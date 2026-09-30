@@ -1,0 +1,1119 @@
+{
+ "schemaVersion": 7,
+ "slug": "tva",
+ "name": "Tennessee Valley Authority",
+ "shortName": "TVA",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.tva.com",
+ "headquarters": "Knoxville, TN, USA",
+ "founded": 1933,
+ "employees": "10,635 at September 30, 2025 (11,312 a year earlier); 59 percent union-represented (FY2025 Form 10-K)",
+ "ownership": {
+  "type": "public (federal corporation)",
+  "ticker": "NYSE: TVE / TVC (power bonds, not equity)",
+  "notes": "A corporate agency and instrumentality of the United States created by the TVA Act of 1933; 'TVA is not authorized to issue equity securities' (FY2025 10-K). Owned by the U.S. Government, governed by a nine-member Board appointed by the President with Senate consent, which 'has sole responsibility for establishing the rates TVA charges for power' — rates 'not subject to judicial review or to review or approval by any state or other federal regulatory body'. Files 10-Ks and 10-Qs with the SEC (CIK 0001376986, fiscal year ends September 30) because its power bonds are registered; the bonds are payable solely from net power proceeds and are not obligations of the United States. No appropriations for the power program."
+ },
+ "summary": "BOTTOM LINE UP FRONT: TVA is the federal utility whose Board — six of nine seats filled, a quorum regained in January 2026 after nine months without one — approved on August 20, 2026 the 2026 Integrated Resource Plan (an incremental need of 11–32 GW through 2040, with 7,000–26,000 MW of gas, up to 5,000 MW of nuclear, 1,000–5,000 MW of storage and 3,000–12,000 MW of renewables nameplate), a standard data-center rate class with a Capacity Commitment Charge for new or expanding loads above 5 MW effective October 1, 2026 (about a 10 percent all-in impact phased over three fiscal years, with a Power Interruption Provision for loads that want service before capacity is available), a $3.5B 'New Gas Facility 2032', three GE 7F.05 turbines and direct TVA service above 100 MW to SpaceXAI's MZX Tech LLC in south Memphis — and whose Clinch River BWRX-300 received the first U.S. small-modular-reactor construction permit on September 29, 2026. BACKGROUND. Knoxville; FY2025 (ended September 30, 2025) operating revenues $13.7B, net income $1.36B, 167,612 GWh sold, total debt $23.5B against a $30.0B statutory cap; nine months of FY2026 revenue $10.0B and net income $965M (+29.5 percent). Serves about 10 million people in parts of seven states through 153 local power companies (about 90 percent of revenue; MLGW 9 percent, NES 8 percent) and 62 directly served customers; the TVA Act's 'fence' bars sales outside the 1957 service area. Summer net capability at September 30, 2025: nuclear 8,302 MW (seven units), coal 5,815 MW (24 units at Cumberland, Gallatin, Kingston and Shawnee), gas and oil 12,643 MW, Raccoon Mountain pumped storage 1,715 MW, plus 8,482 MW of operating PPAs; all-time peak 35,430 MW on January 22, 2025 and a September record of 33,270 MW on September 3, 2026. Storage is thin and contracted: TVA-owned Vonore (20 MW / 40 MWh), two 20-year tolls signed April 21, 2026 (Plus Power's Crawfish Creek, 200 MW / 800 MWh, Jackson County, Alabama; Tenaska's Bobwhite, 225 MW / 900 MWh, Hawkins County, Tennessee; more than $1.3B of capacity payments per the Q3 10-Q) toward a Board authorization of up to 1,500 MW by end-2029, and a 100 MW battery in the Kingston replacement RFP. Ratings Aa1 (Moody's, cut from Aaa with the U.S. sovereign on May 19, 2025), AA+ (S&P), AA+ (Fitch). Leadership is interim: Don Moul retired as CEO on July 1, 2026, three weeks after a Presidential memorandum capping TVA pay at $500,000 was issued; Mike Skaggs is Interim President and CEO through April 24, 2027, the General Counsel and Chief Business Officer seats are vacant, and three Board seats are unfilled with two directors serving in holdover. Collection gap: tva.com is Cloudflare-blocked to this session (the IRP volume, the resolution texts, releases, leadership pages and photos were reached only through the Azure CDN board decks, EDGAR, the NRC and third parties); the Capacity Commitment Charge's per-kW pricing, term, collateral and transitional criteria are not public beyond the 5 MW threshold and a press-reported three-to-five-year payment period (the '$1.5M per MW' figure is a single blocked trade-press report and is not carried here); the MZX Tech MW, the Cumberland and Kingston combined-cycle turbine OEMs and EPCs, the Kingston battery's MWh and award, the 2025 2,250 MW RFP awards and the site of the 2032 gas facility are undisclosed; no NEPA record of decision for the IRP had appeared in the Federal Register by September 29, 2026.",
+ "ecosystemRole": "We assess TVA as the corpus's only gatekeeper with no regulator above it and a President beside it: the Board sets wholesale rates by resolution under a debt-service-coverage method, changes them through the local power companies' contracts (the February 18, 2026 letter to LPCs is the rate case), must approve any firm load above 100 MW, and can be reshaped by removal — three directors were removed in 2025, the quorum was lost from April 1, 2025 to January 2026, and under TVA's bylaws a Board without one 'shall not have the authority ... to embark on new programs'. Basis: the FY2025 10-K, the June 10, 2025 8-K and the August 20, 2026 Board deck. For a data center the door is the LPC or, above 100 MW, TVA itself: xAI's Colossus 1 took 150 MW in November 2024 and 150 MW more in February 2026 through MLGW as CTC Property LLC, enrolled in demand response and conditioned on storage and recycled water, while its Colossus 2 runs behind the meter on a 41-turbine, 1.2 GW gas plant in Southaven, Mississippi (MDEQ permit March 11, 2026; SELC and NAACP litigation) and its next campus, MZX Tech's 'MACROHARD' and 'MINIHARD', will be a direct TVA customer on the new rate and the Capacity Commitment Charge. For battery sellers the account is the developer on the other side of TVA's tolls — Plus Power and Tenaska hold the only large ones, both ordered from TVA's early-2025 RFP with OEMs undisclosed — and the Kingston 100 MW design-build-operate award; TVA's own batteries stop at Vonore's 20 MW. For turbine vendors TVA is a repeat GE Vernova buyer (10 LM6000VELOX at Johnsonville in service 2025, 16 at Kingston for 2028, three 7F.05 frame units approved August 2026) with a 1,450 MW Cumberland combined cycle synchronizing in May 2026, a 500 MW New Caledonia frame plant for May 2028, Allen (200 MW aero, 2027), Lagoon Creek (350 MW) and the unsited $3.5B 2032 plant, and it has reversed the Kingston and Cumberland coal retirements. For nuclear vendors it is the reference U.S. SMR owner: the BWRX-300 construction permit (dockets 99902056 and 05000615) with GE Vernova Hitachi, Bechtel and Sargent & Lundy, about $400M selected by DOE in December 2025 on top of $350M of Board development funding, plus a 50 MW Kairos PPA for Google's load, an ENTRA1/NuScale 6 GW non-binding collaboration and an Oklo fuel-recycling agreement.",
+ "productsAndServices": [
+  {
+   "name": "Wholesale power to 153 local power companies and 62 directly served customers — the Board rate process in place of a rate case",
+   "category": "Regulated utility service",
+   "description": "TVA sells at wholesale to 153 local power companies (municipal systems and cooperatives) that serve about 10 million people in parts of seven states and supplied about 90 percent of FY2025 operating revenue, and directly to 62 customers including seven federal agencies (directly served industrials about 8 percent). Memphis Light, Gas and Water is 9 percent of revenue and Nashville Electric Service 8 percent; MLGW's contract carries a five-year termination notice and NES's twenty. 148 LPCs are on the 20-year rolling Partnership Agreement, which renews annually and lets them self-supply about 5 percent. The TVA Act gives the Board 'sole responsibility for establishing the rates TVA charges for power', not subject to any state or federal review or to the courts; the wholesale structure is time-of-use demand and energy rates, a fuel rate and a Grid Access Charge, set under a debt-service-coverage method and changed through the power contracts' adjustment clause after a letter to the LPCs (February 18, 2026 for the FY2027 changes) and a Board resolution, usually at the August meeting with the budget. A 5.25 percent wholesale base-rate increase took effect October 1, 2024; no rate action was found for October 1, 2025, when the Board had no quorum and could not adopt a budget; the August 20, 2026 package for October 1, 2026 is the data-center class and Capacity Commitment Charge, a requirement to reduce contract demand if materially unused (a 75 percent-of-contract-demand test in the February letter), a stability contract for manufacturing loads above 5 MW, minor off-peak changes and an updated Board policy for new loads above 100 MW — with no general base increase (the FY2027 plan shows an average base rate of 5.48 cents per kWh against 5.60 in FY2026). The statutory 'fence' bars TVA and its LPCs from supplying load outside the area they served on July 1, 1957, and the Federal Power Act's anti-cherry-picking clause bars FERC from ordering TVA to wheel power for use inside it.",
+   "highlights": [
+    "FY2025 average effective rate 8.0 cents per kWh (base 5.6, fuel 2.4); FY2025 revenue $13.7B (+$1.4B: about $400M from the October 2024 base increase and $290M from volume), net income $1.36B",
+    "Nine months of FY2026: revenue $10.0B, net income $965M (+29.5 percent), sales 121,771 GWh; Q3 net income $307M against $212M",
+    "Public input runs through Board listening sessions and the Regional Energy Resource Council; the Tennessee Valley Public Power Association's rates committee negotiates for most LPCs",
+    "Funds are held in a U.S. Treasury account, and the 10-K lists a restriction on accessing them and a lowering of the debt ceiling among its risks"
+   ],
+   "positioning": "The one utility in the corpus whose regulator is its own board and whose board can be removed by the President. Against SRP's landowner-elected Board and APS's five-member elected Commission, TVA's nine directors are appointed and confirmed, serve five-year terms, and were reduced to three in 2025; the FY2026 budget could only be authorized by delegation to the CEO. What the structure buys is speed once a quorum exists: the IRP, the data-center rate, the $3.5B gas plant, the turbines and the SpaceXAI service were all approved in one meeting.",
+   "soldThrough": "Wholesale power contracts with LPCs (20-year rolling partnership agreements) that adopt matching resale schedules; direct contracts with industrial and federal customers; Board resolutions for rates and for any firm load above 100 MW",
+   "targetSegments": [
+    "153 local power companies across Tennessee, Alabama, Mississippi, Kentucky and parts of Georgia, North Carolina and Virginia",
+    "Directly served industrials, federal installations and, from 2026, data centers above 100 MW",
+    "Wholesale counterparties inside the fence"
+   ],
+   "roadmap": "FY2027 budget (August 20, 2026): revenue $13.9B, capex $4.2B and more than $13B over FY2027–29, O&M $4.1B, interest $1.4B, a $4B bond shelf, a $300M retirement contribution; peak-demand growth assumed at 2.9 percent a year FY2026–29; a later rate change is to evaluate the Grid Access Charge and unbundle transmission"
+  },
+  {
+   "name": "The data-center rate class, the Capacity Commitment Charge and the large-load queue — from MLGW's xAI to direct TVA service",
+   "category": "Regulated utility service",
+   "description": "On August 20, 2026 the Board approved a 'new standard data center rate, effective October 1, 2026' with 'an all-in average billing impact of approximately 10 percent, to be phased in over three consecutive fiscal years', capacity commitment provisions in each data-center B, C and D rate schedule, a 'Capacity Commitment Charge (CCC) for new/expanding loads above 5 MW' that 'helps recover incremental capacity costs — ensuring that new data center customers do not shift costs to other customers', a 'Power Interruption Provision' with terms for data centers that want to come online before their availability date, transitional provisions for in-flight projects that meet specific criteria, and the removal of data centers from the manufacturing rate schedules and credits they had been admitted to by a 2008 Board decision. Press accounts add that the charge is paid over three to five years to fund grid upgrades (Action News 5, quoting CFO Tom Rice: 'designed specifically to protect everyday ratepayers if projected power demands are not met'); TVA has published no per-kW price, term or collateral formula, and a cost-of-service study, the data-center definition, minimum terms and exit penalties were not disclosed (SACE: 'one slide with seven bullet points'). The charge flows through the LPCs' resale schedules — Huntsville Utilities and LaFollette adopted theirs in late September 2026 — and applies directly to TVA-served campuses such as Meta's North Huntsville and MZX Tech's Memphis sites. Behind it: TVA's Scott Fiedler put requests 'from just data centers and tech companies alone' at about 11,000 MW in August 2025; data centers were 18 percent of industrial load in 2025 and about 10 percent of total load; the February 2026 deck described 6,200 MW of new generation in progress and the May 2026 Board 3,770 MW under construction. Any firm load above 100 MW needs a Board vote: 150 MW for xAI through MLGW on November 7, 2024; 150 MW more for CTC Property LLC on February 11, 2026, contingent on demand-response enrollment, a storage solution and recycled water; and, on August 20, 2026, more than 100 MW of direct service to MZX Tech LLC, 'a subsidiary of SpaceX (dba SpaceXAI), a new TVA directly served customer', for its 'MACROHARD and MINIHARD' data centers on Tulane Road, on the new rate and the CCC with transmission upgrades and bulk storage — the MW undisclosed.",
+   "highlights": [
+    "TVA signed the DOE/White House Ratepayer Protection Pledge (July 23, 2026); Interim CEO Skaggs: 'We'll build out capacity and transmission systems necessary to be right below what the demand is, and won't build anything above demand'",
+    "Google: a first machine-learning-workload demand-response agreement (August 4, 2025), a $1.5B Jackson County, Alabama expansion (June 15, 2026), a Montgomery County, Tennessee campus and a 50 MW Kairos Hermes 2 PPA (as early as 2030) attributed to its load",
+    "Meta: Gallatin, Tennessee (launched November 2024) and a directly served Huntsville campus; 377 MW of TVA solar contracted for Meta in 2018 (First Solar 227 MW, NextEra 150 MW)",
+    "xAI's Colossus 2 is off-grid: MLGW supplies about 0.5 MW of general service; the Southaven, Mississippi plant on the former Duke Energy site adjacent to TVA's Southaven combined cycle was permitted by MDEQ on March 11, 2026 for 41 turbines and about 1.2 GW, rented through the Stateline Power JV with Solaris (temporary fleet of 59 units including 27 GE Vernova TM2500s by June 2026, per a third-party compilation); Earthjustice and SELC sued for the NAACP under the Clean Air Act"
+   ],
+   "positioning": "The first large-load regime in the corpus written by the utility's own board with no docket: SRP's E-67 (20 MW, 80 percent minimum billing demand) and APS's XHLF took a pricing process and a rate case; TVA's took a letter to its distributors and one August vote, and its threshold — 5 MW — is the lowest in the corpus. What it lacks is the published detail every commission-approved tariff carries: the price of the commitment, its term and its collateral are known only to the customers who sign.",
+   "soldThrough": "Wholesale rate schedules adopted by the LPCs, and direct TVA contracts above 100 MW after a Board vote; demand-response enrollment and storage as conditions of service",
+   "targetSegments": [
+    "Data centers above 5 MW connecting through an LPC",
+    "Campuses above 100 MW seeking direct TVA service (SpaceXAI, Meta Huntsville)",
+    "Manufacturing loads above 5 MW offered the stability contract instead"
+   ],
+   "roadmap": "Effective October 1, 2026 with a three-year phase-in; the updated Board policy for loads above 100 MW; the Power Interruption Provision as the route for loads ahead of capacity; the FY2027 LTIP 'Project Milestones' measure counts large-customer connections above 100 MW"
+  },
+  {
+   "name": "The 2026 Integrated Resource Plan and the generation build — gas, coal kept, storage tolls, Cumberland and Kingston",
+   "category": "Generation",
+   "description": "The Board approved the 2026 IRP on August 20, 2026 by resolution — 'the power supply mix ranges and the strategic portfolio direction' rather than a single strategy — for an incremental need of 11–32 GW through 2040 across scenarios that load growth is 'approaching the Higher Growth Economy scenario primarily due to data center growth'. Ranges through 2040 as reported from the final plan: gas turbines 7,000–26,000 MW, nuclear up to 5,000 MW, renewables 3,000–12,000 MW nameplate, energy efficiency and demand response 2,000–3,000 MW, storage 1,000–5,000 MW; the June 2026 preliminary final put solar at 1–8 GW nameplate and both accounts agree on gas and storage. Recommended actions: invest in the hydro and nuclear fleets and pursue license extensions, add firm dispatchable gas and storage, 'continue operation of the coal fleet, subject to regulatory requirements', pursue solar where it cuts system cost, 'suspend wind additions given cost and portfolio fit challenges', use demand response and behind-the-meter resources to connect new industrial loads early, and 'prepare for Gen III+ and Gen IV nuclear'. The plan reverses the 2023–24 coal retirement decisions: on February 11, 2026 the Board unanimously authorized continued operation of Kingston and Cumberland beyond their planned 2026–28 dates, with Shawnee and Gallatin undated and DOE selecting Cumberland for up to $46M of coal-modernization funding. The build in progress: Cumberland's 1,450 MW combined cycle (first fire April 28, 2026, CT1 synchronized May 29, commercial by December 2026, financed by a $2.0B lease-purchase closed May 26, 2026), Kingston's about 1,500 MW complex (a combined cycle for 2027 plus 16 GE Vernova LM6000VELOX aeroderivatives of up to 850 MW for 2028, a 100 MW battery and a few MW of solar), Johnsonville's ten LM6000VELOX units (500 MW, in service 2025, $652M) with ten legacy units kept, Allen's six aeroderivatives (about 200 MW, Memphis, 2027), New Caledonia's six dual-fuel frame turbines (500 MW, Steens, Mississippi, about $800M, May 2028), Lagoon Creek's four turbines (350 MW, up to $668M), three GE 7F.05 frame turbines approved August 2026 for $300M, and a 'New Gas Facility 2032' at $3,517.5M replacing the cancelled 900 MW Cheatham County plant. An April 2025 RFP sought up to 2,250 MW of new-build PPAs operable by 2031 with awards in 2027, and a May 2026 RFP sought 50–1,000 MW of existing firm capacity for December 2026 to December 2031.",
+   "highlights": [
+    "FY2025 energy: gas 34 percent, nuclear 33 percent, coal 19 percent, hydro 10 percent, renewables 4 percent; nine months of FY2026: nuclear 41, gas 31, coal 17, hydro 6, other renewables 5",
+    "Storage: Board authorization (November 6, 2025) for up to 1,500 MW of bulk storage under contracts of up to 20 years with delivery before end-2029 — 2019–25 had added 370 MW from nine RFPs; the two 20-year tolls signed in FY2026 carry more than $1.3B of capacity payments and a lease component; operating battery PPAs 100 MW (Mississippi) and 270 MW contracted but not online at September 30, 2025",
+    "Nuclear fleet 8,302 MW: Browns Ferry (three units, subsequent license renewal approved December 2025), Sequoyah and Watts Bar; about 244 MW of uprates over 10–15 years; Raccoon Mountain 1,715 MW of pumped storage",
+    "A September 2026 federal court found the Kingston gas decision violated NEPA (TVA to appeal) and a Clean Air Act suit over the same site followed on September 25; the TVA OIG's June 2026 report found coal assets in poor condition without remediation plans"
+   ],
+   "positioning": "The largest gas program in the corpus by range (7–26 GW) and the only IRP that suspends wind, keeps coal indefinitely and plans Gen III+ nuclear in the same document. Against Duke's self-build storage (4.5 GW by 2031) TVA's 1–5 GW is a toll program with two counterparties; against SRP's Marigold the gas is frame and aero turbines on existing sites, financed off the statutory debt cap through lease-purchase entities ($3.7B of alternative financing in FY2026 rising to about $5B).",
+   "soldThrough": "Self-build on TVA sites with lease-purchase financing; 20-year storage tolls and PPAs from RFPs; direct turbine purchases from GE Vernova; EPCs undisclosed for the combined cycles",
+   "targetSegments": [
+    "TVA system load and a 26 percent winter / 18 percent summer planning reserve",
+    "LPCs and directly served customers inside the fence"
+   ],
+   "roadmap": "Cumberland commercial by December 2026; Allen 2027; Kingston combined cycle 2027 and aeros 2028; New Caledonia May 2028; storage tolls online summer 2029; 2,250 MW RFP awards 2027; the 2032 gas facility; total financing obligations projected from $24.3B (FY2026) to $30.7B (FY2029) against the $30.0B cap on bonds"
+  },
+  {
+   "name": "New nuclear — Clinch River BWRX-300, the first U.S. SMR construction permit",
+   "category": "Generation",
+   "description": "The NRC issued the construction permit for a 300 MW GE Vernova Hitachi BWRX-300 at the Clinch River site in Oak Ridge on September 29, 2026 — 'the nation's first commercial small modular reactor' permit, fourteen months after formal review began in July 2025 and four months ahead of schedule (dockets 99902056 and 05000615; final safety evaluation June 25, 2026; final supplemental EIS April 6, 2026; mandatory hearing August 13, 2026; an operating license is still required). The early site permit dates from December 2019 and runs to 2039. The Board approved $150M of SMR development funding in 2022 and another $150M in August 2024, $350M in all; DOE selected TVA for negotiations on about $400M under the Generation III+ SMR program on December 2, 2025 ($800M was sought). Partners are GE Vernova Hitachi, Bechtel and Sargent & Lundy (the corpus's Sargent & Lundy dossier has it as TVA's owner's engineer and detailed-design lead, with a 2026 Valley Supplier Award); Ontario Power Generation's Darlington unit is the lead BWRX-300. Target commercial operation is the early 2030s (a potential 2032 date per Utility Dive). Beyond Clinch River: a PPA of up to 50 MW from Kairos Power's Hermes 2 in Oak Ridge as early as 2030, supporting Google's data centers in Jackson County, Alabama and Montgomery County, Tennessee; a September 2, 2025 non-binding collaboration with ENTRA1 Energy for up to 6 GW of NuScale US460 plants that ENTRA1 would own and sell under PPAs; an agreement with Oklo on fuel recycling at its planned Oak Ridge facility and SMR PPAs; and a state fusion license (August 31, 2026) for Type One Energy's Infinity Two at Bull Run.",
+   "highlights": [
+    "Total project cost and a Board construction-funding decision are not on the record; the IRP's 'up to 5,000 MW' of nuclear through 2040 is the ceiling",
+    "The permit application was filed (April–May 2025) while the Board lacked a quorum; the funding decisions predate the quorum loss",
+    "TVA and AEP's Indiana Michigan Power applied together under the BWRX-300 program; the corpus's AEP and Duke dossiers record the same DOE-funded collaboration",
+    "Browns Ferry's subsequent license renewal was approved in December 2025; Sequoyah and Watts Bar renewals are planned"
+   ],
+   "positioning": "The reference U.S. SMR project — every other BWRX-300 in the corpus (OPG's Darlington, AEP's Rockport application) points at Clinch River's permit — and the only nuclear program in the corpus run by an entity that can take direct pay and federal grants at once.",
+   "soldThrough": "TVA-owned with DOE cost share; third-party PPAs (Kairos, ENTRA1/NuScale, Oklo) for the rest",
+   "targetSegments": [
+    "TVA system baseload replacement for the coal fleet in the 2030s",
+    "Hyperscaler carbon-free demand (Google via Kairos)"
+   ],
+   "roadmap": "Site preparation and construction under the permit from 2026; operating license application; commercial operation early 2030s; ENTRA1/NuScale and Oklo remain non-binding"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Data-center rate class and Capacity Commitment Charge (Board resolution 'Rate Change and Related Actions', August 20, 2026)",
+   "specs": [
+    {
+     "band": "Rate class",
+     "label": "Effective",
+     "value": "New standard data center rate, effective October 1, 2026"
+    },
+    {
+     "band": "Rate class",
+     "label": "Impact",
+     "value": "all-in average billing impact of this rate to be approximately 10%, to be phased in over three consecutive fiscal years"
+    },
+    {
+     "band": "Rate class",
+     "label": "Schedules",
+     "value": "capacity commitment provisions as part of each data center B, C, and D rate schedule"
+    },
+    {
+     "band": "Capacity Commitment Charge",
+     "label": "Threshold",
+     "value": "for new/expanding loads above 5 MW"
+    },
+    {
+     "band": "Capacity Commitment Charge",
+     "label": "Purpose",
+     "value": "helps recover incremental capacity costs — ensuring that new data center customers do not shift costs to other customers while providing a transparent process to accelerate AI development"
+    },
+    {
+     "band": "Capacity Commitment Charge",
+     "label": "Payment period",
+     "value": "over a 3-5 year period to fund grid upgrades (Action News 5, August 20, 2026; not in the TVA deck)"
+    },
+    {
+     "band": "Capacity Commitment Charge",
+     "label": "Price, term, collateral",
+     "value": "not published"
+    },
+    {
+     "band": "Related terms",
+     "label": "Power Interruption Provision",
+     "value": "terms and conditions for data centers requesting to come online prior to the availability date"
+    },
+    {
+     "band": "Related terms",
+     "label": "Transitional provisions",
+     "value": "in-flight data centers must meet specific criteria to qualify"
+    },
+    {
+     "band": "Related terms",
+     "label": "Contract demand",
+     "value": "new rate schedule requirement reducing contract demand if materially unused (75% minimum usage of contract demand over 12 months in the February 18, 2026 letter)"
+    },
+    {
+     "band": "Related terms",
+     "label": "Manufacturing eligibility",
+     "value": "data centers removed from the manufacturing service rate schedules and the General and Small Manufacturing Credits"
+    },
+    {
+     "band": "Related terms",
+     "label": "Large loads",
+     "value": "updating existing Board policy for new power requirements above 100 MW; TVA Board approval is required to authorize TVA to make available additional amounts of firm power exceeding 100 MW"
+    }
+   ],
+   "notes": "August 20, 2026 Board presentation, slides 39–43 and 57–60 (TVA CDN); February 18, 2026 rate-change letter to LPCs (hosted by WATE)."
+  },
+  {
+   "product": "2026 Integrated Resource Plan — ranges through 2040 (Board resolution August 20, 2026)",
+   "specs": [
+    {
+     "band": "Need",
+     "label": "Incremental capacity through 2040",
+     "value": "11 to 32 GW"
+    },
+    {
+     "band": "Ranges",
+     "label": "Natural gas turbines",
+     "value": "7,000–26,000 MW"
+    },
+    {
+     "band": "Ranges",
+     "label": "Nuclear",
+     "value": "up to 5,000 MW"
+    },
+    {
+     "band": "Ranges",
+     "label": "Renewables",
+     "value": "3,000–12,000 MW nameplate (final, as reported by Industrial Info); 1–8 GW nameplate solar in the June 2026 preliminary final (Utility Dive)"
+    },
+    {
+     "band": "Ranges",
+     "label": "Energy efficiency and demand response",
+     "value": "2,000–3,000 MW"
+    },
+    {
+     "band": "Ranges",
+     "label": "Energy storage",
+     "value": "1,000–5,000 MW"
+    },
+    {
+     "band": "Basis",
+     "label": "Capacity basis",
+     "value": "summer net dependable capacity; CC/CT additions could include control technologies, such as carbon capture and sequestration, alternative fuel co-firing (e.g., hydrogen), or gas re-firing of existing coal burners"
+    },
+    {
+     "band": "Direction",
+     "label": "Coal",
+     "value": "Continue operation of the coal fleet, subject to regulatory requirements"
+    },
+    {
+     "band": "Direction",
+     "label": "Wind",
+     "value": "Suspend wind additions given cost and portfolio fit challenges"
+    },
+    {
+     "band": "Direction",
+     "label": "Nuclear",
+     "value": "Prepare for Gen III+ and Gen IV nuclear"
+    },
+    {
+     "band": "Process",
+     "label": "Horizon",
+     "value": "between now and 2050; results summarized through 2040"
+    },
+    {
+     "band": "Process",
+     "label": "Vehicle",
+     "value": "Board IRP Resolution approving the power supply mix ranges and the strategic portfolio direction; programmatic EIS accompanies the IRP; no Federal Register record of decision found by September 29, 2026"
+    }
+   ],
+   "notes": "August 20, 2026 Board presentation, slides 45–54; Utility Dive June 23, 2026; Industrial Info September 1, 2026."
+  },
+  {
+   "product": "Generating capacity (summer net capability at September 30, 2025, FY2025 Form 10-K) and the build in progress",
+   "specs": [
+    {
+     "band": "Fleet",
+     "label": "Nuclear",
+     "value": "7 units, 8,302 MW (Browns Ferry 3,662; Sequoyah 2,292; Watts Bar 2,348)"
+    },
+    {
+     "band": "Fleet",
+     "label": "Coal",
+     "value": "4 plants, 24 units, 5,815 MW (Cumberland 2,470; Gallatin 976; Kingston 1,298; Shawnee 1,071)"
+    },
+    {
+     "band": "Fleet",
+     "label": "Natural gas and oil",
+     "value": "93 combustion turbine power blocks, 12,643 MW (68 simple-cycle units 5,089 MW; 14 combined-cycle units; 10 aeroderivatives at Johnsonville)"
+    },
+    {
+     "band": "Fleet",
+     "label": "Pumped storage",
+     "value": "Raccoon Mountain 1,715 MW"
+    },
+    {
+     "band": "Fleet",
+     "label": "Operating PPAs",
+     "value": "8,482 MW including about 100 MW of batteries (Mississippi, 2044–45)"
+    },
+    {
+     "band": "Fleet",
+     "label": "Contracted, not online",
+     "value": "solar 2,528 MW (31 contracts); batteries 270 MW (3 contracts); Kairos nuclear 50 MW — at September 30, 2025"
+    },
+    {
+     "band": "Build",
+     "label": "Cumberland combined cycle",
+     "value": "1,450 MW; CT1 synchronized May 29, 2026; commercial by December 2026; $2.0B lease-purchase closed May 26, 2026"
+    },
+    {
+     "band": "Build",
+     "label": "Kingston Energy Complex",
+     "value": "about 1,500 MW: combined cycle (2027) + 16 GE Vernova LM6000VELOX up to 850 MW (2028) + 100 MW battery + solar"
+    },
+    {
+     "band": "Build",
+     "label": "Johnsonville aeroderivatives",
+     "value": "10 GE Vernova LM6000VELOX, 500 MW, $652M, commercial 2025"
+    },
+    {
+     "band": "Build",
+     "label": "Allen (Memphis)",
+     "value": "6 aeroderivative units, about 200 MW, 2027"
+    },
+    {
+     "band": "Build",
+     "label": "New Caledonia (Steens, MS)",
+     "value": "500 MW, six dual-fuel frame CTs, about $800M, May 2028"
+    },
+    {
+     "band": "Build",
+     "label": "Lagoon Creek (Brownsville, TN)",
+     "value": "350 MW, four CTs, up to $668M"
+    },
+    {
+     "band": "Build",
+     "label": "Approved August 20, 2026",
+     "value": "three GE 7F.05 combustion turbines, $300.0M; New Gas Facility 2032, $3,517.5M project total"
+    },
+    {
+     "band": "Storage",
+     "label": "TVA-owned",
+     "value": "Vonore 20 MW / 40 MWh"
+    },
+    {
+     "band": "Storage",
+     "label": "Plus Power Crawfish Creek (Jackson County, AL)",
+     "value": "200 MW / 800 MWh; 20-year; construction 2028; commercial summer 2029"
+    },
+    {
+     "band": "Storage",
+     "label": "Tenaska Bobwhite (Hawkins County, TN)",
+     "value": "225 MW / 900 MWh; 20-year; about $300M; construction 2027; late 2029"
+    },
+    {
+     "band": "Storage",
+     "label": "Board authorization",
+     "value": "up to 1,500 MW of bulk storage under contracts of up to 20 years with initial delivery before end-CY2029 (November 6, 2025)"
+    },
+    {
+     "band": "Peaks",
+     "label": "All-time",
+     "value": "approximately 35,430 MW on January 22, 2025; September record 33,270 MW on September 3, 2026"
+    }
+   ],
+   "notes": "Turbine OEMs for the Cumberland and Kingston combined cycles and New Caledonia, and their EPCs, are not on the record read; the Kingston battery's MWh and award are unpublished."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public (SEC 10-K, fiscal year ends September 30; federal corporation, no equity, no consensus)",
+  "periods": [
+   {
+    "period": "FY2025 (ended September 30, 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-09-30",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$13,672M (+$1.4B; base revenue +$690M, of which about $400M from the 5.25% October 2024 base-rate increase and $290M from volume)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "TVA issues no earnings guidance and no sell-side consensus exists for a debt-only issuer; the 10-K's own outlook is that financing obligations 'will increase in future years due to an expected increase in capital expenditures'",
+      "kpi": "revenue",
+      "usdMillions": 13672,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income",
+      "actual": "$1,360M (+19.8%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Interest expense $1,196M; cash from investing $4,661M; year-end cash $1,597M",
+      "kpi": "net-income",
+      "usdMillions": 1360,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Sales of electricity",
+      "actual": "167,612 GWh (+3%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Average effective rate 8.0 cents per kWh (base 5.6, fuel 2.4)"
+     },
+     {
+      "name": "Debt",
+      "actual": "Total debt $23,512M; total financing obligations $23,770M against a $30.0B statutory bond cap",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Aa1 / AA+ / AA+, all stable; Moody's cut from Aaa on May 19, 2025 with the U.S. sovereign"
+     }
+    ],
+    "commentary": "10-K filed November 13, 2025. FY2026 was budgeted by CEO authorization in July 2025 because the Board had no quorum to adopt one; capex was about $5.0B."
+   },
+   {
+    "period": "FY2024 (ended September 30, 2024)",
+    "periodType": "annual",
+    "periodEnd": "2024-09-30",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$12,314M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Comparative from the FY2025 10-K",
+      "kpi": "revenue",
+      "usdMillions": 12314,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income",
+      "actual": "$1,135M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Interest expense $1,066M; capex about $3.9B",
+      "kpi": "net-income",
+      "usdMillions": 1135,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Sales of electricity",
+      "actual": "162,933 GWh",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Total financing obligations $21,203M; year-end cash $523M"
+     }
+    ],
+    "commentary": "Read only as the comparison year."
+   },
+   {
+    "period": "Nine months FY2026 (ended June 30, 2026)",
+    "periodType": "other",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$10,037M (prior $9,758M, +$279M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "10-Q filed August 4, 2026; sales 121,771 GWh against 120,527"
+     },
+     {
+      "name": "Net income",
+      "actual": "$965M (+29.5%); Q3 $307M against $212M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Interest expense $933M; capex $3.0B against $3.7B"
+     },
+     {
+      "name": "Debt",
+      "actual": "Total debt $24,589M; total financing obligations $24,870M; cash $1,505M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Power purchase obligations rose $1.2B on the two 20-year storage agreements"
+     }
+    ],
+    "commentary": "FY2027 plan (August 20, 2026 deck): revenue $13.9B in FY2026 and FY2027 rising to $14.8B in FY2029; capex $4.5B (FY2026), $4.2B, $4.8B, $4.5B; statutory debt from $20.6B to $25.9B by FY2029 and alternative financing about $5B, for total financing obligations of $30.7B — at the level of the bond cap, which the alternative-financing entities sit outside."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-29",
+   "category": "regulatory",
+   "headline": "NRC issues the construction permit for the Clinch River BWRX-300 — the first commercial small modular reactor permit in the United States, four months ahead of schedule",
+   "read": "TVA's nuclear program moves from licensing to execution; the operating license and a construction-funding decision are the next gates.",
+   "source": "https://www.nrc.gov/about-nrc/news-releases/2026/26-079"
+  },
+  {
+   "date": "2026-09-25",
+   "category": "legal",
+   "headline": "SELC, Appalachian Voices and the Sierra Club sue TVA under the Clean Air Act over the Kingston gas plant, weeks after a federal court found the Kingston decision violated NEPA (TVA to appeal)",
+   "read": "The 1,500 MW Kingston complex is about a year from completion with two live cases against it.",
+   "source": "https://www.selc.org/press-release/groups-sue-tva-over-clean-air-act-violations-at-kingston-site/"
+  },
+  {
+   "date": "2026-09-24",
+   "category": "regulatory",
+   "headline": "Local power companies (Huntsville Utilities, LaFollette) adopt resale schedules for TVA's data-center rate ahead of October 1; TVA: 'This rate change protects residential and existing customers'",
+   "read": "The charge reaches a data center through its distributor's schedule, or directly for TVA-served campuses such as Meta's in Huntsville.",
+   "source": "https://www.wvlt.tv/2026/09/25/tva-raises-rates-data-centers-adding-upfront-fee-new-existing-facilities/"
+  },
+  {
+   "date": "2026-09-03",
+   "category": "market",
+   "headline": "September demand record of 33,270 MW during a heat dome",
+   "read": "A late-summer record on a winter-peaking system — the reserve margin the IRP plans is being tested in both seasons.",
+   "source": "https://www.timesfreepress.com/news/2026/sep/26/tva-smashed-september-power-record-amid-heat-dome/"
+  },
+  {
+   "date": "2026-08-20",
+   "category": "regulatory",
+   "headline": "Board approves the 2026 IRP, the FY2027 budget (capex above $13B over three years, a $4B bond shelf), the data-center rate class and Capacity Commitment Charge effective October 1, 2026, direct service above 100 MW to MZX Tech LLC (SpaceXAI), three GE 7F.05 turbines ($300M) and a $3.5B 'New Gas Facility 2032'",
+   "read": "One meeting set the plan, the tariff, the turbines and the largest customer; the quorum regained in January made all of it possible.",
+   "source": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/august-20--2026/august-2026-board-presentation.pdf"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "policy",
+   "headline": "TVA signs the DOE / White House Ratepayer Protection Pledge",
+   "read": "The pledge's commitments — new large loads pay for their own capacity — are reproduced in the August rate package.",
+   "source": "https://www.wsmv.com/2026/07/23/tva-has-signed-trumps-ratepayer-protection-pledge-amid-data-center-boom-heres-what-it-means/"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "leadership",
+   "headline": "Don Moul's retirement as President and CEO takes effect; Mike Skaggs, Interim President and CEO since April 24 at a $500,000 salary, leads the permanent search",
+   "read": "Leadership is interim through April 2027, with the General Counsel and Chief Business Officer seats also vacant.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000026/tve-20260424.htm"
+  },
+  {
+   "date": "2026-06-15",
+   "category": "customer",
+   "headline": "Google announces a $1.5B expansion of its Jackson County, Alabama data center for 2026–27, on the former Widows Creek plant site served by TVA",
+   "read": "TVA's anchor hyperscaler grows on the system that will also host the Kairos and Plus Power resources tied to it.",
+   "source": "https://www.timesfreepress.com/news/2026/jun/15/google-invests-15b-to-expand-alabama-data-center/"
+  },
+  {
+   "date": "2026-05-26",
+   "category": "financial",
+   "headline": "$2.0B lease-purchase for the Cumberland combined cycle closes (a $200M equity and $1.8B secured-notes structure with a 30-year facility lease); CT1 synchronizes May 29; Unit 2 first fire May 31",
+   "read": "Alternative financing keeps the plant off the $30B bond cap; commercial operation is due by December 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000031/tve-20260521.htm"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "regulatory",
+   "headline": "TVA publicly proposes a data-center rate class with a capacity commitment charge, following the February 18 letter to local power companies",
+   "read": "The rate case, in TVA's form: a letter to the distributors, a public proposal, an August vote.",
+   "source": "https://www.wvlt.tv/2026/05/27/tva-proposes-new-rate-class-data-centers-protect-customer-power-bills/"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "procurement",
+   "headline": "Existing Generation Resource RFP for 50–1,000 MW of firm dispatchable capacity (gas, nuclear, hydro, coal) for December 2026 to December 2031; proposals due June 4",
+   "read": "TVA is buying existing capacity inside the fence while its own plants are built; results unpublished.",
+   "source": "https://www.publicpower.org/periodical/article/tva-releases-existing-generation-resource-rfp-firm-capacity-and-energy-offers"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "procurement",
+   "headline": "Two 20-year storage tolls from the early-2025 RFP: Plus Power's Crawfish Creek (200 MW / 800 MWh, Jackson County, Alabama, construction 2028, commercial summer 2029) and Tenaska's Bobwhite (225 MW / 900 MWh, Hawkins County, Tennessee, about $300M, late 2029) — more than $1.3B of capacity payments per the Q3 10-Q",
+   "read": "TVA's first large batteries are tolls with the OEM chosen by the developer; 425 MW toward the 1,500 MW authorization.",
+   "source": "https://www.utilitydive.com/news/tva-plus-power-to-deploy-200-mw800-mwh-bess-in-alabama/818717/"
+  },
+  {
+   "date": "2026-04-03",
+   "category": "leadership",
+   "headline": "CEO Don Moul notifies the Board he will retire July 1, 2026, three weeks after the March 11 Presidential memorandum capping total TVA compensation at $500,000",
+   "read": "The federal owner's pay cap changed the top of the organization within a month.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000022/tve-20260403.htm"
+  },
+  {
+   "date": "2026-03-11",
+   "category": "policy",
+   "headline": "Presidential memorandum caps total annual compensation at TVA at $500,000, with 90-day adoption and OMB certification",
+   "read": "Listed as a risk factor in the Q3 10-Q; the interim CEO's salary is set at the cap.",
+   "source": "https://www.presidency.ucsb.edu/documents/memorandum-promoting-fiscal-responsibility-compensation-practices-the-tennessee-valley"
+  },
+  {
+   "date": "2026-02-27",
+   "category": "leadership",
+   "headline": "Board selects Mitch Graves as Chair (to April 1, 2027) and Jeff Hagood as Chair-Elect (to May 18, 2029) after Bill Renick's February 24 resignation",
+   "read": "The 2025 appointees now chair the Board that had been reduced to three members a year earlier.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000019/tve-20260227.htm"
+  },
+  {
+   "date": "2026-02-18",
+   "category": "regulatory",
+   "headline": "Rate-change letter to local power companies proposes a new class for large loads with a 'capacity commitment charge', a 75% minimum use of contract demand, removal of data centers from manufacturing rates and a review of the Board process for loads above 100 MW",
+   "read": "The proposal that became the October 2026 tariff, written to the distributors rather than to a docket.",
+   "source": "https://www.wate.com/wp-content/uploads/sites/42/2026/05/Rate-Change-Letter-021226_Final_SIGNED.pdf"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "regulatory",
+   "headline": "Board unanimously authorizes continued operation of the Kingston and Cumberland coal units beyond their planned 2026–28 retirements, citing demand 'driven by growth in data center use', and approves 150 MW more for xAI's CTC Property LLC through MLGW contingent on demand response, storage and recycled water",
+   "read": "The coal retirements of 2023–24 are reversed and Colossus 1 reaches its 300 MW ceiling on the grid.",
+   "source": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/february-11--2026/february-2026-board-presentation.pdf"
+  },
+  {
+   "date": "2026-01-20",
+   "category": "leadership",
+   "headline": "Four new directors (Graves, Hagood, Jones, Graham), confirmed by the Senate December 18, 2025, take office and restore the Board's quorum after nine months",
+   "read": "Everything approved in 2026 — the IRP, the rate, the gas plants, the SpaceXAI service — required this.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000008/tve-20251218.htm"
+  },
+  {
+   "date": "2025-12-02",
+   "category": "financial",
+   "headline": "DOE selects TVA for negotiations on about $400M of Generation III+ SMR funding for Clinch River ($800M was sought)",
+   "read": "Federal cost share on top of $350M of Board development money; the total project cost is still unpublished.",
+   "source": "https://www.gevernova.com/news/press-releases/us-department-energy-announces-400-million-funding-accelerate-deployment-nation-first-commercial-small-modular-nuclear-reactor"
+  },
+  {
+   "date": "2025-11-13",
+   "category": "financial",
+   "headline": "FY2025 10-K: revenue $13.7B, net income $1.36B (+19.8%), 167,612 GWh, debt $23.5B; Moody's Aa1 since May 19, 2025",
+   "read": "A record year on a 5.25% base-rate increase and volume, with the Board having lacked a quorum for the fiscal year's last two quarters.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm"
+  },
+  {
+   "date": "2025-11-06",
+   "category": "procurement",
+   "headline": "Board authorizes up to 1,500 MW of bulk storage under contracts of up to 20 years with delivery before the end of 2029; nine RFPs in 2019–25 had added 370 MW",
+   "read": "The storage program that produced the Plus Power and Tenaska tolls five months later.",
+   "source": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/november-6--2025/november-2025-board-presentation.pdf"
+  },
+  {
+   "date": "2025-08-27",
+   "category": "customer",
+   "headline": "TVA signs a PPA of up to 50 MW from Kairos Power's Hermes 2 for Google's Jackson County and Montgomery County data centers; TVA's Scott Fiedler cites 'about 11,000 megawatts of requests from just data centers and tech companies alone'",
+   "read": "The one public sizing of TVA's data-center queue.",
+   "source": "https://www.waff.com/2025/08/27/tva-buy-power-nuclear-plant-fuel-google-data-center-jackson-county/"
+  },
+  {
+   "date": "2025-06-10",
+   "category": "leadership",
+   "headline": "Director Beth Geer removed at the direction of the President; the Board 'now has three members and, thus, continues to be without a quorum'",
+   "read": "A Board below quorum may keep operations running but may not 'embark on new programs'; FY2026 spending had to be delegated to the CEO.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000038/tve-20250610.htm"
+  },
+  {
+   "date": "2024-11-07",
+   "category": "customer",
+   "headline": "Board approves 150 MW of firm power for xAI's Memphis supercomputer through MLGW, energized through an xAI-funded substation",
+   "read": "The first Colossus load was a distributor's customer; by August 2026 the next one is TVA's own.",
+   "source": "https://www.actionnews5.com/2024/11/07/tva-approves-providing-power-xai-facility/"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that the battery decisions on TVA's system sit with its toll counterparties and its design-build bidders, not with TVA: the fleet TVA owns is 20 MW, the 425 MW signed in April 2026 are 20-year tolls with Plus Power and Tenaska whose OEMs are undisclosed, the Kingston 100 MW battery was bid as a design-build-operate contract, and the 1,500 MW authorization is written as contracts of up to 20 years. Basis: the November 2025 Board deck, the April 2026 announcements and the Q3 10-Q's $1.3B of capacity payments.",
+  "(High confidence) We assess that TVA's large-load regime will be the least transparent in the corpus for as long as its pricing stays in customer contracts: the Board approved a charge above 5 MW, a three-year phase-in and a Power Interruption Provision on one slide, and the price per kW, the term and the collateral appear nowhere on the public record. Basis: the August 20, 2026 deck, SACE's contemporaneous critique and the LPC adoption reports; the only dollar figure in circulation is a single blocked trade-press report we do not carry.",
+  "(Moderate confidence) We assess that the President, not the Board, is the binding constraint on TVA's program through 2027: three removals emptied the quorum for nine months, a pay memorandum preceded the CEO's exit by three weeks, two directors serve in holdover until January 3, 2027 and three seats are vacant, so any further removal or a lapsed holdover returns the Board to four members and takes the new-program authority with it. Basis: the 2025 8-Ks, the bylaws' quorum clause and the 10-Q's risk factor on presidential memoranda. Against this: the Board that exists approved everything asked of it on August 20, unanimously and without a question, per SACE.",
+  "(Moderate confidence) We assess that TVA's storage range (1–5 GW) will land at its low end while gas lands high, because the IRP keeps the coal fleet, suspends wind, reverses two retirements and finances gas off the debt cap through lease-purchase entities — a portfolio in which storage substitutes for nothing that is being retired. Basis: the recommended actions, the Kingston and Cumberland decisions of February 2026, the $3.5B 2032 facility and the FY2027–29 financing plan. Against this: the 1,500 MW authorization by 2029 and the Kairos, ENTRA1 and Clinch River nuclear track, which is where the carbon-free capacity is now planned.",
+  "(Low confidence) We assess that direct TVA service will become the norm for hyperscale campuses above 100 MW inside the fence, displacing the distributor as the counterparty: SpaceXAI's MZX Tech was approved as a direct customer on the day the data-center rate passed, Meta's Huntsville campus is already direct-served, and the 'updated Board policy for new power requirements above 100 MW' was in the same package. Basis: the August 2026 deck and WVLT's account of who takes the rate directly. Against this: MLGW's 9 percent of revenue and Colossus 1's 300 MW remain distributor-served, and the MZX MW is undisclosed."
+ ],
+ "relationships": [
+  {
+   "slug": "xai",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-11",
+   "scale": "150 MW + 150 MW via MLGW (Colossus 1); direct service above 100 MW approved August 2026 (Tulane Road)",
+   "note": "TVA's Board approved 150 MW for xAI's Memphis supercomputer through MLGW on November 7, 2024 and 150 MW more for CTC Property LLC on February 11, 2026; on August 20, 2026 it approved MZX Tech LLC (SpaceX, dba SpaceXAI) as a directly served TVA customer above 100 MW on the new data-center rate and Capacity Commitment Charge.",
+   "context": "Colossus 1 is energized through an xAI-funded substation (142 MW) and an adjacent MLGW substation (8 MW); the load is enrolled in TVA demand response and the second 150 MW was conditioned on storage and a recycled-water solution. Colossus 2 takes about 0.5 MW from MLGW and runs on a 41-turbine, 1.2 GW Southaven, Mississippi plant permitted March 11, 2026 on the former Duke Energy site next to TVA's Southaven combined cycle. The corpus's xAI dossier records 'TVA-approved 2×150 MW allocations' and about 300 MW of grid supply against a multi-gigawatt campus draw, consistent with this record; its Tesla Megapacks and VoltaGrid units are xAI's, not TVA's.",
+   "source": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/august-20--2026/august-2026-board-presentation.pdf"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-08",
+   "scale": "$1.5B Jackson County expansion; 50 MW Kairos PPA; first ML-workload demand response",
+   "note": "Google's Jackson County, Alabama and Montgomery County, Tennessee data centers are served on TVA's system; TVA signed a demand-response agreement for Google's machine-learning workloads on August 4, 2025 and a PPA of up to 50 MW from Kairos Power's Hermes 2 for that load.",
+   "context": "Google's $1.5B Bridgeport expansion (June 15, 2026) sits on the former Widows Creek coal plant site; the corpus's Google dossier lists TVA among five demand-response utilities and among its storage-innovation counterparties, and the Excelsior Energy Capital dossier records Skyhawk Solar supplying Google through TVA's Green Invest program.",
+   "source": "https://www.publicpower.org/periodical/article/google-tva-enter-agreement-tied-data-center-demand-response"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "since": "2018",
+   "scale": "Gallatin campus (up to 300 MW per trade press); direct-served Huntsville campus; 377 MW of 2018 solar",
+   "note": "Meta's Gallatin, Tennessee campus (launched November 2024) and its North Huntsville, Alabama campus are on TVA's system, the latter directly served; TVA contracted 377 MW of solar for Meta in 2018 (First Solar 227 MW in Colbert County, NextEra 150 MW in Lincoln County).",
+   "context": "Huntsville is the example WVLT gives of a direct-served data center that takes the new rate from TVA rather than from an LPC. The Gallatin MW figure is trade press (DCD/WKRN via search) and is not TVA's.",
+   "source": "https://www.wvlt.tv/2026/09/25/tva-raises-rates-data-centers-adding-upfront-fee-new-existing-facilities/"
+  },
+  {
+   "slug": "plus-power",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-04",
+   "scale": "200 MW / 800 MWh",
+   "via": "20-year tolling agreement (Crawfish Creek, Jackson County, AL)",
+   "note": "TVA will charge and dispatch Plus Power's Crawfish Creek battery under a 20-year agreement announced April 21, 2026; construction 2028, commercial operation summer 2029; selected from TVA's early-2025 RFP.",
+   "context": "With Tenaska's Bobwhite (225 MW / 900 MWh) it is one of the two agreements the Q3 FY2026 10-Q books at more than $1.3B of capacity payments with a lease component. The corpus's Plus Power dossier records the same project as its seventh state and frames TVA's growth as data-center-driven; TVA's VP Power Supply and Fuels Monika Beckner was quoted.",
+   "source": "https://www.utilitydive.com/news/tva-plus-power-to-deploy-200-mw800-mwh-bess-in-alabama/818717/"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "supplier",
+   "status": "active",
+   "since": "2023",
+   "scale": "26 LM6000VELOX (1,350 MW) + three 7F.05 turbines ($300M) + the BWRX-300",
+   "via": "LM6000VELOX aeroderivatives, 7F.05 frame turbines, BWRX-300 (GE Vernova Hitachi)",
+   "note": "GE Vernova supplied ten LM6000VELOX units at Johnsonville (500 MW, in service 2025) and 16 at Kingston (up to 850 MW, ordered May 6, 2024 for 2028); the Board approved three 7F.05 combustion turbines for $300M on August 20, 2026; GE Vernova Hitachi's BWRX-300 received the Clinch River construction permit on September 29, 2026.",
+   "context": "GE is the only turbine OEM on TVA's record; the Cumberland and Kingston combined-cycle turbines and the New Caledonia frames are unattributed. The 27 GE Vernova TM2500 units at xAI's Southaven plant are xAI's rental fleet, not TVA's.",
+   "source": "https://www.gevernova.com/news/press-releases/nrc-issues-first-us-construction-permit-bwrx-300-small-modular-reactor-tva-clinch-river"
+  },
+  {
+   "slug": "sargent-lundy",
+   "type": "supplier",
+   "status": "active",
+   "since": "1994",
+   "scale": "Clinch River BWRX-300 detailed design; Browns Ferry subsequent license renewal",
+   "via": "Owner's engineer and detailed-design lead, Clinch River",
+   "note": "Sargent & Lundy is TVA's owner's engineer and the detailed-design lead for the site-specific BWRX-300 at Clinch River, alongside Bechtel and GE Vernova Hitachi, and received TVA's 2026 Valley Supplier Award.",
+   "context": "Carried from the corpus's Sargent & Lundy dossier (a relationship 'since February 1994 with no gap in service'; primary vendor for the Browns Ferry subsequent license renewal) and the ANS account of the permit; TVA's own award release is on the blocked tva.com.",
+   "source": "https://www.ans.org/news/2026-09-29/article-8445/tva-receives-construction-permit-for-clinch-river/"
+  },
+  {
+   "slug": "bechtel",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025",
+   "scale": "Clinch River BWRX-300",
+   "note": "Bechtel is a named project partner for the Clinch River BWRX-300 with Sargent & Lundy and GE Vernova Hitachi.",
+   "context": "The construction scope and contract value are not on the record; the corpus's Sargent & Lundy dossier records the same team and Bechtel's 2025 supplier award to Sargent & Lundy.",
+   "source": "https://www.ans.org/news/2026-09-29/article-8445/tva-receives-construction-permit-for-clinch-river/"
+  },
+  {
+   "slug": "kiewit",
+   "type": "supplier",
+   "status": "historical",
+   "scale": "Allen and Paradise combined cycles",
+   "note": "Kiewit built TVA's Allen (2018) and Paradise combined-cycle plants; its role, if any, at Cumberland or Kingston is not confirmed.",
+   "context": "The corpus's Kiewit dossier lists 'TVA Cumberland 1,450 MW' in its reference combined-cycle fleet; TVA's filings and releases read for this dossier do not name the Cumberland EPC, so the two records stand unreconciled.",
+   "source": "Kiewit dossier (profileVersion as of September 2026) — reference CCGT fleet"
+  },
+  {
+   "slug": "aep",
+   "type": "partner",
+   "status": "active",
+   "since": "2025",
+   "scale": "BWRX-300 program (Rockport application as subrecipient)",
+   "note": "AEP's Indiana Michigan Power applied as a subrecipient under TVA's DOE BWRX-300 application for the Rockport site, per the corpus's AEP dossier.",
+   "context": "TVA's DOE selection (about $400M, December 2025) covers Clinch River; the AEP dossier records the joint funding request and Duke's collaboration in the same program.",
+   "source": "AEP dossier — nuclear development; Duke Energy dossier — BWRX-300 program"
+  },
+  {
+   "slug": "oklo",
+   "type": "partner",
+   "status": "announced",
+   "since": "2025",
+   "scale": "Fuel recycling and SMR PPAs to be explored",
+   "note": "TVA agreed in 2025 to explore fuel recycling at Oklo's planned Oak Ridge facility and power purchases from Oklo's reactors (FY2025 10-K).",
+   "context": "Non-binding; the IRP's 'prepare for Gen III+ and Gen IV nuclear' action is the policy frame.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm"
+  },
+  {
+   "slug": "duke-energy",
+   "type": "other",
+   "status": "historical",
+   "scale": "Former Duke Southaven plant site",
+   "note": "xAI's MZX Tech bought the former Duke Energy Southaven plant site (built 2003, sold by Duke in 2004) in July 2025 for its off-grid turbine plant next to TVA's Southaven combined cycle.",
+   "context": "A site lineage, not a dealing between TVA and Duke; the corpus's xAI dossier records the Southaven campus on 'the former 640 MW Duke Energy plant site' in MISO territory.",
+   "source": "https://www.actionnews5.com/2025/07/18/xai-buys-former-power-plant-southaven/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "TVA Act — Board rate authority, the 1957 'fence' and the $30B bond cap",
+   "status": "in-effect",
+   "exposure": "The Board has sole authority over rates with no state or federal review; TVA and its LPCs may not supply load outside the area served on July 1, 1957; bonds are capped at $30.0B outstanding, against $23.5B of debt at September 30, 2025 and total financing obligations projected at $30.7B by FY2029 with about $5B of lease-purchase entities outside the cap. Directors serve at the President's pleasure: three removals in 2025 left the Board without a quorum from April 1, 2025 to January 2026, and the bylaws bar a Board without one from new programs.",
+   "mitigation": "Lease-purchase financing (Cumberland $2.0B, Johnsonville $800M) and $2B of bank lines; delegation of FY2026 spending to the CEO while the quorum was absent.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm"
+  },
+  {
+   "regime": "Presidential memorandum on TVA compensation (March 11, 2026)",
+   "status": "in-effect",
+   "effectiveDate": "2026-03-11",
+   "exposure": "Total annual compensation at TVA is capped at $500,000, adopted within 90 days and certified by OMB within 120; the CEO's FY2026 target (a $1.2M salary plus incentives) exceeded it, the CEO retired three weeks after the memorandum, and the interim CEO is paid at the cap. The Q3 10-Q lists presidential memoranda on compensation as a risk.",
+   "source": "https://www.presidency.ucsb.edu/documents/memorandum-promoting-fiscal-responsibility-compensation-practices-the-tennessee-valley"
+  },
+  {
+   "regime": "NEPA and Clean Air Act litigation over the gas build",
+   "status": "in-effect",
+   "exposure": "As a federal agency TVA needs an EIS and record of decision for the IRP and each plant; a federal court held in September 2026 that the Kingston gas decision violated NEPA (TVA to appeal), a Clean Air Act suit over Kingston followed on September 25, 2026, the Cumberland combined cycle has been in litigation since June 2023, and a state permit appeal over Kingston is pending. TVA published revised NEPA procedures on January 21, 2026.",
+   "mitigation": "An April 2025 presidential proclamation exempts Cumberland, Gallatin, Kingston and Shawnee from the 2024 MATS update for two years (July 2027–July 2029); Shawnee SCRs are under construction for the Good Neighbor rule.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm"
+  },
+  {
+   "regime": "ITC/45X — elective pay",
+   "status": "in-effect",
+   "exposure": "TVA is an applicable entity for direct pay under IRA §6417; the 2025 budget act's accelerated wind and solar phase-outs and FEOC rules bear on its 2,528 MW of contracted solar and its storage tolls; the IRP lists tax credits among its signposts. TVA discloses no amounts received, and the battery OEMs behind the Plus Power and Tenaska tolls are not public, so FEOC exposure cannot be read.",
+   "source": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/august-20--2026/august-2026-board-presentation.pdf"
+  },
+  {
+   "regime": "DOE Generation III+ SMR program and coal 'Restoring Reliability' funding",
+   "status": "announced",
+   "effectiveDate": "2025-12",
+   "exposure": "DOE selected TVA for negotiations on about $400M for Clinch River (December 2, 2025) and up to $46M for Cumberland coal modernization (June 2026, TVA contributing about $70M) — federal money flowing to a federal corporation, with the grant terms unpublished.",
+   "source": "https://www.gevernova.com/news/press-releases/us-department-energy-announces-400-million-funding-accelerate-deployment-nation-first-commercial-small-modular-nuclear-reactor"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Michael D. (Mike) Skaggs",
+   "title": "Interim President and Chief Executive Officer",
+   "background": [
+    "Interim President and CEO from April 24, 2026 to April 24, 2027 (extendable) at a $500,000 salary while the Board conducts a permanent search",
+    "Executive Vice President and Chief Operating Officer of TVA, October 2018–June 2021; joined TVA in 1994 at Watts Bar; led the Watts Bar 2 completion and the Browns Ferry 1 recovery; retired January 2022"
+   ]
+  },
+  {
+   "name": "Thomas C. (Tom) Rice",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "background": [
+    "EVP and CFO since July 2025 (SVP and CFO January–July 2025); presented the FY2027 budget and the data-center rate package to the Board on August 20, 2026",
+    "Joined TVA in 2002; age 45 per the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Matt Rasmussen",
+   "title": "Senior Vice President and Chief Nuclear Officer",
+   "background": [
+    "Assumed the Chief Nuclear Officer duties in August 2025 after Tim Rausch's separation agreement (July 14, 2025); presents the nuclear updates to the Board",
+    "Title and start per APPA reporting located through search; TVA's own leadership page was not readable"
+   ]
+  },
+  {
+   "name": "Daniel (Dan) Pratt",
+   "title": "Senior Vice President, Customer Relations and Economic Development",
+   "background": [
+    "Presented the MZX Tech LLC (SpaceXAI) direct-service item on August 20, 2026: 'The partnership between SpaceXAI, TVA and Memphis Light, Gas and Water remains very strong'",
+    "Co-signed the February 18, 2026 rate-change letter to local power companies as SVP Customer and Stakeholder Engagement"
+   ]
+  },
+  {
+   "name": "John Mitchell (Mitch) Graves",
+   "title": "Chair of the Board of Directors",
+   "background": [
+    "Chair from February 27, 2026 to April 1, 2027; Memphis health-care executive; confirmed December 18, 2025, sworn January 2026; term to May 18, 2029",
+    "Chairs the Audit, Risk and Cybersecurity committee; Jeff Hagood is Chair-Elect for a term to May 18, 2029"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "NRC — News release 26-079: NRC issues construction permit for the Clinch River small modular reactor",
+   "url": "https://www.nrc.gov/about-nrc/news-releases/2026/26-079",
+   "date": "2026-09-29"
+  },
+  {
+   "label": "GE Vernova — NRC issues first U.S. construction permit for a BWRX-300 small modular reactor at TVA's Clinch River",
+   "url": "https://www.gevernova.com/news/press-releases/nrc-issues-first-us-construction-permit-bwrx-300-small-modular-reactor-tva-clinch-river",
+   "date": "2026-09-29"
+  },
+  {
+   "label": "American Nuclear Society — TVA receives construction permit for Clinch River",
+   "url": "https://www.ans.org/news/2026-09-29/article-8445/tva-receives-construction-permit-for-clinch-river/",
+   "date": "2026-09-29"
+  },
+  {
+   "label": "Chattanooga Times Free Press — TVA smashed September power record amid heat dome",
+   "url": "https://www.timesfreepress.com/news/2026/sep/26/tva-smashed-september-power-record-amid-heat-dome/",
+   "date": "2026-09-26"
+  },
+  {
+   "label": "SELC — Groups sue TVA over Clean Air Act violations at Kingston site",
+   "url": "https://www.selc.org/press-release/groups-sue-tva-over-clean-air-act-violations-at-kingston-site/",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "WVLT — TVA raises rates on data centers, adding upfront fee for new and existing facilities (LPC adoption; direct-served campuses)",
+   "url": "https://www.wvlt.tv/2026/09/25/tva-raises-rates-data-centers-adding-upfront-fee-new-existing-facilities/",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "NRC — Clinch River Nuclear Site Unit 1 applicant project page (dockets, schedule)",
+   "url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/applicant-projects/clinch-river",
+   "date": "2026-09-15"
+  },
+  {
+   "label": "WKMS — TVA broke law in building Kingston gas plant, court ruling finds",
+   "url": "https://www.wkms.org/energy/2026-09-10/tva-broke-law-in-building-kingston-gas-plant-court-ruling-finds",
+   "date": "2026-09-10"
+  },
+  {
+   "label": "Industrial Info Resources — TVA board adopts spending plan, commits to shielding smaller customers from large electric users (IRP ranges)",
+   "url": "https://www.industrialinfo.com/news/article/us-tva-board-adopts-spending-plan-commits-to-shielding-smaller-customers-from-large-electric-users-c--361985",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "TVA — Form 8-K, FY2027 performance scorecards (filed August 25, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000038/tve-20260820.htm",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "T&D World — TVA creates new data center rate to protect consumers, boost reliability",
+   "url": "https://www.tdworld.com/utility-business/article/55399847/tva-creates-new-data-center-rate-to-protect-consumers-boost-reliability",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "TVA — Board of Directors presentation, August 20, 2026 (IRP, rate change, FY2027 budget, MZX Tech LLC, projects over $200M)",
+   "url": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/august-20--2026/august-2026-board-presentation.pdf",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Action News 5 — TVA approves 10% rate spike for data centers to protect household ratepayers",
+   "url": "https://www.actionnews5.com/2026/08/20/tva-approves-10-rate-spike-data-centers-protect-household-rate-payers/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Commercial Appeal (via AOL) — TVA board approves agreement with SpaceXAI",
+   "url": "https://www.aol.com/articles/tva-board-approves-agreement-spacexai-234602000.html",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Southern Alliance for Clean Energy — TVA's data center rate talk is cheap until it isn't",
+   "url": "https://cleanenergy.org/news/tvas-data-center-rate-talk-is-cheap-until-it-isnt/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Appalachian Voices — TVA Board meeting, August 20, 2026 (IRP, coal, Kingston and Cumberland investments)",
+   "url": "https://appvoices.org/2026/08/20/tva-board-meeting-aug-20-26/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "TVA — Form 10-Q for the quarter ended June 30, 2026 (filed August 4, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "WSMV — TVA has signed Trump's Ratepayer Protection Pledge amid data center boom",
+   "url": "https://www.wsmv.com/2026/07/23/tva-has-signed-trumps-ratepayer-protection-pledge-amid-data-center-boom-heres-what-it-means/",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "TVA — Form 8-K, $1.0B credit agreement (filed July 15, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000033/tve-20260710.htm",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "TVA OIG — Condition of Coal Plant Assets (2026-17610)",
+   "url": "https://www.oversight.gov/reports/condition-coal-plant-assets",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "Utility Dive — TVA proposes 7 to 26 GW of natural gas in 2026 IRP",
+   "url": "https://www.utilitydive.com/news/tva-proposes-7-to-26-gw-natural-gas-2026-irp/823520/",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "APPA — TVA details recent milestones on Cumberland combined cycle project",
+   "url": "https://www.publicpower.org/periodical/article/tva-details-recent-milestones-cumberland-combined-cycle-project",
+   "date": "2026-06-21"
+  },
+  {
+   "label": "Chattanooga Times Free Press — Google invests $1.5B to expand Alabama data center",
+   "url": "https://www.timesfreepress.com/news/2026/jun/15/google-invests-15b-to-expand-alabama-data-center/",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "TVA — Form 8-K, Cumberland combined cycle lease-purchase (filed May 28, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000031/tve-20260521.htm",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "WVLT — TVA proposes new rate class for data centers to protect customer power bills",
+   "url": "https://www.wvlt.tv/2026/05/27/tva-proposes-new-rate-class-data-centers-protect-customer-power-bills/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "TVA — Board of Directors presentation, May 21, 2026",
+   "url": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/may-21--2026/may-2026-board-presentation.pdf",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "APPA — TVA releases Existing Generation Resource RFP for firm capacity and energy offers",
+   "url": "https://www.publicpower.org/periodical/article/tva-releases-existing-generation-resource-rfp-firm-capacity-and-energy-offers",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Utility Dive — TVA, Plus Power to deploy 200 MW / 800 MWh BESS in Alabama",
+   "url": "https://www.utilitydive.com/news/tva-plus-power-to-deploy-200-mw800-mwh-bess-in-alabama/818717/",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "APPA — TVA board of directors selects Mike Skaggs as TVA's interim president and CEO",
+   "url": "https://www.publicpower.org/periodical/article/tva-board-directors-selects-mike-skaggs-tvas-interim-president-and-ceo",
+   "date": "2026-04-25"
+  },
+  {
+   "label": "TVA — Form 8-K, appointment of Michael D. Skaggs as Interim President and CEO",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000026/tve-20260424.htm",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "pv magazine USA — Tenaska, TVA sign agreement for 225 MW battery project in Tennessee",
+   "url": "https://pv-magazine-usa.com/2026/04/21/tenaska-tva-sign-agreement-for-225-mw-battery-project-in-tennessee/",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "APPA — TVA, Plus Power announce 20-year energy storage agreement",
+   "url": "https://www.publicpower.org/periodical/article/tva-plus-power-announce-20-year-energy-storage-agreement",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "SELC — xAI built an illegal power plant to power its data center (Southaven)",
+   "url": "https://www.selc.org/news/xai-built-an-illegal-power-plant-to-power-its-data-center/",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "Federal Register — Clinch River Nuclear Site Unit 1, final supplemental environmental impact statement",
+   "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06571/tennessee-valley-authority-clinch-river-nuclear-site-unit-1-final-supplemental-environmental-impact",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "TVA — Form 8-K, retirement notice of President and CEO Donald A. Moul",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000022/tve-20260403.htm",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "The American Presidency Project — Memorandum promoting fiscal responsibility in compensation practices at the Tennessee Valley Authority",
+   "url": "https://www.presidency.ucsb.edu/documents/memorandum-promoting-fiscal-responsibility-compensation-practices-the-tennessee-valley",
+   "date": "2026-03-11"
+  },
+  {
+   "label": "TVA — Form 8-K, election of Mitch Graves as Chair and Jeff Hagood as Chair-Elect",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000019/tve-20260227.htm",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "TVA — Form 8-K, resignation of Chair William J. Renick and departure of EVP Jeremy Fisher",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000017/tve-20260224.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "TVA — Rate-change letter to local power companies (hosted by WATE)",
+   "url": "https://www.wate.com/wp-content/uploads/sites/42/2026/05/Rate-Change-Letter-021226_Final_SIGNED.pdf",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "Action News 5 — TVA approves power increase for xAI (150 MW, CTC Property LLC)",
+   "url": "https://www.actionnews5.com/2026/02/12/tva-approves-power-increase-xai/",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "TVA — Board of Directors presentation, February 11, 2026 (Kingston and Cumberland coal continuation; xAI 150 MW)",
+   "url": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/february-11--2026/february-2026-board-presentation.pdf",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Utility Dive — TVA plans nuclear, gas to meet demand growth; data centers 18% of industrial load",
+   "url": "https://www.utilitydive.com/news/tva-tennessee-valley-authority-nuclear-gas-demand-growth/811306/",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "APPA — Four new members join TVA board of directors; quorum restored",
+   "url": "https://www.publicpower.org/periodical/article/four-new-members-join-tva-board-directors-quorum-restored",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "TVA — Form 8-K/A, Board committee assignments (filed January 20, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000008/tve-20251218.htm",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "Federal Register — Allen Aeroderivative Combustion Turbine Project record of decision",
+   "url": "https://www.federalregister.gov/documents/2026/01/14/2026-00570/allen-aeroderivative-combustion-turbine-project",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "TVA — Form 8-K, Senate confirmation of four directors (filed December 22, 2025)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000060/tve-20251218.htm",
+   "date": "2025-12-22"
+  },
+  {
+   "label": "GE Vernova — U.S. Department of Energy announces $400 million in funding to accelerate deployment of the nation's first commercial small modular nuclear reactor",
+   "url": "https://www.gevernova.com/news/press-releases/us-department-energy-announces-400-million-funding-accelerate-deployment-nation-first-commercial-small-modular-nuclear-reactor",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "TVA — Form 10-K for the fiscal year ended September 30, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+   "date": "2025-11-13"
+  },
+  {
+   "label": "WKMS — TVA plans first major battery storage addition (1,500 MW authorization)",
+   "url": "https://www.wkms.org/energy/2025-11-08/tva-plans-first-major-battery-storage-addition",
+   "date": "2025-11-08"
+  },
+  {
+   "label": "TVA — Board of Directors presentation, November 6, 2025 (battery options; FY2025 results)",
+   "url": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/november-6--2025/november-2025-board-presentation.pdf",
+   "date": "2025-11-06"
+  },
+  {
+   "label": "Commercial Dispatch — $800 million TVA energy plant breaks ground outside Caledonia",
+   "url": "https://cdispatch.com/news/800-million-tva-energy-plant-breaks-ground-outside-caledonia/",
+   "date": "2025-10-23"
+  },
+  {
+   "label": "POWER — TVA, ENTRA1 sign agreement for 6 GW, six-plant nuclear SMR collaboration",
+   "url": "https://www.powermag.com/tva-entra1-sign-agreement-for-6-gw-six-plant-nuclear-smr-collaboration/",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "WAFF — TVA to buy power from nuclear plant to fuel Google data center in Jackson County (Kairos; 11,000 MW of requests)",
+   "url": "https://www.waff.com/2025/08/27/tva-buy-power-nuclear-plant-fuel-google-data-center-jackson-county/",
+   "date": "2025-08-27"
+  },
+  {
+   "label": "APPA — Google, TVA enter agreement tied to data center demand response",
+   "url": "https://www.publicpower.org/periodical/article/google-tva-enter-agreement-tied-data-center-demand-response",
+   "date": "2025-08-04"
+  },
+  {
+   "label": "Action News 5 — xAI buys former power plant in Southaven",
+   "url": "https://www.actionnews5.com/2025/07/18/xai-buys-former-power-plant-southaven/",
+   "date": "2025-07-18"
+  },
+  {
+   "label": "TVA — Form 8-K, removal of director Beth Geer; Board without a quorum",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000038/tve-20250610.htm",
+   "date": "2025-06-10"
+  },
+  {
+   "label": "MLGW — xAI update (150 MW energized; curtailment agreement; MLGW has no role in the turbines)",
+   "url": "https://www.mlgw.com/images/content/files/pdf/new/5-5-25%20xAI%20Update.pdf",
+   "date": "2025-05-05"
+  },
+  {
+   "label": "PR Newswire — TVA requests proposals for battery storage at Kingston Energy Complex (100 MW)",
+   "url": "https://www.prnewswire.com/news-releases/tva-requests-proposals-for-battery-storage-at-kingston-energy-complex-302395874.html",
+   "date": "2025-03-07"
+  },
+  {
+   "label": "Action News 5 — TVA approves providing power to xAI facility (150 MW via MLGW)",
+   "url": "https://www.actionnews5.com/2024/11/07/tva-approves-providing-power-xai-facility/",
+   "date": "2024-11-07"
+  },
+  {
+   "label": "World Nuclear News — TVA approves further funding for Clinch River SMR ($350M total)",
+   "url": "https://www.world-nuclear-news.org/Articles/TVA-approves-further-funding-for-Clinch-River-SMR",
+   "date": "2024-08-23"
+  },
+  {
+   "label": "GE Vernova — GE Vernova inks milestone aeroderivative order to help enhance stability of energy grid in Tennessee region (16 LM6000VELOX, Kingston)",
+   "url": "https://www.gevernova.com/news/press-releases/ge-vernova-inks-milestone-aeroderivative-order-help-enhance-stability-energy-grid-tennessee-region",
+   "date": "2024-05-06"
+  },
+  {
+   "label": "SEC EDGAR — Tennessee Valley Authority company filings (CIK 0001376986)",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001376986&type=&dateb=&owner=include&count=40"
+  }
+ ],
+ "lastUpdated": "2026-09-29",
+ "profileVersion": 1
+}

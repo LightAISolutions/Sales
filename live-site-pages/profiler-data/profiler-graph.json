@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-30",
- "companies": 196,
+ "companies": 199,
  "edges": [
   {
    "a": "5c-group",
@@ -249,6 +249,34 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "5c-group",
+   "b": "tva",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Local records show the reality behind the table: 25 of a 75 MW Springfield phase due by the end of September 2026, 20 MW plus an approved 9 MW at Memphis with the next 50 MW waiting on TVA approval, and Phoenix a year late.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: 'over 2 GW' became 'over 1.5 gigawatts' with no explanation; '600 MW available in 6–18 months' (Apr 2025) became about 110 MW operational (Sep 2026); Springfield 'operational by early 2026' became 25 MW by the end of September 2026; Memphis 'this summer' (2025) became 20 MW in 2026 with the next 50 MW waiting on TVA.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "MLGW: 5C approved for 9 MW more at Memphis; its next 50 MW and an unnamed 300 MW project need TVA approval and 'won't advance' before Q1 2027; data centres pay a US$1.52M-per-MW capacity charge — Memphis growth is gated by TVA, not by 5C.",
+     "src": "https://www.yahoo.com/news/us/articles/mlgw-hints-future-data-center-214834214.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-01"
   },
   {
    "a": "5c-group",
@@ -2325,6 +2353,23 @@
      "from": "a"
     }
    ],
+   "last": "2025"
+  },
+  {
+   "a": "aep",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "AEP's Indiana Michigan Power applied as a subrecipient under TVA's DOE BWRX-300 application for the Rockport site, per the corpus's AEP dossier.",
+     "context": "TVA's DOE selection (about $400M, December 2025) covers Clinch River; the AEP dossier records the joint funding request and Duke's collaboration in the same program.",
+     "source": "AEP dossier — nuclear development; Duke Energy dossier — BWRX-300 program",
+     "status": "active",
+     "since": "2025",
+     "scale": "BWRX-300 program (Rockport application as subrecipient)"
+    }
+   },
+   "evid": [],
    "last": "2025"
   },
   {
@@ -5399,6 +5444,20 @@
     }
    ],
    "last": "2026-08-03"
+  },
+  {
+   "a": "amazon",
+   "b": "salt-river-project",
+   "evid": [
+    {
+     "where": "Capabilities · Marigold Energy Center — the 2032 self-developed hybrid and its siting case",
+     "date": "",
+     "text": "Against NiSource's ring-fenced GenCo (two 1.3 GW combined cycles plus a 400 MW battery for Amazon) it is a system resource, not a customer's; against Marigold's own solar and storage the gas leg is the only part a state body can stop.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "amazon",
@@ -11180,6 +11239,46 @@
   },
   {
    "a": "aypa-power",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Aypa's Pediment battery (250 MW / 1,000 MWh, Mesa) came online June 16, 2026 under an SRP energy storage agreement running to FY2046, and a second Aypa project of 250 MW / 2,000 MWh is under contract for December 2028.",
+     "context": "Pediment was originated by Eolian in 2018 and bid jointly with Aypa into SRP's 2023 all-source RFP; SRP announced the agreement July 18, 2024 and Aypa financed it in December 2024. The second project is SRP's first eight-hour lithium contract. The corpus's Aypa dossier records the same facts from Aypa's side, including the 20-year term.",
+     "source": "https://media.srpnet.com/srp-and-aypa-power-bring-new-battery-storage-system-online-to-strengthen-grid-reliability/",
+     "status": "active",
+     "since": "2024-07",
+     "scale": "500 MW / 3,000 MWh across two projects",
+     "via": "Energy storage agreements"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Named counterparties per company or counterparty releases and filings: SDG&E, Idaho Power, Salt River Project, San Diego Community Power, Northern California Power Agency, PG&E (CPUC Resolution E-5437), Santee Cooper, United Power, DTE Electric (Michigan PSC), the Ontario IESO (LT1) and two California CCAs.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "SRP had 'more than 1,570 MW of battery storage' on its system by June 16, 2026 (1,300 MW including 200 MW of pumped hydro in October 2025), nearly all under long-term energy storage agreements in which the developer owns and operates the plant and SRP dispatches it: Plus Power's Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024 with Tesla Megapacks and Burns & McDonnell as EPC at Sierra Estrella; Aypa Power's Pediment (250 MW / 1,000 MWh, Mesa, online June 16, 2026, ESA to FY2046) with a second Aypa project of 250 MW / 2,000 MWh — eight hours — due December 2028; EDP Renewables' Flatland (200 MW / 800 MWh, Coolidge, $271M, Tesla, completed June 2026, a 24-year ESA); Ørsted's Eleven Mile (300 MW solar plus 300 MW / four-hour storage, 2024, most of it dedicated to Meta); NextEra's Sonoran (260 MW solar plus 260 MW / 1 GWh), Storey (88 plus 88 MW) and Saint (100 MW), the first two dedicated to Google; and SRP's own Bolster battery (25 MW / 100 MWh, Tesla, 2021).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-16",
+     "text": "Aypa Power's Pediment battery (250 MW / 1,000 MWh, Mesa) comes online under its SRP energy storage agreement; a second Aypa project of 250 MW / 2,000 MWh is due December 2028; SRP's fleet passes 1,570 MW of batteries — SRP's first eight-hour lithium contract, a year and a half before Marigold's eight-hour specification is bid.",
+     "src": "https://media.srpnet.com/srp-and-aypa-power-bring-new-battery-storage-system-online-to-strengthen-grid-reliability/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-16"
+  },
+  {
+   "a": "aypa-power",
    "b": "spearmint-energy",
    "evid": [
     {
@@ -11496,6 +11595,38 @@
     }
    ],
    "last": "2025-12-11"
+  },
+  {
+   "a": "bechtel",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Bechtel is a named project partner for the Clinch River BWRX-300 with Sargent & Lundy and GE Vernova Hitachi.",
+     "context": "The construction scope and contract value are not on the record; the corpus's Sargent & Lundy dossier records the same team and Bechtel's 2025 supplier award to Sargent & Lundy.",
+     "source": "https://www.ans.org/news/2026-09-29/article-8445/tva-receives-construction-permit-for-clinch-river/",
+     "status": "active",
+     "since": "2025",
+     "scale": "Clinch River BWRX-300"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SMR owner: the BWRX-300 construction permit (dockets 99902056 and 05000615) with GE Vernova Hitachi, Bechtel and Sargent & Lundy, about $400M selected by DOE in December 2025 on top of $350M of Board development funding, plus a 50 MW Kairos PPA for Google's load, an ENTRA1/NuScale 6 GW non-binding collaboration and an Oklo fuel-recycling agreement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New nuclear — Clinch River BWRX-300, the first U.S. SMR construction permit",
+     "date": "",
+     "text": "Partners are GE Vernova Hitachi, Bechtel and Sargent & Lundy (the corpus's Sargent & Lundy dossier has it as TVA's owner's engineer and detailed-design lead, with a 2026 Valley Supplier Award); Ontario Power Generation's Darlington unit is the lead BWRX-300.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
   },
   {
    "a": "berkshire-hathaway-energy",
@@ -14895,6 +15026,23 @@
   },
   {
    "a": "blattner",
+   "b": "florida-power-light",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "The corpus's Blattner dossier records that FPL selected Black & Veatch and Blattner for its 2017 solar energy centers and counts NextEra/FPL among Blattner's repeat-owner frameworks.",
+     "context": "Carried from Blattner's side; FPL's current solar and battery EPCs are not disclosed in the filings read.",
+     "source": "Blattner dossier — repeat-owner frameworks",
+     "status": "historical",
+     "since": "2017",
+     "scale": "2017 solar energy centers"
+    }
+   },
+   "evid": [],
+   "last": "2017"
+  },
+  {
+   "a": "blattner",
    "b": "fluence",
    "curated": {
     "a": {
@@ -16397,6 +16545,31 @@
     }
    },
    "evid": [],
+   "last": "2024"
+  },
+  {
+   "a": "burns-mcdonnell",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Burns & McDonnell was the EPC for Plus Power's Sierra Estrella battery, which SRP dispatches under its energy storage agreement.",
+     "context": "The EPC contract was Plus Power's, not SRP's; it is recorded here because Sierra Estrella is the largest battery on SRP's system and the only one whose EPC is named.",
+     "source": "https://www.burnsmcd.com/news/completion-sierria-estrella-energy-storage-facility",
+     "status": "historical",
+     "since": "2024",
+     "scale": "1 GWh"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "SRP had 'more than 1,570 MW of battery storage' on its system by June 16, 2026 (1,300 MW including 200 MW of pumped hydro in October 2025), nearly all under long-term energy storage agreements in which the developer owns and operates the plant and SRP dispatches it: Plus Power's Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024 with Tesla Megapacks and Burns & McDonnell as EPC at Sierra Estrella; Aypa Power's Pediment (250 MW / 1,000 MWh, Mesa, online June 16, 2026, ESA to FY2046) with a second Aypa project of 250 MW / 2,000 MWh — eight hours — due December 2028; EDP Renewables' Flatland (200 MW / 800 MWh, Coolidge, $271M, Tesla, completed June 2026, a 24-year ESA); Ørsted's Eleven Mile (300 MW solar plus 300 MW / four-hour storage, 2024, most of it dedicated to Meta); NextEra's Sonoran (260 MW solar plus 260 MW / 1 GWh), Storey (88 plus 88 MW) and Saint (100 MW), the first two dedicated to Google; and SRP's own Bolster battery (25 MW / 100 MWh, Tesla, 2021).",
+     "src": "",
+     "from": "b"
+    }
+   ],
    "last": "2024"
   },
   {
@@ -29523,6 +29696,24 @@
   },
   {
    "a": "dominion-energy",
+   "b": "florida-power-light",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "NextEra's merger with Dominion (announced May 18, 2026) would make Dominion a wholly owned subsidiary beside FPL; both shareholder votes passed September 3, 2026, the Virginia SCC hearing is November 17, 2026 and closing is expected in the second half of 2027.",
+     "context": "Post-close ownership about 74.5 percent NextEra / 25.5 percent Dominion holders; the combined company keeps the NEE name and ticker, adds Richmond as a co-headquarters and Cayce, South Carolina as operational headquarters, and names Robert Blue president and CEO of the regulated utilities with Scott Bores staying at FPL. Conditions: HSR, FERC, NRC, Virginia, North Carolina and South Carolina without a 'Burdensome Condition'; outside date November 15, 2027 (extendable to August 15, 2028); termination fees of $4.8B or $6.5B payable by NextEra and about $2.2B by Dominion. NextEra's own filings state no headline value. The corpus's Dominion and NEER dossiers carry the transaction.",
+     "source": "https://www.sec.gov/Archives/edgar/data/753308/000110465926063001/tm2614888d1_ex99-1.htm",
+     "status": "announced",
+     "since": "2026-05",
+     "scale": "0.8138 NEE shares plus a pro-rata share of $360M cash per Dominion share; about $66.8B per third-party accounts",
+     "via": "Agreement and Plan of Merger dated May 15, 2026"
+    }
+   },
+   "evid": [],
+   "last": "2026-05"
+  },
+  {
+   "a": "dominion-energy",
    "b": "form-energy",
    "curated": {
     "b": {
@@ -30591,6 +30782,45 @@
   },
   {
    "a": "duke-energy",
+   "b": "florida-power-light",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "The Vandolah plant FPL is acquiring (FERC-approved December 2025, in FPL's fleet from June 1, 2027) is tolled to Duke Energy Florida through June 2027.",
+     "context": "The corpus's Duke Energy dossier cites FPL's LLCS-1/LLCS-2 as the in-state benchmark for the large-load schedule Duke Energy Florida committed to propose in its next rate case; it reads the thresholds as 50 MW and 85 percent, consistent with the tariff sheets.",
+     "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+     "status": "announced",
+     "since": "2025-12",
+     "scale": "672 MW Vandolah peaker"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For gas vendors the doors are the Vandolah 672 MW peaker acquisition (June 2027, tolled to Duke Energy Florida until then), turbine upgrades and 3,276 MW of new simple-cycle capacity in 2032–35 with no combined cycle in the plan; for nuclear vendors, early-site-permit work in 2026–27 for a small modular reactor beside an existing plant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Solar, gas and nuclear — 20 GW of solar by 2035, Vandolah, 3.3 GW of new peakers and an SMR early site permit",
+     "date": "",
+     "text": "Gas: 24,314 MW owned, mostly combined cycle; the Vandolah 672 MW dual-fuel peaker in Hardee County (FERC-approved December 2025, tolled to Duke Energy Florida through June 2027) joins the fleet June 1, 2027; combined-cycle upgrades of 43 MW (2027) and 19 MW (2028); and 3,276 MW of new simple-cycle capacity — 936 MW in each of 2032, 2033 and 2034 and 468 MW in 2035 — with no new combined cycle in the plan and the turbine OEM unnamed (the plan says the CT OEMs approached FPL about upgrades).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12",
+     "text": "FERC approves FPL's acquisition of the 672 MW Vandolah dual-fuel peaker in Hardee County, tolled to Duke Energy Florida through June 2027 and joining FPL's fleet June 1, 2027 — FPL's only near-term gas addition is a purchase, not a build; new turbines wait until 2032.",
+     "src": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12"
+  },
+  {
+   "a": "duke-energy",
    "b": "ge-vernova",
    "curated": {
     "a": {
@@ -30922,6 +31152,30 @@
      "where": "Capabilities · Battery storage — ~4.5 GW online by 2031, utility-owned on retired coal sites and at solar plants",
      "date": "",
      "text": "Duke is a utility-owned storage buyer in the Southern Company and Xcel mould — batteries enter rate base at retired coal sites — rather than a PPA counterparty like NV Energy; the 4.5 GW by 2031 is comparable to Georgia Power's certified program and about twice Dominion's 2,000 MW by 2045 IRP figure, with the supplier still undisclosed.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "duke-energy",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "xAI's MZX Tech bought the former Duke Energy Southaven plant site (built 2003, sold by Duke in 2004) in July 2025 for its off-grid turbine plant next to TVA's Southaven combined cycle.",
+     "context": "A site lineage, not a dealing between TVA and Duke; the corpus's xAI dossier records the Southaven campus on 'the former 640 MW Duke Energy plant site' in MISO territory.",
+     "source": "https://www.actionnews5.com/2025/07/18/xai-buys-former-power-plant-southaven/",
+     "status": "historical",
+     "scale": "Former Duke Southaven plant site"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Nuclear fleet — 10,773 MW, subsequent license renewals, uprates and the 2037 new-nuclear option",
+     "date": "",
+     "text": "Lee site in Cherokee County, South Carolina for a large reactor, collaborates with TVA on the DOE-funded BWRX-300 program, and signed 2024 agreements with Amazon, Google, Microsoft and Nucor to fund such projects through tariffs.",
      "src": "",
      "from": "a"
     }
@@ -32141,6 +32395,23 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "edgecore",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "EdgeCore's Mesa campus is SRP-served; SRP's general manager was quoted in EdgeCore's May 20, 2025 expansion release.",
+     "context": "The corpus's EdgeCore dossier adds that SRP's switchyard needs cut EdgeCore's Mesa expansion by a building in March 2026 and that the Large Customer Integration Process requires dedicated upgrades to be funded upfront — both from EdgeCore's side.",
+     "source": "https://edgecore.com/edgecore-digital-infrastructure-announces-expansion-of-its-metro-phoenix-data-center-market-to-over-450-mw/",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "206 MW operating and 250 MW under construction"
+    }
+   },
+   "evid": [],
+   "last": "2025-05"
   },
   {
    "a": "edgecore",
@@ -35505,6 +35776,34 @@
   },
   {
    "a": "excelsior-energy-capital",
+   "b": "tva",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: neither release names a site, MW or offtaker; the only hyperscaler revenue on the record runs through utilities (Meta via PacifiCorp Schedule 34 at Faraday; Google via TVA at Skyhawk).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owned operating portfolio — utility-scale solar, wind and distributed solar",
+     "date": "",
+     "text": "The assets the funds own and operate, headed by Faraday Solar (Utah County, 685.3 MWdc / 525 MWac, COD 30 September 2025) and including Prairie Breeze II and III wind (109 MW, Nebraska, acquired from Invenergy 2019–2020), Skyhawk Solar (Tennessee, TVA/Google), El Centro (25 MWdc, California), the Syncarpha and Nokomis distributed portfolios, and the Investments-page entries the firm lists by state (Arizona, California, Colorado, Massachusetts, Minnesota, Nebraska, New Mexico, New York, Tennessee, Texas, Utah, Vermont, Washington).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owned operating portfolio — utility-scale solar, wind and distributed solar",
+     "date": "",
+     "text": "Contracted, investment-grade offtake is the pattern on the owned book — PacifiCorp/Meta at Faraday, AA-rated municipal buyers at Prairie Breeze, TVA at Skyhawk, Xcel community-solar tariffs in Minnesota.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "excelsior-energy-capital",
    "b": "xcel-energy",
    "curated": {
     "a": {
@@ -37417,6 +37716,90 @@
    },
    "evid": [],
    "last": "2018"
+  },
+  {
+   "a": "florida-power-light",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "FPL and NextEra Energy Resources are the two reporting segments of NextEra Energy; they share a common platform, NextEra's Power Generation Division operates both fleets, and NEER's president and CEO Brian Bolster was FPL's CFO.",
+     "context": "The two books are separate: FPL's 991 MW of batteries and 7,454 MW plan sit in rate base, NEER's about 5.2 GW operating fleet and 110 GW storage pipeline are merchant and contracted. A third-party description of Manatee as owned and operated by NEER is contradicted by FPL's Ten-Year Site Plan and 10-K, which count Manatee in FPL's 991 MW. The corpus's NEER dossier (profileVersion 4) records FPL's 991 MW, its 20-plus GW of inquiries and the $2B per GW economics from NEER's side, consistent with this record; the merger's '130 GW' pipeline is the combined group's figure (48.5 GW Dominion, 21 GW FPL, more than 60 GW NEER).",
+     "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+     "status": "active",
+     "scale": "Sister subsidiaries of NextEra Energy, Inc."
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The sister company matters to a seller only as contrast: NextEra Energy Resources' merchant fleet and 30-hub data-center pipeline are separate books, and one trade-press claim that Manatee is NEER-owned is contradicted by FPL's own filings.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-owned battery storage — Manatee, the northwest Florida fleet and 7,454 MW through 2035",
+     "date": "",
+     "text": "Against the sister NextEra Energy Resources (about 5.2 GW operating, a 110 GW storage pipeline, domestic supply locked through 2029) FPL is the rate-based buyer whose 74.5 MW blocks follow its 74.5 MW solar sites.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "florida-power-light",
+   "b": "nisource",
+   "evid": [
+    {
+     "where": "Capabilities · Solar, gas and nuclear — 20 GW of solar by 2035, Vandolah, 3.3 GW of new peakers and an SMR early site permit",
+     "date": "",
+     "text": "A gas-and-solar utility adding 20 GW of solar and 3.3 GW of peakers with no combined cycle — the inverse of PPL's and NiSource's regulated CCGT builds — and, with Duke, one of two corpus utilities relicensing nuclear to 80 years while starting SMR siting.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "florida-power-light",
+   "b": "ppl",
+   "evid": [
+    {
+     "where": "Capabilities · LLCS-1 and LLCS-2 large-load contract service and the data-center funnel",
+     "date": "",
+     "text": "The most fully specified large-load tariff in the corpus and the one with the longest term: 20 years (on the useful life of batteries), against PPL's 10, SRP's undisclosed term and APS's still-pending collateral and exit terms.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Solar, gas and nuclear — 20 GW of solar by 2035, Vandolah, 3.3 GW of new peakers and an SMR early site permit",
+     "date": "",
+     "text": "A gas-and-solar utility adding 20 GW of solar and 3.3 GW of peakers with no combined cycle — the inverse of PPL's and NiSource's regulated CCGT builds — and, with Duke, one of two corpus utilities relicensing nuclear to 80 years while starting SMR siting.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "florida-power-light",
+   "b": "quanta-services",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Quanta's Irby Construction built the Manatee Energy Storage Center — 132 containers, 53,144 modules and a 230/34.5 kV substation — completed December 2021.",
+     "context": "The battery OEM is not disclosed by FPL, Quanta or trade press. The corpus's Blattner dossier records FPL selecting Black & Veatch and Blattner for 2017 solar centers and lists NextEra/FPL among its repeat-owner frameworks; no current FPL EPC award to any covered contractor is on the record.",
+     "source": "https://www.quantaservices.com/stories/manatee-battery-energy-storage-center",
+     "status": "historical",
+     "since": "2021",
+     "scale": "409 MW / 900 MWh Manatee Energy Storage Center",
+     "via": "Irby Construction (EPC)"
+    }
+   },
+   "evid": [],
+   "last": "2021"
   },
   {
    "a": "fluence",
@@ -40632,6 +41015,24 @@
   },
   {
    "a": "ge-vernova",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Coolidge runs twelve GE LM6000 Sprint units from 2011 and is adding twelve more (575 MW), the first six online by summer 2026 and the rest by summer 2027.",
+     "context": "The expansion is the settled version of an 820 MW, 16-unit plan the ACC rejected in 2022; the amended CEC of June 21, 2023 caps it at a 30 percent capacity factor. GE is the only turbine OEM named anywhere in SRP's record; Marigold's gas design was not yet selected as of December 2025.",
+     "source": "https://www.powermag.com/srps-urgent-575-mw-aeroderivative-natural-gas-expansion-gets-arizona-regulators-green-light/",
+     "status": "active",
+     "since": "2011",
+     "scale": "575 MW expansion (12 LM6000 units) on 12 existing units",
+     "via": "LM6000 aeroderivative turbines at Coolidge"
+    }
+   },
+   "evid": [],
+   "last": "2011"
+  },
+  {
+   "a": "ge-vernova",
    "b": "sargent-lundy",
    "curated": {
     "b": {
@@ -40754,6 +41155,60 @@
     }
    ],
    "last": "2025-06-03"
+  },
+  {
+   "a": "ge-vernova",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "GE Vernova supplied ten LM6000VELOX units at Johnsonville (500 MW, in service 2025) and 16 at Kingston (up to 850 MW, ordered May 6, 2024 for 2028); the Board approved three 7F.05 combustion turbines for $300M on August 20, 2026; GE Vernova Hitachi's BWRX-300 received the Clinch River construction permit on September 29, 2026.",
+     "context": "GE is the only turbine OEM on TVA's record; the Cumberland and Kingston combined-cycle turbines and the New Caledonia frames are unattributed. The 27 GE Vernova TM2500 units at xAI's Southaven plant are xAI's rental fleet, not TVA's.",
+     "source": "https://www.gevernova.com/news/press-releases/nrc-issues-first-us-construction-permit-bwrx-300-small-modular-reactor-tva-clinch-river",
+     "status": "active",
+     "since": "2023",
+     "scale": "26 LM6000VELOX (1,350 MW) + three 7F.05 turbines ($300M) + the BWRX-300",
+     "via": "LM6000VELOX aeroderivatives, 7F.05 frame turbines, BWRX-300 (GE Vernova Hitachi)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For turbine vendors TVA is a repeat GE Vernova buyer (10 LM6000VELOX at Johnsonville in service 2025, 16 at Kingston for 2028, three 7F.05 frame units approved August 2026) with a 1,450 MW Cumberland combined cycle synchronizing in May 2026, a 500 MW New Caledonia frame plant for May 2028, Allen (200 MW aero, 2027), Lagoon Creek (350 MW) and the unsited $3.5B 2032 plant, and it has reversed the Kingston and Cumberland coal retirements.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SMR owner: the BWRX-300 construction permit (dockets 99902056 and 05000615) with GE Vernova Hitachi, Bechtel and Sargent & Lundy, about $400M selected by DOE in December 2025 on top of $350M of Board development funding, plus a 50 MW Kairos PPA for Google's load, an ENTRA1/NuScale 6 GW non-binding collaboration and an Oklo fuel-recycling agreement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The 2026 Integrated Resource Plan and the generation build — gas, coal kept, storage tolls, Cumberland and Kingston",
+     "date": "",
+     "text": "The build in progress: Cumberland's 1,450 MW combined cycle (first fire April 28, 2026, CT1 synchronized May 29, commercial by December 2026, financed by a $2.0B lease-purchase closed May 26, 2026), Kingston's about 1,500 MW complex (a combined cycle for 2027 plus 16 GE Vernova LM6000VELOX aeroderivatives of up to 850 MW for 2028, a 100 MW battery and a few MW of solar), Johnsonville's ten LM6000VELOX units (500 MW, in service 2025, $652M) with ten legacy units kept, Allen's six aeroderivatives (about 200 MW, Memphis, 2027), New Caledonia's six dual-fuel frame turbines (500 MW, Steens, Mississippi, about $800M, May 2028), Lagoon Creek's four turbines (350 MW, up to $668M), three GE 7F.05 frame turbines approved August 2026 for $300M, and a 'New Gas Facility 2032' at $3,517.5M replacing the cancelled 900 MW Cheatham County plant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New nuclear — Clinch River BWRX-300, the first U.S. SMR construction permit",
+     "date": "",
+     "text": "The NRC issued the construction permit for a 300 MW GE Vernova Hitachi BWRX-300 at the Clinch River site in Oak Ridge on September 29, 2026 — 'the nation's first commercial small modular reactor' permit, fourteen months after formal review began in July 2025 and four months ahead of schedule (dockets 99902056 and 05000615; final safety evaluation June 25, 2026; final supplemental EIS April 6, 2026; mandatory hearing August 13, 2026; an operating license is still required).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New nuclear — Clinch River BWRX-300, the first U.S. SMR construction permit",
+     "date": "",
+     "text": "Partners are GE Vernova Hitachi, Bechtel and Sargent & Lundy (the corpus's Sargent & Lundy dossier has it as TVA's owner's engineer and detailed-design lead, with a 2026 Valley Supplier Award); Ontario Power Generation's Darlington unit is the lead BWRX-300.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023"
   },
   {
    "a": "ge-vernova",
@@ -41890,6 +42345,59 @@
   },
   {
    "a": "google",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Google's Mesa campus is served through SRP by NextEra's Sonoran, Storey and Babbitt Ranch under an eight-year pact, and Google co-funds SRP's long-duration storage pilots (Energy Dome, ESS) through the September 2025 collaboration.",
+     "context": "SRP projects Google at or above 80 percent hourly carbon-free energy by 2026. The corpus's Google dossier records SRP among its demand-response and storage-innovation counterparties.",
+     "source": "https://media.srpnet.com/srp-and-google-launch-collaboration-to-advance-long-duration-energy-storage-innovation-grid-resilience-in-arizona/",
+     "status": "active",
+     "since": "2024-03",
+     "scale": "More than 430 MW of carbon-free capacity over eight years, plus co-funded long-duration pilots"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For gas vendors the doors are Marigold (technology 'not yet selected'), the Coronado and Springerville coal-to-gas conversions by late 2029, and the LM6000 fleet at Coolidge (twelve new units, 575 MW, first six online by summer 2026); for data-center developers SRP is the Mesa-side utility (Meta, Google, EdgeCore, Apple) that funds no speculative capacity — E-67's 80 percent minimum billing demand, the customer-paid LCIP upgrades and a maximum load SRP sets from the customer's forecast are the terms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "SRP had 'more than 1,570 MW of battery storage' on its system by June 16, 2026 (1,300 MW including 200 MW of pumped hydro in October 2025), nearly all under long-term energy storage agreements in which the developer owns and operates the plant and SRP dispatches it: Plus Power's Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024 with Tesla Megapacks and Burns & McDonnell as EPC at Sierra Estrella; Aypa Power's Pediment (250 MW / 1,000 MWh, Mesa, online June 16, 2026, ESA to FY2046) with a second Aypa project of 250 MW / 2,000 MWh — eight hours — due December 2028; EDP Renewables' Flatland (200 MW / 800 MWh, Coolidge, $271M, Tesla, completed June 2026, a 24-year ESA); Ørsted's Eleven Mile (300 MW solar plus 300 MW / four-hour storage, 2024, most of it dedicated to Meta); NextEra's Sonoran (260 MW solar plus 260 MW / 1 GWh), Storey (88 plus 88 MW) and Saint (100 MW), the first two dedicated to Google; and SRP's own Bolster battery (25 MW / 100 MWh, Tesla, 2021).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "Contracted next: Invenergy's SunDog (200 MW solar plus 200 MW / four-hour storage, Pinal County, announced March 17, 2026 as the first SRP–Invenergy agreement; date and contract type unstated), BrightNight's Eagle Eye (400 MW of solar and storage, La Paz County, from the 2024 RFP), Valley Farms (400 MW of batteries, FY2028) and Selma (150 MW solar plus 150 MW storage) at Coolidge, the Marigold 400 MW / eight-hour battery (2029–30), and two long-duration pilots at Copper Crossing — ESS Tech's 5 MW / 50 MWh iron-flow system under a ten-year agreement by December 2027 and CMBlu's 5 MW organic-flow Desert Blume — plus Energy Dome's 19 MW / ten-hour CO2 battery at Coronado under a 20-year tolling agreement co-funded by Google, due 2029.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-16",
+     "text": "Energy Dome to build a 19 MW / 10-hour CO2 battery at Coronado under a 20-year tolling agreement co-funded by Google through the SRP–Google long-duration storage collaboration; service 2029 — The long-duration pilots are funded by a hyperscaler's balance sheet through the utility, not by SRP alone.",
+     "src": "https://www.utilitydive.com/news/energy-dome-srp-salt-river-project-build-19-mw-co2-battery-system/823015/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-08",
+     "text": "SRP and Google launch a collaboration on long-duration energy storage innovation and grid resilience; Google's Mesa campus is already served by NextEra's Sonoran, Storey and Babbitt Ranch through SRP — The hyperscaler pays for the technology SRP wants to learn, inside a utility program.",
+     "src": "https://media.srpnet.com/srp-and-google-launch-collaboration-to-advance-long-duration-energy-storage-innovation-grid-resilience-in-arizona/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-16"
+  },
+  {
+   "a": "google",
    "b": "sargent-lundy",
    "evid": [
     {
@@ -42208,6 +42716,52 @@
     }
    ],
    "last": "2025-01-08"
+  },
+  {
+   "a": "google",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Google's Jackson County, Alabama and Montgomery County, Tennessee data centers are served on TVA's system; TVA signed a demand-response agreement for Google's machine-learning workloads on August 4, 2025 and a PPA of up to 50 MW from Kairos Power's Hermes 2 for that load.",
+     "context": "Google's $1.5B Bridgeport expansion (June 15, 2026) sits on the former Widows Creek coal plant site; the corpus's Google dossier lists TVA among five demand-response utilities and among its storage-innovation counterparties, and the Excelsior Energy Capital dossier records Skyhawk Solar supplying Google through TVA's Green Invest program.",
+     "source": "https://www.publicpower.org/periodical/article/google-tva-enter-agreement-tied-data-center-demand-response",
+     "status": "active",
+     "since": "2025-08",
+     "scale": "$1.5B Jackson County expansion; 50 MW Kairos PPA; first ML-workload demand response"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Energy Parks & Storage Procurement",
+     "date": "",
+     "text": "Demand response: 1 GW signed across I&M, TVA, Entergy Arkansas, Minnesota Power, DTE.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SMR owner: the BWRX-300 construction permit (dockets 99902056 and 05000615) with GE Vernova Hitachi, Bechtel and Sargent & Lundy, about $400M selected by DOE in December 2025 on top of $350M of Board development funding, plus a 50 MW Kairos PPA for Google's load, an ENTRA1/NuScale 6 GW non-binding collaboration and an Oklo fuel-recycling agreement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New nuclear — Clinch River BWRX-300, the first U.S. SMR construction permit",
+     "date": "",
+     "text": "Beyond Clinch River: a PPA of up to 50 MW from Kairos Power's Hermes 2 in Oak Ridge as early as 2030, supporting Google's data centers in Jackson County, Alabama and Montgomery County, Tennessee; a September 2, 2025 non-binding collaboration with ENTRA1 Energy for up to 6 GW of NuScale US460 plants that ENTRA1 would own and sell under PPAs; an agreement with Oklo on fuel recycling at its planned Oak Ridge facility and SMR PPAs; and a state fusion license (August 31, 2026) for Type One Energy's Infinity Two at Bull Run.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-27",
+     "text": "TVA signs a PPA of up to 50 MW from Kairos Power's Hermes 2 for Google's Jackson County and Montgomery County data centers; TVA's Scott Fiedler cites 'about 11,000 megawatts of requests from just data centers and tech companies alone' — The one public sizing of TVA's data-center queue.",
+     "src": "https://www.waff.com/2025/08/27/tva-buy-power-nuclear-plant-fuel-google-data-center-jackson-county/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-08-27"
   },
   {
    "a": "google",
@@ -47965,6 +48519,45 @@
   },
   {
    "a": "invenergy",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "SunDog Energy Center in Pinal County is the first SRP–Invenergy agreement (March 17, 2026); SRP's release counts 736 MW of Invenergy storage operating or under construction in Arizona.",
+     "context": "The release states no commercial date and no contract form. The corpus's Invenergy dossier carries the same project and the 736 MW figure; its Arizona storage fleet otherwise serves APS.",
+     "source": "https://media.srpnet.com/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand/",
+     "status": "announced",
+     "since": "2026-03",
+     "scale": "200 MW solar + 200 MW / 800 MWh"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its storage business is real but small relative to the whole and is disclosed only in fragments: '27 projects developed', '5,000 megawatt-hours of storage developed' and '150 utility-scale projects in the storage development pipeline' per the company, 736 MW of Arizona storage operating or under construction per Salt River Project (March 2026), and about 2.4 GW of named development-stage microsites in Arizona, Iowa, Tennessee, Ohio, New Mexico and Maryland.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "Contracted next: Invenergy's SunDog (200 MW solar plus 200 MW / four-hour storage, Pinal County, announced March 17, 2026 as the first SRP–Invenergy agreement; date and contract type unstated), BrightNight's Eagle Eye (400 MW of solar and storage, La Paz County, from the 2024 RFP), Valley Farms (400 MW of batteries, FY2028) and Selma (150 MW solar plus 150 MW storage) at Coolidge, the Marigold 400 MW / eight-hour battery (2029–30), and two long-duration pilots at Copper Crossing — ESS Tech's 5 MW / 50 MWh iron-flow system under a ten-year agreement by December 2027 and CMBlu's 5 MW organic-flow Desert Blume — plus Energy Dome's 19 MW / ten-hour CO2 battery at Coronado under a 20-year tolling agreement co-funded by Google, due 2029.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-17",
+     "text": "First SRP–Invenergy agreement: SunDog Energy Center, 200 MW of solar plus 200 MW / four-hour storage in Pinal County; SRP counts 736 MW of Invenergy storage operating or under construction in Arizona — Invenergy joins Plus Power, Aypa, EDP and NextEra as an SRP storage counterparty; the contract type is not stated.",
+     "src": "https://media.srpnet.com/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-17"
+  },
+  {
+   "a": "invenergy",
    "b": "siemens-energy",
    "curated": {
     "a": {
@@ -49009,6 +49602,22 @@
     }
    ],
    "last": "2019-12"
+  },
+  {
+   "a": "kiewit",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Kiewit built TVA's Allen (2018) and Paradise combined-cycle plants; its role, if any, at Cumberland or Kingston is not confirmed.",
+     "context": "The corpus's Kiewit dossier lists 'TVA Cumberland 1,450 MW' in its reference combined-cycle fleet; TVA's filings and releases read for this dossier do not name the Cumberland EPC, so the two records stand unreconciled.",
+     "source": "Kiewit dossier (profileVersion as of September 2026) — reference CCGT fleet",
+     "status": "historical",
+     "scale": "Allen and Paradise combined cycles"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "kiewit",
@@ -52338,6 +52947,38 @@
   },
   {
    "a": "meta",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "SRP serves Meta's Mesa data center through the Meta-funded Project Huckleberry line and Prickly Pear substation and dedicates the majority of Ørsted's Eleven Mile (300 MW solar plus 300 MW storage), 50 MW of West Line and part of Brittlebush to it.",
+     "context": "The December 11, 2023 release is the model for SRP's 'dedicated PPA' practice — twelve renewable PPAs dedicated to large customers per the official statement.",
+     "source": "https://media.srpnet.com/meta-teams-up-with-srp-and-rsted-to-support-data-center-with-clean-energy-from-new-solar-and-battery--project/",
+     "status": "active",
+     "since": "2022-03",
+     "scale": "More than 300 MW of dedicated renewables; a Meta-funded 230 kV line and substation"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For gas vendors the doors are Marigold (technology 'not yet selected'), the Coronado and Springerville coal-to-gas conversions by late 2029, and the LM6000 fleet at Coolidge (twelve new units, 575 MW, first six online by summer 2026); for data-center developers SRP is the Mesa-side utility (Meta, Google, EdgeCore, Apple) that funds no speculative capacity — E-67's 80 percent minimum billing demand, the customer-paid LCIP upgrades and a maximum load SRP sets from the customer's forecast are the terms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "SRP had 'more than 1,570 MW of battery storage' on its system by June 16, 2026 (1,300 MW including 200 MW of pumped hydro in October 2025), nearly all under long-term energy storage agreements in which the developer owns and operates the plant and SRP dispatches it: Plus Power's Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024 with Tesla Megapacks and Burns & McDonnell as EPC at Sierra Estrella; Aypa Power's Pediment (250 MW / 1,000 MWh, Mesa, online June 16, 2026, ESA to FY2046) with a second Aypa project of 250 MW / 2,000 MWh — eight hours — due December 2028; EDP Renewables' Flatland (200 MW / 800 MWh, Coolidge, $271M, Tesla, completed June 2026, a 24-year ESA); Ørsted's Eleven Mile (300 MW solar plus 300 MW / four-hour storage, 2024, most of it dedicated to Meta); NextEra's Sonoran (260 MW solar plus 260 MW / 1 GWh), Storey (88 plus 88 MW) and Saint (100 MW), the first two dedicated to Google; and SRP's own Bolster battery (25 MW / 100 MWh, Tesla, 2021).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2022-03"
+  },
+  {
+   "a": "meta",
    "b": "samsung-sdi",
    "curated": {
     "b": {
@@ -52558,6 +53199,45 @@
     }
    ],
    "last": "2026-02-13"
+  },
+  {
+   "a": "meta",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Meta's Gallatin, Tennessee campus (launched November 2024) and its North Huntsville, Alabama campus are on TVA's system, the latter directly served; TVA contracted 377 MW of solar for Meta in 2018 (First Solar 227 MW in Colbert County, NextEra 150 MW in Lincoln County).",
+     "context": "Huntsville is the example WVLT gives of a direct-served data center that takes the new rate from TVA rather than from an LPC. The Gallatin MW figure is trade press (DCD/WKRN via search) and is not TVA's.",
+     "source": "https://www.wvlt.tv/2026/09/25/tva-raises-rates-data-centers-adding-upfront-fee-new-existing-facilities/",
+     "status": "active",
+     "since": "2018",
+     "scale": "Gallatin campus (up to 300 MW per trade press); direct-served Huntsville campus; 377 MW of 2018 solar"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that direct TVA service will become the norm for hyperscale campuses above 100 MW inside the fence, displacing the distributor as the counterparty: SpaceXAI's MZX Tech was approved as a direct customer on the day the data-center rate passed, Meta's Huntsville campus is already direct-served, and the 'updated Board policy for new power requirements above 100 MW' was in the same package.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The data-center rate class, the Capacity Commitment Charge and the large-load queue — from MLGW's xAI to direct TVA service",
+     "date": "",
+     "text": "The charge flows through the LPCs' resale schedules — Huntsville Utilities and LaFollette adopted theirs in late September 2026 — and applies directly to TVA-served campuses such as Meta's North Huntsville and MZX Tech's Memphis sites.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-24",
+     "text": "Local power companies (Huntsville Utilities, LaFollette) adopt resale schedules for TVA's data-center rate ahead of October 1; TVA: 'This rate change protects residential and existing customers' — The charge reaches a data center through its distributor's schedule, or directly for TVA-served campuses such as Meta's in Huntsville.",
+     "src": "https://www.wvlt.tv/2026/09/25/tva-raises-rates-data-centers-adding-upfront-fee-new-existing-facilities/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-24"
   },
   {
    "a": "meta",
@@ -55516,6 +56196,39 @@
   },
   {
    "a": "nextera-energy-resources",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "NextEra Energy Resources will develop 3,000 MW of solar for SRP at 500 MW a year from 2029 through 2034 (agreement announced April 30, 2026), on top of Sonoran, Storey, Saint, Pinal Central and Babbitt Ranch already serving SRP.",
+     "context": "The agreement 'does not replace SRP's All-Source Request for Proposals process'. Trade press (pv magazine, May 1, 2026) reports 1,000 MW of storage in the same deal; SRP's release does not say so and NextEra's own confirmation was not located, so the storage figure is recorded as unverified. Sonoran and Storey are dedicated to Google's Mesa campus. The corpus's NextEra Energy Resources dossier (profileVersion 4, September 5, 2026) predates the agreement and does not carry it.",
+     "source": "https://media.srpnet.com/srp-announces-3000-mw-solar-agreement-with-nextera-energy-resources/",
+     "status": "active",
+     "since": "2018",
+     "scale": "3,000 MW of solar 2029–2034 plus more than 1,000 MW operating across five projects",
+     "via": "Solar development agreement (2024 RFP) and PPAs/ESAs"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "Solar: 3,000 MW of new solar from NextEra Energy Resources at 500 MW a year from 2029 through 2034 under a 'solar development agreement' selected from the 2024 RFP (April 30, 2026), Clenera's CO Bar (794 MW, FY2027–28), and 600 MW of SunZia wind from Pattern Energy (400 MW from fall 2026, 600 MW by summer 2027, tripling SRP's wind).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "3,000 MW solar development agreement with NextEra Energy Resources — 500 MW a year from 2029 through 2034, selected from the 2024 RFP; trade press adds 1,000 MW of storage that SRP's release does not mention — A single developer takes half of the ISP's 6,000 MW solar target; the storage attached to it is unconfirmed on SRP's side.",
+     "src": "https://media.srpnet.com/srp-announces-3000-mw-solar-agreement-with-nextera-energy-resources/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-30"
+  },
+  {
+   "a": "nextera-energy-resources",
    "b": "samsung-sdi",
    "curated": {
     "a": {
@@ -55866,6 +56579,27 @@
     }
    ],
    "last": "2025-10-30"
+  },
+  {
+   "a": "nisource",
+   "b": "salt-river-project",
+   "evid": [
+    {
+     "where": "Capabilities · Retail electric service and the public price process — the District's Board sets prices",
+     "date": "",
+     "text": "Investor-owned peers (APS next door, Duke, DTE, WEC, PPL, NiSource) argue return, equity ratio and large-load class before a commission; SRP's Board approves a budget and a price adjustment, and its financial targets are bond-rating metrics — a 4.2x debt service coverage and a 46.2 percent debt ratio in FY2025, 'consistent with current AA+/Aa1 ratings' per the FY2027 budget — rather than an allowed return.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Marigold Energy Center — the 2032 self-developed hybrid and its siting case",
+     "date": "",
+     "text": "Against NiSource's ring-fenced GenCo (two 1.3 GW combined cycles plus a 400 MW battery for Amazon) it is a system resource, not a customer's; against Marigold's own solar and storage the gas leg is the only part a state body can stop.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "novonix",
@@ -57769,6 +58503,38 @@
   },
   {
    "a": "oklo",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "TVA agreed in 2025 to explore fuel recycling at Oklo's planned Oak Ridge facility and power purchases from Oklo's reactors (FY2025 10-K).",
+     "context": "Non-binding; the IRP's 'prepare for Gen III+ and Gen IV nuclear' action is the policy frame.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+     "status": "announced",
+     "since": "2025",
+     "scale": "Fuel recycling and SMR PPAs to be explored"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SMR owner: the BWRX-300 construction permit (dockets 99902056 and 05000615) with GE Vernova Hitachi, Bechtel and Sargent & Lundy, about $400M selected by DOE in December 2025 on top of $350M of Board development funding, plus a 50 MW Kairos PPA for Google's load, an ENTRA1/NuScale 6 GW non-binding collaboration and an Oklo fuel-recycling agreement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New nuclear — Clinch River BWRX-300, the first U.S. SMR construction permit",
+     "date": "",
+     "text": "Beyond Clinch River: a PPA of up to 50 MW from Kairos Power's Hermes 2 in Oak Ridge as early as 2030, supporting Google's data centers in Jackson County, Alabama and Montgomery County, Tennessee; a September 2, 2025 non-binding collaboration with ENTRA1 Energy for up to 6 GW of NuScale US460 plants that ENTRA1 would own and sell under PPAs; an agreement with Oklo on fuel recycling at its planned Oak Ridge facility and SMR PPAs; and a state fusion license (August 31, 2026) for Type One Energy's Infinity Two at Bull Run.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "oklo",
    "b": "vertiv",
    "curated": {
     "a": {
@@ -59119,6 +59885,53 @@
    "last": "2023-05"
   },
   {
+   "a": "pattern-energy",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "SRP will take 400 MW of SunZia wind from fall 2026, rising to 600 MW by summer 2027, tripling its wind portfolio.",
+     "context": "Delivered over the SunZia HVDC line to the Pinal Central 500 kV substation; SRP calls it one of the largest renewable PPAs in the country. The corpus's Pattern Energy dossier records the same volumes.",
+     "source": "https://media.srpnet.com/salt-river-project-to-add-600-mw-of-win-d-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "600 MW",
+     "via": "SunZia wind PPA"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "Offtakers named by the company: Shell Energy North America and the University of California (May 2023), Clean Power Alliance (575 MW, 15 years, November 2023), Salt River Project (600 MW — 400 MW from autumn 2026 rising to 600 MW by summer 2027, July 2026), Ava Community Energy (over 250 MW), Central Coast Community Energy, CleanPowerSF, Riverside Public Utilities and Silicon Valley Clean Energy; per-offtaker volumes beyond CPA and SRP are not public.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-08",
+     "text": "Salt River Project signs a 600 MW SunZia PPA — 400 MW from autumn 2026 rising to 600 MW by summer 2027 — 'one of the biggest renewable Power Purchase Agreements in America', tripling SRP's wind — An Arizona anchor at the line's landing point; with CPA's 575 MW the two disclosed contracts cover about a third of the plant.",
+     "src": "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "Solar: 3,000 MW of new solar from NextEra Energy Resources at 500 MW a year from 2029 through 2034 under a 'solar development agreement' selected from the 2024 RFP (April 30, 2026), Clenera's CO Bar (794 MW, FY2027–28), and 600 MW of SunZia wind from Pattern Energy (400 MW from fall 2026, 600 MW by summer 2027, tripling SRP's wind).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-08",
+     "text": "600 MW SunZia wind PPA with Pattern Energy — 400 MW from fall 2026 rising to 600 MW by summer 2027, tripling SRP's wind from 288 MW — SRP's first HVDC-delivered out-of-state resource, and the model for the 2026 RFP's 'wind associated with new interstate transmission'.",
+     "src": "https://media.srpnet.com/salt-river-project-to-add-600-mw-of-win-d-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-08"
+  },
+  {
    "a": "piller",
    "b": "schneider-electric",
    "curated": {
@@ -59400,6 +60213,22 @@
   },
   {
    "a": "pinnacle-west",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "APS and SRP co-own Palo Verde and Four Corners, jointly committed to Energy Transfer's Desert Southwest pipeline expansion (August 2025), run a joint nuclear siting study with TEP (June 2026) and presented side by side at the ACC's April 2026 large-load workshop.",
+     "context": "The two utilities split the Phoenix metro — SRP the Mesa side, APS the West Valley — and their planning is intertwined: APS is the anchor shipper on the pipeline SRP also signed for, both hold shares of Palo Verde (SRP 20.4 percent, 803 MW, per the official statement's Table 4), and the ACC's workshop record carries both utilities' queues. SRP is not under the ACC's rate jurisdiction that governs APS, which is the structural difference the corpus's Pinnacle West dossier describes from the other side.",
+     "source": "https://media.srpnet.com/arizona-utilities-work-to-lock-in-critical-natural-gas-delivery-to-power-growth/",
+     "status": "active",
+     "scale": "Palo Verde 3,937 MW (APS 29.1%, SRP 20.4%); Desert Southwest pipeline 1.5 Bcf/d"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "pinnacle-west",
    "b": "strata-clean-energy",
    "curated": {
     "a": {
@@ -59513,6 +60342,53 @@
     }
    ],
    "last": "2026-05-21"
+  },
+  {
+   "a": "plus-power",
+   "b": "salt-river-project",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Plus Power owns and operates Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024, with SRP holding the dispatch rights.",
+     "context": "SRP announced the two agreements October 27, 2022; Sierra Estrella uses Tesla Megapacks with Burns & McDonnell as EPC. The corpus's Plus Power and Prime Data Centers dossiers describe Sierra Estrella as grid support for the adjacent Prime campus in Avondale; SRP's own releases name neither Prime nor any customer, and no such contract is on SRP's record.",
+     "source": "https://media.srpnet.com/srp-to-add-340-mw-of-additional-battery-storage-to-its-system-with-two-new-projects-from-plus-power/",
+     "status": "active",
+     "since": "2022-10",
+     "scale": "340 MW / 1,360 MWh",
+     "via": "Energy storage agreements (FY2025–FY2045)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Storage on the system passed 1,570 MW in June 2026, almost all of it contracted under energy storage agreements (Plus Power's Sierra Estrella and Superstition, Aypa's Pediment, EDP Renewables' Flatland, Ørsted's Eleven Mile, NextEra's Sonoran, Storey and Saint) against 25 MW SRP owns at Bolster plus 169 MW of pumped hydro.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: 1,548 of the 1,573 MW of operating batteries are under energy storage agreements with Plus Power, Aypa, EDP Renewables, Ørsted and NextEra; every supplier SRP has ever disclosed was chosen by the developer and was Tesla; the 2026 RFP's structures (tolling PPA, build-transfer, asset acquisition) put the equipment choice with the bidder even when SRP ends up owning the plant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "SRP had 'more than 1,570 MW of battery storage' on its system by June 16, 2026 (1,300 MW including 200 MW of pumped hydro in October 2025), nearly all under long-term energy storage agreements in which the developer owns and operates the plant and SRP dispatches it: Plus Power's Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024 with Tesla Megapacks and Burns & McDonnell as EPC at Sierra Estrella; Aypa Power's Pediment (250 MW / 1,000 MWh, Mesa, online June 16, 2026, ESA to FY2046) with a second Aypa project of 250 MW / 2,000 MWh — eight hours — due December 2028; EDP Renewables' Flatland (200 MW / 800 MWh, Coolidge, $271M, Tesla, completed June 2026, a 24-year ESA); Ørsted's Eleven Mile (300 MW solar plus 300 MW / four-hour storage, 2024, most of it dedicated to Meta); NextEra's Sonoran (260 MW solar plus 260 MW / 1 GWh), Storey (88 plus 88 MW) and Saint (100 MW), the first two dedicated to Google; and SRP's own Bolster battery (25 MW / 100 MWh, Tesla, 2021).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-17",
+     "text": "First SRP–Invenergy agreement: SunDog Energy Center, 200 MW of solar plus 200 MW / four-hour storage in Pinal County; SRP counts 736 MW of Invenergy storage operating or under construction in Arizona — Invenergy joins Plus Power, Aypa, EDP and NextEra as an SRP storage counterparty; the contract type is not stated.",
+     "src": "https://media.srpnet.com/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-17"
   },
   {
    "a": "plus-power",
@@ -59675,6 +60551,109 @@
     }
    ],
    "last": "2024-06-24"
+  },
+  {
+   "a": "plus-power",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "TVA will charge and dispatch Plus Power's Crawfish Creek battery under a 20-year agreement announced April 21, 2026; construction 2028, commercial operation summer 2029; selected from TVA's early-2025 RFP.",
+     "context": "With Tenaska's Bobwhite (225 MW / 900 MWh) it is one of the two agreements the Q3 FY2026 10-Q books at more than $1.3B of capacity payments with a lease component. The corpus's Plus Power dossier records the same project as its seventh state and frames TVA's growth as data-center-driven; TVA's VP Power Supply and Fuels Monika Beckner was quoted.",
+     "source": "https://www.utilitydive.com/news/tva-plus-power-to-deploy-200-mw800-mwh-bess-in-alabama/818717/",
+     "status": "announced",
+     "since": "2026-04",
+     "scale": "200 MW / 800 MWh",
+     "via": "20-year tolling agreement (Crawfish Creek, Jackson County, AL)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Plus Power as the utility-tolling franchise of the standalone-storage tier: one new 20-year tolling market per year (Hawaiian Electric → SRP → PNM → TVA), the two largest batteries in New England, a seasoned 700 MW ERCOT merchant fleet, and grid-forming firsts (Kapolei's synthetic inertia/black-start flagship replaced an AES coal plant).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its near-term procurement window is Corazon (150 MW/600 MWh, PNM 20-yr toll, construction 2026) — squarely inside the FEOC-constrained vintage — with Crawfish Creek (TVA, 2028 build) and Laurel Creek (2029) behind it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the bankability gauntlet as the practical qualification bar: five tax-equity/debt syndicates (Morgan Stanley, BofA, Foss, Greenprint + bank clubs) and an independent-engineer process every supplier must clear — a well-capitalized Hithium with Mesquite assembly and long warranties can plausibly pass the technical/financial screens, but the FEOC tax math and NDAA §154 optics (military-adjacent Kapolei marketing; red-state utility counterparties TVA/SRP) are the harder walls.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted utility fleet (the tolling franchise)",
+     "date": "",
+     "text": "AL — 200 MW/800 MWh, 20-yr TVA ESA (Apr 2026), construction 2028, COD summer 2029.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AIDC adjacency (grid-side, not behind-the-meter)",
+     "date": "",
+     "text": "The TVA deal is framed around Southeast demand growth that is heavily data-center-driven.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-21",
+     "text": "TVA signs a 20-year ESA for Crawfish Creek (200 MW/800 MWh, Jackson Co. AL; construction 2028, COD summer 2029) — Plus Power's 7th state and Southeast entry — The tolling-franchise cadence holds (SRP → PNM → TVA, one new utility market per year), and TVA's growth is heavily data-center-driven.",
+     "src": "PRN / ESN",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Storage is thin and contracted: TVA-owned Vonore (20 MW / 40 MWh), two 20-year tolls signed April 21, 2026 (Plus Power's Crawfish Creek, 200 MW / 800 MWh, Jackson County, Alabama; Tenaska's Bobwhite, 225 MW / 900 MWh, Hawkins County, Tennessee; more than $1.3B of capacity payments per the Q3 10-Q) toward a Board authorization of up to 1,500 MW by end-2029, and a 100 MW battery in the Kingston replacement RFP.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For battery sellers the account is the developer on the other side of TVA's tolls — Plus Power and Tenaska hold the only large ones, both ordered from TVA's early-2025 RFP with OEMs undisclosed — and the Kingston 100 MW design-build-operate award; TVA's own batteries stop at Vonore's 20 MW.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the battery decisions on TVA's system sit with its toll counterparties and its design-build bidders, not with TVA: the fleet TVA owns is 20 MW, the 425 MW signed in April 2026 are 20-year tolls with Plus Power and Tenaska whose OEMs are undisclosed, the Kingston 100 MW battery was bid as a design-build-operate contract, and the 1,500 MW authorization is written as contracts of up to 20 years.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-15",
+     "text": "Google announces a $1.5B expansion of its Jackson County, Alabama data center for 2026–27, on the former Widows Creek plant site served by TVA — TVA's anchor hyperscaler grows on the system that will also host the Kairos and Plus Power resources tied to it.",
+     "src": "https://www.timesfreepress.com/news/2026/jun/15/google-invests-15b-to-expand-alabama-data-center/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-21",
+     "text": "Two 20-year storage tolls from the early-2025 RFP: Plus Power's Crawfish Creek (200 MW / 800 MWh, Jackson County, Alabama, construction 2028, commercial summer 2029) and Tenaska's Bobwhite (225 MW / 900 MWh, Hawkins County, Tennessee, about $300M, late 2029) — more than $1.3B of capacity payments per the Q3 10-Q — TVA's first large batteries are tolls with the OEM chosen by the developer; 425 MW toward the 1,500 MW authorization.",
+     "src": "https://www.utilitydive.com/news/tva-plus-power-to-deploy-200-mw800-mwh-bess-in-alabama/818717/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-06",
+     "text": "Board authorizes up to 1,500 MW of bulk storage under contracts of up to 20 years with delivery before the end of 2029; nine RFPs in 2019–25 had added 370 MW — The storage program that produced the Plus Power and Tenaska tolls five months later.",
+     "src": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/november-6--2025/november-2025-board-presentation.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-15"
   },
   {
    "a": "powell-industries",
@@ -60054,6 +61033,27 @@
     }
    },
    "evid": [],
+   "last": ""
+  },
+  {
+   "a": "ppl",
+   "b": "salt-river-project",
+   "evid": [
+    {
+     "where": "Capabilities · Retail electric service and the public price process — the District's Board sets prices",
+     "date": "",
+     "text": "Investor-owned peers (APS next door, Duke, DTE, WEC, PPL, NiSource) argue return, equity ratio and large-load class before a commission; SRP's Board approves a budget and a price adjustment, and its financial targets are bond-rating metrics — a 4.2x debt service coverage and a 46.2 percent debt ratio in FY2025, 'consistent with current AA+/Aa1 ratings' per the FY2027 budget — rather than an allowed return.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · E-67 large-load price plan, the Large Customer Integration Process and the data-center pipeline",
+     "date": "",
+     "text": "Against PPL's Pennsylvania tariff (50 MW, 10-year, 80 percent guaranteed, exit fees, security equal to upgrades) the public terms are similar on the minimum and silent on term and exit, which SRP keeps in the private agreement.",
+     "src": "",
+     "from": "b"
+    }
+   ],
    "last": ""
   },
   {
@@ -60983,6 +61983,74 @@
    "last": "2006"
   },
   {
+   "a": "salt-river-project",
+   "b": "strata-clean-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "Strata Clean Energy, often paired with SRP in trade press, holds no SRP contract — its Arizona batteries are APS's.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "salt-river-project",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Tesla Megapacks equip SRP's own Bolster battery (25 MW, 2021), Plus Power's Sierra Estrella and Superstition (2024) and EDP Renewables' Flatland (2026).",
+     "context": "Only Bolster was bought by SRP; the other three suppliers were chosen by the developers. Pediment's, Eleven Mile's and NextEra's suppliers are not on SRP's record.",
+     "source": "https://media.srpnet.com/srp-and-edp-renewables-announce-new-energy-storage-system-to-support-increasing-energy-demand/",
+     "status": "active",
+     "since": "2021",
+     "scale": "About 565 MW of Megapack-equipped storage on SRP's system",
+     "via": "Megapack"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For sellers of batteries the doors are the developers on the other side of SRP's all-source RFPs — the 2026 solicitation asks for up to 2,900 MW of carbon-free resources plus peaking capacity including storage and gas, in tolling, build-transfer or asset-acquisition form, with proposals due April 29, 2026 and a short list in November — because the operating fleet (Sierra Estrella, Superstition, Pediment, Flatland, Eleven Mile, Sonoran, Storey, Saint) was bought that way and SRP owns only Bolster's 25 MW; where SRP has disclosed the battery it was Tesla (Bolster, Sierra Estrella, Superstition, Flatland).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: 1,548 of the 1,573 MW of operating batteries are under energy storage agreements with Plus Power, Aypa, EDP Renewables, Ørsted and NextEra; every supplier SRP has ever disclosed was chosen by the developer and was Tesla; the 2026 RFP's structures (tolling PPA, build-transfer, asset acquisition) put the equipment choice with the bidder even when SRP ends up owning the plant.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "SRP had 'more than 1,570 MW of battery storage' on its system by June 16, 2026 (1,300 MW including 200 MW of pumped hydro in October 2025), nearly all under long-term energy storage agreements in which the developer owns and operates the plant and SRP dispatches it: Plus Power's Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024 with Tesla Megapacks and Burns & McDonnell as EPC at Sierra Estrella; Aypa Power's Pediment (250 MW / 1,000 MWh, Mesa, online June 16, 2026, ESA to FY2046) with a second Aypa project of 250 MW / 2,000 MWh — eight hours — due December 2028; EDP Renewables' Flatland (200 MW / 800 MWh, Coolidge, $271M, Tesla, completed June 2026, a 24-year ESA); Ørsted's Eleven Mile (300 MW solar plus 300 MW / four-hour storage, 2024, most of it dedicated to Meta); NextEra's Sonoran (260 MW solar plus 260 MW / 1 GWh), Storey (88 plus 88 MW) and Saint (100 MW), the first two dedicated to Google; and SRP's own Bolster battery (25 MW / 100 MWh, Tesla, 2021).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+     "date": "",
+     "text": "Where a supplier is named it is Tesla; Pediment's, Eleven Mile's and NextEra's suppliers are not on SRP's record.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-11",
+     "text": "EDP Renewables and SRP complete the 200 MW / 800 MWh Flatland battery at Coolidge ($271M, Tesla) under a 24-year energy storage agreement — The fourth Tesla-equipped battery on SRP's system; the supplier decision sat with EDP.",
+     "src": "https://pv-magazine-usa.com/2026/06/11/edpr-srp-commission-200-mw-800-mwh-flatland-battery-storage-project-in-arizona/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-11"
+  },
+  {
    "a": "samsung-ct",
    "b": "samsung-sdi",
    "curated": {
@@ -61123,6 +62191,74 @@
    },
    "evid": [],
    "last": "2018"
+  },
+  {
+   "a": "sargent-lundy",
+   "b": "tva",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Sargent & Lundy is TVA's owner's engineer and the detailed-design lead for the site-specific BWRX-300 at Clinch River, alongside Bechtel and GE Vernova Hitachi, and received TVA's 2026 Valley Supplier Award.",
+     "context": "Carried from the corpus's Sargent & Lundy dossier (a relationship 'since February 1994 with no gap in service'; primary vendor for the Browns Ferry subsequent license renewal) and the ANS account of the permit; TVA's own award release is on the blocked tva.com.",
+     "source": "https://www.ans.org/news/2026-09-29/article-8445/tva-receives-construction-permit-for-clinch-river/",
+     "status": "active",
+     "since": "1994",
+     "scale": "Clinch River BWRX-300 detailed design; Browns Ferry subsequent license renewal",
+     "via": "Owner's engineer and detailed-design lead, Clinch River"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Second, nuclear: TVA's owner's engineer and detailed-design lead for the Clinch River BWRX-300 alongside Bechtel and GE Vernova Hitachi; NRC-inspected design packages for the Palisades restart and the Dow / X-energy Xe-100 site; the 2020 top-ten nuclear services clients read TVA, Exelon, Dominion, PSEG, AEP, DTE, Xcel Energy, Southern Nuclear, APS and Ameren.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-04",
+     "text": "TVA presents Sargent & Lundy its 2026 Valley Supplier Award; the relationship 'began in February 1994' with 'no gap in service' — The owner's-engineer seat on the first US utility SMR is an extension of a 32-year account, not a competitive win.",
+     "src": "https://www.sargentlundy.com/news/sargent-lundy-receives-tennessee-valley-authority-2026-valley-supplier-award/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-11",
+     "text": "DOE awards TVA USD 400 million under the Generation III+ SMR programme for Clinch River; the team is TVA, Sargent & Lundy, GE Vernova Hitachi and Bechtel — Federal money now sits behind the project the firm is detailed-design lead on.",
+     "src": "https://www.sargentlundy.com/news/department-of-energy-grants-400m-for-tva-small-modular-reactor-project/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-23",
+     "text": "TVA selects Bechtel, Sargent & Lundy and GE Hitachi for the Clinch River BWRX-300; 'Sargent & Lundy will lead the detailed design for the site-specific implementation' — The first US utility SMR gets a three-firm integrated delivery team with the architect-engineer, not the constructor, leading design.",
+     "src": "https://www.powermag.com/tva-taps-bechtel-sargent-lundy-and-ge-hitachi-for-clinch-river-smr-nuclear-project/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SMR owner: the BWRX-300 construction permit (dockets 99902056 and 05000615) with GE Vernova Hitachi, Bechtel and Sargent & Lundy, about $400M selected by DOE in December 2025 on top of $350M of Board development funding, plus a 50 MW Kairos PPA for Google's load, an ENTRA1/NuScale 6 GW non-binding collaboration and an Oklo fuel-recycling agreement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New nuclear — Clinch River BWRX-300, the first U.S. SMR construction permit",
+     "date": "",
+     "text": "Partners are GE Vernova Hitachi, Bechtel and Sargent & Lundy (the corpus's Sargent & Lundy dossier has it as TVA's owner's engineer and detailed-design lead, with a 2026 Valley Supplier Award); Ontario Power Generation's Darlington unit is the lead BWRX-300.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-04"
   },
   {
    "a": "sargent-lundy",
@@ -63255,6 +64391,73 @@
     }
    ],
    "last": "2025-09-25"
+  },
+  {
+   "a": "tva",
+   "b": "x-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Xe-100 high-temperature gas-cooled small modular reactor",
+     "date": "",
+     "text": "The only HTGR among the US front-runners: TerraPower's Natrium (sodium fast, 345 MWe) holds a construction permit and started construction in April 2026; Kairos (fluoride salt) is building Hermes 2 with TVA offtake for Google; NuScale (light-water) holds a standard design approval; GE Vernova Hitachi's BWRX-300 is under construction at OPG Darlington; Oklo proceeds under DOE authorisation with no NRC reactor licence.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "tva",
+   "b": "xai",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "TVA's Board approved 150 MW for xAI's Memphis supercomputer through MLGW on November 7, 2024 and 150 MW more for CTC Property LLC on February 11, 2026; on August 20, 2026 it approved MZX Tech LLC (SpaceX, dba SpaceXAI) as a directly served TVA customer above 100 MW on the new data-center rate and Capacity Commitment Charge.",
+     "context": "Colossus 1 is energized through an xAI-funded substation (142 MW) and an adjacent MLGW substation (8 MW); the load is enrolled in TVA demand response and the second 150 MW was conditioned on storage and a recycled-water solution. Colossus 2 takes about 0.5 MW from MLGW and runs on a 41-turbine, 1.2 GW Southaven, Mississippi plant permitted March 11, 2026 on the former Duke Energy site next to TVA's Southaven combined cycle. The corpus's xAI dossier records 'TVA-approved 2×150 MW allocations' and about 300 MW of grid supply against a multi-gigawatt campus draw, consistent with this record; its Tesla Megapacks and VoltaGrid units are xAI's, not TVA's.",
+     "source": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/august-20--2026/august-2026-board-presentation.pdf",
+     "status": "active",
+     "since": "2024-11",
+     "scale": "150 MW + 150 MW via MLGW (Colossus 1); direct service above 100 MW approved August 2026 (Tulane Road)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: S-1 KPI disclosures (0→1.0 GW nameplate compute draw in 3 years), SemiAnalysis technical verification of the gigawatt-scale coherent cluster, and TVA/MLGW grid allocations (~300 MW) covering only a fraction of campus load.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a data center the door is the LPC or, above 100 MW, TVA itself: xAI's Colossus 1 took 150 MW in November 2024 and 150 MW more in February 2026 through MLGW as CTC Property LLC, enrolled in demand response and conditioned on storage and recycled water, while its Colossus 2 runs behind the meter on a 41-turbine, 1.2 GW gas plant in Southaven, Mississippi (MDEQ permit March 11, 2026; SELC and NAACP litigation) and its next campus, MZX Tech's 'MACROHARD' and 'MINIHARD', will be a direct TVA customer on the new rate and the Capacity Commitment Charge.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · The data-center rate class, the Capacity Commitment Charge and the large-load queue — from MLGW's xAI to direct TVA service",
+     "date": "",
+     "text": "Any firm load above 100 MW needs a Board vote: 150 MW for xAI through MLGW on November 7, 2024; 150 MW more for CTC Property LLC on February 11, 2026, contingent on demand-response enrollment, a storage solution and recycled water; and, on August 20, 2026, more than 100 MW of direct service to MZX Tech LLC, 'a subsidiary of SpaceX (dba SpaceXAI), a new TVA directly served customer', for its 'MACROHARD and MINIHARD' data centers on Tulane Road, on the new rate and the CCC with transmission upgrades and bulk storage — the MW undisclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-11",
+     "text": "Board unanimously authorizes continued operation of the Kingston and Cumberland coal units beyond their planned 2026–28 retirements, citing demand 'driven by growth in data center use', and approves 150 MW more for xAI's CTC Property LLC through MLGW contingent on demand response, storage and recycled water — The coal retirements of 2023–24 are reversed and Colossus 1 reaches its 300 MW ceiling on the grid.",
+     "src": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/about-tva/board-of-directors/february-11--2026/february-2026-board-presentation.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-11-07",
+     "text": "Board approves 150 MW of firm power for xAI's Memphis supercomputer through MLGW, energized through an xAI-funded substation — The first Colossus load was a distributor's customer; by August 2026 the next one is TVA's own.",
+     "src": "https://www.actionnews5.com/2024/11/07/tva-approves-providing-power-xai-facility/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-11"
   },
   {
    "a": "vantage",

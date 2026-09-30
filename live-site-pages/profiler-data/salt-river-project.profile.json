@@ -1,0 +1,1115 @@
+{
+ "schemaVersion": 7,
+ "slug": "salt-river-project",
+ "name": "Salt River Project Agricultural Improvement and Power District (with the Salt River Valley Water Users' Association)",
+ "shortName": "Salt River Project",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.srpnet.com",
+ "headquarters": "Tempe, AZ, USA",
+ "founded": 1903,
+ "employees": "5,747 at April 30, 2025 (FY2025 annual report); about 6,152 District and Association employees at July 31, 2025, of whom about 2,163 are IBEW Local 266 hourly staff (2025 Series C official statement)",
+ "ownership": {
+  "type": "public (public power)",
+  "notes": "Two organizations collectively known as SRP: the Salt River Project Agricultural Improvement and Power District, an agricultural improvement district and political subdivision of the State of Arizona formed in 1937 that runs the electric business, and the Salt River Valley Water Users' Association, a private water corporation formed in 1903. No shareholders and no listed equity: a landowner-elected Board sets prices under its own public process (A.R.S. 45-1720 removes SRP's rates and service from Arizona Corporation Commission jurisdiction), and the District finances itself with tax-exempt revenue bonds rated Aa1 (Moody's) and AA+ (S&P). The ACC's remaining jurisdiction is bond authorization, power plants above 100 MW and lines at 115 kV or above."
+ },
+ "summary": "BOTTOM LINE UP FRONT: Salt River Project is the Phoenix-area public-power utility whose own Board, not a state commission, decides how a nearly 7,000 MW large-load pipeline (59 customers, per SRP's April 16, 2026 presentation to the Arizona Corporation Commission's large-load workshop) gets priced and served — through the E-67 price plan (mandatory for any new account of 20 MW or more, with an 80 percent-of-forecast minimum billing demand since the November 2025 billing cycle), the Large Customer Integration Process (dedicated upgrades paid upfront) and a resource plan that more than doubles the power system by 2035, with the September 14, 2026 Marigold Energy Center (600 MW solar, 400 MW of 8-hour batteries, 675 MW of gas, online 2032) as its largest self-developed piece; the one outside gate on that plan is the ACC's Certificate of Environmental Compatibility for the gas plant and its 230 kV lines, heard by the siting committee September 21–25, 2026 with a Commission vote expected in November. BACKGROUND. Tempe; a not-for-profit political subdivision of Arizona with a combined FY2025 (ended April 30, 2025) operating revenue of $4,559.7M, net revenues of $604.0M and long-term debt of $6,010.4M, serving 1,183,163 customer accounts across about half of the Phoenix metropolitan area, plus water to about 2.5 million residents. Peak demand reached 9,072 MW on July 24, 2026 (from 8,542 MW in 2025); SRP projects a peak above 14 GW by 2035 with large business customers above 39 percent of it, against 12 percent of the 2025 peak. Data centers were 441 MW, or 5.1 percent, of the 2025 peak per the general manager. FY2025 capability was 12,878 MW, of which 6,811 MW is owned gas and coal, 803 MW is a 20.4 percent share of Palo Verde, and about 31 percent of energy was purchased. Storage on the system passed 1,570 MW in June 2026, almost all of it contracted under energy storage agreements (Plus Power's Sierra Estrella and Superstition, Aypa's Pediment, EDP Renewables' Flatland, Ørsted's Eleven Mile, NextEra's Sonoran, Storey and Saint) against 25 MW SRP owns at Bolster plus 169 MW of pumped hydro. Collection gap: every HTML page on srpnet.com returned 403 to this session, so the officer page, the Integrated System Plan pages and the data-center facts page were not read (PDF assets and the media site were); SRP's own workshop slides are not retrievable from the ACC's JavaScript docket, so the 59-customer / 7,000 MW figure is known only through the ACC's paraphrase; Marigold's total cost, gas technology and battery supplier are unpublished; the E-67 contract term, collateral and termination terms sit in a non-public Agreement for Electric Service; no financial statements after July 31, 2025 were located; and the siting committee's Marigold outcome after September 25, 2026 had not been published as of September 29.",
+ "ecosystemRole": "We assess SRP as the corpus's first gatekeeper whose rate case is an election: prices, the large-load plan and the resource mix are set by a 14-member District Board elected largely by acreage, which flipped to an 8–6 'clean energy' majority in April 2026 and became a 7–7 split in August, so the 675 MW gas leg of Marigold and every future gas toll are votes on a knife edge rather than commission orders. Basis: SRP's election releases, the KJZZ appointment report and A.R.S. 45-1720. For sellers of batteries the doors are the developers on the other side of SRP's all-source RFPs — the 2026 solicitation asks for up to 2,900 MW of carbon-free resources plus peaking capacity including storage and gas, in tolling, build-transfer or asset-acquisition form, with proposals due April 29, 2026 and a short list in November — because the operating fleet (Sierra Estrella, Superstition, Pediment, Flatland, Eleven Mile, Sonoran, Storey, Saint) was bought that way and SRP owns only Bolster's 25 MW; where SRP has disclosed the battery it was Tesla (Bolster, Sierra Estrella, Superstition, Flatland). The self-build leg is new: direct pay under the IRA let SRP own Copper Crossing's 55 MW solar (April 2026), the Marigold storage and solar carry $262M of PPA cost in the fuel clause alongside $1,352M of FY2027–32 capital, and a 1–2 GW pumped-storage project at Apache Lake awaits a construction decision in late 2027. For gas vendors the doors are Marigold (technology 'not yet selected'), the Coronado and Springerville coal-to-gas conversions by late 2029, and the LM6000 fleet at Coolidge (twelve new units, 575 MW, first six online by summer 2026); for data-center developers SRP is the Mesa-side utility (Meta, Google, EdgeCore, Apple) that funds no speculative capacity — E-67's 80 percent minimum billing demand, the customer-paid LCIP upgrades and a maximum load SRP sets from the customer's forecast are the terms.",
+ "productsAndServices": [
+  {
+   "name": "Retail electric service and the public price process — the District's Board sets prices",
+   "category": "Regulated utility service",
+   "description": "The District serves 1,183,163 customer accounts (April 30, 2025, up 2.1 percent) across about half of the population of the Phoenix–Mesa–Chandler metropolitan area, and sold 43,999 GWh in FY2025 (33,963 GWh retail), with retail electric revenue of $3,983.6M — 52 percent residential, 37 percent commercial, 10 percent large industrial and mines. Prices are set by the publicly elected Board in a pricing process, not by the Arizona Corporation Commission: A.R.S. 45-1720 removes 'the rates, services and practices relating to the generation, transmission, distribution and sale of power' from ACC jurisdiction, and the ACC's own FAQ limits its role to bond authorizations, plants above 100 MW and lines at 115 kV or above. The 2025 pricing process (Board vote February 27, 2025, effective with the November 2025 billing cycle) raised base prices 4.0 percent and cut the Fuel and Purchased Power Adjustment Mechanism 1.6 percent, a net 2.4 percent — a $169M base-revenue increase offset by $68.7M of FPPAM — and rewrote the E-67 large-load plan. In March 2026 the Board approved a temporary 3 percent summer FPPAM decrease for May–October 2026 ($0.0038 per kWh, about $5.57 a month for an average home) from a projected $56M FPPAM surplus, and the FY2027 budget: $1.8B of capital, $0.9B of debt issuance, a 7.8 percent retail energy growth assumption and a workforce held at 6,069.",
+   "highlights": [
+    "FY2025 average revenue 10.29 cents per kWh (9.92 in FY2024); retail electric revenue +14.05 percent on volume and the November 2024 FPPAM increase of 3.9 percent",
+    "Revenue-bond financing: $5,666.3M outstanding at April 30, 2025; a $775M 2025 Series C issue priced October 15, 2025 (Goldman Sachs senior manager); ACC authorization for $6.4B of additional bonds secured September 2024",
+    "Governance: 10 division seats elected roughly one acre–one vote and 4 at-large seats one landowner–one vote; a 30-member Council approves bonds and bylaws; officials elected April 7, 2026 took office in May",
+    "Labor: about 2,163 IBEW Local 266 hourly employees under contracts that expire November 15, 2026 (official statement)"
+   ],
+   "positioning": "The only utility in the corpus whose rate case is an election. Investor-owned peers (APS next door, Duke, DTE, WEC, PPL, NiSource) argue return, equity ratio and large-load class before a commission; SRP's Board approves a budget and a price adjustment, and its financial targets are bond-rating metrics — a 4.2x debt service coverage and a 46.2 percent debt ratio in FY2025, 'consistent with current AA+/Aa1 ratings' per the FY2027 budget — rather than an allowed return. The trade-off is political exposure: the April 2026 election quadrupled turnout, produced the first 'clean energy' majority in SRP's history, and an August appointment took it to 7–7.",
+   "soldThrough": "Direct retail service under Board-approved standard price plans (the ratebook), with the FPPAM and a Transmission Cost Adjustment as pass-through clauses; large loads under E-67 and an Agreement for Electric Service",
+   "targetSegments": [
+    "Residential and commercial customers in the Phoenix metropolitan area",
+    "Large industrial and mining accounts (28 large industrial accounts, 3,281 GWh in FY2025)",
+    "Municipal and wholesale counterparties (10 percent of revenue)"
+   ],
+   "roadmap": "FY2026–31 capital program of $12.9B ($5.2B generation, $2.9B distribution, $1.0B transmission), about 45 percent debt-funded; the next pricing process is not yet announced — no base-price action was found in 2026 beyond the temporary summer FPPAM cut"
+  },
+  {
+   "name": "E-67 large-load price plan, the Large Customer Integration Process and the data-center pipeline",
+   "category": "Regulated utility service",
+   "description": "E-67, the 'Standard Price Plan for Large Load Substation Large General Service', is mandatory for any New Large Load Account — an account of 20 MW or more, or one SRP expects from the customer's forecast to reach 20 MW within five years of first service, taking service on or after November 1, 2025. Each such account carries a minimum billing demand of 80 percent of the customer's forecasted demand (SRP may lower it where the customer pays for load-serving resources and infrastructure, or for job creation), SRP sets a maximum load from the forecast and 'will have no obligation to serve load in excess' of it, a customer who wants resources procured faster or at higher cost than SRP otherwise would must agree in writing to reimburse the cost, and the customer signs SRP's then-current Agreement for Electric Service with a minimum term — the term, collateral and termination provisions live in that agreement, which is not public. The prior sheet's 90 percent load-factor test and SRP's right to cancel service below it are gone. The FY2026 ratebook prices the plan at $16.61 per on-peak kW in summer, $28.84 in July–August and $9.83 in winter, with energy from 4.29 to 13.14 cents per kWh including FPPAM and a $5,767.02 monthly service charge with one meter. The Large Customer Integration Process, introduced in 2025, requires customers to fund dedicated upgrades upfront. The pipeline behind the tariff: SRP told the ACC's April 16, 2026 workshop it 'currently serves 59 large load customers, a nearly 7,000 MW combined load' — a figure that cannot be served load against a 9,072 MW system peak and a 441 MW data-center peak in 2025, and reads as the combined requested load of the 59 accounts — and projects a 2035 peak above 14 GW with large business customers above 39 percent, from 12 percent of the 8.5 GW 2025 peak.",
+   "highlights": [
+    "Named large customers on SRP's own record: Meta (Mesa; the Meta-funded Project Huckleberry 230 kV line and Prickly Pear substation; the majority of Ørsted's Eleven Mile 300 MW solar and 300 MW battery, 50 MW of West Line and part of Brittlebush), Google (Mesa; an eight-year pact for more than 430 MW from NextEra's Sonoran, Storey and Babbitt Ranch), EdgeCore (Mesa, 206 MW operating and 250 MW under construction, SRP-served), Apple (Mesa; SRP buys Bonnybrooke's 52 MW)",
+    "Twelve renewable PPAs dedicated to large customers with sustainability goals and five more under development (official statement)",
+    "What SRP told the ACC utilities want: minimum bills at 75–80 percent of demand and energy, longer terms, letters of credit, surety bonds or parent guarantees, early-termination fees, direct assignment of dedicated generation and delivery facilities, and contributions in aid of construction; SRP listed 'historical struggles to provide accurate load ramps' among its five large-customer challenges (Chairman Myers' April 29, 2026 House testimony)",
+    "HB 2756 (signed June 4, 2026) makes SRP file semiannual extra-high-load-factor reports and, on request, a cost-of-service study with its own Board (A.R.S. 30-301, through 2033); the ACC's new tariff authority under A.R.S. 40-207 reaches only public service corporations such as APS"
+   ],
+   "positioning": "Against APS's XHLF schedule (effective March 2024; 5,000 kW, 92 percent load factor, no explicit exit fee, with collateral and minimum bills now in a rate case), E-67 already has the minimum-billing-demand term and the customer-paid upgrades, and dropped the load-factor gate — SRP took the ACC's 'hybrid tariff plus ESA' direction before the ACC wrote it, because its Board could. Against PPL's Pennsylvania tariff (50 MW, 10-year, 80 percent guaranteed, exit fees, security equal to upgrades) the public terms are similar on the minimum and silent on term and exit, which SRP keeps in the private agreement.",
+   "soldThrough": "Mandatory standard price plan plus an Agreement for Electric Service; dedicated substations and transmission funded by the customer under the LCIP; renewable PPAs 'dedicated' to named large customers through SRP",
+   "targetSegments": [
+    "Data-center campuses on the Mesa side of the metro (Elliot Road Technology Corridor)",
+    "Semiconductor and manufacturing loads",
+    "Any new account at or above 20 MW"
+   ],
+   "roadmap": "The 2035 forecast (peak above 14 GW, more than 39 percent large business); the official statement's FY2026–31 total peak load path from 8,495 MW to 11,369 MW; semiannual HB 2756 reports to the Board from 2026; conversion of the 59-account pipeline is gated by the FY2027–32 resource additions, not by a commission order"
+  },
+  {
+   "name": "Owned generation and the coal-to-gas program — Coolidge, Copper Crossing, Coronado, Springerville and Palo Verde",
+   "category": "Generation",
+   "description": "FY2025 capability was 12,878 MW. Owned gas and coal total 6,811 MW (52.9 percent of capability, 48.2 percent of energy): the Gila River blocks 1 and 4 (1,100 MW, SRP-operated), Santan (399 MW combined cycle and 967 MW of peakers), Mesquite block 1 (625 MW), Desert Basin (618 MW combined cycle plus 99 MW of new peakers), Kyrene (263 MW combined cycle plus 174 MW), Agua Fria (389 MW steam, 238 MW of turbines, 99 MW of new peakers), Coolidge (564 MW; twelve GE LM6000 Sprint units from 2011) and Copper Crossing (99 MW), plus the coal units Coronado 1–2 (762 MW, St. Johns) and Springerville 4 (415 MW, TEP-operated). Participations: Palo Verde 803 MW (a 20.4 percent District share of the 3,937 MW plant, licensed to 2045–2047; 14.5 percent of FY2025 energy), Four Corners 4–5 (10 percent, 150 MW, closing by end-2031), Hayden 2 (50 percent, 131 MW, by end-2027) and Craig 1–2 (29 percent, 243 MW; unit 1 by December 31, 2025, unit 2 by September 30, 2028). Owned hydro is 93 MW on the Salt River plus 169 MW of pumped storage at Horse Mesa and Mormon Flat. The Coolidge Expansion adds twelve more LM6000 units (575 MW): construction began June 1, 2024, the first six were to be operational by summer 2026 — SRP's July 27, 2026 release lists the expansion among resources online since the prior summer — and the remaining six by summer 2027; the original 16-unit, 820 MW plan was rejected by the ACC 4–1 in 2022 and settled at 575 MW with a 30 percent capacity-factor cap (amended CEC June 21, 2023). The Board approved converting Coronado's coal boilers to gas by late 2029 (June 24, 2025; 'about $300 million' cheaper than a new gas plant and 'about $1.2 billion' cheaper than long-duration batteries, per SRP) and Springerville 4 by the same lateral (November 3, 2025); the ACC approved both CECs in March 2026. Copper Crossing in Florence added 55 MW of SRP-owned solar on April 15, 2026 — SRP's first owned and operated solar plant — beside 99 MW of flexible gas and the two long-duration pilots.",
+   "highlights": [
+    "Gas supply: SRP committed to capacity on Energy Transfer's Desert Southwest expansion of Transwestern (1.5 Bcf/d, Permian to Arizona, in service late 2029) alongside APS as anchor shipper, Mesa, TEP and UniSource (August 6, 2025); SRP's contracted volume is not disclosed",
+    "Purchases: Harquahala combined cycle tolled at 975 MW through 2031; Tri-State's Springerville 3 (100 MW, 30-year); federal hydro from CRSP (114 MW), Hoover (148 MW) and Parker-Davis (34 MW); geothermal PPAs of 167 MW",
+    "Nuclear: a joint APS–SRP–TEP preliminary siting study is underway (June 24, 2026 release; community meetings late 2026; SMRs and large reactors both under review; the early-2025 DOE grant application was not awarded); the coal conversions are described as 'a bridge to the mid-2040s' when advanced nuclear is mature",
+    "Turbine OEM named only at Coolidge (GE LM6000); Marigold's gas design was 'not yet selected' in the December 2025 open-house materials; no Mitsubishi Power or Siemens Energy link found"
+   ],
+   "positioning": "A public-power self-builder where APS is a toll buyer: SRP owns 6.8 GW of thermal capacity and operates Gila River and Coolidge itself, and its conversions keep two coal sites alive as gas rather than replacing them with contracted capacity. The ACC's CEC power over plants above 100 MW is the one place a state body can stop an SRP plant — it did so at Coolidge in 2022 — which is why the Marigold gas leg is the vote to watch.",
+   "soldThrough": "Self-build and owned operation; tolls (Harquahala) and participation agreements (Palo Verde, Four Corners, Hayden, Craig) for the rest",
+   "targetSegments": [
+    "SRP's own retail load and reserve margin (19–23 percent planned)",
+    "Wholesale sales (10 percent of revenue)"
+   ],
+   "roadmap": "Coolidge's second six units by summer 2027; Craig 2 out by September 2028; Coronado on gas by late 2029 with coal ended by 2032; Four Corners out by 2031; official statement path of owned gas ELCC from 4,557 MW (FY2026) to 5,188 MW (FY2031) and coal from 1,480 MW to 492 MW; Marigold's 675 MW in 2032–33"
+  },
+  {
+   "name": "Storage and renewable procurement — the all-source RFPs, the energy storage agreements and the 2035 plan",
+   "category": "Energy storage",
+   "description": "SRP had 'more than 1,570 MW of battery storage' on its system by June 16, 2026 (1,300 MW including 200 MW of pumped hydro in October 2025), nearly all under long-term energy storage agreements in which the developer owns and operates the plant and SRP dispatches it: Plus Power's Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024 with Tesla Megapacks and Burns & McDonnell as EPC at Sierra Estrella; Aypa Power's Pediment (250 MW / 1,000 MWh, Mesa, online June 16, 2026, ESA to FY2046) with a second Aypa project of 250 MW / 2,000 MWh — eight hours — due December 2028; EDP Renewables' Flatland (200 MW / 800 MWh, Coolidge, $271M, Tesla, completed June 2026, a 24-year ESA); Ørsted's Eleven Mile (300 MW solar plus 300 MW / four-hour storage, 2024, most of it dedicated to Meta); NextEra's Sonoran (260 MW solar plus 260 MW / 1 GWh), Storey (88 plus 88 MW) and Saint (100 MW), the first two dedicated to Google; and SRP's own Bolster battery (25 MW / 100 MWh, Tesla, 2021). The operating list sums to 1,573 MW. Contracted next: Invenergy's SunDog (200 MW solar plus 200 MW / four-hour storage, Pinal County, announced March 17, 2026 as the first SRP–Invenergy agreement; date and contract type unstated), BrightNight's Eagle Eye (400 MW of solar and storage, La Paz County, from the 2024 RFP), Valley Farms (400 MW of batteries, FY2028) and Selma (150 MW solar plus 150 MW storage) at Coolidge, the Marigold 400 MW / eight-hour battery (2029–30), and two long-duration pilots at Copper Crossing — ESS Tech's 5 MW / 50 MWh iron-flow system under a ten-year agreement by December 2027 and CMBlu's 5 MW organic-flow Desert Blume — plus Energy Dome's 19 MW / ten-hour CO2 battery at Coronado under a 20-year tolling agreement co-funded by Google, due 2029. Solar: 3,000 MW of new solar from NextEra Energy Resources at 500 MW a year from 2029 through 2034 under a 'solar development agreement' selected from the 2024 RFP (April 30, 2026), Clenera's CO Bar (794 MW, FY2027–28), and 600 MW of SunZia wind from Pattern Energy (400 MW from fall 2026, 600 MW by summer 2027, tripling SRP's wind).",
+   "highlights": [
+    "The 2026 All-Source RFP (February 23, 2026): up to 2,900 MW nameplate of carbon-free resources including wind on new interstate transmission, plus peaking capacity including storage and gas; 25 MW minimum; tolling PPA, build-transfer or asset acquisition; gas must connect to both El Paso and Transwestern; a $1,500 per MW community contribution; proposals due April 29, 2026, short list November 2026; SRP is 'developing self-build options for flexible natural gas, solar, and storage'",
+    "The 2023 and 2024 RFPs drew 144 proposals from 68 developers; the 2024 RFP sought at least 700 MW of peak capacity by December 1, 2028 and up to 2,500 MW carbon-free",
+    "Structure: energy storage agreements with SRP dispatch rights (Plus Power, Aypa, EDP) and PPAs (NextEra, Ørsted); the pv magazine reports that the NextEra agreement includes 1,000 MW of storage are not in SRP's release and are treated here as unverified",
+    "SRP-owned storage is 25 MW of batteries plus 169 MW of pumped hydro; a 1,000–2,000 MW, ten-hour Salt River pumped-storage project at Apache Lake targets a construction decision in late 2027 or early 2028 and service by 2033 (official statement)"
+   ],
+   "positioning": "The second Arizona toll buyer in the corpus, with a larger fleet than APS's (about 1.57 GW operating against 150 MW APS-owned and 3.6 GW APS-contracted) and one difference that matters to a seller: SRP has begun to own — direct pay under the IRA 'gave the District a new opportunity to diversify development methods', and Copper Crossing, Marigold's storage and solar (carried both as capital and as PPA cost in the FY2027 budget) and Apache Lake are self-build. Where a supplier is named it is Tesla; Pediment's, Eleven Mile's and NextEra's suppliers are not on SRP's record. Strata Clean Energy, often paired with SRP in trade press, holds no SRP contract — its Arizona batteries are APS's.",
+   "soldThrough": "All-source RFPs (2022, 2023, 2024, 2025, 2026) awarding energy storage agreements, PPAs and, from 2026, build-transfer and asset acquisitions; a 2024 long-duration storage RFP for the pilots; self-build with direct pay",
+   "targetSegments": [
+    "Storage developers and IPPs bidding tolls and ESAs",
+    "Solar and wind developers with Arizona sites or interstate transmission",
+    "Long-duration storage vendors (iron flow, organic flow, CO2) through the Google-co-funded pilot program"
+   ],
+   "roadmap": "Integrated System Plan targets (Board, October 2, 2023): 7,000 MW of renewables including 6,000 MW of solar, 1,500 MW of batteries, 1,000 MW of pumped hydro and 2,000 MW of gas by 2035, with more than 1,300 MW of coal retired; the 2035 sustainability goals (effective May 2025) cut CO2 per MWh 82 percent from 2005 and target net zero by 2050; official statement's future renewable purchases rise from 724 MW to 3,166 MW of ELCC by FY2031"
+  },
+  {
+   "name": "Marigold Energy Center — the 2032 self-developed hybrid and its siting case",
+   "category": "Generation",
+   "description": "Approved by the Board on September 14, 2026 for Stanfield in Pinal County, about 45 miles south of Phoenix: 600 MW of solar, 400 MW of eight-hour battery storage (SRP's wording; the MWh, technology and supplier are unstated), 675 MW of gas generation (design not yet selected as of December 2025), a 230 kV / 500 kV substation and about four miles of new 230 kV lines. Construction is to begin in January 2027 and the project 'is scheduled to be online in 2032'; the December 2025 open-house schedule put the solar and storage in service in 2029–30 and the gas in 2032–33. Electrical District No. 3 is evaluating a partnership to take part of the output. SRP has not published a cost; the FY2027 budget carries $1,352.1M of Marigold capital across FY2027–32 (FY2027 $117.6M, FY2031 $657.5M, FY2032 $255.5M) and $262.1M of 'Marigold Energy Center — Power Purchase Agreements' for solar and storage in the fuel clause over FY2028–32, which reads as owned gas and contracted or hybrid-financed solar and storage. The gas plant and the lines need a Certificate of Environmental Compatibility: the Arizona Power Plant and Transmission Line Siting Committee heard Case 268 (the 675 MW thermal plant, docket L-00000B-26-0375-00268) and Case 267 (two 4.5-mile 230 kV lines, docket L-02217B-26-0363-00267) together in Casa Grande from September 21, 2026, and SRP expects the ACC commissioners' decision in November 2026; the solar and batteries are outside the CEC. Residents and the Sierra Club raised air-quality objections in a non-attainment area and asked for a cumulative assessment with a nearby plant and data center; SRP says the plant will use long-term storage credits rather than new groundwater.",
+   "highlights": [
+    "Peak construction employment 300–400; up to 45 permanent jobs (SRP release)",
+    "Precedent: the ACC rejected SRP's 820 MW Coolidge CEC in 2022 and approved a 575 MW settlement version in June 2023, so the November vote is a real gate",
+    "SRP's first eight-hour lithium contract (Aypa's 250 MW / 2,000 MWh, December 2028) precedes Marigold's eight-hour specification",
+    "Part of the plan to 'more than double the capacity of its power system by 2035'; trade press sizes Marigold at 1.675 GW"
+   ],
+   "positioning": "The largest single resource SRP has ever self-developed and the first large gas plant to face the siting committee under a Board split 7–7 on gas. Against NiSource's ring-fenced GenCo (two 1.3 GW combined cycles plus a 400 MW battery for Amazon) it is a system resource, not a customer's; against Marigold's own solar and storage the gas leg is the only part a state body can stop.",
+   "soldThrough": "SRP-owned gas (FP27 capital); solar and storage under PPAs and, where direct pay applies, SRP ownership — the budget carries both",
+   "targetSegments": [
+    "SRP system load and the 2035 doubling",
+    "Electrical District No. 3 as a potential partner"
+   ],
+   "roadmap": "Siting committee outcome after September 25, 2026 (unpublished at September 29); ACC vote November 2026; construction January 2027; solar and storage 2029–30; gas 2032–33"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "E-67 Standard Price Plan for Large Load Substation Large General Service (FY2026 ratebook, effective November 2025 billing cycle)",
+   "specs": [
+    {
+     "band": "Applicability",
+     "label": "Large Load Account",
+     "value": "a load of 20 megawatts (MW) or more, or reasonably expected by SRP, based on customer forecasts, to achieve a load of 20 MW or more within five years of the date on which the account first takes service"
+    },
+    {
+     "band": "Applicability",
+     "label": "New Large Load Account",
+     "value": "first takes service on or after November 1, 2025; participation in this plan is required"
+    },
+    {
+     "band": "Applicability",
+     "label": "Metering",
+     "value": "low side (or, at SRP's sole discretion, high side) of a dedicated or customer-owned substation transformer; one point of delivery"
+    },
+    {
+     "band": "Contract",
+     "label": "Minimum Billing Demand",
+     "value": "80% of customer's forecasted demand; SRP may reduce it based on the extent to which the customer pays for load-serving resources and infrastructure, or for economic development"
+    },
+    {
+     "band": "Contract",
+     "label": "Maximum load",
+     "value": "determined by SRP from customer forecasts; no obligation to serve load in excess of the maximum load"
+    },
+    {
+     "band": "Contract",
+     "label": "Accelerated resources",
+     "value": "customer's written agreement to reimburse SRP for the costs incurred"
+    },
+    {
+     "band": "Contract",
+     "label": "Agreement for Electric Service",
+     "value": "then-current form, having a minimum term as set forth therein; specifies Minimum Billing Demand, maximum load and load-forecasting requirements"
+    },
+    {
+     "band": "Contract",
+     "label": "Load factor",
+     "value": "no requirement (the 2023 sheet required a minimum load factor of 90 percent)"
+    },
+    {
+     "band": "Charges",
+     "label": "Monthly service charge",
+     "value": "$5,479.45 plus $287.57 per meter"
+    },
+    {
+     "band": "Charges",
+     "label": "On-peak demand, summer",
+     "value": "$16.61 per kW (generation $13.44)"
+    },
+    {
+     "band": "Charges",
+     "label": "On-peak demand, summer peak (July–August)",
+     "value": "$28.84 per kW (generation $24.70)"
+    },
+    {
+     "band": "Charges",
+     "label": "On-peak demand, winter",
+     "value": "$9.83 per kW (generation $6.94)"
+    },
+    {
+     "band": "Charges",
+     "label": "Energy, summer on / shoulder / off-peak",
+     "value": "$0.0749 / $0.0544 / $0.0429 per kWh including FPPAM"
+    },
+    {
+     "band": "Charges",
+     "label": "Energy, summer peak",
+     "value": "$0.1314 / $0.0675 / $0.0540 per kWh"
+    },
+    {
+     "band": "Charges",
+     "label": "Energy, winter",
+     "value": "$0.0651 / $0.0550 / $0.0445 per kWh"
+    },
+    {
+     "band": "Charges",
+     "label": "On-peak hours",
+     "value": "5–10 p.m.; off-peak 8 a.m.–3 p.m. daily"
+    },
+    {
+     "band": "Charges",
+     "label": "Minimum bill",
+     "value": "service charge + facilities charge + per-kW charge on Minimum Billing Demand + any minimum dollar amounts specified in the Agreement for Electric Service"
+    },
+    {
+     "band": "Charges",
+     "label": "Power factor",
+     "value": "85% floor"
+    }
+   ],
+   "notes": "Term, collateral and termination fee are in the Agreement for Electric Service, which is not public. Ratebook: https://www.srpnet.com/v3/assets/bltefc1fc708dcc94e7/blt0f96c16a111a5a95/2025_Ratebook_E-67_with_TCA.pdf"
+  },
+  {
+   "product": "Marigold Energy Center (Board approval September 14, 2026)",
+   "specs": [
+    {
+     "band": "Resources",
+     "label": "Solar",
+     "value": "600 megawatts (MW) of solar generation"
+    },
+    {
+     "band": "Resources",
+     "label": "Storage",
+     "value": "400 MW of 8-hour battery storage"
+    },
+    {
+     "band": "Resources",
+     "label": "Gas",
+     "value": "675 MW of natural gas generation"
+    },
+    {
+     "band": "Grid",
+     "label": "Substation",
+     "value": "230-kilovolt (kV)/500 kV substation"
+    },
+    {
+     "band": "Grid",
+     "label": "Transmission",
+     "value": "approximately four miles of new 230 kV transmission lines (two approximately 4.5-mile 230 kV lines per the siting notice)"
+    },
+    {
+     "band": "Schedule",
+     "label": "Construction",
+     "value": "expected to begin in January 2027"
+    },
+    {
+     "band": "Schedule",
+     "label": "Online",
+     "value": "scheduled to be online in 2032 (solar and storage 2029–30, gas 2032–33 per the December 2025 open-house schedule)"
+    },
+    {
+     "band": "Siting",
+     "label": "CEC cases",
+     "value": "Case No. 268, Docket L-00000B-26-0375-00268 (thermal plant); Case No. 267, Docket L-02217B-26-0363-00267 (transmission)"
+    },
+    {
+     "band": "Siting",
+     "label": "Hearing",
+     "value": "September 21–25, 2026, Casa Grande; a decision from the ACC is expected in November 2026"
+    }
+   ],
+   "notes": "Battery MWh (implied 3,200), technology and supplier, gas design and total cost are unpublished; the FY2027 budget carries $1,352.1M of FP27 capital over FY2027–32 and $262.1M of solar-and-storage PPA cost."
+  },
+  {
+   "product": "Storage fleet on SRP's system (operating June 2026, per the 2025 Series C official statement and SRP releases)",
+   "specs": [
+    {
+     "band": "Contracted",
+     "label": "Sierra Estrella (Plus Power, Avondale)",
+     "value": "250 MW / 1,000 MWh; ESA FY2025–FY2045; Tesla Megapacks; online June 2024"
+    },
+    {
+     "band": "Contracted",
+     "label": "Superstition (Plus Power, Gilbert)",
+     "value": "90 MW / 360 MWh; ESA FY2025–FY2045; online June 2024"
+    },
+    {
+     "band": "Contracted",
+     "label": "Pediment (Aypa Power, Mesa)",
+     "value": "250 MW / 1,000 MWh; ESA FY2027–FY2046; online June 16, 2026"
+    },
+    {
+     "band": "Contracted",
+     "label": "Flatland (EDP Renewables, Coolidge)",
+     "value": "200 MW / 800 MWh; ESA FY2026–FY2050; $271M; Tesla; completed June 2026"
+    },
+    {
+     "band": "Contracted",
+     "label": "Eleven Mile (Ørsted, Pinal County)",
+     "value": "300 MW solar + 300 MW / 4-hour storage; PPA FY2025–FY2045"
+    },
+    {
+     "band": "Contracted",
+     "label": "Sonoran (NextEra, Buckeye)",
+     "value": "260 MW solar + 260 MW BESS (1 GWh); PPA FY2024–FY2044"
+    },
+    {
+     "band": "Contracted",
+     "label": "Storey (NextEra, Coolidge)",
+     "value": "88 MW solar + 88 MW BESS; PPA FY2024–FY2044"
+    },
+    {
+     "band": "Contracted",
+     "label": "Saint (NextEra, Coolidge)",
+     "value": "100 MW; ESA FY2024–FY2041"
+    },
+    {
+     "band": "Owned",
+     "label": "Bolster (Peoria)",
+     "value": "25 MW, 4-hour (100 MWh); Tesla Megapacks; September 2021"
+    },
+    {
+     "band": "Owned",
+     "label": "Horse Mesa HM4 and Mormon Flat MF2 pumped storage",
+     "value": "115 MW + 54 MW = 169 MW"
+    },
+    {
+     "band": "Contracted, not online",
+     "label": "Aypa second project",
+     "value": "250 MW / 2,000 MWh; expected online December 2028"
+    },
+    {
+     "band": "Contracted, not online",
+     "label": "Invenergy SunDog (Pinal County)",
+     "value": "200 MW solar + 200 MW / 4-hour storage; announced March 17, 2026"
+    },
+    {
+     "band": "Contracted, not online",
+     "label": "Valley Farms (Coolidge)",
+     "value": "400 MW BESS; FY2028–FY2048"
+    },
+    {
+     "band": "Contracted, not online",
+     "label": "Selma (Coolidge)",
+     "value": "150 MW solar + 150 MW BESS; FY2028–FY2048"
+    },
+    {
+     "band": "Contracted, not online",
+     "label": "Energy Dome (Coronado)",
+     "value": "19 MW, 10-hour CO2 battery; 20-year tolling agreement; 2029"
+    },
+    {
+     "band": "Contracted, not online",
+     "label": "ESS Tech Project New Horizon (Copper Crossing)",
+     "value": "5 MW / 50 MWh iron flow; 10-year energy storage agreement; by December 2027"
+    }
+   ],
+   "notes": "The operating batteries sum to 1,573 MW, matching SRP's 'more than 1,570 MW' of June 16, 2026."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public-power (audited annual financial statements and official statements; no consensus)",
+  "periods": [
+   {
+    "period": "FY2025 (ended April 30, 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-04-30",
+    "metrics": [
+     {
+      "name": "Total operating revenues (combined District and Association)",
+      "actual": "$4,559.7M (+10.0%; retail electric $3,983.6M, +14.05%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "No consensus exists for a public-power issuer; growth attributed by SRP to higher volumes in a hotter year and the November 1, 2024 FPPAM increase",
+      "kpi": "revenue",
+      "usdMillions": 4559.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net revenues",
+      "actual": "$604.0M (FY2024 $405.6M); $503.2M excluding fair-value changes",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Investment income $184.4M; wholesale revenue fell $73.0M to $470.9M; operating expenses +4.7% on purchased power and maintenance",
+      "kpi": "net-income",
+      "usdMillions": 604.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Electric sales and peak",
+      "actual": "43,999 GWh total (33,963 GWh retail); FY peak 8,219 MW; 1,183,163 customer accounts",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Five-year table, FY2025 annual report"
+     },
+     {
+      "name": "Balance sheet and coverage",
+      "actual": "Long-term debt $6,010.4M; revenue bonds $5,666.3M; debt service coverage 4.2x; debt ratio 46.2%",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Moody's Aa1 and S&P AA+ affirmed on the FY2025 issuances"
+     }
+    ],
+    "commentary": "Public-power form: no analyst consensus and no allowed return; the metrics the Board manages to are coverage, the debt ratio and a general-fund target, 'consistent with current AA+/Aa1 ratings' (FY2027 budget packet)."
+   },
+   {
+    "period": "FY2024 (ended April 30, 2024)",
+    "periodType": "annual",
+    "periodEnd": "2024-04-30",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "$4,145.9M (retail electric $3,492.9M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Comparative figure from the FY2025 five-year table",
+      "kpi": "revenue",
+      "usdMillions": 4145.9,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net revenues",
+      "actual": "$405.6M (FY2023 a loss of $361.5M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "FY2023's loss is on the five-year table; its cause was not read",
+      "kpi": "net-income",
+      "usdMillions": 405.6,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Electric sales, peak, debt",
+      "actual": "41,523 GWh; peak 8,163 MW; long-term debt $5,470.9M; coverage 3.8x",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Five-year table"
+     }
+    ],
+    "commentary": "Read only as the comparison year."
+   },
+   {
+    "period": "Q1 FY2026 (three months ended July 31, 2025, unaudited)",
+    "periodType": "quarter",
+    "periodEnd": "2025-07-31",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "$1,454.2M (prior year $1,468.2M); retail electric $1,320.5M; wholesale $103.4M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "2025 Series C official statement, Tables 9–10"
+     },
+     {
+      "name": "Net revenues",
+      "actual": "$482.0M (prior year $471.3M); $371.7M excluding fair-value changes (prior $475.5M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Net operating revenues $394.5M; investment income $126.5M; net financing costs $49.2M"
+     },
+     {
+      "name": "Balance sheet",
+      "actual": "Total assets $17.26B; long-term debt $5,997.6M; 1,186,676 customer accounts (+2.0%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "No later interim was located: srpnet.com's reports page returned 403 and probed FY2026 quarterly PDF paths returned 404"
+     }
+    ],
+    "commentary": "FY2027 budget (Board, March 26, 2026): combined net revenues of $80M before, and $2M after, the temporary 3% summer FPPAM decrease; funds available $548M; debt ratio 49.5%; $919M of debt issuance; $1.8B capital plan; purchased power $913M and fuel $906M; FY2027 peak 8,869 MW — a forecast the July 24, 2026 record of 9,072 MW has already passed."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-22",
+   "category": "regulatory",
+   "headline": "Siting committee hears Marigold CEC Cases 267 and 268 in Casa Grande (September 21–25); residents and the Sierra Club raise air-quality and cumulative-impact objections; SRP says the plant will use long-term storage credits rather than new groundwater",
+   "read": "The first test of an SRP gas plant above 100 MW before the committee since the 2022 Coolidge rejection — the one state gate on the 2035 plan.",
+   "source": "https://www.kjzz.org/business/2026-09-22/nearby-residents-raise-pollution-and-water-concerns-over-srps-proposed-marigold-power-plant"
+  },
+  {
+   "date": "2026-09-14",
+   "category": "project",
+   "headline": "Board approves the Marigold Energy Center at Stanfield: 600 MW solar, 400 MW of 8-hour batteries, 675 MW of gas, a 230/500 kV substation and four miles of 230 kV lines; construction January 2027, online 2032; ACC decision on the CEC expected November 2026",
+   "read": "SRP's largest self-developed resource passes a Board split 7–7 on gas; the battery's supplier and the gas design are still open procurements.",
+   "source": "https://media.srpnet.com/srp-board-approves-marigold-energy-center/"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "leadership",
+   "headline": "Maricopa County Supervisor Thomas Galvin is sworn in to the Board in place of Nick Brown, taking the April 'clean energy' majority from 8–6 to 7–7",
+   "read": "Every gas vote from here is a coin toss; Marigold passed a month later regardless.",
+   "source": "https://www.kjzz.org/politics/2026-08-14/clean-energy-slate-loses-narrow-control-of-srp-board-following-new-appointment"
+  },
+  {
+   "date": "2026-07-27",
+   "category": "market",
+   "headline": "All-time peak of 9,072 MW on July 24, 2026 (from 8,542 MW in 2025), with records on three consecutive days; Copper Crossing solar, Flatland, Pediment and the Coolidge Expansion added 'nearly 800 MW' since summer 2025",
+   "read": "Load is running ahead of the FY2027 budget's 8,869 MW peak and the official statement's 8,495 MW FY2026 total peak load.",
+   "source": "https://media.srpnet.com/srp-sets-multi-day-record-for-energy-demand-amid-extreme-heat/"
+  },
+  {
+   "date": "2026-07-08",
+   "category": "procurement",
+   "headline": "600 MW SunZia wind PPA with Pattern Energy — 400 MW from fall 2026 rising to 600 MW by summer 2027, tripling SRP's wind from 288 MW",
+   "read": "SRP's first HVDC-delivered out-of-state resource, and the model for the 2026 RFP's 'wind associated with new interstate transmission'.",
+   "source": "https://media.srpnet.com/salt-river-project-to-add-600-mw-of-win-d-energy-to-arizona-grid-from-pattern-energys-sunzia-project/"
+  },
+  {
+   "date": "2026-06-24",
+   "category": "project",
+   "headline": "APS, SRP and TEP report a joint preliminary nuclear siting study underway, with community meetings in late 2026; the early-2025 DOE grant application was not awarded",
+   "read": "Nuclear is a mid-2040s answer in SRP's own framing; the coal conversions are the bridge.",
+   "source": "https://media.srpnet.com/aps-srp-and-tep-continue-nuclear-exploration-for-arizona/"
+  },
+  {
+   "date": "2026-06-16",
+   "category": "project",
+   "headline": "Aypa Power's Pediment battery (250 MW / 1,000 MWh, Mesa) comes online under its SRP energy storage agreement; a second Aypa project of 250 MW / 2,000 MWh is due December 2028; SRP's fleet passes 1,570 MW of batteries",
+   "read": "SRP's first eight-hour lithium contract, a year and a half before Marigold's eight-hour specification is bid.",
+   "source": "https://media.srpnet.com/srp-and-aypa-power-bring-new-battery-storage-system-online-to-strengthen-grid-reliability/"
+  },
+  {
+   "date": "2026-06-16",
+   "category": "procurement",
+   "headline": "Energy Dome to build a 19 MW / 10-hour CO2 battery at Coronado under a 20-year tolling agreement co-funded by Google through the SRP–Google long-duration storage collaboration; service 2029",
+   "read": "The long-duration pilots are funded by a hyperscaler's balance sheet through the utility, not by SRP alone.",
+   "source": "https://www.utilitydive.com/news/energy-dome-srp-salt-river-project-build-19-mw-co2-battery-system/823015/"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "project",
+   "headline": "EDP Renewables and SRP complete the 200 MW / 800 MWh Flatland battery at Coolidge ($271M, Tesla) under a 24-year energy storage agreement",
+   "read": "The fourth Tesla-equipped battery on SRP's system; the supplier decision sat with EDP.",
+   "source": "https://pv-magazine-usa.com/2026/06/11/edpr-srp-commission-200-mw-800-mwh-flatland-battery-storage-project-in-arizona/"
+  },
+  {
+   "date": "2026-06-04",
+   "category": "policy",
+   "headline": "Governor Hobbs signs HB 2756: a public-power entity with more than one million connections must report new extra-high-load-factor customers to its own governing body semiannually (A.R.S. 30-301), while the ACC gains tariff authority over public service corporations' large loads (A.R.S. 40-207); the FY2027 state budget pauses new data-center tax-exemption applications from July 1, 2026 to June 30, 2029",
+   "read": "The legislature confirmed the split: SRP answers to its Board, APS to the Commission — and both face a slower pipeline of new applicants.",
+   "source": "https://www.azleg.gov/legtext/57leg/2r/laws/0111.htm"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "procurement",
+   "headline": "3,000 MW solar development agreement with NextEra Energy Resources — 500 MW a year from 2029 through 2034, selected from the 2024 RFP; trade press adds 1,000 MW of storage that SRP's release does not mention",
+   "read": "A single developer takes half of the ISP's 6,000 MW solar target; the storage attached to it is unconfirmed on SRP's side.",
+   "source": "https://media.srpnet.com/srp-announces-3000-mw-solar-agreement-with-nextera-energy-resources/"
+  },
+  {
+   "date": "2026-04-20",
+   "category": "regulatory",
+   "headline": "ACC records SRP's large-load workshop statement: 59 large-load customers, a nearly 7,000 MW combined load; APS's large-customer peak estimated at about 13.1 GW this year; both utilities describe their own queue processes",
+   "read": "The one public sizing of SRP's data-center pipeline, and it came through the Commission that does not regulate it.",
+   "source": "https://www.azcc.gov/news/home/2026/04/20/acc-large-load-data-center-workshop-highlights"
+  },
+  {
+   "date": "2026-04-15",
+   "category": "project",
+   "headline": "Copper Crossing Energy and Research Center adds 55 MW of SRP-owned solar — SRP's first owned and operated solar plant — beside 99 MW of flexible gas and the long-duration storage pilots",
+   "read": "Direct pay under the IRA turned a PPA buyer into a self-builder; small, but the precedent for Marigold's solar and storage.",
+   "source": "https://media.srpnet.com/srp-launches-first-utility-owned-solar-to-support-the-grid/"
+  },
+  {
+   "date": "2026-04-13",
+   "category": "leadership",
+   "headline": "Board and Council election results made official: Chris Dobson President and Barry Paceley Vice President of both organizations; a 'clean energy' slate takes an 8–6 Board majority on turnout four times 2024's",
+   "read": "The rate-setting body changed hands in an election — the public-power equivalent of a new commission.",
+   "source": "https://media.srpnet.com/srp-board-makes-2026-board-and-council-election-results-official/"
+  },
+  {
+   "date": "2026-03-26",
+   "category": "financial",
+   "headline": "Board approves a temporary 3% summer FPPAM decrease for May–October 2026 ($0.0038 per kWh) from a projected $56M fuel-clause surplus, and the FY2027 budget: $1.8B of capital, $0.9B of debt, 7.8% retail energy growth, workforce 6,069",
+   "read": "A fuel-clause surplus returned to customers in an election year; the base price stays where the 2025 process put it.",
+   "source": "https://media.srpnet.com/srp-board-of-directors-approves-temporary-summer-rate-decrease/"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "procurement",
+   "headline": "First SRP–Invenergy agreement: SunDog Energy Center, 200 MW of solar plus 200 MW / four-hour storage in Pinal County; SRP counts 736 MW of Invenergy storage operating or under construction in Arizona",
+   "read": "Invenergy joins Plus Power, Aypa, EDP and NextEra as an SRP storage counterparty; the contract type is not stated.",
+   "source": "https://media.srpnet.com/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand/"
+  },
+  {
+   "date": "2026-02-23",
+   "category": "procurement",
+   "headline": "2026 All-Source RFP: up to 2,900 MW of carbon-free resources plus peaking capacity including storage and gas; tolling PPA, build-transfer or asset acquisition; proposals due April 29, short list November 2026",
+   "read": "The procurement door for the next battery and turbine on SRP's system; build-transfer and acquisition structures are new to SRP's list.",
+   "source": "https://www.srpnet.com/v3/assets/bltefc1fc708dcc94e7/blt7c2744713c80d9b9/2026-All-Source-RFP.pdf"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "project",
+   "headline": "Board approves converting Springerville Unit 4 (400 MW) from coal to gas, served by the new Coronado gas lateral; the ACC approved the Coronado and Springerville CECs in March 2026",
+   "read": "Two coal sites become gas capacity for the late 2020s at a fraction of a new plant's cost, by SRP's own comparison.",
+   "source": "https://media.srpnet.com/srp-board-of-directors-approves-converting-springerville-unit-4-to-natural-gas/"
+  },
+  {
+   "date": "2025-10-15",
+   "category": "financial",
+   "headline": "$775M 2025 Series C revenue bonds priced (closed November 4) at Aa1 / AA+; the official statement of October 8 discloses the FY2026–31 load forecast, the contract table and the FY2026 Q1 results",
+   "read": "The municipal-bond market is where SRP's disclosure lives; the official statement is this dossier's filing.",
+   "source": "https://www.srpnet.com/assets/srpnet/pdf/doing-business/SRP-Preliminary-Official-Statement-2025-Series-C.pdf"
+  },
+  {
+   "date": "2025-10-09",
+   "category": "procurement",
+   "headline": "ESS Tech to build a 5 MW / 50 MWh iron-flow battery at Copper Crossing under a ten-year energy storage agreement from SRP's 2024 long-duration storage RFP, by December 2027",
+   "read": "The non-lithium track: two ten-hour pilots at one site before any 100 MW-scale long-duration award.",
+   "source": "https://essinc.com/srp-and-ess-announce-new-50-mwh-long-duration-energy-storage-pilot-project/"
+  },
+  {
+   "date": "2025-09-08",
+   "category": "partnership",
+   "headline": "SRP and Google launch a collaboration on long-duration energy storage innovation and grid resilience; Google's Mesa campus is already served by NextEra's Sonoran, Storey and Babbitt Ranch through SRP",
+   "read": "The hyperscaler pays for the technology SRP wants to learn, inside a utility program.",
+   "source": "https://media.srpnet.com/srp-and-google-launch-collaboration-to-advance-long-duration-energy-storage-innovation-grid-resilience-in-arizona/"
+  },
+  {
+   "date": "2025-08-06",
+   "category": "partnership",
+   "headline": "SRP, APS, Mesa, TEP and UniSource commit to Energy Transfer's Desert Southwest expansion of the Transwestern pipeline (1.5 Bcf/d, in service late 2029)",
+   "read": "The fuel for Marigold, the conversions and the 2026 RFP's gas bids arrives in late 2029, which fixes the sequencing of everything gas-fired.",
+   "source": "https://media.srpnet.com/arizona-utilities-work-to-lock-in-critical-natural-gas-delivery-to-power-growth/"
+  },
+  {
+   "date": "2025-06-24",
+   "category": "project",
+   "headline": "Board approves converting Coronado Generating Station's coal boilers to gas by late 2029 — 'about $300 million' cheaper than a new gas plant and 'about $1.2 billion' cheaper than long-duration batteries, per SRP; coal ends by 2032",
+   "read": "SRP priced eight-hour lithium against a boiler conversion and chose the boiler; the Marigold battery is the other half of the same plan.",
+   "source": "https://media.srpnet.com/srp-board-approves-converting-coal-fired-coronado-generating-station-to-run-on-natural-gas/"
+  },
+  {
+   "date": "2025-02-27",
+   "category": "regulatory",
+   "headline": "Board approves the 2025 pricing proposal (9–5 per KJZZ): base prices +4.0%, FPPAM −1.6%, net +2.4% from the November 2025 billing cycle, and the redesigned E-67 plan with an 80%-of-forecast minimum billing demand for any new account of 20 MW or more",
+   "read": "SRP's large-load tariff was written by its Board in one vote, a year before the ACC's workshop asked APS for the same terms.",
+   "source": "https://media.srpnet.com/srp-board-of-directors-approves-pricing-proposal/"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that the battery and integrator decisions for SRP's territory are made by the developers bidding into its all-source RFPs, not by SRP's own desk, and that the 2026 solicitation (up to 2,900 MW carbon-free plus peaking, short list November 2026) is the live account. Basis: 1,548 of the 1,573 MW of operating batteries are under energy storage agreements with Plus Power, Aypa, EDP Renewables, Ørsted and NextEra; every supplier SRP has ever disclosed was chosen by the developer and was Tesla; the 2026 RFP's structures (tolling PPA, build-transfer, asset acquisition) put the equipment choice with the bidder even when SRP ends up owning the plant.",
+  "(High confidence) We assess that SRP's large-load terms are already where the Commission is trying to take APS, because SRP's Board could set them without a rate case: a mandatory 20 MW plan, an 80 percent-of-forecast minimum billing demand, customer-paid dedicated upgrades and a maximum load SRP sets from the forecast. Basis: the FY2026 E-67 sheet, the general manager's March 31, 2026 op-ed, HB 2756's split of authority, and the ACC's April 20, 2026 summary of what both utilities asked for.",
+  "(Moderate confidence) We assess that the 675 MW gas leg of Marigold is the most exposed element of the 2035 plan, and that its risk is political and siting rather than economic. Basis: the Board approved it 7–7 on the gas question by composition, with a 'clean energy' slate that won 8–6 in April and lost the majority to an August appointment; the ACC rejected SRP's last large gas CEC (Coolidge, 2022) before approving a smaller settlement; residents and the Sierra Club contested Cases 267 and 268 on air quality in a non-attainment area. Against this: the Board did approve it, the coal conversions' CECs passed in March 2026, and the solar and storage need no CEC.",
+  "(Moderate confidence) We assess that SRP will own more of its next storage than its last, and that eight hours is becoming its default duration. Basis: direct pay under the IRA is cited in the official statement as the reason to 'diversify development methods'; Copper Crossing's 55 MW is SRP-owned; the FY2027 budget carries $1,352M of Marigold capital alongside PPA cost; Apache Lake pumped storage is self-build; the Aypa second project (250 MW / 2,000 MWh) and Marigold's 400 MW are both eight-hour. Against this: SRP's own words on Coronado priced long-duration lithium at $1.2B more than a boiler conversion, and the phase-down of federal credits after 2025 is not quantified anywhere in SRP's record.",
+  "(Low confidence) We assess that the 59-customer / 7,000 MW pipeline will convert at a fraction of its face value, and that SRP's own planning figures — a 2035 peak above 14 GW with 39 percent large business, against a 9,072 MW 2026 peak and 441 MW of data-center load in 2025 — are the number to plan to. Basis: SRP told the Commission that inaccurate load ramps are one of its five main challenges with large customers; the state paused new tax-exemption applications for three years; the queue figure exists only in the ACC's paraphrase of a slide this session could not read."
+ ],
+ "relationships": [
+  {
+   "slug": "pinnacle-west",
+   "type": "partner",
+   "status": "active",
+   "scale": "Palo Verde 3,937 MW (APS 29.1%, SRP 20.4%); Desert Southwest pipeline 1.5 Bcf/d",
+   "note": "APS and SRP co-own Palo Verde and Four Corners, jointly committed to Energy Transfer's Desert Southwest pipeline expansion (August 2025), run a joint nuclear siting study with TEP (June 2026) and presented side by side at the ACC's April 2026 large-load workshop.",
+   "context": "The two utilities split the Phoenix metro — SRP the Mesa side, APS the West Valley — and their planning is intertwined: APS is the anchor shipper on the pipeline SRP also signed for, both hold shares of Palo Verde (SRP 20.4 percent, 803 MW, per the official statement's Table 4), and the ACC's workshop record carries both utilities' queues. SRP is not under the ACC's rate jurisdiction that governs APS, which is the structural difference the corpus's Pinnacle West dossier describes from the other side.",
+   "source": "https://media.srpnet.com/arizona-utilities-work-to-lock-in-critical-natural-gas-delivery-to-power-growth/"
+  },
+  {
+   "slug": "aypa-power",
+   "type": "supplier",
+   "status": "active",
+   "since": "2024-07",
+   "scale": "500 MW / 3,000 MWh across two projects",
+   "via": "Energy storage agreements",
+   "note": "Aypa's Pediment battery (250 MW / 1,000 MWh, Mesa) came online June 16, 2026 under an SRP energy storage agreement running to FY2046, and a second Aypa project of 250 MW / 2,000 MWh is under contract for December 2028.",
+   "context": "Pediment was originated by Eolian in 2018 and bid jointly with Aypa into SRP's 2023 all-source RFP; SRP announced the agreement July 18, 2024 and Aypa financed it in December 2024. The second project is SRP's first eight-hour lithium contract. The corpus's Aypa dossier records the same facts from Aypa's side, including the 20-year term.",
+   "source": "https://media.srpnet.com/srp-and-aypa-power-bring-new-battery-storage-system-online-to-strengthen-grid-reliability/"
+  },
+  {
+   "slug": "plus-power",
+   "type": "supplier",
+   "status": "active",
+   "since": "2022-10",
+   "scale": "340 MW / 1,360 MWh",
+   "via": "Energy storage agreements (FY2025–FY2045)",
+   "note": "Plus Power owns and operates Sierra Estrella (250 MW / 1,000 MWh, Avondale) and Superstition (90 MW / 360 MWh, Gilbert), both online June 2024, with SRP holding the dispatch rights.",
+   "context": "SRP announced the two agreements October 27, 2022; Sierra Estrella uses Tesla Megapacks with Burns & McDonnell as EPC. The corpus's Plus Power and Prime Data Centers dossiers describe Sierra Estrella as grid support for the adjacent Prime campus in Avondale; SRP's own releases name neither Prime nor any customer, and no such contract is on SRP's record.",
+   "source": "https://media.srpnet.com/srp-to-add-340-mw-of-additional-battery-storage-to-its-system-with-two-new-projects-from-plus-power/"
+  },
+  {
+   "slug": "invenergy",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-03",
+   "scale": "200 MW solar + 200 MW / 800 MWh",
+   "note": "SunDog Energy Center in Pinal County is the first SRP–Invenergy agreement (March 17, 2026); SRP's release counts 736 MW of Invenergy storage operating or under construction in Arizona.",
+   "context": "The release states no commercial date and no contract form. The corpus's Invenergy dossier carries the same project and the 736 MW figure; its Arizona storage fleet otherwise serves APS.",
+   "source": "https://media.srpnet.com/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand/"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "supplier",
+   "status": "active",
+   "since": "2018",
+   "scale": "3,000 MW of solar 2029–2034 plus more than 1,000 MW operating across five projects",
+   "via": "Solar development agreement (2024 RFP) and PPAs/ESAs",
+   "note": "NextEra Energy Resources will develop 3,000 MW of solar for SRP at 500 MW a year from 2029 through 2034 (agreement announced April 30, 2026), on top of Sonoran, Storey, Saint, Pinal Central and Babbitt Ranch already serving SRP.",
+   "context": "The agreement 'does not replace SRP's All-Source Request for Proposals process'. Trade press (pv magazine, May 1, 2026) reports 1,000 MW of storage in the same deal; SRP's release does not say so and NextEra's own confirmation was not located, so the storage figure is recorded as unverified. Sonoran and Storey are dedicated to Google's Mesa campus. The corpus's NextEra Energy Resources dossier (profileVersion 4, September 5, 2026) predates the agreement and does not carry it.",
+   "source": "https://media.srpnet.com/srp-announces-3000-mw-solar-agreement-with-nextera-energy-resources/"
+  },
+  {
+   "slug": "pattern-energy",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-07",
+   "scale": "600 MW",
+   "via": "SunZia wind PPA",
+   "note": "SRP will take 400 MW of SunZia wind from fall 2026, rising to 600 MW by summer 2027, tripling its wind portfolio.",
+   "context": "Delivered over the SunZia HVDC line to the Pinal Central 500 kV substation; SRP calls it one of the largest renewable PPAs in the country. The corpus's Pattern Energy dossier records the same volumes.",
+   "source": "https://media.srpnet.com/salt-river-project-to-add-600-mw-of-win-d-energy-to-arizona-grid-from-pattern-energys-sunzia-project/"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "supplier",
+   "status": "active",
+   "since": "2011",
+   "scale": "575 MW expansion (12 LM6000 units) on 12 existing units",
+   "via": "LM6000 aeroderivative turbines at Coolidge",
+   "note": "Coolidge runs twelve GE LM6000 Sprint units from 2011 and is adding twelve more (575 MW), the first six online by summer 2026 and the rest by summer 2027.",
+   "context": "The expansion is the settled version of an 820 MW, 16-unit plan the ACC rejected in 2022; the amended CEC of June 21, 2023 caps it at a 30 percent capacity factor. GE is the only turbine OEM named anywhere in SRP's record; Marigold's gas design was not yet selected as of December 2025.",
+   "source": "https://www.powermag.com/srps-urgent-575-mw-aeroderivative-natural-gas-expansion-gets-arizona-regulators-green-light/"
+  },
+  {
+   "slug": "tesla",
+   "type": "supplier",
+   "status": "active",
+   "since": "2021",
+   "scale": "About 565 MW of Megapack-equipped storage on SRP's system",
+   "via": "Megapack",
+   "note": "Tesla Megapacks equip SRP's own Bolster battery (25 MW, 2021), Plus Power's Sierra Estrella and Superstition (2024) and EDP Renewables' Flatland (2026).",
+   "context": "Only Bolster was bought by SRP; the other three suppliers were chosen by the developers. Pediment's, Eleven Mile's and NextEra's suppliers are not on SRP's record.",
+   "source": "https://media.srpnet.com/srp-and-edp-renewables-announce-new-energy-storage-system-to-support-increasing-energy-demand/"
+  },
+  {
+   "slug": "burns-mcdonnell",
+   "type": "other",
+   "status": "historical",
+   "since": "2024",
+   "scale": "1 GWh",
+   "note": "Burns & McDonnell was the EPC for Plus Power's Sierra Estrella battery, which SRP dispatches under its energy storage agreement.",
+   "context": "The EPC contract was Plus Power's, not SRP's; it is recorded here because Sierra Estrella is the largest battery on SRP's system and the only one whose EPC is named.",
+   "source": "https://www.burnsmcd.com/news/completion-sierria-estrella-energy-storage-facility"
+  },
+  {
+   "slug": "edgecore",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-05",
+   "scale": "206 MW operating and 250 MW under construction",
+   "note": "EdgeCore's Mesa campus is SRP-served; SRP's general manager was quoted in EdgeCore's May 20, 2025 expansion release.",
+   "context": "The corpus's EdgeCore dossier adds that SRP's switchyard needs cut EdgeCore's Mesa expansion by a building in March 2026 and that the Large Customer Integration Process requires dedicated upgrades to be funded upfront — both from EdgeCore's side.",
+   "source": "https://edgecore.com/edgecore-digital-infrastructure-announces-expansion-of-its-metro-phoenix-data-center-market-to-over-450-mw/"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "since": "2022-03",
+   "scale": "More than 300 MW of dedicated renewables; a Meta-funded 230 kV line and substation",
+   "note": "SRP serves Meta's Mesa data center through the Meta-funded Project Huckleberry line and Prickly Pear substation and dedicates the majority of Ørsted's Eleven Mile (300 MW solar plus 300 MW storage), 50 MW of West Line and part of Brittlebush to it.",
+   "context": "The December 11, 2023 release is the model for SRP's 'dedicated PPA' practice — twelve renewable PPAs dedicated to large customers per the official statement.",
+   "source": "https://media.srpnet.com/meta-teams-up-with-srp-and-rsted-to-support-data-center-with-clean-energy-from-new-solar-and-battery--project/"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-03",
+   "scale": "More than 430 MW of carbon-free capacity over eight years, plus co-funded long-duration pilots",
+   "note": "Google's Mesa campus is served through SRP by NextEra's Sonoran, Storey and Babbitt Ranch under an eight-year pact, and Google co-funds SRP's long-duration storage pilots (Energy Dome, ESS) through the September 2025 collaboration.",
+   "context": "SRP projects Google at or above 80 percent hourly carbon-free energy by 2026. The corpus's Google dossier records SRP among its demand-response and storage-innovation counterparties.",
+   "source": "https://media.srpnet.com/srp-and-google-launch-collaboration-to-advance-long-duration-energy-storage-innovation-grid-resilience-in-arizona/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Arizona public-power exemption from ACC rate jurisdiction (A.R.S. 45-1720) and the ACC's CEC power over plants above 100 MW",
+   "status": "in-effect",
+   "exposure": "SRP's Board sets prices and the large-load plan without a commission; the ACC decides only bond authorizations ($6.4B authorized September 2024), Certificates of Environmental Compatibility for plants above 100 MW and lines at 115 kV or above. The CEC gate stopped SRP's 820 MW Coolidge plan in 2022 and is the November 2026 vote on Marigold's 675 MW gas leg and 230 kV lines.",
+   "mitigation": "SRP filed Marigold's solar and storage outside the CEC and settled Coolidge at 575 MW with a capacity-factor cap; the Coronado and Springerville conversion CECs were approved in March 2026.",
+   "source": "https://www.azcc.gov/faqs/utilities-faqs"
+  },
+  {
+   "regime": "HB 2756 — extra-high-load-factor customers (Laws 2026, Ch. 111; A.R.S. 30-301 and 40-207)",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-04",
+   "exposure": "A public-power entity serving more than one million connections — SRP — must file semiannual reports on new extra-high-load-factor customers (requests and completed interconnections) and, on request, a cost-of-service study with its own governing body, through 2033. The ACC's new authority to set required terms (minimum bills, contract length, termination, collateral, infrastructure payment) under 40-207 applies to public service corporations, not SRP.",
+   "mitigation": "E-67's 80 percent minimum billing demand and the LCIP's upfront customer payments already match the terms the ACC is writing for APS.",
+   "source": "https://www.azleg.gov/legtext/57leg/2r/laws/0111.htm"
+  },
+  {
+   "regime": "Arizona data-center tax-exemption pause (FY2027 state budget)",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-01",
+   "exposure": "The Arizona Commerce Authority may not accept new applications for the data-center transaction-privilege and use-tax exemption from July 1, 2026 to June 30, 2029; operators rushed applications before the window closed and the Data Center Coalition says it will push development elsewhere.",
+   "source": "https://azcapitoltimes.com/news/2026/07/09/data-centers-dominated-2026-session-lawmakers-answered-with-3-year-tax-incentive-pause/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "As a tax-exempt entity SRP historically bought renewables and storage through PPAs and ESAs with developers who held the credits; the official statement says the IRA's direct pay 'gave the District a new opportunity to diversify development methods', which is the basis for Copper Crossing's owned solar, the Marigold storage and solar and the Apache Lake pumped storage. The 2025 phase-downs and FEOC rules bear on both the contracted pipeline (NextEra from 2029, Invenergy, BrightNight, Aypa's 2028 project) and the direct-pay projects; SRP has published no quantification.",
+   "source": "https://www.srpnet.com/assets/srpnet/pdf/doing-business/SRP-Preliminary-Official-Statement-2025-Series-C.pdf"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Every battery supplier SRP has disclosed is Tesla (Bolster, Sierra Estrella, Superstition, Flatland); cell origin is not disclosed for any project, and Pediment's, Eleven Mile's and NextEra's suppliers are not on SRP's record. The non-lithium pilots are ESS (Oregon-built iron flow) and Energy Dome (CO2).",
+   "source": "https://media.srpnet.com/srp-and-edp-renewables-announce-new-energy-storage-system-to-support-increasing-energy-demand/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Jim Pratt",
+   "title": "General Manager and Chief Executive Officer",
+   "background": [
+    "General Manager and CEO of SRP since May 5, 2023, succeeding Mike Hummel; the public voice on data centers (March 31, 2026 op-ed: 'data center customers estimated peak demand was 441 MW, which is 5.1% of the highest peak demand'), the coal-to-gas conversions, the Transwestern commitment and the EdgeCore expansion",
+    "No successor announcement located as of September 29, 2026; SRP's officer page returned 403 to this session, so his earlier career is not recorded here"
+   ]
+  },
+  {
+   "name": "Bobby Olsen",
+   "title": "Associate General Manager and Chief Power System Executive",
+   "background": [
+    "Named in the power-system role in every 2026 resource release (Invenergy March 17, NextEra April 30, Pediment June 16, Marigold September 14); the executive over power supply and resource planning",
+    "Associate General Manager and Chief Planning, Strategy and Sustainability Executive in the FY2025 annual report and the October 2025 official statement — moved to the power-system role between October 2025 and March 2026, when John Coggins held the title"
+   ]
+  },
+  {
+   "name": "Brian J. Koch",
+   "title": "Associate General Manager and Chief Financial Executive",
+   "background": [
+    "Chief Financial Executive since February 19, 2024, succeeding Aidan McSheffrey",
+    "Joined SRP in 2001; formerly Corporate Treasurer"
+   ]
+  },
+  {
+   "name": "Chris Dobson",
+   "title": "President of the Board, Salt River Project Agricultural Improvement and Power District and Salt River Valley Water Users' Association",
+   "background": [
+    "Elected President April 7, 2026 and in office from May 2026; previously Vice President (FY2025); presides over both organizations and sets the Board agenda",
+    "Described by the Arizona Capitol Times as a moderate who has developed wind projects on his own land; David Rousseau was President through May 2026"
+   ]
+  },
+  {
+   "name": "Barry Paceley",
+   "title": "Vice President of the Board",
+   "background": [
+    "Elected Vice President April 7, 2026, in office from May 2026",
+    "Formerly Vice Chair of the Council"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "KJZZ — Nearby residents raise pollution and water concerns over SRP's proposed Marigold power plant (siting committee hearing)",
+   "url": "https://www.kjzz.org/business/2026-09-22/nearby-residents-raise-pollution-and-water-concerns-over-srps-proposed-marigold-power-plant",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "SRP — SRP Board approves Marigold Energy Center",
+   "url": "https://media.srpnet.com/srp-board-approves-marigold-energy-center/",
+   "date": "2026-09-14"
+  },
+  {
+   "label": "Arizona Corporation Commission — Notice of Hearing, Case No. 268 (Marigold Thermal Plant Project, 675 MW)",
+   "url": "https://www.azcc.gov/docs/default-source/arizona-power-plant-files/9-21-2026_noh_cec-268.pdf",
+   "date": "2026-09"
+  },
+  {
+   "label": "Arizona Corporation Commission — Notice of Hearing, Case No. 267 (Marigold Transmission Project)",
+   "url": "https://azcc.gov/docs/default-source/arizona-power-plant-files/9-21-2026_noh_cec-267.pdf",
+   "date": "2026-09"
+  },
+  {
+   "label": "KJZZ — Clean energy slate loses narrow control of SRP board following new appointment",
+   "url": "https://www.kjzz.org/politics/2026-08-14/clean-energy-slate-loses-narrow-control-of-srp-board-following-new-appointment",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "SRP — SRP sets multi-day record for energy demand amid extreme heat (9,072 MW)",
+   "url": "https://media.srpnet.com/srp-sets-multi-day-record-for-energy-demand-amid-extreme-heat/",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Utility Dive — SRP seeks input on Marigold, an up-to-1.7 GW mixed-resource project",
+   "url": "https://www.utilitydive.com/news/srp-marigold-project-board-energy-storage/825813/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "SRP — SRP seeks additional input on planned Marigold Energy Center, hosts July open houses",
+   "url": "https://media.srpnet.com/srp-seeks-additional-input-on-planned-marigold-energy-center-hosts-july-open-houses/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Arizona Capitol Times — Data centers dominated 2026 session; lawmakers answered with 3-year tax incentive pause",
+   "url": "https://azcapitoltimes.com/news/2026/07/09/data-centers-dominated-2026-session-lawmakers-answered-with-3-year-tax-incentive-pause/",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "SRP — Salt River Project to add 600 MW of wind energy to Arizona grid from Pattern Energy's SunZia project",
+   "url": "https://media.srpnet.com/salt-river-project-to-add-600-mw-of-win-d-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "SRP — APS, SRP and TEP continue nuclear exploration for Arizona",
+   "url": "https://media.srpnet.com/aps-srp-and-tep-continue-nuclear-exploration-for-arizona/",
+   "date": "2026-06-24"
+  },
+  {
+   "label": "SRP — SRP and Aypa Power bring new battery storage system online (Pediment, 250 MW / 1,000 MWh)",
+   "url": "https://media.srpnet.com/srp-and-aypa-power-bring-new-battery-storage-system-online-to-strengthen-grid-reliability/",
+   "date": "2026-06-16"
+  },
+  {
+   "label": "Utility Dive — Energy Dome, SRP to build 19 MW CO2 battery system",
+   "url": "https://www.utilitydive.com/news/energy-dome-srp-salt-river-project-build-19-mw-co2-battery-system/823015/",
+   "date": "2026-06-16"
+  },
+  {
+   "label": "pv magazine USA — EDPR, SRP commission 200 MW / 800 MWh Flatland battery storage project in Arizona",
+   "url": "https://pv-magazine-usa.com/2026/06/11/edpr-srp-commission-200-mw-800-mwh-flatland-battery-storage-project-in-arizona/",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Arizona Legislature — HB 2756, Laws 2026, Chapter 111 (utilities; high load factor customers)",
+   "url": "https://www.azleg.gov/legtext/57leg/2r/laws/0111.htm",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "pv magazine USA — SRP and NextEra Energy Resources partner on massive solar and storage expansion (source of the 1,000 MW storage claim)",
+   "url": "https://pv-magazine-usa.com/2026/05/01/srp-and-nextera-energy-resources-partner-on-massive-solar-and-storage-expansion/",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "SRP — SRP announces 3,000 MW solar agreement with NextEra Energy Resources",
+   "url": "https://media.srpnet.com/srp-announces-3000-mw-solar-agreement-with-nextera-energy-resources/",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Arizona Corporation Commission — Chairman Nick Myers, testimony to the U.S. House (SRP's 2035 peak and large-business share)",
+   "url": "https://d1dth6e84htgma.cloudfront.net/04_29_2026_ENG_Testimony_Myers_769d07bf6f.pdf",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Arizona Corporation Commission — ACC Data Center / Large Load Workshop highlights (SRP: 59 large-load customers, nearly 7,000 MW)",
+   "url": "https://www.azcc.gov/news/home/2026/04/20/acc-large-load-data-center-workshop-highlights",
+   "date": "2026-04-20"
+  },
+  {
+   "label": "SRP — SRP launches first utility-owned solar to support the grid (Copper Crossing, 55 MW)",
+   "url": "https://media.srpnet.com/srp-launches-first-utility-owned-solar-to-support-the-grid/",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "SRP — SRP Board makes 2026 Board and Council election results official",
+   "url": "https://media.srpnet.com/srp-board-makes-2026-board-and-council-election-results-official/",
+   "date": "2026-04-13"
+  },
+  {
+   "label": "Arizona Capitol Times — Clean energy majority takes over SRP board; turning point falls short",
+   "url": "https://azcapitoltimes.com/news/2026/04/09/clean-energy-majority-takes-over-srp-board-turning-point-falls-short/",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "Arizona Capitol Times — Jim Pratt, 'The facts about SRP and data centers' (441 MW, 5.1% of the 8,542 MW peak; E-67; LCIP)",
+   "url": "https://azcapitoltimes.com/news/2026/03/31/the-facts-about-srp-and-data-centers/",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "SRP — SRP Board of Directors approves temporary summer rate decrease (and the FY2027 budget)",
+   "url": "https://media.srpnet.com/srp-board-of-directors-approves-temporary-summer-rate-decrease/",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "SRP — Finance and Budget Committee packet: FY2027 budgets (Marigold FP27 capital, PPA cost, peak, growth, workforce)",
+   "url": "https://www.srpnet.com/assets/srpnet/pdf/about/governance-leadership/district-meetings/20260326_FB_packet_Budgets.pdf",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "SRP — Power Committee packet, March 24, 2026 (BrightNight Eagle Eye, Energy Dome terms; February 19 minutes listing 2025 RFP attendees)",
+   "url": "https://www.srpnet.com/assets/srpnet/pdf/about/governance-leadership/district-meetings/20260324_Power_packet.pdf",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "SRP — SRP and Invenergy announce first agreement on solar and storage project (SunDog)",
+   "url": "https://media.srpnet.com/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand/",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "KJZZ — SRP board will consider temporary rate decrease for summer months ($56M FPPAM surplus)",
+   "url": "https://www.kjzz.org/business/2026-03-04/srp-board-will-consider-temporary-rate-decrease-for-summer-months",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "SRP — 2026 All-Source Request for Proposals",
+   "url": "https://www.srpnet.com/v3/assets/bltefc1fc708dcc94e7/blt7c2744713c80d9b9/2026-All-Source-RFP.pdf",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "SRP — Marigold Energy Center December 2025 open-house materials (schedule; gas design 'not yet selected')",
+   "url": "https://www.srpnet.com/assets/srpnet/pdf/grid-water-management/grid-management/improvement-projects/marigold/MEC-December-2025-Open-House-Materials.pdf",
+   "date": "2025-12"
+  },
+  {
+   "label": "SRP — Ratebook E-67 Standard Price Plan for Large Load Substation Large General Service (effective November 2025 billing cycle; TCA January 2026)",
+   "url": "https://www.srpnet.com/v3/assets/bltefc1fc708dcc94e7/blt0f96c16a111a5a95/2025_Ratebook_E-67_with_TCA.pdf",
+   "date": "2025-11"
+  },
+  {
+   "label": "SRP — SRP Board of Directors approves converting Springerville Unit 4 to natural gas",
+   "url": "https://media.srpnet.com/srp-board-of-directors-approves-converting-springerville-unit-4-to-natural-gas/",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "ESS Tech — SRP and ESS announce new 50 MWh long-duration energy storage pilot project",
+   "url": "https://essinc.com/srp-and-ess-announce-new-50-mwh-long-duration-energy-storage-pilot-project/",
+   "date": "2025-10-09"
+  },
+  {
+   "label": "SRP — Preliminary Official Statement, 2025 Series C revenue bonds (identity, governance, forecast, power sources, contract table, FY2026 Q1)",
+   "url": "https://www.srpnet.com/assets/srpnet/pdf/doing-business/SRP-Preliminary-Official-Statement-2025-Series-C.pdf",
+   "date": "2025-10-08"
+  },
+  {
+   "label": "SRP — Investor roadshow presentation, 2025 Series C",
+   "url": "https://www.srpnet.com/assets/srpnet/pdf/doing-business/SRP-Investor-Roadshow-Presentation-2025-Series-C.pdf",
+   "date": "2025-10-08"
+  },
+  {
+   "label": "SRP — SRP and Google launch collaboration to advance long-duration energy storage innovation",
+   "url": "https://media.srpnet.com/srp-and-google-launch-collaboration-to-advance-long-duration-energy-storage-innovation-grid-resilience-in-arizona/",
+   "date": "2025-09-08"
+  },
+  {
+   "label": "SRP — Arizona utilities work to lock in critical natural gas delivery to power growth (Desert Southwest expansion)",
+   "url": "https://media.srpnet.com/arizona-utilities-work-to-lock-in-critical-natural-gas-delivery-to-power-growth/",
+   "date": "2025-08-06"
+  },
+  {
+   "label": "SRP — FY2025 Annual Report (year ended April 30, 2025)",
+   "url": "https://www.srpnet.com/assets/srpnet/pdf/about/2025-annual-report.pdf",
+   "date": "2025-07"
+  },
+  {
+   "label": "SRP — SRP Board approves converting coal-fired Coronado Generating Station to run on natural gas",
+   "url": "https://media.srpnet.com/srp-board-approves-converting-coal-fired-coronado-generating-station-to-run-on-natural-gas/",
+   "date": "2025-06-24"
+  },
+  {
+   "label": "EdgeCore — EdgeCore announces expansion of its metro Phoenix data center market to over 450 MW",
+   "url": "https://edgecore.com/edgecore-digital-infrastructure-announces-expansion-of-its-metro-phoenix-data-center-market-to-over-450-mw/",
+   "date": "2025-05-20"
+  },
+  {
+   "label": "SRP — SRP Board of Directors approves pricing proposal (2025 pricing process, E-67 redesign)",
+   "url": "https://media.srpnet.com/srp-board-of-directors-approves-pricing-proposal/",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "SRP — SRP and EDP Renewables announce new energy storage system (Flatland, 200 MW / 800 MWh, $271M, Tesla)",
+   "url": "https://media.srpnet.com/srp-and-edp-renewables-announce-new-energy-storage-system-to-support-increasing-energy-demand/",
+   "date": "2024-11-18"
+  },
+  {
+   "label": "Utility Dive — SRP and APS energy storage deals (EDP Renewables, Strata)",
+   "url": "https://www.utilitydive.com/news/salt-river-srp-aps-energy-storage-edp-renewables-strata/733258/",
+   "date": "2024-11-19"
+  },
+  {
+   "label": "SRP — SRP Board of Directors approves more ambitious sustainability goals",
+   "url": "https://media.srpnet.com/srp-board-of-directors-approves-more-ambitious-sustainability-goals/",
+   "date": "2024-03-04"
+  },
+  {
+   "label": "SRP — SRP issues 2024 All-Source RFP for new power generation resources",
+   "url": "https://media.srpnet.com/srp-issues-2024-all-source-rfp-for-new-power-generation-resources/",
+   "date": "2024-02-29"
+  },
+  {
+   "label": "Burns & McDonnell — Completion of the Sierra Estrella Energy Storage facility",
+   "url": "https://www.burnsmcd.com/news/completion-sierria-estrella-energy-storage-facility",
+   "date": "2024"
+  },
+  {
+   "label": "SRP — Meta teams up with SRP and Ørsted to support data center with clean energy from new solar and battery project (Eleven Mile)",
+   "url": "https://media.srpnet.com/meta-teams-up-with-srp-and-rsted-to-support-data-center-with-clean-energy-from-new-solar-and-battery--project/",
+   "date": "2023-12-11"
+  },
+  {
+   "label": "SRP — SRP Board approves system plan strategies (Integrated System Plan)",
+   "url": "https://media.srpnet.com/srp-board-approves-system-plan-strategies-to-bring-customers-affordable-reliable-and-sustainable-power/",
+   "date": "2023-10-02"
+  },
+  {
+   "label": "POWER — SRP's urgent 575 MW aeroderivative natural gas expansion gets Arizona regulators' green light",
+   "url": "https://www.powermag.com/srps-urgent-575-mw-aeroderivative-natural-gas-expansion-gets-arizona-regulators-green-light/",
+   "date": "2023-06"
+  },
+  {
+   "label": "SRP — SRP to add 340 MW of additional battery storage with two new projects from Plus Power",
+   "url": "https://media.srpnet.com/srp-to-add-340-mw-of-additional-battery-storage-to-its-system-with-two-new-projects-from-plus-power/",
+   "date": "2022-10-27"
+  },
+  {
+   "label": "SRP — SRP announces proposed Mesa-based half-mile transmission line and substation to serve Meta data center",
+   "url": "https://media.srpnet.com/srp-announces-proposed-mesa-based-half-mile-transmission-line-and-substation-to-serve-meta-data-center/",
+   "date": "2022-03-04"
+  },
+  {
+   "label": "SRP — SRP's largest energy storage facility now online (Bolster, 25 MW)",
+   "url": "https://media.srpnet.com/srps-largest-energy-storage-facility-now-online/",
+   "date": "2021-09-16"
+  },
+  {
+   "label": "Arizona Corporation Commission — Utilities FAQs (Does the ACC regulate SRP?)",
+   "url": "https://www.azcc.gov/faqs/utilities-faqs"
+  },
+  {
+   "label": "Arizona Revised Statutes — A.R.S. 45-1720 (District power not subject to ACC regulation)",
+   "url": "https://www.azleg.gov/ars/45/01720.htm"
+  }
+ ],
+ "lastUpdated": "2026-09-29",
+ "profileVersion": 1
+}

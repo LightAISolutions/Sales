@@ -6268,6 +6268,113 @@
           "role": "adjacent"
         }
       ]
+    },
+    {
+      "slug": "florida-power-light",
+      "name": "Florida Power & Light",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "NextEra's regulated side — the corpus's largest utility-owned battery program (991 MW in service; 7,454 MW through 2035 in 74.5 MW blocks, 1,419.5 MW in 2026, no supplier ever named) and Florida's first large-load class, LLCS-1/LLCS-2 (effective January 1, 2026: 50 MW at 85% load factor, 20-year term, 70% take-or-pay, an $11.67/kW Incremental Generation Charge, exit fee and five- or ten-year security), approved inside the 2025 rate settlement (+$945M/+$705M, 10.95% ROE) and codified by Chapter 2026-65; about 21 GW of large-load interest, 12 GW in advanced discussions and none signed as of September 2026.",
+      "hq": "Juno Beach, FL, USA",
+      "ticker": "NYSE: NEE (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "FPL",
+        "Florida Power & Light Company",
+        "Florida Power and Light",
+        "NextEra Energy",
+        "NextEra",
+        "NEE",
+        "Gulf Power"
+      ],
+      "domains": [
+        "fpl.com",
+        "newsroom.fpl.com",
+        "nexteraenergy.com",
+        "newsroom.nexteraenergy.com",
+        "investor.nexteraenergy.com"
+      ],
+      "srcTotal": 44,
+      "srcFirstPct": 59,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "salt-river-project",
+      "name": "Salt River Project",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The Phoenix-area public-power utility whose landowner-elected Board — not the Arizona Corporation Commission — sets prices, the E-67 large-load plan (mandatory at 20 MW, an 80%-of-forecast minimum billing demand since November 2025) and a plan to more than double the system by 2035: 59 large-load customers and a nearly 7,000 MW pipeline against a 9,072 MW peak; more than 1,570 MW of batteries under energy storage agreements with Plus Power, Aypa, EDP, Ørsted and NextEra against 25 MW owned; the 2032 Marigold Energy Center (600 MW solar, 400 MW of 8-hour storage, 675 MW of gas) with the ACC's siting vote due November 2026.",
+      "hq": "Tempe, AZ, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "SRP",
+        "Salt River Project Agricultural Improvement and Power District",
+        "Salt River Valley Water Users' Association",
+        "Salt River Project District"
+      ],
+      "domains": [
+        "srpnet.com",
+        "media.srpnet.com"
+      ],
+      "srcTotal": 54,
+      "srcFirstPct": 59,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "tva",
+      "name": "TVA",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The federal utility with no regulator above it and a President beside it — a nine-seat appointed Board (six filled, quorum lost for nine months in 2025) that approved on August 20, 2026 the 2026 IRP (7–26 GW of gas, 1–5 GW of storage, up to 5 GW of nuclear through 2040), a data-center rate class with a Capacity Commitment Charge above 5 MW from October 1, 2026, a $3.5B 2032 gas plant and direct service to SpaceXAI; two 20-year storage tolls (Plus Power 200 MW / 800 MWh, Tenaska 225 MW / 900 MWh) toward 1,500 MW by 2029; and the first U.S. SMR construction permit (Clinch River BWRX-300, September 29, 2026).",
+      "hq": "Knoxville, TN, USA",
+      "ticker": "NYSE: TVE / TVC (power bonds)",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "Tennessee Valley Authority",
+        "TVA Board",
+        "MLGW",
+        "Memphis Light, Gas and Water"
+      ],
+      "domains": [
+        "tva.com",
+        "tva.gov",
+        "tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net"
+      ],
+      "srcTotal": 62,
+      "srcFirstPct": 29,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
     }
   ]
 }

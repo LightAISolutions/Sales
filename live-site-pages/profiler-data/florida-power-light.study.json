@@ -1,0 +1,381 @@
+{
+ "schemaVersion": 2,
+ "slug": "florida-power-light",
+ "title": "Florida Power & Light — Technology Study Guide",
+ "lastUpdated": "2026-09-29",
+ "sections": [
+  {
+   "id": "the-utility-that-owns-its-batteries",
+   "title": "The utility that owns its batteries: 991 MW in service and 7,454 MW to come",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The corpus has now met four answers to 'who buys the battery?' — Duke self-builds, WEC buys finished projects, DTE takes the customer's money, APS and SRP sign tolls. Florida Power & Light is the largest instance of the first: every battery on its system is in {{rate base}}, and there are a lot of them. At the end of 2025 FPL owned 991 MW delivering to the transmission system — the 409 MW / 900 MWh Manatee Energy Storage Center from 2021, two 30 MW solar-charged plants, and seven 74.5 MW batteries in northwest Florida energized in the fourth quarter — and its 2026 Ten-Year Site Plan adds 1,419.5 MW in 2026, 819.5 MW in 2027, 596 MW a year through 2030 and 7,454 MW in all, for 8,445 MW by 2035.",
+    "The unit is the 74.5 MW block. FPL builds its solar in 74.5 MW centers (120 of them, about 8,826 MW, by August 2026) and its batteries in 74.5 MW blocks co-located at the same sites, so a battery 'project' at FPL is a repeated design at a named farm — Big Brook, Cedar Trail, Sea Grape, Owen Branch — rather than a single 400 MW plant with its own EPC. The purchase runs through NextEra's enterprise engineering, construction and supply-chain organization, the same desk that buys for NextEra Energy Resources' merchant fleet, and no OEM has been named for any FPL battery since Manatee, whose EPC was Quanta's Irby Construction.",
+    "What a seller should notice is who decided and where it is written. The 2025 rate settlement pays for the 2026–29 tranches — 3,431 MW 'consistent with the approved settlement', with 2028–29 through a Solar and Battery Base Rate Adjustment that needs a cost-effectiveness showing — and the same order approved a $78 million Long-Duration Battery Storage Pilot (10 MW / 100 MWh, 'beyond lithium-ion') which the Commission said lets FPL 'diversify its supply chain'. The buyer, the budget and the non-lithium hedge were all set in one January 2026 order."
+   ]
+  },
+  {
+   "id": "a-term-the-length-of-a-battery",
+   "title": "A tariff whose term is the battery's life: LLCS-1 and LLCS-2",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "FPL's {{large-load tariff}} took effect on January 1, 2026, on two rate schedules. Both need a projected new or incremental load of 50 MW or more at a single location and a {{load factor}} of at least 85 percent, served at transmission voltage with dedicated metering. LLCS-1 exists only in three zones near FPL's 500 kV lines — Sunbreak in St. Lucie County, Tesoro in Martin County, Sugar in Palm Beach County — with a 3 GW class cap; it charges $14.61 per kW of base demand and an $11.67 per kW Incremental Generation Charge, sized on the 1 GW FPL expects to serve under it by end-2029. LLCS-2 covers the rest of the territory at $4.08 per kW plus a charge computed from the customer's own share of the generation and interconnection revenue requirement — {{cost of service}} rather than a fixed number.",
+    "The term is 20 years from the in-service date, 'based on useful life of batteries', then evergreen with two years' notice. After the ramp the customer pays demand charges on at least 70 percent of contract demand ({{take-or-pay}}, cut from 90 percent in the settlement) and the Incremental Generation Charge on all of it. Leaving early costs an {{exit fee}} equal to the net present value of the remaining Incremental Generation Charges — even after a force-majeure event lasting more than a year. Within five days of signing the customer posts {{credit support}} worth five years of that charge if it is rated BBB or better and ten years if not, by cash, letter of credit, surety bond or a parent guaranty. FPL keeps sole discretion over what generation it builds to serve the load.",
+    "Two numbers moved between the filing and the order. The threshold went from 25 MW to 50 MW because FPL's engineering studies showed most large-load customers exceed 100 MW; the charge went from $28.07 per kW to $11.67 because the settlement's return was lower and the class was sized on real expected load. What did not move is the customer's identity: the developers' association that intervened told the Commission its members already held confidential service agreements with FPL and that LLCS charges run 65 percent above the ordinary large-load tariff, and nine months after the effective date no signed customer had been announced — 'at least one by the end of the year'."
+   ]
+  },
+  {
+   "id": "the-500-kv-zone-as-a-siting-tool",
+   "title": "The 500 kV zone as a siting tool",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The idea.** A tariff normally says what a customer pays. LLCS-1 also says where the customer may be: only in the three zones around FPL's existing 500 kV substations, and only up to 3 GW in total. A campus at Fort Pierce or Loxahatchee gets the fixed $11.67 charge; a campus in Miami or Jacksonville gets LLCS-2's cost-of-service charge, which will be higher wherever new transmission is needed.",
+    "**Why it works.** Extra-high-voltage substations are where a gigawatt can be delivered without building a new line, and Florida's 500 kV backbone runs through St. Lucie, Martin and Palm Beach. Pricing the zone cheaper steers the first 3 GW to the corridor FPL can serve fastest — 'as soon as 2028' — and keeps the rest of the state on a charge that recovers whatever has to be built.",
+    "**What sits in the zones.** Third-party reporting places three campuses there: Sentinel Grove at Fort Pierce (withdrawn in February 2026 as the state's data-center bill advanced), Project Tango at Loxahatchee (suspended) and Atlas Compute at Fort Pierce (240 MW initial). None is a covered company and FPL names none of them. The zone cap and the 1 GW-by-2029 sizing basis are the only large-load figures with tariff consequences; the '21 GW of interest' is a funnel."
+   ]
+  },
+  {
+   "id": "the-settlement-that-bought-four-years",
+   "title": "The settlement that bought four years: base rates, SoBRA and the RSM",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A Florida {{rate case}} can end in a contested order or a {{settlement}}. FPL's 2025 case (a $1.545 billion ask for 2026, $927 million for 2027, an 11.9 percent return) ended in a settlement signed by thirteen parties — industrial users, the retail federation, the data-center developers' association, Walmart, EV charging companies, the federal agencies and a clean-energy group — against five who refused: the Office of Public Counsel, Florida Rising, LULAC, an environmental coalition and a ratepayer group. The Commission approved it unanimously in November 2025: $945 million in 2026, $705 million in 2027, a 10.95 percent {{allowed return}} in a 9.95–11.95 band on a 59.6 percent equity ratio, rates fixed through at least December 2029.",
+    "Two mechanisms do the work between now and then. The Solar and Battery Base Rate Adjustment lets FPL add solar in 2027–29 and batteries in 2028–29 to rates without a new case, if it shows a need — so the storage program's later tranches are funded by a filing, not a hearing. The Rate Stabilization Mechanism lets FPL amortize up to about $1.5 billion of reserves to keep its earned return inside the band — the {{regulatory lag}} problem APS is trying to solve with a formula rate, solved here by a reserve. A storm mechanism recovers restoration costs from 60 days after a petition, capped at $5 per 1,000 kWh in the first year; the 2024 hurricanes' $1.2 billion was collected through 2025 and $80 million of it refunded in September 2026.",
+    "The non-signatories appealed. The Commission denied reconsideration in April 2026 and the Florida Supreme Court consolidated the appeals in June; the rates, the mechanisms and the LLCS schedules all stand while the court decides. Critics call it a near-$7 billion four-year increase and the highest return in the contiguous states. A seller should read the appeal as a schedule risk to SoBRA's 2028–29 batteries, not to the 2026–27 ones already in rate base."
+   ]
+  },
+  {
+   "id": "a-statute-written-from-a-tariff",
+   "title": "A statute written from a tariff: Chapter 2026-65",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**What passed.** Senate Bill 484, signed in May 2026 and effective July 1, creates section 366.043 of Florida's statutes. A large-load customer is 50 MW or more of anticipated monthly peak at a 15-minute interval at a single location, colocation tenants included, with no splitting to evade. Tariffs must recover the customer's full cost of service — connection, incremental transmission and generation, operations — and put no nonpayment risk on other customers. The Commission may approve contributions in aid of construction, incremental generation charges, financial guarantees, minimum load factors, take-or-pay, minimum contract periods and early-termination fees. A utility may not knowingly serve a load controlled by a foreign country of concern. Every public utility files a compliant tariff by October 1, 2026.",
+    "**What it copied.** Instrument by instrument, that is LLCS-1 and LLCS-2 — the threshold, the load-factor test, the incremental generation charge, the security, the take-or-pay, the term, the exit fee. FPL's own newsroom said the company 'already put this principle into action'. The law generalizes FPL's design to Duke Energy Florida, TECO and the rest; the corpus's Duke dossier already cites LLCS as the in-state benchmark.",
+    "**What it did to the market.** The largest proposed campus in the LLCS-1 zones withdrew its application as the bill advanced, and the state paired the statute with local land-use and water provisions. A seller reading Florida should read the tariff and the statute as one document."
+   ]
+  },
+  {
+   "id": "the-merger-that-changes-nothing-here",
+   "title": "The merger that changes nothing at FPL — and everything at its parent",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "NextEra Energy agreed on May 15, 2026 to acquire Dominion Energy for 0.8138 NextEra shares plus a pro-rata share of $360 million in cash per Dominion share — about $66.8 billion by third-party accounts; NextEra's own filings state no figure. Both shareholder votes passed on September 3, 2026; the Virginia commission holds its evidentiary hearing on November 17, 2026 after the governor intervened and the companies enlarged their Virginia benefits package; approvals from North Carolina, South Carolina, FERC, the NRC and antitrust review are outstanding; closing is expected in the second half of 2027 with an outside date of November 15, 2027.",
+    "For FPL the transaction is an organizational chart. It remains a wholly owned subsidiary with the same president, Scott Bores, named to keep the role in the combined company; Dominion would become a sister subsidiary, and Robert Blue would run the regulated utilities as a group. The '130 GW of large-load opportunities' in the merger release is the combined pipeline — 48.5 GW at Dominion, 21 GW at FPL, more than 60 GW at NextEra Energy Resources — at the interest rung. FPL's share of it is the 21 GW its own quarterly release reports.",
+    "What could reach FPL is the parent's capital. Termination fees of $4.8 to $6.5 billion fall on NextEra if the deal fails on certain terms, and the combined company's growth targets (9 percent-plus adjusted EPS growth through 2035, about 11 percent growth in regulatory capital employed) assume both franchises' plans. A seller counting on FPL's $58.6 billion 2026–30 program should watch Richmond in November, not Juno Beach."
+   ]
+  },
+  {
+   "id": "five-ways-to-own-a-battery",
+   "title": "Five ways a utility ends up with a battery",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The Pinnacle West guide's four-route table, with FPL's route added and each row's supplier decision made explicit.",
+   "cols": [
+    "Route",
+    "Who owns the plant",
+    "Who picks the OEM",
+    "Who carries market risk",
+    "Corpus example"
+   ],
+   "rows": [
+    [
+     "Self-build in repeated blocks, funded by a settlement mechanism",
+     "The utility from day one",
+     "The utility's enterprise supply chain (undisclosed at FPL)",
+     "The utility's customers, through rates",
+     "FPL — 74.5 MW blocks at solar sites; 3,431 MW under SoBRA 2026–29"
+    ],
+    [
+     "Self-build with a supply agreement",
+     "The utility from day one",
+     "The utility",
+     "The utility's customers",
+     "Duke — Allen and Riverbend; SRP — Bolster"
+    ],
+    [
+     "Build-transfer into rate base",
+     "The utility, after completion",
+     "The developer, before the utility was the buyer",
+     "The utility's customers",
+     "WEC — Paris, Darien, Koshkonong"
+    ],
+    [
+     "Customer-funded special contract",
+     "The utility",
+     "The utility",
+     "The contracting customer",
+     "DTE — Saline and Oracle"
+    ],
+    [
+     "Tolling or energy storage agreement",
+     "The developer",
+     "The developer, at bid stage",
+     "The utility (it schedules the plant)",
+     "APS — Papago, White Tank; SRP — Pediment, Sierra Estrella; TVA — Crawfish Creek"
+    ]
+   ]
+  },
+  {
+   "id": "where-fpl-slots-in",
+   "title": "Where FPL's programs slot into the chain",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Each live FPL program, the segment it touches, and who holds the purchase order.",
+   "cols": [
+    "Program",
+    "Segment touched",
+    "Who buys the equipment",
+    "Where the corpus sees it"
+   ],
+   "rows": [
+    [
+     "Utility-owned batteries (7,454 MW to 2035)",
+     "Storage integrators; cells and chemistry",
+     "NextEra's engineering, construction and supply chain (OEM undisclosed)",
+     "Manatee (Irby/Quanta EPC); the 2025 northwest Florida seven"
+    ],
+    [
+     "Solar (12,293 MW to 2035)",
+     "Solar developers; EPC",
+     "NextEra's supply chain; EPCs undisclosed (Blattner and Black & Veatch in 2017)",
+     "120 centers, 8,826 MW, August 2026"
+    ],
+    [
+     "LLCS-1 / LLCS-2",
+     "Utilities (the buyer segment)",
+     "The customer funds studies, CIAC and security; FPL selects the generation",
+     "No signed customer announced at September 2026"
+    ],
+    [
+     "Vandolah 672 MW and 3,276 MW of new peakers (2032–35)",
+     "Gas turbines",
+     "FPL (OEM unnamed; the plan notes turbine OEMs approached FPL about upgrades)",
+     "Vandolah from June 2027"
+    ],
+    [
+     "Nuclear relicensing and SMR early site permit",
+     "Clean firm and nuclear",
+     "FPL / NextEra nuclear division",
+     "Turkey Point to 2052–53; St. Lucie pending; ESP work 2026–27"
+    ],
+    [
+     "Long-Duration Battery Storage Pilot",
+     "Cells and chemistry (non-lithium)",
+     "FPL, $78M FPSC-approved",
+     "Technology not yet named"
+    ]
+   ]
+  },
+  {
+   "id": "gigawatts-on-fpls-clock",
+   "title": "Gigawatts on FPL's clock — the fleet, the funnel and the plan",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "FPL's own figures at their latest disclosure. The shape to notice: the funnel's top is two-thirds of the peak, the tariff's cap is a seventh of it, and the storage plan is bigger than any other utility's in the corpus.",
+   "items": [
+    {
+     "label": "Owned generation, 2025",
+     "sub": "36,372 MW",
+     "v": 36.372
+    },
+    {
+     "label": "Summer peak forecast, 2035",
+     "sub": "35,623 MW total",
+     "v": 35.623
+    },
+    {
+     "label": "Summer peak, 2025",
+     "sub": "28,773 MW total",
+     "v": 28.773
+    },
+    {
+     "label": "Large-load interest",
+     "sub": "'roughly 21 GW', Q2 2026",
+     "v": 21.0
+    },
+    {
+     "label": "Solar by 2035",
+     "sub": "20,225 MW",
+     "v": 20.225
+    },
+    {
+     "label": "Advanced discussions",
+     "sub": "12 GW, some from 2028",
+     "v": 12.0
+    },
+    {
+     "label": "Solar today",
+     "sub": "~8,826 MW, August 2026",
+     "v": 8.826
+    },
+    {
+     "label": "Batteries by 2035",
+     "sub": "8,445 MW",
+     "v": 8.445
+    },
+    {
+     "label": "Large-load expectation by 2032",
+     "sub": "raised from 6 GW, May 2026",
+     "v": 8.0
+    },
+    {
+     "label": "Nuclear",
+     "sub": "3,502 MW, four units",
+     "v": 3.502
+    },
+    {
+     "label": "New peakers 2032–35",
+     "sub": "3,276 MW",
+     "v": 3.276
+    },
+    {
+     "label": "LLCS-1 class cap",
+     "sub": "three 500 kV zones",
+     "v": 3.0
+    },
+    {
+     "label": "Batteries in 2026 alone",
+     "sub": "1,419.5 MW planned",
+     "v": 1.4195
+    },
+    {
+     "label": "Batteries today",
+     "sub": "991 MW, year-end 2025",
+     "v": 0.991
+    },
+    {
+     "label": "Signed under LLCS",
+     "sub": "none announced, Sep 2026",
+     "v": 0.0
+    }
+   ],
+   "note": "The Ten-Year Site Plan assumes large-load demand starts in 2028 and reaches 3 GW by 2035 — the planning figure, against an expectation of 8 GW by 2032 stated a month after the plan was filed."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**No customer.** Nine months after the effective date, the tariff has no announced signatory; the one large campus in an LLCS-1 zone withdrew as the statute advanced. If 'at least one by year-end' slips, the 1 GW-by-2029 basis for the $11.67 charge is wrong and the charge is re-set in a later proceeding — the tariff sheet says so.",
+    "**No supplier.** The largest utility-owned battery program in the corpus names no OEM anywhere, and its non-lithium pilot has no technology yet. A seller cannot tell from FPL's record whether the 2026 tranche is one supplier or three.",
+    "**The appeal.** Base rates, the return, SoBRA and the LLCS schedules all rest on one order under Florida Supreme Court review; the 2028–29 battery tranches depend on a mechanism the appellants oppose.",
+    "**The credit test.** Solar added after 2027 keeps its federal credit only if construction began before July 5, 2026; the plan does not say which of its 2028–35 centers pass, and FPL's May 2026 bonds carry a 'Tax Credit Event' redemption right for a reason."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is the unit of FPL's solar and battery program, and why does it matter to a supplier?",
+     "a": "The 74.5 MW block, repeated at named farms across the state — a battery at FPL is a standard design bought through NextEra's enterprise supply chain, not a bespoke 400 MW project with its own EPC."
+    },
+    {
+     "q": "Name LLCS-1's five eligibility and location tests.",
+     "a": "50 MW or more at a single location; 85 percent load factor; transmission voltage with dedicated metering; one of three 500 kV zones (St. Lucie, Martin, Palm Beach); room under the 3 GW class cap."
+    },
+    {
+     "q": "What is the Incremental Generation Charge and how was $11.67 derived?",
+     "a": "A per-kW charge for the generation built to serve large loads — filed at $28.07, cut to $12.18 when sized on 1 GW served by end-2029, then to $11.67 at the settlement's lower return."
+    },
+    {
+     "q": "What is the exit fee under an LLCS Service Agreement?",
+     "a": "The net present value of the Incremental Generation Charges that would have been paid over the remaining minimum term — even after a force-majeure exit."
+    },
+    {
+     "q": "How is LLCS security sized?",
+     "a": "Five years of the Incremental Generation Charge if the customer is rated BBB or better, ten years if not, posted within five days by cash, letter of credit, surety bond or parent guaranty."
+    },
+    {
+     "q": "What does SoBRA do?",
+     "a": "Lets FPL add solar (2027–29) and batteries (2028–29) to base rates on a showing of need, without a new rate case — the settlement's funding path for the storage program's later tranches."
+    },
+    {
+     "q": "What is the Rate Stabilization Mechanism for?",
+     "a": "Amortizing up to about $1.5 billion of reserves to keep the earned return inside the 9.95–11.95 percent band — a reserve-based answer to regulatory lag."
+    },
+    {
+     "q": "What did Chapter 2026-65 take from FPL's tariff?",
+     "a": "The 50 MW single-location definition, cost-of-service recovery, incremental generation charges, security, minimum load factors, take-or-pay, minimum terms and exit fees — and it made every Florida utility file the same by October 1, 2026."
+    },
+    {
+     "q": "Whose figure is '130 GW of large-load opportunities'?",
+     "a": "The combined NextEra + Dominion pipeline at the interest rung — 48.5 GW Dominion, 21 GW FPL, more than 60 GW NextEra Energy Resources."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A 300 MW campus at a 90 percent load factor sites in Jacksonville. Which schedule applies and what is its generation charge?",
+     "c": [
+      "LLCS-1 at $11.67 per kW",
+      "LLCS-2, with an Incremental Generation Charge computed from the customer's share of the generation and interconnection revenue requirement",
+      "GSLD-3, the ordinary large-load tariff",
+      "Neither — the LLCS-1 cap is full"
+     ],
+     "a": 1,
+     "why": "LLCS-1 is confined to the three 500 kV zones; everywhere else is LLCS-2 at cost of service."
+    },
+    {
+     "q": "An LLCS-1 customer rated BB signs in 2027 and terminates in year 12. What does it owe?",
+     "c": [
+      "Two years of demand charges",
+      "The net present value of the Incremental Generation Charges for the remaining eight years, drawn first from ten years of posted security",
+      "Nothing after the ramp",
+      "The CIAC back to FPL"
+     ],
+     "a": 1,
+     "why": "The exit fee is the NPV of the remaining charge over the 20-year minimum term; a sub-BBB customer posted ten years of the charge as security."
+    },
+    {
+     "q": "FPL plans 596 MW of batteries in 2029. What must it show to put them in rates?",
+     "c": [
+      "Nothing — the settlement pre-approved them",
+      "A demonstrated economic or reliability need under the Solar and Battery Base Rate Adjustment",
+      "A new rate case",
+      "A FERC order"
+     ],
+     "a": 1,
+     "why": "The 2028–29 battery tranches are SoBRA-eligible, subject to the need showing the settlement specifies."
+    },
+    {
+     "q": "Why does the NextEra–Dominion merger not change who buys FPL's batteries?",
+     "c": [
+      "Because Dominion has no storage program",
+      "Because FPL stays a wholly owned subsidiary with the same management and NextEra's supply chain already buys for it",
+      "Because the FPSC blocked it",
+      "Because the merger is all cash"
+     ],
+     "a": 1,
+     "why": "The 8-Ks make Dominion a sister subsidiary and keep Bores at FPL; the enterprise procurement organization is unchanged."
+    },
+    {
+     "q": "Which of FPL's 2026 statements is a planning figure with tariff consequences rather than a funnel rung?",
+     "c": [
+      "21 GW of interest",
+      "12 GW in advanced discussions",
+      "8 GW by 2032",
+      "1 GW served under LLCS-1 by end-2029, the basis for the $11.67 charge"
+     ],
+     "a": 3,
+     "why": "The Final Order sizes the Incremental Generation Charge on that expectation; the tariff says it is 'subject to change' if the resources built differ."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,947 @@
+{
+ "schemaVersion": 7,
+ "slug": "florida-power-light",
+ "name": "Florida Power & Light Company",
+ "shortName": "Florida Power & Light",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.fpl.com",
+ "headquarters": "Juno Beach, FL, USA",
+ "employees": "About 9,400 at December 31, 2025 (about 30 percent IBEW-represented); NextEra Energy about 17,400 (FY2025 Form 10-K)",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "NYSE: NEE (parent, NextEra Energy, Inc.)",
+  "notes": "A Florida corporation and a separate SEC registrant (CIK 0000037634, Commission File No. 2-27612) that files a combined Form 10-K and 10-Q with NextEra Energy, Inc.; 1,000 common shares, all held by NextEra, and no exchange-listed securities — the first mortgage bonds (Aa2 / A+ / AA-) are rated but unlisted. Wholly owned, and unchanged by the NextEra–Dominion merger agreement of May 15, 2026, which would make Dominion a second wholly owned subsidiary with Scott Bores staying president and CEO of FPL."
+ },
+ "summary": "BOTTOM LINE UP FRONT: Florida Power & Light is NextEra's regulated side and the corpus's first utility whose large-load tariff, storage program and rate case were settled together: LLCS-1 and LLCS-2 (effective January 1, 2026 — 50 MW or more at a single location at an 85 percent load factor, a 20-year minimum term, a 70 percent take-or-pay, an exit fee equal to the net present value of the remaining Incremental Generation Charge and security of five or ten years of that charge by credit rating) were approved inside the 2025 rate settlement (FPSC vote November 20, 2025; Final Order PSC-2026-0022-S-EI, January 22, 2026: base revenue +$945M in 2026 and +$705M in 2027, a 10.95 percent return on 59.6 percent equity, solar and battery base-rate adjustments through 2029 and a rate stabilization mechanism of up to about $1.5B), and FPL's 2026 Ten-Year Site Plan puts 7,454 MW of FPL-owned batteries and 12,293 MW of solar in service by 2035 — the largest utility-owned storage program in the corpus, with 1,419.5 MW due in 2026 alone and no supplier ever named. BACKGROUND. Juno Beach; a Florida corporation and separate SEC registrant wholly owned by NextEra Energy (NYSE: NEE); more than six million customer accounts and about 12 million people across 43 counties on Florida's east and lower west coasts and in the northwest; FY2025 operating revenues $18,262M, net income $5,012M and capital investment $8,935M (FY2024 $17,019M / $4,543M / $8,214M); first-half 2026 net income $2,874M with regulatory capital employed of $79.7B, up 9.3 percent, and FY2026 capex guided at $12–13B against a $58.6B accrual plan for 2026–30. Owned generation of 36,372 MW at year-end 2025: 24,314 MW mostly gas, 7,932 MW of solar at 108 sites (about 8,826 MW at 120 sites by August 2026), 3,502 MW of nuclear at Turkey Point (relicensed to 2052–53) and St. Lucie (renewal pending), and 991 MW of batteries including the 409 MW / 900 MWh Manatee Energy Storage Center (2021, Quanta's Irby as EPC) and 521.5 MW added in late 2025. The large-load funnel: about 21 GW of interest, 12 GW in advanced discussions (some serviceable from 2028), an expectation raised from 6 to 8 GW by 2032, a Ten-Year Site Plan assumption of 3 GW by 2035, 'at least one large-load transaction under FPL's tariff by the end of the year' and, as of September 29, 2026, none announced; NextEra values each tariff gigawatt at roughly $2B of capex at FPL's return. The NextEra–Dominion merger (signed May 15, 2026; 0.8138 NEE shares plus a pro-rata share of $360M cash per Dominion share; both shareholder votes on September 3, 2026; a Virginia SCC evidentiary hearing November 17, 2026; closing expected in the second half of 2027, outside date November 15, 2027) would leave FPL a wholly owned subsidiary beside Dominion. Collection gap: no battery OEM or integrator is disclosed for any FPL project in the 10-K, 10-Q, Ten-Year Site Plan or releases; no LLCS customer is named (the FEIA intervenor's members are 'companies that are developing data centers in Florida', unnamed); FPL's compliance filing under Chapter 2026-65 (due October 1, 2026) was not located; the Florida Supreme Court case number and schedule for the consolidated rate-case appeal were not found; investor.nexteraenergy.com's HTML returned 403 to this session and the Q1 2026 slide file 404; the 570 MB Final Order was read only in part.",
+ "ecosystemRole": "We assess FPL as the corpus's largest self-build storage buyer and the one where the buying decision sits inside the utility: unlike APS (tolls) or SRP (energy storage agreements), FPL owns every battery on its plan — 991 MW in service, 3,431 MW under the settlement's 2026–29 schedule and 7,454 MW through 2035 in 74.5 MW blocks co-located with its solar — and procures through NextEra's enterprise engineering, construction and supply-chain organization (EVP Ron Reagan), with the OEM never disclosed and the Long-Duration Battery Storage Pilot (10 MW / 100 MWh, about $78M, 'beyond lithium-ion') approved by the FPSC in the same order 'to diversify its supply chain'. Basis: the 2026 Ten-Year Site Plan, the FY2025 10-K and the January 2026 Final Order. On the demand side FPL is the gatekeeper for a Florida data-center market that its own tariff and a 2026 statute now define: LLCS-1 is confined to three 500 kV zones in St. Lucie, Martin and Palm Beach counties with a 3 GW class cap and an $11.67 per kW Incremental Generation Charge sized on 1 GW served by end-2029; LLCS-2 covers the rest of the territory at a cost-of-service charge; and Chapter 2026-65 (effective July 1, 2026) codifies the design — 50 MW at a 15-minute peak, full cost of service, take-or-pay, exit fees, a ban on serving loads controlled by foreign countries of concern — and requires every Florida utility to file a compliant tariff by October 1, 2026. For gas vendors the doors are the Vandolah 672 MW peaker acquisition (June 2027, tolled to Duke Energy Florida until then), turbine upgrades and 3,276 MW of new simple-cycle capacity in 2032–35 with no combined cycle in the plan; for nuclear vendors, early-site-permit work in 2026–27 for a small modular reactor beside an existing plant. The sister company matters to a seller only as contrast: NextEra Energy Resources' merchant fleet and 30-hub data-center pipeline are separate books, and one trade-press claim that Manatee is NEER-owned is contradicted by FPL's own filings.",
+ "productsAndServices": [
+  {
+   "name": "Regulated retail electric service — the 2025 rate settlement and its appeal",
+   "category": "Regulated utility service",
+   "description": "FPL serves more than six million customer accounts (about 12 million people) in 43 counties across about 35,000 square miles — most of Florida's east and lower west coasts plus eight northwest Florida counties, the former Gulf Power territory the 10-K no longer names — under 226 municipal and county franchises expiring through 2055. Rates are set by the Florida Public Service Commission. The 2025 rate case (Docket 20250011-EI, filed February 28, 2025, asking $1.545B for 2026 and $927M for 2027 at an 11.9 percent return) settled on August 20, 2025 with thirteen signatories (the Florida Industrial Power Users Group, the Florida Retail Federation, the Florida Energy for Innovation Association, Walmart, EVgo, Circle K, RaceTrac, Wawa, Electrify America, the Federal Executive Agencies, Armstrong World Industries, Americans for Affordable Clean Energy and the Southern Alliance for Clean Energy) against five non-signatories (the Office of Public Counsel, Florida Rising, LULAC Florida, the Environmental Confederation of Southwest Florida and Floridians Against Increased Rates). The Commission approved it unanimously on November 20, 2025 and issued Final Order PSC-2026-0022-S-EI on January 22, 2026: base revenue +$945M from January 1, 2026 and +$705M from January 1, 2027 (FPL's August release said $766M; the order, the FPSC release and the 10-K say $705M); a 10.95 percent return in a 9.95–11.95 range on a 59.6 percent equity ratio; a Solar and Battery Base Rate Adjustment for solar in 2027–29 and batteries in 2028–29 subject to a demonstrated need; a Rate Stabilization Mechanism of up to about $1.5B after tax; interim storm recovery from 60 days after a petition, capped at $5 per 1,000 kWh for the first year; a $15M assistance fund and no disconnections above 95°F or below 32°F. The typical 1,000 kWh bill went from $134.14 to $136.64. The non-signatories' reconsideration was denied in substance on April 27, 2026 (Order PSC-2026-0117-FOF-EI), new appeals followed in May and the Florida Supreme Court consolidated them in June 2026; the docket stays open pending the appeal.",
+   "highlights": [
+    "First-half 2026: FPL net income $2,874M ($2,591M a year earlier); Q2 revenue $4,896M; regulatory capital employed $79.7B (+9.3 percent); retail kWh sales +0.4 percent in Q2 (customer growth and mix +1.4, weather −0.2, underlying usage −0.8); more than 90,000 accounts added year on year",
+    "Storm costs: about $1.2B of 2024 hurricane restoration recovered through a 2025 surcharge, with an $80M over-collection returned as an $8 credit in September 2026; the 2022 Ian and Nicole surcharge was about $1.3B",
+    "Non-fuel O&M more than 70 percent better than the industry average per MWh and a typical bill about 30 percent below the national average, projected to rise about 2 percent a year through the decade (Q2 2026 release)",
+    "Critics' framing on appeal: a four-year increase near $7B and a 10.95 percent return described as the largest in the contiguous United States (Food & Water Watch)"
+   ],
+   "positioning": "The corpus's largest regulated franchise by customer count and the only one whose rate order created the large-load class, the storage pilot and the solar-and-battery adjustment in one settlement — against Duke's separate Carolinas plan, APS's still-pending case and SRP's board vote. The four-year term to 2029 with SoBRA inside it means FPL's next battery tranche needs a cost-effectiveness showing, not a rate case.",
+   "soldThrough": "FPSC-approved tariffs; clauses for fuel, capacity, storm protection and conservation; the settlement's SoBRA and RSM mechanisms",
+   "targetSegments": [
+    "Residential and commercial customers in 43 Florida counties",
+    "Municipal and county franchise areas",
+    "Wholesale customers inside FPL's balancing area"
+   ],
+   "roadmap": "Rates fixed by the settlement through at least December 2029; SoBRA filings for 2027–29 solar and 2028–29 batteries; the Supreme Court's decision on the consolidated appeal (schedule not found); rate sheets 'effective October 1, 2026' posted on fpl.com without a stated reason"
+  },
+  {
+   "name": "LLCS-1 and LLCS-2 large-load contract service and the data-center funnel",
+   "category": "Regulated utility service",
+   "description": "Two rate schedules effective January 1, 2026 (tariff sheets 8.950–8.955, issued by Tiffany Cohen, VP Financial Planning and Rate Strategy) with an LLCS Service Agreement (sheet 9.960 onward). Eligibility for both: projected new or incremental load of 50 MW or more at a single location and a projected load factor of at least 85 percent, served at transmission voltage of 69 kV or above with dedicated metering and no aggregation or resale. LLCS-1 is available only in the zones near FPL's existing 500 kV facilities — Sunbreak in St. Lucie County, Tesoro in Martin County and Sugar in Palm Beach County — with a combined class cap of 3 GW; it charges a $669 base charge, a $14.61 per kW base demand charge, 0.758 cents per kWh base energy and an $11.67 per kW Incremental Generation Charge, cut from $28.07 as filed to $12.18 in rebuttal and $11.67 at the settlement return because 'FPL expects to serve 1 GW under LLCS-1 by the end of 2029'. LLCS-2 covers everywhere else at $4.08 per kW plus an Incremental Generation Charge computed as the customer's share of the generation and interconnection revenue requirement. Both carry a 20-year minimum term from the in-service date, then evergreen with two years' notice; demand charges on at least 70 percent of load-ramp or contract demand (cut from 90 percent) and the Incremental Generation Charge on full contract demand after the ramp; an exit fee equal to the net present value of the remaining Incremental Generation Charges over the minimum term (including on a force-majeure exit); performance security within five days of signing equal to the net present value of five years of the charge for customers rated BBB or better and ten years otherwise, by cash, letter of credit, surety bond or a parent guaranty; a contribution in aid of construction within 45 days; system studies and a construction and operating agreement before service; and FPL's sole discretion over the generation built to serve the load, consistent with the Ten-Year Site Plan. The threshold was raised from 25 MW because engineering studies showed most large-load customers exceed 100 MW. The funnel (Q2 2026): roughly 21 GW of large-load interest, advanced discussions on 12 GW, some serviceable as soon as 2028, an expectation raised in May 2026 from 6 GW to 8 GW by 2032, and no signed transaction announced as of September 29, 2026 — 'at least one' is expected by year-end. NextEra's John Ketchum: 'every gigawatt of large load under FPL's approved tariff to be equivalent to roughly $2 billion of CapEx' at FPL's return.",
+   "highlights": [
+    "The FEIA intervenor, whose members are 'companies that are developing data centers in Florida', told the Commission its members had confidential agreements with FPL and that LLCS charges run 65 percent above the GSLD-3 tariff; the order names none of them",
+    "Chapter 2026-65 (SB 484, signed May 2026, effective July 1, 2026) creates s. 366.043: a large-load customer is 50 MW or more of anticipated monthly peak at a 15-minute interval at a single location including colocation tenants; tariffs must recover full cost of service with no nonpayment risk on other customers; the FPSC may approve CIAC, incremental generation charges, financial guarantees, minimum load factors, take-or-pay, minimum terms and exit fees; utilities may not knowingly serve loads controlled by foreign countries of concern; every public utility files a compliant tariff by October 1, 2026 — FPL's filing, if any, was not located",
+    "The three campuses that would have sat in the LLCS-1 zones per third-party reporting — Sentinel Grove (Fort Pierce, application withdrawn February 26, 2026 as the bill advanced), Project Tango (Loxahatchee, suspended) and Atlas Compute (Fort Pierce, 240 MW initial) — are none of them covered companies and none of them named by FPL",
+    "The Ten-Year Site Plan assumes large-load demand 'starting in 2028' and 'a peak demand of 3 GW by 2035' against a 2035 summer peak forecast of 35,623 MW"
+   ],
+   "positioning": "The most fully specified large-load tariff in the corpus and the one with the longest term: 20 years (on the useful life of batteries), against PPL's 10, SRP's undisclosed term and APS's still-pending collateral and exit terms. LLCS-1's zone cap makes it a siting instrument as much as a rate — the 500 kV corridor near St. Lucie, Martin and Palm Beach is where FPL wants the first 3 GW.",
+   "soldThrough": "Tariff rate schedules plus an executed LLCS Service Agreement, a construction and operating agreement and system studies; RECs by separate negotiated agreement",
+   "targetSegments": [
+    "Data centers of 50 MW or more at 85 percent load factor",
+    "Other single-location loads above 50 MW",
+    "Colocation landlords whose tenants aggregate to the threshold"
+   ],
+   "roadmap": "A first announced LLCS transaction by end-2026; service from 2028; 1 GW under LLCS-1 by end-2029 (the charge's sizing basis); the 3 GW LLCS-1 cap; any FPSC action on the Chapter 2026-65 compliance filing due October 1, 2026"
+  },
+  {
+   "name": "Utility-owned battery storage — Manatee, the northwest Florida fleet and 7,454 MW through 2035",
+   "category": "Energy storage",
+   "description": "FPL owns 991 MW of large-scale batteries delivering to the transmission system at year-end 2025: the Manatee Energy Storage Center (409 MW / 900 MWh at the Manatee plant site, in service December 2021, 132 containers and 53,144 modules with a 230/34.5 kV substation, built by Quanta's Irby Construction), Echo River and Sunshine Gateway (30 MW each, 2021, solar-charged) and seven 74.5 MW batteries co-located with solar sites in northwest Florida placed in service in the fourth quarter of 2025 (521.5 MW). The 2026 Ten-Year Site Plan (filed April 2026) adds 1,419.5 MW in 2026, 819.5 MW in 2027, 596 MW a year in 2028–30, 1,192 MW in 2031, 596 MW in 2032 and 2033, 223.5 MW in 2034 and 819.5 MW in 2035 — 3,431 MW in 2026–29 'consistent with the approved settlement' (the 2028–29 tranches SoBRA-eligible) and 7,454 MW over ten years for 8,445 MW by end-2035 — at named preferred sites from Big Brook in Calhoun County to Owen Branch in Manatee County. The plan states nameplate MW only; MWh and duration are not given for the post-2021 projects, and no battery OEM or integrator appears in the plan, the 10-K, the 10-Q or any FPL release read. The FPSC also approved a Long-Duration Battery Storage Pilot in the January 2026 order: two systems totalling 10 MW / 100 MWh for about $78M using 'alternative storage technologies beyond lithium-ion', which the Commission said lets FPL 'diversify its supply chain' over the objection of OPC and the Florida Rising group to ratepayer funding. Federal credits: FPL recognizes the storage ITC when property enters service and sold about $180M of clean-energy credits in 2025; the 30 percent storage ITC runs for projects beginning construction by end-2033 under the 2025 budget act.",
+   "highlights": [
+    "FPL's 2025 additions: 894 MW of solar and 522 MW of storage; January 2026 alone 596 MW of solar; the rest of 2026 expected to bring about 298 MW of solar and about 1,420 MW of storage (10-K)",
+    "The settlement's 20-year LLCS minimum term is set 'based on useful life of batteries' — the storage plan and the large-load tariff were sized together",
+    "Procurement runs through NextEra's enterprise engineering, construction and supply-chain organization (EVP Ron Reagan), not an FPL desk; NextEra states its wind and solar pipeline through 2030 will qualify for credits and that import tariffs have had no material impact so far",
+    "A third-party description of Manatee as owned and operated by NextEra Energy Resources is contradicted by FPL's Ten-Year Site Plan and 10-K, which count it in FPL's 991 MW"
+   ],
+   "positioning": "The largest utility-owned storage program in the corpus — 7.45 GW in ten years against Duke's about 4.5 GW by 2031, DTE's 1,383 MW customer-funded plant and APS's 150 MW owned — and the only one with an FPSC-approved non-lithium pilot. Against the sister NextEra Energy Resources (about 5.2 GW operating, a 110 GW storage pipeline, domestic supply locked through 2029) FPL is the rate-based buyer whose 74.5 MW blocks follow its 74.5 MW solar sites.",
+   "soldThrough": "Self-build into rate base under the settlement's schedule and SoBRA; EPC by contractors (Irby/Quanta at Manatee); OEM undisclosed",
+   "targetSegments": [
+    "FPL's own reserve margin (24–31 percent summer) and solar firming",
+    "Load-ramp service for LLCS customers, whose generation FPL selects"
+   ],
+   "roadmap": "1,419.5 MW in 2026 (about 1,420 MW expected by year-end); 819.5 MW in 2027; SoBRA showings for 2028–29; the 10 MW / 100 MWh long-duration pilot; 8,445 MW by 2035"
+  },
+  {
+   "name": "Solar, gas and nuclear — 20 GW of solar by 2035, Vandolah, 3.3 GW of new peakers and an SMR early site permit",
+   "category": "Generation",
+   "description": "FPL owned 7,932 MW of solar at 108 sites at year-end 2025 and 'approximately 8,826 MW' at 120 sites by August 18, 2026 (12 centers added in 2026, agrivoltaic pilots at 53 sites, more than $1.3B of cumulative fuel savings claimed); the Ten-Year Site Plan adds 894 MW in 2026, 1,192 MW in 2027, 1,788 MW in 2028, 2,384 MW in 2029 and 2,980 MW in 2030, nothing in 2031–33, then 1,490 MW and 1,564.5 MW in 2034–35 — 12,293 MW in 74.5 MW centers for 20,225 MW by 2035, the 2027–29 tranches SoBRA-eligible. Gas: 24,314 MW owned, mostly combined cycle; the Vandolah 672 MW dual-fuel peaker in Hardee County (FERC-approved December 2025, tolled to Duke Energy Florida through June 2027) joins the fleet June 1, 2027; combined-cycle upgrades of 43 MW (2027) and 19 MW (2028); and 3,276 MW of new simple-cycle capacity — 936 MW in each of 2032, 2033 and 2034 and 468 MW in 2035 — with no new combined cycle in the plan and the turbine OEM unnamed (the plan says the CT OEMs approached FPL about upgrades). Retirements: Gulf Clean Energy Center units 4 and 5 (75 MW each) at end-2029 and small units at Perdido, Pea Ridge and the Palm Beach SWA. Nuclear: 3,502 MW at four units producing 29,483 GWh in 2025 (about 20 percent of generation); Turkey Point 3 and 4 relicensed in September 2024 to 2052 and 2053 (an intervenor appeal pending); St. Lucie 1 and 2 renewal filed in 2021 and pending, current licenses to 2036 and 2043; the Turkey Point 6 and 7 combined licenses of 2018 remain valid; and FPL 'plans to begin Early Site Permit work in 2026–2027 for a potential SMR adjacent to an existing nuclear plant'. Peak: 28,773 MW summer total (26,905 net firm) in 2025, forecast at 35,623 MW by 2035; the 2035 mix is projected at 16 percent nuclear and 26 percent solar.",
+   "highlights": [
+    "NextEra sold $1,527M of credits group-wide in 2025; under the 2025 budget act FPL's solar keeps the full credit only if construction began before July 5, 2026 or the plant is in service by end-2027 — the 2028–35 additions are not quantified against that test in the plan or the 10-K",
+    "FPL holds a 215 MW share of the Scherer coal unit in Georgia (operated by the joint owner, unnamed in the 10-K)",
+    "The plan holds the summer reserve margin at 24–31 percent and books 244 MW of purchased power against 36,372 MW owned",
+    "Storm Secure Underground passed 2,000 miles of undergrounded neighborhood lines in September 2026 (more than 200,000 customers), funded through the storm protection plan clause"
+   ],
+   "positioning": "A gas-and-solar utility adding 20 GW of solar and 3.3 GW of peakers with no combined cycle — the inverse of PPL's and NiSource's regulated CCGT builds — and, with Duke, one of two corpus utilities relicensing nuclear to 80 years while starting SMR siting.",
+   "soldThrough": "Self-build into rate base; the Vandolah acquisition; PPAs of 244 MW",
+   "targetSegments": [
+    "FPL system load and reserve margin",
+    "LLCS load from 2028"
+   ],
+   "roadmap": "Vandolah June 2027; SoBRA solar 2027–29; St. Lucie renewal decision; SMR early-site-permit work 2026–27; peakers from 2032"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Rate Schedule LLCS-1 — Large-Load Contract Service-1 (tariff sheets 8.950–8.952, effective January 1, 2026)",
+   "specs": [
+    {
+     "band": "Availability",
+     "label": "Zones",
+     "value": "in the vicinity of Sunbreak in St. Lucie County, Tesoro in Martin County, and Sugar in Palm Beach County"
+    },
+    {
+     "band": "Availability",
+     "label": "Class cap",
+     "value": "3 GW combined; closes when fully subscribed"
+    },
+    {
+     "band": "Eligibility",
+     "label": "Load",
+     "value": "projected new or incremental load of 50 MW or more at a Single Location"
+    },
+    {
+     "band": "Eligibility",
+     "label": "Load factor",
+     "value": "projected load factor of 85% or more"
+    },
+    {
+     "band": "Eligibility",
+     "label": "Service",
+     "value": "transmission voltage of 69 kV or above; dedicated metering per Single Location; no aggregation across locations; no resale"
+    },
+    {
+     "band": "Rates",
+     "label": "Base charge",
+     "value": "$669.00 per month"
+    },
+    {
+     "band": "Rates",
+     "label": "Base demand charge",
+     "value": "$14.61 per kW"
+    },
+    {
+     "band": "Rates",
+     "label": "Base energy charge",
+     "value": "0.758 cents per kWh"
+    },
+    {
+     "band": "Rates",
+     "label": "Incremental Generation Charge",
+     "value": "$11.67 per kW of Demand (as filed $28.07; rebuttal $12.18)"
+    },
+    {
+     "band": "Minimum bill",
+     "label": "During the Load Ramp Period",
+     "value": "base charge + energy charges + demand charges on at least 70% of Load Ramp Demand + Incremental Generation Charge on Load Ramp Demand"
+    },
+    {
+     "band": "Minimum bill",
+     "label": "After the ramp",
+     "value": "demand charges on the greater of 70% of Contract Demand or the highest billing demand in the past 11 months, plus the Incremental Generation Charge on full Contract Demand"
+    },
+    {
+     "band": "Term",
+     "label": "Minimum term",
+     "value": "20 years from the In-Service Date, including the ramp; then evergreen with a 2-year termination notice"
+    },
+    {
+     "band": "Term",
+     "label": "Exit fee",
+     "value": "net present value of the accelerated Incremental Generation Charges that would have been paid over the remaining Minimum Term (also on a force-majeure termination exceeding 365 days)"
+    },
+    {
+     "band": "Security",
+     "label": "Performance Security",
+     "value": "within 5 days: net present value of 5 years of Incremental Generation Charge revenues if rated BBB or better, 10 years if not; cash, letter of credit, surety bond or Parent Company Guaranty"
+    },
+    {
+     "band": "Prerequisites",
+     "label": "Studies and agreements",
+     "value": "pay for System Studies; execute a Construction and Operating Agreement; CIAC payable within 45 days"
+    },
+    {
+     "band": "Generation",
+     "label": "Resource selection",
+     "value": "FPL has sole discretion over generation resource selection, consistent with the Ten-Year Site Plan; RECs by separate negotiated agreement"
+    }
+   ],
+   "notes": "Not eligible for the Economic Development, Load Control, CISR, SST-1 or ISST-1 riders. Source: FPL Electric Retail Tariff Book, Section 8 and the LLCS Service Agreement in Section 9."
+  },
+  {
+   "product": "Rate Schedule LLCS-2 — Large-Load Contract Service-2 (sheets 8.953–8.955, effective January 1, 2026)",
+   "specs": [
+    {
+     "band": "Availability",
+     "label": "Zones",
+     "value": "in all areas not served under LLCS-1; no class cap stated"
+    },
+    {
+     "band": "Eligibility",
+     "label": "Load and load factor",
+     "value": "50 MW or more at a Single Location; 85% or more"
+    },
+    {
+     "band": "Rates",
+     "label": "Base charge",
+     "value": "$669.00 per month"
+    },
+    {
+     "band": "Rates",
+     "label": "Base demand charge",
+     "value": "$4.08 per kW"
+    },
+    {
+     "band": "Rates",
+     "label": "Base energy charge",
+     "value": "0.758 cents per kWh"
+    },
+    {
+     "band": "Rates",
+     "label": "Incremental Generation Charge",
+     "value": "the customer's applicable share of generation-capacity and transmission-interconnection revenue requirements (operating expenses, property taxes and insurance, depreciation, interest, return on rate base, income taxes, tax credits)"
+    },
+    {
+     "band": "Term and security",
+     "label": "Same as LLCS-1",
+     "value": "20-year minimum term; 2-year notice; 70% minimum; exit fee and security as in the LLCS Service Agreement"
+    }
+   ],
+   "notes": "Chapter 2026-65 (s. 366.043, F.S.) codifies the same instruments — CIAC, incremental generation charges, financial guarantees, minimum load factors, take-or-pay, minimum terms and early-termination fees — and requires a compliant tariff filing by October 1, 2026."
+  },
+  {
+   "product": "2026 Ten-Year Site Plan — FPL-owned battery and solar additions (nameplate MW)",
+   "specs": [
+    {
+     "band": "Storage in service",
+     "label": "Year-end 2025",
+     "value": "991 MW: Manatee Energy Storage Center 409 MW / 900 MWh (2021); Echo River 30 MW and Sunshine Gateway 30 MW (2021); seven 74.5 MW batteries in northwest Florida (521.5 MW, Q4 2025)"
+    },
+    {
+     "band": "Storage additions",
+     "label": "2026",
+     "value": "1,419.5 MW"
+    },
+    {
+     "band": "Storage additions",
+     "label": "2027",
+     "value": "819.5 MW"
+    },
+    {
+     "band": "Storage additions",
+     "label": "2028–2030",
+     "value": "596 MW a year (2028–29 SoBRA-eligible)"
+    },
+    {
+     "band": "Storage additions",
+     "label": "2031",
+     "value": "1,192 MW"
+    },
+    {
+     "band": "Storage additions",
+     "label": "2032–2035",
+     "value": "596 MW; 596 MW; 223.5 MW; 819.5 MW"
+    },
+    {
+     "band": "Storage additions",
+     "label": "Ten-year total",
+     "value": "7,454 MW, for 8,445 MW by end-2035"
+    },
+    {
+     "band": "Solar additions",
+     "label": "2026–2030",
+     "value": "894 MW; 1,192 MW; 1,788 MW; 2,384 MW; 2,980 MW (74.5 MW centers; 2027–29 SoBRA-eligible)"
+    },
+    {
+     "band": "Solar additions",
+     "label": "2034–2035",
+     "value": "1,490 MW; 1,564.5 MW (none in 2031–33)"
+    },
+    {
+     "band": "Solar additions",
+     "label": "Ten-year total",
+     "value": "12,293 MW, for 20,225 MW by end-2035"
+    },
+    {
+     "band": "Gas",
+     "label": "Vandolah",
+     "value": "672 MW dual-fuel peaker, Hardee County, in the fleet from June 1, 2027"
+    },
+    {
+     "band": "Gas",
+     "label": "New combustion turbines",
+     "value": "936 MW in each of 2032, 2033 and 2034; 468 MW in 2035 (3,276 MW)"
+    },
+    {
+     "band": "Load",
+     "label": "Summer peak",
+     "value": "2025: 28,773 MW total / 26,905 MW net firm; 2035 forecast 35,623 / 33,515 MW"
+    },
+    {
+     "band": "Load",
+     "label": "Large-load assumption",
+     "value": "demand from large load customers will materialize starting in 2028 and reach a peak demand of 3 GW by 2035"
+    },
+    {
+     "band": "Pilot",
+     "label": "Long-Duration Battery Storage Pilot",
+     "value": "two systems, 10 MW / 100 MWh total, about $78 million, alternative storage technologies beyond lithium-ion (FPSC Final Order, January 22, 2026)"
+    }
+   ],
+   "notes": "MWh and duration are not stated for the post-2021 batteries; no battery OEM or integrator appears in the plan, the 10-K, the 10-Q or FPL's releases."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public filings (NYSE: NEE) — FPL segment of the combined NextEra/FPL 10-K and 10-Q; consensus exists only at the NextEra level",
+  "periods": [
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "FPL operating revenues",
+      "actual": "$18,262M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Segment figure from the combined 10-K (Note 16); no FPL-level consensus exists",
+      "kpi": "revenue",
+      "usdMillions": 18262,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "FPL net income",
+      "actual": "$5,012M (FY2024 $4,543M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Average rate base grew about $5.5B in 2025; the 2025 storm surcharge of about $1.2B was collected through December",
+      "kpi": "net-income",
+      "usdMillions": 5012,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "FPL capital investments",
+      "actual": "$8,935M (new generation $2,915M; existing generation $1,150M; T&D $4,498M; nuclear fuel $216M; general $718M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "2026–30 accrual plan $58,630M: $11,185M, $10,870M, $11,605M, $12,375M, $12,595M",
+      "kpi": "capex",
+      "usdMillions": 8935,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "NextEra adjusted EPS (parent)",
+      "actual": "$3.71 (the 2025 base for guidance); GAAP net income attributable $6.84B",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "2026 guidance $3.92–4.02 'targeting the high end'; 8%+ adjusted EPS growth through 2032 off the 2025 base; 9%+ post-merger"
+     }
+    ],
+    "commentary": "FPL's 2026 capex is guided at $12–13B in the Q1 and Q2 2026 releases against the 10-K's $11,185M accrual figure — a cash-versus-accrual and updated-plan difference the company does not reconcile in the text read."
+   },
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "FPL operating revenues",
+      "actual": "$17,019M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Comparative from the FY2025 10-K",
+      "kpi": "revenue",
+      "usdMillions": 17019,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "FPL net income",
+      "actual": "$4,543M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Capital investments $8,214M (FY2023 $9,400M)",
+      "kpi": "net-income",
+      "usdMillions": 4543,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "Read only as the comparison year."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "FPL net income",
+      "actual": "$1,412M ($0.67 per NEE share), from $1,275M ($0.62); six months $2,874M from $2,591M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Q2 revenue $4,896M ($4,708M); six months $9,167M ($8,705M); storm cost recovery revenue down $309M in the quarter as the 2025 surcharge ended"
+     },
+     {
+      "name": "FPL regulatory capital employed",
+      "actual": "$79.7B, up 9.3% from $72.9B (Q1 2026: $77.7B, +8.8%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Q2 capex about $2.8B (Q1 about $3.2B); FY2026 $12–13B"
+     },
+     {
+      "name": "NextEra adjusted EPS (parent)",
+      "actual": "$1.15 (+9.5%)",
+      "expected": "$1.09 (Zacks consensus; other outlets $1.10–1.11)",
+      "verdict": "beat",
+      "result": "Revenue $7.53B against a $7.99B Zacks consensus — a miss on revenue; Q1 2026 adjusted EPS $1.09 against $0.97 consensus"
+     }
+    ],
+    "commentary": "Ratings as of February 13, 2026: FPL corporate A1 / A / A; first mortgage bonds Aa2 / A+ / AA-; NextEra Baa1 / A- / A-. FPL priced $2.25B of first mortgage bonds on May 26, 2026 (5.125% due 2036, 5.750% due 2056, 5.900% due 2066) with a 'Tax Credit Event' redemption right. Q3 2026 results are expected in late October on the parent's cadence (Q3 2025 was filed October 28); the date had not been announced as of September 29."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-16",
+   "category": "project",
+   "headline": "FPL's Storm Secure Underground Program passes 2,000 miles of undergrounded neighborhood lines serving more than 200,000 customers",
+   "read": "Storm-protection-plan capital keeps flowing through its own clause while base rates sit under appeal.",
+   "source": "https://newsroom.fpl.com/2,000-miles-FPLs-Storm-Secure-Underground-Program-surpasses-milestone"
+  },
+  {
+   "date": "2026-09-14",
+   "category": "ma",
+   "headline": "NextEra and Dominion announce an enhanced Virginia benefits package — residential bill credits extended from two years to four, $100M more for EnergyShare, 1,000 Virginia jobs, a shareholder-funded Richmond co-headquarters tower — after Governor Spanberger intervened at the SCC",
+   "read": "The merger's political cost is being paid in Virginia; FPL's position as a wholly owned subsidiary does not change.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000110465926107537/tm2625368d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-09-10",
+   "category": "regulatory",
+   "headline": "Virginia SCC sets the merger's evidentiary hearing for November 17, 2026 (Case PUR-2026-00112) and orders three in-person public hearings in October and November",
+   "read": "The six-month statutory review from the July 15 filing runs to about mid-January 2027; no approval has been obtained yet from any regulator.",
+   "source": "https://virginiamercury.com/2026/09/10/in-rare-move-scc-orders-three-in-person-hearings-for-nextera-dominion-merger-case/"
+  },
+  {
+   "date": "2026-09-03",
+   "category": "ma",
+   "headline": "NextEra shareholders approve the share issuance for the Dominion merger (99.47% of votes cast) and Dominion shareholders approve the merger agreement the same day",
+   "read": "The shareholder gates are cleared; FERC, NRC, HSR and the three state commissions remain.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000071/nee-20260903.htm"
+  },
+  {
+   "date": "2026-08-18",
+   "category": "capacity",
+   "headline": "FPL reports 120 solar energy centers and about 8,826 MW, twelve added in 2026 including Sea Grape in St. Lucie County, with more than $1.3B of cumulative fuel savings claimed",
+   "read": "The 74.5 MW solar block is the unit of the plan — the batteries follow the same sites.",
+   "source": "https://newsroom.fpl.com/Florida-Power-Lights-investments-in-solar-deliver-more-than-1-3-billion-in-customer-savings"
+  },
+  {
+   "date": "2026-07-24",
+   "category": "financial",
+   "headline": "Q2 2026: FPL net income $1.412B; regulatory capital employed $79.7B (+9.3%); about 21 GW of large-load interest and 12 GW in advanced discussions; expectation raised to 8 GW by 2032; 'at least one large-load transaction under FPL's tariff by the end of the year'; Ketchum: roughly $2B of capex per gigawatt at FPL's return",
+   "read": "The tariff is nine months old with no signed customer announced; the funnel is real, the conversion is not yet.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000058/neeq22026exhibit99.htm"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "regulatory",
+   "headline": "Merger applications filed with the Virginia SCC, the North Carolina Utilities Commission, the South Carolina PSC, FERC and the NRC",
+   "read": "Closing is expected in the second half of 2027, with an outside date of November 15, 2027 extendable to August 15, 2028.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000060/nee-20260630.htm"
+  },
+  {
+   "date": "2026-07-08",
+   "category": "regulatory",
+   "headline": "FPSC approves an $80M true-up of the 2025 storm surcharge as a one-time September 2026 credit of about $8 for a 1,000 kWh residential bill",
+   "read": "The 2024 hurricanes' $1.1–1.2B restoration was over-collected by about 7 percent and returned.",
+   "source": "https://newsroom.fpl.com/FPL-customers-to-receive-one-time-bill-reduction-in-September"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "policy",
+   "headline": "Chapter 2026-65 (SB 484) takes effect: a 50 MW large-load definition, full cost-of-service tariffs, a ban on serving loads controlled by foreign countries of concern and a compliant tariff filing from every public utility by October 1, 2026",
+   "read": "Florida wrote FPL's tariff design into statute six months after the FPSC approved it.",
+   "source": "https://laws.flrules.org/2026/65"
+  },
+  {
+   "date": "2026-06-22",
+   "category": "leadership",
+   "headline": "FPL profiles new President and CEO Scott Bores, who joined FPL in 2011, ran finance and resource planning and was the rate case's settlement witness",
+   "read": "The executive who built the LLCS numbers now runs the utility that has to sign the first customer.",
+   "source": "https://newsroom.fpl.com/FPL-President-CEO-Scott-Bores-Leading-with-purpose"
+  },
+  {
+   "date": "2026-06",
+   "category": "legal",
+   "headline": "The Florida Supreme Court consolidates the appeals of the 2025 rate order by the Office of Public Counsel, Floridians Against Increased Rates and the Florida Rising, LULAC and ECOSWF group",
+   "read": "Rates, SoBRA and the LLCS schedules all stand while the appeal runs; the docket stays open.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000060/nee-20260630.htm"
+  },
+  {
+   "date": "2026-05-26",
+   "category": "financial",
+   "headline": "FPL prices $2.25B of first mortgage bonds — $600M 5.125% due 2036, $600M 5.750% due 2056, $1.05B 5.900% due 2066 — with a 'Tax Credit Event' redemption right",
+   "read": "Fifty-year utility debt priced with a clause that anticipates the federal credit regime changing.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000037634/000119312526242104/d884526d424b2.htm"
+  },
+  {
+   "date": "2026-05-18",
+   "category": "ma",
+   "headline": "NextEra and Dominion announce their merger (agreement dated May 15): 0.8138 NEE shares plus a pro-rata share of $360M cash per Dominion share; about 74.5% / 25.5% post-close; 'more than 130 GW of large-load opportunities' in the combined pipeline (48.5 GW Dominion, 21 GW FPL, more than 60 GW NEER); $2.25B of Virginia, North Carolina and South Carolina bill credits",
+   "read": "The 130 GW figure is the combined group's pipeline at the interest rung; FPL's 21 GW is its share.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000110465926063001/tm2614888d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-05-18",
+   "category": "leadership",
+   "headline": "Armando Pimentel Jr. resigns as FPL CEO to become NextEra Vice Chairman; Scott Bores, FPL President since December 2025, becomes President and CEO in a 'planned leadership succession'",
+   "read": "Same-day as the merger signing; Bores is named FPL's chief in the combined company.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000110465926062992/tm2614888d2_8k.htm"
+  },
+  {
+   "date": "2026-04-27",
+   "category": "regulatory",
+   "headline": "FPSC Order PSC-2026-0117-FOF-EI denies the non-signatories' reconsideration of the rate order in substance (a limited FEECA correction only); new appeals to the Florida Supreme Court follow in May",
+   "read": "The Commission's own review is exhausted; the 10.95 percent return and the settlement's mechanisms go to the court.",
+   "source": "https://www.floridapsc.com/pscfiles/library/filings/2026/02414-2026/02414-2026.pdf"
+  },
+  {
+   "date": "2026-04-23",
+   "category": "financial",
+   "headline": "Q1 2026: FPL net income $1.462B; about 600 MW of solar placed in service; the 2026 Ten-Year Site Plan filed with about 4 GW of new gas, more than 12 GW of solar and more than 7 GW of storage over ten years",
+   "read": "The plan that sizes the storage program the settlement's SoBRA will pay for.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000028/neeq12026exhibit99.htm"
+  },
+  {
+   "date": "2026-03-20",
+   "category": "leadership",
+   "headline": "NextEra Chief Risk Officer Kirk Crews resigns to become a CFO elsewhere; Petter Skantze becomes EVP and Chief Risk Officer",
+   "read": "Enterprise risk, IT and the 'REWIRE' AI initiative move to an ex-NEER infrastructure developer.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000022/nee-20260305.htm"
+  },
+  {
+   "date": "2026-01-22",
+   "category": "regulatory",
+   "headline": "FPSC Final Order PSC-2026-0022-S-EI approves the 2025 settlement: +$945M (2026), +$705M (2027), 10.95% ROE on 59.6% equity, SoBRA 2027–29, the RSM, LLCS-1/LLCS-2 with the 50 MW threshold, 70% take-or-pay and $11.67 per kW charge, and the $78M long-duration storage pilot",
+   "read": "One order set the return, the storage schedule, the large-load class and the non-lithium pilot — the whole buying program for four years.",
+   "source": "https://www.floridapsc.com/pscfiles/library/filings/2026/00561-2026/00561-2026.pdf"
+  },
+  {
+   "date": "2026-01-01",
+   "category": "regulatory",
+   "headline": "New base rates and the LLCS-1 and LLCS-2 tariffs take effect; 596 MW of solar placed in service in January",
+   "read": "The premise date holds on the tariff sheets themselves.",
+   "source": "https://www.fpl.com/content/dam/fplgp/us/en/rates/pdf/electric-tariff-section8.pdf"
+  },
+  {
+   "date": "2025-12",
+   "category": "procurement",
+   "headline": "FERC approves FPL's acquisition of the 672 MW Vandolah dual-fuel peaker in Hardee County, tolled to Duke Energy Florida through June 2027 and joining FPL's fleet June 1, 2027",
+   "read": "FPL's only near-term gas addition is a purchase, not a build; new turbines wait until 2032.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm"
+  },
+  {
+   "date": "2025-11-20",
+   "category": "regulatory",
+   "headline": "FPSC votes unanimously to approve the 2025 settlement; the typical 1,000 kWh bill goes from $134.14 to $136.64; the Commission calls the large-load tariff 'first of its kind in Florida'",
+   "read": "Thirteen signatories including the data-center developers' association against five consumer and environmental non-signatories.",
+   "source": "https://www.floridapsc.com/news-links/12299"
+  },
+  {
+   "date": "2025-10-16",
+   "category": "regulatory",
+   "headline": "The rate-case hearing closes after two weeks, 52 witnesses and 862 exhibits, with FEIA telling the Commission its data-center members hold confidential service agreements with FPL and that LLCS charges are 65% above the GSLD-3 tariff",
+   "read": "The customers exist and are unnamed; the tariff's premium over the general large-load rate is stated by the customers themselves.",
+   "source": "https://www.floridapsc.com/pscfiles/library/filings/2026/02414-2026/02414-2026.pdf"
+  },
+  {
+   "date": "2025-08-20",
+   "category": "regulatory",
+   "headline": "FPL files the 2025 Stipulation and Settlement Agreement, cutting its 2026 ask from $1.545B to $945M and the 2027 ask from $927M to $766M (later $705M in the order), with the 25 MW large-load threshold raised to 50 MW and the take-or-pay cut from 90% to 70%",
+   "read": "The settlement halved the large-load class's entry rate and doubled its threshold before the Commission voted.",
+   "source": "https://newsroom.fpl.com/2025-08-20-FPL-rate-settlement-reduces-request-by-nearly-a-third,-limits-average-annual-bill-increases-to-2-,-maintains-consumer-protections"
+  },
+  {
+   "date": "2025-02-28",
+   "category": "regulatory",
+   "headline": "FPL files its rate petition: $1.545B for 2026, $927M for 2027, SoBRA for 2028–29, an 11.9% return and, inside it, the first large-load contract service schedules at a 25 MW threshold and a $28.07 per kW Incremental Generation Charge",
+   "read": "The large-load tariff entered Florida through a rate case, not a rulemaking.",
+   "source": "https://www.floridapsc.com/pscfiles/library/filings/2026/00561-2026/00561-2026.pdf"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that FPL is the corpus's largest single utility-owned battery account and that its supplier decision is made inside NextEra's enterprise supply chain, not at FPL or through a toll: 7,454 MW of FPL-owned storage is planned over ten years in 74.5 MW blocks, 1,419.5 MW of it in 2026, the settlement pays for it through SoBRA, and no OEM has been named for any project since Manatee in 2021. Basis: the Ten-Year Site Plan, the 10-K and the absence of any supplier attribution across the record read.",
+  "(High confidence) We assess that the LLCS design is now Florida's law and the model the state's other utilities will file by October 1, 2026: Chapter 2026-65's definitions and permitted instruments track FPL's tariff sheet by sheet, and FPL's own newsroom claimed the principle before the statute passed. Basis: s. 366.043 as enacted, the January 2026 Final Order and the May 8, 2026 Bores op-ed.",
+  "(Moderate confidence) We assess that the first LLCS customer will be announced by the end of 2026 in an LLCS-1 zone and that it will be a hyperscaler or its developer rather than a covered landlord, because the three campuses reported in those zones (Sentinel Grove, Project Tango, Atlas Compute) belong to developers outside this corpus and FEIA's members hold confidential agreements already. Basis: the Q2 2026 call, the Final Order's FEIA account and Florida Trend's March 2026 survey. Against this: Sentinel Grove withdrew its application as the statute advanced, and nine months of the tariff have produced no signing.",
+  "(Moderate confidence) We assess that the merger's regulatory path is a NextEra story with no operative effect on FPL's procurement, and that Virginia's process — an evidentiary hearing November 17, 2026, a governor intervening and a benefits package enlarged under pressure — is where the second-half-2027 closing will be decided. Basis: the 8-Ks of May 18 and September 14, 2026 and the SCC's scheduling order. Against this: the termination fees ($4.8–6.5B payable by NextEra) are large enough to change the parent's capital plan if the deal fails.",
+  "(Low confidence) We assess that the 8 GW-by-2032 expectation will prove high relative to the Ten-Year Site Plan's 3 GW by 2035, because the plan was filed in April 2026 by the same company that raised the expectation in May, and because the 3 GW LLCS-1 cap and the 1 GW-by-2029 sizing basis are the only figures with tariff consequences. Basis: the two documents' dates and the funnel's rungs. Against this: FPL says a portion of the 12 GW in advanced discussions is serviceable from 2028, and 'more than 90 percent' baseload gas and nuclear gives it headroom to add load quickly."
+ ],
+ "relationships": [
+  {
+   "slug": "nextera-energy-resources",
+   "type": "other",
+   "status": "active",
+   "scale": "Sister subsidiaries of NextEra Energy, Inc.",
+   "note": "FPL and NextEra Energy Resources are the two reporting segments of NextEra Energy; they share a common platform, NextEra's Power Generation Division operates both fleets, and NEER's president and CEO Brian Bolster was FPL's CFO.",
+   "context": "The two books are separate: FPL's 991 MW of batteries and 7,454 MW plan sit in rate base, NEER's about 5.2 GW operating fleet and 110 GW storage pipeline are merchant and contracted. A third-party description of Manatee as owned and operated by NEER is contradicted by FPL's Ten-Year Site Plan and 10-K, which count Manatee in FPL's 991 MW. The corpus's NEER dossier (profileVersion 4) records FPL's 991 MW, its 20-plus GW of inquiries and the $2B per GW economics from NEER's side, consistent with this record; the merger's '130 GW' pipeline is the combined group's figure (48.5 GW Dominion, 21 GW FPL, more than 60 GW NEER).",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm"
+  },
+  {
+   "slug": "dominion-energy",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-05",
+   "scale": "0.8138 NEE shares plus a pro-rata share of $360M cash per Dominion share; about $66.8B per third-party accounts",
+   "via": "Agreement and Plan of Merger dated May 15, 2026",
+   "note": "NextEra's merger with Dominion (announced May 18, 2026) would make Dominion a wholly owned subsidiary beside FPL; both shareholder votes passed September 3, 2026, the Virginia SCC hearing is November 17, 2026 and closing is expected in the second half of 2027.",
+   "context": "Post-close ownership about 74.5 percent NextEra / 25.5 percent Dominion holders; the combined company keeps the NEE name and ticker, adds Richmond as a co-headquarters and Cayce, South Carolina as operational headquarters, and names Robert Blue president and CEO of the regulated utilities with Scott Bores staying at FPL. Conditions: HSR, FERC, NRC, Virginia, North Carolina and South Carolina without a 'Burdensome Condition'; outside date November 15, 2027 (extendable to August 15, 2028); termination fees of $4.8B or $6.5B payable by NextEra and about $2.2B by Dominion. NextEra's own filings state no headline value. The corpus's Dominion and NEER dossiers carry the transaction.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000110465926063001/tm2614888d1_ex99-1.htm"
+  },
+  {
+   "slug": "duke-energy",
+   "type": "other",
+   "status": "announced",
+   "since": "2025-12",
+   "scale": "672 MW Vandolah peaker",
+   "note": "The Vandolah plant FPL is acquiring (FERC-approved December 2025, in FPL's fleet from June 1, 2027) is tolled to Duke Energy Florida through June 2027.",
+   "context": "The corpus's Duke Energy dossier cites FPL's LLCS-1/LLCS-2 as the in-state benchmark for the large-load schedule Duke Energy Florida committed to propose in its next rate case; it reads the thresholds as 50 MW and 85 percent, consistent with the tariff sheets.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm"
+  },
+  {
+   "slug": "quanta-services",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2021",
+   "scale": "409 MW / 900 MWh Manatee Energy Storage Center",
+   "via": "Irby Construction (EPC)",
+   "note": "Quanta's Irby Construction built the Manatee Energy Storage Center — 132 containers, 53,144 modules and a 230/34.5 kV substation — completed December 2021.",
+   "context": "The battery OEM is not disclosed by FPL, Quanta or trade press. The corpus's Blattner dossier records FPL selecting Black & Veatch and Blattner for 2017 solar centers and lists NextEra/FPL among its repeat-owner frameworks; no current FPL EPC award to any covered contractor is on the record.",
+   "source": "https://www.quantaservices.com/stories/manatee-battery-energy-storage-center"
+  },
+  {
+   "slug": "blattner",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2017",
+   "scale": "2017 solar energy centers",
+   "note": "The corpus's Blattner dossier records that FPL selected Black & Veatch and Blattner for its 2017 solar energy centers and counts NextEra/FPL among Blattner's repeat-owner frameworks.",
+   "context": "Carried from Blattner's side; FPL's current solar and battery EPCs are not disclosed in the filings read.",
+   "source": "Blattner dossier — repeat-owner frameworks"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Chapter 2026-65, Laws of Florida (SB 484) — s. 366.043 large-load tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-01",
+   "exposure": "Defines a large-load customer as 50 MW or more of anticipated monthly peak at a 15-minute interval at a single location (colocation tenants included, no splitting to evade); requires tariffs that recover connection, incremental transmission and generation and O&M costs from the customer with no nonpayment risk on the general body; authorizes CIAC, incremental generation charges, financial guarantees, minimum load factors, take-or-pay, minimum terms and early-termination fees; bars knowingly serving a load controlled by a foreign country of concern (25 percent control test); and requires every public utility to file a compliant tariff by October 1, 2026. FPL's LLCS schedules predate and match the design; whether FPL must re-file was not established.",
+   "mitigation": "FPL's position (Bores, May 8, 2026): the company 'already put this principle into action' with the LLCS structure.",
+   "source": "https://laws.flrules.org/2026/65"
+  },
+  {
+   "regime": "FPSC 2025 rate agreement and its Florida Supreme Court appeal",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "Base rates, the 10.95 percent return, SoBRA, the RSM, the storm mechanism, the LLCS tariffs and the $78M long-duration pilot all rest on Final Order PSC-2026-0022-S-EI, under consolidated appeal since June 2026 by the Office of Public Counsel, FAIR and the Florida Rising group; the docket remains open.",
+   "source": "https://www.floridapsc.com/pscfiles/library/filings/2026/00561-2026/00561-2026.pdf"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Under the 2025 budget act wind and solar keep the full credit only if construction began before July 5, 2026 or the plant is in service by December 31, 2027 (the IRS removed the 5 percent safe harbor for projects starting on or after September 2, 2025); storage keeps a 30 percent ITC for construction beginning by end-2033. FPL recognizes the ITC when property enters service, sold about $180M of credits in 2025, and includes 2025 battery ITC amortization in the settlement's RSM reserve; the plan does not quantify the 2028–35 solar additions against the test. FPL's May 2026 bonds carry a 'Tax Credit Event' redemption right.",
+   "mitigation": "NextEra states its wind and solar pipeline through 2030 'will qualify for clean energy tax credits' (Q2 2026 10-Q).",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "The 10-K and 10-Q carry no reference to foreign entities of concern and FPL discloses no battery supplier or cell origin for any project; the long-duration pilot is explicitly 'beyond lithium-ion' so FPL can 'diversify its supply chain' (FPSC). The 10-Q notes import tariffs and pending trade investigations with 'no material impact' so far. The statute's foreign-country-of-concern clause applies to data-center ownership, not battery supply.",
+   "source": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000060/nee-20260630.htm"
+  },
+  {
+   "regime": "NextEra–Dominion merger approvals",
+   "status": "announced",
+   "effectiveDate": "2027",
+   "exposure": "Closing needs HSR, FERC, NRC and the Virginia, North Carolina and South Carolina commissions without a 'Burdensome Condition'; the Virginia SCC hearing is November 17, 2026 with the governor intervening; termination fees of $4.8–6.5B fall on NextEra. FPL's ownership and management are unchanged either way.",
+   "source": "https://www.scc.virginia.gov/about-the-scc/dominion-nextera-merger-updates/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Scott Bores",
+   "title": "President and Chief Executive Officer, Florida Power & Light Company",
+   "background": [
+    "President and CEO since May 18, 2026 (President since December 2025), succeeding Armando Pimentel in a planned succession; named to keep the role in the combined NextEra–Dominion company",
+    "Joined FPL in 2011; Vice President, Finance (forecasting, budgeting, generation resource planning); FPL's settlement witness in the 2025 rate case (September and October 2025)",
+    "Five years at Mirant; began at PricewaterhouseCoopers; BS accounting, University of Connecticut; Executive MBA, Emory Goizueta; CPA"
+   ],
+   "photo": "images/execs/florida-power-light-bores.jpg"
+  },
+  {
+   "name": "John W. Ketchum",
+   "title": "Chairman, President and Chief Executive Officer, NextEra Energy; Chairman, FPL",
+   "background": [
+    "NextEra President and CEO since March 2022 and Chairman since July 2022; Chairman and CEO of the combined company on closing the Dominion merger; the 'roughly $2 billion of CapEx' per gigawatt statement (Q2 2026 call)",
+    "Joined NextEra in 2002; former President and CEO of NextEra Energy Resources, CFO of NextEra and of FPL",
+    "LL.M. taxation and J.D., University of Missouri–Kansas City; B.A. economics and finance, University of Arizona"
+   ],
+   "photo": "images/execs/florida-power-light-ketchum.jpg"
+  },
+  {
+   "name": "Michael Dunne",
+   "title": "Executive Vice President, Finance and Chief Financial Officer, NextEra Energy",
+   "background": [
+    "CFO of NextEra; previously NextEra treasurer; joined in early 2022 from Bank of America, where he was a managing director in power and renewables investment banking (from 2002)",
+    "J.D., Harvard Law School; B.A., Duke University"
+   ],
+   "photo": "images/execs/florida-power-light-dunne.jpg"
+  },
+  {
+   "name": "Ron Reagan",
+   "title": "Executive Vice President, Engineering, Construction and Supply Chain, NextEra Energy",
+   "background": [
+    "Runs enterprise-wide plant engineering, construction and sourcing — the organization through which FPL's solar and battery equipment is bought",
+    "Joined FPL in 1990; BSEE, Clarkson University"
+   ],
+   "photo": "images/execs/florida-power-light-reagan.jpg"
+  },
+  {
+   "name": "Tiffany Cohen",
+   "title": "Vice President, Financial Planning and Rate Strategy, FPL",
+   "background": [
+    "Issues every FPL tariff sheet, including LLCS-1 and LLCS-2 (effective January 1, 2026); settlement witness in Docket 20250011-EI",
+    "No company-published photo or biography located; FPL has no standalone leadership page"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "FPL — 2,000 miles: FPL's Storm Secure Underground Program surpasses milestone",
+   "url": "https://newsroom.fpl.com/2,000-miles-FPLs-Storm-Secure-Underground-Program-surpasses-milestone",
+   "date": "2026-09-16"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K exhibit 99.1: enhanced Virginia benefits package for the Dominion merger",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000110465926107537/tm2625368d1_ex99-1.htm",
+   "date": "2026-09-14"
+  },
+  {
+   "label": "Virginia Mercury — In rare move, SCC orders three in-person hearings for NextEra–Dominion merger case",
+   "url": "https://virginiamercury.com/2026/09/10/in-rare-move-scc-orders-three-in-person-hearings-for-nextera-dominion-merger-case/",
+   "date": "2026-09-10"
+  },
+  {
+   "label": "Power Technology via Yahoo Finance — NextEra–Dominion $66.8bn merger approved by shareholders",
+   "url": "https://finance.yahoo.com/energy/articles/nextera-dominion-66-8bn-merger-084716932.html",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K, special meeting vote on the share issuance (99.47% for)",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000071/nee-20260903.htm",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "WHSV — Dominion shareholders back merger with NextEra Energy",
+   "url": "https://www.whsv.com/2026/09/03/dominion-shareholders-back-merger-with-nextera-energy/",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K, S-4 effectiveness and shareholder demand letters",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000110465926100476/tm2623831d1_8k.htm",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "FPL — Florida Power & Light's investments in solar deliver more than $1.3 billion in customer savings (120 centers, ~8,826 MW)",
+   "url": "https://newsroom.fpl.com/Florida-Power-Lights-investments-in-solar-deliver-more-than-1-3-billion-in-customer-savings",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K exhibit 99: second-quarter 2026 results (FPL net income, large-load funnel)",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000058/neeq22026exhibit99.htm",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "NextEra Energy — Q2 2026 earnings slides (large-load expectation 6 → 8 GW by 2032; regulatory capital employed)",
+   "url": "https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/reports-and-fillings/quarterly-earnings/2026/Q2%202026/Q2%202026%20Earnings%20Slides_vF.pdf",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "StockAnalysis — NextEra Energy Q2 2026 earnings call transcript (Ketchum: roughly $2 billion of capex per gigawatt)",
+   "url": "https://stockanalysis.com/stocks/nee/transcripts/653604-q2-2026/",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — NextEra Energy Q2 earnings surpass estimates (consensus $1.09)",
+   "url": "https://finance.yahoo.com/energy/articles/nextera-energy-q2-earnings-surpass-175600814.html",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "NextEra Energy / FPL — Form 10-Q for the quarter ended June 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000060/nee-20260630.htm",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "FPL — FPL customers to receive one-time bill reduction in September (storm surcharge true-up)",
+   "url": "https://newsroom.fpl.com/FPL-customers-to-receive-one-time-bill-reduction-in-September",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "Spectrum News 13 — Florida data centers law takes effect",
+   "url": "https://mynews13.com/fl/orlando/news/2026/07/01/florida-data-centers-law-",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "FPL — FPL President & CEO Scott Bores: leading with purpose",
+   "url": "https://newsroom.fpl.com/FPL-President-CEO-Scott-Bores-Leading-with-purpose",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "FPL — Prospectus supplement, $2.25 billion first mortgage bonds (Form 424B2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000037634/000119312526242104/d884526d424b2.htm",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K exhibit 99.1: NextEra Energy and Dominion Energy to combine (joint press release)",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000110465926063001/tm2614888d1_ex99-1.htm",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K exhibit 99.2: merger investor presentation (130+ GW pipeline footnote)",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000110465926063001/tm2614888d1_ex99-2.htm",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K, Item 1.01: Agreement and Plan of Merger with Dominion Energy",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000110465926063001/tm2614888d1_8k.htm",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "NextEra Energy / FPL — Form 8-K, FPL leadership succession (Pimentel to Vice Chairman; Bores to FPL CEO)",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000110465926062992/tm2614888d2_8k.htm",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Laws of Florida — Chapter 2026-65 (CS/CS/SB 484), Data Centers",
+   "url": "https://laws.flrules.org/2026/65",
+   "date": "2026-05"
+  },
+  {
+   "label": "Florida Senate — Bill summary, CS/CS/SB 484 (2026) Data Centers",
+   "url": "https://www.flsenate.gov/Committees/BillSummaries/2026/html/484",
+   "date": "2026-05"
+  },
+  {
+   "label": "FPSC — Order PSC-2026-0117-FOF-EI, motion for reconsideration of the 2025 settlement order (signatories, non-signatories, hearing record)",
+   "url": "https://www.floridapsc.com/pscfiles/library/filings/2026/02414-2026/02414-2026.pdf",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K exhibit 99: first-quarter 2026 results (Ten-Year Site Plan filed; ~600 MW solar in service)",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000028/neeq12026exhibit99.htm",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "Investing.com — NextEra Energy Q1 2026 slides: EPS beats amid record renewables backlog (consensus $0.97; regulatory capital employed $77.7B)",
+   "url": "https://www.investing.com/news/company-news/nextera-energy-q1-2026-slides-eps-beats-amid-record-renewables-backlog-93CH-4633331",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "FPL — 2026 Ten-Year Site Plan (filed with the FPSC)",
+   "url": "https://www.floridapsc.com/pscfiles/website-files/PDF/Utilities/Electricgas/TenYearSitePlans/2026/Florida%20Power%20and%20Light%20Company.pdf",
+   "date": "2026-04"
+  },
+  {
+   "label": "Food & Water Watch — PSC denies reconsideration of FPL rate case; case heads to Florida Supreme Court",
+   "url": "https://www.foodandwaterwatch.org/2026/04/07/psc-denies-reconsideration-of-fpl-rate-case-case-heads-to-fl-supreme-court/",
+   "date": "2026-04-07"
+  },
+  {
+   "label": "Florida Trend — Power Search (Florida data-center projects in FPL territory)",
+   "url": "https://www.floridatrend.com/feature/2026/03/12/power-search/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "NextEra Energy — Form 8-K, resignation of Chief Risk Officer Terrell Kirk Crews II",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000022/nee-20260305.htm",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "WFLX — Developer of St. Lucie County data center project may withdraw plan amid new AI legislation (Sentinel Grove)",
+   "url": "https://www.wflx.com/2026/02/23/scrapped-developer-st-lucie-county-data-center-project-may-withdraw-plan-amid-new-ai-legislation/",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "NextEra Energy / FPL — Form 10-K for the fiscal year ended December 31, 2025 (combined filing)",
+   "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "FPSC — Final Order PSC-2026-0022-S-EI approving FPL's 2025 stipulation and settlement agreement (Docket 20250011-EI)",
+   "url": "https://www.floridapsc.com/pscfiles/library/filings/2026/00561-2026/00561-2026.pdf",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "FPL — Electric Retail Tariff Book, Section 8: rate schedules LLCS-1 and LLCS-2 (sheets 8.950–8.955, effective January 1, 2026)",
+   "url": "https://www.fpl.com/content/dam/fplgp/us/en/rates/pdf/electric-tariff-section8.pdf",
+   "date": "2026-01-01"
+  },
+  {
+   "label": "FPL — Electric Retail Tariff Book, Section 9: LLCS Service Agreement (sheet 9.960 onward)",
+   "url": "https://www.fpl.com/content/dam/fplgp/us/en/rates/pdf/electric-tariff-section9.pdf",
+   "date": "2026-01-01"
+  },
+  {
+   "label": "NextEra Energy — NextEra Energy and Google Cloud announce strategic energy and technology partnership (NEER, not FPL)",
+   "url": "https://newsroom.nexteraenergy.com/2025-12-08-NextEra-Energy-and-Google-Cloud-Announce-Landmark-Strategic-Energy-and-Technology-Partnership-to-Accelerate-AI-Growth-and-Transform-the-Energy-Industry",
+   "date": "2025-12-08"
+  },
+  {
+   "label": "FPSC — News release: Commission approves FPL rate settlement agreement (November 20, 2025 vote)",
+   "url": "https://www.floridapsc.com/news-links/12299",
+   "date": "2025-11-20"
+  },
+  {
+   "label": "FPL — FPL rate settlement reduces request by nearly a third, limits average annual bill increases to 2%",
+   "url": "https://newsroom.fpl.com/2025-08-20-FPL-rate-settlement-reduces-request-by-nearly-a-third,-limits-average-annual-bill-increases-to-2-,-maintains-consumer-protections",
+   "date": "2025-08-20"
+  },
+  {
+   "label": "Quanta Services — Manatee Battery Energy Storage Center (Irby Construction)",
+   "url": "https://www.quantaservices.com/stories/manatee-battery-energy-storage-center",
+   "date": "2022-09-07"
+  },
+  {
+   "label": "NextEra Energy — Leadership page (biographies and company-published photos)",
+   "url": "https://www.nexteraenergy.com/about-us/leadership.html"
+  },
+  {
+   "label": "FPL — Retail tariffs index",
+   "url": "https://www.fpl.com/rates/retail-tariffs.html"
+  },
+  {
+   "label": "FPL — Rates page (September 2026 credit; rate sheets effective October 1, 2026)",
+   "url": "https://www.fpl.com/rates.html"
+  },
+  {
+   "label": "Virginia SCC — Dominion–NextEra merger updates (Case PUR-2026-00112)",
+   "url": "https://www.scc.virginia.gov/about-the-scc/dominion-nextera-merger-updates/"
+  },
+  {
+   "label": "SEC EDGAR — Florida Power & Light Company filings (CIK 0000037634)",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000037634&type=&dateb=&owner=include&count=40"
+  }
+ ],
+ "lastUpdated": "2026-09-29",
+ "profileVersion": 1
+}

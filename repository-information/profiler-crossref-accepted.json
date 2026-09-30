@@ -1,90 +1,96 @@
 {
-  "schemaVersion": 1,
-  "note": "Cross-dossier candidates from scripts/check-profiler-crossrefs.py that a human has reviewed and that need no further dossier change. Each id is printed by the checker; it covers both claims, so editing either side reopens the candidate for review. Method and adjudication standard: repository-information/PROFILER-CROSSREF-CALIBRATION.md.",
-  "accepted": [
-    {
-      "id": "daf884f297f8",
-      "pair": "byd x tesla",
-      "why": "Different products. BYD's positioning quotes Tesla Megapack 3 at ~5 MWh; Tesla's positioning quotes BYD's MC Cube at ~6 MWh. Both accurate.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "1976de46b9f7",
-      "pair": "enchanted-rock x anthropic",
-      "why": "Adjudicated and closed in enchanted-rock v4 (2026-09-05). Anthropic's dossier corroborates the 470 MW order and the RockBlock attribution, but both trace to ERock's own release; Anthropic has not announced the order and names no sites, so the Fluidstack TX/NY host stays genuinely unconfirmed. The marker word remains because the uncertainty is real — it is now documented rather than open.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "bc77c86a8c09",
-      "pair": "envision-energy x prevalon",
-      "why": "Both dossiers flag the same forward-looking regulatory question (whether the Fixx structure survives Treasury's final FEOC rules). No dossier can answer it; only Treasury can.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "402df07664e8",
-      "pair": "envision-energy x fluence",
-      "why": "Same FEOC open question as above; the matched Fluence passage is a cell part number, not an answer.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "f83b579e0be3",
-      "pair": "google x anthropic",
-      "why": "Google's unresolved item is the composition of its own Q2 2026 equity gains. Anthropic's dossier has no bearing on it.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "ad8093af9a68",
-      "pair": "tesla x samsung-sdi",
-      "why": "Both dossiers carry the same hedge on the same reported talks ('confirmed talks but no details finalized'). They agree; neither answers the other.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "54c1e9ac38fc",
-      "pair": "mgx x openai",
-      "why": "Open question stands: MGX's Stargate contribution is confirmed by no principal (Bloomberg's ~USD 7bn is press-reported); OpenAI's new inbound note repeats the SoftBank 'initial equity funder' language and does not state an amount, so it does not answer MGX's 'ticket unconfirmed'. Both dossiers hedge identically.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "04ace9e93f2b",
-      "pair": "mgx x stack-infrastructure",
-      "why": "Both dossiers carry the same Bloomberg-sourced report (AIP among reported suitors for STACK's APAC portfolio) as unconfirmed; MGX's entry is typed `announced` for that reason. Neither answers the other; no party has confirmed.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "35945358a20e",
-      "pair": "form-energy x xcel-energy",
-      "why": "Marker false positive on a shared 'Sherco' anchor. The Form passage is a collection-gap sentence whose 'Also unresolved' clause concerns a possible New York Power Authority or Rochester project, for which no first-party Form release exists; the Xcel passage it was matched against states that Form has a 10 MW / 1,000 MWh pilot at Sherco approved in 2023, which is accurate, already recorded on both sides, and does not bear on the New York question at all. Nothing to close.",
-      "when": "2026-09-06"
-    },
-    {
-      "id": "9062c39b5b8d",
-      "pair": "brookfield x stack-infrastructure",
-      "why": "An open question that genuinely stands unanswered on both sides. Both dossiers independently record the same June 2026 Bloomberg-sourced report that Blue Owl is preparing a sale of STACK's Asia-Pacific portfolio with Brookfield among the reported suitors, and both mark it unconfirmed. STACK's matched passage describes the construction of that portfolio, not the sale process, so it cannot close the question. No party has confirmed and no first-party source exists on either side.",
-      "when": "2026-09-06"
-    },
-    {
-      "id": "6b7685094bf1",
-      "pair": "lightsource-bp x hithium",
-      "why": "Phase 1 (F2) added the hithium → lightsource-bp customer edge at hithium v12; its context restates the Woolooga deal and does not answer Lightsource's open question (whether Stage 1 energized on the mid-2026 schedule). Hithium's registered sources carry no energization date; the question stays with Lightsource's record.",
-      "when": "2026-09-07"
-    },
-    {
-      "id": "d55d105703c5",
-      "pair": "lightsource-bp x hithium",
-      "why": "Same edge, same v12 edit. Whether the under-construction Hithium BESS and its contract transferred to Aula Energy in the February 2026 portfolio sale is unresolved in Lightsource's record, and Hithium's dossier repeats the uncertainty rather than resolving it — no Hithium source addresses the asset sale.",
-      "when": "2026-09-07"
-    },
-    {
-      "id": "bf80c3625ea8",
-      "pair": "duke-energy x nscale",
-      "why": "Same fact from both sides, not an open question: both edges say Duke has never named the NC-1 site's customer. Nscale's S-1 (18 Sep 2026) names neither Duke nor WhiteFiber, so the second passage cannot close the first. Re-check when Duke captions the site or WhiteFiber files an executed ESA.",
-      "when": "2026-09-29"
-    },
-    {
-      "id": "df3f1e9523ae",
-      "pair": "duke-energy x whitefiber",
-      "why": "The 'unconfirmed from Duke's side' marker is the finding itself: WhiteFiber's filings carry the Duke letter and the assigned ESA; no Duke document names WhiteFiber or Enovum. Nothing in the WhiteFiber dossier answers it. Re-check on Duke's next large-load ESA logo strip.",
-      "when": "2026-09-29"
-    }
-  ]
+ "schemaVersion": 1,
+ "note": "Cross-dossier candidates from scripts/check-profiler-crossrefs.py that a human has reviewed and that need no further dossier change. Each id is printed by the checker; it covers both claims, so editing either side reopens the candidate for review. Method and adjudication standard: repository-information/PROFILER-CROSSREF-CALIBRATION.md.",
+ "accepted": [
+  {
+   "id": "daf884f297f8",
+   "pair": "byd x tesla",
+   "why": "Different products. BYD's positioning quotes Tesla Megapack 3 at ~5 MWh; Tesla's positioning quotes BYD's MC Cube at ~6 MWh. Both accurate.",
+   "when": "2026-09-05"
+  },
+  {
+   "id": "1976de46b9f7",
+   "pair": "enchanted-rock x anthropic",
+   "why": "Adjudicated and closed in enchanted-rock v4 (2026-09-05). Anthropic's dossier corroborates the 470 MW order and the RockBlock attribution, but both trace to ERock's own release; Anthropic has not announced the order and names no sites, so the Fluidstack TX/NY host stays genuinely unconfirmed. The marker word remains because the uncertainty is real — it is now documented rather than open.",
+   "when": "2026-09-05"
+  },
+  {
+   "id": "bc77c86a8c09",
+   "pair": "envision-energy x prevalon",
+   "why": "Both dossiers flag the same forward-looking regulatory question (whether the Fixx structure survives Treasury's final FEOC rules). No dossier can answer it; only Treasury can.",
+   "when": "2026-09-05"
+  },
+  {
+   "id": "402df07664e8",
+   "pair": "envision-energy x fluence",
+   "why": "Same FEOC open question as above; the matched Fluence passage is a cell part number, not an answer.",
+   "when": "2026-09-05"
+  },
+  {
+   "id": "f83b579e0be3",
+   "pair": "google x anthropic",
+   "why": "Google's unresolved item is the composition of its own Q2 2026 equity gains. Anthropic's dossier has no bearing on it.",
+   "when": "2026-09-05"
+  },
+  {
+   "id": "ad8093af9a68",
+   "pair": "tesla x samsung-sdi",
+   "why": "Both dossiers carry the same hedge on the same reported talks ('confirmed talks but no details finalized'). They agree; neither answers the other.",
+   "when": "2026-09-05"
+  },
+  {
+   "id": "54c1e9ac38fc",
+   "pair": "mgx x openai",
+   "why": "Open question stands: MGX's Stargate contribution is confirmed by no principal (Bloomberg's ~USD 7bn is press-reported); OpenAI's new inbound note repeats the SoftBank 'initial equity funder' language and does not state an amount, so it does not answer MGX's 'ticket unconfirmed'. Both dossiers hedge identically.",
+   "when": "2026-09-05"
+  },
+  {
+   "id": "04ace9e93f2b",
+   "pair": "mgx x stack-infrastructure",
+   "why": "Both dossiers carry the same Bloomberg-sourced report (AIP among reported suitors for STACK's APAC portfolio) as unconfirmed; MGX's entry is typed `announced` for that reason. Neither answers the other; no party has confirmed.",
+   "when": "2026-09-05"
+  },
+  {
+   "id": "35945358a20e",
+   "pair": "form-energy x xcel-energy",
+   "why": "Marker false positive on a shared 'Sherco' anchor. The Form passage is a collection-gap sentence whose 'Also unresolved' clause concerns a possible New York Power Authority or Rochester project, for which no first-party Form release exists; the Xcel passage it was matched against states that Form has a 10 MW / 1,000 MWh pilot at Sherco approved in 2023, which is accurate, already recorded on both sides, and does not bear on the New York question at all. Nothing to close.",
+   "when": "2026-09-06"
+  },
+  {
+   "id": "9062c39b5b8d",
+   "pair": "brookfield x stack-infrastructure",
+   "why": "An open question that genuinely stands unanswered on both sides. Both dossiers independently record the same June 2026 Bloomberg-sourced report that Blue Owl is preparing a sale of STACK's Asia-Pacific portfolio with Brookfield among the reported suitors, and both mark it unconfirmed. STACK's matched passage describes the construction of that portfolio, not the sale process, so it cannot close the question. No party has confirmed and no first-party source exists on either side.",
+   "when": "2026-09-06"
+  },
+  {
+   "id": "6b7685094bf1",
+   "pair": "lightsource-bp x hithium",
+   "why": "Phase 1 (F2) added the hithium → lightsource-bp customer edge at hithium v12; its context restates the Woolooga deal and does not answer Lightsource's open question (whether Stage 1 energized on the mid-2026 schedule). Hithium's registered sources carry no energization date; the question stays with Lightsource's record.",
+   "when": "2026-09-07"
+  },
+  {
+   "id": "d55d105703c5",
+   "pair": "lightsource-bp x hithium",
+   "why": "Same edge, same v12 edit. Whether the under-construction Hithium BESS and its contract transferred to Aula Energy in the February 2026 portfolio sale is unresolved in Lightsource's record, and Hithium's dossier repeats the uncertainty rather than resolving it — no Hithium source addresses the asset sale.",
+   "when": "2026-09-07"
+  },
+  {
+   "id": "bf80c3625ea8",
+   "pair": "duke-energy x nscale",
+   "why": "Same fact from both sides, not an open question: both edges say Duke has never named the NC-1 site's customer. Nscale's S-1 (18 Sep 2026) names neither Duke nor WhiteFiber, so the second passage cannot close the first. Re-check when Duke captions the site or WhiteFiber files an executed ESA.",
+   "when": "2026-09-29"
+  },
+  {
+   "id": "df3f1e9523ae",
+   "pair": "duke-energy x whitefiber",
+   "why": "The 'unconfirmed from Duke's side' marker is the finding itself: WhiteFiber's filings carry the Duke letter and the assigned ESA; no Duke document names WhiteFiber or Enovum. Nothing in the WhiteFiber dossier answers it. Re-check on Duke's next large-load ESA logo strip.",
+   "when": "2026-09-29"
+  },
+  {
+   "id": "3ccc6f480a35",
+   "pair": "powerhouse-data-centers x ppl",
+   "why": "Accurate — two different campuses: PowerHouse's Carlisle, Pennsylvania joint venture (300 MW by Q2 2027 on PPL Electric's wires) and the PowerHouse–Poe Companies Louisville, Kentucky campus (400 MW, 130 MW by October 2026 on LG&E). Both figures stand; nothing to reconcile. Reviewed in the F-U4 session while checking the three new utilities (none of which the pair touches).",
+   "when": "2026-09-29"
+  }
+ ]
 }

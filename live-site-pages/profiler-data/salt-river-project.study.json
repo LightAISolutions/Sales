@@ -1,0 +1,370 @@
+{
+ "schemaVersion": 2,
+ "slug": "salt-river-project",
+ "title": "Salt River Project — Technology Study Guide",
+ "lastUpdated": "2026-09-29",
+ "sections": [
+  {
+   "id": "public-power",
+   "title": "Public power: the utility with no shareholders and an election for a rate case",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Every utility in this corpus so far has answered to a state commission. Salt River Project answers to its customers' landowners. It is {{public power}}: two organizations — the Salt River Project Agricultural Improvement and Power District, a {{political subdivision}} of Arizona formed in 1937 that runs the electric business, and the Salt River Valley Water Users' Association, a water corporation from 1903 — governed by a Board of fourteen directors plus a president and vice president, elected by the owners of land inside SRP's boundaries, mostly one acre–one vote. There is no {{allowed return}} to earn and no {{rate base}} to argue about before a commission: the Board approves a budget and a price adjustment, and Arizona law (A.R.S. 45-1720) removes SRP's rates and service from the Arizona Corporation Commission entirely.",
+    "What replaces the rate case is a pricing process. In February 2025 the Board voted, 9–5 by one account, to raise base prices 4.0 percent and cut the fuel clause 1.6 percent — a net 2.4 percent from the November 2025 billing cycle — and in the same vote rewrote the large-load price plan. In March 2026 it approved a temporary 3 percent summer cut from a fuel-clause surplus. No hearing examiner, no intervenor testimony, no order to appeal: a vote. The trade-off is that the vote is political. April 2026's election quadrupled turnout, produced the first 'clean energy' majority in SRP's history at 8–6, and an August appointment took it to 7–7. The Marigold gas plant passed that Board a month later.",
+    "For a seller the lesson is where the decision lives. At APS next door the large-load terms wait on a commission order due by December 31, 2026; at SRP they were set in one meeting in February 2025 and took effect that November. A public-power utility can move faster than its investor-owned neighbour — and can also reverse faster, because half the Board stands for election every two years."
+   ]
+  },
+  {
+   "id": "revenue-bonds-and-coverage",
+   "title": "Revenue bonds and coverage: how a utility without equity finances $12.9 billion",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "An investor-owned utility raises money by selling shares and taxable bonds and earns a regulated return on both. SRP has no shares. It sells {{revenue bond}}s — debt repaid only from electric sales, with interest that is exempt from federal income tax — and its financial targets are the ones bond investors watch: {{debt service coverage}} (4.2 times in FY2025), a debt ratio (46.2 percent), days of cash on hand and a general-fund target. Its credit ratings, Aa1 from Moody's and AA+ from S&P, sit above every investor-owned utility in this corpus, and the FY2027 budget was written to be 'consistent with' them.",
+    "The one place a state body touches SRP's money is bond authorization: in September 2024 SRP secured the Arizona Corporation Commission's approval to issue $6.4 billion more over time, and it sold $775 million of 2025 Series C bonds in October 2025 at those ratings. The official statement for that sale — 160 pages — is SRP's equivalent of a 10-K, and it is where the load forecast, the power-source table and the contract list live. A public-power utility's disclosure is municipal-bond disclosure; there is no earnings call and no analyst consensus, and a dossier must say so rather than manufacture an expectation.",
+    "What this buys the customer is a cheaper cost of capital: FY2026–31's $12.9 billion program ($5.2 billion of generation) is about 45 percent debt-funded at tax-exempt rates, and there is no shareholder to pay. What it buys a seller is a counterparty whose 20-year contract is as bankable as any in the corpus — the toll financings on Pediment and Flatland were priced against SRP's ratings."
+   ]
+  },
+  {
+   "id": "the-energy-storage-agreement",
+   "title": "The energy storage agreement: who owns the battery, who dispatches it, who picks the supplier",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "SRP had more than 1,570 MW of batteries on its system by June 2026 and owns 25 MW of them. The rest sit under energy storage agreements — a {{tolling agreement}} by another name — in which the developer builds, finances, owns and operates the plant and SRP holds the right to charge and discharge it for the term. Plus Power owns Sierra Estrella (250 MW / 1,000 MWh) and Superstition; Aypa owns Pediment (250 MW / 1,000 MWh) and a second 250 MW / 2,000 MWh project due in 2028; EDP Renewables owns Flatland (200 MW / 800 MWh); Ørsted's Eleven Mile and NextEra's Sonoran, Storey and Saint pair storage with solar under PPAs. The contracts run twenty years or more (Flatland's is 24).",
+    "The consequence for a battery seller is the same one the Pinnacle West guide taught: the utility signs a contract, and the developer signs the purchase order. Where SRP has disclosed the equipment it was Tesla Megapacks — at Bolster, which SRP bought itself, and at Sierra Estrella, Superstition and Flatland, which the developers bought. Pediment's supplier is not on SRP's record, and neither are Eleven Mile's or NextEra's. The account for the next gigawatt is the bidder into SRP's {{all-source RFP}} — the 2026 solicitation asked for up to 2,900 MW of carbon-free resources plus peaking capacity including storage and gas, with proposals due April 29, 2026 and a short list in November — not SRP's procurement desk.",
+    "One thing has changed since the APS pattern. Federal direct pay let a tax-exempt utility take the storage credit itself, and SRP's official statement says this 'gave the District a new opportunity to diversify development methods'. Copper Crossing's 55 MW of solar (April 2026) is SRP's first owned plant; the Marigold battery is carried as both capital and PPA cost in the FY2027 budget; a 1–2 GW pumped-storage project at Apache Lake is self-build. The 2026 RFP added build-transfer and asset acquisition to its list of structures. When a utility starts to own, the OEM decision starts to move back toward it — the 400 MW / eight-hour Marigold battery is the first test."
+   ]
+  },
+  {
+   "id": "the-forecast-based-minimum-bill",
+   "title": "A minimum bill tied to the customer's own forecast — E-67 and the Large Customer Integration Process",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The instrument.** Since the November 2025 billing cycle any new account of 20 MW or more — or expected to reach 20 MW within five years — must take SRP's E-67 price plan. Its central term is a {{minimum demand charge}} set at 80 percent of the customer's forecasted demand: the customer pays for four-fifths of what it said it would use, whether or not it uses it, for the term of an Agreement for Electric Service. SRP sets a maximum load from the same forecast and has 'no obligation to serve load in excess' of it, and a customer who wants resources built faster or dearer than SRP otherwise would must agree in writing to reimburse the cost. The 2023 sheet's 90 percent {{load factor}} test — the gate APS still uses at 92 percent — is gone.",
+    "**Why the forecast is the lever.** SRP told the Arizona Corporation Commission that 'historical struggles to provide accurate load ramps' are one of its five main problems with large customers. A minimum bill keyed to the forecast makes the ramp the customer's risk: a data center that says 300 MW and draws 150 pays for 240. What the sheet does not carry is the term, the {{credit support}} and the {{exit fee}}; those sit in the private agreement, which is why Prime Data Centers' account of '15-year contracts' and collateral 'in the hundreds of millions' cannot be checked against SRP's record.",
+    "**The upgrades.** The Large Customer Integration Process, introduced in 2025, requires the customer to fund dedicated substations and transmission upfront — the same principle as PPL's 'security equal to upgrades'. EdgeCore's Mesa expansion lost a building to an SRP switchyard in March 2026; Meta paid for its own 230 kV line and substation in 2022. The pipeline behind all this — 59 large-load customers and nearly 7,000 MW, SRP said in April 2026 — is requested load, not served load: SRP's whole peak is 9,072 MW and data centers were 441 MW in 2025."
+   ]
+  },
+  {
+   "id": "the-siting-certificate",
+   "title": "The siting certificate: the one gate a state body holds over a public-power plant",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "The Arizona Corporation Commission does not set SRP's rates, but it does decide whether SRP may build a plant above 100 MW or a line at 115 kV or more, through a {{Certificate of Environmental Compatibility}}. The Power Plant and Transmission Line Siting Committee — state officials and public members — holds an evidentiary hearing and recommends the certificate; the five elected commissioners then approve, amend or reject it at an open meeting. In 2022 they rejected SRP's 820 MW, sixteen-unit Coolidge expansion 4–1, a court upheld them, and the plant was built at 575 MW and twelve units under a settlement with a 30 percent capacity-factor cap.",
+    "Marigold is the next test. SRP's Board approved the project on September 14, 2026 — 600 MW of solar, 400 MW of eight-hour batteries, 675 MW of gas, a 230/500 kV substation and four miles of 230 kV line at Stanfield in Pinal County — but only the gas plant (Case 268) and the lines (Case 267) need a certificate; the solar and batteries do not. The committee sat in Casa Grande from September 21, residents and the Sierra Club argued air quality in a non-attainment area, and the commissioners' vote is expected in November 2026. A seller reading SRP's plan should read the CEC calendar with it: the batteries can proceed whatever the vote, the gas cannot.",
+    "The coal conversions passed this gate in March 2026. Coronado (762 MW) and Springerville 4 (415 MW) will burn gas from late 2029 on a new lateral — SRP priced Coronado's conversion at about $300 million less than a new gas plant and about $1.2 billion less than long-duration lithium batteries, and chose the boiler. Marigold's 400 MW / eight-hour battery is the other half of the same arithmetic: the storage the plan buys is the storage the conversions did not."
+   ]
+  },
+  {
+   "id": "four-utilities-four-regulators",
+   "title": "Four utilities, four ways the large-load terms get set",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The same customer — a 300 MW data center — meets four different processes in four corpus utilities. Read each row as who decides, what the customer signs and where the price sits today.",
+   "cols": [
+    "Utility",
+    "Who sets the terms",
+    "Threshold and minimum",
+    "Where term, collateral and exit live",
+    "Status (September 2026)"
+   ],
+   "rows": [
+    [
+     "SRP (public power)",
+     "The landowner-elected Board, in a pricing process",
+     "20 MW; 80% of forecast demand",
+     "The private Agreement for Electric Service",
+     "In force since November 2025; semiannual reports to the Board under HB 2756"
+    ],
+    [
+     "APS / Pinnacle West (investor-owned)",
+     "The Arizona Corporation Commission, in a rate case",
+     "5,000 kW at 92% load factor (XHLF)",
+     "Collateral and minimum bill proposed in the 2025 case; subscription contracts to be filed",
+     "Commission vote due by December 31, 2026"
+    ],
+    [
+     "PPL Electric (investor-owned)",
+     "The Pennsylvania PUC, by model tariff and rate order",
+     "50 MW; 80% guaranteed for 10 years",
+     "On the tariff: exit fees, security equal to upgrades",
+     "In force since June 2026"
+    ],
+    [
+     "TVA (federal)",
+     "TVA's own Board, by resolution after a letter to distributors",
+     "5 MW; a Capacity Commitment Charge",
+     "Unpublished — price, term and collateral are in customer contracts",
+     "Effective October 1, 2026"
+    ]
+   ]
+  },
+  {
+   "id": "eight-hours",
+   "title": "Eight hours: why SRP's next batteries are twice as long",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Almost every battery in this corpus is a {{four-hour battery}}: 250 MW that can run for four hours holds 1,000 MWh, and four hours covers the evening ramp when solar fades and air conditioning peaks. SRP's Pediment is that shape. Its next two are not: Aypa's second project is 250 MW for eight hours (2,000 MWh, December 2028) and Marigold's is 400 MW for eight hours, which implies 3,200 MWh though SRP has not published the figure. Doubling the duration doubles the cells and the enclosure for the same inverters and interconnection, so the plant costs more per megawatt and earns it back only if the evening it must cover is long.",
+    "SRP's evening is long. Its peak came at 5–6 p.m. on July 24, 2026 at 9,072 MW after a 117-degree day, and E-67's on-peak window runs 5–10 p.m. — five hours of high demand after the sun sets on a system with more than 1,560 MW of solar. A four-hour battery charged at noon is spent by 9 p.m.; an eight-hour one carries the window and part of the night. The plan's arithmetic — more than 6,000 MW of new solar by 2035 against a peak forecast above 14 GW — is what makes the extra hours worth paying for.",
+    "The non-lithium track is testing longer still: ESS Tech's iron-flow battery (5 MW / 50 MWh, ten hours, by 2027), CMBlu's organic-flow Desert Blume at the same site, and Energy Dome's 19 MW / ten-hour CO2 battery at Coronado under a 20-year toll co-funded by Google. They are pilots — a few megawatts — and SRP's own words on Coronado priced long-duration lithium above a boiler conversion. The commercial eight-hour bet is lithium; the {{long-duration storage}} bet is a hyperscaler's research budget."
+   ]
+  },
+  {
+   "id": "direct-pay",
+   "title": "Direct pay: how a tax-exempt utility became an owner",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The problem.** Federal clean-energy credits reduce income tax. A public-power utility pays none, so for two decades SRP bought renewables through PPAs with developers who could use the credit and priced it into the contract — which is why its fleet is contracted rather than owned.",
+    "**The change.** The 2022 federal law let tax-exempt entities take the credit as a cash payment — elective or direct pay. SRP's official statement says this 'gave the District a new opportunity to diversify development methods and advance more renewable and storage projects for the duration of tax credit availability'. Copper Crossing's 55 MW of solar (April 2026) is the first owned plant; the FY2027 budget carries $1,352 million of Marigold capital; Apache Lake pumped storage is a self-build.",
+    "**The catch.** The 2025 phase-downs and the {{FEOC}} rules apply to direct-pay projects as they do to developers', and SRP has published no quantification. A seller should expect SRP's owned projects to carry the same domestic-content and supplier-origin tests as an investor-owned utility's — and, as at Bolster, to be bought by SRP's own desk."
+   ]
+  },
+  {
+   "id": "where-srp-slots-in",
+   "title": "Where SRP's programs slot into the chain",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Each of SRP's live programs, the segment it touches and who actually holds the purchase order.",
+   "cols": [
+    "Program",
+    "Segment touched",
+    "Who buys the equipment",
+    "Where the corpus sees it"
+   ],
+   "rows": [
+    [
+     "Energy storage agreements (Plus Power, Aypa, EDP, Ørsted, NextEra)",
+     "Storage developers and IPPs; integrators",
+     "The developer at bid stage (Tesla where disclosed)",
+     "Sierra Estrella, Superstition, Pediment, Flatland, Eleven Mile, Sonoran"
+    ],
+    [
+     "2026 All-Source RFP (up to 2,900 MW + peaking)",
+     "Storage developers; gas developers",
+     "The bidder — tolling, build-transfer or acquisition",
+     "Short list November 2026"
+    ],
+    [
+     "Marigold Energy Center (2032)",
+     "Grid equipment; gas turbines; storage",
+     "SRP (gas, owned) and SRP/PPA (solar and storage); design and supplier open",
+     "CEC Cases 267/268; ACC vote November 2026"
+    ],
+    [
+     "Coolidge expansion, Coronado and Springerville conversions",
+     "Gas turbines; balance of plant",
+     "SRP (GE LM6000 at Coolidge; conversion contractors unnamed)",
+     "2026–27; late 2029"
+    ],
+    [
+     "Large loads under E-67 and the LCIP",
+     "Utilities (the buyer segment)",
+     "The customer funds dedicated upgrades upfront",
+     "Meta, Google, EdgeCore, Apple in Mesa"
+    ],
+    [
+     "Long-duration pilots (ESS, CMBlu, Energy Dome)",
+     "Cells and chemistry; storage",
+     "The vendor, under SRP tolls co-funded by Google",
+     "Copper Crossing and Coronado, 2027–29"
+    ]
+   ]
+  },
+  {
+   "id": "gigawatts-on-srps-clock",
+   "title": "Gigawatts on SRP's clock — the peak, the pipeline and the plan",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "SRP's own figures at their most recent disclosure. Notice that the pipeline is three-quarters of the peak and that owned storage is a rounding error against contracted storage.",
+   "items": [
+    {
+     "label": "Forecast peak by 2035",
+     "sub": "'over 14 GW', >39% large business",
+     "v": 14.0
+    },
+    {
+     "label": "FY2025 capability",
+     "sub": "official statement, Table 3",
+     "v": 12.878
+    },
+    {
+     "label": "Record peak, July 24, 2026",
+     "sub": "9,072 MW",
+     "v": 9.072
+    },
+    {
+     "label": "Large-load pipeline",
+     "sub": "59 customers, 'nearly 7,000 MW'",
+     "v": 7.0
+    },
+    {
+     "label": "Owned gas and coal",
+     "sub": "6,811 MW",
+     "v": 6.811
+    },
+    {
+     "label": "NextEra solar agreement",
+     "sub": "500 MW/yr, 2029–34",
+     "v": 3.0
+    },
+    {
+     "label": "2026 RFP carbon-free ask",
+     "sub": "up to 2,900 MW",
+     "v": 2.9
+    },
+    {
+     "label": "Marigold",
+     "sub": "600 + 400 + 675 MW",
+     "v": 1.675
+    },
+    {
+     "label": "Batteries operating",
+     "sub": "June 2026, contracted",
+     "v": 1.573
+    },
+    {
+     "label": "Palo Verde share",
+     "sub": "20.4%, 803 MW",
+     "v": 0.803
+    },
+    {
+     "label": "Data-center peak, 2025",
+     "sub": "441 MW, 5.1% of peak",
+     "v": 0.441
+    },
+    {
+     "label": "SRP-owned batteries",
+     "sub": "Bolster",
+     "v": 0.025
+    }
+   ],
+   "note": "Peak was 8,542 MW in 2025 and the FY2027 budget assumed 8,869 MW; the July 2026 record passed both. The 7,000 MW pipeline is requested load as recorded by the ACC, not a served figure."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The vote.** A 7–7 Board is one appointment or one election from a different resource mix. Marigold's gas passed in September 2026; the 2028 election, half the seats, decides the next one.",
+    "**The certificate.** The ACC has already rejected one SRP gas plant this decade. If Case 268 fails in November 2026, Marigold is a solar-and-storage project with no firm leg and the 2035 doubling needs another 675 MW from the 2026 RFP.",
+    "**The forecast.** SRP itself told the Commission that large customers cannot forecast their ramps. If the 7,000 MW converts at the rate its own planning implies — a 2035 peak above 14 GW with 39 percent large business, from 12 percent in 2025 — the pipeline is worth a third of its face.",
+    "**The disclosure.** Every srpnet.com page returned 403 to this session; the workshop slide behind the 59-customer figure was never read; no financial statement after July 31, 2025 was found; the E-67 contract terms are private. A public-power dossier is written from bond documents and board packets, and it says so."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is public power, and what replaces the rate case?",
+     "a": "A utility owned by the public it serves — a district, city or state agency — with no shareholders; an elected or appointed board sets prices in a public budget and pricing process instead of a commission proceeding."
+    },
+    {
+     "q": "Why can SRP's rates not be appealed to the Arizona Corporation Commission?",
+     "a": "A.R.S. 45-1720 removes the District's rates, services and practices from ACC jurisdiction; the ACC decides only bond authorizations, plants above 100 MW and lines at 115 kV or above."
+    },
+    {
+     "q": "What is a revenue bond, and what metric does a public-power utility manage to instead of an allowed return?",
+     "a": "Debt repaid only from the system's own sales, usually tax-exempt; the utility manages debt service coverage, its debt ratio and cash on hand to hold its bond ratings."
+    },
+    {
+     "q": "Under an energy storage agreement, who owns the battery, who dispatches it and who chose the supplier?",
+     "a": "The developer owns and operates it; SRP holds the charge-and-discharge rights for the term; the developer chose the supplier at bid stage."
+    },
+    {
+     "q": "What is E-67's minimum billing demand, and what risk does it shift?",
+     "a": "80 percent of the customer's forecasted demand, payable whether used or not — it makes an inaccurate load ramp the customer's cost rather than other ratepayers'."
+    },
+    {
+     "q": "Which parts of Marigold need a Certificate of Environmental Compatibility?",
+     "a": "The 675 MW gas plant (Case 268) and the 230 kV lines (Case 267); the solar and the batteries do not."
+    },
+    {
+     "q": "What does an eight-hour battery add over a four-hour one, and what does it cost?",
+     "a": "Twice the energy for the same power — it carries a 5–10 p.m. peak window and part of the night — at the price of twice the cells and enclosure for the same inverters and interconnection."
+    },
+    {
+     "q": "What did direct pay change for a tax-exempt utility?",
+     "a": "It let the utility take the federal credit as cash instead of pricing it through a developer's PPA, which is why SRP now self-builds solar, storage and pumped hydro."
+    },
+    {
+     "q": "Is the 'nearly 7,000 MW' figure served load?",
+     "a": "No — it is the combined requested load of 59 large-load customers as recorded by the ACC; SRP's whole peak is 9,072 MW and data centers were 441 MW in 2025."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A developer wins a 20-year SRP energy storage agreement and sells the project with the contract attached. What is the buyer's lender pricing?",
+     "c": [
+      "The battery's merchant revenue",
+      "Twenty years of payments from an Aa1/AA+ public-power utility that recovers them in its own Board-set prices",
+      "The developer's balance sheet",
+      "Arizona's data-center tax exemption"
+     ],
+     "a": 1,
+     "why": "The toll is the asset; SRP's ratings and its independent price-setting authority are what the lenders underwrite."
+    },
+    {
+     "q": "A new customer forecasts 200 MW under E-67, ramps to 120 MW and stalls. What does it pay demand charges on?",
+     "c": [
+      "120 MW",
+      "160 MW — 80 percent of its forecast",
+      "200 MW",
+      "Nothing until it reaches 200 MW"
+     ],
+     "a": 1,
+     "why": "The minimum billing demand is 80 percent of the forecast, unless SRP reduced it for upgrades the customer paid for or for job creation."
+    },
+    {
+     "q": "The ACC commissioners reject Marigold's CEC in November 2026. What can SRP still build at Stanfield?",
+     "c": [
+      "Nothing — the whole project needs the certificate",
+      "The 600 MW of solar and the 400 MW / eight-hour battery, which are outside the CEC",
+      "Only the transmission lines",
+      "Only the gas plant, at a smaller size"
+     ],
+     "a": 1,
+     "why": "The certificate covers plants above 100 MW and lines at 115 kV or above; solar and batteries are not in Cases 267 and 268."
+    },
+    {
+     "q": "Why did SRP convert Coronado's coal boilers to gas instead of building long-duration batteries?",
+     "c": [
+      "The ACC ordered it",
+      "SRP priced the conversion at about $300 million less than a new gas plant and about $1.2 billion less than long-duration lithium",
+      "Batteries were unavailable",
+      "The Board lacked a quorum"
+     ],
+     "a": 1,
+     "why": "SRP's own June 2025 comparison; the Board approved the conversion and the ACC granted the certificate in March 2026."
+    },
+    {
+     "q": "Which of these is SRP's own document, in the sense a 10-K is an investor-owned utility's?",
+     "c": [
+      "An earnings call transcript",
+      "The official statement for a revenue-bond sale",
+      "An analyst consensus estimate",
+      "An ACC rate order"
+     ],
+     "a": 1,
+     "why": "A public-power utility's disclosure is municipal-bond disclosure; the 2025 Series C official statement carries the forecast, the power sources and the contract table."
+    }
+   ]
+  }
+ ]
+}
