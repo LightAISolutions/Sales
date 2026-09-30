@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.75r] — 2026-09-29 08:46:27 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Fable 5.1 High session to run F-U4, then remember session"
+
+### Added
+- `repository-information/PROFILER-COVERAGE-PLAN.md` **§11.5 — the F-U4 paste-in prompt** (Florida Power & Light, Salt River Project, TVA; Fable 5.1 High), §11.4 with F-U3's lessons folded in: FPL's slug decided on the record against `nextera-energy-resources` (a separate SEC registrant), the public-power and federal-utility category tests written as `PROFILER-SCHEMA.md` notes rather than new categories, calendar rules for a public-power district and a federal 10-K filer, the step-7 inbound counts measured today (SRP 11, TVA 12, FPL 5 dossiers by short name), the rotation now due on the first push dated 2026-09-30 EST or later, and the mechanics that held (`sec.gov` with the SEC user agent; `curl` through the proxy; search-seeded fetches).
+
+### Changed
+- `repository-information/SESSION-CONTEXT.md` Latest Session: the recommendation now points at §11.5; repo version and counter lines updated. Remember-session hand-off for the F-U3 write thread.
+- **No rotation.** This push lands on **2026-09-29 EST**: 101 raw / **94 non-exempt** against a 100 trigger with 7 same-day sections; the 2026-09-20 group (8 sections) rotates on the first push dated 2026-09-30 EST or later. Counter `Sections: 100/100` → `101/100`. **No page, GAS script, diagram or rule changed.**
 
 ## [v07.74r] — 2026-09-29 08:41:27 PM EST
 

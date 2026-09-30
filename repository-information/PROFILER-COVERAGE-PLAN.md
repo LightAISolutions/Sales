@@ -687,4 +687,103 @@ cap binds, continue on Opus 5.5 xhigh and record the substitution in the §11.3 
 Pre-Commit and Pre-Push checklists; push on a claude/* branch.
 ```
 
+### 11.5 · Paste-in prompt — F-U4, the public-power and federal utilities
+
+Written 2026-09-29 (v07.75r) at the end of the F-U3 session and handed to the developer in chat; kept here for the same reason as §11.4. It is §11.4 with F-U3's lessons folded in: the one-slug test decided on the record (FPL is its own SEC registrant), the category tests written as schema notes rather than new categories, the calendar rules for a public-power district and a federal 10-K filer, the rotation that is now due on the first push dated 2026-09-30 EST or later, and the mechanics that held (`sec.gov` with the SEC user agent; `curl` through the proxy; search-seeded fetches). **Run it on Fable 5.1 High.**
+
+```text
+Picking up from my last session, run Phase F session F-U4 of repository-information/PROFILER-COVERAGE-PLAN.md
+as a fresh session: Florida Power & Light, Salt River Project and the Tennessee Valley Authority — NextEra's
+regulated side, a public-power utility and a federal one. This session runs on Fable 5.1 at High, per
+repository-information/phase-f-action-plan.md §3 row 4; write "Fable 5.1 High" into the three §11.3 Model cells.
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; phase-f-action-plan.md §3; PROFILER-COVERAGE-PLAN.md §7,
+§11.1 and §11.3 (the three F-U4 rows are yours) and §11.4–§11.5; .claude/rules/profiler-app.md (Profiler Command
+including step 1a identity and step 7 reconciliation, Profiler Prep Command); repository-information/
+PROFILER-SCHEMA.md (Naming and renames, Registry schema and its category list, Segments registry, Refresh calendar);
+PROFILER-STYLES.md (active style intel-briefing). House pattern for a utility: the pinnacle-west, nisource and
+wec-energy dossiers, guides and lesson plans (v07.74r); pinnacle-west is the toll-buyer pattern SRP will resemble.
+
+THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
+categories ["utility"]) and study guide (schema v2) with its lesson plan under repository-information/study-prep/
+<slug>/. Populate aka[] BEFORE the step-7 grep (FPL, Florida Power & Light, NextEra Energy, NEE; SRP, Salt River
+Project Agricultural Improvement and Power District; TVA, Tennessee Valley Authority, MLGW as a distributor if the
+record makes it one). Assign segments with a basis line (hypothesis: `utilities` · incumbent for all three;
+`storage-developers-and-ipps` · adjacent only where utility-owned storage is material — SRP's Marigold 400 MW /
+8-hour and TVA's IRP storage are the candidates; pinnacle-west was left out on that test at v07.74r, so apply it the
+same way). Then the registry sync, the graph build, a dated calendar row per company (FPL/NextEra files with the
+SEC and has an earnings date — mark it unconfirmed until NextEra announces it; SRP and TVA have no earnings clock:
+TVA files 10-Ks with the SEC, so give it a nextReport row on its fiscal-year cadence and say so in the notes; SRP
+follows the private cadence rule), README tree entries, and rewrite and flip your §11.3 rows.
+
+IDENTITY (step 1a) — decide on the record, not the plan:
+- FPL: the one-slug-per-entity rule against `nextera-energy-resources` (NYSE: NEE is the parent's ticker). FPL is
+  a separate SEC registrant (Florida Power & Light Company files its own 10-K with NextEra's) and a separate
+  actor in the ecosystem (the regulated buyer of batteries, the LLCS-1/2 tariffs), which is the schema's test for
+  a subsidiary slug. If you create `florida-power-light`, write the relationship to `nextera-energy-resources`
+  both ways under the Archival Procedure and record the NextEra–Dominion merger's current state (signed 18 May
+  2026 — check for closing, approvals and any change to FPL's position). If you decide one slug covers both, say
+  why and add FPL to `nextera-energy-resources`'s aka[] instead.
+- SRP: the legal entities (the Salt River Project Agricultural Improvement and Power District, a political
+  subdivision of Arizona, and the Salt River Valley Water Users' Association) — one slug, display name "Salt River
+  Project"; ownership.type is the open question. Test the category: `utility` fits; if the schema needs a note
+  that public power has no shareholder return and an elected board, write it into PROFILER-SCHEMA.md's category
+  row in the same commit — do NOT add a category (the developer decided the grid-operator category in its own
+  session; public power stays inside `utility` unless you find the dossier cannot be written that way).
+- TVA: a federal corporation created by the TVA Act, with an SEC-filing 10-K, a presidentially appointed board
+  and no state commission — the rate case, IRP and large-load mechanics all live in TVA's own board process.
+  ownership.type and the financials stance need a one-line schema note the same way. Verify the board's current
+  quorum status — it has mattered for what TVA could approve.
+
+THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF — web research from 2026-09-25 that nobody has read. Verify
+against first-party sources (FPL's and NextEra's 10-K/10-Q and Q2 2026 deck, FPSC dockets, SRP's board and rate
+filings and its ACC decision, TVA's 10-K, board minutes and the 2026 IRP record of decision), record a premise
+verdict per clause, and rewrite the cells. Check hardest:
+- FPL: LLCS-1/2 large-load tariffs effective 1 Jan 2026 (terms — threshold, minimum bill, term, collateral, exit);
+  "more than 130 GW of large-load opportunities" (whose figure, what rung); FPL's own battery build (MW, OEM if
+  ever disclosed) against NextEra Energy Resources' merchant fleet; the 2025 rate settlement and the return.
+- SRP: 59 large-load customers / ~7 GW (Apr 2026, ACC workshop); the E-67 price plan's terms; Marigold (400 MW
+  8-hour battery, 600 MW solar, 675 MW gas) and the ACC decision expected Nov 2026 — is it an ACC decision at all
+  for a public-power district, or a siting-committee one; the NextEra 3 GW solar + 1 GW storage PPA; the storage
+  counterparties (Aypa, Plus Power, Invenergy, ESS, Energy Dome) — pull each from the counterparty's own record
+  first, since `aypa-power`, `plus-power`, `invenergy` and `pinnacle-west` are covered.
+- TVA: the 2026 IRP approved 20 Aug (1–5 GW storage, 7–26 GW gas — the ranges and the preferred portfolio);
+  the Capacity Commitment Charge for new loads above 5 MW effective 1 Oct 2026 (the day after this session may run
+  — check whether it took effect and on what terms); xAI Memphis served through MLGW (who signs for what); the
+  Plus Power 200 MW / 800 MWh toll; any small-reactor programme (Clinch River) on the record.
+For each, the §11.1 verdict: does it, or a platform it controls, sign for batteries, MV gear, generation or SSTs?
+
+RECONCILIATION (step 7) — measured 2026-09-29 by grep: `SRP` 11 dossiers, `Salt River Project` 4; `TVA` 12,
+`Tennessee Valley Authority` 3; `FPL` 5, `Florida Power & Light` 2; `NextEra Energy` 26 — the last is the
+`nextera-energy-resources` dossier's own neighbourhood and is NOT yours to re-reconcile unless FPL contradicts
+it. Known inbound worth reading first: pinnacle-west (SRP as the neighbouring utility and pipeline co-anchor;
+the Mesa data centres), invenergy (736 MW of SRP storage), aypa-power and plus-power (SRP and TVA tolls), xai
+(Memphis and MLGW), sargent-lundy (TVA as a nuclear-services client). Revise only on a contradiction, under the
+Archival Procedure, with any report pin re-checked.
+
+CHANGELOG: the repo CHANGELOG stands at `Sections: 101/100` with seven sections dated 2026-09-29 EST exempt (94
+non-exempt). If your push lands on 2026-09-30 EST or later, those seven stop being exempt: 102 raw / 101 non-exempt
+exceeds the trigger, so rotate the 2026-09-20 date group (v06.75r–v06.82r, 8 sections) into CHANGELOG-archive.md
+above `## [v06.74r]` with a commit SHA on every header (run `git fetch --unshallow origin main` first; the eight
+SHAs resolve on the deep clone), then add your section. Read CHANGELOG-archive.md §"Rotation Logic" before
+assuming otherwise.
+
+DO NOT edit googleAppsScripts/Classroom/Classroom.gs. Three more utilities make landscape-utilities-2026-09
+(now eight franchises behind) staler still; record that in the CHANGELOG entry and the SESSION-CONTEXT hand-off
+(wave C, phase-f-action-plan.md §3 row 16).
+
+MECHANICS that held at v07.74r: sec.gov and data.sec.gov answer when every request carries the SEC_USER_AGENT
+string from scripts/check-source-reachability.py (run that script before planning Stage 2); the shell has
+outbound HTTPS through the proxy, so `curl` reads of a release beat a summariser call; WebFetch refuses a URL
+that no WebSearch result in the session has shown (search-seed first). Never write a dossier figure from memory.
+
+VERIFY: check-source-reachability.py; sync-profiler-registry.py --check clean; build-profiler-graph.py;
+check-profiler-study.py, check-profiler-relationships.py and check-profiler-crossrefs.py clean (accept reviewed
+candidates with a reason); check-profiler-reports.py warnings read; check-readme-tree.py; every new dossier and
+guide renders (Playwright, `pip install playwright`, Chromium at /opt/pw-browsers/chromium) with zero page
+errors. If the Fable weekly cap binds, continue on Opus 5.5 xhigh and record the substitution in the §11.3 Model
+cell. Normal Session Start, Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch restarted
+from origin/main. Then "remember session".
+```
+
 Developed by: LightAISolutions

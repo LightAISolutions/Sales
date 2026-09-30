@@ -7,7 +7,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 ## Latest Session
 
 **Date:** 2026-09-29 07:52 PM → 08:45 PM EST (Phase F session F-U3: PPL, Pinnacle West, NiSource — the write thread of a three-thread project row; one attended turn)
-**Repo version:** v07.74r (one push)
+**Repo version:** v07.74r → v07.75r (two pushes: the F-U3 landing, then the F-U4 prompt + this hand-off)
 **Branch:** `claude/awesome-galileo-8qrhfo`
 **Model:** Fable 5.1 at High (per `phase-f-action-plan.md` §3 row 3)
 
@@ -18,7 +18,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Step 7:** PPL 8 / Pinnacle West 12 / NiSource 5 dossiers grepped by alias; one change — `quanta-services` v5→v6 ('~3 GW CCGT' → 2 × 1,300 MW CCGT + 400 MW BESS, reciprocal `nisource` edge). One relationships finding accepted (`nisource × ppl`, both `other`).
 - **13 concepts** added (`xhlf`, `ring-fencing`, `jurisdictional-declination`, `four-hour-battery`, `reimbursement-agreement`, `default-service`, `emergency-order-202c`, `equity-forward`, `peak-demand`, `pumped-storage`, `service-territory`, `weather-normalized`, `cooling-degree-day`); `stay-out` exists under `rate-freeze`.
 - Calendar rows unconfirmed: `ppl` ~11/05, `pinnacle-west` ~11/03, `nisource` ~10/28. §11.3 rows rewritten and flipped; `phase-f-action-plan.md` row 3 landed with the project-threads note. Checkers all clean; Playwright six routes zero errors.
-- **No CHANGELOG rotation** — 100 raw / 94 non-exempt with six 2026-09-29 sections exempt. **The first push dated 2026-09-30 EST or later rotates the 2026-09-20 group (v06.75r–v06.82r, 8 sections) with SHA enrichment** (full SHAs resolve on the deep clone).
+- **No CHANGELOG rotation on either push** — 101 raw / 94 non-exempt with seven 2026-09-29 sections exempt after the hand-off push. **The first push dated 2026-09-30 EST or later rotates the 2026-09-20 group (v06.75r–v06.82r, 8 sections) with SHA enrichment** (full SHAs resolve on the deep clone).
 
 ### Where we left off
 
@@ -41,14 +41,14 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 ### Active context
 
 - **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 196 dossiers, page v01.93w (unchanged). **Classroom:** GAS v01.93g, page v01.16w. **CHANGELOG** `Sections: 100/100` — **the next push dated 9/30 or later rotates.**
+- **Profiler:** 196 dossiers, page v01.93w (unchanged). **Classroom:** GAS v01.93g, page v01.16w. **CHANGELOG** `Sections: 101/100` (seven 2026-09-29 sections exempt, 94 non-exempt) — **the next push dated 9/30 or later rotates the 2026-09-20 group.**
 - **Active reminders (5):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
 
 ### Recommendation for next session
 
-- **Check the 9/30 Classroom pipeline run first (after ~7:30 AM ET), then run F-U4 (Florida Power & Light, Salt River Project, TVA) on Fable 5.1 High**, adapting `PROFILER-COVERAGE-PLAN.md` §11.4 with the row's model line; test FPL against `nextera-energy-resources` under the one-slug rule and use the new `public-power`-style category tests the row names. The CHANGELOG rotates on that push (2026-09-20 group, 8 sections).
+- **Check the 9/30 Classroom pipeline run first (after ~7:30 AM ET), then run F-U4 (Florida Power & Light, Salt River Project, TVA) on Fable 5.1 High** with the paste-in prompt saved at `PROFILER-COVERAGE-PLAN.md` §11.5 (written at the end of this session, v07.75r); it decides FPL's slug on the record, writes the public-power and federal category tests as schema notes, and carries the rotation due on the first push dated 9/30 or later.
 
-**To continue:** type `run F-U4`.
+**To continue:** paste `PROFILER-COVERAGE-PLAN.md` §11.5 into a fresh Fable 5.1 High session, or type `run F-U4`.
 
 ## Previous Sessions
 **Date:** 2026-09-29 04:00 PM → 07:52 PM EST (Phase F session F-N2: WhiteFiber, 5C Group, TECfusions; then the Projects question and this save; three attended turns)
