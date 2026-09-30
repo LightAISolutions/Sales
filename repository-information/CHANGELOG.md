@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.78r] — 2026-09-30 06:09:16 PM EST
+
+> **Prompt:** "Add the rule yourself if possible. If you cannot and need me to do it, give me step by step instructions on how to paste it, making it as easy for me as possible."
+
+### Added
+- `.claude/rules/profiler-app.md` — Profiler Command step 5 gains the sub-rule approved at v07.77r: a session that adds or removes a member of `profiler-segments.json` or moves a role regenerates every segment lesson `build-classroom-segments.py --check` reports due (`--segment <id>` / `--all`), bumps the Classroom GAS version, changelog and README tree display per [PC-GS-VERSION] #1 / [PC-README-TREE] #7, and runs `check-classroom-content.py` to zero errors plus `node --check` before committing. Refresh-only sessions (a `profileVersion` bump with no membership change) are exempt, which keeps the Routine-fired earnings desk and quarterly sweep outside the rule. Placed with the Profiler Command because the Profiler session is the one that must adapt (direction-of-responsibility rule in `rule-management.md`); no contradiction found in `classroom-app.md`, which already reserves the generator for developer sessions
+
+### Notes
+- The v07.77r note "The approved rule was not written" is now historical: the write was refused by the session's permission classifier from a Bash heredoc, and landed here through the file-edit tool at the developer's explicit direction
+- **No page, GAS script or diagram changed**
 
 ## [v07.77r] — 2026-09-30 06:02:30 PM EST
 
