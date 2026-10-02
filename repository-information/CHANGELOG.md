@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.80r] — 2026-10-02 09:19:04 AM EST
+
+> **Prompt:** Scheduled "Profiler earnings desk" run: take up to three due rows from the refresh calendar, verify each report published, run the Profiler Command, advance the rows.
+
+### Changed
+- `repository-information/profiler-refresh-calendar.json` — Intertek watch-window row re-dated from 2026-10-01 to 2026-11-02 and set unconfirmed: the window opened with no Court sanction, no satisfaction-of-condition and no Trading Update on the RNS feed, so no dossier was written
+- `repository-information/profiler-refresh-notes.json` — Intertek row source note records the re-date
+
+### Notes
+- **No page, GAS script or diagram changed.** Counter 98/100
 
 ## [v07.79r] — 2026-09-30 06:41:21 PM EST
 
