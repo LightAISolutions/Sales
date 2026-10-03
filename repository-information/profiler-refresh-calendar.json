@@ -1,1201 +1,1201 @@
 {
- "schemaVersion": 1,
- "updated": "2026-09-29",
- "description": "Refresh queue for the Profiler Routines. One row per covered company: slug, the next report date (public companies) or cadence+tier (private/unit-level), confirmation status and lastRefreshed. Read it with scripts/profiler-queue.py, never whole. The per-company research payload (source, watch) lives alongside in profiler-refresh-notes.json — see that file's description for why. Cadence rows carry a tier: core = Megmeet/SST-adjacent segments plus the named private/unit-level set, swept every 90 days; watch = the rest, every 180. The quarterly Routine reads these tiers instead of a hardcoded company list, so coverage is changed by a commit, not a prompt paste.",
- "companies": [
-  {
-   "slug": "abb",
-   "nextReport": "2026-10-20",
-   "confirmed": true,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "aep",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "aes-clean-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "albemarle",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "alibaba-cloud",
-   "nextReport": "2026-11-24",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "aligned",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "amazon",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "amd",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "amperesand",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-19",
-   "tier": "core"
-  },
-  {
-   "slug": "anthropic",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "aon",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "apex-clean-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "applied-digital",
-   "nextReport": "2026-10-14",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "arevon",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "available-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "watch"
-  },
-  {
-   "slug": "aypa-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "watch"
-  },
-  {
-   "slug": "bechtel",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "berkshire-hathaway-energy",
-   "nextReport": "2026-11-06",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "black-veatch",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "blackrock",
-   "nextReport": "2026-10-13",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "blackstone",
-   "nextReport": "2026-10-22",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "blattner",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "bloom-energy",
-   "nextReport": "2026-10-27",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "brookfield",
-   "nextReport": "2026-11-07",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "burns-mcdonnell",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "byd",
-   "nextReport": "2026-10-31",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "bytedance",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-26",
-   "tier": "core"
-  },
-  {
-   "slug": "calb",
-   "nextReport": "2027-03-26",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "canadian-solar",
-   "nextReport": "2026-11-24",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "caterpillar",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "catl",
-   "nextReport": "2026-10-31",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-07"
-  },
-  {
-   "slug": "chindata",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-26",
-   "tier": "core"
-  },
-  {
-   "slug": "cipher-mining",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "clearway-energy",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "compass-datacenters",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "constellation-energy",
-   "nextReport": "2026-11-09",
-   "confirmed": true,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "coolit",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-29",
-   "tier": "watch"
-  },
-  {
-   "slug": "core-scientific",
-   "nextReport": "2026-10-23",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-29"
-  },
-  {
-   "slug": "coreweave",
-   "nextReport": "2026-11-12",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "cornex",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-13",
-   "tier": "core"
-  },
-  {
-   "slug": "crrc-zhuzhou",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "crusoe",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-12",
-   "tier": "core"
-  },
-  {
-   "slug": "csa-group",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-08",
-   "tier": "watch"
-  },
-  {
-   "slug": "cummins",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-04"
-  },
-  {
-   "slug": "cyrusone",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "delta-electronics",
-   "nextReport": "2026-11-13",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-23"
-  },
-  {
-   "slug": "dg-matrix",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-19",
-   "tier": "core"
-  },
-  {
-   "slug": "digital-realty",
-   "nextReport": "2026-10-22",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "dnv",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-04",
-   "tier": "watch"
-  },
-  {
-   "slug": "dominion-energy",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "dpr",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "dte-energy",
-   "nextReport": "2026-10-22",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "duke-energy",
-   "nextReport": "2026-11-05",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-29"
-  },
-  {
-   "slug": "eaton",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "edgecore",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "enchanted-rock",
-   "nextReport": "2026-11-12",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "engie-north-america",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "entergy",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "envision-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "eolian",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "equinix",
-   "nextReport": "2026-10-28",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "esvolta",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "watch"
-  },
-  {
-   "slug": "eve-energy",
-   "nextReport": "2026-10-31",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "excelsior-energy-capital",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "watch"
-  },
-  {
-   "slug": "exelon",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "fermi-america",
-   "nextReport": "2026-11-12",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-05"
-  },
-  {
-   "slug": "firmus",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-26",
-   "tier": "core"
-  },
-  {
-   "slug": "flex",
-   "nextReport": "2026-10-28",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-04"
-  },
-  {
-   "slug": "flexgen",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "fluence",
-   "nextReport": "2026-11-24",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "fluidstack",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "form-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "g42",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-26",
-   "tier": "core"
-  },
-  {
-   "slug": "galaxy-digital",
-   "nextReport": "2026-10-27",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "ge-vernova",
-   "nextReport": "2026-10-21",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "google",
-   "nextReport": "2026-10-27",
-   "confirmed": true,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "gotion",
-   "nextReport": "2026-10-28",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "great-power",
-   "nextReport": "2027-04-28",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "grid-united",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-12",
-   "tier": "core"
-  },
-  {
-   "slug": "gridmatic",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-24",
-   "tier": "watch"
-  },
-  {
-   "slug": "gridstor",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "watch"
-  },
-  {
-   "slug": "habitat-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-24",
-   "tier": "watch"
-  },
-  {
-   "slug": "heron-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-12",
-   "tier": "core"
-  },
-  {
-   "slug": "hitachi-energy",
-   "nextReport": "2026-10-23",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "hithium",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-07",
-   "tier": "core"
-  },
-  {
-   "slug": "hitt",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-29",
-   "tier": "core"
-  },
-  {
-   "slug": "holder-construction",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-29",
-   "tier": "core"
-  },
-  {
-   "slug": "huawei-digital-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-07",
-   "tier": "core"
-  },
-  {
-   "slug": "humain",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-26",
-   "tier": "core"
-  },
-  {
-   "slug": "hunt-energy-network",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "watch"
-  },
-  {
-   "slug": "hut-8",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "hyperstrong",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "infineon",
-   "nextReport": "2026-11-10",
-   "confirmed": true,
-   "lastRefreshed": "2026-09-04"
-  },
-  {
-   "slug": "intersect-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-12",
-   "tier": "core"
-  },
-  {
-   "slug": "intertek",
-   "nextReport": "2026-11-02",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-24"
-  },
-  {
-   "slug": "invenergy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "iren",
-   "nextReport": "2026-11-05",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-21"
-  },
-  {
-   "slug": "jinko",
-   "nextReport": "2026-11-10",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-21"
-  },
-  {
-   "slug": "jupiter-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "key-capture-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "kiewit",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "kkr",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "kwh-analytics",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-08",
-   "tier": "watch"
-  },
-  {
-   "slug": "lambda",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "lg-energy-solution",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "lightsource-bp",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "liteon",
-   "nextReport": "2026-11-13",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-23"
-  },
-  {
-   "slug": "ls-energy-solutions",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "macquarie",
-   "nextReport": "2026-11-06",
-   "confirmed": true,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "mainspring-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "marsh-mclennan",
-   "nextReport": "2026-10-15",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "mastec",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "mccarthy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-04",
-   "tier": "watch"
-  },
-  {
-   "slug": "megmeet",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-23"
-  },
-  {
-   "slug": "meta",
-   "nextReport": "2026-10-28",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "mgx",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "watch"
-  },
-  {
-   "slug": "microsoft",
-   "nextReport": "2026-10-27",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "mitra-chem",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-13",
-   "tier": "watch"
-  },
-  {
-   "slug": "mitsubishi-electric",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "mitsubishi-power",
-   "nextReport": "2026-11-06",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "mortenson",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "narada",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "nebius",
-   "nextReport": "2026-11-10",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "nextera-energy-resources",
-   "nextReport": "2026-10-27",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "novonix",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-22"
-  },
-  {
-   "slug": "novos-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-19",
-   "tier": "core"
-  },
-  {
-   "slug": "nrg-energy",
-   "nextReport": "2026-11-05",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-05"
-  },
-  {
-   "slug": "nscale",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-29",
-   "tier": "core"
-  },
-  {
-   "slug": "nvidia",
-   "nextReport": "2026-11-25",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "oklo",
-   "nextReport": "2026-11-11",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-04"
-  },
-  {
-   "slug": "on-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "oncor",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "openai",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "oracle",
-   "nextReport": "2026-12-10",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-21"
-  },
-  {
-   "slug": "panasonic",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "pattern-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-12",
-   "tier": "core"
-  },
-  {
-   "slug": "piller",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-03",
-   "tier": "core"
-  },
-  {
-   "slug": "plus-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "powell-industries",
-   "nextReport": "2026-11-17",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "power-electronics",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "powerhouse-data-centers",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "prevalon",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "prime-data-centers",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "primoris",
-   "nextReport": "2026-11-02",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "proenergy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "qts",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "quanta-services",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "recurrent-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "rehlko",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-04",
-   "tier": "core"
-  },
-  {
-   "slug": "rept",
-   "nextReport": "2027-03-26",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "rolls-royce-power-systems",
-   "nextReport": "2026-11-12",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-04"
-  },
-  {
-   "slug": "rosendin",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "rwe-clean-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "samsung-ct",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "samsung-sdi",
-   "nextReport": "2026-10-27",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "sargent-lundy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-04",
-   "tier": "watch"
-  },
-  {
-   "slug": "schneider-electric",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "siemens-energy",
-   "nextReport": "2026-11-11",
-   "confirmed": true,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "sinexcel",
-   "nextReport": "2026-10-31",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "solv-energy",
-   "nextReport": "2026-11-12",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "southern-company",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "spearmint-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "watch"
-  },
-  {
-   "slug": "stack-infrastructure",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "stem",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "strata-clean-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "sungrow",
-   "nextReport": "2026-10-31",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-07"
-  },
-  {
-   "slug": "sunwoda",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "supermicro",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "switch",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "talen-energy",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-05"
-  },
-  {
-   "slug": "terawulf",
-   "nextReport": "2026-11-09",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "terra-gen",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "tesla",
-   "nextReport": "2026-10-21",
-   "confirmed": false,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "tract",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-05",
-   "tier": "core"
-  },
-  {
-   "slug": "trane-technologies",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-04"
-  },
-  {
-   "slug": "trina-storage",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "turner-construction",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "ul-solutions",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "vantage",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "vertiv",
-   "nextReport": "2026-10-21",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "vicor",
-   "nextReport": "2026-10-20",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-03"
-  },
-  {
-   "slug": "vistra",
-   "nextReport": "2026-11-05",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-05"
-  },
-  {
-   "slug": "voltagrid",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "wartsila",
-   "nextReport": "2026-10-27",
-   "confirmed": true,
-   "lastRefreshed": "2026-08-30"
-  },
-  {
-   "slug": "wec-energy",
-   "nextReport": "2026-10-29",
-   "confirmed": true,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "whiting-turner",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "x-energy",
-   "nextReport": "2026-11-13",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-05"
-  },
-  {
-   "slug": "xai",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-08-30",
-   "tier": "core"
-  },
-  {
-   "slug": "xcel-energy",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-04"
-  },
-  {
-   "slug": "zhonhen",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "5c-group",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-29",
-   "tier": "core"
-  },
-  {
-   "slug": "tecfusions",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-29",
-   "tier": "core"
-  },
-  {
-   "slug": "whitefiber",
-   "nextReport": "2026-11-12",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-29"
-  },
-  {
-   "slug": "ppl",
-   "nextReport": "2026-11-05",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-29"
-  },
-  {
-   "slug": "pinnacle-west",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-29"
-  },
-  {
-   "slug": "nisource",
-   "nextReport": "2026-10-28",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-29"
-  },
-  {
-   "slug": "florida-power-light",
-   "nextReport": "2026-10-27",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-29"
-  },
-  {
-   "slug": "salt-river-project",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-29",
-   "tier": "watch"
-  },
-  {
-   "slug": "tva",
-   "nextReport": "2026-11-13",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-29"
-  }
- ]
+  "schemaVersion": 1,
+  "updated": "2026-10-02",
+  "description": "Refresh queue for the Profiler Routines. One row per covered company: slug, the next report date (public companies) or cadence+tier (private/unit-level), confirmation status and lastRefreshed. Read it with scripts/profiler-queue.py, never whole. The per-company research payload (source, watch) lives alongside in profiler-refresh-notes.json — see that file's description for why. Cadence rows carry a tier: core = Megmeet/SST-adjacent segments plus the named private/unit-level set, swept every 90 days; watch = the rest, every 180. The quarterly Routine reads these tiers instead of a hardcoded company list, so coverage is changed by a commit, not a prompt paste.",
+  "companies": [
+    {
+      "slug": "abb",
+      "nextReport": "2026-10-20",
+      "confirmed": true,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "aep",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "aes-clean-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "albemarle",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-09"
+    },
+    {
+      "slug": "alibaba-cloud",
+      "nextReport": "2026-11-24",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-26"
+    },
+    {
+      "slug": "aligned",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "amazon",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "amd",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-08"
+    },
+    {
+      "slug": "amperesand",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-19",
+      "tier": "core"
+    },
+    {
+      "slug": "anthropic",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-02",
+      "tier": "core"
+    },
+    {
+      "slug": "aon",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-09"
+    },
+    {
+      "slug": "apex-clean-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "applied-digital",
+      "nextReport": "2026-10-14",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "arevon",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "available-power",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "watch"
+    },
+    {
+      "slug": "aypa-power",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "watch"
+    },
+    {
+      "slug": "bechtel",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "berkshire-hathaway-energy",
+      "nextReport": "2026-11-06",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-26"
+    },
+    {
+      "slug": "black-veatch",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "blackrock",
+      "nextReport": "2026-10-13",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-26"
+    },
+    {
+      "slug": "blackstone",
+      "nextReport": "2026-10-22",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "blattner",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "bloom-energy",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "brookfield",
+      "nextReport": "2026-11-07",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "burns-mcdonnell",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "byd",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-08"
+    },
+    {
+      "slug": "bytedance",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-26",
+      "tier": "core"
+    },
+    {
+      "slug": "calb",
+      "nextReport": "2027-03-26",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-09"
+    },
+    {
+      "slug": "canadian-solar",
+      "nextReport": "2026-11-24",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "caterpillar",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "catl",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-07"
+    },
+    {
+      "slug": "chindata",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-26",
+      "tier": "core"
+    },
+    {
+      "slug": "cipher-mining",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "clearway-energy",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "compass-datacenters",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "core"
+    },
+    {
+      "slug": "constellation-energy",
+      "nextReport": "2026-11-09",
+      "confirmed": true,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "coolit",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-29",
+      "tier": "watch"
+    },
+    {
+      "slug": "core-scientific",
+      "nextReport": "2026-10-23",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-29"
+    },
+    {
+      "slug": "coreweave",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "lastRefreshed": "2026-10-02"
+    },
+    {
+      "slug": "cornex",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-13",
+      "tier": "core"
+    },
+    {
+      "slug": "crrc-zhuzhou",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "crusoe",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-02",
+      "tier": "core"
+    },
+    {
+      "slug": "csa-group",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-08",
+      "tier": "watch"
+    },
+    {
+      "slug": "cummins",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-04"
+    },
+    {
+      "slug": "cyrusone",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "delta-electronics",
+      "nextReport": "2026-11-13",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-23"
+    },
+    {
+      "slug": "dg-matrix",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-19",
+      "tier": "core"
+    },
+    {
+      "slug": "digital-realty",
+      "nextReport": "2026-10-22",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "dnv",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-04",
+      "tier": "watch"
+    },
+    {
+      "slug": "dominion-energy",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "dpr",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "dte-energy",
+      "nextReport": "2026-10-22",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-26"
+    },
+    {
+      "slug": "duke-energy",
+      "nextReport": "2026-11-05",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-29"
+    },
+    {
+      "slug": "eaton",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "edgecore",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "core"
+    },
+    {
+      "slug": "enchanted-rock",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "engie-north-america",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "entergy",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "envision-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "eolian",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "equinix",
+      "nextReport": "2026-10-28",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "esvolta",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "watch"
+    },
+    {
+      "slug": "eve-energy",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-08"
+    },
+    {
+      "slug": "excelsior-energy-capital",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "watch"
+    },
+    {
+      "slug": "exelon",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-26"
+    },
+    {
+      "slug": "fermi-america",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-05"
+    },
+    {
+      "slug": "firmus",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-26",
+      "tier": "core"
+    },
+    {
+      "slug": "flex",
+      "nextReport": "2026-10-28",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-04"
+    },
+    {
+      "slug": "flexgen",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "fluence",
+      "nextReport": "2026-11-24",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "fluidstack",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-02",
+      "tier": "core"
+    },
+    {
+      "slug": "form-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "g42",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-26",
+      "tier": "core"
+    },
+    {
+      "slug": "galaxy-digital",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "ge-vernova",
+      "nextReport": "2026-10-21",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "google",
+      "nextReport": "2026-10-27",
+      "confirmed": true,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "gotion",
+      "nextReport": "2026-10-28",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "great-power",
+      "nextReport": "2027-04-28",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-09"
+    },
+    {
+      "slug": "grid-united",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-12",
+      "tier": "core"
+    },
+    {
+      "slug": "gridmatic",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-24",
+      "tier": "watch"
+    },
+    {
+      "slug": "gridstor",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "watch"
+    },
+    {
+      "slug": "habitat-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-02",
+      "tier": "watch"
+    },
+    {
+      "slug": "heron-power",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-12",
+      "tier": "core"
+    },
+    {
+      "slug": "hitachi-energy",
+      "nextReport": "2026-10-23",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "hithium",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-07",
+      "tier": "core"
+    },
+    {
+      "slug": "hitt",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-29",
+      "tier": "core"
+    },
+    {
+      "slug": "holder-construction",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-29",
+      "tier": "core"
+    },
+    {
+      "slug": "huawei-digital-power",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-07",
+      "tier": "core"
+    },
+    {
+      "slug": "humain",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-26",
+      "tier": "core"
+    },
+    {
+      "slug": "hunt-energy-network",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "watch"
+    },
+    {
+      "slug": "hut-8",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "lastRefreshed": "2026-10-02"
+    },
+    {
+      "slug": "hyperstrong",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "infineon",
+      "nextReport": "2026-11-10",
+      "confirmed": true,
+      "lastRefreshed": "2026-09-04"
+    },
+    {
+      "slug": "intersect-power",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-12",
+      "tier": "core"
+    },
+    {
+      "slug": "intertek",
+      "nextReport": "2026-11-02",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-24"
+    },
+    {
+      "slug": "invenergy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "core"
+    },
+    {
+      "slug": "iren",
+      "nextReport": "2026-11-05",
+      "confirmed": false,
+      "lastRefreshed": "2026-10-02"
+    },
+    {
+      "slug": "jinko",
+      "nextReport": "2026-11-10",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-21"
+    },
+    {
+      "slug": "jupiter-power",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "key-capture-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "kiewit",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "kkr",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-26"
+    },
+    {
+      "slug": "kwh-analytics",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-08",
+      "tier": "watch"
+    },
+    {
+      "slug": "lambda",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-02",
+      "tier": "core"
+    },
+    {
+      "slug": "lg-energy-solution",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "lightsource-bp",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "liteon",
+      "nextReport": "2026-11-13",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-23"
+    },
+    {
+      "slug": "ls-energy-solutions",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "macquarie",
+      "nextReport": "2026-11-06",
+      "confirmed": true,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "mainspring-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "marsh-mclennan",
+      "nextReport": "2026-10-15",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-09"
+    },
+    {
+      "slug": "mastec",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "mccarthy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-04",
+      "tier": "watch"
+    },
+    {
+      "slug": "megmeet",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-23"
+    },
+    {
+      "slug": "meta",
+      "nextReport": "2026-10-28",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "mgx",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "watch"
+    },
+    {
+      "slug": "microsoft",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "mitra-chem",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-13",
+      "tier": "watch"
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "mitsubishi-power",
+      "nextReport": "2026-11-06",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "mortenson",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "narada",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "nebius",
+      "nextReport": "2026-11-10",
+      "confirmed": false,
+      "lastRefreshed": "2026-10-02"
+    },
+    {
+      "slug": "nextera-energy-resources",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "novonix",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-22"
+    },
+    {
+      "slug": "novos-power",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-19",
+      "tier": "core"
+    },
+    {
+      "slug": "nrg-energy",
+      "nextReport": "2026-11-05",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-05"
+    },
+    {
+      "slug": "nscale",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-02",
+      "tier": "core"
+    },
+    {
+      "slug": "nvidia",
+      "nextReport": "2026-11-25",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "oklo",
+      "nextReport": "2026-11-11",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-04"
+    },
+    {
+      "slug": "on-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "oncor",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "openai",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "oracle",
+      "nextReport": "2026-12-10",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-21"
+    },
+    {
+      "slug": "panasonic",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "pattern-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-12",
+      "tier": "core"
+    },
+    {
+      "slug": "piller",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-03",
+      "tier": "core"
+    },
+    {
+      "slug": "plus-power",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "powell-industries",
+      "nextReport": "2026-11-17",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "power-electronics",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "powerhouse-data-centers",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "core"
+    },
+    {
+      "slug": "prevalon",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "prime-data-centers",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "core"
+    },
+    {
+      "slug": "primoris",
+      "nextReport": "2026-11-02",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "proenergy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "qts",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "quanta-services",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "recurrent-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "rehlko",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-04",
+      "tier": "core"
+    },
+    {
+      "slug": "rept",
+      "nextReport": "2027-03-26",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "rolls-royce-power-systems",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-04"
+    },
+    {
+      "slug": "rosendin",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "rwe-clean-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "samsung-ct",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "samsung-sdi",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "sargent-lundy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-04",
+      "tier": "watch"
+    },
+    {
+      "slug": "schneider-electric",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "siemens-energy",
+      "nextReport": "2026-11-11",
+      "confirmed": true,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "sinexcel",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-08"
+    },
+    {
+      "slug": "solv-energy",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "southern-company",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "spearmint-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "watch"
+    },
+    {
+      "slug": "stack-infrastructure",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "stem",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-09"
+    },
+    {
+      "slug": "strata-clean-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "core"
+    },
+    {
+      "slug": "sungrow",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-07"
+    },
+    {
+      "slug": "sunwoda",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "supermicro",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-08"
+    },
+    {
+      "slug": "switch",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "talen-energy",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-05"
+    },
+    {
+      "slug": "terawulf",
+      "nextReport": "2026-11-09",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "terra-gen",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "tesla",
+      "nextReport": "2026-10-21",
+      "confirmed": false,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "tract",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-05",
+      "tier": "core"
+    },
+    {
+      "slug": "trane-technologies",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-04"
+    },
+    {
+      "slug": "trina-storage",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "core"
+    },
+    {
+      "slug": "turner-construction",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "ul-solutions",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-09"
+    },
+    {
+      "slug": "vantage",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "vertiv",
+      "nextReport": "2026-10-21",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-06"
+    },
+    {
+      "slug": "vicor",
+      "nextReport": "2026-10-20",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-03"
+    },
+    {
+      "slug": "vistra",
+      "nextReport": "2026-11-05",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-05"
+    },
+    {
+      "slug": "voltagrid",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "wartsila",
+      "nextReport": "2026-10-27",
+      "confirmed": true,
+      "lastRefreshed": "2026-08-30"
+    },
+    {
+      "slug": "wec-energy",
+      "nextReport": "2026-10-29",
+      "confirmed": true,
+      "lastRefreshed": "2026-09-26"
+    },
+    {
+      "slug": "whiting-turner",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-06",
+      "tier": "watch"
+    },
+    {
+      "slug": "x-energy",
+      "nextReport": "2026-11-13",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-05"
+    },
+    {
+      "slug": "xai",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-08-30",
+      "tier": "core"
+    },
+    {
+      "slug": "xcel-energy",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-04"
+    },
+    {
+      "slug": "zhonhen",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-08"
+    },
+    {
+      "slug": "5c-group",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-29",
+      "tier": "core"
+    },
+    {
+      "slug": "tecfusions",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-29",
+      "tier": "core"
+    },
+    {
+      "slug": "whitefiber",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-29"
+    },
+    {
+      "slug": "ppl",
+      "nextReport": "2026-11-05",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-29"
+    },
+    {
+      "slug": "pinnacle-west",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-29"
+    },
+    {
+      "slug": "nisource",
+      "nextReport": "2026-10-28",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-29"
+    },
+    {
+      "slug": "florida-power-light",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-29"
+    },
+    {
+      "slug": "salt-river-project",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-09-29",
+      "tier": "watch"
+    },
+    {
+      "slug": "tva",
+      "nextReport": "2026-11-13",
+      "confirmed": false,
+      "lastRefreshed": "2026-09-29"
+    }
+  ]
 }

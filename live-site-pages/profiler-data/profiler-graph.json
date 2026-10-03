@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-30",
+ "built": "2026-10-03",
  "companies": 199,
  "edges": [
   {
@@ -4038,7 +4038,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, and reported six-year contracts of about USD 45 billion with Nscale (460 MW) and USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
+     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, a contract Nscale's Form S-1 of 18 September 2026 states at 'up to approximately $44.6 billion' with Anthropic PBC for four tranches of Vera Rubin capacity at Monarch (press: six years, 460 MW), and a reported USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
      "src": "",
      "from": "b"
     },
@@ -7877,7 +7877,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, and reported six-year contracts of about USD 45 billion with Nscale (460 MW) and USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
+     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, a contract Nscale's Form S-1 of 18 September 2026 states at 'up to approximately $44.6 billion' with Anthropic PBC for four tranches of Vera Rubin capacity at Monarch (press: six years, 460 MW), and a reported USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
      "src": "",
      "from": "a"
     },
@@ -7891,14 +7891,14 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Trainium 'nearly 1GW' by end-2026, Fluidstack sites 'throughout 2026' (CB-5 already moved to early 2027), Barber Lake September 2026, River Bend Q2 2027, Justified 2H 2027, Rockdale December 2027, Monarch late 2027, TPUs 'starting in 2027'.",
+     "text": "Basis: Trainium 'nearly 1GW' by end-2026, Fluidstack sites 'throughout 2026' (CB-5 already moved to early 2027), Barber Lake Q4 2026–Q1 2027 (slipped from September 2026 by Cipher's 24 September amendment), River Bend Q2 2027, Justified 2H 2027, Rockdale December 2027, Monarch late 2027, TPUs 'starting in 2027'.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "**(Low confidence)** We assess that the reported Nscale and Lambda contracts, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies.",
+     "text": "**(Low confidence)** We assess that the Nscale contract — now filed by Nscale at up to USD 44.6 billion — and the reported Lambda contract, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies.",
      "src": "",
      "from": "a"
     },
@@ -7914,6 +7914,13 @@
      "date": "",
      "text": "Where Anthropic itself, rather than a cloud, is the tenant, end user or equipment buyer: a 20-year, 401 MW lease at TeraWulf's Justified campus in Hawesville, Kentucky (about USD 19 billion initial term, up to about USD 33 billion with extensions, 'supported by an investment-grade credit'); the USD 50 billion Fluidstack programme whose leases the landlords file under Fluidstack's name with Google backstops; Riot's 191 MW build-to-suit at Rockdale, Texas (USD 9.1 billion over 20 years; tenant unnamed by Riot, Anthropic per Bloomberg); Hut 8's River Bend (245 MW for Anthropic via Fluidstack, up to 2,295 MW) and Beacon Point (704 MW, NVIDIA lease, Lambda operator, Anthropic buyer per CoinDesk); ERock's 470 MW RockBlock order; and Theseus, the Macquarie Asset Management–GIC platform formed to 'develop, own, operate, and lease' facilities to Anthropic.",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-25",
+     "text": "Cipher's Barber Lake amendment: delivery to Fluidstack's campus slips from September 2026 to 'individual data halls expected to be delivered from the fourth quarter of 2026 through the first quarter of 2027', with Cipher absorbing the first USD 359.3 million of overruns and 'a leading AI lab' signing a second ten-year term directly — The first filed milestone slip in the Anthropic programme — and the first lease where the lab, not its intermediary, signs the back half.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000043/barberlakeleaseamendmentpr.htm",
      "from": "a"
     },
     {
@@ -7961,21 +7968,28 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "From August 2025 it became the intermediary tenant in a chain of former bitcoin miners' campuses, was named by Anthropic on 12 November 2025 as the builder of a USD 50 billion programme of custom data centres in Texas and New York, moved its headquarters to New York in December 2025, and in July 2026 bought TeraWulf's 50.1% of the Abernathy joint venture for about USD 530 million — its first owned campus.",
+     "text": "From August 2025 it became the intermediary tenant in a chain of former bitcoin miners' campuses, was named by Anthropic on 12 November 2025 as the builder of a USD 50 billion programme of custom data centres in Texas and New York, moved its headquarters to New York in December 2025, in July 2026 bought TeraWulf's 50.1% of the Abernathy joint venture for about USD 530 million — its first owned campus — and on 10 September 2026 took a Cameron County worksite permit and began site works on a USD 4 billion first phase at Harlingen, Texas, with 1.5 GW 'reserved' from AEP Texas, its first ground broken in its own name.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by the landlords only in separate partnership releases or not at all.",
+     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by Fluidstack itself only once and only generically (its 12 November 2025 post names Anthropic, New York and Texas, never a campus or a landlord), by Hut 8 in a partnership release, and by TeraWulf and Cipher not at all ('a leading AI lab').",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Cipher's September 2026 amendment shows the lab now signing the back half of a Fluidstack lease directly, and The Information reports Anthropic negotiating a 1 GW Stream Data Centers lease with a possible Google guarantee and no intermediary.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale, Lambda, Riot and Hut 8's Beacon Point.",
+     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale (reported USD 45 billion, 26 August 2026), Lambda (USD 35 billion, 350 MW at Hut 8's Beacon Point, 1 September) and Riot, is reported in talks for 1 GW directly with Stream Data Centers (23 September), and at Barber Lake has signed the second ten-year term itself (Cipher 8-K, 25 September) — the intermediary's lease now ends where the lab's begins.",
      "src": "",
      "from": "b"
     },
@@ -7983,6 +7997,13 @@
      "where": "Key Judgments",
      "date": "",
      "text": "**(Moderate confidence)** We assess that Google's position — guarantor of the leases, warrant-holder in two landlords, reported prospective shareholder in the tenant and, through the Broadcom–Apollo–Blackstone vehicle, the designer of the chips leased to the end user — makes the Fluidstack chain a Google TPU distribution channel to Anthropic as much as a neocloud.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Two September data points cut both ways: SemiAnalysis now describes the business as 'bare-metal TPU deployments at 100K+ chip scale', which is the TPU channel stated from outside; and The Information reports Google discussed as credit guarantor for an Anthropic lease at Stream with no Fluidstack in it — the guarantee follows the chips and the lab, not the intermediary.",
      "src": "",
      "from": "b"
     },
@@ -8003,7 +8024,14 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "*Any new Anthropic lease signed without Fluidstack:* each one weakens Judgment 2's counter-move.",
+     "text": "Concentration is inferred, not stated — and the first owned campus outside the Anthropic programme, Harlingen (USD 4 billion first phase, 1.5 GW reserved, September 2026), names no tenant at all.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Any Anthropic lease signed without Fluidstack (Stream, or the Barber Lake second term):* each one weakens Judgment 2's counter-move.",
      "src": "",
      "from": "b"
     },
@@ -8019,6 +8047,13 @@
      "date": "",
      "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (the Broadcom–Apollo–Blackstone platform, June 2026, reported at about USD 35 billion for the first tranche).",
      "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (via CoinDesk): 'Anthropic agreed to spend $35 billion buying computing capacity from Lambda', about 350 MW of it at Hut 8's Beacon Point campus in Nueces County, Texas, where NVIDIA holds the lease; Fluidstack is not mentioned — Another Anthropic contract in the tens of billions placed through a different neocloud and a different landlord — the second such deal in a week after Nscale.",
+     "src": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
      "from": "b"
     },
     {
@@ -8064,7 +8099,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-08-31"
+   "last": "2026-09-25"
   },
   {
    "a": "anthropic",
@@ -8094,7 +8129,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, and reported six-year contracts of about USD 45 billion with Nscale (460 MW) and USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
+     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, a contract Nscale's Form S-1 of 18 September 2026 states at 'up to approximately $44.6 billion' with Anthropic PBC for four tranches of Vera Rubin capacity at Monarch (press: six years, 460 MW), and a reported USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
      "src": "",
      "from": "a"
     },
@@ -8129,7 +8164,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "**(Low confidence)** We assess that the reported Nscale and Lambda contracts, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies.",
+     "text": "**(Low confidence)** We assess that the Nscale contract — now filed by Nscale at up to USD 44.6 billion — and the reported Lambda contract, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies.",
      "src": "",
      "from": "a"
     },
@@ -8339,13 +8374,23 @@
      "since": "2026-08",
      "scale": "reported six-year, USD 35 billion; ~350 MW at Hut 8 Beacon Point (NVIDIA lease)",
      "via": "Lambda-operated NVIDIA capacity at Hut 8 Beacon Point, Nueces County TX"
+    },
+    "b": {
+     "type": "customer",
+     "note": "The Wall Street Journal (31 August / 1 September 2026) and Bloomberg report a USD 35 billion Anthropic cloud-computing agreement with Lambda, with NVIDIA holding the Beacon Point lease; no party has confirmed it.",
+     "context": "Yahoo Finance's relay: 'The Wall Street Journal reported Monday that Anthropic signed an agreement with Nvidia-backed Lambda valued at $35 billion for cloud computing … Nvidia would hold the facility lease, while Lambda would provide compute capacity to Anthropic … The reports did not disclose the agreement's term, GPU count, payment schedule or computing capacity.' Bloomberg sourced its own account to 'a person familiar with the matter'. Hut 8's filings through 28 September 2026 name neither Lambda nor Anthropic nor NVIDIA, describing the Beacon Point tenant as 'the high-investment-grade company that executed the Phase 1 lease' with 704 MW contracted. The dossier records the agreement as announced-by-press, not active.",
+     "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html",
+     "status": "announced",
+     "since": "2026-09",
+     "scale": "USD 35 billion (press); ~350 MW at Beacon Point (press)",
+     "via": "cloud capacity at Hut 8's Beacon Point campus, Nueces County, Texas (NVIDIA-held lease per press)"
     }
    },
    "evid": [
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, and reported six-year contracts of about USD 45 billion with Nscale (460 MW) and USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
+     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, a contract Nscale's Form S-1 of 18 September 2026 states at 'up to approximately $44.6 billion' with Anthropic PBC for four tranches of Vera Rubin capacity at Monarch (press: six years, 460 MW), and a reported USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
      "src": "",
      "from": "a"
     },
@@ -8366,7 +8411,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "**(Low confidence)** We assess that the reported Nscale and Lambda contracts, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies.",
+     "text": "**(Low confidence)** We assess that the Nscale contract — now filed by Nscale at up to USD 44.6 billion — and the reported Lambda contract, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies.",
      "src": "",
      "from": "a"
     },
@@ -8380,7 +8425,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "*A confirmed Nscale or Lambda release:* would convert Judgment 7 from inference to record.",
+     "text": "*A confirmed Lambda release, or Anthropic's own statement on Nscale:* Nscale's S-1 has converted its half of Judgment 7 from inference to record; Lambda's USD 35 billion is still press.",
      "src": "",
      "from": "a"
     },
@@ -8411,6 +8456,55 @@
      "text": "CoreWeave and Anthropic sign a multi-year compute agreement (value undisclosed; capacity 'later that year' at 'production scale' per DCD); CoreWeave announced Jane Street's USD 6 billion deal five days later — A fourth NVIDIA-based channel beside Azure, Colossus and Lambda; Anthropic's newsroom is silent.",
      "src": "https://www.datacenterdynamics.com/en/news/coreweave-and-anthropic-sign-multi-year-compute-agreement/",
      "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "September brought the largest number ever attached to the company and the one it has not confirmed: The Wall Street Journal and Bloomberg report a USD 35 billion Anthropic cloud agreement, about 350 MW of it at Hut 8's Beacon Point campus in Texas under an NVIDIA-held lease — Lambda, Anthropic, Hut 8 and NVIDIA have all stayed silent.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "September 2026 extends the pivot on both axes: a reported USD 35 billion Anthropic agreement (unconfirmed by any party) on the contracted side, and a first owned-land campus in Oklahoma on the infrastructure side.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The reported Anthropic structure — NVIDIA holding the Beacon Point lease, Lambda operating, Anthropic buying — would make NVIDIA landlord as well as supplier, investor and customer, if the press account is right; none of the four has confirmed it.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gaps (v6): the Anthropic agreement rests on The Wall Street Journal and Bloomberg sourcing — Lambda, Anthropic, Hut 8 and NVIDIA have published nothing, and Hut 8's filings describe its Beacon Point tenant only as 'the high-investment-grade company'; the October facility's two offtakers and three deployments are unnamed (Bloomberg's August report said Microsoft); Mayes County has no company-stated megawatts, capex or dates (375 MW is Tulsa World, paywalled); the leadership page lists executives (Dave Ward, Steve Stewart, Sandeep Jayaram, Paul Zhao) with no dated announcement; DCD, Forbes and Tulsa World were paywalled or blocked.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "INDICATORS TO WATCH — *Any first-party confirmation of the Anthropic agreement:* a Lambda release, an Anthropic post, a Hut 8 filing naming the tenant, or an NVIDIA statement on the Beacon Point lease — until one exists the USD 35 billion is press.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Superclusters (single-tenant contracted capacity)",
+     "date": "",
+     "text": "The reported USD 35 billion Anthropic agreement (press, September 2026) would be this product line's largest contract by an order of magnitude.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (relayed by Yahoo Finance, Bloomberg Law, CoinDesk): 'Anthropic signed an agreement with Nvidia-backed Lambda valued at $35 billion for cloud computing', with capacity at Hut 8's Beacon Point campus in Nueces County, Texas where 'Nvidia would hold the facility lease'; term, GPU count and MW undisclosed (press summaries: about 350 MW, six years); Lambda, Anthropic, Hut 8 and NVIDIA have not confirmed it — If real, the contract is roughly six times the Series E valuation and the largest ever attached to the company — and a month on, no party has put its name to it.",
+     "src": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html",
+     "from": "b"
     }
    ],
    "last": "2026-09-02"
@@ -8594,7 +8688,7 @@
     {
      "where": "Recent Reporting",
      "date": "2026-08-26",
-     "text": "Bloomberg, CNBC and TechCrunch: about USD 45 billion over six years to Nscale for about 460 MW of Vera Rubin capacity at the Monarch campus in West Virginia from late 2027, after Microsoft walked away from its 1.35 GW letter of intent; Aker's disclosure confirms a contract without a name; Anthropic silent — At about USD 16 million per MW-year the buyer is paying for a build slot, not a landlord's margin.",
+     "text": "Bloomberg, CNBC and TechCrunch: about USD 45 billion over six years to Nscale for about 460 MW of Vera Rubin capacity at the Monarch campus in West Virginia from late 2027, after Microsoft walked away from its 1.35 GW letter of intent; Aker's disclosure confirms a contract without a name; Anthropic silent — At about USD 16 million per MW-year the buyer is paying for a build slot, not a landlord's margin — and Nscale's S-1 of 18 September 2026 names Anthropic PBC and caps the agreements at 'up to approximately $44.6 billion', the first time a counterparty has filed one of these contracts.",
      "src": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
      "from": "a"
     },
@@ -8628,22 +8722,22 @@
    "curated": {
     "a": {
      "type": "supplier",
-     "note": "Press reports (Bloomberg, CNBC, TechCrunch, 26 August 2026) a six-year contract of about USD 45 billion for about 460 MW of Vera Rubin capacity at Nscale's Monarch campus in West Virginia, taking the tranche Microsoft's 1.35 GW letter of intent had covered; Nscale's regulatory disclosure via Aker confirmed a contract without naming the customer.",
-     "context": "Semafor: Microsoft 'withdrew from Monarch negotiations over the summer' and Google's talks 'fell through'; West Virginia's governor: 'the reported $45 billion agreement'. Global Data Center Hub's arithmetic — about USD 16.3 million per MW-year, roughly 1.9x an estimated USD 24 billion build — reads the price as delivery certainty. Monarch's power is 2 GW of Caterpillar gas gensets on a state-certified microgrid; capacity is due from late 2027. Neither company has confirmed the name; the corpus's nscale dossier carries the same 'announced' status.",
-     "source": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
-     "status": "announced",
+     "note": "Nscale's Form S-1 (18 September 2026) names Anthropic PBC as the counterparty to four GPU Services Agreements signed 25 August 2026 for Vera Rubin NVL72 capacity at the Monarch Compute Campus, 'up to approximately $44.6 billion'; Anthropic itself has still said nothing.",
+     "context": "Semafor: Microsoft 'withdrew from Monarch negotiations over the summer' and Google's talks 'fell through'; West Virginia's governor: 'the reported $45 billion agreement'. Global Data Center Hub's arithmetic — about USD 16.3 million per MW-year, roughly 1.9x an estimated USD 24 billion build — reads the price as delivery certainty. Monarch's power is 2 GW of Caterpillar gas gensets on a state-certified microgrid; capacity is due from late 2027. Nscale has now confirmed the name in a filing: its S-1 states the agreements are 'structured as four separate agreements, each between Anthropic and a wholly owned subsidiary of Nscale Limited', carry 'service level commitments that are more stringent than those contained in our other customer agreements', let Anthropic terminate a tranche for late delivery or sustained uptime misses, and that 'As of the date of this prospectus, we have not obtained binding commitments for any of the financings required to fund performance'. The megawatts and term are redacted in exhibit 10.25, so 460 MW and six years remain press. Anthropic has not confirmed; the corpus's nscale dossier (v3) carries the contract as active.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+     "status": "active",
      "since": "2026-08",
-     "scale": "reported ~USD 45 billion over six years for ~460 MW at Monarch (unconfirmed by either party)",
+     "scale": "up to about USD 44.6 billion (Nscale's S-1); press: six years, ~460 MW at Monarch",
      "via": "Vera Rubin capacity at the Monarch Compute Campus, Mason County WV, from late 2027"
     },
     "b": {
      "type": "customer",
-     "note": "Bloomberg, CNBC and TechCrunch reported on 26 August 2026 that Anthropic agreed to pay Nscale about USD 45 billion over six years for about 460 MW of Vera Rubin capacity at the Monarch campus from late 2027; Data Centre Review reports Nscale's regulatory disclosure via Aker confirmed a contract without naming the customer; neither company has confirmed the name.",
-     "context": "TechCrunch: the deal covers 'roughly 460 MW' in the 1.35 GW first phase that Microsoft's March 2026 letter of intent had addressed; Semafor adds that Google was also in talks and that Microsoft 'walked away' over the summer. West Virginia's governor called it 'the reported $45 billion agreement' and 'an extraordinary vote of confidence in our state'; Nscale gave USD 500,000 to Mason County schools. Global Data Center Hub's reading: USD 45 billion / 460 MW / six years is about USD 16.3 million per MW per year against a build cost near USD 24 billion — 'the silicon is being paid off inside the lease'.\n\nAnthropic's own newsroom is silent on Nscale; its only first-party mention is as a Trusted Tech Alliance co-member (February 2026). The status is therefore 'announced' by press, not by the parties, and the number is a press figure.",
-     "source": "https://www.datacentrereview.com/2026/08/anthropic-reportedly-behind-nscales-45bn-ai-compute-contract/",
-     "status": "announced",
+     "note": "Anthropic PBC signed four GPU Services Agreements with Nscale subsidiaries on 25 August 2026 for dedicated Vera Rubin NVL72 capacity at the Monarch Compute Campus, 'up to approximately $44.6 billion' per the S-1; the financing to build it is not yet committed.",
+     "context": "TechCrunch: the deal covers 'roughly 460 MW' in the 1.35 GW first phase that Microsoft's March 2026 letter of intent had addressed; Semafor adds that Google was also in talks and that Microsoft 'walked away' over the summer. West Virginia's governor called it 'the reported $45 billion agreement' and 'an extraordinary vote of confidence in our state'; Nscale gave USD 500,000 to Mason County schools. Global Data Center Hub's reading: USD 45 billion / 460 MW / six years is about USD 16.3 million per MW per year against a build cost near USD 24 billion — 'the silicon is being paid off inside the lease'.\n\nAnthropic's own newsroom is silent on Nscale; its only first-party mention is as a Trusted Tech Alliance co-member (February 2026). The status is therefore 'announced' by press, not by the parties, and the number is a press figure.\n\nThe S-1 of 18 September 2026 names the customer the earlier press and Aker's notice did not: 'On August 25, 2026, we entered into a series of GPU Services Agreements (collectively, the \"Anthropic Services Agreements\") with Anthropic PBC … The Anthropic Services Agreements provide for aggregate payments to us of up to approximately $44.6 billion.' They are 'structured as four separate agreements, each between Anthropic and a wholly owned subsidiary of Nscale Limited', each tranche with 'a multi-year service term commencing on acceptance', and 'include service level commitments that are more stringent than those contained in our other customer agreements': Anthropic may terminate a tranche for late delivery beyond a threshold or for sustained uptime misses. 'As of the date of this prospectus, we have not obtained binding commitments for any of the financings required.' Exhibit 10.25 redacts the site address, GPU count, capacity, dates and price.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+     "status": "active",
      "since": "2026-08",
-     "scale": "reported ~USD 45 billion over six years for ~460 MW at Monarch (press; Aker disclosure; unconfirmed by either party)",
+     "scale": "up to about USD 44.6 billion; four tranches of NVIDIA Vera Rubin NVL72 at Monarch (S-1); press: 460 MW, six years",
      "via": "Vera Rubin NVL72 capacity at Monarch, from late 2027"
     }
    },
@@ -8651,7 +8745,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, and reported six-year contracts of about USD 45 billion with Nscale (460 MW) and USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
+     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, a contract Nscale's Form S-1 of 18 September 2026 states at 'up to approximately $44.6 billion' with Anthropic PBC for four tranches of Vera Rubin capacity at Monarch (press: six years, 460 MW), and a reported USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
      "src": "",
      "from": "a"
     },
@@ -8672,7 +8766,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "**(Low confidence)** We assess that the reported Nscale and Lambda contracts, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies.",
+     "text": "**(Low confidence)** We assess that the Nscale contract — now filed by Nscale at up to USD 44.6 billion — and the reported Lambda contract, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies.",
      "src": "",
      "from": "a"
     },
@@ -8686,7 +8780,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "*A confirmed Nscale or Lambda release:* would convert Judgment 7 from inference to record.",
+     "text": "*A confirmed Lambda release, or Anthropic's own statement on Nscale:* Nscale's S-1 has converted its half of Judgment 7 from inference to record; Lambda's USD 35 billion is still press.",
      "src": "",
      "from": "a"
     },
@@ -8700,21 +8794,21 @@
     {
      "where": "Recent Reporting",
      "date": "2026-08-26",
-     "text": "Bloomberg, CNBC and TechCrunch: about USD 45 billion over six years to Nscale for about 460 MW of Vera Rubin capacity at the Monarch campus in West Virginia from late 2027, after Microsoft walked away from its 1.35 GW letter of intent; Aker's disclosure confirms a contract without a name; Anthropic silent — At about USD 16 million per MW-year the buyer is paying for a build slot, not a landlord's margin.",
+     "text": "Bloomberg, CNBC and TechCrunch: about USD 45 billion over six years to Nscale for about 460 MW of Vera Rubin capacity at the Monarch campus in West Virginia from late 2027, after Microsoft walked away from its 1.35 GW letter of intent; Aker's disclosure confirms a contract without a name; Anthropic silent — At about USD 16 million per MW-year the buyer is paying for a build slot, not a landlord's margin — and Nscale's S-1 of 18 September 2026 names Anthropic PBC and caps the agreements at 'up to approximately $44.6 billion', the first time a counterparty has filed one of these contracts.",
      "src": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
      "from": "a"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Nscale is the anchored neocloud built almost entirely on Microsoft's signature — 'approximately 200,000 NVIDIA GB300 GPUs' contracted in October 2025 across Ward County, Texas; Sines, Portugal; Loughton, England and Narvik, Norway, then 96,000-plus Vera Rubin GPUs added for Norway and Portugal in 2026 — and, since 26 August 2026, on a reported USD 45 billion, six-year contract with Anthropic for 460 MW at the Monarch campus in West Virginia that Microsoft had walked away from over the summer; it has raised about USD 3.7 billion of equity (Series C USD 2 billion at USD 14.6 billion, March 2026, led by Aker ASA and 8090 Industries) and about USD 6.1 billion of debt facilities, two of them investment-grade rated, against reported revenue of about USD 33 million for 2025 and USD 100 million in the second quarter of 2026, and Bloomberg reports an IPO of up to USD 3 billion on a USD 51 billion contracted backlog.",
+     "text": "BOTTOM LINE UP FRONT: Nscale's Form S-1 of 18 September 2026 — its first first-party disclosure of revenue, backlog and debt — shows a company that booked USD 19.1 million of revenue in 2024, USD 33.0 million in 2025 and USD 140.6 million in the first half of 2026 against net losses of USD 78.2 million, USD 761.8 million and USD 1,020.1 million, while contracting USD 103.4 billion of take-or-pay total contract value by 31 August 2026 (USD 2.6 billion of it active), USD 56.4 billion of it already remaining performance obligations at 30 June: Microsoft's statements of work 'provide for payments to us of up to approximately $43.8 billion through December 2033' and the Anthropic Services Agreements of 25 August 2026 — Anthropic PBC is named — 'provide for aggregate payments to us of up to approximately $44.6 billion' for four tranches of NVIDIA Vera Rubin NVL72 at the Monarch Compute Campus, for which 'we have not obtained binding commitments for any of the financings required'.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "Microsoft anchors four sites and Anthropic the fifth; OpenAI's role has shrunk to a paused UK exploration.",
+     "text": "Microsoft anchors four sites and Anthropic the fifth — together 'up to approximately $43.8 billion' and 'up to approximately $44.6 billion' of the USD 103.4 billion contracted; OpenAI withdrew from both Stargate partnerships in April 2026 and appears in the S-1 only as a former partner.",
      "src": "",
      "from": "b"
     },
@@ -8728,22 +8822,71 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "**(Moderate confidence)** We assess that the reported Anthropic Monarch contract prices delivery certainty rather than a landlord's margin, and that it is Nscale's most important and least confirmed number.",
+     "text": "The S-1 puts numbers on the concentration: Microsoft 'up to approximately $43.8 billion' and Anthropic 'up to approximately $44.6 billion' against USD 103.4 billion of TCV — about 85% in two names by the dossier's arithmetic — and 'our largest customer accounted for 52% of our revenue' in H1 2026.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Global Data Center Hub's arithmetic (USD 45 billion / 460 MW / six years ≈ USD 16.3 million per MW-year, roughly 1.9x an estimated USD 24 billion build cost); the value is press-sourced, Aker's disclosure did not name the customer, and Anthropic's newsroom is silent.",
+     "text": "The S-1 confirms the structure and sizes it: about USD 6.5 billion of committed bank facilities, USD 2.54 billion of Dell vendor rent and a minimum USD 3.1 billion of convertible notes against USD 137.4 million of carrying debt and USD 140.6 million of half-year revenue — and it states the unfinanced part plainly: 'we have not obtained binding commitments for any of the financings required to fund performance under the Anthropic Services Agreements'.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "INDICATORS TO WATCH — *September–October 2026 — the S-1:* an actual filing would replace every press-sourced revenue and backlog figure above and state whether the Anthropic contract exists on the reported terms.",
+     "text": "**(High confidence — raised from moderate)** We assess that the Anthropic Monarch contract exists on roughly the reported terms and is Nscale's most important and least financed number.",
      "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the S-1 names Anthropic PBC, dates the agreements to 25 August 2026, caps them at 'up to approximately $44.6 billion' across four Vera Rubin NVL72 tranches at Monarch, and attaches termination rights for late delivery and sustained uptime misses 'more stringent than those contained in our other customer agreements'; exhibit 10.25 redacts the megawatts, the term and the price, so the press 460 MW and six years (about USD 16 million per MW-year on Global Data Center Hub's arithmetic) remain unconfirmed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "If delivered on those terms the residual value of the Vera Rubin fleet in 2033 is the largest open variable in the company's economics; if not financed, Anthropic can terminate tranche by tranche.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gaps: the S-1 does not state the IPO size or valuation, any shareholder's percentage, the rating agency or letter grade behind the two 'investment-grade' GPU facilities, the convertible notes' coupon or conversion price, the Anthropic contract's megawatts, term or start dates (redacted in exhibit 10.25), the Caterpillar order size, the Figure contract's value (the USD 3.5 billion in the Figure release is not in the filing), or the names of the 73% (2025) and 52% (H1 2026) customers; Loughton and Statnett do not appear by name; Aker's 22.76% is Aker's figure; the Bloomberg COO report is paywalled and cited by headline; the earlier gaps on OpenAI's pages, Caterpillar's release and the Hurwitz appointment stand.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Any binding financing commitment for the Anthropic tranches:* the S-1's stated gap, and the trigger that lets Nscale sell Monarch capacity at all.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Late 2027 — the first Vera Rubin tranches at Sines and Monarch:* the delivery dates Anthropic's termination rights key on.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-25",
+     "text": "TechCrunch and SiliconANGLE: USD 3.36 billion of convertible financing led by Third Point, with Apollo, Citadel and more than a dozen institutions, 'USD 2.36 billion available to the company immediately' and USD 1 billion from NVIDIA 'in mid-November'; the S-1 records the 15 September subscription agreement at 'a minimum of $3.1 billion', converting automatically at the IPO and maturing 15 June 2028 — Pre-IPO capital at convertible terms the filing does not price — the bridge that lets the Anthropic build start before the equity market decides.",
+     "src": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-18",
+     "text": "Form S-1 filed with the SEC for a proposed NYSE listing as 'NSCL' (Goldman Sachs, J.P. Morgan, Morgan Stanley): revenue USD 19.1 million (2024), USD 33.0 million (2025), USD 140.6 million (H1 2026); net loss USD 761.8 million (2025) and USD 1,020.1 million (H1 2026); USD 103.4 billion of active and contracted TCV at 31 August; 1.37 GW active and contracted, 1 GW owned; Anthropic PBC named at 'up to approximately $44.6 billion', Microsoft at 'up to approximately $43.8 billion through December 2033'; a going-concern doubt 'initially raised' and alleviated; KPMG LLP auditor — The first first-party numbers: a USD 300 million revenue run-rate carrying a USD 103 billion book — the ratio the whole anchored-neocloud model will be priced on.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
      "from": "b"
     },
     {
@@ -8763,8 +8906,15 @@
     {
      "where": "Recent Reporting",
      "date": "2026-08-26",
-     "text": "Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on — At about USD 16 million per MW-year the silicon is paid off inside the lease (Global Data Center Hub) — the customer is buying delivery certainty, not a landlord's margin.",
+     "text": "Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on — At about USD 16 million per MW-year the silicon is paid off inside the lease (Global Data Center Hub) — the customer is buying delivery certainty, not a landlord's margin — confirmed and named in the S-1 of 18 September 2026 at up to USD 44.6 billion (see 25 August).",
      "src": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-25",
+     "text": "The S-1 names the counterparty: 'On August 25, 2026, we entered into a series of GPU Services Agreements … with Anthropic PBC … at our Monarch Compute Campus to support the deployment of NVIDIA Vera Rubin NVL72 GPUs. The Anthropic Services Agreements provide for aggregate payments to us of up to approximately $44.6 billion' — four tranches, each a wholly-owned subsidiary's contract, with termination rights for late delivery and sustained uptime misses, and 'we have not obtained binding commitments for any of the financings required' — Confirmed, named and sized — but unfinanced: the contract's megawatts and term remain redacted, so the press 460 MW and six years still stand in for them.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
      "from": "b"
     },
     {
@@ -8782,7 +8932,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-09-03"
+   "last": "2026-09-25"
   },
   {
    "a": "anthropic",
@@ -8803,7 +8953,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, and reported six-year contracts of about USD 45 billion with Nscale (460 MW) and USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
+     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, a contract Nscale's Form S-1 of 18 September 2026 states at 'up to approximately $44.6 billion' with Anthropic PBC for four tranches of Vera Rubin capacity at Monarch (press: six years, 460 MW), and a reported USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
      "src": "",
      "from": "a"
     },
@@ -8994,7 +9144,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, and reported six-year contracts of about USD 45 billion with Nscale (460 MW) and USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
+     "text": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, a contract Nscale's Form S-1 of 18 September 2026 states at 'up to approximately $44.6 billion' with Anthropic PBC for four tranches of Vera Rubin capacity at Monarch (press: six years, 460 MW), and a reported USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.",
      "src": "",
      "from": "a"
     },
@@ -18978,14 +19128,14 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before OpenAI's Norway letter of intent was replaced by a Microsoft contract and OpenAI paused Stargate UK, bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026).",
+     "text": "Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before 'In April 2026, OpenAI withdrew from the Stargate Norway and Stargate UK partnerships, with Microsoft subsequently expanding its agreement with us to take the extra compute capacity at Stargate Norway' (S-1), bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026).",
      "src": "",
      "from": "b"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "The European entry in the anchored-neocloud model, and the one that owns its ground: Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid, Loughton in Essex, with partner-run halls at Start Campus (Sines), Ionic Digital (Ward County), Verne (Keflavik) and a Duke Energy-served site in North Carolina.",
+     "text": "The European entry in the anchored-neocloud model, and the one that owns its ground — 1 GW of its 1.37 GW of active and contracted capacity sits at the seven wholly-owned sites, per the S-1: Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid, Loughton in Essex, with partner-run halls at Start Campus (Sines), Ionic Digital (Ward County), Verne (Keflavik) and a Duke Energy-served site in North Carolina.",
      "src": "",
      "from": "b"
     },
@@ -19006,14 +19156,14 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Collection gaps: no revenue, backlog, headcount, contract values (other than Microsoft's USD 6.2 billion) or GPU totals on first-party channels; the new parent 'Nscale Limited' is not identified in Companies House filings read; OpenAI's Stargate pages, Caterpillar's AIP release, Nokia's release and several DCD, CNBC and Bloomberg pages were unreachable and are cited from search summaries or reprints; the Lauren Hurwitz appointment release returns 404; Arkon's site was unreachable; David Sykes and Sam Pitt from the commissioning brief were not found anywhere.",
+     "text": "The S-1 is silent on Statnett and Loughton by name and sizes the Caterpillar relationship only as 'our continued collaboration with Caterpillar as a supplier of natural gas generators'; its grid risk is written generically — 'Governments, regulators, utilities or local authorities may delay, restrict or impose new conditions on … power allocations'.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "*September 2026–August 2027 — Caterpillar genset deliveries at Monarch:* the physical test of the 2 GW-by-H1-2028 claim.",
+     "text": "Collection gaps: the S-1 does not state the IPO size or valuation, any shareholder's percentage, the rating agency or letter grade behind the two 'investment-grade' GPU facilities, the convertible notes' coupon or conversion price, the Anthropic contract's megawatts, term or start dates (redacted in exhibit 10.25), the Caterpillar order size, the Figure contract's value (the USD 3.5 billion in the Figure release is not in the filing), or the names of the 73% (2025) and 52% (H1 2026) customers; Loughton and Statnett do not appear by name; Aker's 22.76% is Aker's figure; the Bloomberg COO report is paywalled and cited by headline; the earlier gaps on OpenAI's pages, Caterpillar's release and the Hurwitz appointment stand.",
      "src": "",
      "from": "b"
     },
@@ -21018,12 +21168,12 @@
     },
     "b": {
      "type": "supplier",
-     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
-     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
+     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW; the 24 September 2026 amendment phases delivery into Q4 2026–Q1 2027 and adds a second ten-year term signed directly by 'a leading AI lab'.",
+     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.\n\nCipher's 8-K of 25 September 2026: 'the lease amendment establishes a phased delivery schedule for the site, with individual data halls expected to be delivered from the fourth quarter of 2026 through the first quarter of 2027', first rent in Q4 2026; Cipher 'will bear the first $359.3 million of costs in excess of the initial budgeted amount', with the tenant reimbursing 50% above that as additional rent; and 'a binding commitment with a leading AI lab to lease the facility for an additional 10-year term following the conclusion of the Barber Lake Lease' lifts contracted revenue from about USD 3.8 billion to 'over $9 billion'. Years one to ten are Fluidstack's; years eleven to twenty are the lab's.",
      "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
      "status": "active",
      "since": "2025-09",
-     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "scale": "300 MW critical IT; 'over $9 billion' across 20 years",
      "via": "Barber Lake, Colorado City TX"
     }
    },
@@ -23236,9 +23386,16 @@
      "text": "Sacra frames CoreWeave as the scale neocloud and Crusoe as the energy-differentiated one; cloud bookings grew 5x in the first three quarters of 2025 — but the developer business, not cloud ARR, carries the valuation.",
      "src": "",
      "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-17",
+     "text": "Series F: 'the initial closing of its anticipated $3.9 billion Series F funding round, at a $30.9 billion post-money valuation', co-led by Atreides, Mubadala Capital and Valor, with Founders Fund, GIC, NVIDIA, QIA, Radical Ventures, TPG and some thirty others; Form D shows USD 3.11 billion of USD 3.90 billion sold; '$140B+' TCV, '6GW+' gross contracted, '1GW+' delivered, 'over 1,800 employees' — The July talks closed above the reported price; the company's first stated TCV puts it in Nscale's and CoreWeave's bracket on contract value while revenue stays an estimate.",
+     "src": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding",
+     "from": "b"
     }
    ],
-   "last": ""
+   "last": "2026-09-17"
   },
   {
    "a": "coreweave",
@@ -23403,7 +23560,7 @@
     {
      "where": "Capabilities · GPU cloud platform (the Essential Cloud for AI)",
      "date": "",
-     "text": "SemiAnalysis ClusterMAX: the only Platinum-tier GPU cloud (AWS/Google/Lambda rated Bronze in the same system) — operational quality, not price, is the differentiator.",
+     "text": "SemiAnalysis ClusterMAX 3.0 (23 September 2026): Platinum for the third consecutive cycle, now shared with Nebius — 'Our CoreWeave clusters are exemplary in all crucial categories … Along with Nebius, CoreWeave serves as a measuring stick for others in the industry'; Google Cloud and Oracle Gold, Lambda Silver, AWS Bronze in the same system.",
      "src": "",
      "from": "a"
     }
@@ -23445,14 +23602,14 @@
     {
      "where": "Capabilities · GPU cloud platform (the Essential Cloud for AI)",
      "date": "",
-     "text": "SemiAnalysis ClusterMAX: the only Platinum-tier GPU cloud (AWS/Google/Lambda rated Bronze in the same system) — operational quality, not price, is the differentiator.",
+     "text": "SemiAnalysis ClusterMAX 3.0 (23 September 2026): Platinum for the third consecutive cycle, now shared with Nebius — 'Our CoreWeave clusters are exemplary in all crucial categories … Along with Nebius, CoreWeave serves as a measuring stick for others in the industry'; Google Cloud and Oracle Gold, Lambda Silver, AWS Bronze in the same system.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "SemiAnalysis ClusterMAX holds Lambda at Silver — two tiers below CoreWeave's Platinum — across both rating cycles.",
+     "text": "SemiAnalysis ClusterMAX holds Lambda at Silver — two tiers below CoreWeave's Platinum — across all three rating cycles, ClusterMAX 3.0 (23 September 2026) crediting improved orchestration and auto-remediation while faulting stale software.",
      "src": "",
      "from": "b"
     },
@@ -23501,7 +23658,7 @@
     {
      "where": "Capabilities · Superclusters (single-tenant contracted capacity)",
      "date": "",
-     "text": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 2.0 (November 2025) still rates Lambda Silver vs CoreWeave Platinum and Nebius/Crusoe/Fluidstack Gold, citing capacity sell-outs, immature Kubernetes, and weak inference support.",
+     "text": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 3.0 (23 September 2026) keeps Lambda at Silver — 'Lambda's orchestration continues to improve, and customers are happy, which lands them in the upper ranks', three simulated errors auto-remediated, but 'CUDA Toolkit 12.0 … so old it's incompatible with the B300' and 'unacceptably old drivers' — while Nebius joins CoreWeave at Platinum, Crusoe drops to Bronze and Fluidstack leaves the ratings; the rater notes 'Lambda is increasingly driving its bottom line via bare-metal builds, apart from managed clusters altogether'.",
      "src": "",
      "from": "b"
     },
@@ -23656,10 +23813,31 @@
    "b": "nebius",
    "evid": [
     {
+     "where": "Summary",
+     "date": "",
+     "text": "SemiAnalysis ClusterMAX has rated it Platinum in all three cycles (March 2025, November 2025 and ClusterMAX 3.0 on 23 September 2026) — the only provider to do so, though since 3.0 it shares the tier with Nebius; the rater calls it 'the industry's sharpest, sturdiest, most proactive neocloud'.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Key Judgments",
      "date": "",
      "text": "Basis: Microsoft ~67% of FY2025 revenue (down from 62%+77% top-two in FY2024), with Meta ($21B), OpenAI (~$22.4B), Anthropic, and Jane Street diversifying the book — but Microsoft declining a ~$12B expansion and routing capacity to Nebius shows the anchor tenant actively cultivating alternatives.",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · GPU cloud platform (the Essential Cloud for AI)",
+     "date": "",
+     "text": "SemiAnalysis ClusterMAX 3.0 (23 September 2026): Platinum for the third consecutive cycle, now shared with Nebius — 'Our CoreWeave clusters are exemplary in all crucial categories … Along with Nebius, CoreWeave serves as a measuring stick for others in the industry'; Google Cloud and Oracle Gold, Lambda Silver, AWS Bronze in the same system.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-23",
+     "text": "SemiAnalysis ClusterMAX 3.0: CoreWeave 'remains the industry's sharpest, sturdiest, most proactive neocloud' and the only provider rated Platinum in all three cycles — 'Provisioning around 10,000 GPUs per week', GPU straggler detection and hourly burn-ins on idle nodes cited; Nebius joins it in Platinum for the first time — The operational benchmark holds for a third cycle, but the tier is no longer a monopoly — Nebius now shares the premium-pricing position the rating confers.",
+     "src": "https://www.coreweave.com/news/coreweave-becomes-the-only-provider-to-earn-semianalysis-platinum-clustermax-tm-rating-three-consecutive-times",
      "from": "a"
     },
     {
@@ -23672,7 +23850,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "SemiAnalysis ClusterMAX rates Nebius Gold — top of the tier, 'the most direct competitor to CoreWeave.' FY2026 guidance: revenue $3.0–3.4B, exit ARR $7–9B, ~40% EBITDA margin, capex $20–25B; contracted-power target raised to 5 GW by year-end 2026.",
+     "text": "SemiAnalysis's ClusterMAX 3.0 (23 September 2026) moved Nebius from Gold to Platinum beside CoreWeave — 'unquestionably an industry leader with strong offerings in every category and the ability to command a significant price premium' — the first provider ever to join CoreWeave in the top tier, after three cycles as 'the most direct competitor to CoreWeave'.",
      "src": "",
      "from": "b"
     },
@@ -23693,15 +23871,29 @@
     {
      "where": "Capabilities · Nebius AI Cloud ('Aether' platform)",
      "date": "",
-     "text": "SemiAnalysis: 'the most direct competitor to CoreWeave' — differentiated by Kubernetes-native flexibility vs CoreWeave's bare-metal long-reservation model; flagged weaknesses are colocation-deal sourcing, credit ratings, and lingering 'Russian roots' customer hesitancy.",
+     "text": "SemiAnalysis ClusterMAX 3.0 (23 September 2026) lifts Nebius to Platinum: 'solid business decisions have established them as the default neocloud to serve the neolabs', 'the most active of all neoclouds in the short-term cluster market' and 'the first provider to deploy HGX B300s back in December of 2025', while it 'still trail[s] CoreWeave on many technical aspects and relationships with both NVIDIA and the frontier labs'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Nebius AI Cloud ('Aether' platform)",
+     "date": "",
+     "text": "Earlier cycles: 'the most direct competitor to CoreWeave', differentiated by Kubernetes-native flexibility vs CoreWeave's bare-metal long-reservation model; flagged weaknesses were colocation-deal sourcing, credit ratings, and lingering 'Russian roots' customer hesitancy.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Capabilities · Committed-capacity contracts & data-center platform",
      "date": "",
-     "text": "vs CoreWeave: roughly 1/4 the revenue and ~40% the backlog ($40B vs $104B), but EBITDA-positive earlier, net-cash longer, and rated one tier below on ClusterMAX; 24/7 Wall St casts Nebius as the 'more defensive profile' of the pair.",
+     "text": "vs CoreWeave: roughly 1/4 the revenue and ~40% the backlog ($40B vs $104B), but EBITDA-positive earlier, net-cash longer, and rated in the same Platinum tier on ClusterMAX since 3.0 (23 September 2026; one tier below through 2.1); 24/7 Wall St casts Nebius as the 'more defensive profile' of the pair.",
      "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-23",
+     "text": "SemiAnalysis ClusterMAX 3.0 moves Nebius into Platinum alongside CoreWeave: 'Nebius is unquestionably an industry leader with strong offerings in every category and the ability to command a significant price premium'; a synthetic GB300 NVL72 rack failure was detected immediately and the node returned to service automatically; Nebius's own post: 'Platinum is proof of the kind of AI infrastructure we've been building' — The challenger label the corpus has carried since the first dossier is now contradicted by the only independent rating in the segment — Nebius prices as an incumbent.",
+     "src": "https://nebius.com/blog/posts/nebius-platinum-clustermax-3-0",
      "from": "b"
     },
     {
@@ -23719,7 +23911,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-07-17"
+   "last": "2026-09-23"
   },
   {
    "a": "coreweave",
@@ -23875,6 +24067,13 @@
    "a": "coreweave",
    "b": "oracle",
    "evid": [
+    {
+     "where": "Capabilities · GPU cloud platform (the Essential Cloud for AI)",
+     "date": "",
+     "text": "SemiAnalysis ClusterMAX 3.0 (23 September 2026): Platinum for the third consecutive cycle, now shared with Nebius — 'Our CoreWeave clusters are exemplary in all crucial categories … Along with Nebius, CoreWeave serves as a measuring stick for others in the industry'; Google Cloud and Oracle Gold, Lambda Silver, AWS Bronze in the same system.",
+     "src": "",
+     "from": "a"
+    },
     {
      "where": "Capabilities · OCI AI infrastructure (Superclusters, Zettascale10)",
      "date": "",
@@ -24672,6 +24871,36 @@
   },
   {
    "a": "crusoe",
+   "b": "digital-realty",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Digital Realty's former CEO Bill Stein (2014–2022; co-founder and CIO 2004–2014) joined Crusoe's board on 17 September 2026 as an independent director; he is CIO of Primary Digital Infrastructure, Crusoe's Abilene joint-venture partner.",
+     "source": "https://www.crusoe.ai/resources/newsroom/crusoe-appoints-seifert-stein-straubel-board-of-directors",
+     "status": "active",
+     "since": "2026-09"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "September also brought Google named as the customer of the Armstrong County campus outside Amarillo, a USD 65 million-a-year Thinking Machines Lab inference contract and a multi-year Perplexity deal that carry Crusoe Managed Inference past USD 100 million of contracted ARR, three independent directors (Cloudflare's CFO, Digital Realty's former CEO, Tesla co-founder JB Straubel) — and two reversals: SemiAnalysis's ClusterMAX 3.0 dropped Crusoe Cloud from Gold to Bronze ('Crusoe's clusters are exceptionally unreliable'), and the USD 1.25 billion Boom Supersonic turbine order was abandoned.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-17",
+     "text": "Three independent directors: Thomas Seifert (Cloudflare CFO; to chair the Audit Committee), Bill Stein (former Digital Realty CEO; CIO of Primary Digital Infrastructure, Crusoe's Abilene JV partner; Chairman of Verne) and JB Straubel (Redwood Materials founder; Tesla co-founder and former CTO); the board reaches eight — An audit-committee chair who took Cloudflare public and a data-centre REIT builder — the board of a company 'constantly evaluating' the public market.",
+     "src": "https://www.crusoe.ai/resources/newsroom/crusoe-appoints-seifert-stein-straubel-board-of-directors",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-17"
+  },
+  {
+   "a": "crusoe",
    "b": "dpr",
    "curated": {
     "b": {
@@ -24886,7 +25115,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BACKGROUND: Founded 2018 as a flare-gas bitcoin miner; sold that business to NYDIG (March 2025) to become 'the energy-first AI factory company.' The energy stack is the deepest of any developer: 29 GE Vernova aeroderivative turbines (~1 GW), ~750 MW of Bergen reciprocating engines, a reported 4.5 GW Engine No.",
+     "text": "BACKGROUND: Founded 2018 as a flare-gas bitcoin miner; sold that business to NYDIG (March 2025) to become 'the energy-first AI factory company.' The energy stack is the deepest of any developer: 29 GE Vernova aeroderivative turbines (~1 GW), ~750 MW of Bergen reciprocating engines, 29 Boom Superpower turbines ordered in December 2025 and dropped in September 2026, a reported 4.5 GW Engine No.",
      "src": "",
      "from": "a"
     },
@@ -24894,6 +25123,13 @@
      "where": "Summary",
      "date": "",
      "text": "Basis: its procurement list reads like this report's supplier index (GE Vernova turbines, Bergen engines, ON.energy MV-BESS at 5 GW — one of the largest battery-UPS commitments anywhere, Form Energy iron-air, Blue Energy and Aalo nuclear), and its build speed (200+ MW energized in under a year at Abilene) is the industry's proof that behind-the-fence generation beats the interconnection queue.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Any replacement for the Boom turbines:* the stack is 29 GE Vernova units and Bergen engines short of the dropped 1.2 GW; a new order names the direction.",
      "src": "",
      "from": "a"
     },
@@ -24909,6 +25145,13 @@
      "date": "",
      "text": "1/GE Vernova gas JV, 5 GW of ON.energy 'AI UPS' medium-voltage BESS (commissioning 2026-27, ERCOT ride-through validated), 12 GWh of Form Energy iron-air 100-hour storage (from 2027), solar/wind/grid integration, and nuclear optionality (Blue Energy: gas bridge 2028 → nuclear 2031 at Port of Victoria; Aalo: 10 MWe reactor pilots toward 50 MWe plants by 2029).",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-25",
+     "text": "TechCrunch: the USD 1.25 billion order for 29 Boom Supersonic Superpower turbines (first deliveries 2027) is off — Boom's CEO: 'Crusoe and Boom are no longer launching our Superpower turbine together'; Crusoe: energy plans 'haven't changed', it still intends turbines 'just not Boom's'; Boom says it will deliver 'about 250MW of Superpowers next year to other sites' — The first supplier to fall out of the deepest private-developer energy stack — and the one that was unproven; GE Vernova and Bergen stand.",
+     "src": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
      "from": "a"
     },
     {
@@ -24933,12 +25176,30 @@
      "from": "b"
     }
    ],
-   "last": "2026-04-16"
+   "last": "2026-09-25"
   },
   {
    "a": "crusoe",
    "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Crusoe is 'the developer of Google's data center campus under construction in Armstrong County outside of Amarillo' (company release, 28 September 2026) — the second Google engagement after Google managed Crusoe off the Wyoming project in June 2026.",
+     "context": "The 28 September 2026 release: 'Crusoe, the AI factory company, today announced it is the developer of Google's data center campus under construction in Armstrong County outside of Amarillo … We broke ground in June 2025 and are building at the same swift pace we set in Abilene.' Power is Serena's Goodnight 1 and 2 wind farms (265.5 MW each) with surplus exported to the grid; the release states no megawatts or capex. Google's side of the record is its Texas Energy Impact Fund support in the county; Google has not named Crusoe. The Energy Mag reports a Cleanview permit application for a 933 MW gas plant at the site and Google telling Cleanview it 'had not signed an agreement to purchase electricity from the gas plant'.",
+     "source": "https://www.crusoe.ai/resources/newsroom/crusoe-developing-data-center-campus-in-armstrong-county-texas",
+     "status": "active",
+     "since": "2025-06",
+     "via": "Armstrong County, Texas campus (design-build)"
+    }
+   },
    "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "September also brought Google named as the customer of the Armstrong County campus outside Amarillo, a USD 65 million-a-year Thinking Machines Lab inference contract and a multi-year Perplexity deal that carry Crusoe Managed Inference past USD 100 million of contracted ARR, three independent directors (Cloudflare's CFO, Digital Realty's former CEO, Tesla co-founder JB Straubel) — and two reversals: SemiAnalysis's ClusterMAX 3.0 dropped Crusoe Cloud from Gold to Bronze ('Crusoe's clusters are exceptionally unreliable'), and the USD 1.25 billion Boom Supersonic turbine order was abandoned.",
+     "src": "",
+     "from": "a"
+    },
     {
      "where": "Summary",
      "date": "",
@@ -24956,12 +25217,47 @@
     {
      "where": "Key Judgments",
      "date": "",
+     "text": "September 2026 adds to both columns: Oracle reports 618 MW and six of eight Abilene buildings delivered with 131,000 GPUs placed in a quarter, and Google names Crusoe the developer of its Armstrong County campus — while the Boom turbine order, the most speculative item in the energy stack, was dropped.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
      "text": "Basis: Oracle/OpenAI halted Abilene expansion (financing stalled, needs shifted per Bloomberg) and Google managed Crusoe off Wyoming — in both cases a single counterparty decision removed or reassigned gigawatt-scale work; Microsoft's arrival cured the first but confirmed the dependency structure.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Series F release counters with breadth — '$140B+' TCV, Google back at Armstrong County, Perplexity and Thinking Machines Lab on the cloud — but discloses no customer split, so the concentration cannot be measured from the company's side.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Armstrong County:* a company-stated megawatt figure, the fate of the 933 MW gas-plant permit, and Google's first public reference to Crusoe at the site.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI-factory campus development (design-build-operate)",
+     "date": "",
+     "text": "Armstrong County, Texas (Claude, outside Amarillo): on 28 September 2026 Crusoe named itself 'the developer of Google's data center campus under construction in Armstrong County' — ground broken June 2025, 'more than 5,500 skilled laborers on-site daily', closed-loop non-evaporative liquid cooling; the release states no megawatts, and the Texas filings press reported in July (seven buildings, 'more than 1GW') are not confirmed by the company.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-28",
+     "text": "Crusoe names Google: 'today announced it is the developer of Google's data center campus under construction in Armstrong County outside of Amarillo' — ground broken June 2025, 5,500 workers on site, direct connection to Serena's Goodnight 1 (265.5 MW, operating) and Goodnight 2 (265.5 MW, under construction) wind farms, closed-loop cooling; no MW or capex stated — Google is back as a Crusoe customer three months after managing it off the Wyoming project — on a wind-connected campus, not a gas one.",
+     "src": "https://www.crusoe.ai/resources/newsroom/crusoe-developing-data-center-campus-in-armstrong-county-texas",
+     "from": "a"
     }
    ],
-   "last": ""
+   "last": "2026-09-28"
   },
   {
    "a": "crusoe",
@@ -25052,8 +25348,8 @@
     "b": {
      "type": "competitor",
      "note": "Private energy-first developer competing for the same power positions without publishing contract values.",
-     "context": "Crusoe discloses roughly 4.9 GW contracted across a much larger pipeline but no contract values, so it competes with Hut 8 for power and tenants while being uncomparable on any published financial measure.",
-     "source": "https://insights4vc.substack.com/p/bitcoin-minings-ai-pivot-2026-thesis",
+     "context": "Crusoe disclosed roughly 4.9 GW contracted in mid-2026 and, in its 17 September 2026 Series F release, '6GW+' of gross contracted capacity and '$140B+' of total contracted value across a much larger pipeline — the first contract-value figure it has published, though no contract-level values — so it competes with Hut 8 for power and tenants while remaining uncomparable on any published financial measure.",
+     "source": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding",
      "status": "active"
     }
    },
@@ -25113,7 +25409,7 @@
     {
      "where": "Capabilities · Superclusters (single-tenant contracted capacity)",
      "date": "",
-     "text": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 2.0 (November 2025) still rates Lambda Silver vs CoreWeave Platinum and Nebius/Crusoe/Fluidstack Gold, citing capacity sell-outs, immature Kubernetes, and weak inference support.",
+     "text": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 3.0 (23 September 2026) keeps Lambda at Silver — 'Lambda's orchestration continues to improve, and customers are happy, which lands them in the upper ranks', three simulated errors auto-remediated, but 'CUDA Toolkit 12.0 … so old it's incompatible with the B300' and 'unacceptably old drivers' — while Nebius joins CoreWeave at Platinum, Crusoe drops to Bronze and Fluidstack leaves the ratings; the rater notes 'Lambda is increasingly driving its bottom line via bare-metal builds, apart from managed clusters altogether'.",
      "src": "",
      "from": "b"
     },
@@ -25162,7 +25458,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Crusoe is the archetypal power-first AI data-center developer — builder of the Stargate Abilene flagship (1.2 GW for Oracle/OpenAI, first phase live within a year of groundbreaking) plus a new 900 MW Microsoft campus next door, with ~4.9 GW contracted against a claimed 40+ GW pipeline and a valuation that ran $2.8B → >$10B → ~$30B-in-talks within twenty months on ~$500M of estimated 2025 revenue.",
+     "text": "BOTTOM LINE UP FRONT: Crusoe is the archetypal power-first AI data-center developer — builder of the Stargate Abilene flagship (1.2 GW for Oracle/OpenAI, first phase live within a year of groundbreaking) plus a new 900 MW Microsoft campus next door, with '6GW+' of gross contracted capacity and '$140B+' of total contracted value by its own count (September 2026) against a claimed 40+ GW pipeline, and a valuation that ran $2.8B → >$10B → $30.9B post-money within twenty-one months on ~$500M of estimated 2025 revenue: the USD 3.9 billion Series F announced 17 September 2026 (co-led by Atreides, Mubadala Capital and Valor; NVIDIA, GIC, QIA, Founders Fund, TPG among the names) is an 'initial closing' with USD 3.11 billion sold per the Form D.",
      "src": "",
      "from": "a"
     },
@@ -25241,6 +25537,13 @@
    "b": "nscale",
    "evid": [
     {
+     "where": "Recent Reporting",
+     "date": "2026-09-17",
+     "text": "Series F: 'the initial closing of its anticipated $3.9 billion Series F funding round, at a $30.9 billion post-money valuation', co-led by Atreides, Mubadala Capital and Valor, with Founders Fund, GIC, NVIDIA, QIA, Radical Ventures, TPG and some thirty others; Form D shows USD 3.11 billion of USD 3.90 billion sold; '$140B+' TCV, '6GW+' gross contracted, '1GW+' delivered, 'over 1,800 employees' — The July talks closed above the reported price; the company's first stated TCV puts it in Nscale's and CoreWeave's bracket on contract value while revenue stays an estimate.",
+     "src": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding",
+     "from": "a"
+    },
+    {
      "where": "Capabilities · Data-centre development and ownership — Glomfjord, Narvik/Kvandal, Monarch, Loughton; partner-run Sines, Ward County, Keflavik, Madison",
      "date": "",
      "text": "Where Fluidstack leases and CoreWeave, Nebius and Lambda mostly colocate, Nscale owns land, power and buildings on two continents — Crusoe's builder-operator model with a Nordic hydro origin.",
@@ -25255,12 +25558,40 @@
      "from": "b"
     }
    ],
-   "last": ""
+   "last": "2026-09-17"
   },
   {
    "a": "crusoe",
    "b": "nvidia",
    "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Crusoe is the archetypal power-first AI data-center developer — builder of the Stargate Abilene flagship (1.2 GW for Oracle/OpenAI, first phase live within a year of groundbreaking) plus a new 900 MW Microsoft campus next door, with '6GW+' of gross contracted capacity and '$140B+' of total contracted value by its own count (September 2026) against a claimed 40+ GW pipeline, and a valuation that ran $2.8B → >$10B → $30.9B post-money within twenty-one months on ~$500M of estimated 2025 revenue: the USD 3.9 billion Series F announced 17 September 2026 (co-led by Atreides, Mubadala Capital and Valor; NVIDIA, GIC, QIA, Founders Fund, TPG among the names) is an 'initial closing' with USD 3.11 billion sold per the Form D.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Crusoe Cloud & modular (Spark, Edge Zones)",
+     "date": "",
+     "text": "SemiAnalysis's ClusterMAX 3.0 (23 September 2026) cut Crusoe Cloud from Gold to Bronze — 'the problems go back to the fundamentals: reliability and hygiene', 'responsible for the majority of this round's hardware failures', 'Crusoe comes in towards the bottom of our Bronze category' — while crediting the Atero acquisition with 'skyrocketing Crusoe to the top of many buyer's lists when it comes to inference endpoint quality'; the company says Managed Inference passed USD 100 million of contracted ARR (Thinking Machines Lab USD 65 million a year; Perplexity multi-year) and NVIDIA granted Exemplar Cloud validation on HGX B300 in Iceland (21 September).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-17",
+     "text": "Series F: 'the initial closing of its anticipated $3.9 billion Series F funding round, at a $30.9 billion post-money valuation', co-led by Atreides, Mubadala Capital and Valor, with Founders Fund, GIC, NVIDIA, QIA, Radical Ventures, TPG and some thirty others; Form D shows USD 3.11 billion of USD 3.90 billion sold; '$140B+' TCV, '6GW+' gross contracted, '1GW+' delivered, 'over 1,800 employees' — The July talks closed above the reported price; the company's first stated TCV puts it in Nscale's and CoreWeave's bracket on contract value while revenue stays an estimate.",
+     "src": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-15",
+     "text": "Perplexity: multi-year partnership 'across the full model lifecycle' — training on dedicated GB300 NVL72 clusters, serving through Managed Inference; Perplexity Enterprise Pro and Max for Crusoe's 1,800 employees in return; value and capacity undisclosed — A consumer-scale inference customer on the cloud, named alongside NVIDIA — the kind of logo the Bronze rating says the clusters have trouble keeping.",
+     "src": "https://www.crusoe.ai/resources/newsroom/crusoe-perplexity-partnership",
+     "from": "a"
+    },
     {
      "where": "Recent Reporting",
      "date": "2025-10-24",
@@ -25269,7 +25600,7 @@
      "from": "a"
     }
    ],
-   "last": "2025-10-24"
+   "last": "2026-09-17"
   },
   {
    "a": "crusoe",
@@ -25406,7 +25737,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Crusoe is the archetypal power-first AI data-center developer — builder of the Stargate Abilene flagship (1.2 GW for Oracle/OpenAI, first phase live within a year of groundbreaking) plus a new 900 MW Microsoft campus next door, with ~4.9 GW contracted against a claimed 40+ GW pipeline and a valuation that ran $2.8B → >$10B → ~$30B-in-talks within twenty months on ~$500M of estimated 2025 revenue.",
+     "text": "BOTTOM LINE UP FRONT: Crusoe is the archetypal power-first AI data-center developer — builder of the Stargate Abilene flagship (1.2 GW for Oracle/OpenAI, first phase live within a year of groundbreaking) plus a new 900 MW Microsoft campus next door, with '6GW+' of gross contracted capacity and '$140B+' of total contracted value by its own count (September 2026) against a claimed 40+ GW pipeline, and a valuation that ran $2.8B → >$10B → $30.9B post-money within twenty-one months on ~$500M of estimated 2025 revenue: the USD 3.9 billion Series F announced 17 September 2026 (co-led by Atreides, Mubadala Capital and Valor; NVIDIA, GIC, QIA, Founders Fund, TPG among the names) is an 'initial closing' with USD 3.11 billion sold per the Form D.",
      "src": "",
      "from": "a"
     },
@@ -25475,7 +25806,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Crusoe is the archetypal power-first AI data-center developer — builder of the Stargate Abilene flagship (1.2 GW for Oracle/OpenAI, first phase live within a year of groundbreaking) plus a new 900 MW Microsoft campus next door, with ~4.9 GW contracted against a claimed 40+ GW pipeline and a valuation that ran $2.8B → >$10B → ~$30B-in-talks within twenty months on ~$500M of estimated 2025 revenue.",
+     "text": "BOTTOM LINE UP FRONT: Crusoe is the archetypal power-first AI data-center developer — builder of the Stargate Abilene flagship (1.2 GW for Oracle/OpenAI, first phase live within a year of groundbreaking) plus a new 900 MW Microsoft campus next door, with '6GW+' of gross contracted capacity and '$140B+' of total contracted value by its own count (September 2026) against a claimed 40+ GW pipeline, and a valuation that ran $2.8B → >$10B → $30.9B post-money within twenty-one months on ~$500M of estimated 2025 revenue: the USD 3.9 billion Series F announced 17 September 2026 (co-led by Atreides, Mubadala Capital and Valor; NVIDIA, GIC, QIA, Founders Fund, TPG among the names) is an 'initial closing' with USD 3.11 billion sold per the Form D.",
      "src": "",
      "from": "a"
     },
@@ -25483,6 +25814,13 @@
      "where": "Summary",
      "date": "",
      "text": "The risk side is customer concentration in its most acute form: single-customer decisions reshaped the company twice in 2026 (Oracle/OpenAI halting Abilene expansion; Google ejecting it from Wyoming).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Abilene buildings 7 and 8 (the last 25%) and Shackleford:* Oracle's Q2 FY2027 call (December).",
      "src": "",
      "from": "a"
     },
@@ -25729,6 +26067,27 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "crusoe",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "September also brought Google named as the customer of the Armstrong County campus outside Amarillo, a USD 65 million-a-year Thinking Machines Lab inference contract and a multi-year Perplexity deal that carry Crusoe Managed Inference past USD 100 million of contracted ARR, three independent directors (Cloudflare's CFO, Digital Realty's former CEO, Tesla co-founder JB Straubel) — and two reversals: SemiAnalysis's ClusterMAX 3.0 dropped Crusoe Cloud from Gold to Bronze ('Crusoe's clusters are exceptionally unreliable'), and the USD 1.25 billion Boom Supersonic turbine order was abandoned.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-17",
+     "text": "Three independent directors: Thomas Seifert (Cloudflare CFO; to chair the Audit Committee), Bill Stein (former Digital Realty CEO; CIO of Primary Digital Infrastructure, Crusoe's Abilene JV partner; Chairman of Verne) and JB Straubel (Redwood Materials founder; Tesla co-founder and former CTO); the board reaches eight — An audit-committee chair who took Cloudflare public and a data-centre REIT builder — the board of a company 'constantly evaluating' the public market.",
+     "src": "https://www.crusoe.ai/resources/newsroom/crusoe-appoints-seifert-stein-straubel-board-of-directors",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-17"
   },
   {
    "a": "crusoe",
@@ -31038,7 +31397,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "The European entry in the anchored-neocloud model, and the one that owns its ground: Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid, Loughton in Essex, with partner-run halls at Start Campus (Sines), Ionic Digital (Ward County), Verne (Keflavik) and a Duke Energy-served site in North Carolina.",
+     "text": "The European entry in the anchored-neocloud model, and the one that owns its ground — 1 GW of its 1.37 GW of active and contracted capacity sits at the seven wholly-owned sites, per the S-1: Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid, Loughton in Essex, with partner-run halls at Start Campus (Sines), Ionic Digital (Ward County), Verne (Keflavik) and a Duke Energy-served site in North Carolina.",
      "src": "",
      "from": "b"
     },
@@ -33140,7 +33499,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "For the ecosystem's utilities and vendors Fluidstack is the counterparty of record at Lake Mariner (NYPA/NYSEG hydro allocation), Abernathy (SPS territory), Barber Lake (AEP Texas/ERCOT), River Bend (Entergy Louisiana, 330 MW utility capacity), New Lebanon (Hoosier Energy/WIN Energy co-ops) and now Wythe County, Virginia (Appalachian Power's large-load list) and Okmulgee, Oklahoma (AEP-PSO, Jane Street as first tenant).",
+     "text": "For the ecosystem's utilities and vendors Fluidstack is the counterparty of record at Lake Mariner (NYPA/NYSEG hydro allocation), Abernathy (SPS territory), Barber Lake (AEP Texas/ERCOT), River Bend (Entergy Louisiana, 330 MW utility capacity), New Lebanon (Hoosier Energy/WIN Energy co-ops) and now Wythe County, Virginia (Appalachian Power's large-load list) Okmulgee, Oklahoma (AEP-PSO, Jane Street as first tenant) and Harlingen, Texas (AEP Texas, 1.5 GW reserved, worksite permit September 2026).",
      "src": "",
      "from": "b"
     },
@@ -38408,7 +38767,7 @@
    "curated": {
     "a": {
      "type": "partner",
-     "note": "Google backstops Fluidstack's lease obligations at every US campus — USD 3.2 billion at Lake Mariner, USD 1.3 billion at Abernathy, USD 1.73 billion at Barber Lake, the full 15-year River Bend base term, and the New Lebanon master lease — and holds penny warrants in TeraWulf and Cipher in return.",
+     "note": "Google backstops Fluidstack's lease obligations at every US campus — USD 3.2 billion at Lake Mariner, USD 1.3 billion at Abernathy, USD 1.73 billion at Barber Lake, the full 15-year River Bend base term, and the New Lebanon master lease — and holds penny warrants in TeraWulf and Cipher in return; The Information (23 September 2026) reports Google discussed as credit guarantor for an Anthropic–Stream lease with no Fluidstack in it.",
      "context": "The mechanics are in the landlords' 8-Ks: Google LLC signs a recognition agreement per building; on 'a payment default under a Fluidstack Lease, or if Fluidstack becomes subject to an insolvency event' Google may pay the termination fee or 'pay all rent currently due under the Fluidstack Lease and assume the Fluidstack Lease as the tenant'. The backstop becomes effective at lease commencement — TeraWulf's Q2 2026 release records USD 600 million of it switching on when CB-3 was delivered. Cipher carries a USD 544.5 million asset for 'the value of Google agreeing to make the lease payments from Fluidstack'.\n\nGoogle has never published a page naming Fluidstack; Fluidstack's one joint release calls it 'a leading global hyperscale partner'. The Wall Street Journal reported (February 2026) that Google was exploring a USD 100 million equity investment in Fluidstack tied to TPU distribution, and the TPUs Anthropic runs at Fluidstack sites are, per press accounts of the Broadcom–Apollo–Blackstone vehicle, Google-built chips leased to Anthropic.",
      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925078084/tm2523008d2_ex99-1.htm",
      "status": "active",
@@ -38438,7 +38797,14 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by the landlords only in separate partnership releases or not at all.",
+     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by Fluidstack itself only once and only generically (its 12 November 2025 post names Anthropic, New York and Texas, never a campus or a landlord), by Hut 8 in a partnership release, and by TeraWulf and Cipher not at all ('a leading AI lab').",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Cipher's September 2026 amendment shows the lab now signing the back half of a Fluidstack lease directly, and The Information reports Anthropic negotiating a 1 GW Stream Data Centers lease with a possible Google guarantee and no intermediary.",
      "src": "",
      "from": "a"
     },
@@ -38473,14 +38839,21 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Collection gaps: Fluidstack has never published revenue, backlog, headcount or a lease; the 2025 GPU-cloud site (pricing, GPU catalogue, solutions pages) has been removed and the Atlas documentation host was unreachable; fluidstack.io carries no leadership page and no headshots; Google has never named Fluidstack; the Broadcom chip-vehicle release and several Bloomberg, DCD and Forbes pages were unreachable and are cited from reprints or search summaries; Fluidstack Ltd's filed FY2024 accounts were not read; the France withdrawal has no first-party statement.",
+     "text": "Two September data points cut both ways: SemiAnalysis now describes the business as 'bare-metal TPU deployments at 100K+ chip scale', which is the TPU channel stated from outside; and The Information reports Google discussed as credit guarantor for an Anthropic lease at Stream with no Fluidstack in it — the guarantee follows the chips and the lab, not the intermediary.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "*2H 2026 — CB-4 rent commencement at Lake Mariner and the September 2026 Barber Lake start:* each switches on a tranche of Google's backstop.",
+     "text": "Collection gaps: Fluidstack has never published revenue, backlog, headcount or a lease; the 2025 GPU-cloud site (pricing, GPU catalogue, solutions pages) has been removed and the Atlas documentation host was unreachable; fluidstack.io carries no leadership page and no headshots; Google has never named Fluidstack; the Broadcom chip-vehicle release and several Bloomberg, DCD and Forbes pages were unreachable and are cited from reprints or search summaries; Fluidstack Ltd's filed FY2024 accounts were not read and its FY2025 accounts are overdue at Companies House (due 30 September 2026; not filed at 2 October 2026); the Forbes (3 September) and Wall Street Journal (10 September) articles were paywalled and are cited through reprints; the Jane Street round, the Pentagon talks and the Harlingen groundbreaking have no first-party statement; the France withdrawal has no first-party statement.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*2H 2026 — CB-4 rent commencement at Lake Mariner:* switches on the next tranche of Google's backstop.",
      "src": "",
      "from": "a"
     },
@@ -38517,6 +38890,20 @@
      "date": "",
      "text": "The credit is Google's.'",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-23",
+     "text": "The Information (via Yahoo Finance): Anthropic is in early talks to lease up to 1 GW directly from Stream Data Centers, majority-owned by Apollo, filled primarily with Google/Broadcom TPUs, with Google discussed as a possible credit guarantor; at least USD 40 billion of capital — Google's backstop is being discussed around Fluidstack rather than only through it — the credit-substitution layer is no longer the intermediary's exclusive product.",
+     "src": "https://finance.yahoo.com/technology/ai/articles/anthropic-discusses-1-gw-stream-134246854.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-10",
+     "text": "Cameron County issues a worksite permit for 'a closed-loop-technology data center facility' near Valley International Airport, Harlingen; the Rio Grande Valley Business Journal reports construction beginning on 'the first $4 billion phase' of a 1,100-acre campus with 'more than 2,500 construction jobs'; 'Cameron County is not providing a tax abatement' — The owner-developer pivot breaks ground in the company's own name for the first time — on a site with no landlord and, so far, no Google recognition agreement on record.",
+     "src": "https://www.cameroncountytx.gov/worksite-permit-issued-for-fluidstack-data-center-project/",
      "from": "a"
     },
     {
@@ -38695,7 +39082,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-08-31"
+   "last": "2026-09-23"
   },
   {
    "a": "fluidstack",
@@ -38734,14 +39121,14 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by the landlords only in separate partnership releases or not at all.",
+     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by Fluidstack itself only once and only generically (its 12 November 2025 post names Anthropic, New York and Texas, never a campus or a landlord), by Hut 8 in a partnership release, and by TeraWulf and Cipher not at all ('a leading AI lab').",
      "src": "",
      "from": "a"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale, Lambda, Riot and Hut 8's Beacon Point.",
+     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale (reported USD 45 billion, 26 August 2026), Lambda (USD 35 billion, 350 MW at Hut 8's Beacon Point, 1 September) and Riot, is reported in talks for 1 GW directly with Stream Data Centers (23 September), and at Barber Lake has signed the second ten-year term itself (Cipher 8-K, 25 September) — the intermediary's lease now ends where the lab's begins.",
      "src": "",
      "from": "a"
     },
@@ -38750,6 +39137,13 @@
      "date": "",
      "text": "The buildings belong to the landlord (TeraWulf, Cipher, Hut 8, Meridian Arc) and the chips increasingly to a financing vehicle; Fluidstack sells speed.",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (via CoinDesk): 'Anthropic agreed to spend $35 billion buying computing capacity from Lambda', about 350 MW of it at Hut 8's Beacon Point campus in Nueces County, Texas, where NVIDIA holds the lease; Fluidstack is not mentioned — Another Anthropic contract in the tens of billions placed through a different neocloud and a different landlord — the second such deal in a week after Nscale.",
+     "src": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
      "from": "a"
     },
     {
@@ -38816,7 +39210,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-02-25"
+   "last": "2026-09-01"
   },
   {
    "a": "fluidstack",
@@ -38847,11 +39241,22 @@
   {
    "a": "fluidstack",
    "b": "lambda",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Lambda took a USD 35 billion Anthropic cloud agreement on 1 September 2026, about 350 MW of it at Hut 8's Beacon Point under an NVIDIA lease — Anthropic capacity routed through a different neocloud and landlord.",
+     "context": "The Wall Street Journal, relayed by CoinDesk: 'Anthropic agreed to spend $35 billion buying computing capacity from Lambda, an AI cloud company backed by Nvidia.' NVIDIA holds the Beacon Point lease, Lambda operates the GPUs and Anthropic buys the compute; Fluidstack is not a party. Together with Nscale's reported Monarch contract and the Barber Lake second term, it is one of three September 2026 data points that Anthropic now contracts gigawatt-class capacity without the intermediary that built its first five campuses.",
+     "source": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
+     "status": "active",
+     "since": "2026-09",
+     "scale": "USD 35 billion Anthropic agreement; ~350 MW at Beacon Point"
+    }
+   },
    "evid": [
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale, Lambda, Riot and Hut 8's Beacon Point.",
+     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale (reported USD 45 billion, 26 August 2026), Lambda (USD 35 billion, 350 MW at Hut 8's Beacon Point, 1 September) and Riot, is reported in talks for 1 GW directly with Stream Data Centers (23 September), and at Barber Lake has signed the second ten-year term itself (Cipher 8-K, 25 September) — the intermediary's lease now ends where the lab's begins.",
      "src": "",
      "from": "a"
     },
@@ -38877,6 +39282,13 @@
      "from": "a"
     },
     {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (via CoinDesk): 'Anthropic agreed to spend $35 billion buying computing capacity from Lambda', about 350 MW of it at Hut 8's Beacon Point campus in Nueces County, Texas, where NVIDIA holds the lease; Fluidstack is not mentioned — Another Anthropic contract in the tens of billions placed through a different neocloud and a different landlord — the second such deal in a week after Nscale.",
+     "src": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
+     "from": "a"
+    },
+    {
      "where": "Key Judgments",
      "date": "",
      "text": "Basis: ClusterMAX held Lambda at Silver across 1.0 and 2.0 while Nebius/Crusoe/Fluidstack sit at Gold and CoreWeave alone at Platinum, citing capacity sell-outs and 'a general degree of disorganization'; Sacra pegs cloud gross margin ~61% vs CoreWeave's 74%.",
@@ -38886,12 +39298,12 @@
     {
      "where": "Capabilities · Superclusters (single-tenant contracted capacity)",
      "date": "",
-     "text": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 2.0 (November 2025) still rates Lambda Silver vs CoreWeave Platinum and Nebius/Crusoe/Fluidstack Gold, citing capacity sell-outs, immature Kubernetes, and weak inference support.",
+     "text": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 3.0 (23 September 2026) keeps Lambda at Silver — 'Lambda's orchestration continues to improve, and customers are happy, which lands them in the upper ranks', three simulated errors auto-remediated, but 'CUDA Toolkit 12.0 … so old it's incompatible with the B300' and 'unacceptably old drivers' — while Nebius joins CoreWeave at Platinum, Crusoe drops to Bronze and Fluidstack leaves the ratings; the rater notes 'Lambda is increasingly driving its bottom line via bare-metal builds, apart from managed clusters altogether'.",
      "src": "",
      "from": "b"
     }
    ],
-   "last": ""
+   "last": "2026-09-01"
   },
   {
    "a": "fluidstack",
@@ -38966,8 +39378,8 @@
    "curated": {
     "a": {
      "type": "competitor",
-     "note": "Nebius and Fluidstack are named together by NVIDIA as DGX Cloud Lepton capacity contributors; both hold SemiAnalysis ClusterMAX Gold tier.",
-     "context": "NVIDIA's June 2025 Lepton release lists both as contributors of Blackwell and other GPUs to its marketplace. SemiAnalysis's ClusterMAX 2.0 (November 2025) placed Nebius, Crusoe and Fluidstack at Gold with CoreWeave alone at Platinum. Nebius builds and owns its own data centres and finances GPUs with convertible notes; Fluidstack is a tenant behind Google's credit.",
+     "note": "Nebius and Fluidstack are named together by NVIDIA as DGX Cloud Lepton capacity contributors; both held SemiAnalysis ClusterMAX Gold in 2.0; in 3.0 (September 2026) Nebius is Platinum and Fluidstack 'Unavailable'.",
+     "context": "NVIDIA's June 2025 Lepton release lists both as contributors of Blackwell and other GPUs to its marketplace. SemiAnalysis's ClusterMAX 2.0 (November 2025) placed Nebius, Crusoe and Fluidstack at Gold with CoreWeave alone at Platinum. Nebius builds and owns its own data centres and finances GPUs with convertible notes; Fluidstack is a tenant behind Google's credit. ClusterMAX 3.0 (23 September 2026) separates them: Nebius moves to Platinum beside CoreWeave while Fluidstack is 'Not Recommended – Unavailable', having 'exited the managed clusters market, as far as we are concerned'.",
      "source": "https://www.clustermax.ai/cloudreview/fluidstack",
      "status": "active",
      "since": "2025-06",
@@ -39019,7 +39431,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale, Lambda, Riot and Hut 8's Beacon Point.",
+     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale (reported USD 45 billion, 26 August 2026), Lambda (USD 35 billion, 350 MW at Hut 8's Beacon Point, 1 September) and Riot, is reported in talks for 1 GW directly with Stream Data Centers (23 September), and at Barber Lake has signed the second ten-year term itself (Cipher 8-K, 25 September) — the intermediary's lease now ends where the lab's begins.",
      "src": "",
      "from": "a"
     },
@@ -39042,6 +39454,13 @@
      "date": "",
      "text": "This is the step from tenant to developer that Crusoe, Nscale and (through Justified) TeraWulf's own tenants have taken; Fluidstack's version keeps a financial partner (Coatue-linked Next Frontier at New Lebanon) as majority owner and Google as guarantor.",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (via CoinDesk): 'Anthropic agreed to spend $35 billion buying computing capacity from Lambda', about 350 MW of it at Hut 8's Beacon Point campus in Nueces County, Texas, where NVIDIA holds the lease; Fluidstack is not mentioned — Another Anthropic contract in the tens of billions placed through a different neocloud and a different landlord — the second such deal in a week after Nscale.",
+     "src": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
      "from": "a"
     },
     {
@@ -39087,7 +39506,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-02-03"
+   "last": "2026-09-01"
   },
   {
    "a": "fluidstack",
@@ -39131,13 +39550,20 @@
     },
     {
      "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (via CoinDesk): 'Anthropic agreed to spend $35 billion buying computing capacity from Lambda', about 350 MW of it at Hut 8's Beacon Point campus in Nueces County, Texas, where NVIDIA holds the lease; Fluidstack is not mentioned — Another Anthropic contract in the tens of billions placed through a different neocloud and a different landlord — the second such deal in a week after Nscale.",
+     "src": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
      "date": "2025-03-25",
      "text": "Exascale H200 clusters in Iceland and Europe with Borealis Data Center, Dell (PowerEdge XE9680) and NVIDIA (Quantum-2 InfiniBand) on hydro and geothermal power; Poolside quoted as customer — The company's last first-party hardware disclosure — the only GPU model it has named since.",
      "src": "https://fluidstack.io/blog/fluidstack-to-deploy-energy-efficient-exascale-gpu-clusters-in-europe-in-collaboration-with-nvidia-borealis-data-center-and-dell-technologies",
      "from": "a"
     }
    ],
-   "last": "2025-03-25"
+   "last": "2026-09-01"
   },
   {
    "a": "fluidstack",
@@ -39165,14 +39591,14 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "From August 2025 it became the intermediary tenant in a chain of former bitcoin miners' campuses, was named by Anthropic on 12 November 2025 as the builder of a USD 50 billion programme of custom data centres in Texas and New York, moved its headquarters to New York in December 2025, and in July 2026 bought TeraWulf's 50.1% of the Abernathy joint venture for about USD 530 million — its first owned campus.",
+     "text": "From August 2025 it became the intermediary tenant in a chain of former bitcoin miners' campuses, was named by Anthropic on 12 November 2025 as the builder of a USD 50 billion programme of custom data centres in Texas and New York, moved its headquarters to New York in December 2025, in July 2026 bought TeraWulf's 50.1% of the Abernathy joint venture for about USD 530 million — its first owned campus — and on 10 September 2026 took a Cameron County worksite permit and began site works on a USD 4 billion first phase at Harlingen, Texas, with 1.5 GW 'reserved' from AEP Texas, its first ground broken in its own name.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by the landlords only in separate partnership releases or not at all.",
+     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by Fluidstack itself only once and only generically (its 12 November 2025 post names Anthropic, New York and Texas, never a campus or a landlord), by Hut 8 in a partnership release, and by TeraWulf and Cipher not at all ('a leading AI lab').",
      "src": "",
      "from": "a"
     },
@@ -39186,7 +39612,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale, Lambda, Riot and Hut 8's Beacon Point.",
+     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale (reported USD 45 billion, 26 August 2026), Lambda (USD 35 billion, 350 MW at Hut 8's Beacon Point, 1 September) and Riot, is reported in talks for 1 GW directly with Stream Data Centers (23 September), and at Barber Lake has signed the second ten-year term itself (Cipher 8-K, 25 September) — the intermediary's lease now ends where the lab's begins.",
      "src": "",
      "from": "a"
     },
@@ -47224,6 +47650,59 @@
   },
   {
    "a": "hut-8",
+   "b": "lambda",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Press places about 350 MW of the reported Anthropic–Lambda capacity at Hut 8's Beacon Point campus under an NVIDIA-held lease; Hut 8 names none of the three.",
+     "context": "CoinDesk (1 September 2026): 'CoinDesk has asked Hut 8 to confirm how much of Beacon Point's 704 megawatts of leased capacity is tied to Lambda and Anthropic, and whether Nvidia is the previously undisclosed tenant behind both leases.' Hut 8's 20 July 2026 release: 'The tenant, the high-investment-grade company that executed the Phase 1 lease, has doubled its contracted IT capacity at the campus to 704 MW.' A Texas construction filing (The Energy Mag, 15 September) has Beacon Point work commencing 28 September 2026 and completing 5 November 2027.",
+     "source": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
+     "status": "announced",
+     "since": "2026-09",
+     "scale": "Beacon Point: 704 MW contracted to an unnamed investment-grade tenant (Hut 8)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (via Yahoo Finance, CoinDesk): Anthropic's reported USD 35 billion cloud agreement with Lambda 'involves Hut 8's Beacon Point data center campus in Nueces County, Texas', with NVIDIA holding the facility lease; Hut 8's filings through 28 September name neither Lambda, Anthropic nor NVIDIA and still describe the tenant as 'the high-investment-grade company' — If the press is right, the unnamed Beacon Point tenant is NVIDIA and the end user is Anthropic — the same three-layer chain as River Bend with a different intermediary; Hut 8 keeps the name out of its filings by design.",
+     "src": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "September brought the largest number ever attached to the company and the one it has not confirmed: The Wall Street Journal and Bloomberg report a USD 35 billion Anthropic cloud agreement, about 350 MW of it at Hut 8's Beacon Point campus in Texas under an NVIDIA-held lease — Lambda, Anthropic, Hut 8 and NVIDIA have all stayed silent.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gaps (v6): the Anthropic agreement rests on The Wall Street Journal and Bloomberg sourcing — Lambda, Anthropic, Hut 8 and NVIDIA have published nothing, and Hut 8's filings describe its Beacon Point tenant only as 'the high-investment-grade company'; the October facility's two offtakers and three deployments are unnamed (Bloomberg's August report said Microsoft); Mayes County has no company-stated megawatts, capex or dates (375 MW is Tulsa World, paywalled); the leadership page lists executives (Dave Ward, Steve Stewart, Sandeep Jayaram, Paul Zhao) with no dated announcement; DCD, Forbes and Tulsa World were paywalled or blocked.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "INDICATORS TO WATCH — *Any first-party confirmation of the Anthropic agreement:* a Lambda release, an Anthropic post, a Hut 8 filing naming the tenant, or an NVIDIA statement on the Beacon Point lease — until one exists the USD 35 billion is press.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (relayed by Yahoo Finance, Bloomberg Law, CoinDesk): 'Anthropic signed an agreement with Nvidia-backed Lambda valued at $35 billion for cloud computing', with capacity at Hut 8's Beacon Point campus in Nueces County, Texas where 'Nvidia would hold the facility lease'; term, GPU count and MW undisclosed (press summaries: about 350 MW, six years); Lambda, Anthropic, Hut 8 and NVIDIA have not confirmed it — If real, the contract is roughly six times the Series E valuation and the largest ever attached to the company — and a month on, no party has put its name to it.",
+     "src": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-01"
+  },
+  {
+   "a": "hut-8",
    "b": "macquarie",
    "evid": [
     {
@@ -47263,9 +47742,16 @@
      "text": "**Highrise AI** operated 1,000 NVIDIA H100 and 96 H200 GPUs at a third-party colocation site near Chicago at 31 December 2025.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (via Yahoo Finance, CoinDesk): Anthropic's reported USD 35 billion cloud agreement with Lambda 'involves Hut 8's Beacon Point data center campus in Nueces County, Texas', with NVIDIA holding the facility lease; Hut 8's filings through 28 September name neither Lambda, Anthropic nor NVIDIA and still describe the tenant as 'the high-investment-grade company' — If the press is right, the unnamed Beacon Point tenant is NVIDIA and the end user is Anthropic — the same three-layer chain as River Bend with a different intermediary; Hut 8 keeps the name out of its filings by design.",
+     "src": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html",
+     "from": "a"
     }
    ],
-   "last": ""
+   "last": "2026-09-01"
   },
   {
    "a": "hut-8",
@@ -48947,7 +49433,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "The tension: every quarter of the trailing year missed sell-side consensus (Q3 FY26 revenue missed by 34%), SemiAnalysis ClusterMAX rates the cloud 'Underperforming' even as NVIDIA grants Exemplar Cloud status, and the stock sits ~46% below its November 2025 peak against a Street average target near $80.",
+     "text": "The tension: every quarter of the trailing year missed sell-side consensus (Q3 FY26 revenue missed by 34%), SemiAnalysis ClusterMAX rates the cloud 'Not Recommended – Underperforming' for a third cycle (ClusterMAX 3.0, 23 September 2026: Prince George is 'The #1 worst site in the industry according to users', though 'the new builds in Childress and Sweetwater look much better') even as NVIDIA grants Exemplar Cloud status, and the stock sits ~46% below its November 2025 peak against a Street average target near $80.",
      "src": "",
      "from": "a"
     },
@@ -49023,6 +49509,13 @@
     },
     {
      "where": "Recent Reporting",
+     "date": "2026-09-23",
+     "text": "SemiAnalysis ClusterMAX 3.0 keeps IREN at 'Not Recommended – Underperforming': Prince George is 'The #1 worst site in the industry according to users' ('Multi-day power outages … XID's everywhere'), while 'the new builds in Childress and Sweetwater look much better (read: not N+0 power, cooling, and ISPs!)' and the USD 2.1 billion NVIDIA investment is expected to 'help them cut less corners'; the rater tells IREN to 'stop pretending to offer managed clusters' and sell bare metal — The quality dispute is now three cycles old and site-specific: the legacy Canadian halls carry the rating, the Texas builds carry the hope — and Mirantis has not yet moved the needle the dossier expected.",
+     "src": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
      "date": "2026-08-13",
      "text": "Horizon 1 delivered to and accepted by Microsoft; NVIDIA Exemplar Cloud status achieved on GB300 NVL72; Horizons 2–4 due later in 2026; Bernstein raised its target to $100 the same day — The proof point the whole pivot rested on: the first purpose-built liquid-cooled building, accepted by the anchor tenant, on the site a short-seller once called HPC-unfit.",
      "src": "https://iren.gcs-web.com/news-releases/news-release-details/iren-delivers-horizon-1-microsoft-and-achieves-nvidia-exemplar",
@@ -49057,7 +49550,7 @@
      "from": "a"
     }
    ],
-   "last": "2026-08-13"
+   "last": "2026-09-23"
   },
   {
    "a": "iren",
@@ -50088,6 +50581,13 @@
      "from": "a"
     },
     {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gaps (v6): the Anthropic agreement rests on The Wall Street Journal and Bloomberg sourcing — Lambda, Anthropic, Hut 8 and NVIDIA have published nothing, and Hut 8's filings describe its Beacon Point tenant only as 'the high-investment-grade company'; the October facility's two offtakers and three deployments are unnamed (Bloomberg's August report said Microsoft); Mayes County has no company-stated megawatts, capex or dates (375 MW is Tulsa World, paywalled); the leadership page lists executives (Dave Ward, Steve Stewart, Sandeep Jayaram, Paul Zhao) with no dated announcement; DCD, Forbes and Tulsa World were paywalled or blocked.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Capabilities · Superclusters (single-tenant contracted capacity)",
      "date": "",
      "text": "This is the layer the Microsoft agreement (November 2025, tens of thousands of GPUs including GB300 NVL72) and the NVIDIA leaseback run through.",
@@ -50130,9 +50630,16 @@
      "from": "a"
     },
     {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "ClusterMAX 3.0 (September 2026) narrows the gap on reliability (three simulated errors auto-remediated, no authentic failures) and reopens it on software hygiene; Lambda stays Silver while Nebius reaches Platinum.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Capabilities · Superclusters (single-tenant contracted capacity)",
      "date": "",
-     "text": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 2.0 (November 2025) still rates Lambda Silver vs CoreWeave Platinum and Nebius/Crusoe/Fluidstack Gold, citing capacity sell-outs, immature Kubernetes, and weak inference support.",
+     "text": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 3.0 (23 September 2026) keeps Lambda at Silver — 'Lambda's orchestration continues to improve, and customers are happy, which lands them in the upper ranks', three simulated errors auto-remediated, but 'CUDA Toolkit 12.0 … so old it's incompatible with the B300' and 'unacceptably old drivers' — while Nebius joins CoreWeave at Platinum, Crusoe drops to Bronze and Fluidstack leaves the ratings; the rater notes 'Lambda is increasingly driving its bottom line via bare-metal builds, apart from managed clusters altogether'.",
      "src": "",
      "from": "a"
     },
@@ -50212,6 +50719,13 @@
      "from": "a"
     },
     {
+     "where": "Summary",
+     "date": "",
+     "text": "September brought the largest number ever attached to the company and the one it has not confirmed: The Wall Street Journal and Bloomberg report a USD 35 billion Anthropic cloud agreement, about 350 MW of it at Hut 8's Beacon Point campus in Texas under an NVIDIA-held lease — Lambda, Anthropic, Hut 8 and NVIDIA have all stayed silent.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Key Judgments",
      "date": "",
      "text": "Basis: hardware business exited (Aug 2025), inference products sunset (Sep 2025), Microsoft and NVIDIA anchor contracts (Q4 2025), investor-relations and audit-chair appointments, and a professional CEO/CFO installed (2026) — every move since mid-2025 points the same direction.",
@@ -50229,6 +50743,27 @@
      "where": "Key Judgments",
      "date": "",
      "text": "Basis: NVIDIA is chip supplier, Series D investor, and — per The Information — largest customer via the $1.5B leaseback; the August 2026 term loan finances an NVIDIA-tied chip purchase.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The reported Anthropic structure — NVIDIA holding the Beacon Point lease, Lambda operating, Anthropic buying — would make NVIDIA landlord as well as supplier, investor and customer, if the press account is right; none of the four has confirmed it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gaps (v6): the Anthropic agreement rests on The Wall Street Journal and Bloomberg sourcing — Lambda, Anthropic, Hut 8 and NVIDIA have published nothing, and Hut 8's filings describe its Beacon Point tenant only as 'the high-investment-grade company'; the October facility's two offtakers and three deployments are unnamed (Bloomberg's August report said Microsoft); Mayes County has no company-stated megawatts, capex or dates (375 MW is Tulsa World, paywalled); the leadership page lists executives (Dave Ward, Steve Stewart, Sandeep Jayaram, Paul Zhao) with no dated announcement; DCD, Forbes and Tulsa World were paywalled or blocked.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "INDICATORS TO WATCH — *Any first-party confirmation of the Anthropic agreement:* a Lambda release, an Anthropic post, a Hut 8 filing naming the tenant, or an NVIDIA statement on the Beacon Point lease — until one exists the USD 35 billion is press.",
      "src": "",
      "from": "a"
     },
@@ -50258,6 +50793,13 @@
      "date": "",
      "text": "This is the layer the Microsoft agreement (November 2025, tens of thousands of GPUs including GB300 NVL72) and the NVIDIA leaseback run through.",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "The Wall Street Journal (relayed by Yahoo Finance, Bloomberg Law, CoinDesk): 'Anthropic signed an agreement with Nvidia-backed Lambda valued at $35 billion for cloud computing', with capacity at Hut 8's Beacon Point campus in Nueces County, Texas where 'Nvidia would hold the facility lease'; term, GPU count and MW undisclosed (press summaries: about 350 MW, six years); Lambda, Anthropic, Hut 8 and NVIDIA have not confirmed it — If real, the contract is roughly six times the Series E valuation and the largest ever attached to the company — and a month on, no party has put its name to it.",
+     "src": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html",
      "from": "a"
     },
     {
@@ -50296,7 +50838,7 @@
      "from": "a"
     }
    ],
-   "last": "2026-08-12"
+   "last": "2026-09-01"
   },
   {
    "a": "lambda",
@@ -52672,6 +53214,20 @@
   },
   {
    "a": "meta",
+   "b": "nscale",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-10-02",
+     "text": "Bloomberg reports Nscale has hired Meta's chief partnerships officer Justin Osofsky as Chief Operating Officer, reporting to CEO Josh Payne, 'ahead of IPO' (headline; article paywalled) — A hyperscaler-grade operator arrives between the S-1 and the roadshow — the filing's leadership page did not list a COO.",
+     "src": "https://bloomberg.com/news/articles/2026-10-02/nscale-hires-meta-s-justin-osofsky-to-be-coo-ahead-of-ipo",
+     "from": "b"
+    }
+   ],
+   "last": "2026-10-02"
+  },
+  {
+   "a": "meta",
    "b": "nvidia",
    "evid": [
     {
@@ -54037,11 +54593,11 @@
     "b": {
      "type": "customer",
      "note": "Microsoft is Nscale's anchor at four sites: the USD 6.2 billion five-year Narvik agreement (September 2025), the ~200,000-GB300 expansion across Texas, Portugal, the UK and Norway (October 2025), 30,000-plus Rubin at Narvik (April 2026) and 66,000-plus Vera Rubin at Sines (May 2026); its 1.35 GW Monarch letter of intent (March 2026) was withdrawn over the summer of 2026.",
-     "context": "Microsoft Source EMEA (17 September 2025): 'Microsoft, Nscale and Aker have entered into a landmark deal … worth an estimated $6.2 billion', 'a five-year agreement that will begin to deliver services in stages, commencing in 2026'; Scott Guthrie's blog the next day names Narvik and Loughton as GB300 sites. Nscale's October 2025 release puts the total at 'approximately 200,000 NVIDIA GB300 GPUs' with Texas at ~104,000 on a 240 MW campus and a Microsoft option on a 700 MW second phase; the FT reported the expansion as worth up to USD 14 billion — no party has stated it.\n\nIn 2026 the Norway tranche moved to 30,000-plus Rubin GPUs (Aker: replacing the OpenAI LOI) and Sines to 66,000-plus Vera Rubin; Aker's H1 2026 report counts 'more than 96,000 NVIDIA Rubin GPUs combined'. The Monarch LOI — 'initial multi-year compute services agreement alongside long-term data centre lease structure' — did not become a contract: Semafor reports Microsoft withdrew 'during a review of its data center portfolio and on-site power generation allocations', and Anthropic took the first 460 MW.",
+     "context": "Microsoft Source EMEA (17 September 2025): 'Microsoft, Nscale and Aker have entered into a landmark deal … worth an estimated $6.2 billion', 'a five-year agreement that will begin to deliver services in stages, commencing in 2026'; Scott Guthrie's blog the next day names Narvik and Loughton as GB300 sites. Nscale's October 2025 release puts the total at 'approximately 200,000 NVIDIA GB300 GPUs' with Texas at ~104,000 on a 240 MW campus and a Microsoft option on a 700 MW second phase; the FT reported the expansion as worth up to USD 14 billion — no party has stated it.\n\nIn 2026 the Norway tranche moved to 30,000-plus Rubin GPUs (Aker: replacing the OpenAI LOI) and Sines to 66,000-plus Vera Rubin; Aker's H1 2026 report counts 'more than 96,000 NVIDIA Rubin GPUs combined'. The Monarch LOI — 'initial multi-year compute services agreement alongside long-term data centre lease structure' — did not become a contract: Semafor reports Microsoft withdrew 'during a review of its data center portfolio and on-site power generation allocations', and Anthropic took the first 460 MW.\n\nThe S-1 sizes the relationship for the first time: 'Between September 2025 and April 2026, we entered into statements of work with Microsoft that provide for payments to us of up to approximately $43.8 billion through December 2033, not including the optional extensions', with 'GPU services terms from five to six years from acceptance of each tranche'. Exhibit 10.19 is the Narvik form of statement of work (Kvandal North, Nordmoveien 301, Bjerkvik). Loughton and the 1.35 GW Monarch letter of intent do not appear in the filing.",
      "source": "https://news.microsoft.com/source/emea/features/the-port-town-in-norway-emerging-as-an-ai-hub/",
      "status": "active",
      "since": "2025-09",
-     "scale": "~200,000 GB300 (Oct 2025) + 96,000+ Vera Rubin (2026); 'approximately USD 6.2 billion' five-year Narvik agreement; 1.35 GW Monarch LOI withdrawn",
+     "scale": "'up to approximately $43.8 billion through December 2033' under statements of work signed September 2025–April 2026 (S-1); ~200,000 GB300 + 96,000+ Vera Rubin",
      "via": "GB300 and Vera Rubin NVL72 capacity at Narvik, Ward County, Loughton, Sines"
     }
    },
@@ -54049,14 +54605,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Nscale is the anchored neocloud built almost entirely on Microsoft's signature — 'approximately 200,000 NVIDIA GB300 GPUs' contracted in October 2025 across Ward County, Texas; Sines, Portugal; Loughton, England and Narvik, Norway, then 96,000-plus Vera Rubin GPUs added for Norway and Portugal in 2026 — and, since 26 August 2026, on a reported USD 45 billion, six-year contract with Anthropic for 460 MW at the Monarch campus in West Virginia that Microsoft had walked away from over the summer; it has raised about USD 3.7 billion of equity (Series C USD 2 billion at USD 14.6 billion, March 2026, led by Aker ASA and 8090 Industries) and about USD 6.1 billion of debt facilities, two of them investment-grade rated, against reported revenue of about USD 33 million for 2025 and USD 100 million in the second quarter of 2026, and Bloomberg reports an IPO of up to USD 3 billion on a USD 51 billion contracted backlog.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before OpenAI's Norway letter of intent was replaced by a Microsoft contract and OpenAI paused Stargate UK, bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026).",
+     "text": "Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before 'In April 2026, OpenAI withdrew from the Stargate Norway and Stargate UK partnerships, with Microsoft subsequently expanding its agreement with us to take the extra compute capacity at Stargate Norway' (S-1), bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026).",
      "src": "",
      "from": "b"
     },
@@ -54070,22 +54619,15 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Glomfjord, Narvik and Monarch are owned; Ward County is Ionic Digital's building under a 10-year triple-net lease, Sines is Start Campus's, Keflavik is Verne's, and Madison is 'partner-run' — the majority of Microsoft's GB300 and Vera Rubin volume sits on other people's campuses.",
+     "text": "Basis: the S-1 states 1 GW of the 1.37 GW of active and contracted capacity at the seven wholly-owned sites, with leased sites 'approximately 15%' of contracted MW, and the April 2026 purchase of SIN02 moved Sines' second phase from Start Campus's building to Nscale's land — which reverses the v2 reading that the majority of Microsoft's volume sits on other people's campuses.",
      "src": "",
      "from": "b"
     },
     {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "Collection gaps: no revenue, backlog, headcount, contract values (other than Microsoft's USD 6.2 billion) or GPU totals on first-party channels; the new parent 'Nscale Limited' is not identified in Companies House filings read; OpenAI's Stargate pages, Caterpillar's AIP release, Nokia's release and several DCD, CNBC and Bloomberg pages were unreachable and are cited from search summaries or reprints; the Lauren Hurwitz appointment release returns 404; Arkon's site was unreachable; David Sykes and Sam Pitt from the commissioning brief were not found anywhere.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "*Q3 2026 — first Ward County GB300 tranche for Microsoft:* the first US delivery against the 'phased from Q3 2026' schedule.",
-     "src": "",
+     "where": "Recent Reporting",
+     "date": "2026-09-18",
+     "text": "Form S-1 filed with the SEC for a proposed NYSE listing as 'NSCL' (Goldman Sachs, J.P. Morgan, Morgan Stanley): revenue USD 19.1 million (2024), USD 33.0 million (2025), USD 140.6 million (H1 2026); net loss USD 761.8 million (2025) and USD 1,020.1 million (H1 2026); USD 103.4 billion of active and contracted TCV at 31 August; 1.37 GW active and contracted, 1 GW owned; Anthropic PBC named at 'up to approximately $44.6 billion', Microsoft at 'up to approximately $43.8 billion through December 2033'; a going-concern doubt 'initially raised' and alleviated; KPMG LLP auditor — The first first-party numbers: a USD 300 million revenue run-rate carrying a USD 103 billion book — the ratio the whole anchored-neocloud model will be priced on.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
      "from": "b"
     },
     {
@@ -54105,7 +54647,7 @@
     {
      "where": "Recent Reporting",
      "date": "2026-08-26",
-     "text": "Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on — At about USD 16 million per MW-year the silicon is paid off inside the lease (Global Data Center Hub) — the customer is buying delivery certainty, not a landlord's margin.",
+     "text": "Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on — At about USD 16 million per MW-year the silicon is paid off inside the lease (Global Data Center Hub) — the customer is buying delivery certainty, not a landlord's margin — confirmed and named in the S-1 of 18 September 2026 at up to USD 44.6 billion (see 25 August).",
      "src": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
      "from": "b"
     },
@@ -54187,7 +54729,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-09-03"
+   "last": "2026-09-18"
   },
   {
    "a": "microsoft",
@@ -56011,6 +56553,13 @@
      "from": "a"
     },
     {
+     "where": "Capabilities · Nebius AI Cloud ('Aether' platform)",
+     "date": "",
+     "text": "SemiAnalysis ClusterMAX 3.0 (23 September 2026) lifts Nebius to Platinum: 'solid business decisions have established them as the default neocloud to serve the neolabs', 'the most active of all neoclouds in the short-term cluster market' and 'the first provider to deploy HGX B300s back in December of 2025', while it 'still trail[s] CoreWeave on many technical aspects and relationships with both NVIDIA and the frontier labs'.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Capabilities · Nebius Token Factory (inference platform) + AI software acquisitions",
      "date": "",
      "text": "Reinforced by acquisition: Tavily (agentic web search, $177.3M, 2.5M+ developers), Eigen AI (inference optimization, 'ranked #1 by NVIDIA at GTC 2026'), and Clarifai's core team + inference IP (founder Matthew Zeiler joined as SVP Research).",
@@ -56893,12 +57442,12 @@
    "curated": {
     "a": {
      "type": "investor",
-     "note": "NVIDIA invested in the Series B (September 2025), the USD 433 million SAFE (October 2025) and the Series C (March 2026), supplies the GB300 and Vera Rubin NVL72 systems behind every anchor contract, and lists Nscale as a DGX Cloud Lepton contributor.",
+     "note": "NVIDIA invested in the Series B (September 2025), the USD 433 million SAFE (October 2025) and the Series C (March 2026), supplies the GB300 and Vera Rubin NVL72 systems behind every anchor contract, and lists Nscale as a DGX Cloud Lepton contributor; the S-1 adds NVIDIA's guarantee of 'up to $860,340,000' of the Ward County lease in return for warrants, its conversion of a USD 300 million SAFE into Series C-3 shares, and its USD 1.0 billion share of the September 2026 convertible-note subscription as the sole holder of post-IPO Non-Voting Shares.",
      "context": "The Series B release names NVIDIA among participants; the SAFE release names 'Blue Owl Managed Funds, Dell, NVIDIA, Nokia'; the Series C lists NVIDIA among supporting investors. On the product side Nscale claims to be 'the first provider outside of Microsoft itself' to deploy Vera Rubin, with Ian Buck quoted, and the Monarch campus is designed to NVIDIA's DSX AI Factory reference design. NVIDIA's own June 2025 Lepton release lists Nscale as a marketplace contributor and its executives are quoted in the Verne and BT releases. The circularity — supplier, shareholder and marketplace operator — is the pattern the corpus records for CoreWeave and Lambda.",
      "source": "https://www.nscale.com/press-releases/nscale-series-b",
      "status": "active",
      "since": "2025-09",
-     "scale": "Series B, SAFE and Series C participant; Vera Rubin NVL72 supplier; DGX Cloud Lepton contributor",
+     "scale": "5%+ shareholder; USD 1.0 billion of convertible notes/Non-Voting Shares (closing ~16 November 2026); USD 860.3 million Ward County lease guarantee; USD 300 million SAFE (S-1)",
      "via": "Series B / pre-Series C SAFE / Series C; DSX AI Factory reference design"
     }
    },
@@ -56906,7 +57455,28 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Nscale is the anchored neocloud built almost entirely on Microsoft's signature — 'approximately 200,000 NVIDIA GB300 GPUs' contracted in October 2025 across Ward County, Texas; Sines, Portugal; Loughton, England and Narvik, Norway, then 96,000-plus Vera Rubin GPUs added for Norway and Portugal in 2026 — and, since 26 August 2026, on a reported USD 45 billion, six-year contract with Anthropic for 460 MW at the Monarch campus in West Virginia that Microsoft had walked away from over the summer; it has raised about USD 3.7 billion of equity (Series C USD 2 billion at USD 14.6 billion, March 2026, led by Aker ASA and 8090 Industries) and about USD 6.1 billion of debt facilities, two of them investment-grade rated, against reported revenue of about USD 33 million for 2025 and USD 100 million in the second quarter of 2026, and Bloomberg reports an IPO of up to USD 3 billion on a USD 51 billion contracted backlog.",
+     "text": "BOTTOM LINE UP FRONT: Nscale's Form S-1 of 18 September 2026 — its first first-party disclosure of revenue, backlog and debt — shows a company that booked USD 19.1 million of revenue in 2024, USD 33.0 million in 2025 and USD 140.6 million in the first half of 2026 against net losses of USD 78.2 million, USD 761.8 million and USD 1,020.1 million, while contracting USD 103.4 billion of take-or-pay total contract value by 31 August 2026 (USD 2.6 billion of it active), USD 56.4 billion of it already remaining performance obligations at 30 June: Microsoft's statements of work 'provide for payments to us of up to approximately $43.8 billion through December 2033' and the Anthropic Services Agreements of 25 August 2026 — Anthropic PBC is named — 'provide for aggregate payments to us of up to approximately $44.6 billion' for four tranches of NVIDIA Vera Rubin NVL72 at the Monarch Compute Campus, for which 'we have not obtained binding commitments for any of the financings required'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Carrying debt was only USD 137.4 million at 30 June, but the committed stack is about USD 6.5 billion of bank facilities (two of them 'investment-grade ratings with a stable outlook', agency unnamed), USD 2.54 billion of Dell vendor rent and at least USD 3.1 billion of convertible loan notes signed 15 September (USD 1.0 billion from NVIDIA, closing around 16 November); management's forecast 'initially raised substantial doubt about the Company's ability to continue as a going concern', alleviated by a plan to defer capex if financing fails.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against this, the largest active deployments in H1 2026 (Portugal 52%, Norway 45% of revenue) still ran in partner-built halls, Ward County remains Ionic Digital's building under an NVIDIA-guaranteed lease, and Anyscale (USD 1.65 billion in equity) closes only with the IPO; power is in-house at Monarch alone.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*By about 16 November 2026 — the NVIDIA Sale closing:* USD 1.0 billion of convertible notes or Non-Voting Shares, the filing's one dated financing event.",
      "src": "",
      "from": "a"
     },
@@ -56926,9 +57496,30 @@
     },
     {
      "where": "Recent Reporting",
+     "date": "2026-09-25",
+     "text": "TechCrunch and SiliconANGLE: USD 3.36 billion of convertible financing led by Third Point, with Apollo, Citadel and more than a dozen institutions, 'USD 2.36 billion available to the company immediately' and USD 1 billion from NVIDIA 'in mid-November'; the S-1 records the 15 September subscription agreement at 'a minimum of $3.1 billion', converting automatically at the IPO and maturing 15 June 2028 — Pre-IPO capital at convertible terms the filing does not price — the bridge that lets the Anthropic build start before the equity market decides.",
+     "src": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-15",
+     "text": "Subscription agreement for 'a minimum of $3.1 billion' of unsecured convertible loan notes — USD 2.1 billion from investors and USD 1.0 billion 'that will be issued to NVIDIA' as notes or Non-Voting Shares, 'the NVIDIA Sale will close on or around November 16, 2026' (S-1) — NVIDIA moves from supplier, shareholder and Ward County guarantor to the company's largest single pre-IPO backer.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
      "date": "2026-09-03",
      "text": "Figure: multi-year partnership — 'initial commitment: $3.5 billion in compute', intent to scale 'over $6 billion', up to 100,000 NVIDIA GPUs, first deployment at Barstow, Texas in H2 2027; Nscale takes a strategic stake in Figure — A third anchor beside Microsoft and Anthropic, and the first where the neocloud is also an investor in its customer.",
      "src": "https://www.nscale.com/press-releases/nscale-and-figure",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-25",
+     "text": "The S-1 names the counterparty: 'On August 25, 2026, we entered into a series of GPU Services Agreements … with Anthropic PBC … at our Monarch Compute Campus to support the deployment of NVIDIA Vera Rubin NVL72 GPUs. The Anthropic Services Agreements provide for aggregate payments to us of up to approximately $44.6 billion' — four tranches, each a wholly-owned subsidiary's contract, with termination rights for late delivery and sustained uptime misses, and 'we have not obtained binding commitments for any of the financings required' — Confirmed, named and sized — but unfinanced: the contract's megawatts and term remain redacted, so the press 460 MW and six years still stand in for them.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
      "from": "a"
     },
     {
@@ -57016,7 +57607,7 @@
      "from": "a"
     }
    ],
-   "last": "2026-09-03"
+   "last": "2026-09-25"
   },
   {
    "a": "nscale",
@@ -57024,10 +57615,10 @@
    "curated": {
     "a": {
      "type": "customer",
-     "note": "OpenAI was announced as 'initial offtaker with option to scale' at Stargate Norway (July 2025) and as the explorer of 'up to 8,000 NVIDIA GPUs in Q1 2026 with the potential to scale to 31,000' at Stargate UK (September 2025); Aker's Q1 2026 report records the Norway LOI replaced by a Microsoft contract, and OpenAI paused Stargate UK in April 2026.",
+     "note": "OpenAI was the announced Stargate Norway and Stargate UK partner (July and September 2025); the S-1 records that 'In April 2026, OpenAI withdrew from the Stargate Norway and Stargate UK partnerships, with Microsoft subsequently expanding its agreement with us to take the extra compute capacity at Stargate Norway'.",
      "context": "Stargate Norway (31 July 2025): 'the first data centre initiative on the continent' under 'OpenAI for Countries', 230 MW at Kvandal with 'approximately USD 1 billion committed to initial 20MW phase'; Sam Altman: 'Europe needs more compute'. Stargate UK (16 September 2025): sites including Cobalt Park in the North East AI Growth Zone, for 'critical public services, regulated industries like finance, research projects or national security partnerships'.\n\nBy April 2026 both had changed: Aker's Q1 report says Microsoft's 30,000-GPU Narvik contract replaced 'the previous LOI with Open AI (Stargate Norway)', and OpenAI told CNBC it would 'move forward when the right conditions such as regulation and the cost of energy enable long-term infrastructure investment'. No OpenAI contract value has ever been stated. OpenAI still appears in Nscale's 'trusted by' logos.",
-     "source": "https://www.nscale.com/press-releases/stargate-norway-nscale-aker-openai",
-     "status": "announced",
+     "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+     "status": "historical",
      "since": "2025-07",
      "scale": "Stargate Norway: 100,000 GPUs by end-2026 target (LOI replaced by Microsoft); Stargate UK: up to 8,000 → 31,000 GPUs (paused April 2026)",
      "via": "Stargate Norway; Stargate UK"
@@ -57037,14 +57628,21 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before OpenAI's Norway letter of intent was replaced by a Microsoft contract and OpenAI paused Stargate UK, bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026).",
+     "text": "It intends to list on the NYSE as 'NSCL'; share count and price are blank, no amendment had been filed by 2 October 2026, and The Wall Street Journal (via Semafor, 30 September) reports the investor roadshow is expected to be postponed as OpenAI's own listing slipped.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "Microsoft anchors four sites and Anthropic the fifth; OpenAI's role has shrunk to a paused UK exploration.",
+     "text": "Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before 'In April 2026, OpenAI withdrew from the Stargate Norway and Stargate UK partnerships, with Microsoft subsequently expanding its agreement with us to take the extra compute capacity at Stargate Norway' (S-1), bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Microsoft anchors four sites and Anthropic the fifth — together 'up to approximately $43.8 billion' and 'up to approximately $44.6 billion' of the USD 103.4 billion contracted; OpenAI withdrew from both Stargate partnerships in April 2026 and appears in the S-1 only as a former partner.",
      "src": "",
      "from": "a"
     },
@@ -57065,14 +57663,14 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Collection gaps: no revenue, backlog, headcount, contract values (other than Microsoft's USD 6.2 billion) or GPU totals on first-party channels; the new parent 'Nscale Limited' is not identified in Companies House filings read; OpenAI's Stargate pages, Caterpillar's AIP release, Nokia's release and several DCD, CNBC and Bloomberg pages were unreachable and are cited from search summaries or reprints; the Lauren Hurwitz appointment release returns 404; Arkon's site was unreachable; David Sykes and Sam Pitt from the commissioning brief were not found anywhere.",
+     "text": "Collection gaps: the S-1 does not state the IPO size or valuation, any shareholder's percentage, the rating agency or letter grade behind the two 'investment-grade' GPU facilities, the convertible notes' coupon or conversion price, the Anthropic contract's megawatts, term or start dates (redacted in exhibit 10.25), the Caterpillar order size, the Figure contract's value (the USD 3.5 billion in the Figure release is not in the filing), or the names of the 73% (2025) and 52% (H1 2026) customers; Loughton and Statnett do not appear by name; Aker's 22.76% is Aker's figure; the Bloomberg COO report is paywalled and cited by headline; the earlier gaps on OpenAI's pages, Caterpillar's release and the Hurwitz appointment stand.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "*Any OpenAI statement on Stargate UK:* a resumption would restore the sovereign narrative; a cancellation would end it.",
+     "text": "*Any OpenAI statement on Stargate UK:* the S-1 records OpenAI's April 2026 withdrawal; a resumption would restore the sovereign narrative.",
      "src": "",
      "from": "a"
     },
@@ -57088,6 +57686,13 @@
      "date": "",
      "text": "Capacity marketed for in-country processing: up to 14 MW across three BT sites in the UK (April 2026), a capacity-swap partnership with Singtel/Nxera across Southeast Asia (2024), the Trusted Tech Alliance membership (February 2026), and Stargate UK with OpenAI and NVIDIA — 'up to 8,000 GPUs in Q1 2026, potential 31,000' at sites including Cobalt Park in the North East AI Growth Zone — which OpenAI paused in April 2026 over energy costs and regulation.",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-30",
+     "text": "The Wall Street Journal (via Semafor): 'The cloud startup NScale to postpone its investor roadshow' as OpenAI shelves its own listing and 'what was set to be a bumper IPO market to end the year is stalling'; no S-1 amendment, price range or pricing had been filed by 2 October — The listing that every press figure in the earlier dossier was waiting on now waits on OpenAI's calendar — the S-1 is public, the deal is not priced.",
+     "src": "https://www.semafor.com/article/09/30/2026/openai-hopes-to-raise-30b-in-new-funding-round",
      "from": "a"
     },
     {
@@ -57126,7 +57731,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-05-08"
+   "last": "2026-09-30"
   },
   {
    "a": "nscale",

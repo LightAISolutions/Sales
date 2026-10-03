@@ -1,21 +1,20 @@
 {
   "schemaVersion": 7,
   "slug": "nscale",
-  "name": "Nscale Limited (to re-register as Nscale plc before the offering; formerly DSNS Holdings Ltd; ultimate holding company of Nscale Global Holdings Limited and Arkon Energy Pty Ltd since the 4–5 May 2026 reorganisation)",
+  "name": "Nscale Limited (Nscale Global Holdings Limited; Nscale AS)",
   "shortName": "Nscale",
   "categories": [
     "neocloud"
   ],
   "website": "https://www.nscale.com/",
-  "headquarters": "London, United Kingdom — principal executive offices at Level 5, 16 New Burlington Place, London W1S 2HX, 'approximately 7,677 square feet of office space' (S-1); Energy & Power office in Houston (agent for service: Nscale Operations US, LLC, 109 N Post Oak Lane), APAC headquarters in Singapore (October 2025), New York (August 2026) and a Bellevue, Washington office planned for January 2027. Operating entities in Norway (Nscale AS, Nscale Norway AS, Nscale Norway DC DA), Portugal, Iceland (Nscale Services Iceland III ehf) and the United States (Nscale Ward County Borrower SPV, LLC; Nscale NC Borrower SPV, LLC; Nscale GPU MCC B1.1 LLC)",
+  "headquarters": "London, United Kingdom — the company says only 'Headquartered in the U.K.'; Companies House shows Nscale Global Holdings Limited's registered office at Level 5, 16 New Burlington Place, London W1S 2HX (moved from Knutsford, Cheshire, July 2026). Operating entities in Norway (Nscale AS, Nscale Norway AS), Portugal, Iceland and the United States (Nscale Ward County Borrower SPV, LLC)",
   "founded": 2024,
-  "employees": "'over 1,000 full-time employees' as of 31 August 2026, 'employees who work 40 hours per week', some union-represented (S-1); Revelio Labs had tracked about 578 in March 2026; Anyscale would add about 200 at closing",
+  "employees": "Not stated by the company. Revelio Labs: about 578 employees worldwide as of March 2026 (42 in 2023, 98 in 2024, 365 in 2025); the Anyscale acquisition adds about 200 and Future-tech added about 60. Collection gap.",
   "ownership": {
-    "type": "private",
-    "ticker": "Private — Form S-1 filed 18 September 2026 for a proposed NYSE listing under 'NSCL'; share count and price range blank, no amendment and no pricing at 2 October 2026"
+    "type": "private"
   },
-  "summary": "BOTTOM LINE UP FRONT: Nscale's Form S-1 of 18 September 2026 — its first first-party disclosure of revenue, backlog and debt — shows a company that booked USD 19.1 million of revenue in 2024, USD 33.0 million in 2025 and USD 140.6 million in the first half of 2026 against net losses of USD 78.2 million, USD 761.8 million and USD 1,020.1 million, while contracting USD 103.4 billion of take-or-pay total contract value by 31 August 2026 (USD 2.6 billion of it active), USD 56.4 billion of it already remaining performance obligations at 30 June: Microsoft's statements of work 'provide for payments to us of up to approximately $43.8 billion through December 2033' and the Anthropic Services Agreements of 25 August 2026 — Anthropic PBC is named — 'provide for aggregate payments to us of up to approximately $44.6 billion' for four tranches of NVIDIA Vera Rubin NVL72 at the Monarch Compute Campus, for which 'we have not obtained binding commitments for any of the financings required'. The portfolio is 'approximately 1.37 GW of active and contracted capacity (representing 1 GW at owned sites, 200 MW at leased sites and 165 MW at colocation sites)' across five active and twelve contracted sites, with 'line of sight to approximately 10 GW'. Carrying debt was only USD 137.4 million at 30 June, but the committed stack is about USD 6.5 billion of bank facilities (two of them 'investment-grade ratings with a stable outlook', agency unnamed), USD 2.54 billion of Dell vendor rent and at least USD 3.1 billion of convertible loan notes signed 15 September (USD 1.0 billion from NVIDIA, closing around 16 November); management's forecast 'initially raised substantial doubt about the Company's ability to continue as a going concern', alleviated by a plan to defer capex if financing fails. It intends to list on the NYSE as 'NSCL'; share count and price are blank, no amendment had been filed by 2 October 2026, and The Wall Street Journal (via Semafor, 30 September) reports the investor roadshow is expected to be postponed as OpenAI's own listing slipped. SemiAnalysis's ClusterMAX 3.0 (23 September) rates it 'Not Recommended – Unavailable' and says it is 'clearly not true' that it offers managed clusters — 'people really want that bare metal at a nice price'.\n\nBACKGROUND. Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before 'In April 2026, OpenAI withdrew from the Stargate Norway and Stargate UK partnerships, with Microsoft subsequently expanding its agreement with us to take the extra compute capacity at Stargate Norway' (S-1), bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026). It calls itself 'the first AI-native hyperscaler' and says 'We build and own every layer ourselves' — sites, power, compute and software. Until 18 September 2026 the company published no revenue, backlog, headcount or contract value; the S-1 now states all four, audited by KPMG LLP (London), and the press figures the earlier dossier carried are reconciled against it below.",
-  "ecosystemRole": "The European entry in the anchored-neocloud model, and the one that owns its ground — 1 GW of its 1.37 GW of active and contracted capacity sits at the seven wholly-owned sites, per the S-1: Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid, Loughton in Essex, with partner-run halls at Start Campus (Sines), Ionic Digital (Ward County), Verne (Keflavik) and a Duke Energy-served site in North Carolina. For the corpus's power vendors Nscale is Caterpillar's largest single generation order (Monarch) and a Schneider Electric customer per Aker; for the utilities it is a 230 MW Statnett reservation at Kvandal that the grid operator's May 2026 allocation halt has put in doubt, and a Duke Energy '99MW secured' site in Madison. Microsoft anchors four sites and Anthropic the fifth — together 'up to approximately $43.8 billion' and 'up to approximately $44.6 billion' of the USD 103.4 billion contracted; OpenAI withdrew from both Stargate partnerships in April 2026 and appears in the S-1 only as a former partner.",
+  "summary": "BOTTOM LINE UP FRONT: Nscale is the anchored neocloud built almost entirely on Microsoft's signature — 'approximately 200,000 NVIDIA GB300 GPUs' contracted in October 2025 across Ward County, Texas; Sines, Portugal; Loughton, England and Narvik, Norway, then 96,000-plus Vera Rubin GPUs added for Norway and Portugal in 2026 — and, since 26 August 2026, on a reported USD 45 billion, six-year contract with Anthropic for 460 MW at the Monarch campus in West Virginia that Microsoft had walked away from over the summer; it has raised about USD 3.7 billion of equity (Series C USD 2 billion at USD 14.6 billion, March 2026, led by Aker ASA and 8090 Industries) and about USD 6.1 billion of debt facilities, two of them investment-grade rated, against reported revenue of about USD 33 million for 2025 and USD 100 million in the second quarter of 2026, and Bloomberg reports an IPO of up to USD 3 billion on a USD 51 billion contracted backlog.\n\nBACKGROUND. Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before OpenAI's Norway letter of intent was replaced by a Microsoft contract and OpenAI paused Stargate UK, bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026). It calls itself 'the first AI-native hyperscaler' and says 'We build and own every layer ourselves' — sites, power, compute and software. The company publishes no revenue, backlog, headcount or contract value; every such figure below is Aker's, a lender's, Companies House's or a named outlet's.",
+  "ecosystemRole": "The European entry in the anchored-neocloud model, and the one that owns its ground: Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid, Loughton in Essex, with partner-run halls at Start Campus (Sines), Ionic Digital (Ward County), Verne (Keflavik) and a Duke Energy-served site in North Carolina. For the corpus's power vendors Nscale is Caterpillar's largest single generation order (Monarch) and a Schneider Electric customer per Aker; for the utilities it is a 230 MW Statnett reservation at Kvandal that the grid operator's May 2026 allocation halt has put in doubt, and a Duke Energy '99MW secured' site in Madison. Microsoft anchors four sites and Anthropic the fifth; OpenAI's role has shrunk to a paused UK exploration.",
   "productsAndServices": [
     {
       "name": "Data-centre development and ownership — Glomfjord, Narvik/Kvandal, Monarch, Loughton; partner-run Sines, Ward County, Keflavik, Madison",
@@ -129,31 +128,6 @@
       "product": "Site and contract ledger — capacity, anchor, status as stated by the company, its landlords, Aker ASA and the anchor customers",
       "specs": [
         {
-          "band": "Portfolio as stated in the S-1 (31 August 2026)",
-          "label": "Capacity",
-          "value": "'approximately 1.37 GW of active and contracted capacity (representing 1 GW at owned sites, 200 MW at leased sites and 165 MW at colocation sites)'; 'line of sight to approximately 10 GW of potential power capacity'"
-        },
-        {
-          "band": "Portfolio as stated in the S-1 (31 August 2026)",
-          "label": "Sites",
-          "value": "'five active and twelve contracted data center sites (including seven wholly-owned sites, nine colocation sites, and one leased site)'; 'now operate in 14 regions'"
-        },
-        {
-          "band": "Portfolio as stated in the S-1 (31 August 2026)",
-          "label": "GPUs",
-          "value": "'approximately 25,000 active GPUs and 461,000 active and contracted GPUs'"
-        },
-        {
-          "band": "Portfolio as stated in the S-1 (31 August 2026)",
-          "label": "Monarch",
-          "value": "'an approximately 2,250-acre site which can deliver up to 8GW of gross behind-the-meter power'; 'We expect to develop up to 2 GW of gross power generation capacity by the first half of 2028'; 'power generation capacity runway scalable to over 6.5 GW of IT load power'"
-        },
-        {
-          "band": "Portfolio as stated in the S-1 (31 August 2026)",
-          "label": "Sines",
-          "value": "SIN02, 'a 200 MW powered land site at the SINES Data Campus in Portugal' acquired 24 April 2026 for EUR 469.3 million; 'over 66,000 NVIDIA Vera Rubin NVL72 GPUs, starting in late 2027' for Microsoft, after 'over 12,600 NVIDIA Grace Blackwell Ultra GPUs at the first building'"
-        },
-        {
           "band": "Glomfjord, Norway (owned)",
           "label": "Capacity and power",
           "value": "'30MW operational' → '60MW'; '100% renewable' hydro; adiabatic cooling; Svartisen cluster 'AMD Instinct MI250X' (Top500 #24, Nov 2024)"
@@ -204,7 +178,7 @@
           "value": "'50MW scalable to 90MW'; Microsoft '23,040 NVIDIA GB300 GPUs initially', 'delivery Q1 2027' (Sept 2025); 'up to 45,000 NVIDIA GB200 GPUs', 'operational Q4 2026' (Jan 2025 — superseded); approved June 2026; 'construction work to begin in the second quarter of 2026'"
         },
         {
-          "band": "Sines, Portugal (Start Campus building 1 partner-run; SIN02 200 MW owned since April 2026)",
+          "band": "Sines, Portugal (Start Campus, partner-run)",
           "label": "Capacity and anchor",
           "value": "'~12,600' GB300 'Q1 2026' (SIN01); '66,000+ NVIDIA Vera Rubin NVL72 GPUs' 'from late 2027'; '€230m shared infra + €465m second 200MW building'; campus '1.2GW fully permitted'; 'target PUE 1.1, WUE 0'"
         },
@@ -275,48 +249,6 @@
   ],
   "recentDevelopments": [
     {
-      "date": "2026-10-02",
-      "category": "leadership",
-      "headline": "Bloomberg reports Nscale has hired Meta's chief partnerships officer Justin Osofsky as Chief Operating Officer, reporting to CEO Josh Payne, 'ahead of IPO' (headline; article paywalled)",
-      "read": "A hyperscaler-grade operator arrives between the S-1 and the roadshow — the filing's leadership page did not list a COO.",
-      "source": "https://bloomberg.com/news/articles/2026-10-02/nscale-hires-meta-s-justin-osofsky-to-be-coo-ahead-of-ipo"
-    },
-    {
-      "date": "2026-09-30",
-      "category": "market",
-      "headline": "The Wall Street Journal (via Semafor): 'The cloud startup NScale to postpone its investor roadshow' as OpenAI shelves its own listing and 'what was set to be a bumper IPO market to end the year is stalling'; no S-1 amendment, price range or pricing had been filed by 2 October",
-      "read": "The listing that every press figure in the earlier dossier was waiting on now waits on OpenAI's calendar — the S-1 is public, the deal is not priced.",
-      "source": "https://www.semafor.com/article/09/30/2026/openai-hopes-to-raise-30b-in-new-funding-round"
-    },
-    {
-      "date": "2026-09-25",
-      "category": "financial",
-      "headline": "TechCrunch and SiliconANGLE: USD 3.36 billion of convertible financing led by Third Point, with Apollo, Citadel and more than a dozen institutions, 'USD 2.36 billion available to the company immediately' and USD 1 billion from NVIDIA 'in mid-November'; the S-1 records the 15 September subscription agreement at 'a minimum of $3.1 billion', converting automatically at the IPO and maturing 15 June 2028",
-      "read": "Pre-IPO capital at convertible terms the filing does not price — the bridge that lets the Anthropic build start before the equity market decides.",
-      "source": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/"
-    },
-    {
-      "date": "2026-09-23",
-      "category": "market",
-      "headline": "SemiAnalysis ClusterMAX 3.0 keeps Nscale at 'Not Recommended – Unavailable' and sharpens the charge: 'It is unbelievable to us that they can have such a big business, and continue to claim in public marketing materials that they offer managed clusters and inference endpoints, when this is clearly not true … people really want that bare metal at a nice price'",
-      "read": "The one independent rater of GPU clouds says the product is powered land and bare metal, not a cloud — which is also what the S-1's TCV describes.",
-      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
-    },
-    {
-      "date": "2026-09-18",
-      "category": "financial",
-      "headline": "Form S-1 filed with the SEC for a proposed NYSE listing as 'NSCL' (Goldman Sachs, J.P. Morgan, Morgan Stanley): revenue USD 19.1 million (2024), USD 33.0 million (2025), USD 140.6 million (H1 2026); net loss USD 761.8 million (2025) and USD 1,020.1 million (H1 2026); USD 103.4 billion of active and contracted TCV at 31 August; 1.37 GW active and contracted, 1 GW owned; Anthropic PBC named at 'up to approximately $44.6 billion', Microsoft at 'up to approximately $43.8 billion through December 2033'; a going-concern doubt 'initially raised' and alleviated; KPMG LLP auditor",
-      "read": "The first first-party numbers: a USD 300 million revenue run-rate carrying a USD 103 billion book — the ratio the whole anchored-neocloud model will be priced on.",
-      "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
-    },
-    {
-      "date": "2026-09-15",
-      "category": "financial",
-      "headline": "Subscription agreement for 'a minimum of $3.1 billion' of unsecured convertible loan notes — USD 2.1 billion from investors and USD 1.0 billion 'that will be issued to NVIDIA' as notes or Non-Voting Shares, 'the NVIDIA Sale will close on or around November 16, 2026' (S-1)",
-      "read": "NVIDIA moves from supplier, shareholder and Ward County guarantor to the company's largest single pre-IPO backer.",
-      "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
-    },
-    {
       "date": "2026-09-03",
       "category": "customer",
       "headline": "Figure: multi-year partnership — 'initial commitment: $3.5 billion in compute', intent to scale 'over $6 billion', up to 100,000 NVIDIA GPUs, first deployment at Barstow, Texas in H2 2027; Nscale takes a strategic stake in Figure",
@@ -355,15 +287,8 @@
       "date": "2026-08-26",
       "category": "order-win",
       "headline": "Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on",
-      "read": "At about USD 16 million per MW-year the silicon is paid off inside the lease (Global Data Center Hub) — the customer is buying delivery certainty, not a landlord's margin — confirmed and named in the S-1 of 18 September 2026 at up to USD 44.6 billion (see 25 August).",
+      "read": "At about USD 16 million per MW-year the silicon is paid off inside the lease (Global Data Center Hub) — the customer is buying delivery certainty, not a landlord's margin.",
       "source": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/"
-    },
-    {
-      "date": "2026-08-25",
-      "category": "customer",
-      "headline": "The S-1 names the counterparty: 'On August 25, 2026, we entered into a series of GPU Services Agreements … with Anthropic PBC … at our Monarch Compute Campus to support the deployment of NVIDIA Vera Rubin NVL72 GPUs. The Anthropic Services Agreements provide for aggregate payments to us of up to approximately $44.6 billion' — four tranches, each a wholly-owned subsidiary's contract, with termination rights for late delivery and sustained uptime misses, and 'we have not obtained binding commitments for any of the financings required'",
-      "read": "Confirmed, named and sized — but unfinanced: the contract's megawatts and term remain redacted, so the press 460 MW and six years still stand in for them.",
-      "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
     },
     {
       "date": "2026-08-21",
@@ -603,42 +528,42 @@
       "type": "customer",
       "status": "active",
       "since": "2025-09",
-      "scale": "'up to approximately $43.8 billion through December 2033' under statements of work signed September 2025–April 2026 (S-1); ~200,000 GB300 + 96,000+ Vera Rubin",
+      "scale": "~200,000 GB300 (Oct 2025) + 96,000+ Vera Rubin (2026); 'approximately USD 6.2 billion' five-year Narvik agreement; 1.35 GW Monarch LOI withdrawn",
       "via": "GB300 and Vera Rubin NVL72 capacity at Narvik, Ward County, Loughton, Sines",
       "note": "Microsoft is Nscale's anchor at four sites: the USD 6.2 billion five-year Narvik agreement (September 2025), the ~200,000-GB300 expansion across Texas, Portugal, the UK and Norway (October 2025), 30,000-plus Rubin at Narvik (April 2026) and 66,000-plus Vera Rubin at Sines (May 2026); its 1.35 GW Monarch letter of intent (March 2026) was withdrawn over the summer of 2026.",
-      "context": "Microsoft Source EMEA (17 September 2025): 'Microsoft, Nscale and Aker have entered into a landmark deal … worth an estimated $6.2 billion', 'a five-year agreement that will begin to deliver services in stages, commencing in 2026'; Scott Guthrie's blog the next day names Narvik and Loughton as GB300 sites. Nscale's October 2025 release puts the total at 'approximately 200,000 NVIDIA GB300 GPUs' with Texas at ~104,000 on a 240 MW campus and a Microsoft option on a 700 MW second phase; the FT reported the expansion as worth up to USD 14 billion — no party has stated it.\n\nIn 2026 the Norway tranche moved to 30,000-plus Rubin GPUs (Aker: replacing the OpenAI LOI) and Sines to 66,000-plus Vera Rubin; Aker's H1 2026 report counts 'more than 96,000 NVIDIA Rubin GPUs combined'. The Monarch LOI — 'initial multi-year compute services agreement alongside long-term data centre lease structure' — did not become a contract: Semafor reports Microsoft withdrew 'during a review of its data center portfolio and on-site power generation allocations', and Anthropic took the first 460 MW.\n\nThe S-1 sizes the relationship for the first time: 'Between September 2025 and April 2026, we entered into statements of work with Microsoft that provide for payments to us of up to approximately $43.8 billion through December 2033, not including the optional extensions', with 'GPU services terms from five to six years from acceptance of each tranche'. Exhibit 10.19 is the Narvik form of statement of work (Kvandal North, Nordmoveien 301, Bjerkvik). Loughton and the 1.35 GW Monarch letter of intent do not appear in the filing.",
+      "context": "Microsoft Source EMEA (17 September 2025): 'Microsoft, Nscale and Aker have entered into a landmark deal … worth an estimated $6.2 billion', 'a five-year agreement that will begin to deliver services in stages, commencing in 2026'; Scott Guthrie's blog the next day names Narvik and Loughton as GB300 sites. Nscale's October 2025 release puts the total at 'approximately 200,000 NVIDIA GB300 GPUs' with Texas at ~104,000 on a 240 MW campus and a Microsoft option on a 700 MW second phase; the FT reported the expansion as worth up to USD 14 billion — no party has stated it.\n\nIn 2026 the Norway tranche moved to 30,000-plus Rubin GPUs (Aker: replacing the OpenAI LOI) and Sines to 66,000-plus Vera Rubin; Aker's H1 2026 report counts 'more than 96,000 NVIDIA Rubin GPUs combined'. The Monarch LOI — 'initial multi-year compute services agreement alongside long-term data centre lease structure' — did not become a contract: Semafor reports Microsoft withdrew 'during a review of its data center portfolio and on-site power generation allocations', and Anthropic took the first 460 MW.",
       "source": "https://news.microsoft.com/source/emea/features/the-port-town-in-norway-emerging-as-an-ai-hub/"
     },
     {
       "slug": "anthropic",
       "type": "customer",
-      "status": "active",
+      "status": "announced",
       "since": "2026-08",
-      "scale": "up to about USD 44.6 billion; four tranches of NVIDIA Vera Rubin NVL72 at Monarch (S-1); press: 460 MW, six years",
+      "scale": "reported ~USD 45 billion over six years for ~460 MW at Monarch (press; Aker disclosure; unconfirmed by either party)",
       "via": "Vera Rubin NVL72 capacity at Monarch, from late 2027",
-      "note": "Anthropic PBC signed four GPU Services Agreements with Nscale subsidiaries on 25 August 2026 for dedicated Vera Rubin NVL72 capacity at the Monarch Compute Campus, 'up to approximately $44.6 billion' per the S-1; the financing to build it is not yet committed.",
-      "context": "TechCrunch: the deal covers 'roughly 460 MW' in the 1.35 GW first phase that Microsoft's March 2026 letter of intent had addressed; Semafor adds that Google was also in talks and that Microsoft 'walked away' over the summer. West Virginia's governor called it 'the reported $45 billion agreement' and 'an extraordinary vote of confidence in our state'; Nscale gave USD 500,000 to Mason County schools. Global Data Center Hub's reading: USD 45 billion / 460 MW / six years is about USD 16.3 million per MW per year against a build cost near USD 24 billion — 'the silicon is being paid off inside the lease'.\n\nAnthropic's own newsroom is silent on Nscale; its only first-party mention is as a Trusted Tech Alliance co-member (February 2026). The status is therefore 'announced' by press, not by the parties, and the number is a press figure.\n\nThe S-1 of 18 September 2026 names the customer the earlier press and Aker's notice did not: 'On August 25, 2026, we entered into a series of GPU Services Agreements (collectively, the \"Anthropic Services Agreements\") with Anthropic PBC … The Anthropic Services Agreements provide for aggregate payments to us of up to approximately $44.6 billion.' They are 'structured as four separate agreements, each between Anthropic and a wholly owned subsidiary of Nscale Limited', each tranche with 'a multi-year service term commencing on acceptance', and 'include service level commitments that are more stringent than those contained in our other customer agreements': Anthropic may terminate a tranche for late delivery beyond a threshold or for sustained uptime misses. 'As of the date of this prospectus, we have not obtained binding commitments for any of the financings required.' Exhibit 10.25 redacts the site address, GPU count, capacity, dates and price.",
-      "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
+      "note": "Bloomberg, CNBC and TechCrunch reported on 26 August 2026 that Anthropic agreed to pay Nscale about USD 45 billion over six years for about 460 MW of Vera Rubin capacity at the Monarch campus from late 2027; Data Centre Review reports Nscale's regulatory disclosure via Aker confirmed a contract without naming the customer; neither company has confirmed the name.",
+      "context": "TechCrunch: the deal covers 'roughly 460 MW' in the 1.35 GW first phase that Microsoft's March 2026 letter of intent had addressed; Semafor adds that Google was also in talks and that Microsoft 'walked away' over the summer. West Virginia's governor called it 'the reported $45 billion agreement' and 'an extraordinary vote of confidence in our state'; Nscale gave USD 500,000 to Mason County schools. Global Data Center Hub's reading: USD 45 billion / 460 MW / six years is about USD 16.3 million per MW per year against a build cost near USD 24 billion — 'the silicon is being paid off inside the lease'.\n\nAnthropic's own newsroom is silent on Nscale; its only first-party mention is as a Trusted Tech Alliance co-member (February 2026). The status is therefore 'announced' by press, not by the parties, and the number is a press figure.",
+      "source": "https://www.datacentrereview.com/2026/08/anthropic-reportedly-behind-nscales-45bn-ai-compute-contract/"
     },
     {
       "slug": "openai",
       "type": "customer",
-      "status": "historical",
+      "status": "announced",
       "since": "2025-07",
       "scale": "Stargate Norway: 100,000 GPUs by end-2026 target (LOI replaced by Microsoft); Stargate UK: up to 8,000 → 31,000 GPUs (paused April 2026)",
       "via": "Stargate Norway; Stargate UK",
-      "note": "OpenAI was the announced Stargate Norway and Stargate UK partner (July and September 2025); the S-1 records that 'In April 2026, OpenAI withdrew from the Stargate Norway and Stargate UK partnerships, with Microsoft subsequently expanding its agreement with us to take the extra compute capacity at Stargate Norway'.",
+      "note": "OpenAI was announced as 'initial offtaker with option to scale' at Stargate Norway (July 2025) and as the explorer of 'up to 8,000 NVIDIA GPUs in Q1 2026 with the potential to scale to 31,000' at Stargate UK (September 2025); Aker's Q1 2026 report records the Norway LOI replaced by a Microsoft contract, and OpenAI paused Stargate UK in April 2026.",
       "context": "Stargate Norway (31 July 2025): 'the first data centre initiative on the continent' under 'OpenAI for Countries', 230 MW at Kvandal with 'approximately USD 1 billion committed to initial 20MW phase'; Sam Altman: 'Europe needs more compute'. Stargate UK (16 September 2025): sites including Cobalt Park in the North East AI Growth Zone, for 'critical public services, regulated industries like finance, research projects or national security partnerships'.\n\nBy April 2026 both had changed: Aker's Q1 report says Microsoft's 30,000-GPU Narvik contract replaced 'the previous LOI with Open AI (Stargate Norway)', and OpenAI told CNBC it would 'move forward when the right conditions such as regulation and the cost of energy enable long-term infrastructure investment'. No OpenAI contract value has ever been stated. OpenAI still appears in Nscale's 'trusted by' logos.",
-      "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
+      "source": "https://www.nscale.com/press-releases/stargate-norway-nscale-aker-openai"
     },
     {
       "slug": "nvidia",
       "type": "investor",
       "status": "active",
       "since": "2025-09",
-      "scale": "5%+ shareholder; USD 1.0 billion of convertible notes/Non-Voting Shares (closing ~16 November 2026); USD 860.3 million Ward County lease guarantee; USD 300 million SAFE (S-1)",
+      "scale": "Series B, SAFE and Series C participant; Vera Rubin NVL72 supplier; DGX Cloud Lepton contributor",
       "via": "Series B / pre-Series C SAFE / Series C; DSX AI Factory reference design",
-      "note": "NVIDIA invested in the Series B (September 2025), the USD 433 million SAFE (October 2025) and the Series C (March 2026), supplies the GB300 and Vera Rubin NVL72 systems behind every anchor contract, and lists Nscale as a DGX Cloud Lepton contributor; the S-1 adds NVIDIA's guarantee of 'up to $860,340,000' of the Ward County lease in return for warrants, its conversion of a USD 300 million SAFE into Series C-3 shares, and its USD 1.0 billion share of the September 2026 convertible-note subscription as the sole holder of post-IPO Non-Voting Shares.",
+      "note": "NVIDIA invested in the Series B (September 2025), the USD 433 million SAFE (October 2025) and the Series C (March 2026), supplies the GB300 and Vera Rubin NVL72 systems behind every anchor contract, and lists Nscale as a DGX Cloud Lepton contributor.",
       "context": "The Series B release names NVIDIA among participants; the SAFE release names 'Blue Owl Managed Funds, Dell, NVIDIA, Nokia'; the Series C lists NVIDIA among supporting investors. On the product side Nscale claims to be 'the first provider outside of Microsoft itself' to deploy Vera Rubin, with Ian Buck quoted, and the Monarch campus is designed to NVIDIA's DSX AI Factory reference design. NVIDIA's own June 2025 Lepton release lists Nscale as a marketplace contributor and its executives are quoted in the Verne and BT releases. The circularity — supplier, shareholder and marketplace operator — is the pattern the corpus records for CoreWeave and Lambda.",
       "source": "https://www.nscale.com/press-releases/nscale-series-b"
     },
@@ -861,18 +786,10 @@
     },
     {
       "name": "Lauren Hurwitz",
-      "title": "Chief Operating Officer (per the company's 2026 leadership page; Bloomberg reports Justin Osofsky named COO on 2 October 2026 — succession not confirmed by the company)",
+      "title": "Chief Operating Officer",
       "background": [
         "Appointed April–May 2026 (search result; the release page returns 404); director of Nscale Global Holdings Ltd from 5 May 2026 (Companies House)",
         "Former head of international public sector, Palantir"
-      ]
-    },
-    {
-      "name": "Justin Osofsky",
-      "title": "Chief Operating Officer (reported by Bloomberg, 2 October 2026 — headline only; not yet on the company's leadership page)",
-      "background": [
-        "Chief Partnerships Officer — Meta (per Bloomberg's report)",
-        "Earlier roles at Meta/Facebook since 2008 across partnerships and global operations (press)"
       ]
     },
     {
@@ -923,8 +840,8 @@
       ]
     },
     {
-      "name": "Board: Josh Payne (Chair), Øyvind Eriksen (Aker ASA), Sheryl Sandberg, Susan Decker, Sir Nick Clegg, Fidji Simo, Jacob Leschly, Rael Nurick",
-      "title": "Directors per the S-1 (Simo from September 2026; 'continues to serve as an advisor to OpenAI')",
+      "name": "Board: Øyvind Eriksen (Aker ASA), Sheryl Sandberg, Susan Decker, Sir Nick Clegg",
+      "title": "Directors (board additions announced March 2026; Eriksen from October 2025)",
       "background": [
         "Eriksen: Aker ASA CEO, on the board since the Series B; Sandberg (ex-Meta COO), Decker (ex-Yahoo CFO) and Clegg (ex-Meta) joined with the Series C",
         "All four resigned from the UK holding company on 5 May 2026 when 'Nscale Limited' was notified as the controlling entity — the board evidently sits at a new parent (Companies House)"
@@ -936,39 +853,16 @@
     "type": "private",
     "periods": [
       {
-        "period": "FY2024 (audited; first disclosed in the S-1 of 18 September 2026)",
+        "period": "FY2024 (no statements published; first accounts to 31 Dec 2024 filed)",
         "periodType": "annual",
         "periodEnd": "2024-12-31",
         "metrics": [
           {
             "name": "Revenue",
-            "actual": "USD 19.1 million",
+            "actual": "Not disclosed by the company",
             "expected": "",
             "verdict": "inline",
-            "result": "S-1, 18 September 2026 (audited by KPMG LLP, London; FY2024 restated in the S-1 format). 'a single customer accounted for substantially all of our revenue' — Pega Nordic, 93%, under an October 2022 agreement that 'terminated in December 2024'",
-            "kpi": "revenue",
-            "usdMillions": 19.1,
-            "fxBasis": "as reported (USD)"
-          },
-          {
-            "name": "Net loss",
-            "actual": "USD (78.2) million; adjusted EBITDA USD (9.1) million; operating loss USD (16.1) million",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Loss on fair value adjustments USD (40.2) million; net loss per share USD (0.46)",
-            "kpi": "net-income",
-            "usdMillions": -78.2,
-            "fxBasis": "as reported (USD)"
-          },
-          {
-            "name": "Capital expenditure and debt",
-            "actual": "Purchases of property and equipment USD (64.2) million; carrying value of total debt USD 218.5 million at year-end (Sandton term loans, repaid October 2025)",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Net cash used in operating activities USD (19.2) million; financing inflow USD 161.7 million",
-            "kpi": "capex",
-            "usdMillions": 64.2,
-            "fxBasis": "as reported (USD)"
+            "result": "Nscale Global Holdings Ltd filed accounts to 31 December 2024 (Companies House); turnover not extracted — collection gap"
           },
           {
             "name": "Funding",
@@ -985,52 +879,19 @@
             "result": "Aker ASA shareholder letter"
           }
         ],
-        "commentary": "The Arkon-era company: one 30 MW Norwegian hydro site, a GPU cloud launched in May 2024 and one customer. The S-1 is the first statement of these figures; the earlier dossier carried none."
+        "commentary": "The Arkon-era company: one 30 MW Norwegian hydro site and a GPU cloud launched in May 2024."
       },
       {
-        "period": "FY2025 (audited; S-1)",
+        "period": "FY2025 (no statements published)",
         "periodType": "annual",
         "periodEnd": "2025-12-31",
         "metrics": [
           {
             "name": "Revenue",
-            "actual": "USD 33.0 million (+73%)",
+            "actual": "About USD 33 million (Bloomberg via Dealroom, August 2026 IPO reporting)",
             "expected": "",
             "verdict": "inline",
-            "result": "S-1, 18 September 2026 (audited by KPMG LLP, London; FY2024 restated in the S-1 format). The press figure the v2 dossier carried ('about USD 33 million', Bloomberg via Dealroom) is confirmed. 'our largest customer accounted for 73% of our revenue' under GPU infrastructure services agreements signed November 2024–March 2026 — not named in the filing, and expected to be 'approximately less than 20%' of 2026 revenue",
-            "kpi": "revenue",
-            "usdMillions": 33.0,
-            "fxBasis": "as reported (USD)"
-          },
-          {
-            "name": "Net loss",
-            "actual": "USD (761.8) million, of which loss on fair value adjustments USD (527.8) million; operating loss USD (169.8) million; adjusted EBITDA USD (81.7) million (−248% margin)",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Share-based compensation USD 47.9 million; net loss per share USD (4.37). The fair-value line is the preferred-share and warrant mark, not an operating cost",
-            "kpi": "net-income",
-            "usdMillions": -761.8,
-            "fxBasis": "as reported (USD)"
-          },
-          {
-            "name": "Cash flow and capex",
-            "actual": "Net cash from operating activities USD 1,376.4 million — prepayment-driven (deferred revenue); purchases of property and equipment USD (621.4) million; financing inflow USD 1,269.4 million",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Cash and cash equivalents USD 1,500.9 million and carrying debt USD 78.9 million at 31 December 2025",
-            "kpi": "capex",
-            "usdMillions": 621.4,
-            "fxBasis": "as reported (USD)"
-          },
-          {
-            "name": "Remaining performance obligations",
-            "actual": "USD 34.5 billion at 31 December 2025 'inclusive of $4.6 billion as a result of the significant financing component' on prepayments; 'approximately 16% is expected to be recognized in the next two years, an additional 40% in the subsequent two year period'",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Active and contracted TCV USD 38.0 billion (USD 0.5 billion active) at the same date. The v2 dossier's press-sourced 'USD 51 billion' backlog had no S-1 counterpart at this date",
-            "kpi": "backlog",
-            "usdMillions": 34500,
-            "fxBasis": "as reported (USD)"
+            "result": "Press figure from IPO preparations; not stated by the company"
           },
           {
             "name": "Equity raised",
@@ -1044,115 +905,36 @@
             "actual": "'contracts securing more than 200,000 GPUs globally' by end-September 2025 (Aker Q3 2025 letter); Microsoft 'approximately 200,000 NVIDIA GB300 GPUs' (October 2025)",
             "expected": "",
             "verdict": "inline",
-            "result": "Aker and company statements; the S-1 states Microsoft's statements of work at 'up to approximately $43.8 billion through December 2033'"
+            "result": "Aker and company statements; contract values not stated beyond the USD 6.2 billion Narvik agreement"
           },
           {
             "name": "Acquisitions",
-            "actual": "Future-tech (December 2025; price not disclosed in the S-1 either)",
+            "actual": "Future-tech (December 2025; terms not stated)",
             "expected": "",
             "verdict": "inline",
-            "result": "S-1: 'a European data center engineering consultancy'"
+            "result": "Company release"
           }
         ],
-        "commentary": "The year the contract book was signed and almost none of it delivered: revenue of USD 33 million against USD 38 billion of contracted TCV. Operating cash flow was positive only because customers prepaid. No consensus exists for a private company; `expected` is left empty."
+        "commentary": "Aker's Q3 2025 letter: 'from a relatively small startup with fewer than 5,000 GPUs to contracts securing more than 200,000 GPUs globally'. No consensus exists for a private company; `expected` is left empty."
       },
       {
-        "period": "H1 2026 (six months to 30 June 2026, unaudited interim; S-1)",
-        "periodType": "interim",
-        "periodEnd": "2026-06-30",
+        "period": "2026 year to date (September)",
+        "periodType": "other",
+        "periodEnd": "2026-09-04",
         "metrics": [
           {
             "name": "Revenue",
-            "actual": "USD 140.6 million (H1 2025: USD 10.4 million; +1,252%); 52% from deployments in Portugal and 45% from Norway",
+            "actual": "About USD 37 million in Q1 2026 and about USD 100 million in Q2 2026 (Bloomberg via Dealroom)",
             "expected": "",
             "verdict": "inline",
-            "result": "'our largest customer accounted for 52% of our revenue' — unnamed. The v2 dossier's press figures (about USD 37 million Q1, USD 100 million Q2) sum to about USD 137 million, close to the filed total",
-            "kpi": "revenue",
-            "usdMillions": 140.6,
-            "fxBasis": "as reported (USD)"
+            "result": "Press figures from IPO preparations; the company has published none"
           },
           {
-            "name": "Net loss",
-            "actual": "USD (1,020.1) million (H1 2025: USD (368.9) million), of which loss on fair value adjustments USD (457.1) million and interest expense USD (95.1) million; operating loss USD (492.0) million; adjusted EBITDA USD (199.2) million (−142% margin)",
+            "name": "Contracted backlog",
+            "actual": "'$51 billion in total contracted revenue' (Bloomberg via Dealroom, August 2026) — before the reported USD 45 billion Anthropic contract and the USD 3.5 billion Figure commitment",
             "expected": "",
             "verdict": "inline",
-            "result": "Share-based compensation USD 113.8 million; net loss per share USD (5.00)",
-            "kpi": "net-income",
-            "usdMillions": -1020.1,
-            "fxBasis": "as reported (USD)"
-          },
-          {
-            "name": "Cash flow and capex",
-            "actual": "Net cash from operating activities USD 1,686.1 million (prepayments); purchases of property and equipment USD (3,230.1) million; Monarch acquisition net cash USD (131.1) million; USD 237.8 million net cash acquired in the Aker JV roll-up",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Financing inflow USD 1,628.4 million",
-            "kpi": "capex",
-            "usdMillions": 3230.1,
-            "fxBasis": "as reported (USD)"
-          },
-          {
-            "name": "Balance sheet at 30 June 2026",
-            "actual": "Cash USD 1,478.4 million; restricted cash USD 570.3 million; receivables USD 1,928.0 million; PP&E USD 5,727.5 million; goodwill and intangibles USD 4,070.2 million; total assets USD 17,252.0 million; deferred revenue USD 6,492.6 million (USD 1,217.9 million current); operating lease liabilities USD 2,625.4 million; carrying debt USD 137.4 million; total equity USD 4,792.2 million including USD 2,503.5 million of non-controlling interests",
-            "expected": "",
-            "verdict": "inline",
-            "result": "The debt that matters is off this balance sheet: committed facilities, vendor rent and convertible notes signed after the period (next period)"
-          },
-          {
-            "name": "Remaining performance obligations",
-            "actual": "USD 56.4 billion 'including $7.1 billion as a result of the significant financing component on customer prepayments', to be recognised 'over the next 7 years'",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Before the Anthropic and Figure agreements of 24–25 August: 'Subsequent to June 30, 2026, we entered into a number of contracts to deploy and operate GPU clusters for an aggregate amount of $52.5 billion'",
-            "kpi": "backlog",
-            "usdMillions": 56400,
-            "fxBasis": "as reported (USD)"
-          }
-        ],
-        "commentary": "Revenue annualising near USD 300 million against a USD 1 billion half-year loss, two-thirds of it non-cash marks on preferred shares and warrants. Management 'identified that the Company's forecast funding requirements included reliance on uncommitted debt and equity financing, which initially raised substantial doubt about the Company's ability to continue as a going concern', and concluded that deferring or cancelling capex 'would provide sufficient liquidity to alleviate the substantial doubt'; KPMG's opinion is unqualified. Construction and service commitments of USD 3.5 billion fall 'primarily throughout 2026 and 2027'."
-      },
-      {
-        "period": "Capital structure at the S-1 (31 August – 18 September 2026)",
-        "periodType": "other",
-        "periodEnd": "2026-09-18",
-        "metrics": [
-          {
-            "name": "Active and contracted total contract value",
-            "actual": "'approximately $2.6 billion of active and $103.4 billion of active and contracted TCV under long-term take-or-pay contracts' at 31 August 2026, supporting 'approximately 461,000 GPUs that were active or contracted' (about 25,000 active); weighted average contract life 'approximately 5.7 years'; weighted-average prepayment 23% of TCV",
-            "expected": "",
-            "verdict": "inline",
-            "result": "TCV 'excluding any optional extensions, renewals, unexercised capacity'. Microsoft up to USD 43.8 billion and Anthropic up to USD 44.6 billion are the only customer-level figures — about 85% of the total by the dossier's arithmetic, not the filing's",
-            "kpi": "backlog",
-            "usdMillions": 103400,
-            "fxBasis": "as reported (USD); TCV as defined in the S-1, not ASC 606 RPO"
-          },
-          {
-            "name": "Committed bank facilities",
-            "actual": "GPU Financing Facility about USD 1.4 billion (February 2026, Term SOFR + 5.00%, +USD 350 million incremental); Revolving Credit Facility USD 900 million (JPMorgan agent; Term SOFR + 1.75%; USD 830 million utilised since 30 June); Kvandal South DC Facility USD 725 million term + USD 65 million VAT (ABN AMRO, DNB, Nordea, Export Finance Norway, SEB; 3.00–3.75%); Macquarie Iceland Facility USD 331.9 million (Term SOFR + 5.50%); Ward County GPU Facility up to USD 1.85 billion and North Carolina GPU Facility up to USD 1.2 billion (JPMorgan, Goldman Sachs; floating Term SOFR + 2.375%) — each 'received investment-grade ratings with a stable outlook'; a further USD 2.35 billion of bank commitments 'subject to the execution of definitive documentation' (August) and 'additional financing facilities of $4.17 billion' since 30 June",
-            "expected": "",
-            "verdict": "inline",
-            "result": "About USD 6.5 billion committed, in line with the v2 dossier's press-sourced USD 6.1 billion. The rating agency and the letter grade are not named in the S-1; all bank facilities float on SOFR"
-          },
-          {
-            "name": "Vendor financing",
-            "actual": "Dell Financial Services framework agreements (April 2026): 40 payment schedules with 'an aggregate initial-term rent of approximately $2.54 billion' as of 4 September 2026, guaranteed by Nscale Global Holdings Ltd",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Ward County schedules on four-month and North Carolina on three-month initial terms from August–September 2026 — short-dated bridges to the GPU facilities"
-          },
-          {
-            "name": "Convertible loan notes",
-            "actual": "Subscription agreement of 15 September 2026 for 'a minimum of $3.1 billion, comprising of $2.1 billion of unsecured convertible loan notes … and a further $1.0 billion … that will be issued to NVIDIA'; convert automatically at the IPO; 'the NVIDIA Sale will close on or around November 16, 2026'; maturity 15 June 2028 if not converted. TechCrunch and SiliconANGLE (25 September): USD 3.36 billion raised, led by Third Point with Apollo, Citadel and others",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Coupon and conversion price are not stated in the S-1; the USD 3.36 billion total and the investor names are press"
-          },
-          {
-            "name": "NVIDIA",
-            "actual": "Series B shareholder above 5%; USD 300 million SAFE converted into 16,346,160 Series C-3 shares; warrants over 9,476,700 Series B shares (USD 60 million) in return for a guarantee of 'up to $860,340,000 of our obligations under the lease agreement for the facility in Ward County, Texas'; sole holder of the post-IPO Non-Voting Shares",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Supplier, shareholder, lease guarantor and convertible-note buyer at once"
+            "result": "Press; Leverage Shares: 'contracted demand is not necessarily guaranteed demand'"
           },
           {
             "name": "Series C",
@@ -1162,6 +944,13 @@
             "result": "Company release; Aker Q1 2026 report"
           },
           {
+            "name": "Debt facilities",
+            "actual": "USD 1.4 billion GPU delayed-draw term loan (February); USD 790 million Narvik project financing (May); USD 900 million revolving credit facility (July); about USD 3 billion of Ward County and Madison delayed-draw term loans, investment-grade rated (August) — about USD 6.1 billion in total",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; totals are the researcher's sum"
+          },
+          {
             "name": "Acquisitions",
             "actual": "American Intelligence & Power Corporation (March; cash and shares, 'slightly ownership dilutive' per Aker); Anyscale (agreed July; about USD 1.65 billion per Bloomberg; close H2 2026)",
             "expected": "",
@@ -1169,122 +958,29 @@
             "result": "Company releases and Aker notice; Anyscale value is press"
           },
           {
-            "name": "Principal shareholders",
-            "actual": "Aker DC Holding AS (Aker ASA; ultimately Kjell Inge Røkke), Sandton Capital Partners and Paladin Capital Limited (a trust of which founder Josh Payne is settlor) listed above 5%; all percentages blank in the S-1. Aker's own reporting: 22.76% fully diluted after Series C",
-            "expected": "",
-            "verdict": "inline",
-            "result": "No high-vote class: all preferred classes convert one-for-one into one-vote ordinary shares at the IPO; 60-for-1 forward split in May 2026"
-          },
-          {
             "name": "IPO",
-            "actual": "S-1 filed 18 September 2026; NYSE 'NSCL'; Goldman Sachs, J.P. Morgan and Morgan Stanley lead bookrunners; emerging growth company; share count, price range and proceeds blank; filing-fee placeholder USD 100 million. No S-1/A, 424B4 or 8-A12B by 2 October 2026. Press: about USD 3 billion at USD 25–35 billion (Bloomberg, Fortune, TechCrunch); The Wall Street Journal via Semafor (30 September): roadshow expected to be postponed",
+            "actual": "Bloomberg (21 August 2026): US IPO of up to USD 3 billion planned, filing as early as September 2026, Goldman Sachs and JPMorgan",
             "expected": "",
             "verdict": "inline",
-            "result": "Use of proceeds: 'general corporate purposes, including to fund and support our data center projects and deployments'. Anyscale (USD 1.65 billion in equity) closes 'at the time of or concurrent with this offering'"
+            "result": "Press; no SEC filing found"
           }
         ],
-        "commentary": "The S-1 replaces every press-sourced figure the v2 dossier carried and changes the shape of two of them: the backlog is USD 103.4 billion of TCV (not USD 51 billion), and the debt is USD 137 million drawn against roughly USD 9 billion committed (bank facilities plus Dell rent) before the convertible notes. The Anthropic financing is the open item — 'we have not obtained binding commitments for any of the financings required to fund performance under the Anthropic Services Agreements'."
+        "commentary": "Equity of roughly USD 3.7 billion and debt facilities of roughly USD 6.1 billion against reported revenue of about USD 100 million in the latest quarter and a reported USD 51 billion backlog — the gap Leverage Shares and Dealroom flag ahead of the IPO."
       }
     ],
-    "commentary": "Nscale's first financial statements are in its Form S-1 of 18 September 2026 (KPMG LLP, London, unqualified; FY2024 and FY2025 audited, H1 2026 unaudited). Figures above are the filing's unless marked Aker (the lead shareholder's quarterly reports), press (the convertible-note total, the IPO size and valuation, Aker's percentage) or company release. The filing names Anthropic and Microsoft but not the 73% (2025) and 52% (H1 2026) customers; it does not state the IPO size, any shareholder percentage, the rating agency behind the two investment-grade GPU facilities, the convertible notes' coupon, or the Anthropic contract's megawatts and term (redacted in exhibit 10.25) — the '460 MW, six years' the dossier carries for Monarch remains press."
+    "commentary": "Nscale publishes no financial statements, revenue, backlog or headcount. The figures above are its own funding releases, Aker ASA's quarterly reports (the lead shareholder's disclosure is the most reliable window), Companies House and named-outlet IPO reporting; aggregator estimates are excluded. The one contract value ever stated by a party is Microsoft's 'approximately USD 6.2 billion' Narvik agreement."
   },
   "strategyRead": [
-    "1. **(High confidence)** We assess that Nscale is a single-anchor business whose anchor has changed twice in a year, and that the contract book is therefore less diversified than its size suggests. Basis: OpenAI was the announced offtaker at Narvik (July 2025) and Cobalt Park (September 2025); by April 2026 Aker records the Norway LOI 'replaced' by Microsoft and OpenAI paused Stargate UK; Microsoft signed the 1.35 GW Monarch LOI in March 2026 and, per Semafor, 'walked away' over the summer, and Anthropic took 460 MW. Microsoft still anchors four sites; Figure is the first customer that is neither a hyperscaler nor a frontier lab. The S-1 puts numbers on the concentration: Microsoft 'up to approximately $43.8 billion' and Anthropic 'up to approximately $44.6 billion' against USD 103.4 billion of TCV — about 85% in two names by the dossier's arithmetic — and 'our largest customer accounted for 52% of our revenue' in H1 2026.",
-    "2. **(High confidence)** We assess that the financing structure is the company's real product for lenders: contracted, anchor-backed capacity at site SPVs, GPU collateral in Europe, and now investment-grade ratings on the Texas and North Carolina term loans. Basis: the February 2026 DDTL is 'secured by GPU infrastructure' against 'multiple executed customer contracts'; the August 2026 loans 'received investment-grade ratings with stable outlooks'; the USD 900 million RCF has twelve banks. The S-1 confirms the structure and sizes it: about USD 6.5 billion of committed bank facilities, USD 2.54 billion of Dell vendor rent and a minimum USD 3.1 billion of convertible notes against USD 137.4 million of carrying debt and USD 140.6 million of half-year revenue — and it states the unfinanced part plainly: 'we have not obtained binding commitments for any of the financings required to fund performance under the Anthropic Services Agreements'. Management's own forecast 'initially raised substantial doubt about the Company's ability to continue as a going concern'; the cure is a plan to defer capex, which is to say to deliver late into contracts whose termination rights turn on delivery dates.",
-    "3. **(High confidence)** We assess that power, not capital or chips, is the binding constraint at every European site and the reason the capital went to West Virginia and Texas. Basis: Statnett's May 2026 halt ('Phase 2 is more uncertain'); Loughton's slip from 'operational Q4 2026' to 2027 through a planning fight settled by ministerial letter; OpenAI's Stargate UK pause on 'the cost of energy'; against which Monarch buys 2 GW of Caterpillar gas 'independently from the local grid' and Ward County sits on an ERCOT campus a miner already energised. The S-1 is silent on Statnett and Loughton by name and sizes the Caterpillar relationship only as 'our continued collaboration with Caterpillar as a supplier of natural gas generators'; its grid risk is written generically — 'Governments, regulators, utilities or local authorities may delay, restrict or impose new conditions on … power allocations'.",
-    "4. **(High confidence — raised from moderate)** We assess that the Anthropic Monarch contract exists on roughly the reported terms and is Nscale's most important and least financed number. Basis: the S-1 names Anthropic PBC, dates the agreements to 25 August 2026, caps them at 'up to approximately $44.6 billion' across four Vera Rubin NVL72 tranches at Monarch, and attaches termination rights for late delivery and sustained uptime misses 'more stringent than those contained in our other customer agreements'; exhibit 10.25 redacts the megawatts, the term and the price, so the press 460 MW and six years (about USD 16 million per MW-year on Global Data Center Hub's arithmetic) remain unconfirmed. The filing also states that no financing for the build is committed and that Nscale may not sell capacity at the site until it is. If delivered on those terms the residual value of the Vera Rubin fleet in 2033 is the largest open variable in the company's economics; if not financed, Anthropic can terminate tranche by tranche.",
-    "5. **(Moderate confidence — revised)** We assess that 'we build and own every layer ourselves' is now true of the ground but not yet of the contracted GPU volume. Basis: the S-1 states 1 GW of the 1.37 GW of active and contracted capacity at the seven wholly-owned sites, with leased sites 'approximately 15%' of contracted MW, and the April 2026 purchase of SIN02 moved Sines' second phase from Start Campus's building to Nscale's land — which reverses the v2 reading that the majority of Microsoft's volume sits on other people's campuses. Against this, the largest active deployments in H1 2026 (Portugal 52%, Norway 45% of revenue) still ran in partner-built halls, Ward County remains Ionic Digital's building under an NVIDIA-guaranteed lease, and Anyscale (USD 1.65 billion in equity) closes only with the IPO; power is in-house at Monarch alone.",
-    "6. **(Low confidence)** We assess that the Arkon Energy origin still shapes the company's site choices and its governance. Basis: Glomfjord was Arkon's mining site; Ward County is a miner's campus; Companies House shows Arkon Energy Pty Ltd as the pre-Series B controlling shareholder and shows the 5 May 2026 migration of the board to a new parent, 'Nscale Limited', whose filings were not found. The company has never mentioned Arkon on its own channels. The S-1 settles the ownership question the record left open: 'Nscale Limited … is the ultimate holding company of Arkon Energy Pty Ltd. and, directly and indirectly, of Nscale Global Holdings Limited' after the 4–5 May 2026 reorganisation, and Paladin Capital Limited — a trust of which 'Joshua Payne is the settlor' — is a 5% holder. The company still never mentions Arkon on its own channels; the shaping of site choices remains inference.",
-    "Collection gaps: the S-1 does not state the IPO size or valuation, any shareholder's percentage, the rating agency or letter grade behind the two 'investment-grade' GPU facilities, the convertible notes' coupon or conversion price, the Anthropic contract's megawatts, term or start dates (redacted in exhibit 10.25), the Caterpillar order size, the Figure contract's value (the USD 3.5 billion in the Figure release is not in the filing), or the names of the 73% (2025) and 52% (H1 2026) customers; Loughton and Statnett do not appear by name; Aker's 22.76% is Aker's figure; the Bloomberg COO report is paywalled and cited by headline; the earlier gaps on OpenAI's pages, Caterpillar's release and the Hurwitz appointment stand.",
-    "INDICATORS TO WATCH — *Any day — an S-1/A with a price range, or a formal postponement:* the first would convert the press USD 25–35 billion into a filed number; the Wall Street Journal's reported roadshow delay (30 September) says the second is the nearer. *By about 16 November 2026 — the NVIDIA Sale closing:* USD 1.0 billion of convertible notes or Non-Voting Shares, the filing's one dated financing event. *Any binding financing commitment for the Anthropic tranches:* the S-1's stated gap, and the trigger that lets Nscale sell Monarch capacity at all. *At the IPO — Anyscale closing and the automatic conversion of at least USD 3.1 billion of notes:* both are conditioned on the listing. *Late 2027 — the first Vera Rubin tranches at Sines and Monarch:* the delivery dates Anthropic's termination rights key on. *H1 2028 — 2 GW of gross generation at Monarch:* the stated power milestone. *The next Aker ASA quarterly (Q3 2026):* the only regular window into the company until it reports as a listed issuer. *Any OpenAI statement on Stargate UK:* the S-1 records OpenAI's April 2026 withdrawal; a resumption would restore the sovereign narrative."
+    "1. **(High confidence)** We assess that Nscale is a single-anchor business whose anchor has changed twice in a year, and that the contract book is therefore less diversified than its size suggests. Basis: OpenAI was the announced offtaker at Narvik (July 2025) and Cobalt Park (September 2025); by April 2026 Aker records the Norway LOI 'replaced' by Microsoft and OpenAI paused Stargate UK; Microsoft signed the 1.35 GW Monarch LOI in March 2026 and, per Semafor, 'walked away' over the summer, and Anthropic took 460 MW. Microsoft still anchors four sites; Figure is the first customer that is neither a hyperscaler nor a frontier lab.",
+    "2. **(High confidence)** We assess that the financing structure is the company's real product for lenders: contracted, anchor-backed capacity at site SPVs, GPU collateral in Europe, and now investment-grade ratings on the Texas and North Carolina term loans. Basis: the February 2026 DDTL is 'secured by GPU infrastructure' against 'multiple executed customer contracts'; the August 2026 loans 'received investment-grade ratings with stable outlooks'; the USD 900 million RCF has twelve banks. The counter-evidence is the revenue base — about USD 100 million in Q2 2026 (press) against USD 6.1 billion of facilities — which is why the Leverage Shares note calls contracted demand 'not necessarily guaranteed demand'.",
+    "3. **(High confidence)** We assess that power, not capital or chips, is the binding constraint at every European site and the reason the capital went to West Virginia and Texas. Basis: Statnett's May 2026 halt ('Phase 2 is more uncertain'); Loughton's slip from 'operational Q4 2026' to 2027 through a planning fight settled by ministerial letter; OpenAI's Stargate UK pause on 'the cost of energy'; against which Monarch buys 2 GW of Caterpillar gas 'independently from the local grid' and Ward County sits on an ERCOT campus a miner already energised.",
+    "4. **(Moderate confidence)** We assess that the reported Anthropic Monarch contract prices delivery certainty rather than a landlord's margin, and that it is Nscale's most important and least confirmed number. Basis: Global Data Center Hub's arithmetic (USD 45 billion / 460 MW / six years ≈ USD 16.3 million per MW-year, roughly 1.9x an estimated USD 24 billion build cost); the value is press-sourced, Aker's disclosure did not name the customer, and Anthropic's newsroom is silent. If confirmed at those terms the residual value of the Vera Rubin fleet in 2033 is the largest open variable in the company's economics.",
+    "5. **(Moderate confidence)** We assess that 'vertically integrated' is true of ownership and increasingly of software, but not of Nscale's largest contracted sites. Basis: Glomfjord, Narvik and Monarch are owned; Ward County is Ionic Digital's building under a 10-year triple-net lease, Sines is Start Campus's, Keflavik is Verne's, and Madison is 'partner-run' — the majority of Microsoft's GB300 and Vera Rubin volume sits on other people's campuses. Anyscale (Ray) and Future-tech add the software and engineering layers; power is in-house at Monarch only.",
+    "6. **(Low confidence)** We assess that the Arkon Energy origin still shapes the company's site choices and its governance. Basis: Glomfjord was Arkon's mining site; Ward County is a miner's campus; Companies House shows Arkon Energy Pty Ltd as the pre-Series B controlling shareholder and shows the 5 May 2026 migration of the board to a new parent, 'Nscale Limited', whose filings were not found. The company has never mentioned Arkon on its own channels. This is inference from the corporate record, not from any statement.",
+    "Collection gaps: no revenue, backlog, headcount, contract values (other than Microsoft's USD 6.2 billion) or GPU totals on first-party channels; the new parent 'Nscale Limited' is not identified in Companies House filings read; OpenAI's Stargate pages, Caterpillar's AIP release, Nokia's release and several DCD, CNBC and Bloomberg pages were unreachable and are cited from search summaries or reprints; the Lauren Hurwitz appointment release returns 404; Arkon's site was unreachable; David Sykes and Sam Pitt from the commissioning brief were not found anywhere.",
+    "INDICATORS TO WATCH — *September–October 2026 — the S-1:* an actual filing would replace every press-sourced revenue and backlog figure above and state whether the Anthropic contract exists on the reported terms. *Q3 2026 — first Ward County GB300 tranche for Microsoft:* the first US delivery against the 'phased from Q3 2026' schedule. *September 2026–August 2027 — Caterpillar genset deliveries at Monarch:* the physical test of the 2 GW-by-H1-2028 claim. *2026–2027 — Statnett's allocation decisions in Northern Norway:* any allocation to Korgen or Ballangsleira would reopen phase 2; none would confirm Judgment 3. *H2 2026 — Anyscale close and any Series D:* whether the software strategy and the pre-IPO cap table settle before the listing. *Any OpenAI statement on Stargate UK:* a resumption would restore the sovereign narrative; a cancellation would end it."
   ],
   "sources": [
-    {
-      "label": "SEC EDGAR — NSCALE Ltd (CIK 0002110365) submissions: S-1 of 18 September 2026 and four draft registration statements; no amendment or pricing filing by 2 October 2026",
-      "url": "https://data.sec.gov/submissions/CIK0002110365.json",
-      "date": "2026-10-02",
-      "party": "disclosure"
-    },
-    {
-      "label": "Bloomberg — Nscale hires Meta's Justin Osofsky to be COO ahead of IPO (headline; paywalled)",
-      "url": "https://bloomberg.com/news/articles/2026-10-02/nscale-hires-meta-s-justin-osofsky-to-be-coo-ahead-of-ipo",
-      "date": "2026-10-02"
-    },
-    {
-      "label": "Semafor — OpenAI hopes to raise $30B in new funding round (relaying The Wall Street Journal: Nscale to postpone its investor roadshow)",
-      "url": "https://www.semafor.com/article/09/30/2026/openai-hopes-to-raise-30b-in-new-funding-round",
-      "date": "2026-09-30"
-    },
-    {
-      "label": "TechCrunch — Ahead of U.S. IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
-      "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
-      "date": "2026-09-25"
-    },
-    {
-      "label": "SiliconANGLE — AI data center builder Nscale raises $3.36B ahead of IPO",
-      "url": "https://siliconangle.com/2026/09/25/ai-data-center-builder-nscale-raises-3-36b-ahead-of-ipo/",
-      "date": "2026-09-25"
-    },
-    {
-      "label": "SemiAnalysis — ClusterMAX 3.0: The Industry Standard GPU Cloud Rating System Returns (Nscale: Not Recommended – Unavailable)",
-      "url": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard",
-      "date": "2026-09-23"
-    },
-    {
-      "label": "TechCrunch — Nscale's IPO will test Wall Street's appetite for concentrated AI bets once again",
-      "url": "https://techcrunch.com/2026/09/22/nscales-ipo-will-test-wall-streets-appetite-for-concentrated-ai-bets-once-again/",
-      "date": "2026-09-22"
-    },
-    {
-      "label": "Fortune — Money-losing Nscale's $35 billion IPO includes a $3 billion deal with Nvidia and 'going concern' worries",
-      "url": "https://fortune.com/2026/09/21/nscale-35-billion-ipo-nvidia-going-concern/",
-      "date": "2026-09-21"
-    },
-    {
-      "label": "Nscale Limited — Form S-1 registration statement (NYSE: NSCL proposed); audited FY2024–FY2025 and H1 2026 financial statements, customer agreements, indebtedness, going-concern note",
-      "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
-      "date": "2026-09-18",
-      "party": "disclosure"
-    },
-    {
-      "label": "Nscale Limited — S-1 filing index (exhibits 10.18–10.25: RCF, Kvandal South, Macquarie Iceland, Ward County and North Carolina GPU credit agreements, Dell framework, Microsoft and Anthropic forms of order)",
-      "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/",
-      "date": "2026-09-18",
-      "party": "disclosure"
-    },
-    {
-      "label": "Nscale Limited — S-1 Exhibit 10.25: Form of Order for GPU Services, Anthropic PBC / Nscale GPU MCC B1.1 LLC (four tranches of NVIDIA Vera Rubin NVL72; site, GPU count, dates and price redacted)",
-      "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_25.htm",
-      "date": "2026-09-18",
-      "party": "disclosure"
-    },
-    {
-      "label": "Nscale Limited — S-1 Exhibit 10.19: Form of Partner Statement of Work, Microsoft Ireland Operations Limited / Nscale Ventures Holdings Norway AS (Kvandal North, Narvik)",
-      "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_19.htm",
-      "date": "2026-09-18",
-      "party": "disclosure"
-    },
-    {
-      "label": "Nscale Limited — S-1 filing-fee exhibit (USD 100,000,000 maximum aggregate offering price placeholder)",
-      "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-exfiling_fees.htm",
-      "date": "2026-09-18",
-      "party": "disclosure"
-    },
-    {
-      "label": "Nscale — Nscale Files Registration Statement for Proposed Initial Public Offering",
-      "url": "https://www.nscale.com/press-releases/nscale-files-initial-public-offering",
-      "date": "2026-09-18"
-    },
-    {
-      "label": "Aker ASA (via Inderes/NewsWeb) — Nscale files registration statement for proposed initial public offering",
-      "url": "https://www.inderes.fi/en/releases/aker-asa-nscale-files-registration-statement-for-proposed-initial-public-offering",
-      "date": "2026-09-18"
-    },
-    {
-      "label": "Dealroom — Nscale files for NYSE IPO as net loss widens to $1.02B",
-      "url": "https://app.dealroom.co/news/note/nscale-files-for-nyse-ipo-as-net-loss-widens-to-1-02b",
-      "date": "2026-09-18"
-    },
     {
       "label": "Nscale — Figure partnership: USD 3.5B initial compute commitment, Barstow TX",
       "url": "https://www.nscale.com/press-releases/nscale-and-figure",
@@ -1393,11 +1089,6 @@
     {
       "label": "Aker ASA — Q2 2026 CEO letter (PDF)",
       "url": "https://airtools-aker.prod-mid-euw3.investis.com/sites/airtools-aker/files/pr/Aker-ASA-Q2-2026-CEO-Letter.pdf",
-      "date": "2026-07-16"
-    },
-    {
-      "label": "Aker ASA (via Inderes/NewsWeb) — second quarter and half-year results 2026 ('more than 96,000 NVIDIA Rubin GPUs combined')",
-      "url": "https://www.inderes.fi/en/releases/aker-asa-reports-second-quarter-and-half-year-results-2026",
       "date": "2026-07-16"
     },
     {
@@ -1903,6 +1594,6 @@
       "url": "https://en.wikipedia.org/wiki/Nscale"
     }
   ],
-  "lastUpdated": "2026-10-02",
-  "profileVersion": 3
+  "lastUpdated": "2026-09-29",
+  "profileVersion": 2
 }

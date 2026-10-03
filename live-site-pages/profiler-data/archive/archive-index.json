@@ -409,6 +409,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "coreweave.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 5
     }
   ],
   "crrc-zhuzhou": [
@@ -449,6 +455,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-12",
       "supersededBy": 6
+    },
+    {
+      "file": "crusoe.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 7
     }
   ],
   "delta-electronics": [
@@ -1021,6 +1033,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-09-21",
       "supersededBy": 5
+    },
+    {
+      "file": "iren.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 6
     }
   ],
   "jinko": [
@@ -1145,6 +1163,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-09-05",
       "supersededBy": 5
+    },
+    {
+      "file": "lambda.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 6
     }
   ],
   "lg-energy-solution": [
@@ -1463,6 +1487,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-09-06",
       "supersededBy": 5
+    },
+    {
+      "file": "nebius.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 6
     }
   ],
   "nextera-energy-resources": [
@@ -2571,6 +2601,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-09-06",
       "supersededBy": 3
+    },
+    {
+      "file": "anthropic.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 4
     }
   ],
   "talen-energy": [
@@ -2697,6 +2733,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-06",
       "supersededBy": 2
+    },
+    {
+      "file": "fluidstack.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 3
     }
   ],
   "entergy": [
@@ -2741,6 +2783,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-06",
       "supersededBy": 2
+    },
+    {
+      "file": "hut-8.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 3
     }
   ],
   "prime-data-centers": [
@@ -2845,6 +2893,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-24",
       "supersededBy": 2
+    },
+    {
+      "file": "habitat-energy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 3
     }
   ],
   "gridmatic": [
@@ -2971,6 +3025,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-29",
       "supersededBy": 2
+    },
+    {
+      "file": "nscale.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-10-02",
+      "supersededBy": 3
     }
   ],
   "duke-energy": [

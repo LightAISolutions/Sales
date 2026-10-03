@@ -376,15 +376,15 @@
       "tagline": "The compute buyer — up to 5 GW of Trainium, 'well over a gigawatt' of TPUs then multi-GW from 2027, USD 30bn of Azure, all of Colossus 1, a 401 MW direct lease, a 470 MW gas order and reported USD 45bn/USD 35bn neocloud contracts, on run-rate revenue of USD 47bn and a USD 965bn Series H ahead of an IPO.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "anthropic.com",
         "claude.com",
         "www-cdn.anthropic.com",
         "assets.anthropic.com"
       ],
-      "srcTotal": 150,
-      "srcFirstPct": 56,
+      "srcTotal": 152,
+      "srcFirstPct": 57,
       "kpiNorm": false,
       "segments": [
         {
@@ -1300,11 +1300,11 @@
       "hq": "Livingston, NJ, USA",
       "ticker": "NASDAQ: CRWV",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "coreweave.com"
       ],
-      "srcTotal": 22,
+      "srcTotal": 24,
       "srcFirstPct": 50,
       "kpiNorm": true,
       "segments": [
@@ -1312,6 +1312,11 @@
           "id": "neoclouds",
           "role": "incumbent"
         }
+      ],
+      "aka": [
+        "CoreWeave, Inc.",
+        "CRWV",
+        "Atlantic Crypto"
       ]
     },
     {
@@ -1405,15 +1410,15 @@
         "neocloud",
         "developer"
       ],
-      "tagline": "The energy-first AI factory builder — Abilene 1.2 GW for OpenAI/Oracle, ~4.9 GW contracted of a 40+ GW pipeline; the deepest private-developer energy stack.",
+      "tagline": "The energy-first AI factory builder — Abilene 1.2 GW for OpenAI/Oracle (618 MW delivered), Google's Armstrong County campus, '6GW+' contracted and '$140B+' TCV by its count; USD 3.9bn Series F at USD 30.9bn post (Sep 2026); ClusterMAX 3.0 Bronze; the Boom turbine order dropped.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-12",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "crusoe.ai"
       ],
-      "srcTotal": 19,
-      "srcFirstPct": 42,
+      "srcTotal": 33,
+      "srcFirstPct": 52,
       "kpiNorm": false,
       "segments": [
         {
@@ -1424,6 +1429,13 @@
           "id": "neoclouds",
           "role": "challenger"
         }
+      ],
+      "aka": [
+        "Crusoe Energy",
+        "Crusoe Energy Systems",
+        "Crusoe Inc.",
+        "Crusoe Cloud",
+        "Crusoe Industries"
       ]
     },
     {
@@ -2349,18 +2361,18 @@
       "categories": [
         "neocloud"
       ],
-      "tagline": "Tenant-of-record on ~1.4 GW of Anthropic-bound leases at TeraWulf, Cipher, Hut 8 and Meridian Arc — bankable only through Google's backstops and penny warrants; owns one campus (Abernathy, July 2026) and USD 2.6bn of equity against ~USD 27bn of rent.",
+      "tagline": "Tenant-of-record on ~1.4 GW of Anthropic-bound leases at TeraWulf, Cipher, Hut 8 and Meridian Arc — bankable only through Google's backstops; owns Abernathy and now breaks ground at Harlingen (USD 4bn, 1.5 GW reserved); ClusterMAX 3.0 'Unavailable' (bare-metal TPUs at 100K+ chips); USD 2.6bn equity against ~USD 27bn of rent; FY2025 accounts overdue at Companies House.",
       "hq": "New York, NY, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "fluidstack.io",
         "okmulgeefluidstack.io",
         "sullivanfluidstack.io",
         "harlingenfluidstack.io"
       ],
-      "srcTotal": 136,
-      "srcFirstPct": 47,
+      "srcTotal": 149,
+      "srcFirstPct": 46,
       "kpiNorm": false,
       "segments": [
         {
@@ -2371,6 +2383,14 @@
           "id": "neoclouds",
           "role": "challenger"
         }
+      ],
+      "aka": [
+        "Fluidstack Ltd",
+        "Fluidstack Limited",
+        "FluidStack",
+        "Fluidstack USA II Inc.",
+        "Fluidstack USA IV Inc.",
+        "Solis Arx"
       ]
     },
     {
@@ -2760,10 +2780,10 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "The Oxford-born, Quinbrook-owned battery optimiser — EVOLVE desk-plus-registration service on revenue share across GB (BM Virtual Lead Party), ERCOT (Level 4 QSE) and the NEM; 5.5 GW under contract by its count, third in GB and first in ERCOT's December 2025 capture-rate table by Modo's; for sale since March 2026 with no buyer on record.",
+      "tagline": "The Oxford-born, Quinbrook-owned battery optimiser — EVOLVE desk-plus-registration service on revenue share across GB (BM Virtual Lead Party), ERCOT (Level 4 QSE) and the NEM; 5.5 GW under contract by its count, third in GB and first in ERCOT's December 2025 capture-rate table by Modo's; for sale since March 2026 with no buyer on record; FY2025 accounts overdue at Companies House since 30 Sep 2026.",
       "hq": "Oxford, United Kingdom",
       "status": "active",
-      "lastUpdated": "2026-09-24",
+      "lastUpdated": "2026-10-02",
       "aka": [
         "Habitat Energy Limited",
         "Habitat",
@@ -2779,7 +2799,7 @@
         "habitat.energy",
         "quinbrook.com"
       ],
-      "srcTotal": 75,
+      "srcTotal": 78,
       "srcFirstPct": 63,
       "kpiNorm": false,
       "segments": [
@@ -3046,12 +3066,12 @@
       "hq": "Miami, FL, USA",
       "ticker": "NASDAQ: HUT",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "hut8.com"
       ],
-      "srcTotal": 71,
-      "srcFirstPct": 48,
+      "srcTotal": 74,
+      "srcFirstPct": 47,
       "kpiNorm": true,
       "segments": [
         {
@@ -3239,13 +3259,13 @@
       "hq": "Sydney, Australia",
       "ticker": "NASDAQ: IREN",
       "status": "active",
-      "lastUpdated": "2026-09-21",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "iren.com",
         "iren.gcs-web.com"
       ],
-      "srcTotal": 38,
-      "srcFirstPct": 63,
+      "srcTotal": 39,
+      "srcFirstPct": 62,
       "kpiNorm": true,
       "segments": [
         {
@@ -3256,6 +3276,11 @@
           "id": "neoclouds",
           "role": "challenger"
         }
+      ],
+      "aka": [
+        "IREN Limited",
+        "Iris Energy",
+        "IREN Cloud"
       ]
     },
     {
@@ -3449,14 +3474,14 @@
       "categories": [
         "neocloud"
       ],
-      "tagline": "The Superintelligence Cloud — Microsoft multibillion + NVIDIA leaseback anchors, $5.9B Series E, first IG-rated private-neocloud term loan; H2 2026 IPO window.",
+      "tagline": "The Superintelligence Cloud — Microsoft multibillion + NVIDIA leaseback anchors, a reported (unconfirmed) USD 35bn Anthropic deal at Hut 8's Beacon Point, $5.9B Series E, three ~USD 1bn 2026 debt raises (latest fixed-rate, A(low)/Baa1); IPO window now 2027; ClusterMAX Silver.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "lambda.ai"
       ],
-      "srcTotal": 29,
+      "srcTotal": 44,
       "srcFirstPct": 48,
       "kpiNorm": false,
       "segments": [
@@ -3464,6 +3489,11 @@
           "id": "neoclouds",
           "role": "challenger"
         }
+      ],
+      "aka": [
+        "Lambda, Inc.",
+        "Lambda Labs",
+        "Lambda Cloud"
       ]
     },
     {
@@ -4001,22 +4031,28 @@
       "categories": [
         "neocloud"
       ],
-      "tagline": "CoreWeave's most direct challenger — ARR $3B (+56% QoQ), >$40B Microsoft/Meta backlog, 5 GW contracted-power target; ClusterMAX Gold; Vineland permits are the live risk.",
+      "tagline": "CoreWeave's Platinum-tier peer since ClusterMAX 3.0 (Sep 2026) — ARR $3B (+56% QoQ), >$40B Microsoft/Meta backlog, 5 GW contracted-power target; Vineland permits are the live risk.",
       "hq": "Amsterdam, Netherlands",
       "ticker": "NASDAQ: NBIS",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "nebius.com"
       ],
-      "srcTotal": 29,
+      "srcTotal": 31,
       "srcFirstPct": 45,
       "kpiNorm": true,
       "segments": [
         {
           "id": "neoclouds",
-          "role": "challenger"
+          "role": "incumbent"
         }
+      ],
+      "aka": [
+        "Nebius Group",
+        "Nebius Group N.V.",
+        "NBIS",
+        "Yandex N.V."
       ]
     },
     {
@@ -4215,17 +4251,17 @@
       "categories": [
         "neocloud"
       ],
-      "tagline": "Microsoft-anchored European neocloud that owns its ground — Glomfjord and Narvik hydro, the 2 GW Caterpillar-powered Monarch campus — ~200,000 GB300 + 96,000 Rubin contracted, a reported USD 45bn Anthropic deal after Microsoft walked, USD 3.7bn equity and USD 6.1bn debt against ~USD 100M quarterly revenue.",
+      "tagline": "Microsoft- and Anthropic-anchored European neocloud that owns its ground — S-1 of 18 Sep 2026: USD 103.4bn contracted TCV (Microsoft up to USD 43.8bn, Anthropic up to USD 44.6bn) on USD 140.6M H1 2026 revenue and a USD 1.02bn loss; 1 GW of 1.37 GW owned; USD 3.1bn+ convertible notes; NYSE 'NSCL' unpriced; ClusterMAX 3.0 'Unavailable'.",
       "hq": "London, United Kingdom",
       "status": "active",
-      "lastUpdated": "2026-09-29",
+      "lastUpdated": "2026-10-02",
       "domains": [
         "nscale.com",
         "docs.nscale.com"
       ],
-      "srcTotal": 128,
-      "srcFirstPct": 52,
-      "kpiNorm": false,
+      "srcTotal": 145,
+      "srcFirstPct": 50,
+      "kpiNorm": true,
       "segments": [
         {
           "id": "aidc-developers-and-landlords",
@@ -4235,6 +4271,18 @@
           "id": "neoclouds",
           "role": "challenger"
         }
+      ],
+      "aka": [
+        "Nscale Limited",
+        "Nscale plc",
+        "Nscale Global Holdings Limited",
+        "Nscale Global Holdings",
+        "NSCL",
+        "DSNS Holdings",
+        "Nscale AS",
+        "Nscale Norway",
+        "Nscale GPU MCC B1.1 LLC",
+        "Arkon Energy"
       ]
     },
     {

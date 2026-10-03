@@ -9,9 +9,9 @@
   "hq": "San Francisco, CA, USA",
   "founded": "2012 (GPU cloud from 2018; on-prem hardware exited August 2025)",
   "ownership": "private",
-  "employees": "Not disclosed; the Mayes County release says the campus will create 'up to 100 permanent positions'",
+  "employees": "Not disclosed",
   "website": "https://lambda.ai",
-  "summary": "BOTTOM LINE UP FRONT: Lambda is the developer-DNA neocloud converting itself into a contracted 'Superintelligence Cloud' ahead of a reported H2 2026 IPO — a multibillion-dollar multi-year Microsoft deployment agreement (November 2025), NVIDIA as simultaneous supplier, Series D investor, and reportedly largest customer (a $1.5B four-year leaseback of ~18,000 of its own GPUs, per The Information), a >$1.5B Series E at $5.9B post-money (Forge round data; Lambda never disclosed the valuation), and the first investment-grade-rated Term Loan B by a private neocloud ($926M, Baa2, SOFR+300bps, August 2026). BACKGROUND: Founded 2012 in San Francisco by Stephen and Michael Balaban; sold GPU workstations and servers for a decade before going cloud-only (hardware exited August 2025; Inference API and Lambda Chat sunset September 2025). Michel Combes (ex-Sprint, Alcatel-Lucent, SoftBank International) replaced founder Stephen Balaban as CEO in May 2026; stated target is 3 GW of AI compute under management by 2030 against a footprint whose largest disclosed site is ~100 MW potential. SemiAnalysis ClusterMAX holds Lambda at Silver — two tiers below CoreWeave's Platinum — across all three rating cycles, ClusterMAX 3.0 (23 September 2026) crediting improved orchestration and auto-remediation while faulting stale software. September brought the largest number ever attached to the company and the one it has not confirmed: The Wall Street Journal and Bloomberg report a USD 35 billion Anthropic cloud agreement, about 350 MW of it at Hut 8's Beacon Point campus in Texas under an NVIDIA-held lease — Lambda, Anthropic, Hut 8 and NVIDIA have all stayed silent. What the company did announce: a USD 1.008 billion investment-grade fixed-rate delayed-draw term loan (6.78%, A (low) from Morningstar DBRS and Baa1 from Moody's, 1 October) 'backed by contracted cash flows from two hyperscale customers' it does not name, its first owned-land data centre at MidAmerica Industrial Park in Mayes County, Oklahoma (27 September; GRDA power, no incentives, press: 375 MW), and the White House Ratepayer Protection Pledge. Bloomberg reported in late August talks to raise up to USD 3 billion at USD 12 billion or more 'for a public offering next year' — the IPO window has moved from H2 2026 to 2027.",
+  "summary": "BOTTOM LINE UP FRONT: Lambda is the developer-DNA neocloud converting itself into a contracted 'Superintelligence Cloud' ahead of a reported H2 2026 IPO — a multibillion-dollar multi-year Microsoft deployment agreement (November 2025), NVIDIA as simultaneous supplier, Series D investor, and reportedly largest customer (a $1.5B four-year leaseback of ~18,000 of its own GPUs, per The Information), a >$1.5B Series E at $5.9B post-money (Forge round data; Lambda never disclosed the valuation), and the first investment-grade-rated Term Loan B by a private neocloud ($926M, Baa2, SOFR+300bps, August 2026). BACKGROUND: Founded 2012 in San Francisco by Stephen and Michael Balaban; sold GPU workstations and servers for a decade before going cloud-only (hardware exited August 2025; Inference API and Lambda Chat sunset September 2025). Michel Combes (ex-Sprint, Alcatel-Lucent, SoftBank International) replaced founder Stephen Balaban as CEO in May 2026; stated target is 3 GW of AI compute under management by 2030 against a footprint whose largest disclosed site is ~100 MW potential. SemiAnalysis ClusterMAX holds Lambda at Silver — two tiers below CoreWeave's Platinum — across both rating cycles.",
   "ecosystemRole": "We assess Lambda as the price-and-flexibility neocloud moving up-market into the CoreWeave model — and as a demand signal rather than a power buyer for most of this ecosystem's vendors, because its footprint is colocation-first (EdgeConneX Chicago, Cologix Columbus, Prime Data Centers Vernon, Aligned DFW) with owned 'AI factories' only now emerging (Kansas City, 24 MW scaling to 100 MW+). Basis: company site-level disclosures and trade press; no company-wide MW or GPU-fleet figure has ever been published — a collection gap its S-1 would close. For power-chain vendors the read-through is indirect: Lambda's 600 kW-rack Chicago build and hydrogen-powered GB300 deployment at ECL Mountain View show where high-density neocloud requirements are heading, but the facility capex mostly belongs to its colocation landlords.",
   "productsAndServices": [
     {
@@ -58,7 +58,7 @@
         "GB300 NVL72 live on Lambda Cloud October 2025",
         "Industry-first hydrogen-powered GB300 NVL72 systems online at ECL Mountain View (September 2025)"
       ],
-      "positioning": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 3.0 (23 September 2026) keeps Lambda at Silver — 'Lambda's orchestration continues to improve, and customers are happy, which lands them in the upper ranks', three simulated errors auto-remediated, but 'CUDA Toolkit 12.0 … so old it's incompatible with the B300' and 'unacceptably old drivers' — while Nebius joins CoreWeave at Platinum, Crusoe drops to Bronze and Fluidstack leaves the ratings; the rater notes 'Lambda is increasingly driving its bottom line via bare-metal builds, apart from managed clusters altogether'. The reported USD 35 billion Anthropic agreement (press, September 2026) would be this product line's largest contract by an order of magnitude.",
+      "positioning": "Converts Lambda from developer cloud into a CoreWeave-style contracted operator; ClusterMAX 2.0 (November 2025) still rates Lambda Silver vs CoreWeave Platinum and Nebius/Crusoe/Fluidstack Gold, citing capacity sell-outs, immature Kubernetes, and weak inference support.",
       "soldThrough": "Multi-year committed contracts; private cloud and dedicated bare-metal variants.",
       "targetSegments": [
         "Microsoft (multibillion agreement)",
@@ -71,7 +71,7 @@
     {
       "name": "AI factories (data-center layer)",
       "category": "Data centers",
-      "description": "Lambda's physical footprint: 'contiguous AI factories' (75 MW+ campuses) and 'distributed AI factories' (5–75 MW metro sites), overwhelmingly leased from colocation partners today — EdgeConneX Chicago (23 MW, 600+ kW racks, RFS 2026) and Atlanta, Cologix Columbus (HGX B200, 44 kW air-cooled racks), Prime Data Centers Vernon CA (21 of 33 MW), Aligned DFW-04 Plano — plus the first owned-scale conversion in Kansas City, MO (~$500M, 24 MW at early-2026 launch, >10,000 Blackwell Ultra GPUs, scalable past 100 MW, dedicated to a single unnamed customer). Mayes County, Oklahoma (announced 27 September 2026): a data centre on land Lambda buys 'at full market value' in the south section of MidAmerica Industrial Park, Chouteau — power from the Grand River Dam Authority with Lambda funding 'the upfront infrastructure costs', 'closed-loop cooling technology', no incentives or abatement, 'an estimated $500 million in taxes over the next 10 years', up to 1,000 construction and 100 permanent jobs; no megawatts, customer, capex or dates stated by the company (Tulsa World: 375 MW on 329 acres — press).",
+      "description": "Lambda's physical footprint: 'contiguous AI factories' (75 MW+ campuses) and 'distributed AI factories' (5–75 MW metro sites), overwhelmingly leased from colocation partners today — EdgeConneX Chicago (23 MW, 600+ kW racks, RFS 2026) and Atlanta, Cologix Columbus (HGX B200, 44 kW air-cooled racks), Prime Data Centers Vernon CA (21 of 33 MW), Aligned DFW-04 Plano — plus the first owned-scale conversion in Kansas City, MO (~$500M, 24 MW at early-2026 launch, >10,000 Blackwell Ultra GPUs, scalable past 100 MW, dedicated to a single unnamed customer).",
       "highlights": [
         "Company-stated megawatt footprint 'multiplying by 4 between 2025-2026'",
         "Hydrogen fuel-cell off-grid GB300 site with ECL: zero-emissions, water byproduct recycled into liquid cooling",
@@ -82,45 +82,10 @@
       "targetSegments": [
         "Its own cloud customers — the data-center layer is not sold standalone"
       ],
-      "roadmap": "1 MW rack-scale designs on the AI-infrastructure roadmap; 2 GW+ vision with 1M+ GPUs by end of decade (EdgeConneX release); Mayes County, OK: 'The partners have not announced a construction start or opening date' (MidAmerica, 27 September 2026); Cloverleaf Infrastructure readying the site"
+      "roadmap": "1 MW rack-scale designs on the AI-infrastructure roadmap; 2 GW+ vision with 1M+ GPUs by end of decade (EdgeConneX release)."
     }
   ],
   "recentDevelopments": [
-    {
-      "date": "2026-10-01",
-      "category": "financial",
-      "headline": "USD 1.008 billion senior secured fixed-rate delayed-draw term loan closes — 6.78% semi-annual coupon, A (low) Morningstar DBRS and Baa1 Moody's, fully amortising to 30 May 2033, J.P. Morgan sole arranger, 'marketed to insurance companies and fixed income investors'; funds 'three committed customer deployments with two investment-grade offtakers' (unnamed)",
-      "read": "A third credit market opened in 18 months and the first fixed-rate, two-agency-rated GPU paper from a private neocloud — the financing model has outrun the disclosure of who the offtakers are.",
-      "source": "https://lambda.ai/blog/lambda-closes-1-billion-senior-secured-fixed-rate-financing"
-    },
-    {
-      "date": "2026-09-27",
-      "category": "project",
-      "headline": "Mayes County, Oklahoma: Lambda 'announced plans to build a new data center at MidAmerica Industrial Park', buying the land 'at full market value', powered by the Grand River Dam Authority with Lambda funding the infrastructure, no incentives — 'an estimated $500 million in taxes over the next 10 years'; no MW, customer or dates stated (press: 375 MW, 329 acres)",
-      "read": "The first owned-land campus outside Kansas City, chosen by a 'reverse RFP' — the colocation-first footprint starts to add its own ground.",
-      "source": "https://lambda.ai/blog/new-lambda-data-center-in-oklahoma"
-    },
-    {
-      "date": "2026-09-23",
-      "category": "market",
-      "headline": "SemiAnalysis ClusterMAX 3.0 keeps Lambda at Silver for a third cycle: 'Lambda's orchestration continues to improve, and customers are happy, which lands them in the upper ranks of ClusterMAX 3.0'; two synthetic XIDs 'autoremediated in less than 15 minutes', no authentic errors — against CUDA 12.0 and 'unacceptably old drivers' on Slurm",
-      "read": "Reliability, the 2.0 criticism, is answered; software hygiene is the new gap — and the rater says the bottom line now runs on bare metal anyway.",
-      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
-    },
-    {
-      "date": "2026-09-14",
-      "category": "policy",
-      "headline": "Lambda signs the White House Ratepayer Protection Pledge; Combes: 'When developed responsibly, data centers can do more than power the technologies of the future … But we know that trust is built over time'",
-      "read": "The policy posture precedes the Oklahoma announcement by two weeks and is written into it ('paying 100 percent of its energy costs').",
-      "source": "https://lambda.ai/blog/lambda-signs-the-white-house-ratepayer-protection-pledge"
-    },
-    {
-      "date": "2026-09-01",
-      "category": "customer",
-      "headline": "The Wall Street Journal (relayed by Yahoo Finance, Bloomberg Law, CoinDesk): 'Anthropic signed an agreement with Nvidia-backed Lambda valued at $35 billion for cloud computing', with capacity at Hut 8's Beacon Point campus in Nueces County, Texas where 'Nvidia would hold the facility lease'; term, GPU count and MW undisclosed (press summaries: about 350 MW, six years); Lambda, Anthropic, Hut 8 and NVIDIA have not confirmed it",
-      "read": "If real, the contract is roughly six times the Series E valuation and the largest ever attached to the company — and a month on, no party has put its name to it.",
-      "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html"
-    },
     {
       "date": "2026-08-12",
       "category": "financial",
@@ -207,13 +172,11 @@
     }
   ],
   "strategyRead": [
-    "(High confidence) We assess Lambda has executed a deliberate, near-total pivot from developer GPU cloud to contracted superintelligence infrastructure in preparation for a public listing. Basis: hardware business exited (Aug 2025), inference products sunset (Sep 2025), Microsoft and NVIDIA anchor contracts (Q4 2025), investor-relations and audit-chair appointments, and a professional CEO/CFO installed (2026) — every move since mid-2025 points the same direction. September 2026 extends the pivot on both axes: a reported USD 35 billion Anthropic agreement (unconfirmed by any party) on the contracted side, and a first owned-land campus in Oklahoma on the infrastructure side.",
-    "(High confidence) We assess the NVIDIA relationship is simultaneously Lambda's moat and its largest structural risk. Basis: NVIDIA is chip supplier, Series D investor, and — per The Information — largest customer via the $1.5B leaseback; the August 2026 term loan finances an NVIDIA-tied chip purchase. The circular-financing critique applied to CoreWeave applies here with more force, because Lambda's concentration is undisclosed pending an S-1. The reported Anthropic structure — NVIDIA holding the Beacon Point lease, Lambda operating, Anthropic buying — would make NVIDIA landlord as well as supplier, investor and customer, if the press account is right; none of the four has confirmed it.",
-    "(Moderate confidence) We assess a 2026 IPO was contractually incentivized and has slipped to 2027, not merely aspirational. Basis: the reported Mubadala convertible carries penalty terms if no listing within a year of January 2026; banks have been engaged since September 2025; timing has already slipped once (H1→H2 2026). Collection gap: no public S-1 exists as of 2026-08-21, and any filing would likely be confidential first. Bloomberg's 24 August report — up to USD 3 billion at USD 12 billion or more 'for a public offering next year' — moves the window; the October facility's seven-year fixed-rate maturity says the lenders are not waiting on it.",
-    "(Moderate confidence) We assess the operational-quality gap versus CoreWeave is the valuation-relevant execution question. Basis: ClusterMAX held Lambda at Silver across 1.0 and 2.0 while Nebius/Crusoe/Fluidstack sit at Gold and CoreWeave alone at Platinum, citing capacity sell-outs and 'a general degree of disorganization'; Sacra pegs cloud gross margin ~61% vs CoreWeave's 74%. The Combes/Fisher/Hunter leadership import is the board's answer to exactly this. ClusterMAX 3.0 (September 2026) narrows the gap on reliability (three simulated errors auto-remediated, no authentic failures) and reopens it on software hygiene; Lambda stays Silver while Nebius reaches Platinum.",
-    "(Moderate confidence) We assess capacity strategy is colocation-first with ownership just emerging, which caps near-term capex but also caps the power moat. Basis: EdgeConneX/Cologix/Prime/Aligned leases versus one owned conversion (Kansas City, ≤100 MW+ potential) against a stated 3 GW-by-2030 target. Collection gap: Lambda has never disclosed company-wide operating MW or GPU-fleet size — the widest disclosure gap among the major neoclouds. Mayes County (September 2026) is the second owned site and the first bought outright, on a GRDA grid with the company paying the infrastructure — ownership emerging as stated, still unsized.",
-    "Collection gaps (v6): the Anthropic agreement rests on The Wall Street Journal and Bloomberg sourcing — Lambda, Anthropic, Hut 8 and NVIDIA have published nothing, and Hut 8's filings describe its Beacon Point tenant only as 'the high-investment-grade company'; the October facility's two offtakers and three deployments are unnamed (Bloomberg's August report said Microsoft); Mayes County has no company-stated megawatts, capex or dates (375 MW is Tulsa World, paywalled); the leadership page lists executives (Dave Ward, Steve Stewart, Sandeep Jayaram, Paul Zhao) with no dated announcement; DCD, Forbes and Tulsa World were paywalled or blocked.",
-    "INDICATORS TO WATCH — *Any first-party confirmation of the Anthropic agreement:* a Lambda release, an Anthropic post, a Hut 8 filing naming the tenant, or an NVIDIA statement on the Beacon Point lease — until one exists the USD 35 billion is press. *Beacon Point construction:* the Texas filing has work commencing 28 September 2026 and completion 5 November 2027. *A Series F close or an S-1:* Bloomberg's USD 3 billion at USD 12 billion-plus, and the 2027 listing it is said to precede. *Mayes County:* GRDA's and Lambda's 'project-specific power details', a construction start, a named customer. *The next debt raise:* whether the fixed-rate insurance market repeats and whether offtakers are named. *First Vera Rubin capacity:* 'production availability … planned for the second half of 2026' per the January post — none announced by 2 October."
+    "(High confidence) We assess Lambda has executed a deliberate, near-total pivot from developer GPU cloud to contracted superintelligence infrastructure in preparation for a public listing. Basis: hardware business exited (Aug 2025), inference products sunset (Sep 2025), Microsoft and NVIDIA anchor contracts (Q4 2025), investor-relations and audit-chair appointments, and a professional CEO/CFO installed (2026) — every move since mid-2025 points the same direction.",
+    "(High confidence) We assess the NVIDIA relationship is simultaneously Lambda's moat and its largest structural risk. Basis: NVIDIA is chip supplier, Series D investor, and — per The Information — largest customer via the $1.5B leaseback; the August 2026 term loan finances an NVIDIA-tied chip purchase. The circular-financing critique applied to CoreWeave applies here with more force, because Lambda's concentration is undisclosed pending an S-1.",
+    "(Moderate confidence) We assess a 2026 IPO is contractually incentivized, not merely aspirational. Basis: the reported Mubadala convertible carries penalty terms if no listing within a year of January 2026; banks have been engaged since September 2025; timing has already slipped once (H1→H2 2026). Collection gap: no public S-1 exists as of 2026-08-21, and any filing would likely be confidential first.",
+    "(Moderate confidence) We assess the operational-quality gap versus CoreWeave is the valuation-relevant execution question. Basis: ClusterMAX held Lambda at Silver across 1.0 and 2.0 while Nebius/Crusoe/Fluidstack sit at Gold and CoreWeave alone at Platinum, citing capacity sell-outs and 'a general degree of disorganization'; Sacra pegs cloud gross margin ~61% vs CoreWeave's 74%. The Combes/Fisher/Hunter leadership import is the board's answer to exactly this.",
+    "(Moderate confidence) We assess capacity strategy is colocation-first with ownership just emerging, which caps near-term capex but also caps the power moat. Basis: EdgeConneX/Cologix/Prime/Aligned leases versus one owned conversion (Kansas City, ≤100 MW+ potential) against a stated 3 GW-by-2030 target. Collection gap: Lambda has never disclosed company-wide operating MW or GPU-fleet size — the widest disclosure gap among the major neoclouds."
   ],
   "relationships": [
     {
@@ -247,27 +210,6 @@
       "note": "Prime Data Centers is Lambda's Los Angeles landlord: Lambda leases 21 MW of the 33 MW LAX01 building in Vernon for NVIDIA Blackwell systems, announced 13 November 2025.",
       "context": "Prime's release says 'Lambda will initially lease a portion of the facility representing 21 MW of power' at a building that opened in November 2024 'one hundred percent leased by two artificial intelligence companies' — Lambda is one of the two and the other is unnamed. LAX01 was built for 40 kW per rack on air with liquid cooling to 120 kW. The lease is one of the colocation sites (with EdgeConneX Chicago, Cologix Columbus and Aligned DFW-04) that make Lambda's footprint colocation-first; the Prime dossier (September 2026) records it as one of Prime's two named tenants alongside CoreWeave.",
       "source": "https://primedatacenters.com/news/prime-data-centers-and-lambda-partner-to-power-the-next-era-of-superintelligence-with-ai-optimized-infrastructure-in-southern-california/"
-    },
-    {
-      "slug": "anthropic",
-      "type": "customer",
-      "status": "announced",
-      "since": "2026-09",
-      "scale": "USD 35 billion (press); ~350 MW at Beacon Point (press)",
-      "via": "cloud capacity at Hut 8's Beacon Point campus, Nueces County, Texas (NVIDIA-held lease per press)",
-      "note": "The Wall Street Journal (31 August / 1 September 2026) and Bloomberg report a USD 35 billion Anthropic cloud-computing agreement with Lambda, with NVIDIA holding the Beacon Point lease; no party has confirmed it.",
-      "context": "Yahoo Finance's relay: 'The Wall Street Journal reported Monday that Anthropic signed an agreement with Nvidia-backed Lambda valued at $35 billion for cloud computing … Nvidia would hold the facility lease, while Lambda would provide compute capacity to Anthropic … The reports did not disclose the agreement's term, GPU count, payment schedule or computing capacity.' Bloomberg sourced its own account to 'a person familiar with the matter'. Hut 8's filings through 28 September 2026 name neither Lambda nor Anthropic nor NVIDIA, describing the Beacon Point tenant as 'the high-investment-grade company that executed the Phase 1 lease' with 704 MW contracted. The dossier records the agreement as announced-by-press, not active.",
-      "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html"
-    },
-    {
-      "slug": "hut-8",
-      "type": "supplier",
-      "status": "announced",
-      "since": "2026-09",
-      "scale": "Beacon Point: 704 MW contracted to an unnamed investment-grade tenant (Hut 8)",
-      "note": "Press places about 350 MW of the reported Anthropic–Lambda capacity at Hut 8's Beacon Point campus under an NVIDIA-held lease; Hut 8 names none of the three.",
-      "context": "CoinDesk (1 September 2026): 'CoinDesk has asked Hut 8 to confirm how much of Beacon Point's 704 megawatts of leased capacity is tied to Lambda and Anthropic, and whether Nvidia is the previously undisclosed tenant behind both leases.' Hut 8's 20 July 2026 release: 'The tenant, the high-investment-grade company that executed the Phase 1 lease, has doubled its contracted IT capacity at the campus to 704 MW.' A Texas construction filing (The Energy Mag, 15 September) has Beacon Point work commencing 28 September 2026 and completing 5 November 2027.",
-      "source": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal"
     }
   ],
   "technicalSpecs": [
@@ -390,27 +332,6 @@
         "CEO, AT&T Communications (2017–2019); AT&T CTO and Group President, Technology & Operations before that",
         "Chairs the board through the planned listing; joined alongside Vice Chairman Jerry Hunter (ex-Snap COO, early AWS infrastructure)"
       ]
-    },
-    {
-      "name": "Leonard Speiser",
-      "title": "Chief Operating Officer (leadership page, October 2026)",
-      "background": [
-        "Chief Operating Officer — Lambda (per lambda.ai/leadership)"
-      ]
-    },
-    {
-      "name": "David Crosby",
-      "title": "EVP Capital Markets & Corporate Development (leadership page, October 2026)",
-      "background": [
-        "EVP Capital Markets & Corporate Development — Lambda; the October 2026 fixed-rate facility and the August Term Loan B fall under this remit (title per lambda.ai/leadership)"
-      ]
-    },
-    {
-      "name": "Robert Brooks IV",
-      "title": "Chief Commercial Officer (leadership page, October 2026)",
-      "background": [
-        "Chief Commercial Officer — Lambda (per lambda.ai/leadership)"
-      ]
     }
   ],
   "financials": {
@@ -445,11 +366,11 @@
             "actual": "$1.5B (Series C $320M, Feb 2024) → ~$2.5B (Series D $480M, Feb 2025, NVIDIA/ARK/In-Q-Tel participating) → $5.9B post (Series E >$1.5B, Nov 2025, TWG Global lead — per Forge round data)",
             "expected": "",
             "verdict": "beat",
-            "result": "~$2.36B total equity raised; Forge secondary at $39.32/share (2026-08-21) sits ~22% above the $32.27 Series E price. Bloomberg (24 August 2026): 'discussing raising up to $3 billion in a funding round that could position the company for a public offering next year … at a valuation of $12 billion or higher'; terms not finalised, nothing announced by 2 October"
+            "result": "~$2.36B total equity raised; Forge secondary at $39.32/share (2026-08-21) sits ~22% above the $32.27 Series E price"
           },
           {
             "name": "Debt ladder",
-            "actual": "$500M Macquarie GPU-backed facility (Apr 2024, the sector's first) → $275M JPMorgan (Aug 2025) → $1B secured facility (May 2026, oversubscribed) → $926M TLB at Baa2/SOFR+300 (Aug 2026) → $1.008B senior secured fixed-rate delayed-draw term loan (1 Oct 2026; 6.78% semi-annual; A (low) Morningstar DBRS / Baa1 Moody's; fully amortising to 30 May 2033; J.P. Morgan sole coordinating lead arranger)",
+            "actual": "$500M Macquarie GPU-backed facility (Apr 2024, the sector's first) → $275M JPMorgan (Aug 2025) → $1B secured facility (May 2026, oversubscribed) → $926M TLB at Baa2/SOFR+300 (Aug 2026)",
             "expected": "",
             "verdict": "beat",
             "result": "The first private neocloud with an investment-grade-rated term loan — the same coupon-compression arc CoreWeave traveled, compressed into two years"
@@ -460,86 +381,13 @@
             "expected": "",
             "verdict": "inline",
             "result": "Reported H2 2026 listing window; Morgan Stanley/J.P. Morgan/Citi engaged since Sep 2025; no public S-1 as of 2026-08-21"
-          },
-          {
-            "name": "Fixed-rate GPU facility (October 2026)",
-            "actual": "'$1.008 billion delayed draw term loan' at '6.78% fixed interest rate on a semi-annual coupon basis', 'marketed to insurance companies and fixed income investors', 'oversubscribed'; 'an A (low) rating from Morningstar DBRS and a Baa1 rating from Moody's'; 'to fund the purchase and development of GPU infrastructure supporting three committed customer deployments with two investment-grade offtakers across multiple data centers'",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Company release, 1 October 2026 — 'Lambda's first U.S. fixed rate financing and its first $1 billion-plus institutional debt financing', 'the third new credit market Lambda has opened in the last 18 months' after the bank facility and the Term Loan B; one notch above August's Baa2. The offtakers are unnamed; Bloomberg (28 August) said the chips are ones 'that Microsoft will lease'. Secured on the funded GPU servers and the contracted cash flows"
           }
         ],
-        "commentary": "The capital structure tells the strategy: equity for land-grab speed, GPU-collateralized debt matched to contracted cash flows from a concentrated customer set (NVIDIA leaseback, Microsoft). Fully-amortizing structures mean the debt only works if the contracts pay to term. Each of the three 2026 institutional debt raises was about USD 1 billion ('Across its major 2026 financings, Lambda has raised approximately $1 billion in each transaction'); the reported USD 35 billion Anthropic agreement, if real, would be the largest contract the debt has ever been sized against, and no party has confirmed it."
+        "commentary": "The capital structure tells the strategy: equity for land-grab speed, GPU-collateralized debt matched to contracted cash flows from a concentrated customer set (NVIDIA leaseback, Microsoft). Fully-amortizing structures mean the debt only works if the contracts pay to term."
       }
-    ],
-    "commentary": "Private; revenue and margins are third-party estimates and reports, while the capital structure is company-stated at each raise. The October 2026 facility is the first with a public rating from two agencies (A (low) / Baa1) and the first fixed-rate; its offtakers, like the reported Anthropic agreement's terms, are undisclosed."
+    ]
   },
   "sources": [
-    {
-      "label": "KRMG — Lambda data center to be located at MidAmerica Industrial Park (300-acre site)",
-      "url": "https://krmg.com/2026/10/02/lambda-data-center-to-be-located-at-midamerica-industrial-park/",
-      "date": "2026-10-02"
-    },
-    {
-      "label": "Lambda — Lambda closes $1 billion senior secured fixed rate financing (USD 1.008 billion delayed-draw term loan; A (low) DBRS, Baa1 Moody's; 6.78%; maturity 30 May 2033)",
-      "url": "https://lambda.ai/blog/lambda-closes-1-billion-senior-secured-fixed-rate-financing",
-      "date": "2026-10-01"
-    },
-    {
-      "label": "Hut 8 — 8-K Ex. 99.1: $1.07 billion senior secured revolving credit facility (no tenant named)",
-      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926111154/tm2625691d1_ex99-1.htm",
-      "date": "2026-09-28"
-    },
-    {
-      "label": "Lambda — Lambda to build new data center in Mayes County, Oklahoma, generating half a billion dollars in tax revenue over next decade",
-      "url": "https://lambda.ai/blog/new-lambda-data-center-in-oklahoma",
-      "date": "2026-09-27"
-    },
-    {
-      "label": "MidAmerica Industrial Park — Lambda data center project: community questions and answers",
-      "url": "https://maip.com/news/article/lambda-data-center-project-community-questions-and-answers",
-      "date": "2026-09-27"
-    },
-    {
-      "label": "SemiAnalysis — ClusterMAX 3.0: The Industry Standard GPU Cloud Rating System Returns (Lambda: Silver)",
-      "url": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard",
-      "date": "2026-09-23"
-    },
-    {
-      "label": "Lambda — MLPerf Inference v6.1: pioneering agent, VLM benchmarks",
-      "url": "https://lambda.ai/blog/mlperf-inference-v6.1",
-      "date": "2026-09-16"
-    },
-    {
-      "label": "The Energy Mag — Hut 8 Beacon Point construction filing (work commencement 28 September 2026; completion target 5 November 2027)",
-      "url": "https://www.theenergymag.com/news/2026-09-15/hut-beacon-point-ai-construction-texas",
-      "date": "2026-09-15"
-    },
-    {
-      "label": "Lambda — Lambda signs the White House Ratepayer Protection Pledge",
-      "url": "https://lambda.ai/blog/lambda-signs-the-white-house-ratepayer-protection-pledge",
-      "date": "2026-09-14"
-    },
-    {
-      "label": "Yahoo Finance / Blockspace (relaying The Wall Street Journal) — Anthropic signs $35 billion Lambda cloud deal",
-      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-signs-35-billion-lambda-144113886.html",
-      "date": "2026-09-01"
-    },
-    {
-      "label": "Bloomberg Law (Bloomberg News) — Anthropic seals $35 billion cloud deal with Nvidia-backed Lambda",
-      "url": "https://news.bloomberglaw.com/crypto/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda",
-      "date": "2026-09-01"
-    },
-    {
-      "label": "CoinDesk — Hut 8's Texas power site sits inside Anthropic's $35 billion AI deal",
-      "url": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
-      "date": "2026-09-01"
-    },
-    {
-      "label": "Investing.com (relaying Bloomberg) — Lambda in talks to raise $3 billion at $12 billion valuation",
-      "url": "https://www.investing.com/news/stock-market-news/lambda-in-talks-to-raise-3-billion-at-12-billion-valuation-bloomberg-93CH-4874319",
-      "date": "2026-08-24"
-    },
     {
       "label": "Lambda — $926M Term Loan B priced (Baa2, first IG-rated private-neocloud TLB)",
       "url": "https://lambda.ai/blog/lambda-prices-926-million-senior-secured-term-loan-b-facility",
@@ -549,11 +397,6 @@
       "label": "Bloomberg (via Yahoo Finance) — Lambda taps loan market for NVIDIA-tied chip deal",
       "url": "https://finance.yahoo.com/technology/ai/articles/ai-cloud-provider-lambda-taps-144447179.html",
       "date": "2026-08-10"
-    },
-    {
-      "label": "Hut 8 — 8-K Ex. 99.1: Beacon Point Phase 2 lease — 'the high-investment-grade company that executed the Phase 1 lease, has doubled its contracted IT capacity at the campus to 704 MW'",
-      "url": "https://www.sec.gov/Archives/edgar/data/0001964789/000110465926084862/tm2620835d1_ex99-1.htm",
-      "date": "2026-07-20"
     },
     {
       "label": "Lambda — MLPerf Training v6.0 fastest GB300 NVL72 LLM training",
@@ -683,12 +526,8 @@
     {
       "label": "Sacra — Lambda revenue, valuation & funding estimates",
       "url": "https://sacra.com/c/lambda-labs/"
-    },
-    {
-      "label": "Lambda — Leadership page (executive team, October 2026)",
-      "url": "https://lambda.ai/leadership"
     }
   ],
-  "lastUpdated": "2026-10-02",
-  "profileVersion": 6
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 5
 }

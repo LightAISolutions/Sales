@@ -19,14 +19,6 @@
       "why": "Short-gap pin (v8 -> v9, 1 version): all three cited byd sources compared and unchanged. NOTE THE SUBSTANTIVE DRIFT, which the pin exists to make visible: this edition records BYD's specified-foreign-entity status as unresolved, and v9 resolves it against IRS Notice 2026-15 on two prongs. The edition is immutable and its snapshot stands; the corrected finding reaches readers with the next edition of this report."
     },
     {
-      "report": "named-project-bess-attach--opportunity--2026-09-08",
-      "slug": "crusoe",
-      "pinnedVersion": 5,
-      "verifiedAt": 6,
-      "when": "2026-09-12",
-      "why": "v6 adds only a one-sided Heron Power supplier relationship (letter of intent, announced) and its Latitude Media source; no figure, project attachment or BESS claim the report pinned moved."
-    },
-    {
       "report": "aidc-power-conversion-rev2--competitive--2026-09-25",
       "slug": "zhonhen",
       "pinnedVersion": 8,
@@ -105,6 +97,31 @@
       "verifiedAt": 3,
       "when": "2026-09-26",
       "why": "Edge-only revision (F-I1 step 7, 2026-09-26): v3 adds one curated 'other' relationship to the new kkr dossier (KKR has controlled STTGDC, host of Amperesand's HVDC testbed, since 2 Sep 2026), citing the STT GDC release already in v2. Every other field is byte-identical to the archived v2; all seven amperesand sources the report cites are unchanged, and the report does not mention KKR."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "crusoe",
+      "pinnedVersion": 5,
+      "verifiedAt": 7,
+      "when": "2026-09-08",
+      "why": "Crusoe v7 (2026-10-02) adds the USD 3.9bn Series F at USD 30.9bn post-money, Google named as the Armstrong County customer, the Boom turbine order dropped, ClusterMAX 3.0 Bronze and three directors. None of the report's Crusoe claims moves: Crusoe remains Abilene's developer-operator (Oracle: 618 MW, six of eight buildings delivered), the ON.energy 5 GW AI-UPS and Form Energy 12 GWh fleet contracts stand, and the Microsoft 900 MW Abilene campus is unchanged. Read 2026-10-02.",
+      "verifiedOn": "2026-10-02"
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "anthropic",
+      "pinnedVersion": 3,
+      "verifiedAt": 4,
+      "when": "2026-09-08",
+      "why": "Anthropic v4 (2026-10-02) is a step-7 revision: Nscale's S-1 names Anthropic at up to USD 44.6bn (the relationship moves to active) and Cipher's Barber Lake amendment is recorded. The report cites Anthropic only as Colossus's tenant and River Bend's end user behind Fluidstack; neither claim nor any cited source moved. Read 2026-10-02."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "hut-8",
+      "pinnedVersion": 2,
+      "verifiedAt": 3,
+      "when": "2026-09-08",
+      "why": "Hut 8 v3 (2026-10-02) updates the Crusoe competitor context ('6GW+' contracted per the Series F release), adds the WSJ-reported Beacon Point tenancy (press, unconfirmed) and the USD 1.07bn revolver. The report pins River Bend — the USD 7.0bn Fluidstack lease on 330 MW of Entergy capacity with Google's backstop and the 1,000 MW ROFO — which is untouched. Read 2026-10-02."
     }
   ]
 }
