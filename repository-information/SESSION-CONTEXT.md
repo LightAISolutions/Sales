@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-10-02 07:37 PM → 08:40 PM EST (§3 row 5: the neoclouds Profiler pass + `profiler Habitat Energy`, then the reminders, the F-I4 prompt and this save; two attended turns)
+**Repo version:** v07.80r → v07.82r (two pushes: v07.81r the pass, v07.82r reminders + §9 prompt + this save)
+**Branch:** `claude/zen-heisenberg-w8bs9q`
+**Model:** Fable 5.1 High (`claude-fable-5-1`); `get_session` exposes no cost field — six research subagents reported 1,590,595 tokens between them
+
+### What was done
+
+- **Both Companies House gates were missed, not filed.** Fluidstack Ltd (10985545), Habitat Energy Limited (10923911) and Renewable and Grid Services Limited (13250883) all showed 'Accounts overdue' on 2 October (FY2025 accounts due 30 September). Recorded in Fluidstack v3 and Habitat v3 as the finding (summary, financials rows, commentary, indicators, watch lists).
+- **Nscale v3** rebuilt from the S-1 of 18 September (KPMG): revenue USD 19.1M / 33.0M / 140.6M (2024 / 2025 / H1 2026), net loss USD 1,020.1M in H1, USD 103.4bn TCV at 31 August, RPO USD 56.4bn, **Anthropic PBC named at up to USD 44.6bn** (four Vera Rubin tranches at Monarch, financing uncommitted), Microsoft up to USD 43.8bn, 1 GW of 1.37 GW owned, going-concern doubt raised and alleviated, ~USD 6.5bn committed bank facilities + USD 2.54bn Dell rent + ≥USD 3.1bn convertible notes (NVIDIA USD 1.0bn closing ~16 Nov). No S-1/A or pricing by 2 October; WSJ (via Semafor) expects the roadshow postponed; Bloomberg reports Justin Osofsky (Meta) hired as COO.
+- **ClusterMAX 3.0 (23 Sep)** folded in: CoreWeave v5 (third Platinum, now shared), **Nebius v6 (Gold → Platinum; segment role challenger → incumbent)**, Crusoe v7 (Gold → Bronze), Lambda v6 (Silver), IREN v6 (Underperforming), Fluidstack ('Unavailable' — 'bare-metal TPU deployments at 100K+ chip scale'), Nscale ('Unavailable'). Lambda and Crusoe ran the full command (watch items had moved: the press-only USD 35bn Anthropic–Lambda deal at Beacon Point, Lambda's USD 1.008bn fixed-rate facility A(low)/Baa1 and Mayes County OK; Crusoe's USD 3.9bn Series F at USD 30.9bn post, Google named at Armstrong County, the Boom turbine order dropped, three directors).
+- **Step 7** by aka[]: Anthropic v4 (Nscale's S-1 names it; Barber Lake slip — Cipher's 24 Sep amendment moves delivery to Q4 2026–Q1 2027 with the lab signing years 11–20 directly) and Hut 8 v3 revised; three report pins re-verified; one crossref candidate accepted. Habitat's five inbound dossiers unchanged.
+- **Part C** (first application of the step-5 sub-rule): all 19 segment lessons regenerated; `check-classroom-content.py` 0 errors (was 14 on main); Classroom GAS v01.94g; pipeline checker P1/P10 only. `main` is green for the 10/7 07:02 AM ET pipeline run.
+- **Routines (10/1):** drift check stood down at 8/25 drifted pins (no superseding BESS-attach report); quarterly sweep 0 due; earnings desk v07.80r (Intertek re-dated). Session context was stale and auto-reconstructed.
+- **v07.82r:** the neoclouds and Habitat reminders moved to Completed; §3 row 5 marked landed, row 6 re-timed; **§9 = the F-I4 paste-in prompt** (Quinbrook · ECP · CPP Investments, Fable 5.1 High).
+
+### Where we left off
+
+- All changes committed and pushed; `main` carries v07.81r (merged) and v07.82r is on its way via the auto-merge workflow.
+- **Next: paste `phase-f-action-plan.md` §9 into a fresh Fable 5.1 High session** — F-I4, three new `capital` dossiers; it regenerates `segment-capital` and bumps Classroom GAS to v01.95g.
+- Then F-G1 (Clayco, Faith Technologies, EMCOR), F-A1 (Anza, SemiAnalysis, EPRI); the Dominion reframe (its own session, by Tue 10/6); wave A Sat 10/3–Tue 10/6 — `landscape-neoclouds-2026-09` must now reflect Nebius at Platinum/incumbent and Fluidstack and Nscale at 'Unavailable'.
+
+### Key decisions made
+
+- A late Companies House filing is written as the finding itself (date checked, 'Accounts overdue' quoted, filing-pattern context), never as an absence.
+- Nebius's role moved on the third-party top-tier rank per the segments evidence rule; no other role moved on a rating — challengers are placed on the capacity they sell.
+- Lambda and Crusoe were escalated from targeted to full refreshes because their watch items had moved (the prompt's own rule); IREN got a targeted refresh because ClusterMAX 3.0 names it.
+- The stop hook's mid-session push requests were held: the Session Start reconstruction rides with the task push.
+
+### Known issues
+
+- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged.
+- `verify-profiler-roles.py` fails two progress-isolation fixtures in the headless harness (pre-existing; Profiler.html untouched).
+- `profiler-graph.json` `built` reads 2026-10-03 (UTC build) while the dossiers say 2026-10-02 — the content checker accepts it.
+- Both overdue filings are open watch items that no Routine covers (Fluidstack is in the January sweep; Habitat is watch tier) — a mid-October re-check is manual.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 199 dossiers, page v01.93w. **Classroom:** GAS v01.94g, page v01.16w, content checker 0 errors. **CHANGELOG** `Sections: 100/100` (three 2026-10-02 sections exempt → 97 non-exempt; no rotation yet — the next push's non-exempt count decides).
+- **Active reminders (2):** the Dominion reframe (10/2–10/6), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
+
+### Recommendation for next session
+
+- **Paste `phase-f-action-plan.md` §9 into a fresh Fable 5.1 High session** — F-I4 (Quinbrook, Energy Capital Partners, CPP Investments); Quinbrook's overdue group accounts and the stalled Habitat sale are already researched inputs in Habitat v3.
+
+**To continue:** type `run F-I4` (or paste §9 directly).
+
+## Previous Sessions
+
 **Date:** 2026-10-02 09:19 AM EST (the Routine-fired Profiler earnings desk — one unattended turn)
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
 **Repo version:** v07.80r
@@ -25,51 +74,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **TODO.md:** no items
 - **Active reminders (4):** the neoclouds Profiler pass (on or after 10/1), the Dominion rehearsal reframe (10/2–10/6), `profiler Habitat Energy` (on or after 10/1), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31)
 - **Classroom:** content checker still 14 errors on main (seven segment lessons behind the registry) — cleared by the row-5 session's push
-
-## Previous Sessions
-
-**Date:** 2026-09-30 04:21 PM → 06:45 PM EST (the 9/30 Classroom pipeline run check, its diagnosis, the segment-regeneration rule, and the row-5 prompt; four attended turns)
-**Repo version:** v07.76r → v07.79r (three pushes: v07.77r reminders + rotation, v07.78r the rule, v07.79r the prompt + this save)
-**Branch:** `claude/lucid-brown-6zw798`
-**Model:** Fable 5.1 (check session; §3 row 2 planned Opus 5.5 medium for the read-only check — the diagnosis then turned into three pushes)
-
-### What was done
-
-- **The 9/30 Classroom pipeline run ended `BLOCKED`** (session `cse_01Er6Rdt6vPQL95C41VR3Qme`, 11:03–11:07 UTC, Opus 5): pre-flight §5.1 step 2 found `check-classroom-content.py` red on `main` — 14 errors, seven `segment-*` lessons (aidc-developers-and-landlords, bridge-and-on-site-generation, capital, hyperscalers-and-ai-labs, neoclouds, storage-developers-and-ipps, utilities) no longer matching `profiler-segments.json` after the F-H1/F-N1/F-I1/F-N2/F-U3/F-U4 pushes added 17 members since the v07.60r regeneration. Gate digest, schema versions and push path all passed; nothing written, no branch left. The run could not set its session title (no tool in a Routine-fired session); no email arrived for 9/21, 9/23 or 9/30 (push was sent by the run).
-- **Root cause named:** the Profiler checkers do not read the Classroom lessons, and the pipeline is forbidden to regenerate a `segment-*` lesson, so nothing between a registry push and Wednesday noticed. `build-classroom-segments.py --check` reads 15 due on the deep clone.
-- **v07.77r** — the 2026-09-26 "Check the 9/30 run" reminder moved to Completed (the 9/24 duplicate was already there); CHANGELOG rotation of the 2026-09-20 group (v06.75r–v06.82r, 8 of 8 SHAs resolved). The rule write into `.claude/rules/profiler-app.md` was refused by the permission classifier from a Bash heredoc that push.
-- **v07.78r** — the rule landed via the file-edit tool at the developer's explicit direction: Profiler Command step 5 sub-bullet — any session that adds/removes a segment member or moves a role regenerates every due segment lesson, bumps the Classroom GAS version, and runs `check-classroom-content.py` to zero errors before committing; refresh-only sessions exempt (keeps the Routine-fired desk and sweep outside it).
-- **v07.79r** — `phase-f-action-plan.md` §8: the paste-in prompt for §3 row 5 (neoclouds pass + `profiler Habitat Energy`, Fable 5.1 High, Thu 10/1 after 5:00 PM PT), rebuilt from v07.40r/v07.46r and the reminders; row 5 re-timed and pointed at §8.
-- **The 10/1 Routines, predicted from the calendar and pins:** earnings desk 9:05 AM ET stand-down (`intertek` nextReport 10/1, confirmed → due 10/2); quarterly sweep 9:05 AM ET stand-down (0 core rows past 90 days); opportunity-report drift check 1:02 PM ET **commits** (15 of 15 pins on `named-project-bess-attach--opportunity--2026-09-08` drifted, gate 10).
-
-### Where we left off
-
-- **Next: paste §8 into a fresh Fable 5.1 High session on Thu 10/1 after 5:00 PM PT.** It rebases first, refreshes Fluidstack/Nscale (+ ClusterMAX 3.0 rows on CoreWeave, Nebius, Crusoe, Lambda) and Habitat Energy, then regenerates all 15 due segments (Classroom GAS v01.93g → v01.94g) so `main` is green before the 10/7 07:02 AM ET pipeline run. That session's push will be the first under the new rule.
-- **Then Phase 1 in order:** F-I4 (Quinbrook, ECP, CPP Investments), F-G1 (Clayco, Faith Technologies, EMCOR), F-A1 (Anza, SemiAnalysis, EPRI) — each now regenerates the segments it moves. Dominion reframe Fri 10/2–Tue 10/6 in its own session. Wave A Sat 10/3–Tue 10/6.
-- **Not done:** the segment lessons are still red on `main` (14 errors) — by design, deferred to the 10/1 push. `landscape-neoclouds-2026-09` and `scenario-neoclouds-discovery` keep reviewBy 2026-09-30 until wave A.
-
-### Key decisions made
-
-- The pipeline's own suggestion adopted as a rule (developer approved 2026-09-30), scoped to membership/role changes and written to regenerate **all** due segments, not only the touched ones, so F-I4/F-G1/F-A1 cannot re-redden `main` before 10/7.
-- The refused rules-file write was not routed around; it was retried only after the developer's explicit "add the rule yourself if possible".
-- Row 5 timed after 5:00 PM PT rather than "after the Routines commit", so all three 10/1 Routine pushes are on `main` before the session starts.
-
-### Known issues
-
-- Pre-existing report pin warnings (`fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6) — the 10/1 drift check will change the BESS-attach report's pins.
-- A stale unmerged remote branch `claude/adoring-brown-mvddj2` (9/13, "Remember session context") was never swept; left alone.
-- Routine email notifications: none received for the three C2 runs despite `email: true`; push confirmed sent by the 9/30 run. Raise with support if a COMMIT run also goes silent.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 199 dossiers, page v01.93w. **Classroom:** GAS v01.93g, page v01.16w, content checker **14 errors on main**. **CHANGELOG** `Sections: 97/100` (three 2026-09-30 sections exempt, 94 non-exempt).
-- **Active reminders (4):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run.
-
-### Recommendation for next session
-
-- **Paste `phase-f-action-plan.md` §8 into a fresh Fable 5.1 High session on Thu 2026-10-01 after 5:00 PM PT** — it carries the rebase, both refreshes and the 15-segment catch-up that unblocks the 10/7 pipeline run.
-
-**To continue:** type `run the neoclouds pass` (or paste §8 directly).
 
 Developed by: LightAISolutions

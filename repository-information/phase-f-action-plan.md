@@ -104,6 +104,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | F-N2 — WhiteFiber, 5C Group, TECfusions | Fable 5.1 High | v07.73r, 9/29 |
 | F-U3 — PPL, Pinnacle West, NiSource | Fable 5.1 High | v07.74r, 9/29 (run as three project threads: research, hand-off, write) |
 | F-U4 — Florida Power & Light, Salt River Project, TVA | Fable 5.1 High | v07.76r, 9/29 (one session; three parallel research subagents, then the write) |
+| Row 5 — neoclouds pass (Fluidstack v3, Nscale v3, CoreWeave v5, Nebius v6, Crusoe v7, Lambda v6, IREN v6) + Habitat Energy v3; 19 segment lessons regenerated | Fable 5.1 High | v07.81r, 10/2 (one session; six research subagents) |
 
 **Week 1 — now to Sat 10/3, 7:00 AM ET.** About $1,150 of the Fable half is left: the week's only Fable session so far (another project) used about $41. The seven Fable rows below come to about $800–$1,000.
 
@@ -113,8 +114,8 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | 2 | Wed 9/30, after ~7:30 AM ET | Check the 9/30 Classroom pipeline run (read-only) | Opus 5.5 · medium | The standing reminder. If the run committed, `git fetch origin main` and rebase before the next session |
 | 3 | ~~Wed 9/30~~ **Landed 9/29 (v07.74r)** | **F-U3** — PPL, Pinnacle West, NiSource | Fable 5.1 · high | Done, as a project thread: two research threads wrote the verified notes and a hand-off, and a third thread finished the six NiSource gaps and wrote the dossiers. NiSource is a Delaware corporation per its 10-K cover; `quanta-services` v5→v6 corrected its '~3 GW CCGT' to 2 × 1,300 MW plus a 400 MW battery. Wave C (row 16) now takes eight new franchises since `landscape-utilities-2026-09` was written (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource) |
 | 4 | ~~Wed 9/30 – Thu 10/1~~ **Landed 9/29 (v07.76r)** | **F-U4** — Florida Power & Light, Salt River Project, TVA | Fable 5.1 · high | Done, in one session with three research subagents. FPL got its own slug on the record (a separate SEC registrant and the LLCS counterparty); SRP and TVA stayed inside `utility` with `public (public power)` / `public (federal corporation)` ownership variants and a schema note rather than a new category. TVA's Capacity Commitment Charge is approved for 10/1 with its price unpublished; the Clinch River construction permit issued 9/29. Wave C (row 16) now takes eleven new franchises since `landscape-utilities-2026-09` was written (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource, FPL, SRP, TVA) |
-| 5 | Thu 10/1, **after 5:00 PM PT** (the 10/1 Profiler Routines fire at 9:05 AM and 1:02 PM ET; the drift check is the one predicted to commit) | Neoclouds Profiler pass + `profiler Habitat Energy` (one session) — prompt in §8 | Fable 5.1 · high | Waits on filings due 9/30 (Fluidstack, Habitat Energy). **Rebase first.** First application of the step-5 segment sub-rule (v07.78r): its push regenerates all 15 due segment lessons, which clears the red baseline that blocked the 9/30 pipeline run before the 10/7 run |
-| 6 | Thu 10/1 – Fri 10/2 | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments | Fable 5.1 · high | Was November. Lands before wave B, so capital is re-authored once. Quinbrook is `habitat-energy`'s parent; ECP is `proenergy`'s |
+| 5 | ~~Thu 10/1, after 5:00 PM PT~~ **Landed Fri 10/2 (v07.81r)** | Neoclouds Profiler pass + `profiler Habitat Energy` (one session) — prompt in §8 | Fable 5.1 · high | Done. Both Companies House gates were missed, not filed ('Accounts overdue' on 2 Oct at Fluidstack Ltd, Habitat Energy Limited and its parent); Nscale v3 was rebuilt from the S-1 (Anthropic named at up to USD 44.6bn); ClusterMAX 3.0 folded into CoreWeave, Nebius (→ incumbent), Crusoe, Lambda and IREN; Lambda and Crusoe ran the full command because their watch items had moved; step 7 revised Anthropic (v4) and Hut 8 (v3). First application of the step-5 sub-rule: all 19 segment lessons regenerated, `check-classroom-content.py` 0 errors, Classroom GAS v01.94g — `main` is green for the 10/7 run. The 10/1 drift check stood down (8/25 pins), so no superseding BESS-attach report exists |
+| 6 | **Next — Fri 10/2 evening or Sat 10/3** | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments — prompt in §9 | Fable 5.1 · high | Was November. Lands before wave B, so capital is re-authored once. Quinbrook is `habitat-energy`'s parent (its group accounts are overdue and the Habitat sale is seven months silent — both now in Habitat v3); ECP is `proenergy`'s majority owner and a Bridgepoint subsidiary; CPP controls Pattern Energy and co-controls ALLETE. Regenerates `segment-capital` under the step-5 sub-rule |
 | 7 | Fri 10/2 | **F-G1** — Clayco, Faith Technologies, EMCOR | Fable 5.1 · high | Was November. Decide Faith Technologies' category (epc or supplier) on the record |
 | 8 | Fri 10/2 – Sat 10/3, 7 AM | **F-A1** — Anza, SemiAnalysis, EPRI | Fable 5.1 · medium | Was November. SemiAnalysis may carry no segment; record it as unassigned if so. **First to roll into week 2** if time runs out |
 
@@ -633,5 +634,127 @@ Habitat Energy) are mine: report them as done in the summary and I will dismiss 
 each on whether the Fluidstack and Habitat accounts were filed or missed; the segment count regenerated and
 the content checker's final line; and the session's usage value from get_session for the cost table.
 ```
+
+## 9 · Paste-in prompt — §3 row 6, F-I4: Quinbrook · Energy Capital Partners · CPP Investments (Fable 5.1 · High)
+
+Written 2026-10-02 (v07.82r) at the close of the row-5 session, so that the three capital dossiers land before wave B re-authors `landscape-capital`. Built from the `PROFILER-COVERAGE-PLAN.md` §8 F-I4 rows, the C-I/C10 investor precedent (every "owns" and "seeded" verb was re-verified against the deal documents and two of five failed), the inbound mentions already in the corpus, and the Habitat v3 record of the Quinbrook chain. Run it in a **fresh Fable 5.1 High session**.
+
+```text
+Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 6 as a fresh
+session: F-I4 — `profiler Quinbrook Infrastructure Partners`, `profiler Energy Capital Partners`,
+`profiler CPP Investments` — three new dossiers, one session, one commit. Fable 5.1 at High; check
+Settings → Usage first.
+
+STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+HEAD || git rebase origin/main. Read the CHANGELOG counter after the rebase (100/100 at v07.82r with three
+sections dated 2026-10-02 exempt — rotate the oldest date group only if the NON-EXEMPT count reaches 100;
+sections dated the day you push are exempt). Run git fetch --unshallow origin main before any rotation or
+pin read.
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; phase-f-action-plan.md §3 row 6 and §9 (this
+prompt); PROFILER-COVERAGE-PLAN.md — the three F-I4 rows in §8 (quinbrook · energy-capital-partners ·
+cpp-investments) and the C-I/C10 row for Blackstone · Brookfield · Macquarie, which is the precedent for
+how investor dossiers go wrong (transaction-value headlines read as equity prices; 'seeded' written for
+'acquired'; vehicle sets asserted from secondary accounts); .claude/rules/profiler-app.md — step 1a
+(identity), step 2 (two parallel research subagents per company, Stage 1 first-party exhaustive, Stage 2
+third-party; run check-source-reachability.py before planning Stage 2), step 5 including the segment
+assignment and the segment-regeneration sub-rule, step 7 (reconciliation by aka[]), the Archival Procedure
+(no archive — these are new profiles); PROFILER-SCHEMA.md (registry schema — `investor` category; profile
+schema v7; Segments registry; Refresh calendar: a new company gets a calendar row and a notes entry in the
+same commit); PROFILER-STYLES.md (active style `intel-briefing`); .claude/rules/classroom-app.md (the
+content fence, the verification list, the gateDigest obligation) because the segment sub-rule will fire.
+
+IDENTITY FIRST (step 1a), from a primary source dated within twelve months, before any research prompt:
+- Quinbrook: the legal entity (Quinbrook Infrastructure Partners Limited and its Australian and US
+  affiliates), who owns it (founders David Scaysbrook and Rory Quinlan — confirm), its funds (Quinbrook
+  Renewables Impact Fund (Jersey); Renewables Impact Fund II, GBP 587M oversubscribed close announced
+  8 July 2026; the Net Zero Power Fund; any US fund), and whether it is still independent.
+- Energy Capital Partners: a subsidiary of Bridgepoint Group plc (LSE: BPT) since August 2024 — type
+  `ownership` subsidiary and take the facts from Bridgepoint's annual report and RNS, not from ECP's own
+  'about' page; the ECP legal entity and the funds (ECP V, the continuation vehicles).
+- CPP Investments: the Canada Pension Plan Investment Board, a federal Crown corporation; fiscal year ends
+  31 March; the FY2026 annual report (May 2026) and the quarterly results releases are first-party; net
+  assets and the Real Assets / Sustainable Energies group figures come from there, not from press.
+Correct the coverage-plan rows in the same commit if any identity fact is stale.
+
+WHAT THE RECORD ALREADY SAYS — read these dossiers' sentences before writing, because step 7 will hold the
+new dossiers to them (or revise them):
+- Quinbrook ← `habitat-energy` v3 (23 mentions): wholly acquired Habitat 30 Nov 2021; the ownership chain
+  Habitat Energy Limited → Renewable and Grid Services Limited → (ceased) Renewables Impact Holding
+  Limited, Jersey → Quinbrook Renewables Impact Fund; the May 2026 PSC07/PSC08 register correction; the
+  JLL/BCG sale mandate (New Project Media, 17 March 2026) with no public step since; the FY2025 accounts of
+  both UK companies OVERDUE at 2 October 2026; Quinbrook's portfolio page still 'Operational & Expanding';
+  Flexitricity sold to Drax (GBP 36M EV, signed 21 Jan 2026). The Quinbrook dossier tells the sale from the
+  seller's side and must agree with Habitat v3 or state the gap — never a second, differing account.
+  Also on the record from the coverage plan: Supernode (Brisbane; stage 2 operational 28 July 2026) and
+  Rowan Digital Infrastructure (a reported Blackstone minority stake, April 2026 — verify).
+- ECP ← `proenergy` v4 (majority owner since 5 Sep 2024), `kkr` v1 (the USD 50bn KKR–ECP partnership;
+  Bosque County with CyrusOne), `cyrusone` v2, `talen-energy` v3 (Cornerstone sold to Talen; ECP took about
+  5% of Talen at the June 2026 close), `vistra` v4 (chairman Scott Helm is an ECP founding partner),
+  `terra-gen` v5 ('ECP is fully OUT' — exited to Masdar, 1 Oct 2024). Calpine → Constellation (closed
+  7 Jan 2026 per the plan row — verify the date and ECP's residual stake); EnergySolutions (pending?).
+- CPP ← `pattern-energy` v1 (majority since the March 2020 take-private; Cordelio folded in 2 Apr 2026,
+  CPP-led ownership ~69%), `grid-united` v1 and `blackrock` v1 (ALLETE/Minnesota Power with GIP, closed
+  Dec 2025), `equinix` v7 (the >USD 15bn US xScale JV, CPP 37.5%; atNorth), `kkr` v1 (45% of Sempra
+  Infrastructure Partners with KKR — signed, check closing), `blackstone` v2 and `macquarie` v2 (12% of
+  AirTrunk alongside Blackstone), `voltagrid` v5 and `mainspring-energy` v4 (earlier-round investor). The
+  plan row adds atNorth ~51% (closed 2 Sep 2026) — verify from CPP's or Partners Group's release.
+
+RESEARCH: two general-purpose subagents per company (first-party / third-party), ~50–70 sources each
+company; products-and-services depth first (funds, strategies, the AIDC and storage positions as the
+'product lines'); financials for a manager are AUM/net assets, fund sizes and closes, realised exits —
+never invent a revenue line; `expected` stays empty. Every sec.gov request sends the SEC_USER_AGENT
+string from scripts/check-source-reachability.py. Relationships: curate every covered counterparty the
+prose names (habitat-energy, proenergy, kkr, cyrusone, talen-energy, vistra, terra-gen, pattern-energy,
+grid-united, blackrock, equinix, blackstone, macquarie, voltagrid, mainspring-energy, constellation-energy
+…) with `status`, `since`, `scale` verbatim-short and an exact sources[] URL; type the owner side
+`investor`/`portfolio` correctly (the `portfolio` inverse exists since 2026-09-06).
+
+SEGMENTS (step 5): all three go in `capital`; the role is decided on each dossier's own evidence — the
+plan row types Quinbrook challenger; ECP and CPP are open (the segment holds six incumbents: Blackstone,
+Brookfield, Macquarie, MGX, BlackRock, KKR). Add `adjacent` memberships only where the dossier records a
+product line or buyer/supplier position in another segment (CPP's Pattern and ALLETE control are
+holdings, not a product line — argue it from the dossier, not the holding). Then the sub-rule: python3
+scripts/build-classroom-segments.py --check, regenerate EVERY due segment (--all), bump Classroom.gs
+VERSION v01.94g → v01.95g and live-site-pages/gs-versions/Classroomgs.version.txt, one generic line in
+live-site-pages/gs-changelogs/Classroomgs.changelog.md, the README tree's Classroom display; python3
+scripts/check-classroom-content.py must report 0 errors; node --check on a .js copy of Classroom.gs; node
+scripts/check-gas-inner-scripts.js; python3 scripts/check-classroom-pipeline.py --base origin/main (P1,
+P2, P10 expected; refresh gateDigest only if P3 fires). Do not edit any landscape or scenario lesson —
+`landscape-capital` is wave B's.
+
+CALENDAR: three cadence rows (`quarterly`) with the tier the other `capital` investors carry (read
+blackrock/kkr in profiler-refresh-calendar.json) unless the record argues otherwise; notes entries with
+`source` and watch[] (Quinbrook: the Habitat sale, the overdue group accounts, Fund II deployments; ECP:
+Bridgepoint's results, the KKR partnership's next campus, EnergySolutions; CPP: the quarterly results
+cadence, Sempra closing, Pattern's next move). State in the summary why CPP stays a cadence row rather than
+a nextReport row.
+
+STEP 7 by aka[] for all three (populate aka[] first: 'Quinbrook', 'QIP', fund names; 'ECP', 'Energy
+Capital Partners'; 'CPPIB', 'Canada Pension Plan Investment Board', 'CPP Investments'). Read every hit;
+revise the other dossier where the new research contradicts it (archive + profileVersion +1); state both
+figures where two differ; report counts reviewed and changed.
+
+VERIFY: check-source-reachability.py first; sync-profiler-registry.py (write, then --check clean);
+build-profiler-graph.py; check-profiler-relationships.py, check-profiler-crossrefs.py, check-profiler-study.py
+clean (accept reviewed candidates with a reason); check-profiler-reports.py — four pre-existing pin
+warnings are expected (fluence v10, jupiter-power v7, jinko v6, oracle v6); any dossier you revise in step 7
+that a current report pins must be re-verified by reading in report-pins-verified.json; check-readme-tree.py
+0 findings (the README tree lists every profile and archive file — add the three new profile and study
+entries); Playwright render of the three new dossiers at Profiler.html#<slug> and of
+Classroom.html#lesson/segment-capital, zero page errors other than the sandbox's sign-in stubs (the
+render recipe: serve live-site-pages over 127.0.0.1, stub script.google.com whoami as admin for Profiler;
+for Classroom patch _e='' and AUTO_REFRESH=false on a scratch copy, seed the sessionStorage session after
+load, override window._gasPost after load with the lesson literals parsed by
+check-classroom-content.py's parse_literals, hide #auth-wall/.splash/#gas-pill/#verify-overlay, then
+clHeaderShow(); clAppMount()). Study guides for the three new companies per the Profiler Command. Normal
+Pre-Commit and Pre-Push checklists; ONE commit; push on your claude/* branch once ls-remote is empty.
+
+At the end: one line per company on the identity check (what the plan row got wrong, if anything); the
+three capital roles and any adjacent memberships; step-7 counts; the segment count regenerated and the
+content checker's final line; and note that get_session exposes no cost field — give the subagent token
+totals and the rate-limit status instead.
+```
+
 
 Developed by: LightAISolutions

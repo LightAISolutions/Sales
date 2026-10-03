@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.82r] — 2026-10-02 08:33:24 PM EST
+
+> **Prompt:** "Dismiss the two reminders, then give me a prompt to run F-I4 in a new Fable 5.1 High session, then remember session."
+
+### Changed
+- `repository-information/REMINDERS.md` — the 2026-09-24 neoclouds-pass and `profiler Habitat Energy` reminders moved to Completed (dismissed by the developer after v07.81r), each with the gate's outcome: both FY2025 filings missed, 'Accounts overdue' at Companies House on 2 October
+- `repository-information/phase-f-action-plan.md` — §3 row 5 marked landed (v07.81r) with its outcome; row 6 re-timed to the next session and pointed at **§9, the new paste-in prompt for F-I4** (Quinbrook · Energy Capital Partners · CPP Investments, Fable 5.1 High): identity-first checks (Bridgepoint subsidiary; Crown corporation), the corpus's existing claims each dossier must agree with, the `capital` segment assignment and the step-5 regeneration (Classroom GAS → v01.95g), calendar rows, step 7 by `aka[]`, the verify list and the Playwright recipe; the Done table gains the row-5 session
+- `repository-information/SESSION-CONTEXT.md` — Latest Session written for the 10/2 pass (remember session); the reconstructed earnings-desk entry moves to Previous Sessions and the 9/30 entry drops under the 2-session cap
+
+### Notes
+- **No page, GAS script or diagram changed.** Counter 100/100 — three sections dated 2026-10-02 are exempt (97 non-exempt), so no rotation; the next push rotates the 2026-09-21/22 date group only if its non-exempt count reaches 100
 
 ## [v07.81r] — 2026-10-02 08:21:12 PM EST
 

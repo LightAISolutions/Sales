@@ -4,25 +4,12 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
 
 ## Active Reminders
 
-- `2026-09-24 06:19:25 PM EST` — **Run the neoclouds Profiler pass on or after Thursday 2026-10-01, in a fresh Opus 5.5 High session** — the paste-ready prompt is in the last response of the 2026-09-24 "Classroom review pass" session (v07.40r). Wait until Fluidstack's accounts, due Wednesday 30 September, have either been filed or visibly missed. Either outcome is the answer the pass needs.
-  - **Why it waits:** the `landscape-neoclouds-2026-09` module and `scenario-neoclouds-discovery` both keep reviewBy 2026-09-30 for this one gate. The filing decides how the Fluidstack figures and the scenario's gap 7 read.
-  - **If the prompt is lost:** it is not in the repo. In the new session, type `give me the neoclouds Profiler-pass prompt`; it can be rebuilt from `SESSION-CONTEXT.md` and the v07.40r CHANGELOG entry. The prompt's inputs include ClusterMAX 3.0 of 23 Sep, Nscale's S-1 of 18 Sep, and Fluidstack naming its end customer.
 - `2026-09-24 06:19:25 PM EST` — **Reframe the Dominion rehearsal (`scenario-utilities-objection`) between Friday 2026-10-02 and Tuesday 2026-10-06** — the room is framed ahead of Dominion's Virginia and North Carolina storage purchase solicitation, which is due to issue Thursday 1 October. Once it has issued, the pre-issue framing is out of date: *"You are not bidding anything today"*, *"issues on 1 October 2026"*, and the premise *"the solicitation opens"*.
   - **Why this window:** starting on 2 Oct gives the solicitation a day to post, and the capacity, dates and eligibility can then be read from the document itself. Finishing by 6 Oct puts it before the Megmeet start on 7 Oct. The scenario's reviewBy is 2026-10-01, so it shows as due in the curriculum report until the reframe lands.
   - **If the solicitation slips:** re-date the framing and move reviewBy to the new issue date rather than rewriting the room.
   - **While in the scenario:** check the unverified "all-stock" description of Dominion's merger, which was flagged but left unchanged at v07.40r.
   - **Run it in its own session**, not inside the neoclouds pass. The two draw on different rule files: Classroom authoring versus the Profiler command.
   - **To resume:** type `reframe the Dominion rehearsal`.
-- `2026-09-24 08:48:57 PM EST` — **Re-run `profiler Habitat Energy` on or after Thursday 2026-10-01, once its FY2025 accounts are at Companies House** — Habitat Energy Limited (10923911) and its parent Renewable and Grid Services Limited (13250883) both owe accounts to 31 Dec 2025 by Wednesday 30 September. The v2 refresh (v07.46r) ran six days before that deadline, with neither filed.
-  - **Why it needs a hand:** the dossier is on the `watch` tier. The 10/1 quarterly Routine skips it, and its next scheduled pass is around March 2027. Nothing else will fold the accounts in.
-  - **What to pull:**
-    - The group "Optimisation services" line (FY2024 GBP 4.17M, +80%).
-    - The UK entity's turnover and loss (FY2024: GBP 1.99M and GBP 5.0M).
-    - Any directors'-report or post-balance-sheet mention of the Quinbrook sale process (JLL/BCG, reported March 2026, still unresolved).
-    - Recheck the PSC and officers pages for a change of control at the same time.
-  - **If the accounts are late:** record the late filing itself as the finding. The prior two years were filed in late December and early January, so a miss would be out of pattern.
-  - **Can share a session** with the neoclouds pass (also waiting on a 9/30 accounts filing, Fluidstack's), since both run under the Profiler command.
-  - **To resume:** type `profiler Habitat Energy`.
 
 - `2026-09-25 07:05:46 PM EST` — **Re-run the AIDC power-conversion report once Megmeet's Q3 2026 report is filed (due by Saturday 2026-10-31)** — this supersedes the current edition, `aidc-power-conversion-rev2--competitive--2026-09-25`. **Refresh the Megmeet dossier first** under `profiler Megmeet`; it is at v8, pinned 9/23. Zhonhen and Sinexcel report by the same deadline.
   - **When:** the refresh calendar has Megmeet's `nextReport` at 2026-10-30, unconfirmed; Q3 2025 was published 2025-10-30. Check cninfo first — if the filing is late, the late filing is itself the finding.
@@ -35,6 +22,21 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **To resume:** type `profiler Megmeet`, then `profiler report competitive: AIDC power conversion`.
 
 ## Completed Reminders
+
+- ~~`2026-09-24 06:19:25 PM EST` — **Run the neoclouds Profiler pass on or after Thursday 2026-10-01, in a fresh Opus 5.5 High session** — the paste-ready prompt is in the last response of the 2026-09-24 "Classroom review pass" session (v07.40r). Wait until Fluidstack's accounts, due Wednesday 30 September, have either been filed or visibly missed. Either outcome is the answer the pass needs.~~ — completed `2026-10-02 08:33:24 PM EST` (dismissed by the developer after the v07.81r pass: Fluidstack's FY2025 accounts were missed, not filed — 'Accounts overdue' at Companies House on 2 October; Fluidstack v3, Nscale v3 from the S-1, ClusterMAX 3.0 across the segment, Nebius moved to incumbent)
+  - **Why it waits:** the `landscape-neoclouds-2026-09` module and `scenario-neoclouds-discovery` both keep reviewBy 2026-09-30 for this one gate. The filing decides how the Fluidstack figures and the scenario's gap 7 read.
+  - **If the prompt is lost:** it is not in the repo. In the new session, type `give me the neoclouds Profiler-pass prompt`; it can be rebuilt from `SESSION-CONTEXT.md` and the v07.40r CHANGELOG entry. The prompt's inputs include ClusterMAX 3.0 of 23 Sep, Nscale's S-1 of 18 Sep, and Fluidstack naming its end customer.
+
+- ~~`2026-09-24 08:48:57 PM EST` — **Re-run `profiler Habitat Energy` on or after Thursday 2026-10-01, once its FY2025 accounts are at Companies House** — Habitat Energy Limited (10923911) and its parent Renewable and Grid Services Limited (13250883) both owe accounts to 31 Dec 2025 by Wednesday 30 September. The v2 refresh (v07.46r) ran six days before that deadline, with neither filed.~~ — completed `2026-10-02 08:33:24 PM EST` (dismissed by the developer after the v07.81r pass: both Habitat Energy Limited and its parent missed the 30 September deadline — 'Accounts overdue' on 2 October, the first late filing after two on-time years; Habitat v3 records it, registers and board unchanged, the Quinbrook sale still silent)
+  - **Why it needs a hand:** the dossier is on the `watch` tier. The 10/1 quarterly Routine skips it, and its next scheduled pass is around March 2027. Nothing else will fold the accounts in.
+  - **What to pull:**
+    - The group "Optimisation services" line (FY2024 GBP 4.17M, +80%).
+    - The UK entity's turnover and loss (FY2024: GBP 1.99M and GBP 5.0M).
+    - Any directors'-report or post-balance-sheet mention of the Quinbrook sale process (JLL/BCG, reported March 2026, still unresolved).
+    - Recheck the PSC and officers pages for a change of control at the same time.
+  - **If the accounts are late:** record the late filing itself as the finding. The prior two years were filed in late December and early January, so a miss would be out of pattern.
+  - **Can share a session** with the neoclouds pass (also waiting on a 9/30 accounts filing, Fluidstack's), since both run under the Profiler command.
+  - **To resume:** type `profiler Habitat Energy`.
 
 - ~~`2026-09-26 01:21:37 AM EST` — **Check the 9/30 Classroom pipeline run once it has happened — after about 7:30 AM ET on Wednesday 2026-09-30** — the weekly Routine "Classroom curriculum pipeline (C2) - weekly" (`trig_01TiCXzEjowZGbS7aB2e6gQS`) is next due at **2026-09-30 11:02 UTC**. Open its session and read the final `CLASSROOM PIPELINE — 2026-09-30 — …` report.~~ — completed `2026-09-30 06:02:30 PM EST`
   - **Why this was re-requested:** the v07.60r Classroom re-pin ran on the night of 25–26 September, before the run existed, so its Part A could not be done. This covers the same check as the 2026-09-24 reminder above; dismiss either once it is done.
