@@ -6,6 +6,57 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-10-03 07:25 PM → 09:20 PM EST (§3 row 6: F-I4 — Quinbrook, Energy Capital Partners, CPP Investments — then the F-G1 prompt and this save; two attended turns, one context compaction mid-task)
+**Repo version:** v07.82r → v07.84r (two pushes: v07.83r the three dossiers, v07.84r §10 prompt + this save)
+**Branch:** `claude/friendly-johnson-hsmoru`
+**Model:** Fable 5.1 High (`claude-fable-5-1`); `get_session` exposes no cost field — six research subagents reported 2,304,771 tokens between them; no rate-limit event
+
+### What was done
+
+- **Identity check corrected all three plan rows before research.** Quinbrook: founder-owned via Quinbrook Holdings Limited (Jersey); the row missed Rory Quinlan's UK-board resignation (TM01, 18 Jul 2025 — still Managing Partner and a control person) and treated The Information's Rowan 49% / ~USD 3.8bn as announced (reported only). ECP: Bridgepoint subsidiary confirmed; the row had EnergySolutions backwards — ECP is the buyer (agreed 6 Apr 2026); ECP VI USD 8.1bn; 'USD 36.0bn' was EUR 36.0bn segment AUM. CPP: Crown corporation confirmed; the row's 'xScale limited partner' is a 37.5% controlling interest (Equinix 8-K); atNorth c. 51% at close (60% at signing).
+- **Three `investor` dossiers v1** with 84 / 69 / 73 sources, study guides (12 / 13 / 13 sections) and eight-module lesson plans; Quinbrook carries eight decision-makers with company-published portraits.
+- **Segments:** `capital` — CPP incumbent, ECP and Quinbrook challengers; Quinbrook adjacent in `storage-developers-and-ipps` and `aidc-developers-and-landlords` (its own development lines). No adjacent for ECP/CPP (holdings are not product lines).
+- **Step 7:** 24 raw aka hits (7 / 7 / 10); `equinix` v8 (atNorth completion split c. 51 / 34 / 10; reciprocal edge) and `habitat-energy` v4 (Flexitricity 0.9 GW per Drax vs c. 1.3 GW per Quinbrook stated both ways; ultimate controlling party; `quinbrook` as investor) revised and archived; a subagent's form-energy 'contradiction' verified correct and withdrawn; three crossref candidates accepted.
+- **Calendar:** three `cadence: quarterly` core rows + notes. CPP is a cadence row, not `nextReport`: no ticker, no consensus, results against benchmark portfolios.
+- **Step-5 sub-rule:** all 19 segment lessons regenerated; Classroom GAS v01.95g; `check-classroom-content.py` 71 lessons / 8 tracks / 220 gate cases — 0 errors; pipeline checker P1/P10 only.
+- **CHANGELOG rotation fired** at v07.83r: the 2026-09-21 group (23 sections) archived with SHA enrichment; counter 78/100 → 79/100 after v07.84r.
+- **v07.84r:** §3 row 7 re-timed and pointed at **§10 = the F-G1 paste-in prompt** (Clayco · Faith Technologies · EMCOR).
+
+### Where we left off
+
+- All changes committed and pushed; `main` carries v07.83r (merged) and v07.84r is on its way via the auto-merge workflow.
+- **Next: paste `phase-f-action-plan.md` §10 into a fresh Fable 5.1 High session** — F-G1, three new `epc-and-construction` dossiers; Faith Technologies' category decided on the record; EMCOR takes a `nextReport` row; regenerates `segment-epc-and-construction` and bumps Classroom GAS to v01.96g.
+- Then F-A1 (Anza, SemiAnalysis, EPRI; §3 row 8); the Dominion reframe (its own session, reminder due by Tue 10/6); wave A landscapes.
+
+### Key decisions made
+
+- A plan row's identity facts are hypotheses: every F-I4 row needed correction, so §10 tells the next session to expect the same.
+- An investor's adjacent seats come from its own development lines (Quinbrook) never from holdings (ECP, CPP) — the evidence rule applied to the capital segment.
+- Reported figures (The Information's Rowan 49%) are written as reported with the outlet named, beside the announced wording ('significant minority stake').
+- Two sources, two figures → both stated with their sources (Flexitricity capacity), never one chosen.
+- The CHANGELOG prompt blockquote was written multi-line with each line prefixed (verbatim), rather than collapsed to one line.
+
+### Known issues
+
+- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged.
+- `verify-profiler-roles.py` fails two progress-isolation fixtures in the headless harness (pre-existing; Profiler.html untouched).
+- The step-7 raw tally (24) overstates substantive reads (~18) because of name collisions (Rowan, Supernode, Cornerstone, Bridgepoint).
+- Habitat Energy's and RGS's FY2025 accounts remain overdue at Companies House (3 Oct); a mid-October manual re-check is still uncovered by any Routine.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 202 dossiers, page v01.93w. **Classroom:** GAS v01.95g, page v01.16w, content checker 0 errors. **CHANGELOG** `Sections: 79/100`.
+- **Active reminders (2):** the Dominion reframe (10/2–10/6), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
+
+### Recommendation for next session
+
+- **Paste `phase-f-action-plan.md` §10 into a fresh Fable 5.1 High session** — F-G1 (Clayco, Faith Technologies, EMCOR); the five GC dossiers that cite BD+C's 2025 ranking are the step-7 baseline and the Faith Technologies category call is the one decision the row leaves open.
+
+**To continue:** type `run F-G1` (or paste §10 directly).
+
+## Previous Sessions
+
 **Date:** 2026-10-02 07:37 PM → 08:40 PM EST (§3 row 5: the neoclouds Profiler pass + `profiler Habitat Energy`, then the reminders, the F-I4 prompt and this save; two attended turns)
 **Repo version:** v07.80r → v07.82r (two pushes: v07.81r the pass, v07.82r reminders + §9 prompt + this save)
 **Branch:** `claude/zen-heisenberg-w8bs9q`
@@ -52,27 +103,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Paste `phase-f-action-plan.md` §9 into a fresh Fable 5.1 High session** — F-I4 (Quinbrook, Energy Capital Partners, CPP Investments); Quinbrook's overdue group accounts and the stalled Habitat sale are already researched inputs in Habitat v3.
 
 **To continue:** type `run F-I4` (or paste §9 directly).
-
-## Previous Sessions
-
-**Date:** 2026-10-02 09:19 AM EST (the Routine-fired Profiler earnings desk — one unattended turn)
-**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v07.80r
-
-### What was done
-
-- Profiler earnings desk: Intertek watch-window row re-dated 2026-10-01 → 2026-11-02 and set unconfirmed — no Court sanction, satisfaction-of-condition or Trading Update on the RNS feed, so no dossier was written; the notes row records the re-date (v07.80r)
-- The other two 10/1 Profiler Routines committed nothing: the quarterly sweep found 0 core rows due; the opportunity-report drift check measured 8 of 25 pins drifted on `named-project-bess-attach--opportunity--2026-09-08`, under its gate of 10, and stood down (the 9/30 prediction of a superseding report did not hold)
-
-### Where we left off
-
-- All changes committed and merged to main
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off
-- **TODO.md:** no items
-- **Active reminders (4):** the neoclouds Profiler pass (on or after 10/1), the Dominion rehearsal reframe (10/2–10/6), `profiler Habitat Energy` (on or after 10/1), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31)
-- **Classroom:** content checker still 14 errors on main (seven segment lessons behind the registry) — cleared by the row-5 session's push
 
 Developed by: LightAISolutions

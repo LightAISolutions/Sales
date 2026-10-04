@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 78/100`
+`Sections: 79/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.84r] — 2026-10-03 09:18:17 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Fable 5.1 High session to run F-G1, then remember session."
+
+### Added
+- `repository-information/phase-f-action-plan.md` — **§10 = the F-G1 paste-in prompt** (Clayco · Faith Technologies · EMCOR, Fable 5.1 High): identity-first with the Faith Technologies category decision (`epc` or `supplier`) to be made on the record; EMCOR as the one listed name taking a `nextReport` calendar row; the five BD+C-ranking dossiers that already name Clayco as the step-7 baseline; the `epc-and-construction` roster (16 incumbents, 2 challengers) and the evidence-rule test for Faith's hypothesised `in-hall-power` adjacent seat; the step-5 sub-rule with Classroom v01.95g → v01.96g; `landscape-epc-and-construction` and `landscape-in-hall-power` reserved for wave D.
+
+### Changed
+- `repository-information/phase-f-action-plan.md` — §3 row 7 re-timed to the next session and pointed at §10, with the calendar and segment consequences spelled out.
+- `repository-information/SESSION-CONTEXT.md` — Latest Session written for the 10/3 F-I4 pass (remember session); the 10/2 neoclouds entry moves to Previous Sessions and the earnings-desk entry drops under the 2-session cap.
+
+### Notes
+- **No page, GAS script or diagram changed.** Counter 79/100 — two sections dated 2026-10-03 are exempt (77 non-exempt), so no rotation.
 
 ## [v07.83r] — 2026-10-03 08:54:06 PM EST
 

@@ -116,7 +116,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | 4 | ~~Wed 9/30 – Thu 10/1~~ **Landed 9/29 (v07.76r)** | **F-U4** — Florida Power & Light, Salt River Project, TVA | Fable 5.1 · high | Done, in one session with three research subagents. FPL got its own slug on the record (a separate SEC registrant and the LLCS counterparty); SRP and TVA stayed inside `utility` with `public (public power)` / `public (federal corporation)` ownership variants and a schema note rather than a new category. TVA's Capacity Commitment Charge is approved for 10/1 with its price unpublished; the Clinch River construction permit issued 9/29. Wave C (row 16) now takes eleven new franchises since `landscape-utilities-2026-09` was written (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource, FPL, SRP, TVA) |
 | 5 | ~~Thu 10/1, after 5:00 PM PT~~ **Landed Fri 10/2 (v07.81r)** | Neoclouds Profiler pass + `profiler Habitat Energy` (one session) — prompt in §8 | Fable 5.1 · high | Done. Both Companies House gates were missed, not filed ('Accounts overdue' on 2 Oct at Fluidstack Ltd, Habitat Energy Limited and its parent); Nscale v3 was rebuilt from the S-1 (Anthropic named at up to USD 44.6bn); ClusterMAX 3.0 folded into CoreWeave, Nebius (→ incumbent), Crusoe, Lambda and IREN; Lambda and Crusoe ran the full command because their watch items had moved; step 7 revised Anthropic (v4) and Hut 8 (v3). First application of the step-5 sub-rule: all 19 segment lessons regenerated, `check-classroom-content.py` 0 errors, Classroom GAS v01.94g — `main` is green for the 10/7 run. The 10/1 drift check stood down (8/25 pins), so no superseding BESS-attach report exists |
 | 6 | ~~Fri 10/2 evening or Sat 10/3~~ **Landed Sat 10/3 (v07.83r)** | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments — prompt in §9 | Fable 5.1 · high | Done, in one session with six research subagents (two per company). Identity check corrected all three plan rows: Quinlan's UK-board resignation and the Rowan figures as reported-not-announced (Quinbrook); EnergySolutions is an ECP acquisition, not a pending sale, and 'USD 36.0bn' was EUR (ECP); xScale is a 37.5% controlling interest, not 'limited partner' (CPP). Roles — `capital`: CPP incumbent, ECP and Quinbrook challengers; Quinbrook adjacent in `storage-developers-and-ipps` and `aidc-developers-and-landlords`. Step 7: 24 raw aka hits, `equinix` v8 and `habitat-energy` v4 revised. Step-5 sub-rule: all 19 segment lessons regenerated, Classroom.gs v01.95g. Was November. Lands before wave B, so capital is re-authored once. Quinbrook is `habitat-energy`'s parent (its group accounts are overdue and the Habitat sale is seven months silent — both now in Habitat v3); ECP is `proenergy`'s majority owner and a Bridgepoint subsidiary; CPP controls Pattern Energy and co-controls ALLETE. Regenerates `segment-capital` under the step-5 sub-rule |
-| 7 | Fri 10/2 | **F-G1** — Clayco, Faith Technologies, EMCOR | Fable 5.1 · high | Was November. Decide Faith Technologies' category (epc or supplier) on the record |
+| 7 | **Next — Sat 10/3 evening or Sun 10/4** | **F-G1** — Clayco, Faith Technologies, EMCOR — prompt in §10 | Fable 5.1 · high | Was November. Decide Faith Technologies' category (epc or supplier) on the record; EMCOR is the one listed name (NYSE: EME) so it takes a `nextReport` calendar row, the other two cadence rows. Regenerates `segment-epc-and-construction` (and `segment-in-hall-power` if Faith's Excellerate line earns the adjacent seat) under the step-5 sub-rule; `landscape-epc-and-construction` stays wave D's |
 | 8 | Fri 10/2 – Sat 10/3, 7 AM | **F-A1** — Anza, SemiAnalysis, EPRI | Fable 5.1 · medium | Was November. SemiAnalysis may carry no segment; record it as unassigned if so. **First to roll into week 2** if time runs out |
 
 **Week 2 — Sat 10/3 to Sat 10/10.** The Megmeet start is Wed 10/7. The four Fable rows come to about $650–$800, plus any week-1 rollover.
@@ -756,5 +756,143 @@ content checker's final line; and note that get_session exposes no cost field �
 totals and the rate-limit status instead.
 ```
 
+## 10 · Paste-in prompt — §3 row 7, F-G1: Clayco · Faith Technologies · EMCOR (Fable 5.1 · High)
+
+Written 2026-10-03 (v07.84r) at the close of the F-I4 session, so that the three contractor dossiers land before wave D re-authors `landscape-epc-and-construction`. Built from the `PROFILER-COVERAGE-PLAN.md` §8 F-G1 rows, the F-I4 precedent (every plan row carried at least one stale identity fact — the identity check corrected all three before research began), the five GC dossiers that already name Clayco in BD+C's 2025 ranking (`hitt`, `holder-construction`, `mccarthy`, `mortenson`, `whiting-turner`), and the segment's current shape (sixteen incumbents and two challengers in `epc-and-construction`; `rosendin` is the one member that also holds an `in-hall-power` adjacent seat). Run it in a **fresh Fable 5.1 High session**.
+
+```text
+Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 7 as a fresh
+session: F-G1 — `profiler Clayco`, `profiler Faith Technologies`, `profiler EMCOR` — three new dossiers,
+one session, one commit. Fable 5.1 at High; check Settings → Usage first.
+
+STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+HEAD || git rebase origin/main. Read the CHANGELOG counter after the rebase (79/100 at v07.84r after the
+2026-09-21 group rotated — rotate the oldest date group only if the NON-EXEMPT count reaches 100; sections
+dated the day you push are exempt; no rotation is expected this session). Run git fetch --unshallow origin
+main before any pin read.
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; phase-f-action-plan.md §3 row 7 and §10 (this
+prompt); PROFILER-COVERAGE-PLAN.md — the three F-G1 rows in §8 (clayco · faith-technologies · emcor) and
+the F-I4 rows directly below them, which show the shape a landed row takes (verified role with its basis,
+the step-7 tally, the premise verdicts naming what the hypothesis row got wrong); the `hitt`, `mccarthy`
+and `rosendin` dossiers as the precedent for how a contractor dossier is written (self-perform scope,
+contractor-furnished equipment, the ranking sources used as evidence); .claude/rules/profiler-app.md — step
+1a (identity), step 2 (two parallel research subagents per company, Stage 1 first-party exhaustive, Stage 2
+third-party; run check-source-reachability.py before planning Stage 2), step 5 including the segment
+assignment and the segment-regeneration sub-rule, step 7 (reconciliation by aka[]), the Archival Procedure
+(no archive — these are new profiles); PROFILER-SCHEMA.md (registry schema — the `gc` and `epc` categories
+render as "General Contractor" and "EPC"; profile schema v7; Segments registry and its evidence rule; Refresh
+calendar: a new company gets a calendar row and a notes entry in the same commit — `nextReport` for a listed
+issuer, `cadence` for a private one); PROFILER-STYLES.md (active style `intel-briefing`);
+.claude/rules/classroom-app.md (the content fence, the verification list, the gateDigest obligation)
+because the segment sub-rule will fire.
+
+IDENTITY FIRST (step 1a), from a primary source dated within twelve months, before any research prompt:
+- Clayco: the legal entity (Clayco, Inc., Chicago — confirm the state of incorporation and whether it is
+  still privately held by Bob Clark and management; any ESOP or outside investor), its design-build
+  affiliates (Lamar Johnson Collaborative, Concrete Strategies, Ventana, Treanor — confirm the current set),
+  and what 'Clayco Compute' (announced January 2025) is legally — a division, a subsidiary or a brand.
+  Category `gc`.
+- Faith Technologies: the legal entity (Faith Technologies Incorporated, Menasha, Wisconsin) and its
+  ownership — the plan row says 'private, employee-owned'; confirm whether that is an ESOP, a family
+  holding or management ownership, from the company's own statement or a filing, not from press. DECIDE
+  THE CATEGORY ON THE RECORD: `epc` if the dossier's evidence is contracting revenue and self-performed
+  electrical scope; `supplier` only if Excellerate's manufactured power modules are sold as products to
+  third parties at a scale the dossier can state. Write the decision and its basis in the coverage-plan
+  row's premise verdicts and in the dossier's ecosystemRole. Both categories are allowed if the evidence
+  supports both — say why.
+- EMCOR: EMCOR Group, Inc. (NYSE: EME), a Delaware corporation — the FY2025 10-K, the Q2 2026 10-Q and
+  the Q2 2026 earnings release are first-party; take revenue by segment, the network and communications
+  (data centre) market revenue, remaining performance obligations and the Miller Electric purchase
+  (closed February 2025 — confirm the date and price from the 8-K, not the plan row's 'Feb 2025') from
+  there. Fiscal year ends 31 December. `ownership` public.
+Correct the coverage-plan rows in the same commit if any identity fact is stale — in F-I4 all three rows
+needed correction; expect the same here.
+
+WHAT THE RECORD ALREADY SAYS — read these dossiers' sentences before writing, because step 7 will hold the
+new dossiers to them (or revise them):
+- Clayco ← `hitt` v5, `holder-construction` v5, `mccarthy` v5, `mortenson` v7, `whiting-turner` v1: each cites BD+C's
+  2025 data-centre ranking with Clayco fourth behind HITT, Holder and DPR (USD 3.64bn of 2024 data-centre
+  revenue per the plan row — verify the figure and the ranking year against BD+C itself). The Clayco
+  dossier must agree with that ranking or state the gap; if a 2026 BD+C ranking has been published since,
+  record both years and set the role on the newer one.
+- Faith Technologies ← no covered dossier names it (plan-row count 0 — re-check by the full aka[] grep,
+  including 'Excellerate' and 'FTI'). Its evidence will be its own: ABC's 2026 top data-centre contractor
+  listing, the 950+ MW of greenfield data-centre work, the Excellerate factory and the 2 MW prefabricated
+  power modules (whose buyers, if any, are named).
+- EMCOR ← no covered dossier names it (plan-row count 0 — re-check, including 'Miller Electric' and the
+  subsidiary brands the 10-K lists). The record is the SEC filings: segment revenue (US electrical and
+  mechanical construction), the network and communications market line (USD 973M electrical and USD 799M
+  mechanical in Q2 2026 per the plan row — verify), RPO (USD 17.14bn per the plan row — verify) and the
+  10-K's own description of what it self-performs and what it procures.
+
+RESEARCH: two general-purpose subagents per company (first-party / third-party), ~50–70 sources each
+company; products-and-services depth first (what each contractor self-performs — electrical, mechanical,
+prefabrication, commissioning — against what it subcontracts; which equipment it furnishes under its own
+purchase orders and which the owner furnishes; the named hyperscaler and developer customers each will
+state); financials — EMCOR from the filings with `expected` from published consensus where it exists;
+Clayco and Faith are private, so revenue is what ENR or BD+C publish or the company states, each marked
+with its source, and `expected` stays empty — never invent a margin. Every sec.gov request sends the
+SEC_USER_AGENT string from scripts/check-source-reachability.py. Relationships: curate every covered
+counterparty the prose names (hitt, holder-construction, dpr, turner-construction, mccarthy, mortenson,
+whiting-turner, rosendin, schneider-electric, vertiv, eaton, cummins, caterpillar, the hyperscalers and
+developers each names …) with `status`, `since`, `scale` verbatim-short and an exact sources[] URL; type
+contractor↔supplier edges `supplier`/`customer` and contractor↔owner edges from the owner's side.
+
+SEGMENTS (step 5): all three go in `epc-and-construction`; the role is decided on each dossier's own
+evidence under the evidence rule — the segment holds sixteen incumbents (Turner, HITT, DPR, Holder,
+Whiting-Turner, Mortenson, Kiewit, Bechtel, Black & Veatch, Burns & McDonnell, Quanta, Rosendin, Primoris,
+MasTec, SOLV, Blattner) and two challengers (McCarthy, Samsung C&T). Clayco's plan row leaves incumbent
+or challenger open — decide it against the ranking the incumbents' own dossiers cite. Faith's
+`in-hall-power` adjacent seat is granted only if the dossier records Excellerate's power modules as a
+product line with named third-party buyers — the plan row's hypothesis, not evidence. EMCOR takes no
+adjacent seat unless its dossier records a product line. Then the sub-rule: python3
+scripts/build-classroom-segments.py --check, regenerate EVERY due segment (--all), bump Classroom.gs
+VERSION v01.95g → v01.96g and live-site-pages/gs-versions/Classroomgs.version.txt, one generic line in
+live-site-pages/gs-changelogs/Classroomgs.changelog.md, the README tree's Classroom display; python3
+scripts/check-classroom-content.py must report 0 errors; node --check on a .js copy of Classroom.gs; node
+scripts/check-gas-inner-scripts.js; python3 scripts/check-classroom-pipeline.py --base origin/main (P1,
+P2, P10 expected; refresh gateDigest only if P3 fires). Do not edit any landscape or scenario lesson —
+`landscape-epc-and-construction` and `landscape-in-hall-power` are wave D's.
+
+CALENDAR: EMCOR takes a `nextReport` row — read its Q3 2026 release date from the company's investor
+calendar or the Q3 2025 precedent and mark it unconfirmed if only inferred; Clayco and Faith take
+`cadence` rows (`quarterly`) with the tier the other private GCs carry (read hitt / mccarthy /
+holder-construction in profiler-refresh-calendar.json); notes entries with `source` and watch[] (Clayco:
+the next BD+C and ENR rankings, Clayco Compute's first named campus, any ownership change; Faith: the
+category decision's trigger — a third-party Excellerate order — and the ABC listing; EMCOR: the Q3 2026
+release, RPO, the network and communications line, any further acquisition). State in the summary why
+EMCOR is the one `nextReport` row.
+
+STEP 7 by aka[] for all three (populate aka[] first: 'Clayco', 'Clayco Compute', 'Clayco Inc', the
+affiliate names; 'Faith Technologies', 'FTI', 'Excellerate'; 'EMCOR', 'EMCOR Group', 'Miller Electric'
+and the 10-K's subsidiary brands). Read every hit; revise the other dossier where the new research
+contradicts it (archive + profileVersion +1); state both figures where two differ; report counts reviewed
+and changed. Expect the five BD+C-ranking mentions of Clayco to be the bulk — they are held, not revised,
+unless the ranking figure differs.
+
+VERIFY: check-source-reachability.py first; sync-profiler-registry.py (write, then --check clean);
+build-profiler-graph.py; check-profiler-relationships.py, check-profiler-crossrefs.py, check-profiler-study.py
+clean (accept reviewed candidates with a reason); check-profiler-reports.py — four pre-existing pin
+warnings are expected (fluence v10, jupiter-power v7, jinko v6, oracle v6); any dossier you revise in step 7
+that a current report pins must be re-verified by reading in report-pins-verified.json; check-readme-tree.py
+0 findings (the README tree lists every profile, study and archive file and every study-prep directory —
+add the three new profile and study entries and the three curriculum directories); Playwright render of
+the three new dossiers at Profiler.html#<slug> and of Classroom.html#lesson/segment-epc-and-construction
+(and segment-in-hall-power if it regenerated), zero page errors other than the sandbox's sign-in stubs
+(the render recipe: serve live-site-pages over 127.0.0.1; for Profiler seed localStorage ov_note_session,
+route script.google.com whoami as admin and abort accounts.google.com; for Classroom patch _e='' and
+AUTO_REFRESH=false on a scratch copy, seed the sessionStorage session after load, override window._gasPost
+after load with the lesson literals parsed by check-classroom-content.py's parse_literals, hide
+#auth-wall/.splash/#gas-pill/#verify-overlay, then clHeaderShow(); clAppMount(); clRoute()). Study guides
+and study-prep lesson plans for the three new companies per the Profiler Command (lesson plans carry the
+Developed by footer). Normal Pre-Commit and Pre-Push checklists; ONE commit; push on your claude/* branch
+once ls-remote is empty.
+
+At the end: one line per company on the identity check (what the plan row got wrong, if anything); Faith
+Technologies' category decision and its basis; the three epc-and-construction roles and any adjacent
+memberships; step-7 counts; the segment count regenerated and the content checker's final line; and note
+that get_session exposes no cost field — give the subagent token totals and the rate-limit status instead.
+```
 
 Developed by: LightAISolutions
