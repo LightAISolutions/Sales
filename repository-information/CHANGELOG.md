@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 80/100`
+`Sections: 81/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.86r] — 2026-10-03 11:05:04 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new session (recommend a model and effort level between Opus 5.5 and Fable 5.1, Medium, High, Xhigh) to run the next row of phase-f-action-plan.md, then remember session."
+
+### Added
+- `repository-information/phase-f-action-plan.md` — **§11, the F-A1 paste-in prompt** (`profiler Anza`, `profiler SemiAnalysis`, `profiler EPRI`; §3 row 8). Recommended **Fable 5.1 · High**, raised from the plan's Medium on two facts the row lacked: 31 dossiers cite SemiAnalysis or ClusterMAX today (the row said 22), so step 7 is the session's weight; and SemiAnalysis would be the first entry in the segments registry's `unassigned[]`. Opus 5.5 · xhigh named as the substitute if the Fable half is short (none of the three is a 10-K filer; EPRI's Form 990 is the one long filing). The prompt carries the identity hypotheses, the 31 citing dossiers by slug, the two segments' current shape, `cadence`/`watch` calendar rows, the Classroom bump v01.96g → v01.97g and the render recipe with the seed-after-load fix.
+
+### Changed
+- `repository-information/phase-f-action-plan.md` — §3 row 8 re-timed to Sun 10/4 or Mon 10/5, pointed at §11, model cell `high`; §2's effort table moves F-A1 from the medium row to the high row with the reason.
+- `repository-information/SESSION-CONTEXT.md` — Latest Session written for the F-G1 session (identity corrections, the Faith category basis, roles, step 7, calendar, Classroom v01.96g, the §11 decision); previous entry rotated down under the 2-session cap.
+
+### Notes
+- No dossier, page, GAS or diagram changed. CHANGELOG `Sections: 81/100` (four sections dated 2026-10-03 EST exempt; no rotation).
 
 ## [v07.85r] — 2026-10-03 10:30:29 PM EST
 

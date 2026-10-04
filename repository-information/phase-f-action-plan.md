@@ -44,8 +44,8 @@ The rule comes from `PROFILER-COVERAGE-PLAN.md` §2's own evidence: **effort buy
 |---|---|---|
 | **Opus 5.5 · xhigh** | Long first-party filings to mine: 10-Ks, an S-1, Chinese-language quarterlies with conflicting figures | F-I2 (11), F-I3 (12), the Megmeet refresh and report (18) |
 | **Fable 5.1 · xhigh** | Classroom teaching material that lessons hang on (§2's anchor rule), and the corpus's largest step 7 | Waves A–D (9, 15, 16, 17), ERCOT (13) |
-| **Fable 5.1 · high** | Private or thin records, where the dossier's value is inference; regulatory synthesis (utilities, grid operators); refresh passes and scenario reframes | F-N2 (1), F-U3 (3), F-U4 (4), the neoclouds + Habitat pass (5), F-I4 (6), F-G1 (7), the Dominion reframe (10), PJM (14) |
-| **Fable 5.1 · medium** | Bounded adjudication on thin records | F-A1 (8) |
+| **Fable 5.1 · high** | Private or thin records, where the dossier's value is inference; regulatory synthesis (utilities, grid operators); refresh passes and scenario reframes | F-N2 (1), F-U3 (3), F-U4 (4), the neoclouds + Habitat pass (5), F-I4 (6), F-G1 (7), F-A1 (8, raised from medium — §11), the Dominion reframe (10), PJM (14) |
+| **Fable 5.1 · medium** | Bounded adjudication on thin records | — (F-A1 moved to high on 10/3 — §11 gives the two facts that moved it) |
 | **Opus 5.5 · medium** | Read-only checks | The 9/30 pipeline-run check (2) |
 
 **Changed from the 9/26 plan:** F-U3, F-U4 and PJM drop from xhigh to high. That matches F-U1 and F-U2, which ran on Fable 5.1 High and caught their one wrong premise. Every other change is the model.
@@ -117,7 +117,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | 5 | ~~Thu 10/1, after 5:00 PM PT~~ **Landed Fri 10/2 (v07.81r)** | Neoclouds Profiler pass + `profiler Habitat Energy` (one session) — prompt in §8 | Fable 5.1 · high | Done. Both Companies House gates were missed, not filed ('Accounts overdue' on 2 Oct at Fluidstack Ltd, Habitat Energy Limited and its parent); Nscale v3 was rebuilt from the S-1 (Anthropic named at up to USD 44.6bn); ClusterMAX 3.0 folded into CoreWeave, Nebius (→ incumbent), Crusoe, Lambda and IREN; Lambda and Crusoe ran the full command because their watch items had moved; step 7 revised Anthropic (v4) and Hut 8 (v3). First application of the step-5 sub-rule: all 19 segment lessons regenerated, `check-classroom-content.py` 0 errors, Classroom GAS v01.94g — `main` is green for the 10/7 run. The 10/1 drift check stood down (8/25 pins), so no superseding BESS-attach report exists |
 | 6 | ~~Fri 10/2 evening or Sat 10/3~~ **Landed Sat 10/3 (v07.83r)** | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments — prompt in §9 | Fable 5.1 · high | Done, in one session with six research subagents (two per company). Identity check corrected all three plan rows: Quinlan's UK-board resignation and the Rowan figures as reported-not-announced (Quinbrook); EnergySolutions is an ECP acquisition, not a pending sale, and 'USD 36.0bn' was EUR (ECP); xScale is a 37.5% controlling interest, not 'limited partner' (CPP). Roles — `capital`: CPP incumbent, ECP and Quinbrook challengers; Quinbrook adjacent in `storage-developers-and-ipps` and `aidc-developers-and-landlords`. Step 7: 24 raw aka hits, `equinix` v8 and `habitat-energy` v4 revised. Step-5 sub-rule: all 19 segment lessons regenerated, Classroom.gs v01.95g. Was November. Lands before wave B, so capital is re-authored once. Quinbrook is `habitat-energy`'s parent (its group accounts are overdue and the Habitat sale is seven months silent — both now in Habitat v3); ECP is `proenergy`'s majority owner and a Bridgepoint subsidiary; CPP controls Pattern Energy and co-controls ALLETE. Regenerates `segment-capital` under the step-5 sub-rule |
 | 7 | ~~Sat 10/3 evening or Sun 10/4~~ **Landed Sun 10/4 (v07.85r)** | **F-G1** — Clayco, Faith Technologies, EMCOR — prompt in §10 | Fable 5.1 · high | Done, in one session with six research subagents (two per company). Identity check corrected all three plan rows: Clayco is a Missouri corporation with no Treanor affiliate and Clayco Compute is a business unit; Faith Technologies is directly employee-held (an S corporation, not an ESOP) and its category is decided `epc` — the 2 MW power module has no named outside buyer, so no `in-hall-power` seat; EMCOR is ENR's No. 2 (not No. 1) and takes the one `nextReport` row (2026-10-29, unconfirmed). Roles — `epc-and-construction`: Clayco and EMCOR incumbents, Faith Technologies challenger. Step 7: 12 raw aka hits, 0 revised. Step-5 sub-rule: segment lessons regenerated, Classroom.gs v01.96g. Was November. Decide Faith Technologies' category (epc or supplier) on the record; EMCOR is the one listed name (NYSE: EME) so it takes a `nextReport` calendar row, the other two cadence rows. Regenerates `segment-epc-and-construction` (and `segment-in-hall-power` if Faith's Excellerate line earns the adjacent seat) under the step-5 sub-rule; `landscape-epc-and-construction` stays wave D's |
-| 8 | Fri 10/2 – Sat 10/3, 7 AM | **F-A1** — Anza, SemiAnalysis, EPRI | Fable 5.1 · medium | Was November. SemiAnalysis may carry no segment; record it as unassigned if so. **First to roll into week 2** if time runs out |
+| 8 | ~~Fri 10/2 – Sat 10/3, 7 AM~~ **Sun 10/4 or Mon 10/5** (rolled into week 2, as planned) | **F-A1** — Anza, SemiAnalysis, EPRI — prompt in §11 | Fable 5.1 · high (§11 raises it from medium; Opus 5.5 · xhigh if the Fable half is short) | Was November. SemiAnalysis carries no segment on the plan row — record it in `unassigned[]`, the registry's first use of the field. 31 dossiers cite it today (the row said 22), so step 7 is the session's weight |
 
 **Week 2 — Sat 10/3 to Sat 10/10.** The Megmeet start is Wed 10/7. The four Fable rows come to about $650–$800, plus any week-1 rollover.
 
@@ -893,6 +893,149 @@ At the end: one line per company on the identity check (what the plan row got wr
 Technologies' category decision and its basis; the three epc-and-construction roles and any adjacent
 memberships; step-7 counts; the segment count regenerated and the content checker's final line; and note
 that get_session exposes no cost field — give the subagent token totals and the rate-limit status instead.
+```
+
+## 11 · Paste-in prompt — §3 row 8, F-A1: Anza · SemiAnalysis · EPRI (Fable 5.1 · High)
+
+Written 2026-10-03 (v07.86r) at the close of the F-G1 session. Row 8 rolled from week 1 into week 2 as §3 said it would. **The model line is raised from the plan's Fable 5.1 Medium to Fable 5.1 High**, on two facts the plan row did not have: a grep of the corpus today finds **31 dossiers** citing SemiAnalysis or ClusterMAX (the row says 22) — the neocloud, hyperscaler and power-conversion dossiers whose tiers and figures rest on its ratings — so step 7 is the session's weight and a sourcing-and-relationship job, which §2 records as Fable's measured edge; and SemiAnalysis would be the **first entry in the segments registry's `unassigned[]`** (empty since S0), while Anza's `software-and-optimization` seat and EPRI's `assurance` seat are evidence-rule calls of the kind F-G1's Faith Technologies category decision needed. §2's own evidence (effort buys depth of reading, not care) still holds, so Medium is the fallback if Settings → Usage shows the Fable half short; and because EPRI's Form 990 and annual report are the batch's one long first-party record and none of the three is a 10-K filer, **Opus 5.5 xhigh spares the Fable half entirely** and is the right substitute if wave A, the Dominion reframe and ERCOT would otherwise not fit this week. Record whichever runs in the §11.3 Model cells. Built from the `PROFILER-COVERAGE-PLAN.md` §8 F-A1 rows, the F-G1 and F-I4 precedents (every plan row carried at least one stale identity fact), the eight `advisor` dossiers already covered (`aon`, `csa-group`, `dnv`, `intertek`, `kwh-analytics`, `marsh-mclennan`, `sargent-lundy`, `ul-solutions`), and the two segments' current shape. Run it in a **fresh Fable 5.1 High session**.
+
+```text
+Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 8 as a fresh
+session: F-A1 — `profiler Anza`, `profiler SemiAnalysis`, `profiler EPRI` — three new dossiers, one
+session, one commit. Fable 5.1 at High (the plan row said Medium; §11 says why High, and why Opus 5.5
+xhigh is the substitute if the Fable half is short); check Settings → Usage first.
+
+STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+HEAD || git rebase origin/main. Read the CHANGELOG counter after the rebase (81/100 at v07.86r — rotate
+the oldest date group only if the NON-EXEMPT count reaches 100; sections dated the day you push are
+exempt; no rotation is expected this session). Run git fetch --unshallow origin main before any pin read.
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; phase-f-action-plan.md §3 row 8 and §11 (this
+prompt); PROFILER-COVERAGE-PLAN.md — the three F-A1 rows in §8 (anza · semianalysis · epri) and the F-G1
+rows above them, which show the shape a landed row takes (verified role with its basis, the step-7 tally,
+the premise verdicts naming what the hypothesis row got wrong); the `dnv`, `kwh-analytics` and
+`sargent-lundy` dossiers as the precedent for how an advisor dossier is written (what is sold — ratings,
+data, certification, engineering hours — to whom, and what the firm's independence rests on);
+.claude/rules/profiler-app.md — step 1a (identity), step 2 (two parallel research subagents per company,
+Stage 1 first-party exhaustive, Stage 2 third-party; run check-source-reachability.py before planning
+Stage 2), step 5 including the segment assignment, the `unassigned[]` field and the segment-regeneration
+sub-rule, step 7 (reconciliation by aka[]), the Archival Procedure (no archive — these are new profiles);
+PROFILER-SCHEMA.md (registry schema — the `advisor` category; profile schema v7; Segments registry, its
+evidence rule and `unassigned[]` — `{ "slug", "reason" }`, empty since S0; Refresh calendar: a new company
+gets a calendar row and a notes entry in the same commit — all three are private or non-profit, so
+`cadence` rows); PROFILER-STYLES.md (active style `intel-briefing`); .claude/rules/classroom-app.md (the
+content fence, the verification list, the gateDigest obligation) because the segment sub-rule will fire.
+
+IDENTITY FIRST (step 1a), from a primary source dated within twelve months, before any research prompt:
+- Anza: the plan row has no legal entity. Establish it (the Borrego spin-out of 2022 — confirm the
+  registered name and state, who owns it now, any funding round and investor, and the headcount the
+  company itself states), and what it sells: Energy Storage Pro and the solar module platform as paid
+  data subscriptions, the Transformer Procurement Service (16 December 2025) and commissioning support
+  as services. Category `advisor` unless the evidence is a software product sold on its own terms — then
+  say which and why.
+- SemiAnalysis: the legal entity (confirm the name and state; Dylan Patel's ownership; any outside
+  investor), headcount, and the product set — the Datacenter Industry Model, the Accelerator Model, the
+  China Datacenter Model (25 September 2026), the newsletter, consulting, InferenceMAX and ClusterMAX —
+  and, decisive for how 31 dossiers read it, whether rated companies pay SemiAnalysis for anything and
+  what the ClusterMAX methodology discloses about that. Category `advisor`. The plan row expects NO
+  segment: record `semianalysis` in `unassigned[]` with a one-sentence reason if the dossier's
+  productsAndServices supports no seat — this is the field's first use, so report whether
+  sync-profiler-registry.py, build-profiler-graph.py, build-classroom-segments.py and the checkers
+  handled a populated `unassigned[]` without a change; if one of them needs a fix, make it in the same
+  commit and say so.
+- EPRI: Electric Power Research Institute, Inc. — confirm the 501(c)(3) status, the state of
+  incorporation, the headquarters the current Form 990 and annual report give, the officers, and the
+  revenue and membership-funding figures from the 990 (ProPublica or the IRS copy is primary), not from
+  press; DCFlex (the data-centre flexibility initiative) — its launch date, named members and the
+  demonstrations published; any Open Power AI Consortium facts. Category `advisor`; `ownership` is a
+  non-profit — use the schema's variant and say which.
+Correct the coverage-plan rows in the same commit if any identity fact is stale — in F-I4 and F-G1 every
+row needed correction; expect the same here, starting with the inbound counts (SemiAnalysis 22 on the row
+against 31 by grep today; EPRI 3 against 5).
+
+WHAT THE RECORD ALREADY SAYS — read these dossiers' sentences before writing, because step 7 will hold the
+new dossiers to them (or revise them):
+- SemiAnalysis ← 31 dossiers: alibaba-cloud, amd, amperesand, bytedance, chindata, coolit, coreweave,
+  crusoe, delta-electronics, dg-matrix, firmus, fluidstack, g42, google, heron-power, humain, infineon,
+  iren, lambda, liteon, megmeet, nebius, novos-power, nscale, piller, supermicro, vertiv, vicor,
+  voltagrid, whitefiber, xai. The neocloud dossiers carry ClusterMAX 3.0 (23 September 2026) tiers —
+  CoreWeave and Nebius Platinum, Crusoe Bronze, Lambda Silver, IREN Underperforming, Fluidstack and
+  Nscale 'Unavailable' — and `landscape-neoclouds-2026-09` rests on that rating; the power-conversion
+  and SST dossiers cite SemiAnalysis's 800 VDC and datacenter-model work. The SemiAnalysis dossier must
+  state the rating's method, cadence and independence the way those dossiers rely on it, or name the gap.
+  Expect most hits to be held, not revised, unless a tier or date differs.
+- EPRI ← dominion-energy, kwh-analytics, mitsubishi-power, ppl, wec-energy (DCFlex and research
+  programmes). Anza ← no covered dossier names it (re-check by the full aka[] grep, including 'Anza
+  Renewables' and 'Energy Storage Pro').
+
+RESEARCH: two general-purpose subagents per company (first-party / third-party), ~40–60 sources each
+company (thinner records than F-G1 — do not pad); products-and-services depth first (what each firm
+sells, to whom, at what cadence, and what each publishes free against paid; for SemiAnalysis the
+methodology pages of ClusterMAX and InferenceMAX; for EPRI the programme structure and how members fund
+it; for Anza the data coverage claims — '~95% of the US BESS market' — and how they are substantiated);
+financials — EPRI from the 990 with no `expected`; Anza and SemiAnalysis private — revenue only where the
+company or a named outlet states it, source marked, `expected` empty, never a margin invented. Every
+sec.gov request (there should be few) sends the SEC_USER_AGENT string from
+scripts/check-source-reachability.py. Relationships: curate every covered counterparty the prose names
+(the rated neoclouds, the hyperscalers, the DCFlex members — google, meta, compass-datacenters and the
+utilities — kwh-analytics, dnv, ul-solutions …) with `status`, `since`, `scale` verbatim-short and an exact
+sources[] URL; type advisor↔client edges from the client's side and rating↔rated edges as `other` with
+the tier in `scale` unless the schema names a better type.
+
+SEGMENTS (step 5): decided on each dossier's own evidence under the evidence rule. Anza's plan row
+hypothesises `software-and-optimization` · adjacent — the segment holds flexgen and stem as incumbents,
+fluence, habitat-energy and gridmatic as challengers and fifteen adjacent seats (dnv and ul-solutions
+among them): grant the seat only if the dossier records a software or data product line sold to
+operators or developers; otherwise `unassigned[]`. EPRI's row hypothesises `assurance` · adjacent — the
+segment holds dnv, ul-solutions, intertek and sargent-lundy as incumbents, csa-group as challenger,
+black-veatch and burns-mcdonnell adjacent: grant it only if the dossier records a testing, standards or
+qualification line. SemiAnalysis: none expected — see IDENTITY. Then the sub-rule: python3
+scripts/build-classroom-segments.py --check, regenerate EVERY due segment (--all), bump Classroom.gs
+VERSION v01.96g → v01.97g and live-site-pages/gs-versions/Classroomgs.version.txt, one generic line in
+live-site-pages/gs-changelogs/Classroomgs.changelog.md, the README tree's Classroom display; python3
+scripts/check-classroom-content.py must report 0 errors; node --check on a .js copy of Classroom.gs; node
+scripts/check-gas-inner-scripts.js; python3 scripts/check-classroom-pipeline.py --base origin/main (P1,
+P7, P10 expected; refresh gateDigest only if P3 fires). Do not edit any landscape or scenario lesson —
+`landscape-software-and-optimization` and `landscape-assurance` are wave D's.
+
+CALENDAR: all three take `cadence` rows (`quarterly`) with the tier the private advisors carry (read dnv /
+csa-group / sargent-lundy / kwh-analytics in profiler-refresh-calendar.json — `watch`); no `nextReport`
+row — none is a listed issuer, and say so in the summary. Notes entries with `source` and watch[] (Anza:
+the next data-coverage claim, any funding round, the transformer service's first named data-centre
+client; SemiAnalysis: ClusterMAX 4.0 or the next InferenceMAX, any disclosed commercial relationship with
+a rated company, the China Datacenter Model's next release; EPRI: the next 990, DCFlex demonstration
+results, Open Power AI Consortium membership changes).
+
+STEP 7 by aka[] for all three (populate aka[] first: 'Anza', 'Anza Renewables', 'Energy Storage Pro';
+'SemiAnalysis', 'ClusterMAX', 'InferenceMAX', 'Dylan Patel' only if the schema allows a person — else
+leave it out; 'EPRI', 'Electric Power Research Institute', 'DCFlex'). Read every hit; revise the other
+dossier where the new research contradicts it (archive + profileVersion +1); state both figures where two
+differ; report counts reviewed and changed. Any neocloud dossier you revise that a current report pins
+must be re-verified by reading in report-pins-verified.json.
+
+VERIFY: check-source-reachability.py first; sync-profiler-registry.py (write, then --check clean);
+build-profiler-graph.py; check-profiler-relationships.py, check-profiler-crossrefs.py, check-profiler-study.py
+clean (accept reviewed candidates with a reason); check-profiler-reports.py — four pre-existing pin
+warnings are expected (fluence v10, jupiter-power v7, jinko v6, oracle v6); check-readme-tree.py 0 findings
+(add the three new profile and study entries and the three curriculum directories); Playwright render of
+the three new dossiers at Profiler.html#<slug> and of Classroom.html#lesson/segment-software-and-optimization
+and #lesson/segment-assurance (if they regenerated), zero page errors other than the sandbox's sign-in
+stubs (the render recipe: serve live-site-pages over 127.0.0.1; for Profiler seed localStorage
+ov_note_session, route script.google.com whoami as admin and abort accounts.google.com; for Classroom
+patch _e='' and AUTO_REFRESH=false on a scratch copy, seed the sessionStorage session after load — the
+boot clears it when whoami fails, so seed it again after load — override window._gasPost after load with
+the lesson literals parsed by check-classroom-content.py's parse_literals, hide
+#auth-wall/.splash/#gas-pill/#verify-overlay, then clHeaderShow(); clAppMount(); set the hash). Study
+guides and study-prep lesson plans for the three new companies per the Profiler Command (lesson plans
+carry the Developed by footer). Normal Pre-Commit and Pre-Push checklists; ONE commit; push on your
+claude/* branch once ls-remote is empty. Before staging, run git diff --stat and re-serialise any JSON
+whose diff is thousands of lines (the originals are 2-space indented).
+
+At the end: one line per company on the identity check (what the plan row got wrong, if anything); the
+segment decisions — Anza's and EPRI's seats granted or withheld with the evidence, and whether
+SemiAnalysis went into `unassigned[]` and how the tooling took it; step-7 counts; the segment count
+regenerated and the content checker's final line; and note that get_session exposes no cost field — give
+the subagent token totals and the rate-limit status instead.
 ```
 
 Developed by: LightAISolutions

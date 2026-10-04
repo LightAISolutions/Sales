@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-10-03 09:23 PM → 11:05 PM EST (§3 row 7: F-G1 — Clayco, Faith Technologies, EMCOR — then the F-A1 prompt and this save; two attended turns, one context compaction mid-task)
+**Repo version:** v07.84r → v07.86r (two pushes: v07.85r the three dossiers, v07.86r §11 prompt + this save)
+**Branch:** `claude/gifted-fermat-v9vztl`
+**Model:** Fable 5.1 High (`claude-fable-5-1`); `get_session` exposes no cost field — six research subagents reported 1,940,411 tokens between them; no rate-limit event
+
+### What was done
+
+- **Identity check corrected all three plan rows before research.** Clayco: Clayco, Inc., a Missouri corporation, privately owned (Bob Clark "owns most"); Treanor is not an affiliate (Clayco Design & Engineering merged into Lamar Johnson Collaborative 8 Jan 2026); Galaxy's Helios Phase 2 (260 MW) moved to HITT in 2026; Clayco Compute is a business unit. Faith Technologies: Faith Technologies, Inc. (Wisconsin), an S corporation under direct employee shareholding — Form 5500 shows no ESOP; **category decided `epc`** (all revenue is contracting revenue; Excellerate Products has no named third-party buyer, so no `in-hall-power` seat). EMCOR: ENR No. 2, not No. 1; Miller Electric closed 3 Feb 2025 for USD 865m cash from the ESOP trust (8-K); role incumbent, not challenger.
+- **Three dossiers v1** (75 / 78 / 67 sources), study guides (11 / 12 / 10 sections), eight-module lesson plans, 12 company-published portraits. EMCOR carries the KPI overlay with consensus; Clayco and Faith private with `expected` empty.
+- **Segments:** `epc-and-construction` — clayco incumbent (BD+C 2025 No. 4 on USD 3.64bn, ENR Top 400 No. 20), emcor incumbent, faith-technologies challenger (EC&M 2026 No. 9, +62.6%). No adjacent seats.
+- **Step 7:** 12 raw aka hits (Clayco 9, Faith 3 incl. one FTI Consulting collision, EMCOR 0); 0 revised.
+- **Calendar:** EMCOR the one `nextReport` row (2026-10-29, unconfirmed — inferred from the Q2→Q3 spacing); Clayco and Faith `cadence: quarterly`, tier `core`.
+- **Step-5 sub-rule:** all 19 segment lessons regenerated, 12 changed; Classroom GAS v01.96g; content checker 71 lessons / 8 tracks / 220 gate cases — 0 errors; pipeline checker P1/P7/P10 only.
+- **v07.86r:** §3 row 8 re-timed and pointed at **§11 = the F-A1 paste-in prompt** (Anza · SemiAnalysis · EPRI), raised from Fable 5.1 Medium to **High** because 31 dossiers cite SemiAnalysis today (the row said 22) and `unassigned[]` would see its first use; Opus 5.5 xhigh named as the substitute if the Fable half is short. §2's effort table updated to match.
+
+### Where we left off
+
+- All changes committed and pushed; `main` carries v07.85r (merged) and v07.86r is on its way via the auto-merge workflow.
+- **Next: paste `phase-f-action-plan.md` §11 into a fresh Fable 5.1 High session** — F-A1, three new `advisor` dossiers; SemiAnalysis probably lands in `unassigned[]`; Anza's `software-and-optimization` and EPRI's `assurance` adjacent seats are evidence-rule calls; bumps Classroom GAS to v01.97g.
+- Also in-window this week: the Dominion reframe (its own session, reminder due by Tue 10/6); Classroom wave A (row 9, Fable xhigh); ERCOT (row 13).
+
+### Key decisions made
+
+- A category is decided on revenue and routing evidence, not on a product's existence: Faith Technologies stays `epc` until a named outside buyer of Excellerate Products appears (the refresh note's first watch item).
+- A plan row's inbound count is re-grepped before the prompt is written — SemiAnalysis's 22 was 31 — and the effort tier follows what the session has to read, so F-A1 moved from Medium to High in §2 and §11.
+- JSON files are re-serialised to the repo's 2-space indent before staging; a `git diff --stat` in the thousands on a registry file is a formatting regression, not content.
+- The CHANGELOG prompt blockquote stays verbatim and multi-line; the segment-regeneration line names how many lessons changed against how many were regenerated (12 of 19), not one number.
+
+### Known issues
+
+- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged.
+- EMCOR's 2026-10-29 date is inferred (`confirmed: false`); Clayco's own 2025 revenue boilerplate conflicts (USD 7.6bn vs ENR's 8.1bn) — both stated in the dossier.
+- `verify-profiler-roles.py` still fails two progress-isolation fixtures in the headless harness (pre-existing; Profiler.html untouched).
+- `unassigned[]` has never held an entry — F-A1 is its first use, and the prompt tells the session to report how the tooling took it.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 205 dossiers, page v01.93w. **Classroom:** GAS v01.96g, page v01.16w, content checker 0 errors. **CHANGELOG** `Sections: 81/100`.
+- **Active reminders (2):** the Dominion reframe (10/2–10/6), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
+
+### Recommendation for next session
+
+- **Paste `phase-f-action-plan.md` §11 into a fresh Fable 5.1 High session** — F-A1 (Anza, SemiAnalysis, EPRI); the 31 dossiers that cite SemiAnalysis are the step-7 baseline, and whether the registry tooling accepts a populated `unassigned[]` is the one thing the row has not tested.
+
+**To continue:** type `run F-A1` (or paste §11 directly).
+
+## Previous Sessions
+
 **Date:** 2026-10-03 07:25 PM → 09:20 PM EST (§3 row 6: F-I4 — Quinbrook, Energy Capital Partners, CPP Investments — then the F-G1 prompt and this save; two attended turns, one context compaction mid-task)
 **Repo version:** v07.82r → v07.84r (two pushes: v07.83r the three dossiers, v07.84r §10 prompt + this save)
 **Branch:** `claude/friendly-johnson-hsmoru`
@@ -54,54 +103,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Paste `phase-f-action-plan.md` §10 into a fresh Fable 5.1 High session** — F-G1 (Clayco, Faith Technologies, EMCOR); the five GC dossiers that cite BD+C's 2025 ranking are the step-7 baseline and the Faith Technologies category call is the one decision the row leaves open.
 
 **To continue:** type `run F-G1` (or paste §10 directly).
-
-## Previous Sessions
-
-**Date:** 2026-10-02 07:37 PM → 08:40 PM EST (§3 row 5: the neoclouds Profiler pass + `profiler Habitat Energy`, then the reminders, the F-I4 prompt and this save; two attended turns)
-**Repo version:** v07.80r → v07.82r (two pushes: v07.81r the pass, v07.82r reminders + §9 prompt + this save)
-**Branch:** `claude/zen-heisenberg-w8bs9q`
-**Model:** Fable 5.1 High (`claude-fable-5-1`); `get_session` exposes no cost field — six research subagents reported 1,590,595 tokens between them
-
-### What was done
-
-- **Both Companies House gates were missed, not filed.** Fluidstack Ltd (10985545), Habitat Energy Limited (10923911) and Renewable and Grid Services Limited (13250883) all showed 'Accounts overdue' on 2 October (FY2025 accounts due 30 September). Recorded in Fluidstack v3 and Habitat v3 as the finding (summary, financials rows, commentary, indicators, watch lists).
-- **Nscale v3** rebuilt from the S-1 of 18 September (KPMG): revenue USD 19.1M / 33.0M / 140.6M (2024 / 2025 / H1 2026), net loss USD 1,020.1M in H1, USD 103.4bn TCV at 31 August, RPO USD 56.4bn, **Anthropic PBC named at up to USD 44.6bn** (four Vera Rubin tranches at Monarch, financing uncommitted), Microsoft up to USD 43.8bn, 1 GW of 1.37 GW owned, going-concern doubt raised and alleviated, ~USD 6.5bn committed bank facilities + USD 2.54bn Dell rent + ≥USD 3.1bn convertible notes (NVIDIA USD 1.0bn closing ~16 Nov). No S-1/A or pricing by 2 October; WSJ (via Semafor) expects the roadshow postponed; Bloomberg reports Justin Osofsky (Meta) hired as COO.
-- **ClusterMAX 3.0 (23 Sep)** folded in: CoreWeave v5 (third Platinum, now shared), **Nebius v6 (Gold → Platinum; segment role challenger → incumbent)**, Crusoe v7 (Gold → Bronze), Lambda v6 (Silver), IREN v6 (Underperforming), Fluidstack ('Unavailable' — 'bare-metal TPU deployments at 100K+ chip scale'), Nscale ('Unavailable'). Lambda and Crusoe ran the full command (watch items had moved: the press-only USD 35bn Anthropic–Lambda deal at Beacon Point, Lambda's USD 1.008bn fixed-rate facility A(low)/Baa1 and Mayes County OK; Crusoe's USD 3.9bn Series F at USD 30.9bn post, Google named at Armstrong County, the Boom turbine order dropped, three directors).
-- **Step 7** by aka[]: Anthropic v4 (Nscale's S-1 names it; Barber Lake slip — Cipher's 24 Sep amendment moves delivery to Q4 2026–Q1 2027 with the lab signing years 11–20 directly) and Hut 8 v3 revised; three report pins re-verified; one crossref candidate accepted. Habitat's five inbound dossiers unchanged.
-- **Part C** (first application of the step-5 sub-rule): all 19 segment lessons regenerated; `check-classroom-content.py` 0 errors (was 14 on main); Classroom GAS v01.94g; pipeline checker P1/P10 only. `main` is green for the 10/7 07:02 AM ET pipeline run.
-- **Routines (10/1):** drift check stood down at 8/25 drifted pins (no superseding BESS-attach report); quarterly sweep 0 due; earnings desk v07.80r (Intertek re-dated). Session context was stale and auto-reconstructed.
-- **v07.82r:** the neoclouds and Habitat reminders moved to Completed; §3 row 5 marked landed, row 6 re-timed; **§9 = the F-I4 paste-in prompt** (Quinbrook · ECP · CPP Investments, Fable 5.1 High).
-
-### Where we left off
-
-- All changes committed and pushed; `main` carries v07.81r (merged) and v07.82r is on its way via the auto-merge workflow.
-- **Next: paste `phase-f-action-plan.md` §9 into a fresh Fable 5.1 High session** — F-I4, three new `capital` dossiers; it regenerates `segment-capital` and bumps Classroom GAS to v01.95g.
-- Then F-G1 (Clayco, Faith Technologies, EMCOR), F-A1 (Anza, SemiAnalysis, EPRI); the Dominion reframe (its own session, by Tue 10/6); wave A Sat 10/3–Tue 10/6 — `landscape-neoclouds-2026-09` must now reflect Nebius at Platinum/incumbent and Fluidstack and Nscale at 'Unavailable'.
-
-### Key decisions made
-
-- A late Companies House filing is written as the finding itself (date checked, 'Accounts overdue' quoted, filing-pattern context), never as an absence.
-- Nebius's role moved on the third-party top-tier rank per the segments evidence rule; no other role moved on a rating — challengers are placed on the capacity they sell.
-- Lambda and Crusoe were escalated from targeted to full refreshes because their watch items had moved (the prompt's own rule); IREN got a targeted refresh because ClusterMAX 3.0 names it.
-- The stop hook's mid-session push requests were held: the Session Start reconstruction rides with the task push.
-
-### Known issues
-
-- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged.
-- `verify-profiler-roles.py` fails two progress-isolation fixtures in the headless harness (pre-existing; Profiler.html untouched).
-- `profiler-graph.json` `built` reads 2026-10-03 (UTC build) while the dossiers say 2026-10-02 — the content checker accepts it.
-- Both overdue filings are open watch items that no Routine covers (Fluidstack is in the January sweep; Habitat is watch tier) — a mid-October re-check is manual.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 199 dossiers, page v01.93w. **Classroom:** GAS v01.94g, page v01.16w, content checker 0 errors. **CHANGELOG** `Sections: 100/100` (three 2026-10-02 sections exempt → 97 non-exempt; no rotation yet — the next push's non-exempt count decides).
-- **Active reminders (2):** the Dominion reframe (10/2–10/6), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
-
-### Recommendation for next session
-
-- **Paste `phase-f-action-plan.md` §9 into a fresh Fable 5.1 High session** — F-I4 (Quinbrook, Energy Capital Partners, CPP Investments); Quinbrook's overdue group accounts and the stalled Habitat sale are already researched inputs in Habitat v3.
-
-**To continue:** type `run F-I4` (or paste §9 directly).
 
 Developed by: LightAISolutions
