@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 2,
+  "slug": "anza",
+  "title": "Anza — Technology Study Guide",
+  "lastUpdated": "2026-10-04",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: procurement intelligence between the factory and the project",
+      "kind": "callout",
+      "tone": "info",
+      "read": "A procurement-intelligence firm sits between equipment makers and project buyers: it collects every supplier's price, lead time and compliance paperwork, standardises it, and sells the comparison — then runs the purchase for a fee per watt.",
+      "ps": [
+        "**The trade.** Solar modules, battery containers and power-conversion systems are bought by developers, {{independent power producer}}s and {{EPC}} contractors from dozens of factories, each quoting its own price, delivery terms and paperwork. A {{procurement intelligence}} platform asks every supplier for the same data every month, normalises it, and lets a buyer rank thirty products on one screen before a single request for proposal goes out.",
+        "**Two ways to pay.** The buyer pays a subscription to see the data, or pays a {{per-watt fee}} for the firm to run the procurement — a cent or two per watt on a commercial project, tenths of a cent at utility scale. The supplier pays nothing: it hands over quotes in exchange for market feedback and a seat in the buyer's shortlist.",
+        "**Why it exists now.** Three things changed in 2025–26: a tax-credit regime that depends on where each component was made ({{FEOC}} rules, the {{domestic content bonus}}), tariffs that reprice imports overnight ({{Section 232 tariff}}, {{AD/CVD}}), and a wave of new battery and inverter suppliers. Comparing products became a compliance exercise, and compliance became a data product.",
+        "**What to carry.** Learn the four questions a buyer now asks of every product — what does it cost delivered, how long until it ships, which tax credits does it qualify for, and which rules could disqualify it — and you understand what every screen on such a platform is for."
+      ]
+    },
+    {
+      "id": "lifecycle-cost",
+      "title": "Effective cost per watt: why the cheapest module is rarely the cheapest project",
+      "kind": "prose",
+      "read": "A module's sticker price is a fraction of what it costs a project over 30 years; lifecycle ranking turns price, efficiency, degradation, tax credits and tariffs into one number.",
+      "ps": [
+        "**Price per watt.** Solar modules and batteries are quoted in dollars per watt (or per watt-hour) of nameplate capacity — {{nameplate capacity}} being the rated output under standard test conditions. Two modules at the same price per watt can differ in size, efficiency and warranty.",
+        "**What efficiency buys.** A higher-efficiency module produces the same power from a smaller area, which means fewer racks, less wiring, less land and lower installation labour. Platforms translate that into a per-watt saving on the balance of system — everything on the project that is not the module itself.",
+        "**Degradation and warranty.** Modules lose a fraction of a percent of output every year; batteries lose capacity with cycles and calendar age ({{degradation}}, {{cycle life}}). A product that degrades slower earns more over its life, and a stronger warranty transfers more of that risk to the maker. Lifecycle tools discount future output back to today.",
+        "**Tax credits and tariffs as price terms.** A module that qualifies for the {{domestic content bonus}} is worth an extra tenth of the project's investment tax credit; one caught by a tariff costs more at the border. An {{effective cost per watt}} ranking folds both in, so a dearer domestic module can rank above a cheaper import.",
+        "**The buyer's use.** Rank the field, shortlist, then negotiate — the platform's claim is that the saving from choosing the right product outweighs the subscription many times over on a 100 MW project."
+      ]
+    },
+    {
+      "id": "compliance-filters",
+      "title": "The compliance layer: FEOC, domestic content and the Covered List",
+      "kind": "table",
+      "read": "Four rule sets now decide which products a US project may buy with full tax credits; a procurement platform's value is tracking each product's status against all four.",
+      "intro": "What each regime asks, and what a platform must verify per product.",
+      "cols": [
+        "Regime",
+        "The question it asks of a product",
+        "What a platform tracks",
+        "Who certifies"
+      ],
+      "rows": [
+        [
+          "{{FEOC}} restrictions",
+          "Was too much of the product's value supplied by a prohibited foreign entity?",
+          "The {{material assistance cost ratio}} per module or battery and the tier of proof behind it",
+          "Legal opinion, third-party audit or supplier certificate at module, cell and seller level"
+        ],
+        [
+          "{{domestic content bonus}}",
+          "Is enough of the project's manufactured content American-made to earn the adder?",
+          "Each product's domestic-content points and the blend of products that clears the threshold",
+          "The project owner, with supplier cost attestations"
+        ],
+        [
+          "{{Section 232 tariff}} on polysilicon",
+          "Does the import price fall below the minimum the proclamation set for cells and modules?",
+          "Repricing by supplier and the median delivered price before and after the effective date",
+          "US Customs at the border"
+        ],
+        [
+          "FCC Covered List and the bulk-power executive order",
+          "Does the inverter, battery or transformer come from a covered entity or lack equipment authorisation?",
+          "Authorisation status and covered-entity exposure per supplier and product",
+          "FCC and the Department of Energy"
+        ],
+        [
+          "{{AD/CVD}} and {{UFLPA}}",
+          "Is the product subject to anti-dumping duties or at risk of detention for forced-labour sourcing?",
+          "Country-of-origin and supply-chain traceability flags in a risk rating",
+          "Commerce, the ITC and Customs"
+        ]
+      ],
+      "note": "A product can pass one regime and fail another; the filters are stacked, and a self-reported claim is not treated as compliant until a third party vouches for it."
+    },
+    {
+      "id": "two-sided-exchange",
+      "title": "How a two-sided data exchange works — and who pays",
+      "kind": "prose",
+      "read": "Suppliers give data for free to be seen; buyers pay to see it and to have the firm buy on their behalf. The economics only hold if the supplier roster stays near-complete.",
+      "ps": [
+        "**The supply side.** Every month the platform's sourcing team meets each supplier and loads its current pricing, lead times, product specifications and compliance documents. The supplier is not paid and does not pay; its incentive is distribution — every buyer running a comparison sees its product, and the firm's own procurements send it orders.",
+        "**The demand side.** Buyers pay in two ways: a {{subscription}} for the data and modelling tools, and a {{per-watt fee}} when the firm negotiates and contracts the purchase. On a {{solar-plus-storage}} project the fee is a small slice of a multi-million-dollar order, which is why buyers accept it as the price of a transparent market.",
+        "**The network effect.** The platform is only as good as its coverage. A claim to cover most of the US module or battery supply is a claim that a buyer need not look anywhere else — and a supplier that stays off the platform is invisible to the buyers on it. Coverage claims are therefore the firm's most important marketing statement and the hardest to audit.",
+        "**The conflict to understand.** The firm advises buyers and runs their procurements while depending on suppliers for its data. Its answer is that it never takes a supplier's money; a careful buyer still asks whether the shortlist favours suppliers who update the platform diligently over those who do not.",
+        "**For a seller.** If you make modules, batteries or inverters, the platform is a channel: being on it with current, verified data puts you in front of buyers you have never met. If you sell to developers, the platform is your competitor for the comparison step and your partner for the order."
+      ]
+    },
+    {
+      "id": "scenario-engine",
+      "title": "Scenario modelling for a battery project",
+      "kind": "prose",
+      "read": "A storage scenario engine lets a developer design the battery to the site and the tariff, then price every supplier's product against that design.",
+      "ps": [
+        "**Inputs.** Site location (which sets the interconnection, the tariff and the weather), the {{point of interconnection}} capacity, the required {{duration}} in hours, the degradation and {{augmentation}} plan, and the use case — energy arbitrage, capacity, or backing a data-centre load.",
+        "**What the engine does.** It sizes the DC block and the {{PCS}} for each candidate product, applies that product's price, efficiency and warranty, and ranks the field on lifecycle cost. The developer can add its own quotes and compare them confidentially against the market.",
+        "**Why it matters commercially.** Battery quotes used to take weeks per supplier; a configured comparison takes an afternoon. The firm's claim is that this compresses the development cycle and lets smaller developers negotiate like large ones.",
+        "**The limits.** The engine ranks products on data the suppliers supplied. It does not test them, does not certify safety ({{UL 9540A}} is the laboratory's job) and does not replace the owner's engineer or {{independent engineer}} who signs off for the lender."
+      ]
+    },
+    {
+      "id": "tariff-shock",
+      "title": "Reading a tariff shock through platform data",
+      "kind": "table",
+      "read": "When a tariff lands, a procurement platform sees repricing first — supplier by supplier, product by product — before any trade statistic does.",
+      "intro": "How the 2026 polysilicon tariff showed up in platform data, and what each signal means.",
+      "cols": [
+        "Signal",
+        "What the platform measured",
+        "What a buyer reads from it"
+      ],
+      "rows": [
+        [
+          "Repricing breadth",
+          "The share of active suppliers that changed prices within a month of the proclamation",
+          "How fast the market believes the tariff will bite"
+        ],
+        [
+          "Imported-module median",
+          "The median delivered price for shipments after the effective date versus before",
+          "The new floor the tariff sets; whether imports continue at all"
+        ],
+        [
+          "Domestic-import spread",
+          "The gap between US-made and imported modules",
+          "Whether the domestic premium has closed enough to switch suppliers"
+        ],
+        [
+          "Pull-forward volume",
+          "Procurement volume contracted before the effective date",
+          "How much demand was borrowed from next year"
+        ],
+        [
+          "Compliance re-sorting",
+          "Products whose tax-credit status changed with the new rule",
+          "Which shortlists must be rebuilt"
+        ]
+      ],
+      "note": "These are company-published platform statistics; they describe the suppliers on the platform, not the whole market."
+    },
+    {
+      "id": "transformer-procurement",
+      "title": "Buying transformers: why a procurement service exists for one component",
+      "kind": "prose",
+      "read": "Medium- and high-voltage transformers have multi-year lead times and dozens of qualified makers; a buyer-side service aggregates demand and specifications so a developer does not shop alone.",
+      "ps": [
+        "**The component.** A {{transformer}} steps a project's voltage up to the grid's ({{generator step-up transformer}}) or down to the site's; a {{large power transformer}} weighs hundreds of tonnes and is built to order. Every solar plant, battery, substation and data centre needs several.",
+        "**The shortage.** Demand from data centres, renewables and grid upgrades outran factory capacity; {{lead time}}s stretched to years and prices rose. A developer that orders late loses its {{commercial operation date}}.",
+        "**What a buyer-side service does.** Pre-qualifies many makers, standardises the specification so bids are comparable, aggregates several projects' orders to win factory slots, and manages the contract through factory acceptance. It is the module-procurement model applied to a slow, custom, high-value component.",
+        "**Why data-centre developers are the stated target.** They buy the same transformers as utilities and renewables, on tighter schedules, and most lack a procurement department for electrical gear. A named data-centre client would confirm the thesis; none has been published."
+      ]
+    },
+    {
+      "id": "where-it-sits",
+      "title": "Where procurement intelligence sits in the chain",
+      "kind": "proscons",
+      "read": "The platform is neither the engineer who certifies the design nor the laboratory that certifies the product; it is the market-data layer in front of both.",
+      "intro": "What the model does well and where it stops.",
+      "cards": [
+        {
+          "t": "Procurement intelligence as a buyer-side data layer",
+          "meta": "A subscription-and-fee model between equipment makers and project buyers",
+          "adv": [
+            "Compresses weeks of supplier quoting into a configured comparison",
+            "Turns tax-credit and tariff rules into per-product filters a buyer can act on",
+            "Gives smaller developers the pricing visibility of a large one",
+            "Gives suppliers a channel to buyers without a sales call"
+          ],
+          "dis": [
+            "Covers the suppliers on the platform, not the whole market; coverage claims are company statements",
+            "Ranks on supplier-supplied data; it tests nothing and certifies nothing",
+            "Advises the buyer while depending on the supplier for data",
+            "Revenue, subscription prices and take rates are undisclosed, so its scale cannot be checked"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "Mechanisms only — no dates, names or revenue figures.",
+      "cards": [
+        {
+          "q": "Why can a dearer domestic module rank above a cheaper import on an effective-cost-per-watt basis?",
+          "a": "Because the ranking folds in the tax-credit adder for domestic content and the tariff cost of the import; the sticker price is only one term."
+        },
+        {
+          "q": "Who pays on a two-sided procurement platform, and who does not?",
+          "a": "Buyers pay — a subscription for the data and a per-watt fee for a managed procurement. Suppliers hand over data for free in exchange for visibility and orders."
+        },
+        {
+          "q": "What does the material assistance cost ratio measure?",
+          "a": "The share of a product's value that came from a prohibited foreign entity; under FEOC rules a product above the threshold loses tax-credit eligibility."
+        },
+        {
+          "q": "Why is a self-reported FEOC claim not enough for a platform filter?",
+          "a": "The buyer's tax credit depends on it; a legal opinion, third-party audit or certificate at module, cell and seller level is the evidence a lender accepts."
+        },
+        {
+          "q": "What does a storage scenario engine not do?",
+          "a": "It does not test the battery, certify its safety, or replace the independent engineer; it ranks products on supplier-supplied data against the developer's design."
+        },
+        {
+          "q": "Why does a transformer need a buyer-side procurement service when a module does not?",
+          "a": "It is built to order with multi-year lead times; aggregating orders and standardising specifications wins factory slots a single developer cannot."
+        },
+        {
+          "q": "What is the first thing a platform sees when a tariff is announced?",
+          "a": "Repricing — the share of suppliers that change quotes and the new median delivered price for shipments after the effective date."
+        },
+        {
+          "q": "What is the structural conflict in the model?",
+          "a": "The firm advises buyers and runs their procurements while relying on suppliers for its data; it answers by taking no supplier money."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "Six questions on the mechanics.",
+      "items": [
+        {
+          "q": "A developer's platform ranking shows an imported module USD 0.04/W cheaper than a domestic one, yet the domestic module ranks first on effective cost. Which term most likely explains it?",
+          "c": [
+            "Lower degradation",
+            "The domestic content bonus on the investment tax credit",
+            "A longer warranty",
+            "Lower shipping cost"
+          ],
+          "a": 1,
+          "why": "A tenth of the project's investment tax credit is worth more than four cents a watt on most projects; the ranking folds it into the price."
+        },
+        {
+          "q": "A supplier refuses to share monthly pricing with the platform. What is the direct consequence for that supplier?",
+          "c": [
+            "It pays a listing fee",
+            "It is excluded from comparisons the platform's buyers run",
+            "It loses its UL listing",
+            "It must pay AD/CVD duties"
+          ],
+          "a": 1,
+          "why": "The supplier's only incentive is visibility; off the platform it is invisible to those buyers."
+        },
+        {
+          "q": "Which body actually certifies a battery container's fire-safety performance?",
+          "c": [
+            "The procurement platform",
+            "A testing laboratory running UL 9540A",
+            "The developer",
+            "The module maker"
+          ],
+          "a": 1,
+          "why": "Large-scale fire testing is the laboratory's job; the platform ranks products, it does not test them."
+        },
+        {
+          "q": "A proclamation sets a minimum import price for modules effective in four months. Which platform signal would show demand being pulled forward?",
+          "c": [
+            "Repricing breadth",
+            "Procurement volume contracted before the effective date",
+            "The domestic-import spread",
+            "Compliance re-sorting"
+          ],
+          "a": 1,
+          "why": "Buyers rush to contract before the tariff bites; the volume spike before the date is the pull-forward."
+        },
+        {
+          "q": "Under FEOC rules, which evidence tier does a careful platform treat as compliant?",
+          "c": [
+            "The supplier's own statement",
+            "A legal opinion, third-party audit or certificate at module, cell and seller level",
+            "A customs entry form",
+            "Membership of a trade association"
+          ],
+          "a": 1,
+          "why": "Self-reporting is not treated as compliant; a lender needs third-party evidence."
+        },
+        {
+          "q": "Why would a data-centre developer use a transformer procurement service rather than order directly?",
+          "c": [
+            "Transformers are cheap commodities",
+            "Most developers lack electrical-gear procurement teams and need factory slots that aggregated orders win",
+            "Transformers do not need specifications",
+            "Utilities are barred from selling to them"
+          ],
+          "a": 1,
+          "why": "Built-to-order components with multi-year lead times reward aggregated, standardised buying."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "procurement intelligence",
+      "d": "A data service that collects suppliers' prices, lead times, specifications and compliance documents on a standard basis and sells buyers the comparison — the market-data layer in front of a purchase."
+    },
+    {
+      "t": "per-watt fee",
+      "d": "A procurement fee charged as cents (or tenths of a cent) per watt of equipment bought, so the adviser's revenue scales with the size of the order rather than the hours worked."
+    },
+    {
+      "t": "effective cost per watt",
+      "d": "A lifecycle ranking that adjusts a product's price per watt for efficiency, degradation, warranty, tax-credit eligibility and tariffs, so products are compared on what they cost a project over its life."
+    },
+    {
+      "t": "subscription",
+      "d": "Recurring payment for access to a data platform and its tools, independent of how much equipment the subscriber buys."
+    }
+  ]
+}

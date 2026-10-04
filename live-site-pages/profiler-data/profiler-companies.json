@@ -2304,7 +2304,7 @@
       "tagline": "Australian neocloud that owns and builds its AI factories — more than 900 MW contracted (OpenAI the anchor for two unbuilt Malaysian sites) against two operating sites; buys its own substations, UPS and batteries, but Maas Group's JLE is the exclusive supplier of its Australian power trains (A$855M order); ASX IPO timed for 22 Oct 2026",
       "hq": "Sydney, Australia",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "aka": [
         "Firmus Technologies",
         "Firmus Grid",
@@ -2457,7 +2457,7 @@
       "tagline": "Tenant-of-record on ~1.4 GW of Anthropic-bound leases at TeraWulf, Cipher, Hut 8 and Meridian Arc — bankable only through Google's backstops; owns Abernathy and now breaks ground at Harlingen (USD 4bn, 1.5 GW reserved); ClusterMAX 3.0 'Unavailable' (bare-metal TPUs at 100K+ chips); USD 2.6bn equity against ~USD 27bn of rent; FY2025 accounts overdue at Companies House.",
       "hq": "New York, NY, USA",
       "status": "active",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "fluidstack.io",
         "okmulgeefluidstack.io",
@@ -3352,7 +3352,7 @@
       "hq": "Sydney, Australia",
       "ticker": "NASDAQ: IREN",
       "status": "active",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "iren.com",
         "iren.gcs-web.com"
@@ -6096,7 +6096,7 @@
       "hq": "Columbus, OH, USA",
       "ticker": "NYSE: VRT",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "vertiv.com"
       ],
@@ -6714,6 +6714,106 @@
         {
           "id": "epc-and-construction",
           "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "anza",
+      "name": "Anza",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Oakland procurement-intelligence firm spun out of Borrego (ECP-led consortium, 2023) — four paid data subscriptions on module, battery and PCS pricing it says cover '95%' of US supply, plus per-watt procurement, BESS commissioning and a transformer-sourcing service; an intermediary that publishes an index.",
+      "hq": "Oakland, California, United States",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "Anza Renewables",
+        "Anza RE",
+        "Anza RE, LLC",
+        "Energy Storage Pro",
+        "Anza Pulse",
+        "Solar Pro",
+        "Energy Storage DG",
+        "Anza Exchange"
+      ],
+      "domains": [
+        "anzarenewables.com"
+      ],
+      "srcTotal": 116,
+      "srcFirstPct": 62,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "semianalysis",
+      "name": "SemiAnalysis",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Founder-owned Florida research LLC whose free ClusterMAX rating decides which GPU clouds the corpus calls Platinum, Gold, Silver or 'Not Recommended' — a 318,000-subscriber newsletter, sixteen institutional models sold on request, consulting that performs paid technical assessments with the same toolkit, and since July 2026 a USD 400m venture fund investing in the sector it rates.",
+      "hq": "No published headquarters — registered office Crawfordville, Florida; largest office San Francisco, California, United States",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "SemiAnalysis LLC",
+        "ClusterMAX",
+        "InferenceMAX",
+        "InferenceX",
+        "SemiAnalysis Capital"
+      ],
+      "domains": [
+        "semianalysis.com",
+        "clustermax.ai",
+        "inferencex.semianalysis.com"
+      ],
+      "srcTotal": 116,
+      "srcFirstPct": 48,
+      "kpiNorm": false,
+      "segments": []
+    },
+    {
+      "slug": "epri",
+      "name": "EPRI",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "The utility industry's own USD 500-million-a-year research cooperative — a member-funded 501(c)(3) whose DCFlex initiative convenes hyperscalers, landlords, utilities and grid operators in one flexibility test bed, whose BESS Failure Incident Database supplies the safety statistics every storage argument cites, and whose Powering Intelligence forecast (9–17% of US electricity by 2030) sets the load debate.",
+      "hq": "Palo Alto, California, United States",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "Electric Power Research Institute",
+        "Electric Power Research Institute, Inc.",
+        "DCFlex",
+        "ESIC",
+        "Open Power AI Consortium",
+        "StorageWiki",
+        "Flex MOSAIC"
+      ],
+      "domains": [
+        "epri.com",
+        "eprijournal.com",
+        "dcflex.epri.com",
+        "openpowerai.org",
+        "storagewiki.epri.com"
+      ],
+      "srcTotal": 124,
+      "srcFirstPct": 45,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "assurance",
+          "role": "adjacent"
         }
       ]
     }

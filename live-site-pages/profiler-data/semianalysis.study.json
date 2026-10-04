@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "slug": "semianalysis",
+  "title": "SemiAnalysis — Technology Study Guide",
+  "lastUpdated": "2026-10-04",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: the research firm whose rating the GPU-cloud market reads",
+      "kind": "callout",
+      "tone": "info",
+      "read": "An independent research firm sells three things — a newsletter, data models of a supply chain, and consulting — and gives away one: a rating of GPU clouds that the buyers, lenders and the clouds themselves now quote.",
+      "ps": [
+        "**The trade.** Semiconductor and AI-infrastructure research is the business of knowing, before the market does, how many chips a foundry can make, how many racks a data centre can power and which cloud can actually keep a thousand GPUs running. A {{sell-side research}} firm sells that knowledge to investors; an {{independent research}} firm sells it to anyone — hyperscalers, {{neocloud}}s, hedge funds, governments — and is paid by subscription and by project, not by trading commissions.",
+        "**Why a rating matters.** Renting a {{GPU cluster}} is a multi-year, multi-million-dollar commitment to a provider whose reliability cannot be read off a price list. A published {{ClusterMAX}} tier is the one outside signal a buyer, a lender and a provider's own marketing all cite — which gives its author influence out of proportion to the rating's price, which is nothing.",
+        "**The structure to learn.** Free rating → paid models and assessments → consulting → a venture fund investing in the rated sector. Each layer feeds the next; each adds a question about independence that the firm answers by assertion rather than disclosure.",
+        "**What to carry.** Learn how a cluster is tested, what the tiers mean, how a supply-chain model is built, how an inference benchmark works, and where the conflicts of interest sit — and you can read any research firm's output in this market with the right discount."
+      ]
+    },
+    {
+      "id": "cluster-testing",
+      "title": "What it takes to rate a GPU cloud",
+      "kind": "prose",
+      "read": "A rating is a hands-on test: the rater is granted a cluster, runs training and inference jobs on it, breaks things on purpose, and scores how the provider's software and people respond.",
+      "ps": [
+        "**The unit under test.** A {{GPU cluster}} is hundreds to thousands of accelerators joined by a high-bandwidth network and shared storage, rented as bare metal or through an orchestration layer. The hard part is not the chips; it is keeping them all working at once — a single failed link or a slow node drags the whole training job.",
+        "**What gets measured.** Time from contract to a usable cluster (handover), network throughput between nodes, storage performance, how failed nodes are detected and swapped (auto-remediation), monitoring and alerting, security posture (who can reach what), {{service level agreement}} terms, and the quality of the support engineers at 3 a.m.",
+        "**Hands-on versus mystery shopping.** The rater is granted test nodes and talks to the provider during testing; it is not an anonymous customer. That makes the test deeper and the relationship closer — a point both the rater's defenders and its critics make.",
+        "**How tiers move.** A provider that gives no access is listed unavailable rather than rated; one whose security fails a gate falls regardless of performance; one that fixes a known gap between editions rises. Tiers are therefore as much about the provider's engineering culture as its hardware.",
+        "**For a buyer.** Read the methodology and the provider's own response before the medal; a tier is a point-in-time judgment by one firm, and the firm says so."
+      ]
+    },
+    {
+      "id": "tiers",
+      "title": "Reading the tiers",
+      "kind": "table",
+      "read": "The medal tiers are a shorthand for a long technical review; what each tier asserts is narrower than its name suggests.",
+      "intro": "What a tier means in the current edition, and what it does not.",
+      "cols": [
+        "Tier",
+        "What it asserts",
+        "What it does not assert"
+      ],
+      "rows": [
+        [
+          "Platinum",
+          "Best-in-class across handover, networking, reliability, security and support, with the operational maturity to run frontier training",
+          "That the provider is the cheapest, the largest, or will stay Platinum"
+        ],
+        [
+          "Gold",
+          "Strong across the board with identified gaps the provider is closing",
+          "Equivalence with Platinum — the gap is documented in the review"
+        ],
+        [
+          "Silver / Bronze",
+          "Usable for the right workload with material weaknesses the review names",
+          "Suitability for every buyer; a Bronze may be the right choice for a small inference fleet"
+        ],
+        [
+          "Participation Ribbon",
+          "The provider engaged but did not meet the bar for a medal",
+          "A failing grade on any single criterion"
+        ],
+        [
+          "Not Recommended / Underperforming",
+          "The review found operational failures a buyer should weigh heavily",
+          "A judgment about the company's finances or its other sites — reviews now split verdicts by site"
+        ],
+        [
+          "Unavailable",
+          "The rater could not test — the provider exited managed clusters, declined, or gave no access",
+          "Anything about quality; absence of a rating is not a rating"
+        ]
+      ],
+      "note": "Each edition re-rates the field under a stricter methodology; comparing a provider's tier across editions without reading the methodology change is the most common misuse."
+    },
+    {
+      "id": "supply-chain-models",
+      "title": "How a supply-chain model is built and sold",
+      "kind": "prose",
+      "read": "An institutional model is a spreadsheet-scale reconstruction of an industry — every fab, every data centre, every accelerator SKU — assembled from filings, permits, shipping data and conversations, and sold to the people whose decisions depend on it.",
+      "ps": [
+        "**The object.** A {{datacenter industry model}} tracks thousands of facilities by owner, location, power, construction status and tenant; an accelerator model tracks each {{AI accelerator}} and {{HBM}} stack by volume and price; a cloud {{total cost of ownership}} model prices a GPU-hour from capital cost, power, depreciation and utilisation. Each is a living dataset, updated as the firm learns.",
+        "**The inputs.** Public filings and permits, satellite and permit-based construction tracking, supplier and customer conversations, teardown of hardware in a lab, and the firm's own benchmarks. The skill is reconciliation — making the bottom-up count agree with the top-down disclosures.",
+        "**Who buys and why.** Hyperscalers check their suppliers' capacity claims; neoclouds price their own clusters; investors size markets; governments watch export-control effects. The price is 'contact sales' and the buyer list is undisclosed, which is normal for institutional research and awkward for a firm that also rates some of those buyers.",
+        "**The {{MNPI}} line.** A firm that sells to investors must keep material non-public information out of what it sells. Compliance programmes — trading pre-approval, supervisory review — exist for this; the 2026 litigation turned on an allegation (denied, unproven) that the line was crossed.",
+        "**For a seller.** Your own figures — capacity, power, customers — appear in these models whether or not you supplied them; knowing what the model says about you is part of selling into this market."
+      ]
+    },
+    {
+      "id": "inference-benchmark",
+      "title": "Inference benchmarks: what a public hardware test proves",
+      "kind": "prose",
+      "read": "A continuous open benchmark runs the same models on competing accelerators and publishes throughput, latency and cost per token; its credibility rests on who owns the hardware and who can reproduce the runs.",
+      "ps": [
+        "**What is measured.** {{inference}} — serving a trained model — is scored on tokens per second per GPU, latency at a target interactivity, and cost per million tokens, across models and sequence lengths. A {{compute benchmark}} that runs nightly on current software shows how fast the software stack, not just the chip, is improving.",
+        "**Why vendors fund it.** Chip makers and clouds donate hardware and engineering because a public number they can win is worth more than a private one; the benchmark becomes a marketing venue for the sponsors.",
+        "**The provenance question.** When the hardware is supplied by the vendors being compared and the public cannot run the suite on its own systems, the result is auditable only by the benchmark's author. That is the standing critique, and it is the same question the cluster rating faces.",
+        "**For a buyer.** Use the trend lines — software gains, chip-to-chip ratios — and discount the absolute ranking by the sponsor list."
+      ]
+    },
+    {
+      "id": "independence",
+      "title": "Independence: the four layers and where the questions sit",
+      "kind": "table",
+      "read": "The firm's four businesses touch the companies it rates in four different ways; the disclosure that exists is thinner than the reliance placed on the rating.",
+      "intro": "Each layer, its link to the rated companies, and what is and is not disclosed.",
+      "cols": [
+        "Layer",
+        "Link to rated companies",
+        "Disclosed",
+        "Not disclosed"
+      ],
+      "rows": [
+        [
+          "Free rating",
+          "Providers grant test clusters and talk to the rater during testing",
+          "Methodology; which providers gave access",
+          "Whether any rated provider is a client of the other layers"
+        ],
+        [
+          "Paid models and assessments",
+          "Models sold to hyperscalers and neoclouds; a paid technical-assessment service built on the rating toolkit",
+          "That the services exist and who to email",
+          "Client list; whether compensation is tied to tiers (asserted not, in the first edition only)"
+        ],
+        [
+          "Consulting",
+          "Due diligence for investors deploying capital into the sector",
+          "That it exists",
+          "Engagements"
+        ],
+        [
+          "Venture fund",
+          "Invests in the sector the firm rates; a prior vehicle held a stake in a rated cloud",
+          "SEC Form D filings for the fund and SPVs",
+          "Holdings; any policy on rating portfolio companies"
+        ]
+      ],
+      "note": "The firm's stated position is that providers cannot buy a ranking and that compensation is not tied to ratings; no critic has produced evidence of pay-for-rank. The gap is disclosure, not proof of misconduct."
+    },
+    {
+      "id": "research-to-fund",
+      "title": "From research to venture fund: the structure",
+      "kind": "prose",
+      "read": "A research firm that raises a venture fund changes its own position in the market: it becomes an owner of companies it analyses, with the fund's filings as the only public record.",
+      "ps": [
+        "**The vehicles.** A {{venture capital fund}} raises committed capital from limited partners under private-placement exemptions and reports the raise on {{Form D}}; a {{special purpose vehicle}} pools investors for a single deal; a third-party feeder gives smaller investors access. All three appeared in the firm's 2026 filings.",
+        "**Why research firms do it.** The analysts see deal flow first; the brand attracts founders; management fees and carried interest are a new revenue line unrelated to subscriptions.",
+        "**What changes.** Every published view on a portfolio company, its competitors and its suppliers is now a view from an owner. Sell-side research has decades of rules for this; an independent firm sets its own.",
+        "**How to read it.** Treat the fund's Form D as the fact base (target size, amount sold, investors), the firm's public statements as claims, and any rating of a portfolio company or its competitor as requiring a disclosure the reader should look for."
+      ]
+    },
+    {
+      "id": "power-research",
+      "title": "The power research line: 800 VDC, behind-the-meter and the grid",
+      "kind": "prose",
+      "read": "The same firm publishes the datacentre-power analysis this corpus's power-conversion and grid dossiers cite — scenario framing with stated assumptions, sold alongside the models that underlie it.",
+      "ps": [
+        "**The 800 VDC thesis.** As {{rack power density}} passes several hundred kilowatts, distributing power at {{800 VDC}} from a centralised rectifier replaces the AC switchgear and UPS chain inside the hall, in phases: power-rack retrofits first, DC-native racks next, facility-level DC distribution, and finally the {{SST}} (solid-state transformer) replacing the line-frequency transformer.",
+        "**The market sizing.** Each phase implies a bill of materials; multiplying by gigawatts of build gives a market figure for power shelves, rectifiers and transformers. Such figures are forecasts with stated assumptions, not orders.",
+        "**Behind-the-meter.** On-site gas turbines and engines, batteries and {{behind-the-meter}} interconnection as answers to the grid queue; the firm's estimates of how much datacentre capacity will be served this way frame the generation dossiers.",
+        "**Grid economics.** Analysis of capacity-market modelling and of whether datacentres raise household bills — research that reaches regulators and ratepayer advocates, not just investors.",
+        "**For a reader of this corpus.** When a dossier quotes a market size for SSTs or a behind-the-meter gigawatt figure 'per SemiAnalysis', it is quoting this line; check the post's date and assumptions, because the firm revises them."
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "Mechanisms only — no dates, names or revenue figures.",
+      "cards": [
+        {
+          "q": "What does a cluster rating actually test?",
+          "a": "Handover time, inter-node networking, storage, failure detection and remediation, monitoring, security posture, SLA terms and support quality — on test nodes the provider grants."
+        },
+        {
+          "q": "What does an 'Unavailable' listing assert about a provider's quality?",
+          "a": "Nothing. It records that the rater could not test — the provider exited managed clusters, declined, or gave no access."
+        },
+        {
+          "q": "Why is hands-on testing both the rating's strength and its exposure?",
+          "a": "Granted clusters and conversations give depth a mystery shopper cannot reach, and create a working relationship with the companies being rated."
+        },
+        {
+          "q": "How is a supply-chain model built?",
+          "a": "Bottom-up counts (facilities, SKUs, permits, teardowns, conversations) reconciled against top-down disclosures, kept as a living dataset and sold by subscription."
+        },
+        {
+          "q": "What is the provenance question in a vendor-funded benchmark?",
+          "a": "If the compared vendors supply the hardware and the public cannot reproduce the runs, the result is auditable only by its author."
+        },
+        {
+          "q": "What does a Form D tell you about a venture fund that a press profile does not?",
+          "a": "The filed target, the amount actually sold, the number of investors and the signatory — facts, where the profile carries claims."
+        },
+        {
+          "q": "Why does a research firm's venture fund change how its research should be read?",
+          "a": "Every view on a portfolio company, its competitors and suppliers is now an owner's view, and the firm sets its own disclosure rules."
+        },
+        {
+          "q": "What is the MNPI line for a research seller?",
+          "a": "Material non-public information must stay out of what is sold to investors; trading pre-approval and supervisory review are the controls."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "Six questions on the mechanics.",
+      "items": [
+        {
+          "q": "A provider falls from Gold to Bronze between editions while its hardware is unchanged. Which explanation fits the methodology best?",
+          "c": [
+            "Its GPUs aged",
+            "The edition added a security gate and penalised handover delays and failed auto-remediation",
+            "It cut prices",
+            "It changed its name"
+          ],
+          "a": 1,
+          "why": "Tiers follow operations and methodology; each edition re-rates under a stricter bar."
+        },
+        {
+          "q": "A cloud is listed 'Unavailable'. What may a buyer conclude?",
+          "c": [
+            "It failed the security test",
+            "It is the worst provider",
+            "Only that it was not tested in this edition",
+            "It has no GPUs"
+          ],
+          "a": 2,
+          "why": "Absence of a rating is not a rating."
+        },
+        {
+          "q": "Which disclosure would most directly answer the pay-for-rank question?",
+          "c": [
+            "The methodology document",
+            "A list of which rated providers buy the firm's models or assessments",
+            "The newsletter price",
+            "The number of subscribers"
+          ],
+          "a": 1,
+          "why": "The open question is commercial ties to rated firms, not method."
+        },
+        {
+          "q": "An inference benchmark runs on hardware donated by the chip vendors compared. What is the right use of its results?",
+          "c": [
+            "Ignore them",
+            "Treat the absolute ranking as audited",
+            "Use the trend lines and discount the ranking by the sponsor list",
+            "Use only the slowest result"
+          ],
+          "a": 2,
+          "why": "Software-gain trends are robust; absolute placement inherits the provenance problem."
+        },
+        {
+          "q": "A profile says a fund 'confirmed at USD 500m'; the Form D shows a USD 400m target and nil sold. Which is the fact?",
+          "c": [
+            "The profile",
+            "The filing — the profile figure is a company-confirmed claim until a Form D/A shows an amount sold",
+            "Neither",
+            "The larger number"
+          ],
+          "a": 1,
+          "why": "Filings record what was filed; profiles record what was said."
+        },
+        {
+          "q": "A datacentre-power forecast gives a market size for solid-state transformers. How should a seller read it?",
+          "c": [
+            "As a purchase order",
+            "As a forecast with stated assumptions, dated to the post that carried it",
+            "As a regulatory requirement",
+            "As a competitor's revenue"
+          ],
+          "a": 1,
+          "why": "Scenario framing, revised by the author; not demand."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "sell-side research",
+      "d": "Research produced by brokerages and investment banks and distributed to their trading clients; paid for through commissions and subject to securities-industry rules on conflicts and disclosure."
+    },
+    {
+      "t": "independent research",
+      "d": "Research sold by a firm that is not a broker or bank, paid by subscription or project; free of trading conflicts but setting its own disclosure rules."
+    },
+    {
+      "t": "datacenter industry model",
+      "d": "A dataset tracking datacentre facilities by owner, location, power capacity, construction status and tenant, built from permits, filings and site tracking and sold to buyers of capacity and their investors."
+    },
+    {
+      "t": "venture capital fund",
+      "d": "A pooled vehicle that raises committed capital from limited partners to buy minority stakes in private companies, charges a management fee and shares in gains; in the US it reports its raise on Form D under private-placement exemptions."
+    },
+    {
+      "t": "special purpose vehicle",
+      "d": "An entity created to hold one investment, so several investors can pool into a single deal with its own filing and fee terms."
+    }
+  ]
+}

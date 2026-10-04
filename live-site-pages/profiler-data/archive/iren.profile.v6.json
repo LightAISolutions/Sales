@@ -25,7 +25,7 @@
         "Customers: Microsoft, NVIDIA, Perplexity, Figure AI, Together AI, Fluidstack, Fireworks AI, Fal AI, Hume AI",
         "NVIDIA Exemplar Cloud status on HGX B300 and GB300 NVL72; NVIDIA Preferred Partner"
       ],
-      "positioning": "The sharpest quality dispute in the cohort: SemiAnalysis ClusterMAX rates IREN 'Underperforming' (vs CoreWeave and, since ClusterMAX 3.0 of 23 September 2026, Nebius at Platinum — Nebius was Gold through 2.1 — and Lambda at Silver) while NVIDIA's own programs certify it — the Mirantis acquisition (>1,500 enterprise customers, k0rdent AI platform, NVIDIA DSX OS integration) is the answer to the software-maturity gap. ClusterMAX 3.0 (23 September 2026) holds the rating: 'Multi-day power outages, network upgrades, storage failures, air quality controls leading to link flaps, XID's everywhere' at Prince George and Mackenzie; 'We recommend that IREN stop pretending to offer managed clusters and inference endpoints in public marketing and investment materials, and focus on their bare metal offerings'.",
+      "positioning": "The sharpest quality dispute in the cohort: SemiAnalysis ClusterMAX rates IREN 'Underperforming' (vs CoreWeave Platinum, Nebius Gold, Lambda Silver) while NVIDIA's own programs certify it — the Mirantis acquisition (>1,500 enterprise customers, k0rdent AI platform, NVIDIA DSX OS integration) is the answer to the software-maturity gap. ClusterMAX 3.0 (23 September 2026) holds the rating: 'Multi-day power outages, network upgrades, storage failures, air quality controls leading to link flaps, XID's everywhere' at Prince George and Mackenzie; 'We recommend that IREN stop pretending to offer managed clusters and inference endpoints in public marketing and investment materials, and focus on their bare metal offerings'.",
       "soldThrough": "Direct multi-year contracts; newest deals ~$15M/MW vs the Microsoft anchor at ~$10M/MW (Needham) — pricing power improving as scarcity bites.",
       "targetSegments": [
         "Hyperscaler overflow (Microsoft)",
@@ -682,6 +682,6 @@
       "url": "https://stockanalysis.com/stocks/iren/forecast/"
     }
   ],
-  "lastUpdated": "2026-10-04",
-  "profileVersion": 7
+  "lastUpdated": "2026-10-02",
+  "profileVersion": 6
 }

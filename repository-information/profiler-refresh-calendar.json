@@ -414,7 +414,7 @@
     {
       "slug": "firmus",
       "cadence": "quarterly",
-      "lastRefreshed": "2026-09-26",
+      "lastRefreshed": "2026-10-04",
       "tier": "core"
     },
     {
@@ -438,7 +438,7 @@
     {
       "slug": "fluidstack",
       "cadence": "quarterly",
-      "lastRefreshed": "2026-10-02",
+      "lastRefreshed": "2026-10-04",
       "tier": "core"
     },
     {
@@ -595,7 +595,7 @@
       "slug": "iren",
       "nextReport": "2026-11-05",
       "confirmed": false,
-      "lastRefreshed": "2026-10-02"
+      "lastRefreshed": "2026-10-04"
     },
     {
       "slug": "jinko",
@@ -1099,7 +1099,7 @@
       "slug": "vertiv",
       "nextReport": "2026-10-21",
       "confirmed": false,
-      "lastRefreshed": "2026-09-06"
+      "lastRefreshed": "2026-10-04"
     },
     {
       "slug": "vicor",
@@ -1232,6 +1232,24 @@
       "nextReport": "2026-10-29",
       "confirmed": false,
       "lastRefreshed": "2026-10-04"
+    },
+    {
+      "slug": "anza",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-04",
+      "tier": "watch"
+    },
+    {
+      "slug": "semianalysis",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-04",
+      "tier": "watch"
+    },
+    {
+      "slug": "epri",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-04",
+      "tier": "watch"
     }
   ]
 }

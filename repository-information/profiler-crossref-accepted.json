@@ -115,6 +115,12 @@
       "pair": "habitat-energy x quinbrook",
       "why": "The 'unresolved' marker is the Habitat sale process (JLL/BCG mandate, March 2026); Quinbrook's fund description lists Habitat as a QRIF holding and says nothing about the sale — the question stays open in both dossiers by design. F-I4 accept 3 of 3.",
       "when": "2026-10-03"
+    },
+    {
+      "id": "dc623a62c920",
+      "pair": "iren x semianalysis",
+      "why": "Same fact, two tellings. IREN's strategyRead records that ClusterMAX 3.0 split the verdict by site (Prince George worst, Texas better) and that the Culper-era class action remains unresolved; SemiAnalysis's relationship note quotes the same 3.0 verdict on Prince George. The marker word belongs to the litigation, which neither dossier can close, not to the rating.",
+      "when": "2026-10-04"
     }
   ]
 }

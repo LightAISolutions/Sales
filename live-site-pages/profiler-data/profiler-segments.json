@@ -490,7 +490,7 @@
         "Service, spares and the bushing supply chain",
         "Custom-engineered speed (ten-week MV switchgear from a domestic plant)"
       ],
-      "notes": "Reserved adjacent role filled at V3 (v05.40r, 2026-09-12): the two transmission developers (grid-united, pattern-energy) sit here as adjacent — buyers of HVDC converter capacity — alongside Invenergy's Grain Belt Express; the segment's incumbents are unchanged.",
+      "notes": "Reserved adjacent role filled at V3 (v05.40r, 2026-09-12): the two transmission developers (grid-united, pattern-energy) sit here as adjacent — buyers of HVDC converter capacity — alongside Invenergy's Grain Belt Express; the segment's incumbents are unchanged. F-A1 (2026-10-04) added Anza as adjacent on the evidence rule: the Transformer Procurement Service is a channel position touching the segment (a buyer-side intermediary, like the transmission developers already seated), not a maker of equipment; ten months after launch it names no client, so the seat records a product line, not traction.",
       "members": [
         {
           "slug": "hitachi-energy",
@@ -566,6 +566,11 @@
           "slug": "pattern-energy",
           "role": "adjacent",
           "basis": "productsAndServices › SunZia Wind and Transmission: buyer of Hitachi Energy's HVDC Light voltage-source converters (±525 kV, 3,000 MW, the largest VSC HVDC installation in the US) and 674 GE Vernova turbines; Pattern Transmission has 'sponsored 30 percent of the HVDC transmission lines in the United States'"
+        },
+        {
+          "slug": "anza",
+          "role": "adjacent",
+          "basis": "productsAndServices › Transformer Procurement Service — a buyer-side procurement channel across '50+' MV/HV transformer and HV breaker suppliers (launched 2025-12-16), with pre-negotiated Supplier Purchase Agreements and lead-time data; no named client or OEM on the record"
         }
       ]
     },
@@ -1997,7 +2002,7 @@
         "Authorship of the recommended practice the contract cites",
         "Turnaround against financial close and the 30/60/90 review calendar"
       ],
-      "notes": "At the floor since S3 V1 (2026-09-08, v05.21r) and deepened by S3 P4 (2026-09-09) to SEVEN members — 4 incumbents (DNV, Sargent & Lundy, UL Solutions, Intertek), 1 challenger (CSA Group), 2 adjacent (Black & Veatch, Burns & McDonnell). P4 did not change the floor state; it changed what the segment's incumbency rests on. Both new incumbents are typed on a named sub-market — MarketsandMarkets' July 2026 battery-storage TIC assessment, which names UL Solutions and Intertek the leading key players — and NEITHER is an incumbent in global TIC: Aventis Advisors' May 2026 league table ranks Intertek 5th of ten by revenue and UL Solutions 8th, in a market where the top ten hold under a quarter of global revenue. Any landscape module drawing on this segment should say which market it means. TWO PENDING CHANGES OF CONTROL, one on each side of the incumbent/challenger line. CSA Group agreed on 2026-08-28 to sell its entire testing and certification subsidiary to Kiwa Group, closing targeted Q4 2026 — after which the standards author and the certifier are different organisations. Intertek is being taken private by EQT on a shareholder-approved scheme awaiting court sanction in Q4 2026 or Q1 2027, and the buyer has said it intends to recommence a paused review of separating the division that holds Intertek CEA about twelve months after completion. Both roles should be re-read at first refresh. A third structural fact worth carrying into any landscape: UL Solutions does not own UL 9540, UL 9540A or UL 1973 — UL Standards & Engagement publishes them and UL Solutions pays $22m a year for library access — and Intertek's OSHA NRTL scope covered UL 9540 only from 2025-08-22 and UL 1973 only from 2024-04-24.",
+      "notes": "At the floor since S3 V1 (2026-09-08, v05.21r) and deepened by S3 P4 (2026-09-09) to SEVEN members — 4 incumbents (DNV, Sargent & Lundy, UL Solutions, Intertek), 1 challenger (CSA Group), 2 adjacent (Black & Veatch, Burns & McDonnell). P4 did not change the floor state; it changed what the segment's incumbency rests on. Both new incumbents are typed on a named sub-market — MarketsandMarkets' July 2026 battery-storage TIC assessment, which names UL Solutions and Intertek the leading key players — and NEITHER is an incumbent in global TIC: Aventis Advisors' May 2026 league table ranks Intertek 5th of ten by revenue and UL Solutions 8th, in a market where the top ten hold under a quarter of global revenue. Any landscape module drawing on this segment should say which market it means. TWO PENDING CHANGES OF CONTROL, one on each side of the incumbent/challenger line. CSA Group agreed on 2026-08-28 to sell its entire testing and certification subsidiary to Kiwa Group, closing targeted Q4 2026 — after which the standards author and the certifier are different organisations. Intertek is being taken private by EQT on a shareholder-approved scheme awaiting court sanction in Q4 2026 or Q1 2027, and the buyer has said it intends to recommence a paused review of separating the division that holds Intertek CEA about twelve months after completion. Both roles should be re-read at first refresh. A third structural fact worth carrying into any landscape: UL Solutions does not own UL 9540, UL 9540A or UL 1973 — UL Standards & Engagement publishes them and UL Solutions pays $22m a year for library access — and Intertek's OSHA NRTL scope covered UL 9540 only from 2025-08-22 and UL 1973 only from 2024-04-24. F-A1 (2026-10-04) added EPRI as adjacent on its testing-and-guidelines line only: the member-funded research institute whose incident database and ESIC guidelines the segment's incumbents cite in their own reports, and whose laboratories characterise hazards and qualify inspectors rather than list products. It is the one member that issues no certificate; a lesson drawing on this segment should present it as the reference the assurance firms rely on, not as a competitor to them.",
       "members": [
         {
           "slug": "dnv",
@@ -2033,6 +2038,11 @@
           "slug": "intertek",
           "role": "incumbent",
           "basis": "ecosystemRole: the other half of the assurance pair this corpus's battery chain runs through, reaching a project from the buyer's side through Intertek CEA — 400-point factory audits, 280-point inline production monitoring and factory acceptance test witnessing sold to developers, EPCs, IPPs and financiers — while the laboratory issues ETL and cETL marks against standards other bodies write. Third-party basis: MarketsandMarkets (2026-07-08) names Intertek and UL Solutions the leading key players in battery-storage TIC, framing Intertek's strategy as lifecycle project assurance rather than laboratory specialisation. NOT an incumbent by scale — Aventis Advisors ranks it 5th of ten in global TIC at USD 4,619m, roughly 1.5-2% world share"
+        },
+        {
+          "slug": "epri",
+          "role": "adjacent",
+          "basis": "productsAndServices › Energy storage safety research and Laboratories, testing, training and technical services — EPRI writes the guidelines (ESIC's eighteen; the Reliability Guideline for Emerging Large Loads), runs the test methods (Energy Storage Test Manual, module burn tests) and keeps the BESS Failure Incident Database that the segment's certifiers, independent engineers and insurers cite, and in August 2026 said DCFlex is 'developing testing and certification methodologies' for large-load ride-through. It issues no certificate, listing or mark and holds no accreditation as a certification body — the seat was granted on the F-A1 test (a testing, standards or qualification line) on that line alone, and the basis says what EPRI is not"
         }
       ]
     },
@@ -2049,7 +2059,7 @@
         "Cybersecurity certification (IEC 62443, NERC CIP)",
         "Fleet scale under management and the QSE or scheduling-entity service behind it"
       ],
-      "notes": "INTEGRATED-REMEDIATION-PLAN.md §7.2 recorded this segment as starting at zero. It now holds two incumbents (FlexGen's software-first business and Stem) and one challenger (Fluence's Mosaic and Nispera). S3 P3 landed Stem on 2026-09-09; the landscape module is still held for the E1 private half (V2 — Habitat Energy and Gridmatic), because both incumbents reach the segment from an adjacent business — FlexGen from integration, Stem from solar asset-performance management — and the pure-play merchant optimizers are all on the private side. A finding for whoever writes that landscape: no third party reachable in the P3 research ranks any player in storage bidding except Modo Energy, whose 2025 US directory quantifies Habitat, Gridmatic, Equilibrium, Tesla, Tierra and Caerus and does not quantify Stem. Wood Mackenzie's 'Global BESS software landscape 2026' is the one source that would settle the ranking and it is paywalled. S3 V2 (E1b) landed Habitat Energy and Gridmatic on 2026-09-12 as the pure-play challengers: the segment now holds 2 incumbents, 3 challengers and 15 adjacent, and the landscape hold is released — the two incumbents' adjacent-business origin and the pure-play optimisers' private status are both now documented from the dossiers. Modo's April 2025 US directory remains the only source that lists the whole optimiser set, and it is vendor-written; Modo's monthly capture-rate tables are the only independent rankings and are paywalled beyond the months quoted in free text.",
+      "notes": "INTEGRATED-REMEDIATION-PLAN.md §7.2 recorded this segment as starting at zero. It now holds two incumbents (FlexGen's software-first business and Stem) and one challenger (Fluence's Mosaic and Nispera). S3 P3 landed Stem on 2026-09-09; the landscape module is still held for the E1 private half (V2 — Habitat Energy and Gridmatic), because both incumbents reach the segment from an adjacent business — FlexGen from integration, Stem from solar asset-performance management — and the pure-play merchant optimizers are all on the private side. A finding for whoever writes that landscape: no third party reachable in the P3 research ranks any player in storage bidding except Modo Energy, whose 2025 US directory quantifies Habitat, Gridmatic, Equilibrium, Tesla, Tierra and Caerus and does not quantify Stem. Wood Mackenzie's 'Global BESS software landscape 2026' is the one source that would settle the ranking and it is paywalled. S3 V2 (E1b) landed Habitat Energy and Gridmatic on 2026-09-12 as the pure-play challengers: the segment now holds 2 incumbents, 3 challengers and 15 adjacent, and the landscape hold is released — the two incumbents' adjacent-business origin and the pure-play optimisers' private status are both now documented from the dossiers. Modo's April 2025 US directory remains the only source that lists the whole optimiser set, and it is vendor-written; Modo's monthly capture-rate tables are the only independent rankings and are paywalled beyond the months quoted in free text. F-A1 (2026-10-04) added Anza as adjacent: its four subscriptions are procurement-side data products (what to buy, at what price, under which tariff and FEOC rule), the pre-construction counterpart to the operating software the segment's incumbents sell; it does not dispatch, bid or monitor a plant. Any landscape drawing on this segment should keep the two kinds of software apart.",
       "members": [
         {
           "slug": "flexgen",
@@ -2150,6 +2160,11 @@
           "slug": "gridmatic",
           "role": "challenger",
           "basis": "ecosystemRole: the second pure-play merchant optimiser, which puts its own fund's capital behind the battery — tolling or revenue-floor offtake plus the QSE seat — and runs a retail book on the same forecasts; productsAndServices › Battery storage optimisation, tolling and revenue-floor offtake: '300 MW / 1 GWh under management' (December 2024), Cross Trails (Energy Vault, 10-year floor), Caballero (CAISO, optimiser) and Endurance Park. Challenger: every ranking is the company's own; the one independent leaderboard (Amperical, ERCOT public settlements, Jan–Jul 2026) places its two batteries 11th and 43rd of 308."
+        },
+        {
+          "slug": "anza",
+          "role": "adjacent",
+          "basis": "productsAndServices › Energy Storage Pro, Solar Pro, Anza Pulse, Energy Storage DG — paid data-and-analytics subscriptions sold to storage and solar developers, IPPs, EPCs and utilities (procurement-side scenario modelling, lifecycle-cost ranking and FEOC/tariff compliance filters), not dispatch or EMS software; the seat was granted on the F-A1 test — a software or data product line sold to operators or developers — and the basis names what it is"
         }
       ]
     },
@@ -2186,5 +2201,10 @@
       ]
     }
   ],
-  "unassigned": []
+  "unassigned": [
+    {
+      "slug": "semianalysis",
+      "reason": "An advisor whose product is a rating of other segments' members (ClusterMAX over the neoclouds) and research models sold across the stack; it makes, finances, insures, builds, certifies or operates nothing the nineteen segments cover, and the coverage plan's F-A1 row expected no seat (2026-10-04)."
+    }
+  ]
 }

@@ -138,7 +138,7 @@
  "strategyRead": [
   "(High confidence) We assess Vertiv functions as the sector's leveraged proxy: its equity and orders amplify AI-capex sentiment in both directions. Basis: +14-20% on the Q4 2025 order blowout, -25-30% in days on the DeepSeek scare, -10-17% on a 3% revenue miss — against a business whose backlog ($15B) and book-to-bill (~2.9x) kept strengthening throughout.",
   "(High confidence) We assess the #1 position is real but shared and contested. Basis: Dell'Oro places Schneider and Vertiv ~0.1 point apart at the top of data-center physical infrastructure; hyperscalers are deliberately multi-sourcing (Aaon and Modine ramping thermal, Eaton buying Boyd), and Delta-class ODM power vendors sit closer to the NVIDIA rack than any incumbent.",
-  "(Moderate confidence) We assess the 800 VDC transition is a net-content question Vertiv has not yet proven. Basis: independent analysis (SemiAnalysis) projects the architecture contracts the centralized UPS market — a core Vertiv franchise — while creating a power-rack (sidecar) market peaking at ~$11B in 2028 and a solid-state-transformer market of ~$32B by 2030 (SemiAnalysis's own post, 26 May 2026, at '$1.25M/MW'; third-party summaries of the piece circulate a ~$13B SST figure that the post's visible text does not contain); Vertiv's 2H 2026 DC portfolio is announced but no incumbent has yet named a shipping 800 VDC switchboard product.",
+  "(Moderate confidence) We assess the 800 VDC transition is a net-content question Vertiv has not yet proven. Basis: independent analysis (SemiAnalysis) projects the architecture contracts the centralized UPS market — a core Vertiv franchise — while creating ~$11B power-rack and ~$13B solid-state-transformer markets; Vertiv's 2H 2026 DC portfolio is announced but no incumbent has yet named a shipping 800 VDC switchboard product.",
   "(Moderate confidence) We assess execution, not demand, is the binding risk into 2027. Basis: the Q2 2026 revenue miss on supply-chain/project timing, five simultaneous plant expansions, five acquisitions integrating (Great Lakes, Waylay, PurgeRite, ThermoKey, BMarko, Strategic Thermal Labs), and the 2021-22 precedent — management underestimated inflation, produced a 37% one-day drop, and drew securities litigation that still defines the bear case's execution argument.",
   "(Moderate confidence) We assess EnergyCore Grid signals convergence between data-center power vendors and the BESS integrator space. Basis: a 1 MW-200+ MW utility-grade product sold through data-center relationships attacks the interconnection-queue problem that Fluence/Tesla-class integrators serve from the IPP side — a lane-crossing move worth tracking for every storage vendor in this file."
  ],
@@ -519,6 +519,6 @@
    "url": "https://rosenlegal.com/case/vertiv-holdings-co/"
   }
  ],
- "lastUpdated": "2026-10-04",
- "profileVersion": 10
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 9
 }

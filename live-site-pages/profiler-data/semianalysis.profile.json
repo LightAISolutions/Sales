@@ -1,0 +1,1518 @@
+{
+  "schemaVersion": 7,
+  "slug": "semianalysis",
+  "name": "SemiAnalysis LLC (a Florida limited liability company)",
+  "shortName": "SemiAnalysis",
+  "categories": [
+    "advisor"
+  ],
+  "website": "https://semianalysis.com/",
+  "headquarters": "No headquarters is published. Registered office 3896 Coastal Highway, Crawfordville, Florida (Florida registry, trademark filing, Form D); legal contact Denver, Colorado (terms); the founder and the largest office are in San Francisco; careers filters list San Francisco, New York, Chicago, Hillsboro (Oregon, the teardown lab), Singapore, Korea and remote",
+  "founded": 2020,
+  "employees": "Not published as a total. The company says 'a global team of over 50 analysts'; third-party counts range from ~60 (The Information via KuCoin, June 2026) through ~85–90 (Odaily, FourWeekMBA) to '100 full-time employees' by year-end (Substrate, September 2026); careers listed 48 open roles in October 2026",
+  "ownership": {
+    "type": "private",
+    "ticker": "",
+    "notes": "Owned by founder Dylan Patel — described as 'sole owner with no employee equity options' in the former employee's complaint as reported (More Than Moore, 2026-04-04); the newsletter's copyright line reads '© 2026 Dylan Patel'. No outside investor in the operating LLC has been reported and the LLC itself files nothing with the SEC. Florida document L22000096118 (organised 2022 per the filing-year prefix; the business dates from May 2020), registered agent Dylan S Patel. Affiliates: SemiAnalysis Holdings LLC and SemiAnalysis Merger Sub LLC (Florida, 2026), SemiAnalysis Research LLC and SemiAnalysis Capital LLC (Delaware), and the fund vehicles below"
+  },
+  "summary": "BOTTOM LINE UP FRONT: SemiAnalysis is the founder-owned research firm whose ClusterMAX rating decides, for the 31 other dossiers in this corpus that cite it, which GPU clouds count as Platinum, Gold, Silver, Bronze or 'Not Recommended' — and it is simultaneously a newsletter (318,000-plus subscribers at USD 70 a month or USD 690 a year), a vendor of sixteen institutional data models sold on request to 'hyperscalers, neoclouds, many of the world's largest hedge funds, and government agencies', a consultancy that performs paid technical assessments with the same toolkit it rates with, and, since July 2026, a venture investor filing for a USD 400 million fund — so its independence is a claim the firm makes about itself, backed by a compensation disclaimer printed once (ClusterMAX 1.0, March 2025) and not repeated in 2.0 or 3.0, and tested by a live employment suit alleging that material non-public information from a Fluidstack investment vehicle the founder led was to be put into paid research (an allegation SemiAnalysis denies). BACKGROUND. Founded 22 May 2020 by Dylan Patel as a WordPress blog, moved to Substack in 2021; merged with Doug O'Laughlin's Fabricated Knowledge (November 2024), absorbed Chips & Wafers (September 2025) and acquired Citrini Research (September 2026, price undisclosed). Legal entity SemiAnalysis LLC, a Florida limited liability company (court caption; Florida registry L22000096118; USPTO serial 99336949), with branch registrations in California, New York, Oregon and Utah. Revenue, per The Information (April 2026): about USD 20 million in 2025, projected to exceed USD 100 million in 2026; 'less than 5% of revenue comes from Substack' (Substrate, September 2026); the company publishes no accounts. Products: the newsletter; Core Research and the weekly Cache Up digest for institutional investors (reviewed by a Series 16 supervisory analyst); the Accelerator & HBM, Datacenter Industry (5,000-plus facilities), China Datacenter (1,000-plus facilities, launched 25 September 2026), AI Cloud TCO, AI Networking, Wafer Fab Equipment, Foundry, Memory, Energy, Industrials, Tokenomics, Space DC TCO and VR NVL72 models — every one 'a separate institutional offering, not part of the newsletter subscription' and priced on request except the VR NVL72 Model at USD 10,000; ClusterMAX (1.0 March 2025, 2.0 November 2025, 2.1 April 2026, 3.0 23 September 2026: 323 providers tracked, 77 reviewed, 19 medallions); InferenceX, the open-source (Apache 2.0) inference benchmark formerly InferenceMAX, launched October 2025 and renamed February 2026 with compute donated by rated providers; and consulting 'from retained advisory to one-off projects to hourly calls'. Collection gaps: audited revenue, the revenue split by product, the client list, whether any rated neocloud is a paying client, badge-licensing terms, and the fund's capital raised (Form D: USD 400 million target, USD 0 sold at filing; USD 500 million 'confirmed' only by a company-sourced profile).",
+  "ecosystemRole": "The corpus's tenth `advisor` and the only one whose product is a rating the other dossiers rely on: ClusterMAX tiers appear in the neocloud dossiers (coreweave, nebius, crusoe, lambda, iren, fluidstack, nscale, firmus, whitefiber, g42, humain, alibaba-cloud), its 800 VDC and datacenter-power analysis in the power-conversion and SST dossiers (vertiv, delta-electronics, megmeet, liteon, vicor, infineon, amperesand, dg-matrix, heron-power, novos-power, piller, voltagrid), and its datacenter and China models in the hyperscaler and landlord dossiers (bytedance, alibaba-cloud, chindata, google, xai, amd, supermicro, coolit). What those dossiers rest on, stated plainly: a relative rating of managed GPU clusters, tested hands-on by SemiAnalysis staff on clusters the providers grant (so not mystery-shopped), scored on ten published criteria with a three-phase audit, performance and reliability protocol, informed by 'well over 200' user interviews, re-run on a 'roughly 6 months' cadence that has in practice been 7.5 and 10.5 months, with no compensation disclaimer since the first edition and no published policy on rated-company consulting, badge licensing or staff and fund holdings. The firm sells models and consulting to the hyperscalers and neoclouds it rates and benchmarks, its founder's investment vehicle sat in a neocloud (Fluidstack) that was rated Gold in 2.0, and the only public response to the conflict question is a relayed sentence that 'providers cannot purchase their ranking and client compensation is not tied to the ratings'. The seat is real — buyers from OpenAI's Stargate team to General Atlantic endorse it and tier moves move stock prices — and so is the gap. No segment of this corpus's value chain holds a market-intelligence vendor, so the company is recorded in the segments registry's unassigned list.",
+  "productsAndServices": [
+    {
+      "name": "ClusterMAX™ — the GPU cloud rating system",
+      "category": "Rating and technical assessment — managed GPU clusters",
+      "description": "A relative, five-tier rating (Platinum, Gold, Silver, Bronze, Underperforming; plus 'Not Recommended – Unavailable' and, from 3.0, a 'Participation Ribbon') of managed GPU cluster providers, produced by SemiAnalysis staff testing clusters the providers grant against ten published criteria — Security, Lifecycle, Orchestration, Storage, Networking, Reliability, Monitoring, Pricing, Partnerships, Availability — complemented by end-user interviews. Editions: 1.0 (26 March 2025; 26 providers rated, 169 tracked), 2.0 (6 November 2025; 84 rated, 209 tracked, 37 medallions), 2.1 (April 2026; site-only update, no full re-test), 3.0 (23 September 2026; 77 reviewed, 323 tracked, 19 medallions, 15 Participation Ribbons). The ratings site (clustermax.ai) is free; the full provider write-ups are paid newsletter posts; the Phase 1 audit tool is open source.",
+      "highlights": [
+        "Method, 3.0 (company text): 'Phase 1: Audit — … yes/no questions. Is the cluster setup properly? … It takes about 15 minutes to run. It's available on GitHub or via uv pip install clustermax … We have released this part for free … The rest we keep internally'; 'Phase 2: Performance — puts a pass/fail threshold on the performance characteristics' via microbenchmarks and real-world training and inference runs; Phase 3 reliability — 'an 8-hour burn-in on the GPUs and network … destructive testing' with injected XIDs, reboots and PCIe resets; 'we always complement this testing by contacting customers of all these providers' — 'well over 200 end users'. Scope: 'we are ranking managed clusters … We are not testing who can build the best powered shell.'",
+        "What 'Unavailable' means (3.0): 'four types of companies: Those that we have previously tested who now claim to have zero spare capacity and/or refuse to test with us … Those that are yet to launch … Those who are big and important, but who we cannot test properly due to geographic or regulatory concerns … Those who are too small to be relevant' — Fluidstack, Nscale, HUMAIN, Alibaba Cloud and Scaleway sit in that bucket in 3.0, and the post accuses a group including Nscale of 'misleading investors (i.e., lying)' about offering managed clusters.",
+        "Cadence as stated against cadence as delivered: 1.0 promised re-evaluation 'every 3-6 months'; 2.0 said major versions 'every ~6 months' with minor versions in between; actual intervals were 7.5 months (1.0 → 2.0) and 10.5 months (2.0 → 3.0), with the 2.1 site update at 5.5 months. 3.0 names no cadence and announces inference-endpoint testing and a 'PostTrainingX' ranking for future versions.",
+        "Independence, in the company's own words: 1.0 opened 'The ClusterMAX™ Rating System and content within this article were prepared independently by SemiAnalysis. No part of SemiAnalysis's compensation by our clients was, is, or will be directly or indirectly related to the specific tiering, ratings or comments expressed.' Neither 2.0 nor 3.0 repeats that sentence; neither discloses rated-company consulting relationships, badge-licensing terms or staff and fund holdings. The clustermax.ai legal notice invites 'Licensing inquiries and partnership proposals' and reserves financial-product use of the ratings. Relayed response to a September 2026 'pay to rank' accusation (Yahoo Finance): 'providers cannot purchase their ranking and … client compensation is not tied to the ratings'.",
+        "The paid adjunct (3.0): 'include a SemiAnalysis Technical Assessment during acceptance testing and monthly SLA performance reviews. We perform this Technical Assessment using our cmax utility and a comprehensive, proprietary process. Please contact us at clustermax@semianalysis.com' — the rating toolkit sold as a service to cluster buyers; the careers page files ClusterMAX under 'Consulting & diligence'.",
+        "3.0 placements that this corpus's dossiers carry: Platinum CoreWeave and Nebius; Gold Oracle and Google Cloud (two members, not three); Silver Azure, Lambda, TensorWave, Firmus, GMI; Bronze Crusoe (from Gold), AWS, Together AI, DigitalOcean, Prime Intellect, Hyperstack; Participation Ribbon Core42, Vultr, Hyperbolic and twelve others; Underperforming IREN, WhiteFiber, Sharon AI; Unavailable Fluidstack, Nscale, HUMAIN, Alibaba Cloud, Scaleway, Cirrascale and the yet-to-launch list including 'SpaceXAI'. Market reaction (24/7 Wall St, 25 September 2026): IREN −4%, CoreWeave −3%, Nebius −2% in a week that also carried Redburn notes."
+      ],
+      "positioning": "SemiAnalysis calls it 'the industry standard'; buyers and investors quoted on clustermax.ai (OpenAI Stargate's Peter Hoeschele, Meta's Santosh Janardhan, Michael Dell, Atreides' Gavin Baker — 'the industry standard for evaluating GPU cloud providers' — Altimeter's Brad Gerstner, General Atlantic) endorse it, and no comparable third-party rating of managed GPU clouds exists; MLCommons' MLPerf benchmarks hardware, not clouds. Criticism on the record: Hot Aisle CEO Jon Stevens ('Influence as a Service', December 2025 — Hot Aisle is itself a Bronze-rated provider), the 'pay to rank' charge of September 2026, and remio.ai's note that SemiAnalysis 'communicates with companies during testing' rather than mystery-shopping.",
+      "soldThrough": "Free tier list and badges at clustermax.ai; full reviews behind the paid newsletter (USD 70/month, USD 690/year); Phase 1 audit CLI free (GitHub, `uv pip install clustermax`); Technical Assessment and SLA reviews sold as consulting by email; badge use by rated providers (CoreWeave, Nebius, Together AI, TensorWave publish it) with no published licence terms.",
+      "targetSegments": [
+        "GPU cluster buyers (AI labs, enterprises)",
+        "Investors in neoclouds (public and private)",
+        "The rated providers themselves (feedback and badges)"
+      ],
+      "roadmap": "Inference-endpoint testing and a 'PostTrainingX' ranking announced for 'future versions'; no dated 4.0."
+    },
+    {
+      "name": "Institutional data models — Datacenter Industry, China Datacenter, Accelerator & HBM, AI Cloud TCO, Energy, Industrials and nine others",
+      "category": "Subscription data models — AI supply chain",
+      "description": "Sixteen quarterly or monthly Excel-plus-dashboard models sold 'as a separate institutional offering, not part of the newsletter subscription' on request (no list price except the VR NVL72 Model at USD 10,000 one-time): Accelerator & HBM (22 vendors, 85-plus SKUs, 60-plus buyers, 2021–2030), Datacenter Industry (5,000-plus facilities, 200-plus companies, 2017–2032), China Datacenter (1,000-plus facilities, 60-plus operators, launched 25 September 2026), AI Cloud TCO (Nvidia, AMD, TPU, Trainium ownership economics; home of the Neocloud Dashboard), AI Networking, Wafer Fab Equipment (monthly), Foundry Industry, Memory, Energy (25,000-plus US generating units, 60-plus balancing authorities, 2002–2040), Industrials (20-plus datacenter bills of materials, 75-plus equipment lines, 550-plus suppliers; carries the 800VDC module), Tokenomics, Core Research with the weekly Cache Up digest, ChipBook (monthly tracker), Space DC TCO, VR NVL72, and 'Compute Capital & Markets' (coming soon).",
+      "highlights": [
+        "Datacenter Industry Model (launched 3 February 2024): 'Critical IT power capacity for every datacenter that matters: who is building, where, how many megawatts, and whether the power is actually there' — built from 'property records, permits, FOIA requests, and frequent satellite imagery, with computer vision models accelerating the reads'; quarterly releases; buyers 'hyperscalers and major semiconductor companies for competitive analysis and supply chain planning, as well as large investors'. Substrate (September 2026) calls it 'recently top product'. Free findings published from it: 'US Grid Constraints: Towards 40GW+ of Behind-The-Meter Datacenter by 2028?' (June 2026); the Colossus 2 'first gigawatt datacenter' verification (September 2025).",
+        "China Datacenter Model (25 September 2026): 'Every datacenter building in mainland China that matters, tracked one by one: 1,000+ facilities across 60+ players … from 2017 to 2032'; headline findings released free — ByteDance 'occupies roughly a fifth of delivered datacenter capacity in China, and it rents nearly all of it'; '24GW of delivered capacity', '~20GW of dated pipeline', '~30GW of announced projects'; GDS and VNET 'captured barely a third of ByteDance and Alibaba orders in 2024–2026YTD'. Relayed by SCMP, DigiTimes and TechNews; the GDS/VNET share and the 'single most important customer' framing exist only in the free portion of the post.",
+        "Energy Model: 'Datacenter electricity demand is already transforming electricity as a commodity' — sold to 'Utilities & IPPs; hyperscalers & developers; equipment manufacturers; investors'; the Industrials Model 'translate[s] the buildout into capex per megawatt for 75+ equipment lines, reconciled against a 550+ supplier tracker' — the two models closest to this corpus's suppliers and utilities.",
+        "Who buys (company statements): 'We work with hyperscalers, neoclouds, many of the world's largest hedge funds, and government agencies'; Patel to Substrate: 'Hyperscalers are my biggest customers. If you look at the top 10 companies in the world – besides Saudi Aramco – they're [in] my top 15 customers.' Institutional research 'reviewed by a Series 16 Supervisory Analyst prior to publication'; the firm 'is not a FINRA member'.",
+        "Revenue weight (third-party and company statements): 'Less than 5% of revenue comes from Substack. The vast majority derives from models, Core Research…and consulting' (Substrate); The Information: ~USD 20 million (2025) to over USD 100 million projected (2026) — no accounts published, no split by model."
+      ],
+      "positioning": "Positioned as bottom-up, building-by-building and SKU-by-SKU tracking against survey-based or top-down research; third parties name TechInsights as the 'most direct competitor' and TrendForce, Omdia and Yole Group as peers (Asymmetrix); Dell'Oro, IDC, Synergy and the sell-side are not named as competitors by any outlet found. For the datacenter models the comparators in this corpus's own dossiers are datacenterHawk, DC Byte and Structure Research — none has published a like-for-like comparison.",
+      "soldThrough": "Direct enterprise sales ('Talk to sales / Request pricing'); team licensing for Core Research; API access to institutional subscribers (Accelerator & HBM, AI Networking); 'one year of quarterly updates' with onboarding call and analyst access; the VR NVL72 Model alone carries a public price (USD 10,000).",
+      "targetSegments": [
+        "Hyperscalers and AI labs",
+        "Semiconductor and equipment vendors",
+        "Public and private investors (hedge funds, long-only, PE, VC)",
+        "Neoclouds and datacenter developers",
+        "Utilities and IPPs (Energy Model)",
+        "Government agencies and policy teams"
+      ],
+      "roadmap": "'Compute Capital & Markets' — 'Who funds the AI buildout, and at what price' — 'Coming soon. The sales team opens scoping, licensing, and pricing at launch'; a Capital & Markets team is hiring; GPU Pricing API and Taiwan Monthly Dashboard listed as new tools."
+    },
+    {
+      "name": "InferenceX™ (formerly InferenceMAX) — open-source continuous inference benchmark",
+      "category": "Open-source benchmark — AI accelerators and serving stacks",
+      "description": "An Apache 2.0 benchmark that 'runs [a] suite of benchmarks every night on hundreds of chips' across NVIDIA (Vera Rubin NVL72, GB300 NVL72, GB200 NVL72, B300, B200, H200, H100), AMD (MI355X, MI325X, MI300X) and Google TPUv7x hardware and the SGLang, vLLM and TensorRT-LLM stacks, publishing a free live dashboard of fixed-sequence serving results and, since August 2026, AgentX — a 'long-context, multi-turn agentic coding workload'. Launched as InferenceMAX on 9 October 2025; renamed InferenceX with v2 on 16 February 2026; v3/AgentX on 24 August 2026.",
+      "highlights": [
+        "Stated purpose: 'designed to be a neutral benchmark, not cherry-picked to promote any specific vendor'; 'our independent, vendor neutral, reproducible benchmark'; 'Our benchmark has been widely reproduced, validated and/or supported by almost every major buyer of compute.' GitHub ~1.8k stars; 'Only SemiAnalysisAI/InferenceX repo contains the Official InferenceX™ result'.",
+        "Supporters quoted on the project site include Jensen Huang and Ian Buck (NVIDIA), Lisa Su and Anush Elangovan (AMD), Peter Hoeschele (OpenAI Stargate), Scott Guthrie (Microsoft), Jay Jackson (OCI), Tri Dao, Simon Mo (vLLM), and the CEOs or CTOs of CoreWeave, Nebius, TensorWave, Crusoe, Supermicro, Vultr, Lambda and Firmus — the rated neoclouds among them 'supply compute for InferenceMAX' (Nebius partner catalog; Crusoe blog: 'we're proud to support InferenceMAX'). No fee, sponsorship or paid-placement statement exists either way.",
+        "Findings this corpus's dossiers cite: v2 (February 2026) 'the first third party benchmark to test disagg+wideEP multi-node FP4 and FP8 MI355X performance', finding MI355X competitive on FP8 disaggregated perf-per-TCO and behind on FP4 (the amd dossier); 'Vera Rubin NVL72 Agentic Inference: 67x better Performance per Dollar' (September 2026); 'TPU Inference Externalization Full Steam Ahead' (September 2026).",
+        "Critique on the record (Silicon Data, March 2026): results come from 'hardware that SemiAnalysis operates internally' with 'no way for the public to run InferenceX on their own systems', hardware 'likely provided' by NVIDIA and AMD, and a repository that 'lacks structure'. AMD disputed a separate SemiAnalysis report (MI455X volume slipping to 2027) in February 2026 — 'BS. Right on target for H2 2026.'"
+      ],
+      "positioning": "Against MLCommons' MLPerf (periodic, vendor-submitted) and vendor-run benchmarks: nightly, third-party-run, open code; against Silicon Data's SiliconMark, which positions itself as the customer-runnable alternative.",
+      "soldThrough": "Free and open source (Apache 2.0); dashboard public at inferencex.com; the analysis posts are paid newsletter content; compute donated by supporters.",
+      "targetSegments": [
+        "ML engineers and capacity planners at AI labs and neoclouds",
+        "Accelerator vendors",
+        "Investors reading perf-per-TCO"
+      ],
+      "roadmap": "CollectiveX and OperatorX (beta) and a power model listed in the repository; TPU and Trainium coverage expanding."
+    },
+    {
+      "name": "The newsletter — SemiAnalysis on Substack",
+      "category": "Subscription research newsletter",
+      "description": "The public layer: 'Every week we break down what's actually happening across the stack' — weekly and ad hoc long-form posts on semiconductors, AI infrastructure, datacenters and power, with a free preview and a paid body. Plans: USD 70 a month or USD 690 a year (20 percent group discount from two seats); 'more than 318,000 subscribers'; 'thousands of paid subscribers' (Substack ranking detail). The ClusterMAX, InferenceX, China model and 800 VDC posts the corpus cites all sit here.",
+      "highlights": [
+        "Free versus paid: 'Free section of posts, directly to your inbox' against 'Full access to newsletter posts and archive. (This does not include access to separate institutional models and products)'; nearly every post examined carries Substack's `only_paid` audience flag, with the 2024 Datacenter Industry Model launch post an exception.",
+        "Scale: '#1 technology publication on Substack, reaching 318k+ subscribers' (careers); 'Over 319,000 subscribers' (subscribe page); legacy strings of '180,000+' and '200,000+' survive on the main site. Earlier price points reported: USD 200 a year at the start (Substrate), USD 500 a year (Asymmetrix, Hot Aisle); current plans created 1 October 2025.",
+        "Weight: 'Less than 5% of revenue comes from Substack' (Substrate, September 2026) — the newsletter is the marketing and the research 'public layer' for the models and consulting, in the company's own framing ('The newsletter is the public layer. Core Research is the signal-dense version of the same lens').",
+        "Power and datacenter posts this corpus's dossiers cite: 'Inside the 800VDC Revolution – Part 1' (26 May 2026 — sidecar TAM 'to peak at ~$11B in 2028', 'SST TAM to reach ~$32B' by 2030 at '$1.25M/MW', ~39 GW of incremental 800 VDC capacity by 2030, 'no vendor has completed UL certification for datacenter SST deployment as of May 2026'); 'How AI Labs Are Solving the Power Crisis: The Onsite Gas Deep Dive'; 'US Grid Constraints: Towards 40GW+ of Behind-The-Meter Datacenter by 2028?' (25 June 2026); '$12B of US ratepayers' money wasted on a modeling mistake and PJM wants to do it again' (16 August 2026); 'Energizing AI: Power Delivery Competition Heats Up' (2023 — the six-player set Vicor, MPS, Delta, ADI, Renesas, Infineon)."
+      ],
+      "positioning": "The most-cited independent voice on AI infrastructure in this corpus; Jensen Huang named Patel from the GTC 2026 stage ('accused me of sandbagging … He wasn't wrong'). The Information's April 2026 profile frames the business as having 'blurred the lines between media, research and investing'.",
+      "soldThrough": "Substack subscription (card-billed; prorated refunds on request only).",
+      "targetSegments": [
+        "Industry professionals (the company says 200,000-plus)",
+        "Investors",
+        "The general technology audience"
+      ],
+      "roadmap": "None stated."
+    },
+    {
+      "name": "Consulting, technical due diligence and SemiAnalysis Capital",
+      "category": "Advisory services and venture investing",
+      "description": "'Retained advisory, bespoke projects, and hourly consulting for organizations working a specific question'; 'Technical due diligence on silicon, clusters, and clouds for the people deploying capital' for 'the largest private equity funds, leading venture capital firms, companies across the AI ecosystem, and government agencies' — plus, since 2026, SemiAnalysis Capital, a venture arm that filed a Form D for SemiAnalysis Capital Fund I, LP (USD 400 million target) and runs special-purpose vehicles.",
+      "highlights": [
+        "SEC Form D record (fetched from EDGAR): SemiAnalysis Capital Fund I, LP — Delaware, 'Venture Capital Fund', total offering USD 400,000,000, amount sold USD 0, 'dateOfFirstSale: yetToOccur', GP SemiAnalysis Capital Fund I GP, LLC, signed by Dylan Patel as 'Manager of the General Partner' (29 July 2026); GCW Access-SemiAnalysis Capital Fund I, L.P. — a third-party feeder managed by Allocate Management Company, USD 19,825,000 sold to 57 investors (5 August 2026); SemiAnalysis Capital SPV I — USD 20,000,000 fully sold to 20 investors (28 August 2026); SPV II — USD 19,999,728 from 32 investors (amended 16 September 2026). Substrate's company-sourced profile says the fund is 'confirmed at $500M'; no amended Form D showed that as of 4 October 2026.",
+        "Portfolio as reported: Positron AI's USD 875 million Series C 'co-led by NEA, Andra Capital, Atreides Management, Valor Equity Partners, and SemiAnalysis Capital' with Patel joining the board (10 September 2026); 'stakes in roughly 20 startups, including Mira Murati's Thinking Machines Lab and the networking-chip company Enfabrica' (The Information via FourWeekMBA); SemiAnalysis Capital among the new investors in Crusoe's Series F (Crusoe Form D, per the crusoe dossier) six days before ClusterMAX 3.0 downgraded Crusoe Cloud; a USD 50 million SPV Patel raised in Fluidstack's USD 700 million round (The Information, February 2026).",
+        "The conflict question, as it stands: the Wei Zhou complaint (San Francisco Superior Court, 30 March 2026) alleges retaliatory dismissal for refusing to put Fluidstack material non-public information from Patel's investment vehicle into paid Tokenomics research; SemiAnalysis's own suit (filed 27 March 2026, CGC-26-635328) pleads trade-secret misappropriation and misconduct and Patel's public statement 'unequivocally denies' Zhou's claims; on 20 July 2026 the court compelled arbitration and stayed the case. KuCoin (April 2026) reports SemiAnalysis 'does not proactively disclose Patel's investment ties when reporting on companies in which he invests'. The compliance page covers personal trading in listed securities ('every trade requiring pre-approval') but publishes no policy on private-company holdings or rated-company consulting.",
+        "Corporate development: Fabricated Knowledge merger (November 2024; Doug O'Laughlin President), Chips & Wafers team joins (September 2025), Citrini Research acquired (confirmed to Bloomberg 11 September 2026; price undisclosed; James van Geelen stays CEO) — the firm now spans chips, datacenters, power, thematic equities and macro."
+      ],
+      "positioning": "FourWeekMBA's description of the model — 'research generates influence, influence creates deal access, and deal access enables a fund that backs the very infrastructure the research covers' — is the structure the firm's own compliance page does not address.",
+      "soldThrough": "Direct engagements by email (sales@semianalysis.com); fund interests via the LP, an Allocate-managed feeder and series SPVs under Regulation D.",
+      "targetSegments": [
+        "Private equity and venture investors",
+        "Hyperscalers, neoclouds and chip vendors",
+        "Government agencies"
+      ],
+      "roadmap": "Fund I's first close (USD 0 sold at filing); a Venture Associate role open in San Francisco; the Citrini integration."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "ClusterMAX™ editions — scale, method and placements",
+      "specs": [
+        {
+          "band": "Editions",
+          "label": "1.0",
+          "value": "Published 2025-03-26; '26' providers rated (per 2.0), 169 tracked; 'approximately 90% coverage of the entire GPU market by GPU volume'"
+        },
+        {
+          "band": "Editions",
+          "label": "2.0",
+          "value": "Published 2025-11-06; '84 providers, up from 26'; '209 total providers'; '37 clouds achieving a medallion rating'; evaluation 'conducted from August to September in 2025'"
+        },
+        {
+          "band": "Editions",
+          "label": "2.1",
+          "value": "April 2026 site-only update — 'not a full re-test of all providers'; four providers moved into Bronze; 'several serious providers' moved to Unavailable; 3.0 test deadline 'Aug 1st'"
+        },
+        {
+          "band": "Editions",
+          "label": "3.0",
+          "value": "Published 2026-09-23; '77 providers' reviewed; '323 providers' tracked; 'only 19 neoclouds globally achieve a Medallion rating'; 'Participation Ribbon tier. 15 providers join'; 'well over 200 end users' interviewed"
+        },
+        {
+          "band": "Criteria",
+          "label": "Ten dimensions (2.0, 3.0)",
+          "value": "Security, Lifecycle, Orchestration, Storage, Networking, Reliability, Monitoring, Pricing, Partnerships, Availability"
+        },
+        {
+          "band": "Criteria",
+          "label": "Tiers",
+          "value": "Platinum, Gold, Silver, Bronze, Underperforming (plus 'Not Recommended – Unavailable'; 3.0 adds 'Participation Ribbon' between Bronze and Underperforming); 'a relative rating system'"
+        },
+        {
+          "band": "Test protocol (3.0)",
+          "label": "Phase 1 — Audit",
+          "value": "'yes/no questions … about 15 minutes to run … available on GitHub or via uv pip install clustermax'"
+        },
+        {
+          "band": "Test protocol (3.0)",
+          "label": "Phase 2 — Performance",
+          "value": "'pass/fail threshold' via GEMMs, NCCL collectives, fio and checkpoint storage tests, torchtitan training, AgentX inference"
+        },
+        {
+          "band": "Test protocol (3.0)",
+          "label": "Phase 3 — Reliability",
+          "value": "'8-hour burn-in on the GPUs and network'; fabric and storage endurance; orchestration churn; 'destructive testing' with node reboots, XID injection and PCIe bridge resets"
+        },
+        {
+          "band": "Test protocol (3.0)",
+          "label": "Access",
+          "value": "'most providers granted us at least 4 B300 nodes'; providers notified of criteria in advance (2.0: 'sent to all GPU cloud providers where we have working relations on August 6th')"
+        },
+        {
+          "band": "3.0 placements",
+          "label": "Platinum",
+          "value": "CoreWeave; Nebius"
+        },
+        {
+          "band": "3.0 placements",
+          "label": "Gold",
+          "value": "Oracle; Google Cloud"
+        },
+        {
+          "band": "3.0 placements",
+          "label": "Silver",
+          "value": "Microsoft Azure (from Gold); Lambda; TensorWave; Firmus; GMI Cloud (from Bronze)"
+        },
+        {
+          "band": "3.0 placements",
+          "label": "Bronze",
+          "value": "Crusoe (from Gold); AWS (from Silver); Together AI (from Silver); DigitalOcean; Prime Intellect; Hyperstack"
+        },
+        {
+          "band": "3.0 placements",
+          "label": "Participation Ribbon",
+          "value": "Core42 (G42); Vultr; Hyperbolic; Latitude; and others — 15 in total"
+        },
+        {
+          "band": "3.0 placements",
+          "label": "Not Recommended – Underperforming",
+          "value": "IREN; WhiteFiber; Sharon AI"
+        },
+        {
+          "band": "3.0 placements",
+          "label": "Not Recommended – Unavailable",
+          "value": "Fluidstack (from Gold); Nscale; HUMAIN; Alibaba Cloud; Scaleway (from Silver); Voltage Park/Lightning AI (from Silver); Cirrascale; the yet-to-launch list (SpaceXAI, Mistral, Poolside, Highrise, Corvex, Andromeda, Volta, Firebird, Tatra, Sesterce, Yotta, Boostrun, GlobalAI, Argentum, Qumulus); geo/regulatory (MegaSpeed, BytePlus, RunSun, SK Telecom, Naver Cloud, Indosat)"
+        },
+        {
+          "band": "Prior placements",
+          "label": "2.0 (Nov 2025)",
+          "value": "Platinum CoreWeave; Gold Nebius, Oracle, Azure, Crusoe, Fluidstack; Silver Google, AWS, Together AI, Lambda, Firmus, TensorWave, Vultr, Voltage Park, Scaleway; Bronze GMI and others; Underperforming WhiteFiber, IREN, Hyperbolic; Unavailable Nscale, Core42, HUMAIN, Alibaba Cloud"
+        },
+        {
+          "band": "Prior placements",
+          "label": "1.0 (Mar 2025)",
+          "value": "Platinum CoreWeave; Gold Crusoe, Nebius, Oracle, Azure, Together AI, LeptonAI; Silver AWS, Lambda, Firmus/SMC, Scaleway; Bronze Google Cloud, TensorWave, DataCrunch; Underperforming Massed Compute, SaladCloud and others"
+        }
+      ],
+      "notes": "Placements are read from the editions' executive summaries and appendix section headings (company text) and from the third-party reporting that relayed them; 'from X' marks a tier move since the prior full edition. The 3.0 Gold tier has two members — a third Gold provider does not exist."
+    },
+    {
+      "product": "Institutional data models — coverage figures as stated on product pages",
+      "specs": [
+        {
+          "band": "Datacenter Industry Model",
+          "label": "Coverage",
+          "value": "'5,000+ facilities tracked individually'; '200+ companies'; USA, Canada, China, Singapore, Malaysia, Australia, India, Europe, UK, Middle East; 2017–2032; quarterly releases"
+        },
+        {
+          "band": "China Datacenter Model",
+          "label": "Coverage",
+          "value": "'1,000+ facilities across 60+ players'; 'annual / quarterly capacity tracking from 2017 to 2032'; '24GW+ fleet projected by end-2026'; 'Major update every quarter'"
+        },
+        {
+          "band": "Accelerator & HBM Model",
+          "label": "Coverage",
+          "value": "22 vendors, 85+ SKUs, 60+ buyers modeled, 2021–2030 quarterly; Excel, dashboard and API"
+        },
+        {
+          "band": "AI Cloud TCO Model",
+          "label": "Coverage",
+          "value": "Nvidia, AMD, TPU, Trainium; install base through 2028, shipments through 2034; includes the Neocloud Dashboard ClusterMAX 3.0 cites"
+        },
+        {
+          "band": "Energy Model",
+          "label": "Coverage",
+          "value": "US; 25,000+ generating units; 30+ OEMs; 60+ balancing authorities; 2002–2040; quarterly"
+        },
+        {
+          "band": "Industrials Model",
+          "label": "Coverage",
+          "value": "20+ datacenter bills of materials; 75+ equipment lines; 550+ supplier tracker; 6,000+ sites; carries an 800VDC module"
+        },
+        {
+          "band": "AI Networking Model",
+          "label": "Coverage",
+          "value": "80+ configuration panels; 25+ vendors; 200G–1.6T; 2023–2026; quarterly"
+        },
+        {
+          "band": "Pricing",
+          "label": "Published prices",
+          "value": "VR NVL72 Model 'One-time license at USD 10,000'; every other model 'Talk to sales / Request pricing'; newsletter USD 70/month or USD 690/year"
+        },
+        {
+          "band": "Compliance",
+          "label": "Institutional research",
+          "value": "'reviewed by a Series 16 Supervisory Analyst prior to publication'; 'We are not a FINRA member'; personal-trading pre-approval and a restricted list of 'hundreds of securities'"
+        }
+      ],
+      "notes": "All figures are the company's own product-page statements (undated pages read 2026-10-04)."
+    },
+    {
+      "product": "SemiAnalysis Capital — SEC Form D record",
+      "specs": [
+        {
+          "band": "Fund I",
+          "label": "SemiAnalysis Capital Fund I, LP",
+          "value": "Delaware LP; 'Venture Capital Fund'; total offering $400,000,000; amount sold $0; 'dateOfFirstSale: yetToOccur'; filed 2026-07-29; signed Dylan Patel, 'Manager of the General Partner of the Issuer'; issuer address 3896 Coastal Highway, Crawfordville, FL"
+        },
+        {
+          "band": "Feeder",
+          "label": "GCW Access-SemiAnalysis Capital Fund I, L.P.",
+          "value": "Delaware LP; investment manager Allocate Management Company, LLC (Palo Alto); $19,825,000 sold to 57 investors; first sale 2026-07-24; filed 2026-08-05"
+        },
+        {
+          "band": "SPVs",
+          "label": "SemiAnalysis Capital SPV I",
+          "value": "Series of CGF2021 LLC; $20,000,000 fully sold to 20 investors; first sale 2026-08-26; filed 2026-08-28"
+        },
+        {
+          "band": "SPVs",
+          "label": "SemiAnalysis Capital SPV II",
+          "value": "$16,865,000 → $19,999,728 sold; 17 → 32 investors; filed 2026-09-03, amended 2026-09-16"
+        },
+        {
+          "band": "Reported",
+          "label": "Fund size",
+          "value": "USD 400 million filed target (The Information, 'according to a securities filing'); 'confirmed at $500M' (Substrate, company-sourced, 2026-09-18); 'reportedly targeting $400m to $500m' (Asymmetrix, 2026-10-01)"
+        },
+        {
+          "band": "Reported",
+          "label": "Prior vehicle",
+          "value": "'$50 million special-purpose vehicle raised within Fluidstack's $700 million round' (The Information, February 2026); 'stakes in roughly 20 startups, including … Thinking Machines Lab and … Enfabrica'"
+        }
+      ],
+      "notes": "Form D data fetched from sec.gov on 2026-10-04 with the research contact User-Agent; the operating LLC files nothing with the SEC."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-10-01",
+      "category": "corporate",
+      "headline": "Asymmetrix profile: team '~100', '300,000+ Substack subscribers', the fund 'reportedly targeting $400m to $500m', 'nine of the world's ten largest companies sit among its top 15 customers', and 'conflict-of-interest questions'",
+      "read": "The firm's own growth story and the independence question now travel together in every profile written about it.",
+      "source": "https://asymmetrixintelligence.substack.com/p/9-of-the-worlds-10-largest-companies"
+    },
+    {
+      "date": "2026-09-25",
+      "category": "product-launch",
+      "headline": "China Datacenter Model launched: '1,000+ facilities across 60+ operators', '24GW of delivered capacity', ByteDance 'roughly a fifth of delivered datacenter capacity in China, and it rents nearly all of it'; GDS and VNET 'captured barely a third of ByteDance and Alibaba orders in 2024–2026YTD'",
+      "read": "The seventeenth model extends the firm's building-by-building method to the market this corpus's Chinese hyperscaler and landlord dossiers describe — and they already quote it.",
+      "source": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom"
+    },
+    {
+      "date": "2026-09-25",
+      "category": "market",
+      "headline": "Neocloud shares fall after ClusterMAX 3.0 and a week of sell-side notes: IREN −4%, CoreWeave −3%, Nebius −2% (24/7 Wall St); Yahoo Finance airs a 'pay to rank' accusation and SemiAnalysis's reply that 'providers cannot purchase their ranking and … client compensation is not tied to the ratings'",
+      "read": "A private firm's rating moves listed equities — which is why the compensation question is asked of it and not of a sell-side analyst.",
+      "source": "https://247wallst.com/investing/2026/09/25/neocloud-stocks-fall-as-selling-extends-after-a-week-of-research-notes-iren-drops-4-coreweave-slides-3-nebius-eases/"
+    },
+    {
+      "date": "2026-09-23",
+      "category": "product-launch",
+      "headline": "ClusterMAX 3.0: 323 providers tracked, 77 reviewed, 19 medallions, a new Participation Ribbon tier; Nebius joins CoreWeave at Platinum, Crusoe drops Gold to Bronze, Azure to Silver, AWS and Together to Bronze, Fluidstack to 'Unavailable'; a paid 'SemiAnalysis Technical Assessment' service announced",
+      "read": "The rating that 12 of this corpus's dossiers rest on — and the edition that turns the toolkit into a consulting product.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "date": "2026-09-18",
+      "category": "corporate",
+      "headline": "Substrate profile: revenue 'projected to beat $100M this year', '100 full-time employees' by year-end, 'Less than 5% of revenue comes from Substack', 'Twelve models', Fund I 'confirmed at $500M' (company-sourced)",
+      "read": "The only published revenue mix — models, Core Research and consulting over the newsletter — and a fund figure the SEC record does not yet carry.",
+      "source": "https://substratemag.com/dylanpatel/"
+    },
+    {
+      "date": "2026-09-16",
+      "category": "financial",
+      "headline": "Form D/A: SemiAnalysis Capital SPV II — USD 19,999,728 sold to 32 investors (SPV I: USD 20,000,000 to 20 investors, 28 August; GCW Access feeder: USD 19,825,000 to 57 investors, 5 August)",
+      "read": "About USD 60 million raised across three vehicles while the USD 400 million flagship fund shows USD 0 sold.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2151312/000215131226000002/primary_doc.xml"
+    },
+    {
+      "date": "2026-09-12",
+      "category": "ma",
+      "headline": "Citrini Research acquired (confirmed to Bloomberg by Patel and James van Geelen; price undisclosed; van Geelen remains Citrini CEO) — thematic-equity and macro research joins chips, datacenters and power",
+      "read": "The research footprint widens toward the hedge-fund client base that already pays for the models.",
+      "source": "https://panews.io/articles/01a09462-27b6-7783-b3a1-dea75e9eb362"
+    },
+    {
+      "date": "2026-09-10",
+      "category": "financial",
+      "headline": "Positron AI's USD 875 million Series C 'co-led by NEA, Andra Capital, Atreides Management, Valor Equity Partners, and SemiAnalysis Capital'; Patel joins Positron's board",
+      "read": "The research firm's fund co-leads a round in an inference-chip vendor the research covers — the structure FourWeekMBA calls the 'information-advantage flywheel'.",
+      "source": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html"
+    },
+    {
+      "date": "2026-08-30",
+      "category": "product-launch",
+      "headline": "'Most Neoclouds Suck At Security' — the security precursor to ClusterMAX 3.0",
+      "read": "Attestation (SOC 2, ISO 27001) becomes an explicit gate below Bronze.",
+      "source": "https://newsletter.semianalysis.com/p/most-neoclouds-suck-at-security"
+    },
+    {
+      "date": "2026-08-24",
+      "category": "product-launch",
+      "headline": "AgentX / InferenceX v3: 'World's First Fully Open Source Apache 2.0 Realistic 1Mil+ Long Context, Multi Turn Benchmark Live'",
+      "read": "The benchmark moves from token throughput to agentic workloads — the measure the labs now buy on.",
+      "source": "https://github.com/SemiAnalysisAI/InferenceX"
+    },
+    {
+      "date": "2026-07-29",
+      "category": "financial",
+      "headline": "Form D: SemiAnalysis Capital Fund I, LP — Delaware venture fund, USD 400,000,000 total offering, USD 0 sold, Dylan Patel 'Manager of the General Partner'",
+      "read": "The firm becomes an investor in the sector it rates, with no published conflict policy to accompany the filing.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2145695/000090514826003383/primary_doc.xml"
+    },
+    {
+      "date": "2026-07-20",
+      "category": "legal",
+      "headline": "San Francisco Superior Court grants SemiAnalysis's motion to compel arbitration and stay proceedings in SemiAnalysis LLC v. Wei Zhou (CGC-26-635328); Zhou's anti-SLAPP motion goes off calendar; case management conference set for 26 August",
+      "read": "The MNPI allegation leaves the public docket for arbitration — the record will not settle it in view.",
+      "source": "https://unicourt.com/case/ca-sfc-casebk9d44a7eda595-763022"
+    },
+    {
+      "date": "2026-05-26",
+      "category": "product-launch",
+      "headline": "'Inside the 800VDC Revolution – Part 1': four-phase transition to facility-level DC; sidecar TAM 'to peak at ~$11B in 2028'; 'SST TAM to reach ~$32B' by 2030 at '$1.25M/MW'; '~39GW' of incremental 800 VDC capacity by 2030; SST vendor set DG Matrix, Amperesand, Heron Power, Novos Power; 'no vendor has completed UL certification for datacenter SST deployment as of May 2026'",
+      "read": "The post the power-conversion and SST dossiers in this corpus cite — and the one whose SST market figure third parties misquoted as ~$13 billion.",
+      "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part"
+    },
+    {
+      "date": "2026-04-18",
+      "category": "corporate",
+      "headline": "The Information (Abram Brown): SemiAnalysis 'expects to top $100 million in revenue this year' from about USD 20 million a year earlier, Patel 29, a business that 'blurred the lines between media, research and investing'; KuCoin relays that the firm 'does not proactively disclose Patel's investment ties when reporting on companies in which he invests'",
+      "read": "The revenue figure every later profile repeats, and the disclosure gap stated in the same breath.",
+      "source": "https://www.kucoin.com/news/flash/semianalysis-revenue-surges-to-100m-amid-legal-dispute-over-report-bias"
+    },
+    {
+      "date": "2026-04-04",
+      "category": "legal",
+      "headline": "Dylan Patel's statement on X: SemiAnalysis 'terminated an employee due to severe misconduct' in January 2026, sued him on 27 March 'for breach of contract, trade secret misappropriation, and other claims', and 'unequivocally denies' his suit; Wei Zhou's complaint (30 March) alleges retaliatory dismissal for refusing to put Fluidstack MNPI from Patel's USD 50 million SPV into paid Tokenomics research",
+      "read": "The independence question arrives as litigation; the statement answers the misconduct charge and does not mention Fluidstack.",
+      "source": "https://morethanmoore.substack.com/p/dylan-patels-semianalysis-is-being"
+    },
+    {
+      "date": "2026-04-20",
+      "category": "product-launch",
+      "headline": "ClusterMAX 2.1 site update and 'How Much Do GPU Clusters Really Cost?': GPU Cluster TCO Calculator and Goodput Expense Calculator; four providers into Bronze, 'several serious providers' to Unavailable; 3.0 test deadline 1 August",
+      "read": "A minor version without a full re-test — the cadence the firm promised in 2.0.",
+      "source": "https://newsletter.semianalysis.com/p/how-much-do-gpu-clusters-really-cost"
+    },
+    {
+      "date": "2026-03-04",
+      "category": "other",
+      "headline": "Silicon Data's SiliconMark comparison: InferenceX results come from 'hardware that SemiAnalysis operates internally' with 'no way for the public to run InferenceX on their own systems'",
+      "read": "The first competitor critique of the benchmark's reproducibility claim.",
+      "source": "https://www.silicondata.com/blog/siliconmark-vs.-inferencex"
+    },
+    {
+      "date": "2026-02-18",
+      "category": "market",
+      "headline": "AMD's Anush Elangovan rejects a SemiAnalysis report that MI455X volume would slip to 2027: 'BS. Right on target for H2 2026'",
+      "read": "A rated vendor disputing the research in public — rare, and on the record.",
+      "source": "https://hothardware.com/news/amd-naysays-mi400-delay"
+    },
+    {
+      "date": "2026-02-16",
+      "category": "product-launch",
+      "headline": "InferenceX v2 (formerly InferenceMAX): GB300 NVL72 and B300 coverage, 'the first third party benchmark to test disagg+wideEP multi-node FP4 and FP8 MI355X performance'; Apache 2.0",
+      "read": "The rename and the Blackwell Ultra coverage the amd dossier cites.",
+      "source": "https://newsletter.semianalysis.com/p/inferencex-v2-nvidia-blackwell-vs"
+    },
+    {
+      "date": "2026-01-13",
+      "category": "corporate",
+      "headline": "Terms & Conditions updated — Florida governing law and venue; legal contact 2246 Irving St, Suite 114, Denver",
+      "read": "The one legal-identity page a reader can check; it names no entity type.",
+      "source": "https://semianalysis.com/terms-and-conditions/"
+    },
+    {
+      "date": "2025-12-02",
+      "category": "other",
+      "headline": "Hot Aisle CEO Jon Stevens publishes 'Influence as a Service: SemiAnalysis Under the Microscope' — a 'critical-to-consultant pipeline' charge from a Bronze-rated provider",
+      "read": "The first written independence critique; its author's own rating is the caveat.",
+      "source": "https://jon4hotaisle.substack.com/p/influence-as-a-service-semianalysis"
+    },
+    {
+      "date": "2025-11-06",
+      "category": "product-launch",
+      "headline": "ClusterMAX 2.0: 84 providers rated, 209 tracked, 37 medallions; CoreWeave alone at Platinum; Gold Nebius, Oracle, Azure, Crusoe and new entrant Fluidstack; IREN, WhiteFiber and Hyperbolic Underperforming; Nscale, Core42, HUMAIN, Alibaba Cloud Unavailable; Wei Zhou a credited co-author",
+      "read": "The edition that rated Fluidstack Gold while the founder's SPV sat in the company — the fact the litigation turns on.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-20-the-industry-standard"
+    },
+    {
+      "date": "2025-10-09",
+      "category": "product-launch",
+      "headline": "InferenceMAX launched as 'an open-source automated benchmark … running suite of benchmarks every night on hundreds of chips', with supporters OpenAI, Microsoft, PyTorch Foundation, OCI, Crusoe, CoreWeave, Nebius, TensorWave, Together AI, Supermicro and Vultr and quotes from Jensen Huang and Lisa Su",
+      "read": "The benchmark the rated neoclouds donate compute to — a relationship the rating editions do not disclose.",
+      "source": "https://newsletter.semianalysis.com/p/inferencemax-open-source-inference"
+    },
+    {
+      "date": "2025-09-01",
+      "category": "ma",
+      "headline": "Chips & Wafers team joins SemiAnalysis (terms undisclosed)",
+      "read": "The second research shop absorbed after Fabricated Knowledge (November 2024).",
+      "source": "https://chipsandwafers.substack.com/p/chips-and-wafers-is-joining-semianalysis"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "coreweave",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "scale": "Platinum (1.0, 2.0, 3.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Rated Platinum in every ClusterMAX edition — the only provider to be — and 'the industry's sharpest, sturdiest, most proactive neocloud' in 3.0; also a named InferenceX compute supporter.",
+      "context": "ClusterMAX 1.0 (26 March 2025): 'CoreWeave is the only non-hyperscaler currently that is experienced at operating large-scale 10k+ H100 clusters reliably'; 2.0 (6 November 2025): 'CoreWeave retains top spot as the only member of the Platinum tier … the only cloud to consistently command premium pricing'; 3.0 (23 September 2026): Platinum shared with Nebius. CoreWeave markets the rating on a dedicated page and in three releases; Patel is quoted in CoreWeave's 23 September 2026 release ('CoreWeave remains the operational benchmark for the industry').\n\nCoreWeave is also listed among the InferenceX compute supporters (Peter Salanki quoted). Whether CoreWeave buys SemiAnalysis models or consulting is not disclosed by either party.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "nebius",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "scale": "Platinum (3.0; Gold in 1.0, 2.0, 2.1)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Lifted from Gold to Platinum in ClusterMAX 3.0 — 'unquestionably an industry leader with strong offerings in every category and the ability to command a significant price premium'; the first provider to join CoreWeave at the top; supplies compute for InferenceX.",
+      "context": "Nebius's own post (23 September 2026) quotes the rating; its partner catalog (updated 13 July 2026) records that Nebius 'supplies compute for InferenceMAX' and 'holds a Gold rating (ClusterMAX 2.0)' — the two sides of the relationship, rating and compute donation, stated by Nebius. 3.0 also credits Nebius as 'the first provider to deploy HGX B300s back in December of 2025' while noting it 'still trail[s] CoreWeave on many technical aspects'. The 3.0 text refers to 'clients of our industry-leading Datacenter Model' in the Nebius section; no statement says whether Nebius is one.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "crusoe",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "scale": "Bronze (3.0; Gold in 1.0, 2.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Cut from Gold to Bronze in ClusterMAX 3.0 — 'Crusoe's clusters are exceptionally unreliable', 'responsible for the majority of this round's hardware failures' — six days after SemiAnalysis Capital appeared among new investors in Crusoe's Series F (per Crusoe's Form D, in the crusoe dossier); Crusoe donates compute to InferenceX.",
+      "context": "3.0 (23 September 2026) places Crusoe 'towards the bottom of our Bronze category' citing 'the oldest Linux kernel and the oldest GPU drivers tested' and a 'surprisingly lethargic response', while praising the Atero inference acquisition. Crusoe's blog (16 October 2025) says it is 'proud to support InferenceMAX'. The investment-and-rating sequence is the clearest instance in this corpus of the fund-plus-rating structure; neither party has commented on it, and no Crusoe statement on the downgrade exists.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "lambda",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "scale": "Silver (1.0, 2.0, 3.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Held at Silver in all three editions; 3.0 credits improving orchestration ('customers are happy') and faults 'unacceptably old drivers'; an InferenceX compute supporter (Stephen Balaban quoted).",
+      "context": "2.0 called Lambda 'another gold-tier candidate that unfortunately comes in at #1 in the wrong category: customer complaints'; 3.0 keeps Silver and notes 'Lambda is increasingly driving its bottom line via bare-metal builds, apart from managed clusters altogether'.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "iren",
+      "type": "other",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "Not Recommended – Underperforming (2.0, 3.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Rated 'Not Recommended – Underperforming' in 2.0 and 3.0; 3.0 calls Prince George 'The #1 worst site in the industry according to users' and tells IREN to 'stop pretending to offer managed clusters'.",
+      "context": "Yahoo Finance (25 September 2026) and Capital Brief (24 September 2026) carry the 3.0 language; IREN shares fell 4 percent on 25 September in a week that also carried a Redburn note. IREN has not responded publicly. 1.0 did not list IREN, so 'third cycle' rests on SemiAnalysis's own text.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "fluidstack",
+      "type": "other",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "Not Recommended – Unavailable (3.0; Gold in 2.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Debuted at Gold in ClusterMAX 2.0 — 'the only cloud to debut in our Gold tier this round', 'the hired gun' — then moved to 'Not Recommended – Unavailable' in 3.0 as having 'exited the managed clusters market, as far as we are concerned'; the neocloud in which Dylan Patel's USD 50 million SPV sits, and the subject of the Zhou litigation's MNPI allegation.",
+      "context": "2.0 (6 November 2025) rated Fluidstack Gold while, per The Information (February 2026), Patel had raised 'a $50M SPV toward Fluidstack's $700M fundraising'; neither the 2.0 nor the 3.0 post discloses the investment. Wei Zhou's complaint (30 March 2026) alleges he was asked to put confidential Fluidstack deployment data from that vehicle into paid Tokenomics research; SemiAnalysis denies the claims and the case went to arbitration on 20 July 2026. 3.0's stated reason for 'Unavailable' is that Fluidstack's 'focus has shifted from managed Nvidia clusters to bare-metal TPU deployments at 100K+ chip scale' and it is listed among providers that 'claim to have zero spare capacity and/or refuse to test with us'. Fluidstack's 'awarded ClusterMAX Gold' post remains live.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "nscale",
+      "type": "other",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "Not Recommended – Unavailable (2.0, 3.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Listed 'Unavailable' in both editions; 3.0 names Nscale among providers SemiAnalysis believes are 'misleading investors (i.e., lying)' by claiming managed clusters — 'It is unbelievable to us that they can have such a big business'.",
+      "context": "2.0: 'NScale is an NVIDIA-backed partner … We have been unable to gain access to any GPUs on the NScale platform.' 3.0 sharpens the charge to 'clearly not true … people really want that bare metal at a nice price'. Nscale's S-1 excerpts do not cite ClusterMAX; no Nscale reply was found.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "firmus",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "scale": "Silver (1.0, 2.0, 3.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Silver in all three editions (as Sustainable Metal Cloud in 1.0); 3.0 calls Firmus 'our favorite in Asia-Pacific' and a researcher told Capital Brief 'We expect they have the technical and operational capacity to scale'; an InferenceX supporter (Tim Rosenfield quoted).",
+      "context": "2.0 judged 'the bulk of Firmus's experience with immersion cooling is misguided, and now wasted' as the platform moved to direct-to-chip cooling; 3.0 recorded network drops and a lost NIC on a development GB300 cluster while keeping Silver. Capital Brief's 'up for the challenge' is the article's headline, not a SemiAnalysis quotation.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "whitefiber",
+      "type": "other",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "Not Recommended – Underperforming (2.0, 3.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "'Underperforming' in 2.0 for a non-working Slurm/Kubernetes layer and no SOC 2 or ISO 27001 attestation; kept there in 3.0 without re-testing — 'We need to verify that these operational problems are fixed'.",
+      "context": "2.0 found 'good network performance but unusable Slurm/Kubernetes integration and weak job monitoring'; WhiteFiber was not rated in 1.0.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "g42",
+      "type": "other",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "Participation Ribbon (3.0; Unavailable in 2.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Core42, G42's neocloud, moved from 'Unavailable' (2.0 — UAE compliance restrictions prevented testing) to the new Participation Ribbon tier in 3.0: 'a dark horse … solid team, allocation of GPUs, political backing, and an infinite money glitch in the form of Mubadala'.",
+      "context": "No third-party outlet names Core42's tier; the placement rests on the 3.0 text's section headings. The 2.0 Core42 page on clustermax.ai was updated 20 April 2026 (the 2.1 pass).",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "humain",
+      "type": "other",
+      "status": "active",
+      "since": "2026-09",
+      "scale": "Not Recommended – Unavailable (3.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "Listed 'Not Recommended – Unavailable' in 3.0 because 'we have yet to get a response from the team' — 'We would be happy to start with a login and a functioning cluster'.",
+      "context": "HUMAIN was listed as 'HUMAIN Compute — Unavailable' on the 2.0/2.1 consolidated list; no HUMAIN reply was found.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "alibaba-cloud",
+      "type": "other",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "Not Recommended – Unavailable (2.0, 3.0)",
+      "via": "ClusterMAX 3.0 rating",
+      "note": "'Unavailable' in both editions — in 3.0 among 'those who are big and important, but who we cannot test properly due to geographic or regulatory concerns'; separately, the China Datacenter Model names Alibaba with ByteDance as the wholesale market's largest orders.",
+      "context": "2.0: 'not readily available for testing in most public regions'. The alibaba-cloud dossier draws its overseas-revenue share and the GDS/VNET order-share claim from the China Datacenter Model's free text (25 September 2026).",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "bytedance",
+      "type": "other",
+      "status": "active",
+      "since": "2026-09",
+      "via": "China Datacenter Model",
+      "note": "The China Datacenter Model's headline subject: ByteDance 'occupies roughly a fifth of delivered datacenter capacity in China, and it rents nearly all of it'; three self-build clusters counted and 'a fourth' inferred from two Zhongwei entities.",
+      "context": "Launch post of 25 September 2026 (Everlyn, Dylan Patel, Patrick Schaabi), relayed by SCMP, DigiTimes and TechNews; the bytedance dossier's summary, products and developments rest on it. SemiAnalysis also wrote (June 2025) that 'most of Oracle's ASEAN GPU capacity' is believed allocated to ByteDance — a single-outlet estimate the dossier labels as such. ByteDance is a subject of the research, not a disclosed client.",
+      "source": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom"
+    },
+    {
+      "slug": "amd",
+      "type": "other",
+      "status": "active",
+      "since": "2023",
+      "via": "InferenceX; MI455X delay report",
+      "note": "Rated and benchmarked, and the one vendor to dispute SemiAnalysis in public: AMD's VP of AI software called the February 2026 MI455X-delay report 'BS. Right on target for H2 2026'; Lisa Su and Anush Elangovan are quoted InferenceX supporters, and Su gave Patel a 90-minute session after the ROCm critique.",
+      "context": "InferenceX v2 (16 February 2026) found MI355X competitive on FP8 disaggregated performance-per-TCO and behind on FP4; SemiAnalysis's July 2026 assessment upgraded AMD's odds against the CUDA moat to 'a great chance of success'. The amd dossier carries all of these; third parties echo the 'BS' exchange (HotHardware, 18 February 2026) but not the benchmark detail. AMD supplies hardware to the InferenceX fleet per Silicon Data's reading ('likely provided' by NVIDIA and AMD).",
+      "source": "https://hothardware.com/news/amd-naysays-mi400-delay"
+    },
+    {
+      "slug": "nvidia",
+      "type": "other",
+      "status": "active",
+      "since": "2025-10",
+      "via": "InferenceX support; GTC recognition",
+      "note": "Jensen Huang and Ian Buck are quoted InferenceX supporters; Huang named Patel from the GTC 2026 keynote ('accused me of sandbagging … He wasn't wrong') and GTC 2024 called the firm's inference sweep 'the largest, most comprehensive … ever done'.",
+      "context": "NVIDIA's blog relayed the InferenceMAX launch (October 2025) and the GB200 NVL72 results; Silicon Data reads the benchmark fleet as 'likely provided' by NVIDIA and AMD. SemiAnalysis's 800 VDC series tracks NVIDIA's rack-power roadmap (Kyber, Vera Rubin NVL72). No commercial relationship is disclosed by either party.",
+      "source": "https://inferencex.semianalysis.com/quotes"
+    },
+    {
+      "slug": "google",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "via": "ClusterMAX rating (Bronze → Silver → Gold)",
+      "note": "Google Cloud rose from Bronze (1.0) through Silver (2.0) to Gold (3.0) — 'Google Cloud joins Oracle in the Gold tier'; SemiAnalysis's TPUv7 analysis ('the 900lb gorilla') is cited in the google dossier.",
+      "context": "1.0 said Google was 'on a Rocketship path toward ClusterMAX™ Gold or ClusterMAX™ Platinum'; 3.0 confirms Gold with two members. The TPU work ('TPU Inference Externalization Full Steam Ahead', September 2026) extends InferenceX to TPUv7x.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "oracle",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "via": "ClusterMAX rating (Gold in 1.0, 2.0, 3.0); InferenceX support",
+      "note": "Gold in every edition and a quoted InferenceX supporter (Jay Jackson); SemiAnalysis's 'How Oracle is winning the AI compute market' (June 2025) is the source of the bytedance dossier's ASEAN-capacity claim.",
+      "context": "2.0: 'Nebius, Oracle and Azure are the top providers within the Gold tier'; 3.0: Gold with Google Cloud. A September 2026 X critic argued Oracle ranked above AWS and Azure 'despite a huge security breach' — the 'pay to rank' charge SemiAnalysis denied.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "microsoft",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "via": "ClusterMAX rating (Gold → Silver); InferenceX support",
+      "note": "Azure fell from Gold (1.0, 2.0) to Silver in 3.0 — 'customers do not come first in matters of taste'; Scott Guthrie and Saurabh Dighe are quoted InferenceX supporters and Microsoft was a launch compute supporter.",
+      "context": "The only hyperscaler downgraded in 3.0. Microsoft is also the vendor of the Claude-competing stacks the firm benchmarks; no commercial relationship is disclosed.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "amazon",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "via": "ClusterMAX rating (Silver → Bronze)",
+      "note": "AWS fell from Silver (1.0, 2.0 — 'full of headache') to Bronze in 3.0: 'Our last report summarized the AWS experience as a \"headache.\"'",
+      "context": "AWS is not listed among InferenceX supporters; AWS Trainium coverage is 'planned' in the benchmark.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "slug": "xai",
+      "type": "other",
+      "status": "active",
+      "since": "2025-09",
+      "via": "Colossus 2 verification; ClusterMAX 3.0 'Unavailable' list",
+      "note": "SemiAnalysis's September 2025 report called Colossus 2 'the first gigawatt datacenter in the world' and is the independent verification the xai dossier cites; in ClusterMAX 3.0 'SpaceXAI' appears in the Unavailable 'yet to launch' group accused of claiming managed clusters it does not offer.",
+      "context": "Techmeme (17 September 2025): 'on track to be the world's first gigawatt-scale AI datacenter, after starting in March and reaching ~200MW by August 22 (Jeremie Eliahou Ontiveros/SemiAnalysis)'. The ~460 MW of on-site gas and the Megapack detail the xai, piller and voltagrid dossiers carry come from the paid onsite-gas post and are not echoed by third parties.",
+      "source": "https://www.techzine.eu/news/infrastructure/135207/colossus-2-should-propel-xai-to-the-top-of-the-ai-race/"
+    },
+    {
+      "slug": "vicor",
+      "type": "other",
+      "status": "historical",
+      "since": "2023",
+      "via": "'Energizing AI: Power Delivery Competition Heats Up' (2023)",
+      "note": "SemiAnalysis 'first broke the news that Vicor was designed out in the H100 and replaced by Monolithic Power Systems' and named the six-player AI power-delivery set (Vicor, MPS, Delta, ADI, Renesas, Infineon); Vicor's shares fell more than 20 percent the morning after and the report sold 'about $100K in a single day' (Substrate).",
+      "context": "The 2023 piece is the source for the vicor, infineon and delta-electronics dossiers' competitive set; its date is fixed by the firm's LinkedIn post (late July 2023). It is the clearest instance of the research moving a listed equity before ClusterMAX existed.",
+      "source": "https://substratemag.com/dylanpatel/"
+    },
+    {
+      "slug": "amperesand",
+      "type": "other",
+      "status": "active",
+      "since": "2026-05",
+      "via": "'Inside the 800VDC Revolution – Part 1'",
+      "note": "Named in the May 2026 SST vendor set — 'Amperesand's third-generation system claims greater than 98.5%' — with DG Matrix, Heron Power and Novos Power, in a post that sizes the SST market at '~$32B' by 2030 at '$1.25M/MW' and records that 'no vendor has completed UL certification for datacenter SST deployment as of May 2026'.",
+      "context": "The amperesand, dg-matrix, heron-power and novos-power dossiers all cite the post; third-party summaries (BigGo, All-Weather) relayed a ~USD 13 billion SST figure the post's visible text does not contain — the vertiv dossier was corrected on it in this session. Novos Power is thanked in the post's acknowledgments, so at least one vendor briefed it.",
+      "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part"
+    },
+    {
+      "slug": "dg-matrix",
+      "type": "other",
+      "status": "active",
+      "since": "2026-05",
+      "via": "'Inside the 800VDC Revolution – Part 1'",
+      "note": "Placed as the 'LV-input SST in place of the conventional rectifier-plus-PSU stack', 'ABB-backed', 'claims up to 98.5%', 'shipping pre-certification units and targeting UL certification by end of Q2 2026' in the May 2026 post the dg-matrix dossier cites.",
+      "context": "DG Matrix's own June 2026 insight piece and Power Electronics News's SST coverage do not cite SemiAnalysis; the firm's reading of DG Matrix as LV-input against Heron's and Novos's direct-MV designs is the frame the three SST dossiers use.",
+      "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part"
+    },
+    {
+      "slug": "vertiv",
+      "type": "other",
+      "status": "active",
+      "since": "2026-05",
+      "via": "800 VDC market analysis",
+      "note": "SemiAnalysis's 800 VDC series projects that facility-level DC distribution removes the centralized UPS — a core Vertiv franchise — while creating a sidecar market 'to peak at ~$11B in 2028' and an SST market of '~$32B' by 2030; the vertiv dossier's strategy read rests on it.",
+      "context": "Phase 3 of the firm's four-phase transition (late 2028/29) is 'facility-level DC distribution, centralized rectifiers, no AC switchgear/UPS'. Vertiv is not named as a client.",
+      "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part"
+    },
+    {
+      "slug": "anthropic",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026",
+      "scale": "'$7 million' annualised (April 2026); '$11M in eight months' (July 2026)",
+      "via": "Claude Code",
+      "note": "SemiAnalysis's largest disclosed vendor: Patel put Claude Code spend at '$7 million' against a '$25 million' salary base (Invest Like the Best, April 2026) and '$11M in eight months … roughly one-third of total payroll' by July 2026; Patel shares a home with Anthropic's Sholto Douglas (Substrate; Hot Aisle).",
+      "context": "The spend figures are Patel's own statements relayed by BigGo and Podcast Alpha; Hot Aisle's critique names the Anthropic connection as an undisclosed 'roommate nexus'. Anthropic is a subject of the firm's Tokenomics research and, per Zhou's complaint as reported, among the labs whose Fluidstack deployment data the alleged MNPI covered.",
+      "source": "https://finance.biggo.com/news/49e997a69909cc52"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "US export controls on advanced computing (BIS Entity List and AI-chip licence rules)",
+      "status": "in-effect",
+      "exposure": "Indirect but central to the product line: the China Datacenter Model (launched 25 September 2026) and the Accelerator & HBM and Datacenter Industry Models exist to price what the controls leave reachable — the firm's September 2026 thesis that ByteDance holds about one-fifth of China's datacentre capacity ran through the South China Morning Post and DigiTimes. The controls change the firm's addressable data (what Chinese operators can buy and build), not its licence to publish; no SemiAnalysis entity is a party to any export-control action and none of its products is a controlled item"
+    },
+    {
+      "regime": "Investment Advisers Act / Regulation D private-fund exemptions (SemiAnalysis Capital)",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-29",
+      "exposure": "The venture business runs under the private-fund exemptions, not the research firm's licence: SemiAnalysis Capital Fund I, LP filed Form D on 29 July 2026 under Rule 506(b) with 3(c)(1) and 3(c)(7) exclusions (USD 400m target, nil sold at filing), two SPV series filed in August–September 2026 (USD 20.0m and USD 19.999m, fully sold) and a third-party feeder managed by Allocate Management Company took USD 19.8m from 57 investors. The research side states it is 'not a FINRA member', provides 'no investment advice, buy/sell/hold or any other ratings on any securities', has institutional research reviewed by 'a Series 16 Supervisory Analyst' and runs pre-approval trading restrictions — but publishes no policy on private-company holdings or on consulting for rated providers, which is the gap the 2026 litigation and the ClusterMAX independence debate turn on"
+    },
+    {
+      "regime": "California trade-secret and whistleblower-retaliation law (CUTSA; Labor Code 98.6 and 1102.5)",
+      "status": "in-effect",
+      "effectiveDate": "2026-03-27",
+      "exposure": "Two San Francisco Superior Court matters, not federal: SemiAnalysis LLC v. Wei Zhou (CGC-26-635328, filed 27 March 2026 — declaratory relief on arbitrability, trade-secret misappropriation, conversion, breach of contract and fiduciary duty, defamation, unfair competition) and Zhou v. SemiAnalysis LLC (CGC-26-635374, summons 30 March 2026 — breach of contract, retaliation under Labor Code 98.6 and 1102.5, wrongful termination). Zhou's unproven allegation is that he was fired for refusing to put material non-public information from a USD 50m Fluidstack investment vehicle into client models; the company's statement of 4 April 2026 pleads misconduct and 'unequivocally denies these claims'. On 20 July 2026 the court granted SemiAnalysis's motion to compel arbitration and stay proceedings; the anti-SLAPP motion went off calendar; no merits ruling or settlement is reported. The exposure that matters commercially is the one KuCoin reported in April: clients 'questioning the firm's confidential data handling practices'"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Dylan Patel",
+      "title": "Founder, Chief Executive Officer and Chief Analyst; sole owner (as pleaded); Manager of the General Partner, SemiAnalysis Capital",
+      "background": [
+        "Founded SemiAnalysis on 22 May 2020 (first post on his 24th birthday) as a WordPress blog, moved to Substack in 2021; the newsletter's copyright line reads '© 2026 Dylan Patel'; the company's own pages print no title for him — 'Founder, CEO, and Chief Analyst' is the DAC 2026 and third-party form",
+        "Signs the fund filings: 'Manager of the General Partner of the Issuer' on SemiAnalysis Capital Fund I, LP's Form D (29 July 2026) and 'Manager' on the SPV I and II filings; joined the board of Positron AI with its September 2026 Series C, which SemiAnalysis Capital co-led; reported stakes in roughly 20 start-ups including Thinking Machines Lab and Enfabrica, and a USD 50m SPV in Fluidstack's 2026 round (The Information)",
+        "University of Georgia (information systems, risk management, analytics and legal studies — not Georgia Tech); raised in Cairo, Georgia; insurance structuring in Minnesota and about eighteen months as a beekeeper before the newsletter; Reddit moderator of r/hardware as u/dylan522p",
+        "Born 22 May 1996 (30 since May 2026; The Information's April 2026 'Dylan, 29' was correct when printed); based in San Francisco"
+      ]
+    },
+    {
+      "name": "Doug O'Laughlin",
+      "title": "President",
+      "background": [
+        "Founder of the Fabricated Knowledge newsletter, merged into SemiAnalysis in November 2024 (announced in a Stratechery interview with Patel on 14 November 2024); suggested the 2021 move to Substack",
+        "Named in Zhou's complaint (allegation, unproven) as having neglected oversight while fundraising for Patel's investment vehicle; filed a declaration in CGC-26-635328 opposing the anti-SLAPP motion",
+        "Titled 'President' by Substrate and the company site; BlockBeats calls him 'Partner'"
+      ]
+    },
+    {
+      "name": "Daniel Nishball",
+      "title": "Director of Research",
+      "background": [
+        "Co-author of the neocloud and ClusterMAX work since 2023 and of each ClusterMAX edition; an 'early hire' (Substrate)",
+        "The company's careers page refers to an unnamed 'Director of Research'; the title is from the site and clustermax.ai bylines"
+      ]
+    },
+    {
+      "name": "Jordan Nanos",
+      "title": "Lead author, ClusterMAX 2.0 and 3.0",
+      "background": [
+        "Lead byline on ClusterMAX 2.0 (6 November 2025) and 3.0 (23 September 2026); quoted by Capital Brief on Firmus ('We expect they have the technical and operational capacity to scale') and IREN",
+        "Also credited on 'Most Neoclouds Suck At Security' (30 August 2026) and 'How Much Do GPU Clusters Really Cost?' (20 April 2026)"
+      ]
+    },
+    {
+      "name": "Jeremie Eliahou Ontiveros",
+      "title": "Lead, Datacenter and Energy research (runs the Datacenter Industry Model)",
+      "background": [
+        "Byline on every power post in the corpus's citation set: Inside the 800VDC Revolution Part 1 (26 May 2026), the behind-the-meter series (June and September 2026), the PJM capacity-market post (16 August 2026) and the household-bills post (3 March 2026); credited on the Colossus 2 report",
+        "'Technology Analyst' on the Yet Another Value Blog podcast (August 2025); 'runs datacenter model' per Substrate"
+      ]
+    },
+    {
+      "name": "Kimbo Chen",
+      "title": "Member of Technical Staff; InferenceMAX/InferenceX lead",
+      "background": [
+        "Named InferenceMAX lead at the October 2025 launch and in LMSYS's acknowledgements; New York-based per third-party profiles, previously Mako and Qualcomm"
+      ]
+    },
+    {
+      "name": "Michelle Shen",
+      "title": "Chief of Staff",
+      "background": [
+        "Title per Substrate's September 2026 profile; appears in the newsletter byline roster"
+      ]
+    },
+    {
+      "name": "Wayne Ma",
+      "title": "Writer and Analyst",
+      "background": [
+        "Joined from The Information (previously the Wall Street Journal) per Muck Rack — the hire that moved the firm into reported journalism alongside analysis"
+      ]
+    },
+    {
+      "name": "James van Geelen",
+      "title": "Chief Executive Officer, Citrini Research (SemiAnalysis subsidiary since September 2026)",
+      "background": [
+        "Founder of Citrini Research, acquired for an undisclosed price and confirmed to Bloomberg on 11 September 2026; 'will temporarily continue serving as CEO' and 'intends to launch a new investment fund' (Bloomberg via PANews and KuCoin)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "CY2023",
+        "periodType": "annual",
+        "periodEnd": "2023-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed; 'seven figures in revenue by 2023' (Substrate, citing the company)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Founder-owned LLC; no accounts are filed anywhere. The newsletter's early price was 'USD 200/year' (Substrate)"
+          },
+          {
+            "name": "Corporate action",
+            "actual": "Merger with Doug O'Laughlin's Fabricated Knowledge announced 14 November 2024 (terms undisclosed)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Stratechery interview; no consideration published"
+          }
+        ],
+        "commentary": "The firm had three lines by 2023 — newsletter, the first institutional models (Accelerator, Datacenter from February 2024) and consulting — and had hired its first analysts. Every figure is third-party or company-stated to a third party."
+      },
+      {
+        "period": "CY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "About USD 20m (The Information, April 2026: 'from around $20 million a year ago'; repeated by Odaily, KuCoin, FourWeekMBA)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "One outlet's reporting, widely relayed; Ian Cutress's independent 'approximately $50M+' estimate (April 2026) is the outlier and is an author's guess"
+          },
+          {
+            "name": "Newsletter share of revenue",
+            "actual": "'Less than 5% of revenue comes from Substack' (Substrate; Asymmetrix)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "At USD 690/year list price and 318,000-plus total subscribers the paid base implied is small; no paid-subscriber count is published"
+          },
+          {
+            "name": "Headcount",
+            "actual": "About 50 analysts (company: 'over 50 analysts'); third-party totals ~60",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company boilerplate versus The Information's count; no total-employee figure is published"
+          },
+          {
+            "name": "Payroll and tooling (founder statements)",
+            "actual": "'$25 million' salary base; Claude Code spend '$7 million' annualised (April 2026), '$11M in eight months' (July 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Patel on Invest Like the Best and Podcast Alpha; the firm is the corpus's one named Anthropic customer by spend"
+          },
+          {
+            "name": "Corporate action",
+            "actual": "Chips & Wafers team joined (announced 1 September 2025; terms undisclosed)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Acquirer and target statements only"
+          }
+        ],
+        "commentary": "Revenue is concentrated in institutional models and consulting: the firm says it sells to 'hyperscalers, neoclouds, many of the world's largest hedge funds, and government agencies', and Asymmetrix reports 'nine of the world's ten largest companies sit among its top 15 customers'. No client is named by the company. Expectations fields are empty by design — no analyst covers a private research LLC."
+      },
+      {
+        "period": "CY2026 (projection and YTD to 2026-10-04)",
+        "periodType": "other",
+        "periodEnd": "2026-10-04",
+        "metrics": [
+          {
+            "name": "Revenue (projection)",
+            "actual": "'expects $100M+ in 2026 revenue' (The Information, 18–19 April 2026); 'projected to beat $100M this year' (Substrate, 18 September 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "A five-fold projection on the 2025 base, company-sourced through two outlets; no half-year actual has been published"
+          },
+          {
+            "name": "Headcount",
+            "actual": "~85 across 11 countries (Odaily, June); ~90 (FourWeekMBA, August); '100 full-time employees' by year-end (Substrate, September); ~100 (Asymmetrix, October); 48 open roles on the careers page (October)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Four third-party counts inside four months, all rising; the company publishes none"
+          },
+          {
+            "name": "SemiAnalysis Capital Fund I, LP (Form D, 2026-07-29)",
+            "actual": "Total offering USD 400,000,000; amount sold USD 0; 'dateOfFirstSale: yetToOccur'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Filed target. Substrate's 'Fund I amount confirmed at $500M' (18 September) is company-confirmed but no Form D/A showing any amount sold was on EDGAR at 2026-10-04 — both figures are stated"
+          },
+          {
+            "name": "SemiAnalysis Capital SPV I and II (Form D, 2026-08-28 and 2026-09-03/16)",
+            "actual": "SPV I USD 20,000,000 fully sold to 20 investors (first sale 26 August 2026); SPV II USD 19,999,728 sold to 32 investors (amended 16 September)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Series of CGF2021 LLC; executive officer SemiAnalysis Capital Management LLC; Dylan Patel signs as Manager"
+          },
+          {
+            "name": "GCW Access-SemiAnalysis Capital Fund I, L.P. (feeder, Form D 2026-08-05)",
+            "actual": "USD 19,825,000 sold to 57 investors; first sale 24 July 2026; investment manager Allocate Management Company, LLC",
+            "expected": "",
+            "verdict": "inline",
+            "result": "A third-party access vehicle, not a SemiAnalysis filing — it shows outside LP demand before the main fund recorded a sale"
+          },
+          {
+            "name": "Corporate action",
+            "actual": "Citrini Research acquired (confirmed to Bloomberg 11 September 2026; price undisclosed); Positron AI Series C (USD 875m at a USD 5bn valuation, 10 September 2026) co-led by SemiAnalysis Capital",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Acquisition terms unpublished; the Positron co-lead is the fund's first named deal"
+          }
+        ],
+        "commentary": "2026 is the year the research LLC acquired a market-strategy publisher, launched a venture fund and two SPVs, and was sued by a former analyst — all while projecting a five-fold revenue year. The structural fact for a reader of this corpus: the same owner now runs a rating system (ClusterMAX), a paid technical-assessment service built on it, institutional models sold to the rated providers' customers and competitors, and a venture fund that invests in the sector it rates. None of the fund's holdings is disclosed on the rating."
+      }
+    ],
+    "commentary": "SemiAnalysis is a founder-owned Florida LLC that files no accounts; every revenue and headcount figure above is a company statement relayed by a named outlet or a third-party count, dated to the piece that carried it, and where two outlets differ both are stated. The SEC record is the exception: the four Form D filings for the SemiAnalysis Capital vehicles are primary and were read from sec.gov. What a reader can rely on without caveat: the USD 70/month and USD 690/year newsletter prices, the 'contact sales' pricing of every model except the USD 10,000 VR NVL72 model, the USD 400m Fund I target with nil sold at filing, and the two fully subscribed USD 20m SPVs."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that ClusterMAX is the firm's distribution engine rather than its revenue line: it is free to read, cited by 31 other dossiers in this corpus, displayed as a badge by CoreWeave, Nebius, Together AI and TensorWave, and converts into paid work three ways the company itself describes — the 'SemiAnalysis Technical Assessment during acceptance testing and monthly SLA performance reviews' sold from the 3.0 post, the AI Cloud TCO Model 'trusted by the world's largest GPU buyers' plugged inside provider reviews, and consulting 'for the people deploying capital'. Basis: the careers page files ClusterMAX under 'Consulting & diligence'; Substrate and Asymmetrix put the newsletter under 5% of revenue; the 2025→2026 revenue path (~USD 20m → >USD 100m projected) coincides with the rating's second and third editions.",
+    "2. **(High confidence)** We assess that the independence record has weakened edition by edition, as a matter of what is printed: 1.0 (March 2025) opened with the compensation disclaimer ('No part of SemiAnalysis's compensation by our clients was, is, or will be directly or indirectly related to the specific tiering'); 2.0 and 3.0 carry no compensation, conflict or staff-investment disclosure, and 3.0 explains Fluidstack's fall to 'Unavailable' without mentioning the USD 50m Fluidstack SPV Patel led. The company's position, relayed by Yahoo Finance in September 2026, is that 'providers cannot purchase their ranking' and 'client compensation is not tied to the ratings'; no evidence of pay-for-rank has been produced by any critic. We note the loudest critic (Hot Aisle's CEO) runs a Bronze-rated provider.",
+    "3. **(Moderate confidence)** We assess that the rated providers are, as a class, also counterparties: InferenceMAX/InferenceX runs on compute donated by Crusoe, CoreWeave, Nebius, TensorWave, Oracle and Together (Nebius's own partner catalogue says it 'supplies compute for InferenceMAX'); 'most providers granted us at least 4 B300 nodes' for 3.0 testing; the 3.0 text refers to 'clients of our industry-leading Datacenter Model' inside the Nebius section. Whether any rated provider pays SemiAnalysis for models, assessments or badge display is undisclosed by every party. The confidence is moderate because the dependency is documented and the payment is not.",
+    "4. **(High confidence)** We assess that the firm has become a market participant in the sector it rates. The SEC record is unambiguous: Fund I (USD 400m target), two fully sold USD 20m SPVs and a USD 19.8m third-party feeder since July 2026; a board seat at Positron AI; reported stakes in about 20 start-ups. The compliance page restricts personal trading in 'hundreds of securities' and bars securities ratings and target prices, but is silent on private-company holdings and on consulting for rated providers — the two exposures that actually exist. For a reader of this corpus the practical rule is: treat a ClusterMAX tier as a technically grounded assessment by a firm with undisclosed commercial and investment ties to several of the rated companies, not as an audit.",
+    "5. **(High confidence)** We assess that the 3.0 edition is materially harsher than 2.0 and that this is the edition the corpus should carry: Gold shrank to two (Oracle, Google); Nebius rose to Platinum; Crusoe fell from Gold to Bronze; Fluidstack, Nscale and HUMAIN went 'Unavailable'; IREN, WhiteFiber and Sharon AI were placed 'Underperforming'; Core42, Vultr and Hyperbolic received a 'Participation Ribbon'. The methodology shift — security as a gate after 'Most Neoclouds Suck At Security' (30 August 2026), auto-remediation and handover delays penalised, hands-on testing of granted B300 nodes — explains most of the movement. Four inbound dossiers (iren, firmus, fluidstack, vertiv) carried 2.0-era or misattributed details and were revised in this session; the remaining 27 held.",
+    "6. **(Moderate confidence)** We assess that the Zhou litigation is a reputational rather than financial exposure. Both matters are in San Francisco Superior Court (not the Northern District, as one earlier dossier text implied); the court compelled arbitration on 20 July 2026 and stayed the case, so nothing further will surface publicly unless an award is confirmed. The allegation that matters to clients — that MNPI from a Patel investment vehicle was pushed into paid models — is unproven and denied, but KuCoin reported in April 2026 that clients had 'begun questioning the firm's confidential data handling practices'. We have no evidence of client loss.",
+    "7. **(Moderate confidence)** We assess that the datacenter-power research line is the firm's bridge into this corpus's grid and power-conversion coverage, and that its forecasts should be read as scenario framing: the 800 VDC series (Part 1, 26 May 2026) gave the four-phase transition and the SST market figure (~USD 32bn by 2030 at '$1.25M/MW') that the vertiv dossier now attributes correctly; the behind-the-meter series put US BTM datacentre capacity 'towards 40GW+' by 2028; the PJM post (16 August 2026) argued a USD 12bn modelling error. These are analyst estimates with stated assumptions, not forecasts the firm is accountable for, and the firm sells the Energy and Industrials Models that underlie them.",
+    "COLLECTION GAPS — (a) no client list: whether any rated provider buys models, assessments or consulting is unknown; (b) no paid-subscriber count, revenue actuals or margin — only The Information's ~USD 20m (2025) and the >USD 100m 2026 projection; (c) no badge-licence terms — clustermax.ai invites 'licensing inquiries' but publishes no fee or policy; (d) Fund I's actual close — USD 400m filed versus USD 500m company-confirmed, with no amount sold on EDGAR at 2026-10-04; (e) the arbitration's outcome, which is private; (f) the full list of SemiAnalysis Capital and Patel personal holdings against the ClusterMAX roster — only Fluidstack (SPV), Positron, Thinking Machines Lab, Enfabrica and Prime Intellect are reported; (g) no first-party photograph or biography of any leader is published.",
+    "INDICATORS TO WATCH — a Form D/A for SemiAnalysis Capital Fund I, LP showing an amount sold (confirms the USD 400m or USD 500m close and dates the fund's investing period); a ClusterMAX 3.1 or 4.0 edition that restores a compensation or holdings disclosure (tests Judgments 2 and 4) or that re-rates Fluidstack, Nscale or HUMAIN from 'Unavailable'; the first rated provider to dispute a tier publicly (none has — Cirrascale sent 'a legal letter' over a description, per the 3.0 text); a confirmed arbitration award or settlement in the Zhou matter; a published client or holdings list; InferenceX hardware provenance moving from provider-donated to independently procured compute; and the cadence promise — 3.0 says ratings refresh roughly every six months, so a 4.0 around March 2027 is the test of whether the system is maintained."
+  ],
+  "sources": [
+    {
+      "label": "Asymmetrix Intelligence — 9 of the World's 10 Largest Companies Read This Substack",
+      "url": "https://asymmetrixintelligence.substack.com/p/9-of-the-worlds-10-largest-companies",
+      "date": "2026-10-01"
+    },
+    {
+      "label": "DigiTimes — China data center capex and capacity expansion (SemiAnalysis figures)",
+      "url": "https://www.digitimes.com/news/a20261001PD218/china-data-center-capex-capacity-expansion.html",
+      "date": "2026-10-01"
+    },
+    {
+      "label": "tech360.tv — ByteDance controls one-fifth of China's data centres for AI (SCMP relay of the China model)",
+      "url": "https://www.tech360.tv/bytedance-controls-one-fifth-of-china-s-data-centers-for-ai",
+      "date": "2026-09-29"
+    },
+    {
+      "label": "SemiAnalysis newsletter — The Chinese AI Infrastructure Boom (China Datacenter Model launch)",
+      "url": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom",
+      "date": "2026-09-25"
+    },
+    {
+      "label": "Yahoo Finance — SemiAnalysis upgrades Nebius, downgrades IREN ('pay to rank' claim and reply)",
+      "url": "https://finance.yahoo.com/video/semianalysis-upgrades-nebius-downgrades-iren-130200247.html",
+      "date": "2026-09-25"
+    },
+    {
+      "label": "24/7 Wall St — Neocloud stocks fall after a week of research notes: IREN −4%, CoreWeave −3%, Nebius −2%",
+      "url": "https://247wallst.com/investing/2026/09/25/neocloud-stocks-fall-as-selling-extends-after-a-week-of-research-notes-iren-drops-4-coreweave-slides-3-nebius-eases/",
+      "date": "2026-09-25"
+    },
+    {
+      "label": "Capital Brief — Firmus is 'up for the challenge' but IREN runs '#1 worst site' (Jordan Nanos quoted)",
+      "url": "https://www.capitalbrief.com/article/silicon-valleys-top-ai-scrutineer-says-firmus-is-up-for-the-challenge-but-iren-runs-1-worst-site-74ce1b6f-95fb-482d-a5de-6f3752cc758e/",
+      "date": "2026-09-24"
+    },
+    {
+      "label": "FourWeekMBA — SemiAnalysis redraws the neocloud tier map (ClusterMAX 3.0)",
+      "url": "https://fourweekmba.com/ai-chatgpt-voice-tools-gemini-4-post-training-clustermax-3-neoc/",
+      "date": "2026-09-24"
+    },
+    {
+      "label": "SemiAnalysis newsletter — ClusterMAX 3.0: The Industry Standard (tiers; Technical Assessment service)",
+      "url": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "remio.ai — ClusterMAX 3.0 ratings return and cheap GPU clouds face a harder test",
+      "url": "https://www.remio.ai/post/clustermax-3-0-ratings-return-and-cheap-gpu-clouds-face-a-harder-test",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "Crypto Briefing — CoreWeave earns Platinum ClusterMAX rating for the third time",
+      "url": "https://www.cryptobriefing.com/coreweave-platinum-clustermax-rating-third-time/",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "CoreWeave — release: only provider to earn SemiAnalysis Platinum ClusterMAX rating three consecutive times",
+      "url": "https://www.coreweave.com/news/coreweave-becomes-the-only-provider-to-earn-semianalysis-platinum-clustermax-tm-rating-three-consecutive-times",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "Nebius — Rated Platinum in ClusterMAX 3.0",
+      "url": "https://nebius.com/blog/posts/nebius-platinum-clustermax-3-0",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "Substrate — Dylan Patel Profile: Inside SemiAnalysis (Cat Tang)",
+      "url": "https://substratemag.com/dylanpatel/",
+      "date": "2026-09-18"
+    },
+    {
+      "label": "SEC EDGAR — Form D/A, SemiAnalysis Capital SPV II (USD 19,999,728, 32 investors)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2151312/000215131226000002/primary_doc.xml",
+      "date": "2026-09-16"
+    },
+    {
+      "label": "PANews — Bloomberg: SemiAnalysis acquires Citrini Research",
+      "url": "https://panews.io/articles/01a09462-27b6-7783-b3a1-dea75e9eb362",
+      "date": "2026-09-12"
+    },
+    {
+      "label": "KuCoin — SemiAnalysis acquires Citrini Research; founder to remain CEO",
+      "url": "https://www.kucoin.com/news/flash/semianalysis-acquires-citrini-research-founder-to-remain-ceo",
+      "date": "2026-09-12"
+    },
+    {
+      "label": "SemiAnalysis newsletter — What is So Hard About Behind-The-Meter Power For Datacenters? Part 1",
+      "url": "https://newsletter.semianalysis.com/p/what-is-so-hard-about-behind-the",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "PR Newswire — Positron AI raises $875 million at a $5 billion valuation (SemiAnalysis Capital co-lead; Patel joins board)",
+      "url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "SemiAnalysis newsletter — Most Neoclouds Suck At Security",
+      "url": "https://newsletter.semianalysis.com/p/most-neoclouds-suck-at-security",
+      "date": "2026-08-30"
+    },
+    {
+      "label": "SEC EDGAR — Form D, SemiAnalysis Capital SPV I (USD 20m, 20 investors)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2147974/000214797426000001/primary_doc.xml",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "aiweekly — SemiAnalysis Core Research eyes $100M year on buy-side demand",
+      "url": "https://aiweekly.co/alerts/semianalysis-core-research-eyes-100m-year-on-buy-side-demand",
+      "date": "2026-08-19"
+    },
+    {
+      "label": "SemiAnalysis newsletter — $12B of US ratepayers' money wasted on a modeling mistake (PJM)",
+      "url": "https://newsletter.semianalysis.com/p/12b-of-us-ratepayers-money-wasted",
+      "date": "2026-08-16"
+    },
+    {
+      "label": "SEC EDGAR — Form D, GCW Access-SemiAnalysis Capital Fund I, L.P. (feeder; USD 19.825m, 57 investors)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2142619/000101297526000722/primary_doc.xml",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "FourWeekMBA — SemiAnalysis Is Raising a $400 Million Fund (compute-intelligence flywheel)",
+      "url": "https://fourweekmba.com/ai-semianalysis-400-million-fund-compute-intelligence-flywheel/",
+      "date": "2026-08-03"
+    },
+    {
+      "label": "The Information — Exclusive: SemiAnalysis's Dylan Patel Targets $400 Million Venture Capital Fund (Julia Hornstein)",
+      "url": "https://www.theinformation.com/briefings/exclusive-semianalysis-dylan-patel-targets-400-million-venture-capital-fund",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "SEC EDGAR — Form D, SemiAnalysis Capital Fund I, LP (USD 400m target; nil sold)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2145695/000090514826003383/primary_doc.xml",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "UniCourt — SemiAnalysis LLC v. Wei Zhou docket (arbitration compelled 2026-07-20; CMC 2026-08-26)",
+      "url": "https://unicourt.com/case/ca-sfc-casebk9d44a7eda595-763022",
+      "date": "2026-07-27"
+    },
+    {
+      "label": "Nebius — partner catalogue: SemiAnalysis ('supplies compute for InferenceMAX')",
+      "url": "https://nebius.com/partner-catalog/semianalysis",
+      "date": "2026-07-13"
+    },
+    {
+      "label": "Podcast Alpha — Dylan Patel of SemiAnalysis: the $11M Claude Code bill",
+      "url": "https://podcastalpha.substack.com/p/dylan-patel-of-semianalysis-the-11m",
+      "date": "2026-07-10"
+    },
+    {
+      "label": "SemiAnalysis newsletter — US Grid Constraints: Towards 40GW+ of Behind-The-Meter Datacenter by 2028?",
+      "url": "https://newsletter.semianalysis.com/p/us-grid-constraints-towards-40gw",
+      "date": "2026-06-25"
+    },
+    {
+      "label": "KuCoin / Odaily — SemiAnalysis founder Dylan Patel, from beekeeper to semiconductor influencer",
+      "url": "https://www.kucoin.com/news/flash/semianalysis-founder-dylan-patel-from-beekeeper-to-semiconductor-industry-influencer",
+      "date": "2026-06-19"
+    },
+    {
+      "label": "Odaily — From 'hardware enthusiasts' to AI's 'Muddy Waters' (~85 staff, 11 countries)",
+      "url": "https://www.odaily.news/en/post/5211329",
+      "date": "2026-06-12"
+    },
+    {
+      "label": "RealClear AI — SemiAnalysis: 20 gigawatts in 2026",
+      "url": "https://www.realclear.ai/blog/semianalysis-20-gigawatts-2026",
+      "date": "2026-06-11"
+    },
+    {
+      "label": "Hedgehog — The Sell Math: How ClusterMAX 2.0 ratings translate into revenue (vendor marketing)",
+      "url": "https://hedgehog.cloud/blog/the-sell-math-how-clustermax-2.0-ratings-translate-into-revenue",
+      "date": "2026-06-08"
+    },
+    {
+      "label": "SemiAnalysis newsletter — Inside the 800VDC Revolution, Part 1 (four phases; SST ~$32B by 2030)",
+      "url": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "BigGo — How the 800V DC revolution is reshaping a multi-billion-dollar power equipment market",
+      "url": "https://finance.biggo.com/news/wpuCZZ4BDXrLZJaAMptK",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "All-Weather Finance — SemiAnalysis in-depth analysis: under the wave of 800VDC the power equipment market is being reshaped",
+      "url": "https://allweatherfinance.com/semianalysis-in-depth-analysis-under-the-wave-of-800vdc-the-power-equipment-market-is-quietly-being-reshaped/",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "BigGo — SemiAnalysis's $7 Million AI Token Bill (Invest Like the Best)",
+      "url": "https://finance.biggo.com/news/49e997a69909cc52",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "SemiAnalysis newsletter — How Much Do GPU Clusters Really Cost?",
+      "url": "https://newsletter.semianalysis.com/p/how-much-do-gpu-clusters-really-cost",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "clustermax.ai — provider review pages (2.0/2.1 consolidated list)",
+      "url": "https://www.clustermax.ai/cloudreview/nscale",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "KuCoin / ME News — SemiAnalysis revenue surges to $100M amid legal dispute over report bias",
+      "url": "https://www.kucoin.com/news/flash/semianalysis-revenue-surges-to-100m-amid-legal-dispute-over-report-bias",
+      "date": "2026-04-18"
+    },
+    {
+      "label": "The Information — Dylan Patel's SemiAnalysis Projects Over $100 Million in 2026 Revenue (Abram Brown)",
+      "url": "https://www.theinformation.com/briefings/dylan-patels-semianalysis-projects-100-million-2026-revenue",
+      "date": "2026-04-18"
+    },
+    {
+      "label": "BigGo — 29-Year-Old Founder Builds AI Research Empire (The Information relay)",
+      "url": "https://finance.biggo.com/news/KPbYnp0BvthpMgHBApty",
+      "date": "2026-04-18"
+    },
+    {
+      "label": "Longbridge / Wallstreetcn — lawsuit coverage",
+      "url": "https://longbridge.com/en/news/281699561",
+      "date": "2026-04-05"
+    },
+    {
+      "label": "All-Weather Finance — lawsuit coverage (Fluidstack Gold tier flagged)",
+      "url": "https://allweatherfinance.com/semianalysis-the-influencer-chip-research-platform-is-being-sued-by-its-former-core-employee-accused-of-pushing-major-non-public-information-to-clients-and-inserting-ceos-personal-agend/",
+      "date": "2026-04-05"
+    },
+    {
+      "label": "Dylan Patel on X — statement on the Zhou litigation",
+      "url": "https://x.com/dylan522p/status/2040382363591487990",
+      "date": "2026-04-04"
+    },
+    {
+      "label": "More Than Moore (Ian Cutress) — Dylan Patel's SemiAnalysis Is Being Sued",
+      "url": "https://morethanmoore.substack.com/p/dylan-patels-semianalysis-is-being",
+      "date": "2026-04-04"
+    },
+    {
+      "label": "SemiWiki forum — lawsuit thread with Patel statement",
+      "url": "https://semiwiki.com/forum/threads/dylan-patels-semianalysis-is-being-sued.24882/",
+      "date": "2026-04-04"
+    },
+    {
+      "label": "Trellis — Summons, Wei Zhou v. SemiAnalysis LLC et al., CGC-26-635374",
+      "url": "https://trellis.law/doc/277803622/summons-issued-transaction-id-78902535-to-plaintiff-zhou-wei",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "Docket Alarm — SemiAnalysis LLC v. Wei Zhou, CGC-26-635328",
+      "url": "https://www.docketalarm.com/cases/California_State_San_Francisco_County_Superior_Court/CGC-26-635328/SEMIANALYSIS_LLC_VS._WEI_ZHOU/10130362/",
+      "date": "2026-03-27"
+    },
+    {
+      "label": "Silicon Data — SiliconMark vs. InferenceX (hardware provenance critique)",
+      "url": "https://www.silicondata.com/blog/siliconmark-vs.-inferencex",
+      "date": "2026-03-04"
+    },
+    {
+      "label": "SemiAnalysis newsletter — Are AI Datacenters Increasing Electric Bills for American Households?",
+      "url": "https://newsletter.semianalysis.com/p/are-ai-datacenters-increasing-electric",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "HotHardware — AMD calls SemiAnalysis MI455X delay report 'BS'",
+      "url": "https://hothardware.com/news/amd-naysays-mi400-delay",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "SemiAnalysis newsletter — InferenceX v2: NVIDIA Blackwell vs AMD (rename)",
+      "url": "https://newsletter.semianalysis.com/p/inferencex-v2-nvidia-blackwell-vs",
+      "date": "2026-02-16"
+    },
+    {
+      "label": "SemiAnalysis — Terms & Conditions (Florida governing law; Denver legal address)",
+      "url": "https://semianalysis.com/terms-and-conditions/",
+      "date": "2026-01-13"
+    },
+    {
+      "label": "Hot Aisle (Jon Stevens) — Influence as a Service: SemiAnalysis Under the Microscope (author's firm is Bronze-rated)",
+      "url": "https://jon4hotaisle.substack.com/p/influence-as-a-service-semianalysis",
+      "date": "2025-12-02"
+    },
+    {
+      "label": "Motley Fool boards — NeoCloud rankings from SemiAnalysis (2.0 discussion)",
+      "url": "https://discussion.fool.com/t/neocloud-rankings-from-semianalysis/122030",
+      "date": "2025-11-07"
+    },
+    {
+      "label": "SemiAnalysis newsletter — ClusterMAX 2.0: The Industry Standard",
+      "url": "https://newsletter.semianalysis.com/p/clustermax-20-the-industry-standard",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "TensorWave — Our ClusterMAX rank confirms the AI cloud we've been building",
+      "url": "https://tensorwave.com/blog/our-clustermax-rank-confirms-the-ai-cloud-weve-been-building",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "Business Wire — CoreWeave ClusterMAX 2.0 Platinum release",
+      "url": "https://www.businesswire.com/news/home/20251105957267/en/",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "Crusoe — The new AI benchmark: unlocking real-world performance with InferenceMAX by SemiAnalysis",
+      "url": "https://www.crusoe.ai/resources/blog/the-new-ai-benchmark-unlocking-real-world-performance-with-inferencemax-by-semianalysis",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "GIGAZINE — SemiAnalysis launches InferenceMAX AI hardware benchmark (supporter list)",
+      "url": "https://gigazine.net/gsc_news/en/20251014-semianalysis-inferencemax-ai-hardware-benchmark/",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "LMSYS — SGLang and NVIDIA on InferenceMAX",
+      "url": "https://www.lmsys.org/blog/2025-10-14-sa-inference-max/",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "Irrational Analysis — SemiAnalysis InferenceMAX launch",
+      "url": "https://irrationalanalysis.substack.com/p/semianalysis-clustermax-launch-surprising",
+      "date": "2025-10-10"
+    },
+    {
+      "label": "SemiAnalysis newsletter — InferenceMAX: Open Source Inference Benchmarking (launch)",
+      "url": "https://newsletter.semianalysis.com/p/inferencemax-open-source-inference",
+      "date": "2025-10-09"
+    },
+    {
+      "label": "Techzine — Colossus 2 should propel xAI to the top of the AI race (SemiAnalysis report)",
+      "url": "https://www.techzine.eu/news/infrastructure/135207/colossus-2-should-propel-xai-to-the-top-of-the-ai-race/",
+      "date": "2025-09-02"
+    },
+    {
+      "label": "Chips & Wafers — Chips and Wafers is joining SemiAnalysis",
+      "url": "https://chipsandwafers.substack.com/p/chips-and-wafers-is-joining-semianalysis",
+      "date": "2025-09-01"
+    },
+    {
+      "label": "Yet Another Value Blog — SemiAnalysis's Jeremie Eliahou Ontiveros podcast",
+      "url": "https://www.yetanothervalueblog.com/p/semianalysis-jeremie-eliahou-ontiveros-5b1",
+      "date": "2025-08-18"
+    },
+    {
+      "label": "uspto.report — SEMIANALYSIS trademark serial 99336949",
+      "url": "https://uspto.report/TM/99336949",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "Blocks & Files — CoreWeave tops new GPU cloud rankings from SemiAnalysis (1.0 tiers)",
+      "url": "https://www.blocksandfiles.com/ai-ml/2025/04/03/coreweave-tops-new-gpu-cloud-rankings-from-semianalysis/1604431",
+      "date": "2025-04-03"
+    },
+    {
+      "label": "Together AI — Awarded ClusterMAX Gold (carries the 1.0 independence disclaimer)",
+      "url": "https://www.together.ai/blog/clustermax-gold",
+      "date": "2025-03-27"
+    },
+    {
+      "label": "SemiAnalysis newsletter — The GPU Cloud ClusterMAX Rating System (1.0; compensation disclaimer)",
+      "url": "https://newsletter.semianalysis.com/p/the-gpu-cloud-clustermax-rating-system-how-to-rent-gpus",
+      "date": "2025-03-26"
+    },
+    {
+      "label": "TechSerai — The epic merger of SemiAnalysis and Fabricated Knowledge",
+      "url": "https://www.techserai.com/p/the-epic-merger-of-semianalysis-and",
+      "date": "2024-11-16"
+    },
+    {
+      "label": "Stratechery — An interview with Dylan Patel and Doug O'Laughlin about semiconductors and SemiAnalysis",
+      "url": "https://stratechery.com/2024/an-interview-with-dylan-patel-and-doug-olaughlin-about-the-current-state-of-semiconductors-and-semianalysis/",
+      "date": "2024-11-14"
+    },
+    {
+      "label": "SemiAnalysis — Privacy Policy",
+      "url": "https://semianalysis.com/privacy-policy/",
+      "date": "2024-11-04"
+    },
+    {
+      "label": "SemiAnalysis newsletter — Datacenter Industry Model launch",
+      "url": "https://newsletter.semianalysis.com/p/datacenter-model",
+      "date": "2024-02-03"
+    },
+    {
+      "label": "SemiAnalysis — About (self-description; 'more than 318,000 subscribers'; three ways in)",
+      "url": "https://semianalysis.com/about/"
+    },
+    {
+      "label": "SemiAnalysis — Homepage",
+      "url": "https://semianalysis.com/"
+    },
+    {
+      "label": "SemiAnalysis — Careers (48 roles; 'SemiAnalysis LLC participates in the E-Verify program'; Venture department; 'over 50 analysts')",
+      "url": "https://semianalysis.com/careers/"
+    },
+    {
+      "label": "SemiAnalysis — Models & Research index",
+      "url": "https://semianalysis.com/models-research/"
+    },
+    {
+      "label": "SemiAnalysis — Compliance policies (not a FINRA member; Series 16 review; trading pre-approval; no securities ratings)",
+      "url": "https://semianalysis.com/compliance-polices/"
+    },
+    {
+      "label": "SemiAnalysis — Newsletter Subscription Policy",
+      "url": "https://semianalysis.com/newsletter-subscription-policy/"
+    },
+    {
+      "label": "SemiAnalysis — Accelerator & HBM Model",
+      "url": "https://semianalysis.com/accelerator-hbm-model/"
+    },
+    {
+      "label": "SemiAnalysis — Datacenter Industry Model (product page)",
+      "url": "https://semianalysis.com/datacenter-industry-model/"
+    },
+    {
+      "label": "SemiAnalysis — China Datacenter Model (product page)",
+      "url": "https://semianalysis.com/china-datacenter-model/"
+    },
+    {
+      "label": "SemiAnalysis — AI Cloud TCO Model",
+      "url": "https://semianalysis.com/ai-cloud-tco-model/"
+    },
+    {
+      "label": "SemiAnalysis — AI Networking Model",
+      "url": "https://semianalysis.com/ai-networking-model/"
+    },
+    {
+      "label": "SemiAnalysis — Wafer Fab Equipment Model",
+      "url": "https://semianalysis.com/wafer-fab-model/"
+    },
+    {
+      "label": "SemiAnalysis — Foundry Industry Model",
+      "url": "https://semianalysis.com/foundry-industry-model/"
+    },
+    {
+      "label": "SemiAnalysis — Memory Model",
+      "url": "https://semianalysis.com/memory-model/"
+    },
+    {
+      "label": "SemiAnalysis — Energy Model",
+      "url": "https://semianalysis.com/energy-model/"
+    },
+    {
+      "label": "SemiAnalysis — Industrials Model",
+      "url": "https://semianalysis.com/industrials-model/"
+    },
+    {
+      "label": "SemiAnalysis — Tokenomics Model",
+      "url": "https://semianalysis.com/tokenomics-model/"
+    },
+    {
+      "label": "SemiAnalysis — Core Research",
+      "url": "https://semianalysis.com/core-research/"
+    },
+    {
+      "label": "SemiAnalysis — Cache Up",
+      "url": "https://semianalysis.com/cache-up/"
+    },
+    {
+      "label": "SemiAnalysis — ChipBook",
+      "url": "https://semianalysis.com/chipbook/"
+    },
+    {
+      "label": "SemiAnalysis — Space DC TCO Model",
+      "url": "https://semianalysis.com/space-dc-tco/"
+    },
+    {
+      "label": "SemiAnalysis — VR NVL72 Model (USD 10,000)",
+      "url": "https://semianalysis.com/vr-nvl72-model/"
+    },
+    {
+      "label": "SemiAnalysis — Compute Capital & Markets (coming soon)",
+      "url": "https://semianalysis.com/compute-capital-and-markets/"
+    },
+    {
+      "label": "SemiAnalysis — GPU Pricing Index",
+      "url": "https://semianalysis.com/gpu-pricing-index/"
+    },
+    {
+      "label": "SemiAnalysis newsletter — About ('© 2026 Dylan Patel')",
+      "url": "https://newsletter.semianalysis.com/about"
+    },
+    {
+      "label": "SemiAnalysis newsletter — Subscribe (USD 70/month, USD 690/year; first post 2020-05-22)",
+      "url": "https://newsletter.semianalysis.com/subscribe"
+    },
+    {
+      "label": "SemiAnalysis newsletter — byline roster API",
+      "url": "https://newsletter.semianalysis.com/api/v1/publication/users/ranked?public=true"
+    },
+    {
+      "label": "clustermax.ai — home, v1/v2/v2.1/v3 tier lists, criteria, quotes, legal notice",
+      "url": "https://clustermax.ai/"
+    },
+    {
+      "label": "InferenceX — About",
+      "url": "https://inferencex.semianalysis.com/about"
+    },
+    {
+      "label": "InferenceX — Supporters and quotes",
+      "url": "https://inferencex.semianalysis.com/quotes"
+    },
+    {
+      "label": "GitHub — SemiAnalysisAI/InferenceX (README, LICENSE)",
+      "url": "https://github.com/SemiAnalysisAI/InferenceX"
+    },
+    {
+      "label": "SemiAnalysis newsletter — How AI Labs Are Solving the Power Crisis: The Onsite Gas Deep Dive",
+      "url": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power"
+    },
+    {
+      "label": "SemiAnalysis newsletter — sitemap 2026",
+      "url": "https://newsletter.semianalysis.com/sitemap/2026"
+    },
+    {
+      "label": "SEC EDGAR — full-text search, 'SemiAnalysis', Form D",
+      "url": "https://efts.sec.gov/LATEST/search-index?q=%22SemiAnalysis%22&forms=D"
+    },
+    {
+      "label": "OpenCorporates — SEMIANALYSIS LLC, Florida L22000096118 (registered agent Dylan S Patel)",
+      "url": "https://opencorporates.com/companies/us_fl/L22000096118"
+    },
+    {
+      "label": "Origins Media — Dylan Patel (University of Georgia; Cairo, Georgia)",
+      "url": "https://originsmedia.substack.com/p/dylan-patel"
+    },
+    {
+      "label": "CoreWeave — SemiAnalysis landing page (badge display)",
+      "url": "https://www.coreweave.com/semianalysis"
+    },
+    {
+      "label": "vCluster Labs — ClusterMAX criteria coverage page",
+      "url": "https://www.vcluster.com/clustermax"
+    },
+    {
+      "label": "Muck Rack — Wayne Ma, Writer and Analyst, SemiAnalysis",
+      "url": "https://muckrack.com/wayne-ma"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}

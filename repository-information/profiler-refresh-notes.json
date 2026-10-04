@@ -2278,6 +2278,43 @@
         "ENR 2026 Top 600 Specialty Contractors (2026-10-22): the rank against Quanta and the 2025 revenue figure.",
         "Named customers: any hyperscaler or developer named in a filing, call or release — none exists as of October 2026."
       ]
+    },
+    "anza": {
+      "source": "PRIVATE — Anza RE, LLC, a Delaware LLC owned by an ECP-led consortium (Energy Transition Opportunities Fund, Angeleno Group) since May 2023; no earnings clock, no filings, no revenue disclosure. A cadence row swept quarterly, tier watch (advisor set, as dnv / csa-group / sargent-lundy / kwh-analytics). First-party record: anzarenewables.com press-release archive (PR Newswire mirrors), the quarterly 'Pricing Insights' snapshots, blogs and webinars — all served over plain curl in October 2026; the Wayback Machine was blocked and three 2022–2024 release permalinks now redirect. Third-party: pv magazine USA, pv-tech, Solar Builder and Utility Dive quote each quarterly report; OpenCorporates for the registry; LinkedIn/PitchBook for headcount estimates only.",
+      "watch": [
+        "The next data-coverage claim and its denominator: '95% of the U.S. battery market' (March 2026 release) against '85% of current suppliers' (September 2026 blog) — whether any Q2/Q3 2026 storage report defines what the percentage is of",
+        "Any funding round, recapitalisation or sale: ECP's Energy Transition Opportunities Fund is closed with Anza as its last deal (May 2023); the sister entities ANZA RE BUYER, LLC and ANZA RE HOLDINGS, LLC suggest a sponsor holding structure",
+        "The Transformer Procurement Service's first named client — above all a data-centre developer — its MW/MVA and the OEM; whether Anza Exchange leaves alpha",
+        "4 December 2026 (Section 232 effective) and 24 December 2026 (DOE bulk-power rules): whether the import-price floor Anza published holds and how fast the FCC/EO 14421 filters update",
+        "Reconciliation of the company's own volume figures (BESS POs 4.7 vs 7 vs 8 GWh; 2025 safe-harbor 15 customers/1.2 GW vs 11/1.1 GW) on its next release",
+        "Any supplier withdrawing from the platform or disputing a ranking, or any outlet questioning the index-plus-procurement-fee model",
+        "Chesterton check: Anza publishes no revenue, headcount or subscription price — do not import LinkedIn (84 listed), PitchBook (86) or Built In (77) counts as facts; the 'founded' year differs by milestone (2021 platform, 2022 launch, 2023 LLC and separation)"
+      ]
+    },
+    "semianalysis": {
+      "source": "PRIVATE — SemiAnalysis LLC, a Florida LLC owned by founder Dylan Patel; no earnings clock, no filings by the operating company, revenue only as reported by The Information (~USD 20m 2025; >USD 100m projected 2026). A cadence row swept quarterly, tier watch (advisor set, as anza / dnv / kwh-analytics). First-party record: semianalysis.com product pages, the Substack newsletter (paid posts served as previews; the public text of each ClusterMAX edition is the tier anchor), clustermax.ai, inferencex.semianalysis.com, and the fund's Form D filings on sec.gov (read with SEC_USER_AGENT). Third-party: The Information (paywalled; relayed by Techmeme/BigGo/KuCoin/FourWeekMBA), Substrate, Asymmetrix, UniCourt and Docket Alarm for the San Francisco Superior Court dockets, Yahoo Finance and 24/7 Wall St for market reaction.",
+      "watch": [
+        "The next ClusterMAX edition (3.0 said roughly six-monthly, so around March 2027): any tier move for coreweave, nebius, crusoe, lambda, iren, fluidstack, nscale, firmus, whitefiber, g42/core42, humain or alibaba-cloud, and whether a compensation, conflict or holdings disclosure returns to the post",
+        "A Form D/A for SemiAnalysis Capital Fund I, LP showing an amount sold — the USD 400m filed target against the USD 500m company-confirmed figure — and any new SPV series",
+        "The Zhou arbitration: a confirmed award, settlement or dismissal in CGC-26-635328 / CGC-26-635374; the CMC calendar after 2026-08-26",
+        "A published client list, badge-licence terms or rated-provider dispute (none exists; Cirrascale's 'legal letter' is the only one the firm has mentioned)",
+        "InferenceX hardware provenance — whether compute remains provider-donated — and the next InferenceX or ClusterX release",
+        "Any revision to the 800 VDC series (the ~USD 32bn-by-2030 SST figure) or the behind-the-meter 40 GW+ forecast that the vertiv, amperesand, dg-matrix and power-conversion dossiers cite",
+        "Acquisitions after Citrini Research (September 2026) and the headcount passing 100"
+      ]
+    },
+    "epri": {
+      "source": "NON-PROFIT — Electric Power Research Institute, Inc., a member-funded 501(c)(3) (DC domicile on the Form 990 through FY2024; Delaware certificate now posted). Two fixed disclosure clocks: Deloitte-audited consolidated statements each April (publicdownload.epri.com) and the IRS Form 990 each November (ProPublica full-text renders). A cadence row swept quarterly, tier watch (advisor set). First-party record: epri.com press releases (served through the GraphQL API at apim.epri.com; the SPA returns only 'EPRI Home' to curl), restservice.epri.com public attachments (board rosters, DCFlex notice, white papers), dcflex.epri.com deliverables, openpowerai.org, eprijournal.com, europe.epri.com. Third-party: Utility Dive, Latitude Media, Daily Energy Insider, Public Power, T&D World, POWER, DCD/DCK; OpenCorporates for the California registrations; USAspending for federal awards.",
+      "watch": [
+        "Flex MOSAIC final framework (due by October 2026) and the first ISO, RTO or state tariff that adopts a MOSAIC class — PJM and ERCOT first",
+        "The 96 MW Aurora AI Factory in Manassas going live 'late 2026' (EPRI, NVIDIA, Emerald AI, Compass) and the measured flexibility it delivers",
+        "FY2025 Form 990 (due November 2026): the Delaware domicile, headcount, CEO compensation and the DOE award position; the FY2026 audited statements in April 2027",
+        "A board chair transition in 2027 following Michael Innocenzo's announced Exelon departure; the 2027 slate",
+        "The BESS Failure Incident Database annual update — the 2025 incident count and per-GW rate the kwh-analytics and storage dossiers will cite",
+        "Open Power AI: an open-weights model release (none exists; NIM early access only) or the next WattWorks benchmark; SAFERai.power's risk framework",
+        "DCFlex's planned end 'by the end of 2027' — renewal, a numbered programme, or a standing body; membership count past 'more than 65'",
+        "Any EPRI statement on transformer lead times (none found) and the next Bobby Noble gas-turbine lead-time figure the mitsubishi-power dossier would carry"
+      ]
     }
   }
 }

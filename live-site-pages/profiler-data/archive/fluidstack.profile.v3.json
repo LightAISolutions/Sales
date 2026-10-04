@@ -24,7 +24,7 @@
         "Home page (2026): 'We build technology to enable delivery of gigawatts of compute in 6 months rather than the industry's 18-24 months'; jobs page: 'We build gigawatt-scale data centers from the ground up, delivered in months'.",
         "Anthropic (12 November 2025) chose Fluidstack 'for its ability to move with exceptional agility, enabling rapid delivery of gigawatts of power'; the programme is 'USD 50 billion' of 'custom-built data centers designed specifically for Anthropic's workloads' in Texas and New York, 'with additional sites planned', 'approximately 800 permanent jobs and 2,400 construction jobs', sites 'expected to come online throughout 2026'.",
         "Contracted lease positions per the landlords' filings: Lake Mariner NY 378 MW critical IT (three 10-year leases, ~USD 6.7 billion initial term); Abernathy TX 168 MW (25-year hosting term, ~USD 9.5 billion); Barber Lake TX 207 MW (10-year, ~USD 3.8 billion); River Bend LA 245 MW (15-year triple-net, USD 7.0 billion); New Lebanon IN 430 MW (15-year master lease behind USD 5.7 billion of Meridian Arc notes).",
-        "SemiAnalysis ClusterMAX 2.0 (November 2025, Gold tier, one of five Gold-tier clouds — Nebius, Oracle, Azure, Crusoe and Fluidstack — among 84 providers rated, per the 2.0 executive summary): Fluidstack has 'the most unique business model' and is 'effectively the hired gun that organizations go to in order to turn bronze-tier datacenter infrastructure into a gold-tier customer experience'; 'the speed at which the Fluidstack team addressed issues was unmatched in all our testing'.",
+        "SemiAnalysis ClusterMAX 2.0 (November 2025, Gold tier, one of six among 84 providers): Fluidstack has 'the most unique business model' and is 'effectively the hired gun that organizations go to in order to turn bronze-tier datacenter infrastructure into a gold-tier customer experience'; 'the speed at which the Fluidstack team addressed issues was unmatched in all our testing'.",
         "First-party project sites for owned developments: Sullivan County, Indiana ('a USD 65 billion development', 2027 start, leased 'exclusively to American tenants', USD 50 million of community payments) and Okmulgee, Oklahoma (first phase September 2027, final September 2028, Jane Street as first tenant, AEP-PSO power, 'Fluidstack is paying for all of the energy and energy infrastructure')."
       ],
       "positioning": "Against CoreWeave, Nebius, Lambda and Crusoe — which own or finance GPUs and, increasingly, buildings — Fluidstack owns almost nothing: measuredai's July 2026 analysis calls it 'the pure tenant-operator' that 'owns zero buildings across its five U.S. sites while managing operations through five bankruptcy-remote tenant SPVs'. Its differentiator is a Google credit wrap that no other neocloud carries; its weakness is that the same wrap makes it replaceable — Anthropic signed its 401 MW Kentucky lease with TeraWulf directly in July 2026 with no Fluidstack involvement.",
@@ -1708,6 +1708,6 @@
       "url": "https://efts.sec.gov/LATEST/search-index?q=Fluidstack&dateRange=custom&startdt=2025-01-01&enddt=2026-09-04"
     }
   ],
-  "lastUpdated": "2026-10-04",
-  "profileVersion": 4
+  "lastUpdated": "2026-10-02",
+  "profileVersion": 3
 }

@@ -1,0 +1,1772 @@
+{
+  "schemaVersion": 7,
+  "slug": "epri",
+  "name": "Electric Power Research Institute, Inc.",
+  "shortName": "EPRI",
+  "categories": [
+    "advisor"
+  ],
+  "website": "https://www.epri.com/",
+  "headquarters": "3420 Hillview Avenue, Palo Alto, California 94304 (Form 990 principal office); principal offices and laboratories also in Charlotte, North Carolina; Knoxville, Tennessee; and Lenox, Massachusetts (Schedule O), with offices in Dallas and Washington, D.C., and EPRI Europe DAC in Dublin",
+  "founded": 1972,
+  "employees": "1,475 (Form 990 FY2024, Part I line 5); 1,455 (FY2023); 1,373 (FY2022); the About page says 'more than 1,300 employees'",
+  "ownership": {
+    "type": "non-profit (501(c)(3) scientific research organization; member-funded)",
+    "ticker": "",
+    "notes": "A non-stock, non-profit corporation with no owners. Legal domicile: the Form 990 header gives 'State of legal domicile: DC' through the FY2024 return (filed 2025-11-14) and Schedule O cites 'the Nonprofit Corporation Code of the District of Columbia'; the certificate of incorporation and bylaws EPRI now posts describe 'a Non-Stock, Nonprofit Delaware Corporation' with its registered office at 1209 Orange Street, Wilmington, and California registered a new foreign-corporation branch of a Delaware EPRI in 2026 — a redomestication whose date neither document states. California is only the principal-office state (Wikipedia's 'California' incorporation is wrong). EIN 23-7175375; IRS ruling September 1972; governed by a 37-member board elected by five membership classes, with permanent seats for the Tennessee Valley Authority and the Bonneville Power Administration"
+  },
+  "summary": "BOTTOM LINE UP FRONT: EPRI is the utility industry's own USD 500-million-a-year research cooperative — a 501(c)(3) funded about half by fixed annual membership dues from utilities that 'represent 90% of the electricity generated and delivered in the United States' and half by supplemental projects those members and others buy into — and since October 2024 it has run DCFlex, the one forum where the hyperscalers (Google, Meta, Microsoft, Oracle, NVIDIA), the data-centre landlords (Compass, QTS) and the utilities and grid operators (Duke, Constellation, Southern, Dominion, PG&E, ERCOT, PJM) test together whether an AI campus can be a flexible load; its BESS Failure Incident Database is the statistic every battery-safety conversation in this corpus quotes. BACKGROUND. Founded 1972 by Chauncey Starr after the 1965 Northeast blackout; a District of Columbia non-profit corporation through its FY2024 Form 990, now presenting Delaware governing documents; principal office Palo Alto with laboratories in Charlotte, Knoxville and Lenox. Finances (audited, Deloitte): total revenues USD 509.6 million in 2025 (491.7 million in 2024; 466.6 million in 2023), of which membership USD 244.4 million and supplemental USD 261.8 million; a USD 6.7 million surplus in 2025 after deficits of 10.6 million (2024) and 14.0 million (2023); net assets USD 153.6 million. Form 990 FY2024: total revenue USD 503,197,591, expenses 516,331,444, 1,475 employees, CEO Arshad Mansoor paid USD 2,132,369 plus 737,890 other. Members: 'more than 450 companies in 45 countries'; research organised in four sectors (Nuclear — about USD 184 million of 2025 expense — Generation, Energy Delivery & Customer Solutions, Technology Innovation) across 99 programmes in the 2026 portfolio, including Program 94 Energy Storage and Distributed Generation (USD 5.5 million, 2026). Data-centre work runs through the DCFlex supplemental project (launched 29 October 2024 with 15 founding members; 'more than 60 companies' by February 2026; nine demonstration sites; a published price list from USD 50,000 to USD 325,000 a year by funder type), the Open Power AI Consortium (20 March 2025, with NVIDIA), Flex MOSAIC (March 2026) and the Powering Intelligence load forecasts (9–17 percent of US electricity by 2030, February 2026). Collection gaps: the Delaware redomestication date, the DCFlex membership roster in full, per-programme revenue, and whether DCFlex's 'public' deliverables are readable without an EPRI.com account (four were not).",
+  "ecosystemRole": "The corpus's eleventh `advisor` and the only non-profit among them: where DNV, UL Solutions and Intertek sell certificates and independent-engineer reports to one client at a time, EPRI sells collaborative research to the utilities that buy from and interconnect everyone else in this corpus — the gatekeepers — and publishes the parts of it that set the industry's shared facts: the failure-rate statistics behind every BESS safety argument ('9.2 incidents per gigawatt in 2018 to 0.2 per gigawatt in 2023'; '72% of failures … within two years'), the data-centre load forecast regulators and DOE cite, the Flex MOSAIC flexibility classes, the ESIC commissioning guides and the DER-VET storage valuation tool. Its seat in the AI-power chain is DCFlex: EPRI 'oversees' the demonstrations in which Emerald AI, Oracle, NVIDIA and Salt River Project cut a GPU cluster's draw 25 percent for three hours, Google and Duke choreograph workloads in Lenoir, and National Grid and Nebius curtail an AI cluster in London — the evidence on which 'flexible large load' tariffs and interconnection rules are being written. Independence: EPRI 'do[es] not advocate for any specific company, sector, or technology', but its funding is the utilities' and 'the vast majority of its board members are utility executives' (Energy & Policy Institute), with an NVIDIA executive seated as an external director since 2025. Assurance seat decision: EPRI tests (battery burn tests, the HVO backup-generator field test, the DER interoperability lab), writes guidelines and runs ESIC, but it issues no certificate, listing or lender's report — the `assurance` adjacent seat is granted on the testing-and-guidelines line and the basis says so.",
+  "productsAndServices": [
+    {
+      "name": "Research programmes — the membership product (99 programmes, four sectors)",
+      "category": "Collaborative R&D membership",
+      "description": "A fixed-price annual membership that buys a seat on programme committees ('Each member company that invests in a research program is entitled to appoint committee members to represent it'), the programme's deliverables (reports, software, databases, training), and 'the support of EPRI researchers and technical advisors'. The 2026 portfolio lists 99 programmes across Nuclear, Generation, Energy Delivery & Customer Solutions and Technology Innovation, plus the Low-Carbon Resources Initiative and Climate READi workstreams. Membership revenue: USD 244.4 million (2025), 238.5 million (2024), 237.1 million (2023) — about 48 percent of revenue; 'Existing Product Credits' accrue only to multi-year members.",
+      "highlights": [
+        "Governance of the product (EPRI's words): 'Program Committees — Work with us within each research program to define scope, assess priorities, and determine the best mechanisms to deliver the results of our work'; 'More than 1,400 leaders and technical experts from the electricity sector, academia and government help EPRI develop and conduct its research'.",
+        "Program 94 Energy Storage and Distributed Generation (ED&CS; 2026 budget '$5.5M'): 'advance the integration and use of safe, reliable, affordable, environmentally responsible energy storage, distributed generation, and microgrids'; members gain 'technology evaluation, economic and technical modeling, testing and field demonstration, safety practices … community engagement'; deliverables named — the Energy Storage Roadmap, ESIC ('eighteen published guidelines, tools, and templates'), DER-VET®, the Energy Storage Technology Database (with P221 Bulk Energy Storage), lithium-ion combustion-product burn tests, First Responder Engagement Guidance, the Utility Battery Energy Storage Handbook, StorageWiki with the failure-incident database.",
+        "Nuclear is the largest sector by expense (USD 184.4 million of 513.5 million in 2025): '~$200 million USD in annual funding to support the industry through nuclear R&D'; '150+ Nuclear Deliverables … issued annually'; '$89 – the additional leverage that an average full nuclear member gets for every $1 of funding towards base projects' (Nuclear Sector Value Briefing, August 2025).",
+        "Membership classes (Schedule O): Class I US federal, cooperative, public-power and RTO members (elect eight directors; TVA and BPA each appoint one), Class II regulated domestic utilities (seventeen), Class III non-US utilities and ISOs (six), Class IV non-voting unregulated generators, Class V non-voting others 'supporting a domestic or international program for electric sector research'; the Governance and Nominating Committee appoints seven.",
+        "Reach, as stated: 'EPRI's trusted experts collaborate with more than 450 companies in 45 countries'; members 'represent 90% of the electricity generated and delivered in the United States' (2020 boilerplate; relayed since as EPRI's self-description); 'With more than 1,300 employees' (About) against 1,475 on the FY2024 Form 990."
+      ],
+      "positioning": "The only industry-wide cooperative of its kind in US electricity; 'Rigorously objective in our role and our research, we do not advocate for any specific company, sector, or technology.' The Energy & Policy Institute's critique (August 2025) is the counter-position: about half the funding is utility dues and 'the vast majority of its board members are utility executives'.",
+      "soldThrough": "Direct annual membership agreements with utilities and other eligible organisations, priced on member size (T&D throughput bands appear in the DCFlex price list); multi-year contracts earn Existing Product Credits.",
+      "targetSegments": [
+        "Investor-owned utilities",
+        "Public power, cooperatives and federal utilities",
+        "Non-US utilities and ISOs/RTOs",
+        "Unregulated generators (non-voting class)",
+        "Government agencies and research organisations"
+      ],
+      "roadmap": "The 2026 portfolio is live; a VP for 'AI Power and Data Center Innovation' now sits on the leadership page, signalling a standalone data-centre line beyond the DCFlex supplemental."
+    },
+    {
+      "name": "Supplemental projects and the DCFlex Data Center Flexible Load Initiative",
+      "category": "Supplemental research — data-centre flexibility",
+      "description": "Supplemental projects are the second revenue line, larger than membership since 2024 (USD 261.8 million in 2025; 250.2 million in 2024; 228.0 million in 2023): opt-in, separately funded projects 'offered twice yearly', with 25 percent of a member's annual research funding allocated to self-directed or tailored-collaboration accounts that can be spent on them; non-members may fund them. DCFlex (Project 01-119727) is the flagship: launched 29 October 2024 'to explore how data centers can support the electric grid, enable better asset utilization, improve interconnection, and support the clean energy transition', planned as 'a 3-year initiative … completed by the end of 2027', with five workstreams and nine demonstration sites by February 2026.",
+      "highlights": [
+        "Price list (DCFlex Supplemental Project Notice, September 2025, verbatim): 'Utilities *Large $250K; *Medium $175K; *Small $75K; Generation only $200K; Data Center Developers/Operators $325K; Technology Providers $250K; ISOs, RTOs, and Others $50K; Mgmt Consultant $200k' per year, with utility size set by 'Transmission and Distribution Throughput Basis: Large - T>10,000 or D>44,000; Medium - 10,000>T>5,000 or 44,000>D>15,000; Small - T<5,000 or D<15,000'.",
+        "Founding members (29 October 2024): 'Compass Datacenters, Constellation Energy, Duke Energy, the Electric Reliability Council of Texas (ERCOT), Google, Meta, New York Power Authority, NRG Energy, NVIDIA, Pacific Gas and Electric Company (PG&E), PJM Interconnection, Portland General Electric, QTS Data Centers, Southern Company, and Vistra Corp.' Growth: 'nearly 40 participants, including Dominion Energy, ERCOT, PJM, Google, Microsoft, and Nvidia' (Latitude Media, March 2025, with RTE, ING and PPC joining); 'more than 40 members' (EPRI testimony, June 2025); 'over 45 companies' (August 2025); 'more than 60 companies' (February 2026); Flex MOSAIC 'developed … in collaboration with more than 65' organisations (March 2026); '70+' member logos on dcflex.epri.com.",
+        "Demonstrations: Lenoir, North Carolina (Google and Duke Energy — workload choreography); Phoenix, Arizona (Emerald AI with Oracle, NVIDIA, Databricks, Salt River Project — 'a 25% reduction in cluster power usage for three hours during peak grid events while maintaining AI quality of service', arXiv 2507.00909, 1 July 2025; 256 GPUs); Paris (Data4 with Schneider Electric and RTE — UPS grid support); and, announced 2 February 2026: Chicago (Google and NVIDIA — AI compute flexibility 'in a simulated production environment'), Dallas (HVO renewable diesel in Compass backup generators — public report 29 July 2026), Ashburn–Chicago (geospatial load shifting), Manassas (Compass; 'flexibility by design at commercial scale' — the 96 MW Aurora AI Factory with NVIDIA and Emerald AI, 'late 2026'), London (National Grid, Emerald AI, Nebius, NVIDIA — 'cutting load by up to 30–40% within seconds'), Texas (PADO AI compute-and-HVAC control). A December 2025 GPU-cluster demonstration 'achieved 100% compliance with 200+ power targets, delivering 40% load reductions in under one minute' (EPRI Journal).",
+        "Flex MOSAIC (23 March 2026, CERAWeek): 'a uniform flexibility classification framework for large electric loads' — 'a small set of uniform flexibility classes' (five) — with NERC's Jim Robb and NARUC's Ann Rendahl endorsing; Mansoor: flexibility 'is becoming the third leg of the speed-to-power stool, alongside generation and transmission'; final version planned 'by October 2026'.",
+        "Deliverables (40-plus on dcflex.epri.com, all labelled public): the Reliability Guideline for Emerging Large Loads (December 2025), the Data Center Load Shape Library and web tool, the Retail Flexible Load Tariff dataset ('159 flexible load tariffs from 71 U.S. utilities'), 'Texas SB6 Explained', the Global Survey of Data Center Owners & Operators ('1,126 data center professionals across twelve countries', August 2026), the PJM capacity-crunch Quick Insight. Access caveat: four 'public' PDFs returned 'your company has not purchased the rights to view this item' to an anonymous download — public here means free to registered EPRI.com accounts."
+      ],
+      "positioning": "The only multi-party test bed for data-centre flexibility with hyperscalers, landlords, utilities and grid operators in one project; the Duke Nicholas Institute's 'Rethinking Load Growth' (76–126 GW of headroom at 0.25–1% curtailment) is the academic companion, not an EPRI product. Sceptics on the record: AES's Kleber Costa ('Data center operators do not like to be flexible'), Schneider's Steven Carlini ('it's questionable whether they want to do it'); EPRI's own Anuja Ratnayake: 'If it is banking services or credit card services, there is very little flexibility.'",
+      "soldThrough": "Supplemental project funding agreements by funder type (price list above); members may apply self-directed or tailored-collaboration funds; demonstrations hosted by participating companies at their own sites.",
+      "targetSegments": [
+        "Utilities and generators",
+        "Data-centre developers and operators",
+        "Hyperscalers and AI infrastructure companies",
+        "Technology providers",
+        "ISOs, RTOs and regulators",
+        "Management consultants"
+      ],
+      "roadmap": "Testing 'could run through 2027'; the Manassas 96 MW Aurora site online 'late 2026'; Flex MOSAIC final framework by October 2026; ride-through testing and certification methodologies under development (EPRI Journal, August 2026)."
+    },
+    {
+      "name": "Open Power AI Consortium, SAFERai.power and the AI initiatives",
+      "category": "Consortia — AI for the power sector",
+      "description": "The Open Power AI Consortium (launched 20 March 2025 at NVIDIA GTC) 'to drive the development and deployment of an open AI model tailored for the power sector' — domain-specific models built with Articul8 and NVIDIA and served as an NVIDIA NIM microservice in early access, a sandbox, '130+ free to use datasets', the WattWorks benchmarking hub — with membership 'of EPRI member and non-member utilities, academia, research organizations and national labs, technology companies, hyperscalers and AI infrastructure service providers' contributing 'active participation … sharing data and insights, providing financial and in-kind contributions'; no fee schedule published. SAFERai.power (August 2026) adds an AI risk framework with 'more than two dozen founding' members.",
+      "highlights": [
+        "Launch roster (EPRI release): energy executives from 'ACWA (NOMAC), Alliant Energy, Ameren, Constellation, Con Edison, CPS Energy, Dairyland Power Cooperative, Duke Energy, ENOWA … Exelon, GCC Interconnection Authority, Georgia Transmission Corporation, KEPCO, KHNP, Khalifa University, MISO, North Carolina's Electric Cooperatives, New York Power Authority (NYPA), Pacific Gas and Electric Company (PG&E), Portland General Electric, PPL Corporation, RTE, Santee Cooper, Saudi Electricity Company, Southern Company, Southern California Edison, Tennessee Valley Authority, WEC Energy Group, and Westinghouse Electric Company' with 'key technology companies Articul8, AWS, Linux Foundation Energy, Microsoft, NVIDIA, Oracle, Rolls-Royce SMR Limited, SHI and WWT'.",
+        "Scale as EPRI states it: '300+ Organizations Engaged', '150+ Technology Providers', '120+ Utilities/Energy Companies', '30+ AI Models' (openpowerai.org); '250+' use cases compiled (POWER, August 2025); later joiners Avangrid, Cisco, GE Vernova, Google, Burns & McDonnell, KYRO AI, Landis+Gyr. Check: no open-weights release exists on Hugging Face or GitHub as of 4 October 2026 — the models remain NIM early access.",
+        "First output: 'EPRI Publishes First Electric Sector Benchmarking Results of Public LLMs' (9 December 2025) — '2,100+ questions and answers generated by 94 power sector experts across 35 topics'; GPT-5, Grok 4 and Gemini 2.5 Pro scored 83–86 percent on multiple choice with a '27-percentage-point average accuracy drop' on open-ended questions.",
+        "SAFERai.power (6 August 2026): founders include 'Alliant, Ameren, ATC, Arizona Public Service, Centerpoint Energy, Con Edison, Constellation, Cooperative Energy, CPS Energy, Duke Energy, Exelon, HData, Microsoft, MISO, NERC, Nebraska Public Power District, NYPA, NVIDIA, Omaha Public Power District, Pacific Gas & Electric, PJM Interconnection, Salt River Project, SHI International, Southern California Edison, Southern Company, TVA, WEC Energy Group, World Wide Technology'; deliverables a risk framework, evidence packages and an open-source assessment tool.",
+        "Adjacent: the micro-data-centre collaboration with NVIDIA, Prologis and InfraPartners (3 February 2026) — '5 to 20 megawatts … at or near utility substations', 'at least five pilot sites in development across the U.S. by the end of 2026'."
+      ],
+      "positioning": "The utility industry's collective answer to vendor-led AI; NVIDIA is co-developer, consortium member, DCFlex founder and board member (Marc Spieler, external director since April 2025) — the one technology company present at every layer.",
+      "soldThrough": "Consortium membership (in-kind, data and financial contributions; EPRI members and non-members); outputs via NVIDIA NIM early access, the WattWorks hub and openpowerai.org.",
+      "targetSegments": [
+        "Utilities and grid operators",
+        "Technology companies and hyperscalers",
+        "National labs and universities",
+        "AI vendors to the power sector"
+      ],
+      "roadmap": "AI for Power Challenge (May 2026); model release beyond NIM early access unannounced; SAFERai.power risk framework and assessment tool in development."
+    },
+    {
+      "name": "Energy storage safety research — BESS Failure Incident Database, ESIC, StorageWiki, DER-VET and StorageVET",
+      "category": "Collaborative research and public tools — energy storage",
+      "description": "The storage line sits in Program 94 Energy Storage and Distributed Generation (2026 budget USD 5.5m) and Program 221 Bulk Energy Storage, and most of its output is free to the public: the BESS Failure Incident Database ('initiated in 2021 following the series of lithium ion BESS fires in South Korea and the Surprise, AZ, incident'; events back to 2011), the Energy Storage Integration Council (ESIC, formed 2013, 'eighteen published guidelines, tools, and templates'), StorageWiki, the Battery Storage Fire Safety Roadmap, the open-source DER-VET optimisation tool (an extension of the 2016 StorageVET) and the Energy Storage Test Manual and data-submission guidelines. Funders get project access by login; 'many outputs are publicly released'.",
+      "highlights": [
+        "The failure-rate statistics every BESS safety argument in this corpus leans on: 'Between 2018 and 2023, the global grid-scale BESS failure rate has dropped 97%' (2024 White Paper, free PDF); 9.2 incidents per gigawatt in 2018 to 0.2 in 2023, eight incidents worldwide in 2024 against a 53 percent rise in deployment (as cited in the California Energy Commission docket 25-OPT-02, February 2026); 'dropping 98% from 2018 to 2024' (EPRI-authored chapter in kWh Analytics' Solar Risk Assessment 2025); the live database page now says 99 percent 2018–2025.",
+        "Root cause: the TWAICE/EPRI/PNNL study (15 May 2024) analysed 81 incidents, 26 with enough information to assign a cause; '72% of failures in systems whose age is known occurred during construction, the commissioning process or within two years of becoming operational' — 'integration, assembly and construction' led the assigned causes, not cells.",
+        "Government reliance: DOE's Energy Storage Safety Strategic Plan (April 2024) cites the ESIC Energy Storage Commissioning Guide and seated EPRI alongside UL Solutions, CSA Group and DNV on its advisory board; the California Energy Commission's final report CEC-500-2024-010 (February 2024) validated DER-VET ('downloaded by over 200 unique users') and recorded 'over 60 monthly task force meetings' run through ESIC.",
+        "Burn testing: 'Performed battery module burn testing to identify and quantify emitted gases and particulate matter' (P94); Lithium Ion Combustion Product Characterization; First Responder Engagement Guidance; Utility Battery Energy Storage Handbook; Decommissioning and Recycling Assessment (Cedartown case study).",
+        "Partnerships: MOU with Energy Storage Canada (29 September 2025); the CMBlu organic-flow pilot at WEC Energy's Valley plant (2023) 'in collaboration with' EPRI; Energy Dome feasibility studies listed under Bulk Energy Storage."
+      ],
+      "positioning": "The reference dataset, not a certificate: EPRI records and analyses incidents and writes guidelines, while UL 9540A tests are run by UL Solutions, TÜV and others and listings are issued by certification bodies — EPRI issues none. Its StorageWiki entry on Moss Landing ('300 MW / 1,200 MWh … LG Energy Solution … 4.1 years old') is the neutral record the trade press cites.",
+      "soldThrough": "Programme membership (P94, P221) and supplemental funding; ESIC 'Membership is open'; the database, white papers, roadmap and DER-VET are free downloads; non-members can buy reports ('SALE OF R&D REPORTS 752,871', FY2024 Form 990).",
+      "targetSegments": [
+        "Utilities and storage owners",
+        "Storage developers and integrators (through ESIC)",
+        "Fire marshals, first responders and permitting authorities",
+        "Regulators and state energy agencies",
+        "Insurers and independent engineers who cite the database"
+      ],
+      "roadmap": "2026 P94 objectives: 'Safety hazard investigation', 'Performance and reliability assessment — Develop databases', end-of-life and second-use research, critical-materials supply chain."
+    },
+    {
+      "name": "Powering Intelligence — data-centre load forecasts and the large-load research corpus",
+      "category": "Public research — load forecasting and grid integration",
+      "description": "The forecast the US power system argues over: Powering Intelligence (May 2024) put data centres at 4.6–9.1 percent of US generation by 2030; the 2026 update (26 February 2026, report 3002034696) raised it to 9–17 percent (380–790 TWh) from a 4–5 percent 2024 base, 'about 60% higher than EPRI projected in 2024', with Virginia at 41–59 percent of state load and AI at 15–25 percent of data-centre electricity. Around it sit the joint report with Epoch AI (11 August 2025: 'training a leading model could require more than 4 gigawatts (GW) of power by 2030'), the state-level projections PNNL republished as the 'IM3 + EPRI Data Center Load Projections' dataset (December 2025), Texas SB6 Explained, the Reliability Guideline for Emerging Large Loads (December 2025) and the FERC co-location technical-conference summary.",
+      "highlights": [
+        "How government cites it: DOE's Office of Electricity web page — 'EPRI estimates that data centers could grow to consume up to 9% of U.S. electricity generation annually by 2030'; LBNL's Large Load Literature Review (November 2025) catalogues six EPRI items and an EPRI utility survey finding 'almost half of the utilities have data center interconnection requests that exceed 50% of their present system peak demand'.",
+        "Position on the pipeline: 'announced nominal capacity for data center projects should be treated as a pipeline indicator rather than a near-term peak forecast'; on supply: 'Under current state and federal policies, natural gas dominates near-term incremental supply… if data centers adopt and achieve 24/7 carbon-free energy targets, renewable and battery additions dominate'.",
+        "Gas-turbine lead times, as EPRI's Bobby Noble states them: 'orders having a lead time as long as seven years, but most of them are in that five-year period' (August 2025); large turbines 'more than five years', small '18 to 36 months', prices 'from roughly $2,000/kW to $3,000/kW' in six months (March 2026). No EPRI statement on transformer lead times was found.",
+        "Reliability work: ride-through curves published or proposed by 'ERCOT, SPP, AESO, RTE, Fingrid, EirGrid, and Energinet' catalogued (EPRI Journal, August 2026); 'Managing Oscillating Load Impacts from Data Centers on Synchronous Machines'; 'Assessing Subsynchronous Torsional Interactions with Respect to AI Training Loads'; 'state regulators approved 29 large-load tariffs in 2025' and a dataset of '159 flexible load tariffs from 71 U.S. utilities'.",
+        "Nuclear-and-data-centre line: 'Advanced Nuclear Technology: A Guide for Co-locating Data Centers with Nuclear Plants' (April 2025); Jeremy Renshaw's House Science testimony (12 June 2025); a Nuclear and Data Center Integration Workshop (July 2025)."
+      ],
+      "positioning": "The industry's own forecast rather than a consultancy's — cited by DOE, LBNL, PNNL and the CEC because its authors are the utilities' research arm; its ranges are wide by design and the 2026 revision moved the whole band up.",
+      "soldThrough": "Public reports and briefs (free PDFs via restservice.epri.com; some 'public' DCFlex items require epri.com registration); underlying programme work funded by members.",
+      "targetSegments": [
+        "Utilities and resource planners",
+        "ISOs/RTOs and reliability bodies",
+        "State regulators and legislators",
+        "Data-centre developers",
+        "Federal agencies and national labs"
+      ],
+      "roadmap": "Powering Intelligence refreshes roughly every two years; Flex MOSAIC final framework by October 2026; a VP for AI Power and Data Center Innovation now owns the line."
+    },
+    {
+      "name": "Laboratories, testing, training and technical services",
+      "category": "Billable services and member benefits",
+      "description": "Laboratories in Charlotte (North Carolina), Knoxville (Tennessee) and Lenox (Massachusetts) do the physical work behind the research: battery-module burn tests, the Nondestructive Evaluation Performance Demonstration Lab ('approximately $20M in samples for the industry' used to qualify inspectors under 10 CFR 50.55a Appendix VIII), the DER Interoperability Lab at Knoxville (August 2026), the DCFlex Dallas field test of renewable diesel (HVO) in a Compass backup generator (public report, 29 July 2026). 'BILLABLE SERVICES' were USD 18,198,066 on the FY2024 Form 990. Training: 'Hundreds of on-demand technical training modules'; 'More than 40,000 professional development hours (PDH) earned by Members through training interactions over the last two years' (nuclear).",
+      "highlights": [
+        "Software suites delivered as member benefits: StorageVET and DER-VET (storage), DCFlex Load Shape Library web tool (July 2026), WattWorks AI benchmarking hub, Tech Radar and Tech Portal (Technology Innovation), and for nuclear the Phoenix Architect suite, Radwaste Hub and the IDKVP digital twin.",
+        "Federal cost-reimbursable work is a growing line: 'cost-reimbursable federal and state contracts and grants' revenue USD 67.3m (2025), 34.4m (2024), 27.5m (2023) per the audited statements; USAspending shows DOE obligations of USD 181.3m from October 2019 to September 2026, with a USD 75.1m spike in FY2024; USD 428,000 of FY2025 federal expenditure is excluded pending 'termination appeals with the U.S. Department of Energy' on five awards.",
+        "Events: EPRI Summer Seminar, European Workshop Week, Technology Transfer Awards, Incubatenergy Labs Challenge; EPRI Europe DAC (Dublin) runs FLEXIT and DCFlex in Europe; EPRI Gulf serves the GCC members."
+      ],
+      "positioning": "Member-funded capability rather than a competitive testing business — EPRI does not seek accreditation as a certification body and its laboratories qualify people and characterise hazards rather than list products.",
+      "soldThrough": "Programme membership, supplemental funding, cost-reimbursable federal and state contracts, and billable services to members.",
+      "targetSegments": [
+        "Nuclear operators (NDE qualification)",
+        "Utilities (training, interoperability testing)",
+        "Federal and state agencies (contract research)",
+        "Data-centre and backup-power operators (field tests)"
+      ],
+      "roadmap": "DER Interoperability Lab and working group (Knoxville, 2026); ride-through 'testing and certification methodologies' under development in DCFlex — the one place EPRI has said the word certification."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Revenue and expenses — audited consolidated statements (Deloitte; USD thousands)",
+      "specs": [
+        {
+          "band": "Audited",
+          "label": "Membership revenue",
+          "value": "FY2025: 244,374 · FY2024: 238,547 · FY2023: 237,077"
+        },
+        {
+          "band": "Audited",
+          "label": "Supplemental revenue",
+          "value": "FY2025: 261,765 · FY2024: 250,179 · FY2023: 228,007"
+        },
+        {
+          "band": "Audited",
+          "label": "Other revenue",
+          "value": "FY2025: 3,450 · FY2024: 2,929 · FY2023: 1,563"
+        },
+        {
+          "band": "Audited",
+          "label": "Total revenues",
+          "value": "FY2025: 509,589 · FY2024: 491,655 · FY2023: 466,646"
+        },
+        {
+          "band": "Audited",
+          "label": "Nuclear expense",
+          "value": "FY2025: 184,375 · FY2024: 180,695 · FY2023: 182,527"
+        },
+        {
+          "band": "Audited",
+          "label": "Generation expense",
+          "value": "FY2025: 79,914 · FY2024: 82,157 · FY2023: 81,869"
+        },
+        {
+          "band": "Audited",
+          "label": "Integrated grid and energy systems",
+          "value": "FY2025: 67,382 · FY2024: 65,980 · FY2023: 62,359"
+        },
+        {
+          "band": "Audited",
+          "label": "T&D infrastructure",
+          "value": "FY2025: 67,528 · FY2024: 64,409 · FY2023: 59,564"
+        },
+        {
+          "band": "Audited",
+          "label": "Electrification and sustainable energy",
+          "value": "FY2025: 55,527 · FY2024: 52,066 · FY2023: 46,557"
+        },
+        {
+          "band": "Audited",
+          "label": "Technology innovation",
+          "value": "FY2025: 31,903 · FY2024: 34,494 · FY2023: 33,618"
+        },
+        {
+          "band": "Audited",
+          "label": "Low Carbon Resources Initiative",
+          "value": "FY2025: 21,112 · FY2024: 23,404 · FY2023: 20,627"
+        },
+        {
+          "band": "Audited",
+          "label": "Climate READi",
+          "value": "FY2025: 5,741 · FY2024: 11,468 · FY2023: 8,532"
+        },
+        {
+          "band": "Audited",
+          "label": "Total expenses",
+          "value": "FY2025: 513,482 · FY2024: 514,673 · FY2023: 495,653"
+        },
+        {
+          "band": "Audited",
+          "label": "Change in net assets",
+          "value": "FY2025: +6,652 · FY2024: −10,580 · FY2023: −14,047"
+        },
+        {
+          "band": "Audited",
+          "label": "Net assets, end of year",
+          "value": "FY2025: 153,609 · FY2024: 146,957 · FY2023: 157,537"
+        },
+        {
+          "band": "Audited",
+          "label": "Federal/state cost-reimbursable revenue",
+          "value": "FY2025: 67,297 · FY2024: 34,425 · FY2023: 27,464"
+        }
+      ],
+      "notes": "Deloitte & Touche LLP opinions dated 24 April 2025 (FY2024) and 23 April 2026 (FY2025). Membership dues are booked as exchange-transaction programme revenue, so the Form 990 shows zero contributions. Operating deficits in 2023 and 2024 preceded a USD 6.65m surplus in 2025; deferred revenue (current) USD 146.5m at end-2025."
+    },
+    {
+      "product": "IRS Form 990 (EIN 23-7175375; calendar years; USD)",
+      "specs": [
+        {
+          "band": "Form 990",
+          "label": "State of legal domicile",
+          "value": "FY2024 (filed 2025-11-14): DC · FY2023: DC · FY2022: DC"
+        },
+        {
+          "band": "Form 990",
+          "label": "Employees (Part I line 5)",
+          "value": "FY2024 (filed 2025-11-14): 1,475 · FY2023: 1,455 · FY2022: 1,373"
+        },
+        {
+          "band": "Form 990",
+          "label": "Voting board members / independent",
+          "value": "FY2024 (filed 2025-11-14): 37 / 37 · FY2023: 36 / 36 · FY2022: 37 / 37"
+        },
+        {
+          "band": "Form 990",
+          "label": "Program service revenue",
+          "value": "FY2024 (filed 2025-11-14): 488,718,548 · FY2023: 464,996,285 · FY2022: 440,236,183"
+        },
+        {
+          "band": "Form 990",
+          "label": "Total revenue",
+          "value": "FY2024 (filed 2025-11-14): 503,197,591 · FY2023: 478,660,003 · FY2022: 445,795,227"
+        },
+        {
+          "band": "Form 990",
+          "label": "Total expenses",
+          "value": "FY2024 (filed 2025-11-14): 516,331,444 · FY2023: 498,259,253 · FY2022: 461,607,672"
+        },
+        {
+          "band": "Form 990",
+          "label": "Net assets, end of year",
+          "value": "FY2024 (filed 2025-11-14): 138,711,034 · FY2023: 151,420,180 · FY2022: 167,463,050"
+        },
+        {
+          "band": "Form 990",
+          "label": "Unrelated business revenue",
+          "value": "FY2024 (filed 2025-11-14): 78,919,815 · FY2023: 60,055,086 · FY2022: 45,582,647"
+        },
+        {
+          "band": "Form 990",
+          "label": "President & CEO reportable compensation",
+          "value": "FY2024 (filed 2025-11-14): 2,132,369 (+737,890 other) · FY2023: 2,107,021 · FY2022: 1,583,402"
+        }
+      ],
+      "notes": "Full-text renders via ProPublica Nonprofit Explorer. The 990's total revenue exceeds the audited figure because it adds investment income, royalties and report sales. FY2024 Part VIII: membership fee revenue 238,546,787; supplemental funding 231,973,695; billable services 18,198,066. Audit flags on the FY2024 and FY2025 returns: a 'significant deficiency in internal controls… less severe than a material weakness' and first-class or charter travel for officers."
+    },
+    {
+      "product": "DCFlex Supplemental Project Notice — price list (September 2025, per funder per year)",
+      "specs": [
+        {
+          "band": "Price list",
+          "label": "Utilities — Large (T>10,000 or D>44,000)",
+          "value": "$250K"
+        },
+        {
+          "band": "Price list",
+          "label": "Utilities — Medium",
+          "value": "$175K"
+        },
+        {
+          "band": "Price list",
+          "label": "Utilities — Small (T<5,000 or D<15,000)",
+          "value": "$75K"
+        },
+        {
+          "band": "Price list",
+          "label": "Generation only",
+          "value": "$200K"
+        },
+        {
+          "band": "Price list",
+          "label": "Data Center Developers/Operators",
+          "value": "$325K"
+        },
+        {
+          "band": "Price list",
+          "label": "Technology Providers",
+          "value": "$250K"
+        },
+        {
+          "band": "Price list",
+          "label": "ISOs, RTOs, and Others",
+          "value": "$50K"
+        },
+        {
+          "band": "Price list",
+          "label": "Mgmt Consultant",
+          "value": "$200k"
+        }
+      ],
+      "notes": "Product 3002031004. 'DCFlex is planned to be a 3-year initiative launched in late 2024 and be completed by the end of 2027.' Utility size by 'Transmission and Distribution Throughput Basis'. Technical contacts David Porter and Anuja Ratnayake."
+    },
+    {
+      "product": "BESS failure statistics EPRI publishes (as cited)",
+      "specs": [
+        {
+          "band": "Failure data",
+          "label": "Global grid-scale failure rate, 2018→2023",
+          "value": "Value: 9.2 → 0.2 incidents per GW (−97%) · Source: 2024 White Paper; CEC docket 25-OPT-02"
+        },
+        {
+          "band": "Failure data",
+          "label": "Incidents worldwide in 2024",
+          "value": "Value: 8, against +53% deployment · Source: CEC docket 25-OPT-02 (February 2026)"
+        },
+        {
+          "band": "Failure data",
+          "label": "2018→2024 decline",
+          "value": "Value: 98% · Source: kWh Analytics SRA 2025, EPRI chapter"
+        },
+        {
+          "band": "Failure data",
+          "label": "Incidents analysed / with assigned root cause",
+          "value": "Value: 81 / 26 · Source: TWAICE-EPRI-PNNL study, May 2024"
+        },
+        {
+          "band": "Failure data",
+          "label": "Failures in construction, commissioning or first two years (known-age systems)",
+          "value": "Value: 72% · Source: Utility Dive, 21 May 2024"
+        }
+      ],
+      "notes": "The 72 percent is of failures with a known system age (64 of 81 at the time) and the window is construction, commissioning or the first two years of operation — not strictly 'two years of installation'."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-01",
+      "category": "leadership",
+      "headline": "Board roster 'As of September 01, 2026': Michael Innocenzo (Exelon) chair, Matthew Ketschke (Con Edison) first vice chair, Lisa Barton (Alliant) second vice chair; NVIDIA's Marc Spieler the one external technology director (term 2029); TVA and BPA permanent seats",
+      "read": "Thirty-seven directors, nearly all utility executives — the governance fact behind both EPRI's convening power and the independence critique",
+      "source": "https://restservice.epri.com/publicattachment/100149"
+    },
+    {
+      "date": "2026-08-26",
+      "category": "project",
+      "headline": "DCFlex publishes the Global Survey of Data Center Owners & Operators (report 3002035987): '1,126 data center professionals across twelve countries'",
+      "read": "The largest operator survey on flexibility yet; the initiative is now producing market data, not just demonstrations",
+      "source": "https://dcflex.epri.com/deliverables"
+    },
+    {
+      "date": "2026-08-25",
+      "category": "leadership",
+      "headline": "Exelon's Form 8-K: board chair Michael Innocenzo 'will depart from his roles as Executive Vice President and Chief Operating Officer of Exelon, President and Chief Executive Officer of PECO… effective in 2027'",
+      "read": "EPRI's sitting chair is leaving the utility post that qualified him; a mid-term chair change is likely in 2027",
+      "source": "https://www.sec.gov/Archives/edgar/data/1109357/000110935726000084/exc-20260825.htm"
+    },
+    {
+      "date": "2026-08-06",
+      "category": "product-launch",
+      "headline": "SAFERai.power launched 'building on work from EPRI's Open Power AI (OPAI) consortium' — more than two dozen founders including Microsoft, NVIDIA, NERC, PJM, MISO, Duke, Exelon, Southern, PG&E, TVA, WEC Energy; deliverables a risk framework, evidence packages and an open-source assessment tool",
+      "read": "Mansoor: 'AI is ready to transform how the power system operates — but only if we make it trustworthy in the real world'; EPRI positions itself as the sector's AI safety convener",
+      "source": "https://dailyenergyinsider.com/news/53357-epri-launches-saferai-power-initiative-to-establish-ai-risk-framework-for-electric-utilities/"
+    },
+    {
+      "date": "2026-08-05",
+      "category": "project",
+      "headline": "EPRI Journal 'Large Load Ride-Through for Data Centers': DCFlex pursuing 'improving consistency in ride-through requirements and developing testing and certification methodologies'; ERCOT, SPP, AESO, RTE, Fingrid, EirGrid and Energinet curves catalogued",
+      "read": "The first EPRI statement that reaches toward a certification methodology — the basis on which the assurance seat was weighed",
+      "source": "https://eprijournal.com/large-load-ride-through-for-data-centers/"
+    },
+    {
+      "date": "2026-07-29",
+      "category": "project",
+      "headline": "Public report: 'DCFlex Demonstration of Cleaner Backup Power: Field-Validated Emissions Performance of HVO in Data Center Backup Generators' (3002036362) from the Dallas Compass Datacenters site",
+      "read": "Backup generators as a grid resource is the DCFlex workstream with the fewest dependencies on the hyperscalers' software",
+      "source": "https://dcflex.epri.com/deliverables"
+    },
+    {
+      "date": "2026-06-26",
+      "category": "project",
+      "headline": "Utility Dive: 'In late 2026, EPRI, NVIDIA, Emerald AI and their partners plan to bring the 96-MW Aurora AI Factory online in Manassas, Virginia' — flexibility by design at commercial scale; Schneider's Steven Carlini: 'it's questionable whether they want to do it'",
+      "read": "Aurora is the first DCFlex site built flexible rather than retrofitted — the test of whether the thesis survives a commercial build",
+      "source": "https://www.utilitydive.com/news/data-centers-flexibility-utilities-speed-to-power/822588/"
+    },
+    {
+      "date": "2026-05-05",
+      "category": "leadership",
+      "headline": "Innocenzo elected chair, Ketschke first vice chair; ten new directors including Ed Baine (Dominion Energy Virginia), Joseph Bergstein (PPL CFO), Brian Bolster (NextEra Energy Resources), Dan Eggers (Constellation), Phillip May (Entergy Louisiana), Lanny Nickell (SPP)",
+      "read": "Dominion returns to the board through Baine (not Robert Blue); PPL stays through its CFO after Vince Sorgi's chairmanship ended in 2025",
+      "source": "https://dailyenergyinsider.com/news/52174-epri-board-names-new-leadership-board-members/"
+    },
+    {
+      "date": "2026-04-23",
+      "category": "financial",
+      "headline": "Deloitte opinion on the FY2025 consolidated statements: total revenues USD 509,589k (membership 244,374k; supplemental 261,765k); expenses 513,482k; change in net assets +6,652k; net assets 153,609k",
+      "read": "The first surplus after two deficit years; supplemental funding has out-earned dues for a third year",
+      "source": "https://publicdownload.epri.com/PublicAttachmentDownload.svc/AttachmentId=98274"
+    },
+    {
+      "date": "2026-04-06",
+      "category": "project",
+      "headline": "EPRI Europe: 'the UK's first live DCFlex demonstration, delivered with National Grid, Emerald AI, Nebius, NVIDIA, and EPRI… cutting load by up to 30–40% within seconds'; ESB and Kraken join",
+      "read": "The London site is the one DCFlex demonstration on a neocloud's hardware — Nebius's",
+      "source": "https://europe.epri.com/press-releases/dcflex-momentum-builds-across-europe"
+    },
+    {
+      "date": "2026-03-23",
+      "category": "product-launch",
+      "headline": "Flex MOSAIC launched at CERAWeek: 'a uniform flexibility classification framework for large electric loads' with five classes, built 'in collaboration with more than 65 utilities, system operators, regulators, hyperscalers, and technology providers'; NERC's Jim Robb and NARUC's Ann Rendahl quoted; final version due by October 2026",
+      "read": "Mansoor: flexibility 'is becoming the third leg of the speed-to-power stool, alongside generation and transmission' — the framework is the product DCFlex was built to produce",
+      "source": "https://www.globenewswire.com/news-release/2026/03/23/3260463/0/en/epri-launches-flex-mosaic-to-reduce-time-to-power-for-data-centers.html"
+    },
+    {
+      "date": "2026-02-26",
+      "category": "market",
+      "headline": "Powering Intelligence 2026: 'EPRI projects data centers to consume 9% to 17% of U.S. electricity by 2030, up from 4% to 5% today… about 60% higher than EPRI projected in 2024'; Virginia 41–59 percent of state load",
+      "read": "The forecast every utility IRP and state tariff debate now cites — and EPRI's own caution that announced capacity is 'a pipeline indicator rather than a near-term peak forecast'",
+      "source": "https://www.epri.com/about/media-resources/press-release/trb5wwt7oemdbkaamxrccqkq2ktteae8"
+    },
+    {
+      "date": "2026-02-03",
+      "category": "partnership",
+      "headline": "EPRI, NVIDIA, Prologis and InfraPartners to produce 'micro data centers—ranging from 5 to 20 megawatts—at or near utility substations', with 'at least five pilot sites in development across the U.S. by the end of 2026'",
+      "read": "Stranded distribution capacity as a siting strategy; NVIDIA's Spieler: 'unlock stranded power to scale AI inference efficiently'",
+      "source": "https://www.epri.com/about/media-resources/press-release/dzagwmfxgarse2g2s9ma4telm5gxqsbt"
+    },
+    {
+      "date": "2026-02-02",
+      "category": "capacity",
+      "headline": "DCFlex expands to nine demonstration sites: Chicago (Google, NVIDIA), Dallas (HVO backup fuel), Ashburn–Chicago geospatial load shifting, Manassas (Compass, under construction), London (National Grid, Nebius), Texas (PADO AI with LG); partners 'Compass Datacenters, Constellation, Emerald AI, Google, National Grid, Nebius, NVIDIA, Oracle, PADO AI'",
+      "read": "From three test beds to nine in eight months, with the first purpose-built site; David Porter: 'a powerhouse coalition'",
+      "source": "https://www.prnewswire.com/news-releases/epris-dcflex-initiative-expands-to-nine-demonstration-sites-across-us-europe-302676241.html"
+    },
+    {
+      "date": "2025-12-15",
+      "category": "product-launch",
+      "headline": "RADAR launched — 'EPRI Launches Global Effort to Prepare Future-Ready Grids'; founding members Duke Energy, PG&E, RTE and SSE",
+      "read": "A fourth flexibility-era initiative beside DCFlex, FLEXIT and OPAI",
+      "source": "https://www.epri.com/about/media-resources/press-release/paizyqqkovecyn82v5gbhdroqrdmet7y"
+    },
+    {
+      "date": "2025-12-09",
+      "category": "product-launch",
+      "headline": "First electric-sector benchmarking of public LLMs (WattWorks): '2,100+ questions and answers generated by 94 power sector experts across 35 topics'; GPT-5, Grok 4 and Gemini 2.5 Pro 83–86 percent on multiple choice with a '27-percentage-point average accuracy drop' on open-ended questions",
+      "read": "OPAI's first public deliverable is a benchmark, not an open model — the open-weights release has not appeared",
+      "source": "https://www.prnewswire.com/news-releases/epri-publishes-first-electric-sector-benchmarking-results-of-public-llms-302635785.html"
+    },
+    {
+      "date": "2025-12-02",
+      "category": "project",
+      "headline": "'Reliability Guideline: Risk Mitigation for Emerging Large Loads' (3002034368) published, with the 2025 DCFlex Demonstration Projects Update and 'Supply-Side Technology Pathways To Meet Future U.S. Data Center Demand' in the same month",
+      "read": "The reliability guideline is the document grid operators cite when they write large-load interconnection rules",
+      "source": "https://dcflex.epri.com/deliverables"
+    },
+    {
+      "date": "2025-11-14",
+      "category": "financial",
+      "headline": "FY2024 Form 990 filed (signed by Swati Daji): total revenue USD 503,197,591; expenses 516,331,444; 1,475 employees; CEO Arshad Mansoor reportable compensation 2,132,369 plus 737,890 other; 'State of legal domicile: DC'",
+      "read": "The public record of a USD 500m cooperative — and the document that fixes the DC domicile the Delaware certificate later supersedes",
+      "source": "https://projects.propublica.org/nonprofits/full_text/202543189349303899/IRS990"
+    },
+    {
+      "date": "2025-09-29",
+      "category": "partnership",
+      "headline": "MOU with Energy Storage Canada 'to create a practical platform for collaboration… across Canada and North America'; ESIC described as formed in 2013 with resources 'free to all'",
+      "read": "Extends ESIC's open storage-integration work into the Canadian market",
+      "source": "https://www.energystoragecanada.org/blog-3-1/epri-energy-storage-canada-sign-mou-to-accelerate-energy-storage-innovation-across-north-america"
+    },
+    {
+      "date": "2025-08-26",
+      "category": "product-launch",
+      "headline": "FLEXIT launched — 'EPRI Drives Grid Flexibility with Streamlined DER Integration'; 'more than two dozen initial members representing 45% of U.S. electricity customers' including Duke, Dominion, Southern, PG&E, NYPA, Xcel, Exelon utilities",
+      "read": "DER interoperability as the distribution-side companion to DCFlex",
+      "source": "https://www.epri.com/about/media-resources/press-release/vx3WvfIlz6k6GTvk857R5IH7izR1Rug8"
+    },
+    {
+      "date": "2025-08-21",
+      "category": "market",
+      "headline": "EPRI's Bobby Noble on gas turbines, in Utility Dive's report on Mitsubishi Power's M501JAC delivery to Georgia Power: 'I've heard orders having a lead time as long as seven years, but most of them are in that five-year period'",
+      "read": "The lead-time quote the mitsubishi-power dossier carries — confirmed verbatim and held",
+      "source": "https://www.utilitydive.com/news/georgia-power-natural-gas-turbine-delivery-delays-mitsubishi/758252/"
+    },
+    {
+      "date": "2025-08-11",
+      "category": "partnership",
+      "headline": "EPRI–Epoch AI joint report: 'training a leading model could require more than 4 gigawatts (GW) of power by 2030'; DCFlex 'brings together over 45 companies' with first field demonstrations in Lenoir, Phoenix and Paris",
+      "read": "EPRI borrows a frontier-AI forecaster's model-scaling curve to size the load its members must serve",
+      "source": "https://www.epri.com/about/media-resources/press-release/ood6gzwpcqjeuq7dngaq6n4ywomeleq7"
+    },
+    {
+      "date": "2025-08-06",
+      "category": "market",
+      "headline": "Energy & Policy Institute critique: EPRI 'receives about half of its funding—more than $238 million in 2024—from membership dues paid by utilities' and 'the vast majority of its board members are utility executives'; its SMARTargets methodology 'could enable utilities to scale back climate targets'",
+      "read": "The independence critique on the record; EPRI 'did not directly respond to questions about its failure to disclose utility funding'",
+      "source": "https://energyandpolicy.org/epri-smartargets/"
+    },
+    {
+      "date": "2025-07-01",
+      "category": "project",
+      "headline": "Phoenix DCFlex result published (arXiv 2507.00909; Emerald AI with Oracle, NVIDIA, Databricks, Salt River Project): 'a 25% reduction in cluster power usage for three hours during peak grid events while maintaining AI quality of service' on 256 GPUs",
+      "read": "The first measured number for AI-compute flexibility — compute only, not cooling or backup power",
+      "source": "https://arxiv.org/abs/2507.00909"
+    },
+    {
+      "date": "2025-06-12",
+      "category": "policy",
+      "headline": "Jeremy Renshaw testifies to the House Science Subcommittee on Energy ('Powering Demand: Nuclear Solutions for AI Infrastructure'): DCFlex has 'more than 40 members, including Meta, Google, Microsoft, NVIDIA, QTS, Compass Datacenters'; backup generation 'could be leveraged during peak loading events'",
+      "read": "EPRI's congressional posture: flexibility and nuclear co-location as the two answers to AI load",
+      "source": "https://restservice.epri.com/publicattachment/93796"
+    },
+    {
+      "date": "2025-04-29",
+      "category": "leadership",
+      "headline": "'EPRI Announces 2025 Chairs, Board Members': Tom Kent (NPPD) chair succeeding Vince Sorgi (PPL); Marc Spieler of NVIDIA appointed external director; Lisa Barton, Ralph LaRossa, Shane Lies, Jason Wells, Chris Womack among new directors",
+      "read": "A chip company's executive on the utility cooperative's board for the first time — NVIDIA at every layer of EPRI's AI work",
+      "source": "https://www.epri.com/about/media-resources/press-release/kaihqaxxnmgznjwpdmfc83uztw7sdxcc"
+    },
+    {
+      "date": "2025-03-20",
+      "category": "product-launch",
+      "headline": "Open Power AI Consortium launched at NVIDIA GTC: 'the first set of industry-first domain-specific GenAI models' with Articul8 and NVIDIA 'as an NVIDIA NIM microservice for early access'; members include AWS, Microsoft, NVIDIA, Oracle, Rolls-Royce SMR, Duke, Exelon, Southern, PG&E, PPL, TVA, WEC Energy, Westinghouse",
+      "read": "EPRI claims the platform role for power-sector AI; eighteen months on, openpowerai.org counts '300+ Organizations Engaged' and '30+ AI Models' but no open-weights release",
+      "source": "https://www.epri.com/about/media-resources/press-release/yglqo5dymdh2nonjvdgqmmpgplyyj826"
+    },
+    {
+      "date": "2024-10-29",
+      "category": "product-launch",
+      "headline": "DCFlex launched: founding members 'Compass Datacenters, Constellation Energy, Duke Energy, the Electric Reliability Council of Texas (ERCOT), Google, Meta, New York Power Authority, NRG Energy, NVIDIA, Pacific Gas and Electric Company (PG&E), PJM Interconnection, Portland General Electric, QTS Data Centers, Southern Company, and Vistra Corp.'; 'five to ten flexibility hubs'; 'testing could run through 2027'",
+      "read": "The pre-window event the rest of the dossier hangs on — the initiative grew out of DOE Secretary's Energy Advisory Board recommendations of July 2024",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "nvidia",
+      "type": "partner",
+      "status": "active",
+      "note": "Co-developer of the Open Power AI models, DCFlex founding member, Flex MOSAIC collaborator, micro-data-centre partner, and the board's one external technology director (Marc Spieler, since April 2025)",
+      "context": "NVIDIA is the one technology company present at every layer of EPRI's AI work. It was a DCFlex founding member (29 October 2024), co-developed the first Open Power AI models with Articul8 ('made available as an NVIDIA NIM microservice for early access', 20 March 2025), had Marc Spieler elected an external director on 29 April 2025 (term 2029), partnered with EPRI, Prologis and InfraPartners on 5–20 MW substation-sited micro data centres (3 February 2026), and supplies the GPUs under every DCFlex compute demonstration from Phoenix to the 96 MW Aurora site in Manassas.",
+      "source": "https://www.epri.com/about/media-resources/press-release/kaihqaxxnmgznjwpdmfc83uztw7sdxcc",
+      "since": "2024-10",
+      "via": "DCFlex; Open Power AI Consortium"
+    },
+    {
+      "slug": "google",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member and demonstration host (Lenoir, North Carolina with Duke Energy; Chicago with NVIDIA); Flex MOSAIC collaborator; Open Power AI member",
+      "context": "Google funds DCFlex as a founding member and hosts two of its nine demonstration sites: Lenoir, North Carolina, with Duke Energy (workload choreography) and Chicago with NVIDIA (compute flexibility with real-time power control). Its August 2025 Indiana Michigan Power and TVA demand-response agreements were separate contracts, but Latitude Media tied them to Google's DCFlex membership. Google is also a Flex MOSAIC collaborator and an Open Power AI member.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "meta",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member ('Meta is committed to efficient data center operations matched by 100 percent clean and renewable energy' — Bryce Dalley) and Flex MOSAIC collaborator",
+      "context": "Meta joined DCFlex at launch and is listed among the Flex MOSAIC collaborators (March 2026). No Meta-hosted demonstration site is named among the nine.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "microsoft",
+      "type": "customer",
+      "status": "active",
+      "note": "Open Power AI founding technology member; DCFlex participant by March 2025 ('more than 40 members, including Meta, Google, Microsoft, NVIDIA'); SAFERai.power founder",
+      "context": "Microsoft was absent from DCFlex's October 2024 launch ('in active discussions' per EPRI) and in by March 2025; it was a founding technology member of the Open Power AI Consortium and a founding member of SAFERai.power (August 2026).",
+      "source": "https://www.epri.com/about/media-resources/press-release/yglqo5dymdh2nonjvdgqmmpgplyyj826",
+      "since": "2025-03",
+      "via": "Open Power AI Consortium; DCFlex"
+    },
+    {
+      "slug": "amazon",
+      "type": "partner",
+      "status": "active",
+      "note": "AWS is an Open Power AI Consortium technology member; not a DCFlex founder",
+      "context": "AWS joined the Open Power AI Consortium at launch among 'key technology companies Articul8, AWS, Linux Foundation Energy, Microsoft, NVIDIA, Oracle, Rolls-Royce SMR Limited, SHI and WWT'. It was named with Microsoft as 'absent but in active discussions' at the DCFlex launch and no later DCFlex membership is reported.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yglqo5dymdh2nonjvdgqmmpgplyyj826",
+      "since": "2025-03",
+      "via": "Open Power AI Consortium"
+    },
+    {
+      "slug": "oracle",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex demonstration partner (Phoenix, with Emerald AI, NVIDIA and Salt River Project) and Open Power AI member",
+      "context": "Oracle Cloud Infrastructure hosted the Phoenix demonstration in which 'a 25% reduction in cluster power usage for three hours during peak grid events' was achieved on 256 GPUs (arXiv 2507.00909, July 2025), and is named among the nine-site partners in February 2026. It is also an Open Power AI technology member.",
+      "source": "https://www.prnewswire.com/news-releases/epris-dcflex-initiative-expands-to-nine-demonstration-sites-across-us-europe-302676241.html",
+      "since": "2025",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "nebius",
+      "type": "partner",
+      "status": "active",
+      "note": "DCFlex demonstration partner for the London site with National Grid, Emerald AI and NVIDIA — 'cutting load by up to 30–40% within seconds'",
+      "context": "Nebius is the one neocloud in DCFlex: the UK's first live demonstration ran on its hardware (EPRI Europe, April 2026) after it was named among the nine-site partners in February 2026. Not reported as a funder.",
+      "source": "https://www.prnewswire.com/news-releases/epris-dcflex-initiative-expands-to-nine-demonstration-sites-across-us-europe-302676241.html",
+      "since": "2026-02",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "compass-datacenters",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member (Chris Crosby: 'glad to invest in EPRI's research'); host of the Dallas HVO backup-fuel test and the Manassas site under construction; Flex MOSAIC collaborator",
+      "context": "Compass is the landlord most embedded in DCFlex: founding funder, host of the Dallas renewable-diesel field test (public report 29 July 2026) and of the Manassas, Virginia site 'under construction to incorporate flexibility by design at commercial scale'.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "qts",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member ('QTS Data Centers')",
+      "context": "Named among the fifteen founding members on 29 October 2024; no QTS-hosted demonstration is named among the nine sites.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "constellation-energy",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member (Joe Dominguez quote) and demonstration partner; Open Power AI member; Flex MOSAIC collaborator; SAFERai.power founder; Dan Eggers on the EPRI board (term 2030)",
+      "context": "Constellation is on every EPRI AI-era roster — DCFlex founder, OPAI member, Flex MOSAIC collaborator, SAFERai founder — and holds a board seat through Dan Eggers since May 2026; Joseph Dominguez left the board in the same cycle.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "duke-energy",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member and Lenoir, North Carolina demonstration host with Google; Open Power AI member; RADAR and FLEXIT founding member; Brian Savoy on the board (Audit Committee chair)",
+      "context": "Duke is the utility half of the first DCFlex demonstration (Lenoir, with Google) and a founder of RADAR (December 2025) and FLEXIT (August 2025); its CFO Brian Savoy chairs EPRI's Audit Committee.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "dominion-energy",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex participant by March 2025; FLEXIT member; Ed Baine (President, Dominion Energy Virginia) elected to the EPRI board in May 2026",
+      "context": "Latitude Media counted Dominion among DCFlex's 'nearly 40 participants' in March 2025; Dominion Energy is a FLEXIT member; Edward Baine joined the board in the May 2026 slate. Robert Blue, Dominion's chair and CEO, does not sit on the board — the dominion-energy dossier's board line names Baine and holds.",
+      "source": "https://dailyenergyinsider.com/news/52174-epri-board-names-new-leadership-board-members/",
+      "since": "2025-03",
+      "via": "DCFlex; FLEXIT"
+    },
+    {
+      "slug": "southern-company",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member; Open Power AI member; Flex MOSAIC collaborator; SAFERai.power founder; Chris Womack on the board (second vice chair 2025)",
+      "context": "Southern Company is a founder of DCFlex and SAFERai.power, an OPAI member and Flex MOSAIC collaborator; Chris Womack was elected a director and second vice chair in April 2025 and remains on the September 2026 roster.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "vistra",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member (Jim Burke: 'Vistra is pleased to invest in EPRI's DCFlex initiative'); its Moss Landing fire is logged in EPRI's BESS Failure Incident Database",
+      "context": "Vistra funds DCFlex as a founding member. Separately, EPRI's StorageWiki records the January 2025 Moss Landing incident ('300 MW / 1,200 MWh … LG Energy Solution … 4.1 years old') in the failure database the industry cites.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "nrg-energy",
+      "type": "customer",
+      "status": "active",
+      "note": "DCFlex founding member ('NRG Energy')",
+      "context": "Named among the fifteen founding members on 29 October 2024.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "since": "2024-10",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "exelon",
+      "type": "customer",
+      "status": "active",
+      "note": "Open Power AI founding member; Flex MOSAIC collaborator; FLEXIT (BGE, ComEd, PECO, Pepco); SAFERai.power founder; Michael Innocenzo EPRI board chair since May 2026",
+      "context": "Exelon's EVP and COO Michael Innocenzo chairs EPRI's board from 5 May 2026 (first vice chair in 2025); Exelon's 8-K of 25 August 2026 says he leaves Exelon and PECO in 2027. Exelon utilities are FLEXIT members and the company is an OPAI founder and SAFERai founder.",
+      "source": "https://dailyenergyinsider.com/news/52174-epri-board-names-new-leadership-board-members/",
+      "since": "2025-03",
+      "via": "Open Power AI Consortium; FLEXIT"
+    },
+    {
+      "slug": "entergy",
+      "type": "customer",
+      "status": "active",
+      "note": "Flex MOSAIC collaborator; nuclear Technology Transfer Award 2024; Phillip May (Entergy Louisiana) on the board (term 2030)",
+      "context": "Entergy is a Flex MOSAIC collaborator and a nuclear-sector member (2024 Technology Transfer Award for NDE AI); Phillip May joined the board in the May 2026 slate.",
+      "source": "https://www.globenewswire.com/news-release/2026/03/23/3260463/0/en/epri-launches-flex-mosaic-to-reduce-time-to-power-for-data-centers.html",
+      "since": "2026-03",
+      "via": "Flex MOSAIC"
+    },
+    {
+      "slug": "aep",
+      "type": "customer",
+      "status": "active",
+      "note": "Open Power AI member ('American Electric Power'); Shane Lies elected director 2025 (term 2029); LCRI partner",
+      "context": "AEP is an OPAI member and an LCRI partner; Shane Lies joined the board in the April 2025 slate. Indiana Michigan Power's August 2025 Google demand-response agreement was outside EPRI.",
+      "source": "https://www.epri.com/about/media-resources/press-release/kaihqaxxnmgznjwpdmfc83uztw7sdxcc",
+      "since": "2025-04",
+      "via": "Open Power AI Consortium"
+    },
+    {
+      "slug": "nextera-energy-resources",
+      "type": "customer",
+      "status": "active",
+      "note": "Brian Bolster (NextEra Energy Resources, LLC) on the EPRI board (term 2030); NextEra an Open Power AI member",
+      "context": "NextEra Energy Resources took a board seat in the May 2026 slate through Brian Bolster; NextEra appears among the OPAI members displayed on openpowerai.org.",
+      "source": "https://restservice.epri.com/publicattachment/100149",
+      "since": "2026-05",
+      "via": "Board of Directors"
+    },
+    {
+      "slug": "tva",
+      "type": "customer",
+      "status": "active",
+      "note": "Permanent board seat ('Tennessee Valley Authority (TVA) has a permanent seat on EPRI's Board'); Open Power AI member; SAFERai.power founder; LCRI partner",
+      "context": "TVA appoints one director by right (Mike Skaggs on the September 2026 roster, succeeding Don Moul) and is a member of OPAI and SAFERai.power. Its August 2025 Google demand-response agreement was a bilateral deal, not an EPRI project.",
+      "source": "https://www.epri.com/about/media-resources/press-release/yglqo5dymdh2nonjvdgqmmpgplyyj826",
+      "since": "2025-03",
+      "via": "Open Power AI Consortium"
+    },
+    {
+      "slug": "salt-river-project",
+      "type": "customer",
+      "status": "active",
+      "note": "Utility in the Phoenix DCFlex demonstration (with Emerald AI, Oracle, NVIDIA); Flex MOSAIC collaborator; FLEXIT member; SAFERai.power founder; Jim Pratt on the board",
+      "context": "SRP was the grid counterparty for the Phoenix demonstration that produced the 25-percent-for-three-hours result, and is a Flex MOSAIC collaborator, FLEXIT member and SAFERai founder; Jim Pratt sits on the board.",
+      "source": "https://www.globenewswire.com/news-release/2026/03/23/3260463/0/en/epri-launches-flex-mosaic-to-reduce-time-to-power-for-data-centers.html",
+      "since": "2025",
+      "via": "DCFlex; Flex MOSAIC"
+    },
+    {
+      "slug": "ppl",
+      "type": "customer",
+      "status": "active",
+      "note": "Open Power AI member ('PPL Corporation'; CEO Vincent Sorgi quoted in NVIDIA's launch blog); Sorgi EPRI board chair 2024–25; Joseph Bergstein Jr. (CFO) director since May 2026",
+      "context": "Vince Sorgi chaired the board until 29 April 2025 and is not on the 2026 roster; PPL's seat passed to its CFO Joseph Bergstein in May 2026. The ppl dossier's 'past chair, EPRI' line holds.",
+      "source": "https://dailyenergyinsider.com/news/52174-epri-board-names-new-leadership-board-members/",
+      "since": "2024",
+      "via": "Board of Directors; Open Power AI Consortium"
+    },
+    {
+      "slug": "wec-energy",
+      "type": "customer",
+      "status": "active",
+      "note": "Open Power AI member ('WEC Energy Group'); SAFERai.power founder; LCRI partner; the 2023 CMBlu organic-flow battery pilot at the Valley plant ran 'in collaboration with' EPRI",
+      "context": "WEC Energy is an OPAI member, a SAFERai founder and an LCRI partner. Its 1–2 MWh CMBlu Organic SolidFlow pilot in Milwaukee (announced 9 February 2023) was run with EPRI as research partner — EPRI's Neva Espinoza: 'The results of the pilot will provide key insights that could inform deployment of clean energy technologies across the industry.' The wec-energy dossier's pilot line holds; publication of results is unconfirmed.",
+      "source": "https://www.globenewswire.com/news-release/2023/02/09/2605163/0/en/CMBlu-Energy-Continues-U-S-Expansion-With-Long-Duration-Energy-Storage-Pilot-Project-in-Wisconsin.html",
+      "since": "2023-02",
+      "via": "Open Power AI Consortium; CMBlu pilot"
+    },
+    {
+      "slug": "wartsila",
+      "type": "partner",
+      "status": "historical",
+      "note": "The 18 MW Wärtsilä engine at WEC's Upper Michigan Energy Resources was the test bed for the 2022 hydrogen-blend RICE test run with Burns & McDonnell and EPRI",
+      "context": "An 18 MW Wärtsilä reciprocating engine burned up to 25 percent hydrogen by volume in the October 2022 utility-scale test led by WEC Energy, Burns & McDonnell and EPRI — the precedent for EPRI's later 'Reciprocating Internal Combustion Engines and Data Centers' work.",
+      "source": "https://www.burnsmcd.com/news/utility-scale-hydrogen-power-test",
+      "since": "2022-10",
+      "via": "Hydrogen RICE test"
+    },
+    {
+      "slug": "burns-mcdonnell",
+      "type": "partner",
+      "status": "active",
+      "note": "Open Power AI member; engineering partner on the 2022 WEC hydrogen RICE test with EPRI",
+      "context": "Burns & McDonnell joined the Open Power AI Consortium (reported by POWER, August 2025) and was the engineering firm on the 2022 hydrogen-blend engine test at WEC's Upper Michigan Energy Resources with EPRI.",
+      "source": "https://www.burnsmcd.com/news/utility-scale-hydrogen-power-test",
+      "since": "2022-10",
+      "via": "Open Power AI Consortium"
+    },
+    {
+      "slug": "mitsubishi-power",
+      "type": "other",
+      "status": "active",
+      "note": "EPRI's Bobby Noble supplied the gas-turbine lead-time quote in Utility Dive's report on Mitsubishi Power's M501JAC delivery to Georgia Power",
+      "context": "Not a contractual link: EPRI's senior programme manager for gas-turbine R&D was the industry voice ('as long as seven years, but most of them are in that five-year period') in the August 2025 article about Mitsubishi Power's first of three M501JAC units for Georgia Power; the mitsubishi-power dossier's line is confirmed verbatim.",
+      "source": "https://www.utilitydive.com/news/georgia-power-natural-gas-turbine-delivery-delays-mitsubishi/758252/",
+      "since": "2025-08",
+      "via": "Gas turbine R&D commentary"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "partner",
+      "status": "active",
+      "note": "Open Power AI member (reported by POWER, August 2025); 'GE' an LCRI partner (2021)",
+      "context": "GE Vernova is an OPAI member; its predecessor GE was among the 33 LCRI partners when that initiative passed USD 100m in February 2021.",
+      "source": "https://www.powermag.com/building-chatgpt-for-the-power-industry-epri-leads-the-way/",
+      "since": "2021-02",
+      "via": "Open Power AI Consortium; LCRI"
+    },
+    {
+      "slug": "hitachi-energy",
+      "type": "partner",
+      "status": "active",
+      "note": "Open Power AI member (logo on openpowerai.org)",
+      "context": "Hitachi Energy appears among the technology members displayed on openpowerai.org; no DCFlex or board link.",
+      "source": "https://openpowerai.org/about",
+      "since": "2025",
+      "via": "Open Power AI Consortium"
+    },
+    {
+      "slug": "schneider-electric",
+      "type": "partner",
+      "status": "active",
+      "note": "DCFlex demonstration partner for the Paris site with Data4 and RTE (UPS grid support); joined DCFlex March 2025",
+      "context": "Schneider Electric joined DCFlex in March 2025 and is the technology partner of the Paris demonstration (Data4 with RTE) on UPS grid support — while its own Steven Carlini is on record that 'it's questionable whether they want to do it'.",
+      "source": "https://www.epri.com/about/media-resources/press-release/ood6gzwpcqjeuq7dngaq6n4ywomeleq7",
+      "since": "2025-03",
+      "via": "DCFlex"
+    },
+    {
+      "slug": "kwh-analytics",
+      "type": "partner",
+      "status": "active",
+      "note": "kWh Analytics' Solar Risk Assessment 2025 carries an EPRI-authored chapter ('To date, 72% of BESS failures Have Occurred Within the First 2 Years of Installation')",
+      "context": "Three EPRI storage researchers (Eula Billaut, Lakshmi Srinivasan, Stephanie Shaw) wrote the BESS-failure chapter of kWh Analytics' June 2025 Solar Risk Assessment — the publication the kwh-analytics dossier cites; the attribution 'EPRI data cited' holds.",
+      "source": "https://kwhanalytics.com/wp-content/uploads/2025/06/Solar-Risk-Assessment-2025.pdf",
+      "since": "2025-06",
+      "via": "Solar Risk Assessment 2025"
+    },
+    {
+      "slug": "ul-solutions",
+      "type": "partner",
+      "status": "active",
+      "note": "Co-advisors on DOE's Energy Storage Safety Strategic Plan (April 2024); EPRI's BESS white paper cites 'UL's Lithium-Ion Battery Incident Reporting' as the other incident tracker",
+      "context": "EPRI (Lakshmi Srinivasan, Dirk Long) and UL Solutions (LaTanya Schwalb, Laurie Florence) sat on the external advisory board of DOE's April 2024 safety plan; the two incident databases are the industry's pair. UL runs the UL 9540A tests and issues listings — EPRI does neither.",
+      "source": "https://www.energy.gov/sites/default/files/2024-05/EED_2827_FIG_SafetyStrategy%20240505v2.pdf",
+      "since": "2024-04",
+      "via": "DOE Energy Storage Safety Strategic Plan"
+    },
+    {
+      "slug": "dnv",
+      "type": "partner",
+      "status": "active",
+      "note": "Co-advisors on DOE's Energy Storage Safety Strategic Plan (Carrie Kaplan for DNV; EPRI's Srinivasan and Long)",
+      "context": "DNV and EPRI both advised DOE's Office of Electricity on the April 2024 Energy Storage Safety Strategic Plan; DNV sells the independent-engineer reports that cite EPRI's incident data.",
+      "source": "https://www.energy.gov/sites/default/files/2024-05/EED_2827_FIG_SafetyStrategy%20240505v2.pdf",
+      "since": "2024-04",
+      "via": "DOE Energy Storage Safety Strategic Plan"
+    },
+    {
+      "slug": "csa-group",
+      "type": "partner",
+      "status": "active",
+      "note": "Co-advisors on DOE's Energy Storage Safety Strategic Plan (Jody Leber for CSA Group)",
+      "context": "CSA Group sat with EPRI, UL Solutions and DNV on the external advisory board of DOE's April 2024 safety plan.",
+      "source": "https://www.energy.gov/sites/default/files/2024-05/EED_2827_FIG_SafetyStrategy%20240505v2.pdf",
+      "since": "2024-04",
+      "via": "DOE Energy Storage Safety Strategic Plan"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "FERC large-load interconnection and co-location (ANOPR and technical conference)",
+      "status": "in-effect",
+      "exposure": "EPRI is a convener and documenter rather than a party: its DCFlex summary of the FERC technical conference on large loads co-located at generating facilities (28 February 2025), Workstream 2's 'framework for wholesale markets and retail programs to facilitate data center demand flexibility' and the PJM capacity-crunch Quick Insight (June 2026) are the reference documents, and Flex MOSAIC is offered as 'a technical foundation that jurisdictions and market participants can adapt to their local needs'. Form 990 lobbying fees were USD 23,500 in FY2024 — EPRI does not advocate for outcomes."
+    },
+    {
+      "regime": "NERC large-load reliability standards and ride-through requirements",
+      "status": "announced",
+      "exposure": "The 'Reliability Guideline: Risk Mitigation for Emerging Large Loads' (December 2025) and the August 2026 ride-through work ('improving consistency in ride-through requirements and developing testing and certification methodologies') are the technical inputs NERC and the system operators are drawing on; NERC President Jim Robb endorsed Flex MOSAIC ('having clear, technically grounded definitions of flexibility is critical for reliability'). If a NERC standard adopts EPRI's classes, EPRI's framework becomes de facto regulation it did not write as a regulator."
+    },
+    {
+      "regime": "State large-load tariffs (Texas SB6 and the 2025 tariff wave)",
+      "status": "in-effect",
+      "effectiveDate": "2025-06-20",
+      "exposure": "'Texas SB6 Explained: Addressing Large Load Impacts' (20 June 2025), the 'Retail Flexible Load Tariff Sample Dataset' ('159 flexible load tariffs from 71 U.S. utilities') and the finding that 'state regulators approved 29 large-load tariffs in 2025' make EPRI the record-keeper of the tariff wave; NARUC's president is quoted in its Flex MOSAIC release on 'ensuring customers are not burdened by the costs of serving new, large loads'."
+    },
+    {
+      "regime": "DOE 10 CFR Part 810 (nuclear technology export authorisation)",
+      "status": "in-effect",
+      "exposure": "EPRI filed a voluntary self-disclosure to DOE on 22 March and 5 May 2023 under Part 810; 'As of the end of FY 2025, EPRI has not received any communications, decisions, or notice of penalties', and 'In March 2024, the Department of Energy issued a specific authorization for an additional Chinese customer entity' (audited statements). The exposure is to the nuclear sector's international membership, which is the institute's largest revenue line."
+    },
+    {
+      "regime": "Federal research funding (DOE awards, Uniform Guidance)",
+      "status": "in-effect",
+      "exposure": "Cost-reimbursable federal and state revenue rose to USD 67.3m in 2025 from 34.4m in 2024; DOE obligations to EPRI totalled USD 181.3m from October 2019 to September 2026 with a USD 75.1m FY2024 spike. USD 428,000 of FY2025 federal expenditure is excluded from the single-audit schedule pending 'termination appeals with the U.S. Department of Energy' on five awards — the 2025 DOE award terminations reached EPRI directly."
+    },
+    {
+      "regime": "Section 501(c)(3) tax exemption and the unrelated-business tail",
+      "status": "in-effect",
+      "exposure": "Exempt since September 1972 as a scientific research organisation; unrelated business revenue was USD 78.9m in FY2024 (60.1m in FY2023), mostly membership and supplemental funding from non-exempt purposes. The Energy & Policy Institute's August 2025 critique of utility funding and board composition is a reputational exposure, not a tax one; the 1986 Research Consulting Associates challenge to the exemption failed on standing."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Arshad Mansoor",
+      "title": "President and Chief Executive Officer",
+      "background": [
+        "President and CEO since 1 January 2021 (elected 12 August 2020, succeeding Michael Howard); joined EPRI in 2006 as Vice President, Power Delivery; President from November 2019",
+        "FY2024 reportable compensation USD 2,132,369 plus 737,890 other (Form 990); the public face of DCFlex ('Flexible data center design and operation is a key strategy for accelerating AI development') and Flex MOSAIC ('the third leg of the speed-to-power stool')"
+      ]
+    },
+    {
+      "name": "Swati Daji",
+      "title": "Executive Vice President; Chief Financial, Risk and Operations Officer",
+      "background": [
+        "Signed the FY2024 Form 990 (14 November 2025); in the role from April 2024, succeeding Pamela Keefe as finance lead",
+        "On Open Power AI's data problem: 'An estimated 95% of all data is behind utility cybersecurity and customer privacy walls' (April 2025)"
+      ]
+    },
+    {
+      "name": "Robert Chapman",
+      "title": "Executive Vice President and Chief Commercial Customer Officer",
+      "background": [
+        "Senior Vice President, Energy Delivery and Customer Solutions on the FY2024 Form 990 (USD 805,823 reportable); now holds the commercial customer brief on the leaders page"
+      ]
+    },
+    {
+      "name": "Neva Espinoza",
+      "title": "Senior Vice President and Chief Technology Officer",
+      "background": [
+        "Leads 'the institute's Office of Technology and Transformation … spanning AI, digital strategy, technology, and innovation as data center-related energy demand drives' growth; Vice President, Low Carbon Resource on the FY2024 Form 990 (USD 772,467)",
+        "EPRI's quoted voice on the 2023 CMBlu pilot with WEC Energy"
+      ]
+    },
+    {
+      "name": "David Porter",
+      "title": "Vice President, AI Power and Data Center Innovation",
+      "background": [
+        "DCFlex technical lead and spokesman ('DCFlex brings together a powerhouse coalition', February 2026; 'The scale and speed of data center growth represent a defining moment for the US power system', March 2026); previously Vice President of Electrification and Sustainable Energy Strategy (the title on the February 2026 releases; Morgan Scott now holds it)",
+        "Named technical contact on the DCFlex Supplemental Project Notice with Anuja Ratnayake"
+      ]
+    },
+    {
+      "name": "Daniel Brooks",
+      "title": "Senior Vice President, Energy Delivery and Customer Solutions",
+      "background": [
+        "Vice President, Integrated Grid on the FY2024 Form 990 (USD 631,353); the sector that houses Program 94 Energy Storage and Distributed Generation and the FLEXIT initiative"
+      ]
+    },
+    {
+      "name": "Manu Sivaraman",
+      "title": "Senior Vice President and Chief Generation Officer",
+      "background": [
+        "Leads the Generation sector (USD 79.9m of 2025 expense), which houses Program 221 Bulk Energy Storage and Bobby Noble's gas-turbine R&D"
+      ]
+    },
+    {
+      "name": "Steve Swilley",
+      "title": "Vice President of Nuclear and Chief Nuclear Officer",
+      "background": [
+        "Deputy Chief Nuclear Officer on the FY2024 Form 990 (USD 497,945); the Nuclear sector is EPRI's largest at USD 184.4m of 2025 expense and '~$200 million USD in annual funding'; Neil Wilmshurst, the prior Chief Nuclear Officer, is no longer on the leaders page"
+      ]
+    },
+    {
+      "name": "Jeremy Renshaw",
+      "title": "Executive Director, AI and Quantum (Open Power AI Consortium lead)",
+      "background": [
+        "Testified to the House Science Subcommittee on Energy on 12 June 2025 ('Powering Demand: Nuclear Solutions for AI Infrastructure'); the consortium's spokesman ('A domain specific Gen AI model can understand that islanding or black start are critical grid operations'); titled 'Director of Open Power AI and Quantum' in a partner's April 2026 release"
+      ]
+    },
+    {
+      "name": "Anuja Ratnayake",
+      "title": "DCFlex programme lead (Workstream 1 — data-centre design)",
+      "background": [
+        "Co-author of the Phoenix demonstration paper (arXiv 2507.00909); quoted across the trade press on what flexibility is realistic ('Most data centers today are passive loads… there's the potential to be a prosumer'; 'If it is banking services or credit card services, there is very little flexibility'; 'Data centers need a more gradual load reduction')"
+      ]
+    },
+    {
+      "name": "Michael Innocenzo",
+      "title": "Chair of the Board (Executive Vice President and COO, Exelon; President and CEO, PECO)",
+      "background": [
+        "Elected chair 5 May 2026 after a year as first vice chair; Exelon's 8-K of 25 August 2026 says he leaves his Exelon and PECO roles in 2027 — a chair transition before his 2028 term end is likely",
+        "Predecessors: Tom Kent (NPPD) April 2025–May 2026; Vince Sorgi (PPL) 2024–25"
+      ]
+    },
+    {
+      "name": "Marc Spieler",
+      "title": "External Director (NVIDIA)",
+      "background": [
+        "Appointed external director on 29 April 2025 (term 2029) — the board's one technology-company seat; NVIDIA's spokesman on DCFlex and the micro-data-centre collaboration ('unlock stranded power to scale AI inference efficiently')"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "non-profit (IRS Form 990 and Deloitte-audited consolidated statements)",
+    "periods": [
+      {
+        "period": "FY2023",
+        "periodType": "annual",
+        "periodEnd": "2023-12-31",
+        "metrics": [
+          {
+            "name": "Total revenues (audited)",
+            "actual": "466,646 thousand (membership 237,077; supplemental 228,007; other 1,563)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Deloitte consolidated statements; Form 990 total revenue 478,660,003 adds investment income and gains"
+          },
+          {
+            "name": "Total expenses (audited)",
+            "actual": "495,653 thousand",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Change in net assets −14,047 thousand; net assets 157,537 thousand"
+          },
+          {
+            "name": "Employees (Form 990)",
+            "actual": "1,455",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Part I line 5"
+          },
+          {
+            "name": "Federal/state cost-reimbursable revenue",
+            "actual": "27,464 thousand",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Audited statement note"
+          }
+        ],
+        "commentary": "The first of two deficit years: supplemental funding (opt-in projects) had not yet overtaken fixed membership dues, and Climate READi spending peaked the following year."
+      },
+      {
+        "period": "FY2024",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Total revenues (audited)",
+            "actual": "491,655 thousand (membership 238,547; supplemental 250,179; other 2,929)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Supplemental revenue exceeded membership revenue for the first time; the 990's 'MEMBERSHIP FEE REVENUE 238,546,787' matches the audited line to the dollar"
+          },
+          {
+            "name": "Total revenue (Form 990)",
+            "actual": "503,197,591",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Program service revenue 488,718,548 (membership 238,546,787; supplemental funding 231,973,695; billable services 18,198,066); investment income 12,882,241; unrelated business revenue 78,919,815"
+          },
+          {
+            "name": "Total expenses",
+            "actual": "514,673 thousand (audited); 516,331,444 (Form 990)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Change in net assets −10,580 thousand (audited); salaries, compensation and benefits 280,325,032 (990)"
+          },
+          {
+            "name": "Net assets, end of year",
+            "actual": "146,957 thousand (audited); 138,711,034 (Form 990)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Total assets 401,886,494; liabilities 263,175,460 (990)"
+          },
+          {
+            "name": "Employees / voting directors",
+            "actual": "1,475 / 37 (all independent)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Form 990 Part I"
+          },
+          {
+            "name": "CEO compensation",
+            "actual": "Arshad Mansoor 2,132,369 reportable + 737,890 other",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Part VII; officers' total reportable 12,465,011; 'first-class or charter travel' flagged for officers"
+          },
+          {
+            "name": "Federal awards expended (SEFA)",
+            "actual": "28,185,940 (of which 11,049,815 passed through)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Single-audit schedule; USAspending shows DOE obligations of 75.1 million in federal FY2024"
+          }
+        ],
+        "commentary": "The year DCFlex launched (October) and the year supplemental projects — the line DCFlex sits in — became the larger revenue stream. The audited and 990 figures differ by scope (the 990 adds investment income, royalties and report sales) and both are stated. Expectations fields are empty by design: a member-funded non-profit publishes no guidance and no analyst covers it."
+      },
+      {
+        "period": "FY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Total revenues (audited)",
+            "actual": "509,589 thousand (membership 244,374; supplemental 261,765; other 3,450)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Deloitte opinion dated 23 April 2026; the Form 990 for FY2025 is not yet filed (due November 2026)"
+          },
+          {
+            "name": "Total expenses (audited)",
+            "actual": "513,482 thousand (nuclear 184,375; generation 79,914; T&D 67,528; integrated grid 67,382; electrification 55,527; technology innovation 31,903; LCRI 21,112; Climate READi 5,741)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Investment income net 9,489 thousand; change in net assets +6,652 thousand — the first surplus since 2022"
+          },
+          {
+            "name": "Net assets, end of year",
+            "actual": "153,609 thousand",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Total assets 401,008 thousand; deferred revenue (current) 146,527 thousand; cash and investments about 233,079 thousand"
+          },
+          {
+            "name": "Federal/state cost-reimbursable revenue",
+            "actual": "67,297 thousand (from 34,425 in 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Nearly doubled; 428,000 excluded from the federal-awards schedule pending 'termination appeals with the U.S. Department of Energy' on five awards; cost share 6,661,655"
+          },
+          {
+            "name": "DCFlex pricing (per funder per year)",
+            "actual": "Data Center Developers/Operators $325K; Technology Providers $250K; Large utilities $250K; Generation only $200K; ISOs/RTOs $50K",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Supplemental Project Notice, September 2025; with 'more than 60 companies' the initiative's annual funding is in the low tens of millions — EPRI publishes no DCFlex total"
+          }
+        ],
+        "commentary": "A USD 510m year with revenue up 3.6 percent and expenses flat, returning the institute to surplus. Government contract revenue is the fastest-growing line and the one exposed to the 2025 DOE award terminations. Collection gap: EPRI publishes no revenue by initiative (DCFlex, OPAI), no member count by class, and no dues schedule beyond the DCFlex notice."
+      }
+    ],
+    "commentary": "EPRI is a member-funded 501(c)(3) that publishes audited consolidated statements each April and files a Form 990 each November; both were read for this dossier and both figures are stated where they differ by scope. The structure a reader can rely on: roughly 48 percent fixed membership dues from utilities, roughly 50 percent opt-in supplemental and contract funding (DCFlex, LCRI, federal awards), a small services and report-sales tail; nuclear is the largest sector at about 36 percent of expense; the institute ran deficits in 2023 and 2024 and a USD 6.65m surplus in 2025. Expectations are empty by design — no guidance, no consensus."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that EPRI's value to this corpus is as the convener that gets the gatekeepers and the gated into one room: DCFlex is the only standing forum in which the hyperscalers (Google, Meta, Microsoft, Oracle, NVIDIA), the landlords (Compass, QTS), the utilities (Duke, Dominion, Southern, Constellation, Vistra, NRG, PG&E) and the grid operators (ERCOT, PJM) co-fund demonstrations and co-author a framework. Basis: the founding roster of 29 October 2024, growth to 'more than 65' collaborators on Flex MOSAIC by March 2026, nine demonstration sites, and the fact that every one of those parties pays — the DCFlex notice prices a data-centre operator's seat at USD 325,000 a year.",
+    "2. **(High confidence)** We assess that EPRI is an advisor, not an assurance body, and that its new `assurance` seat is adjacent on a narrow basis: it writes the guidelines (ESIC's eighteen, the Reliability Guideline for Emerging Large Loads), runs the test methods (Energy Storage Test Manual, module burn tests) and keeps the incident database the certifiers and insurers cite — but it issues no certificate, listing or mark, holds no accreditation as a certification body, and has used the word 'certification' once, for ride-through 'testing and certification methodologies' it is still developing (August 2026). The seat rests on the testing-and-guidelines line only; if that ride-through work becomes an EPRI-run qualification, the basis strengthens.",
+    "3. **(High confidence)** We assess that the BESS failure statistics are EPRI's most consequential public product for the storage chain and that they should be quoted with their denominators: 97 percent decline 2018–2023 (9.2 to 0.2 incidents per GW), 98 percent to 2024, eight incidents worldwide in 2024, and '72% of failures in systems whose age is known occurred during construction, the commissioning process or within two years' — of 64 known-age incidents among 81 catalogued, with 26 root causes assigned. The kwh-analytics dossier's '72 percent within two years of installation' holds with that nuance; permitting dockets (CEC 25-OPT-02) now cite the figures directly.",
+    "4. **(Moderate confidence)** We assess that Flex MOSAIC is the deliverable most likely to change how this corpus's projects interconnect: a five-class flexibility taxonomy endorsed by NERC's and NARUC's presidents, with a final version due by October 2026 and PJM-era capacity rules the obvious adopter. The confidence is moderate because the framework is voluntary by design ('a technical foundation that jurisdictions and market participants can adapt'), and because the operators' appetite is contested on the record — Schneider's Carlini ('questionable whether they want to do it'), AES's Costa ('Data center operators do not like to be flexible') against EPRI's own measured 25 percent for three hours in Phoenix and 30–40 percent within seconds in London.",
+    "5. **(High confidence)** We assess that NVIDIA is structurally embedded in EPRI's AI agenda to a degree no other vendor is — DCFlex founder, OPAI model co-developer and NIM distributor, Flex MOSAIC collaborator, micro-data-centre partner, GPU supplier to every compute demonstration, and the board's one external technology director since April 2025. EPRI's 'we do not advocate for any specific company, sector, or technology' is the stated posture; the roster is the fact. A reader weighing OPAI's 'open' models should note that no open-weights release exists eighteen months after launch — the models remain NVIDIA NIM early access.",
+    "6. **(High confidence)** We assess that the identity facts the coverage plan carried were wrong in two places and the inbound count in one: EPRI is not a California corporation (DC domicile on every Form 990 through FY2024; a Delaware certificate now posted and a 2026 California foreign registration of the Delaware entity), Palo Alto is the principal office with Charlotte unverified as the largest site, and five dossiers, not three, cite EPRI. The FY2024 Form 990 (USD 503.2m revenue, 1,475 employees) and the FY2025 audited statements (USD 509.6m) are the figures to carry.",
+    "7. **(Moderate confidence)** We assess that governance turnover is the near-term risk to EPRI's convening role: the chair elected in May 2026 is leaving his utility in 2027 (Exelon 8-K, 25 August 2026); nine directors left the roster in 2025–26 including the CEOs of PG&E, Constellation, MISO and KHNP; and the Energy & Policy Institute's critique that 'the vast majority of its board members are utility executives' is accurate as a description. None of this touches the research, but DCFlex's neutrality claim depends on a board the hyperscalers trust, and that board is almost entirely their counterparties.",
+    "COLLECTION GAPS — (a) revenue by initiative: EPRI publishes no DCFlex, OPAI or FLEXIT budget and no member count by class; (b) the Delaware redomestication date — the certificate carries none in the extracted text and the FY2025 Form 990 (due November 2026) will be the first to show the new domicile; (c) whether the CMBlu pilot results were published; (d) litigation 2023–2026 — CourtListener was throttled and Justia blocked, so 'none found' is not 'none'; (e) which Flex MOSAIC class, if any, PJM or ERCOT adopts; (f) the 'largest office is Charlotte' claim — supported only by the Charlotte mailing address on the 2026 California registration; (g) no first-party photographs are published for any leader.",
+    "INDICATORS TO WATCH — the Flex MOSAIC final framework (due by October 2026) and the first ISO or state tariff that cites a MOSAIC class; the 96 MW Aurora site in Manassas going live 'late 2026' as the first flexibility-by-design build; the FY2025 Form 990 (November 2026) for the Delaware domicile, the FY2025 headcount and any change in the DOE award position; a chair transition at the 2027 board meeting following Innocenzo's Exelon departure; an Open Power AI open-weights release or a WattWorks benchmark of utility-trained models (tests whether 'open' means open); the next BESS Failure Incident Database annual update (2025 incident count and rate); and DCFlex's planned end 'by the end of 2027' — whether it is renewed, folded into a numbered programme, or spun into a standing body."
+  ],
+  "sources": [
+    {
+      "label": "EPRI — Board of Directors roster, as of 1 September 2026",
+      "url": "https://restservice.epri.com/publicattachment/100149",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "EPRI — Board Committees, as of 1 September 2026",
+      "url": "https://restservice.epri.com/publicattachment/99675",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "SEC EDGAR — Exelon Form 8-K Item 5.02 (Michael Innocenzo departure, effective 2027)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109357/000110935726000084/exc-20260825.htm",
+      "date": "2026-08-25"
+    },
+    {
+      "label": "Public Power — Public power utilities join effort to reduce risk in AI power-sector deployment (SAFERai.power)",
+      "url": "https://www.publicpower.org/periodical/article/public-power-utilities-join-effort-reduce-risk-ai-power-sector-deployment",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "Daily Energy Insider — EPRI launches SAFERai.power initiative",
+      "url": "https://dailyenergyinsider.com/news/53357-epri-launches-saferai-power-initiative-to-establish-ai-risk-framework-for-electric-utilities/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "EPRI Journal — Large Load Ride-Through for Data Centers",
+      "url": "https://eprijournal.com/large-load-ride-through-for-data-centers/",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Utility Dive — Data centers are ready to negotiate flexibility for speed (Aurora 96 MW; Carlini)",
+      "url": "https://www.utilitydive.com/news/data-centers-flexibility-utilities-speed-to-power/822588/",
+      "date": "2026-06-26"
+    },
+    {
+      "label": "Public Power — CPS Energy's Rudy Garza elected to EPRI board",
+      "url": "https://www.publicpower.org/periodical/article/cps-energy-president-and-ceo-rudy-garza-elected-board-directors-electric-power-research-institute",
+      "date": "2026-05-08"
+    },
+    {
+      "label": "Daily Energy Insider — EPRI board names new leadership, board members (Innocenzo chair; ten new directors)",
+      "url": "https://dailyenergyinsider.com/news/52174-epri-board-names-new-leadership-board-members/",
+      "date": "2026-05-07"
+    },
+    {
+      "label": "EPRI — Board roster as of 5 May 2026",
+      "url": "https://restservice.epri.com/publicattachment/98300",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "Landis+Gyr — joins EPRI's Open Power AI Consortium",
+      "url": "https://www.landisgyr.com/us/en/home/news-media/newsroom/2026/Landis-Gyr-Joins-EPRI-s-Open-Power-AI-Consortium-to-Advance-Applications-for-the-Electric-Power-Industry",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "EPRI — Consolidated Financial Statements FY2025/2024 and SEFA (Deloitte)",
+      "url": "https://publicdownload.epri.com/PublicAttachmentDownload.svc/AttachmentId=98274",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "Data Center Dynamics — EPRI launches data center flexibility framework (Siemens listed)",
+      "url": "https://www.datacenterdynamics.com/en/news/epri-launches-data-center-flexibility-framework-to-speed-up-grid-connections/",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "Utility Dive — Gas turbine supply crunch set to raise prices (Noble on Hormuz risk)",
+      "url": "https://www.utilitydive.com/news/gas-turbine-supply-crunch-set-to-raise-prices-195-by-2027-woodmac/816904/",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "EPRI Europe — DCFlex: Momentum Builds Across Europe (UK live demo with National Grid, Emerald AI, Nebius, NVIDIA)",
+      "url": "https://europe.epri.com/press-releases/dcflex-momentum-builds-across-europe",
+      "date": "2026-04-06"
+    },
+    {
+      "label": "SEC EDGAR — Dominion Energy DEF 14A 2026 (no EPRI board reference for Robert Blue)",
+      "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526115180/d-d-def_14a-2026.pdf",
+      "date": "2026-03-27"
+    },
+    {
+      "label": "T&D World — EPRI launches framework to reduce 'time to power' (Mansoor: third leg of the stool)",
+      "url": "https://www.tdworld.com/distributed-energy-resources/demand-side-management/news/55366867/epri-launches-framework-to-reduce-time-to-power-for-data-centers",
+      "date": "2026-03-26"
+    },
+    {
+      "label": "Daily Energy Insider — EPRI launches new framework to classify flexibility for large electric loads (Flex MOSAIC)",
+      "url": "https://dailyenergyinsider.com/news/51623-epri-launches-new-framework-to-classify-flexibility-for-large-electric-loads/",
+      "date": "2026-03-25"
+    },
+    {
+      "label": "EPRI Journal — How a Common Language for Flexibility Can Speed Large Load Interconnection (Flex MOSAIC; 29 tariffs in 2025)",
+      "url": "https://eprijournal.com/how-a-common-language-for-flexibility-can-speed-large-load-interconnection/",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "Public Power — EPRI launches framework to reduce time to power for data centers",
+      "url": "https://www.publicpower.org/periodical/article/epri-launches-framework-reduce-time-power-data-centers",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "GlobeNewswire — EPRI Launches Flex MOSAIC to Reduce 'Time to Power' for Data Centers",
+      "url": "https://www.globenewswire.com/news-release/2026/03/23/3260463/0/en/epri-launches-flex-mosaic-to-reduce-time-to-power-for-data-centers.html",
+      "date": "2026-03-23"
+    },
+    {
+      "label": "Utility Dive — 5-year waits and rising costs: how demand is redefining the gas turbine market (Noble op-ed)",
+      "url": "https://www.utilitydive.com/news/5-year-waits-and-rising-costs-how-demand-is-redefining-the-gas-turbine-mar/813385/",
+      "date": "2026-03-23"
+    },
+    {
+      "label": "Data Center Knowledge — EPRI report: US data center grid strain casts cloud over AI race (Powering Intelligence 2026)",
+      "url": "https://www.datacenterknowledge.com/build-design/epri-report-us-data-center-grid-strain-casts-cloud-over-ai-race",
+      "date": "2026-03-05"
+    },
+    {
+      "label": "EPRI release — Data Centers Could Consume Up to 17% of U.S. Electricity by 2030 (Powering Intelligence 2026)",
+      "url": "https://www.epri.com/about/media-resources/press-release/trb5wwt7oemdbkaamxrccqkq2ktteae8",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "EPRI — Powering Intelligence: Updated U.S. Data Center Scenarios (brief)",
+      "url": "https://restservice.epri.com/publicattachment/97025",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "California Energy Commission docket 25-OPT-02, TN 268717 — ESRG comments citing EPRI's failure database (9.2 → 0.2 per GW; 8 incidents in 2024)",
+      "url": "https://efiling.energy.ca.gov/GetDocument.aspx?tn=268717&DocumentContentId=105872",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "EPRI Europe — EPRI Advances Grid Flexibility Across Europe (FLEXIT)",
+      "url": "https://europe.epri.com/press-releases/epri-advances-grid-flexibility-across-europe",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "Data Center Dynamics — NVIDIA, Prologis, EPRI, InfraPartners target prefab data centers at substations",
+      "url": "https://www.datacenterdynamics.com/en/news/nvidia-prologis-epri-infrapartners-target-prefab-data-centers-at-substation-sites/",
+      "date": "2026-02-05"
+    },
+    {
+      "label": "Data Center Knowledge — NVIDIA, EPRI, Prologis, InfraPartners team up to build smaller data centers",
+      "url": "https://www.datacenterknowledge.com/build-design/nvidia-epri-prologis-infrapartners-team-up-to-build-smaller-data-centers",
+      "date": "2026-02-04"
+    },
+    {
+      "label": "EPRI release — EPRI, NVIDIA, Prologis, and InfraPartners Announce Collaboration to Produce Smaller Data Centers",
+      "url": "https://www.epri.com/about/media-resources/press-release/dzagwmfxgarse2g2s9ma4telm5gxqsbt",
+      "date": "2026-02-03"
+    },
+    {
+      "label": "PR Newswire — EPRI's DCFlex Initiative Expands to Nine Demonstration Sites Across U.S., Europe",
+      "url": "https://www.prnewswire.com/news-releases/epris-dcflex-initiative-expands-to-nine-demonstration-sites-across-us-europe-302676241.html",
+      "date": "2026-02-02"
+    },
+    {
+      "label": "Renewable Energy World — EPRI expands DCFlex to nine demo sites across U.S. and Europe",
+      "url": "https://www.renewableenergyworld.com/news/epri-expands-dcflex-data-center-initiative-to-nine-demo-sites-across-u-s-and-europe/",
+      "date": "2026-02-02"
+    },
+    {
+      "label": "EPRI release — EPRI Launches Global Effort to Prepare Future-Ready Grids (RADAR)",
+      "url": "https://www.epri.com/about/media-resources/press-release/paizyqqkovecyn82v5gbhdroqrdmet7y",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "EPRI Europe — New Global Initiative Launched to Prepare Future-Ready Grids (RADAR)",
+      "url": "https://europe.epri.com/press-releases/new-global-initiative-launched-prepare-future-ready-grids",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "OSTI — IM3 + EPRI Data Center Load Projections (PNNL dataset)",
+      "url": "https://www.osti.gov/biblio/3007669",
+      "date": "2025-12-11"
+    },
+    {
+      "label": "PR Newswire — EPRI Publishes First Electric Sector Benchmarking Results of Public LLMs",
+      "url": "https://www.prnewswire.com/news-releases/epri-publishes-first-electric-sector-benchmarking-results-of-public-llms-302635785.html",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "IRS Form 990 FY2024 — full text (ProPublica; filed 2025-11-14; DC domicile; 1,475 employees)",
+      "url": "https://projects.propublica.org/nonprofits/full_text/202543189349303899/IRS990",
+      "date": "2025-11-14"
+    },
+    {
+      "label": "IRS Form 990 FY2024 — Schedule O (membership classes; offices; mission)",
+      "url": "https://projects.propublica.org/nonprofits/full_text/202543189349303899/IRS990ScheduleO",
+      "date": "2025-11-14"
+    },
+    {
+      "label": "IRS Form 990 FY2024 — Schedule J (officer compensation)",
+      "url": "https://projects.propublica.org/nonprofits/full_text/202543189349303899/IRS990ScheduleJ",
+      "date": "2025-11-14"
+    },
+    {
+      "label": "LBNL — Large Load Literature Review, November 2025 update",
+      "url": "https://eta-publications.lbl.gov/sites/default/files/2025-11/wip_lbnl_lllreview_oct_update_2025.pdf",
+      "date": "2025-11-01"
+    },
+    {
+      "label": "Energy Storage Canada — EPRI–Energy Storage Canada MOU (EPRI release copy)",
+      "url": "https://www.energystoragecanada.org/blog-3-1/epri-energy-storage-canada-sign-mou-to-accelerate-energy-storage-innovation-across-north-america",
+      "date": "2025-09-29"
+    },
+    {
+      "label": "EPRI — DCFlex Supplemental Project Notice (product 3002031004; price list)",
+      "url": "https://restservice.epri.com/publicdownload/000000003002031004/0/Product",
+      "date": "2025-09-01"
+    },
+    {
+      "label": "Gas Turbine World — Gas turbine demand surges (Noble: three to seven years)",
+      "url": "https://gasturbineworld.com/gas-turbine-demand-surges/",
+      "date": "2025-08-29"
+    },
+    {
+      "label": "EPRI release — EPRI Drives Grid Flexibility with Streamlined DER Integration (FLEXIT)",
+      "url": "https://www.epri.com/about/media-resources/press-release/vx3WvfIlz6k6GTvk857R5IH7izR1Rug8",
+      "date": "2025-08-26"
+    },
+    {
+      "label": "Utility Dive — Georgia Power receives natural gas turbine as delays loom (Noble: 'as long as seven years')",
+      "url": "https://www.utilitydive.com/news/georgia-power-natural-gas-turbine-delivery-delays-mitsubishi/758252/",
+      "date": "2025-08-21"
+    },
+    {
+      "label": "EPRI Journal — Flexible Loads, Resilient Grids (49 participants; Lenoir demo)",
+      "url": "https://eprijournal.com/flexible-loads-resilient-grids/",
+      "date": "2025-08-20"
+    },
+    {
+      "label": "EPRI Journal — When Knowledge Demands Power (Summer Seminar)",
+      "url": "https://eprijournal.com/when-knowledge-demands-power/",
+      "date": "2025-08-12"
+    },
+    {
+      "label": "EPRI release — EPRI, Epoch AI Joint Report Finds Surging Power Demand from AI Model Training",
+      "url": "https://www.epri.com/about/media-resources/press-release/ood6gzwpcqjeuq7dngaq6n4ywomeleq7",
+      "date": "2025-08-11"
+    },
+    {
+      "label": "POWER — Building ChatGPT for the power industry: EPRI leads the way (250+ use cases; GE Vernova, Google, Burns & McDonnell members)",
+      "url": "https://www.powermag.com/building-chatgpt-for-the-power-industry-epri-leads-the-way/",
+      "date": "2025-08-07"
+    },
+    {
+      "label": "Energy & Policy Institute — Utility-backed climate framework could weaken emissions targets (EPRI SMARTargets; $238m dues)",
+      "url": "https://energyandpolicy.org/epri-smartargets/",
+      "date": "2025-08-06"
+    },
+    {
+      "label": "Latitude Media — Google expands demand response to target machine learning workloads (DCFlex membership noted)",
+      "url": "https://www.latitudemedia.com/news/google-expands-demand-response-to-target-machine-learning-workloads/",
+      "date": "2025-08-04"
+    },
+    {
+      "label": "EPRI — Nuclear Sector Value Briefing, Summer 2025",
+      "url": "https://restservice.epri.com/publicattachment/94886",
+      "date": "2025-08-01"
+    },
+    {
+      "label": "Power Engineering — Turbine delays: solving the puzzle (Bobby Noble, EPRI)",
+      "url": "https://www.power-eng.com/gas/turbines/turbine-delays-solving-the-puzzle-critical-to-an-affordable-reliable-energy-future/",
+      "date": "2025-07-28"
+    },
+    {
+      "label": "EPRI ANT blog — Nuclear and Data Center Integration Workshop",
+      "url": "https://ant.epri.com/blog/nuclear-beyond-electricity-workshop",
+      "date": "2025-07-17"
+    },
+    {
+      "label": "arXiv 2507.00909 — Turning AI Data Centers into Grid-Interactive Assets: Results from a Field Demonstration in Phoenix, Arizona",
+      "url": "https://arxiv.org/abs/2507.00909",
+      "date": "2025-07-01"
+    },
+    {
+      "label": "Latitude Media — NVIDIA and Oracle tapped this startup to flex a Phoenix data center",
+      "url": "https://www.latitudemedia.com/news/nvidia-and-oracle-tapped-this-startup-to-flex-a-phoenix-data-center/",
+      "date": "2025-07-01"
+    },
+    {
+      "label": "kWh Analytics — Solar Risk Assessment 2025 (EPRI-authored BESS failure chapter)",
+      "url": "https://kwhanalytics.com/wp-content/uploads/2025/06/Solar-Risk-Assessment-2025.pdf",
+      "date": "2025-06-15"
+    },
+    {
+      "label": "EPRI — Jeremy Renshaw written testimony, House Science Subcommittee on Energy",
+      "url": "https://restservice.epri.com/publicattachment/93796",
+      "date": "2025-06-12"
+    },
+    {
+      "label": "IEEE Spectrum — Big Tech tests data center flexibility (first three DCFlex test beds)",
+      "url": "https://spectrum.ieee.org/dcflex-data-center-flexibility",
+      "date": "2025-06-12"
+    },
+    {
+      "label": "Public Power — NPPD's Tom Kent begins service as EPRI board chair (Sorgi outgoing)",
+      "url": "https://www.publicpower.org/periodical/article/nppd-president-and-ceo-tom-kent-begins-service-epri-board-chair",
+      "date": "2025-05-04"
+    },
+    {
+      "label": "Daily Energy Insider — EPRI names new board chair and appoints slate of directors (2025)",
+      "url": "https://dailyenergyinsider.com/news/48103-epri-names-new-board-chair-and-appoints-slate-of-directors/",
+      "date": "2025-05-01"
+    },
+    {
+      "label": "EPRI release — EPRI Announces 2025 Chairs, Board Members (Tom Kent chair; Marc Spieler external director)",
+      "url": "https://www.epri.com/about/media-resources/press-release/kaihqaxxnmgznjwpdmfc83uztw7sdxcc",
+      "date": "2025-04-29"
+    },
+    {
+      "label": "Utility Dive — EPRI's Open Power AI consortium and the data problem (Daji: 95% behind utility walls)",
+      "url": "https://www.utilitydive.com/news/epri-open-power-ai-consortium-grid-modernization-data/745730/",
+      "date": "2025-04-29"
+    },
+    {
+      "label": "EPRI — Consolidated Financial Statements FY2024/2023 and SEFA (Deloitte)",
+      "url": "https://restservice.epri.com/publicattachment/93477",
+      "date": "2025-04-24"
+    },
+    {
+      "label": "Utility Dive — EPRI launches consortium to develop power-sector AI applications",
+      "url": "https://www.utilitydive.com/news/epri-launches-consortium-to-develop-power-sector-ai-applications/743190/",
+      "date": "2025-03-21"
+    },
+    {
+      "label": "EPRI release — EPRI Launches Consortium to Develop Open AI Model for the Power Sector (Open Power AI)",
+      "url": "https://www.epri.com/about/media-resources/press-release/yglqo5dymdh2nonjvdgqmmpgplyyj826",
+      "date": "2025-03-20"
+    },
+    {
+      "label": "EPRI — Open Power AI Consortium factsheet",
+      "url": "https://restservice.epri.com/publicattachment/92658",
+      "date": "2025-03-20"
+    },
+    {
+      "label": "T&D World — EPRI launches Open Power AI Consortium (full member list)",
+      "url": "https://www.tdworld.com/electric-utility-operations/tools-and-technologies/news/55276361/epri-launches-open-power-ai-consortium-to-advance-ai-applications-in-the-energy-sector",
+      "date": "2025-03-20"
+    },
+    {
+      "label": "NVIDIA blog — Open Power AI Consortium launch (H100-trained model; NIM early access)",
+      "url": "https://blogs.nvidia.com/blog/open-power-ai-consortium/",
+      "date": "2025-03-20"
+    },
+    {
+      "label": "Latitude Media — EPRI launches consortium to wrangle the 'wild west' of power sector AI models",
+      "url": "https://www.latitudemedia.com/news/epri-launches-consortium-to-wrangle-the-wild-west-of-power-sector-ai-models/",
+      "date": "2025-03-20"
+    },
+    {
+      "label": "EPRI — Board roster as of 13 March 2025",
+      "url": "https://restservice.epri.com/publicattachment/92683",
+      "date": "2025-03-13"
+    },
+    {
+      "label": "EPRI Europe — EPRI's Data Center Flexibility and Grid Reliability Initiative Expands to Europe",
+      "url": "https://europe.epri.com/press-releases/epris-data-center-flexibility-and-grid-reliability-initiative-expands-europe",
+      "date": "2025-03-04"
+    },
+    {
+      "label": "Latitude Media — EPRI takes its data center flexibility project global ('nearly 40 participants, including Dominion Energy… Microsoft')",
+      "url": "https://www.latitudemedia.com/news/epri-takes-its-data-center-flexibility-project-global/",
+      "date": "2025-03-04"
+    },
+    {
+      "label": "Utility Dive — US grid headroom for flexible load (Duke 'Rethinking Load Growth'; EPRI not an author)",
+      "url": "https://www.utilitydive.com/news/us-grid-headroom-flexible-load-data-center-ai-ev-duke-report/739767/",
+      "date": "2025-02-11"
+    },
+    {
+      "label": "Canary Media — Moss Landing fire reveals flaws in the battery industry's early designs (cites StorageWiki)",
+      "url": "https://www.canarymedia.com/articles/energy-storage/moss-landing-fire-reveals-flaws-in-the-battery-industrys-early-designs",
+      "date": "2025-01-27"
+    },
+    {
+      "label": "pv magazine USA — Grid-scale battery safety showing signs of progress amid growth",
+      "url": "https://pv-magazine-usa.com/2025/01/06/grid-scale-battery-safety-showing-signs-of-progress-amid-growth/",
+      "date": "2025-01-06"
+    },
+    {
+      "label": "IRS Form 990 FY2023 — full text",
+      "url": "https://projects.propublica.org/nonprofits/full_text/202442969349301334/IRS990",
+      "date": "2024-11-15"
+    },
+    {
+      "label": "Latitude Media — Can a new coalition turn data centers into grid assets? (Microsoft and Amazon 'in active discussions')",
+      "url": "https://www.latitudemedia.com/news/can-a-new-coalition-turn-data-centers-into-grid-assets/",
+      "date": "2024-10-31"
+    },
+    {
+      "label": "Utility Dive — EPRI launches data center flexibility initiative with NVIDIA, Google, Meta",
+      "url": "https://www.utilitydive.com/news/epri-launches-data-center-flexibility-initiative-with-NVIDIA-google-meta/731490/",
+      "date": "2024-10-30"
+    },
+    {
+      "label": "EPRI release — EPRI Launches Initiative to Enhance Data Center Flexibility and Grid Reliability (DCFlex founders)",
+      "url": "https://www.epri.com/about/media-resources/press-release/yimzjv2xnv9cqiztau1zxbedletwyqk1",
+      "date": "2024-10-29"
+    },
+    {
+      "label": "Public Power — EPRI report examines power demand from data centers and AI (2024)",
+      "url": "https://www.publicpower.org/periodical/article/epri-report-examines-power-demand-data-centers-artificial-intelligence",
+      "date": "2024-06-01"
+    },
+    {
+      "label": "Utility Dive — AI doubles data center demand by 2030 (Powering Intelligence 2024)",
+      "url": "https://www.utilitydive.com/news/artificial-intelligence-doubles-data-center-demand-2030-EPRI/717467/",
+      "date": "2024-05-30"
+    },
+    {
+      "label": "Utility Dive — Cells and modules not responsible for most BESS failures (72%; 81 incidents; 97%)",
+      "url": "https://www.utilitydive.com/news/cells-and-modules-not-responsible-for-most-battery-energy-storage-system-fa/716732/",
+      "date": "2024-05-21"
+    },
+    {
+      "label": "EPRI — 2024 White Paper: Insights from EPRI's BESS Failure Incident Database (product 3002030360)",
+      "url": "https://restservice.epri.com/publicdownload/000000003002030360/0/Product",
+      "date": "2024-05-15"
+    },
+    {
+      "label": "GlobeNewswire — BESS Failures Study by EPRI, PNNL and TWAICE (81 events; 26 root causes)",
+      "url": "https://www.globenewswire.com/news-release/2024/05/15/2882515/0/en/BESS-Failures-Study-by-EPRI-PNNL-and-TWAICE-Shows-Quality-Assurance-and-Battery-Monitoring-Could-Prevent-Majority-of-Failures.html",
+      "date": "2024-05-15"
+    },
+    {
+      "label": "EPRI — Technology Innovation Sector Overview (product 3002030325)",
+      "url": "https://restservice.epri.com/publicdownload/000000003002030325/0/Product",
+      "date": "2024-05-01"
+    },
+    {
+      "label": "US DOE Office of Electricity — Energy Storage Safety Strategic Plan (EPRI, UL Solutions, CSA Group, DNV advisors)",
+      "url": "https://www.energy.gov/sites/default/files/2024-05/EED_2827_FIG_SafetyStrategy%20240505v2.pdf",
+      "date": "2024-04-30"
+    },
+    {
+      "label": "California Energy Commission — CEC-500-2024-010: EPRI DER-VET final report",
+      "url": "https://www.energy.ca.gov/sites/default/files/2024-02/CEC-500-2024-010.pdf",
+      "date": "2024-02-01"
+    },
+    {
+      "label": "IRS Form 990 FY2022 — full text",
+      "url": "https://projects.propublica.org/nonprofits/full_text/202342649349300509/IRS990",
+      "date": "2023-11-15"
+    },
+    {
+      "label": "Korea Times — KHNP CEO elected to EPRI board ('39 board members')",
+      "url": "https://koreatimes.co.kr/www/tech/2023/04/419_350080.html",
+      "date": "2023-04-30"
+    },
+    {
+      "label": "GlobeNewswire — CMBlu Energy long-duration storage pilot in Wisconsin with WEC Energy and EPRI",
+      "url": "https://www.globenewswire.com/news-release/2023/02/09/2605163/0/en/CMBlu-Energy-Continues-U-S-Expansion-With-Long-Duration-Energy-Storage-Pilot-Project-in-Wisconsin.html",
+      "date": "2023-02-09"
+    },
+    {
+      "label": "Burns & McDonnell — Utility-scale hydrogen power test (WEC, Wärtsilä engine, EPRI)",
+      "url": "https://www.burnsmcd.com/news/utility-scale-hydrogen-power-test",
+      "date": "2022-11-09"
+    },
+    {
+      "label": "PR Newswire — EPRI and GTI Low-Carbon Resources Initiative surpasses $100 million from 33 global partners",
+      "url": "https://www.prnewswire.com/news-releases/epri-and-gti-low-carbon-resources-initiative-surpasses-100-million-in-funding-from-33-global-partners-301222592.html",
+      "date": "2021-02-04"
+    },
+    {
+      "label": "EPRI release — EPRI Announces Executive Leadership Changes (offices in Dallas and Washington)",
+      "url": "https://www.epri.com/about/media-resources/press-release/66zoabeYmJAv8VvraaIeoW",
+      "date": "2020-10-02"
+    },
+    {
+      "label": "PR Newswire — Arshad Mansoor elected EPRI President and CEO",
+      "url": "https://www.prnewswire.com/news-releases/arshad-mansoor-elected-epri-president-and-ceo-301111296.html",
+      "date": "2020-08-12"
+    },
+    {
+      "label": "The Almanac — Chauncey Starr obituary (founded EPRI in 1972)",
+      "url": "https://www.almanacnews.com/news/2007/04/25/obituary-chauncey-starr-apostle-for-technology-pioneer-of-nuclear-power/",
+      "date": "2007-04-25"
+    },
+    {
+      "label": "CourtListener — Research Consulting Associates v. Electric Power Research Institute (D. Mass. 1986)",
+      "url": "https://www.courtlistener.com/opinion/1398428/research-consulting-associates-v-electric-power-research-institute-inc/",
+      "date": "1986-01-01"
+    },
+    {
+      "label": "ProPublica Nonprofit Explorer — EPRI, EIN 23-7175375 (organisation page; audit flags)",
+      "url": "https://projects.propublica.org/nonprofits/organizations/237175375"
+    },
+    {
+      "label": "ProPublica Nonprofit Explorer API — organisation record",
+      "url": "https://projects.propublica.org/nonprofits/api/v2/organizations/237175375.json"
+    },
+    {
+      "label": "EPRI — Certificate of Incorporation (Delaware non-stock, nonprofit corporation)",
+      "url": "https://restservice.epri.com/publicattachment/95181"
+    },
+    {
+      "label": "EPRI — Bylaws (Delaware; registered office 1209 Orange Street, Wilmington)",
+      "url": "https://restservice.epri.com/publicattachment/95179"
+    },
+    {
+      "label": "EPRI — About EPRI",
+      "url": "https://www.epri.com/about/epri"
+    },
+    {
+      "label": "EPRI — Governance (program committees; sectors)",
+      "url": "https://www.epri.com/about/governance"
+    },
+    {
+      "label": "EPRI — Leaders",
+      "url": "https://www.epri.com/about/leaders"
+    },
+    {
+      "label": "EPRI — Research programs (2026 portfolio, 99 programmes)",
+      "url": "https://www.epri.com/research/programs"
+    },
+    {
+      "label": "EPRI — Program 94 Energy Storage and Distributed Generation (2026 budget $5.5M)",
+      "url": "https://www.epri.com/research/programs/053125"
+    },
+    {
+      "label": "DCFlex — home",
+      "url": "https://dcflex.epri.com/"
+    },
+    {
+      "label": "DCFlex — demonstrations",
+      "url": "https://dcflex.epri.com/demonstrations"
+    },
+    {
+      "label": "DCFlex — deliverables (40-plus public reports)",
+      "url": "https://dcflex.epri.com/deliverables"
+    },
+    {
+      "label": "DCFlex — Workstream 2 deliverables (PJM capacity-crunch Quick Insight)",
+      "url": "https://dcflex.epri.com/deliverables/workstream-2"
+    },
+    {
+      "label": "Open Power AI Consortium — about",
+      "url": "https://openpowerai.org/about"
+    },
+    {
+      "label": "WattWorks — the power sector's AI benchmarking hub",
+      "url": "https://wattworks.epri.com/"
+    },
+    {
+      "label": "EPRI StorageWiki — Battery Energy Storage Roadmap / SAFE",
+      "url": "https://storagewiki.epri.com/index.php/Battery_Energy_Storage_Roadmap/SAFE"
+    },
+    {
+      "label": "EPRI StorageWiki — Storage Safety (ESIC membership open)",
+      "url": "https://storagewiki.epri.com/index.php/Storage_Safety"
+    },
+    {
+      "label": "EPRI — Collaborative Supplemental Projects (offered twice yearly)",
+      "url": "https://msites.epri.com/supplemental-projects"
+    },
+    {
+      "label": "OpenCorporates — EPRI California foreign registration B20260248338 (branch of the Delaware corporation; Charlotte mailing address)",
+      "url": "https://opencorporates.com/companies/us_ca/B20260248338"
+    },
+    {
+      "label": "OpenCorporates — EPRI California foreign registration C0682349 (branch of the District of Columbia corporation; terminated)",
+      "url": "https://opencorporates.com/companies/us_ca/0682349"
+    },
+    {
+      "label": "Candid — Electric Power Research Institute Inc profile",
+      "url": "https://app.candid.org/profile/7176720/electric-power-research-institute-inc-23-7175375"
+    },
+    {
+      "label": "Charity Navigator — EIN 237175375",
+      "url": "https://www.charitynavigator.org/ein/237175375"
+    },
+    {
+      "label": "CauseIQ — Electric Power Research Institute",
+      "url": "https://www.causeiq.com/organizations/electric-power-research-institute,237175375/"
+    },
+    {
+      "label": "USAspending.gov API — obligations to EPRI by awarding agency (DOE USD 181.3m, FY2020–FY2026)",
+      "url": "https://api.usaspending.gov/api/v2/search/spending_by_category/awarding_agency/"
+    },
+    {
+      "label": "US DOE Office of Electricity — Clean energy resources to meet data center electricity demand (cites EPRI 9%)",
+      "url": "https://www.energy.gov/oe/clean-energy-resources-meet-data-center-electricity-demand"
+    },
+    {
+      "label": "NVIDIA — Emerald AI case study (Phoenix demonstration under DCFlex)",
+      "url": "https://www.nvidia.com/en-us/case-studies/emerald-ai/"
+    },
+    {
+      "label": "Wikipedia — Electric Power Research Institute (cross-check only; 'California' incorporation is wrong)",
+      "url": "https://en.wikipedia.org/wiki/Electric_Power_Research_Institute"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}

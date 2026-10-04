@@ -41,6 +41,15 @@
    ]
   },
   {
+   "slug": "501c3",
+   "term": "501(c)(3)",
+   "def": "The section of the US tax code that exempts charitable, educational and scientific organisations from federal income tax. A research institute organised under it has no owners or shareholders, is governed by a board, and must file a public Form 990 each year.",
+   "aliases": [
+    "501(c)(3) organisation",
+    "tax-exempt research organisation"
+   ]
+  },
+  {
    "slug": "765-kv",
    "term": "765 kV",
    "def": "The highest transmission voltage in common use in the United States. A 765 kV line carries several times the power of a 345 kV line on one right-of-way with lower losses, which is why it is the backbone choice when a region must move gigawatts across hundreds of miles. AEP built and operates most of the country's existing 765 kV network; Texas chose it in 2025 for the Permian Basin plan.",
@@ -2214,6 +2223,15 @@
    ]
   },
   {
+   "slug": "compute-benchmark",
+   "term": "compute benchmark",
+   "def": "A published, repeatable test that runs the same AI workload on different hardware or clouds and reports throughput, cost and efficiency, so buyers can compare vendors' claims. Its credibility depends on who supplied the hardware and whether others can reproduce the runs.",
+   "aliases": [
+    "inference benchmark",
+    "AI hardware benchmark"
+   ]
+  },
+  {
    "slug": "compute-commitment",
    "term": "compute commitment",
    "def": "A buyer's contractual promise to purchase a stated amount of computing capacity or spend a stated sum over years — the demand-side document that suppliers, landlords and lenders finance against.",
@@ -3337,6 +3355,15 @@
     "capacity charge",
     "demand charges",
     "$/kW-month"
+   ]
+  },
+  {
+   "slug": "demand-flexibility",
+   "term": "demand flexibility",
+   "def": "A large electricity user's ability to reduce, shift or shape its consumption on request — by pausing or moving computing jobs, running on-site generation or batteries, or adjusting cooling — so the grid can serve it without building for its peak. Measured by how much load can move, how fast, and for how long.",
+   "aliases": [
+    "load flexibility",
+    "flexible load"
    ]
   },
   {
@@ -5213,6 +5240,14 @@
    "slug": "foreign-private-issuer",
    "term": "foreign private issuer",
    "def": "A non-US company listed in the United States that reports under a lighter regime than a domestic filer — annually on Form 20-F or 40-F rather than quarterly on 10-K and 10-Q, and often under international rather than US accounting rules."
+  },
+  {
+   "slug": "form-990",
+   "term": "Form 990",
+   "def": "The annual return a tax-exempt US organisation files with the IRS and that becomes public: revenue by source, expenses, net assets, employee count, board size and officer pay. For a non-profit it is the closest thing to an annual report.",
+   "aliases": [
+    "IRS Form 990"
+   ]
   },
   {
    "slug": "form-adv",
@@ -7879,6 +7914,14 @@
     "Midcontinent Independent System Operator",
     "MISO South",
     "MISO South region"
+   ]
+  },
+  {
+   "slug": "mnpi",
+   "term": "MNPI",
+   "def": "Material non-public information: facts about a company that a reasonable investor would act on and that have not been published. Trading on it is illegal, and a research firm that sells models to investors must keep it out of what it sells.",
+   "aliases": [
+    "material non-public information"
    ]
   },
   {
@@ -11100,6 +11143,15 @@
    ]
   },
   {
+   "slug": "section-232-tariff",
+   "term": "Section 232 tariff",
+   "def": "An import duty or minimum import price imposed under Section 232 of the US Trade Expansion Act on national-security grounds, by presidential proclamation rather than by Congress. Unlike anti-dumping duties it applies to a product class regardless of exporter, so it reprices every import of that class on its effective date.",
+   "aliases": [
+    "Section 232",
+    "232 tariff"
+   ]
+  },
+  {
    "slug": "section-301",
    "term": "Section 301 tariffs",
    "def": "US tariffs on Chinese imports imposed under Section 301 of the Trade Act — including steep rates on lithium-ion batteries — that reshape the landed cost of China-sourced storage hardware.",
@@ -13046,6 +13098,14 @@
    "aliases": [
     "type test",
     "type-tested"
+   ]
+  },
+  {
+   "slug": "uflpa",
+   "term": "UFLPA",
+   "def": "The US Uyghur Forced Labor Prevention Act, which presumes goods with inputs from China's Xinjiang region were made with forced labour and lets Customs detain them at the border unless the importer proves otherwise. For solar modules and batteries it makes supply-chain traceability a condition of delivery.",
+   "aliases": [
+    "Uyghur Forced Labor Prevention Act"
    ]
   },
   {

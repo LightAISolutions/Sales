@@ -122,6 +122,22 @@
       "verifiedAt": 3,
       "when": "2026-09-08",
       "why": "Hut 8 v3 (2026-10-02) updates the Crusoe competitor context ('6GW+' contracted per the Series F release), adds the WSJ-reported Beacon Point tenancy (press, unconfirmed) and the USD 1.07bn revolver. The report pins River Bend — the USD 7.0bn Fluidstack lease on 330 MW of Entergy capacity with Google's backstop and the 1,000 MW ROFO — which is untouched. Read 2026-10-02."
+    },
+    {
+      "report": "aidc-power-conversion-rev2--competitive--2026-09-25",
+      "slug": "vertiv",
+      "pinnedVersion": 9,
+      "verifiedAt": 10,
+      "when": "2026-10-04",
+      "why": "Short-gap pin (v9 -> v10, 1 version): the v10 revision changed one sentence of strategyRead (the SemiAnalysis 800 VDC market sizing — the SST figure corrected from a third-party ~$13B to the post's own ~$32B by 2030, both now stated) and nothing else; sources[] unchanged, so every citation this edition copies from vertiv is identical; the edition's text does not carry the SST market figure (checked by grep), so no claim it makes moved."
+    },
+    {
+      "report": "sst-hall-edge-block-rev2--competitive--2026-09-23",
+      "slug": "vertiv",
+      "pinnedVersion": 9,
+      "verifiedAt": 10,
+      "when": "2026-10-04",
+      "why": "Short-gap pin (v9 -> v10, 1 version): the v10 revision changed one sentence of strategyRead (the SemiAnalysis 800 VDC market sizing — the SST figure corrected from a third-party ~$13B to the post's own ~$32B by 2030, both now stated) and nothing else; sources[] unchanged, so every citation this edition copies from vertiv is identical; the edition's text does not carry the SST market figure (checked by grep), so no claim it makes moved."
     }
   ]
 }

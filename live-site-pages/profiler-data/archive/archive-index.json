@@ -1045,6 +1045,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-10-02",
       "supersededBy": 6
+    },
+    {
+      "file": "iren.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-10-04",
+      "supersededBy": 7
     }
   ],
   "jinko": [
@@ -2339,6 +2345,12 @@
       "profileVersion": 8,
       "archivedAt": "2026-09-05",
       "supersededBy": 9
+    },
+    {
+      "file": "vertiv.profile.v9.json",
+      "profileVersion": 9,
+      "archivedAt": "2026-10-04",
+      "supersededBy": 10
     }
   ],
   "voltagrid": [
@@ -2745,6 +2757,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-10-02",
       "supersededBy": 3
+    },
+    {
+      "file": "fluidstack.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-10-04",
+      "supersededBy": 4
     }
   ],
   "entergy": [
@@ -3050,6 +3068,14 @@
       "file": "duke-energy.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-09-29",
+      "supersededBy": 2
+    }
+  ],
+  "firmus": [
+    {
+      "file": "firmus.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-10-04",
       "supersededBy": 2
     }
   ]

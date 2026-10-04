@@ -1,0 +1,1295 @@
+{
+  "schemaVersion": 7,
+  "slug": "anza",
+  "name": "Anza RE, LLC (operating as Anza; branded Anza Renewables)",
+  "shortName": "Anza",
+  "categories": [
+    "advisor"
+  ],
+  "website": "https://www.anzarenewables.com/",
+  "headquarters": "Oakland, California, United States (legal and notice address 1440 Broadway, Suite 200 #1100; the California foreign-LLC record gives 1423 Broadway #1100; staff are remote across the United States)",
+  "founded": 2022,
+  "employees": "Not published. LinkedIn range '51-200 employees' (company-set) with 84 members listed (read 2026-10-04); PitchBook '86 total employees' (third-party estimate); the company's own pages name about 30 staff and four officers",
+  "ownership": {
+    "type": "private",
+    "ticker": "",
+    "notes": "Energy Capital Partners-led consortium (ECP's Energy Transition Opportunities Fund, Angeleno Group and 'other investors') since the May 2023 separation from Borrego; terms never disclosed; management holds equity under 'an attractive equity program' (careers page); whether Borrego retained a stake is stated nowhere. Delaware LLC per state-registry mirrors (OpenCorporates DE file 7326972; the formation date is paywalled and the aggregator date of 2023-03-02/03 is unconfirmed); foreign-registered in California, Washington, New Hampshire and eleven other states from 3 May 2023"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Anza is the Oakland procurement-intelligence firm that turned Borrego's internal module-buying tools into four paid data subscriptions (Solar Pro, Anza Pulse, Energy Storage Pro, Energy Storage DG) and a fee-for-service procurement, commissioning and transformer-sourcing practice for developers, IPPs, EPCs, utilities and data-centre developers; its data claims rest on supplier participation it does not pay for — '40+ module, 20+ battery block and 50+ transformer suppliers' and 'more than 95% of the U.S. solar module and battery supply' (company statement, never audited) — and it earns on the procurement it advises, so it is an intermediary that publishes an index, not a neutral analyst. BACKGROUND. Strategy conceived in 2020 by Mike and Aaron Hall inside Borrego; platform live in 2021 (privacy policy effective 1 September 2021; LinkedIn 'Founded 2021'); formally launched as Borrego's procurement marketplace on 12 September 2022; separated on 17 May 2023 with funding from an Energy Capital Partners-led consortium (ECP's Energy Transition Opportunities Fund, Angeleno Group, others — 'terms of the transaction were not disclosed'); legal entity Anza RE, LLC, a Delaware LLC per state-registry mirrors, with California governing law in its terms. Commercial model, in the company's and third parties' words: buyers 'pay us for access to the data and technology and also the services' (CEO, Solar Builder, April 2024); 'approximately 1-2 cents per watt on projects, with utility-scale fees measured in tenths of a cent' (CEO, Clean Power Hour, September 2023); 'tiered subscription packages' with no published price list; Anza Pulse and Energy Storage DG are self-serve, card-billed, auto-renewing subscriptions with a 14-day Pulse trial. Scale as stated by the company (none audited): '100+ current subscribers'; '9.2+ GW of solar POs and 4.7+ GWh of energy storage POs' supported in five years (about-us, June 2026) against 'over 10 GW of solar & 8 GWh of BESS experience' on a page updated September 2026 and '8 GW of PV and 7 GWh of BESS purchase orders' in December 2025 — three figures for the same claim; '11 GWh' of BESS construction and commissioning support; 'over 5 GW of module procurement over the past 12 months' (September 2026). Collection gaps: revenue, subscription prices, the per-watt fee on storage, the transformer-service fee, headcount, Borrego's residual stake and any funding since 2023 are published nowhere; no data-centre developer or transformer client is named.",
+  "ecosystemRole": "The corpus's ninth `advisor` and its first procurement-side one: where DNV and Sargent & Lundy sell the engineering judgment a lender relies on, Anza sells the market view a buyer needs before the purchase order — supplier-provided price, lead-time, FEOC, domestic-content and certification data on the modules, battery blocks, PCS and transformers that this corpus's suppliers make and its developers buy — and then runs the RFP, BAFO and pre-negotiated Supplier Purchase Agreement for a per-watt fee, warehouses the equipment, and manages BESS commissioning (GridStor's 220 MW / 440 MWh Texas plant; Aypa's 150 MW ERCOT battery). Category decision: `advisor`, not `supplier`. The subscriptions are software and data products sold on their own terms, but they are procurement intelligence of the kind SemiAnalysis sells to the same buyer function, not operating software a plant runs on; the only fee model either the company or a third party has described is buyer-paid procurement fees plus subscriptions, and neither has published the revenue split, so the record supports one category. Independence: its indices are built from quotes suppliers hand over in exchange for free market feedback and the chance to 'win more business' through Anza's procurements; trade press (Utility Dive, Forbes) nonetheless cites them beside Wood Mackenzie's as neutral market data. No covered dossier names Anza.",
+  "productsAndServices": [
+    {
+      "name": "Energy Storage Pro — utility-scale and high-volume DG battery data and analytics subscription",
+      "category": "Software and data subscription — energy storage",
+      "description": "A subscription database and modelling engine for battery energy storage procurement: supplier-provided FOB/DDP pricing, CapEx and OpEx 'for deliveries 3 years out, including system, block, & PCS pricing', 150-plus data fields across batteries, PCS and full configurations, 30-plus filters (Tier-1 status, PCS compatibility, country of origin, certification, FEOC tier, domestic-content eligibility), downloadable datasheets, UL 9540 certificates, single-line diagrams and cash-flow models, side-by-side comparison of up to four systems, and since March 2026 an automated scenario engine (duration, tariff severity, delivery timing, augmentation versus overbuild, supplier degradation curves) with confidential quote benchmarking.",
+      "highlights": [
+        "Launched 13 May 2025 'across more than 20 battery suppliers, including fully domestic and non-Chinese options' with 'real-time access to more than 150 data fields'; the launch blog claimed pricing 'for more than 85% of U.S. BESS supply', restated as '95% of the U.S. battery market' on 3 March 2026 — the 85 percent figure still appears in a September 2026 blog ('pricing data from 85% of current suppliers') and Utility Dive (7 April 2026) reported '85% of energy storage market' in the same quarter the release said 95 percent. Company claims; no third party has tested either denominator.",
+        "3 March 2026: 'the first market-wide scenario intelligence engine purpose-built for utility-scale and DG battery energy storage system (BESS) development and procurement' — 'model duration scenarios, tariff severity outcomes, delivery timing shifts, and probability-weighted pricing assumptions', 'supplier-specific degradation curves', 'AC/DC augmentation or overbuild strategies', and 'Centralized Quote Benchmarking' against 'standardized data covering 95% of U.S. battery suppliers'; the companion blog claims 'compatibility checks in under a minute and the ability to model 10+ trade-off scenarios in under 30 minutes'.",
+        "FEOC and FCC compliance as a product (blog, 29 September 2026): six FEOC status tiers from 'Not Compliant' to 'Legal Opinion Available'; across tracked storage products '40% of products in the high FEOC risk categories (Self-Reported, Not Compliant) and 25% of products in the low-risk categories … with roughly 35% … Pending'; a filter for 'FCC inverter compliance status' and the 'MACR points a particular solution (or variant) contributes'; the company commits to re-filter when DOE's rules issue in December 2026.",
+        "Current page (September 2026): 'add custom systems and your own supplier quotes to instantly (and confidentially) benchmark your offering against 30+ BESS suppliers and 55+ different products'; 'AC-wrapped and self-integrated product options'; filters for IEEE 2800, NERC IBR and RTO interconnection standards; total lifecycle cost 'including preventative maintenance, warranties, capacity maintenance, and LTSA'.",
+        "Named users: GridBeyond (beta; quote cycles 'up to three weeks' replaced by platform configurations), MMR/SouthWestern Power Group (beta), Standard Solar ('We rely on the platform to rapidly validate various sizing and scope iterations, solidifying our Basis of Design in real time' — CJ Colavito), New Leaf Energy (ECP-owned sibling; 'validating Anza's energy storage software against our internal design tool'), EnerSmart Storage, Chaberton Energy."
+      ],
+      "positioning": "Positioned against 'hard-to-get, quickly outdated pricing, siloed non-standardized product and supplier data, expensive consultants, and manual processes' (CEO at launch) rather than against a named vendor; no third party names a competitor, and Utility Dive runs Anza's median capex beside Wood Mackenzie's deployment data as parallel sources. The differentiation claimed is direct-from-supplier pricing updated monthly or more often, not modelled indices.",
+      "soldThrough": "Direct subscription sold through the company's sales team ('Schedule a Meeting' order forms); 'tiered subscription packages custom built to fit companies' unique needs'; no price list published; Market Insights (quarterly report plus four hours of custom analysis per quarter) bundled with platform subscriptions.",
+      "targetSegments": [
+        "Storage developers",
+        "IPPs",
+        "EPCs",
+        "Utilities",
+        "Data-centre developers (stated target; none named)"
+      ],
+      "roadmap": "Re-filtering for DOE's bulk-power-system rules 'due by December 24, 2026' (blog, 29 September 2026); a new storage webinar series launched 31 August 2026."
+    },
+    {
+      "name": "Solar Pro — module data, analytics and optimisation subscription (Anza Effective $/W®)",
+      "category": "Software and data subscription — solar modules",
+      "description": "A subscription platform covering '95% of the U.S. module supply' (company) across 40-plus suppliers and 280-plus modules: ten quarters of supplier-provided pricing and availability, a five-year monthly machine-learning price forecast, a 'Predicted Quote' negotiated-price range, NPV ranking of modules against project specifications by the registered Anza Effective $/W® metric, a domestic-content blending tool for the 10 percent ITC adder, FEOC compliance filtering with Material Assistance Cost Ratio calculation, Anza Risk Rating® and vetted PAN, LID and IAM files.",
+      "highlights": [
+        "Launched as a standalone subscription on 14 August 2024 'with access to data and insights of more than 95% of the U.S. module supply' and 'over 110 solar products'; 'Anza will offer tiered subscription packages custom built to fit companies' unique needs'.",
+        "26 August 2025 (RE+): 'Predicted Quote' — 'estimates the final negotiated price range for every module on the platform, using real-world, anonymized customer quotes and Anza's supplier negotiation experience. Prices are shown as a 25th–75th percentile range'; 'Quarterly Pricing' — '10 quarters (2.5 years) of supplier-provided module pricing'; 'Five-Year Monthly Forecast' — 'machine learning models to predict module prices up to five years out', trained on 'a structured two-year dataset from 40+ suppliers, with 10,000+ verified platform price points' (technology page).",
+        "Accuracy claim (pricing-advantage page, September 2026): 'Our solar module platform prices are within $0.008/watt of final supplier price quotes since September 2025.' Company statement.",
+        "FEOC (blog, 20 April 2026): a compliance filter over '240+ modules', MACR calculated per module with the verification tier shown — 'legal opinion, third-party audit, or certificate, and at the module OEM, cell, and seller level'; 'Suppliers that are only self-reporting … are not qualified as FEOC-compliant on the Anza platform'.",
+        "Named users: New Leaf Energy (vetting time 'from approximately 6 hours … to just 1 hour'), Apex Clean Energy ('Manual calculations that used to take the APEX team four hours can be completed in 30 minutes'), ClearPath Energy ('$12MM … saved by blending domestic and imported modules' — company calculator page), Alluvial Power, Birch Creek Energy, Renewable Properties, Spreck Energy, Working Power."
+      ],
+      "positioning": "Against periodic survey-based indices: 'The solar market intelligence category has been defined for years by periodic reports and bottom-up, component-based module pricing produced from annual supplier surveys and raw material price indexes' (Pulse release, May 2026). The pitch is live supplier quotes and project-specific NPV ranking; Latitude Media once labelled the company 'a solar energy equipment supplier', which it is not.",
+      "soldThrough": "Direct tiered subscription via order form; brochure 'Solar Subscription Packages' (December 2025) implies tiers by use-case — development, buying soon, between purchases; no tier names or prices published.",
+      "targetSegments": [
+        "Developers",
+        "IPPs",
+        "EPCs",
+        "Utilities",
+        "Investors and independent engineers (named in the 2024 launch)"
+      ],
+      "roadmap": "No announced items beyond the continuous tariff and FEOC updates."
+    },
+    {
+      "name": "Anza Pulse — on-demand solar module market-intelligence subscription",
+      "category": "Software and data subscription — solar market intelligence",
+      "description": "A standalone, self-serve subscription 'built specifically for the work that happens between procurement cycles': live module pricing from 40 suppliers and 'over 1000 monthly price quotes, refreshed continuously and segmented by Tier 1, FEOC, domestic content', a Policy & Trade Navigator, a vetted supplier directory with contacts, and exportable bid snapshots; card-billed, auto-renewing, 14-day free trial.",
+      "highlights": [
+        "Launched 27 May 2026 (covered as 'Solar Pulse' by Renewable Energy Magazine on 1 June and as 'Anza Pulse' by pv magazine India on 23 June — the brand settled within the month); CEO: 'We give you the data equivalent to running a fresh RFP across every supplier, every day of the year.'",
+        "Product page: '95% of U.S. module market covered / 40 suppliers tracked'; pre-built segments 'U.S. Assembly, Domestic Cells, Domestic Lite, FEOC-Compliant Cells, and Non-Domestic Modules'; 'Pricing reflects Anza supplier-provided platform pricing, shortlist and BAFO supplier quotes, and our price forecast logic'.",
+        "Terms (May 2026): subscriptions 'shall automatically renew … unless … cancel at least thirty (30) days prior to the expiration'; 'ANZA DOES NOT PROVIDE REFUNDS OR CREDITS'; liability capped at fees paid in the prior six months; prices posted in-app, not on the public site.",
+        "Pulse data is the source of the free biweekly 'Pricing & Strategy Insights' and of the company's public tariff commentary — for example the Section 232 repricing data of 22 September 2026 (imported-module median $0.27/W to $0.38/W for delivery after 4 December).",
+        "Customer quote: 'Going to Anza Pulse is like having access to a Bloomberg terminal' — Jon Gillis, US Clean Energy; ForeFront Power's Monica Carter: 'It puts always-current supplier pricing and policy intelligence in one place.'"
+      ],
+      "positioning": "The company's own description — 'Anza Pulse is a data subscription, not software' — places it against quarterly reports and 'modelled averages' from survey publishers; Anza names none of them.",
+      "soldThrough": "Self-serve online subscription (credit card, auto-renew, 14-day trial) under the Anza Pulse Terms of Service; 'complements Anza's Solar Pro offering'.",
+      "targetSegments": [
+        "Solar developers",
+        "EPCs",
+        "IPPs",
+        "Utilities",
+        "Sourcing and procurement teams between buying cycles"
+      ],
+      "roadmap": "None announced."
+    },
+    {
+      "name": "Energy Storage DG — entry-level C&I and distributed-generation storage data subscription",
+      "category": "Software and data subscription — distributed storage",
+      "description": "A standalone 'entry-level subscription' for C&I and DG storage developers and EPCs: budgetary pricing for AC-integrated systems sized to the project with east- or west-coast delivery, a searchable product library with FEOC status, domestic-content, safety certification and commercial-wrap data, and downloadable UL 9540 / 9540A / NFPA 855 / FSS documentation packages for AHJ submission.",
+      "highlights": [
+        "Launched 28 May 2026 to 'help C&I and distributed generation storage developers and EPCs access traditionally hard-to-get pricing and technical product data and documentation earlier in the project lifecycle'; 'a standalone subscription priced to reflect the deal sizes and project economics in this segment'.",
+        "Product page: 'No callbacks. No stale quotes. No expensive distributor markups'; 'Tier 1, Domestic, and FEOC labels at the supply-variant level'; CEC-list and 'UL 1741 SA/SB interconnection eligibility at a glance'.",
+        "Shares the self-serve, card-billed, auto-renewing Terms of Service with Anza Pulse.",
+        "No third-party coverage beyond a wire reprint; no named customer."
+      ],
+      "positioning": "Against distributor quotes and callbacks in a segment the company says lacks data; the only competitor reference is 'expensive distributor markups'.",
+      "soldThrough": "Self-serve online subscription (card-billed); the entry point to the storage platform below Energy Storage Pro.",
+      "targetSegments": [
+        "C&I storage developers",
+        "DG storage developers",
+        "EPCs"
+      ],
+      "roadmap": "None announced."
+    },
+    {
+      "name": "Solar procurement advisory — 'Full Scope Procurement' and Pro Procure",
+      "category": "Advisory services — solar modules",
+      "description": "Fee-for-service module procurement for the buyer: supplier RFP and best-and-final-offer process, pre-negotiated Supplier Purchase Agreements and redlined terms with 'most U.S. OEMs', AD/CVD, FEOC and safe-harbor strategy, tariff-sharing clauses, vendor due diligence and third-party production inspection, with warehousing and order fulfilment as add-ons; the line that produces the company's GW-of-POs statistics.",
+      "highlights": [
+        "Fee model as the company has described it to third parties: 'approximately 1-2 cents per watt on projects, with utility-scale fees measured in tenths of a cent' (CEO, Clean Power Hour, 22 September 2023); 'We sign a contract with the buyer, and the buyer pays us for access to the data and technology and also the services that we wrap the whole thing in' (CEO, Solar Builder, 3 April 2024); Solar Builder's note that Anza 'is not a distributor or middleman, though it has done some brokerage work but is moving out of that business'. No fee schedule is published.",
+        "Volume, in the company's own successive statements: '1.9 GW of module sales to date' (May 2023); 'more than 8.4 GW of cumulative solar procurements' (September 2025); 'over 8 GW of PV and 7 GWh of BESS purchase orders in the past five years' (December 2025); '9.2+ GW of solar POs and 4.7+ GWH of energy storage POs' (about-us, June 2026); 'Over 10 GW of Solar & 8 GWh of BESS Experience' (September 2026) — the BESS figure runs 4.7 / 7 / 8 GWh across pages of different vintage and no page reconciles them.",
+        "2025 safe-harbor season: 'over two gigawatts (GW) of solar modules in 2025, surpassing the total 2024 volume in just eight months'; 'Between June and August, Anza helped 15 customers … with 11 different solar module manufacturers, totaling over 1.2 GW' (release, 8 September 2025) — restated in September 2026 as '11 clients secure 1.1 GW of modules under Safe Harbor in two months'; 'over 5 GW of module procurement over the past 12 months' (22 September 2026).",
+        "Case studies the company publishes: NewSun Energy ('saving millions' on AD/CVD exposure, November 2024); Pacifico Power ('$0.04/watt' saving, '19% below our most recent quote', 17 MW, July 2025); 'a 200 MW replacement contract at $0.23/W covering approximately $10M of the tariff exposure' (blog, June 2025); Nofar USA ('Within 72 hours, we secured capacity with two top-tier suppliers'); Renewable Properties' 96 MW of VSUN and BYD modules in five deals (2022, under Borrego).",
+        "PV Module Warranty Insurance add-on 'offered through a third-party insurance provider … AA- S&P rated international company' (January 2023), still referenced as a project-level option in November 2025."
+      ],
+      "positioning": "Sold as faster and cheaper than an in-house RFP ('What takes customers 3 weeks becomes a 30-minute exercise' is the transformer-service wording; the solar line claims 'Anza helped five companies go from module selection to PO for 1.5 GW in less than 4 weeks'). The structural question no outlet has asked: the same firm publishes the price index and earns per watt on the procurement rush its commentary describes.",
+      "soldThrough": "Direct advisory engagement under a buyer contract; per-watt and service fees (company and podcast statements); brochures 'Full Scope Procurement' and 'Solar Subscription Packages' (December 2025).",
+      "targetSegments": [
+        "Developers",
+        "IPPs",
+        "EPCs",
+        "Utilities",
+        "Community-solar and C&I buyers"
+      ],
+      "roadmap": "None announced."
+    },
+    {
+      "name": "Energy storage services — development, procurement and contracting, construction and commissioning, warehousing",
+      "category": "Advisory and technical services — BESS",
+      "description": "Four storage service lines: BESS Development Support (EPC selection, capacity feasibility, sizing and cost modelling, RFP responses, site layouts); BESS Procurement & Contracting Support (supplier RFP, BAFO shortlist, letter of exclusivity, BESA, MSA and LTSA negotiation support, technical exhibits); BESS Construction & Commissioning Execution Support (UL 9540 field-evaluation documentation, FIT and FAT witnessing, RFI support, OEM parameter review, on-site commissioning management, owner's-representative work); and Storage Warehousing & Logistics / Order Fulfillment (track-and-trace, customs documents, state-of-charge maintenance, warranty management, third-party inspections).",
+      "highlights": [
+        "Scale claims: 'Over 19 GWh of Proven Expertise … 8 GWh of procurement support and 11 GWh of construction & commissioning support over the last 3 years' (services page, September 2026); the December 2025 brochure says '9 GWh of procurement support and 10.4 GWh of construction & commissioning support'; a blog of 31 August 2026 says 'more than 8 GWh of storage projects over the past year … across nearly 100 deployments'. Company statements.",
+        "Flagship case study (1 May 2026): GridStor's Texas plant, '220 MW/440MWh (68 inverter skids, 204 battery units)' — Anza as 'Commissioning Management, Technical Integration, Owner's Representative'; 'completed hot commissioning and ERCOT testing for the 220 MW facility in just two months'; 'award of a subsequent project in which Anza will provide full-scope commissioning and engineering support for GridStor's next major deployment'.",
+        "Aypa Power testimonial: 'Anza provided Aypa essential procurement and commissioning services for our 150 MW AC battery project in ERCOT' — Drew Silverman, VP Pre-Construction and Procurement.",
+        "Procurement stories: a 16 MWh Renewable Properties OEM pivot 'within four weeks' (September 2025); '18 MWh of storage in just seven days … We are now supporting that customer with another 100 MWh'; Alpha Omega Power's 'contract covering over 60 exhibits … in just two weeks—a process that typically takes two months'; an earlier page claims '$29/kWh' saved 'via a competitive shortlist process with three Tier-1 vendors'.",
+        "The company's own boundary: 'We're not an EPC or an independent engineer. But … for companies who are buying a DC block, we will help with commissioning, and contract supervision' (CEO, Troutman Pepper podcast, recorded 25 October 2024); warehousing priced in one public example at 'Add in warehousing service for 1 cent' per watt (September 2026)."
+      ],
+      "positioning": "Sits between the owner and the OEM/EPC on self-integrated DC-block builds — the configuration the company says its data favours against 'fully integrated AC block solutions, Tesla maybe being … the most well-packaged' — without taking engineer-of-record or EPC risk.",
+      "soldThrough": "Direct service engagements (owner's-representative, commissioning-management and procurement-support contracts); 'Energy Storage Services' brochure (December 2025).",
+      "targetSegments": [
+        "Storage developers and IPPs",
+        "Utilities",
+        "EPCs",
+        "Data-centre developers (stated target; none named)"
+      ],
+      "roadmap": "A follow-on GridStor engagement for 'full-scope commissioning and engineering support' on its 'next major deployment' (May 2026; no size or date given)."
+    },
+    {
+      "name": "Transformer Procurement Service — MV/HV transformers and HV breakers",
+      "category": "Advisory services — grid equipment",
+      "description": "A sourcing service launched 16 December 2025 under Felicity Lunden (ex-Quanta Infrastructure Solutions Group) 'for developers, IPPs, EPCs, utilities, and data center developers': market-wide supplier comparison across '50+ suppliers' of medium- and high-voltage transformers and HV breakers, lead-time and quote-response metrics, specification and quote reviews, supply-chain origin and tariff exposure, pre-negotiated Supplier Purchase Agreements, and ITC safe-harbor support. Sold as a service; there is no transformer data subscription.",
+      "highlights": [
+        "Launch framing (release, 16 December 2025): 'medium voltage 9 weeks to 1 year and high voltage 2-4 years' lead times; 'massive price variances with wildly different quotes for identical specifications'; 'a network of 45+ MV/HV suppliers' — the page now says '50+' and 'MV transformer lead times (20 weeks to 1 year)'.",
+        "Claimed effect: 'creating a vendor contact list for an RFP … becomes a 30-minute exercise rather than many weeks'; pre-negotiated SPAs 'saving customers an estimated 2–6 months'; safe-harbor components 'seeing lead times of 18-20 weeks'.",
+        "Lunden 'brings over a decade of experience and a proven track record of more than 65 substation procurements across the U.S.' (release); earlier roles at Quanta Infrastructure Solutions Group, Wanzek Construction and Blattner Energy (webinar bio).",
+        "Traction: Transformers Magazine covered the January 2026 webinar; pv magazine USA's May 2026 transformer-market feature (Wood Mackenzie, Burns & McDonnell, Hitachi Energy, Siemens) did not cite Anza; no transformer client is named on any page."
+      ],
+      "positioning": "A procurement channel into the grid-equipment segment this corpus tracks (Hitachi Energy, Siemens Energy, GE Vernova, ABB, Mitsubishi Electric), pitched on transparency over a bottleneck the company describes with the same lead-time figures the OEMs' own customers report; it names no OEM.",
+      "soldThrough": "Direct service engagement; brochure 'Find MV/HV Transformer and HV Breaker suppliers' (January 2026); surplus units also listed on the Anza Exchange marketplace.",
+      "targetSegments": [
+        "Developers",
+        "IPPs",
+        "EPCs",
+        "Utilities",
+        "Data-centre developers"
+      ],
+      "roadmap": "None announced beyond the Anza Exchange alpha for surplus transformers."
+    },
+    {
+      "name": "Anza Exchange — alpha marketplace for surplus transformers, HV breakers and modules; Market Insights and free tools",
+      "category": "Marketplace and bundled intelligence",
+      "description": "Anza Exchange (exchange.anzarenewables.com) is an alpha B2B marketplace 'to list & purchase new surplus transformers and solar modules' (homepage, March 2026), the remnant of the 2022 marketplace model. Market Insights — a quarterly report on policy, trade, supply chain, roadmaps, pricing and contract terms plus 'four hours custom analysis per quarter' — is bundled with subscriptions. Free lead-generation content: biweekly module and quarterly BESS pricing snapshots, a quarterly domestic-content report, three calculators (domestic content to IRS Notice 2025-08, Section 232 blending, Pulse ROI), webinars and case studies.",
+      "highlights": [
+        "Anza Exchange has no press release, fee model or third-party coverage; its own page calls it 'the B2B marketplace for renewable energy equipment' for 'power transformers, HV breakers, and solar modules'.",
+        "The free quarterly series is what the trade press quotes: Q2 2025 'the sharpest single jump in battery energy storage prices since 2021' (DG 4-hour AC '+68%' January to May 2025); Q1 2026 utility-scale self-integrated '$145/kWh (down 5.8% from November's $154/kWh)'; module median '$0.28/W' (Q1 2026); US-assembled modules '$0.30/W' (July 2026); imported modules '$0.27/W' to '$0.38/W' after the Section 232 proclamation (September 2026). Three outlets printed three different 'February 2026 utility-scale' figures ($145, $158, $178 per kWh) for differently defined systems — quote with the system definition attached.",
+        "Market Insights content: 'AD/CVD cases, the latest on IEEPA tariffs, ITC beyond 2025, safe harbor deadlines … Current pricing and key contract terms from fully negotiated contracts, including available fixed price contracts and excess inventory'.",
+        "Two-sided mechanics (pricing-advantage page): 'Our team meets with all Anza platform suppliers every month … Suppliers update pricing to stay competitive, move up our ranking table, and win more business'; suppliers 'gain access to the U.S. market and real-time feedback' and 'Your Products Available to 80+ Subscribers with GWs & GWhs of Annual Demand'."
+      ],
+      "positioning": "The free series is the firm's public voice and the reason trade press cites it as a market tracker; the Exchange is an alpha with no disclosed traction.",
+      "soldThrough": "Exchange: marketplace (fee model unpublished). Market Insights: bundled with platform subscriptions. Free tools: form-gated lead generation.",
+      "targetSegments": [
+        "Buyers of surplus equipment",
+        "Existing subscribers",
+        "Prospects"
+      ],
+      "roadmap": "Exchange described as an 'alpha launch' (March 2026); no general-availability date."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Data platform coverage (company statements, September 2026 unless dated)",
+      "specs": [
+        {
+          "band": "Library",
+          "label": "Solar products and suppliers",
+          "value": "'280+ solar products from 40+ suppliers'"
+        },
+        {
+          "band": "Library",
+          "label": "Storage products and suppliers",
+          "value": "'55+ BESS products from 30+ BESS suppliers'; boilerplate '20+ battery block' suppliers"
+        },
+        {
+          "band": "Library",
+          "label": "Transformer suppliers",
+          "value": "'50+ suppliers' (service page); '45+ MV/HV suppliers' (December 2025 release)"
+        },
+        {
+          "band": "Library",
+          "label": "Price refresh",
+          "value": "'2,000+ platform price updates each month'; Pulse 'over 1000 monthly price quotes'"
+        },
+        {
+          "band": "Coverage claims",
+          "label": "Solar modules",
+          "value": "'more than 95% of the U.S. solar module … supply' (company); '90% of U.S. solar modules' at the September 2022 launch"
+        },
+        {
+          "band": "Coverage claims",
+          "label": "Battery storage",
+          "value": "'95% of the U.S. battery market' (release, 2026-03-03); 'more than 85% of U.S. BESS supply' (blog, 2025-05-13); 'pricing data from 85% of current suppliers' (blog, 2026-09-29); Utility Dive '85% of energy storage market' (2026-04-07)"
+        },
+        {
+          "band": "Coverage claims",
+          "label": "Verification",
+          "value": "No third party has tested any coverage percentage; every instance traces to a company release or report"
+        },
+        {
+          "band": "Accuracy",
+          "label": "Module platform price vs final quote",
+          "value": "'within $0.008/watt of final supplier price quotes since September 2025'"
+        },
+        {
+          "band": "Accuracy",
+          "label": "Forecast training set",
+          "value": "'a structured two-year dataset from 40+ suppliers, with 10,000+ verified platform price points'"
+        },
+        {
+          "band": "Subscribers",
+          "label": "Subscriber count",
+          "value": "'100+ current subscribers' (software-and-data page); 'Your Products Available to 80+ Subscribers' (manufacturers page, December 2025)"
+        }
+      ],
+      "notes": "All figures are the company's own; coverage percentages have no published denominator or audit. Supplier participation counts (40+ module, 20–30+ battery, 50+ transformer) are the defensible form of the claim."
+    },
+    {
+      "product": "Energy Storage Pro — feature and data figures",
+      "specs": [
+        {
+          "band": "Data",
+          "label": "Fields and filters",
+          "value": "'more than 150 data fields'; 'more than 30 filters, such as Tier-1 status, PCS compatibility, country of origin, certification standards'"
+        },
+        {
+          "band": "Data",
+          "label": "Pricing horizon",
+          "value": "'pricing for deliveries 3 years out, including system, block, & PCS pricing'; FOB or DDP; CapEx and OpEx"
+        },
+        {
+          "band": "Data",
+          "label": "FEOC tiers",
+          "value": "Six categories from 'Not Compliant' to 'Legal Opinion Available'; tracked products '40% … high FEOC risk', '25% … low-risk', '35% … Pending' (September 2026)"
+        },
+        {
+          "band": "Modelling",
+          "label": "Scenario engine",
+          "value": "'model duration scenarios, tariff severity outcomes, delivery timing shifts, and probability-weighted pricing assumptions'; 'supplier-specific degradation curves'; 'AC/DC augmentation or overbuild strategies'"
+        },
+        {
+          "band": "Modelling",
+          "label": "Speed claim",
+          "value": "'compatibility checks in under a minute and the ability to model 10+ trade-off scenarios in under 30 minutes'"
+        },
+        {
+          "band": "Modelling",
+          "label": "Comparison",
+          "value": "'compare up to four systems side by side'; custom systems and own quotes benchmarked 'against 30+ BESS suppliers and 55+ different products'"
+        },
+        {
+          "band": "Compliance",
+          "label": "Standards filters",
+          "value": "IEEE 2800, NERC IBR, RTO interconnection standards; UL 9540 certification and test reports; FCC inverter compliance status; MACR points per variant"
+        }
+      ],
+      "notes": "Launch date 2025-05-13; scenario engine 2026-03-03; FCC/EO 14421 filters September 2026."
+    },
+    {
+      "product": "Transformer Procurement Service — market figures as stated",
+      "specs": [
+        {
+          "band": "Lead times",
+          "label": "Medium voltage",
+          "value": "'9 weeks to 1 year' (release, 2025-12-16); '20 weeks to 1 year' (service page, 2026)"
+        },
+        {
+          "band": "Lead times",
+          "label": "High voltage",
+          "value": "'2-4 years'"
+        },
+        {
+          "band": "Lead times",
+          "label": "Safe-harbor components",
+          "value": "'lead times of 18-20 weeks'"
+        },
+        {
+          "band": "Process",
+          "label": "Vendor list for an RFP",
+          "value": "'becomes a 30-minute exercise rather than many weeks'"
+        },
+        {
+          "band": "Process",
+          "label": "Contracting",
+          "value": "pre-negotiated Supplier Purchase Agreements 'saving customers an estimated 2–6 months'"
+        },
+        {
+          "band": "Scope",
+          "label": "Equipment",
+          "value": "MV and HV transformers; HV breakers (brochure, January 2026)"
+        }
+      ],
+      "notes": "No client, volume or fee has been published for this service."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-22",
+      "category": "market",
+      "headline": "Platform data one month after the Section 232 polysilicon proclamation: 55% of active suppliers repriced (65% of modules); imported-module median $0.27/W → $0.38/W for delivery after 4 December; like-for-like quotes +15%; 'over 5 GW of module procurement over the past 12 months'",
+      "read": "The free price series is the firm's megaphone — and the rush it describes is the procurement it is paid per watt to run.",
+      "source": "https://www.anzarenewables.com/press-release/anza-shows-solar-module-prices-rise-after-section-232/"
+    },
+    {
+      "date": "2026-09-16",
+      "category": "policy",
+      "headline": "Blog on the Bulk Power Executive Order (EO 14421) and the FCC inverter Covered List: Anza adds FCC compliance status and covered-entity exposure at supplier and product level, and commits to re-filter when DOE's rules issue in December 2026",
+      "read": "Every new trade rule becomes a filter — the compliance layer is the product's moat against spreadsheets.",
+      "source": "https://www.anzarenewables.com/blog/inverter-battery-and-transformer-sourcing-just-got-more-complicated-what-the-new-bulk-power-executive-order-and-the-fcc-inverter-ban-actually-mean/"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "product-launch",
+      "headline": "First storage webinar series ('Avoiding the Mistakes that Sink Storage Projects'; 'From Risk to ROI' with Chaberton Energy); blog claims 'more than 8 GWh of storage projects over the past year … across nearly 100 deployments'",
+      "read": "Storage services are being marketed as a practice, not an add-on, a year after the data product launched.",
+      "source": "https://www.anzarenewables.com/webinars/avoiding-the-mistakes-that-sink-storage-projects/"
+    },
+    {
+      "date": "2026-08-12",
+      "category": "market",
+      "headline": "Forbes cites Anza's 27.1 cents/W median import price against the 38 cents/W Section 232 floor; Aaron Hall: 'tariffs hurt the market—they reduce demand'",
+      "read": "General-press citation as a neutral tracker — the role the fee model does not quite fit.",
+      "source": "https://nofarusa.com/news/the-solar-dilemma-build-local-or-buy-cheap-from-overseas"
+    },
+    {
+      "date": "2026-07-22",
+      "category": "market",
+      "headline": "Pulse data: the Domestic Lite premium fell to $0.07/W in mid-June from $0.133/W in January (−47%); '19 suppliers offering domestic cell modules on Anza Pulse'",
+      "read": "The domestic-content adder is becoming cheap enough to blend by default — Anza's blending tool is the beneficiary.",
+      "source": "https://www.anzarenewables.com/blog/domestic-content-has-gotten-cheaper-why-you-should-blend-your-way-to-the-10-itc-adder/"
+    },
+    {
+      "date": "2026-05-28",
+      "category": "product-launch",
+      "headline": "Energy Storage DG launched — an entry-level, card-billed C&I/DG storage data subscription with AHJ documentation packages",
+      "read": "Down-market extension of the storage platform to deal sizes the advisory practice does not serve.",
+      "source": "https://www.anzarenewables.com/press-release/anza-launches-energy-storage-dg/"
+    },
+    {
+      "date": "2026-05-27",
+      "category": "product-launch",
+      "headline": "Anza Pulse launched — a standalone, self-serve solar module intelligence subscription (40 suppliers, 1,000+ monthly quotes, 14-day trial); covered as 'Solar Pulse' on 1 June and 'Anza Pulse' from 23 June",
+      "read": "The first product sold without a sales call — the data business testing whether it can scale beyond the procurement client base.",
+      "source": "https://www.anzarenewables.com/press-release/anza-launches-anza-pulse-the-solar-industrys-first-on-demand-module-intelligence-platform/"
+    },
+    {
+      "date": "2026-05-01",
+      "category": "customer",
+      "headline": "GridStor case study: commissioning management, technical integration and owner's representative on a 220 MW / 440 MWh Texas plant ('68 inverter skids, 204 battery units'), hot commissioning and ERCOT testing 'in just two months'; follow-on award for GridStor's 'next major deployment'",
+      "read": "The largest named storage engagement on the record and the one that makes 'commissioning' a line of business rather than a service claim.",
+      "source": "https://www.anzarenewables.com/case-studies/how-anza-delivered-technical-certainty-for-gridstors-self-integrated-440-mwh-project/"
+    },
+    {
+      "date": "2026-04-07",
+      "category": "market",
+      "headline": "Utility Dive: storage pricing 'beginning to fracture' by product type; Anza dataset of 79 storage products — 40% low, 9% medium, 51% high or highest FEOC risk; utility-scale AC systems down 20.9% since May 2025",
+      "read": "Trade press now runs Anza's medians beside Wood Mackenzie's — the index has become a reference whether or not its denominator is known.",
+      "source": "https://www.utilitydive.com/news/energy-storage-pricing-anza-woodmac/816857/"
+    },
+    {
+      "date": "2026-03-03",
+      "category": "product-launch",
+      "headline": "Energy Storage Pro scenario modeling and configuration engine: tariff-severity, delivery-timing and augmentation scenarios, supplier degradation curves, confidential quote benchmarking; supplier coverage restated to '95% of the U.S. battery market'",
+      "read": "The storage product moved from a catalogue to a modelling tool — the step that makes a developer's own engineers users.",
+      "source": "https://www.anzarenewables.com/press-release/anza-launches-first-automated-scenario-modeling-and-configuration-engine-for-utility-scale-dg-battery-storage/"
+    },
+    {
+      "date": "2025-12-16",
+      "category": "product-launch",
+      "headline": "Transformer Procurement Service launched under Felicity Lunden (ex-Quanta Infrastructure Solutions Group, '65 substation procurements'): 45+ MV/HV suppliers, pre-negotiated SPAs, lead-time and tariff-exposure data; targets 'data center developers' among buyers",
+      "read": "The first product line outside solar and storage, aimed at the bottleneck every campus and plant in this corpus is waiting on.",
+      "source": "https://www.anzarenewables.com/press-release/anza-launches-novel-transformer-procurement-service-to-bring-transparency-and-efficiency-to-substation-equipment-sourcing/"
+    },
+    {
+      "date": "2025-09-08",
+      "category": "customer",
+      "headline": "'Over 2 GW of solar modules in 2025, surpassing the total 2024 volume in just eight months'; June–August: 15 customers, 11 manufacturers, 1.2 GW ahead of the 2 September safe-harbor deadline; 8.4 GW cumulative advisory volume",
+      "read": "Policy deadlines are the procurement practice's demand driver — and its best quarter.",
+      "source": "https://www.anzarenewables.com/press-release/anza-supports-over-2-gw-of-solar-safe-harbor-procurements-in-2025-helping-developers-preserve-itc-benefits-and-project-economics/"
+    },
+    {
+      "date": "2025-08-26",
+      "category": "product-launch",
+      "headline": "Solar Pro adds Predicted Quote (25th–75th percentile negotiated range), ten quarters of supplier pricing and a five-year monthly machine-learning forecast; shown at RE+ 2025",
+      "read": "Forecasting is the move from reporting prices to predicting them — the claim that puts Anza in the analyst seat.",
+      "source": "https://www.anzarenewables.com/press-release/anza-unveils-groundbreaking-solar-platform-features-including-first-of-its-kind-intelligent-price-quote-predictor/"
+    },
+    {
+      "date": "2025-06-09",
+      "category": "market",
+      "headline": "Q2 2025 storage report: 'the sharpest single jump in battery energy storage prices since 2021' — DG 4-hour AC prices +68% January to May; Utility Dive: 'by April, every battery manufacturer tracked by Anza had paused price quotes'",
+      "read": "When suppliers stop quoting, the index goes dark — the dependency the data model carries.",
+      "source": "https://pv-magazine-usa.com/2025/06/10/battery-energy-storage-prices-spike-in-q2-2025/"
+    },
+    {
+      "date": "2025-05-13",
+      "category": "product-launch",
+      "headline": "Energy Storage Pro launched: 'more than 20 battery suppliers, including fully domestic and non-Chinese options', 150+ data fields, 30+ filters, lifecycle cost and domestic-content/ITC tools; beta users GridBeyond and MMR/SouthWestern Power Group",
+      "read": "The storage data subscription that the coverage plan's seat hypothesis rests on.",
+      "source": "https://www.anzarenewables.com/press-release/anza-launches-energy-storage-pro/"
+    },
+    {
+      "date": "2025-05-05",
+      "category": "market",
+      "headline": "Domestic Content Insights (via Utility Dive): US battery cell suppliers to grow from 1 now to 10 by H1 2027; module suppliers 17 → 20 by H1 2026; Ravi Manghani: battery supply-chain companies 'less willing today than in the past to absorb higher costs for imported components'",
+      "read": "Anza tracks the domestic roster other firms count — the manufacturing-side mirror of its buyer data.",
+      "source": "https://www.utilitydive.com/news/us-solar-battery-manufacturing-to-expand-through-2027-despite-uncertainty/747115/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "energy-capital-partners",
+      "type": "investor",
+      "status": "active",
+      "since": "2023-05",
+      "note": "Lead of the May 2023 consortium that funded Anza's separation from Borrego, through ECP's Energy Transition Opportunities Fund; terms undisclosed.",
+      "context": "Anza's own release of 17 May 2023: 'An Energy Capital Partners led consortium of investors that included the ECP's–Energy Transition Opportunities Fund, Angeleno Group, and other investors provided funding to the company. Terms of the transaction were not disclosed.' ECP partner Andrew Gilbert: 'As a leading investor in renewables, we frequently see the challenges developers, IPPs, and EPCs face in procuring major materials for their projects.'\n\nECP had bought Borrego's development business a year earlier (now New Leaf Energy), so the sponsor owns both halves of the former Borrego — the developer that buys equipment and the platform that prices it — and New Leaf is an Anza customer. Mergr and PitchBook describe the 2023 transaction as an acquisition; no stake percentage, Borrego residual or later round has been published, and ECP's Energy Transition Opportunities Fund is 'closed' with Anza as its most recent deal (PitchBook) — a 2023-vintage holding with an exit window ahead.",
+      "source": "https://www.anzarenewables.com/press-release/anza-completes-separation-from-borrego-and-receives-new-investment-from-energy-capital-partners-led-consortium-to-transform-solar-and-storage-procurement/"
+    },
+    {
+      "slug": "aypa-power",
+      "type": "customer",
+      "status": "active",
+      "scale": "150 MW AC",
+      "via": "BESS procurement and commissioning services",
+      "note": "Aypa credits Anza with 'essential procurement and commissioning services for our 150 MW AC battery project in ERCOT'.",
+      "context": "Testimonial on Anza's homepage and storage-services page from Drew Silverman, Vice President, Pre-Construction and Procurement, Aypa Power: 'Anza provided Aypa essential procurement and commissioning services for our 150 MW AC battery project in ERCOT.' The project, its supplier and the fee are not named by either side; the engagement is documented only from Anza's side, as a customer quotation the company publishes.",
+      "source": "https://www.anzarenewables.com/energy-storage-services/"
+    },
+    {
+      "slug": "gridstor",
+      "type": "customer",
+      "status": "active",
+      "since": "2026",
+      "scale": "220 MW / 440 MWh",
+      "via": "Commissioning management, technical integration, owner's representative",
+      "note": "Anza's flagship storage case study: commissioning management of GridStor's self-integrated 220 MW / 440 MWh Texas plant, with a follow-on award for the 'next major deployment'.",
+      "context": "Anza's case study (1 May 2026): '220 MW/440MWh (68 inverter skids, 204 battery units)', services 'Commissioning Management, Technical Integration, Owner's Representative'; 'completed hot commissioning and ERCOT testing for the 220 MW facility in just two months'; quote from Tony Song, SVP EPC, GridStor; and 'award of a subsequent project in which Anza will provide full-scope commissioning and engineering support for GridStor's next major deployment', plus an engagement 'to support technical operations for a facility in their portfolio'.\n\nDocumented from Anza's side only; GridStor's dossier does not name Anza.",
+      "source": "https://www.anzarenewables.com/case-studies/how-anza-delivered-technical-certainty-for-gridstors-self-integrated-440-mwh-project/"
+    },
+    {
+      "slug": "apex-clean-energy",
+      "type": "customer",
+      "status": "active",
+      "since": "2025",
+      "via": "Solar Pro platform",
+      "note": "Apex's Director of Solar Technology describes module calculations that 'used to take the APEX team four hours' being done 'in 30 minutes with the Anza platform'.",
+      "context": "Anza's customer-testimonial video (8 May 2025): 'Angad Sachdeva, Director of Solar Technology at APEX Clean Energy, shares his experience as an Anza customer. APEX Clean Energy is an IPP that develops, owns, and operates utility-scale projects, with approximately 2 GW of assets under their management… Manual calculations that used to take the APEX team four hours can be completed in 30 minutes with the Anza platform.' A platform subscription, not a procurement mandate; no volume is stated and Apex's own channels do not mention Anza.",
+      "source": "https://www.anzarenewables.com/videos/anza-customer-testimonial-apex-clean-energy/"
+    },
+    {
+      "slug": "byd",
+      "type": "other",
+      "status": "historical",
+      "since": "2022",
+      "scale": "96 MW (with VSUN)",
+      "via": "Module sales through the Borrego-era Anza marketplace",
+      "note": "BYD 540-watt modules were among the 96 MW Renewable Properties bought through Anza in five deals in 2022; BYD is also one of the NDAA-listed FEOC entities Anza's compliance filters flag.",
+      "context": "Solar Builder (10 November 2022, republished on Anza's site): Renewable Properties 'has gained better pricing for quality tier 1 bifacial monocrystalline modules, such as 540-watt modules from VSUN and BYD' across 'five separate deals' totalling 96 MW, with Anza providing vendor due diligence, pre-negotiated contracts and third-party inspections. BYD is a supplier on the platform, not an Anza customer; the transaction is the one named supplier-level sale on the record.\n\nAnza's FEOC commentary (29 July 2025) separately lists 'CATL, BYD, Gotion, EVE, Envision, and Hithium specified in the National Defense Authorization Act for Fiscal Year 2024' — the suppliers its compliance tiers rate against.",
+      "source": "https://www.anzarenewables.com/solar-builder/renewable-properties-uses-anza-for-96-mw-modules/"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2026-01-01",
+      "exposure": "Anza's central 2026 product theme rather than a liability: it sells the compliance layer. Solar: a FEOC filter over '240+ modules' with the Material Assistance Cost Ratio calculated per module and the verification tier shown ('legal opinion, third-party audit, or certificate, and at the module OEM, cell, and seller level'); 'Suppliers that are only self-reporting … are not qualified as FEOC-compliant on the Anza platform.' Storage: six status tiers; across tracked products '40% … high FEOC risk … 25% … low-risk … roughly 35% … Pending' (September 2026). Utility Dive (April 2026): 79 storage products, 51% high or highest risk. Thresholds as Anza states them: solar MACR '40% non-PFE threshold [2026] … rises to 45% in 2027'; storage 'at least 55% … for a 2026 construction start, rising to 60% in 2027 and reaching 75% for projects beginning in 2030'.",
+      "mitigation": "Company-stated: documentation 'requested directly from suppliers'; a '60 point questionnaire' for FEOC risk ratings (CEO, October 2025); contract-review services for FEOC carve-outs.",
+      "source": "https://www.anzarenewables.com/blog/how-anzas-energy-storage-platform-helps-reduce-cost-feoc-compliance-supply-chain-risks-for-bess-projects/"
+    },
+    {
+      "regime": "Section 232 polysilicon",
+      "status": "announced",
+      "effectiveDate": "2026-12-04",
+      "exposure": "The 6 August 2026 proclamation (effective 4 December 2026) set minimum import prices Anza publishes as '$21/kg poly, $100/kg ingots/wafers, $0.22/W cells, $0.38/W modules + 15% ad valorem'. Anza's platform data a month later: '55% of active suppliers' repriced, imported-module median '$0.27/W → $0.38/W' for post-deadline delivery, like-for-like quotes '+15%'. The firm's procurement volume is the exposure: tariff deadlines drive buying rushes it is paid per watt to execute, and 'over 5 GW of module procurement over the past 12 months' is the result.",
+      "mitigation": "Company recommendations to clients: buy in-country inventory, lock domestic content, import before 4 December only with supplier tariff indemnity, 'consider First Solar'; a Section 232 blending calculator (21 August 2026).",
+      "source": "https://www.anzarenewables.com/press-release/anza-shows-solar-module-prices-rise-after-section-232/"
+    },
+    {
+      "regime": "FCC Covered List / EO 14421 (bulk-power system)",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-28",
+      "exposure": "The FCC's inverter Covered List (28 July 2026) and Executive Order 14421 (26 August 2026) reach the PCS and transformers Anza prices. Anza 'tracks equipment authorization status and covered-entity exposure at the supplier and product level', distinguishes 'Exempt systems (i.e., domestically produced) and those with Supplier Declaration of Conformity (SDoC)', and filters on 'FCC inverter compliance status'.",
+      "mitigation": "Commitment to re-filter when DOE issues its rules 'due by December 24, 2026'.",
+      "source": "https://www.anzarenewables.com/blog/inverter-battery-and-transformer-sourcing-just-got-more-complicated-what-the-new-bulk-power-executive-order-and-the-fcc-inverter-ban-actually-mean/"
+    },
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "exposure": "The platform computes IRS domestic-content eligibility points and ITC value, blends domestic and imported modules for the 10 percent adder (ClearPath Energy '$12MM' saved, company figure), and the advisory practice sells safe-harbor execution — 'over 2 GW of solar modules in 2025' ahead of the 2 September 2025 deadline, with the OBBBA timeline ('begin construction by July 4, 2026, or be placed in service by Dec. 31, 2027') as the next clock. Two public calculators built to IRS Notice 2025-08 (thresholds 40%–60% for 2024–2028).",
+      "mitigation": "None needed — the regime is demand.",
+      "source": "https://www.anzarenewables.com/press-release/anza-supports-over-2-gw-of-solar-safe-harbor-procurements-in-2025-helping-developers-preserve-itc-benefits-and-project-economics/"
+    },
+    {
+      "regime": "AD/CVD",
+      "status": "in-effect",
+      "exposure": "Anza Risk Rating® fields assess 'FEOC compliance, tariffs, UFLPA, AD/CVD, and counterparty risk'; its commentary covers the Southeast Asia case ('Trina Solar Thailand, Canadian Solar, Runergy, Boviet Solar Technology, JA Solar Vietnam, and Jinko Solar Vietnam, receiving cash deposit rates between 50% and 80%'), Solar IV (India, Indonesia, Laos; preliminary CVD 23 February 2026, AD 27 March 2026) and active-anode-material duties ('$8–$15/kWh at the block level'). Case study: NewSun Energy 'saving millions' on AD/CVD exposure (November 2024).",
+      "mitigation": "Tariff-sharing clauses in pre-negotiated SPAs — a '200 MW replacement contract at $0.23/W covering approximately $10M of the tariff exposure' (June 2025).",
+      "source": "https://www.anzarenewables.com/blog/current-tariff-risks-for-2025-solar-module-and-bess-product-planning/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Mike Hall",
+      "title": "Chief Executive Officer and board member",
+      "photo": "images/execs/anza-mike-hall.jpg",
+      "background": [
+        "Chief Executive Officer, Anza (since September 2022; 'In 2020, Mike and his brother Aaron developed the initial Anza business strategy' inside Borrego)",
+        "Co-founder, Borrego (2002, with brother Aaron Hall and Chris Anderson); Borrego CEO 2009–2023, stepping down at end-August 2023 while remaining on its board; '21 years at Borrego'",
+        "Process Engineer, Applied Materials, Santa Clara (before Borrego)",
+        "M.S. Chemical Engineering, Stanford University; B.S., UC Santa Barbara"
+      ]
+    },
+    {
+      "name": "Aaron Hall",
+      "title": "President",
+      "photo": "images/execs/anza-aaron-hall.jpg",
+      "background": [
+        "President, Anza (theorg.com: since January 2021); leads the PV strategic-sourcing team and is the company's public voice on Section 232 and tariffs (pv-tech, pv magazine USA, Forbes, 2026)",
+        "Co-founder of Borrego (re-founded 2001–2002 with Mike Hall); 'President of Borrego and Anza' in 2022; Inc. Magazine Top 30 Under 30 (2008, per bio)",
+        "B.A. Economics, Northwestern University, magna cum laude (2001)"
+      ]
+    },
+    {
+      "name": "Malini Balakrishnan",
+      "title": "Chief Technology Officer and co-founder",
+      "photo": "images/execs/anza-balakrishnan.jpg",
+      "background": [
+        "Founding CTO, Anza; authored the 2023 origin-story blog as Borrego's former CIO/CTO",
+        "Technology leadership roles over 20-plus years — Borrego Solar Systems, Kaiser Permanente, BMC, ORCO Construction Supply, Chemoil (third-party bios)",
+        "Bachelor of Engineering, Computer Science (Anna University / College of Engineering, Guindy); MBA (company page: Indian Institute of Management, Calcutta; a third-party bio says UC Berkeley Haas — the two sources differ)"
+      ]
+    },
+    {
+      "name": "Steve Kline",
+      "title": "Chief Revenue Officer",
+      "photo": "images/execs/anza-kline.jpg",
+      "background": [
+        "Chief Revenue Officer, Anza (people page added April 2024)",
+        "CRO, Sustainable Resource Management business, Engie Impact",
+        "Go-to-market roles at EnerNOC and then Enel X after EnerNOC's acquisition; 'more than 13 years' in energy"
+      ]
+    },
+    {
+      "name": "Ravi Manghani",
+      "title": "Senior Director of Strategic Sourcing, Energy Storage",
+      "background": [
+        "Leads Anza's BESS strategic-sourcing team ('20+ years' in energy storage); quoted on the Energy Storage DG launch (May 2026) and the scenario engine (March 2026)",
+        "Titled 'Director of Strategic Sourcing' in Utility Dive (May 2025), 'senior director' from March 2026"
+      ]
+    },
+    {
+      "name": "Felicity Lunden",
+      "title": "Director of Transformer Procurement",
+      "background": [
+        "Appointed December 2025 to lead the Transformer Procurement Service; 'more than 65 substation procurements across the U.S.'",
+        "Quanta Infrastructure Solutions Group (procurement and substation category management); Wanzek Construction; Blattner Energy — 'about 6 years of HV/MV procurement experience'; based in Fargo, North Dakota"
+      ]
+    },
+    {
+      "name": "Kyle Cerniglia",
+      "title": "Director of Product and Engineering, Energy Storage",
+      "background": [
+        "Product lead for Energy Storage Pro; quoted on the March 2026 scenario engine: 'We are deliberately evolving ES Pro to give users more control over their designs and analysis'",
+        "Presenter, 'Inside the FEOC Black Box' webinar (February 2026)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "CY2024",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Private company; no revenue, bookings or valuation figure has ever been published by the company or a named outlet. PitchBook's valuation is paywalled; Growjo/ZoomInfo estimates were not read and are not used"
+          },
+          {
+            "name": "Fee model (as stated to third parties)",
+            "actual": "'approximately 1-2 cents per watt on projects, with utility-scale fees measured in tenths of a cent' (CEO, Clean Power Hour, 2023-09-22); 'tiered subscription packages' (2024-08-14)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No price list, take rate or revenue split between subscriptions and procurement services is public"
+          },
+          {
+            "name": "Module volume supported (company claim)",
+            "actual": "'over 1 gigawatt of procurement in 2022'; 2024 volume exceeded by the first eight months of 2025 (per the September 2025 release)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company statements; no audited volume"
+          },
+          {
+            "name": "Platform usage (company claim)",
+            "actual": "'35 gigawatts of solar … 75 gigawatt-hours … 1,000+ projects' assessed since launch (May 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company boilerplate; counts projects run through the tool, not purchases"
+          },
+          {
+            "name": "Funding",
+            "actual": "No round since the May 2023 ECP-led consortium ('terms not disclosed')",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PitchBook lists the last round as 'a private equity round on June 17, 2023'; none found 2024–2026"
+          }
+        ],
+        "commentary": "The company reports growth through volume milestones and 'over 100% YoY growth' statements (2023–2024), never through accounts. The subscription product launched in August 2024, so 2024 is the first year with two revenue lines."
+      },
+      {
+        "period": "CY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No figure published; no analyst covers a private procurement-intelligence firm"
+          },
+          {
+            "name": "Module procurement supported (company claim)",
+            "actual": "'over two gigawatts (GW) of solar modules in 2025, surpassing the total 2024 volume in just eight months' (September 2025); 'more than 8.4 GW of cumulative solar procurements supported to date'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release of 2025-09-08; the safe-harbor rush ahead of 2 September 2025 is the stated driver"
+          },
+          {
+            "name": "Storage services volume (company claim)",
+            "actual": "'8 GWh of procurement support and 11 GWh of construction & commissioning support over the last 3 years' (services page); '9 GWh … and 10.4 GWh' (December 2025 brochure)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Two company figures for the same claim on pages of different vintage"
+          },
+          {
+            "name": "Subscribers (company claim)",
+            "actual": "'80+ subscribers' (manufacturers page, December 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company statement; rises to '100+' on a September 2026 page"
+          },
+          {
+            "name": "Headcount",
+            "actual": "Not published; LinkedIn range '51-200'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Third-party estimates: PitchBook 86, LinkedIn 84 members listed (2026-10), Built In 77 — not used as fact"
+          }
+        ],
+        "commentary": "Energy Storage Pro (May 2025) and the Transformer Procurement Service (December 2025) added two lines in the year; the company's own cumulative BESS-PO figure moved from '7 GWh' (December 2025) to '4.7+ GWh' (June 2026) to '8 GWh' (September 2026) across pages, and no page reconciles them. Expectations fields are empty by design: no consensus exists."
+      },
+      {
+        "period": "2026 YTD (to 2026-10-04)",
+        "periodType": "other",
+        "periodEnd": "2026-10-04",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No figure published"
+          },
+          {
+            "name": "Module procurement supported, trailing 12 months (company claim)",
+            "actual": "'over 5 GW of module procurement over the past 12 months' (22 September 2026); '11 clients secure 1.1 GW of modules under Safe Harbor in two months' in 2025",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; the 2025 release counted '15 customers … totaling over 1.2 GW' for the same window"
+          },
+          {
+            "name": "Cumulative volume (company claim)",
+            "actual": "'9.2+ GW of solar POs and 4.7+ GWH of energy storage POs' in five years (about-us, June 2026); 'Over 10 GW of Solar & 8 GWh of BESS Experience' (September 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company pages; the storage figures differ by page"
+          },
+          {
+            "name": "Subscribers and data refresh (company claim)",
+            "actual": "'100+ current subscribers'; '2,000+ platform price updates each month'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Software-and-data page, September 2026"
+          },
+          {
+            "name": "New product lines",
+            "actual": "Scenario engine (March), Anza Pulse and Energy Storage DG (May), Anza Exchange alpha (March)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Four launches in nine months; none with disclosed pricing"
+          }
+        ],
+        "commentary": "Collection gap: revenue, subscription prices, the storage take rate, the transformer-service fee, Borrego's residual stake and any post-2023 financing are published nowhere. ECP's Energy Transition Opportunities Fund is closed with Anza as its last deal (PitchBook), so a sale or recapitalisation in the fund's exit window is the financial event to watch; nothing has been reported."
+      }
+    ],
+    "commentary": "Anza is private and publishes no financial statements. Every figure above is a company statement of volume, usage or subscriber count, dated to the page or release that carried it; where two company pages give two numbers for the same claim both are stated. No third-party revenue or valuation estimate is used. The structural facts a reader can rely on: buyer-paid per-watt procurement fees and tiered subscriptions are the only disclosed revenue mechanisms; suppliers pay nothing to be listed; the one financing is the undisclosed May 2023 ECP-led round."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Anza's business is a two-sided data exchange monetised on the buy side: suppliers hand over quotes, lead times and FEOC documentation in exchange for free market feedback and the chance to 'win more business' through Anza-run procurements, and buyers pay — per watt on procurements and by subscription for the data. Basis: the company's pricing-advantage page ('Our team meets with all Anza platform suppliers every month … Suppliers update pricing to stay competitive, move up our ranking table, and win more business'), the manufacturers page ('Your Products Available to 80+ Subscribers'), the CEO's own descriptions of the fee ('1-2 cents per watt'; buyers 'pay us for access to the data and technology and also the services') and the April 2025 episode in which 'every battery manufacturer tracked by Anza had paused price quotes' and the storage index went dark.",
+    "2. **(High confidence)** We assess that the firm is an intermediary that publishes an index, not a neutral analyst, and that the trade press has not yet priced that in. Basis: it earns on the volume of procurement its commentary describes (Section 232 'prices rising sharply' and 'over 5 GW … over the past 12 months' in the same release), it holds pre-negotiated agreements 'with most U.S. OEMs' whose prices it ranks, and no outlet read in this research has asked the question; Utility Dive and Forbes cite its medians beside Wood Mackenzie's. This is a characterisation of incentives, not an allegation of bias — no third party has found an error in the series.",
+    "3. **(Moderate confidence)** We assess that the strategic pivot since 2024 is from marketplace to data subscription, and that the subscription business is still small relative to procurement services. Basis: four subscriptions launched in 26 months (Solar Pro, Energy Storage Pro, Anza Pulse, Energy Storage DG), the first two self-serve products in May 2026, Solar Builder's 2024 note that Anza 'has done some brokerage work but is moving out of that business', and the Anza Exchange marketplace surviving only as an alpha for surplus equipment; against that, every scale statistic the company publishes is a procurement figure (GW of POs) and the subscriber count is '100+'. The revenue split is undisclosed, so the weight is inferred.",
+    "4. **(Moderate confidence)** We assess that the coverage claims ('95% of U.S. module supply', '95% of U.S. battery suppliers') are participation claims the company cannot audit and that have drifted upward with the product cycle. Basis: 90% at the 2022 launch, 'more than 85%' at the storage launch in May 2025, '95%' in March 2026, '85% of current suppliers' again in a September 2026 blog, and Utility Dive's '85%' in the quarter the release said 95%; no denominator has been defined in any outlet. The defensible figures are the supplier counts.",
+    "5. **(Moderate confidence)** We assess that FEOC and tariff compliance, not price discovery, is now the product's commercial edge. Basis: the 2026 release cadence — scenario engine with tariff-severity modelling (March), six-tier FEOC classification and MACR calculation (April–September), FCC Covered List and EO 14421 filters (September), two tariff calculators — and the company's own 'the compliance layer' framing; price data alone is replicable by a determined buyer, documentation verification at the OEM, cell and seller level is not.",
+    "6. **(Moderate confidence)** We assess that the Transformer Procurement Service and the stated 'data center developers' target are options, not yet businesses. Basis: no transformer client, volume or fee is named ten months after launch; pv magazine USA's May 2026 transformer feature did not cite Anza; no data-centre developer appears as a customer on any page, and the storage case studies (GridStor, Aypa) are grid-scale IPP projects. The service does give Anza a seat at the grid-equipment bottleneck this corpus's campuses wait on.",
+    "7. **(Low confidence)** We assess that an ownership event is more likely than a growth round. Basis: ECP's Energy Transition Opportunities Fund is 'closed' with Anza as its most recent deal (15 May 2023, PitchBook); the sister Delaware entities ANZA RE BUYER, LLC and ANZA RE HOLDINGS, LLC suggest a sponsor holding structure; no round has been reported since 2023. Nothing has been announced; this is inference from vintage and structure.",
+    "Collection gaps: revenue, subscription prices, the storage take rate, the transformer fee, headcount, Borrego's residual stake, the Delaware formation date (aggregator-only), and the FY-by-FY procurement volumes behind the cumulative figures. Two founding dates (2021 platform; 2022 launch; 2023 separation) are each defensible for a different milestone and are stated as such.",
+    "INDICATORS TO WATCH — 4 December 2026, Section 232 effective date: whether Anza's post-deadline import median holds at $0.38/W (confirms the floor it published) or imports simply stop (confirms the procurement rush was pulled forward); by 24 December 2026, DOE's bulk-power rules: whether the platform's FCC/EO 14421 filters update within weeks (tests Judgment 5); the first named transformer or data-centre client (tests Judgment 6); a Q2/Q3 2026 storage pricing report with a defined denominator (tests Judgment 4); any funding, recapitalisation or sale announcement (tests Judgment 7); a supplier publicly withdrawing from the platform or disputing a ranking (tests Judgments 1–2)."
+  ],
+  "sources": [
+    {
+      "label": "Anza blog — How Anza's Energy Storage Platform Helps Reduce Cost, FEOC Compliance & Supply Chain Risks (six FEOC tiers; FCC filters)",
+      "url": "https://www.anzarenewables.com/blog/how-anzas-energy-storage-platform-helps-reduce-cost-feoc-compliance-supply-chain-risks-for-bess-projects/",
+      "date": "2026-09-29"
+    },
+    {
+      "label": "pv magazine USA — Anza expects at least a 40% spike in solar module prices after Section 232",
+      "url": "https://pv-magazine-usa.com/2026/09/25/anza-expects-at-least-a-40-spike-in-solar-module-prices-after-section-232/",
+      "date": "2026-09-25"
+    },
+    {
+      "label": "pv-tech — Price of US module imports up more than 40% since Section 232 (Anza data)",
+      "url": "https://www.pv-tech.org/price-solar-modules-imported-us-up-more-than-40-section-232/",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "Anza — Anza Data Shows Solar Module Prices Rising Sharply After Section 232 (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-shows-solar-module-prices-rise-after-section-232/",
+      "date": "2026-09-22"
+    },
+    {
+      "label": "PR Newswire — Anza Data Shows Solar Module Prices Rising Sharply After Section 232 (wire copy)",
+      "url": "https://www.prnewswire.com/news-releases/anza-data-shows-solar-module-prices-rising-sharply-after-section-232-302885455.html",
+      "date": "2026-09-22"
+    },
+    {
+      "label": "Anza blog — Inverter, Battery, and Transformer Sourcing Just Got More Complicated (Bulk Power EO and FCC inverter ban)",
+      "url": "https://www.anzarenewables.com/blog/inverter-battery-and-transformer-sourcing-just-got-more-complicated-what-the-new-bulk-power-executive-order-and-the-fcc-inverter-ban-actually-mean/",
+      "date": "2026-09-16"
+    },
+    {
+      "label": "Anza webinar — Avoiding the Mistakes that Sink Storage Projects",
+      "url": "https://www.anzarenewables.com/webinars/avoiding-the-mistakes-that-sink-storage-projects/",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Anza blog — How to Reduce Cost, Performance, FEOC Compliance and Schedule Risk on Your Energy Storage Projects",
+      "url": "https://www.anzarenewables.com/blog/how-to-reduce-cost-performance-feoc-compliance-and-schedule-risk-on-your-energy-storage-projects/",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Anza — Section 232 Polysilicon Domestic Content Blending Calculator",
+      "url": "https://www.anzarenewables.com/calculator/section-232-polysilicon-domestic-content-blending-calculator/",
+      "date": "2026-08-21"
+    },
+    {
+      "label": "Forbes (Ken Silverstein) via Nofar USA mirror — The Solar Dilemma: Build Local or Buy Cheap (Anza 27.1¢/W median; Aaron Hall quoted)",
+      "url": "https://nofarusa.com/news/the-solar-dilemma-build-local-or-buy-cheap-from-overseas",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "Anza blog — Section 232 Solar Tariffs Add New Price Floor on Modules",
+      "url": "https://www.anzarenewables.com/blog/section-232-solar-tariffs-add-new-price-floor-on-modules-what-buyers-need-to-know/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "pv-tech — 'Wait-and-see' approach driving stability in US module prices: Anza",
+      "url": "https://www.pv-tech.org/wait-and-see-approach-driving-stability-us-module-prices-anza/",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Anza blog — Domestic Content Has Gotten Cheaper (Pulse data: Domestic Lite premium −47%)",
+      "url": "https://www.anzarenewables.com/blog/domestic-content-has-gotten-cheaper-why-you-should-blend-your-way-to-the-10-itc-adder/",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "pv magazine USA — U.S.-assembled module prices steady at $0.30/W (Anza)",
+      "url": "https://pv-magazine-usa.com/2026/07/10/u-s-assembled-module-prices-steady-at-0-30-w/",
+      "date": "2026-07-10"
+    },
+    {
+      "label": "Anza blog — Illinois Energy Storage Virtual Power Plant program: equipment guide (platform standards filters)",
+      "url": "https://www.anzarenewables.com/blog/ill-energy-storage-virtual-power-plant-program/",
+      "date": "2026-06-25"
+    },
+    {
+      "label": "pv magazine India — Anza introduces real-time intelligence platform for PV modules and markets (Anza Pulse)",
+      "url": "https://www.pv-magazine-india.com/2026/06/23/anza-introduces-real-time-intelligence-platform-for-pv-modules-and-markets/",
+      "date": "2026-06-23"
+    },
+    {
+      "label": "Anza — Anza Pulse ROI Calculator ('95% of the U.S. module market covered / 40 suppliers tracked')",
+      "url": "https://www.anzarenewables.com/calculator/anza-pulse-roi-calculator/",
+      "date": "2026-06-01"
+    },
+    {
+      "label": "Renewable Energy Magazine — Anza launches on-demand module intelligence platform ('Solar Pulse')",
+      "url": "https://www.renewableenergymagazine.com/pv_solar/anza-launches-ondemand-module-intelligence-platform-solar-20260601",
+      "date": "2026-06-01"
+    },
+    {
+      "label": "Anza — Anza Launches Energy Storage DG (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-launches-energy-storage-dg/",
+      "date": "2026-05-28"
+    },
+    {
+      "label": "Anza blog — Bridging the Data Gap That's Costing C&I and DG Energy Storage Teams Bids",
+      "url": "https://www.anzarenewables.com/blog/bridging-the-data-gap-thats-costing-ci-and-dg-energy-storage-teams-bids/",
+      "date": "2026-05-28"
+    },
+    {
+      "label": "Anza — Anza Launches Anza Pulse, the Solar Industry's First On-demand Module Intelligence Platform (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-launches-anza-pulse-the-solar-industrys-first-on-demand-module-intelligence-platform/",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "Anza blog — The Solar Module Intelligence Gap and How Anza Pulse Closes It ('a data subscription, not software')",
+      "url": "https://www.anzarenewables.com/blog/the-solar-module-intelligence-gap-and-how-anza-pulse-closes-it-for-you/",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "pv magazine USA — U.S. transformer market faces severe supply constraints as lead times extend to four years (no Anza citation)",
+      "url": "https://pv-magazine-usa.com/2026/05/11/u-s-transformer-market-faces-severe-supply-constraints-as-lead-times-extend-to-four-years/",
+      "date": "2026-05-11"
+    },
+    {
+      "label": "Anza — Domestic Content Blending Calculator (IRS Notice 2025-08)",
+      "url": "https://www.anzarenewables.com/calculator/domestic-content-blending-calculator/",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "Anza case study — How Anza Delivered Technical Certainty for GridStor's Self-Integrated 440 MWh Project",
+      "url": "https://www.anzarenewables.com/case-studies/how-anza-delivered-technical-certainty-for-gridstors-self-integrated-440-mwh-project/",
+      "date": "2026-05-01"
+    },
+    {
+      "label": "Anza blog — Time Is Short to Understand FEOC-Related Risks (240+ module filter; MACR; verification tiers)",
+      "url": "https://www.anzarenewables.com/blog/time-is-short-to-understand-feoc-related-risks-to-avoid-solar-project-exposure/",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "Solar Builder — Anza highlights underlying uncertainty in State of the Market report (Q1 2026)",
+      "url": "https://solarbuildermag.com/policy/anza-highlights-underlying-uncertainty-in-state-of-the-market-report/",
+      "date": "2026-04-14"
+    },
+    {
+      "label": "Utility Dive — Energy storage pricing beginning to 'fracture' (Anza and Wood Mackenzie; 79 products; FEOC risk split)",
+      "url": "https://www.utilitydive.com/news/energy-storage-pricing-anza-woodmac/816857/",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "pv magazine USA — U.S. solar module prices face upward pressure as trade risks and FEOC rules dominate Q1 2026",
+      "url": "https://pv-magazine-usa.com/2026/04/03/u-s-solar-module-prices-face-upward-pressure-as-trade-risks-and-feoc-rules-dominate-q1-2026/",
+      "date": "2026-04-03"
+    },
+    {
+      "label": "pv-tech — PERC module prices up 20% in US; overall module prices remain constant (Anza Q1 2026)",
+      "url": "https://www.pv-tech.org/perc-module-prices-up-20-us-overall-module-prices-remain-constan/",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "Solar Builder — Anza launches new tools to aid utility-scale and DG battery storage developers ('95% of U.S. battery market coverage')",
+      "url": "https://solarbuildermag.com/energy-storage/anza-launches-new-tools-to-aid-utility-scale-and-dg-battery-storage-developers/",
+      "date": "2026-03-11"
+    },
+    {
+      "label": "pv magazine USA — New platform feature brings tariff and FEOC risk modeling into BESS procurement",
+      "url": "https://pv-magazine-usa.com/2026/03/03/new-platform-feature-brings-tariff-and-feoc-risk-modeling-into-bess-procurement/",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "Anza — Anza Launches First Automated Scenario Modeling and Configuration Engine for Utility-Scale & DG Battery Storage (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-launches-first-automated-scenario-modeling-and-configuration-engine-for-utility-scale-dg-battery-storage/",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "Anza blog — Accelerating BESS Modeling & Iteration to Stay Ahead of the Competition",
+      "url": "https://www.anzarenewables.com/blog/accelerating-bess-modeling-iteration-to-stay-ahead-of-the-competition/",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "Anza blog — Solar & Storage Procurement Outlook: Mitigating Tariff, Trade & Supply Chain Risk in 2026",
+      "url": "https://www.anzarenewables.com/blog/solar-storage-procurement-outlook-mitigating-tariff-trade-supply-chain-risk-in-2026/",
+      "date": "2026-01-22"
+    },
+    {
+      "label": "Transformers Magazine — Anza targets transformer supply bottleneck",
+      "url": "https://transformer-magazine.com/news/anza-targets-transformer-supply-bottleneck/",
+      "date": "2026-01-19"
+    },
+    {
+      "label": "Solar Builder (now.solar mirror) — Anza launches new Transformer Procurement Service",
+      "url": "https://now.solar/2025/12/31/anza-launches-new-transformer-procurement-service-solar-builder/",
+      "date": "2025-12-31"
+    },
+    {
+      "label": "Anza — Anza Launches Novel Transformer Procurement Service (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-launches-novel-transformer-procurement-service-to-bring-transparency-and-efficiency-to-substation-equipment-sourcing/",
+      "date": "2025-12-16"
+    },
+    {
+      "label": "Anza webinar — Navigating the Transformer Market with Anza (Felicity Lunden bio)",
+      "url": "https://www.anzarenewables.com/webinars/navigating-the-transformer-market-transparency-efficiency-and-expert-strategy-with-anza/",
+      "date": "2025-12-16"
+    },
+    {
+      "label": "pv magazine USA — People on the move: Anza, SEIA and more (Felicity Lunden)",
+      "url": "https://pv-magazine-usa.com/2025/12/12/people-on-the-move-anza-seia-and-more/",
+      "date": "2025-12-12"
+    },
+    {
+      "label": "Anza blog — How to Ensure Solar Module Bankability & Quality",
+      "url": "https://www.anzarenewables.com/blog/how-to-ensure-solar-module-bankability-quality/",
+      "date": "2025-11-04"
+    },
+    {
+      "label": "Solar Builder — Q&A: solar module prices, FEOC risk and the next round of trade turbulence with Anza CEO Mike Hall ('60 point questionnaire')",
+      "url": "https://solarbuildermag.com/news/qa-solar-module-prices-feoc-risk-and-the-next-round-of-trade-turbulence-with-anza-ceo-mike-hall/",
+      "date": "2025-10-09"
+    },
+    {
+      "label": "pv magazine USA — Policy deadline rush pushes U.S. solar module pricing up in Q3 (Anza)",
+      "url": "https://pv-magazine-usa.com/2025/10/08/policy-deadline-rush-pushes-u-s-solar-module-pricing-up-in-q3/",
+      "date": "2025-10-08"
+    },
+    {
+      "label": "Anza — Anza Supports Over 2 GW of Solar Safe Harbor Procurements in 2025 (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-supports-over-2-gw-of-solar-safe-harbor-procurements-in-2025-helping-developers-preserve-itc-benefits-and-project-economics/",
+      "date": "2025-09-08"
+    },
+    {
+      "label": "Anza case study — OEM pivot: rapid contracting to mitigate tariff risk for a 16 MWh energy storage project (Renewable Properties)",
+      "url": "https://www.anzarenewables.com/case-studies/oem-pivot-rapid-contracting-to-mitigate-tariff-risk-for-a-16-mwh-energy-storage-project/",
+      "date": "2025-09-08"
+    },
+    {
+      "label": "Anza — Anza Unveils Groundbreaking Solar Platform Features, Including First-of-its-Kind Intelligent Price Quote Predictor (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-unveils-groundbreaking-solar-platform-features-including-first-of-its-kind-intelligent-price-quote-predictor/",
+      "date": "2025-08-26"
+    },
+    {
+      "label": "Solar Builder — Market factors affecting ESS prices in Q3, according to Anza",
+      "url": "https://solarbuildermag.com/news/market-factors-affecting-ess-prices-in-q3-according-to-anza/",
+      "date": "2025-08-21"
+    },
+    {
+      "label": "Anza blog — FEOC Compliance: Understanding New Restrictions for Solar and Energy Storage Procurement (NDAA-listed entities)",
+      "url": "https://www.anzarenewables.com/blog/feoc-compliance-understanding-new-restrictions-for-solar-and-energy-storage-procurement/",
+      "date": "2025-07-29"
+    },
+    {
+      "label": "pv magazine USA — Solar module pricing up 12%, according to Anza report",
+      "url": "https://pv-magazine-usa.com/2025/07/21/solar-module-pricing-up-12-according-to-anza-report/",
+      "date": "2025-07-21"
+    },
+    {
+      "label": "Anza case study — Navigating tariff complexities for Pacifico Power ($0.04/W saving)",
+      "url": "https://www.anzarenewables.com/case-studies/navigating-tariff-complexities-and-expanding-pacifico-powers-team-for-solar-procurement-success/",
+      "date": "2025-07-08"
+    },
+    {
+      "label": "Anza blog — How Anza has helped procurement clients navigate solar and storage market uncertainty ('6.5 GW of solar and 8 GWh')",
+      "url": "https://www.anzarenewables.com/blog/how-anza-has-helped-procurement-clients-navigate-solar-and-storage-market-uncertainty-with-confidence/",
+      "date": "2025-06-23"
+    },
+    {
+      "label": "Anza blog — Unlock the Domestic Content Bonus Credit with Optimal Solar Module Blending",
+      "url": "https://www.anzarenewables.com/blog/unlock-the-domestic-content-bonus-credit-with-optimal-solar-module-blending/",
+      "date": "2025-06-20"
+    },
+    {
+      "label": "pv magazine USA — Battery energy storage prices spike in Q2 2025 (Anza)",
+      "url": "https://pv-magazine-usa.com/2025/06/10/battery-energy-storage-prices-spike-in-q2-2025/",
+      "date": "2025-06-10"
+    },
+    {
+      "label": "Utility Dive — Tariffs to spike power generation costs: reports ('every battery manufacturer tracked by Anza had paused price quotes')",
+      "url": "https://www.utilitydive.com/news/tariffs-to-spike-power-generation-costs-reports/750133/",
+      "date": "2025-06-09"
+    },
+    {
+      "label": "Solar Builder — Anza ready to revolutionize BESS procurement with Energy Storage Pro",
+      "url": "https://solarbuildermag.com/energy-storage/anza-ready-to-revolutionize-bess-procurement-with-energy-storage-pro/",
+      "date": "2025-05-15"
+    },
+    {
+      "label": "Anza — Anza Launches Energy Storage Pro (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-launches-energy-storage-pro/",
+      "date": "2025-05-13"
+    },
+    {
+      "label": "Anza blog — Speeding Up Energy Storage Development with Instant, Accurate Data ('more than 85% of U.S. BESS supply')",
+      "url": "https://www.anzarenewables.com/blog/speeding-up-energy-storage-development-with-instant-accurate-data-automated-tools/",
+      "date": "2025-05-13"
+    },
+    {
+      "label": "Solar Power World — Anza launches energy storage supply chain analytics platform",
+      "url": "https://www.solarpowerworldonline.com/2025/05/anza-launches-energy-storage-supply-chain-analytics-platform/",
+      "date": "2025-05-13"
+    },
+    {
+      "label": "Anza case study — GridBeyond harnesses Anza's storage platform",
+      "url": "https://www.anzarenewables.com/case-studies/gridbeyond-harnesses-anzas-storage-platform/",
+      "date": "2025-05-09"
+    },
+    {
+      "label": "Anza video — Customer testimonial: Apex Clean Energy",
+      "url": "https://www.anzarenewables.com/videos/anza-customer-testimonial-apex-clean-energy/",
+      "date": "2025-05-08"
+    },
+    {
+      "label": "Utility Dive — US solar, battery manufacturing to expand through 2027 despite uncertainty (Anza Domestic Content Insights)",
+      "url": "https://www.utilitydive.com/news/us-solar-battery-manufacturing-to-expand-through-2027-despite-uncertainty/747115/",
+      "date": "2025-05-05"
+    },
+    {
+      "label": "Anza case study — How New Leaf Energy uses Anza's module data to improve its solar development design process",
+      "url": "https://www.anzarenewables.com/case-studies/how-new-leaf-energy-uses-anzas-module-data-to-improve-its-solar-development-design-process/",
+      "date": "2025-03-11"
+    },
+    {
+      "label": "Anza blog — Current tariff risks for 2025 solar module and BESS product planning (AD/CVD rates)",
+      "url": "https://www.anzarenewables.com/blog/current-tariff-risks-for-2025-solar-module-and-bess-product-planning/",
+      "date": "2025-01-08"
+    },
+    {
+      "label": "pv-tech — IRA incentives drove domestic purchase of solar cells: Anza on the US solar market in 2024 and 2025",
+      "url": "https://www.pv-tech.org/ira-incentives-drove-domestic-purchase-of-solar-cells-anza-on-the-us-solar-market-in-2024-and-2025/",
+      "date": "2025-01-02"
+    },
+    {
+      "label": "Anza case study — Anza helped NewSun Energy navigate new AD/CVD risk, saving millions",
+      "url": "https://www.anzarenewables.com/case-studies/anza-helped-newsun-energy-navigate-new-ad-cvd-risk-saving-millions/",
+      "date": "2024-11-12"
+    },
+    {
+      "label": "Troutman Pepper Battery + Storage podcast — transcript S05E11, Anza (Mike Hall on the two-sided model; recorded 2024-10-25)",
+      "url": "https://www.troutman.com/wp-content/uploads/2025/03/bs_s05e11__anza__transcript.pdf",
+      "date": "2024-10-25"
+    },
+    {
+      "label": "Solar Builder — Anza now provides real-time solar module market data via subscription",
+      "url": "https://solarbuildermag.com/news/anza-now-provides-real-time-solar-module-market-data-via-subscription/",
+      "date": "2024-08-15"
+    },
+    {
+      "label": "Anza — Anza Launches New Software (data and subscription offering; press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-launches-new-software/",
+      "date": "2024-08-14"
+    },
+    {
+      "label": "pv-tech — Anza launches PV module price database for US solar sector",
+      "url": "https://www.pv-tech.org/anza-launches-pv-module-price-database-for-us-solar-sector/",
+      "date": "2024-08-14"
+    },
+    {
+      "label": "Solar Builder — Anza adds energy storage systems to procurement platform",
+      "url": "https://solarbuildermag.com/energy-storage/anza-adds-energy-storage-systems-to-procurement-platform/",
+      "date": "2024-05-06"
+    },
+    {
+      "label": "Solar Builder — Reinventing solar module and storage procurement with Anza (The Pitch; 'the buyer pays us'; 'moving out of' brokerage)",
+      "url": "https://solarbuildermag.com/news/reinventing-solar-module-storage-procurement-with-anza-the-pitch/",
+      "date": "2024-04-03"
+    },
+    {
+      "label": "Canary Media — Charging Up: a chat with Malini Balakrishnan, CTO at Anza Renewables",
+      "url": "https://www.canarymedia.com/articles/workforce-diversity/charging-up-a-chat-with-malini-balakrishnan-cto-at-anza-renewables",
+      "date": "2024-01-04"
+    },
+    {
+      "label": "Clean Power Hour ep. 161 — Mike Hall, Anza Renewables ('1-2 cents per watt')",
+      "url": "https://cleanpowerhour.com/podcast/mike-hall-anza-renewables-effective-watt-for-optimizing-pv-procurement-ep161/",
+      "date": "2023-09-22"
+    },
+    {
+      "label": "Anza — Anza Completes Separation from Borrego and Receives New Investment from Energy Capital Partners Led Consortium (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-completes-separation-from-borrego-and-receives-new-investment-from-energy-capital-partners-led-consortium-to-transform-solar-and-storage-procurement/",
+      "date": "2023-05-17"
+    },
+    {
+      "label": "Solar Power World — Anza solar marketplace completes separation from Borrego",
+      "url": "https://www.solarpowerworldonline.com/2023/05/anza-solar-marketplace-completes-separation-from-borrego/",
+      "date": "2023-05-17"
+    },
+    {
+      "label": "Renewable Energy World — Borrego spins off solar and storage platform Anza",
+      "url": "https://www.renewableenergyworld.com/energy-storage/borrego-spins-off-solar-and-storage-platform-anza/",
+      "date": "2023-05-17"
+    },
+    {
+      "label": "Anza blog — Procurement technology origin story (CTO)",
+      "url": "https://www.anzarenewables.com/blog/procurement-technology-origin/",
+      "date": "2023-01-23"
+    },
+    {
+      "label": "Anza — Anza Adds PV Module Warranty Insurance (press release)",
+      "url": "https://www.anzarenewables.com/press-release/anza-adds-pv-module-warranty-insurance/",
+      "date": "2023-01-17"
+    },
+    {
+      "label": "Solar Builder (republished on Anza's site) — Renewable Properties uses Anza for 96 MW of modules (VSUN, BYD)",
+      "url": "https://www.anzarenewables.com/solar-builder/renewable-properties-uses-anza-for-96-mw-modules/",
+      "date": "2022-11-12"
+    },
+    {
+      "label": "Solar Power World — Borrego launches solar + storage product procurement marketplace Anza",
+      "url": "https://www.solarpowerworldonline.com/2022/09/borrego-launches-solar-storage-product-procurement-marketplace-anza/",
+      "date": "2022-09-13"
+    },
+    {
+      "label": "pv magazine USA — Borrego sells development business including 8.4 GW solar pipeline (to ECP)",
+      "url": "https://pv-magazine-usa.com/2022/05/25/borrego-sells-development-business-including-8-4-gw-solar-pipeline/",
+      "date": "2022-05-25"
+    },
+    {
+      "label": "Anza — About Us (history, officers, '9.2+ GW of solar POs and 4.7+ GWH of energy storage POs')",
+      "url": "https://www.anzarenewables.com/about-us/"
+    },
+    {
+      "label": "Anza — Homepage (footer legal name; Exchange and Pulse sliders; Aypa testimonial)",
+      "url": "https://www.anzarenewables.com/"
+    },
+    {
+      "label": "Anza — Software & Data overview ('280+ solar products from 40+ suppliers and 55+ BESS products'; '100+ current subscribers')",
+      "url": "https://www.anzarenewables.com/software-and-data/"
+    },
+    {
+      "label": "Anza — Pricing Advantage (how suppliers share pricing; 'within $0.008/watt')",
+      "url": "https://www.anzarenewables.com/pricing-advantage/"
+    },
+    {
+      "label": "Anza — Energy Storage (Pro) platform page",
+      "url": "https://www.anzarenewables.com/energy-storage/"
+    },
+    {
+      "label": "Anza — Energy Storage DG product page",
+      "url": "https://www.anzarenewables.com/energy-storage-dg/"
+    },
+    {
+      "label": "Anza — Solar platform (Solar Pro) page",
+      "url": "https://www.anzarenewables.com/solar/"
+    },
+    {
+      "label": "Anza — Anza Pulse product page",
+      "url": "https://www.anzarenewables.com/anza-pulse-solar/"
+    },
+    {
+      "label": "Anza — Anza Pulse / Energy Storage DG Terms of Service (Anza RE, LLC; California law; auto-renewal)",
+      "url": "https://www.anzarenewables.com/anza-pulse-terms-and-conditions/"
+    },
+    {
+      "label": "Anza — Privacy Policy (Anza RE, LLC; effective 1 September 2021)",
+      "url": "https://www.anzarenewables.com/privacy-policy/"
+    },
+    {
+      "label": "Anza — Energy Storage Services ('Over 19 GWh of Proven Expertise'; Aypa quote)",
+      "url": "https://www.anzarenewables.com/energy-storage-services/"
+    },
+    {
+      "label": "Anza — BESS Procurement & Contracting Support",
+      "url": "https://www.anzarenewables.com/bess-procurement-contracting-support/"
+    },
+    {
+      "label": "Anza — BESS Construction & Commissioning Execution Support",
+      "url": "https://www.anzarenewables.com/bess-construction-commissioning-execution-support/"
+    },
+    {
+      "label": "Anza — BESS Development Support",
+      "url": "https://www.anzarenewables.com/bess-development-support/"
+    },
+    {
+      "label": "Anza — Storage Warehousing & Logistics",
+      "url": "https://www.anzarenewables.com/storage-warehousing-logistics/"
+    },
+    {
+      "label": "Anza — Solar Procurement Support ('10 GW of solar procurements in the last 5 years')",
+      "url": "https://www.anzarenewables.com/solar-procurement-support/"
+    },
+    {
+      "label": "Anza — Transformer Procurement Service page ('50+ suppliers')",
+      "url": "https://www.anzarenewables.com/transformer-service/"
+    },
+    {
+      "label": "Anza — Manufacturers ('Your Products Available to 80+ Subscribers')",
+      "url": "https://www.anzarenewables.com/manufacturers/"
+    },
+    {
+      "label": "Anza — Who We Help (Data Center Owners & Developers)",
+      "url": "https://www.anzarenewables.com/who-we-help/"
+    },
+    {
+      "label": "Anza — Technology (forecast training set; lifecycle ranking)",
+      "url": "https://www.anzarenewables.com/technology/"
+    },
+    {
+      "label": "Anza — Our Experience / Team Spotlight ('Over 10 GW of Solar & 8 GWh of BESS Experience')",
+      "url": "https://www.anzarenewables.com/our-experience/"
+    },
+    {
+      "label": "Anza — Careers (remote team; equity program; Rippling ATS 'anza-re-llc')",
+      "url": "https://www.anzarenewables.com/careers/"
+    },
+    {
+      "label": "Anza — Solar Market Insights (bundled quarterly report)",
+      "url": "https://www.anzarenewables.com/solar-market-insights/"
+    },
+    {
+      "label": "Anza — Energy Storage Pricing Insights (free quarterly snapshot)",
+      "url": "https://www.anzarenewables.com/energy-storage-pricing-insights/"
+    },
+    {
+      "label": "Anza — People: Mike Hall",
+      "url": "https://www.anzarenewables.com/people/mike-hall/"
+    },
+    {
+      "label": "Anza — People: Aaron Hall",
+      "url": "https://www.anzarenewables.com/people/aaron-hall/"
+    },
+    {
+      "label": "Anza — People: Malini Balakrishnan",
+      "url": "https://www.anzarenewables.com/people/malini-balakrishnan/"
+    },
+    {
+      "label": "Anza — People: Steve Kline",
+      "url": "https://www.anzarenewables.com/people/steve-kline/"
+    },
+    {
+      "label": "Anza Exchange — New Equipment Marketplace (alpha)",
+      "url": "https://exchange.anzarenewables.com/"
+    },
+    {
+      "label": "Angeleno Group — Portfolio: Anza Renewables",
+      "url": "https://www.angelenogroup.com/portfolio/anza-renewables/"
+    },
+    {
+      "label": "OpenCorporates — ANZA RE, LLC (Delaware, file 7326972)",
+      "url": "https://opencorporates.com/companies/us_de/7326972"
+    },
+    {
+      "label": "OpenCorporates — Anza RE, LLC, California foreign LLC 202355418387",
+      "url": "https://opencorporates.com/companies/us_ca/202355418387"
+    },
+    {
+      "label": "OpenCorporates — ANZA RE, LLC, Washington foreign registration (3 May 2023)",
+      "url": "https://opencorporates.com/companies/us_wa/605173052"
+    },
+    {
+      "label": "LinkedIn — Anza Renewables company page ('51-200 employees'; founded 2021)",
+      "url": "https://www.linkedin.com/company/anza-renewables"
+    },
+    {
+      "label": "CB Insights — Anza (investors Borrego, Energy Capital Partners, Angeleno Group; 'Spinoff / Spinout')",
+      "url": "https://www.cbinsights.com/company/anza"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}

@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 2,
+  "slug": "epri",
+  "title": "EPRI — Technology Study Guide",
+  "lastUpdated": "2026-10-04",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: the utilities' own research cooperative",
+      "kind": "callout",
+      "tone": "info",
+      "read": "A research cooperative is funded by the industry it studies, governed by that industry's executives, and publishes the shared facts — failure rates, load forecasts, test methods — that the industry's suppliers, regulators and insurers then argue from.",
+      "ps": [
+        "**The trade.** Electric utilities face the same engineering problems — how a battery fails, how a data centre's load behaves, how a nuclear weld is inspected — and none can afford to solve them alone. A {{research cooperative}} pools their money: each member pays a fixed annual {{membership fee}} for a seat on programme committees and the right to every deliverable, and buys into optional {{supplemental project}}s for the questions it cares about most.",
+        "**Why a non-profit.** Organised as a {{501(c)(3)}} scientific organisation, it has no owners, pays no tax on its exempt work and publishes a {{Form 990}} every year — the closest a non-profit comes to an annual report. Its neutrality claim rests on that structure; its critics point out that the board is almost entirely utility executives.",
+        "**Why this corpus cares.** Three of its outputs sit under arguments every other dossier makes: the incident database behind every battery-safety statistic, the load forecast behind every data-centre interconnection debate, and the one test bed where hyperscalers, landlords, utilities and grid operators demonstrate {{demand flexibility}} together.",
+        "**What to carry.** Learn how a cooperative is funded and governed, how an incident database turns into a failure rate, how a load forecast is built and misread, and what a flexibility demonstration measures — and you can read a research institute's output for what it is: a shared fact base, not a certificate."
+      ]
+    },
+    {
+      "id": "funding-model",
+      "title": "How a research cooperative is funded",
+      "kind": "table",
+      "read": "Half fixed dues, half opt-in projects, a tail of services and government contracts — and the split decides who sets the agenda.",
+      "intro": "The revenue lines and what each buys the funder.",
+      "cols": [
+        "Line",
+        "What the funder pays for",
+        "Who sets the scope",
+        "Share (order of magnitude)"
+      ],
+      "rows": [
+        [
+          "{{membership fee}}",
+          "A seat on each research programme's committee, every deliverable, access to researchers and training",
+          "Programme committees of members",
+          "About half"
+        ],
+        [
+          "{{supplemental project}}",
+          "An opt-in project with its own budget and deliverables, offered twice a year; non-members may fund",
+          "The funders of that project",
+          "About half, and now the larger line"
+        ],
+        [
+          "Billable services",
+          "Hands-on work for one member — laboratory qualification, consulting",
+          "The member",
+          "A few percent"
+        ],
+        [
+          "Government contracts and grants",
+          "Cost-reimbursable research for federal and state agencies",
+          "The agency's statement of work",
+          "Growing; exposed to award terminations"
+        ],
+        [
+          "Report sales and royalties",
+          "Deliverables bought one at a time by non-members",
+          "The institute",
+          "Under one percent"
+        ]
+      ],
+      "note": "Fixed dues fund the long programmes; supplementals fund the urgent questions. When the supplemental line overtakes dues, the agenda is being set increasingly by whoever funds the project — including technology companies and data-centre operators who are not utilities."
+    },
+    {
+      "id": "governance",
+      "title": "Governance and the neutrality question",
+      "kind": "prose",
+      "read": "A member-elected board of utility executives governs the institute; neutrality is asserted by charter and contested by funding critics.",
+      "ps": [
+        "**Who votes.** Membership classes — federal and public power, regulated utilities, non-US utilities and system operators, unregulated generators, others — each elect a share of the board; a governance committee appoints a handful of outside directors. A chip company's executive took one of those seats in 2025.",
+        "**The posture.** 'We do not advocate for any specific company, sector, or technology.' Lobbying spend is trivial; the institute writes technical foundations that regulators and markets adapt, rather than rules.",
+        "**The critique.** When about half the money is utility dues and almost every director runs a utility, a methodology that happens to favour utilities' preferred outcomes invites the charge of industry capture. The institute's defence is the open publication of methods and data.",
+        "**How to read it.** Treat the institute's measurements (incident counts, survey results, test data) as the most reliable public record available, and its framings (which scenarios to run, what counts as flexible) as positions a funder influenced."
+      ]
+    },
+    {
+      "id": "incident-database",
+      "title": "From incident database to failure rate",
+      "kind": "prose",
+      "read": "A public database of battery fires and failures, divided by the capacity installed, produces the failure-rate curve every safety argument now cites — with denominators a careful reader keeps attached.",
+      "ps": [
+        "**The record.** Every publicly reported {{BESS}} fire, explosion or safety event since 2011, by date, site, chemistry, size, age and (where known) root cause. Collection depends on media coverage, so events in some regions are undercounted.",
+        "**The numerator and the denominator.** Incidents per year over gigawatts deployed gives a rate per gigawatt; as deployment grew far faster than incidents, the rate fell by roughly two orders of magnitude between 2018 and 2024. The headline percentage decline is only meaningful with both numbers attached.",
+        "**Root cause.** Of the incidents catalogued, only a third had enough information to assign a cause; integration, assembly and construction led, not cells. Most failures with a known system age happened during construction, commissioning or the first two years — the {{bathtub curve}} of infant mortality.",
+        "**What it changes.** Commissioning rigour, {{thermal runaway}} containment, first-responder guidance and the case that modern {{LFP}} containers built to {{NFPA 855}} and tested to {{UL 9540A}} are a different risk from the early designs that burned.",
+        "**What it is not.** A certificate. The institute writes the guidelines and keeps the record; laboratories test and certification bodies list. A permitting docket citing the database is citing a fact base, not an approval."
+      ]
+    },
+    {
+      "id": "load-forecast",
+      "title": "Building — and misreading — a data-centre load forecast",
+      "kind": "prose",
+      "read": "A scenario forecast gives a range for how much electricity data centres will use, by state, under stated growth assumptions; the range is the finding, and announced capacity is a pipeline, not a peak.",
+      "ps": [
+        "**The method.** Start from a measured base year (how much electricity data centres used, by state), apply growth scenarios (low, medium, high) grounded in chip shipments, construction tracking and operator disclosures, and project energy (terawatt-hours) and share of national use to a horizon year.",
+        "**Why the range is wide.** AI's share of data-centre power, efficiency gains, and how many announced projects are built are all uncertain; a forecast that reports one number is hiding the uncertainty, not resolving it.",
+        "**The pipeline trap.** Announced nameplate megawatts far exceed what will be energised on schedule; developers file for interconnection at many sites to secure a few. The institute's own guidance: treat announced capacity as 'a pipeline indicator rather than a near-term peak forecast'.",
+        "**How it is used.** Utilities put it in {{IRP}} filings; regulators cite it in {{large-load tariff}} dockets; federal agencies republish the state-level numbers. A revision upward by half between editions is therefore a market event.",
+        "**For a seller.** The forecast's state table tells you where load — and therefore equipment demand — concentrates; its scenario spread tells you how much of your pipeline is real."
+      ]
+    },
+    {
+      "id": "flexibility-demo",
+      "title": "What a data-centre flexibility demonstration measures",
+      "kind": "table",
+      "read": "A flexibility test asks how much load a data centre can shed or shift, how fast, for how long, and at what cost to the work it was doing.",
+      "intro": "The levers a demonstration can pull and what each is good for.",
+      "cols": [
+        "Lever",
+        "How it works",
+        "Speed and duration",
+        "Limit"
+      ],
+      "rows": [
+        [
+          "Compute choreography",
+          "Pause, slow or reschedule AI training and batch jobs; cap GPU power",
+          "Seconds to minutes; hours",
+          "Latency-sensitive services cannot move; quality-of-service must hold"
+        ],
+        [
+          "Geospatial shifting",
+          "Move workloads to a data centre on another grid",
+          "Minutes; as long as the other site has room",
+          "Needs spare capacity and data locality elsewhere"
+        ],
+        [
+          "Backup generation and batteries",
+          "Run on-site generators or {{UPS}} batteries during a grid event",
+          "Seconds; hours",
+          "Fuel, emissions permits and battery duration"
+        ],
+        [
+          "Cooling and auxiliaries",
+          "Pre-cool, then ride through on thermal mass",
+          "Minutes; tens of minutes",
+          "Hardware temperature limits"
+        ],
+        [
+          "{{ride-through}} behaviour",
+          "Stay connected through voltage and frequency dips instead of tripping to backup",
+          "Milliseconds",
+          "Equipment settings and the operator's risk appetite"
+        ]
+      ],
+      "note": "A uniform classification of flexibility — how much, how fast, how long — is what lets a grid operator write a large-load tariff or interconnection rule around it; without it, every jurisdiction negotiates from scratch."
+    },
+    {
+      "id": "where-it-sits",
+      "title": "Where a research institute sits against the assurance firms",
+      "kind": "proscons",
+      "read": "The institute is the reference the certifiers, independent engineers and insurers cite — not a competitor to them.",
+      "intro": "What the cooperative model does well and where it stops.",
+      "cards": [
+        {
+          "t": "The member-funded research cooperative",
+          "meta": "Industry-funded, industry-governed, publishing the shared record",
+          "adv": [
+            "Pools the industry's money on problems no member could fund alone",
+            "Publishes the shared record — incident data, forecasts, test methods — openly",
+            "Convenes parties that do not otherwise sit together: hyperscalers, landlords, utilities, grid operators",
+            "Writes the technical foundations regulators and markets adapt"
+          ],
+          "dis": [
+            "Issues no certificate, listing or mark and holds no accreditation as a certification body",
+            "Governed and half-funded by the utilities it studies",
+            "Agenda increasingly set by supplemental funders, including non-utilities",
+            "Many 'public' deliverables require registration; initiative budgets are undisclosed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "Mechanisms only — no dates, names or revenue figures.",
+      "cards": [
+        {
+          "q": "What does a membership fee buy a utility in a research cooperative?",
+          "a": "A seat on each programme's committee, every deliverable, access to the researchers and training — scope set collectively by the members."
+        },
+        {
+          "q": "How does a supplemental project differ from programme membership?",
+          "a": "It is opt-in with its own budget and deliverables, offered periodically, and non-members may fund it — so its funders set its scope."
+        },
+        {
+          "q": "Why must a failure-rate percentage carry its denominator?",
+          "a": "The rate is incidents divided by capacity installed; a 97 percent decline is mostly the denominator growing, and the raw incident count is the other half of the story."
+        },
+        {
+          "q": "Where on the bathtub curve do most battery failures with known age fall?",
+          "a": "In infant mortality — construction, commissioning or the first two years of operation — pointing at integration and assembly, not cells."
+        },
+        {
+          "q": "Why does a load forecast report a range rather than a number?",
+          "a": "AI's share of load, efficiency gains and how much announced capacity gets built are all uncertain; the range is the finding."
+        },
+        {
+          "q": "What does 'announced capacity is a pipeline indicator' mean?",
+          "a": "Developers file for far more megawatts than they will energise on schedule; nameplate announcements overstate near-term peak demand."
+        },
+        {
+          "q": "What three quantities define a flexibility class?",
+          "a": "How much load can move, how fast it responds, and how long it can hold the reduction."
+        },
+        {
+          "q": "What does a research institute not do that a certification body does?",
+          "a": "Issue a certificate, listing or mark against a standard; the institute writes guidelines, keeps the record and runs test methods."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "Six questions on the mechanics.",
+      "items": [
+        {
+          "q": "A cooperative's supplemental revenue overtakes its membership dues. What follows for its research agenda?",
+          "c": [
+            "Nothing — all revenue is pooled",
+            "The agenda is set increasingly by whoever funds each project, including non-utilities",
+            "Members lose their committee seats",
+            "Dues must rise"
+          ],
+          "a": 1,
+          "why": "Supplemental scope belongs to the project's funders; dues fund the collective programmes."
+        },
+        {
+          "q": "A permitting filing cites a 97 percent decline in battery failure rates. What should the reviewer ask for?",
+          "c": [
+            "The insurer's premium",
+            "The incident count and the installed capacity behind the rate",
+            "The chemistry",
+            "The certificate number"
+          ],
+          "a": 1,
+          "why": "The rate is a ratio; both terms are needed to judge it."
+        },
+        {
+          "q": "Most battery incidents with a known system age occurred within two years of operation. Which intervention does that most support?",
+          "c": [
+            "Longer warranties",
+            "Rigorous commissioning and integration quality control",
+            "Smaller batteries",
+            "Different chemistry"
+          ],
+          "a": 1,
+          "why": "Infant-mortality failures point at construction and commissioning, where the data says the causes sit."
+        },
+        {
+          "q": "A state's announced data-centre pipeline is three times its utility's forecast peak. Which reading matches the institute's guidance?",
+          "c": [
+            "The utility is wrong",
+            "Announced nameplate is a pipeline indicator, not a near-term peak",
+            "All projects will be built",
+            "The forecast should triple"
+          ],
+          "a": 1,
+          "why": "Developers file at many sites to secure a few; nameplate overstates near-term peak."
+        },
+        {
+          "q": "A data centre offers to cut cluster power by a quarter for three hours on request. Which flexibility lever is that?",
+          "c": [
+            "Geospatial shifting",
+            "Compute choreography",
+            "Backup generation",
+            "Ride-through"
+          ],
+          "a": 1,
+          "why": "Capping or pausing compute while holding quality of service is choreography of the workload itself."
+        },
+        {
+          "q": "A lender asks whether a battery container is 'EPRI certified'. What is the right answer?",
+          "c": [
+            "Yes, if it is in the database",
+            "The institute certifies nothing; the laboratory's UL 9540A test and the certification body's listing are the documents",
+            "Only for LFP",
+            "Only after commissioning"
+          ],
+          "a": 1,
+          "why": "Guidelines and records are the institute's product; certificates are the assurance firms'."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "research cooperative",
+      "d": "A non-profit research body funded by fixed dues from the companies of one industry and governed by their representatives, which pools their money on shared technical problems and publishes much of the result."
+    },
+    {
+      "t": "membership fee",
+      "d": "The fixed annual payment a member makes to a research cooperative for a seat on programme committees and the right to every programme deliverable; priced by the member's size."
+    },
+    {
+      "t": "supplemental project",
+      "d": "An opt-in research project with its own budget, funders and deliverables, offered alongside a cooperative's core programmes; non-members may fund it and its funders set its scope."
+    }
+  ]
+}
