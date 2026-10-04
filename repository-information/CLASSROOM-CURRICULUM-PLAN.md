@@ -1299,7 +1299,7 @@ The registry is the developer's taxonomy applied by one session against 154 doss
 | 1 | `scenario-storage-developers-and-ipps-objection` | storage-seller | storage-developers-and-ipps | objection | `aypa-power` | 1 | **v06.52r** |
 | 2 | `scenario-aidc-developers-and-landlords-objection` | aidc-power-seller | aidc-developers-and-landlords | objection | `vantage` | 1 | **v06.52r** · re-pinned **v07.89r** |
 | 3 | `scenario-storage-developers-and-ipps-discovery` | storage-seller | storage-developers-and-ipps | discovery | `spearmint-energy` | 2 | **v06.53r** |
-| 4 | `scenario-utilities-objection` | storage-seller | utilities | objection | `dominion-energy` | 2 | **v06.53r** |
+| 4 | `scenario-utilities-objection` | storage-seller | utilities | objection | `dominion-energy` | 2 | **v06.53r** · re-pinned **v07.60r** · reframed **v07.91r** (the 1 Oct solicitation had not issued; reviewBy → 2026-12-02) |
 | 5 | `scenario-aidc-developers-and-landlords-discovery` | aidc-power-seller | aidc-developers-and-landlords | discovery | `hut-8` | 2 | **v06.53r** · re-pinned **v07.89r** |
 | 6 | `scenario-utilities-discovery` | storage-seller | utilities | discovery | `southern-company` | 3 | **v06.54r** |
 | 7 | `scenario-hyperscalers-and-ai-labs-objection` | aidc-power-seller | hyperscalers-and-ai-labs | objection | `meta` | 3 | **v06.54r** · re-pinned **v07.89r** |

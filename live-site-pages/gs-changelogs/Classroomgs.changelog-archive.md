@@ -8,6 +8,107 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.59g] — 2026-09-16 10:28:01 PM EST — v06.28r — [5284762](https://github.com/LightAISolutions/Sales/commit/528476282675c25ac179bf022761e734d55a1673)
+
+### Added
+
+- A new study module in the guidance library, covering one more part of the value chain
+
+### Changed
+
+- Curriculum updated — one generated lesson refreshed so its reading list and its buyer's-criteria table reflect the lessons now available
+
+## [v01.58g] — 2026-09-16 09:07:17 PM EST — v06.26r — [21b8e54](https://github.com/LightAISolutions/Sales/commit/21b8e546483622f4808ab4b4d42ffa75debba67c)
+
+### Added
+
+- A new lesson in the AI campus track, second in the reading order: the cooling plant outside the hall — the two efficiency ratios a facilities team runs the plant on, how a chiller and an economiser split the year between them, the water argument and what a closed loop costs to win it, what aisle containment changes beyond the hall, the software that decides the energy bill, and five ways a cooling plant disappoints the people who paid for it
+- Six new flashcards and a five-question self-test on that lesson, plus seven lesson-specific glossary terms
+
+### Changed
+
+- The AI campus track is now complete, so its summary line describes what you can do after finishing it rather than how far it has got
+
+## [v01.57g] — 2026-09-16 08:22:31 PM EST — v06.24r — [a10b5fd](https://github.com/LightAISolutions/Sales/commit/a10b5fd9e07bad67de052bca2f015fd607a9449f)
+
+### Added
+
+- A new guidance module in the Value Chain library, covering the tier of the market that owns and lends against the platforms this curriculum describes: who holds which position, what each is betting on, what to watch, and how a seller should read the difference
+
+### Changed
+
+- The corresponding segment page now points to that module and no longer describes one of its follow-on lessons as still to come, since that lesson is already available
+
+## [v01.56g] — 2026-09-16 06:47:59 PM EST — v06.22r — [423d40c](https://github.com/LightAISolutions/Sales/commit/423d40c1b0a2d34d395255a6a2c32c2dc1fbcc35)
+
+### Added
+
+- A new lesson at the end of the grid-to-chip track: a single map of where the power path from the grid to the chip actually fails, what makes it fail at each point, and which party owns each failure
+
+### Changed
+
+- The grid-to-chip track now closes on that map, and its summary says so
+
+## [v01.55g] — 2026-09-16 06:02:51 PM EST — v06.20r — [e30ef03](https://github.com/LightAISolutions/Sales/commit/e30ef032f874093eae34060552aba2841b4363f3)
+
+### Changed
+- Guidance library updated
+- Curriculum updated
+
+## [v01.54g] — 2026-09-16 06:38:00 AM EST — v06.15r — [716aa80](https://github.com/LightAISolutions/Sales/commit/716aa809bdeed1f8974d4aef6e53ef2be1185fe1)
+
+### Added
+
+- A new market-landscape guide in the Value Chain library, covering the contracted GPU-cloud operators — who leads, who is contesting it, what each is betting on and what to watch next
+
+### Changed
+
+- The Value Chain lesson for that part of the market now points to the new guide and shows its two follow-on lessons as available rather than planned
+
+## [v01.53g] — 2026-09-16 05:33:09 AM EST — v06.13r — [b56e278](https://github.com/LightAISolutions/Sales/commit/b56e2782f335b6ba1facb73fa2954a63f41c5371)
+
+### Added
+
+- A new lesson in the AI campus track, on what "firm" power means and what a campus still needs alongside it
+
+### Changed
+
+- Curriculum updated
+
+## [v01.52g] — 2026-09-16 04:04:07 AM EST — v06.11r — [f477836](https://github.com/LightAISolutions/Sales/commit/f4778369b96766a8ddeb8105f56ac1081aa81151)
+
+### Added
+
+- A new study module in the guidance library, covering another part of the market map
+
+### Changed
+
+- Curriculum updated
+
+## [v01.51g] — 2026-09-16 02:38:20 AM EST — v06.09r — [338dafc](https://github.com/LightAISolutions/Sales/commit/338dafced8d3e9776fc399a9b9e7d447f3abb885)
+
+### Added
+- New lesson added to a track
+
+### Changed
+- Curriculum updated
+
+## [v01.50g] — 2026-09-16 01:24:09 AM EST — v06.07r — [1d0ece0](https://github.com/LightAISolutions/Sales/commit/1d0ece02a7177444608a8cf1b066fcee694fb498)
+
+### Added
+- Guidance library updated
+
+### Changed
+- Curriculum updated
+
+## [v01.49g] — 2026-09-16 12:25:00 AM EST — v06.05r — [07d098c](https://github.com/LightAISolutions/Sales/commit/07d098c6d8e2995e3a0c0886d33a570914f4fe0e)
+
+### Added
+- New lesson added to a track
+
+### Changed
+- Curriculum updated
+
 ## [v01.48g] — 2026-09-15 11:26:20 PM EST — v06.03r — [5b9f283](https://github.com/LightAISolutions/Sales/commit/5b9f283d0cca0f7c559e0f7db36337bb8b28a765)
 
 ### Added

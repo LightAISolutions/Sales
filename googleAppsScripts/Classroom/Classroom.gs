@@ -1,4 +1,4 @@
-var VERSION = "v01.98g";
+var VERSION = "v01.99g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -53175,8 +53175,8 @@ function clLessonScenarioUtilitiesObjection_() {
   "counterparty": "dominion-energy",
   "stage": "rfp"
  },
- "updated": "2026-09-26",
- "reviewBy": "2026-10-01",
+ "updated": "2026-10-04",
+ "reviewBy": "2026-12-02",
  "tiles": [
   {
    "k": "Dominion Energy",
@@ -53237,9 +53237,9 @@ function clLessonScenarioUtilitiesObjection_() {
    "read": "2 min",
    "tone": "info",
    "ps": [
-    "**You are the storage seller** — the commercial lead for an integrator, in a supplier-qualification meeting you asked for, two weeks before this utility's annual purchase solicitation issues. You are not bidding anything today. You are trying to be someone a bid can be built on.",
+    "**You are the storage seller** — the commercial lead for an integrator, in a supplier-qualification meeting you asked for, three days after the date on which this utility's annual purchase solicitation was due to issue. It has not — or not anywhere you can read it. The company's own solicitation page still says the purchase solicitation *is expected to be issued on October 1, 2026*; its materials sit behind a bidder registration portal, no document is posted and no new date is published. You are not bidding anything today, and what you know about the next solicitation is the shape of the last one. You are trying to be someone a bid can be built on.",
     "**Across the table** sit the utility-operations organisation — the one the record names with a president of its own for the Virginia franchise — and the regulatory and customer organisation, which is the function that has to defend whatever gets bought. There is no procurement person in this room with the authority to prefer you, and that is not an accident of scheduling. **It is the segment.**",
-    "**On the table** is the calendar. The annual purchase solicitation for Virginia and North Carolina issues on **1 October 2026**; the acquisition solicitation already ran its bidder webinar in June. Behind both sits a five-year capital plan in which battery storage is about **two billion dollars against a sixty-five billion dollar total** — three per cent — while transmission is a quarter of it.",
+    "**On the table** is the calendar, and the calendar has slipped. The annual purchase solicitation for Virginia and North Carolina was due on **1 October 2026** and has not issued on the public record; the acquisition solicitation ran its bidder webinar in June and its document is posted; a dispatchable-generation solicitation has been open since 1 July with bids due on **18 December**. Behind all three sits a five-year capital plan in which battery storage is about **two billion dollars against a sixty-five billion dollar total** — three per cent — while transmission is a quarter of it. And the buyer is a month past the vote that changes its owner: both sets of shareholders approved the combination with NextEra Energy on 3 September, and Virginia's commission opens its local public hearings on 7 October.",
     "**What you are rehearsing** is the objection every regulated account eventually makes, and it is not a preference. It is a standard: this utility may only recover what a commission finds {{prudence}} in. Your product is not being compared with a competitor's. It is being compared with what a regulator will allow."
    ],
    "sales": "In this segment the buyer is not deciding whether it likes you. It is deciding whether it can defend you in a filing."
@@ -53249,7 +53249,7 @@ function clLessonScenarioUtilitiesObjection_() {
    "title": "What the record says",
    "kind": "table",
    "read": "4 min",
-   "intro": "The nine things you walk in knowing, each one a row of the ledger at the bottom of this scenario. Nothing in the three beats depends on a fact that is not here.",
+   "intro": "The ten things you walk in knowing, each one a row of the ledger at the bottom of this scenario. Nothing in the three beats depends on a fact that is not here.",
    "cols": [
     "What you know",
     "The record",
@@ -53272,9 +53272,14 @@ function clLessonScenarioUtilitiesObjection_() {
      "the buyer's own strategy read — **analysis**"
     ],
     [
-     "**How it actually buys, and when**",
-     "Two annual solicitations: an acquisition solicitation (bidder webinar 18 June 2026) and **a purchase solicitation issuing 1 October 2026** for Virginia and North Carolina; the prior purchase solicitation closed 9 February 2026. The company states it both self-develops storage and solicits storage purchase agreements annually",
-     "the buyer's procurement line"
+     "**How it actually buys, and when — and that the when has slipped**",
+     "Two annual solicitations: an acquisition solicitation (bidder webinar 18 June 2026; its 2026 document is posted) and a purchase solicitation for Virginia and North Carolina that the company's page said would issue on **1 October 2026** — and on 4 October still says *is expected to be issued* on that date, its materials behind a bidder registration portal, no document posted, no new date. The prior purchase solicitation is the model: dated 8 October 2025, intent to bid by 20 January 2026, proposals due 9 February 2026, seeking up to 1,000 MW of utility-scale solar and onshore wind, up to 100 MW of distributed solar and up to **500 MW of storage**, on fifteen-year storage and twenty-year renewable terms, for delivery by the end of 2029. The company states it both self-develops storage and solicits storage purchase agreements annually",
+     "the buyer's procurement line, and the company's solicitation page and its 2025 purchase solicitation read first-hand on 4 October 2026"
+    ],
+    [
+     "**The third lane, and the one procurement date that is published**",
+     "A dispatchable-generation solicitation for Virginia opened its bid form on **1 July 2026**, with final submissions due at 5 pm on **18 December 2026** — the only procurement deadline this buyer has published for the rest of the year. The dossier's indicators read a storage or hybrid winner there as opening a third lane for storage — **analysis**",
+     "the buyer's recent developments and its indicators, and the company's dispatchable-generation page read first-hand on 4 October 2026"
     ],
     [
      "**What the last filing actually got**",
@@ -53293,8 +53298,8 @@ function clLessonScenarioUtilitiesObjection_() {
     ],
     [
      "**Who the counterparty becomes**",
-     "An all-stock combination agreed **15 May 2026**. Virginia's evidentiary hearing is **17 November 2026**; South Carolina's hearing is **8 December 2026**, with its final order expected **29 January 2027**; and closing is expected in the second half of 2027. The Virginia utility keeps its president and its dockets",
-     "the buyer's merger exposure and its investor relationship, and the segment landscape's merger calendar"
+     "A combination with NextEra Energy agreed **15 May 2026** — not all-stock, as this room once said: each Dominion share converts into 0.8138 NextEra shares **plus a pro rata share of a single USD 360 million cash payment**, with no election and no contingent right. Both sets of shareholders approved it on **3 September 2026** (Dominion: 671.3 million shares for, 8.6 million against). Virginia's commission holds local public hearings on **7 and 9 October**, public-witness sessions on 5, 9 and 10 November and its evidentiary hearing from **17 November 2026**; South Carolina's hearing is **8 December 2026**, with its final order expected **29 January 2027**; closing is expected in the second half of 2027. The Virginia utility keeps its president and its dockets",
+     "the buyer's merger exposure and its investor relationship; the May 2026 merger 8-K, the July 2026 joint proxy, the two 3 September vote filings and the two commissions' hearing notices read first-hand; and the segment landscape's merger calendar"
     ],
     [
      "**Where the veto sits in this segment**",
@@ -53302,7 +53307,7 @@ function clLessonScenarioUtilitiesObjection_() {
      "the segment landscape, the seller's play — **analysis**"
     ]
    ],
-   "sales": "Read row five and row nine together. Row five is what a commission did to this buyer's last storage ask; row nine is who will be reading your file by the time the next one is decided."
+   "sales": "Read row six and row nine together. Row six is what a commission did to this buyer's last storage ask; row nine is who will be reading your file by the time the next one is decided."
   },
   {
    "id": "the-position",
@@ -53312,7 +53317,7 @@ function clLessonScenarioUtilitiesObjection_() {
    "ps": [
     "**The buyer's position is that it does not choose, and on this record that is very nearly true.** A regulated franchise converts load into plant through a sequence of documents, and the purchase order is the last of them: the {{integrated resource plan}} sets what the utility says it needs, the annual solicitation collects what the market will offer, a petition asks the commission to approve specific projects and specific agreements, and only an approval lets anything be signed. **What it owns and builds goes through a {{certificate of public convenience and necessity}} instead** — the gas station certified in November 2025 is that lane, not this one. Neither lane has a step in it where a supplier is preferred, and every step is on a calendar the utility publishes rather than one it controls.",
     "**The rule behind the position is {{prudence}}, and it is a fact rather than a posture.** This utility may only recover from customers what a commission finds reasonable on the record at the time the decision was made. The evidence for that is not rhetorical: its last clean-energy petition asked for two storage projects totalling about 155 megawatts and came away with one of about eighty. So the objection you are about to hear — *we cannot prefer you, and what we do buy has to survive a filing* — is a description of a standard the buyer is held to, not a way of declining a meeting.",
-    "**And the pressure on that position is also in the record, which is what makes the room worth having.** A statute passed in April 2026 names four gigawatts of short-duration storage by the end of 2030; the plan in force carries two gigawatts by 2045 and no generic build before 2030. The dossier holds at moderate confidence that the next comprehensive plan raises the storage number, and notes the reconciliation could come through purchases rather than build — which is the lane the October solicitation opens. **Expect the objection to be true and the conclusion to be wrong**: *we do not pick the battery* is accurate, and *therefore there is nothing to talk about* does not follow from it."
+    "**And the pressure on that position is also in the record, which is what makes the room worth having.** A statute passed in April 2026 names four gigawatts of short-duration storage by the end of 2030; the plan in force carries two gigawatts by 2045 and no generic build before 2030. The dossier holds at moderate confidence that the next comprehensive plan raises the storage number, and notes the reconciliation could come through purchases rather than build — which is the lane the purchase solicitation opens when it issues, and on 4 October it has not. A solicitation that is late against its own published date is still the instrument; the statute above it has not moved. **Expect the objection to be true and the conclusion to be wrong**: *we do not pick the battery* is accurate, and *therefore there is nothing to talk about* does not follow from it."
    ],
    "sales": "The objection is a standard, not a preference. Answer the standard — and never argue with a regulated utility about its own filings."
   },
@@ -53327,15 +53332,15 @@ function clLessonScenarioUtilitiesObjection_() {
      "q": "Your move?",
      "c": [
       "Lead on delivered cost per kilowatt-hour — show that you would have been the cheapest project in the last petition, and let the number make the case.",
-      "Ask which of the two lanes this conversation is about — the purchase solicitation issuing on 1 October, where your customer is the developer bidding it, or the utility's own programme, where the commission is the reviewer — and offer the evidence that lane's reviewer actually reads.",
+      "Ask which of the two lanes this conversation is about — the purchase solicitation the record expected on 1 October and that has not yet issued, where your customer is the developer who will bid it, or the utility's own programme, where the commission is the reviewer — and offer the evidence that lane's reviewer actually reads.",
       "Point out that the April 2026 statute requires four gigawatts by the end of 2030 while the plan in force carries two by 2045, so far more storage will have to be bought than is planned.",
       "Ask to be added to the approved-vendor list, and leave the specification to them."
      ],
      "a": 1,
-     "why": "**Option 2 is the only move that changes what you are being asked to prove.** The record shows two lanes with two different reviewers — a bidder's economics in one, a commission's {{prudence}} finding in the other — and the same product is judged on different evidence in each. Naming the lane converts an objection you cannot argue with into a question the buyer can answer in a sentence. **Option 1 ignores the segment's first criterion.** What a regulated utility buys is decided by what the commission will allow into {{rate base}} or into an approved agreement, not by what is cheapest; a price the filing cannot carry is not a cheaper offer, and the last petition's outcome is the evidence. **Option 3 ignores whose argument that is.** The conflict between the statute and the plan is real and the dossier rates it moderate confidence — but it is an argument made by parties to a docket, and a vendor making it in a supplier meeting has told a regulated utility that its own filing is wrong. **Option 4 ignores the order the record puts the two routes in.** This buyer's addressable market is the developer bidding the October solicitation first and the approved-vendor list second, so asking only for the list asks for the smaller half and skips the question of who is going to bid you."
+     "why": "**Option 2 is the only move that changes what you are being asked to prove.** The record shows two lanes with two different reviewers — a bidder's economics in one, a commission's {{prudence}} finding in the other — and the same product is judged on different evidence in each. Naming the lane converts an objection you cannot argue with into a question the buyer can answer in a sentence. **Option 1 ignores the segment's first criterion.** What a regulated utility buys is decided by what the commission will allow into {{rate base}} or into an approved agreement, not by what is cheapest; a price the filing cannot carry is not a cheaper offer, and the last petition's outcome is the evidence. **Option 3 ignores whose argument that is.** The conflict between the statute and the plan is real and the dossier rates it moderate confidence — but it is an argument made by parties to a docket, and a vendor making it in a supplier meeting has told a regulated utility that its own filing is wrong. **Option 4 ignores the order the record puts the two routes in.** This buyer's addressable market is the developer bidding the purchase solicitation first — late or not, the developers who will bid it are choosing their equipment now — and the approved-vendor list second, so asking only for the list asks for the smaller half and skips the question of who is going to bid you."
     }
    ],
-   "note": "The operations organisation says both lanes are live and that the purchase solicitation is the nearer one, then hands the meeting to the regulatory organisation."
+   "note": "The operations organisation says both lanes are live, that the purchase solicitation is the nearer one once it issues — and that it has no date to give you — then hands the meeting to the regulatory organisation."
   },
   {
    "id": "beat-2",
@@ -53363,7 +53368,7 @@ function clLessonScenarioUtilitiesObjection_() {
    "title": "Beat 3 — the close",
    "kind": "quiz",
    "read": "3 min",
-   "intro": "The meeting ends where a regulated procurement always ends — on a calendar rather than a decision. The purchase solicitation issues on 1 October. The new large-load class takes effect on 1 January 2027. The combination's Virginia evidentiary hearing is 17 November 2026, South Carolina's hearing is on 8 December with its final order expected on 29 January 2027, and closing is expected in the second half of 2027. The Virginia utility keeps its president and its dockets.",
+   "intro": "The meeting ends where a regulated procurement always ends — on a calendar rather than a decision, and this one has slipped. The purchase solicitation the record expected on 1 October has not issued and no new date is published; the dispatchable-generation solicitation's bids are due on 18 December. The new large-load class takes effect on 1 January 2027. Both sets of shareholders approved the combination on 3 September; Virginia's commission holds local public hearings on 7 and 9 October and opens its evidentiary hearing on 17 November, South Carolina's hearing is on 8 December with its final order expected on 29 January 2027, and closing is expected in the second half of 2027. The Virginia utility keeps its president and its dockets.",
    "items": [
     {
      "q": "What do you ask for?",
@@ -53374,7 +53379,7 @@ function clLessonScenarioUtilitiesObjection_() {
       "Agree to come back once the combination has closed and the combined company's supplier process is published."
      ],
      "a": 1,
-     "why": "**Option 2 asks the one question only this counterparty can answer, and it is the segment's characteristic risk.** The landscape's reading is that qualification is an asset with an expiry date and that this is the one segment where it can expire without the customer doing anything — and the record makes that concrete here: the dockets and the calendar survive the combination, while supplier qualification moves to a platform whose own merchant arm is the largest storage developer in the corpus. What carries over is therefore the question, and it is answerable in writing today. **Option 1 ignores what a solicitation is.** It is a published process with a date, not a decision anyone in the room may accelerate; asking a regulated utility to prefer a vendor outside the process it is required to run asks it to do the exact thing a {{prudence}} finding punishes. **Option 3 ignores that there is no combined company yet.** Five approvals are pending, the Virginia evidentiary hearing is not until mid-November and closing is expected in the second half of 2027 — a call to the acquirer during a pending review is the least welcome call either party can take, and it spends the access this meeting earned. **Option 4 ignores the calendar in front of you.** The solicitation issues in a fortnight, the rate class takes effect in January, and at least one full annual cycle runs before any close — so waiting forfeits the only lane that is open now."
+     "why": "**Option 2 asks the one question only this counterparty can answer, and it is the segment's characteristic risk.** The landscape's reading is that qualification is an asset with an expiry date and that this is the one segment where it can expire without the customer doing anything — and the record makes that concrete here: the dockets and the calendar survive the combination, while supplier qualification moves to a platform whose own merchant arm is the largest storage developer in the corpus. What carries over is therefore the question, and it is answerable in writing today. **Option 1 ignores what a solicitation is.** It is a published process with a date, not a decision anyone in the room may accelerate; asking a regulated utility to prefer a vendor outside the process it is required to run asks it to do the exact thing a {{prudence}} finding punishes. **Option 3 ignores that there is no combined company yet.** The shareholder votes are done, but five regulatory approvals are pending, the Virginia evidentiary hearing is not until mid-November and closing is expected in the second half of 2027 — a call to the acquirer during a pending review is the least welcome call either party can take, and it spends the access this meeting earned. **Option 4 ignores the calendar in front of you.** The purchase solicitation is late against its own date, not withdrawn — the developers who will bid it are choosing equipment now, against a document whose last edition gave bidders four months from issue to proposal — the dispatchable solicitation closes on 18 December, the rate class takes effect in January, and at least one full annual cycle runs before any close; so waiting forfeits the only windows that are open now."
     }
    ],
    "note": "You leave with a written requalification position to send and a request pending on what survives the combination. In this segment that is a good day."
@@ -53429,7 +53434,7 @@ function clLessonScenarioUtilitiesObjection_() {
    "title": "Claims ledger",
    "kind": "ledger",
    "read": "reference",
-   "intro": "Every premise in the room, the record and the position, plus every fact the three rationales lean on. **Facts are the dossier's; analysis is the landscape's or the dossier's own labelled assessment** — and the rule behind the objection is carried by fact rows, never by an analysis one. The dossier version and the module's `updated` are the values read off each fetched document on 2026-09-18. **This scenario's review date is 1 October 2026** — the nearest dated gate in the ledger below, and the date the landscape's own review fell on until that review, on 24 September 2026, moved the landscape to 1 January 2027. It ships inside its own thirty-day horizon by design.",
+   "intro": "Every premise in the room, the record and the position, plus every fact the three rationales lean on. **Facts are the dossier's; analysis is the landscape's or the dossier's own labelled assessment** — and the rule behind the objection is carried by fact rows, never by an analysis one. The dossier version and the module's `updated` are the values read off each fetched document on 2026-09-18 and re-read on 4 October 2026; the rows marked as read first-hand cite documents the dossier predates, by title and date. **This scenario's review date is 2 December 2026** — the landscape's own review date, which binds first: the scenario's own next dated gate, the dispatchable-generation solicitation's 18 December deadline, falls after it, and the purchase solicitation the room was written around has no published date to review against.",
    "rows": [
     [
      "The 2025 integrated resource plan update's preferred plan adds 2,000 MW of storage by 2045, alongside 17,534 MW of solar, 3,460 MW of wind, 1,944 MW of small modular reactors and 8,510 MW of gas; demand in the zone is forecast to rise 6.3 per cent a year over the next decade",
@@ -53448,6 +53453,22 @@ function clLessonScenarioUtilitiesObjection_() {
      "profile:dominion-energy v1 · productsAndServices[3] · fact"
     ],
     [
+     "On 4 October 2026 the company's solicitation page still reads that the purchase solicitation 'is expected to be issued on October 1, 2026', directs bidders to a registration portal for the CE-8 solicitation materials, and posts the 2026 Development Asset Acquisition RFP but no purchase solicitation document; the newsroom's releases of 14 September and 1 October concern the merger's Virginia benefits package and a South Carolina efficiency programme, and no issue notice or new date was found",
+     "Dominion Energy Virginia, 'Solar, Onshore Wind & Energy Storage Proposals' page and the company newsroom, read first-hand 4 October 2026 · fact (the dossier, at 3 September, predates the date)"
+    ],
+    [
+     "The 2025 purchase solicitation — the model for the next one — was dated 8 October 2025, took intent-to-bid forms to 20 January 2026 and proposals to 9 February 2026, and sought up to 100 MW of distributed solar, up to 1,000 MW of utility-scale solar and onshore wind and up to 500 MWac of storage, on twenty-year renewable and fifteen-year storage delivery terms, for delivery no later than 31 December 2029",
+     "Dominion Energy Virginia and Dominion Energy North Carolina, 'Request for Proposals — 2025 Solicitation for New Renewable Generation and Energy Storage', dated 8 October 2025, read first-hand 4 October 2026 · fact"
+    ],
+    [
+     "A dispatchable-generation solicitation for Virginia opened its bid form on 1 July 2026, with final submissions due at 5 pm on 18 December 2026",
+     "profile:dominion-energy v1 · recentDevelopments[7] · fact; Dominion Energy Virginia, 'Dispatchable Generation Proposals' page, read first-hand 4 October 2026 · fact"
+    ],
+    [
+     "A storage or hybrid winner in the dispatchable-generation solicitation would open a third lane for storage at this buyer",
+     "profile:dominion-energy v1 · strategyRead[7] · analysis"
+    ],
+    [
      "The October 2025 clean-energy petition sought six utility-scale solar projects totalling about 845 MW, two energy-storage projects totalling about 155 MW and purchase agreements for ten solar facilities totalling 439 MW; the commission approved four solar projects of about 532 MW and one storage project of about 80 MW for approximately USD 1.5 billion, in service between 2028 and 2030",
      "profile:dominion-energy v1 · productsAndServices[3] · fact"
     ],
@@ -53464,8 +53485,16 @@ function clLessonScenarioUtilitiesObjection_() {
      "profile:dominion-energy v1 · policyExposure[1] · fact"
     ],
     [
-     "An all-stock combination was agreed on 15 May 2026; Virginia's evidentiary hearing is 17 November 2026, South Carolina's hearing is 8 December 2026 with its final order expected 29 January 2027, five approvals are pending, and closing is expected in the second half of 2027. The Virginia utility keeps its president and its dockets",
-     "profile:dominion-energy v1 · summary, policyExposure[5], relationships[8] · fact; guidance:landscape-utilities-2026-09 · the-indicators · fact (merger calendar corrected at the 24 September 2026 review)"
+     "A combination with NextEra Energy was agreed on 15 May 2026: each Dominion share converts into 0.8138 NextEra shares plus a pro rata share of a one-time aggregate USD 360 million cash payment, with no election and no contingent value right — the merger 8-K and the joint proxy describe stock and cash and neither uses the words 'all-stock'; Virginia's evidentiary hearing begins 17 November 2026, South Carolina's hearing is 8 December 2026 with its final order expected 29 January 2027, five regulatory approvals are pending, and closing is expected in the second half of 2027. The Virginia utility keeps its president and its dockets",
+     "profile:dominion-energy v1 · relationships[8], policyExposure[5], summary · fact (the dossier carries the cash in its relationship row and still labels the deal all-stock — flagged for refresh); NextEra Energy Form 8-K of May 2026 (the merger agreement) and the Dominion Energy joint proxy statement of 28 July 2026, read first-hand 4 October 2026 · fact; guidance:landscape-utilities-2026-09 · the-indicators · fact (merger calendar corrected at the 24 September 2026 review)"
+    ],
+    [
+     "Dominion's shareholders approved the merger agreement on 3 September 2026 — 671,317,253 shares for, 8,566,156 against, 2,185,104 abstaining, no broker non-votes — and NextEra's shareholders approved the share issuance the same day, 1,612,635,616 for and 8,545,037 against",
+     "Dominion Energy Form 8-K, Item 5.07, 3 September 2026, and NextEra Energy Form 8-K, Item 5.07, 3 September 2026, read first-hand 4 October 2026 · fact (the dossier, at 3 September, records the meeting and not its result)"
+    ],
+    [
+     "In the Virginia merger case the commission holds local public hearings on 7 October in Newport News and 9 October in Fairfax, public-witness sessions on 5, 9 and 10 November, and an evidentiary hearing beginning 17 November 2026 in Richmond; in South Carolina the commission's hearing on the combination opens on 8 December 2026 in Columbia",
+     "Virginia State Corporation Commission news release of 22 September 2026 (Case PUR-2026-00112) and the 'Upcoming Public Hearings in Nov. & Dec.' notice of 11 August 2026 on South Carolina's utility-consumer site (Docket 2026-186-EG), read first-hand 4 October 2026 · fact"
     ],
     [
      "The leadership the record names for this decision is an executive vice president for utility operations who is also president of the Virginia utility, and an executive vice president who is chief regulatory and customer officer",
@@ -53504,14 +53533,15 @@ function clLessonScenarioUtilitiesObjection_() {
    "read": "2 min",
    "tone": "warn",
    "ps": [
-    "**In an objection room this is the list of things you must ask rather than assert.** Each is a gap the record states about itself, and each is a sentence a seller under pressure will be tempted to fill.",
+    "**In an objection room this is the list of things you must ask rather than assert.** Each is a gap the record states about itself or that the calendar has opened, and each is a sentence a seller under pressure will be tempted to fill.",
     "**1 · The tariff's own text.** The dossier records that the standalone large-load rate sheet, the collateral quantum in dollars per megawatt and the commission's final-order text were **not reachable** — the ramp, exit-fee and notice terms in this file rest on a regulator's fact sheet and an investor deck. Quote the fact sheet's labels or quote nothing.",
     "**2 · Who the incumbent supplier is.** There is none on the record. The segment's reading is that most of the eleven franchises' owned battery lane has **no supplier discoverable in any source** — two that run open storage solicitations name none — so do not walk in assuming a competitor is installed here, and do not let the buyer's silence be read as one.",
     "**3 · The commercial terms of the large-load contracts.** Contracted megawatts, minimum-bill percentages and termination formulas are filed under seal or redacted, and the dossiers say so in their own collection gaps. Every figure in this scenario about those contracts is a company disclosure or a regulator's summary — never the contract.",
     "**4 · How the plan and the statute get reconciled.** That the next comprehensive plan raises the storage number is a moderate-confidence judgment, not a filing. Whether the gap is closed by building or by buying is exactly the question a seller wants answered and exactly the one nobody has published. **Ask it; do not model it.**",
-    "**5 · What supplier qualification looks like after the combination.** Neither party has published a position. The record says the dockets survive and the platform decides — which is a shape, not a process. The written answer to that question is worth more than anything else in the meeting, and only this counterparty can give it."
+    "**5 · What supplier qualification looks like after the combination.** Neither party has published a position. The record says the dockets survive and the platform decides — which is a shape, not a process. The written answer to that question is worth more than anything else in the meeting, and only this counterparty can give it.",
+    "**6 · What the next purchase solicitation asks for, and when.** Its capacity, categories, terms and due dates are not on the public record on 4 October: the company's page says only that it is expected, and the materials sit behind a registration portal. The 2025 document is the model — 500 megawatts of storage, fifteen-year terms, delivery by the end of 2029 — and a model is not a term sheet. Say what the last one asked; ask what this one will."
    ],
-   "sales": "Five gaps, and four of them are places where a confident sentence would be an invention. In a regulated account an invention is not a risk to the deal — it is the end of the file."
+   "sales": "Six gaps, and five of them are places where a confident sentence would be an invention. In a regulated account an invention is not a risk to the deal — it is the end of the file."
   }
  ],
  "revisions": [
@@ -53528,6 +53558,19 @@ function clLessonScenarioUtilitiesObjection_() {
    "date": "2026-09-26",
    "note": "Re-judged against the landscape re-pinned on 26 September 2026, when five franchises joined the utilities segment. All three beats hold: the two lanes, the prudence standard, the edition-and-date answer and the qualification-expiry reading are unchanged, and the landscape's new instruments and review date do not reach this buyer. One premise moved: what-the-record-does-not-say taught that two of the six franchises run open storage solicitations and neither one's battery supplier is discoverable; the landscape now counts eleven franchises, most of whose owned lane names no supplier — so the sentence says that, and its advice stands. The landscape pin moves to 26 September; reviewBy stays 1 October, the purchase solicitation's issue date and the separate reframe's gate.",
    "changed": [
+    "what-the-record-does-not-say"
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "Reframed after the premise passed. The room was written two weeks before the purchase solicitation issued on 1 October 2026; on 4 October the company's own solicitation page still says it is expected to be issued on that date, its materials sit behind a registration portal, no document is posted, the newsroom carries no issue notice and no new date is published — so the room is re-dated to the slip rather than rewritten, with the 2025 purchase solicitation read first-hand as the model and the dispatchable-generation solicitation's 18 December deadline carried as the one published procurement gate. The 'all-stock' description was checked against the May 2026 merger 8-K and the July 2026 joint proxy and corrected: 0.8138 NextEra shares plus a pro rata share of a USD 360 million cash payment, no election, no contingent right; the 3 September shareholder votes and the two commissions' hearing calendars are added as first-hand reads. All three beats hold: the lane question, the edition-and-date answer and the what-survives question rest on prudence, the instrument and the collateral, none of which the slip or the vote changes. the-room taught a meeting two weeks before a 1 October issue and now teaches one three days after a date that passed without an issue; what-the-record-says taught a solicitation issuing 1 October and an all-stock deal and now teaches the slip, the 2025 model, the dispatchable lane and the stock-plus-cash terms with the vote; the-position taught the lane the October solicitation opens and now teaches the lane it opens when it issues; beat-1's option and rationale named the 1 October issue and now name the slip; beat-3's setup and rationale carried the issue in a fortnight and the pending approvals and now carry the slip, the votes and the hearing calendar; claims-ledger carries the new review date and seven primary-read rows; what-the-record-does-not-say gains a sixth gap, the solicitation's own terms. Pins unchanged: the dossier at v1 of 3 September 2026, the landscape at 26 September. reviewBy 1 October → 2 December 2026, the landscape's own review date, which binds before the scenario's 18 December gate.",
+   "changed": [
+    "the-room",
+    "what-the-record-says",
+    "the-position",
+    "beat-1",
+    "beat-3",
+    "claims-ledger",
     "what-the-record-does-not-say"
    ]
   }

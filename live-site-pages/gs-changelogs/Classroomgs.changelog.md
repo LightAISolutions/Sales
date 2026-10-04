@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 40/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.99g] — 2026-10-04 05:14:32 PM EST — v07.91r
+
+### Changed
+
+- One rehearsal exercise re-timed to its buyer's published calendar
 
 ## [v01.98g] — 2026-10-04 04:11:56 AM EST — v07.89r
 
@@ -369,106 +375,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - The BESS Foundations track is now complete, and its summary line has been updated to describe everything the finished track covers
 - A cross-reference in an existing lesson now points to the new lesson
 - Minor internal improvements
-
-## [v01.59g] — 2026-09-16 10:28:01 PM EST — v06.28r
-
-### Added
-
-- A new study module in the guidance library, covering one more part of the value chain
-
-### Changed
-
-- Curriculum updated — one generated lesson refreshed so its reading list and its buyer's-criteria table reflect the lessons now available
-
-## [v01.58g] — 2026-09-16 09:07:17 PM EST — v06.26r
-
-### Added
-
-- A new lesson in the AI campus track, second in the reading order: the cooling plant outside the hall — the two efficiency ratios a facilities team runs the plant on, how a chiller and an economiser split the year between them, the water argument and what a closed loop costs to win it, what aisle containment changes beyond the hall, the software that decides the energy bill, and five ways a cooling plant disappoints the people who paid for it
-- Six new flashcards and a five-question self-test on that lesson, plus seven lesson-specific glossary terms
-
-### Changed
-
-- The AI campus track is now complete, so its summary line describes what you can do after finishing it rather than how far it has got
-
-## [v01.57g] — 2026-09-16 08:22:31 PM EST — v06.24r
-
-### Added
-
-- A new guidance module in the Value Chain library, covering the tier of the market that owns and lends against the platforms this curriculum describes: who holds which position, what each is betting on, what to watch, and how a seller should read the difference
-
-### Changed
-
-- The corresponding segment page now points to that module and no longer describes one of its follow-on lessons as still to come, since that lesson is already available
-
-## [v01.56g] — 2026-09-16 06:47:59 PM EST — v06.22r
-
-### Added
-
-- A new lesson at the end of the grid-to-chip track: a single map of where the power path from the grid to the chip actually fails, what makes it fail at each point, and which party owns each failure
-
-### Changed
-
-- The grid-to-chip track now closes on that map, and its summary says so
-
-## [v01.55g] — 2026-09-16 06:02:51 PM EST — v06.20r
-
-### Changed
-- Guidance library updated
-- Curriculum updated
-
-## [v01.54g] — 2026-09-16 06:38:00 AM EST — v06.15r
-
-### Added
-
-- A new market-landscape guide in the Value Chain library, covering the contracted GPU-cloud operators — who leads, who is contesting it, what each is betting on and what to watch next
-
-### Changed
-
-- The Value Chain lesson for that part of the market now points to the new guide and shows its two follow-on lessons as available rather than planned
-
-## [v01.53g] — 2026-09-16 05:33:09 AM EST — v06.13r
-
-### Added
-
-- A new lesson in the AI campus track, on what "firm" power means and what a campus still needs alongside it
-
-### Changed
-
-- Curriculum updated
-
-## [v01.52g] — 2026-09-16 04:04:07 AM EST — v06.11r
-
-### Added
-
-- A new study module in the guidance library, covering another part of the market map
-
-### Changed
-
-- Curriculum updated
-
-## [v01.51g] — 2026-09-16 02:38:20 AM EST — v06.09r
-
-### Added
-- New lesson added to a track
-
-### Changed
-- Curriculum updated
-
-## [v01.50g] — 2026-09-16 01:24:09 AM EST — v06.07r
-
-### Added
-- Guidance library updated
-
-### Changed
-- Curriculum updated
-
-## [v01.49g] — 2026-09-16 12:25:00 AM EST — v06.05r
-
-### Added
-- New lesson added to a track
-
-### Changed
-- Curriculum updated
 
 Developed by: LightAISolutions

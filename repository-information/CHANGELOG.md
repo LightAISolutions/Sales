@@ -3,11 +3,176 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 85/100`
+`Sections: 86/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.91r] — 2026-10-04 05:14:32 PM EST
+
+> **Prompt:** "Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 10 as a fresh
+> session: reframe the Dominion rehearsal — `scenario-utilities-objection` in
+> googleAppsScripts/Classroom/Classroom.gs — now that its premise has passed. The room is written two weeks
+> BEFORE Dominion's annual Virginia and North Carolina solar-and-storage purchase solicitation "issues on
+> 1 October 2026", and it is past 1 October. One session, ONE commit, this scenario only. Fable 5.1 at high
+> (§2: scenario reframes and regulatory synthesis run at high — the facts are a regulated utility's calendar,
+> not a filing to mine). Check Settings → Usage first: the week-2 Fable allowance resets Sat 10/10 7:00 AM ET
+> and wave A ran on it on 10/4 (get_session exposed no cost for that session; status allowed_warning). If
+> the Fable cap binds mid-session, finish on Opus 5.5 high and record the substitution in the §3 row 10 cell
+> and the CHANGELOG section.
+>
+> STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+> HEAD || git rebase origin/main; git fetch --unshallow origin main before any pin read or changelog
+> rotation. Read the two counters after the rebase. repository-information/CHANGELOG.md is 85/100 at
+> v07.90r — no rotation. live-site-pages/gs-changelogs/Classroomgs.changelog.md is at `Sections: 50/50` —
+> AT CAPACITY — so the Classroom GAS bump this session makes (v01.98g → v01.99g) ROTATES it FIRST: move the
+> oldest whole date groups to Classroomgs.changelog-archive.md with SHA enrichment per
+> .claude/rules/changelogs.md (look each section up by the `— vXX.XXr` cross-reference at the end of its
+> header, one `git log --oneline --all` for the batch; `grep '^## \[v' ARCHIVE | grep -v '— \['` must print
+> nothing before you commit), until fewer than 50 remain, then add the v01.99g section. Run python3
+> scripts/check-classroom-curriculum.py --strict and record its opening lines: it should read "0
+> scenario(s) whose landscape has moved since the pin", no structural findings, and
+> `scenario-utilities-objection` listed as DUE — reviewBy 2026-10-01 is the reframe's own gate, left in
+> place on purpose at v07.60r.
+>
+> READ FIRST, in this order: repository-information/SESSION-CONTEXT.md (the wave A hand-off);
+> repository-information/REMINDERS.md — the first active reminder IS this task; read every sub-bullet (the
+> window, the slip rule, the all-stock check, "its own session"); it is the developer's note — never mark
+> it complete or move it; report what you did and let the developer dismiss it. phase-f-action-plan.md §2
+> and §3 rows 10–17 and this §13. .claude/rules/classroom-app.md — "Authoring a pipeline lesson" for the G3
+> contradiction test and the per-section "section <id> teaches X; <ref> now says Y" sentence, the
+> `revisions[]` shape {date, note, changed[]} with P8 equality (every id listed differs, every differing id
+> is listed, unchanged sections byte for byte), G2 read-before-re-pin, D6/P13 (a scenario is revised by a
+> developer session only — this is one), and the content fence: the scenario sits INSIDE it, the gate
+> derivation is untouched; if P3 reports, refresh gateDigest per the rule, otherwise leave the ledger alone.
+> repository-information/C5-SALES-SIMULATIONS-DESIGN.md §5 (the ten-section template) and §6 (the stamp).
+> CLASSROOM-CURRICULUM-PLAN.md §11 row 4. The v07.60r section of CHANGELOG.md (Part D: the room was
+> deliberately NOT reframed then — "the reframe's gate") and the v07.89r section (the five scenario re-pins
+> this one follows: changed[] names only the sections whose meaning changed; `updated` advances; reviewBy
+> follows the nearest dated gate in the new material). Then the literal itself —
+> clLessonScenarioUtilitiesObjection_(), every section — and the dossier it is pinned to,
+> live-site-pages/profiler-data/dominion-energy.profile.json (v1, lastUpdated 2026-09-03 at the time of
+> writing; the pin you write is the fetched file's own value, G2 — the registry is for the sweep, never for
+> a pin).
+>
+> THE PREMISE, AND HOW TO READ IT. The pre-issue framing lives in six sections (grep the literal):
+> the-room ("two weeks before this utility's annual purchase solicitation issues", "You are not bidding
+> anything today", "issues on 1 October 2026"); what-the-record-says ("1 October"; the "all-stock" row);
+> the-position ("the solicitation opens"); beat-1 and beat-3 ("1 October", "solicitation issues");
+> claims-ledger (the dated rows and the review-date row). Before touching any of them, establish from the
+> primary source whether the solicitation issued: Dominion Energy Virginia's annual solicitation page and
+> documents (the 2025 cycle's structure is the model), the SCC docket if a filing accompanies it, and the
+> company's newsroom — read first-hand and dated. THREE OUTCOMES, ONE RULE EACH. (a) ISSUED ON 1 OCTOBER —
+> reframe the room to the day after issue: the seller has the document in hand; read the capacity sought,
+> the eligible technologies, the proposal due date and the key dates OFF THE DOCUMENT and write them into
+> what-the-record-says and the ledger as a primary read, cited by document title and date (the 24
+> September neoclouds precedent: a primary document read first-hand is cited directly in the ledger when
+> the dossier predates it); re-judge the beats against the new framing — the correct answers rest on
+> prudence, the instrument and the collateral, which the issue does not change, so expect them to hold, but
+> say so beat by beat; reviewBy moves to the nearest dated gate IN THE DOCUMENT (the proposal due date or
+> the next calendar step), never earlier than `updated`. (b) ISSUED ON A LATER DATE — as (a), with that
+> date. (c) NOT ISSUED — the reminder's own rule: re-date the framing to the new published issue date and
+> move reviewBy to it rather than rewriting the room; if no new date is published, say so in the room ("the
+> solicitation the record expected on 1 October has not issued") and set reviewBy from the Dispatchable
+> Generation RFP's proposal deadline of 18 December 2026 (dominion v1, recentDevelopments 2026-07-01), the
+> nearest dated gate the dossier holds. The counterparty is a role, never a person; positions are
+> paraphrased from the record.
+>
+> THE ALL-STOCK CHECK (the reminder's sub-bullet; flagged at v07.40r, left unchanged at v07.60r). The
+> dossier and the scenario describe the 15 May 2026 NextEra–Dominion combination as "all-stock" (a fixed
+> exchange ratio; shareholder vote 3 September 2026; closing expected in the second half of 2027). Verify
+> against the merger agreement and the 8-K of May 2026 and the joint proxy: is the consideration NextEra
+> stock at a fixed exchange ratio only, or is there a cash component, an election or a contingent value
+> right? Record the 3 September vote result and the status of SCC case PUR-2026-00112 from primary
+> sources. If "all-stock" is right, say so in the ledger row's source with the document named. If it is
+> wrong, correct the scenario's wording and FLAG the dossier for a `profiler Dominion Energy` refresh in
+> your hand-off — a Classroom session NEVER edits a dossier, a registry entry, Profiler.gs or Profiler.html.
+>
+> WHAT MOVES AND WHAT DOES NOT. Edit only clLessonScenarioUtilitiesObjection_(). Pins:
+> `profile:dominion-energy` at the fetched lastUpdated (2026-09-03 unless a refresh landed — read the
+> file); `guidance:landscape-utilities-2026-09` stays at 2026-09-26 — the landscape is NOT revised here,
+> that is wave C (§3 row 16); note in your hand-off that its the-indicators row dated "1 October 2026" has
+> passed, for wave C to carry. `updated` → the run date (P7). Append the third `revisions[]` entry with
+> changed[] naming exactly the differing sections and the X→Y notes. Do not touch the other thirteen
+> scenarios, any landscape, any segment-* lesson (`build-classroom-segments.py --check` will read 19
+> pin-only due on concepts: pins — leave them, G3), any dossier, REMINDERS.md or TODO.md.
+>
+> VERSIONING ([PC-GS-VERSION] #1, [PC-PAGE-CHANGELOG] #16): Classroom.gs VERSION v01.98g → v01.99g and
+> live-site-pages/gs-versions/Classroomgs.version.txt → |v01.99g| together; the GAS changelog ROTATED, then
+> one generic public line ("One rehearsal exercise re-timed to its buyer's published calendar" — no names,
+> dockets or internals); README tree Classroom display → v01.99g (python3 scripts/check-readme-tree.py); no
+> page bump. CHANGELOG: the v07.91r section with this prompt verbatim as the blockquote; the outcome (a, b
+> or c) in its first line; the G3 sentence per changed section; the all-stock verdict with its source; the
+> --strict and --check final lines; the rotation count; and "Reminder: left for the developer to dismiss".
+> Flip §3 row 10 to landed (the pattern of rows 1–9).
+>
+> VERIFY: node --check on a .js copy of Classroom.gs; node scripts/check-gas-inner-scripts.js; python3
+> scripts/check-classroom-content.py (0 errors; 71 lessons / 8 tracks / 220 gate cases, unchanged); python3
+> scripts/check-classroom-pipeline.py --base origin/main (P1 on the developer files and P13 on this one
+> scenario are expected; no P3 unless you moved a gate symbol, no P7 after the `updated` advance, no P8);
+> python3 scripts/check-classroom-curriculum.py --strict (the scenario no longer due; 0 moved); a
+> Playwright render of Classroom.html#lesson/scenario-utilities-objection at contributor with zero page
+> errors — industry-guidance.md step 7's recipe. Wave A's render script left with its container, so
+> rebuild it: serve a scratch copy of live-site-pages over http://127.0.0.1 with `_e = ''` and
+> `AUTO_REFRESH = false`, seed sessionStorage AFTER load (`Classroom_gas_session_token`,
+> `Classroom_gas_user_email`, `Classroom_gas_user_role` = contributor, `Classroom_gas_user_permissions` =
+> ["guidance","tracks"]), override window._gasPost AFTER load with a fake that answers
+> cop=index/lesson/progress/drill and gop=index/doc from the parsed literals (wrap the assignment in an
+> IIFE — page.evaluate invokes a bare function expression), hide #auth-wall / .splash / #gas-pill /
+> #verify-overlay, then clHeaderShow(); clAppMount(); clRoute(); and read the section headings back.
+>
+> Normal Pre-Commit and Pre-Push checklists; ONE commit; push on the claude/* branch once git ls-remote
+> shows it absent (the harness pre-creates the branch at origin/main — that is not an in-flight workflow).
+>
+> NEVER: mark or move the developer's reminder; edit a dossier, the registry, Profiler.gs or Profiler.html;
+> edit a segment-* lesson, another scenario or any landscape; fabricate a provenance input or use a `note:`
+> prefix; name a person as the counterparty.
+>
+> At the end: which outcome (a, b or c) the primary source supported and the document it came from; the
+> sections changed with their G3 sentences; the new reviewBy and its gate; the all-stock verdict; the
+> --strict and --check final lines; the rotation (sections moved, SHA check clean); and the session's cost
+> from get_session's usage.cost_usd if it exposes one, with the rate-limit status."
+
+The Dominion reframe — row 10 of `phase-f-action-plan.md` §3, the standing reminder's own window. **Outcome (c) — the solicitation had not issued on the public record**: on 4 October 2026 Dominion Energy Virginia's own "Solar, Onshore Wind & Energy Storage Proposals" page still reads that the purchase solicitation "is expected to be issued on October 1, 2026", directs bidders to the CE-8 registration portal for its materials, posts the 2026 Development Asset Acquisition RFP and no purchase-solicitation document, and the newsroom's releases since 1 September (14 September, the merger's Virginia benefits package; 1 October, a South Carolina efficiency programme) carry no issue notice; no new date is published anywhere. So the room is re-dated to the slip rather than rewritten, the 2025 purchase solicitation is read first-hand as the model, and the dispatchable-generation solicitation's 18 December deadline is carried as the one published procurement gate. The "all-stock" description is wrong and is corrected. All three beats hold. One commit, Fable 5.1 throughout — no model substitution (launched at xhigh; see Notes).
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — `scenario-utilities-objection` (Dominion; developer session, design D6; guidance, unchanged)
+- `updated` 2026-09-26 → 2026-10-04; `reviewBy` 2026-10-01 → **2026-12-02**. Pins unchanged and re-read: `profile:dominion-energy` v1 @2026-09-03 (the fetched file's own `lastUpdated`; no refresh has landed), `guidance:landscape-utilities-2026-09` @2026-09-26 (not revised here — wave C's). A third `revisions[]` entry names the seven sections that differ, and P8's equality holds.
+- **The primary reads, by document and date** (the 24 September neoclouds precedent — cited directly in the ledger because the dossier predates them):
+  - Dominion Energy Virginia, "Solar, Onshore Wind & Energy Storage Proposals" page, read 4 October 2026 — the pre-issue language still standing; the posted documents list.
+  - Dominion Energy Virginia and Dominion Energy North Carolina, "Request for Proposals — 2025 Solicitation for New Renewable Generation and Energy Storage", dated 8 October 2025 — the model: intent to bid 20 January 2026, proposals 9 February 2026 (3 pm), up to 100 MW distributed solar, up to 1,000 MW utility-scale solar and onshore wind, up to 500 MWac of storage, twenty-year renewable and fifteen-year storage terms, delivery by 31 December 2029.
+  - Dominion Energy Virginia, "Dispatchable Generation Proposals" page — bid form open since 1 July 2026, final submissions due 5 pm 18 December 2026 (confirms `recentDevelopments[7]`).
+  - NextEra Energy Form 8-K of May 2026 (the merger agreement) and the Dominion Energy joint proxy statement (DEFM14A, 28 July 2026) — the consideration.
+  - Dominion Energy Form 8-K, Item 5.07, 3 September 2026 (671,317,253 for / 8,566,156 against / 2,185,104 abstain; no broker non-votes) and NextEra Energy Form 8-K, Item 5.07, 3 September 2026 (share issuance 1,612,635,616 for / 8,545,037 against).
+  - Virginia State Corporation Commission news release of 22 September 2026, Case PUR-2026-00112 — local public hearings 7 October (Newport News) and 9 October (Fairfax), public-witness sessions 5, 9 and 10 November, evidentiary hearing from 17 November in Richmond; and the "Upcoming Public Hearings in Nov. & Dec." notice of 11 August 2026 on South Carolina's utility-consumer site, Docket 2026-186-EG — hearing 8 December 2026 in Columbia.
+- **The all-stock verdict: wrong as worded.** Neither the merger 8-K nor the joint proxy uses the phrase; each Dominion share converts into 0.8138 NextEra shares **plus its pro rata share of an aggregate USD 360 million cash payment**, with no election and no contingent value right. The scenario's wording is corrected in `what-the-record-says` and the ledger, with the documents named in the row's source. `dominion-energy` v1 carries the cash in `relationships[8].scale` and `recentDevelopments[10]` yet labels the deal "all-stock" in `summary`, `relationships[8].note` and that headline — **flagged for a `profiler Dominion Energy` refresh**; a Classroom session does not edit a dossier.
+- **The G3 sentences, one per changed section (7 of 10):**
+  - **`the-room`** taught a meeting two weeks before the purchase solicitation issues on 1 October 2026 and "you are not bidding anything today"; the company's page now says the solicitation is still expected on that date, with its materials behind a portal and no document posted — so the room is three days after a date that passed without an issue, the dispatchable lane and the 3 September votes are on the table, and the seller still bids nothing.
+  - **`what-the-record-says`** taught "a purchase solicitation issuing 1 October 2026" and "an all-stock combination"; the page now says expected, the 2025 document says what the model asked for, the 8-K and proxy say stock plus cash, the two 8-Ks say both votes passed, and the two commissions' notices give the hearing calendar. A tenth row carries the dispatchable-generation lane (deadline as fact, the third-lane reading as analysis); the sales line re-points to rows six and nine.
+  - **`the-position`** taught "the lane the October solicitation opens"; the page now says it opens when the solicitation issues, which on 4 October it has not — and a late instrument is still the instrument.
+  - **`beat-1`** taught, in its strong option and rationale, "the purchase solicitation issuing on 1 October" and "the developer bidding the October solicitation"; now the solicitation the record expected and that has not yet issued, where the developers who will bid it are choosing equipment now. Correct answer unchanged (the lane question).
+  - **`beat-3`** taught, in its setup and rationale, "the purchase solicitation issues on 1 October", "five approvals are pending" and "the solicitation issues in a fortnight"; now the slip with no new date, the dispatchable deadline, the votes done with five regulatory approvals pending, the Virginia hearings of 7 and 9 October and 17 November, and a rationale for option 4 that names the windows actually open. Correct answer unchanged (what survives the combination).
+  - **`claims-ledger`** taught a review date of 1 October inside a thirty-day horizon; now 2 December with the reason, the solicitation row kept as the dossier states it, seven primary-read rows added by document title and date, and the merger row corrected with its source naming the 8-K, the proxy and the dossier's own inconsistency.
+  - **`what-the-record-does-not-say`** taught five gaps; a sixth — what the next purchase solicitation asks for, and when — is opened by the calendar: the 2025 document is a model, not a term sheet.
+  - **Unchanged, byte for byte:** `beat-2` (the edition-and-date answer turns on the award-to-energisation gap, not the issue date), `the-mechanism-behind-it`, `debrief`.
+- **The beats, re-judged one by one:** beat 1 — the lane question still converts the objection into something the buyer can answer, and the slip only sharpens it (the developer lane is live and dateless, the commission lane unchanged); beat 2 — nothing in the slip, the votes or the consideration touches a prudence finding made on the record at the decision; beat 3 — the dockets and the calendar still survive the combination and supplier qualification still moves, so the written what-carries-over question is still the one only this counterparty can answer. **All three beats hold.**
+- **Why 2 December, not 18 December:** the prompt's (c) rule sets `reviewBy` from the dispatchable-generation solicitation's 18 December deadline, the nearest procurement gate the dossier holds. C5 §6 binds a scenario to its landscape's own review date ("a scenario cannot outlive the judgment it rests on"; the content checker warns otherwise), and `landscape-utilities-2026-09` reads 2 December — so the AEP scenario at v07.60r and the Hut 8 scenario at v07.89r were bound the same way. 18 December is carried in the ledger as the scenario's own next gate; wave C re-sorts both together.
+
+#### Versions
+- Classroom GAS `VERSION` v01.98g → **v01.99g**; `live-site-pages/gs-versions/Classroomgs.version.txt` → `|v01.99g|`; README tree Classroom display v01.99g (`check-readme-tree.py`: 0 findings). No page bump.
+- **`Classroomgs.changelog.md` rotated first** — it stood at `Sections: 50/50`. The oldest whole date group, **2026-09-16 (11 sections, v01.49g–v01.59g)**, moved to `Classroomgs.changelog-archive.md` with SHA enrichment from a deepened clone (1,780 commits; one `git log --oneline --all` resolved 11 of 11 by their `— vXX.XXr` cross-references). `grep '^## \[v' ARCHIVE | grep -v '— \['` prints nothing. Then the v01.99g section with one generic line: counter **40/50**; the archive holds 59.
+
+#### Documents
+- **`repository-information/phase-f-action-plan.md`** §3 row 10 flipped to landed, in the pattern of rows 1–9. **`CLASSROOM-CURRICULUM-PLAN.md`** §11 row 4 annotated with the reframe version.
+
+### Notes
+- **Checkers (final run, before commit):** `node --check` on a `.js` copy clean; `check-gas-inner-scripts.js` 11 files / 106 blocks clean; `check-classroom-content.py` **71 lessons, 8 tracks, 220 gate cases — 0 errors, 0 warnings** (unchanged); `check-classroom-curriculum.py --strict` — opening lines at session start read **"0 scenario(s) whose landscape has moved since the pin"**, **no structural findings**, and `scenario-utilities-objection` listed under review dates as **reviewBy 2026-10-01 PASSED**; final run **0 moved, no structural findings, the scenario no longer listed** (reviewBy 2026-12-02 is outside the 30-day horizon). `build-classroom-segments.py --check`: **19 segments, 19 due — 0 with section changes, 19 pin-only** (`concepts:profiler-concepts` 2026-09-30 → 2026-10-04) — none regenerated (G3). `check-classroom-pipeline.py --base origin/main`: **P13** on this one scenario (reserved to a developer session by D6) and **P1** on the developer files; **no P3** (gateDigest untouched), **no P7**, **no P8**. `check-readme-tree.py` 0 findings.
+- **Render:** Playwright, Chromium at contributor over a scratch copy served on 127.0.0.1 with `_e = ''` and `AUTO_REFRESH = false`, the session seeded and `window._gasPost` overridden after load with a fake answering cop=index/lesson/progress/drill and gop=index/doc from the literals (payloads built by running `Classroom.gs` in a Node sandbox with stubbed GAS services): `Classroom.html#lesson/scenario-utilities-objection` — **0 page errors**, 12 headings rendered (the ten sections, the title and the glossary), no literal `**` or `{{` in the rendered text; the new sentences read back. Two console lines are external-resource loads behind the proxy's certificate, not page errors.
+- **Model:** Fable 5.1 (`claude-fable-5-1`) for the whole session, no substitution to Opus 5.5; `get_session` reports the session was launched at effort `xhigh`, not the `high` the row asked for — the developer's launch setting, not changed mid-session. It exposed no `usage.cost_usd`; rate limit `allowed_warning` on the seven-day window, resets Sat 10/10 7:00 AM ET.
+- **Reminder: left for the developer to dismiss** — the first active reminder in `REMINDERS.md` is untouched.
+- **For the hand-off:** (1) `dominion-energy` v1 (2026-09-03) is a `profiler Dominion Energy` refresh candidate — the "all-stock" label, the 3 September vote result, the SCC hearing calendar, and its "final order expected January 29, 2027 per the Q2 2026 deck" line, which the deck's approval-timeline slide does not show at day level (the SC procedural schedule is the likelier source — not re-sourced here); (2) `landscape-utilities-2026-09`'s `the-indicators` row dated "1 October 2026" (Florida's compliant-tariff deadline) has passed and this session did not touch the landscape — wave C (§3 row 16) carries it, and should also carry that Dominion's purchase solicitation slipped past its own date; (3) the newsroom index at news.dominionenergy.com answers 403 to a plain fetch — the overview page was read through the fetch tool instead.
 
 ## [v07.90r] — 2026-10-04 06:09:18 AM EST
 
