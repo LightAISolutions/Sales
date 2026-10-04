@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.92r] — 2026-10-04 05:30:08 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5.5 xhigh session to run F-12, then remember session"
+
+The paste-in prompt for §3 row 11 — F-I2: SoftBank, SB Energy, Blue Owl — appended to `phase-f-action-plan.md` as §14 and given in chat, with row 11 pointing at it; then the session context saved. "F-12" is read as F-I2, the plan's row 11 (there is no row or session F-12).
+
+### Added
+
+- **`repository-information/phase-f-action-plan.md` §14** — the F-I2 prompt (Opus 5.5 xhigh, the plan's own model line for a long first-party record — SB Energy's S-1). It adapts §6 (F-I1) with what rows 5–8 added since: the DigitalBridge gate (trade press reports SoftBank completed the ~USD 3.1bn take-private on 30 September 2026 — the prompt makes the session verify that from DigitalBridge's completion 8-K before writing SoftBank once, with DigitalBridge's platforms as controlled platforms and `vantage` and `switch` taking reciprocal investor edges); the step-5 sub-rule (segment lessons regenerated in the same commit, Classroom GAS v01.99g → **v02.00g**, written out because the +0.01 step crosses the minor boundary); the identity-check record of rows 6–8; SEC access through `SEC_USER_AGENT`; the inbound counts re-measured today by word-bounded grep — `\bSoftBank\b` 12 dossiers, `\bSB Energy\b` 4, `\bBlue Owl\b` 15, `\bDigitalBridge\b` 10 — against the §11.3 rows' 9 / 0 / 9; the SB Energy IPO status check (424B4 / 8-A12B since the 1 September S-1); and the Megmeet hand-off paragraph. It forbids F-I3, ERCOT, PJM and any Classroom wave, and leaves `landscape-capital-2026-09` and `scenario-capital-objection` for wave B.
+
+### Changed
+
+- **`phase-f-action-plan.md`** — §3 row 11's When cell notes the reported close and points at §14; the "Prompts for these sessions" paragraph adds §14 as the pattern for F-I3 (row 12).
+- **`repository-information/SESSION-CONTEXT.md`** — a new Latest Session (the row 10 hand-off: outcome (c), the all-stock correction, the reviewBy bound, the rotation, the checkers, the render, and the §14 prompt). The wave A entry (v07.88r–v07.90r) moved to Previous Sessions; the F-A1 entry (v07.86r–v07.88r) dropped under the two-session cap.
+- **README.md** — timestamp and repo version.
+
+### Notes
+
+- No dossier, page, GAS or diagram changed. CHANGELOG `Sections: 86/100` → 87/100 (sections dated 2026-10-04 EST exempt; no rotation).
+- The DigitalBridge close is a press report here (DCD, Mobile Europe), deliberately not written into any dossier or registry entry — the F-I2 session reads the 8-K and records it.
+- The reminder for the Dominion reframe is still the developer's to dismiss.
 
 ## [v07.91r] — 2026-10-04 05:14:32 PM EST
 
