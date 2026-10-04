@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 84/100`
+`Sections: 85/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.90r] — 2026-10-04 06:09:18 AM EST
+
+> **Prompt:** "give me a prompt to paste into a new session (recommend model and effort level) to continue the action plan, then remember session."
+
+The hand-off after Classroom wave A. The next open row of `phase-f-action-plan.md` §3 is row 10, the Dominion reframe — the standing reminder's window closes Tue 10/6 — and its paste-in prompt is appended as §13 at the plan's own model line, Fable 5.1 High. Session context saved.
+
+### Added
+
+- **`repository-information/phase-f-action-plan.md`** — **§13, the paste-in prompt for §3 row 10** (`scenario-utilities-objection`, Fable 5.1 · high): STEP 0 (rebase, unshallow, the two counters — the Classroom GAS changelog is at 50/50 and must rotate before that session's v01.99g section), the read-first list, the premise and the three outcomes the reminder names (issued on 1 October / issued later / not issued, each with its reviewBy rule), the all-stock check against the merger agreement and proxy with the never-edit-a-dossier rule, what moves and what does not (the landscape is wave C's; the generator's 19 pin-only segments stay), versioning, the verify list including a rebuilt Playwright recipe, and the end report. §3 row 10 now reads "prompt in §13"; the "Prompts for these sessions" paragraph names §13 as the pattern for single-scenario reframes.
+
+### Changed
+
+- **`repository-information/SESSION-CONTEXT.md`** — Latest Session rewritten for the wave A session (what landed at v07.89r, where it left off, the decisions, the known issues, the recommendation to run §13 next); the previous Latest Session moved to Previous Sessions and the older entry dropped (two-session cap).
+
+### Notes
+
+- No code, module, lesson or dossier changed in this push; no GAS or page bump. Repo version v07.89r → v07.90r.
+- `get_session` exposed no `usage.cost_usd` for this session in three calls; rate limit `allowed_warning` on the seven-day window, no overage, resets Sat 10/10 7:00 AM ET.
 
 ## [v07.89r] — 2026-10-04 04:11:56 AM EST
 

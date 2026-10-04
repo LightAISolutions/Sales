@@ -6,6 +6,61 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-10-04 03:15 AM → ~06:15 AM EST (§3 row 9: Classroom wave A — three AIDC landscapes re-authored, five rehearsals re-judged, the drill cap raised — then the row 10 prompt and this save; one attended turn plus this one, one context compaction mid-task)
+**Repo version:** v07.88r → v07.90r (two pushes: v07.89r the wave, v07.90r §13 prompt + this save)
+**Branch:** `claude/practical-edison-7lh1fp`
+**Model:** Fable 5.1 xhigh (`claude-fable-5-1`), no substitution; `get_session` exposed NO `usage.cost_usd` this session (three calls — the F-A1 session had one); rate limit `allowed_warning` on the seven-day window, no overage, resets Sat 10/10 7:00 AM ET
+
+### What was done
+
+- **`landscape-neoclouds-2026-09`** — 9 of 9 sections re-authored at **12 members (2 · 9 · 1)**: Nebius incumbent on its ClusterMAX 3.0 Platinum (registry `notes`, 2 Oct); Firmus, HUMAIN, G42, WhiteFiber new challengers, 5C Group the first adjacent; five routes (the out-compound route's runner became an incumbent; sovereign builders and a landlord-cloud are new). **The 30 Sept gate failed** — Fluidstack's FY2025 accounts overdue at Companies House on 2 Oct. ClusterMAX is now explained and attributed through `semianalysis` v1 (what it is, who publishes it, why a tier is a point-in-time judgment by a firm with undisclosed ties to several of the rated); the module never ranks by tier alone. Counts restated from the files: 9 of 12 shared with the landlords segment, 5 inversions; 7 of 12 publish no revenue figure; fence 35 / 23 / 0 with CoreWeave, Lambda, IREN carrying none; graph 29 edges / 14 typed pairs / 17 typings / 3 transactions; purchasing authority at 8 of 11 ranked members. `reviewBy` 2026-09-30 → **2026-10-08** (Firmus prospectus lodgement, Reuters term sheet — the nearest dated gate in the new material, four days out by rule).
+- **`landscape-hyperscalers-and-ai-labs-2026-09`** — 8 of 9 sections at **10 members (5 · 5 · 0)**: ByteDance and Alibaba Cloud as challengers of a second kind ("a leader elsewhere"); a fourth threat direction (where the architecture is written); Oracle's RPO dated USD 638 bn → 664 bn; **closure holds at ten, (bb1) instruments stay disabled**; the zero-adjacent set and the closed set now coincide. Fence 18 / 13 / 1 (2027-01-01). `reviewBy` stays **2026-12-31**. Seller's play unchanged.
+- **`landscape-aidc-developers-and-landlords-2026-09`** — 7 of 9 sections at **38 members (9 · 18 · 11)**: four routes (8 · 3 · 5 · 2 — 5C built its substation, TECfusions runs its flagship on its own turbines, WhiteFiber holds the utility agreement, Chindata and Khazna/G42 lead another market); 27 bet rows from the newcomers' `strategyRead[]` only; Tract (PUCN conditional approval 17 Sep) and PowerHouse (FERC rejected the cancellation 22 Sep) rows corrected; 25 of 38 publish no revenue, 7 of 9 incumbents among them; fence 141 / 104 / 2. `reviewBy` 2026-12-15 → **2026-11-02** (end of the Upper Burrell moratorium — TECfusions' township as its binding constraint). (s) kept: who-dominates and the seller's play unchanged.
+- **Five rehearsals re-judged, all fifteen beats hold**: `scenario-neoclouds-discovery` (fluidstack v4; Harlingen as the third own-name site; Barber Lake slip + the lab's direct second term; accounts overdue; 9 sections changed; reviewBy 2026-10-08), `scenario-aidc-developers-and-landlords-objection` (vantage v9 unchanged; `claims-ledger`; reviewBy 2026-11-02), `scenario-aidc-developers-and-landlords-discovery` (hut-8 v3 — the USD 1.07 bn parent revolver, the Beacon Point press report carried as unconfirmed; `claims-ledger` + gap 5; reviewBy 2026-11-02), `scenario-hyperscalers-and-ai-labs-objection` (meta v10; `claims-ledger`), `scenario-hyperscalers-and-ai-labs-discovery` (google v9 unchanged; changed none). Every `updated` advanced to 2026-10-04 (P7); every `changed[]` matched the differing sections (no P8).
+- **Segments:** `--check` read 19 due, all pin-only (`concepts:profiler-concepts` 09-30 → 10-04) — none regenerated (G3).
+- **Drill cap:** `CL_DRILL_INV_CAP` 2400 → 3200 (2,491 items); not a gate symbol, no gateDigest refresh; the content checker's documented cap and `CLASSROOM-SCHEMA.md` moved with it.
+- **Verification:** content checker 0 / 0 (71 / 8 / 220); `--strict` no structural findings, 0 scenarios moved, drill-cap finding gone; pipeline P1/P2/P10/P13 only (no P3/P7/P8); selftest 15 / 0; Playwright rendered 3 modules + 5 scenarios with zero page errors. Classroom GAS **v01.98g**; `Classroomgs.changelog.md` now **50/50**.
+- **Docs:** analysis markdowns §14 / §13 / §12; §3 row 9 landed; §10.6 and §11 rows 2, 5, 7, 11, 14 annotated.
+- **v07.90r:** §13 = the row 10 paste-in prompt (the Dominion reframe, Fable 5.1 High) appended to `phase-f-action-plan.md`; row 10 points at it.
+
+### Where we left off
+
+- All changes committed and pushed; `main` carries v07.89r (merged, `3937288f`) and v07.90r is on its way via the auto-merge workflow.
+- **Phase F position:** rows 1–9 landed. Open: **row 10 (Dominion reframe, window closes Tue 10/6)**, row 11 F-I2 (Opus 5.5 xhigh, by Wed 10/7 either way), row 12 F-I3, row 13 ERCOT, row 14 PJM, waves B–D (rows 15–17, week 3), row 18 Megmeet after the Q3 filing.
+- **Next: paste `phase-f-action-plan.md` §13 into a fresh Fable 5.1 High session** — the Dominion reframe. It reads the solicitation primary source first (three branches), checks the "all-stock" description, rotates the GAS changelog before v01.99g, and leaves the reminder for the developer to dismiss.
+
+### Key decisions made
+
+- The nearest-dated-gate rule is applied literally even when it lands close: neoclouds `reviewBy` is four days out (a slip past 8 Oct is itself the finding), and the landlords landscape takes a township's moratorium end as its clock because it is the dated test of a taught claim.
+- A rating is reported beside the role, dated and attributed through the rater's dossier, and never used to rank on its own — the SemiAnalysis dossier's rule ("not an audit") is carried into the module verbatim in substance.
+- Pin-only segment regenerations are left alone (G3), as at v07.60r; a scenario's `updated` advances whenever its literal changes, even when `changed[]` is empty.
+- A press identification of an unnamed tenant (Beacon Point) is carried as reported and unconfirmed, never as fact; a dossier that predates a passed gate (Fermi's 30 Sep condition) gets "no outcome asserted", not an inference.
+- The checker's documented constant moves in the same commit as the constant it documents.
+- Prompts for plan rows live in the plan (§§4–13), each row pointing at its section; the prompt is given in chat as well.
+
+### Known issues
+
+- `Classroomgs.changelog.md` is at `Sections: 50/50` — **the next GAS bump rotates it** (§13 says so).
+- `landscape-neoclouds-2026-09` `reviewBy` 2026-10-08 will show as due by 10/9 whether or not the Firmus prospectus lodges.
+- `dominion-energy` is at v1 (2026-09-03) and predates the 1 Oct solicitation; `fermi-america` v1 predates its 30 Sep lease condition — both are Profiler refresh candidates, flagged for the developer rather than edited from Classroom.
+- `landscape-utilities-2026-09` carries an indicator row dated "1 October 2026" that has passed — wave C (row 16) carries it.
+- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged; `verify-profiler-roles.py` still fails two progress-isolation fixtures (pre-existing).
+- `get_session` exposed no cost field this session; the plan's §2 budget table has no wave A figure.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 208 dossiers, page v01.93w. **Classroom:** GAS v01.98g, page v01.16w, content checker 0 errors. **CHANGELOG** `Sections: 85/100`; **Classroom GAS changelog** `50/50`.
+- **Active reminders (2):** the Dominion reframe (10/2–10/6 — this is §3 row 10), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
+
+### Recommendation for next session
+
+- **Paste `phase-f-action-plan.md` §13 into a fresh Fable 5.1 High session** — the Dominion reframe (`scenario-utilities-objection`): establish from the primary source whether the 1 October solicitation issued, reframe or re-date the room accordingly, verify the "all-stock" description, rotate the Classroom GAS changelog before v01.99g, flip §3 row 10, and leave the reminder for the developer to dismiss. Run it before Tue 10/6; row 11 (F-I2, Opus 5.5 xhigh) follows by Wed 10/7.
+
+**To continue:** type `run the Dominion reframe` (or paste §13 directly).
+
+## Previous Sessions
+
 **Date:** 2026-10-03 11:09 PM → 2026-10-04 ~02:45 AM EST (§3 row 8: F-A1 — Anza, SemiAnalysis, EPRI — then the plan evaluation, the §12 wave-A prompt and this save; two attended turns, one worker restart and one context compaction mid-task)
 **Repo version:** v07.86r → v07.88r (two pushes: v07.87r the three dossiers, v07.88r §12 prompt + this save)
 **Branch:** `claude/kind-archimedes-sje924`
@@ -54,55 +109,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Paste `phase-f-action-plan.md` §12 into a fresh Fable 5.1 xhigh session** — Classroom wave A: re-author the three AIDC landscapes against rosters of 12, 10 and 38 members, re-judge the five rehearsals pinned to them, raise the drill cap, Classroom v01.98g. Run the Dominion reframe (REMINDERS) in its own session before Tue 10/6.
 
 **To continue:** type `run wave A` (or paste §12 directly).
-
-## Previous Sessions
-
-
-**Date:** 2026-10-03 09:23 PM → 11:05 PM EST (§3 row 7: F-G1 — Clayco, Faith Technologies, EMCOR — then the F-A1 prompt and this save; two attended turns, one context compaction mid-task)
-**Repo version:** v07.84r → v07.86r (two pushes: v07.85r the three dossiers, v07.86r §11 prompt + this save)
-**Branch:** `claude/gifted-fermat-v9vztl`
-**Model:** Fable 5.1 High (`claude-fable-5-1`); `get_session` exposes no cost field — six research subagents reported 1,940,411 tokens between them; no rate-limit event
-
-### What was done
-
-- **Identity check corrected all three plan rows before research.** Clayco: Clayco, Inc., a Missouri corporation, privately owned (Bob Clark "owns most"); Treanor is not an affiliate (Clayco Design & Engineering merged into Lamar Johnson Collaborative 8 Jan 2026); Galaxy's Helios Phase 2 (260 MW) moved to HITT in 2026; Clayco Compute is a business unit. Faith Technologies: Faith Technologies, Inc. (Wisconsin), an S corporation under direct employee shareholding — Form 5500 shows no ESOP; **category decided `epc`** (all revenue is contracting revenue; Excellerate Products has no named third-party buyer, so no `in-hall-power` seat). EMCOR: ENR No. 2, not No. 1; Miller Electric closed 3 Feb 2025 for USD 865m cash from the ESOP trust (8-K); role incumbent, not challenger.
-- **Three dossiers v1** (75 / 78 / 67 sources), study guides (11 / 12 / 10 sections), eight-module lesson plans, 12 company-published portraits. EMCOR carries the KPI overlay with consensus; Clayco and Faith private with `expected` empty.
-- **Segments:** `epc-and-construction` — clayco incumbent (BD+C 2025 No. 4 on USD 3.64bn, ENR Top 400 No. 20), emcor incumbent, faith-technologies challenger (EC&M 2026 No. 9, +62.6%). No adjacent seats.
-- **Step 7:** 12 raw aka hits (Clayco 9, Faith 3 incl. one FTI Consulting collision, EMCOR 0); 0 revised.
-- **Calendar:** EMCOR the one `nextReport` row (2026-10-29, unconfirmed — inferred from the Q2→Q3 spacing); Clayco and Faith `cadence: quarterly`, tier `core`.
-- **Step-5 sub-rule:** all 19 segment lessons regenerated, 12 changed; Classroom GAS v01.96g; content checker 71 lessons / 8 tracks / 220 gate cases — 0 errors; pipeline checker P1/P7/P10 only.
-- **v07.86r:** §3 row 8 re-timed and pointed at **§11 = the F-A1 paste-in prompt** (Anza · SemiAnalysis · EPRI), raised from Fable 5.1 Medium to **High** because 31 dossiers cite SemiAnalysis today (the row said 22) and `unassigned[]` would see its first use; Opus 5.5 xhigh named as the substitute if the Fable half is short. §2's effort table updated to match.
-
-### Where we left off
-
-- All changes committed and pushed; `main` carries v07.85r (merged) and v07.86r is on its way via the auto-merge workflow.
-- **Next: paste `phase-f-action-plan.md` §11 into a fresh Fable 5.1 High session** — F-A1, three new `advisor` dossiers; SemiAnalysis probably lands in `unassigned[]`; Anza's `software-and-optimization` and EPRI's `assurance` adjacent seats are evidence-rule calls; bumps Classroom GAS to v01.97g.
-- Also in-window this week: the Dominion reframe (its own session, reminder due by Tue 10/6); Classroom wave A (row 9, Fable xhigh); ERCOT (row 13).
-
-### Key decisions made
-
-- A category is decided on revenue and routing evidence, not on a product's existence: Faith Technologies stays `epc` until a named outside buyer of Excellerate Products appears (the refresh note's first watch item).
-- A plan row's inbound count is re-grepped before the prompt is written — SemiAnalysis's 22 was 31 — and the effort tier follows what the session has to read, so F-A1 moved from Medium to High in §2 and §11.
-- JSON files are re-serialised to the repo's 2-space indent before staging; a `git diff --stat` in the thousands on a registry file is a formatting regression, not content.
-- The CHANGELOG prompt blockquote stays verbatim and multi-line; the segment-regeneration line names how many lessons changed against how many were regenerated (12 of 19), not one number.
-
-### Known issues
-
-- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged.
-- EMCOR's 2026-10-29 date is inferred (`confirmed: false`); Clayco's own 2025 revenue boilerplate conflicts (USD 7.6bn vs ENR's 8.1bn) — both stated in the dossier.
-- `verify-profiler-roles.py` still fails two progress-isolation fixtures in the headless harness (pre-existing; Profiler.html untouched).
-- `unassigned[]` has never held an entry — F-A1 is its first use, and the prompt tells the session to report how the tooling took it.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 205 dossiers, page v01.93w. **Classroom:** GAS v01.96g, page v01.16w, content checker 0 errors. **CHANGELOG** `Sections: 81/100`.
-- **Active reminders (2):** the Dominion reframe (10/2–10/6), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
-
-### Recommendation for next session
-
-- **Paste `phase-f-action-plan.md` §11 into a fresh Fable 5.1 High session** — F-A1 (Anza, SemiAnalysis, EPRI); the 31 dossiers that cite SemiAnalysis are the step-7 baseline, and whether the registry tooling accepts a populated `unassigned[]` is the one thing the row has not tested.
-
-**To continue:** type `run F-A1` (or paste §11 directly).
 
 Developed by: LightAISolutions

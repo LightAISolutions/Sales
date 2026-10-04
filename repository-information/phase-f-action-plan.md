@@ -125,7 +125,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | # | When | Session | Model · effort | Why here |
 |---|---|---|---|---|
 | 9 | ~~Sat 10/3 – Tue 10/6~~ **Landed Sun 10/4 (v07.89r)** — prompt in §12 | **Classroom wave A** — re-author `landscape-neoclouds-2026-09`, `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1, F-N1, F-N2 and row 5, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their five rehearsals — prompt in §12 | Fable 5.1 · xhigh (no substitution) | Done, in one session and one commit. G3 counts — neoclouds 9 of 9 sections changed (12 members, 2 · 9 · 1; the 30 September gate failed, Fluidstack's accounts overdue; ClusterMAX explained through `semianalysis` v1; reviewBy → 2026-10-08, the Firmus prospectus); hyperscalers 8 of 9 (10 members, 5 · 5 · 0; closure holds at ten, (bb1) instruments stay disabled; a fourth direction for the two leaders from another market; reviewBy stays 2026-12-31); aidc landlords 7 of 9 (38 members, 9 · 18 · 11; four routes, 27 bet rows, 25 of 38 publish no revenue; reviewBy → 2026-11-02, the Upper Burrell moratorium). Five rehearsals re-judged, all fifteen beats hold; changed sections 9 / 1 / 2 / 1 / 0. Segments: 19 due, all pin-only, none regenerated (G3). `CL_DRILL_INV_CAP` 2400 → 3200 (2,491 items). Classroom v01.98g |
-| 10 | Sat 10/3 – Tue 10/6 | Reframe the Dominion rehearsal (Classroom, its own session) | Fable 5.1 · high | The standing reminder's window, after the 10/1 solicitation issues. Also check the unverified "all-stock" merger description |
+| 10 | Sat 10/3 – Tue 10/6 — **prompt in §13** | Reframe the Dominion rehearsal (Classroom, its own session) | Fable 5.1 · high | The standing reminder's window, after the 10/1 solicitation issues. Also check the unverified "all-stock" merger description |
 | 11 | Once the DigitalBridge close is confirmed, and **by Wed 10/7 either way** | **F-I2** — SoftBank, SB Energy, Blue Owl | Opus 5.5 · xhigh | SB Energy's S-1 is a long first-party record. DigitalBridge said on 9/22 the deal would close within five business days. **If it is still pending, write SoftBank's dossier with the deal as pending** and add the close later with a targeted `softbank` refresh: §2 prices a routine refresh at about $7–$29 per company, well below waiting a week |
 | 12 | After row 11 | **F-I3** — Apollo, Ares, Stonepeak | Opus 5.5 · xhigh | Was November. Two 10-K filers. Ares ties to `apex-clean-energy`, Apollo to Stream |
 | 13 | Week 2 | **ERCOT**, with the grid-operator schema note, category and Profiler page change | Fable 5.1 · xhigh | Was the last row. 73 inbound dossiers, the corpus's largest step 7. See the note below |
@@ -145,7 +145,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 |---|---|---|---|---|
 | 18 | After the filing | `profiler Megmeet`, then `profiler report competitive: AIDC power conversion` | Opus 5.5 · xhigh | The standing reminder. Raise Mitsubishi Electric's scope question here |
 
-**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High); §8–§11 are rows 5–8 as run; **§12 is row 9's (Classroom wave A, Fable 5.1 xhigh)** — the first Classroom-wave prompt, and the pattern for waves B–D (rows 15–17). §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
+**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High); §8–§11 are rows 5–8 as run; **§12 is row 9's (Classroom wave A, Fable 5.1 xhigh)** — the first Classroom-wave prompt, and the pattern for waves B–D (rows 15–17); **§13 is row 10's (the Dominion reframe, Fable 5.1 High)** — the first single-scenario reframe prompt, and the pattern for any later one. §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
 
 **ERCOT and PJM — decided 2026-09-26: cover both, as grid operators.** The developer knows both well and wants them in. The category is a new **`grid-operator`** (label 'Grid operator'), not the generic `other` the earlier recommendation named, so the tag says what they are. That adds one entry to the Profiler page's category list, a page change made in the ERCOT session. The work is **two sessions, ERCOT first**: 73 inbound dossiers alone is a larger step 7 than BlackRock's 42 raw hits, which filled most of F-I1. The earlier reasoning stands:
 - **Why:** they are the two most-cited uncovered entities in the corpus (73 and 37 dossiers). Curating them converts roughly 110 derived mentions into real edges, and their rules (Batch Zero and SB 6; the capacity auction) are what half the utilities and developers in the corpus are exposed to.
@@ -1167,4 +1167,133 @@ At the end: one line per module (sections changed, the new reviewBy and the gate
 roster counts restated); one line per scenario (beats re-judged, re-pinned to what); the --check and
 --strict final lines; whether the drill cap was raised; and the session's cost from get_session's
 usage.cost_usd (it now exposes one — the F-A1 session read USD 100.14) with the rate-limit status.
+```
+
+## 13 · Paste-in prompt — §3 row 10, the Dominion reframe: `scenario-utilities-objection` (Fable 5.1 · high)
+
+Written 2026-10-04 (v07.90r) at the close of the wave A session. Row 10 is the standing reminder's own window (Fri 10/2 – Tue 10/6) and the one open row of week 2 that is a single scenario rather than a landscape. Three facts fix its scope. **The premise has passed**: the room is written two weeks before Dominion's annual Virginia and North Carolina solar-and-storage purchase solicitation "issues on 1 October 2026", and `reviewBy` 2026-10-01 — left in place at v07.60r as "the reframe's gate" — now shows the scenario as due. **Whether the solicitation actually issued is not in the corpus**: `dominion-energy` is at v1 (2026-09-03), so the session reads the primary source first and takes one of three branches the reminder already names (issued on the day, issued later, not issued). **The Classroom GAS changelog is at capacity** (`Sections: 50/50` after wave A's v01.98g), so this session's GAS bump rotates it before adding a section. The model line is the plan's own: scenario reframes run at **Fable 5.1 High** (§2). The reminder is the developer's and stays theirs to dismiss.
+
+```text
+Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 10 as a fresh
+session: reframe the Dominion rehearsal — `scenario-utilities-objection` in
+googleAppsScripts/Classroom/Classroom.gs — now that its premise has passed. The room is written two weeks
+BEFORE Dominion's annual Virginia and North Carolina solar-and-storage purchase solicitation "issues on
+1 October 2026", and it is past 1 October. One session, ONE commit, this scenario only. Fable 5.1 at high
+(§2: scenario reframes and regulatory synthesis run at high — the facts are a regulated utility's calendar,
+not a filing to mine). Check Settings → Usage first: the week-2 Fable allowance resets Sat 10/10 7:00 AM ET
+and wave A ran on it on 10/4 (get_session exposed no cost for that session; status allowed_warning). If
+the Fable cap binds mid-session, finish on Opus 5.5 high and record the substitution in the §3 row 10 cell
+and the CHANGELOG section.
+
+STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+HEAD || git rebase origin/main; git fetch --unshallow origin main before any pin read or changelog
+rotation. Read the two counters after the rebase. repository-information/CHANGELOG.md is 85/100 at
+v07.90r — no rotation. live-site-pages/gs-changelogs/Classroomgs.changelog.md is at `Sections: 50/50` —
+AT CAPACITY — so the Classroom GAS bump this session makes (v01.98g → v01.99g) ROTATES it FIRST: move the
+oldest whole date groups to Classroomgs.changelog-archive.md with SHA enrichment per
+.claude/rules/changelogs.md (look each section up by the `— vXX.XXr` cross-reference at the end of its
+header, one `git log --oneline --all` for the batch; `grep '^## \[v' ARCHIVE | grep -v '— \['` must print
+nothing before you commit), until fewer than 50 remain, then add the v01.99g section. Run python3
+scripts/check-classroom-curriculum.py --strict and record its opening lines: it should read "0
+scenario(s) whose landscape has moved since the pin", no structural findings, and
+`scenario-utilities-objection` listed as DUE — reviewBy 2026-10-01 is the reframe's own gate, left in
+place on purpose at v07.60r.
+
+READ FIRST, in this order: repository-information/SESSION-CONTEXT.md (the wave A hand-off);
+repository-information/REMINDERS.md — the first active reminder IS this task; read every sub-bullet (the
+window, the slip rule, the all-stock check, "its own session"); it is the developer's note — never mark
+it complete or move it; report what you did and let the developer dismiss it. phase-f-action-plan.md §2
+and §3 rows 10–17 and this §13. .claude/rules/classroom-app.md — "Authoring a pipeline lesson" for the G3
+contradiction test and the per-section "section <id> teaches X; <ref> now says Y" sentence, the
+`revisions[]` shape {date, note, changed[]} with P8 equality (every id listed differs, every differing id
+is listed, unchanged sections byte for byte), G2 read-before-re-pin, D6/P13 (a scenario is revised by a
+developer session only — this is one), and the content fence: the scenario sits INSIDE it, the gate
+derivation is untouched; if P3 reports, refresh gateDigest per the rule, otherwise leave the ledger alone.
+repository-information/C5-SALES-SIMULATIONS-DESIGN.md §5 (the ten-section template) and §6 (the stamp).
+CLASSROOM-CURRICULUM-PLAN.md §11 row 4. The v07.60r section of CHANGELOG.md (Part D: the room was
+deliberately NOT reframed then — "the reframe's gate") and the v07.89r section (the five scenario re-pins
+this one follows: changed[] names only the sections whose meaning changed; `updated` advances; reviewBy
+follows the nearest dated gate in the new material). Then the literal itself —
+clLessonScenarioUtilitiesObjection_(), every section — and the dossier it is pinned to,
+live-site-pages/profiler-data/dominion-energy.profile.json (v1, lastUpdated 2026-09-03 at the time of
+writing; the pin you write is the fetched file's own value, G2 — the registry is for the sweep, never for
+a pin).
+
+THE PREMISE, AND HOW TO READ IT. The pre-issue framing lives in six sections (grep the literal):
+the-room ("two weeks before this utility's annual purchase solicitation issues", "You are not bidding
+anything today", "issues on 1 October 2026"); what-the-record-says ("1 October"; the "all-stock" row);
+the-position ("the solicitation opens"); beat-1 and beat-3 ("1 October", "solicitation issues");
+claims-ledger (the dated rows and the review-date row). Before touching any of them, establish from the
+primary source whether the solicitation issued: Dominion Energy Virginia's annual solicitation page and
+documents (the 2025 cycle's structure is the model), the SCC docket if a filing accompanies it, and the
+company's newsroom — read first-hand and dated. THREE OUTCOMES, ONE RULE EACH. (a) ISSUED ON 1 OCTOBER —
+reframe the room to the day after issue: the seller has the document in hand; read the capacity sought,
+the eligible technologies, the proposal due date and the key dates OFF THE DOCUMENT and write them into
+what-the-record-says and the ledger as a primary read, cited by document title and date (the 24
+September neoclouds precedent: a primary document read first-hand is cited directly in the ledger when
+the dossier predates it); re-judge the beats against the new framing — the correct answers rest on
+prudence, the instrument and the collateral, which the issue does not change, so expect them to hold, but
+say so beat by beat; reviewBy moves to the nearest dated gate IN THE DOCUMENT (the proposal due date or
+the next calendar step), never earlier than `updated`. (b) ISSUED ON A LATER DATE — as (a), with that
+date. (c) NOT ISSUED — the reminder's own rule: re-date the framing to the new published issue date and
+move reviewBy to it rather than rewriting the room; if no new date is published, say so in the room ("the
+solicitation the record expected on 1 October has not issued") and set reviewBy from the Dispatchable
+Generation RFP's proposal deadline of 18 December 2026 (dominion v1, recentDevelopments 2026-07-01), the
+nearest dated gate the dossier holds. The counterparty is a role, never a person; positions are
+paraphrased from the record.
+
+THE ALL-STOCK CHECK (the reminder's sub-bullet; flagged at v07.40r, left unchanged at v07.60r). The
+dossier and the scenario describe the 15 May 2026 NextEra–Dominion combination as "all-stock" (a fixed
+exchange ratio; shareholder vote 3 September 2026; closing expected in the second half of 2027). Verify
+against the merger agreement and the 8-K of May 2026 and the joint proxy: is the consideration NextEra
+stock at a fixed exchange ratio only, or is there a cash component, an election or a contingent value
+right? Record the 3 September vote result and the status of SCC case PUR-2026-00112 from primary
+sources. If "all-stock" is right, say so in the ledger row's source with the document named. If it is
+wrong, correct the scenario's wording and FLAG the dossier for a `profiler Dominion Energy` refresh in
+your hand-off — a Classroom session NEVER edits a dossier, a registry entry, Profiler.gs or Profiler.html.
+
+WHAT MOVES AND WHAT DOES NOT. Edit only clLessonScenarioUtilitiesObjection_(). Pins:
+`profile:dominion-energy` at the fetched lastUpdated (2026-09-03 unless a refresh landed — read the
+file); `guidance:landscape-utilities-2026-09` stays at 2026-09-26 — the landscape is NOT revised here,
+that is wave C (§3 row 16); note in your hand-off that its the-indicators row dated "1 October 2026" has
+passed, for wave C to carry. `updated` → the run date (P7). Append the third `revisions[]` entry with
+changed[] naming exactly the differing sections and the X→Y notes. Do not touch the other thirteen
+scenarios, any landscape, any segment-* lesson (`build-classroom-segments.py --check` will read 19
+pin-only due on concepts: pins — leave them, G3), any dossier, REMINDERS.md or TODO.md.
+
+VERSIONING ([PC-GS-VERSION] #1, [PC-PAGE-CHANGELOG] #16): Classroom.gs VERSION v01.98g → v01.99g and
+live-site-pages/gs-versions/Classroomgs.version.txt → |v01.99g| together; the GAS changelog ROTATED, then
+one generic public line ("One rehearsal exercise re-timed to its buyer's published calendar" — no names,
+dockets or internals); README tree Classroom display → v01.99g (python3 scripts/check-readme-tree.py); no
+page bump. CHANGELOG: the v07.91r section with this prompt verbatim as the blockquote; the outcome (a, b
+or c) in its first line; the G3 sentence per changed section; the all-stock verdict with its source; the
+--strict and --check final lines; the rotation count; and "Reminder: left for the developer to dismiss".
+Flip §3 row 10 to landed (the pattern of rows 1–9).
+
+VERIFY: node --check on a .js copy of Classroom.gs; node scripts/check-gas-inner-scripts.js; python3
+scripts/check-classroom-content.py (0 errors; 71 lessons / 8 tracks / 220 gate cases, unchanged); python3
+scripts/check-classroom-pipeline.py --base origin/main (P1 on the developer files and P13 on this one
+scenario are expected; no P3 unless you moved a gate symbol, no P7 after the `updated` advance, no P8);
+python3 scripts/check-classroom-curriculum.py --strict (the scenario no longer due; 0 moved); a
+Playwright render of Classroom.html#lesson/scenario-utilities-objection at contributor with zero page
+errors — industry-guidance.md step 7's recipe. Wave A's render script left with its container, so
+rebuild it: serve a scratch copy of live-site-pages over http://127.0.0.1 with `_e = ''` and
+`AUTO_REFRESH = false`, seed sessionStorage AFTER load (`Classroom_gas_session_token`,
+`Classroom_gas_user_email`, `Classroom_gas_user_role` = contributor, `Classroom_gas_user_permissions` =
+["guidance","tracks"]), override window._gasPost AFTER load with a fake that answers
+cop=index/lesson/progress/drill and gop=index/doc from the parsed literals (wrap the assignment in an
+IIFE — page.evaluate invokes a bare function expression), hide #auth-wall / .splash / #gas-pill /
+#verify-overlay, then clHeaderShow(); clAppMount(); clRoute(); and read the section headings back.
+
+Normal Pre-Commit and Pre-Push checklists; ONE commit; push on the claude/* branch once git ls-remote
+shows it absent (the harness pre-creates the branch at origin/main — that is not an in-flight workflow).
+
+NEVER: mark or move the developer's reminder; edit a dossier, the registry, Profiler.gs or Profiler.html;
+edit a segment-* lesson, another scenario or any landscape; fabricate a provenance input or use a `note:`
+prefix; name a person as the counterparty.
+
+At the end: which outcome (a, b or c) the primary source supported and the document it came from; the
+sections changed with their G3 sentences; the new reviewBy and its gate; the all-stock verdict; the
+--strict and --check final lines; the rotation (sections moved, SHA check clean); and the session's cost
+from get_session's usage.cost_usd if it exposes one, with the rate-limit status.
 ```
