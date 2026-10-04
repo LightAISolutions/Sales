@@ -293,4 +293,63 @@ Seven absences, each one stated by the dossier that has it rather than inferred 
 - `scripts/build-classroom-segments.py --check` before and after; `--segment hyperscalers-and-ai-labs` run once and only once.
 - Playwright render at contributor with zero page errors, every section read from its screenshot; analyst denial confirmed through the real serving path (`handleGuidanceOp_` → `clRequire_`).
 
+## 13. Revision — 4 October 2026 re-pin (Classroom wave A)
+
+The first revision of this module, run as row 9 of `phase-f-action-plan.md` §3 after Phase F's F-H1 session added two members to the segment and six member dossiers moved. Everything below is read off the files on 4 October 2026.
+
+### 13.1 The segment, re-measured
+
+| Measurement | 16 September (v06.11r reading) | 4 October 2026 (this revision) |
+|---|---|---|
+| Members | 8 — 5 incumbent · 3 challenger · 0 adjacent | **10 — 5 incumbent · 5 challenger · 0 adjacent** |
+| Challengers | OpenAI, Anthropic, xAI | OpenAI, Anthropic, xAI, **ByteDance, Alibaba Cloud** — the registry's basis lines call each "a leader elsewhere", not a new buyer scaling up |
+| Ranked in another segment | 0 of 8 | **0 of 10** — the closure holds |
+| Closed segments in the taxonomy | 2 (this one; insurance and risk transfer) | **2** — unchanged |
+| Segments with zero adjacents | 3 (the two closed ones plus neoclouds) | **2** — neoclouds gained an adjacent on 2 October, so the zero-adjacent set and the closed set are now the same two segments |
+| `policyExposure[]` | 11 entries · 9 dated · 1 future; 7 on one member; 2 members with none | **18 · 13 · 1 future** — Anthropic 7, ByteDance 3, Alibaba Cloud 3, the five incumbents 1 each; OpenAI and xAI none; the one future date is still 2027-01-01 (New York's RAISE Act, `anthropic` v4) |
+| Graph (`profiler-graph.json` built 2026-10-04) | — | **23 edges · 13 typed pairs · 19 typings** — supplier 7, customer 5, partner 3, competitor 3, investor 1; the one ByteDance edge inside the segment is a partner typing to Oracle |
+| Most-connected outside counterparties (typed edges) | — | NVIDIA 9 · CoreWeave 9 · SemiAnalysis 8 · MGX 8 · AMD 7 · Lightsource bp 7 · STACK 7 · AES Clean Energy 6 |
+| Buying criteria with a taught owner in the public segment lesson | 0 of 6 | **0 of 6** — the lesson regenerated 4 October 2026 still prints a dash against every one |
+| Dossier versions | amazon v10, google v9, microsoft v4, meta v9, oracle v4, openai v5, anthropic v3, xai v4 | amazon v10, google v9 (unchanged); **microsoft v6, meta v10, oracle v6, openai v6, anthropic v4, xai v6; bytedance v1, alibaba-cloud v1** |
+
+**(bb1) re-tested at ten.** Closure disables the two standing instruments — reading a segment's adjacents for what kind of thing it is, and the role-inversion comparison against a neighbouring landscape — and with ten of ten pure plays and zero adjacents both remain disabled. The one thing that changed around the instrument is outside this segment: the third zero-adjacent segment of September, neoclouds, now has an adjacent, so the drill card and the quiz rationale that leaned on "a third segment has no adjacents but is not closed" lose their example and say instead that the two sets coincide.
+
+### 13.2 The G3 sentences, one per section
+
+- **`who-dominates-and-on-what-basis`** taught eight members and three challengers, re-measured 16 September. The registry now says ten and five, and the two newcomers carry the challenger label for a second reason. The first paragraph is rewritten; the five instruments and the refusal to rank are untouched.
+- **`who-threatens`** taught three challengers who are the demand, a USD 638 bn contracted-revenue figure "roughly half" press-attributed to one lab, and "every one of the three is financed by the five". `oracle` v6 says USD 664 bn at the quarter ended 31 August 2026, with the attribution made against the earlier figure; `bytedance` v1 and `alibaba-cloud` v1 describe a fourth direction — a leader in another market that writes its own architecture or buys through three doors — financed by nobody in this segment. A fourth-direction paragraph is added, the figure is dated, and the counter-evidence sentence is scoped to the three US labs.
+- **`each-players-bet`** taught eight rows, "the smallest segment any landscape has covered", and USD 638 bn for Oracle. Ten rows now; ByteDance and Alibaba Cloud rows are drawn from `strategyRead[]` with each dossier's confidence carried; Oracle's row carries USD 664 bn and the Q1 FY2027 cash flow.
+- **`the-indicators`** taught "a day-level scan of all eight dossiers found exactly one future day-level date". Ten dossiers, still one. One row is added for the two newcomers' dated items — the November 2027 expiry of ByteDance's first wholesale lease with its landlord, and the end of Alibaba's three-year plan — because they are the only dates the new material supplies.
+- **`claims-ledger`** cited eight dossiers at their 16 September versions and the registry at v06.10r. Six rows move to new versions where the cited field still holds (`microsoft` v6, `meta` v10, `oracle` v6, `openai` v6, `anthropic` v4, `xai` v6); six rows are added for the newcomers; the registry row carries ten members at v07.87r and the fence row 18 / 13 / 1.
+- **`what-the-record-does-not-say`** taught "no contract price for any of the eight" and "no league table of these eight". Ten, and two absences the newcomers' dossiers state about themselves are added — no accounts, no named power vendor and no 800 V award for one; no solid-state transformer in service behind the other's 800 V compatibility.
+- **`drill`** (cards 1, 6 and 8) and **`check-yourself`** (items 2 and 3) carried the three-challenger, eight-of-eight, eleven-entry and "third zero-adjacent segment" claims. Corrected; no correct answer changed.
+- **Outside the sections:** `short`, tiles 1, 2 and 4, `source.doc`, the `closed segment` and `challenger` glossary entries, and the first `revisions[]` entry.
+
+**Not changed, and why.** `the-sellers-play` — nothing in the ten files contradicts its measurement that no incumbent buys behind-the-meter storage at its own campus or its reading that the specification is written above the seller; the Chinese hyperscaler that writes its own architecture is an instance of the second, not an exception to it. The five instruments, the split with `utility-aidc-procurement-2026-08` and the three omissions stand.
+
+### 13.3 The review date
+
+Rule: the nearest dated gate in the new material, never earlier than `updated`. The new material carries **no future day-level date before 31 December 2026**: `anthropic` v4's roadmap is quarter-level (CB-4 2H 2026, Abernathy Q4 2026, the public S-1 "Q4 2026"), `oracle` v6's RFP runs 2027–2031, `bytedance` v1 and `alibaba-cloud` v1 carry no future day-level date, and the fence's one future date is 2027-01-01 — a model-transparency statute that is already four modules' review date and this segment's own generated lesson's clock, rejected in September for the same reasons. **`reviewBy` stays 2026-12-31** — the end-2026 delivery checkpoint one lab's own indicator list calls *the first hard delivery tests*, which `anthropic` v4 restates. `updated` 2026-09-16 → 2026-10-04.
+
+### 13.4 The scenarios on this landscape, re-judged
+
+- **`scenario-hyperscalers-and-ai-labs-objection`** (Meta; `profile:meta` v9 @2026-09-06 → **v10 @2026-09-26**; guidance 2026-09-16 → **2026-10-04**; `reviewBy` stays 2026-12-31). All three beats hold: the Hyperion joint venture (~USD 27 bn, 80/20, USD 26 bn of debt, four-year leases, sixteen-year residual guarantee), the Louisiana utility package with three undisclosed batteries, the tolled Wyoming project, the two direct energy-storage agreements and the withdrawn 750 MW request are unchanged in v10, and the indices the ledger cites still point at the same entries. `changed[]`: `claims-ledger` — the version cites move to v10.
+- **`scenario-hyperscalers-and-ai-labs-discovery`** (Google; `profile:google` v9 @2026-09-07, unchanged; guidance 2026-09-16 → **2026-10-04**; `reviewBy` stays 2026-12-31). All three beats hold; the three routes, the lease instrument's start date and caps, the separate equipment-guarantee footnote and the park-side storage finding are untouched. `changed[]`: none — the landscape pin moves and nothing in the text differs, which the `revisions[]` note says.
+
+### 13.5 Verification
+
+Run on 4 October 2026 after every edit in this revision, including the scenario re-pins and the drill-cap change.
+
+| Check | Result |
+|---|---|
+| `node --check` on a `.js` copy of `Classroom.gs` | clean |
+| `scripts/check-gas-inner-scripts.js` | clean — 11 files, 106 inner `<script>` blocks |
+| `scripts/check-classroom-content.py` | **0 errors / 0 warnings — 71 lessons, 8 tracks, 220 gate cases** |
+| `scripts/check-classroom-curriculum.py --strict` | no structural findings; **0 scenarios whose landscape has moved since the pin**; the drill-cap finding (2,491 > 2400) is gone |
+| `scripts/check-classroom-pipeline.py --base origin/main` | P1 (developer files), P2 (below the fence), P10 (five revised lessons), P13 (five scenarios) — expected of a developer session; **no P3**, **no P7**, **no P8**; P12 clean at one step |
+| `scripts/check-classroom-pipeline.py --selftest` | 15 fixtures / 0 failures |
+| `scripts/build-classroom-segments.py --check` | **19 segments, 19 due — 0 with section changes, 19 pin-only**; none regenerated (G3) |
+| `scripts/check-readme-tree.py` | 0 findings after the GAS bump |
+| Playwright render at **contributor**, `Classroom.html#guidance/<id>` ×3 and `#lesson/<scenario id>` ×5 | **zero page errors on all eight**; every section heading rendered; no literal `*` or `{{` left in the rendered text |
+
 Developed by: LightAISolutions

@@ -364,4 +364,75 @@ So a headline like *"Vantage prices $1.4bn data center ABS"*, *"Tract sells powe
 
 **No `tv` marker**, for the reason session 5 recorded: `tv` guards edits to an *existing* seed's terms and lives on `SCRAPER_SEGMENT_SEEDS`; this is a new key with no sheet row. Adding it touches `Scraper.gs`, so the Scraper GAS version and its changelog bump in the same commit ([PC-GS-VERSION] #1, `industry-guidance.md` step 9).
 
+## 12. Revision — 4 October 2026 re-pin (Classroom wave A)
+
+The first revision of this module, run as row 9 of `phase-f-action-plan.md` §3 after Phase F's F-N1, F-N2, row 5, F-A1 and the `tract` v4 / `powerhouse-data-centers` v3 refreshes enlarged the segment from thirty members to thirty-eight and moved sixteen member dossiers. Everything below is read off the files on 4 October 2026.
+
+### 12.1 The segment, re-measured
+
+| Measurement | 15 September (v05.88r reading) | 4 October 2026 (this revision) |
+|---|---|---|
+| Members | 30 — 9 incumbent · 13 challenger · 8 adjacent | **38 — 9 incumbent · 18 challenger · 11 adjacent** |
+| New challengers | — | **Chindata, G42 (through Khazna), WhiteFiber, 5C Group, TECfusions** |
+| New adjacents | — | **Firmus, HUMAIN, Quinbrook** |
+| Registry `notes` field | absent | absent — the roles are still read off the basis lines |
+| Pure plays (ranked here only) | — | **16 of 38** |
+| Publish a normalized revenue figure | 12 of 30 (18 publish none; 7 of the 9 incumbents among them) | **13 of 38 — 25 publish none, and 7 of the 9 incumbents are still among them.** The thirteen: Digital Realty and Equinix; Applied Digital, Cipher, Core Scientific, Fermi (zero, as reported), Galaxy, Hut 8, IREN, TeraWulf, WhiteFiber; Talen and Nscale (`segment-aidc-developers-and-landlords` `the-numbers`). Four more publish megawatts only — Chindata, G42, 5C, Fluidstack |
+| Challengers publishing none | 5 of 13 | **9 of 18** — Crusoe, EdgeCore, PowerHouse, Prime, Tract, Chindata, G42, 5C, TECfusions |
+| `policyExposure[]` | 107 entries · 2 future | **141 · 104 dated · 2 future** (both 2027-12-31, Section 232, `digital-realty` v2 and `cyrusone` v2); five members carry none — STACK, Applied Digital, Core Scientific, TeraWulf, IREN |
+| Graph (`profiler-graph.json` built 2026-10-04) | — | **118 edges · 88 typed pairs · 111 typings** — competitor 82, partner 11, supplier 7, customer 6, other 5; outside counterparties NVIDIA 21 · Microsoft 16 · BlackRock 14 · Google 13 · OpenAI 13 · Exelon 12 · CoreWeave 12 · Amazon 10 |
+| Ranked dossiers carrying an indicators block | 6 of 22 | **12 of 27** |
+| Buying criteria with a taught owner | 1 of 6 (time to power → *The Fence Line*) | 1 of 6 — unchanged in the lesson regenerated 4 October 2026 |
+| Dossier versions moved | — | hut-8 v2→**v3**, tract v3→**v4**, powerhouse-data-centers v2→**v3**, equinix v7→**v8**, aligned v7→**v8**, stack-infrastructure v7→**v8**, compass-datacenters v5→**v6**, cyrusone v1→**v2**, terawulf v7→**v8**, edgecore v1→**v2**, intersect-power v2→**v3**, eolian v6→**v7**, talen-energy v2→**v3**, iren v4→**v7**, crusoe v6→**v7**, fluidstack v2→**v4**; vantage v9, qts v8, digital-realty v2, switch v7, applied-digital v4, core-scientific v3, cipher-mining v1, galaxy-digital v1, prime-data-centers v3, fermi-america v1, strata v2, apex v1, samsung-ct v4 unchanged |
+
+**(s) kept.** The four-neighbour split stands: nothing from *Reading the Named Projects*, *Large-Load Interconnection*, *When Utility Procurement Meets AI Data-Center Load* or *Power Infrastructure and the AIDC Power Chain* was imported. The bets table is extended from the five newcomers' `strategyRead[]` only, with each dossier's confidence carried.
+
+### 12.2 The G3 sentences, one per section
+
+- **`who-threatens`** taught thirteen challengers on three routes — seven converted miners, two energy-first developers, four ladder specialists — and "three of the eight adjacent members are parties that can host a campus without being a landlord". The registry now says eighteen challengers and eleven adjacents, and the five new dossiers describe members the three routes do not hold: `5c-group` v1 owns the substation and the site power at four US campuses and competes on a date without a mining past (route one, built rather than inherited); `tecfusions` v1 is "the only landlord in this corpus that says its flagship campus is currently powered by turbines it controls" (route two); `whitefiber` v1 is the retrofit landlord through which a larger neocloud reaches a utility, holding the service agreement while the utility owns the substation (route three); `chindata` v1 and `g42` v1 are leaders in another market — China's third-largest third-party operator and the UAE's dominant landlord — which is a fourth route the September roster could not show. `firmus` v2 and `humain` v1 are adjacents that build their own campuses and lease shells to nobody, and `quinbrook` v1 is an investor whose own team founded and still chairs a hyperscale developer. Rewritten: four routes, eight–three–five–two, the adjacents paragraph at eleven.
+- **`each-players-bet`** taught twenty-two rows, "twenty-two of the thirty members", a Tract row contingent on "a regulator's decision it cannot control" and a PowerHouse row "now being tested in federal court". Twenty-seven rows now; `tract` v4 says the state commission conditionally approved 362 MW of temporary gas plants on 17 September 2026 while the utility's suit continues; `powerhouse-data-centers` v3 says FERC rejected the utility's cancellation on 22 September 2026 and sent the credit clause to the Northern District of Illinois. Five rows are added from the newcomers' `strategyRead[]`.
+- **`the-indicators`** taught "six of the twenty-two dossiers carry an indicators block", a pending federal ruling on the ComEd cancellation, a pending commission decision on Tract's temporary plants, a Fermi lease condition due 30 September 2026, "the only two future effective dates anywhere in this roster's hundred and seven policy entries", and 15 December 2026 as "this module's own review date". Twelve of twenty-seven; FERC decided 22 September and the credit clause went to court; the commission approved the plants conditionally on 17 September; the Fermi condition date passed with the dossier unrevised, so no outcome is asserted; a hundred and forty-one entries with the same two future dates; and the review date moves (12.3). Rows added: the Upper Burrell moratorium and ordinance (2 November 2026), the G42/Core42 licence sunset (6 April 2027), ByteDance's first wholesale lease with Chindata (November 2027), and Frederick County's moratorium extension over Rowan's campuses (1 July 2027).
+- **`claims-ledger`** cited thirty dossiers at their 15 September versions and the registry at v05.41r "because it did not move this session". It moved. Sixteen rows move to new versions where the cited field still holds; rows are added for Tract's approval, PowerHouse's FERC order, Hut 8's parent-level revolver and the press identification at Beacon Point, the eight newcomers, the revenue recount and the fence; the registry rows carry thirty-eight at v07.87r.
+- **`what-the-record-does-not-say`** taught "Hut 8's second campus tenant is unnamed in every first-party source" and "seven of the nine incumbents publish none, and so do five of the thirteen challengers". The first is still true and now incomplete — `hut-8` v3, `lambda` v6 and `anthropic` v4 all carry the Wall Street Journal's report placing a frontier lab's USD 35 billion agreement with Lambda at Beacon Point under an NVIDIA-held lease, with none of the four parties confirming it and Hut 8's filings naming none of them. The second is now nine of eighteen challengers and nine of eleven adjacents. Both paragraphs change; Chindata's single tenant identified only through its self-build list and TECfusions' "1 GW" that its own deck calls a right of first refusal are added to the tenants paragraph.
+- **`drill`** (cards 1, 4 and 5) and **`check-yourself`** (items 2 and 4) carried the thirty, eighteen-of-thirty and three-route claims. Corrected; no correct answer changed.
+- **Outside the sections:** `short`, tiles 1 and 2, `source.doc`, the `adjacent` glossary entry, and a second `revisions[]` entry.
+
+**Not changed, and why.** `who-dominates-and-on-what-basis` — nine incumbents, four bases and the consent constraint; `equinix` v8, `aligned` v8, `stack-infrastructure` v8, `compass-datacenters` v6 and `cyrusone` v2 restate every cited fact. `the-sellers-play` — the three sockets and "know who signs" are not contradicted; the newcomers supply new instances of the second (Khazna buys for G42; an EPC contractor buys for HUMAIN; WhiteFiber signs behind the utility's meter), and instances are not corrections.
+
+### 12.3 The review date
+
+Rule: the nearest dated gate in the new material, never earlier than `updated`.
+
+| Candidate | Source | Verdict |
+|---|---|---|
+| 7 October 2026 — Upper Burrell supervisors' meeting | `tecfusions` v1 | Rejected: a meeting at which a paused draft ordinance may or may not return; the dossier lists it as an indicator beside the deadline below, not as a decision date |
+| **2 November 2026 — end of the township's 180-day moratorium, by which the draft "bring your own baseload" ordinance would be adopted** | `tecfusions` v1 — "a 180-day township moratorium (to 2 Nov 2026) with TECfusions 'grandfathered in'"; judgment 4: "the township, not the utility, is the binding constraint on Keystone Connect through 2027" | **Taken.** The nearest dated gate in the new material, and a gate on a taught claim: the module now says the township is the newest route-two member's binding constraint, and 2 November is the dated test of what that constraint becomes |
+| 30 October 2026 — Fermi's first annual meeting; November 2026 — Fermi's 400 MW warehouse test | `fermi-america` v1 | Not new material — the dossier is unchanged at v1; the November row already stands in the indicators |
+| 10 December 2026 — the grid operator's audit report | `hut-8` v3, `cipher-mining` v1 | Rejected, as in September: already the review clock of two registered modules; watched here, not owned |
+| 15 December 2026 — Virginia's tax-policy study | `edgecore` v2 | The September date; later than the gate taken, and `edgecore` v2 restates it. Stays as an indicator row |
+| 31 March 2027 — TECfusions' SPAC outside date; 6 April 2027 — G42/Core42 licence sunset; 1 July 2027 — Frederick County moratorium; November 2027 — Chindata's first wholesale expiry; 31 December 2027 — Section 232 | `tecfusions` v1, `g42` v1, `quinbrook` v1, `chindata` v1, `digital-realty` v2 | Rejected: later than a six-month default; carried in the indicators |
+
+`reviewBy` **2026-12-15 → 2026-11-02**. `updated` 2026-09-15 → 2026-10-04.
+
+### 12.4 The scenarios on this landscape, re-judged
+
+- **`scenario-aidc-developers-and-landlords-objection`** (Vantage; `profile:vantage` v9 @2026-09-06 unchanged; `project:lighthouse` @2026-09-06 unchanged; guidance 2026-09-15 → **2026-10-04**; `reviewBy` 2026-12-15 → **2026-11-02**, with the landscape's). All three beats hold — the seller's play it quotes is unchanged, this landlord's row in the bets table is unchanged, and "seven of the nine incumbents publish no revenue" is still the count. `changed[]`: `claims-ledger` — the intro's read date.
+- **`scenario-aidc-developers-and-landlords-discovery`** (Hut 8; `profile:hut-8` v2 @2026-09-06 → **v3 @2026-10-02**; `project:river-bend-campus` @2026-09-06 unchanged; guidance → **2026-10-04**; `reviewBy` 2026-12-10 → **2026-11-02**, because the landscape's bound is now nearer than this scenario's own 10 December gate). All three beats hold: 949 MW and USD 26.6 billion, the three parties with the end user outside the lease, the USD 3.25 billion non-recourse notes against about USD 159.3 million of parent recourse debt, the buffering statement at one campus only and the two regulatory clocks are restated in v3. What v3 adds and where the scenario changes: a USD 1.07 billion four-year senior secured revolving credit facility at the parent (28 September 2026), which the dossier reads as corporate liquidity on top of campus-level notes with the parent still carrying almost no recourse debt — the ledger's financing row carries it; and the Wall Street Journal's report placing a frontier lab's USD 35 billion agreement with a GPU cloud at Beacon Point under a chip vendor's lease, which the company's filings through 28 September do not confirm — gap 5 and the ledger's Beacon Point row carry it as reported, not confirmed. `changed[]`: `claims-ledger`, `what-the-record-does-not-say`.
+
+### 12.5 Verification
+
+Run on 4 October 2026 after every edit in this revision, including the scenario re-pins and the drill-cap change.
+
+| Check | Result |
+|---|---|
+| `node --check` on a `.js` copy of `Classroom.gs` | clean |
+| `scripts/check-gas-inner-scripts.js` | clean — 11 files, 106 inner `<script>` blocks |
+| `scripts/check-classroom-content.py` | **0 errors / 0 warnings — 71 lessons, 8 tracks, 220 gate cases** |
+| `scripts/check-classroom-curriculum.py --strict` | no structural findings; **0 scenarios whose landscape has moved since the pin**; the drill-cap finding (2,491 > 2400) is gone |
+| `scripts/check-classroom-pipeline.py --base origin/main` | P1 (developer files), P2 (below the fence), P10 (five revised lessons), P13 (five scenarios) — expected of a developer session; **no P3**, **no P7**, **no P8**; P12 clean at one step |
+| `scripts/check-classroom-pipeline.py --selftest` | 15 fixtures / 0 failures |
+| `scripts/build-classroom-segments.py --check` | **19 segments, 19 due — 0 with section changes, 19 pin-only**; none regenerated (G3) |
+| `scripts/check-readme-tree.py` | 0 findings after the GAS bump |
+| Playwright render at **contributor**, `Classroom.html#guidance/<id>` ×3 and `#lesson/<scenario id>` ×5 | **zero page errors on all eight**; every section heading rendered; no literal `*` or `{{` left in the rendered text |
+
 Developed by: LightAISolutions

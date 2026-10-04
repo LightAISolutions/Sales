@@ -1,4 +1,4 @@
-var VERSION = "v01.97g";
+var VERSION = "v01.98g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -52410,8 +52410,8 @@ function clLessonScenarioAidcDevelopersAndLandlordsObjection_() {
   "counterparty": "vantage",
   "stage": "rfp"
  },
- "updated": "2026-09-18",
- "reviewBy": "2026-12-15",
+ "updated": "2026-10-04",
+ "reviewBy": "2026-11-02",
  "tiles": [
   {
    "k": "Vantage Data Centers",
@@ -52459,7 +52459,7 @@ function clLessonScenarioAidcDevelopersAndLandlordsObjection_() {
    {
     "kind": "guidance",
     "ref": "guidance:landscape-aidc-developers-and-landlords-2026-09",
-    "date": "2026-09-15",
+    "date": "2026-10-04",
     "note": "the seller's play for this seat — establish the route before the product, lead with lead time, know who signs — and this landlord's row in the bets table"
    },
    {
@@ -52670,7 +52670,7 @@ function clLessonScenarioAidcDevelopersAndLandlordsObjection_() {
    "title": "Claims ledger",
    "kind": "ledger",
    "read": "reference",
-   "intro": "Every premise in the room, the record and the position, plus every fact the three rationales lean on. **Facts are the dossier's and the project registry's; analysis is the landscape's or the dossier's own labelled assessment** — and the objection's rule, the campus's published commitment, is a fact row. The dossier version and the module's `updated` are the values read off each fetched document on 2026-09-18; the project registry is pinned to its last commit on the base revision.",
+   "intro": "Every premise in the room, the record and the position, plus every fact the three rationales lean on. **Facts are the dossier's and the project registry's; analysis is the landscape's or the dossier's own labelled assessment** — and the objection's rule, the campus's published commitment, is a fact row. The dossier version and the module's `updated` are the values read off each fetched document on 2026-10-04, the re-pin day — the dossier and the project registry unchanged since 2026-09-06; the project registry is pinned to its last commit on the base revision.",
    "rows": [
     [
      "The campus is 902 MW critical IT load on 672 acres (500 developed), four data centres, 2.5M sq ft, completion 2028, the Midwest node of a 4.5 GW programme expansion at USD 15 billion-plus",
@@ -52764,6 +52764,15 @@ function clLessonScenarioAidcDevelopersAndLandlordsObjection_() {
     "**5 · Whether a liquidity event lands, and what it would do to procurement.** An exploration was reported in August 2026 and is unconfirmed by the company. A qualification held at the platform survives a change of ownership better than a purchase order held at a building, which is an argument for beat 3's move rather than a prediction."
    ],
    "sales": "Three of these five are questions that belong in the first meeting. Asking them is how a seller stops sounding like the press release everyone else read."
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-10-04",
+   "note": "Re-judged against the landscape revised on 4 October 2026 (thirty-eight members, four routes, reviewBy moved to 2 November). All three beats hold: the seller's play this room rests on — establish the route before the product, lead with lead time, know who signs — is unchanged in the revised module, this landlord's row in the bets table is unchanged, and seven of the nine incumbents still publish no revenue. The counterparty dossier (vantage v9 @2026-09-06) and the project registry pin are unchanged. The landscape pin moves to 2026-10-04 and reviewBy moves with the landscape's to 2026-11-02; the ledger's intro records the read date.",
+   "changed": [
+    "claims-ledger"
+   ]
   }
  ]
 };
@@ -53541,8 +53550,8 @@ function clLessonScenarioAidcDevelopersAndLandlordsDiscovery_() {
   "counterparty": "hut-8",
   "stage": "discovery"
  },
- "updated": "2026-09-18",
- "reviewBy": "2026-12-10",
+ "updated": "2026-10-04",
+ "reviewBy": "2026-11-02",
  "tiles": [
   {
    "k": "Hut 8",
@@ -53584,13 +53593,13 @@ function clLessonScenarioAidcDevelopersAndLandlordsDiscovery_() {
    {
     "kind": "public",
     "ref": "profile:hut-8",
-    "date": "2026-09-06",
-    "note": "the record: the contracted book across two campuses, the lease and its three parties with the end user outside it, the non-recourse project financings, the buffering statement made at one campus and not the other, and the two regulatory clocks"
+    "date": "2026-10-02",
+    "note": "the record: the contracted book across two campuses, the lease and its three parties with the end user outside it, the non-recourse project financings, the buffering statement made at one campus and not the other, and the two regulatory clocks, and the parent-level revolving facility signed 28 September 2026"
    },
    {
     "kind": "guidance",
     "ref": "guidance:landscape-aidc-developers-and-landlords-2026-09",
-    "date": "2026-09-15",
+    "date": "2026-10-04",
     "note": "the seller's play (establish the route before the product; lead with lead time then the specification; the bench contracts with the landlord and the engineering firm writes the specification), storage as an interconnection instrument, and the audit-report indicator"
    },
    {
@@ -53807,59 +53816,59 @@ function clLessonScenarioAidcDevelopersAndLandlordsDiscovery_() {
    "title": "Claims ledger",
    "kind": "ledger",
    "read": "reference",
-   "intro": "Every premise in the room, the record and the open questions, plus every fact the three rationales lean on. **Facts are the dossier's or the project registry's; analysis is the landscape's or the dossier's own labelled assessment.** The dossier version and the module's `updated` are the values read off each fetched document on 2026-09-18, and the project pin is that file's last commit on the base revision.",
+   "intro": "Every premise in the room, the record and the open questions, plus every fact the three rationales lean on. **Facts are the dossier's or the project registry's; analysis is the landscape's or the dossier's own labelled assessment.** The dossier version and the module's `updated` are the values read off each fetched document on 2026-10-04, the re-pin day, and the project pin is that file's last commit on the base revision.",
    "rows": [
     [
      "949 MW of contracted critical IT capacity across about USD 26.6 billion of base-term lease value on two campuses; neither has delivered a megawatt, with the first data hall here targeted for the second quarter of 2027 and initial energisation at the other campus for the first quarter of 2027",
-     "profile:hut-8 v2 · summary, productsAndServices[0] · fact"
+     "profile:hut-8 v3 · summary, productsAndServices[0] · fact"
     ],
     [
      "This campus: 245 MW of critical IT on 330 MW of utility capacity available from 1 July 2026 and scalable to 1,000 MW; implied gross-to-critical ratio about 1.35 to 1; 627 acres owned with 2,361 further acres under option; design efficiency 1.35; build cost USD 9–11 million per MW; vertical construction commenced in the second quarter of 2026",
-     "profile:hut-8 v2 · technicalSpecs[0] · fact"
+     "profile:hut-8 v3 · technicalSpecs[0] · fact"
     ],
     [
      "The lessor is the landlord's campus subsidiary, the lessee of record is a subsidiary of a compute provider, a hyperscaler backstops all rent and related pass-through obligations across the fifteen-year base term with no warrants and no equity given, and the end user is not a party to the lease",
-     "profile:hut-8 v2 · relationships[0], relationships[1], relationships[2], technicalSpecs[0] · fact"
+     "profile:hut-8 v3 · relationships[0], relationships[1], relationships[2], technicalSpecs[0] · fact"
     ],
     [
      "The lease is triple net with a fifteen-year base term, a 3.0 per cent annual escalator and three five-year renewal options; USD 7.0 billion of base-term value and about USD 17.7 billion if all renewals are exercised; expected net operating income averaging about USD 454 million a year; the annual report discloses certain customer termination rights",
-     "profile:hut-8 v2 · technicalSpecs[0], strategyRead[6] · fact"
+     "profile:hut-8 v3 · technicalSpecs[0], strategyRead[6] · fact"
     ],
     [
-     "USD 3.25 billion of senior secured notes at 6.192 per cent issued through a campus subsidiary on a non-recourse basis, rated BBB− with a stated minimum debt-service coverage of 1.31 times, amortising from May 2028, up to 85 per cent loan-to-cost; about USD 7.5 billion of project debt in total against roughly USD 159.3 million of parent recourse debt",
-     "profile:hut-8 v2 · technicalSpecs[0], summary · fact"
+     "USD 3.25 billion of senior secured notes at 6.192 per cent issued through a campus subsidiary on a non-recourse basis, rated BBB− with a stated minimum debt-service coverage of 1.31 times, amortising from May 2028, up to 85 per cent loan-to-cost; about USD 7.5 billion of project debt in total against roughly USD 159.3 million of parent recourse debt; a USD 1.07 billion four-year senior secured revolving credit facility signed at the parent on 28 September 2026, read by the dossier as corporate liquidity on top of campus-level notes with the parent still carrying almost no recourse debt",
+     "profile:hut-8 v3 · technicalSpecs[0], summary, recentDevelopments[0] · fact"
     ],
     [
-     "The other campus carries 704 MW of critical IT under two identical 352 MW leases of USD 9.8 billion each to one unnamed tenant described only as rated AA− or higher, on 1,000 MW of interconnection, and its design is stated to incorporate battery systems to mitigate voltage impacts and support reliable integration with that grid",
-     "profile:hut-8 v2 · technicalSpecs[1] · fact"
+     "The other campus carries 704 MW of critical IT under two identical 352 MW leases of USD 9.8 billion each to one unnamed tenant described only as rated AA− or higher, on 1,000 MW of interconnection, and its design is stated to incorporate battery systems to mitigate voltage impacts and support reliable integration with that grid; a newspaper reported on 1 September 2026 that a frontier lab's USD 35 billion cloud agreement with a GPU cloud 'involves' that campus under a chip vendor's facility lease, and the company's filings through 28 September name none of the three",
+     "profile:hut-8 v3 · technicalSpecs[1], recentDevelopments[1] · fact"
     ],
     [
      "A state directive of 3 August 2026 put the grid operator and the commission to verifying and auditing every data centre advancing through interconnection and paused new large-load energisations; the scope is some 250 to 300 projects of at least 75 MW against a queue of more than 1,800 requests totalling about 474 GW, and the report is targeted for 10 December 2026",
-     "profile:hut-8 v2 · policyExposure[0] · fact"
+     "profile:hut-8 v3 · policyExposure[0] · fact"
     ],
     [
      "A state commission approved a fast-track process for large-load infrastructure in December 2025 requiring a fifteen-year supply agreement and at least 50 per cent of infrastructure capital cost borne by the data centre while waiving solicitation requirements; the utility plans new transmission for a roughly 345 MW load of which 330 MW is allocated to this campus; no docket specific to this company or this campus was identified",
-     "profile:hut-8 v2 · policyExposure[1] · fact"
+     "profile:hut-8 v3 · policyExposure[1] · fact"
     ],
     [
      "A named infrastructure partner supplies custom critical infrastructure at this campus, and the project registry names it alongside an engineering, procurement and construction-management firm",
-     "profile:hut-8 v2 · relationships[5] · fact; project:river-bend-campus · note · fact"
+     "profile:hut-8 v3 · relationships[5] · fact; project:river-bend-campus · note · fact"
     ],
     [
      "The pipeline behind the two campuses is recorded in stages at 30 June 2026 — 5,400 MW under diligence, 1,880 MW under exclusivity, 550 MW under development and 830 MW under construction — and one named 500 MW pipeline site appears on the company's own site but in no filing",
-     "profile:hut-8 v2 · technicalSpecs[2] · fact"
+     "profile:hut-8 v3 · technicalSpecs[2] · fact"
     ],
     [
      "The counterparty structure here is a three-party arrangement that reporting routinely collapses into two, and the end user is deliberately not a party to the lease",
-     "profile:hut-8 v2 · strategyRead[2] · analysis"
+     "profile:hut-8 v3 · strategyRead[2] · analysis"
     ],
     [
      "This capital structure is the most conventional in its cohort and that is the deliberate strategy — non-recourse investment-grade campus notes against almost no parent recourse debt",
-     "profile:hut-8 v2 · strategyRead[5] · analysis"
+     "profile:hut-8 v3 · strategyRead[5] · analysis"
     ],
     [
      "The largest near-term risk to the contracted book is regulatory timing rather than credit, because the other campus's energisation target falls inside the audit window",
-     "profile:hut-8 v2 · strategyRead[6] · analysis"
+     "profile:hut-8 v3 · strategyRead[6] · analysis"
     ],
     [
      "Establish the route before the product, and lead with lead time then the specification: substation transformers run seventy-five to a hundred and ten weeks, generator step-up units a hundred to a hundred and fifty or more, and medium-voltage switchgear fifty-two to eighty and largely sold out through 2028 — so a factory-built unit deliverable in months outranks a better unit deliverable in three years",
@@ -53895,10 +53904,20 @@ function clLessonScenarioAidcDevelopersAndLandlordsDiscovery_() {
     "**2 · Who owns the equipment scope on this campus?** The record names an infrastructure partner and an engineering firm, and the segment's reading is that the specification usually belongs to neither party to the lease. **Ask which of the three writes it, and which of the three places the order.**",
     "**3 · Which date binds?** Two campuses, two grids, two clocks, and one of them has a regulator's report due on 10 December. **Ask which schedule the procurement is actually run against** — and remember that the audit's conclusion is not in the record either. What the record carries is the pause, the scope and the date.",
     "**4 · What do the project's lenders require of a supplier?** The campus is financed {{non-recourse}} with rated notes, a stated coverage minimum and an amortisation date, so it has covenants and almost certainly a technical adviser. **Ask whether the landlord's qualification and the project's are one process or two.** Nobody has published the answer.",
-    "**5 · Who is the other campus's tenant?** Unnamed in every first-party source, and named in none the segment's own review could find. **Do not guess it, and do not let a guess reach a slide.** If the answer matters to your proposal, ask what the tenant's design organisation requires and let the buyer decide how much of that to say.",
+    "**5 · Who is the other campus's tenant?** Unnamed in every first-party source — the company describes it only as rated AA− or higher. A newspaper has since placed a frontier lab's thirty-five-billion-dollar agreement with a GPU cloud at that campus under a chip vendor's lease, and none of the four parties has confirmed it; the landlord's filings through 28 September name none of them. **Do not guess it, and do not let a report reach a slide as a fact.** If the answer matters to your proposal, ask what the tenant's design organisation requires and let the buyer decide how much of that to say.",
     "**6 · What is in the pipeline, as opposed to in the stages?** Diligence and exclusivity are not orders, and one 500 MW site appears on the company's own pages and in no filing. **Ask which pipeline sites have site control and an interconnection position** — those two things are what turn a stage into a customer."
    ],
    "sales": "Six questions, five of which the buyer can answer in a sentence. The sixth — what the audit concludes — nobody can, and saying so out loud is worth more than a forecast."
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-10-04",
+   "note": "Re-judged against the landscape revised on 4 October 2026 and the counterparty dossier at v3. All three beats hold: 949 MW and USD 26.6 billion across two campuses, the three parties with the end user outside the lease, the non-recourse campus notes against about USD 159.3 million of parent recourse debt, the buffering statement at one campus only and the two regulatory clocks are restated in v3. Two things were added rather than changed. A USD 1.07 billion four-year senior secured revolving credit facility was signed at the parent on 28 September 2026, which the dossier reads as corporate liquidity on top of the campus-level notes with the parent still carrying almost no recourse debt — the ledger's financing row carries it. And a newspaper has placed a frontier lab's reported USD 35 billion agreement with a GPU cloud at the other campus under a chip vendor's lease, which the company's filings through 28 September do not confirm — gap 5 and the ledger's Beacon Point row carry it as reported, not confirmed, so the instruction to ask rather than guess stands with a sharper reason. The landscape pin moves to 2026-10-04 and reviewBy moves with the landscape's to 2026-11-02, which is now nearer than this scenario's own 10 December gate. The project pin is unchanged.",
+   "changed": [
+    "claims-ledger",
+    "what-the-record-does-not-say"
+   ]
   }
  ]
 };
@@ -54305,7 +54324,7 @@ function clLessonScenarioHyperscalersAndAiLabsObjection_() {
   "counterparty": "meta",
   "stage": "shortlist"
  },
- "updated": "2026-09-18",
+ "updated": "2026-10-04",
  "reviewBy": "2026-12-31",
  "tiles": [
   {
@@ -54348,13 +54367,13 @@ function clLessonScenarioHyperscalersAndAiLabsObjection_() {
    {
     "kind": "public",
     "ref": "profile:meta",
-    "date": "2026-09-06",
+    "date": "2026-09-26",
     "note": "the record: the campus and its joint-venture financing, the utility package and its three undisclosed batteries, the tolled Wyoming project, the two direct storage agreements that are the exception, the nuclear book and the interconnection withdrawal inside it, and the ratepayer proceeding"
    },
    {
     "kind": "guidance",
     "ref": "guidance:landscape-hyperscalers-and-ai-labs-2026-09",
-    "date": "2026-09-16",
+    "date": "2026-10-04",
     "note": "the seller's play for both paths — the storage channel being the members' counterparties rather than the members, the AIDC-power inversion in which the segment writes the architecture and pays for the grid, the clock being a delivery date rather than a price, and the caution that the credit behind a campus is routinely not the company in the headline"
    },
    {
@@ -54574,7 +54593,7 @@ function clLessonScenarioHyperscalersAndAiLabsObjection_() {
    "rows": [
     [
      "The Richland Parish campus in Louisiana is a 5 GW design at more than USD 50 billion across about 2,250 acres, described as the first multi-gigawatt AI training cluster, with about 2 GW by 2030 and full build around 2032; the expansion to that size was announced on 13 July 2026",
-     "profile:meta v9 · productsAndServices[0], technicalSpecs[0], recentDevelopments[2] · fact"
+     "profile:meta v10 · productsAndServices[0], technicalSpecs[0], recentDevelopments[2] · fact"
     ],
     [
      "The campus is delivered by a shared bench of three builders on a programme the registry describes at about USD 50 billion and 5 GW",
@@ -54582,55 +54601,55 @@ function clLessonScenarioHyperscalersAndAiLabsObjection_() {
     ],
     [
      "The campus is held in a joint venture with a private-capital partner announced 21 October 2025: about USD 27 billion of development financing at 80/20, with USD 26 billion of third-party debt, four-year leases and a 16-year residual guarantee; the same template was repeated on 28 July 2026 for a second campus at about USD 14 billion at 80/20 with USD 12.5 billion of debt",
-     "profile:meta v9 · productsAndServices[0], recentDevelopments[10], recentDevelopments[1] · fact"
+     "profile:meta v10 · productsAndServices[0], recentDevelopments[10], recentDevelopments[1] · fact"
     ],
     [
      "Capital-expenditure guidance for 2026 is USD 130–145 billion against USD 39.2 billion actually spent in 2024; Q2 2026 capital expenditure of USD 31.1 billion consumed about 98 per cent of operating cash flow and free cash flow fell to USD 784 million",
-     "profile:meta v9 · productsAndServices[0], recentDevelopments[0] · fact"
+     "profile:meta v10 · productsAndServices[0], recentDevelopments[0] · fact"
     ],
     [
      "This campus's power comes through a Louisiana utility package: about 2.3 GW of Phase 1 approved and about 5.2 GW of Phase 2 proposed across seven gas plants, plus nuclear uprates, plus three grid-scale batteries whose megawatts the buyer's own posts omit, with the regulator's docket named as the follow-up source",
-     "profile:meta v9 · productsAndServices[1], technicalSpecs[1], recentDevelopments[2] · fact"
+     "profile:meta v10 · productsAndServices[1], technicalSpecs[1], recentDevelopments[2] · fact"
     ],
     [
      "A Wyoming project announced 21 May 2026 pairs 365 MW of solar with 200 MW / 1,600 MWh of batteries serving the buyer's data centres through utility tolling, at about USD 1.2 billion of the developer's investment; the relationship with that developer totals 1.6 GW",
-     "profile:meta v9 · productsAndServices[1], technicalSpecs[1], recentDevelopments[3] · fact"
+     "profile:meta v10 · productsAndServices[1], technicalSpecs[1], recentDevelopments[3] · fact"
     ],
     [
      "On 8 December 2025 the buyer signed about 2.5 GW across eleven power purchase agreements plus two energy-storage agreements contracted directly — 168 MW in New Mexico, in service 2026–2028 — in energy-storage-agreement format",
-     "profile:meta v9 · relationships[2], recentDevelopments[8] · fact"
+     "profile:meta v10 · relationships[2], recentDevelopments[8] · fact"
     ],
     [
      "The contracted nuclear book is about 7.7 GW: 1,121 MW on a twenty-year agreement from 2027, and a package agreed 9 January 2026 of two 690 MW units with rights to six more and 1.2 GW of molten-salt thermal storage, up to 1.2 GW at a second developer's campus, and 2,609 MW of existing-plant agreements and uprates",
-     "profile:meta v9 · productsAndServices[1], technicalSpecs[1], recentDevelopments[7] · fact"
+     "profile:meta v10 · productsAndServices[1], technicalSpecs[1], recentDevelopments[7] · fact"
     ],
     [
      "Long-duration storage is reserved rather than bought: up to 1 GW / 100 GWh above a hundred hours, with a 25 MW / 2.5 GWh pilot in 2028",
-     "profile:meta v9 · productsAndServices[1], technicalSpecs[1] · fact"
+     "profile:meta v10 · productsAndServices[1], technicalSpecs[1] · fact"
     ],
     [
      "The regional transmission organisation withdrew a 750 MW interconnection request on 3 August 2026 — 150 MW nuclear, 300 MW fuel cells and 300 MW gas — stating the developer had never demonstrated ride-through of a sudden voltage drop; the developer filed an emergency complaint on 28 August 2026 claiming a delay of at least 14 months",
-     "profile:meta v9 · relationships[8] · fact"
+     "profile:meta v10 · relationships[8] · fact"
     ],
     [
      "The Louisiana review is the record's highest-profile ratepayer controversy: a judge ordered the buyer to reveal withheld demand evidence and a commissioner dissented over 15-year customer contracts against 30-year plant lives, with a ratepayer-protection pledge attached to the tariff arrangements",
-     "profile:meta v9 · policyExposure[0] · fact"
+     "profile:meta v10 · policyExposure[0] · fact"
     ],
     [
      "The leadership the record names for this account is a head of infrastructure, alongside the energy organisation that contracts the buyer's generation",
-     "profile:meta v9 · decisionMakers[3] · fact"
+     "profile:meta v10 · decisionMakers[3] · fact"
     ],
     [
      "Storage demand here stays utility-side rather than on-campus in the near term — the utility batteries, the tolling structure and no evidence of behind-the-meter batteries at either flagship campus — so the sales channel for a battery supplier is this buyer's utility counterparties rather than this buyer; held at moderate confidence",
-     "profile:meta v9 · strategyRead[2] · analysis"
+     "profile:meta v10 · strategyRead[2] · analysis"
     ],
     [
      "The joint-venture financing model is now core strategy rather than a one-off: it preserves reported capital-expenditure optics and credit capacity while transferring residual-value risk to private capital, and is to be expected on every subsequent gigawatt campus; held at moderate confidence",
-     "profile:meta v9 · strategyRead[1] · analysis"
+     "profile:meta v10 · strategyRead[1] · analysis"
     ],
     [
      "This is the highest-beta energy buyer in the covered set, because no external cloud revenue absorbs the spend — the capital programme and the nuclear package are a bet that the products monetise, with the collapse in free cash flow as the measurable cost",
-     "profile:meta v9 · strategyRead[0] · analysis; guidance:landscape-hyperscalers-and-ai-labs-2026-09 · each-players-bet · analysis"
+     "profile:meta v10 · strategyRead[0] · analysis; guidance:landscape-hyperscalers-and-ai-labs-2026-09 · each-players-bet · analysis"
     ],
     [
      "For a storage seller the addressable buyer in this segment is almost never the member itself, so the account plan is built around its developers and utilities rather than around it",
@@ -54662,6 +54681,15 @@ function clLessonScenarioHyperscalersAndAiLabsObjection_() {
     "**6 · Whether any of this reaches the white space.** Rack-level backup inside the hall is the layer this segment's own reading calls unmeasurable — it appears only in reporting from unnamed sources. **Carry it as reporting and say so when you carry it**, and never present it to this buyer as a market it has entered."
    ],
    "sales": "Six gaps, and five of them are places where a confident sentence would be an invention. On a shortlist an invention does not lose the deal — it loses the next three."
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-10-04",
+   "note": "Re-judged against the landscape revised on 4 October 2026 (ten members; the seller's play unchanged) and the counterparty dossier at v10. All three beats hold: the Hyperion joint venture at about USD 27 billion, 80/20, with USD 26 billion of third-party debt, four-year leases and a sixteen-year residual guarantee; the Louisiana utility package with three batteries of undisclosed size; the tolled Wyoming project; the two direct energy-storage agreements of December 2025; the withdrawn 750 MW request and the 28 August complaint; and the ratepayer proceeding are all restated in v10 at the same field indices the ledger cites. The ledger's version cites move to v10; nothing else in the text differs. The landscape pin moves to 2026-10-04; reviewBy stays 2026-12-31 with the landscape's.",
+   "changed": [
+    "claims-ledger"
+   ]
   }
  ]
 };
@@ -55834,7 +55862,7 @@ function clLessonScenarioNeocloudsDiscovery_() {
  "id": "scenario-neoclouds-discovery",
  "type": "scenario",
  "title": "Rehearsal — The Tenant Who Is Not the Landlord",
- "short": "Discovery rehearsal: Fluidstack, the neocloud that is counterparty of record at six campuses and owns the power at almost none of them.",
+ "short": "Discovery rehearsal: Fluidstack, tenant of record at five campuses, owner of one, developer in its own name at three more — and buyer of the power at only some.",
  "group": "The Value Chain",
  "scenario": {
   "mode": "discovery",
@@ -55843,8 +55871,8 @@ function clLessonScenarioNeocloudsDiscovery_() {
   "counterparty": "fluidstack",
   "stage": "discovery"
  },
- "updated": "2026-09-24",
- "reviewBy": "2026-09-30",
+ "updated": "2026-10-04",
+ "reviewBy": "2026-10-08",
  "tiles": [
   {
    "k": "Fluidstack",
@@ -55890,14 +55918,14 @@ function clLessonScenarioNeocloudsDiscovery_() {
    {
     "kind": "public",
     "ref": "profile:fluidstack",
-    "date": "2026-09-06",
-    "note": "the record: the five leased campuses and the landlord for each, the lease ledger as the landlords filed it, the guarantor's backstops and when they start, the two sites where this company pays for the energy infrastructure itself, the first campus it bought outright, the utilities named per site, and the statutory filing deadline that is the only scheduled disclosure"
+    "date": "2026-10-04",
+    "note": "the record: the five leased campuses and the landlord for each, the lease ledger as the landlords filed it, the guarantor's backstops and when they start, the sites where this company pays for the energy infrastructure itself and the one where it has broken ground in its own name, the utilities named per site, the delivery slip and overrun cap at one campus, and the statutory accounts now overdue"
    },
    {
     "kind": "guidance",
     "ref": "guidance:landscape-neoclouds-2026-09",
-    "date": "2026-09-24",
-    "note": "the seller's play (in only four of seven members does purchasing authority for power equipment sit with the member; the three that do not buy; schedule beats price where permitting or allocation binds) and this member's row in the bets table"
+    "date": "2026-10-04",
+    "note": "the seller's play (in eight of the eleven ranked members purchasing authority for power equipment sits with the member at at least one site; this one pays at the sites it develops in its own name and at none of the five it fronts; schedule beats price where permitting, allocation or licensing binds) and this member's row in the bets table"
    }
   ]
  },
@@ -55909,12 +55937,12 @@ function clLessonScenarioNeocloudsDiscovery_() {
    "read": "2 min",
    "tone": "info",
    "ps": [
-    "**You are the AI-data-centre power seller** — medium-voltage equipment, on-site generation, the gear between the utility's fence and the hall. A neocloud has taken your call. It is named on the utility filings at six sites and it is moving faster than anyone else you cover.",
+    "**You are the AI-data-centre power seller** — medium-voltage equipment, on-site generation, the gear between the utility's fence and the hall. A neocloud has taken your call. It is tenant of record at five campuses, owner of one of them since July 2026, developer in its own name at three more sites, and it is moving faster than anyone else you cover.",
     "**Across the table** are a co-founder and chief executive, a co-founder and president, and a general counsel, with a chief operating officer and a vice-president of sales named in the record. **Nobody from a landlord is in the room**, and at most of these campuses the landlord is the party that buys what you sell.",
-    "**On the table** is nothing yet — which is the point. This is a first substantive conversation with a company that is {{tenant of record}} on about **1.4 GW** of {{critical IT load}} across five campuses it does not own, whose rent is backstopped by a third party with more than **USD 6 billion** of guarantees, and whose end user the landlords name in their own releases and it names on its own press page for its New York and Texas campuses.",
+    "**On the table** is nothing yet — which is the point. This is a first substantive conversation with a company that is {{tenant of record}} on about **1.4 GW** of {{critical IT load}} across five campuses, one of which it has owned outright since July 2026, whose rent is backstopped by a third party with more than **USD 6 billion** of guarantees, and whose end user the landlords name in their own releases and it names on its own press page for its New York and Texas campuses.",
     "**What you are rehearsing** is discovery against a counterparty of record who is, at most sites, not the buyer. **The whole exercise is establishing site by site who signs for the power** — because the record says the answer is different at different campuses, and it says so in both directions."
    ],
-   "sales": "One company, six sites, and at least two different answers to who buys the substation. The account plan that treats it as one buyer is wrong at five of them or wrong at one."
+   "sales": "One company, eight sites, and at least two different answers to who buys the substation. The account plan that treats it as one buyer is wrong at five of them or wrong at three."
   },
   {
    "id": "what-the-record-says",
@@ -55945,7 +55973,7 @@ function clLessonScenarioNeocloudsDiscovery_() {
     ],
     [
      "**That it has stopped being only a tenant**",
-     "In July 2026 it bought the **50.1%** of one Texas joint venture it did not hold, for about **USD 530 million** payable in three instalments — **USD 250m within 14 days, USD 150m by 31 December 2026 and about USD 130m by 30 April 2027** — its first owned campus. It is also **49.9%** of the holding company behind the Indiana campus",
+     "In July 2026 it bought the **50.1%** of one Texas joint venture it did not hold, for about **USD 530 million** payable in three instalments — **USD 250m within 14 days, USD 150m by 31 December 2026 and about USD 130m by 30 April 2027** — its first owned campus. It is also **49.9%** of the holding company behind the Indiana campus. And on **10 September 2026** it took a county worksite permit and began site works on a **USD 4 billion first phase** in south Texas with **1.5 GW 'reserved'** from the utility — its first ground broken in its own name, with no tenant named",
      "the counterparty's lease ledger and its owned-development product line"
     ],
     [
@@ -55975,7 +56003,7 @@ function clLessonScenarioNeocloudsDiscovery_() {
     ],
     [
      "**How little of it you can check**",
-     "It has **never published revenue, backlog, headcount or a lease**. Its only scheduled disclosure is a statutory accounts filing, **next due 30 September 2026** — and its own indicator list calls that the first audited turnover for the pivot year",
+     "It has **never published revenue, backlog, headcount or a lease**. Its only scheduled disclosure was a statutory accounts filing due **30 September 2026** — the first audited turnover for the pivot year — and it **missed the deadline**: the companies registry showed *Accounts overdue* on 2 October. The revenue figures now in circulation come from a press relay of an investor memo, and the dossier does not use them",
      "the counterparty's stated collection gaps and its filed-accounts metric"
     ]
    ],
@@ -55988,8 +56016,8 @@ function clLessonScenarioNeocloudsDiscovery_() {
    "read": "3 min",
    "ps": [
     "**In discovery there is no position to defend, and here there is not even a single counterparty to address.** What the record leaves open is not this company's view of your equipment. It is which of several parties, at which of several sites, is the one that signs — and the record is unusually clear that the answer varies. So what follows is the three things the meeting has to establish, in the order a good conversation would take them.",
-    "**First: which site, and therefore which buyer.** The segment's own measurement is that in only four of its seven members does purchasing authority for power equipment sit with the member at all, and it names this company among **the three that do not buy** — *at whose campuses the landlord pays for the generators and the substation*. That is true of the leased campuses and the record supports it: at the Louisiana site the landlord pays for the generators and the substation while the utility provides 330 MW. **And the same record contains the counter-example, in the company's own words**: at its Oklahoma project it states it is paying for all of the energy and energy infrastructure. One company, two opposite answers, both on the record, differing by site. **There is no account-level answer to who buys, and a seller who assumes one is wrong somewhere.**",
-    "**Second: when, and against what clock.** This is the fastest-moving buyer set in the corpus and the thing it is short of is schedule rather than price — the segment's reading says a supplier who can move a schedule is worth more than one who can move a price, and calls that the single most actionable fact in the module. The record puts dates on almost every campus: a September 2026 commencement at one Texas site with 39 MW more by January 2027, a fourth-quarter 2026 target at the other, first halls in mid-2027 in Louisiana and Indiana, first phases in September 2027 and September 2028 in Oklahoma. **What it does not say is which of those dates has equipment reserved behind it**, and that is the question a power seller exists to ask.",
+    "**First: which site, and therefore which buyer.** The segment's own measurement is that in eight of its eleven ranked members purchasing authority for power equipment sits with the member at at least one site, and it names this company as the one that pays **at the sites it develops in its own name and at none of the five it fronts** — *at whose campuses the landlord pays for the generators and the substation*. That is true of the leased campuses and the record supports it: at the Louisiana site the landlord pays for the generators and the substation while the utility provides 330 MW. **And the same record contains the counter-example, in the company's own words**: at its Oklahoma project it states it is paying for all of the energy and energy infrastructure. One company, two opposite answers, both on the record, differing by site. **There is no account-level answer to who buys, and a seller who assumes one is wrong somewhere.**",
+    "**Second: when, and against what clock.** This is the fastest-moving buyer set in the corpus and the thing it is short of is schedule rather than price — the segment's reading says a supplier who can move a schedule is worth more than one who can move a price, and calls that the single most actionable fact in the module. The record puts dates on almost every campus: a phased Q4 2026–Q1 2027 delivery at one Texas site under a 24 September lease amendment that also caps overruns at USD 359.3 million, a fourth-quarter 2026 target at the other, first halls in mid-2027 in Louisiana and Indiana, first phases in September 2027 and September 2028 in Oklahoma — and a south Texas first phase with ground broken in September 2026 and no delivery date published. **What it does not say is which of those dates has equipment reserved behind it**, and that is the question a power seller exists to ask.",
     "**Third: who is carrying the risk while it is being built.** This is where the record is sharpest and least obvious. The guarantor standing behind the rent is standing behind it **only from lease commencement** — so during construction the project bondholders carry the build with a capped USD 100 million {{completion guarantee}}, and a delay beyond 180 days lets the tenant walk, at which point on the same reading the backstop never triggers. **The strong credit in this structure is not present during the period in which you would be delivering.** Whose balance sheet your equipment order sits against, at a campus with a bond issue and a landlord and a tenant and a guarantor, is not a detail of the paperwork — it is the first thing to establish before a delivery commitment is made, and nothing published settles it."
    ],
    "sales": "Which site, which date, and whose credit is present during the build. Asked in that order they are three short questions; asked at the account level they have no answers at all."
@@ -56013,7 +56041,7 @@ function clLessonScenarioNeocloudsDiscovery_() {
      "why": "**Option 2 is the question that decides whether there is a sale here at all, and it is answerable only by this counterparty.** The segment's own measurement is that purchasing authority for power equipment sits with the member in only four of its seven, and it puts this company among the three where it does not — the landlord pays for the generators and the substation. But the same record carries the opposite in the company's own words at its Oklahoma project, where it states it is paying for all of the energy and energy infrastructure. **One company, two answers, split by site**, and no published source maps the split across all of them. Asking it first means everything after it is about a real buyer. **Option 1 gives away the one thing you have before knowing who it is for.** Lead times are this counterparty's scarce good — the segment calls a supplier who can move a schedule worth more than one who can move a price — and quoting them into a call where you do not yet know whether this party signs is spending your leverage on a party that may be relaying it to somebody else. **Option 3 sizes a market that is not yours.** The 1.4 GW is five landlords' filings added up, not a purchase pipeline, and the record says the company has never published a lease; a breakdown of capacity tells you how big the buildings are, not who buys the switchgear in them. **Option 4 goes round the counterparty in the first five minutes.** The landlords do hold the purchase orders at the leased campuses and are worth knowing — but asking this company to introduce you to the parties who buy instead of it, before establishing where it buys for itself, gives up the one site where it might be your customer."
     }
    ],
-   "note": "The answer splits the account exactly as the record does: at the leased campuses the landlord buys and this company specifies; at the two sites it is developing in its own name it buys everything, and it says the Oklahoma site is the one that is furthest along."
+   "note": "The answer splits the account exactly as the record does: at the leased campuses the landlord buys and this company specifies; at the sites it is developing in its own name it buys everything, and it names the south Texas site, where ground was broken on 10 September 2026, as the one with site works under way."
   },
   {
    "id": "beat-2",
@@ -56031,7 +56059,7 @@ function clLessonScenarioNeocloudsDiscovery_() {
       "Raise the European campus that was abandoned in March 2026 as evidence that stated schedules at this counterparty have not always held."
      ],
      "a": 1,
-     "why": "**Option 2 asks the only schedule question that has an answer, because this counterparty's dates are not one date.** The record gives a different clock at every campus — a September 2026 commencement at one Texas site with 39 MW more by January 2027, a fourth-quarter 2026 target at the other, first halls in 2027 in Louisiana and Indiana, September 2027 and September 2028 in Oklahoma — and at the leased sites commencement runs *on a data hall-by-data hall basis*. Asking which of those the order is built backwards from, and what is already reserved, converts *the schedule does not wait* into a date you can either hold or not; it is also the question that surfaces whether somebody else has already taken the slot. **Option 1 commits against a date you have not identified.** Committing delivery to a stated need-by at a company whose own schedules have moved — one site from the second half of 2026 to the fourth quarter, another from the second half of 2026 to early 2027 — is accepting schedule risk created by a party you have not yet credit-assessed, and it is the commitment beat 3 is about. **Option 3 trades the one site where it is the buyer for five where it is not.** A volume commitment across all six campuses is a commitment across five landlords who have not agreed to anything, and the record is explicit that the company has never published a lease and is not the purchaser at those sites. **Option 4 wins a point and spends the relationship.** The European withdrawal is real, is dated March 2026 and carries no first-party statement — and raising it as a credibility challenge in a discovery call converts a supplier conversation into a defence, when the same fact is far more useful later as a reason to ask what makes this site different."
+     "why": "**Option 2 asks the only schedule question that has an answer, because this counterparty's dates are not one date.** The record gives a different clock at every campus — a phased Q4 2026–Q1 2027 delivery at one Texas site under a 24 September amendment, a fourth-quarter 2026 target at the other, first halls in 2027 in Louisiana and Indiana, September 2027 and September 2028 in Oklahoma, and no date yet for the south Texas site where ground was just broken — and at the leased sites commencement runs *on a data hall-by-data hall basis*. Asking which of those the order is built backwards from, and what is already reserved, converts *the schedule does not wait* into a date you can either hold or not; it is also the question that surfaces whether somebody else has already taken the slot. **Option 1 commits against a date you have not identified.** Committing delivery to a stated need-by at a company whose own schedules have moved three times — one site from the second half of 2026 to the fourth quarter, another from the second half of 2026 to early 2027, a third from September 2026 to a phased Q4 2026–Q1 2027 — is accepting schedule risk created by a party you have not yet credit-assessed, and it is the commitment beat 3 is about. **Option 3 trades the one site where it is the buyer for five where it is not.** A volume commitment across all six campuses is a commitment across five landlords who have not agreed to anything, and the record is explicit that the company has never published a lease and is not the purchaser at those sites. **Option 4 wins a point and spends the relationship.** The European withdrawal is real, is dated March 2026 and carries no first-party statement — and raising it as a credibility challenge in a discovery call converts a supplier conversation into a defence, when the same fact is far more useful later as a reason to ask what makes this site different."
     }
    ],
    "note": "The date named is the utility energisation rather than the phase date, the reservation behind the medium-voltage package has not been made, and the company asks what a slot would cost to hold and for how long."
@@ -56047,12 +56075,12 @@ function clLessonScenarioNeocloudsDiscovery_() {
      "q": "What do you ask?",
      "c": [
       "Accept the assurance and price the slot, since a guarantor of that standing behind every lease is better credit than most buyers in this market can offer.",
-      "Ask for the statutory accounts due on 30 September 2026, since they will be the first audited turnover this company has ever published and fall due on 30 September 2026.",
+      "Ask for the statutory accounts that were due on 30 September 2026, since they will be the first audited turnover this company has ever published and are now overdue.",
       "Ask which entity signs the equipment order at this site and whose credit stands behind it during construction — because the backstop the record describes becomes effective only at lease commencement, and the site is not built yet.",
       "Ask for payment in advance against the reservation, on the basis that a company publishing no revenue, backlog or headcount cannot be credit-assessed at all."
      ],
      "a": 2,
-     "why": "**Option 3 is the question the assurance quietly avoids, and the record answers it in the counterparty's own file.** The guarantor's support is a {{recognition agreement}} that *becomes effective as of the commencement date* — so at a campus still being built there is no backstop yet, the project bondholders carry construction with a capped USD 100 million {{completion guarantee}}, and a delay beyond 180 days lets this company terminate, at which point on the same reading the guarantor's obligation would never trigger. **The credit being offered is real and it is not present during the period you would be delivering in.** Asking which entity signs and whose balance sheet is behind it during construction is therefore not a credit formality; it is the difference between selling to a bond-financed project vehicle and selling to a guarantor that is not yet on risk. **Option 1 accepts a true statement as an answer to a different question.** The backstops are real and large — about USD 3.2 billion, USD 1.3 billion, USD 1.73 billion and a full 15-year base term — and every one of them is about rent after commencement, not about equipment before it. **Option 2 asks for a document that is public once filed and answers none of this.** The filing is genuinely the only scheduled disclosure this company has, and it is worth reading — but it is a UK statutory account for a prior year, it will not name a signing entity at a US project vehicle, and asking the counterparty to hand you something you can simply collect makes the ask look like a test. **Option 4 is the right worry expressed as the wrong term.** No revenue, backlog, headcount or lease has ever been published, so caution is warranted — but demanding cash up front from a counterparty whose sites are financed by bond issues and backstopped leases answers a structure question with a blunt commercial instrument, and it will be read as an inability to understand the structure rather than as prudence."
+     "why": "**Option 3 is the question the assurance quietly avoids, and the record answers it in the counterparty's own file.** The guarantor's support is a {{recognition agreement}} that *becomes effective as of the commencement date* — so at a campus still being built there is no backstop yet, the project bondholders carry construction with a capped USD 100 million {{completion guarantee}}, and a delay beyond 180 days lets this company terminate, at which point on the same reading the guarantor's obligation would never trigger. **The credit being offered is real and it is not present during the period you would be delivering in.** Asking which entity signs and whose balance sheet is behind it during construction is therefore not a credit formality; it is the difference between selling to a bond-financed project vehicle and selling to a guarantor that is not yet on risk. **Option 1 accepts a true statement as an answer to a different question.** The backstops are real and large — about USD 3.2 billion, USD 1.3 billion, USD 1.73 billion and a full 15-year base term — and every one of them is about rent after commencement, not about equipment before it. **Option 2 asks for a document that is public once filed and answers none of this.** The filing is genuinely the only scheduled disclosure this company has, it is overdue — the deadline passed on 30 September and the registry flagged it on 2 October — and it is worth reading when it lands; but it is a UK statutory account for a prior year, it will not name a signing entity at a US project vehicle, and asking the counterparty to hand you something you can simply collect, or explain why it is late, makes the ask look like a test. **Option 4 is the right worry expressed as the wrong term.** No revenue, backlog, headcount or lease has ever been published, so caution is warranted — but demanding cash up front from a counterparty whose sites are financed by bond issues and backstopped leases answers a structure question with a blunt commercial instrument, and it will be read as an inability to understand the structure rather than as prudence."
     }
    ],
    "note": "The signing entity is the project vehicle rather than the parent, the construction-period credit is the bond proceeds, and the company offers to put the reservation inside the project's own procurement rather than on its own paper."
@@ -56084,14 +56112,14 @@ function clLessonScenarioNeocloudsDiscovery_() {
     [
      "**1 — the opening**",
      "Ask which sites this company buys the power equipment for itself and which the landlord buys for, before quoting anything",
-     "The segment counts this member among the three of seven where purchasing authority does not sit with the member — and the same record has it stating at one of its own projects that it is paying for all of the energy and energy infrastructure. Both are true, split by site",
+     "The segment counts this member among the ones whose landlord pays at the campuses it fronts — and the same record has it stating at its own Oklahoma project that it is paying for all of the energy and energy infrastructure, and breaking ground in its own name in south Texas. Both are true, split by site",
      "Spending lead times before knowing the buyer, sizing an addressable market off five landlords' filings, or asking for introductions to the landlords in the first five minutes"
     ],
     [
      "**2 — the question that decides it**",
      "Ask which date the order is built backwards from at that site, and what has already been reserved against it",
-     "Every campus in the record runs on a different clock — a September 2026 commencement, a Q4 2026 target, 2027 first halls, September 2027 and 2028 phases — and leased commencement runs hall by hall, so a single account-level schedule does not exist",
-     "Committing delivery to a stated need-by at a company whose schedules have already moved twice, trading one owned site for five leased ones, or using the abandoned European campus as a challenge"
+     "Every campus in the record runs on a different clock — a phased Q4 2026–Q1 2027 delivery, a Q4 2026 target, 2027 first halls, September 2027 and 2028 phases, and one site with no date yet — and leased commencement runs hall by hall, so a single account-level schedule does not exist",
+     "Committing delivery to a stated need-by at a company whose schedules have already moved three times, trading one owned site for five leased ones, or using the abandoned European campus as a challenge"
     ],
     [
      "**3 — the close**",
@@ -56107,86 +56135,86 @@ function clLessonScenarioNeocloudsDiscovery_() {
    "title": "Claims ledger",
    "kind": "ledger",
    "read": "reference",
-   "intro": "Every premise in the room, the record and the open questions, plus every fact the three rationales lean on. **Facts are the dossier's; analysis is the landscape's or the dossier's own labelled assessment** — and the rule this room turns on, which is who signs for the power at which site, is carried by fact rows in both directions. The dossier version and this scenario's stamp dates are the ones read off the fetched files on the authoring day.",
+   "intro": "Every premise in the room, the record and the open questions, plus every fact the three rationales lean on. **Facts are the dossier's; analysis is the landscape's or the dossier's own labelled assessment** — and the rule this room turns on, which is who signs for the power at which site, is carried by fact rows in both directions. The dossier version and this scenario's stamp dates are the ones read off the fetched files on 4 October 2026, the re-pin day.",
    "rows": [
     [
      "The counterparty is the tenant of record rather than the owner of roughly 1.4 GW of contracted critical IT load across five US campuses — 378 MW, 168 MW, 207 MW, 245 MW and 430 MW — each with a different landlord, and it has never published a lease: every figure in the ledger is a landlord's or bond counsel's",
-     "profile:fluidstack v2 · summary, technicalSpecs[0] · fact"
+     "profile:fluidstack v4 · summary, technicalSpecs[0] · fact"
     ],
     [
      "At the Louisiana campus the utility will provide 330 MW of utility capacity for 245 MW of IT capacity under a 15-year, USD 7.0 billion triple-net lease with a 3.0 per cent annual base-rent escalator, and the reported position is that the landlord pays for the generators and the substation",
-     "profile:fluidstack v2 · relationships[3], relationships[10], policyExposure[0], technicalSpecs[0] · fact"
+     "profile:fluidstack v4 · relationships[3], relationships[10], policyExposure[0], technicalSpecs[0] · fact"
     ],
     [
      "At its Oklahoma project the company's own project site states that it is paying for all of the energy and energy infrastructure, names the utility as power provider, says the campus is designed to comply with the state's water statute and its 2026 ratepayer-protection act, and seeks no property-tax incentives; the first phase is September 2027 and the final phase September 2028",
-     "profile:fluidstack v2 · policyExposure[1], recentDevelopments[4] · fact"
+     "profile:fluidstack v4 · policyExposure[1], recentDevelopments[4] · fact"
     ],
     [
-     "In July 2026 it acquired the 50.1 per cent of the Texas joint venture it did not hold, for about USD 530 million payable in three instalments — USD 250m within 14 days, USD 150m by 31 December 2026 and about USD 130m by 30 April 2027 — its first owned campus; it also holds 49.9 per cent of the holding company behind the Indiana campus",
-     "profile:fluidstack v2 · technicalSpecs[0], recentDevelopments[6] · fact"
+     "In July 2026 it acquired the 50.1 per cent of the Texas joint venture it did not hold, for about USD 530 million payable in three instalments — USD 250m within 14 days, USD 150m by 31 December 2026 and about USD 130m by 30 April 2027 — its first owned campus; it also holds 49.9 per cent of the holding company behind the Indiana campus; and on 10 September 2026 it took a Cameron County worksite permit and began site works on a USD 4 billion first phase at Harlingen, Texas, with 1.5 GW 'reserved' from the utility — its first ground broken in its own name, with no tenant named",
+     "profile:fluidstack v4 · technicalSpecs[0], recentDevelopments, strategyRead[5] · fact"
     ],
     [
      "A single guarantor backstops the lease obligations at every US campus — about USD 3.2 billion at Lake Mariner, USD 1.3 billion at Abernathy, USD 1.73 billion at Barber Lake, the full 15-year Louisiana base term and the Indiana master lease — taking penny warrants of about 14 per cent and about 5.4 per cent in two landlords in return, and totalling more than USD 6 billion of backstops and guarantees",
-     "profile:fluidstack v2 · relationships[1], technicalSpecs[0] · fact"
+     "profile:fluidstack v4 · relationships[1], technicalSpecs[0] · fact"
     ],
     [
      "The backstop is a recognition agreement under which the guarantor may pay the termination fee, or pay all rent currently due and assume the lease as the tenant — and it becomes effective only at lease commencement, so bondholders carry construction risk without it",
-     "profile:fluidstack v2 · technicalSpecs[0] · fact"
+     "profile:fluidstack v4 · technicalSpecs[0] · fact"
     ],
     [
-     "Because the backstop becomes effective as of the commencement date, the bondholders at two project vehicles carry the build with only a capped USD 100 million completion guarantee, and a delay beyond 180 days lets the counterparty terminate — at which point, on the same reading, the guarantor's obligation would never trigger; the schedules have already moved twice, one site from the second half of 2026 to early 2027 and another from the second half of 2026 to the fourth quarter",
-     "profile:fluidstack v2 · strategyRead[2] · analysis"
+     "Because the backstop becomes effective as of the commencement date, the bondholders at two project vehicles carry the build with only a capped USD 100 million completion guarantee, and a delay beyond 180 days lets the counterparty terminate — at which point, on the same reading, the guarantor's obligation would never trigger; the schedules have already moved three times, one site from the second half of 2026 to early 2027, another from the second half of 2026 to the fourth quarter, and Barber Lake from September 2026 to a phased Q4 2026–Q1 2027 delivery under a 24 September amendment carrying a USD 359.3 million overrun cap",
+     "profile:fluidstack v4 · strategyRead[2] · analysis"
     ],
     [
      "A different utility sits at each site: a state power authority and an investor-owned utility in New York with 750 MW allocated and 90 per cent of it hydropower, the Southwest utility's territory at the Texas joint venture, a Texas operating company at the second Texas site, the Louisiana utility at 330 MW, and two co-operatives in Indiana — with an Oklahoma operating company and a Virginia investor-owned utility beyond them",
-     "profile:fluidstack v2 · ecosystemRole, relationships[3], relationships[4], policyExposure[2] · fact"
+     "profile:fluidstack v4 · ecosystemRole, relationships[3], relationships[4], policyExposure[2] · fact"
     ],
     [
      "The Virginia utility has told the press it has 36 potential large-load customers representing about 25,000 MW against a recent peak near 7,200 MW, listing the counterparty in one county with unknown megawatts, and its pending rate case and large-load terms will govern the campus's minimum-demand and credit-support obligations",
-     "profile:fluidstack v2 · policyExposure[3] · fact"
+     "profile:fluidstack v4 · policyExposure[3] · fact"
     ],
     [
-     "Campus delivery dates are a September 2026 expected commencement at Barber Lake with a further 39 MW by January 2027, a fourth-quarter 2026 target at Abernathy, a first Louisiana hall in the second quarter of 2027, a first Indiana hall in July 2027, and Oklahoma phases in September 2027 and September 2028 — and at Lake Mariner commencement runs on a data-hall-by-data-hall basis",
-     "profile:fluidstack v2 · technicalSpecs[0], productsAndServices · fact"
+     "Campus delivery dates are a phased Q4 2026–Q1 2027 delivery at Barber Lake under the 24 September 2026 amendment, a fourth-quarter 2026 target at Abernathy, a first Louisiana hall in the second quarter of 2027, a first Indiana hall in July 2027, Oklahoma phases in September 2027 and September 2028, and no published date for the Harlingen first phase — and at Lake Mariner commencement runs on a data-hall-by-data-hall basis",
+     "profile:fluidstack v4 · technicalSpecs[0], productsAndServices, recentDevelopments · fact"
     ],
     [
      "The 2026 website describes the company as building civilization-scale infrastructure for AI and delivering gigawatts of compute in 6 months, and its European programme — a EUR 10 billion, 1 GW campus memorandum signed in February 2025 — was abandoned in March 2026 with no first-party statement on the withdrawal",
-     "profile:fluidstack v2 · summary, policyExposure[4] · fact"
+     "profile:fluidstack v4 · summary, policyExposure[4] · fact"
     ],
     [
      "The counterparty's own press page names the frontier lab it builds the New York and Texas campuses for; the landlords name the same end user in their own releases",
-     "guidance:landscape-neoclouds-2026-09 · who-threatens · fact (read off the counterparty's press page at the 24 September 2026 review)"
+     "profile:fluidstack v4 · strategyRead[5] · fact"
     ],
     [
-     "The company has never published revenue, backlog, headcount or a lease; its only scheduled disclosure is a statutory accounts filing with accounts made up to 31 December 2024 filed and the next due 30 September 2026",
-     "profile:fluidstack v2 · strategyRead[6], financials · fact"
+     "The company has never published revenue, backlog, headcount or a lease; its only scheduled disclosure was a statutory accounts filing due 30 September 2026, which it missed — Companies House showed 'Accounts overdue' on 2 October 2026 — and the revenue figures relayed from an investor memo by a database are press citing a sales document, not used",
+     "profile:fluidstack v4 · strategyRead[6], financials, recentDevelopments · fact"
     ],
     [
      "The roles in this room are a co-founder and chief executive officer, a co-founder and president, a general counsel, a chief operating officer and a vice-president of sales",
-     "profile:fluidstack v2 · decisionMakers[0], decisionMakers[1], decisionMakers[3], decisionMakers[4], decisionMakers[6] · fact"
+     "profile:fluidstack v4 · decisionMakers[0], decisionMakers[1], decisionMakers[3], decisionMakers[4], decisionMakers[6] · fact"
     ],
     [
      "The company's own first judgment is that its product is credit substitution plus speed rather than compute — every US lease signed by a bankruptcy-remote subsidiary and every one carrying a recognition agreement — and it is labelled high confidence",
-     "profile:fluidstack v2 · strategyRead[0] · analysis"
+     "profile:fluidstack v4 · strategyRead[0] · analysis"
     ],
     [
-     "In only four of this segment's seven members does purchasing authority for power equipment sit with the member at all; the three that do not buy are the incumbent whose shells are leased, one colocation-first member, and the tenant-of-record member at whose campuses the landlord pays for the generators and the substation",
+     "In eight of this segment's eleven ranked members purchasing authority for power equipment sits with the member at at least one site; the first incumbent and one colocation-first member do not buy; the tenant-of-record member pays for everything at the sites it develops in its own name and for nothing at the five campuses it fronts, where the landlord pays for the generators and the substation",
      "guidance:landscape-neoclouds-2026-09 · the-sellers-play · analysis"
     ],
     [
-     "Three of the four members that do own have a stated permitting or allocation problem, which is where a supplier who can move a schedule is worth more than one who can move a price — the single most actionable fact in the segment module",
+     "Six of the eight members that own have a stated permitting, allocation or licensing problem, which is where a supplier who can move a schedule is worth more than one who can move a price — the single most actionable fact in the segment module",
      "guidance:landscape-neoclouds-2026-09 · the-sellers-play · analysis"
     ],
     [
-     "Three of the seven publish no revenue, backlog or headcount — four until a fourth member filed to list in September 2026 — so an opportunity in this segment is sized off press reports and counterparties' filings for nearly half the roster, and the module's instruction is to say so in the account notes",
+     "Seven of the twelve publish no revenue figure — four publish nothing and three publish megawatts only — so an opportunity in this segment is sized off press reports, landlords' filings and a rater's tiers for more than half the roster, and the module's instruction is to say so in the account notes",
      "guidance:landscape-neoclouds-2026-09 · the-sellers-play · analysis"
     ],
     [
-     "This member's bet is that credit substitution plus speed is a product — bankruptcy-remote lessee subsidiaries and recognition agreements making a highly rated guarantor the tenant of last resort, on about USD 27 bn of base-term rent against roughly USD 2.6 bn of equity — with the conceded cost that the tenant-of-record position is replaceable by its own customer, as July 2026 showed when that customer signed 401 MW directly with a landlord",
+     "This member's bet is that credit substitution plus speed is a product — bankruptcy-remote lessee subsidiaries and recognition agreements making a highly rated guarantor the tenant of last resort, on about USD 27 bn of base-term rent against roughly USD 2.6 bn of equity — with the conceded cost that the tenant-of-record position is replaceable by its own customer, as July 2026 showed when that customer signed 401 MW directly with a landlord and September showed again when it signed the second ten-year term at one of this company's own campuses itself",
      "guidance:landscape-neoclouds-2026-09 · each-players-bet · analysis"
     ],
     [
-     "The review date is 30 September 2026, and here the nearest dated gate in this ledger and the landscape's own bound are the same date read off the same document: the counterparty's statutory accounts deadline is both the only scheduled disclosure in its file and, in the segment module's own indicator table, this module's review date. A day-level scan of all seven of the segment's dossiers found exactly three future day-level dates in the whole segment and all three sit in this member's file, with fourteen policy entries across the roster carrying not one dated future entry at any granularity",
+     "The review date is 8 October 2026, taken from the landscape. The 30 September gate this scenario shared with the landscape failed — the counterparty's statutory accounts were not filed by the deadline and no new date exists for them — and the landscape's nearest dated gate in its October material is another member's prospectus lodgement, a gate on the landscape's own count of who publishes a revenue figure rather than on this counterparty. The policy fence across the twelve still carries no dated future entry at any granularity",
      "guidance:landscape-neoclouds-2026-09 · the-indicators · analysis"
     ]
    ],
@@ -56200,12 +56228,12 @@ function clLessonScenarioNeocloudsDiscovery_() {
    "tone": "warn",
    "ps": [
     "**In discovery this section is the question list.** Each is something no dossier carries — which is exactly why it is asked in the room rather than assumed on the way there. On this counterparty the list is long for a structural reason: the company publishes almost nothing, and everything known about it was filed by somebody else.",
-    "**1 · Who buys the power equipment at each individual site.** The record establishes the pattern at two campuses in opposite directions and **leaves the other four unstated**. There is no account-level answer and no published site-by-site map. **Ask campus by campus**, and expect the answer to change as the two owned developments progress.",
+    "**1 · Who buys the power equipment at each individual site.** The record establishes the pattern at the Louisiana campus (the landlord) and at the Oklahoma and south Texas developments (this company), and **leaves the other four leased campuses unstated**. There is no account-level answer and no published site-by-site map. **Ask campus by campus**, and expect the answer to change as the own-name developments progress.",
     "**2 · Which entity actually signs.** Every US lease is signed by a separate bankruptcy-remote subsidiary, two campuses sit in joint-venture holding companies and two carry their own bond issues — and **nothing published names the contracting entity for equipment at any of them**. **Ask for the name before the terms**, because credit, payment and remedy all move with it.",
     "**3 · What is already reserved, and against which date.** The record gives a delivery date for every campus and **no reservation date for any of them**. Ask for the reservation rather than the need-by, and treat a quarter as a usable answer.",
     "**4 · What the construction-period credit actually is.** The backstop's start at commencement is documented; **what stands behind an equipment order before that is not**. The bond proceeds are the visible answer and no source states the mechanism. **Ask, and get it in writing.**",
-    "**5 · What the Virginia and Oklahoma sites will require.** One is an application on a large-load list at **unknown megawatts** in a pending rate case whose terms will set minimum-demand and credit-support obligations; the other is a project site with phase dates and no filed detail. **Neither is a forecastable pipeline yet**, and treating either as one puts a number in your account plan that no source supports.",
-    "**6 · Anything about the company's own finances.** No revenue, no backlog, no headcount, no lease, ever. The statutory filing due **30 September 2026** will be the first audited turnover for the pivot year — and it is a prior-year filing for the UK parent, not a statement about any US project. **Do not build a capacity or solvency argument on the reported valuations**, which the record marks as press reports the company has not announced.",
+    "**5 · What the Virginia, Oklahoma and south Texas sites will require.** One is an application on a large-load list at **unknown megawatts** in a pending rate case whose terms will set minimum-demand and credit-support obligations; one is a project site with phase dates and no filed detail; one has a worksite permit, site works begun and 1.5 GW *reserved* on a newspaper's report, with no tenant and no delivery date. **None is a forecastable pipeline yet**, and treating any of them as one puts a number in your account plan that no source supports.",
+    "**6 · Anything about the company's own finances.** No revenue, no backlog, no headcount, no lease, ever. The statutory filing due **30 September 2026** would have been the first audited turnover for the pivot year; **it was not filed by the deadline** and the registry shows it overdue — and when it lands it is a prior-year filing for the UK parent, not a statement about any US project. **Do not build a capacity or solvency argument on the reported valuations or on the investor memo's revenue figures**, which the record marks as press the company has not announced.",
     "**7 · Whether the end user is a party to anything you would sign.** The landlords name the end user in their own releases, and this company names it too, on its own press page, for its New York and Texas campuses — **but no document places that party in the equipment chain**. **Do not carry it into a proposal**: the name is public, and the step from a named end user to a signatory is still the single most tempting inference in this record, and nothing supports it."
    ],
    "sales": "Seven gaps, and the first three are the meeting. Against a tenant of record, every sentence that begins *presumably you* is a sentence that should have been a question."
@@ -56218,6 +56246,21 @@ function clLessonScenarioNeocloudsDiscovery_() {
    "changed": [
     "the-room",
     "beat-3",
+    "claims-ledger",
+    "what-the-record-does-not-say"
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "Re-judged against the landscape revised on 4 October 2026 and the counterparty dossier at v4. All three beats hold: the two opposite site-level answers on who buys, the dates behind the campuses as the thing to ask for, and the commencement-dated backstop are unchanged, and v4 restates them. Three things moved. The counterparty broke ground in its own name at a third own-name site on 10 September 2026 — Harlingen, a USD 4 billion first phase with 1.5 GW reserved and no tenant — so the room, row four, beat 1's note and gap 1 say three sites and name it; Barber Lake slipped from September 2026 to a phased Q4 2026–Q1 2027 delivery under a 24 September amendment with a USD 359.3 million overrun cap, with the end user signing the second term itself, so the position, beat 2's rationale and the debrief carry the new dates and count three moves rather than two; and the statutory accounts were not filed by 30 September — Companies House showed them overdue on 2 October — so row ten, beat 3's second option and its rationale, the ledger and gap 6 say overdue rather than due. The landscape's counts quoted in the ledger move with it (purchasing authority at eight of eleven ranked members; seven of twelve publishing no revenue; six of eight owners with a stated problem), the version cites move to v4, and the review-date row explains the failed gate. The landscape pin moves to 2026-10-04 and reviewBy moves with the landscape's to 2026-10-08. The mechanism section is byte-identical; the counterparty remains a set of roles.",
+   "changed": [
+    "the-room",
+    "what-the-record-says",
+    "the-position",
+    "beat-1",
+    "beat-2",
+    "beat-3",
+    "debrief",
     "claims-ledger",
     "what-the-record-does-not-say"
    ]
@@ -57004,7 +57047,7 @@ function clLessonScenarioHyperscalersAndAiLabsDiscovery_() {
   "counterparty": "google",
   "stage": "discovery"
  },
- "updated": "2026-09-18",
+ "updated": "2026-10-04",
  "reviewBy": "2026-12-31",
  "tiles": [
   {
@@ -57057,7 +57100,7 @@ function clLessonScenarioHyperscalersAndAiLabsDiscovery_() {
    {
     "kind": "guidance",
     "ref": "guidance:landscape-hyperscalers-and-ai-labs-2026-09",
-    "date": "2026-09-16",
+    "date": "2026-10-04",
     "note": "the seller's play for the AI-data-centre power seat (the specification is written above you and reaches you through the landlord; the buying centre is the tenant's own energy team; the clock is a delivery date rather than a price) and its caution that the credit behind a campus is routinely not the company in the headline, plus this player's row in the bets table and the storage finding about where its batteries actually sit"
    },
    {
@@ -57375,6 +57418,13 @@ function clLessonScenarioHyperscalersAndAiLabsDiscovery_() {
     "**7 · Whether the aggregate and the named instruments reconcile.** The disclosed caps total about USD 6.233 billion; adding the uncapped base term as a proxy gives roughly USD 13.2 billion against an aggregate of USD 16,940 million at the end of 2025, and the 2026 growth is **entirely unattributed** because no landlord announced a new backstopped lease that year. The two figures are also measured differently. **Do not net them, and do not quote either as an exposure to a site.**"
    ],
    "sales": "Seven gaps, and the first two are the meeting. Against a party that owns, pays and guarantees by turns, every sentence that begins *you are exposed there anyway* is a sentence that names the wrong instrument."
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-10-04",
+   "note": "Re-judged against the landscape revised on 4 October 2026 (ten members; the seller's play, the storage finding and the caution this room quotes are unchanged). All three beats hold: the three routes, the lease instrument's start date and debt-sized caps, the separate equipment-guarantee footnote and the park-side storage finding are untouched, and the counterparty dossier (google v9 @2026-09-07) and the project pin are unchanged. The landscape pin moves to 2026-10-04 and nothing in the text differs; reviewBy stays 2026-12-31, which the ledger's review-date row already explains.",
+   "changed": []
   }
  ]
 };
@@ -58081,7 +58131,7 @@ var CL_DRILL_LOG_HEADERS = ['Timestamp', 'Account', 'ItemId', 'Grade',
 var CL_DRILL_SESSION_CAP = 20;    // items served in one drill session
 var CL_DRILL_NEW_CAP = 10;        // never-seen items introduced per day
 var CL_DRILL_ACCOUNT_CAP = 6000;  // state rows per account, BOTH decks together — a guard again at ~1.7× the largest deck measured (3,453: contributor + roster deck, 2026-09-19); it bound at 3,000 (rr58)
-var CL_DRILL_INV_CAP = 2400;      // study items built into the pool — a guard, not a limit (~1,920 today)
+var CL_DRILL_INV_CAP = 3200;      // study items built into the pool — a guard, not a limit (2,491 today, 4 October 2026)
 var CL_DRILL_ID_RE = /^(lc|lq|sf|ss|gc|gq):[a-z0-9][a-z0-9-]{0,63}(:[a-z0-9][a-z0-9-]{0,63})?:\d{1,4}$/;
 var CL_DRILL_SECTION_ID_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;   // an ss: section id must survive CL_DRILL_ID_RE
 
@@ -68439,33 +68489,46 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
  "id": "landscape-aidc-developers-and-landlords-2026-09",
  "group": "The Value Chain",
  "title": "Landscape — AIDC Developers and Landlords",
- "short": "Nine incumbents whose leadership rests on four things that cannot be compared, thirteen challengers who arrived owning substations rather than winning bids, and a tenant-credit layer whose price is quoted in basis points. The judgment layer above the public segment lesson.",
+ "short": "Nine incumbents whose leadership rests on four things that cannot be compared, eighteen challengers most of whom arrived owning substations or generation rather than winning bids — two of them leaders in another market — and a tenant-credit layer whose price is quoted in basis points. The judgment layer above the public segment lesson.",
  "source": {
-  "doc": "Corpus synthesis over the 30 member dossiers of the aidc-developers-and-landlords segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "doc": "Corpus synthesis over the 38 member dossiers of the aidc-developers-and-landlords segment, at the profile versions in the claims ledger — no ingested document and no new research; re-measured at thirty-eight on 4 October 2026 after eight members joined and sixteen dossiers moved",
   "publisher": "Internal analysis",
   "date": "September 2026",
   "pages": 9,
   "series": "Industry Guidance — landscape module",
   "repo": "repository-information/industry-guidance/landscape-aidc-developers-and-landlords-analysis.md"
  },
- "updated": "2026-09-15",
- "reviewBy": "2026-12-15",
+ "updated": "2026-10-04",
+ "reviewBy": "2026-11-02",
  "revisions": [
   {
    "date": "2026-09-15",
    "note": "First authoring, and the sixth landscape module of the segment layer. Corpus synthesis over the 30 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. This is the third landscape to land on a segment existing modules already cover and the first to land on one an existing PUBLIC lesson covers: Reading the Named Projects is built on nine of this segment's members and How a Storage Project Happens on two more. The split was written before the module and is stated in the opening paragraph — that lesson owns the lifecycle and how to read an announcement, this module owns who stands where and what each is betting — and nine things the four neighbours own are omitted here on purpose and listed in section 2 of the analysis file. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis and is labelled as analysis rather than blended with fact. The review date is 15 December 2026 — the tax-policy study due under Virginia's 2026 budget, read out of a member's policy prose while that same entry's date field carries the consumption tax's 1 July start. The genuine nearest gate, 10 December 2026, was rejected because it is already the review clock of two registered modules, and it appears in the indicators instead. The reasoning and five rejected candidates are written out in the analysis file."
+  },
+  {
+   "date": "2026-10-04",
+   "note": "Classroom wave A re-pin against the enlarged roster. The segment was re-measured at thirty-eight members — 9 incumbent, 18 challenger, 11 adjacent — after chindata v1, g42 v1, whitefiber v1, 5c-group v1 and tecfusions v1 joined as challengers and firmus v2, humain v1 and quinbrook v1 as adjacents; sixteen dossiers were re-read at new versions (hut-8 v3, tract v4, powerhouse-data-centers v3, equinix v8, aligned v8, stack-infrastructure v8, compass-datacenters v6, cyrusone v2, terawulf v8, edgecore v2, intersect-power v3, eolian v7, talen-energy v3, iren v7, crusoe v7, fluidstack v4). Four routes replace three: a developer that built its substation rather than inheriting one joins route one, a landlord that runs its flagship on its own turbines joins route two, a retrofit landlord holding a utility agreement joins route three, and two leaders in another market are route four. The bets table grows from twenty-two to twenty-seven rows from the newcomers' strategyRead[] only, with each dossier's confidence carried; Tract's and PowerHouse's rows carry the commission's conditional approval of 17 September and FERC's order of 22 September. Every count is restated from the files: 25 of 38 publishing no revenue figure with seven of nine incumbents among them; a fence of 141 entries, 104 dated, two future, five members with none; twelve of twenty-seven ranked dossiers with an indicators block. The four-neighbour split is kept; who-dominates and the seller's play are unchanged because nothing in the thirty-eight files contradicts them. reviewBy moves to 2026-11-02 — the end of the Upper Burrell moratorium under which the newest route-two member's township would adopt its 'bring your own baseload' ordinance, the nearest dated gate in the October material and the dated test of the dossier's reading that the township is that member's binding constraint; 10 December is still another module's clock and 15 December stays as an indicator. The Fermi condition of 30 September passed with the dossier unrevised, so no outcome is asserted.",
+   "changed": [
+    "who-threatens",
+    "each-players-bet",
+    "the-indicators",
+    "claims-ledger",
+    "what-the-record-does-not-say",
+    "drill",
+    "check-yourself"
+   ]
   }
  ],
  "tiles": [
   {
-   "k": "30",
+   "k": "38",
    "v": "members on record",
-   "sub": "Nine incumbent, thirteen challenger, eight adjacent — re-measured 15 September 2026, confirming the programme's written figure exactly, member for member"
+   "sub": "Nine incumbent, eighteen challenger, eleven adjacent — re-measured 4 October 2026, member for member. Eight more than September: five challengers, two of them leaders in another market, and three adjacents that build their own campuses or found the developers that do"
   },
   {
-   "k": "18 of 30",
+   "k": "25 of 38",
    "v": "publish no revenue figure",
-   "sub": "And seven of the nine incumbents are among them. The half of this segment you can measure is its challengers, because they arrived already listed and already filing"
+   "sub": "And seven of the nine incumbents are still among them. Thirteen publish one — two incumbents, nine challengers and two adjacents — because the converted-miner cohort arrived already listed and already filing, and the newest listed challenger did the same"
   },
   {
    "k": "~375 bp",
@@ -68499,26 +68562,27 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
   {
    "id": "who-threatens",
    "title": "Who threatens, and on which route",
-   "read": "9 min",
+   "read": "11 min",
    "kind": "prose",
    "ps": [
-    "**Thirteen {{challenger}}s is the largest challenger set this programme has met, and they are not a smaller version of the incumbents.** They divide into three routes, and only the third is attacking the thing the incumbents actually sell. Note first what the registry does **not** say: unlike the utilities segment, whose registry note explains its own challenger label, this segment's note field is empty. The roles have to be read off the thirty basis lines and the dossiers, and the reading below is that work rather than a label repeated.",
-    "**Route one — the converted miners, attacking with an energised power position. Seven of the thirteen.** *Applied Digital*, *Core Scientific*, *TeraWulf*, *Cipher Digital*, *Hut 8*, *IREN* and *Galaxy Digital* did not win a bid against any incumbent. They already owned substations, cheap power contracts and energised interconnections for a different business, and the market re-priced the asset underneath them. *Cipher* is furthest through the conversion: self-mining capacity fell from about 23.6 to about 11.6 exahashes per second, the joint ventures were sold, one site remains, and **the registrant renamed itself on 20 February 2026** with the stated reason that the new name aligns with scaling into a data-centre developer and operator. *IREN* is liquidating rather than diversifying — a hundred and seventy-two million dollars of voluntary chip impairments in two quarters, bitcoin dropped from the corporate boilerplate, and no hashrate figure published since October 2025. **The tell that this is a route and not a coincidence: not one of the seven competes on building product, cooling design or facility standard. Every one of them competes on a date.**",
-    "**Route two — the energy-first developers, attacking by owning the generation. Two of the thirteen.** *Crusoe* energised more than two hundred megawatts at its flagship within a year of groundbreaking and a substation in under six months, on a procurement list that reads like a supplier index — turbines, reciprocating engines, a five-gigawatt medium-voltage battery commitment among the largest anywhere, iron-air storage and two nuclear developers. *Fermi America* goes further and treats the utility as the supplement rather than the source: roughly one and a half gigawatts of turbines landed and six gigawatts of gas permitted **before any tenant existed**, financed by three equipment lenders at twelve to thirteen per cent, with a four-unit reactor licence application docketed. Both are betting that behind-the-fence generation beats the {{interconnection queue}} — and both carry the same exposure in its acute form. *Crusoe*'s dossier records two single-counterparty decisions reshaping the company inside one year; *Fermi*'s records a warehouse facility that **penalises the absence of a four-hundred-megawatt lease by November 2026** and a single signed tenant whose lease is conditional on financing and a guarantor that has not been named.",
-    "**Route three — the ladder specialists, attacking one rung rather than the whole thing. Four of the thirteen.** *Tract* is the purest case: it sells {{powered land}} — entitled, permitted ground — and leaves the vertical work to others. Its own dossier records that the product **has not yet been sold to anyone outside the group**: across four years and fourteen parks the only recorded transactions are two parcels bought by its own affiliate's project companies. *PowerHouse Data Centers* buys or options sites, secures utility capacity and zoning, builds {{powered shell}}s and, at its one completed cycle, sold the stabilised building to its tenant; its portfolio counter is expressly *in planning, underway, or completed*, and the boilerplate grew from four point one to about ten gigawatts in twenty-one months while the delivered base stayed at one building. *EdgeCore* runs the sponsor-financed single-tenant {{build-to-suit}} at project level, with a verifiable operating base of **about sixty-two megawatts in two buildings** behind a headline of one point eight gigawatts *delivered or under development*. *Prime Data Centers* is the recapitalisation case — five equity rounds, an acquisition line, a shelved bond, project-level high-yield debt — against about a hundred and fifty-one megawatts operating after nine years.",
-    "**What the three routes have in common, and it is not size.** None of the thirteen is attacking an incumbent's ranking, because there is no ranking to attack. Route one attacks with a date, route two with a fuel supply, route three with a rung of the ladder. So **the threat to this segment's incumbents is not share loss to a cheaper rival — it is that the scarce asset moved, from land to an energised interconnection**, and a miner already owned one. That is the module's own assessment rather than a finding of the record, and it is the single most useful sentence here. It also explains why every incumbent response is a **procurement** move rather than a product move: self-funded substations at *Vantage*, *QTS*, *Compass*, *EdgeCore* and *Switch*; a seven-hundred-megawatt behind-the-meter microgrid at *Vantage*; fuel cells at *Equinix* and *STACK*; a battery framed explicitly as an interconnection accelerator at *Aligned*; and at *CyrusOne*, co-location on somebody else's electrical asset at three of its four largest campuses.",
+    "**Eighteen {{challenger}}s is the largest challenger set this programme has met, and they are not a smaller version of the incumbents.** They divide into four routes, and only the third is attacking the thing the incumbents actually sell. Note first what the registry does **not** say: unlike the utilities segment, whose registry note explains its own challenger label, this segment's note field is still empty. The roles have to be read off the thirty-eight basis lines and the dossiers, and the reading below is that work rather than a label repeated.",
+    "**Route one — an energised power position. Eight of the eighteen: seven converted miners, and one that built the position rather than inheriting it.** *Applied Digital*, *Core Scientific*, *TeraWulf*, *Cipher Digital*, *Hut 8*, *IREN* and *Galaxy Digital* did not win a bid against any incumbent. They already owned substations, cheap power contracts and energised interconnections for a different business, and the market re-priced the asset underneath them. *Cipher* is furthest through the conversion: self-mining capacity fell from about 23.6 to about 11.6 exahashes per second, the joint ventures were sold, one site remains, and **the registrant renamed itself on 20 February 2026** with the stated reason that the new name aligns with scaling into a data-centre developer and operator. *IREN* is liquidating rather than diversifying — a hundred and seventy-two million dollars of voluntary chip impairments in two quarters, bitcoin dropped from the corporate boilerplate, and no hashrate figure published since October 2025. *5C Group* is the eighth, and the one with no mining past: a Montreal developer that leases powered, cooled halls to neoclouds and **owns the buildings, the substation and the site power at four US campuses** — the utility's own filing says *the customer will own the Benjamin Substation* — with about **110 MW operational** against a roadmap its own file calls a sales document, stated as *over 1.5 gigawatts* where a year earlier it said *over 2 GW*. **The tell that this is a route and not a coincidence: not one of the eight competes on building product, cooling design or facility standard. Every one of them competes on a date.**",
+    "**Route two — the energy-first developers, attacking by owning the generation. Three of the eighteen.** *Crusoe* energised more than two hundred megawatts at its flagship within a year of groundbreaking and a substation in under six months, on a procurement list that reads like a supplier index — turbines, reciprocating engines, a five-gigawatt medium-voltage battery commitment among the largest anywhere, iron-air storage and two nuclear developers. *Fermi America* goes further and treats the utility as the supplement rather than the source: roughly one and a half gigawatts of turbines landed and six gigawatts of gas permitted **before any tenant existed**, financed by three equipment lenders at twelve to thirteen per cent, with a four-unit reactor licence application docketed. Both are betting that behind-the-fence generation beats the {{interconnection queue}} — and both carry the same exposure in its acute form. *Crusoe*'s dossier records two single-counterparty decisions reshaping the company inside one year; *Fermi*'s records a warehouse facility that **penalises the absence of a four-hundred-megawatt lease by November 2026** and a single signed tenant whose lease is conditional on financing and a guarantor that has not been named. *TECfusions* is the third, and the smallest: a founder-owned Florida developer that leases *space, power, and cooling* in re-used industrial buildings and is **the only landlord in this corpus that says its flagship campus is currently powered by turbines it controls** — against **55 MW live across three sites**, 2 MW at the flagship, a marketed *3 GW* its own deck footnotes as a management estimate, a *1 GW* tenant figure the same deck restates as an anchor with a right of first refusal, and a USD 4.0 billion SPAC valuation that is signed but not closed, with a township moratorium, a draft *bring your own baseload* ordinance and no located air permit around it.",
+    "**Route three — the ladder specialists, attacking one rung rather than the whole thing. Five of the eighteen.** *Tract* is the purest case: it sells {{powered land}} — entitled, permitted ground — and leaves the vertical work to others. Its own dossier records that the product **has not yet been sold to anyone outside the group**: across four years and fourteen parks the only recorded transactions are two parcels bought by its own affiliate's project companies. *PowerHouse Data Centers* buys or options sites, secures utility capacity and zoning, builds {{powered shell}}s and, at its one completed cycle, sold the stabilised building to its tenant; its portfolio counter is expressly *in planning, underway, or completed*, and the boilerplate grew from four point one to about ten gigawatts in twenty-one months while the delivered base stayed at one building. *EdgeCore* runs the sponsor-financed single-tenant {{build-to-suit}} at project level, with a verifiable operating base of **about sixty-two megawatts in two buildings** behind a headline of one point eight gigawatts *delivered or under development*. *Prime Data Centers* is the recapitalisation case — five equity rounds, an acquisition line, a shelved bond, project-level high-yield debt — against about a hundred and fifty-one megawatts operating after nine years. *WhiteFiber* holds the fifth rung, and it is a new one: a listed, miner-controlled operator whose retrofit landlord is **the party through which a larger neocloud reaches the utility** — it holds the service agreement, the utility owns the substation, the transformers and the breakers under it, and the company buys everything behind the meter; its one large lease, **40 MW of IT at about USD 865 million over ten years, is 93 per cent of its remaining performance obligations**, and a medium-voltage switchgear supply issue disclosed in May 2026 moved that tenant's ready-for-service dates by a quarter.",
+    "**Route four — leaders in another market, which the September roster could not show. Two of the eighteen.** *Chindata China* is the corpus's first Chinese wholesale landlord — **third among China's third-party operators by in-service capacity and first around Beijing**, with 800 MW in service, 886 MW signed but undelivered and 824 MW of new orders in the first eight months of 2026 — and the landlord behind most of one hyperscale tenant's rented capacity: its acquirer discloses that **one unnamed customer took 90.12 per cent of 2025 revenue**, identifies that customer only through its own self-build campuses, and records that the first wholesale contract expires in November 2027 with no renewal talks begun. It is also the named reference site for a solid-state transformer carrying a production AI load, declared in formal operation on 2 July 2026. *G42*, through Khazna, owns the UAE's dominant landlord — **about 650 MW across 30 live sites, 73 per cent of the national market, more than 1 GW in development** — and is the named builder of a 1 GW cluster for the first *OpenAI for Countries* campus, whose first 200 MW it says has *completed procurement of all long-lead equipment*; its licence-free status for advanced chips **expires on 6 April 2027** unless it becomes a US company. Neither competes for a US tenant, and both are challengers here because the registry's established set is the US set.",
+    "**What the four routes have in common, and it is not size.** None of the eighteen is attacking an incumbent's ranking, because there is no ranking to attack. Route one attacks with a date, route two with a fuel supply, route three with a rung of the ladder, route four with a market the incumbents are not in. So **the threat to this segment's incumbents is not share loss to a cheaper rival — it is that the scarce asset moved, from land to an energised interconnection**, and a miner already owned one. That is the module's own assessment rather than a finding of the record, and it is the single most useful sentence here. It also explains why every incumbent response is a **procurement** move rather than a product move: self-funded substations at *Vantage*, *QTS*, *Compass*, *EdgeCore* and *Switch*; a seven-hundred-megawatt behind-the-meter microgrid at *Vantage*; fuel cells at *Equinix* and *STACK*; a battery framed explicitly as an interconnection accelerator at *Aligned*; and at *CyrusOne*, co-location on somebody else's electrical asset at three of its four largest campuses.",
     "**The counter-threat route one carries and the incumbents do not.** That power position arrived with a tenant problem. *Core Scientific*'s annual filing states that one leveraged neocloud is **one hundred per cent of colocation revenue and about eighty-three per cent of total quarterly revenue**. *Applied Digital*'s filings show two customers at one hundred per cent of continuing revenue, with an **unnamed** hyperscaler holding about sixty-nine per cent of a thirty-six billion dollar backlog — an unverifiable credit until it is named. *Galaxy Digital*'s single tenant is that same neocloud, and its own risk factor concedes the dependence. **The credit-substitution layer exists because route one's tenants are thin**, and the corpus quotes its price.",
     "**And the price is quoted in basis points, which is the most useful number in the segment.** On substantially the same lease template, campus-level notes priced at **6.125 per cent** where an investment-grade parent guaranteed the rent directly, **6.192 per cent** with a triple-B-minus rating behind a technology-company backstop, **7.125 per cent** where the backstop was a step further from the tenant, and **9.875 per cent** where the tenant was unrated and levered with **no credit enhancement disclosed at all**. That is a spread of roughly three hundred and seventy-five basis points, and it is a price for the tenant rather than for the building. It is also paid in equity: one landlord gave the backstop provider about fourteen per cent of pro forma equity, a second warrants over about five and a half per cent of itself — and **a third, on the same template, gave neither and obtained the backstop anyway**, which its own dossier identifies as its differentiator and which no peer matched. **{{credit substitution}} is a market with observable prices, and a seller who does not know where a counterparty sits on it is mispricing its schedule risk.**",
-    "**The threat that carries no challenger label at all.** Three of the eight {{adjacent}} members are not suppliers to this segment — they are **parties that can host a campus without being a landlord**. A merchant generator in this roster is the corpus's worked example of selling from an existing fleet rather than a pipeline, and the federal record its co-location arrangement produced now governs every operator here. A co-located energy-park developer put solar, wind, batteries and gas on the same site as a hyperscaler's data centre **and then became part of that hyperscaler**, in a twelve-billion-dollar combined exit completed in March 2026. A storage developer converts a battery's interconnection into speed-to-power, and the first marquee case of it in Texas has one of this segment's own incumbents as the tenant. **A tenant that can buy a powered site directly from a generator does not need a landlord** — and the registry classes these three as adjacent precisely because they are not landlords, which is what makes the route easy to miss."
+    "**The threat that carries no challenger label at all.** Three of the eleven {{adjacent}} members are not suppliers to this segment — they are **parties that can host a campus without being a landlord**. A merchant generator in this roster is the corpus's worked example of selling from an existing fleet rather than a pipeline, and the federal record its co-location arrangement produced now governs every operator here. A co-located energy-park developer put solar, wind, batteries and gas on the same site as a hyperscaler's data centre **and then became part of that hyperscaler**, in a twelve-billion-dollar combined exit completed in March 2026. A storage developer converts a battery's interconnection into speed-to-power, and the first marquee case of it in Texas has one of this segment's own incumbents as the tenant. **A tenant that can buy a powered site directly from a generator does not need a landlord** — and the registry classes these three as adjacent precisely because they are not landlords, which is what makes the route easy to miss. **And three of the eleven are something newer still: operators that need no landlord because they are their own.** Two neoclouds — an Australian owner-operator that *owns and builds its campuses and connection substations for its own cloud* and *does not lease shells to other operators*, and a sovereign builder that is *owner and grid counterparty for its own builds* — sit here as adjacents precisely because they build what this segment sells and sell none of it. The third is an investor whose own team founded a hyperscale developer, still chairs it, and sold a reported 49 per cent of it to a larger fund in April 2026. A tenant that builds its own campus is the landlord's customer and the landlord at once."
    ],
-   "sales": "Ask which route the account took to get here before you ask what it needs. Route one buys schedule certainty and long-lead equipment; route two buys generation and the balance of plant around it; route three may not buy equipment at all, because it sells the parcel before the fit-out. Pitching a cooling architecture to a powered-land developer is a category error, not a hard sell."
+   "sales": "Ask which route the account took to get here before you ask what it needs. Route one buys schedule certainty and long-lead equipment; route two buys generation and the balance of plant around it; route three may not buy equipment at all, because it sells the parcel before the fit-out — or buys only what sits behind a utility's meter; route four buys to an architecture written at home, and at one of the two the buyer is a subsidiary with its own debt and its own contractors rather than the group whose name is on the roster. Pitching a cooling architecture to a powered-land developer is a category error, not a hard sell."
   },
   {
    "id": "each-players-bet",
    "title": "Each player's bet",
-   "read": "8 min",
+   "read": "10 min",
    "kind": "table",
-   "intro": "One row per incumbent and challenger — twenty-two of the thirty members, in registry order. **Every bet below is analysis, not fact**: each is that member's own strategy read, which its dossier already marks as an assessment carrying a confidence level, restated here in one line. They are never blended with the fact rows above. The eight adjacent members get no row because they are not ranked players in this segment; what they do to it is in the section above and in the indicators below. At twenty-two rows this is the second-largest bets table in the corpus, and nothing has been trimmed — the size of the challenger set is one of the things the segment is about.",
+   "intro": "One row per incumbent and challenger — twenty-seven of the thirty-eight members, in registry order. **Every bet below is analysis, not fact**: each is that member's own strategy read, which its dossier already marks as an assessment carrying a confidence level, restated here in one line and carrying that confidence where the dossier states it. They are never blended with the fact rows above. The eleven adjacent members get no row because they are not ranked players in this segment; what they do to it is in the section above and in the indicators below. Nothing has been trimmed — the size of the challenger set is one of the things the segment is about.",
    "cols": [
     "Player",
     "Role",
@@ -68618,7 +68682,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     [
      "PowerHouse Data Centers",
      "challenger",
-     "That a land-and-entitlement developer can sell pipeline to capital partners while supplying only five to ten per cent of the equity — and that the utility-first model survives a utility cancelling a federally accepted transmission agreement four months after acceptance over deposit timing, a proposition now being tested in federal court"
+     "That a land-and-entitlement developer can sell pipeline to capital partners while supplying only five to ten per cent of the equity — and that the utility-first model survives a utility cancelling a federally accepted transmission agreement four months after acceptance over deposit timing: the federal regulator rejected the cancellation on 22 September 2026 and declined jurisdiction over the credit clause, so the contract question is now before a federal district court"
     ],
     [
      "Prime Data Centers",
@@ -68628,29 +68692,59 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     [
      "Tract",
      "challenger",
-     "That entitled, powered ground is a product somebody else will buy — a proposition the record has not yet confirmed outside its own affiliate — with the position that would prove it now contingent on a utility dispute, a billion-dollar network-upgrade demand and a regulator's decision it cannot control"
+     "That entitled, powered ground is a product somebody else will buy — a proposition the record has not yet confirmed outside its own affiliate — with the position that would prove it now contingent on a utility dispute and a billion-dollar network-upgrade demand that continue, after the state commission conditionally approved 362 MW of the affiliate's temporary gas plants on 17 September 2026 with air permits and county approvals still to come"
     ],
     [
      "Fermi America",
      "challenger",
      "That time to power, not land or buildings, is the product — converting the balance sheet into landed turbines and permitted gas before any tenant existed, on equipment debt at twelve to thirteen per cent — with a reactor programme as the long banner and a capital need one order of magnitude above the company's own market value"
+    ],
+    [
+     "Chindata",
+     "challenger",
+     "That the first commercial solid-state-transformer site in China makes it the reference landlord for the architecture, and that it can build a domestic supply chain behind the first vendor (high confidence) — while the business is a single-tenant credit with a 2027 renewal cliff that its new owner is trying to dilute (high confidence), selling into it means passing the landlord's architecture and the tenant's approved list (high confidence), and the owner's own components pull procurement toward themselves where they exist (moderate). The next equipment wave is large and dated: RMB 4.75 billion of mechanical and electrical spend earmarked, 2,289 MW to start by 2028 (moderate)"
+    ],
+    [
+     "G42",
+     "challenger",
+     "That the UAE's dominant landlord can also build the first *OpenAI for Countries* campus and be its buyer of record — Khazna, not the group or its cloud arm, buys the power equipment, and the first 200 MW's long-lead procurement is already done (high confidence). The cost its file reads: the 6 April 2027 sunset on its licence-free status for advanced chips is the single fact most likely to change its structure, with a majority sale to a US vehicle reported in talks (high confidence); the campus's power and physical design is back in flux after drone strikes on a hyperscaler's regional sites (moderate); the one Gulf landlord with an 800 V DC conversation on the record (moderate); and a China-ties question that is a standing risk to every US decision it depends on (moderate)"
+    ],
+    [
+     "WhiteFiber",
+     "challenger",
+     "That the landlord is worth more than the cloud — one 40 MW lease is 93 per cent of its remaining performance obligations and an analyst values that campus alone above the company's market capitalisation (high confidence) — and that being the buyer of record for everything behind the utility's meter, with medium-voltage switchgear the category where that authority has already been tested, is the proposition (high confidence). The cost: a 99 MW utility figure that is a schedule rather than a contract, with 54 gross MW the only firm number (moderate); a controlling miner shareholder whose stake shrinks by financing rather than by sale (moderate); and on-site generation expected to be third-party-owned fuel cells, with batteries and solid-state transformers not in view (low)"
+    ],
+    [
+     "5C Group",
+     "challenger",
+     "That owning the substation and the site power at every campus, with tenants that buy only GPUs, is the counterparty position in the neocloud-landlord trade — documented where the utility's filing says *the customer will own the Benjamin Substation* (high confidence) — and that the capacity table is a sales document while the local record is the build record: *over 2 GW* became *over 1.5 gigawatts* and *600 MW available in 6–18 months* became about 110 MW operational (high confidence). The cost: a Memphis site read as carrying behind-the-meter gas it would sign for, unpermitted today, inferred from a label and a photograph (moderate); and a roadmap that the next financing decides rather than the USD 1.4 billion already raised (moderate)"
+    ],
+    [
+     "TECfusions",
+     "challenger",
+     "That a landlord that is also the generator can lease *space, power, and cooling* in re-used industrial buildings to one anchor neocloud and avoid the compute layer entirely — signing for its own power chain, generation included, on buying that is small today and undocumented as to vendors (high confidence). The cost: the *3 GW* and *1 GW leased* figures are marketing and the deck's own phase table — 2 MW live, 10 MW contracted at the flagship — is the real position (high confidence); a SPAC likely to close at a lower cash level than the trust implies, if it closes, with an outside date of 31 March 2027 (moderate); and a township, not a utility, as the binding constraint through 2027 (moderate)"
     ]
    ],
-   "note": "Read column three downwards and the divide is unmissable: **the incumbents' bets turn on capital structure and consent, the challengers' on power and credit.** Not one incumbent row turns on owning generation, and not one challenger row turns on a building product. That is the same split the two sections above describe, seen from the other side — and it is why the seller's approach has to differ by route rather than by product.",
+   "note": "Read column three downwards and the divide is unmissable: **the incumbents' bets turn on capital structure and consent, the challengers' on power and credit.** Not one incumbent row turns on owning generation, and not one challenger row turns on a building product — the five rows added in October turn on a substation, a turbine fleet, a utility service agreement, a solid-state transformer and a licence. That is the same split the two sections above describe, seen from the other side — and it is why the seller's approach has to differ by route rather than by product.",
    "sales": "Match your opening to the column. To an incumbent, lead with what your product does to cost of capital or to a consent argument. To a challenger, lead with what it does to a date or to a lender's view of the tenant."
   },
   {
    "id": "the-indicators",
    "title": "The indicators",
-   "read": "6 min",
+   "read": "7 min",
    "kind": "table",
-   "intro": "What to watch, dated where the record dates it and marked undated where it is not. Six of the twenty-two dossiers carry an indicators block of their own; these are the segment-level ones, drawn across the whole roster. **Row one is the largest dated risk in the segment and is deliberately not this module's review date** — it is already the review clock of two other guidance modules, so it is watched here rather than owned here.",
+   "intro": "What to watch, dated where the record dates it and marked undated where it is not. Twelve of the twenty-seven ranked dossiers carry an indicators block of their own; these are the segment-level ones, drawn across the whole roster. **Row one is the nearest dated gate in the October material and this module's review date; row two is the largest dated risk in the segment and is deliberately not its review date** — it is already the review clock of two other guidance modules, so it is watched here rather than owned here.",
    "cols": [
     "Watch",
     "When",
     "Why it matters, and to whom"
    ],
    "rows": [
+    [
+     "A township's 180-day moratorium over the newest route-two member's flagship site, and the draft 'bring your own baseload' ordinance paused ahead of a 7 October supervisors' meeting",
+     "2 Nov 2026",
+     "*TECfusions* is grandfathered under the moratorium, but its own dossier reads the township, not the utility, as the binding constraint on the site through 2027 — a draft ordinance would require every new data centre to supply its own baseload power with setbacks and a noise limit, a residents' land-use appeal is in county court, and no air permit in the company's name has been located. **The dated test of that constraint, and this module's review date.** Its SPAC, signed in July 2026, targets a Q4 2026 close with an outside date of 31 March 2027"
+    ],
     [
      "The grid operator's audit report to the state commission under the August 2026 directive, with new large-load energisations paused meanwhile",
      "10 Dec 2026",
@@ -68659,7 +68753,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     [
      "The state tax-policy study due under the 2026 budget that preserved the equipment exemption and added a per-kilowatt-hour electricity consumption tax",
      "15 Dec 2026",
-     "The segment's largest single operating concentration is one state: *Digital Realty* holds eight hundred and forty-two megawatts of white-space load at 98.6 per cent occupancy plus more than a gigawatt developable; *CyrusOne* five Sterling facility groups at two hundred and thirty-three megawatts plus the acquired Ashburn campus, carrying 61.7 per cent of its 2025 securitisation pool by location; *EdgeCore* three campuses including Louisa's 1.1-gigawatt planning-stage site; *Compass Datacenters* its remaining seventy-nine megawatts at Loudoun after losing the Digital Gateway rezoning in court; and *PowerHouse Data Centers* its Arcola expansion. **Five of the twenty-two ranked players on one state's tax decision — and this module's own review date**"
+     "The segment's largest single operating concentration is one state: *Digital Realty* holds eight hundred and forty-two megawatts of white-space load at 98.6 per cent occupancy plus more than a gigawatt developable; *CyrusOne* five Sterling facility groups at two hundred and thirty-three megawatts plus the acquired Ashburn campus, carrying 61.7 per cent of its 2025 securitisation pool by location; *EdgeCore* three campuses including Louisa's 1.1-gigawatt planning-stage site; *Compass Datacenters* its remaining seventy-nine megawatts at Loudoun after losing the Digital Gateway rezoning in court; and *PowerHouse Data Centers* its Arcola expansion. **Five of the twenty-seven ranked players on one state's tax decision — this module's review date from September until this revision, and still the second gate it watches**"
     ],
     [
      "A named anchor tenant at any of the unnamed-tenant campuses",
@@ -68682,24 +68776,39 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
      "Any one that completes converts a private incumbent into a disclosing one, and *CyrusOne*'s dossier states plainly that **the resulting disclosure would itself be a material event**. It is also the only mechanism by which this segment becomes rankable at all"
     ],
     [
-     "The federal ruling on ComEd's cancellation of *PowerHouse Data Centers*' accepted transmission security agreement, and the parallel federal suit",
-     "pending",
-     "The live test of whether a developer may hold a grid position ahead of a tenant. Illinois's deposit rule — five hundred thousand dollars per hundred megawatts above two hundred, retained on failure — prices exactly the behaviour route three's model depends on"
+     "*G42*'s licence-free status for advanced chips, which the US rule text says expires unless the group and its cloud arm become US companies",
+     "6 Apr 2027",
+     "The single fact its own dossier says is most likely to change the structure of the UAE's dominant landlord within six months, with a majority sale to a US vehicle reported in talks. A gigawatt cluster's buyer of record could change hands on a licensing decision"
+    ],
+    [
+     "The first wholesale contract between *Chindata* and its single hyperscale tenant — about ninety per cent of revenue — reaching expiry with no renewal talks begun",
+     "Nov 2027",
+     "The route-four landlord's whole credit is one tenant whose own self-build campuses its acquirer tabulates; the tenant's dossier reads self-build as the direction of travel and the landlords' main risk. The segment's single-tenant problem, in another market"
+    ],
+    [
+     "Frederick County's data-centre moratorium, extended on 15 September 2026 over the zone that holds Rowan's existing campuses — the developer the adjacent *Quinbrook* founded and still chairs",
+     "1 Jul 2027",
+     "The consent constraint the nine incumbents name, landing on a developer that a larger fund bought 49 per cent of in April. Its own dossier records that the effect on later phases is not stated"
+    ],
+    [
+     "The credit clause of *PowerHouse Data Centers*' transmission security agreement with ComEd, before the federal district court after the federal regulator rejected the utility's cancellation on 22 September 2026 and declined jurisdiction over the clause; the parallel residents' suit",
+     "pending — court",
+     "The live test of whether a developer may hold a grid position ahead of a tenant. The regulator's order keeps the agreement alive and leaves the question of whether a USD 1 letter of credit satisfied the initial credit requirement to the court; the same utility signed two more such agreements with other developers on 16 September. Illinois's deposit rule — five hundred thousand dollars per hundred megawatts above two hundred, retained on failure — prices exactly the behaviour route three's model depends on"
     ],
     [
      "NV Energy's litigation and arbitration over *Tract*'s Nevada portfolio, and the billion-dollar network-upgrade demand behind it",
      "pending",
-     "Decides whether twelve thousand acres and five and a half gigawatts of stated load energise on the published dates, and whether *Tract* or its utility sets large-load cost allocation in Nevada"
+     "Decides whether twelve thousand acres and five and a half gigawatts of stated load energise on the published dates, and whether *Tract* or its utility sets large-load cost allocation in Nevada. The state commission conditionally approved the affiliate's two temporary gas plants — 362 MW in total — on 17 September 2026, with air permits and county approvals as conditions and construction from early 2027; the utility's July suit and the arbitration continue"
     ],
     [
      "*Fermi America*'s warehouse-facility test of a four-hundred-megawatt lease, and the conditions on its only signed lease",
      "Nov 2026",
-     "The clearest single-company test of whether generation-first development can finance itself before a tenant exists"
+     "The clearest single-company test of whether generation-first development can finance itself before a tenant exists. Its only signed lease was conditional on financing, approvals and an unnamed guarantor by 30 September 2026; that date has passed, the dossier read for this revision predates it, and no outcome is asserted here"
     ],
     [
      "Tariff rates on transformers and switchgear, held at fifteen per cent through the end of 2027, against lead times of seventy-five to a hundred and ten weeks for substation transformers and fifty-two to eighty for medium-voltage switchgear largely sold out through 2028",
      "31 Dec 2027",
-     "**The only two future effective dates anywhere in this roster's hundred and seven policy entries.** A landlord whose whole proposition is speed to market carries this as a schedule risk before it is a cost risk. *Digital Realty* answered with a three-hundred-and-seventy-three-million-dollar Schneider Electric supply-capacity agreement reserving factory slots rather than ordering equipment; *CyrusOne*'s dossier notes it has announced none"
+     "**The only two future effective dates anywhere in this roster's hundred and forty-one policy entries.** A landlord whose whole proposition is speed to market carries this as a schedule risk before it is a cost risk. *Digital Realty* answered with a three-hundred-and-seventy-three-million-dollar Schneider Electric supply-capacity agreement reserving factory slots rather than ordering equipment; *CyrusOne*'s dossier notes it has announced none"
     ]
    ],
    "sales": "Two of these are yours to use directly. The lead-time row is the strongest argument any equipment seller has in this cycle, and the securitisation row tells you when an account's cost of capital just moved — which is when a capital-expenditure conversation is easiest to open."
@@ -68723,27 +68832,27 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
    "title": "Claims ledger",
    "read": "reference",
    "kind": "ledger",
-   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 15 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. The registry is cited at the repo version of its last change rather than at this session's, because it did not move this session. **Three claims in this module are the module's own** and are labelled as analysis wherever they appear: that dominance here cannot be ranked and the useful question is what each incumbency is made of; that the threat is the scarce asset moving from land to an energised interconnection rather than share loss; and that tenant credit is manufactured with an observable price. **Every row of the bets table is likewise analysis.**",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 4 October 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. The registry is cited at the repo version of its last change, which this time is the version that added eight members. **Three claims in this module are the module's own** and are labelled as analysis wherever they appear: that dominance here cannot be ranked and the useful question is what each incumbency is made of; that the threat is the scarce asset moving from land to an energised interconnection rather than share loss; and that tenant credit is manufactured with an observable price. **Every row of the bets table is likewise analysis.**",
    "rows": [
     [
-     "Segment holds 30 members — 9 incumbent, 13 challenger, 8 adjacent; chain position 12, tier demand",
-     "profiler-segments.json @ v05.41r — segments[].members[], .position, .tier"
+     "Segment holds 38 members — 9 incumbent, 18 challenger, 11 adjacent; chain position 12, tier demand",
+     "profiler-segments.json @ v07.87r — segments[].members[], .position, .tier"
     ],
     [
      "The definition names wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and lease to a hyperscaler or neocloud",
-     "profiler-segments.json @ v05.41r — segments[].definition"
+     "profiler-segments.json @ v07.87r — segments[].definition"
     ],
     [
      "The six buying criteria, led by time to power and including tenant credit and the credit-substitution layer, financing route and grid posture",
-     "profiler-segments.json @ v05.41r — segments[].buyingCriteria[]"
+     "profiler-segments.json @ v07.87r — segments[].buyingCriteria[]"
     ],
     [
      "The registry's notes field is empty for this segment, so the roles are read off the thirty basis lines",
-     "profiler-segments.json @ v05.41r — segments[].notes absent"
+     "profiler-segments.json @ v07.87r — segments[].notes absent"
     ],
     [
-     "Eighteen of thirty members carry no normalized revenue figure, and seven of the nine incumbents are among them",
-     "segment-aidc-developers-and-landlords — the-numbers, generated from the members' financials overlay"
+     "Twenty-five of thirty-eight members carry no normalized revenue figure, and seven of the nine incumbents are among them; thirteen carry one — two incumbents, nine challengers and two adjacents — and four more publish megawatts only",
+     "Classroom.gs — clLessonSegmentAidcDevelopersAndLandlords_() the-numbers, generated 4 October 2026 from the members' financials overlay"
     ],
     [
      "The largest-AI-landlord claim is unfalsifiable rather than true or false; every published ranking measures something else",
@@ -68751,7 +68860,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     ],
     [
      "Third-party rankings of one member disagree by about 4.5 times — 3,026 MW tracked capacity against 674 MW of active IT load",
-     "profile:cyrusone @ v1 — strategyRead"
+     "profile:cyrusone @ v2 — strategyRead"
     ],
     [
      "Vantage originated the data-centre ABS asset class in 2018 and claims $60B+ raised globally since late 2024",
@@ -68791,35 +68900,35 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     ],
     [
      "Aligned's source-capture arrays run ~1% of IT load in fan power against ~10% for CRAC/CRAH rows, behind 50+ patents; its liquid platform rejects 350 kW/rack with zero-downtime live conversion",
-     "profile:aligned @ v7 — strategyRead"
+     "profile:aligned @ v8 — strategyRead"
     ],
     [
      "The ~$40B consortium acquisition closed 21 July 2026 with Microsoft, NVIDIA, xAI and Cisco among its members and $5B of growth capital committed at closing",
-     "profile:aligned @ v7 — strategyRead"
+     "profile:aligned @ v8 — strategyRead"
     ],
     [
      "A 31 MW / 62 MWh battery is framed explicitly as an interconnection accelerator (October 2025)",
-     "profile:aligned @ v7 — strategyRead"
+     "profile:aligned @ v8 — strategyRead"
     ],
     [
      "STACK is developer-owner of all three campuses in one hyperscaler's Louisiana programme, raised from $12B to $18B in six months, and of one site in a second programme",
-     "profile:stack-infrastructure @ v7 — strategyRead"
+     "profile:stack-infrastructure @ v8 — strategyRead"
     ],
     [
      "Three monetisation moves in fourteen months against a stated 13 GW pipeline; ten securitisation series since 2019",
-     "profile:stack-infrastructure @ v7 — strategyRead"
+     "profile:stack-infrastructure @ v8 — strategyRead"
     ],
     [
      "No revenue, EBITDA or tenant-mix disclosure exists anywhere in STACK's public record",
-     "profile:stack-infrastructure @ v7 — strategyRead"
+     "profile:stack-infrastructure @ v8 — strategyRead"
     ],
     [
      "Equinix has crossed from power consumer to power developer: a >100 MW fuel-cell fleet, ~1.25 GW of advanced-nuclear commitments and LOIs, and a take-or-pay structure funding 100% of grid upgrades",
-     "profile:equinix @ v7 — strategyRead"
+     "profile:equinix @ v8 — strategyRead"
     ],
     [
      "Power scarcity is the growth gate: 0.3% Northern Virginia vacancy, a >70 MW Amsterdam moratorium, and ~$130B of blocked or delayed US projects in Q1 2026",
-     "profile:equinix @ v7 — strategyRead, policyExposure"
+     "profile:equinix @ v8 — strategyRead, policyExposure"
     ],
     [
      "Digital Realty funds a $4.25–4.75bn annual development programme from issuance because a REIT must distribute most taxable income; fee income rose 98.3% in FY2025 and a $3.25bn fund closed in March 2026 with 20% retained",
@@ -68855,31 +68964,31 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     ],
     [
      "Three of CyrusOne's four largest campuses sit on someone else's electrical asset — 760 MW and 400 MW beside two gas plants, 200 MW on a battery",
-     "profile:cyrusone @ v1 — strategyRead"
+     "profile:cyrusone @ v2 — strategyRead"
     ],
     [
      "Under Texas SB 6 a co-located large load must curtail fully within thirty minutes of an emergency instruction, without compensation",
-     "profile:cyrusone @ v1 — policyExposure"
+     "profile:cyrusone @ v2 — policyExposure"
     ],
     [
      "A November 2025 outage paused a $1.3bn bond sale on the same campus within a week; the deal returned at $1.25bn",
-     "profile:cyrusone @ v1 — strategyRead"
+     "profile:cyrusone @ v2 — strategyRead"
     ],
     [
      "No revenue, EBITDA, leverage, backlog or bookings figure exists in any first-party CyrusOne source, and no current corporate credit rating was resolvable",
-     "profile:cyrusone @ v1 — strategyRead"
+     "profile:cyrusone @ v2 — strategyRead"
     ],
     [
      "Compass: 84% of the building fabricated offsite, 80–90% of power-centre work in the factory, a supplier plant on its own campus under a $3bn agreement, up to 1,500 medium-voltage skids, 1.27 design PUE",
-     "profile:compass-datacenters @ v5 — strategyRead"
+     "profile:compass-datacenters @ v6 — strategyRead"
     ],
     [
      "Compass took the first Moody's AAA on hyperscale ABS collateral; three sponsors are paid at asset level, so a listing is not in prospect",
-     "profile:compass-datacenters @ v5 — strategyRead"
+     "profile:compass-datacenters @ v6 — strategyRead"
     ],
     [
      "A 2,000-acre Virginia rezoning co-developed with QTS died in court in April 2026; Compass, QTS, Vantage and Digital Realty co-founded an infrastructure coalition in September 2026",
-     "profile:compass-datacenters @ v5 — strategyRead, policyExposure"
+     "profile:compass-datacenters @ v6 — strategyRead, policyExposure"
     ],
     [
      "Applied Digital: two customers are 100% of continuing revenue; an unnamed hyperscaler holds about 69% of a $36B backlog; the neocloud tenant's lease security was restructured with a $50M letter of credit",
@@ -68899,11 +69008,11 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     ],
     [
      "TeraWulf converts brownfield megawatts into take-or-pay leases made bankable by about $4.5B of third-party backstops, with about 14% of pro forma equity the disclosed price",
-     "profile:terawulf @ v7 — strategyRead"
+     "profile:terawulf @ v8 — strategyRead"
     ],
     [
      "Its flagship builds at about $9.1M per critical-IT MW, and trade coverage flags transformers, switchgear and chillers as the choke point on the second-half 2027 schedule",
-     "profile:terawulf @ v7 — strategyRead"
+     "profile:terawulf @ v8 — strategyRead"
     ],
     [
      "Cipher's self-mining capacity fell from about 23.6 to about 11.6 EH/s and the registrant renamed itself on 20 February 2026 to align with becoming a data-centre developer",
@@ -68923,19 +69032,27 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     ],
     [
      "Hut 8 received no warrants or equity consideration for its backstop, against about 5.4% at one peer and about 14% at another on the same template",
-     "profile:hut-8 @ v2 — strategyRead"
+     "profile:hut-8 @ v3 — strategyRead"
     ],
     [
      "About $7.5bn of non-recourse campus-level notes — $3.25bn at 6.192% rated BBB- for one campus and $4.25bn for the other — against about $159.3m of parent recourse debt",
-     "profile:hut-8 @ v2 — strategyRead"
+     "profile:hut-8 @ v3 — strategyRead"
     ],
     [
      "One campus is a three-party arrangement — landlord, an intermediary subsidiary as lessee, and a technology company as payment backstop — with the end user not a party to the lease at all",
-     "profile:hut-8 @ v2 — strategyRead"
+     "profile:hut-8 @ v3 — strategyRead"
     ],
     [
      "That campus's Q1 2027 energisation sits inside the audit window; the report is targeted to the commission by 10 December 2026; scope is some 250 to 300 projects of at least 75 MW against a queue of 1,800+ totalling about 474 GW",
-     "profile:hut-8 @ v2 — policyExposure"
+     "profile:hut-8 @ v3 — policyExposure"
+    ],
+    [
+     "A USD 1.07bn four-year senior secured revolving credit facility signed 28 September 2026 at the parent, read as corporate liquidity on top of campus-level notes with the parent still carrying almost no recourse debt; the release names no tenant",
+     "profile:hut-8 @ v3 — recentDevelopments[0]"
+    ],
+    [
+     "The Wall Street Journal's report that a frontier lab's USD 35bn cloud agreement with Lambda 'involves Hut 8's Beacon Point data center campus' with NVIDIA holding the facility lease; Hut 8's filings through 28 September name neither Lambda, Anthropic nor NVIDIA and still describe the tenant only as rated AA- or higher",
+     "profile:hut-8 @ v3 — recentDevelopments[1]; profile:lambda @ v6 — summary"
     ],
     [
      "Galaxy's second-phase notes priced at 9.875% against 6.125% for parent-guaranteed paper, 7.125% for backstopped paper and 6.192% for the BBB- campus bond; its tenant is unrated and levered with no credit enhancement disclosed",
@@ -68951,39 +69068,43 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     ],
     [
      "IREN holds 5 GW of secured power on substations it owns; its newest contracts price about $15M per MW against about $1.4M per MW for pure landlord colocation",
-     "profile:iren @ v4 — ecosystemRole, strategyRead"
+     "profile:iren @ v7 — ecosystemRole, strategyRead"
     ],
     [
      "A 1.4 GW bulk substation energised on schedule in April 2026 with no announced tenant",
-     "profile:iren @ v4 — strategyRead"
+     "profile:iren @ v7 — strategyRead"
     ],
     [
      "Crusoe energised 200+ MW within a year of groundbreaking and a substation in under six months; its procurement list includes a 5 GW medium-voltage battery commitment",
-     "profile:crusoe @ v6 — strategyRead, ecosystemRole"
+     "profile:crusoe @ v7 — strategyRead, ecosystemRole"
     ],
     [
      "Two single-counterparty decisions reshaped the company in 2026 — one halting a flagship expansion, the other reassigning it out of a state",
-     "profile:crusoe @ v6 — strategyRead"
+     "profile:crusoe @ v7 — strategyRead"
     ],
     [
      "EdgeCore's verifiable operating base is about 62 MW in two buildings, behind a 1.8 GW delivered-or-under-development headline",
-     "profile:edgecore @ v1 — strategyRead"
+     "profile:edgecore @ v2 — strategyRead"
     ],
     [
      "Its stated posture is that it expects to bear 100% of the cost of power delivery, with a stated willingness to abandon projects whose power economics become unworkable",
-     "profile:edgecore @ v1 — strategyRead, policyExposure"
+     "profile:edgecore @ v2 — strategyRead, policyExposure"
     ],
     [
      "Virginia's 2026 budget preserved the equipment exemption and added an electricity consumption tax of $0.011 per kWh from 1 July 2026 to 30 June 2028, capped at $600m a year, with a tax-policy study due 15 December 2026",
-     "profile:edgecore @ v1 — policyExposure"
+     "profile:edgecore @ v2 — policyExposure"
     ],
     [
      "PowerHouse supplies 5–10% of the equity through its parent's own funds; the boilerplate grew from 4.1 GW to about 10 GW in 21 months while the delivered base stayed at one building",
-     "profile:powerhouse-data-centers @ v2 — strategyRead"
+     "profile:powerhouse-data-centers @ v3 — strategyRead"
     ],
     [
      "A utility cancelled a federally accepted transmission security agreement four months after acceptance over deposit timing; the developer challenged it federally and sued. The state rule sets a $500,000 deposit per 100 MW above 200 MW, retained on failure",
-     "profile:powerhouse-data-centers @ v2 — strategyRead, policyExposure"
+     "profile:powerhouse-data-centers @ v3 — strategyRead, policyExposure"
+    ],
+    [
+     "FERC rejected the utility's notice of cancellation on 22 September 2026 and declined jurisdiction over the credit clause, sending the question of whether a USD 1 letter of credit satisfied the initial credit requirement to the Northern District of Illinois; the utility signed transmission security agreements with two more developers on 16 September",
+     "profile:powerhouse-data-centers @ v3 — recentDevelopments, policyExposure"
     ],
     [
      "Prime has taken five equity rounds, shelved a bond and financed its one fully leased campus with project-level high-yield debt — against about 151 MW operating after nine years",
@@ -68991,11 +69112,15 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     ],
     [
      "Tract's entitled-and-powered parcel has not been sold to any third party on the record across four years and fourteen parks; the only recorded transactions are to its own affiliate's project companies",
-     "profile:tract @ v3 — strategyRead"
+     "profile:tract @ v4 — strategyRead"
     ],
     [
      "Its utility sued on 24 July 2026 seeking about $1bn of network upgrades and commission rather than arbitral jurisdiction over roughly 5.5 GW of stated load",
-     "profile:tract @ v3 — policyExposure, strategyRead"
+     "profile:tract @ v4 — policyExposure, strategyRead"
+    ],
+    [
+     "The state commission conditionally approved the affiliate's temporary gas plants at a special meeting on 17 September 2026 — 218 MW at Peru Ridge and 144 MW at South Valley, 362 MW in total — with air permits and county approvals as conditions, construction from early 2027 and two to three years of operation while utility service is built",
+     "profile:tract @ v4 — policyExposure, recentDevelopments"
     ],
     [
      "Fermi landed about 1.5 GW of turbines and permitted 6 GW of gas before any tenant, on equipment debt at 12–13% and a warehouse line that tests a 400 MW lease by November 2026",
@@ -69007,23 +69132,67 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     ],
     [
      "A merchant generator in this roster is the corpus's worked example of selling from an existing fleet, and the federal record its co-location arrangement produced now governs every operator",
-     "profile:talen-energy @ v2 — ecosystemRole"
+     "profile:talen-energy @ v3 — ecosystemRole"
     ],
     [
      "A co-located energy-park developer put solar, wind, batteries and gas on one site with a hyperscaler's data centre and became part of that hyperscaler on 10 March 2026, in a $12bn combined exit",
-     "profile:intersect-power @ v2 — ecosystemRole"
+     "profile:intersect-power @ v3 — ecosystemRole"
     ],
     [
      "Energy-plus-load converts a battery interconnection into speed to power, and the first marquee Texas case has one of this segment's incumbents as the tenant",
-     "profile:eolian @ v6 — ecosystemRole"
+     "profile:eolian @ v7 — ecosystemRole"
     ],
     [
      "The credit-substitution layer of record: three converted miners sign 10–25 year leases with one intermediary's subsidiaries while a technology company's recognition agreements make it the tenant of last resort and the end user is named only separately",
-     "profile:fluidstack @ v2 — ecosystemRole"
+     "profile:fluidstack @ v4 — ecosystemRole"
+    ],
+    [
+     "Chindata China is third among China's third-party operators by in-service capacity and first around Beijing, with 800 MW in service, 886 MW signed but undelivered and 824 MW of new orders in January–August 2026; its acquirer discloses one unnamed customer at 90.12% of 2025 revenue, identified only through its Volcano Engine self-build projects, on mostly ten-year contracts, the first expiring in November 2027 with no renewal talks begun",
+     "profile:chindata @ v1 — summary, ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "A Delta silicon-carbide solid-state transformer converting 10 kV AC to 800 V DC in one step, built for Meituan at the Sangyuan campus and declared in formal commercial operation on 2 July 2026; selling equipment to the landlord means passing its architecture and the tenant's qualified-vendor list; RMB4.75bn of mechanical and electrical spend earmarked and 2,289 MW to start by 2028",
+     "profile:chindata @ v1 — summary, strategyRead[0], strategyRead[1], strategyRead[4]"
+    ],
+    [
+     "Khazna 'designs, builds and operates wholesale data centers' — 30 live sites totalling almost 650 MW, 73% of the UAE market, more than 1 GW in development — and is developing the 1 GW Stargate UAE cluster whose first 200 MW has 'completed procurement of all long-lead equipment'; the BIS approval of 10 July 2026 'shall automatically expire on April 6, 2027' unless G42 and Core42 become US companies",
+     "profile:g42 @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "WhiteFiber's Enovum landlord holds the Duke Energy Carolinas service agreement for NC-1 through Enovum NC-1 Bidco while the utility owns the substations, transformers and breakers as 'Extra Facilities'; the company buys power distribution equipment, generators and cooling behind the meter; the 40 MW IT lease to Nscale (~US$865M over ten years) is 93% of US$1.0bn of remaining performance obligations; a medium-voltage switchgear supply-chain issue disclosed 14 May 2026 pushed the tenant's ready-for-service dates into the third quarter",
+     "profile:whitefiber @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "5C Group owns the buildings, the substation and the site power at four US campuses — FirstEnergy's filing: 'The customer will own the Benjamin Substation' — and leases powered, cooled halls to Together AI, Vultr and Crusoe, whose GPUs it does not own; about 110 MW operational against 'over 1.5 gigawatts', down from 'over 2 GW'; more than US$1.4bn raised",
+     "profile:5c-group @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "The Memphis site is read as carrying behind-the-meter gas generation that 5C would sign for and that is unpermitted today — an inference from a 'GRID / BTM' label and drone footage, stated as such",
+     "profile:5c-group @ v1 — strategyRead[2] (moderate confidence)"
+    ],
+    [
+     "TECfusions leases 'space, power, and cooling' in re-used industrial buildings, is TensorWave's landlord at Tucson and Keystone Connect, and is the only landlord in the corpus that says its flagship is 'currently powered by turbines' it controls; 55 MW live across three sites against a marketed '3 GW'; the deck restates the '1 GW' tenant figure as 'anchor tenant with right-of-first-refusal' and states 2 MW live and 10 MW contracted at the flagship",
+     "profile:tecfusions @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "A 180-day township moratorium to 2 November 2026 with TECfusions 'grandfathered in'; a draft 'bring your own baseload' ordinance paused by the planning commission on 22 September ahead of a 7 October supervisors' meeting; a residents' land-use appeal filed 25 August 2026; no Pennsylvania DEP air permit in the company's name located; a SPAC at US$4.0bn pre-money signed 21 July 2026 with a targeted Q4 2026 close and an outside date of 31 March 2027",
+     "profile:tecfusions @ v1 — technicalSpecs, policyExposure, strategyRead[2], strategyRead[3]"
+    ],
+    [
+     "Firmus owns and builds its campuses and connection substations for its own cloud and does not lease shells to other operators; HUMAIN is owner and grid counterparty for its own builds, with a 250 MW EPC contractor buying on its work orders — both adjacents here, challengers in the neoclouds segment",
+     "profile:firmus @ v2 — ecosystemRole; profile:humain @ v1 — ecosystemRole, strategyRead[0]; profiler-segments.json @ v07.87r — basis lines"
+    ],
+    [
+     "Quinbrook founded Rowan Digital Infrastructure, kept the chairmanship and a board seat, and funds affiliated with Blackstone acquired 'a significant minority stake' on 9 April 2026 (reported at 49%); Frederick County's executive rejected a neighbouring agreement on 15 September 2026 and extended a data-centre moratorium to 1 July 2027, with Rowan's existing campuses inside the zone and the effect on later phases not stated",
+     "profile:quinbrook @ v1 — summary, ecosystemRole, highlights"
     ],
     [
      "Transformers and switchgear carry a reduced 15% tariff rate through 31 December 2027; substation transformers run 75–110 weeks, generator step-up units 100–150+ weeks, and 15 kV medium-voltage switchgear 52–80 weeks with many manufacturers sold out through 2028",
-     "profile:digital-realty @ v2 — policyExposure; profile:cyrusone @ v1 — policyExposure"
+     "profile:digital-realty @ v2 — policyExposure; profile:cyrusone @ v2 — policyExposure"
+    ],
+    [
+     "141 policyExposure entries across the thirty-eight members, 104 dated, exactly two in the future and both 2027-12-31; five members — STACK Infrastructure, Applied Digital, Core Scientific, TeraWulf and IREN — carry none",
+     "the thirty-eight profile files — policyExposure[], read entry by entry on 4 October 2026"
     ]
    ]
   },
@@ -69035,8 +69204,8 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
    "tone": "warn",
    "ps": [
     "**It does not rank these landlords, and no published source does.** Four dossiers reach that conclusion independently and from different directions: *Digital Realty*'s calls the category claim unfalsifiable; *CyrusOne*'s records a 4.5-times disagreement between published rankings of one company; *Cipher Digital*'s states that no independent ranking of AI-data-centre landlords by contracted megawatts or lease value exists in either direction; *Hut 8*'s finds only a second-hand contracted-revenue-per-megawatt measure that does not publish its own figure. **This module states the absence and declines to supply an ordering.**",
-    "**It does not name the tenants.** *Compass Datacenters* names no customer on any page or release. *EdgeCore* has no tenant at any campus on the record. *STACK Infrastructure* publishes no tenant-mix data outside securitisation collateral. *Applied Digital*'s largest counterparty is an unnamed hyperscaler at about sixty-nine per cent of backlog. *Hut 8*'s second campus tenant is unnamed in every first-party source. Eleven of *PowerHouse*'s thirteen announced campuses have no disclosed tenant.",
-    "**It does not give revenue for most of the leading set.** Seven of the nine incumbents publish none, and so do five of the thirteen challengers. Any statement about the relative size of *QTS*, *Vantage*, *Aligned*, *STACK*, *Switch*, *CyrusOne* or *Compass* rests on an estimate made from outside the company.",
+    "**It does not name the tenants.** *Compass Datacenters* names no customer on any page or release. *EdgeCore* has no tenant at any campus on the record. *STACK Infrastructure* publishes no tenant-mix data outside securitisation collateral. *Applied Digital*'s largest counterparty is an unnamed hyperscaler at about sixty-nine per cent of backlog. *Hut 8*'s second campus tenant is unnamed in every first-party source — a newspaper has placed a frontier lab's thirty-five-billion-dollar agreement with a GPU cloud there under a chip vendor's lease, none of the four parties has confirmed it, and the landlord's filings through 28 September name none of them. *Chindata*'s single tenant at ninety per cent of revenue is identified only through its own campuses. *TECfusions*' *1 GW* tenant is, in its own deck, an anchor with a right of first refusal. Eleven of *PowerHouse*'s thirteen announced campuses have no disclosed tenant.",
+    "**It does not give revenue for most of the leading set.** Seven of the nine incumbents publish none, and so do nine of the eighteen challengers and nine of the eleven adjacents. Any statement about the relative size of *QTS*, *Vantage*, *Aligned*, *STACK*, *Switch*, *CyrusOne* or *Compass* rests on an estimate made from outside the company.",
     "**It does not settle whether the powered-land product has a market.** *Tract*'s is the clearest case: four years, fourteen parks, and **no third-party parcel sale with a named buyer or a price anywhere on the record.**",
     "**It does not reconcile the cohort's lease-value figures.** *Cipher*'s own dossier counts four different labels for three revenue concepts plus one cost concept inside ten weeks. *Galaxy* publishes an annual rate where peers publish a fifteen-year base term, and its audited figure differs from both. **Cross-company lease comparison in this segment is unsound, and this module does not perform one.**",
     "**It does not establish intent behind the speculative build.** *Digital Realty*'s own dossier holds the falling pre-leased share at moderate confidence precisely because no source establishes management intent, and it names the equally consistent alternative: leases lagging construction starts in a market where power sets the schedule.",
@@ -69052,7 +69221,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
    "cards": [
     {
      "q": "How many members does the AIDC developers and landlords segment hold, and in what split?",
-     "a": "Thirty — nine incumbent, thirteen challenger, eight adjacent. It is the third-deepest segment in the registry and the largest challenger set the landscape programme has met."
+     "a": "Thirty-eight — nine incumbent, eighteen challenger, eleven adjacent. It is the second-deepest segment in the registry and the largest challenger set the landscape programme has met; eight members joined in a fortnight in October 2026, five of them challengers."
     },
     {
      "q": "Why does this module refuse to rank the nine incumbents?",
@@ -69064,11 +69233,11 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
     },
     {
      "q": "Eighteen of the thirty members publish no normalized revenue figure. Which half of the segment is the measurable one?",
-     "a": "The challengers. Seven of the nine incumbents publish nothing, while eight of the thirteen challengers do — because the converted-miner cohort arrived in this segment already listed and already filing."
+     "a": "The challengers. Seven of the nine incumbents publish nothing, while nine of the eighteen challengers do — because the converted-miner cohort arrived in this segment already listed and already filing, and the newest listed challenger did the same. Twenty-five of thirty-eight publish no normalized revenue figure in all."
     },
     {
-     "q": "What are the three routes the thirteen challengers are attacking on?",
-     "a": "An energised power position (the seven converted miners), owning the generation (the two energy-first developers), and one rung of the ladder rather than the whole thing (the four land, shell and build-to-suit specialists)."
+     "q": "What are the four routes the eighteen challengers are attacking on?",
+     "a": "An energised power position (seven converted miners and one developer that built the position rather than inheriting it), owning the generation (two energy-first developers and a landlord that says its flagship runs on turbines it controls), one rung of the ladder rather than the whole thing (the four land, shell and build-to-suit specialists and a retrofit landlord that holds the utility agreement while the utility owns the substation), and a market the incumbents are not in (China's third-largest third-party operator and the UAE's dominant landlord)."
     },
     {
      "q": "State this module's own assessment of what actually threatens the incumbents.",
@@ -69114,7 +69283,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
      "why": "One dossier reaches exactly that conclusion and gives the reason: the rankings measure colocation revenue share, markets rather than operators, or active IT load, and the private platforms that captured the demand publish no comparable megawatt or revenue figure — so a category ranking would omit half the field by construction. The listed trust is largest by leasable area and pipeline and second on revenue, which is a narrower and defensible statement, not the same claim."
     },
     {
-     "q": "Seven of this segment's thirteen challengers are converted bitcoin miners. What does this module assess that they are competing on?",
+     "q": "Seven of this segment's eighteen challengers are converted bitcoin miners. What does this module assess that they are competing on?",
      "c": [
       "A date — they already owned energised substations and the market re-priced that asset under them",
       "Price per megawatt, undercutting the incumbents",
@@ -69122,7 +69291,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
       "Access to cheaper construction labour"
      ],
      "a": 0,
-     "why": "Not one of the seven competes on building product, cooling design or facility standard. They arrived owning substations, cheap power contracts and energised interconnections for a different business. That is why the module's own assessment is that the threat is the scarce asset moving from land to an energised interconnection, rather than share loss to a cheaper rival."
+     "why": "Not one of the seven competes on building product, cooling design or facility standard. They arrived owning substations, cheap power contracts and energised interconnections for a different business. That is why the module's own assessment is that the threat is the scarce asset moving from land to an energised interconnection, rather than share loss to a cheaper rival — and why the eighth member of the route, which built its substation rather than inheriting one, competes on the same thing."
     },
     {
      "q": "A developer's marketing says 1.8 GW delivered or under development. What does this module say about that figure, and what does it deliberately leave to the public lesson?",
@@ -69139,7 +69308,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
      "q": "Which claim in this module is the module's own analysis rather than a finding of the record?",
      "c": [
       "That the useful question is what each incumbency is made of, because that decides what can take it away",
-      "That eighteen of thirty members publish no normalized revenue figure",
+      "That twenty-five of thirty-eight members publish no normalized revenue figure",
       "That one campus note priced at 9.875 per cent",
       "That a state tax-policy study is due on 15 December 2026"
      ],
@@ -69171,7 +69340,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
   },
   {
    "t": "adjacent",
-   "d": "The registry's role for a member that bears on a segment without being a ranked player in it. Adjacent members count toward the three-member floor for authoring a landscape and never toward the incumbent or challenger roles. Three of this segment's eight can host a campus without being a landlord at all."
+   "d": "The registry's role for a member that bears on a segment without being a ranked player in it. Adjacent members count toward the three-member floor for authoring a landscape and never toward the incumbent or challenger roles. Three of this segment's eleven can host a campus without being a landlord at all, and three more are operators that build their own campuses and lease shells to nobody — or found the developers that do."
   },
   {
    "t": "credit substitution",
@@ -69186,7 +69355,7 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
    "d": "A grid operator's practice of grouping large-load interconnection requests and studying their system impact on a portfolio basis rather than one at a time, rather than first come first served. Several of this segment's uncontracted sites are explicitly qualified in filings as subject to it."
   }
  ]
- };
+  };
 }
 
 // Content: Landscape - In-Hall Power (corpus synthesis, 2026-09-15). Derived
@@ -71911,28 +72080,43 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
  "id": "landscape-hyperscalers-and-ai-labs-2026-09",
  "group": "The Value Chain",
  "title": "Hyperscalers and AI Labs — the Landscape",
- "short": "Five incumbents holding five instruments that cannot be compared, three challengers who are not taking share because they are the demand, and the only closed segment at the end of the chain.",
+ "short": "Five incumbents holding five instruments that cannot be compared, five challengers — three who are not taking share because they are the demand, and two who lead another market — and the only closed segment at the end of the chain.",
  "source": {
-  "doc": "Corpus synthesis over the 8 member dossiers of the hyperscalers-and-ai-labs segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "doc": "Corpus synthesis over the 10 member dossiers of the hyperscalers-and-ai-labs segment, at the profile versions in the claims ledger — no ingested document and no new research; re-measured at ten on 4 October 2026 after two members joined and six dossiers moved",
   "publisher": "Internal analysis",
   "date": "September 2026",
   "pages": 9,
   "series": "Industry Guidance — landscape module",
   "repo": "repository-information/industry-guidance/landscape-hyperscalers-and-ai-labs-analysis.md"
  },
- "updated": "2026-09-16",
+ "updated": "2026-10-04",
  "reviewBy": "2026-12-31",
- "revisions": [],
+ "revisions": [
+  {
+   "date": "2026-10-04",
+   "note": "Classroom wave A re-pin against the enlarged roster. The segment was re-measured at ten members — 5 incumbent, 5 challenger, 0 adjacent — after bytedance v1 and alibaba-cloud v1 joined as challengers the registry calls 'a leader elsewhere, not in the established US set'; six dossiers were re-read at new versions (microsoft v6, meta v10, oracle v6, openai v6, anthropic v4, xai v6), amazon v10 and google v9 unchanged. The closure holds at ten of ten with zero adjacents, so the adjacency and role-inversion instruments stay disabled; the third zero-adjacent segment of September gained an adjacent, so the zero-adjacent set and the closed set now coincide and the drill card and quiz rationale that leaned on the difference are corrected. Oracle's contracted-revenue figure is dated — USD 638 bn when the attribution was made, USD 664 bn at the quarter ended 31 August 2026. A fourth direction is added to the threats section for the two leaders from another market — one buys through three doors and publishes no accounts, the other writes its own power architecture and buys it by framework tender — with the module's judgment that their threat is to where the architecture is written, not to share; their rows are drawn from strategyRead[] with each dossier's confidence carried. The fence is restated at 18 entries, 13 dated, 1 future (2027-01-01); the graph at 23 edges, 13 typed pairs and 19 typings. reviewBy stays 2026-12-31: the new material carries no future day-level date before it, and the fence's one future date is already four modules' clock. The seller's play is unchanged — nothing in the ten files contradicts it.",
+   "changed": [
+    "who-dominates-and-on-what-basis",
+    "who-threatens",
+    "each-players-bet",
+    "the-indicators",
+    "claims-ledger",
+    "what-the-record-does-not-say",
+    "drill",
+    "check-yourself"
+   ]
+  }
+ ],
  "tiles": [
   {
-   "k": "8",
+   "k": "10",
    "v": "members on record",
-   "sub": "Five incumbent, three challenger, no adjacents — re-measured 16 September 2026 from the registry, member for member. The smallest segment any landscape has been written on; the previous smallest was fourteen, and every one of the eight carries a dossier and a study guide"
+   "sub": "Five incumbent, five challenger, no adjacents — re-measured 4 October 2026 from the registry, member for member. Two more than September, both leaders in another market: the registry calls each 'a leader elsewhere, not in the established US set'. Every one of the ten carries a dossier and a study guide"
   },
   {
-   "k": "8 of 8",
+   "k": "10 of 10",
    "v": "belong to nothing else",
-   "sub": "Not one member is ranked in any other segment. With zero adjacents that makes this a closed segment — one of only two in the whole taxonomy — and the reason is simply that this is where the chain ends"
+   "sub": "Not one member is ranked in any other segment. With zero adjacents that makes this a closed segment — still one of only two in the whole taxonomy — and the reason is simply that this is where the chain ends"
   },
   {
    "k": "0 of 6",
@@ -71940,9 +72124,9 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
    "sub": "The public segment lesson prints a dash against every one of the six, and structurally so: the three mechanism lessons mapped to this segment appear nowhere in the criterion lexicon, so the match is empty by construction. This module owns none of the six tests"
   },
   {
-   "k": "11",
-   "v": "policy entries across eight members",
-   "sub": "Seven of the eleven belong to one member and two members carry none at all. The thinnest policy fence any landscape has faced, and the reason this module's review date had to be read out of delivery milestones rather than out of a regulation"
+   "k": "18",
+   "v": "policy entries across ten members",
+   "sub": "Seven of the eighteen belong to one member, three each to the two newcomers, and two members carry none at all. Still the thinnest policy fence relative to its roster that any landscape has faced, and the reason this module's review date is read out of delivery milestones rather than out of a regulation"
   }
  ],
  "glossary": [
@@ -71952,11 +72136,11 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
   },
   {
    "t": "challenger",
-   "d": "The registry role for a member attacking the segment on a route the incumbents do not hold. In this segment it means a new buyer scaling up rather than a rival selling against the five, which is why the label and the money point in opposite directions."
+   "d": "The registry role for a member attacking the segment on a route the incumbents do not hold. In this segment it has two meanings: a new buyer scaling up rather than a rival selling against the five, which is why the label and the money point in opposite directions — and, for the two members added in October 2026, a leader in another market contesting the one the corpus serves."
   },
   {
    "t": "closed segment",
-   "d": "A segment with no adjacent members and no member belonging to any other segment. Only two of the nineteen are closed: this one at eight of eight, and insurance and risk transfer at three of three."
+   "d": "A segment with no adjacent members and no member belonging to any other segment. Only two of the nineteen are closed: this one at ten of ten, and insurance and risk transfer at three of three."
   },
   {
    "t": "energy services agreement",
@@ -71986,7 +72170,7 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
    "read": "7 min",
    "kind": "prose",
    "ps": [
-    "**Start with the shape, because it is a measurement and it decides how the rest reads.** Eight members: **Amazon, Google, Microsoft, Meta and Oracle** as incumbents, **OpenAI, Anthropic and xAI** as challengers, and **no adjacents at all**. Re-measured across all nineteen segments on 16 September 2026, not one of the eight is ranked anywhere else — which makes this a {{closed segment}}, one of only two in the taxonomy. The reason is not coverage: it is that this is **the end of the chain**. Every segment above sells into this one, and this one sells into none of them, so nobody arrives here as an adjacent and nobody leaves.",
+    "**Start with the shape, because it is a measurement and it decides how the rest reads.** Ten members: **Amazon, Google, Microsoft, Meta and Oracle** as incumbents, **OpenAI, Anthropic, xAI, ByteDance and Alibaba Cloud** as challengers, and **no adjacents at all**. Re-measured across all nineteen segments on 4 October 2026, not one of the ten is ranked anywhere else — which makes this a {{closed segment}}, still one of only two in the taxonomy. The reason is not coverage: it is that this is **the end of the chain**. Every segment above sells into this one, and this one sells into none of them, so nobody arrives here as an adjacent and nobody leaves. The two members added in October are challengers of a second kind — the registry's basis lines call each *a leader elsewhere* — and the section on threats takes them in turn.",
     "**The second measurement is about the curriculum rather than the market, and it sets this module's scope.** The public segment lesson prints a dash against **all six** of this segment's buying criteria. That is structural, not an oversight: the generator only names a lesson that is mapped to the segment, and the three lessons mapped here — *The AI Data-Center Power Chain*, *Reading the Named Projects* and *The Gatekeeper* — appear nowhere in its criterion index, so the match is empty whatever the criteria say. One of the three is not built at all. **So this module owns none of the six tests.** It says who sits where on each, and where a test has no owner it says that rather than teaching it.",
     "**Now the finding. The five incumbents do not compete on one axis — each has bought a different instrument for the same thing, which is firm power at a date.** That is why there is no league table here and why this section is written instrument by instrument rather than rank by rank.",
     "**Amazon — the portfolio, and the precedent it triggered.** The largest corporate clean-energy portfolio on earth: more than 40 GW across 700-plus projects, ranked first by a third-party tracker since 2020, and including **eleven utility-scale battery projects**. One of them targets 1 GW of solar with 1 GW / 4,000 MWh of storage, with the first 500 MW and 1 GWh phase completed in June 2025. The nuclear half is a front-of-meter PPA ramping to **1,920 MW through 2042** — restructured into that shape only after the federal regulator rejected the behind-the-meter version, **a precedent Amazon itself triggered and which every other member now structures around.**",
@@ -72001,24 +72185,25 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
   {
    "id": "who-threatens",
    "title": "Who threatens",
-   "read": "6 min",
+   "read": "8 min",
    "kind": "prose",
    "ps": [
-    "**The registry's {{challenger}} label means something here it has meant in no previous landscape, and reading it wrongly inverts the whole section.** These three are not selling against the five. **OpenAI, Anthropic and xAI are the demand the five incumbents' order books are made of** — the plan's own taxonomy note says the labs carry the role as *new buyers scaling up*. So the label and the money point in opposite directions, and the threat has to be found somewhere other than share.",
-    "**Direction one — upward, into the incumbents' books.** One challenger's commitments are, to a first approximation, the AI half of several incumbents' backlogs: roughly $300 bn to one of them (press-attributed as about half of a $638 bn contracted-revenue figure), $250 bn of cloud purchases to another, $38 bn to a third with a reported $100 bn expansion — alongside multi-gigawatt letters with three silicon suppliers. A second challenger's book is the mirror image: up to 5 GW of one incumbent's custom accelerator at more than $100 bn over ten years, well over a gigawatt of another's in 2026 with multiple gigawatts from 2027, $30 bn of a third's cloud and up to 1 GW of merchant GPUs. **Three signatures underwrite a large share of five order books.**",
+    "**The registry's {{challenger}} label means something here it has meant in no previous landscape, and reading it wrongly inverts the whole section.** Three of the five are not selling against the five. **OpenAI, Anthropic and xAI are the demand the five incumbents' order books are made of** — the plan's own taxonomy note says the labs carry the role as *new buyers scaling up*. The other two, **ByteDance and Alibaba Cloud**, carry it for a different reason the registry states in as many words: *a leader elsewhere, not in the established US set*. So the label and the money point in opposite directions twice over, and the threat has to be found somewhere other than share.",
+    "**Direction one — upward, into the incumbents' books.** One challenger's commitments are, to a first approximation, the AI half of several incumbents' backlogs: roughly $300 bn to one of them — press-attributed as about half of a contracted-revenue figure that stood at $638 bn when the attribution was made and reached **$664 bn at the quarter ended 31 August 2026**, with the company never disclosing the split — $250 bn of cloud purchases to another, $38 bn to a third with a reported $100 bn expansion, alongside multi-gigawatt letters with three silicon suppliers. A second challenger's book is the mirror image: up to 5 GW of one incumbent's custom accelerator at more than $100 bn over ten years, well over a gigawatt of another's in 2026 with multiple gigawatts from 2027, $30 bn of a third's cloud and up to 1 GW of merchant GPUs. **Three signatures underwrite a large share of five order books.**",
     "**Direction two — downward, past the incumbents entirely. This is the newer half and it is what makes the label defensible.** Since mid-2026 one challenger **signs the leases and the generation orders in its own name**: a twenty-year 401 MW lease at about $19 bn, a 470 MW equipment purchase order for on-site generation, a 191 MW build-to-suit, an anchor-tenant platform with two infrastructure investors, and a February 2026 pledge to pay **100 % of the grid upgrades** its sites need and to cover the consumer price effects — voluntarily assuming what large-load tariffs are only beginning to require. Its own file states the posture precisely: rent the building, buy the power, let a lessor hold the silicon and a hyperscaler hold the credit. **An infrastructure counterparty that never becomes an owner.**",
     "**Direction three — sideways, which is the one nobody predicted.** The third challenger proved a gigawatt-class campus can skip the queue: about 1.0 GW of nameplate compute draw by March 2026 from zero in 2023, powered almost entirely by self-deployed {{behind-the-meter generation}} buffered by the largest battery installation of its kind, with utility allocations covering only a fraction of campus load. It now sells that capacity **back up the chain** — one incumbent pays about $920 m a month for roughly 110,000 GPUs at its sites from October 2026, and a fellow challenger pays $1.25 bn a month for an entire campus. **A challenger in this segment is simultaneously an incumbent's largest customer, a landlord's tenant and an incumbent's supplier.**",
-    "**So what is the threat, stated as this module's own judgment rather than as a fact from a file?** It is **disintermediation of the procurement function** — the exact thing the five instruments in the previous section exist to perform. If a lab can sign a twenty-year lease, order 470 MW of generation and pay for the grid upgrades itself, then the hyperscaler's balance sheet stops being the scarce input, and what the five are selling reduces to silicon and operations.",
-    "**And here is the counter-evidence, which is why this is a threat rather than an outcome.** Every one of the three is financed by the five. One incumbent holds about $190 bn of one challenger's paper and a second holds about 14 % of its equity, contractually capped at 15 %; a third holds about 27 % of another challenger; the third challenger was absorbed by a sister company and its own filing makes it IPO-dependent. **The circularity is contractual rather than rhetorical** — one investor's $20 bn facility releases against that investor's own delivery milestones as a supplier. A buyer that disintermediates its own funder has not disintermediated anything yet."
+    "**Direction four — from another market, which is the one the September roster could not show.** *ByteDance* is China's largest data-centre tenant — about a fifth of the country's delivered capacity on one research firm's September 2026 model, nearly all of it rented — and, on its suppliers' filings rather than its own word, **a buyer of power equipment through three doors**: its own campuses under the Volcano Engine name, where suppliers record it buying UPS, power modules, prefabricated substations and transformers directly; its landlords' build-to-suit halls, where one landlord discloses that a single unnamed customer took **90.12 per cent of 2025 revenue**; and the tenant's approved-vendor list inside landlord tenders. It publishes no accounts, names no power vendor, and its 2026 capex is known only from leaks that differ in scope as well as size — RMB 160 bn, more than RMB 200 bn, up to USD 70 bn; its one reported move toward 800 V is **a tender, not an award**. *Alibaba Cloud* is the one Chinese hyperscaler whose data-centre power architecture has a name, a published specification and a disclosed supply contract — **Panama**, a 10 kV-to-240/336 V DC transformer-rectifier launched with two suppliers in 2019 and bought by annual framework tender — and its 2026 report says its latest data centres are *fully compatible* with 800 V DC, which its own dossier reads as compatibility rather than deployment. More than RMB 190 bn of a RMB 380 bn three-year plan had been deployed by 30 June 2026; about a fifth of its cloud revenue is overseas; it was placed on a US military-companies list on 8 June 2026. **Neither is financed by anyone in this segment, and neither buys from the five.**",
+    "**So what is the threat, stated as this module's own judgment rather than as a fact from a file?** For the three labs it is **disintermediation of the procurement function** — the exact thing the five instruments in the previous section exist to perform. If a lab can sign a twenty-year lease, order 470 MW of generation and pay for the grid upgrades itself, then the hyperscaler's balance sheet stops being the scarce input, and what the five are selling reduces to silicon and operations. For the two leaders from another market the threat is to a different assumption — **that the architecture this segment passes down to landlords and vendors is written in the United States**. One of them writes its own and makes suppliers build to it; the other sits inside its landlords' tenders as the approved list.",
+    "**And here is the counter-evidence, which is why this is a threat rather than an outcome.** Every one of the three US challengers is financed by the five. One incumbent holds about $190 bn of one challenger's paper and a second holds about 14 % of its equity, contractually capped at 15 %; a third holds about 27 % of another challenger; the third challenger was absorbed by a sister company and its own filing makes it IPO-dependent. **The circularity is contractual rather than rhetorical** — one investor's $20 bn facility releases against that investor's own delivery milestones as a supplier. A buyer that disintermediates its own funder has not disintermediated anything yet. The two from another market are outside that circle entirely — which is also why their only edge inside this segment is a partnership, not a purchase."
    ],
-   "sales": "Do not sell to these three as if they were start-ups and do not sell to them as if they were the five. Two of them now run their own energy procurement with their own signatures on twenty-year paper, which means there is a real buying centre to find — and one of them has said in public that it will pay 100 % of the grid upgrades, which is the most generous counterparty posture in the corpus. The qualifying question is whether the account signs its own leases yet."
+   "sales": "Do not sell to these five as if they were start-ups and do not sell to them as if they were the five incumbents. Two of the labs now run their own energy procurement with their own signatures on twenty-year paper, which means there is a real buying centre to find — and one of them has said in public that it will pay 100 % of the grid upgrades, which is the most generous counterparty posture in the corpus. The qualifying question is whether the account signs its own leases yet. For the two from another market the question is different: which of three doors the hall sits behind, and whose specification — the landlord's or the tenant's — the equipment is being bought to."
   },
   {
    "id": "each-players-bet",
    "title": "Each player's bet",
-   "read": "6 min",
+   "read": "7 min",
    "kind": "table",
-   "intro": "One row per incumbent and challenger, in registry order. **Every row is analysis** — read off each dossier's own strategy section and labelled as judgment, never blended with fact. **Eight rows because the ranked roster is eight.** This is the smallest segment any landscape has covered and the table is not padded to look like the others: there are no adjacents to omit, and inventing a ninth row would be inventing a member.",
+   "intro": "One row per incumbent and challenger, in registry order. **Every row is analysis** — read off each dossier's own strategy section and labelled as judgment, never blended with fact; where a dossier states a confidence level, it is carried. **Ten rows because the ranked roster is ten.** The table is not padded to look like the others: there are no adjacents to omit, and inventing an eleventh row would be inventing a member.",
    "cols": [
     "Player",
     "Role",
@@ -72048,7 +72233,7 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
     [
      "Oracle",
      "incumbent",
-     "That **a concentrated landlord bet is worth its funding cost** — $638 bn of contracted revenue, roughly half press-attributed to a single counterparty, funded by debt and equity at a scale that made its credit default swaps a market-wide barometer for AI-capex risk. Its file is candid that the economics are thin near-term (free cash flow −$23.7 bn, leaked gross margins of about 14–16 % on GPU rentals against about 70 % on the legacy book). The power half is deliberate, and it is the one thing it publishes in full"
+     "That **a concentrated landlord bet is worth its funding cost** — $664 bn of contracted revenue at the quarter ended 31 August 2026, up from $638 bn three months earlier, roughly half of the earlier figure press-attributed to a single counterparty and never split by the company — funded by debt and equity at a scale that made its credit default swaps a market-wide barometer for AI-capex risk. Its file is candid that the economics are thin near-term (quarterly free cash flow of about −$5.4 bn on the latest print, leaked gross margins of about 14–16 % on GPU rentals against about 70 % on the legacy book). The power half is deliberate, and it is the one thing it publishes in full"
     ],
     [
      "OpenAI",
@@ -72064,9 +72249,19 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
      "xAI",
      "challenger",
      "That **speed-to-power beats model quality as a differentiator** — behind-the-meter gas plus battery buffering skipping the queue outright, 64-to-91-day cluster bring-ups, and turbine procurement that made it one of the largest mobile-turbine buyers anywhere. The same playbook is the risk template in its own file: a federal air-quality suit, four different turbine counts with four different evidentiary statuses, and a self-recorded $399 m accrual. Related-party procurement is **structural rather than incidental**, and vendors should assume the affiliate gets first look at any storage scope"
+    ],
+    [
+     "ByteDance",
+     "challenger",
+     "That **the hall decides who buys** — three doors, and a seller who does not know which one a hall sits behind is selling to the wrong person (high confidence): direct purchases for its own campuses, its landlords' build-to-suit halls, and the approved-vendor list inside landlord tenders. Its file reads **self-build as the direction of travel and the landlords' main risk** (high confidence) — its principal landlord's first wholesale contract expires in November 2027 with no renewal talks begun — and reads the leaked capex figures as bracketing a budget and a ceiling rather than disagreeing (moderate). The 800 V move is a tender signal, not yet a programme (moderate). It publishes no accounts and names no power vendor"
+    ],
+    [
+     "Alibaba Cloud",
+     "challenger",
+     "That **a specifier-buyer wins** — design the power architecture, then buy it from a short supplier list by framework tender (high confidence); Panama is a transformer-rectifier and the stated 800 V position is compatibility, not deployment (high confidence). The cost its file reads: a supplier base that is concentrated and now partly battery-owned, after a cell maker took 49 per cent of the principal supplier's holding company (moderate), and a capacity plan that will increasingly be leased and co-built, which moves part of the equipment decision to landlords working to its specification (moderate). A RMB 380 bn three-year plan with more than RMB 190 bn deployed by mid-2026, management saying five-year needs *will far exceed* it, and a US military-companies listing on 8 June 2026"
     ]
    ],
-   "note": "**The eight rows are not comparable to each other and are not meant to be.** Two of the incumbents are betting on instruments they own, one on an instrument it has deleted, one on an instrument a utility owns and one on publishing the menu. Two of the challengers are betting that commitments create supply and the third that supply can be self-built. Reading down the column is the point; ranking across it is not available from anything in this corpus.",
+   "note": "**The ten rows are not comparable to each other and are not meant to be.** Two of the incumbents are betting on instruments they own, one on an instrument it has deleted, one on an instrument a utility owns and one on publishing the menu. Two of the challengers are betting that commitments create supply, a third that supply can be self-built, and two that an architecture written at home travels. Reading down the column is the point; ranking across it is not available from anything in this corpus.",
    "sales": "The bet column is the fastest way to a first meeting that does not waste it. An account betting on the complete machine wants to hear about its developers' asset choices. One betting on deleting the machine does not want a UPS conversation at all and does want a grid-interactive one. One betting on speed wants a delivery date before it wants a price."
   },
   {
@@ -72074,7 +72269,7 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
    "title": "The indicators",
    "read": "4 min",
    "kind": "table",
-   "intro": "What to watch, dated where the record dates it. **Where the record dates something only to a month, a quarter or a year, the row says so** rather than supplying a day — and here that is the dominant case, not the exception: a day-level scan of all eight dossiers found **exactly one future day-level date in the whole segment**, and it belongs to a statute about model disclosure rather than to anything about power.",
+   "intro": "What to watch, dated where the record dates it. **Where the record dates something only to a month, a quarter or a year, the row says so** rather than supplying a day — and here that is the dominant case, not the exception: a day-level scan of all ten dossiers found **exactly one future day-level date in the whole segment**, and it belongs to a statute about model disclosure rather than to anything about power.",
    "cols": [
     "Watch",
     "When the record dates it",
@@ -72120,6 +72315,11 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
      "Custom-silicon delivery against three separate accelerator programmes",
      "**End-2026 initial deployment for one; 2027 for another; and for the third, the record says only starting in 2027**",
      "Each is a gigawatt-denominated commitment whose power draw lands in somebody's hall. Where the silicon slips, the power schedule slips with it"
+    ],
+    [
+     "The two leaders from another market — whether one's capacity lands as owned or rented, and whether the other's plan lands as deployment or compatibility",
+     "**November 2027 — month only** for the expiry of one member's first wholesale lease with its principal landlord, with no renewal talks begun; **2027 — year only** for the end of the other's three-year plan",
+     "One member's own file reads self-build as the direction of travel and the landlords' main risk; the other's reads its 800 V position as compatibility rather than deployment. Neither date is a gate on this module's claims, which is why neither is its review date"
     ]
    ],
    "sales": "Rows two and seven are the ones to put in front of a sceptical sales manager. The first says the flagship campus is at about 0.3 GW live against 1.2 GW projected by Q4 2026 and more than 9 GW by 2029; the second says one of the five incumbents has begun renting compute from one of the three challengers. Both are in the record, both are dated, and both change how an account plan should be written."
@@ -72144,23 +72344,23 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
    "title": "Claims ledger",
    "read": "reference",
    "kind": "ledger",
-   "intro": "**Provenance:** corpus synthesis over the segment's eight member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 16 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. **Four claims in this module are the module's own** and are labelled as analysis wherever they appear: that the closure makes this segment the chain's terminus; that the five incumbents hold five non-comparable instruments rather than five ranks; that the challengers' threat is disintermediation of the procurement function rather than share; and every row of the bets table.",
+   "intro": "**Provenance:** corpus synthesis over the segment's ten member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 4 October 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. **Four claims in this module are the module's own** and are labelled as analysis wherever they appear: that the closure makes this segment the chain's terminus; that the five incumbents hold five non-comparable instruments rather than five ranks; that the challengers' threat is disintermediation of the procurement function — and, for the two from another market, a challenge to where the architecture is written — rather than share; and every row of the bets table.",
    "rows": [
     [
-     "Segment holds 8 members — 5 incumbent, 3 challenger, 0 adjacent; chain position 13, tier demand; and the registry entry carries NO notes field",
-     "profiler-segments.json @ v06.10r — segments[].members[], .position, .tier"
+     "Segment holds 10 members — 5 incumbent, 5 challenger, 0 adjacent; chain position 13, tier demand; and the registry entry carries NO notes field",
+     "profiler-segments.json @ v07.87r — segments[].members[], .position, .tier"
     ],
     [
-     "Not one of the eight members is ranked in any other segment, so the segment is closed; only two of the nineteen segments are (this one and insurance-and-risk-transfer)",
-     "profiler-segments.json @ v06.10r — every segments[].members[].slug, cross-checked"
+     "Not one of the ten members is ranked in any other segment, so the segment is closed; only two of the nineteen segments are (this one and insurance-and-risk-transfer), and since 2 October 2026 they are also the only two with zero adjacents",
+     "profiler-segments.json @ v07.87r — every segments[].members[].slug, cross-checked"
     ],
     [
      "The definition names the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream, and the tenants whose credit shapes the leases below them",
-     "profiler-segments.json @ v06.10r — segments[].definition"
+     "profiler-segments.json @ v07.87r — segments[].definition"
     ],
     [
-     "The six buying criteria, verbatim, and the plan's note that the labs carry challenger as new buyers scaling up",
-     "profiler-segments.json @ v06.10r — segments[].buyingCriteria; CLASSROOM-CURRICULUM-PLAN.md 10.2 and 10.11"
+     "The six buying criteria, verbatim, and the plan's note that the labs carry challenger as new buyers scaling up; the two October members carry it as 'a leader elsewhere, not in the established US set'",
+     "profiler-segments.json @ v07.87r — segments[].buyingCriteria, segments[].members[].basis; CLASSROOM-CURRICULUM-PLAN.md 10.2 and 10.11"
     ],
     [
      "All six buying criteria print a dash in the public segment lesson, because the three lessons mapped to this segment appear in no entry of the generator's criterion index",
@@ -72200,95 +72400,119 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
     ],
     [
      "Flagship design runs on resilient grid power with no on-site generators and no UPS, four-nines availability at three-nines cost; resilience spend moves upstream of the fence line",
-     "profile:microsoft @ v4 — ecosystemRole, strategyRead[1]"
+     "profile:microsoft @ v6 — ecosystemRole, strategyRead[1]"
     ],
     [
      "About 835 MW nuclear restart on a twenty-year PPA with a $1 bn federal loan, a record 10.5 GW renewables framework, a ~40 GW clean portfolio, the first fusion PPA; no major standalone battery procurement surfaced in 2025 or 2026",
-     "profile:microsoft @ v4 — summary, ecosystemRole, policyExposure[0]"
+     "profile:microsoft @ v6 — summary, ecosystemRole, policyExposure[0]"
     ],
     [
      "A $678 bn commercial backlog growing at +84 %, faster than capex, so the buildout is substantially pre-sold",
-     "profile:microsoft @ v4 — strategyRead[0], summary"
+     "profile:microsoft @ v6 — strategyRead[0], summary"
     ],
     [
      "More than 30 GW contracted, about 7.7 GW of nuclear; the utility building seven gas plants plus three grid-scale batteries and nuclear uprates for one campus; BESS exposure runs through utility-side tolling with no behind-the-meter batteries at either flagship",
-     "profile:meta @ v9 — ecosystemRole, strategyRead[2], recentDevelopments"
+     "profile:meta @ v10 — ecosystemRole, strategyRead[2], recentDevelopments"
     ],
     [
      "About $41 bn of announced development cost moved into two private-capital joint ventures at 80/20, with four-year leases and a sixteen-year residual guarantee; free cash flow collapsing to sub-$1 bn quarters",
-     "profile:meta @ v9 — strategyRead[0], strategyRead[1], recentDevelopments"
+     "profile:meta @ v10 — strategyRead[0], strategyRead[1], recentDevelopments"
     ],
     [
      "The ratepayer proceeding read as the sector's regulatory bellwether: a judge compelling demand-evidence disclosure and a commissioner dissenting on fifteen-year contracts against thirty-year plant lives",
-     "profile:meta @ v9 — policyExposure[0], strategyRead[3]"
+     "profile:meta @ v10 — policyExposure[0], strategyRead[3]"
     ],
     [
      "Five simultaneously active and different site architectures — engine microgrid with 115 MW live, fuel cells up to 2.45 GW replacing planned turbines, turbines plus grid, utility grid plus new battery storage, about 70 % renewables plus battery — codified by a January 2026 self-funded-energy policy post",
-     "profile:oracle @ v4 — ecosystemRole, strategyRead[2], recentDevelopments"
+     "profile:oracle @ v6 — ecosystemRole, strategyRead[2], recentDevelopments"
     ],
     [
-     "$638 bn of remaining performance obligations at +363 %, roughly half press-attributed to one counterparty and never split by the company; free cash flow −$23.7 bn; leaked gross margins about 14–16 % on GPU rentals against about 70 % legacy; credit default swaps became a market-wide AI-capex barometer",
-     "profile:oracle @ v4 — summary, strategyRead[0], strategyRead[1]"
+     "$664 bn of remaining performance obligations at the quarter ended 31 August 2026, up from $638 bn three months earlier, roughly half of the earlier figure press-attributed to one counterparty and never split by the company; quarterly free cash flow about −$5.4 bn; leaked gross margins about 14–16 % on GPU rentals against about 70 % legacy; credit default swaps became a market-wide AI-capex barometer",
+     "profile:oracle @ v6 — summary, strategyRead[0], strategyRead[1]"
     ],
     [
      "About $1.4 tn and roughly 30 GW of infrastructure commitments acknowledged by the chief executive; per-counterparty tallies of about $300 bn, $250 bn, $38 bn plus a reported $100 bn, and multi-gigawatt letters with three silicon suppliers",
-     "profile:openai @ v5 — summary, ecosystemRole, strategyRead[0]"
+     "profile:openai @ v6 — summary, ecosystemRole, strategyRead[0]"
     ],
     [
      "The financing is circular by construction — the same dollars appear as vendor revenue, as funding and as counterparty backlog — and about $25 bn annualised stands against $750 bn of planned compute through 2030",
-     "profile:openai @ v5 — strategyRead[1], strategyRead[2]"
+     "profile:openai @ v6 — strategyRead[1], strategyRead[2]"
     ],
     [
      "About 0.3 GW live at the flagship campus against 1.2 GW projected by Q4 2026 and more than 9 GW projected by 2029; one expansion at that campus was reversed",
-     "profile:openai @ v5 — technicalSpecs, strategyRead[3]"
+     "profile:openai @ v6 — technicalSpecs, strategyRead[3]"
     ],
     [
      "From mid-2026 the lab signs leases and generation orders itself: a twenty-year 401 MW lease at about $19 bn, a 470 MW equipment purchase order with no sites or dates disclosed, a 191 MW build-to-suit, an anchor-tenant platform with two infrastructure investors",
-     "profile:anthropic @ v3 — ecosystemRole, strategyRead[1], recentDevelopments"
+     "profile:anthropic @ v4 — ecosystemRole, strategyRead[1], recentDevelopments"
     ],
     [
      "Up to 5 GW of one incumbent's accelerator at more than $100 bn over ten years; well over a gigawatt of another's in 2026 with multiple gigawatts from 2027; $30 bn of a third's cloud and up to 1 GW of merchant GPUs",
-     "profile:anthropic @ v3 — summary, strategyRead[0]"
+     "profile:anthropic @ v4 — summary, strategyRead[0]"
     ],
     [
      "The February 2026 pledge to pay 100 % of the grid upgrades needed to interconnect its data centres and to cover demand-driven consumer price effects — voluntarily assuming what large-load tariffs are beginning to require",
-     "profile:anthropic @ v3 — policyExposure[6], recentDevelopments"
+     "profile:anthropic @ v4 — policyExposure[6], recentDevelopments"
     ],
     [
      "Delivery-date risk assessed as larger than allocation risk, with the book's start dates concentrated in one window and start-up counterparties carrying the execution; end-2026 named as the first hard delivery tests",
-     "profile:anthropic @ v3 — strategyRead[3], strategyRead[8]"
+     "profile:anthropic @ v4 — strategyRead[3], strategyRead[8]"
     ],
     [
      "One incumbent holds about $190 bn of the lab's paper and a second about 14 % of its equity, contractually capped at 15 %; a $20 bn facility releases against that investor's own compute-delivery milestones",
-     "profile:anthropic @ v3 — strategyRead[0], recentDevelopments"
+     "profile:anthropic @ v4 — strategyRead[0], recentDevelopments"
     ],
     [
      "About 1.0 GW of nameplate compute draw by March 2026 from zero in 2023, almost entirely on self-deployed generation buffered by the largest installation of its battery type; utility allocations cover only a fraction of campus load",
-     "profile:xai @ v4 — ecosystemRole, strategyRead[0]"
+     "profile:xai @ v6 — ecosystemRole, strategyRead[0]"
     ],
     [
      "Cluster bring-ups of 64 to 91 days independently corroborated; about $3.7 bn of 2026 turbine commitments; a federal air-quality suit, four different turbine counts with different evidentiary statuses, and a self-recorded $399 m accrual",
-     "profile:xai @ v4 — strategyRead[0], strategyRead[1], recentDevelopments"
+     "profile:xai @ v6 — strategyRead[0], strategyRead[1], recentDevelopments"
     ],
     [
      "Related-party procurement described as structural rather than incidental, with the recommendation that vendors assume the affiliate gets first look at any storage scope",
-     "profile:xai @ v4 — strategyRead[3]"
+     "profile:xai @ v6 — strategyRead[3]"
     ],
     [
      "Mobile turbines under an environmental agreed order with removal running August 2026 to July 2027, behind a permitted permanent 1.2 GW behind-the-meter plant",
-     "profile:xai @ v4 — technicalSpecs, recentDevelopments"
+     "profile:xai @ v6 — technicalSpecs, recentDevelopments"
     ],
     [
      "One incumbent pays about $920 m per month for roughly 110,000 GPUs at the challenger's sites, October 2026 through June 2029; a fellow challenger pays $1.25 bn per month for an entire campus",
-     "profile:google @ v9 and profile:xai @ v4 — recentDevelopments (both sides); profile:anthropic @ v3 — recentDevelopments"
+     "profile:google @ v9 and profile:xai @ v6 — recentDevelopments (both sides); profile:anthropic @ v4 — recentDevelopments"
     ],
     [
-     "Eleven policyExposure entries across the eight members, seven of them on one member and two members carrying none; nine carry an effectiveDate and exactly one is in the future",
-     "profile:amazon, google, meta, microsoft, oracle, anthropic, openai, xai — policyExposure[] counted at the versions above"
+     "ByteDance buys data-centre power equipment through three doors — its own Volcano Engine campuses, where suppliers' filings record direct purchases of UPS, power modules, prefabricated substations and transformers; its landlords' build-to-suit halls; and the tenant's approved-vendor list inside landlord tenders — and is about a fifth of China's delivered data-centre capacity on a research firm's September 2026 model, nearly all rented",
+     "profile:bytedance @ v1 — summary, ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Its principal landlord's acquirer discloses one unnamed customer at 90.12 % of that landlord's 2025 revenue and identifies that customer's own campuses as Volcano Engine projects; the first wholesale contract expires in November 2027 with no renewal talks begun; self-build is the direction of travel",
+     "profile:bytedance @ v1 — summary, strategyRead[3]"
+    ],
+    [
+     "It publishes no accounts and names no power vendor; 2026 capex is known only from anonymous-source leaks of RMB 160 bn, more than RMB 200 bn and up to USD 70 bn that differ in scope as well as size; its one reported move toward 800 V is a tender, not an award; three policy entries (PAFACA 2026-01-22, H200 licensing 2026-05, East Data West Computing undated)",
+     "profile:bytedance @ v1 — summary, strategyRead[1], strategyRead[2], policyExposure[]"
+    ],
+    [
+     "Alibaba Cloud's power architecture has a name, a published specification and a disclosed supply contract — Panama, a 10 kV-to-240/336 V DC transformer-rectifier launched with Delta and Zhonhen in 2019 and bought by annual framework tender; its 2026 ESG report says its latest data centres are fully compatible with 800 V DC, read by its dossier as compatibility rather than deployment; no solid-state transformer in service is disclosed",
+     "profile:alibaba-cloud @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "More than RMB 190 bn of a RMB 380 bn three-year AI and cloud infrastructure plan deployed by 30 June 2026, with management saying five-year needs will far exceed it; about 20 % of cloud revenue overseas; a US Section 1260H listing on 2026-06-08; capacity increasingly leased and co-built to its specification",
+     "profile:alibaba-cloud @ v1 — summary, ecosystemRole, strategyRead[3], policyExposure[0]"
+    ],
+    [
+     "Its supplier base is concentrated and partly battery-owned: broker estimates put one supplier at about half of its HVDC and more than 90 % of Panama, with a second at about 20 %, and a cell maker signed on 14 August 2026 to take 49 % of the first supplier's controlling holding company",
+     "profile:alibaba-cloud @ v1 — strategyRead[2]"
+    ],
+    [
+     "Eighteen policyExposure entries across the ten members, seven of them on one member and three each on the two October members, with two members carrying none; thirteen carry an effectiveDate and exactly one is in the future",
+     "profile:amazon, google, meta, microsoft, oracle, anthropic, openai, xai, bytedance, alibaba-cloud — policyExposure[] counted at the versions above"
     ],
     [
      "The one future effective date in the fence is 2027-01-01, a state frontier-AI transparency statute — also the review date of four registered modules and of this segment's own generated lesson",
-     "profile:anthropic @ v3 — policyExposure[2]; Classroom.gs — guidanceDocs() reviewBy fields and clLessonSegmentHyperscalersAndAiLabs()"
+     "profile:anthropic @ v4 — policyExposure[2]; Classroom.gs — guidanceDocs() reviewBy fields and clLessonSegmentHyperscalersAndAiLabs() regenerated 4 October 2026"
     ]
    ]
   },
@@ -72299,14 +72523,16 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
    "kind": "callout",
    "tone": "warn",
    "ps": [
-    "Seven absences. Each one is **stated by the dossier that has it**, not inferred from silence — and on a segment this small the absences carry more weight than usual, because there is no eighth or ninth member to fill them in.",
-    "**1. No contract price, anywhere, for any of the eight.** Not one dossier publishes a per-megawatt-hour figure for a nuclear, renewable or firm contract. The second buying criterion is priced in no source this segment holds.",
+    "Nine absences. Each one is **stated by the dossier that has it**, not inferred from silence — and on a segment this small the absences carry more weight than usual, because there is no eleventh member to fill them in.",
+    "**1. No contract price, anywhere, for any of the ten.** Not one dossier publishes a per-megawatt-hour figure for a nuclear, renewable or firm contract. The second buying criterion is priced in no source this segment holds.",
     "**2. No behind-the-meter campus storage for four of the five incumbents** — and three of them say so in their own files, one of them calling the absence *a genuine structural contrast* with the challenger that has a fleet.",
     "**3. No battery vendor is named anywhere in the utility-scale layer.** One dossier says its renewables disclosures name developers but never battery vendors, and explicitly refuses the obvious inference from a developer's corporate stake as *an untested inference, not a sourced fact*.",
     "**4. No rack-level backup supply agreement is confirmed by anybody.** The only reporting rests on unnamed sources at trade outlets, names the same supplier in parallel talks with three of these members, and is confirmed by neither side of any of them.",
     "**5. No customer split for the largest contracted-revenue figure in the segment.** The company has never disclosed it; the *roughly half* attribution is press reporting, and analysts openly handicap collectability in the same dossier.",
     "**6. No consolidated capacity total, fiscal-year revenue, compute spend, burn or headcount** for the challenger with the deepest file — its own collection-gaps note lists all five — and the credit-support provider behind two of its leases is **unnamed in every source read**.",
-    "**7. No league table of these eight exists in this corpus.** The public campus lesson says the same thing one layer down, in as many words, and declines to invent one. This module states five instruments and declines the ordering for the same reason: the bases do not compare."
+    "**7. No league table of these ten exists in this corpus.** The public campus lesson says the same thing one layer down, in as many words, and declines to invent one. This module states five instruments and declines the ordering for the same reason: the bases do not compare.",
+    "**8. No accounts, no power vendor and no 800 V award for the newest challenger.** Its own dossier says so in its first sentence: it is a direct buyer of power equipment *on Chinese suppliers' own filings, not its own word*, its capex is known only from leaks, and the one reported move toward 800 V is a tender.",
+    "**9. No solid-state transformer in service behind the other newcomer's 800 V compatibility.** Its dossier states that no first-party source discloses one, that the only SST-adjacent link on the record is a joint innovation centre, and that *fully compatible* is a statement about the building, not about deployed equipment."
    ]
   },
   {
@@ -72317,7 +72543,7 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
    "cards": [
     {
      "q": "What does it mean that this segment is *closed*, and how many segments are?",
-     "a": "Closed means **zero adjacent members and no member belonging to any other segment**. Only **two** of the nineteen are: this one at **8 of 8 pure plays**, and insurance and risk transfer at 3 of 3. A third segment has no adjacents but is not closed, because four of its seven members are ranked elsewhere too."
+     "a": "Closed means **zero adjacent members and no member belonging to any other segment**. Only **two** of the nineteen are: this one at **10 of 10 pure plays**, and insurance and risk transfer at 3 of 3. Since October 2026 they are also the only two segments with zero adjacents — the third zero-adjacent segment of September, neoclouds, gained one — so the two sets now coincide."
     },
     {
      "q": "Why does nobody arrive in this segment as an adjacent?",
@@ -72337,7 +72563,7 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
     },
     {
      "q": "In what sense are the three challengers a threat, given that they are the incumbents' customers?",
-     "a": "Not share — **disintermediation of the procurement function**. Two of the three now sign twenty-year leases, buy generation and pledge grid upgrades in their own names, which is what the incumbents' five instruments exist to do. The counter-evidence is that all three are financed by the five, with one investor's facility releasing against its own delivery milestones as a supplier."
+     "a": "Not share — **disintermediation of the procurement function**. Two of the five now sign twenty-year leases, buy generation and pledge grid upgrades in their own names, which is what the incumbents' five instruments exist to do. The counter-evidence is that all three US labs are financed by the five, with one investor's facility releasing against its own delivery milestones as a supplier. The two challengers from another market threaten something else — the assumption that the segment's architecture is written in the United States — and are financed by nobody here."
     },
     {
      "q": "What is the single measurement a storage seller should take away from this segment?",
@@ -72345,7 +72571,7 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
     },
     {
      "q": "This module's review date is a delivery checkpoint rather than a regulation. Why?",
-     "a": "Because the fence has **eleven policy entries across eight members, nine dated and exactly one in the future** — a model-transparency statute that is off-subject, already four modules' review date, and already this segment's own generated lesson's clock. The record instead converges on end-2026 from seven directions, and one dossier calls that point *the first hard delivery tests*, which is a gate rather than a signal."
+     "a": "Because the fence has **eighteen policy entries across ten members, thirteen dated and exactly one in the future** — a model-transparency statute that is off-subject, already four modules' review date, and already this segment's own generated lesson's clock. The record instead converges on end-2026 from seven directions, and one dossier calls that point *the first hard delivery tests*, which is a gate rather than a signal."
     }
    ]
   },
@@ -72367,18 +72593,18 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
      "why": "Gigawatts contracted fails because one of the five deliberately deletes in-hall machinery and buys firmness upstream instead, so the figure measures a different strategy rather than a weaker one. Capex fails harder: it measures **the size of the buyer, not its position in this segment**, and three of the five moved it twice inside a year. Nuclear megawatts fails for the same reason as the first — it ranks one instrument as though it were the only one."
     },
     {
-     "q": "The registry calls three of these eight members *challengers*, and those three are among the largest sources of demand in the whole corpus. What does the label actually mean here?",
+     "q": "The registry calls five of these ten members *challengers*; three of them are among the largest sources of demand in the whole corpus and two lead another market. What does the label actually mean here?",
      "c": [
       "The registry is using the role loosely and it should be read as a coverage note rather than a position",
-      "New buyers scaling up — so the label and the money point in opposite directions, and the threat has to be found in how they buy rather than in share taken",
+      "New buyers scaling up for the three labs, and leaders in another market for the other two — so the label and the money point in opposite directions, and the threat has to be found in how they buy rather than in share taken",
       "Companies with less revenue than the incumbents, which is what challenger means everywhere in the registry",
       "Suppliers attacking the incumbents' cloud businesses on price"
      ],
      "a": 1,
-     "why": "The plan's own taxonomy note says the labs carry the role **as new buyers scaling up**. Reading it as a size ranking inverts the section: one of the three underwrites roughly half of one incumbent's entire contracted-revenue figure. The threat that is actually present is **disintermediation of procurement** — two of the three now sign their own leases, buy their own generation and pay their own grid upgrades."
+     "why": "The plan's own taxonomy note says the labs carry the role **as new buyers scaling up**, and the registry's basis lines call the two October members *a leader elsewhere, not in the established US set*. Reading it as a size ranking inverts the section: one of the three labs underwrites roughly half of one incumbent's earlier contracted-revenue figure. The threat that is actually present is **disintermediation of procurement** — two of the labs now sign their own leases, buy their own generation and pay their own grid upgrades — and, from the other two, an architecture written somewhere else."
     },
     {
-     "q": "Eight of eight members here belong to no other segment, and there are no adjacents. What is the correct inference?",
+     "q": "Ten of ten members here belong to no other segment, and there are no adjacents. What is the correct inference?",
      "c": [
       "The segment is under-covered and more members will be added as the corpus fills",
       "The registry's adjacent role was applied inconsistently to this segment",
@@ -72386,7 +72612,7 @@ function guidanceDocLandscapeHyperscalersAndAiLabs_() {
       "That the segment sits high in the chain, where adjacency is unusual"
      ],
      "a": 2,
-     "why": "It is a measurement rather than a gap — checked against all nineteen segments, only **two are closed**, this one and insurance and risk transfer, and the three-segments-with-no-adjacents set is larger than the closed set. The consequence for a reader is practical: the standing instrument that reads a segment's adjacents for what kind of thing the segment is **cannot be run here at all**, and neither can the role-inversion comparison against a neighbouring landscape, because there are no shared members to invert."
+     "why": "It is a measurement rather than a gap — checked against all nineteen segments, only **two are closed**, this one and insurance and risk transfer, and since October 2026 those two are also the only segments with zero adjacents. The consequence for a reader is practical: the standing instrument that reads a segment's adjacents for what kind of thing the segment is **cannot be run here at all**, and neither can the role-inversion comparison against a neighbouring landscape, because there are no shared members to invert."
     },
     {
      "q": "You are selling containerised storage and you have a meeting with one of the five incumbents. What is the most useful thing this module tells you before you walk in?",
@@ -72507,53 +72733,76 @@ function guidanceDocLandscapeNeoclouds_() {
  "id": "landscape-neoclouds-2026-09",
  "group": "The Value Chain",
  "title": "Neoclouds — the Landscape",
- "short": "One incumbent against six challengers — the most lopsided roster in the taxonomy — where the incumbency rests on a third-party operational rating rather than on size, and the threat arrives from the customers rather than from the bench.",
+ "short": "Two incumbents sharing one top rating, nine challengers on five routes and a first adjacent — a roster that grew from seven to twelve in a fortnight — where the incumbency rests on a third-party rating that is a point-in-time judgment by a firm with undisclosed ties to several of the rated, and the threat still arrives from the customers rather than from the bench.",
  "source": {
-  "doc": "Corpus synthesis over the 7 member dossiers of the neoclouds segment, at the profile versions in the claims ledger — no ingested document; at the 24 September 2026 review the dated gates were re-verified and three primary documents that overturned taught claims were read first-hand and cited in the claims ledger",
+  "doc": "Corpus synthesis over the 12 member dossiers of the neoclouds segment, plus the dossier on the research firm whose rating two of the roles rest on, at the profile versions in the claims ledger — no ingested document; at the 4 October 2026 re-pin the roster was re-measured at twelve, every count was restated from the files, the 30 September gate was recorded as failed, and the rating is now explained and attributed rather than cited as a publisher",
   "publisher": "Internal analysis",
   "date": "September 2026",
   "pages": 9,
   "series": "Industry Guidance — landscape module",
   "repo": "repository-information/industry-guidance/landscape-neoclouds-analysis.md"
  },
- "updated": "2026-09-24",
- "reviewBy": "2026-09-30",
+ "updated": "2026-10-04",
+ "reviewBy": "2026-10-08",
  "revisions": [
   {
    "date": "2026-09-24",
    "note": "Freshness review ahead of the 30 September gate. Two primary documents published after authoring overturned taught claims, and both are now cited directly. (1) ClusterMAX 3.0 (SemiAnalysis, 23 September 2026) places Nebius level with the incumbent at Platinum for the first time, keeps Lambda at Silver, drops Crusoe from Gold to Bronze, moves Fluidstack from Gold to Not Recommended – Unavailable, keeps IREN at Not Recommended – Underperforming after testing, and names Nscale for the first time, under Unavailable. The rating now covers all seven; the incumbent is the only member at Platinum in all three cycles but no longer the only one at Platinum. (2) Nscale's S-1 (18 September 2026) publishes revenue, confirms the largest contract in the segment at up to about USD 44.6 bn with a frontier lab, and states that about 1 GW of its 1.37 GW is at owned sites, contradicting the dossier's 'majority on other people's campuses'; the private members publishing no revenue fall from four to three, and the registration-statement indicator is resolved. Also: Fluidstack's own press page names its end customer for the New York and Texas campuses, and IREN was re-read at v5 (the consensus-miss run now covers all of FY2026). The six-challenger, four-route structure and the four-of-seven purchasing-authority count are unchanged. Not refreshed here, because the dossiers they rest on predate newer filings: the incumbent's backlog and contracted-power figures and the Crusoe contracted figure. They are dated-true, not contradicted, and are left for a dossier refresh. reviewBy stays 30 September: the statutory-accounts gate has not resolved."
+  },
+  {
+   "date": "2026-10-04",
+   "note": "Classroom wave A re-pin against the enlarged roster. The 30 September gate failed: Fluidstack Ltd missed the statutory deadline for its FY2025 accounts and Companies House showed 'Accounts overdue' on 2 October 2026 (fluidstack v4). The segment was re-measured at twelve members — 2 incumbent, 9 challenger, 1 adjacent — with Nebius moved to incumbent on 2 October on its ClusterMAX 3.0 Platinum (registry notes, nebius v6), five new members (Firmus v2, HUMAIN v1, G42 v1, WhiteFiber v1 as challengers; 5C Group v1 as the first adjacent), and seven members re-read at new versions (coreweave v5, nebius v6, lambda v6, crusoe v7, iren v7, fluidstack v4, nscale v3). The rating the roles rest on is now explained and attributed through the semianalysis v1 dossier rather than cited as a publisher: what ClusterMAX is, who publishes it, and why a tier is a point-in-time judgment by a firm with undisclosed commercial and investment ties to several of the rated — the module does not rank by tier alone. Every count is restated from the files: nine of twelve shared with the landlords segment with five inversions; 7 of 12 publishing no revenue figure; a fence of 35 / 23 / 0 future with CoreWeave, Lambda and IREN carrying none; a graph of 29 edges, 14 typed pairs, 17 typings and three commercial transactions; purchasing authority at eight of the eleven ranked members; one utility-scale battery commitment. Five routes replace four: the out-compound route's one runner became an incumbent, and the sovereign builders and the landlord-cloud are new. reviewBy moves to 2026-10-08, the Firmus prospectus lodgement on a Reuters-reported term sheet — the nearest dated gate in the new material and a gate on the module's own disclosure count; six later candidates are rejected in the analysis file. Dated-true figures left for a dossier refresh in September (the first incumbent's backlog and contracted power) are unchanged in coreweave v5 and are kept.",
+   "changed": [
+    "who-dominates-and-on-what-basis",
+    "who-threatens",
+    "each-players-bet",
+    "the-indicators",
+    "the-sellers-play",
+    "claims-ledger",
+    "what-the-record-does-not-say",
+    "drill",
+    "check-yourself"
+   ]
   }
  ],
  "tiles": [
   {
-   "k": "1 · 6 · 0",
-   "v": "incumbent, challengers, adjacents",
-   "sub": "Seven members, re-measured 16 September 2026 from the registry member by member. The most lopsided roster any landscape has covered: every previous one had a plural incumbency to sort, and this one has a single company to explain"
+   "k": "2 · 9 · 1",
+   "v": "incumbents, challengers, adjacents",
+   "sub": "Twelve members, re-measured 4 October 2026 from the registry member by member — five more than the September roster. The second incumbent arrived by rating rather than by scale, and the first adjacent is a landlord whose tenants own their own GPUs"
   },
   {
-   "k": "6 of 7",
-   "v": "rated on one third-party scale — all seven, from September 2026",
-   "sub": "The September 2026 cycle of a single named rating places every member for the first time. The incumbent is the only member at the top tier in all three cycles — and for the first time it shares that tier, with one challenger. It measures operational quality rather than size"
+   "k": "11 of 12",
+   "v": "rated on one third-party scale",
+   "sub": "The September 2026 edition places every ranked member; only the adjacent landlord is unrated. Two at Platinum, two at Silver, one at Bronze, one in the new Participation Ribbon tier, two Underperforming, three Unavailable. The rater sells research and consulting to companies it rates and has not repeated its compensation disclaimer since the first edition — a tier is a point-in-time judgment, not an audit"
   },
   {
-   "k": "3 of 7",
-   "v": "publish no revenue at all",
-   "sub": "Three members are listed, a fourth filed to list in September 2026, and three are private — and not one of those three discloses revenue, backlog or headcount. The one-incumbent shape is partly a disclosure artefact: the incumbent is the company anyone can measure longest"
+   "k": "7 of 12",
+   "v": "publish no revenue figure",
+   "sub": "Five publish one — both incumbents, two listed challengers and one that has filed to list. Of the seven, four publish nothing and three publish megawatts only. September's one-incumbent shape was partly a disclosure artefact; October's two-incumbent shape is a rating"
   },
   {
-   "k": "1",
-   "v": "transaction between members, on the record",
-   "sub": "Eighteen edges connect the seven, but only four pairs are typed and four of those five typings read competitor. The single commercial edge runs from the member that owns least to the member that owns most"
+   "k": "3",
+   "v": "transactions between members, on the record",
+   "sub": "Twenty-nine edges connect the twelve, fourteen pairs are typed, and thirteen of the seventeen typings read competitor. The three commercial edges are a tenant buying capacity from an owner, a neocloud leasing a landlord's hall, and a landlord hosting a neocloud"
   }
  ],
  "glossary": [
   {
    "t": "incumbent",
-   "d": "The registry role for a member whose position in this segment is established and held. Here exactly one member carries it, and the basis is a third-party operational rating plus the fact that its numbers are public, audited and quarterly."
+   "d": "The registry role for a member whose position in this segment is established and held. Two members carry it since 2 October 2026 — the second moved from challenger on a Platinum rating, the first time an independent rating has lifted a role in this registry — and the basis for both is the same third-party scale plus numbers that are public, audited and quarterly."
   },
   {
    "t": "challenger",
-   "d": "The registry role for a member contesting the established set. Six of the seven carry it, and they are not six versions of one attack: they run four distinct routes that sort along the segment's own third buying criterion."
+   "d": "The registry role for a member contesting the established set. Nine of the twelve carry it, and they are not nine versions of one attack: they run five distinct routes that sort along the segment's own third buying criterion, leased shell against own-build — two of them routes the September roster did not have."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member that bears on the segment without being a ranked player in it. The one adjacent here is a landlord that owns the substation, the buildings and the site power at four US campuses and leases powered halls to neoclouds whose GPUs it does not own — a seller of what this segment buys, not a seller of compute."
+  },
+  {
+   "t": "ClusterMAX",
+   "d": "SemiAnalysis's relative rating of managed GPU-cloud providers — Platinum, Gold, Silver, Bronze, a Participation Ribbon tier added in 2026, and two Not Recommended categories — tested hands-on on clusters the providers grant, against ten published criteria, on a stated six-month cadence that has in practice been longer. The rater sells research and consulting to companies it rates, its founder's investment vehicle sat in one of them, and the compensation disclaimer printed in the first edition has not been repeated. A tier is a point-in-time judgment by that firm, not an audit."
   },
   {
    "t": "tenant of record",
@@ -72569,7 +72818,7 @@ function guidanceDocLandscapeNeoclouds_() {
   },
   {
    "t": "delayed-draw term loan",
-   "d": "A committed loan drawn in tranches as capacity is delivered rather than all at once. Four of the seven members finance GPUs or campuses this way, and the fall in its pricing is how the debt market has repriced the whole segment."
+   "d": "A committed loan drawn in tranches as capacity is delivered rather than all at once. Several members finance GPUs or campuses this way, and the fall in its pricing — from coupons near 15 per cent in 2023 to investment grade in 2026 — is how the debt market has repriced the whole segment."
   },
   {
    "t": "remaining performance obligation",
@@ -72584,43 +72833,46 @@ function guidanceDocLandscapeNeoclouds_() {
   {
    "id": "who-dominates-and-on-what-basis",
    "title": "Who dominates, and on what basis",
-   "read": "7 min",
+   "read": "9 min",
    "kind": "prose",
    "ps": [
-    "**Start with the shape, because it is a measurement and it decides how everything below reads.** Seven members: **CoreWeave** as the single {{incumbent}}, and **Nebius, Lambda, Crusoe, IREN, Fluidstack and Nscale** as {{challenger}}s, with **no adjacents at all**. Every landscape before this one had a plural incumbency to sort — nine incumbents holding nine stages of a chain, six franchises that do not compete, three incumbents as three answers to one objection. **This one has a single company to explain**, so there is no ordering to make and no league table to decline. The only question is the basis, and this segment answers it more cleanly than any segment so far.",
-    "**The basis is a third-party operational rating, and since September 2026 it covers all seven.** SemiAnalysis's ClusterMAX places **CoreWeave at Platinum in all three of its rating cycles** — and in the third, published 23 September 2026, **Nebius joins it at Platinum**. The rest spread across the scale: **Lambda at Silver in every cycle**; **Crusoe down from Gold to Bronze**; and three members under *Not Recommended* — **IREN at Underperforming**, re-tested and kept there while NVIDIA's own programme certifies it as an exemplar, and **Fluidstack and Nscale at Unavailable**, the first because it no longer offers capacity for testing and the second because the rater says it markets managed clusters while selling bare metal. What makes this unusual is not the existence of a ranking — it is that **the rated companies themselves use it as the scoreboard**: one member's file calls the quality gap *the valuation-relevant execution question*, another calls its own rating *the sharpest quality dispute in the cohort* and names the acquisition it made to answer it. That is as close to a shared basis as this corpus has found anywhere — **and its latest cycle is the first to put a challenger level with the incumbent**, which the registry's role labels do not yet reflect.",
-    "**And the rating measures operational quality, not scale — which matters, because on scale the incumbent is not first.** One challenger holds **5 GW of secured power** and another **about 4.9 GW contracted**, against the incumbent's **3.5+ GW**. One challenger grew **454 per cent** year over year against the incumbent's **112 per cent**. The incumbent's own file states the real reason for its position without decoration: it is **the public numbers every private neocloud gets measured against**. **Three of the seven publish no revenue at all** — four until a fourth member filed to list in September 2026.",
-    "**The incumbent's position, from its own file.** FY2025 revenue **$5.13 bn, up 168 per cent**; **more than 1 GW of active power across 49 data centres**; **3.5+ GW contracted**; a **$99.4 bn backlog**, up 284 per cent year over year after one customer expanded to $21 bn and another to about $22.4 bn; and a GPU-collateralised debt ladder of about **$24.9 bn** whose cost fell from roughly **15 per cent in 2023 to investment-grade SOFR plus 225 basis points in March 2026**. That coupon trajectory is the segment's clearest external validation: sophisticated lenders repriced GPU collateral by more than a thousand basis points in three years.",
+    "**Start with the shape, because it is a measurement and it decides how everything below reads.** Twelve members, re-measured on 4 October 2026: **CoreWeave and Nebius** as {{incumbent}}s, **Lambda, Crusoe, IREN, Fluidstack, Nscale, Firmus, HUMAIN, G42 and WhiteFiber** as {{challenger}}s, and **5C Group** as the one {{adjacent}}. In September this was seven members with a single incumbent, and this module called it the most lopsided roster any landscape had covered. That reading is retired. Five members joined in a fortnight, and the second incumbent did not arrive by growing — **it arrived by being rated**: the registry moved Nebius from challenger to incumbent on 2 October on the strength of one placement in one third-party rating, and says so in a notes field the September entry did not have.",
+    "**So the basis has to be stated more carefully than before, and it has to start with what the rating is.** {{ClusterMAX}} is a relative rating of managed GPU-cloud providers published by SemiAnalysis, a founder-owned research firm. Its third edition, published 23 September 2026, tracked 323 providers, reviewed 77 and awarded 19 medallions. The method is hands-on: SemiAnalysis staff test clusters the providers grant — *most providers granted us at least 4 B300 nodes* — against ten published criteria through a three-phase audit, performance and reliability protocol, informed by *well over 200* user interviews. Across these twelve it places **CoreWeave and Nebius at Platinum; Lambda and Firmus at Silver; Crusoe at Bronze**, down from Gold; **Core42, G42's cloud arm, in the new Participation Ribbon tier; IREN and WhiteFiber under Not Recommended – Underperforming; Fluidstack, Nscale and HUMAIN under Not Recommended – Unavailable**; and 5C it does not rate at all. The registry's own note is explicit that the rating moves one role and no other — the challengers are placed on the capacity they sell, not on managed-cluster quality.",
+    "**And here is what the rating is not, in the words of the dossier on the rater.** SemiAnalysis is also a newsletter, a vendor of institutional data models sold to the hyperscalers and neoclouds it rates, a consultancy that performs paid technical assessments with the toolkit it rates with, and, since July 2026, a venture investor filing for a USD 400 million fund — its founder led a USD 50 million vehicle into one member of this segment, which was rated Gold in the second edition and Unavailable in the third without the vehicle being mentioned. The compensation disclaimer was printed once, in the first edition, and not in the second or third; no policy is published on rated-company consulting, badge licensing or staff and fund holdings; the providers donate the compute the firm benchmarks on. The firm's position, relayed by a news outlet, is that *providers cannot purchase their ranking*, and no critic has produced evidence that they can. The dossier's rule is the one this module adopts: **a ClusterMAX tier is a technically grounded assessment by a firm with undisclosed commercial and investment ties to several of the rated companies, not an audit — a point-in-time judgment, dated and attributed. This module does not rank by tier alone.**",
+    "**The rating measures operational quality, not scale — which matters, because on scale neither incumbent is first.** One challenger states **6 GW-plus of gross contracted capacity** by its own September 2026 count and another holds **5 GW of secured power**, against the first incumbent's **3.5-plus GW contracted** and the second's **5 GW contracted-power target for year-end 2026**. The first incumbent's own file states the real reason for its position without decoration: it is **the public numbers every private neocloud gets measured against**. The second incumbent is the other set of public, quarterly numbers — the fastest-compounding ones. **Seven of the twelve publish no revenue figure at all**: four publish nothing, and three publish megawatts and nothing else.",
+    "**The first incumbent's position, from its own file.** FY2025 revenue **$5.13 bn, up 168 per cent**; **more than 1 GW of active power across 49 data centres**; **3.5-plus GW contracted**; a **$99.4 bn backlog**, up 284 per cent year over year after one customer expanded to $21 bn and another to about $22.4 bn; a GPU-collateralised debt ladder of about **$24.9 bn** whose cost fell from roughly **15 per cent in 2023 to investment-grade SOFR plus 225 basis points in March 2026**; and Platinum in all three rating cycles — the only member that can say so. That coupon trajectory is the segment's clearest external validation: sophisticated lenders repriced GPU collateral by more than a thousand basis points in three years.",
     "**The same file states the cost of that position, and it is the finding of this section.** One customer was **about 67 per cent of FY2025 revenue**. FY2025 net loss was **$1.17 bn**. Interest expense was **$1.23 bn on $5.13 bn of revenue — roughly twenty-four cents in every revenue dollar** — against a 2026 refinancing tower of about $4.2 bn. The **$9 bn acquisition that was its main play to own rather than lease power was voted down** by the target's shareholders in October 2025, leaving power ownership incomplete and about $3.5 bn of lease liabilities in its place. And a guidance cut in Q3 2025 was caused by **a single third-party developer running late** — the leased model's fragility made visible in one quarter.",
-    "**The module's own judgment, and it is analysis rather than record: in this segment dominance and exposure are the same measurement.** Being the proxy requires being public. Being public at this capital intensity requires an {{anchor tenant}} large enough to fund the build. And that anchor is simultaneously the concentration risk and the party shopping for alternatives — the incumbent's own file records the same customer **declining a roughly $12 bn expansion and routing capacity to the challenger ranked immediately behind it**. No challenger has to take share for the incumbent's position to weaken. The customer only has to allocate elsewhere.",
-    "**So read the one-incumbent shape correctly.** It is not a monopoly, and the dossiers do not describe a market about to collapse to three names. It is **a market being sorted by its customers**, in which one member is legible and six are not, and the legibility is itself most of the incumbency."
+    "**The second incumbent's position, from its own file.** Q2 2026 revenue **$582.3 M, up 454 per cent**; ARR **$3.0 B**; an AI-cloud adjusted-EBITDA margin around **50 per cent**; **more than $40 bn of customer commitments** from two anchors, one at up to about $19.4 bn and the other at up to about $27 bn; capex guidance of **$20–25 bn** on $3.0–3.4 bn of revenue; and, from 23 September 2026, **Platinum beside the first incumbent** — the rater's words were *unquestionably an industry leader … the ability to command a significant price premium*, and its own file reads the challenger label the corpus had carried as contradicted by the only independent rating in the segment. The cost, from the same file: **capital-markets-dependent through at least 2027**, and execution risk that has migrated *from GPUs to permits and power*, with two stop-work orders on the anchor contract's critical path.",
+    "**The module's own judgment, and it is analysis rather than record: in this segment dominance and exposure are the same measurement, and there are now two of them.** Being the proxy requires being public. Being public at this capital intensity requires an {{anchor tenant}} large enough to fund the build. And that anchor is simultaneously the concentration risk and the party shopping for alternatives — the first incumbent's own file records the same customer **declining a roughly $12 bn expansion and routing capacity to the member that is now the second incumbent**. No challenger has to take share for an incumbent's position to weaken. The customer only has to allocate elsewhere.",
+    "**So read the two-incumbent shape correctly.** It is not a duopoly, and the dossiers do not describe a market about to collapse to three names. It is **a market being sorted by its customers and described by one rater**, in which two members are legible, nine are less so, and the legibility is itself most of the incumbency."
    ],
-   "sales": "Do not treat the incumbent as the segment. Its own file says it is the benchmark rather than the majority, and four of the six challengers outspend or out-grow it on at least one axis you are selling into — and one now matches it on the rating as well. The useful question at the top of a call is which of the seven actually signs for power equipment — four of them do and three of them do not, and that is a different list from the revenue ranking."
+   "sales": "Do not treat the two incumbents as the segment. Both files say the same thing in different words — one is the benchmark, the other is the challenger the benchmark's anchor diverted capacity to — and challengers outspend or out-build both on at least one axis you are selling into. The useful question at the top of a call is which of the twelve actually signs for power equipment: eight of the eleven ranked members do at at least one site, the first incumbent and one colocation-first challenger do not, and the adjacent landlord signs for everything it builds."
   },
   {
    "id": "who-threatens",
    "title": "Who threatens, and on which route",
-   "read": "8 min",
+   "read": "10 min",
    "kind": "prose",
    "ps": [
-    "**Six challengers against one incumbent is the thickest bench any landscape has faced relative to its incumbency, and the temptation is to write it as six versions of one attack. The record says otherwise: there are four routes, and the registry sorts them itself.**",
-    "**The sort is a measurement, not a framing.** Four of the seven members are ranked in exactly one other segment, and it is the same one for all four — **AIDC developers and landlords**, which already has a landscape of its own. Two of those four carry **challenger in both segments**; the other two carry **challenger here and adjacent there**. That split is not arbitrary, and it is finer than it first looks. A member ranked as a **challenger** in the landlord segment sells campus capacity to others as a business of its own. A member listed there as **adjacent** does not — and the two that invert do not for *different* reasons: one owns most of its contracted capacity outright but builds it only for its own contracted load, and the other owns almost nothing and leases from everybody. **So the inversion separates the members whose campus position is a business they sell from the members whose campus position only serves their own book** — a sharper cut than this segment's third buying criterion states, running along the same leased-shell-against-own-build axis. **Three of the seven — the incumbent and two challengers — sit outside that overlap**, and they complete the picture.",
-    "**Route one — own the shell and sell the cloud on top. Three of the six.** *Crusoe*, *IREN* and *Nscale*. *Crusoe* is the time-to-power case: **more than 200 MW energised within a year of groundbreaking**, a substation energised **in under six months**, and an energy stack that reads like a supplier index — twenty-nine aeroderivative turbines at roughly a gigawatt, about **750 MW of reciprocating engines**, **5 GW of medium-voltage battery UPS**, **12 GWh of iron-air storage** and two nuclear plays. Against it: **about 4.9 GW contracted on a claimed 40-plus GW pipeline**, an eight-to-one ratio its own file reads as converting *at well under half*. *IREN* is the only member that owns land, substations, buildings **and** the cloud on top: **5 GW of secured power**, a **1.4 GW bulk substation energised on schedule with no announced tenant**, a **$9.7 bn five-year contract** whose first liquid-cooled hall was **delivered and accepted on 13 August 2026**, and newest contracts pricing at **about $15 M per MW against about $1.4 M per MW for pure landlord colocation**. *Nscale* runs a **state-certified microgrid on a 2 GW engine order**, and its September 2026 registration statement settles what its dossier had read the other way: **about 1 GW of its 1.37 GW of active and contracted capacity sits at seven wholly owned sites**, against 200 MW leased and 165 MW in colocation.",
-    "**Route two — own nothing, and sell the credit. One of the six.** *Fluidstack* is the corpus's clearest {{credit substitution}} case, and the registry's basis line says so. It is {{tenant of record}} on **about 1.4 GW of contracted critical IT across five campuses**, none of which it owned until July 2026, made bankable by **more than USD 6 bn of backstops and {{recognition agreement}}s** from one guarantor. The proportion is the point: **roughly USD 27 bn of base-term rent standing on about USD 2.6 bn of equity.** Its own first judgment states the product plainly — *credit substitution plus speed, not compute* — and the September 2026 rating cycle agrees from the other side, listing it as unavailable to test rather than rating a cloud. Its own press page names the frontier lab it builds the New York and Texas campuses for.",
-    "**Route three — out-compound on the same model. One of the six.** *Nebius* is the only challenger the incumbent's own file names as the beneficiary of its anchor's diversification. **Q2 2026 revenue $582.3 M, up 454 per cent; ARR $3.0 B; adjusted-EBITDA margin around 50 per cent on the AI cloud; more than $40 bn of customer commitments** from two anchors. Deal economics its file quotes — **$20–25 M of annual contract value per MW, about 70 per cent prepaid, sub-two-year payback** — are the sharpest statement in the corpus of what contracted compute actually earns. It has travelled the incumbent's own financing arc a year or two behind, reaching **asset-backed debt at SOFR plus 250 in July 2026**, and in September 2026 the independent rating placed it **level with the incumbent at Platinum** — the first challenger to get there. It remains **capital-markets-dependent through at least 2027** on capex guidance of $20–25 bn against $3.0–3.4 bn of revenue.",
-    "**Route four — climb up-market from below. One of the six.** *Lambda* is the only member whose attack is on product rather than capital. Developer DNA, **colocation-first** across four named landlords, hardware exited and inference sunset, a professional chief executive and finance officer installed, and the **first investment-grade-rated Term Loan B by a private neocloud** at $926 M. The gap is stated in its own file: **ClusterMAX Silver in all three cycles**, cloud gross margin around **61 per cent against the incumbent's 74**, a stated target of **3 GW under management by 2030** against a footprint whose **largest disclosed site is about 100 MW of potential**, and **no company-wide megawatt or GPU-fleet figure ever published**.",
-    "**Now the finding, and it is the reason the lopsided shape is not a story about consolidation.** Among the seven members the graph holds **eighteen edges but only four typed pairs**, and **four of the five typings on them read competitor**. The one exception is a **supplier** edge in which one member buys GPU capacity from another while its own leased halls are still under construction. **In a seven-member segment the record contains exactly one commercial transaction between members, and it runs from the member that owns least to the member that owns most.** The volume is all outward: the most-connected counterparties are a chip vendor at six typed edges, a hyperscaler at five, a frontier lab at four.",
-    "**So the threat is not moving between the seven. It arrives from the customers, and the record shows it three ways.** One hyperscaler anchors **four of the seven** and has already **declined one expansion and re-routed capacity** to a different member. One frontier lab has **signed 401 MW directly with a landlord, with no intermediary entity in the lease at all**, and has since contracted through three other members. And the chip vendor is on every side of the same trade at once — supplier, investor, reportedly the largest customer of one member through a **$1.5 bn four-year leaseback of that member's own GPUs**, a **$3.4 bn customer** of another with a **$2.1 bn share-purchase right**, and the certifier whose badge contradicts the independent rating of the same company.",
-    "**The module's judgment, labelled as analysis: none of the six is competing for the incumbent's share. All seven are competing for an allocation decision made inside four or five customer organisations.** That is why a one-incumbent segment with six challengers is neither a market that has just formed nor one about to consolidate. The shape is a **rating plus a disclosure artefact**, and the thing that actually moves is a purchase order somewhere else."
+    "**Nine challengers against two incumbents is the thickest bench any landscape has faced, and the temptation is to write it as nine versions of one attack. The record says otherwise: there are five routes, and the registry sorts them itself.**",
+    "**The sort is a measurement, not a framing.** Nine of the twelve members are ranked in exactly one other segment, and it is the same one for all nine — **AIDC developers and landlords**, which already has a landscape of its own. Four carry **challenger in both segments** (Crusoe, IREN, G42, WhiteFiber); four carry **challenger here and adjacent there** (Fluidstack, Nscale, Firmus, HUMAIN); and the one adjacent here is a **challenger there** (5C Group). So five of the nine shared members invert, and the inversion is finer than it first looks. A member ranked as a **challenger** in the landlord segment sells campus capacity to others as a business of its own. A member listed there as **adjacent** does not — Nscale owns about 1 GW of its 1.37 GW but builds for its own anchors, Firmus owns and builds its campuses and *does not lease shells to other operators*, HUMAIN is owner and grid counterparty for its own builds, and Fluidstack owns almost nothing. **The inversion still separates the members whose campus position is a business they sell from the members whose campus position only serves their own book**, along the leased-shell-against-own-build axis — and the fifth inversion runs the other way, because 5C sells halls and not compute. **Three of the twelve — both incumbents and Lambda — sit outside the overlap**, and they complete the picture.",
+    "**Route one — own the shell and sell the cloud on top. Four of the nine.** *Crusoe*, *IREN*, *Nscale* and *Firmus*. *Crusoe* is the time-to-power case: **more than 200 MW energised within a year of groundbreaking**, a substation energised **in under six months**, and an energy stack that reads like a supplier index — twenty-nine aeroderivative turbines at roughly a gigawatt, about **750 MW of reciprocating engines**, **5 GW of medium-voltage battery UPS**, **12 GWh of iron-air storage** and two nuclear plays; a second turbine order of twenty-nine units was placed in December 2025 and dropped in September 2026. Against it: **6 GW-plus of gross contracted capacity and $140 bn-plus of total contracted value by its own September 2026 count** on a claimed 40-plus GW pipeline, a USD 3.9 bn Series F at a USD 30.9 bn post-money valuation, and a fall from Gold to Bronze in the same month. *IREN* is the only member that owns land, substations, buildings **and** the cloud on top: **5 GW of secured power**, a **1.4 GW bulk substation energised on schedule with no announced tenant**, a **$9.7 bn five-year contract** whose first liquid-cooled hall was **delivered and accepted on 13 August 2026**, newest contracts pricing at **about $15 M per MW against about $1.4 M per MW for pure landlord colocation** — and mining *effectively decommissioned* by the end of December 2026 on management's own guidance. *Nscale* runs a **state-certified microgrid on a 2 GW engine order**, and its September 2026 registration statement settles what its dossier had read the other way: **about 1 GW of its 1.37 GW of active and contracted capacity sits at seven wholly owned sites**, against 200 MW leased and 165 MW in colocation; USD 103.4 bn of take-or-pay contract value stands behind it. *Firmus*, the corpus's first Asia-Pacific neocloud, **owns and operates its own AI factories and pays for its own connection substations up front** — more than 900 MW of contracted customer capacity against two operating sites, with the anchor signed for two Malaysian sites not yet built, and an Australian power train contracted exclusively to one supplier under an A$855 M order.",
+    "**Route two — own nothing, and sell the credit. One of the nine, and it is changing shape.** *Fluidstack* is the corpus's clearest {{credit substitution}} case, and the registry's basis line says so. It is {{tenant of record}} on **about 1.4 GW of contracted critical IT across five campuses**, made bankable by **more than USD 6 bn of backstops and {{recognition agreement}}s** from one guarantor. The proportion is the point: **roughly USD 27 bn of base-term rent standing on about USD 2.6 bn of equity.** Its own first judgment states the product plainly — *credit substitution plus speed, not compute* — and the September 2026 rating cycle agrees from the other side, listing it as unavailable to test rather than rating a cloud. Three things moved in September and none was announced by the company: one campus's delivery slipped from September 2026 to a phased Q4 2026–Q1 2027 under a 24 September lease amendment carrying a USD 359.3 million overrun cap, **and the end user signed the second ten-year term there itself**; the company broke ground **in its own name** at a USD 4 bn first phase in Texas with 1.5 GW *reserved*, its first owned development outside the programme it fronts; and it **missed the 30 September deadline for its statutory accounts**. The intermediary's lease now ends where the lab's begins.",
+    "**Route three — climb up-market from below. One of the nine.** *Lambda* is the only member whose attack is on product rather than capital. Developer DNA, **colocation-first** across four named landlords with owned *AI factories* only now emerging, hardware exited and inference sunset, a professional chief executive and finance officer installed, the **first investment-grade-rated Term Loan B by a private neocloud** at $926 M and, on 1 October 2026, a **USD 1.008 bn investment-grade fixed-rate delayed-draw term loan**. The gap is stated in its own file: **Silver in all three rating cycles**, cloud gross margin around **61 per cent against the first incumbent's 74**, a stated target of **3 GW under management by 2030** against a footprint whose **largest disclosed site is about 100 MW of potential**, **no company-wide megawatt or GPU-fleet figure ever published**, and an IPO window that has moved from the second half of 2026 to 2027. The largest number ever attached to it — a reported **USD 35 bn** agreement with a frontier lab, about 350 MW of it at a Texas campus under a chip vendor's lease — is confirmed by none of the four parties. **The route that had a second runner in September — out-compound the incumbent on its own model — has none in October, because the runner reached the top tier and the registry moved it.**",
+    "**Route four — the sovereign builders. Two of the nine, and new to the roster.** *HUMAIN* is Saudi Arabia's state AI company, owned by the sovereign fund: it sells GPU capacity to foreign labs and platforms, it is the grid counterparty for the kingdom's AI data-centre power, and on its first 250 MW the equipment buyer is the engineering, procurement and construction contractor it appointed on 20 September 2026, working to its work orders. Its own file measures the gap between target and fact at **about three orders of magnitude — a 1.1 MW cloud energised against 1.9 GW by 2030 and about 6 GW by 2034** — and reads **export licensing, not power, as the binding constraint**: one disclosed US authorisation for up to 35,000 chips against a 600,000-GPU plan. *G42* is Abu Dhabi's state-aligned group, and through Khazna it owns the UAE's dominant landlord — **about 650 MW across 30 live sites, 73 per cent of the national market** — and is the named builder of the 1 GW Stargate UAE cluster, whose first 200 MW it says has *completed procurement of all long-lead equipment*; its cloud arm is a 60 MW tenant at a US member's campus. Its own file names the single fact most likely to change its structure: **its licence-free status for advanced chips expires on 6 April 2027 unless it becomes a US company.** Both are rated — one Unavailable, one with a Participation Ribbon — and both sell compute to the same frontier labs the US members sell to.",
+    "**Route five — the landlord that also sells cloud. One of the nine, plus the adjacent as its mirror.** *WhiteFiber* is a listed, miner-controlled operator of two businesses: a GPU cloud the rating has placed Underperforming twice, and a retrofit landlord whose one large lease — **40 MW of IT to another member of this segment, about USD 865 M over ten years, 93 per cent of its USD 1.0 bn of remaining performance obligations** — is where its own file says its value sits. It signs for everything behind the utility's meter and holds the utility service agreement its tenant reaches the grid through; a **medium-voltage switchgear supply issue** disclosed in May 2026 pushed that tenant's ready-for-service dates by a quarter. *5C Group*, the adjacent, is the inverse: a landlord that **owns the buildings, the substation and the site power at four US campuses** and leases powered halls to neoclouds whose GPUs it does not own — about 110 MW operational against a roadmap stated as *over 1.5 gigawatts*, down from *over 2 GW* a year earlier. The registry ranks it here as adjacent because it sells what this segment buys.",
+    "**Now the finding, re-measured, and it is still the reason the shape is not a story about consolidation.** Among the twelve members the graph holds **twenty-nine edges, fourteen typed pairs and seventeen typings — thirteen of them competitor**. The commercial exceptions are three: a **supplier** edge in which the tenant-of-record member buys GPU capacity from the member that owns the most; a **supplier-and-customer** pair in which one neocloud leases another's retrofit hall; and a **customer** edge in which the adjacent landlord hosts a route-one developer. **In a twelve-member segment the record contains three commercial transactions between members, and two of them are a neocloud renting a landlord's hall.** The volume is all outward: the most-connected counterparties outside the segment are a chip vendor at fifteen typed edges, a hyperscaler at thirteen, the rater itself at eleven, a frontier lab at nine, a second chip vendor at eight, a second lab at seven and a second hyperscaler at six.",
+    "**So the threat is not moving between the twelve. It arrives from the customers, and the record now shows it four ways.** One hyperscaler anchors **five of the twelve** and has already **declined one expansion and re-routed capacity** to the member that became the second incumbent. One frontier lab **signed 401 MW directly with a landlord, with no intermediary entity in the lease**, has since contracted through three other members — one of them at up to about USD 44.6 bn in a filed registration statement, one at a reported USD 35 bn that nobody has confirmed — and has now **signed the second term at an intermediary's campus itself**. The chip vendor is on every side of the same trade at once — supplier, investor in at least four members, creditor to one through a USD 1.0 bn note closing in November, reportedly the largest customer of one member through a **$1.5 bn four-year leaseback of that member's own GPUs**, a **$3.4 bn customer** of another with a **$2.1 bn share-purchase right**, the certifier whose exemplar badge contradicts the independent rating of the same company, and, per press, the holder of the facility lease behind the reported USD 35 bn agreement. And for the sovereign route the fourth customer is a government licensing desk: one member's chip authorisation and the other's licence-free status are the clocks their own files watch.",
+    "**The module's judgment, labelled as analysis: none of the nine is competing for the incumbents' share. All twelve are competing for an allocation decision made inside four or five customer organisations — and two of them for a licence as well.** That is why a two-incumbent segment with nine challengers is neither a market that has just formed nor one about to consolidate. The shape is **a rating plus a disclosure artefact**, and the thing that actually moves is a purchase order, or a licence, somewhere else."
    ],
-   "sales": "The routes decide who your counterparty is, so establish the route before the pitch. Four of the seven own the power decision outright and buy in unusual shapes. One owns nothing, and its landlords buy the generators and the substation. One is colocation-first, so the facility capex belongs to its landlords. And the incumbent's campuses are third-party developers' work. Treating all six challengers as one buyer type will send a power-equipment proposal to a company that has never signed for a transformer."
+   "sales": "The routes decide who your counterparty is, so establish the route before the pitch. Eight of the eleven ranked members own the power decision at at least one site and buy in unusual shapes; one owns nothing at its leased campuses and everything at its own-name sites; one is colocation-first, so the facility capex belongs to its landlords; the first incumbent's campuses are third-party developers' work; and at two members the signature belongs to an engineering contractor or a landlord subsidiary rather than to the name on the roster. Treating all nine challengers as one buyer type will send a power-equipment proposal to a company that has never signed for a transformer — or to a government that has to license the chips first."
   },
   {
    "id": "each-players-bet",
    "title": "Each player's bet",
-   "read": "7 min",
+   "read": "9 min",
    "kind": "table",
-   "intro": "One row per incumbent and challenger, in registry order. **Every row is analysis** — read off each dossier's own strategy section and labelled as judgment, never blended with fact. **Seven rows because the ranked roster is seven**, and there are no adjacents to omit. Six of the seven rows attack the same position; that repetition is the segment's actual shape rather than something to edit out, and the rows differ in **route** rather than in target. Each row also names the cost the dossier itself puts against the bet, because on a segment where three of seven publish nothing, a bet stated without its stated cost is not a reading.",
+   "intro": "One row per incumbent and challenger, in registry order. **Every row is analysis** — read off each dossier's own strategy section and labelled as judgment, never blended with fact; where a dossier states a confidence level, it is carried. **Eleven rows because the ranked roster is eleven**; the one adjacent gets no row, because it is not a ranked player here. Nine of the eleven rows attack the same two positions; that repetition is the segment's actual shape rather than something to edit out, and the rows differ in **route** rather than in target. Each row also names the cost the dossier itself puts against the bet, because on a segment where seven of twelve publish no revenue figure, a bet stated without its stated cost is not a reading.",
    "cols": [
     "Player",
     "Role",
@@ -72634,43 +72886,63 @@ function guidanceDocLandscapeNeoclouds_() {
     ],
     [
      "Nebius",
-     "challenger",
-     "That **the same model run faster wins** — and in September 2026 the independent rating placed it level with the incumbent at Platinum — take-or-pay anchors at **$20–25 M of annual contract value per MW with about 70 per cent prepaid and sub-two-year payback**, owned gigawatt-scale factories rather than leases, and a full-stack software layer the landlord neoclouds do not have. **The cost:** about **$20 bn raised in twenty months** against **$20–25 bn of capex guidance on $3.0–3.4 bn of revenue**, leaving it capital-markets-dependent through at least 2027 — and execution risk that has migrated, in its own words, *from GPUs to permits and power*, with two stop-work orders sitting on its anchor contract's critical path"
+     "incumbent",
+     "That **the same model run faster wins** — and on 23 September 2026 the independent rating placed it level with the first incumbent at Platinum, on which the registry moved its role nine days later — take-or-pay anchors at **$20–25 M of annual contract value per MW with about 70 per cent prepaid and sub-two-year payback**, owned gigawatt-scale factories rather than leases, a 5 GW contracted-power target for year-end 2026, and a full-stack software layer the landlord neoclouds do not have. **The cost:** about **$20 bn raised in twenty months** against **$20–25 bn of capex guidance on $3.0–3.4 bn of revenue**, leaving it capital-markets-dependent through at least 2027 — and execution risk that has migrated, in its own words, *from GPUs to permits and power*, with two stop-work orders sitting on its anchor contract's critical path"
     ],
     [
      "Lambda",
      "challenger",
-     "That **product quality and a listing beat capital scale** — hardware exited, inference sunset, a professional chief executive and finance officer installed, and the first investment-grade-rated term loan B by a private neocloud. **The cost:** **Silver across all three rating cycles** against the incumbent's Platinum, cloud gross margin around **61 per cent against 74**, and a chip vendor that is supplier, investor and reportedly largest customer at once — the circular-financing critique *with more force*, because the concentration is undisclosed until a filing exists"
+     "That **product quality and a listing beat capital scale** — hardware exited, inference sunset, a professional chief executive and finance officer installed, the first investment-grade-rated term loan B by a private neocloud and, on 1 October 2026, a USD 1.008 bn investment-grade delayed-draw term loan. **The cost:** **Silver across all three rating cycles** against two incumbents at Platinum, cloud gross margin around **61 per cent against 74**, an IPO window moved from the second half of 2026 to 2027, a chip vendor that is supplier, investor and reportedly largest customer at once — the circular-financing critique *with more force*, because the concentration is undisclosed until a filing exists — and the largest number ever attached to the company, a reported USD 35 bn agreement with a frontier lab, confirmed by none of the four parties"
     ],
     [
      "Crusoe",
      "challenger",
-     "That **energy-first development is a durable business rather than a leveraged construction cycle**, proven on a time-to-power record no incumbent developer matched publicly in the same window. **The cost, proven twice in one year — and a third time on quality, when the September 2026 rating cycle dropped it from Gold to Bronze:** one counterparty **halted a flagship expansion** and another **removed it from a 1.8 GW project** — each a single decision reassigning gigawatt-scale work. Its file also reads the economics as running *through asset flips and JV debt* rather than through a cloud P&L, against a valuation that moved from $2.8 bn to a discussed $30 bn in twenty months"
+     "That **energy-first development is a durable business rather than a leveraged construction cycle**, proven on a time-to-power record no incumbent developer matched publicly in the same window, and now priced at a USD 30.9 bn post-money valuation by a USD 3.9 bn Series F whose investors include the chip vendor. **The cost, proven twice in one year — and a third time on quality, when the September 2026 rating cycle dropped it from Gold to Bronze as exceptionally unreliable:** one counterparty **halted a flagship expansion** and another **removed it from a 1.8 GW project** — each a single decision reassigning gigawatt-scale work — and a second twenty-nine-turbine order was dropped in the month the round closed. Its file also reads the economics as running *through asset flips and JV debt* rather than through a cloud P&L"
     ],
     [
      "IREN",
      "challenger",
-     "That **one company can hold both ends of the stack** — landlord-grade ownership of 5 GW on substations it owns, with a cloud on top at **about $15 M per MW against about $1.4 M for pure colocation** — and that **filling an energised 1.4 GW campus with no announced tenant decides whether the integrated model compounds or the power sits as optionality**. **The cost:** **every quarter of FY2026 missed consensus**, one by 34 per cent on revenue, and so did the full-year print on both lines, which its own file reads as structural rather than informational; and the cohort's only **Underperforming** rating, answered by acquisition and **kept at the September 2026 re-test**, where the rater called one of its northern sites the worst in the industry according to users while judging its new Texas builds much better"
+     "That **one company can hold both ends of the stack** — landlord-grade ownership of 5 GW on substations it owns, with a cloud on top at **about $15 M per MW against about $1.4 M for pure colocation** — and that **filling an energised 1.4 GW campus with no announced tenant decides whether the integrated model compounds or the power sits as optionality**, with mining *effectively decommissioned* by the end of December 2026 so that nothing else is left to carry it. **The cost:** **every quarter of FY2026 missed consensus**, one by 34 per cent on revenue, and so did the full-year print on both lines, which its own file reads as structural rather than informational; and the cohort's only **Underperforming** rating to be re-tested and kept for a third cycle, against an exemplar badge from the chip vendor"
     ],
     [
      "Fluidstack",
      "challenger",
-     "That **{{credit substitution}} plus speed is a product** — bankruptcy-remote lessee subsidiaries, {{recognition agreement}}s making a highly rated guarantor the tenant of last resort, and **about USD 27 bn of base-term rent on roughly USD 2.6 bn of equity**. **The cost is conceded in its own second judgment:** the {{tenant of record}} position **is replaceable by its own customer**, and July 2026 showed it when that customer signed 401 MW directly with a landlord. Its answer — buying a campus and developing three sites in its own name — is, in its file's words, *a move from tenant to owner-developer that its balance sheet has not yet been shown to carry*"
+     "That **{{credit substitution}} plus speed is a product** — bankruptcy-remote lessee subsidiaries, {{recognition agreement}}s making a highly rated guarantor the tenant of last resort, and **about USD 27 bn of base-term rent on roughly USD 2.6 bn of equity**. **The cost is conceded in its own second judgment and sharpened in September 2026:** the {{tenant of record}} position **is replaceable by its own customer** — July showed it when that customer signed 401 MW directly with a landlord, and September showed it again when the same customer signed the second ten-year term at one of this company's own campuses itself, under a lease amendment that also slipped delivery to Q4 2026–Q1 2027 behind a USD 359.3 M overrun cap. Its answer — a campus bought outright and ground broken in its own name on a USD 4 bn first phase with no tenant — is, in its file's words, *a move from tenant to owner-developer that its balance sheet has not yet been shown to carry*, and the first audited look at that balance sheet is overdue"
     ],
     [
      "Nscale",
      "challenger",
-     "That **an anchor's signature is financeable even when the anchor changes** — investment-grade project debt at site level on the strength of contracts, about **USD 6.1 bn of facilities against roughly USD 100 M of quarterly revenue** — a book its September 2026 registration statement now puts in filed numbers: **USD 33.0 M of 2025 revenue, USD 140.6 M in the first half of 2026 and a USD 1.02 bn first-half net loss**, and the largest contract in the segment confirmed at up to about USD 44.6 bn. **The cost:** its own first judgment is that **the anchor has changed twice in a year**, and its own third is that **power, not capital or chips, is the binding constraint at every European site** — a grid-allocation halt, a planning fight that pushed one site into 2027, and a two-gigawatt engine order bought specifically to route around both"
+     "That **an anchor's signature is financeable even when the anchor changes** — investment-grade project debt at site level on the strength of contracts, a book its September 2026 registration statement puts in filed numbers: **USD 33.0 M of 2025 revenue, USD 140.6 M in the first half of 2026 and a USD 1.02 bn first-half net loss**, against USD 103.4 bn of take-or-pay contract value with the largest single contract in the segment confirmed at up to about USD 44.6 bn. **The cost:** its own first judgment is that **the anchor has changed twice in a year**, its third that **power, not capital or chips, is the binding constraint at every European site**, and the filing itself records that management's forecast *initially raised substantial doubt* about going concern, alleviated by a plan to defer capex if financing fails — with a USD 1.0 bn note to the chip vendor closing around 16 November and the roadshow expected to be postponed"
+    ],
+    [
+     "Firmus",
+     "challenger",
+     "That **a neocloud that builds and pays for its own factories and substations can sell dedicated capacity to the largest labs from the Asia-Pacific grid** — more than 900 MW contracted, Silver on the rating, and an anchor signed for two Malaysian sites. **The cost, from its own file (high confidence):** the 900 MW *is a sales figure, not a build figure* against two operating sites, one of them inside another operator's building; the first owned campus completes in late 2026; two Tasmanian sites have no energy contract pending a 450 MW decision due by the end of 2026; and **the Australian power train is contracted away to one exclusive supplier**, so the door a power-equipment vendor would knock on there is not the company's. Its moderate-confidence read is that the chip vendor's several roles — shareholder, supplier, customer and, at one site, credit support — and the twice-slipped listing are one risk, not two"
+    ],
+    [
+     "HUMAIN",
+     "challenger",
+     "That **a sovereign fund can build and sell AI compute to foreign labs at gigawatt scale** — the owner of record and grid counterparty for the kingdom's AI data-centre power, selling capacity to two frontier-lab-class customers and a hyperscaler's regional zone. **The cost, from its own file:** the gap between target and fact is **about three orders of magnitude** (high confidence) — a 1.1 MW cloud energised against 1.9 GW by 2030; **export licensing, not power, is the binding constraint** (moderate) — one disclosed authorisation for up to 35,000 chips against a 600,000-GPU plan; and part of its demand is funded by itself (moderate) — two anchor tenants are its own investees. On the first 250 MW the equipment buyer is its engineering contractor, working to its work orders, and no power-equipment supplier to it is named in any source"
+    ],
+    [
+     "G42",
+     "challenger",
+     "That **the UAE's dominant landlord can also be the neocloud, and that building the first OpenAI for Countries campus makes it the buyer of record for a gigawatt** — about 650 MW across 30 live sites, 73 per cent of the national market, the first 200 MW of the 1 GW cluster already procured for long-lead equipment (high confidence), and a cloud arm with 60 MW leased at a US member's campus. **The cost, from its own file:** **its licence-free status for advanced chips expires on 6 April 2027 unless it becomes a US company** — the single fact most likely to change its structure (high confidence), with talks on a majority sale to a US vehicle reported; the campus's power and physical design is *back in flux* after drone strikes on a hyperscaler's regional data centres (moderate); and the China-ties question is a standing risk to every US decision it depends on (moderate). Its cloud arm holds a Participation Ribbon, not a medallion"
+    ],
+    [
+     "WhiteFiber",
+     "challenger",
+     "That **the landlord is worth more than the cloud** — its own file's first judgment (high confidence): one lease of 40 MW to another member of this segment is 93 per cent of its remaining performance obligations, an analyst values that campus alone above the company's market capitalisation, and it is the buyer of record for everything behind the utility's meter there, with medium-voltage switchgear the category where that authority has already been tested (high confidence). **The cost:** a cloud rated **Underperforming twice** that lost its largest customer; a 99 MW utility figure that is *a schedule, not a contract*, with 54 gross MW the only firm number (moderate); and a controlling miner shareholder whose stake shrinks by financing rather than by sale, lending to the campus at 9.5 per cent funded by crypto-collateralised borrowing (moderate)"
     ]
    ],
-   "note": "**Read the column, not the row order.** Registry order puts the incumbent first and that is the only ranking in this table. The six challenger rows are **not** ordered by size, growth, contracted power or rating, because those four measures disagree with each other here — the largest secured-power position, the fastest growth rate, the largest single contract and the highest rating belong to four different companies. **What the rows share is that every one names a cost the company states about itself.** On a segment where three of seven publish no revenue, a dossier's own stated weakness is the most reliable thing in the file."
+   "note": "**Read the column, not the row order.** Registry order puts the incumbents first and that is the only ranking in this table. The nine challenger rows are **not** ordered by size, growth, contracted power or rating, because those four measures disagree with each other here — the largest gross contracted figure, the largest secured-power position, the fastest growth rate, the largest filed contract and the top rating belong to different companies, and the top rating now belongs to two. **What the rows share is that every one names a cost the company states about itself.** On a segment where seven of twelve publish no revenue figure, a dossier's own stated weakness is the most reliable thing in the file."
   },
   {
    "id": "the-indicators",
    "title": "The indicators",
-   "read": "5 min",
+   "read": "6 min",
    "kind": "table",
-   "intro": "What to watch, dated **only where the record dates it** — and on this segment that caveat is the rule rather than the exception. A day-level scan of all seven dossiers found **exactly three future day-level dates in the entire segment, and all three sit in one member's file** — and one month-range row below resolved on 18 September 2026, when a second private member filed to list. The other six supply none at all, and the policy fence supplies nothing: fourteen entries across seven members, **three of the seven carrying no policy array whatsoever**, and **not one dated entry in the future at any granularity**. Where a row says *open*, no source read here puts a date on it.",
+   "intro": "What to watch, dated **only where the record dates it**. A day-level scan of all twelve dossiers found future day-level dates in four members' files and in the rater's — a fortnight ago there were three, all in one file — and the policy fence still supplies none: thirty-five entries across twelve members, **three of the twelve carrying no policy array whatsoever, including the first incumbent**, and **not one dated entry in the future at any granularity**. The gate this module carried in September **failed**, and row one records how. Where a row says *open*, no source read here puts a date on it.",
    "cols": [
     "Watch",
     "When the record dates it",
@@ -72678,56 +72950,71 @@ function guidanceDocLandscapeNeoclouds_() {
    ],
    "rows": [
     [
-     "**The only audited figure a private member is scheduled to publish** — one member's statutory accounts for the pivot year, described in its own indicator list as the first audited turnover for that year",
-     "**30 September 2026** — a filing deadline, day-level, and **this module's own review date**",
-     "Three of the seven publish no revenue. This is the single scheduled event that puts an audited number behind the most leveraged position in the segment — roughly USD 27 bn of base-term rent against about USD 2.6 bn of equity"
+     "**The only audited figure a private member was scheduled to publish** — one member's statutory accounts for the pivot year, the first audited turnover for that year",
+     "**Overdue.** The 30 September 2026 deadline was missed; the registry showed *Accounts overdue* on 2 October. **Any day — no new date exists**",
+     "Seven of the twelve publish no revenue figure, and this was the single scheduled event that would put an audited number behind the most leveraged position in the segment — roughly USD 27 bn of base-term rent against about USD 2.6 bn of equity. A press relay of an investor memo now circulates revenue figures for the company; its own dossier does not use them"
     ],
     [
-     "A second private member's listing — **the registration statement was filed on 18 September 2026**; pricing is next",
-     "**Filed 18 September 2026**; pricing — **open, no date in any source read**",
-     "The filing already replaced press-sourced figures with filed ones: 2025 revenue of USD 33.0 M, first-half 2026 revenue of USD 140.6 M, the largest contract in the segment confirmed at up to about USD 44.6 bn, and about 1 GW of 1.37 GW at owned sites. What pricing adds is the market's valuation of the first member to put a filed number behind an anchor contract that size"
+     "**The first revenue figure for a route-one member that has never published one** — the Asia-Pacific owner-operator's prospectus and listing",
+     "**8 October 2026** for the prospectus and **22 October 2026** for the listing, on a press-reported term sheet that has slipped twice — and **this module's own review date**",
+     "The prospectus would be the first document obliged to carry a revenue figure, and it moves the seven-of-twelve count the module carries in a tile. A slip past the date is itself the finding, as 30 September was"
     ],
     [
-     "**The tenant-to-owner test** — delivery of the first campus one member bought outright, and the instalments behind the purchase",
-     "**Q4 2026** for delivery; instalments **31 December 2026** and **30 April 2027**",
-     "A slip past 180 days would test a termination right, and on that member's own reading the guarantor's backstop *would never trigger*. It is the only place the record puts a date on construction-period risk"
+     "**The second private member's listing** — the registration statement was filed on 18 September 2026; the roadshow is reported as expected to be postponed",
+     "**Filed 18 September 2026**; a **USD 1.0 bn note to the chip vendor closes on or around 16 November 2026**; pricing — **open**",
+     "The filing already replaced press-sourced figures with filed ones and confirmed the largest contract in the segment at up to about USD 44.6 bn. The note is the chip vendor moving from supplier and shareholder to creditor, and the filing records that management's forecast *initially raised substantial doubt* about going concern, alleviated by a plan to defer capex if financing fails"
+    ],
+    [
+     "**The tenant-to-owner test** — delivery at the campuses one member fronts and the one it bought outright, and the instalments behind the purchase",
+     "**Q4 2026–Q1 2027** at one campus under a 24 September amendment carrying a USD 359.3 M overrun cap; **Q4 2026** at the owned campus; instalments **31 December 2026** and **30 April 2027**",
+     "A slip past 180 days would test a termination right, and on that member's own reading the guarantor's backstop *would never trigger*. The overrun cap is the first dollar figure the record puts on construction-period risk, and the end user signing the second term itself is the first time the intermediary's lease has ended where the lab's begins"
     ],
     [
      "**Whether vertical integration fills its own power** — an energised 1.4 GW bulk substation with no announced tenant",
-     "**Open for a tenant — no date stated in any source read**; the member's own file now targets delivery of the first 300 MW gross under construction there for Q4 2027",
-     "The explicit test in that member's own file of whether holding both ends of the stack compounds, or whether the power simply sits there as optionality"
+     "**Open for a tenant — no date stated in any source read**; the hub was conditionally included in the grid operator's new large-load batch process on 8 September 2026, and the first 300 MW gross under construction there is targeted for **Q4 2027**",
+     "The explicit test in that member's own file of whether holding both ends of the stack compounds, or whether the power simply sits there as optionality — with mining *effectively decommissioned* by December 2026, nothing else will carry the campus meanwhile"
     ],
     [
-     "**The anchor's next allocation** — one hyperscaler anchoring four of the seven, having already declined one expansion and walked away from one campus",
+     "**The anchor's next allocation** — one hyperscaler anchoring five of the twelve, having already declined one expansion and walked away from one campus",
      "**Open — no date stated**",
-     "This segment's structure is an allocation decision inside a small number of customers rather than a contest between members. This is the mechanism, and it has moved twice already"
+     "This segment's structure is an allocation decision inside a small number of customers rather than a contest between members. This is the mechanism, and it has moved twice already — the second time it made an incumbent"
     ],
     [
      "**The depreciation argument** — a six-year GPU useful-life assumption against a three-to-4.75-year bear case, with observed 50–70 per cent rental-rate declines on prior-generation parts as the empirical anchor",
      "**Open — nothing in the corpus dates it**",
-     "By the incumbent's own file the change *would roughly double D&A and erase margins*. It is the largest single variable in the segment's economics and it has no clock"
+     "By the first incumbent's own file the change *would roughly double D&A and erase margins*. It is the largest single variable in the segment's economics and it has no clock"
     ],
     [
-     "**Grid allocation in one European market** after a May 2026 halt, with one member's phase two described by its own country head as more uncertain",
-     "**Open — the halt is dated, the resumption is not**",
-     "The one member whose stated binding constraint is power rather than capital or chips, and the reason its capital moved to two US states"
+     "**Power allocation at two members' home grids** — a May 2026 grid-allocation halt in one European market, and a 450 MW long-term supply request before a state utility in Tasmania",
+     "**Open** for the halt — it is dated, the resumption is not; **by the end of 2026** for the Tasmanian decision, on a public broadcaster's report",
+     "The two members whose stated binding constraint at home is power rather than capital or chips — one moved its capital to two US states, the other has two sites with no energy contract"
+    ],
+    [
+     "**The sovereign route's licensing clocks** — one member's licence-free status for advanced chips, and the other's single disclosed chip authorisation",
+     "**6 April 2027** for the sunset, by rule text, unless the group becomes a US company; **open** for the authorisation",
+     "Both files read export licensing, not power, as the binding constraint. A licence decision moves a gigawatt of sovereign demand the way an allocation decision moves a hyperscaler's"
+    ],
+    [
+     "**The rating's next edition** — the basis of two of this segment's roles, on a stated six-month cadence",
+     "**Around March 2027** on the stated cadence — the actual intervals so far were 7.5 and 10.5 months",
+     "Whether it re-rates the three members under Unavailable and the two under Underperforming, and whether it restores a compensation or holdings disclosure — the rater's own dossier names both as the tests of whether the system is maintained"
     ]
    ],
-   "note": "**Five of the seven rows carry no day at all, and the two that do carry one draw on the same dossier — which is the honest state of this segment's calendar rather than a gap in the reading.** The three future day-level dates in the whole segment are a statutory filing deadline and two instalment dates, all in one member's file. Two of them were **rejected** as this module's review date and the reasons are in the analysis file: one is already carried by four other modules, and the other falls later than a six-month default, which would slow the review on the fastest-moving segment in the corpus."
+   "note": "**Five of the ten rows now carry a day, against two of seven in September — and the two newest are a prospectus and a licence sunset, neither of which is a regulation.** The fence is still empty of future dates at any granularity. Six candidates were **rejected** as this module's review date and the reasons are in the analysis file: the listing is the same document chain as the prospectus, later; the chip vendor's note is a financing event and approximate; the Tasmanian decision and the December instalment are later; the licence sunset and the rating's next edition fall later than a six-month default. The failed 30 September gate is carried as a row rather than as a date, because no new date exists for it."
   },
   {
    "id": "the-sellers-play",
    "title": "The seller's play",
-   "read": "6 min",
+   "read": "7 min",
    "kind": "callout",
    "tone": "info",
    "ps": [
-    "**The organising measurement for both paths, and it is the first thing to establish on any call: in only four of the seven members does the purchasing authority for power equipment sit with the member at all.** Those four are exactly the ownership route. For the other three the buyer is a landlord or a colocation provider, and selling into the neocloud means selling to somebody who does not sign.",
-    "**The four that buy.** One owns its substations and builds 130–200 kW-rack liquid-cooled halls at 50 MW of IT each. One holds twenty-nine aeroderivative turbines, about 750 MW of reciprocating engines, **5 GW of medium-voltage battery UPS** and **12 GWh of iron-air storage**. One signed a **ten-year, USD 2.6 bn master agreement for behind-the-meter fuel cells**, choosing that technology partly because it avoids a permitting review gas turbines trigger. One bought **2 GW of engines** for a single campus to run independently of the local grid, with emissions controls and battery storage on the gensets. **The three that do not buy** are the incumbent, whose shells are leased and whose campuses are third-party developers' work; one colocation-first member whose own file says the facility capex *mostly belongs to its colocation landlords*; and the tenant-of-record member, at whose campuses the landlord pays for the generators and the substation.",
-    "**If you sell storage, the channel is narrow and the honest headline is uncomfortable: only one of the seven has a named battery commitment of any size.** That member's medium-voltage battery UPS programme is, on its own file's account, among the largest anywhere, and it sits beside an iron-air commitment. One other member has batteries **only on the gensets at a single site**. **The other five name no battery programme at all.** So the move is to find who owns the **storage** decision member by member, which is not the same list as who owns the power decision: it is the member itself at the four that buy their own power, and the landlord or the developer at the other three — a roster you already have from the landlords landscape. Carry two caveats honestly. First, the fleet-owner's argument for deleting the in-hall machine and buying firmness upstream **does not transfer** to a leased single-hall operator, which is the distinction the public redundancy lesson makes and the reason this segment is not simply a smaller version of the hyperscalers. Second, the white-space question — rack-level backup — has **no supply agreement confirmed by anyone in this corpus**, so it is a question to raise rather than a pipeline to forecast.",
-    "**If you sell AIDC power, the posture inverts and this becomes one of the fastest-moving buyer sets in the corpus.** The four that own buy in unusual shapes and say so: gigawatt-scale aeroderivatives and reciprocating engines, a decade-long fuel-cell master agreement chosen as permitting strategy, a two-gigawatt genset order bought to avoid a grid entirely, and self-owned substations energised on schedule. **Three of those four have a stated permitting or allocation problem** — air permitting under press scrutiny, stop-work orders on an anchor contract's critical path, and a national grid-allocation halt. That is where a supplier who can move a **schedule** is worth more than one who can move a **price**, and it is the single most actionable fact in this module.",
-    "**And on specification, this segment leads rather than follows.** One member builds at **130–200 kW per rack** liquid-cooled; another has built at **600 kW per rack**; rack density and the liquid-cooling specification are written into the segment's own definition as a buying criterion. Take the density and cooling **mechanism** from the public lessons, which teach it vendor-blind. Take the **position** — who is at what density, on whose campus, under whose signature — from here.",
-    "**One closing discipline for both paths.** Three of seven publish no revenue, backlog or headcount. When you size an opportunity in this segment you are sizing it off press reports and counterparties' filings for nearly half the roster. Say so in your own account notes, the way the dossiers do."
+    "**The organising measurement for both paths, and it is the first thing to establish on any call: in eight of the eleven ranked members the purchasing authority for power equipment sits with the member at at least one site — and at two of those eight it sits one step away, with a contractor or a subsidiary the member controls.** The tenant-of-record member pays for everything at the sites it develops in its own name — three, with ground broken at one — and for nothing at the five campuses it fronts. The first incumbent and the colocation-first challenger do not sign. And the adjacent landlord signs for every phase it builds.",
+    "**The eight that buy, and how.** One owns its substations and builds 130–200 kW-rack liquid-cooled halls at 50 MW of IT each. One holds twenty-nine aeroderivative turbines, about 750 MW of reciprocating engines, **5 GW of medium-voltage battery UPS** and **12 GWh of iron-air storage**. One signed a **ten-year, USD 2.6 bn master agreement for behind-the-meter fuel cells**, choosing that technology partly because it avoids a permitting review gas turbines trigger. One bought **2 GW of engines** for a single campus to run independently of the local grid, with emissions controls and battery storage on the gensets. One **pays for its own connection substations up front** and buys UPS, batteries and backup generators — but has contracted its entire Australian power train to **one exclusive supplier** under an A$855 M order, so the Australian door is that supplier's. One is **owner and grid counterparty** for its country's AI data-centre power and has appointed an engineering contractor to buy the first 250 MW against its work orders — a two-step door. One owns the UAE's dominant landlord, which *designs, builds and operates* its sites and says the first 200 MW of its gigawatt cluster has **already completed long-lead procurement**. And one is the buyer of record for everything behind its utility's meter at a retrofit campus — distribution, generators, cooling — while the utility owns the substation, the transformers and the breakers. **The three that do not buy** are the first incumbent, whose shells are leased and whose campuses are third-party developers' work; the colocation-first member whose own file says the facility capex *mostly belongs to its colocation landlords*; and the tenant-of-record member at the five campuses it fronts, where the landlord pays for the generators and the substation.",
+    "**If you sell storage, the channel is narrow and the honest headline is uncomfortable: only one of the twelve has a named utility-scale battery commitment of any size.** That member's medium-voltage battery UPS programme is, on its own file's account, among the largest anywhere, and it sits beside an iron-air commitment. One other runs UPS batteries as a programme through a subsidiary and a 26 MW behind-the-meter battery trial at a research site — but contracts its firming through a retailer that underwrites third-party storage rather than buying it. One has batteries **only on the gensets at a single site**. **The other nine name no battery programme at all**, and three of the newest files say so as an inference from absence rather than from a statement. So the move is to find who owns the **storage** decision member by member, which is not the same list as who owns the power decision — a roster you already have from the landlords landscape for the nine members shared with it. Carry two caveats honestly. First, the fleet-owner's argument for deleting the in-hall machine and buying firmness upstream **does not transfer** to a leased single-hall operator, which is the distinction the public redundancy lesson makes and the reason this segment is not simply a smaller version of the hyperscalers. Second, the white-space question — rack-level backup — has **no supply agreement confirmed by anyone in this corpus**, so it is a question to raise rather than a pipeline to forecast.",
+    "**If you sell AIDC power, the posture inverts and this becomes one of the fastest-moving buyer sets in the corpus.** The eight that own buy in unusual shapes and say so: gigawatt-scale aeroderivatives and reciprocating engines, a decade-long fuel-cell master agreement chosen as permitting strategy, a two-gigawatt genset order bought to avoid a grid entirely, self-owned substations energised on schedule, modular power trains from one exclusive supplier, a sovereign owner tendering a campus's high-voltage infrastructure and signing a 250 MW engineering contract, a Gulf landlord that has already bought its first 200 MW of long-lead equipment, and a retrofit landlord whose medium-voltage switchgear issue moved a tenant's ready-for-service date by a quarter. **Six of those eight have a stated permitting, allocation or licensing problem** — air permitting under press scrutiny, stop-work orders on an anchor contract's critical path, a national grid-allocation halt, two sites with no energy contract pending a utility decision, and two export-licensing clocks. That is where a supplier who can move a **schedule** is worth more than one who can move a **price**, and it is the single most actionable fact in this module.",
+    "**And on specification, this segment leads rather than follows.** One member builds at **130–200 kW per rack** liquid-cooled; another has built at **600 kW per rack**; the adjacent landlord's own pages speak of *prefabricated power skids* and *warmer-water cooling*; rack density and the liquid-cooling specification are written into the segment's own definition as a buying criterion. Take the density and cooling **mechanism** from the public lessons, which teach it vendor-blind. Take the **position** — who is at what density, on whose campus, under whose signature — from here.",
+    "**One closing discipline for both paths.** Seven of twelve publish no revenue figure. When you size an opportunity in this segment you are sizing it off press reports, landlords' filings and a rater's tiers for more than half the roster. Say so in your own account notes, the way the dossiers do — and say which edition of the rating a tier came from, because the next one is due around March 2027."
    ]
   },
   {
@@ -72735,135 +73022,171 @@ function guidanceDocLandscapeNeoclouds_() {
    "title": "Claims ledger",
    "read": "reference",
    "kind": "ledger",
-   "intro": "**Provenance:** corpus synthesis over the segment's seven member dossiers at the versions below; no ingested document. **At the 24 September 2026 review three primary documents published after authoring were read first-hand — the September rating cycle, one member's registration statement and one member's own press page — and the rows that rest on them cite the publisher directly.** Every other load-bearing claim above traces to a dossier, at that dossier's profile version on 16 September 2026 (one re-read at v5 on 24 September), and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. **Four claims in this module are the module's own** and are labelled as analysis wherever they appear: that the segment is being sorted by its customers rather than forming or consolidating; that the incumbent's dominance and its largest exposure are the same measurement; that the six challengers run four routes which sort on the segment's own third buying criterion; and every row of the bets table.",
+   "intro": "**Provenance:** corpus synthesis over the segment's twelve member dossiers and the dossier on the rater, at the versions below; no ingested document. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 4 October 2026, and to the field inside it; the registry is cited at the repo version of its last change and the graph at its build date. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. The rating that two roles rest on is cited through the dossier on the firm that publishes it, not through the firm. **Four claims in this module are the module's own** and are labelled as analysis wherever they appear: that the segment is being sorted by its customers rather than forming or consolidating; that each incumbent's dominance and its largest exposure are the same measurement; that the nine challengers run five routes which sort on the segment's own third buying criterion; and every row of the bets table.",
    "rows": [
     [
-     "Segment holds 7 members — 1 incumbent, 6 challenger, 0 adjacent; chain position 14, tier demand; and the registry entry carries NO notes field",
-     "profiler-segments.json @ v06.14r — segments[].members[], .position, .tier"
+     "Segment holds 12 members — 2 incumbent, 9 challenger, 1 adjacent; chain position 14, tier demand; the registry entry now carries a notes field stating the ClusterMAX 3.0 tier table as a basis input and that the rating moves no other role",
+     "profiler-segments.json @ v07.87r — segments[].members[], .position, .tier, .notes"
     ],
     [
-     "Four of the seven are ranked in exactly one other segment and it is the same one for all four (aidc-developers-and-landlords); the other three belong to no other segment",
-     "profiler-segments.json @ v06.14r — every segments[].members[].slug, cross-checked across all 19 segments"
+     "Nebius moved from challenger to incumbent on 2 October 2026 on its ClusterMAX 3.0 Platinum, the basis line quoting the rater's 'unquestionably an industry leader'",
+     "profiler-segments.json @ v07.87r — segments[].members[].basis; profile:nebius @ v6 — ecosystemRole"
     ],
     [
-     "Two of those four carry challenger in both segments and two carry challenger here and adjacent there — a 50 per cent inversion rate that sorts on leased shell versus own-build",
-     "profiler-segments.json @ v06.14r — segments[].members[].role, both segments"
+     "Nine of the twelve are ranked in exactly one other segment and it is the same one for all nine (aidc-developers-and-landlords): Crusoe, IREN, G42 and WhiteFiber challenger in both; Fluidstack, Nscale, Firmus and HUMAIN challenger here and adjacent there; 5C Group adjacent here and challenger there — five inversions among nine shared members",
+     "profiler-segments.json @ v07.87r — every segments[].members[].slug and .role, cross-checked across all 19 segments"
     ],
     [
      "The definition: GPU-cloud operators selling contracted AI compute to labs and hyperscalers on leased or self-built capacity and thin balance sheets, and the tenants whose leases carry most of the corpus's credit-substitution structures",
-     "profiler-segments.json @ v06.14r — segments[].definition"
+     "profiler-segments.json @ v07.87r — segments[].definition"
     ],
     [
      "The five buying criteria, verbatim",
-     "profiler-segments.json @ v06.14r — segments[].buyingCriteria"
+     "profiler-segments.json @ v07.87r — segments[].buyingCriteria"
     ],
     [
-     "All five buying criteria print a dash in the public segment lesson — and every one of the five does hit a keyword whose lesson simply is not in this segment's mapped set",
-     "scripts/build-classroom-segments.py — READ_NEXT and CRITERION_LEXICON, intersected in sec_what_is_bought"
+     "All five buying criteria print a dash in the public segment lesson regenerated 4 October 2026 — every one of the five hits a keyword whose lesson is not in this segment's mapped set",
+     "Classroom.gs — clLessonSegmentNeoclouds_() what-is-bought-and-on-what; scripts/build-classroom-segments.py — READ_NEXT and CRITERION_LEXICON"
     ],
     [
-     "18 edges among the seven members; 4 typed pairs carrying 5 typings; 4 of the 5 read competitor; the only other is a supplier typing from one member to another",
-     "profiler-graph.json built 2026-09-13 — edges[] where both ends are members"
+     "Five of the twelve publish a revenue figure — CoreWeave 5,130, Nebius 529.8, IREN 707, Nscale 33, WhiteFiber 79.2 (USD m); Crusoe, Firmus, HUMAIN and Lambda publish none; Fluidstack, G42 and 5C Group publish megawatts only",
+     "Classroom.gs — clLessonSegmentNeoclouds_() the-numbers, generated from the members' financials overlay"
     ],
     [
-     "The most-connected counterparties outside the segment, by typed edges: a chip vendor at 6, a hyperscaler at 5, a frontier lab at 4",
-     "profiler-graph.json built 2026-09-13 — curated edges from members to non-members"
+     "29 edges among the twelve members; 14 typed pairs carrying 17 typings; 13 read competitor; the three commercial relationships are Fluidstack buying from IREN (supplier), Nscale leasing WhiteFiber's hall (supplier and customer) and 5C Group hosting Crusoe (customer)",
+     "profiler-graph.json built 2026-10-04 — edges[] where both ends are members, curated.a.type and curated.b.type"
+    ],
+    [
+     "The most-connected counterparties outside the segment, by typed edges: NVIDIA 15, Microsoft 13, SemiAnalysis 11, OpenAI 9, AMD 8, Anthropic 7, Google 6",
+     "profiler-graph.json built 2026-10-04 — curated edges from members to non-members"
+    ],
+    [
+     "ClusterMAX is a relative rating of managed GPU-cloud providers on ten published criteria, tested hands-on on clusters the providers grant through a three-phase protocol, informed by well over 200 user interviews; 3.0 (23 September 2026) tracked 323 providers, reviewed 77 and awarded 19 medallions, adding a Participation Ribbon tier",
+     "profile:semianalysis @ v1 — ecosystemRole, technicalSpecs[0]"
+    ],
+    [
+     "3.0 placements across the twelve: CoreWeave and Nebius Platinum; Lambda and Firmus Silver; Crusoe Bronze; Core42 (G42) Participation Ribbon; IREN and WhiteFiber Not Recommended – Underperforming; Fluidstack, Nscale and HUMAIN Not Recommended – Unavailable; 5C Group unrated",
+     "profiler-segments.json @ v07.87r — segments[].notes; profile:semianalysis @ v1 — technicalSpecs[0], strategyRead[4]"
+    ],
+    [
+     "The rater is also a newsletter, a vendor of institutional data models sold to hyperscalers and neoclouds, a consultancy that performs paid technical assessments with the toolkit it rates with, and since July 2026 a venture investor with a USD 400 million Form D fund and SPVs, one of them a USD 50 million vehicle its founder led into Fluidstack; the compensation disclaimer was printed in 1.0 only; no policy is published on rated-company consulting, badge licensing or holdings; providers donate benchmark compute; the stated cadence is roughly six months and the actual intervals were 7.5 and 10.5 months, with a 4.0 due around March 2027",
+     "profile:semianalysis @ v1 — summary, ecosystemRole, strategyRead[1], strategyRead[2], strategyRead[3], strategyRead[8]"
+    ],
+    [
+     "The rule: treat a ClusterMAX tier as a technically grounded assessment by a firm with undisclosed commercial and investment ties to several of the rated companies, not as an audit",
+     "profile:semianalysis @ v1 — strategyRead[3] (high confidence)"
     ],
     [
      "The demand-side test case for whether contracted AI backlog can carry leveraged infrastructure — the public numbers every private neocloud gets measured against; 1 GW+ active power",
-     "profile:coreweave @ v4 — ecosystemRole"
+     "profile:coreweave @ v5 — ecosystemRole"
     ],
     [
-     "FY2025 revenue $5.13bn (+168%), 49 data centres, 3.5+ GW contracted, $99.4bn backlog (+284% YoY), a ~$24.9bn GPU-collateralised debt ladder, coupon ~15% in 2023 to SOFR+225bps in March 2026, and ClusterMAX Platinum in all three rating cycles — sole Platinum in the first two, shared with Nebius in the third (23 September 2026)",
-     "profile:coreweave @ v4 — summary; SemiAnalysis, ClusterMAX 3.0, 23 September 2026"
+     "FY2025 revenue $5.13bn (+168%), 49 data centres, 3.5+ GW contracted, $99.4bn backlog (+284% YoY), a ~$24.9bn GPU-collateralised debt ladder, coupon ~15% in 2023 to SOFR+225bps in March 2026, and Platinum in all three rating cycles",
+     "profile:coreweave @ v5 — summary"
     ],
     [
-     "One customer at ~67% of FY2025 revenue; that customer declining a ~$12bn expansion and routing capacity to another member; the $9bn acquisition that was the main play to own rather than lease power voted down in October 2025; ~$3.5bn of lease liabilities; a Q3 2025 guidance cut caused by one third-party developer running late",
-     "profile:coreweave @ v4 — strategyRead, ecosystemRole"
+     "One customer at ~67% of FY2025 revenue; that customer declining a ~$12bn expansion and routing capacity to another member; the $9bn acquisition that was the main play to own rather than lease power voted down in October 2025; ~$3.5bn of lease liabilities; a Q3 2025 guidance cut caused by one third-party developer running late; FY2025 net loss $1.17bn",
+     "profile:coreweave @ v5 — strategyRead, ecosystemRole, summary"
     ],
     [
      "Interest expense $1.23bn on $5.13bn of revenue (~24%); a six-year GPU useful-life assumption against a 3-4.75-year bear case that would roughly double D&A and erase margins; observed 50-70% rental-rate declines on prior-generation parts; a ~$4.2bn 2026 refinancing tower",
-     "profile:coreweave @ v4 — strategyRead"
+     "profile:coreweave @ v5 — strategyRead"
     ],
     [
-     "Q2 2026 revenue $582.3M (+454%), ARR $3.0B, AI-cloud adjusted-EBITDA margin ~50%, >$40bn of customer commitments from two anchors, ClusterMAX Platinum from 23 September 2026 (Gold before it), and the most direct competitor to the incumbent, a 5 GW contracted-power target",
-     "profile:nebius @ v5 — summary; SemiAnalysis, ClusterMAX 3.0, 23 September 2026"
+     "Q2 2026 revenue $582.3M (+454%), ARR $3.0B, AI-cloud adjusted-EBITDA margin ~50%, >$40bn of customer commitments from two anchors (up to ~$19.4bn and up to ~$27bn), a 5 GW contracted-power target for year-end 2026, and Platinum from 23 September 2026 (Gold before it)",
+     "profile:nebius @ v6 — summary, ecosystemRole"
     ],
     [
      "$20-25M of annual contract value per MW with ~70% prepaid and sub-two-year payback; ~$20bn raised in ~20 months; first asset-backed debt at SOFR+250 in July 2026; capital-markets-dependent through at least 2027 on $20-25bn capex guidance against $3.0-3.4bn of revenue",
-     "profile:nebius @ v5 — strategyRead"
+     "profile:nebius @ v6 — strategyRead"
     ],
     [
      "Execution risk migrating from GPUs to permits and power; two stop-work orders in August 2026 on the anchor contract's critical path; a $2.6bn ten-year fuel-cell master agreement with a first 328 MW deployment, chosen partly because fuel cells avoid the review gas turbines trigger",
-     "profile:nebius @ v5 — ecosystemRole, strategyRead, policyExposure[0]"
+     "profile:nebius @ v6 — ecosystemRole, strategyRead, policyExposure[0]"
     ],
     [
-     "ClusterMAX Silver in all three cycles; cloud gross margin ~61% against the incumbent's ~74%; a colocation-first footprint whose facility capex mostly belongs to its landlords; a 3 GW-by-2030 target against a largest disclosed site of ~100 MW potential; no company-wide MW or GPU-fleet figure ever published",
-     "profile:lambda @ v5 — summary, ecosystemRole, strategyRead; SemiAnalysis, ClusterMAX 3.0, 23 September 2026"
+     "Silver in all three rating cycles; cloud gross margin ~61% against the first incumbent's ~74%; a colocation-first footprint whose facility capex mostly belongs to its landlords, with owned AI factories only now emerging; a 3 GW-by-2030 target against a largest disclosed site of ~100 MW potential; no company-wide MW or GPU-fleet figure ever published; the IPO window moved from H2 2026 to 2027",
+     "profile:lambda @ v6 — summary, ecosystemRole, strategyRead"
     ],
     [
-     "A $926M term loan B at Baa2 and SOFR+300, the first investment-grade-rated TLB by a private neocloud; a chip vendor as supplier, Series D investor and reportedly largest customer via a $1.5bn four-year leaseback of ~18,000 of the company's own GPUs; Crusoe, Nebius and Fluidstack at ClusterMAX Gold in the second cycle — in the third, Nebius Platinum, Crusoe Bronze, Fluidstack Unavailable",
-     "profile:lambda @ v5 — summary, strategyRead; SemiAnalysis, ClusterMAX 3.0, 23 September 2026"
+     "A $926M term loan B at Baa2 and SOFR+300, the first investment-grade-rated TLB by a private neocloud; a USD 1.008bn investment-grade fixed-rate delayed-draw term loan closed 1 October 2026; a chip vendor as supplier, Series D investor and reportedly largest customer via a $1.5bn four-year leaseback of ~18,000 of the company's own GPUs; a reported USD 35bn frontier-lab agreement with about 350 MW at a Texas campus under a chip-vendor-held lease, confirmed by none of the four parties",
+     "profile:lambda @ v6 — summary, strategyRead, recentDevelopments"
     ],
     [
-     "200+ MW energised within a year of groundbreaking, a substation energised in under six months, a 91-day-class build cadence; ~4.9 GW contracted against a claimed 40+ GW pipeline converting at well under half; 29 aeroderivative turbines (~1 GW), ~750 MW of reciprocating engines, 5 GW of medium-voltage battery UPS, 12 GWh of iron-air storage",
-     "profile:crusoe @ v6 — summary, ecosystemRole, strategyRead"
+     "200+ MW energised within a year of groundbreaking, a substation energised in under six months; '6GW+' of gross contracted capacity and '$140B+' of total contracted value by its own September 2026 count (~4.9 GW contracted on the earlier count) against a claimed 40+ GW pipeline; 29 GE Vernova aeroderivative turbines (~1 GW), ~750 MW of reciprocating engines, 5 GW of medium-voltage battery UPS, 12 GWh of iron-air storage; a second 29-turbine order placed December 2025 and dropped September 2026; a USD 3.9bn Series F at USD 30.9bn post-money (17 September 2026) with the chip vendor among the investors",
+     "profile:crusoe @ v7 — summary, ecosystemRole, productsAndServices, recentDevelopments"
     ],
     [
-     "Two single-counterparty decisions reshaping the company inside one year — one halting a flagship expansion, one removing it from a 1.8 GW project; economics running through asset flips and JV debt; a valuation moving from $2.8bn to a discussed ~$30bn in twenty months",
-     "profile:crusoe @ v6 — strategyRead"
+     "Two single-counterparty decisions reshaping the company inside one year — one halting a flagship expansion, one removing it from a 1.8 GW project; economics running through asset flips and JV debt; ClusterMAX 3.0 cut it from Gold to Bronze as 'exceptionally unreliable'",
+     "profile:crusoe @ v7 — strategyRead, summary"
     ],
     [
      "Minor permit-by-rule instruments under press scrutiny with a pending major permit for 41 further turbines",
-     "profile:crusoe @ v6 — policyExposure[0]"
+     "profile:crusoe @ v7 — policyExposure[0]"
     ],
     [
-     "5 GW of secured power across three continents; a $9.7bn five-year GB300 contract whose first liquid-cooled hall was delivered and accepted on 13 August 2026; a $3.4bn cloud contract with a $2.1bn share-purchase right; a year-end 2026 ARR target above $4bn, ~85% contracted",
-     "profile:iren @ v5 — summary"
+     "5 GW of secured power across three continents; a $9.7bn five-year GB300 contract whose first liquid-cooled hall was delivered and accepted on 13 August 2026; a $3.4bn cloud contract with a $2.1bn share-purchase right; $4bn of contracted ARR for 2026 capacity; mining 'effectively decommissioned' by the end of December 2026 on management guidance",
+     "profile:iren @ v7 — summary, financials"
     ],
     [
-     "Owning land, substations, buildings and the cloud; a 1.4 GW bulk substation energised on schedule in April 2026 with no announced tenant; newest contracts at ~$15M per MW against ~$1.4M per MW for pure landlord colocation; 130-200 kW-rack liquid-cooled halls at 50 MW IT each",
-     "profile:iren @ v5 — ecosystemRole, strategyRead"
+     "Owning land, substations, buildings and the cloud; a 1.4 GW bulk substation energised on schedule in April 2026 with no announced tenant; the 2 GW hub conditionally included as Base Load in the grid operator's Batch Zero process on 8 September 2026; 300 MW gross under construction with delivery targeted Q4 2027; newest contracts at ~$15M per MW against ~$1.4M per MW for pure landlord colocation; 130-200 kW-rack liquid-cooled halls at 50 MW IT each",
+     "profile:iren @ v7 — ecosystemRole, strategyRead, recentDevelopments"
     ],
     [
-     "A ClusterMAX Underperforming rating against an exemplar certification from the chip vendor, kept at the 23 September 2026 re-test; every quarter of FY2026 missing consensus, one by 34% on revenue, and the FY2026 full-year print missing on revenue ($707.0M against $722.9M) and on EPS, read by its own file as structural rather than informational",
-     "profile:iren @ v5 — summary, strategyRead; SemiAnalysis, ClusterMAX 3.0, 23 September 2026"
+     "A ClusterMAX Underperforming rating against an exemplar certification from the chip vendor, re-tested and kept for a third cycle; every quarter of FY2026 missing consensus, one by 34% on revenue, and the FY2026 full-year print missing on revenue ($707.0M) and on EPS, read by its own file as structural rather than informational",
+     "profile:iren @ v7 — summary, strategyRead"
     ],
     [
      "Tenant of record, not owner, of ~1.4 GW of contracted critical IT across five campuses; more than USD 6bn of backstops and guarantees behind the rent; ~USD 27bn of base-term rent standing on ~USD 2.6bn of equity; bankruptcy-remote lessee subsidiaries and recognition agreements",
-     "profile:fluidstack @ v2 — summary, ecosystemRole, strategyRead"
+     "profile:fluidstack @ v4 — summary, ecosystemRole, strategyRead[0]"
     ],
     [
-     "The product is credit substitution plus speed rather than compute; the tenant-of-record position is replaceable by its own customer, shown when that customer signed 401 MW directly with a landlord with no intermediary entity in the lease; construction-period risk is where the chain can break, with a 180-day slip testing a termination right",
-     "profile:fluidstack @ v2 — strategyRead"
+     "The product is credit substitution plus speed rather than compute; the tenant-of-record position is replaceable by its own customer, shown in July 2026 when that customer signed 401 MW directly with a landlord and again on 25 September 2026 when it signed the second ten-year term at Barber Lake itself; construction-period risk is where the chain can break — Barber Lake slipped from September 2026 to a phased Q4 2026–Q1 2027 delivery under a 24 September amendment with a USD 359.3M overrun cap",
+     "profile:fluidstack @ v4 — strategyRead[1], strategyRead[2], recentDevelopments"
     ],
     [
-     "ClusterMAX Gold, one of six among 84 providers, in the second cycle; moved to Not Recommended – Unavailable in the third (23 September 2026) as a provider no longer offering capacity for testing; its own press page names the frontier lab it builds the New York and Texas campuses for; the company has never published revenue, backlog, headcount or a lease",
-     "profile:fluidstack @ v2 — productsAndServices, strategyRead; SemiAnalysis, ClusterMAX 3.0, 23 September 2026; Fluidstack press page, read 24 September 2026"
+     "Moved from Gold to Not Recommended – Unavailable in ClusterMAX 3.0 as a provider no longer offering capacity for testing; its own press page names the frontier lab it builds the New York and Texas campuses for; it has never published revenue, backlog, headcount or a lease, and the press relay of an investor memo's revenue figures is not used",
+     "profile:fluidstack @ v4 — summary, strategyRead[5], strategyRead[6], financials"
     ],
     [
-     "Statutory accounts for the pivot year next due 30 September 2026 — the first audited turnover; campus buy-out instalments of USD 150M by 31 December 2026 and ~USD 130M by 30 April 2027",
-     "profile:fluidstack @ v2 — financials.periods[].metrics; strategyRead indicators"
+     "Fluidstack Ltd missed the 30 September 2026 statutory deadline for its FY2025 accounts — 'Accounts overdue' at Companies House on 2 October 2026; on 10 September 2026 it took a worksite permit and began site works on a USD 4bn first phase at Harlingen, Texas, with 1.5 GW 'reserved' from the utility, its first ground broken in its own name and with no tenant named; campus buy-out instalments of USD 150M by 31 December 2026 and ~USD 130M by 30 April 2027",
+     "profile:fluidstack @ v4 — summary, financials, recentDevelopments, strategyRead[5]"
     ],
     [
-     "~200,000 GB300 GPUs contracted plus 96,000+ next-generation parts; the largest contract at one campus, reported as USD 45bn over six years and 460 MW and confirmed in the registration statement as agreements signed 25 August 2026 at the Monarch Compute Campus for aggregate payments of up to approximately USD 44.6bn; ~USD 3.7bn of equity and ~USD 6.1bn of facilities; 2025 revenue USD 33.0M, first-half 2026 revenue USD 140.6M and a first-half net loss of USD 1,020.1M; registration statement filed 18 September 2026 for a NYSE listing as NSCL",
-     "profile:nscale @ v1 — summary; Nscale Limited, Form S-1 registration statement, filed 18 September 2026"
+     "USD 103.4bn of take-or-pay total contract value by 31 August 2026; agreements signed 25 August 2026 at the Monarch Compute Campus 'provide for aggregate payments to us of up to approximately $44.6 billion' for four tranches, for which no binding financing commitments had been obtained; 2025 revenue USD 33.0M, first-half 2026 revenue USD 140.6M and a first-half net loss of USD 1,020.1M; registration statement filed 18 September 2026",
+     "profile:nscale @ v3 — summary, ecosystemRole"
     ],
     [
-     "A single-anchor business whose anchor has changed twice in a year; power rather than capital or chips as the binding constraint at every European site; a May 2026 grid-allocation halt and a planning fight pushing one site to 2027; the dossier read the majority of contracted volume as sitting on other people's campuses, and the registration statement reverses it — the substantial majority of contracted sites by capacity are wholly owned, about 1 GW of 1.37 GW active and contracted at seven owned sites against 200 MW leased and 165 MW in colocation",
-     "profile:nscale @ v1 — strategyRead, policyExposure[1]; Nscale Limited, Form S-1 registration statement, filed 18 September 2026"
+     "About 1 GW of 1.37 GW of active and contracted capacity at seven wholly owned sites against 200 MW leased and 165 MW in colocation; a 2 GW Caterpillar genset order with battery storage and SCR emissions controls at Monarch; a USD 1.0bn note to NVIDIA closing on or around 16 November 2026; management's forecast 'initially raised substantial doubt' about going concern, alleviated by a plan to defer capex if financing fails; the roadshow reported as expected to be postponed",
+     "profile:nscale @ v3 — ecosystemRole, strategyRead, financials, recentDevelopments"
     ],
     [
-     "A state-certified microgrid on a 2 GW engine order running independently of the local grid, with emissions controls and battery storage on the gensets",
-     "profile:nscale @ v1 — ecosystemRole, policyExposure[3]"
+     "Firmus owns and operates its own AI factories and pays for its own connection substations up front; more than 900 MW of contracted customer capacity (8 September 2026) against two operating sites, with OpenAI signed as anchor for two Malaysian sites not yet built; Maas Group's JLE is the exclusive supplier of power train units for its Australian pipeline (A$855M order, 4 August 2026); it buys UPS and batteries through its Synert subsidiary on Eaton's platform and runs a 26 MW behind-the-meter battery trial at Wesley Vale; Gunvor's 12-year, 600 MW supply underwrites 1.5 GWh of third-party storage; Silver in ClusterMAX 3.0",
+     "profile:firmus @ v2 — summary, ecosystemRole, strategyRead[0], strategyRead[1], strategyRead[2]"
     ],
     [
-     "14 policyExposure entries across the seven members; three members carry none at all; eleven entries dated and not one of them in the future at any granularity; exactly one day-level date in the fence and it is in the past",
-     "the seven profile files — policyExposure[], read entry by entry"
+     "No revenue figure has ever been published; a Reuters-reported term sheet times the ASX listing at bookbuild 6-7 October, prospectus 8 October and listing 22 October 2026, after slips from June and September; the prospectus would be the first document obliged to carry a revenue figure; the Hydro Tasmania decision on a 450 MW request is expected by the end of 2026",
+     "profile:firmus @ v2 — financials, ownership, productsAndServices"
     ],
     [
-     "The September 2026 cycle places CoreWeave and Nebius at Platinum, Lambda at Silver and Crusoe at Bronze; IREN under Not Recommended – Underperforming; Fluidstack under Not Recommended – Unavailable as a previously tested provider now claiming no spare capacity or declining to test; and Nscale under Not Recommended – Unavailable among providers the rater says market managed clusters while offering bare metal",
-     "SemiAnalysis, ClusterMAX 3.0, 23 September 2026"
+     "HUMAIN is Saudi Arabia's state AI company, owned by PIF, selling GPU capacity to xAI, Together AI, Adobe, Luma and an AWS zone; the grid counterparty to National Grid SA (2 September 2026); a 250 MW EPC agreement with MIS (20 September 2026, ~SAR 8.76bn) executed through HUMAIN-issued work orders; targets of 1.9 GW by 2030 and ~6 GW by 2034 against a 1.1 MW cloud energised; one disclosed US authorisation for up to 35,000 GB300-equivalent chips against a 600,000-GPU plan; Unavailable in ClusterMAX 3.0; no power-equipment supplier named in any source",
+     "profile:humain @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1], strategyRead[2], strategyRead[3]"
+    ],
+    [
+     "Khazna 'designs, builds and operates' 30 live data centres totalling almost 650 MW with 73% of the UAE market and more than 1 GW in development; it is developing the 1 GW Stargate UAE cluster, whose first 200 MW is targeted for 2026 and for which G42 said in October 2025 'the project has completed procurement of all long-lead equipment'; Core42 is a 60 MW tenant at TeraWulf's Lake Mariner and holds a Participation Ribbon; the BIS A:5 approval of 10 July 2026 'shall automatically expire on April 6, 2027' unless G42 and Core42 become US companies",
+     "profile:g42 @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "WhiteFiber is a Bit Digital-controlled, Nasdaq-listed operator of a GPU cloud rated 'Underperforming' in ClusterMAX 2.0 and 3.0 and a retrofit landlord whose 40 MW IT lease to Nscale at NC-1 (~US$865M over ten years) is 93% of its US$1.0bn of remaining performance obligations; it holds the Duke Energy Carolinas service agreement through Enovum NC-1 Bidco and buys the power distribution equipment, generators and cooling behind the meter while the utility owns the substations, transformers and breakers; a medium-voltage switchgear supply issue disclosed 14 May 2026 pushed the tenant's ready-for-service dates into the third quarter; 99 MW is a schedule and 54 gross MW the only firm figure",
+     "profile:whitefiber @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "5C Group leases powered, cooled halls to neoclouds and is landlord of record for Together AI, Vultr and Crusoe; it owns the Benjamin Substation at Springfield ('the customer will own') and the site power at four US campuses; about 110 MW operational against a roadmap stated as 'over 1.5 gigawatts', down from 'over 2 GW'; more than US$1.4bn raised; its tenants own their own GPUs; its 2026 pages speak of 'prefabricated power skids' and 'warmer-water cooling'; no battery, SST or 800 VDC purchase in prospect (inference from absence)",
+     "profile:5c-group @ v1 — summary, ecosystemRole, strategyRead[0], strategyRead[1], strategyRead[4]"
+    ],
+    [
+     "35 policyExposure entries across the twelve members; three members — CoreWeave, Lambda and IREN — carry none at all; twenty-three entries dated and not one of them in the future at any granularity",
+     "the twelve profile files — policyExposure[], read entry by entry on 4 October 2026"
     ]
    ]
   },
@@ -72874,15 +73197,15 @@ function guidanceDocLandscapeNeoclouds_() {
    "kind": "callout",
    "tone": "warn",
    "ps": [
-    "Eight absences. Each one is **stated by the dossier that has it**, not inferred from silence — and on this segment they matter more than usual, because more than half the roster publishes nothing at all.",
-    "**1. No revenue, for three of the seven.** Three members are private and not one of them discloses revenue — the fourth that was private filed to list in September 2026 and now does. One file says the company has *never* published revenue, backlog, headcount or a lease, and records that aggregator estimates were deliberately not used rather than quietly borrowed. Another says every figure in it is a lender's, a partner's, a registry's or a named outlet's.",
-    "**2. No company-wide megawatt or GPU-fleet figure** for one member, which its own file calls the widest disclosure gap among the majors and says a filing would close.",
-    "**3. No confirmed megawatts or term for the largest contract in the segment.** The biggest reported deal was press-sourced when this module was written; one member's September 2026 registration statement now confirms the counterparty, the campus and aggregate payments of up to about USD 44.6 bn, and states **neither the megawatts nor the term** the press reported. Its own file had called it *the most important and least confirmed number* in the company — it is now half confirmed.",
-    "**4. No customer-concentration figure for four of the seven.** Only the two members with public filings disclose one. Elsewhere it is undisclosed pending a filing, **explicitly inferred rather than stated**, observable only through two counterparty decisions, or visible only as an anchor that keeps changing. Concentration is this segment's fourth buying criterion and it is measurable for two members out of seven.",
-    "**5. A rating for every member, and a re-rating that confirmed the one in dispute.** The September 2026 cycle places all seven for the first time. The member whose rating was disputed was re-tested after the acquisition made to answer it and **kept at Underperforming**; the record does not yet say whether its new Texas builds, which the rater judged much better, will move it at the next cycle.",
-    "**6. No policy exposure on record at all for three of the seven** — including the incumbent. Three members carry an empty fence, which is why this module's review date had to be read out of a filing deadline rather than out of a regulation.",
-    "**7. No date, anywhere, for the depreciation question.** The GPU useful-life dispute is the largest single variable in the segment's economics by the incumbent's own account, and nothing in the corpus says when it resolves.",
-    "**8. No league table of these seven exists in this corpus.** The public lane opener says the same thing one layer up — placement is this layer's job — and the public campus lesson states outright that no ranking of the landlords exists here and that it will not invent one. **This module ranks by role, which the registry supplies, and declines to rank within the six challengers**, whose four routes are not measures of one thing."
+    "Eight absences. Each one is **stated by the dossier that has it**, not inferred from silence — and on this segment they matter more than usual, because more than half the roster publishes nothing a lender would call a number.",
+    "**1. No revenue figure, for seven of the twelve.** Four members publish nothing — one of them, the colocation-first challenger, is private; two are sovereign; one is an Asia-Pacific owner-operator whose prospectus, due 8 October, would be the first document obliged to carry one. Three more publish megawatts and nothing else. The tenant-of-record member's only scheduled disclosure, its statutory accounts, is **overdue**; the revenue figures now circulating for it come from a press relay of an investor memo, and its own dossier says they are not used.",
+    "**2. No company-wide megawatt or GPU-fleet figure** for one member, which its own file calls the widest disclosure gap among the majors and says a filing would close — and whose filing has moved to 2027.",
+    "**3. No confirmed megawatts or term for the two largest contracts in the segment.** One member's registration statement confirms the counterparty, the campus and aggregate payments of up to about USD 44.6 bn, and states **neither the megawatts nor the term** the press reported. The other — a reported USD 35 bn agreement with the same lab, about 350 MW of it at a Texas campus under a chip vendor's lease — is **confirmed by none of the four parties** the reports name.",
+    "**4. No customer-concentration figure except from the filers.** The listed members and the one that has filed to list disclose one — 67 per cent at the first incumbent, 93 per cent of one landlord-cloud's backlog in a single lease, two anchors in one registration statement. Everywhere else it is undisclosed pending a filing, **explicitly inferred rather than stated**, observable only through counterparty decisions, or visible only as an anchor that keeps changing. Concentration is this segment's fourth buying criterion and it is measurable for five members out of twelve.",
+    "**5. A rating for eleven of the twelve — and what the rating does not say.** The September 2026 edition places every ranked member; the adjacent landlord is unrated. What the rater's own dossier records as absent is the other half: **no client list**, so whether any rated provider pays for models, assessments or badges is unknown; no badge-licence terms; no holdings list against the roster beyond one SPV; and no compensation disclaimer since the first edition. The record does not say whether the three members under Unavailable will be re-tested in the next edition, due around March 2027.",
+    "**6. No policy exposure on record at all for three of the twelve** — including the first incumbent. Three members carry an empty fence, and across the other nine not one dated entry is in the future, which is why this module's review date has had to be read out of filings rather than out of a regulation twice in a row.",
+    "**7. No date, anywhere, for the depreciation question.** The GPU useful-life dispute is the largest single variable in the segment's economics by the first incumbent's own account, and nothing in the corpus says when it resolves.",
+    "**8. No league table of these twelve exists in this corpus — and the rating is not one.** The public lane opener says the same thing one layer up — placement is this layer's job — and the public campus lesson states outright that no ranking of the landlords exists here and that it will not invent one. **This module ranks by role, which the registry supplies; it reports the tier beside the role, dated and attributed; and it declines to rank within the nine challengers**, whose five routes are not measures of one thing."
    ]
   },
   {
@@ -72892,44 +73215,44 @@ function guidanceDocLandscapeNeoclouds_() {
    "kind": "flashcards",
    "cards": [
     {
-     "q": "This segment has one incumbent and six challengers. What does that shape actually tell you?",
-     "a": "**Less than it looks like, and something different from what it looks like.** It is not a monopoly and the dossiers do not describe a market about to consolidate. Read with the disclosure measurement beside it — **three of the seven publish no revenue at all** — the shape is largely a **legibility** effect: one member is public, audited and quarterly, and is therefore the only one anyone can be measured against. Its own file says exactly that."
+     "q": "This segment has two incumbents, nine challengers and one adjacent. What does that shape actually tell you?",
+     "a": "**Less than it looks like, and something different from what it looks like.** The second incumbent did not arrive by growing — the registry moved it on one placement in one third-party rating. Read with the disclosure measurement beside it — **seven of the twelve publish no revenue figure** — the shape is largely a **legibility** effect: two members are public, audited and quarterly, and are therefore the two anyone can be measured against. The first incumbent's own file says exactly that about itself."
     },
     {
-     "q": "On what basis is the single incumbent an incumbent, given it is not first on contracted power or on growth?",
-     "a": "**A third-party operational rating that since September 2026 covers all seven members on one scale**, in which it is the only member at the top tier in all three rating cycles — and in the third it shares that tier with one challenger for the first time. It is **not** first on scale — one challenger holds 5 GW of secured power and another about 4.9 GW contracted, against its 3.5+ GW — and **not** first on growth, where a challenger grew 454 per cent against its 112. The rating measures operational quality, and the rated companies themselves cite it as the scoreboard."
+     "q": "On what basis are the two incumbents incumbents, and what is the basis worth?",
+     "a": "**A third-party operational rating — ClusterMAX, published by SemiAnalysis — that places both at Platinum**, plus numbers that are public and quarterly. Neither is first on scale: one challenger states 6 GW-plus gross contracted and another holds 5 GW of secured power. And the rating is **a point-in-time judgment by a firm with undisclosed commercial and investment ties to several of the rated companies** — it sells research and consulting to companies it rates, its founder's vehicle sat in one of them, and it has not repeated its compensation disclaimer since the first edition. The rater's own dossier says: a technically grounded assessment, not an audit. Report the tier, date it, attribute it — and never rank by it alone."
     },
     {
-     "q": "The six challengers are said to run four routes rather than one attack. What are they, and what sorts them?",
-     "a": "**Own the shell and sell cloud on top** (three members) · **own nothing and sell the credit** (one) · **out-compound on the same model** (one) · **climb up-market from a developer base** (one). What sorts them is the registry itself: the four members ranked in the landlords segment as well are exactly the ownership route, and the two that appear there only as *adjacent* are the two that are counterparties rather than developers. **The sort runs along this segment's own third buying criterion — leased shell against own-build.**"
+     "q": "The nine challengers are said to run five routes rather than one attack. What are they, and what sorts them?",
+     "a": "**Own the shell and sell cloud on top** (four) · **own nothing and sell the credit** (one) · **climb up-market from a developer base** (one) · **build and sell sovereign compute to foreign labs** (two) · **be the landlord that also sells cloud** (one). What sorts them is the registry itself: nine of the twelve are also ranked in the landlords segment, and the four that carry challenger in both sell campus capacity to others, while the four that invert to adjacent there build only for their own book or own almost nothing. **The sort runs along this segment's own third buying criterion — leased shell against own-build.** The sixth route of September — out-compound the incumbent on its own model — has no runner left, because the runner became an incumbent."
     },
     {
-     "q": "How many commercial transactions between members does the record actually hold, and which direction does it run?",
-     "a": "**One.** Eighteen edges connect the seven members, but only four pairs are typed and **four of those five typings read competitor**. The single exception is a **supplier** edge in which the member that owns the least buys GPU capacity from the member that owns the most, while its own leased halls are still under construction."
+     "q": "How many commercial transactions between members does the record actually hold, and what are they?",
+     "a": "**Three.** Twenty-nine edges connect the twelve, fourteen pairs are typed, and **thirteen of the seventeen typings read competitor**. The exceptions are a **supplier** edge in which the tenant-of-record member buys GPU capacity from the member that owns the most; a **supplier-and-customer** pair in which one neocloud leases another's retrofit hall; and a **customer** edge in which the adjacent landlord hosts a route-one developer. Two of the three are a neocloud renting a landlord's hall."
     },
     {
-     "q": "If the challengers are not taking share from the incumbent, where does the threat in this segment come from?",
-     "a": "**From the customers.** One hyperscaler anchors four of the seven and has already declined one expansion and re-routed capacity to a different member. One frontier lab signed 401 MW directly with a landlord, **with no intermediary entity in the lease**, and has since contracted through three other members. And the chip vendor is supplier, investor, customer and certifier at once. **All seven compete for allocation decisions made inside four or five customer organisations.**"
+     "q": "If the challengers are not taking share from the incumbents, where does the threat in this segment come from?",
+     "a": "**From the customers — and, for two members, from a licensing desk.** One hyperscaler anchors five of the twelve and has already declined one expansion and re-routed capacity to the member that became the second incumbent. One frontier lab signed 401 MW directly with a landlord, **with no intermediary entity in the lease**, has contracted through three other members since, and has now signed the second term at an intermediary's own campus itself. The chip vendor is supplier, investor, creditor, customer, certifier and, per press, lease-holder at once. And the sovereign route's two members watch a chip authorisation and a licence sunset. **All twelve compete for allocation decisions made inside four or five customer organisations.**"
     },
     {
      "q": "How many of this segment's five buying criteria are taught by a lesson, and why is that number what it is?",
-     "a": "**None of the five** — the public segment lesson prints a dash against every one. But the reason here is **not** a curriculum hole: every one of the five criteria *does* match a keyword, and **not one of the matching lessons is in this segment's mapped set**. The map names three campus-and-power lessons while the criteria are written in commercial vocabulary. **This module still teaches none of the five**; it says who sits where and points at the lesson."
+     "a": "**None of the five** — the public segment lesson, regenerated on 4 October 2026, prints a dash against every one. But the reason here is **not** a curriculum hole: every one of the five criteria *does* match a keyword, and **not one of the matching lessons is in this segment's mapped set**. The map names three campus-and-power lessons while the criteria are written in commercial vocabulary. **This module still teaches none of the five**; it says who sits where and points at the lesson."
     },
     {
-     "q": "Why can this module's review date not be read out of the policy fence, the way most modules' are?",
-     "a": "Because the fence is empty of future dates. **Fourteen policy entries across seven members, three of the seven carrying none at all, eleven dated — and not one dated entry in the future at any granularity.** The only day-level date in the whole fence is in the past. The date taken instead is a **statutory filing deadline** read out of one member's own indicator list, and it is the only future day-level date in the segment that is neither already another module's clock nor later than a six-month default."
+     "q": "Why is this module's review date a prospectus lodgement four days after it was revised?",
+     "a": "Because the fence is still empty of future dates — **thirty-five policy entries across twelve members, three of the twelve carrying none at all, twenty-three dated, and not one dated entry in the future at any granularity** — and because the gate the module carried in September **failed**: the statutory accounts it waited for were not filed. The nearest dated gate in the new material is the Asia-Pacific owner-operator's prospectus, on a press-reported term sheet that has slipped twice, and it is a gate on a taught claim — the first revenue figure for a member that has never published one moves a count this module carries in a tile. A slip past the date is itself the finding."
     },
     {
-     "q": "A colleague proposes selling a battery system into this segment by approaching all seven members the same way. What is wrong with that?",
-     "a": "**Purchasing authority sits with the member in only four of the seven cases**, and those four are the ownership route. For the incumbent the campuses are third-party developers' work; for one member the facility capex belongs to its colocation landlords; for another the landlord buys the generators and the substation. On storage specifically it is narrower still: **only one of the seven has a named battery commitment of any size**, and one other has batteries on the gensets at a single site."
+     "q": "A colleague proposes selling a battery system into this segment by approaching all twelve members the same way. What is wrong with that?",
+     "a": "**Purchasing authority for power equipment sits with the member in eight of the eleven ranked cases, and at two of those it sits one step away** — with an engineering contractor working to the member's work orders, or with a landlord subsidiary the member owns. The first incumbent's campuses are third-party developers' work; the colocation-first member's facility capex belongs to its landlords; the tenant-of-record member pays at its two own-name sites and at none of the five it fronts. On storage specifically it is narrower still: **only one of the twelve has a named utility-scale battery commitment of any size**, one buys UPS batteries as a programme and runs a trial, one has batteries on the gensets at a single site, and nine name none."
     },
     {
      "q": "What is the single largest variable in this segment's economics, and what does the corpus say about when it resolves?",
-     "a": "**The GPU useful-life assumption** — six years on the incumbent's books against a three-to-4.75-year bear case, a change its own file says *would roughly double D&A and erase margins*, with observed 50-70 per cent rental-rate declines on prior-generation parts as the empirical anchor. **The corpus puts no date on it at all.** It sits in the indicators table as an open row for exactly that reason."
+     "a": "**The GPU useful-life assumption** — six years on the first incumbent's books against a three-to-4.75-year bear case, a change its own file says *would roughly double D&A and erase margins*, with observed 50-70 per cent rental-rate declines on prior-generation parts as the empirical anchor. **The corpus puts no date on it at all.** It sits in the indicators table as an open row for exactly that reason."
     },
     {
      "q": "Where does the credit-substitution chain get taught, and what does this module add to it?",
-     "a": "**The chain is taught in public, by the Value Chain lane opener**, which uses this segment's own chain as its worked example and names one member twenty-six times. That lesson owns the **method** — what an edge is, how a chip reads, what the roles claim, and four specific ways to misread a player table. **This module owns the positions**: who sits where, at what size, under whose signature. The lesson's own words are that the companies are the worked example, not the material."
+     "a": "**The chain is taught in public, by the Value Chain lane opener**, which uses this segment's own chain as its worked example and names one member twenty-six times. That lesson owns the **method** — what an edge is, how a chip reads, what the roles claim, and four specific ways to misread a player table. **This module owns the positions**: who sits where, at what size, under whose signature — and, since October, which tier, from which edition of which rating, with what caveat. The lesson's own words are that the companies are the worked example, not the material."
     }
    ]
   },
@@ -72940,37 +73263,37 @@ function guidanceDocLandscapeNeoclouds_() {
    "kind": "quiz",
    "items": [
     {
-     "q": "A colleague sees one incumbent against six challengers and concludes the segment is about to consolidate around the incumbent. What does the record actually support?",
+     "q": "A colleague sees two incumbents against nine challengers and concludes the segment is consolidating around the two. What does the record actually support?",
      "c": [
-      "Consolidation — a single incumbent with six sub-scale challengers is a late-stage market",
-      "A market that has just formed, since six of seven members carry the entrant role",
-      "Neither: the shape is largely a legibility effect, and the competition runs between each member and its customers rather than between members",
-      "Fragmentation — six challengers on one incumbent means share is about to move"
+      "Consolidation — two incumbents with nine sub-scale challengers is a late-stage market",
+      "A market that has just formed, since nine of twelve members carry the entrant role",
+      "Neither: the shape is largely a legibility effect plus one rating, and the competition runs between each member and its customers rather than between members",
+      "Fragmentation — nine challengers on two incumbents means share is about to move"
      ],
      "a": 2,
-     "why": "Three of the seven publish no revenue at all, so the incumbent is the only member anyone can measure — which is most of what the role is recording. And the record shows the action outward, not inward: **eighteen edges among the members but only one commercial transaction between any two of them**, against a hyperscaler anchoring four of the seven, a frontier lab that has already contracted around one member, and a chip vendor on every side of the trade."
+     "why": "Seven of the twelve publish no revenue figure, so the two incumbents are the two members anyone can measure — which is most of what the role is recording, and the second role was moved by a rating rather than by share. And the record shows the action outward, not inward: **twenty-nine edges among the members but only three commercial transactions between any two of them**, against a hyperscaler anchoring five of the twelve, a frontier lab that has already contracted around one member twice, and a chip vendor on every side of the trade."
     },
     {
-     "q": "You need to say why the single incumbent holds that role. Which answer is supported by the dossiers?",
+     "q": "You need to say why the second incumbent holds that role. Which answer is supported by the record?",
      "c": [
       "It holds the most contracted power in the segment",
-      "It grew fastest in the most recent reported quarter",
-      "A third-party operational rating now covering all seven has placed it in the top tier in every one of its cycles, and its numbers are the longest audited, quarterly, complete set in the segment",
-      "It is the only member with an anchor contract from a hyperscaler"
+      "It signed the largest single contract in the segment",
+      "A third-party rating placed it level with the first incumbent at Platinum on 23 September 2026 and the registry moved its role on that basis — a stated basis input from a rater with undisclosed ties to several of the rated, reported beside its own public numbers rather than instead of them",
+      "It was the only member to grow faster than the first incumbent"
      ],
      "a": 2,
-     "why": "The first two are false on the record: one challenger holds 5 GW of secured power and another about 4.9 GW contracted against the incumbent's 3.5+ GW, and a challenger grew 454 per cent against its 112. The fourth is false because a hyperscaler anchors **four** of the seven. What is left is the rating plus legibility — and the rating's September 2026 cycle is the first to put a challenger in the same tier, which is why the answer says every cycle rather than alone — which the incumbent's own file states as its role in this ecosystem."
+     "why": "The first two are false on the record: one challenger states 6 GW-plus of gross contracted capacity and another 5 GW of secured power, and the largest filed contract belongs to a challenger at up to about USD 44.6 bn. The fourth is true but is not the basis — the registry's own note names the rating, and the member's file reads its old label as contradicted by *the only independent rating in the segment*. The rater's dossier is the reason the answer carries the caveat: a tier is a point-in-time judgment by a firm that sells research and consulting to rated companies, not an audit."
     },
     {
-     "q": "Two members carry the challenger role in this segment and in the landlords segment both; two others carry challenger here and adjacent there. What is the right inference?",
+     "q": "Nine of the twelve are also ranked in the landlords segment, and five of those nine carry a different role there. What is the right inference?",
      "c": [
-      "The registry is inconsistent and one of the two placements should be corrected",
+      "The registry is inconsistent and the five should be corrected",
       "The ones that invert are less important members of this segment",
-      "The inversion separates the members whose campus position is a business they sell to others from the members whose campus position only serves their own book — a sharper reading of the same leased-shell-against-own-build axis",
+      "The inversion separates the members whose campus position is a business they sell to others from the members whose campus position only serves their own book — a sharper reading of the same leased-shell-against-own-build axis — and the one that inverts the other way sells halls rather than compute",
       "Adjacent in another segment always means a smaller business"
      ],
      "a": 2,
-     "why": "A role is a placement inside **one** segment, made from that company's own record, so two placements cannot contradict each other. What the pattern measures here is whether a shared member's campus business is something it **sells** or something it merely **has**. The two that hold challenger in both sell campus capacity to others. Of the two that invert, one owns three campuses outright and builds them only for its own contracted load, and the other owns almost nothing — two different reasons for the same label, and neither of them is size."
+     "why": "A role is a placement inside **one** segment, made from that company's own record, so two placements cannot contradict each other. The four that hold challenger in both sell campus capacity to others. Of the four that invert to adjacent there, one owns about 1 GW of 1.37 GW but builds for its own anchors, one owns and builds its factories and does not lease shells, one is owner and grid counterparty for its own builds, and one owns almost nothing — four different reasons for the same label, and none of them is size. The fifth is adjacent **here** because its business is leasing powered halls to neoclouds whose GPUs it does not own."
     },
     {
      "q": "The public segment lesson prints a dash against all five buying criteria. A colleague concludes the curriculum does not teach any of them. Is that right?",
@@ -72984,26 +73307,26 @@ function guidanceDocLandscapeNeoclouds_() {
      "why": "The generator names a lesson only when it is in the segment's mapped set **and** a keyword from its index appears in the criterion's own text. Here the mapped set and the keyword-matching set are **disjoint**. That changes the diagnosis but not the scope: **layer four says who sits where and declines to teach the mechanism**, because a landscape that starts teaching a criterion stops being a landscape."
     },
     {
-     "q": "You are sizing a storage opportunity across all seven members. What does the record support?",
+     "q": "You are sizing a storage opportunity across all twelve members. What does the record support?",
      "c": [
-      "Seven comparable buyers, since every AI data-centre operator buys batteries",
-      "One member with a named battery commitment of any size and one with batteries on the gensets at a single site — for the rest, the buyer is the landlord or the developer",
-      "Six buyers, excluding only the tenant-of-record member",
-      "Four buyers — the members that own their own campuses all buy batteries"
+      "Twelve comparable buyers, since every AI data-centre operator buys batteries",
+      "One member with a named utility-scale battery commitment, one with a UPS-battery programme and a behind-the-meter trial, one with batteries on the gensets at a single site — and nine that name none, three of them saying so as an inference from absence",
+      "Eleven buyers, excluding only the tenant-of-record member",
+      "Eight buyers — the members that own their own campuses all buy batteries"
      ],
      "a": 1,
-     "why": "Four of the seven buy power equipment, but that is **not** the same list as the members with a battery programme. Only one has a battery commitment of any size, and one other has batteries on the gensets at a single site; **the other five name none at all.** For the three that do not buy power equipment, the signature belongs to a landlord, a colocation provider or a third-party developer."
+     "why": "Eight of the eleven ranked members own the power decision somewhere, but that is **not** the same list as the members with a battery programme. One has a 5 GW medium-voltage battery UPS commitment and 12 GWh of iron-air; one buys UPS batteries through a subsidiary and runs a 26 MW trial while contracting its firming through a retailer; one has batteries on the gensets at a single site; **the other nine name none at all.** For the three that do not buy power equipment, the signature belongs to a landlord, a colocation provider or a third-party developer."
     },
     {
-     "q": "This module carries a review date only two weeks after the date it was written. What is the reason?",
+     "q": "This module carries a review date four days after the date it was revised. What is the reason?",
      "c": [
-      "A standing rule that demand-side modules are reviewed fortnightly",
+      "A standing rule that demand-side modules are reviewed weekly",
       "The policy fence held a regulation taking effect that day",
-      "The fence holds no future date at all, and the nearest genuine gate in the segment is a statutory filing deadline that puts the first audited number behind the most leveraged position here",
+      "The fence holds no future date at all, the September gate failed, and the nearest dated gate in the new material is a prospectus that would put the first revenue figure behind a member that has never published one",
       "It was set to match the two other modules already inside their review horizon"
      ],
      "a": 2,
-     "why": "Fourteen policy entries across seven members, three members with none at all, and **not one dated entry in the future at any granularity** — so the fence supplies nothing. Of the three future day-level dates in the whole segment, one is already carried by four other modules and one falls later than a six-month default. The filing deadline is the only one left, and it is a gate on **this module's own claim** about rent standing on equity."
+     "why": "Thirty-five policy entries across twelve members, three members with none at all, and **not one dated entry in the future at any granularity** — so the fence supplies nothing, and the statutory-accounts gate the module carried in September was missed. Of the future day-level dates now in the files, the listing is the same document chain as the prospectus, the chip vendor's note is a financing event, the December dates are later, and the licence sunset and the rating's next edition fall later than a six-month default. The prospectus is the nearest, and it is a gate on **this module's own count** of who publishes a number."
     }
    ]
   }

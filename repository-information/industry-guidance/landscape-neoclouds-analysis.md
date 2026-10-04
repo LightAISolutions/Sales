@@ -713,4 +713,98 @@ A freshness review ahead of the 30 September gate. The gate itself, Fluidstack's
   - Fluidstack's equity (press reports a Series B that the company has not announced).
   - The segment registry's roles.
 
+## 14. Revision — 4 October 2026 re-pin (Classroom wave A)
+
+The second revision, run as row 9 of `phase-f-action-plan.md` §3 after Phase F's F-N1, F-N2, row 5 and F-A1 sessions enlarged the segment from seven members to twelve and wrote the SemiAnalysis dossier that documents the rating the roles rest on. The 30 September gate this module carried **failed to resolve**: Fluidstack Ltd missed the statutory deadline for its FY2025 accounts, and Companies House showed `Accounts overdue` on 2 October 2026 (`fluidstack` v4, `financials` and `recentDevelopments`). Nothing was done to the module by hand before this session; everything below is read off the files on 4 October 2026.
+
+### 14.1 The segment, re-measured
+
+| Measurement | 24 September (v06.52r reading) | 4 October 2026 (this revision) |
+|---|---|---|
+| Members | 7 — 1 incumbent · 6 challenger · 0 adjacent | **12 — 2 incumbent · 9 challenger · 1 adjacent** |
+| Incumbents | CoreWeave | **CoreWeave, Nebius** — Nebius moved from challenger on 2 October 2026 on its ClusterMAX 3.0 Platinum (registry `basis` and `notes`, `profiler-segments.json` @ v07.87r) |
+| Challengers | Nebius, Lambda, Crusoe, IREN, Fluidstack, Nscale | Lambda, Crusoe, IREN, Fluidstack, Nscale, **Firmus, HUMAIN, G42, WhiteFiber** |
+| Adjacents | none | **5C Group** — a landlord whose tenants own their own GPUs |
+| Registry `notes` field | absent | **present** — the ClusterMAX 3.0 tier table and the rule that the rating moves no other role |
+| Ranked in another segment | 4 of 7, all in `aidc-developers-and-landlords` | **9 of 12, all in `aidc-developers-and-landlords`**: Crusoe, IREN, G42, WhiteFiber challenger in both; Fluidstack, Nscale, Firmus, HUMAIN challenger here and adjacent there; 5C adjacent here and challenger there |
+| Role inversion among shared members | 2 of 4 | **5 of 9** |
+| Publish a revenue figure | 4 of 7 (3 publish none) | **5 of 12** — CoreWeave 5,130, Nebius 529.8, IREN 707, Nscale 33, WhiteFiber 79.2 (USD m, `segment-neoclouds` `the-numbers`); **7 publish none** — Crusoe, Firmus, HUMAIN and Lambda nothing, Fluidstack, G42 and 5C megawatts only |
+| `policyExposure[]` | 14 entries · 11 dated · 0 future; 3 members with none | **35 · 23 · 0 future; 3 with none — CoreWeave, Lambda, IREN** |
+| Graph (`profiler-graph.json` built 2026-10-04) | 18 edges · 4 typed pairs · 5 typings · 1 commercial | **29 edges · 14 typed pairs · 17 typings · 13 competitor · 3 commercial** — Fluidstack buys capacity from IREN (supplier); Nscale leases WhiteFiber's NC-1 hall (supplier/customer); 5C hosts Crusoe at Springfield (customer) |
+| Most-connected outside counterparties (typed edges) | NVIDIA 6 · a hyperscaler 5 · a lab 4 | **NVIDIA 15 · Microsoft 13 · SemiAnalysis 11 · OpenAI 9 · AMD 8 · Anthropic 7 · Google 6** |
+| Rated on one scale | 6 of 7 → 7 of 7 | **11 of 12** — 5C unrated |
+| Purchasing authority for power equipment with the member | 4 of 7 | **8 of the 11 ranked members at at least one site** — Nebius, Crusoe, IREN, Nscale, Firmus, HUMAIN (through its EPC contractor on the first 250 MW), G42 (through Khazna), WhiteFiber (behind Duke's meter) — plus Fluidstack at Okmulgee and Harlingen in its own name; CoreWeave and Lambda do not; the adjacent 5C buys everything it builds |
+| Named battery commitment | 1 of 7 (Crusoe) + gensets at 1 | **1 utility-scale (Crusoe: 5 GW MV-BESS, 12 GWh iron-air) · 1 UPS-battery programme and a 26 MW behind-the-meter trial (Firmus) · batteries on gensets at 1 (Nscale) · 9 name none** — WhiteFiber, 5C and HUMAIN say so as inference from absence |
+
+**ClusterMAX 3.0 across the twelve** (registry `notes` @ v07.87r; `semianalysis` v1 `technicalSpecs`): Platinum — CoreWeave, Nebius · Silver — Lambda, Firmus · Bronze — Crusoe · Participation Ribbon — Core42 (G42) · Not Recommended – Underperforming — IREN, WhiteFiber · Not Recommended – Unavailable — Fluidstack, Nscale, HUMAIN · unrated — 5C. The edition reviewed 77 of 323 tracked providers and awarded 19 medallions.
+
+**(cc2) re-read at twelve.** The 50 per cent inversion rate of September is now 5 of 9, and the sort still runs on leased shell against own-build: the four challenger-in-both members sell campus capacity to others; of the four that invert to adjacent in the landlords segment, Nscale owns 1 GW of its 1.37 GW but builds for its own anchors, Firmus owns and builds its campuses and "does not lease shells to other operators", HUMAIN is owner and grid counterparty for its own builds, and Fluidstack owns almost nothing but is now developer in its own name at three sites. The fifth inversion runs the other way — 5C is adjacent here because it sells halls, not compute.
+
+### 14.2 What the rating is, and why a tier is not an audit
+
+The module previously cited SemiAnalysis's ClusterMAX 3.0 directly as a primary source. The F-A1 session wrote `semianalysis` v1 (2026-10-04), and the module now says what the rating is and who publishes it, and cites the dossier for both:
+
+- **What it is.** A relative rating of managed GPU-cloud providers on ten published criteria (Security, Lifecycle, Orchestration, Storage, Networking, Reliability, Monitoring, Pricing, Partnerships, Availability), tested hands-on by SemiAnalysis staff on clusters the providers grant — "most providers granted us at least 4 B300 nodes" — through a three-phase audit, performance and reliability protocol, informed by "well over 200" user interviews. Tiers: Platinum, Gold, Silver, Bronze, a Participation Ribbon tier added in 3.0, and two Not Recommended categories. Cadence stated at "roughly 6 months"; actual intervals 7.5 and 10.5 months; a 4.0 is due "around March 2027" on the stated cadence.
+- **Who publishes it.** SemiAnalysis LLC, a founder-owned Florida research firm that is also a newsletter, a vendor of sixteen institutional data models sold to hyperscalers and neoclouds, a consultancy that performs paid technical assessments with the same toolkit it rates with, and, since July 2026, a venture investor (Form D for a USD 400 million Fund I; two USD 20 million SPVs; a USD 50 million SPV its founder led in Fluidstack's USD 700 million round).
+- **Why a tier is a point-in-time judgment and not an audit** (`semianalysis` v1, judgment 4, high confidence): the compensation disclaimer was printed once, in 1.0 (March 2025), and not in 2.0 or 3.0; no policy is published on rated-company consulting, badge licensing or staff and fund holdings; rated providers donate the compute the firm benchmarks on; the firm's position, relayed by Yahoo Finance, is that "providers cannot purchase their ranking", and no critic has produced evidence of pay-for-rank. The dossier's rule, carried into the module verbatim in substance: treat a ClusterMAX tier as a technically grounded assessment by a firm with undisclosed commercial and investment ties to several of the rated companies, not as an audit.
+- **Consequence for this module.** The registry uses the rating as one stated basis input (it moved Nebius's role and no other); the module does the same and **does not rank by tier alone** — the dossiers' own numbers carry scale, growth, disclosure and purchasing authority, and the tier is reported beside them, dated and attributed.
+
+### 14.3 The G3 sentences, one per section
+
+Only a section with such a sentence changes. Sections are named by their ids.
+
+- **`who-dominates-and-on-what-basis`** taught seven members, one incumbent and no adjacents, "the most lopsided roster", a rating "that since September 2026 covers all seven", "three of the seven publish no revenue", and cited the rating as its own primary source. The registry now says twelve members, two incumbents and one adjacent; `semianalysis` v1 says what the rating is and who publishes it; the numbers table says seven of twelve publish no revenue; `nebius` v6 says the registry moved its role on 2 October on the Platinum. Rewritten: shape, the rating explained and attributed, the rating's limits stated in the rater's dossier's own words, Nebius's position added from its own file beside CoreWeave's.
+- **`who-threatens`** taught six challengers on four routes, "four of the seven ranked in exactly one other segment", a 50 per cent inversion, 18 edges and one commercial transaction, a hyperscaler anchoring "four of the seven", and route three with one runner (Nebius). The registry now says nine challengers, nine of twelve shared with the landlords segment and five inversions; the graph says 29 edges, 14 typed pairs and three commercial transactions; the runner on route three became an incumbent; `firmus` v2, `humain` v1, `g42` v1 and `whitefiber` v1 describe two routes the September roster did not have — sovereign builders selling compute to foreign labs and a landlord that also sells cloud; `crusoe` v7 says "6 GW+" gross contracted and "$140B+" TCV against the "about 4.9 GW" taught; `fluidstack` v4 says the lab signed the second Barber Lake term itself and that Fluidstack broke ground in its own name at Harlingen. Rewritten: five routes, the recount, the three transactions, the customers' moves restated at twelve.
+- **`each-players-bet`** taught seven rows and "seven rows because the ranked roster is seven, and there are no adjacents to omit". Eleven rows now: Nebius carries incumbent; Firmus, HUMAIN, G42 and WhiteFiber rows are drawn from each dossier's `strategyRead[]` with the dossier's confidence carried and labelled as analysis; the adjacent gets no row. Rows whose dossier moved are corrected only where the dossier contradicts them — Crusoe (Series F at USD 30.9 bn post-money, Boom turbines dropped, Bronze), IREN (FY2026 missed on both lines, mining decommissioned by December 2026, a third Underperforming cycle), Fluidstack (Barber Lake slip and the lab's direct second term; Harlingen; accounts overdue), Nscale (filed numbers; the NVIDIA note closing around 16 November; going-concern language alleviated by a capex-deferral plan; roadshow expected to be postponed), Lambda (a USD 1.008 bn fixed-rate delayed-draw term loan; the IPO window moved to 2027; a reported USD 35 bn agreement confirmed by none of the four parties).
+- **`the-indicators`** taught "exactly three future day-level dates in the entire segment, all in one member's file", a fence of 14 / 11 / 0, and the 30 September deadline as "this module's own review date". The files now carry future day-level dates in four members' files and the rater's; the fence is 35 / 23 / 0 with CoreWeave, Lambda and IREN carrying none; the 30 September gate failed. Row one records the failure; rows for Firmus's prospectus and listing, Nscale's NVIDIA note, the sovereign route's licensing sunsets and the rating's next edition are added; the Barber Lake row carries the 24 September amendment.
+- **`the-sellers-play`** taught "in only four of the seven members does the purchasing authority for power equipment sit with the member", "only one of the seven has a named battery commitment of any size" and "three of those four have a stated permitting or allocation problem". The twelve dossiers say eight of the eleven ranked members own the decision at at least one site, plus Fluidstack at two sites in its own name and the adjacent for everything it builds; one utility-scale battery commitment (Crusoe), one UPS-battery programme with a behind-the-meter trial (Firmus), batteries on gensets at one (Nscale); and six of the eight owners carry a stated permitting, allocation or licensing problem. Rewritten at twelve, with the Australian power train's JLE exclusivity and the two-step sovereign door added because they decide who signs.
+- **`claims-ledger`** cited the rating as a publisher and the dossiers at their 16–24 September versions. Every row now cites a dossier — `semianalysis` v1 for the rating — and the twelve member dossiers at `coreweave` v5, `nebius` v6, `lambda` v6, `crusoe` v7, `iren` v7, `fluidstack` v4, `nscale` v3, `firmus` v2, `humain` v1, `g42` v1, `whitefiber` v1 and `5c-group` v1; the registry at v07.87r; the graph built 2026-10-04. Every count in the module appears as a row.
+- **`what-the-record-does-not-say`** taught "no revenue for three of the seven", "no customer-concentration figure for four of the seven", "a rating for every member", "no policy exposure for three of the seven" and "declines to rank within the six challengers". Restated at twelve: seven, the filers only, eleven of twelve rated and what the rating does not disclose, three of twelve, nine challengers — and a new absence, the rater's ties to the rated beyond the one SPV on the record.
+- **`drill`** and **`check-yourself`** carried the one-incumbent, six-challenger, four-of-seven, eighteen-edge, fourteen-entry and two-week-review claims in nine cards and five items. They are rewritten against the new counts; the correct answers that survive are the structural ones (legibility, the customers, the empty fence), and one item's question changes because its premise did — "why does the single incumbent hold that role" is now "why did the second incumbent arrive".
+- **Outside the sections:** `short`, all four tiles, `source.doc`, the glossary's `incumbent` and `challenger` entries (counts) and `delayed-draw term loan` (a count removed), and two new glossary terms, `adjacent` and `ClusterMAX`, so the tooltips exist where the prose uses them.
+
+**Not changed, and why.** The three mechanism omissions of §2 stand — nothing from the lane opener or the campus lesson was imported. The four own-judgment claims stand with their labels. The credit-substitution chain is still taught in public.
+
+### 14.4 The review date
+
+Rule: the nearest dated gate in the new material, never earlier than `updated`.
+
+| Candidate | Source | Verdict |
+|---|---|---|
+| 30 September 2026 — Fluidstack's statutory accounts | `fluidstack` v4 | **Failed.** Missed; `Accounts overdue` at Companies House on 2 October. Now row one of the indicators as an any-day event, not a date |
+| **8 October 2026 — Firmus prospectus lodgement** | `firmus` v2 — Reuters-reported term sheet (bookbuild 6–7 Oct, prospectus 8 Oct, listing 22 Oct); `financials`: "the prospectus due on 8 Oct 2026 would be the first document obliged to carry one" | **Taken.** It is the nearest dated gate in the new material, and it is a gate on a taught claim: the first revenue figure for a member that has never published one moves the seven-of-twelve count the module carries in a tile. The term sheet has slipped twice (June → September → October), which makes it a test rather than a certainty — a slip past the date is itself the finding, as 30 September was |
+| 22 October 2026 — Firmus listing | `firmus` v2 | Rejected as the same document chain, later |
+| ~16 November 2026 — Nscale's USD 1.0 bn NVIDIA note closes | `nscale` v3 (S-1: "on or around November 16, 2026") | Rejected: later; a financing event rather than a disclosure, and approximate |
+| 31 December 2026 — Hydro Tasmania's 450 MW decision; Fluidstack's USD 150 M instalment | `firmus` v2; `fluidstack` v4 | Rejected: later; the instalment date was rejected in September for the same reason |
+| 6 April 2027 — G42/Core42 licence-free status expires | `g42` v1 | Rejected: later than a six-month default; carried in the indicators |
+| ~March 2027 — ClusterMAX 4.0 | `semianalysis` v1 | Rejected: approximate and later; carried in the indicators because it is the basis of two roles |
+
+`reviewBy` **2026-09-30 → 2026-10-08**. `updated` 2026-09-24 → 2026-10-04.
+
+### 14.5 The scenario on this landscape, re-judged
+
+**`scenario-neoclouds-discovery`** (Fluidstack; `profile:fluidstack` v2 @2026-09-06 → **v4 @2026-10-04**; `guidance:landscape-neoclouds-2026-09` 2026-09-24 → **2026-10-04**; `reviewBy` 2026-09-30 → **2026-10-08**, moving with the landscape's). All three beats hold: the correct answers — which site and therefore which buyer, which date the order is built backwards from, whose credit is present during construction — rest on the two opposite site-level answers (the landlord pays at River Bend; Fluidstack pays at Okmulgee), the commencement-dated backstop and the 180-day termination right, and v4 restates all three. What v4 says differently, and where the scenario changes:
+
+- The counterparty now develops in its own name at **three** sites, not two — Harlingen broke ground on 10 September 2026 (USD 4 billion first phase, 1.5 GW "reserved" from AEP Texas, no tenant named). `the-room`, `what-the-record-says` (row four), beat 1's note (which named Oklahoma as furthest along; Harlingen is the one with ground broken) and gap 1 change.
+- Barber Lake slipped from September 2026 to a phased Q4 2026–Q1 2027 delivery under a 24 September amendment with a USD 359.3 million overrun cap, and the end user signed the second ten-year term itself. `the-position`, beat 2's rationale (the dates and "moved twice" → three times) and `debrief` change.
+- The statutory accounts are overdue, not due. Beat 3's second option and its rationale, `what-the-record-says` (row ten), the ledger and gap 6 change. The investor memo relayed by Dealroom (USD 660 million of 2026 revenue; USD 66.2 million of 2024 audited revenue) is press citing a sales document and is not used, which gap 6 now says.
+- The landscape's counts quoted in the ledger move — purchasing authority at eight of eleven ranked members plus this one at its own-name sites, seven of twelve publishing no revenue, the review-date row — and the ledger's version cites move to v4.
+- `changed[]`: `the-room`, `what-the-record-says`, `the-position`, `beat-1`, `beat-2`, `beat-3`, `debrief`, `claims-ledger`, `what-the-record-does-not-say`. `the-mechanism-behind-it` is byte-identical. The counterparty is a role throughout; `short` is corrected ("six campuses" → five leased, one of them now owned, three more in its own name).
+
+### 14.6 Verification
+
+Run on 4 October 2026 after every edit in this revision, including the scenario re-pins and the drill-cap change.
+
+| Check | Result |
+|---|---|
+| `node --check` on a `.js` copy of `Classroom.gs` | clean |
+| `scripts/check-gas-inner-scripts.js` | clean — 11 files, 106 inner `<script>` blocks |
+| `scripts/check-classroom-content.py` | **0 errors / 0 warnings — 71 lessons, 8 tracks, 220 gate cases** |
+| `scripts/check-classroom-curriculum.py --strict` | no structural findings; **0 scenarios whose landscape has moved since the pin**; the drill-cap finding (2,491 > 2400) is gone |
+| `scripts/check-classroom-pipeline.py --base origin/main` | P1 (developer files), P2 (below the fence), P10 (five revised lessons), P13 (five scenarios) — expected of a developer session; **no P3**, **no P7**, **no P8**; P12 clean at one step |
+| `scripts/check-classroom-pipeline.py --selftest` | 15 fixtures / 0 failures |
+| `scripts/build-classroom-segments.py --check` | **19 segments, 19 due — 0 with section changes, 19 pin-only**; none regenerated (G3) |
+| `scripts/check-readme-tree.py` | 0 findings after the GAS bump |
+| Playwright render at **contributor**, `Classroom.html#guidance/<id>` ×3 and `#lesson/<scenario id>` ×5 | **zero page errors on all eight**; every section heading rendered; no literal `*` or `{{` left in the rendered text |
+
 Developed by: LightAISolutions

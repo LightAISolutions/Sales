@@ -3,11 +3,204 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 83/100`
+`Sections: 84/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.89r] — 2026-10-04 04:11:56 AM EST
+
+> **Prompt:** "Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 9 as a fresh
+> session: Classroom wave A — re-author the three AIDC landscape modules `landscape-neoclouds-2026-09`,
+> `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09`
+> against their enlarged rosters, then re-judge and re-pin the five rehearsal scenarios stamped on them —
+> one session, ONE commit. Fable 5.1 at xhigh (§2's anchor rule: lessons hang on this material); check
+> Settings → Usage first — week 2's Fable allowance resets Sat 10/10 7:00 AM ET and F-A1 took about $100
+> of it. If the Fable cap binds mid-session, finish on Opus 5.5 xhigh and record the substitution in your
+> §11.3-equivalent cells (the §3 row 9 cell and the CHANGELOG section).
+>
+> STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+> HEAD || git rebase origin/main. Run git fetch --unshallow origin main before any pin read (a shallow
+> clone makes every per-file git log return the boundary commit's date — a provenance stamp written off it
+> is wrong and no checker sees it). Read the CHANGELOG counter after the rebase (82/100 at v07.88r;
+> sections dated the push day are exempt; no rotation is expected). Run python3
+> scripts/check-classroom-curriculum.py --strict and record its opening lines: it should read
+> "0 scenario(s) whose landscape has moved since the pin" and ONE strict finding — the study pool (2,491)
+> exceeds CL_DRILL_INV_CAP (2400), so the drill silently truncates about ninety items. Fix that in this
+> session: raise CL_DRILL_INV_CAP in Classroom.gs to 3200, rewrite its comment with today's count, and
+> record the line in the CHANGELOG. It sits outside the content fence and is not one of the 32 GATE_SYMBOLS,
+> so no gateDigest refresh — confirm that by grepping GATE_SYMBOLS in scripts/check-classroom-pipeline.py
+> before you touch it, and if it IS listed, refresh gateDigest in the same commit per classroom-app.md.
+>
+> READ FIRST, in this order: repository-information/SESSION-CONTEXT.md (the F-A1 hand-off);
+> phase-f-action-plan.md §3 rows 9–17 and this §12; .claude/rules/industry-guidance.md in full (the module
+> lives in googleAppsScripts/Classroom/Classroom.gs below the `// CONTENT END` fence as a guidanceDoc<Name>_()
+> function; the analysis markdown at repository-information/industry-guidance/landscape-<segment>-analysis.md
+> is the source of truth and is edited FIRST; versioning is the Classroom GAS version only; the verify list
+> is step 7); .claude/rules/classroom-app.md — the G3 contradiction test, the per-section X→Y sentence, the
+> `revisions[]` entry shape, G2 read-before-re-pin, the scenario rules (D6/P13), the content fence and the
+> gateDigest obligation; CLASSROOM-CURRICULUM-PLAN.md §10.6 (the landscape module — shape, reviewBy from the
+> nearest dated gate, the split rule against neighbouring lessons) and §11 (the scenario ledger — rows 2, 5,
+> 7, 11 and 14 are yours); the v07.60r section of CHANGELOG.md — the utilities landscape re-pin — which is the
+> pattern this wave follows: one G3 sentence per section, the fence counts restated, the indicators table
+> extended, reviewBy moved to the nearest NEW gate; and the three analysis markdowns plus the three module
+> literals as they stand. Then read every member dossier the module will cite — the registry is for the
+> sweep, never for a pin: every `profile:<slug>` date you write is the `lastUpdated` read off the fetched
+> <slug>.profile.json (G2).
+>
+> THE THREE MODULES — what moved, read off profiler-segments.json at v07.87r:
+>
+> - `landscape-neoclouds-2026-09` (updated 2026-09-24, reviewBy 2026-09-30 — OVERDUE). Written on seven
+>   members, 1 · 6 · 0. Today twelve: incumbents coreweave AND nebius (Platinum in ClusterMAX 3.0, 23 Sep
+>   2026 — nebius moved from challenger to incumbent in the row-5 pass, v07.81r); challengers lambda, crusoe
+>   (Gold → Bronze in 3.0), iren (Underperforming; v7 on 10/4), fluidstack (Unavailable in 3.0; v4 on
+>   10/4), nscale (Unavailable; v3 from the S-1), firmus (Silver; v2 on 10/4), humain (Unavailable), g42
+>   (Core42 — Participation Ribbon), whitefiber (Underperforming); adjacent 5c-group. The module's
+>   incumbency basis is the ClusterMAX rating itself, so re-read `semianalysis.profile.json` (v1, 10/4):
+>   its technicalSpecs carry the full 3.0 tier table and its strategyRead the independence record — the
+>   landscape should now say what the rating is, who publishes it, and why a tier is a point-in-time
+>   judgment by a firm with undisclosed commercial and investment ties to several rated clouds. Do not
+>   rank by tier alone; the dossiers' own facts (contracted MW, named tenants, owned sites) are the other
+>   basis. Nearest dated gates to weigh for reviewBy: Nscale's S-1 effectiveness/IPO, IREN's Q1 FY27
+>   results, the next ClusterMAX edition (~March 2027), Fluidstack Ltd's overdue Companies House accounts.
+> - `landscape-hyperscalers-and-ai-labs-2026-09` (updated 2026-09-16, reviewBy 2026-12-31). Written on
+>   eight; today ten: incumbents amazon, google, microsoft, meta, oracle; challengers openai, anthropic
+>   (v4, 10/2 — Nscale at up to USD 44.6bn, Fluidstack, the Claude Code spend SemiAnalysis names), xai,
+>   bytedance and alibaba-cloud (F-H1, 9/26 — the China buyer side, with the China Datacenter Model's
+>   'one-fifth of China's capacity' finding now in semianalysis v1). Microsoft, meta, oracle, openai and xai
+>   were refreshed 9/26. The module's closure finding (§10.6 (bb1): the smallest segment, which disabled two
+>   instruments) must be re-tested at ten members.
+> - `landscape-aidc-developers-and-landlords-2026-09` (updated 2026-09-15, reviewBy 2026-12-15). Written
+>   on the pre-Phase-F roster; today 38 members, 9 · 18 · 11. New since: chindata, g42, whitefiber,
+>   5c-group and tecfusions as challengers; firmus, humain and quinbrook adjacent; equinix v8 (atNorth
+>   split), hut-8 v3, tract v4, powerhouse-data-centers v3, iren/crusoe/fluidstack/nscale revised. This is
+>   the largest roster any landscape covers; keep the four-neighbour split §10.6 (s) recorded and extend
+>   the each-players-bet table from the newcomers' strategyRead[] only, labelled as analysis with the
+>   dossier's confidence carried, as v07.60r did.
+>
+> HOW TO REVISE (the v07.60r pattern, enforced by P7/P8 on lessons and by your own honesty on modules):
+> for each module, read each section and write the sentence "section <id> teaches X; <ref> now says Y";
+> only a section with such a sentence changes. Update the analysis markdown first, then the module literal
+> to match; bump `updated` to the run date; set `reviewBy` from the nearest dated gate in the NEW material
+> (never earlier than updated); append one `revisions[]` entry naming the changed section ids and the X→Y
+> notes; restate every fence count the module carries (member counts, policy-entry counts, dated-gate
+> counts) from the files, not from memory. The claims ledger must cite a dossier for every claim about a
+> named company. Content scope: the landscape names and ranks covered companies by construction — the one
+> module class that may — and its guidance is still to the seller reading it. Never edit a segment-* lesson
+> by hand (the generator owns them), never edit a landscape for another segment, never touch Profiler.gs
+> or Profiler.html.
+>
+> THE FIVE SCENARIOS (CLASSROOM-CURRICULUM-PLAN.md §11): `scenario-neoclouds-discovery` (fluidstack;
+> reviewBy 2026-09-30 — overdue; one prior revision), `scenario-aidc-developers-and-landlords-objection`
+> (vantage), `scenario-aidc-developers-and-landlords-discovery` (hut-8), `scenario-hyperscalers-and-ai-labs-
+> objection` (meta), `scenario-hyperscalers-and-ai-labs-discovery` (google). For each: re-read its beats
+> against the revised landscape and the counterparty's current dossier (fluidstack v4, hut-8 v3, meta and
+> google at their current versions); re-judge every beat that cites a fact the landscape or dossier now
+> states differently; re-pin `guidance:landscape-…` to the module's new `updated` and `profile:<slug>` to the
+> fetched lastUpdated; move reviewBy with the landscape's; append a `revisions[]` entry listing the changed
+> section ids (P8 equality — an id listed must differ, an id that differs must be listed; copy unchanged
+> sections byte for byte). The counterparty is a role, never a person; positions are paraphrased from the
+> record. Do not touch the other nine scenarios.
+>
+> SEGMENTS: after the modules land, run python3 scripts/build-classroom-segments.py --check. Landscapes
+> are not segment inputs, so expect 0 due unless a dossier moved; if any is due, regenerate it (`--segment`
+> for each, or `--all`), and the Classroom GAS bump below covers it. Do not edit any segment lesson by hand.
+>
+> VERSIONING: Classroom.gs VERSION v01.97g → v01.98g and live-site-pages/gs-versions/Classroomgs.version.txt
+> → |v01.98g| in the same commit; one generic line in live-site-pages/gs-changelogs/Classroomgs.changelog.md
+> (`Sections: 49/50` → 50/50 — the NEXT GAS bump after yours rotates that file; say so in the hand-off);
+> README tree Classroom display → v01.98g (python3 scripts/check-readme-tree.py, 0 findings). No page bump:
+> no renderer change.
+>
+> VERIFY: node --check on a .js copy of Classroom.gs; node scripts/check-gas-inner-scripts.js; python3
+> scripts/check-classroom-content.py (0 errors — 71 lessons, 8 tracks, 220 gate cases today); python3
+> scripts/check-classroom-pipeline.py --base origin/main (P1 on your paths and P7/P8 on the five scenarios
+> are expected; a P3 means you moved a gate symbol — refresh gateDigest; a P13 means a scenario changed in
+> a way only P13 forbids — read it before dismissing it); python3 scripts/check-classroom-curriculum.py
+> --strict (the moved-landscape line must read 0 again after the re-pins; the drill-cap finding must be
+> gone); Playwright renders of Classroom.html#guidance/<each module id> and #lesson/<each scenario id> with
+> zero page errors (the render recipe is industry-guidance.md step 7: scratch copy, `_e = ''`,
+> `AUTO_REFRESH = false`, seed sessionStorage after load, override window._gasPost after load, hide the
+> walls, clHeaderShow(); clAppMount()). Normal Pre-Commit and Pre-Push checklists; ONE commit; push on your
+> claude/* branch once git ls-remote shows it absent. Flip §3 row 9 to landed with the G3 counts (sections
+> changed per module, scenarios re-judged, reviewBy moved to what), update CLASSROOM-CURRICULUM-PLAN.md
+> §10.6's built-list line for the three modules and §11's five rows with the new versions, and write the
+> CHANGELOG section with this prompt verbatim as the blockquote.
+>
+> At the end: one line per module (sections changed, the new reviewBy and the gate it comes from, the
+> roster counts restated); one line per scenario (beats re-judged, re-pinned to what); the --check and
+> --strict final lines; whether the drill cap was raised; and the session's cost from get_session's
+> usage.cost_usd (it now exposes one — the F-A1 session read USD 100.14) with the rate-limit status."
+
+Classroom wave A — row 9 of `phase-f-action-plan.md` §3. The three AIDC landscape modules are re-authored against their enlarged rosters under the G3 contradiction test, section by section, with every count restated from the files on 4 October 2026; the five rehearsal scenarios stamped on them are re-judged and re-pinned, and all fifteen beats hold; the drill study-pool cap is raised; no segment lesson is regenerated because every one of the nineteen due is pin-only. One commit, Fable 5.1 at xhigh throughout — no model substitution.
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — `landscape-neoclouds-2026-09` (guidance, below the fence; contributor, unchanged)
+- `updated` 2026-09-24 → 2026-10-04; `reviewBy` 2026-09-30 → **2026-10-08**. **The 30 September gate failed**: Fluidstack Ltd missed the statutory deadline for its FY2025 accounts and Companies House showed `Accounts overdue` on 2 October (`fluidstack` v4). Roster re-measured **7 → 12 (2 · 9 · 1)**: Nebius moved to incumbent on 2 October on its ClusterMAX 3.0 Platinum (registry `notes`, `nebius` v6); Firmus v2, HUMAIN v1, G42 v1 and WhiteFiber v1 join as challengers and 5C Group v1 as the first adjacent; coreweave v5, lambda v6, crusoe v7, iren v7, fluidstack v4 and nscale v3 re-read. The rating the roles rest on is now explained and attributed through `semianalysis` v1 — what ClusterMAX is, who publishes it, and why a tier is a point-in-time judgment by a firm with undisclosed commercial and investment ties to several of the rated — and the module does not rank by tier alone.
+- **The G3 sentences, one per section** (9 of 9 changed):
+  - **`who-dominates-and-on-what-basis`** taught one incumbent, "the most lopsided roster", three of seven publishing no revenue, and cited the rating as a publisher. Now two incumbents (the second by rating, not by scale), the rating explained with the rater's own dossier's limits, seven of twelve publishing no revenue figure, and Nebius's position from its own file beside CoreWeave's.
+  - **`who-threatens`** taught six challengers on four routes, four of seven shared with the landlords segment at a 50 % inversion, 18 edges and one commercial transaction, Crusoe at "about 4.9 GW". Now nine challengers on five routes (the out-compound route's runner became an incumbent; sovereign builders and a landlord-cloud are new), nine of twelve shared with five inversions, 29 edges / 14 typed pairs / 17 typings / three transactions, Crusoe at "6 GW+" gross and "$140B+" TCV, the lab signing the second Barber Lake term itself, Fluidstack breaking ground in its own name.
+  - **`each-players-bet`** taught seven rows. Eleven: Nebius as incumbent; Firmus, HUMAIN, G42 and WhiteFiber from `strategyRead[]` with confidence carried; Crusoe (Series F at USD 30.9 bn, Boom order dropped, Bronze), IREN (FY2026 missed on both lines, mining decommissioned by December), Fluidstack (slip, overrun cap, direct second term, Harlingen, accounts overdue), Nscale (filed numbers, NVIDIA note ~16 November, going-concern language alleviated, roadshow expected to be postponed) and Lambda (USD 1.008 bn DDTL, IPO window 2027, the unconfirmed USD 35 bn) corrected where contradicted.
+  - **`the-indicators`** taught three future day-level dates all in one file, a 14 / 11 / 0 fence, and 30 September as the review date. Now ten rows: the failed gate as an any-day row, the Firmus prospectus and listing (the new review date), Nscale's NVIDIA note, the Barber Lake amendment, Sweetwater's conditional Batch Zero inclusion, the sovereign licensing clocks and the rating's next edition; fence 35 / 23 / 0 with CoreWeave, Lambda and IREN carrying none.
+  - **`the-sellers-play`** taught purchasing authority at four of seven, one battery commitment, three of four owners with a permitting problem. Now eight of eleven ranked members (two of them one step away, through an EPC contractor or a landlord subsidiary) plus Fluidstack at its own-name sites and the adjacent for everything it builds; one utility-scale battery commitment, one UPS programme with a trial, batteries on gensets at one; six of eight owners with a permitting, allocation or licensing problem; the JLE exclusivity and the two-step sovereign door added because they decide who signs.
+  - **`claims-ledger`** cited the rating as a publisher. Every row now cites a dossier — `semianalysis` v1 for the rating — and the twelve members at their 4 October versions; registry @ v07.87r; graph built 2026-10-04; 41 rows.
+  - **`what-the-record-does-not-say`** restated at twelve, with the rater's undisclosed ties added as the fifth absence.
+  - **`drill`** (10 cards) and **`check-yourself`** (6 items) rewritten against the new counts; one item's question changed because its premise did.
+  - **Outside the sections:** `short`, four tiles, `source.doc`, three glossary entries, two new glossary terms (`adjacent`, `ClusterMAX`), a second `revisions[]` entry.
+- **Review date.** Nearest dated gate in the new material: the Firmus prospectus lodgement on a Reuters-reported term sheet (bookbuild 6–7 Oct, prospectus 8 Oct, listing 22 Oct), which the dossier calls "the first document obliged to carry" a revenue figure — a gate on the module's own seven-of-twelve count. Rejected: 22 Oct (same chain, later), ~16 Nov (Nscale's NVIDIA note, a financing event), 31 Dec (Hydro Tasmania; the Fluidstack instalment), 6 Apr 2027 (G42 sunset), ~March 2027 (ClusterMAX 4.0).
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — `landscape-hyperscalers-and-ai-labs-2026-09` (guidance, below the fence; contributor, unchanged)
+- `updated` 2026-09-16 → 2026-10-04; `reviewBy` stays **2026-12-31** — the new material carries no future day-level date before it (`anthropic` v4's roadmap is quarter-level; `bytedance` v1 and `alibaba-cloud` v1 carry none), and the fence's one future date, 2027-01-01, is already four modules' clock. Roster re-measured **8 → 10 (5 · 5 · 0)**: ByteDance v1 and Alibaba Cloud v1 join as challengers the registry calls "a leader elsewhere, not in the established US set"; microsoft v6, meta v10, oracle v6, openai v6, anthropic v4 and xai v6 re-read; amazon v10 and google v9 unchanged. **(bb1) re-tested at ten: the closure holds** (10 of 10 pure plays, zero adjacents), so the adjacency and role-inversion instruments stay disabled; the third zero-adjacent segment of September gained an adjacent, so the zero-adjacent set and the closed set now coincide.
+- **The G3 sentences** (8 of 9 sections changed):
+  - **`who-dominates-and-on-what-basis`** taught eight members and three challengers; the first paragraph now says ten and five and names the second kind of challenger. The five instruments and the refusal to rank are untouched.
+  - **`who-threatens`** taught three challengers, Oracle's contracted revenue at USD 638 bn and "every one of the three is financed by the five". `oracle` v6 says USD 664 bn at the quarter ended 31 August 2026 (the attribution dated to the earlier figure); a fourth direction is added — one newcomer buys through three doors and publishes no accounts, the other writes its own power architecture and buys it by framework tender — with the module's judgment that their threat is to where the architecture is written; the counter-evidence sentence is scoped to the three US labs.
+  - **`each-players-bet`** taught eight rows and "the smallest segment any landscape has covered". Ten rows; ByteDance and Alibaba Cloud from `strategyRead[]` with confidence carried; Oracle at USD 664 bn.
+  - **`the-indicators`** taught "all eight dossiers"; ten, still exactly one future day-level date; one row added for the newcomers' month- and year-level dates.
+  - **`claims-ledger`**: six rows move to new versions where the cited field still holds; six rows added for the newcomers; registry @ v07.87r; fence 18 / 13 / 1; 42 rows.
+  - **`what-the-record-does-not-say`**: ten, and two absences the newcomers state about themselves (no accounts, no vendor, no 800 V award; no solid-state transformer in service behind the other's 800 V compatibility).
+  - **`drill`** (cards 1, 6, 8) and **`check-yourself`** (items 2, 3) corrected; no correct answer changed.
+  - **Outside the sections:** `short`, tiles 1, 2 and 4, `source.doc`, two glossary entries, the first `revisions[]` entry.
+- **Not changed:** `the-sellers-play` — nothing in the ten files contradicts it; a hyperscaler that writes its own architecture is an instance of "the specification is written above you", not an exception.
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — `landscape-aidc-developers-and-landlords-2026-09` (guidance, below the fence; contributor, unchanged)
+- `updated` 2026-09-15 → 2026-10-04; `reviewBy` 2026-12-15 → **2026-11-02** — the end of the Upper Burrell township's 180-day moratorium, by which the draft "bring your own baseload" ordinance over TECfusions' flagship would be adopted (`tecfusions` v1; its judgment that the township, not the utility, is the binding constraint through 2027). Rejected: 7 Oct (a supervisors' meeting, not a decision), 10 Dec (another module's clock, as in September), 15 Dec (the September date, later — kept as an indicator), 31 Mar / 6 Apr / 1 Jul / Nov / 31 Dec 2027 (later than a six-month default). Roster re-measured **30 → 38 (9 · 18 · 11)**: Chindata v1, G42 v1, WhiteFiber v1, 5C Group v1 and TECfusions v1 join as challengers; Firmus v2, HUMAIN v1 and Quinbrook v1 as adjacents; sixteen dossiers re-read (hut-8 v3, tract v4, powerhouse-data-centers v3, equinix v8, aligned v8, stack-infrastructure v8, compass-datacenters v6, cyrusone v2, terawulf v8, edgecore v2, intersect-power v3, eolian v7, talen-energy v3, iren v7, crusoe v7, fluidstack v4). **(s) kept** — the four-neighbour split; the bets table extended from the newcomers' `strategyRead[]` only, confidence carried.
+- **The G3 sentences** (7 of 9 sections changed):
+  - **`who-threatens`** taught thirteen challengers on three routes (7 · 2 · 4) and three of eight adjacents hosting without being landlords. Now eighteen on four routes (8 · 3 · 5 · 2): 5C joins route one as the position built rather than inherited; TECfusions joins route two as the landlord running its flagship on its own turbines; WhiteFiber joins route three holding the utility agreement while the utility owns the substation; Chindata and Khazna/G42 are route four, leaders in another market. Eleven adjacents, three of them operators that need no landlord.
+  - **`each-players-bet`** taught twenty-two rows, a Tract row contingent on "a regulator's decision it cannot control" and a PowerHouse row "now being tested in federal court". Twenty-seven rows; `tract` v4 says the commission conditionally approved 362 MW of temporary gas on 17 September while the suit continues; `powerhouse-data-centers` v3 says FERC rejected the cancellation on 22 September and sent the credit clause to the Northern District of Illinois.
+  - **`the-indicators`** taught six of twenty-two dossiers with an indicators block, two pending rows, a Fermi condition due 30 September, "a hundred and seven policy entries" and 15 December as the review date. Twelve of twenty-seven; the ComEd and Tract rows carry the decisions; the Fermi row records that the date passed with the dossier unrevised and asserts no outcome; a hundred and forty-one entries; four rows added (Upper Burrell 2 Nov 2026, G42 sunset 6 Apr 2027, Chindata's first wholesale expiry Nov 2027, Frederick County 1 Jul 2027); 14 rows.
+  - **`claims-ledger`** cited the registry at v05.41r "because it did not move this session". Sixteen rows move to new versions; rows added for Tract's approval, PowerHouse's order, Hut 8's parent revolver and the press identification at Beacon Point, the eight newcomers, the revenue recount (25 of 38; 7 of 9 incumbents) and the fence (141 / 104 / 2; five members with none); 90 rows.
+  - **`what-the-record-does-not-say`**: the tenants paragraph carries the Beacon Point report as unconfirmed by all four parties, Chindata's tenant identified only through its self-build list and TECfusions' "1 GW" as a right of first refusal; the revenue paragraph says nine of eighteen challengers and nine of eleven adjacents.
+  - **`drill`** (cards 1, 4, 5) and **`check-yourself`** (items 2, 4) corrected; no correct answer changed.
+  - **Outside the sections:** `short`, tiles 1 and 2, `source.doc`, the `adjacent` glossary entry, a second `revisions[]` entry.
+- **Not changed:** `who-dominates-and-on-what-basis` (nine incumbents, four bases, consent — every cited fact restated at the new versions) and `the-sellers-play` (the newcomers supply instances of "know who signs", not corrections).
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — rehearsal scenarios (developer session, design D6; all fifteen beats hold)
+- **`scenario-neoclouds-discovery`** (Fluidstack; `profile:fluidstack` v2 @2026-09-06 → v4 @2026-10-04; guidance 2026-09-24 → 2026-10-04; `reviewBy` 2026-09-30 → 2026-10-08 with the landscape's). Changed: `the-room`, `what-the-record-says`, `the-position`, `beat-1`, `beat-2`, `beat-3`, `debrief`, `claims-ledger`, `what-the-record-does-not-say` — Harlingen as the third own-name site (ground broken 10 September, 1.5 GW reserved, no tenant); Barber Lake's slip to Q4 2026–Q1 2027 with the USD 359.3 M overrun cap and the lab's direct second term ("moved twice" → three times); the statutory accounts overdue rather than due; the landscape's counts quoted in the ledger. `the-mechanism-behind-it` byte-identical; `short` corrected.
+- **`scenario-aidc-developers-and-landlords-objection`** (Vantage; `vantage` v9 and `project:lighthouse` unchanged; guidance → 2026-10-04; `reviewBy` 2026-12-15 → 2026-11-02). Changed: `claims-ledger` (read date).
+- **`scenario-aidc-developers-and-landlords-discovery`** (Hut 8; `profile:hut-8` v2 → v3 @2026-10-02; guidance → 2026-10-04; `reviewBy` 2026-12-10 → 2026-11-02, the landscape's bound now nearer than its own 10 December gate). Changed: `claims-ledger` (v3 cites; the USD 1.07 bn parent revolver of 28 September; the Beacon Point press report as unconfirmed) and `what-the-record-does-not-say` (gap 5).
+- **`scenario-hyperscalers-and-ai-labs-objection`** (Meta; `profile:meta` v9 → v10 @2026-09-26; guidance → 2026-10-04; `reviewBy` stays 2026-12-31). Changed: `claims-ledger` (fourteen version cites; every field index re-verified in v10).
+- **`scenario-hyperscalers-and-ai-labs-discovery`** (Google; `google` v9 unchanged; guidance → 2026-10-04; `reviewBy` stays 2026-12-31). Changed: none — re-judged and re-stamped, first `revisions[]` entry.
+- Every scenario's `updated` advances to 2026-10-04 (P7). The counterparty is a role throughout; no `note:` prefix, no `report:`/`corpus:`/`briefing:` input.
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — drill study pool
+- `CL_DRILL_INV_CAP` **2400 → 3200**, comment rewritten with today's count (2,491 study items, 4 October 2026). The pool had passed the cap and the drill was silently truncating about ninety items (`--strict` baseline finding). Not a `GATE_SYMBOL`, so `gateDigest` is untouched — confirmed by `check-classroom-pipeline.py` reporting no P3.
+- `scripts/check-classroom-content.py`: the cap assertion's documented value 2400 → 3200. `repository-information/CLASSROOM-SCHEMA.md`: the `CL_DRILL_INV_CAP` line restated at 3200 with the reason.
+
+#### Versions
+- Classroom GAS `VERSION` v01.97g → **v01.98g**; `live-site-pages/gs-versions/Classroomgs.version.txt` → `|v01.98g|`; `Classroomgs.changelog.md` gains a generic section (**50/50 — the next GAS bump rotates it**); README tree Classroom display v01.98g (`check-readme-tree.py`: 0 findings). No page bump.
+
+#### Documents
+- **`repository-information/industry-guidance/landscape-neoclouds-analysis.md`** §14, **`landscape-hyperscalers-and-ai-labs-analysis.md`** §13, **`landscape-aidc-developers-and-landlords-analysis.md`** §12 — each: the segment re-measured, the G3 sentence per section, the review-date judgment with every rejected candidate, the scenarios re-judged, and the verification lines.
+- **`repository-information/phase-f-action-plan.md`** §3 row 9 flipped to landed with the G3 counts; **`CLASSROOM-CURRICULUM-PLAN.md`** §10.6 built-list line annotated for the three modules and §11 rows 2, 5, 7, 11 and 14 annotated with the re-pin version.
+
+### Notes
+- **Segments (G3):** `build-classroom-segments.py --check` — **19 segments, 19 due — 0 with section changes, 19 pin-only** (`concepts:profiler-concepts` 2026-09-30 → 2026-10-04 on every one). None regenerated: regenerating a pin-only segment rewrites dates and nothing else, as the v07.60r session also left them.
+- **Checkers:** `node --check` clean; `check-gas-inner-scripts.js` 11 files / 106 blocks clean; `check-classroom-content.py` **0 errors / 0 warnings — 71 lessons, 8 tracks, 220 gate cases**; `check-classroom-curriculum.py --strict` **no structural findings; 0 scenarios whose landscape has moved since the pin**; the drill-cap finding is gone. `check-classroom-pipeline.py --base origin/main`: P1 on the developer files, P2 below the fence, P10 (five revised lessons) and P13 (five scenarios) — all expected of a developer session and reserved to one by D6; **no P3** (gateDigest untouched), **no P7** after the `updated` advance, **no P8** (every `changed[]` matches the differing sections), P12 clean at one step. `--selftest` 15 fixtures / 0 failures. `check-readme-tree.py` 0 findings.
+- **Render:** Playwright, Chromium at contributor with a fake transport serving the parsed literals — `Classroom.html#guidance/<id>` for the three modules and `#lesson/<id>` for the five scenarios: **zero page errors on all eight**, every section heading rendered (11 per module, 12 per scenario), no literal `*` or `{{` left in the rendered text.
+- **Model:** Fable 5.1 at xhigh for the whole session; no substitution to Opus 5.5.
+- **Left for the next session:** the Classroom GAS changelog is at 50/50 — the next GAS bump rotates it. `landscape-neoclouds-2026-09`'s review date is four days out by rule; a slip past 8 October in the Firmus term sheet is itself the finding.
 
 ## [v07.88r] — 2026-10-04 02:24:50 AM EST
 

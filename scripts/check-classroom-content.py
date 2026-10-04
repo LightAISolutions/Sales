@@ -1605,8 +1605,8 @@ def run_gate_truth_table(src, lesson_ids=()):
         err("drill study pool: an unreachable registry should yield no study items, got %d"
             % ds["offline"])
     cases += 1
-    if ds["cap"] > 2400:
-        err("drill study pool: the build cap is %d, above the documented 2400" % ds["cap"])
+    if ds["cap"] > 3200:
+        err("drill study pool: the build cap is %d, above the documented 3200" % ds["cap"])
 
     # Study-next: never points a tier at a lesson it cannot read.
     nx = out["next"]
