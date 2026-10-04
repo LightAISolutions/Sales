@@ -124,7 +124,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 
 | # | When | Session | Model · effort | Why here |
 |---|---|---|---|---|
-| 9 | Sat 10/3 – Tue 10/6 | **Classroom wave A** — re-author `landscape-neoclouds-2026-09`, `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1, F-N1, F-N2 and row 5, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their rehearsals | Fable 5.1 · xhigh | Clears the stale modules before the job starts. If it runs long, split neoclouds off first: its module is overdue |
+| 9 | Sat 10/3 – Tue 10/6 — **prompt in §12** | **Classroom wave A** — re-author `landscape-neoclouds-2026-09`, `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1, F-N1, F-N2 and row 5, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their five rehearsals — prompt in §12 | Fable 5.1 · xhigh | Clears the stale modules before the job starts. If it runs long, split neoclouds off first: its module is overdue |
 | 10 | Sat 10/3 – Tue 10/6 | Reframe the Dominion rehearsal (Classroom, its own session) | Fable 5.1 · high | The standing reminder's window, after the 10/1 solicitation issues. Also check the unverified "all-stock" merger description |
 | 11 | Once the DigitalBridge close is confirmed, and **by Wed 10/7 either way** | **F-I2** — SoftBank, SB Energy, Blue Owl | Opus 5.5 · xhigh | SB Energy's S-1 is a long first-party record. DigitalBridge said on 9/22 the deal would close within five business days. **If it is still pending, write SoftBank's dossier with the deal as pending** and add the close later with a targeted `softbank` refresh: §2 prices a routine refresh at about $7–$29 per company, well below waiting a week |
 | 12 | After row 11 | **F-I3** — Apollo, Ares, Stonepeak | Opus 5.5 · xhigh | Was November. Two 10-K filers. Ares ties to `apex-clean-energy`, Apollo to Stream |
@@ -145,7 +145,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 |---|---|---|---|---|
 | 18 | After the filing | `profiler Megmeet`, then `profiler report competitive: AIDC power conversion` | Opus 5.5 · xhigh | The standing reminder. Raise Mitsubishi Electric's scope question here |
 
-**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High). §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
+**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High); §8–§11 are rows 5–8 as run; **§12 is row 9's (Classroom wave A, Fable 5.1 xhigh)** — the first Classroom-wave prompt, and the pattern for waves B–D (rows 15–17). §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
 
 **ERCOT and PJM — decided 2026-09-26: cover both, as grid operators.** The developer knows both well and wants them in. The category is a new **`grid-operator`** (label 'Grid operator'), not the generic `other` the earlier recommendation named, so the tag says what they are. That adds one entry to the Profiler page's category list, a page change made in the ERCOT session. The work is **two sessions, ERCOT first**: 73 inbound dossiers alone is a larger step 7 than BlackRock's 42 raw hits, which filled most of F-I1. The earlier reasoning stands:
 - **Why:** they are the two most-cited uncovered entities in the corpus (73 and 37 dossiers). Curating them converts roughly 110 derived mentions into real edges, and their rules (Batch Zero and SB 6; the capacity auction) are what half the utilities and developers in the corpus are exposed to.
@@ -1040,3 +1040,131 @@ the subagent token totals and the rate-limit status instead.
 ```
 
 Developed by: LightAISolutions
+
+## 12 · Paste-in prompt — §3 row 9, Classroom wave A: the three AIDC landscapes (Fable 5.1 · xhigh)
+
+Written 2026-10-04 (v07.88r) at the close of the F-A1 session. Row 9 is the first Classroom wave and the first session of week 2 that is not a Profiler row. Three facts fix its scope. **`landscape-neoclouds-2026-09` is overdue** — `reviewBy` 2026-09-30, and its roster has gone from seven members (1 · 6 · 0) when it was written to **twelve** (2 · 9 · 1): Nebius is the second incumbent on ClusterMAX 3.0, and HUMAIN, G42, WhiteFiber and Firmus are new challengers with 5C Group adjacent. **`landscape-hyperscalers-and-ai-labs-2026-09`** (updated 2026-09-16) was written on eight members; ByteDance and Alibaba Cloud have joined as challengers and Anthropic was revised to v4 on 10/2. **`landscape-aidc-developers-and-landlords-2026-09`** (updated 2026-09-15) now has **38 members** (9 · 18 · 11) — Chindata, G42, WhiteFiber, 5C Group and TECfusions as challengers, Firmus, HUMAIN and Quinbrook adjacent, Tract v4, PowerHouse v3, Hut 8 v3 and the neocloud refreshes behind it. Five rehearsal scenarios are pinned to these three modules and only a developer session may re-judge them (D6, P13). The strict curriculum checker also reports one finding to carry: the drill pool stands at 2,491 study items against `CL_DRILL_INV_CAP` 2400.
+
+```text
+Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 9 as a fresh
+session: Classroom wave A — re-author the three AIDC landscape modules `landscape-neoclouds-2026-09`,
+`landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09`
+against their enlarged rosters, then re-judge and re-pin the five rehearsal scenarios stamped on them —
+one session, ONE commit. Fable 5.1 at xhigh (§2's anchor rule: lessons hang on this material); check
+Settings → Usage first — week 2's Fable allowance resets Sat 10/10 7:00 AM ET and F-A1 took about $100
+of it. If the Fable cap binds mid-session, finish on Opus 5.5 xhigh and record the substitution in your
+§11.3-equivalent cells (the §3 row 9 cell and the CHANGELOG section).
+
+STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+HEAD || git rebase origin/main. Run git fetch --unshallow origin main before any pin read (a shallow
+clone makes every per-file git log return the boundary commit's date — a provenance stamp written off it
+is wrong and no checker sees it). Read the CHANGELOG counter after the rebase (82/100 at v07.88r;
+sections dated the push day are exempt; no rotation is expected). Run python3
+scripts/check-classroom-curriculum.py --strict and record its opening lines: it should read
+"0 scenario(s) whose landscape has moved since the pin" and ONE strict finding — the study pool (2,491)
+exceeds CL_DRILL_INV_CAP (2400), so the drill silently truncates about ninety items. Fix that in this
+session: raise CL_DRILL_INV_CAP in Classroom.gs to 3200, rewrite its comment with today's count, and
+record the line in the CHANGELOG. It sits outside the content fence and is not one of the 32 GATE_SYMBOLS,
+so no gateDigest refresh — confirm that by grepping GATE_SYMBOLS in scripts/check-classroom-pipeline.py
+before you touch it, and if it IS listed, refresh gateDigest in the same commit per classroom-app.md.
+
+READ FIRST, in this order: repository-information/SESSION-CONTEXT.md (the F-A1 hand-off);
+phase-f-action-plan.md §3 rows 9–17 and this §12; .claude/rules/industry-guidance.md in full (the module
+lives in googleAppsScripts/Classroom/Classroom.gs below the `// CONTENT END` fence as a guidanceDoc<Name>_()
+function; the analysis markdown at repository-information/industry-guidance/landscape-<segment>-analysis.md
+is the source of truth and is edited FIRST; versioning is the Classroom GAS version only; the verify list
+is step 7); .claude/rules/classroom-app.md — the G3 contradiction test, the per-section X→Y sentence, the
+`revisions[]` entry shape, G2 read-before-re-pin, the scenario rules (D6/P13), the content fence and the
+gateDigest obligation; CLASSROOM-CURRICULUM-PLAN.md §10.6 (the landscape module — shape, reviewBy from the
+nearest dated gate, the split rule against neighbouring lessons) and §11 (the scenario ledger — rows 2, 5,
+7, 11 and 14 are yours); the v07.60r section of CHANGELOG.md — the utilities landscape re-pin — which is the
+pattern this wave follows: one G3 sentence per section, the fence counts restated, the indicators table
+extended, reviewBy moved to the nearest NEW gate; and the three analysis markdowns plus the three module
+literals as they stand. Then read every member dossier the module will cite — the registry is for the
+sweep, never for a pin: every `profile:<slug>` date you write is the `lastUpdated` read off the fetched
+<slug>.profile.json (G2).
+
+THE THREE MODULES — what moved, read off profiler-segments.json at v07.87r:
+
+- `landscape-neoclouds-2026-09` (updated 2026-09-24, reviewBy 2026-09-30 — OVERDUE). Written on seven
+  members, 1 · 6 · 0. Today twelve: incumbents coreweave AND nebius (Platinum in ClusterMAX 3.0, 23 Sep
+  2026 — nebius moved from challenger to incumbent in the row-5 pass, v07.81r); challengers lambda, crusoe
+  (Gold → Bronze in 3.0), iren (Underperforming; v7 on 10/4), fluidstack (Unavailable in 3.0; v4 on
+  10/4), nscale (Unavailable; v3 from the S-1), firmus (Silver; v2 on 10/4), humain (Unavailable), g42
+  (Core42 — Participation Ribbon), whitefiber (Underperforming); adjacent 5c-group. The module's
+  incumbency basis is the ClusterMAX rating itself, so re-read `semianalysis.profile.json` (v1, 10/4):
+  its technicalSpecs carry the full 3.0 tier table and its strategyRead the independence record — the
+  landscape should now say what the rating is, who publishes it, and why a tier is a point-in-time
+  judgment by a firm with undisclosed commercial and investment ties to several rated clouds. Do not
+  rank by tier alone; the dossiers' own facts (contracted MW, named tenants, owned sites) are the other
+  basis. Nearest dated gates to weigh for reviewBy: Nscale's S-1 effectiveness/IPO, IREN's Q1 FY27
+  results, the next ClusterMAX edition (~March 2027), Fluidstack Ltd's overdue Companies House accounts.
+- `landscape-hyperscalers-and-ai-labs-2026-09` (updated 2026-09-16, reviewBy 2026-12-31). Written on
+  eight; today ten: incumbents amazon, google, microsoft, meta, oracle; challengers openai, anthropic
+  (v4, 10/2 — Nscale at up to USD 44.6bn, Fluidstack, the Claude Code spend SemiAnalysis names), xai,
+  bytedance and alibaba-cloud (F-H1, 9/26 — the China buyer side, with the China Datacenter Model's
+  'one-fifth of China's capacity' finding now in semianalysis v1). Microsoft, meta, oracle, openai and xai
+  were refreshed 9/26. The module's closure finding (§10.6 (bb1): the smallest segment, which disabled two
+  instruments) must be re-tested at ten members.
+- `landscape-aidc-developers-and-landlords-2026-09` (updated 2026-09-15, reviewBy 2026-12-15). Written
+  on the pre-Phase-F roster; today 38 members, 9 · 18 · 11. New since: chindata, g42, whitefiber,
+  5c-group and tecfusions as challengers; firmus, humain and quinbrook adjacent; equinix v8 (atNorth
+  split), hut-8 v3, tract v4, powerhouse-data-centers v3, iren/crusoe/fluidstack/nscale revised. This is
+  the largest roster any landscape covers; keep the four-neighbour split §10.6 (s) recorded and extend
+  the each-players-bet table from the newcomers' strategyRead[] only, labelled as analysis with the
+  dossier's confidence carried, as v07.60r did.
+
+HOW TO REVISE (the v07.60r pattern, enforced by P7/P8 on lessons and by your own honesty on modules):
+for each module, read each section and write the sentence "section <id> teaches X; <ref> now says Y";
+only a section with such a sentence changes. Update the analysis markdown first, then the module literal
+to match; bump `updated` to the run date; set `reviewBy` from the nearest dated gate in the NEW material
+(never earlier than updated); append one `revisions[]` entry naming the changed section ids and the X→Y
+notes; restate every fence count the module carries (member counts, policy-entry counts, dated-gate
+counts) from the files, not from memory. The claims ledger must cite a dossier for every claim about a
+named company. Content scope: the landscape names and ranks covered companies by construction — the one
+module class that may — and its guidance is still to the seller reading it. Never edit a segment-* lesson
+by hand (the generator owns them), never edit a landscape for another segment, never touch Profiler.gs
+or Profiler.html.
+
+THE FIVE SCENARIOS (CLASSROOM-CURRICULUM-PLAN.md §11): `scenario-neoclouds-discovery` (fluidstack;
+reviewBy 2026-09-30 — overdue; one prior revision), `scenario-aidc-developers-and-landlords-objection`
+(vantage), `scenario-aidc-developers-and-landlords-discovery` (hut-8), `scenario-hyperscalers-and-ai-labs-
+objection` (meta), `scenario-hyperscalers-and-ai-labs-discovery` (google). For each: re-read its beats
+against the revised landscape and the counterparty's current dossier (fluidstack v4, hut-8 v3, meta and
+google at their current versions); re-judge every beat that cites a fact the landscape or dossier now
+states differently; re-pin `guidance:landscape-…` to the module's new `updated` and `profile:<slug>` to the
+fetched lastUpdated; move reviewBy with the landscape's; append a `revisions[]` entry listing the changed
+section ids (P8 equality — an id listed must differ, an id that differs must be listed; copy unchanged
+sections byte for byte). The counterparty is a role, never a person; positions are paraphrased from the
+record. Do not touch the other nine scenarios.
+
+SEGMENTS: after the modules land, run python3 scripts/build-classroom-segments.py --check. Landscapes
+are not segment inputs, so expect 0 due unless a dossier moved; if any is due, regenerate it (`--segment`
+for each, or `--all`), and the Classroom GAS bump below covers it. Do not edit any segment lesson by hand.
+
+VERSIONING: Classroom.gs VERSION v01.97g → v01.98g and live-site-pages/gs-versions/Classroomgs.version.txt
+→ |v01.98g| in the same commit; one generic line in live-site-pages/gs-changelogs/Classroomgs.changelog.md
+(`Sections: 49/50` → 50/50 — the NEXT GAS bump after yours rotates that file; say so in the hand-off);
+README tree Classroom display → v01.98g (python3 scripts/check-readme-tree.py, 0 findings). No page bump:
+no renderer change.
+
+VERIFY: node --check on a .js copy of Classroom.gs; node scripts/check-gas-inner-scripts.js; python3
+scripts/check-classroom-content.py (0 errors — 71 lessons, 8 tracks, 220 gate cases today); python3
+scripts/check-classroom-pipeline.py --base origin/main (P1 on your paths and P7/P8 on the five scenarios
+are expected; a P3 means you moved a gate symbol — refresh gateDigest; a P13 means a scenario changed in
+a way only P13 forbids — read it before dismissing it); python3 scripts/check-classroom-curriculum.py
+--strict (the moved-landscape line must read 0 again after the re-pins; the drill-cap finding must be
+gone); Playwright renders of Classroom.html#guidance/<each module id> and #lesson/<each scenario id> with
+zero page errors (the render recipe is industry-guidance.md step 7: scratch copy, `_e = ''`,
+`AUTO_REFRESH = false`, seed sessionStorage after load, override window._gasPost after load, hide the
+walls, clHeaderShow(); clAppMount()). Normal Pre-Commit and Pre-Push checklists; ONE commit; push on your
+claude/* branch once git ls-remote shows it absent. Flip §3 row 9 to landed with the G3 counts (sections
+changed per module, scenarios re-judged, reviewBy moved to what), update CLASSROOM-CURRICULUM-PLAN.md
+§10.6's built-list line for the three modules and §11's five rows with the new versions, and write the
+CHANGELOG section with this prompt verbatim as the blockquote.
+
+At the end: one line per module (sections changed, the new reviewBy and the gate it comes from, the
+roster counts restated); one line per scenario (beats re-judged, re-pinned to what); the --check and
+--strict final lines; whether the drill cap was raised; and the session's cost from get_session's
+usage.cost_usd (it now exposes one — the F-A1 session read USD 100.14) with the rate-limit status.
+```

@@ -6,6 +6,58 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-10-03 11:09 PM → 2026-10-04 ~02:45 AM EST (§3 row 8: F-A1 — Anza, SemiAnalysis, EPRI — then the plan evaluation, the §12 wave-A prompt and this save; two attended turns, one worker restart and one context compaction mid-task)
+**Repo version:** v07.86r → v07.88r (two pushes: v07.87r the three dossiers, v07.88r §12 prompt + this save)
+**Branch:** `claude/kind-archimedes-sje924`
+**Model:** Fable 5.1 High (`claude-fable-5-1`); `get_session` NOW exposes `usage.cost_usd` — USD 100.14 at the end of the F-A1 turn; six research subagents reported 2,334,150 tokens; rate limit `allowed_warning` on the seven-day window, no overage
+
+### What was done
+
+- **Identity check corrected all three plan rows before research.** Anza: Anza RE, LLC (the row had no entity), Delaware per registry mirrors, ECP-led consortium since May 2023; '~95%' is a company claim with a moving denominator. SemiAnalysis: a Florida LLC (not Delaware), Patel sole owner as pleaded, 31 inbound dossiers (row said 22), ClusterMAX 3.0 Gold has two members, the Zhou matters are in San Francisco Superior Court (arbitration compelled 2026-07-20), Fund I Form D USD 400m target with nil sold. EPRI: 501(c)(3) member-funded; legal domicile DC on every Form 990 through FY2024 with a Delaware certificate now posted (not California); 5 inbound dossiers (row said 3); no `nextReport` row.
+- **Three `advisor` dossiers v1** (116 / 116 / 124 sources), study guides (10 / 10 / 9 sections), six-to-seven-module lesson plans, four Anza portraits; seven concepts registered (1,600 total).
+- **Segments:** anza adjacent in `software-and-optimization` and `grid-equipment`; epri adjacent in `assurance` on its testing-and-guidelines line (issues no certificate); **semianalysis is the first `unassigned[]` entry** — sync, graph builder and segment generator took it without change, the curriculum checker prints it.
+- **Step 7:** 36 dossiers reviewed, 4 revised with archives — iren v7, firmus v2, fluidstack v4, vertiv v10 (two vertiv report pins re-verified); amperesand and dg-matrix held against the primary post; one crossref candidate (iren × semianalysis) accepted.
+- **Step-5 sub-rule:** 14 segment lessons due and regenerated with `--all`; Classroom GAS v01.97g; content checker 71 / 8 / 220 — 0 errors; pipeline checker P1/P10 only (no P3).
+- **Formatting lesson:** `vertiv.profile.json` and `profiler-concepts.json` are 1-space indented, `firmus.profile.json` uses compact inline arrays — re-serialising at 2 spaces produced 1,000–27,000-line diffs; each was restored to its own style so the diff is the edit alone.
+- **v07.88r:** plan evaluation written in chat; **§12 = the Classroom wave A paste-in prompt** (three AIDC landscapes + five rehearsals, Fable 5.1 xhigh) appended to `phase-f-action-plan.md`; §3 row 9 points at it; the strict checker's drill-cap finding (study pool 2,491 > `CL_DRILL_INV_CAP` 2400) is carried into §12 as a fix for that session.
+
+### Where we left off
+
+- All changes committed and pushed; `main` carries v07.87r (merged) and v07.88r is on its way via the auto-merge workflow.
+- **Phase F position:** 8 of 10 new-dossier sessions landed (34 of 37 companies plus 5 utilities; F-I2 and F-I3 remain, Opus 5.5 xhigh), ERCOT and PJM not started, none of the four Classroom waves run, the Dominion reframe still open (reminder window closes Tue 10/6), Megmeet row 18 waits on the Q3 filing.
+- **Next: paste `phase-f-action-plan.md` §12 into a fresh Fable 5.1 xhigh session** — Classroom wave A. `landscape-neoclouds-2026-09` is overdue (reviewBy 2026-09-30) on a roster that went 7 → 12.
+
+### Key decisions made
+
+- An advisor's category holds when its data products are sold beside a procurement or rating service: Anza stays `advisor`, its adjacent seats come from product lines with named buyers or a stated buyer-side channel.
+- `unassigned[]` is used, not avoided, when a dossier supports no segment; the reason sentence is written into the registry.
+- Rated↔rater edges are typed `other` with the tier in `scale`; member↔cooperative edges are typed from the member's side (`customer`).
+- A JSON file is re-serialised in its OWN original style (indent, inline arrays), checked with `git diff --stat` before staging; the generic "2-space" rule is a default, not a guarantee.
+- Wave A runs on Fable 5.1 xhigh per §2's anchor rule and inherits the v07.60r re-pin pattern; the drill-cap raise rides that session because it is a one-line guard outside the fence.
+
+### Known issues
+
+- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged.
+- `check-classroom-curriculum.py --strict`: study pool 2,491 exceeds `CL_DRILL_INV_CAP` 2400 — the drill truncates ~90 items until wave A raises it.
+- `Classroomgs.changelog.md` is at `Sections: 49/50`; the GAS bump after wave A's rotates it.
+- `verify-profiler-roles.py` still fails two progress-isolation fixtures in the headless harness (pre-existing; Profiler.html untouched).
+- SemiAnalysis Fund I: USD 400m filed vs USD 500m company-confirmed — no Form D/A with an amount sold as of 10/4.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 208 dossiers, page v01.93w. **Classroom:** GAS v01.97g, page v01.16w, content checker 0 errors. **CHANGELOG** `Sections: 83/100`.
+- **Active reminders (2):** the Dominion reframe (10/2–10/6), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
+
+### Recommendation for next session
+
+- **Paste `phase-f-action-plan.md` §12 into a fresh Fable 5.1 xhigh session** — Classroom wave A: re-author the three AIDC landscapes against rosters of 12, 10 and 38 members, re-judge the five rehearsals pinned to them, raise the drill cap, Classroom v01.98g. Run the Dominion reframe (REMINDERS) in its own session before Tue 10/6.
+
+**To continue:** type `run wave A` (or paste §12 directly).
+
+## Previous Sessions
+
+
 **Date:** 2026-10-03 09:23 PM → 11:05 PM EST (§3 row 7: F-G1 — Clayco, Faith Technologies, EMCOR — then the F-A1 prompt and this save; two attended turns, one context compaction mid-task)
 **Repo version:** v07.84r → v07.86r (two pushes: v07.85r the three dossiers, v07.86r §11 prompt + this save)
 **Branch:** `claude/gifted-fermat-v9vztl`
@@ -52,56 +104,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Paste `phase-f-action-plan.md` §11 into a fresh Fable 5.1 High session** — F-A1 (Anza, SemiAnalysis, EPRI); the 31 dossiers that cite SemiAnalysis are the step-7 baseline, and whether the registry tooling accepts a populated `unassigned[]` is the one thing the row has not tested.
 
 **To continue:** type `run F-A1` (or paste §11 directly).
-
-## Previous Sessions
-
-**Date:** 2026-10-03 07:25 PM → 09:20 PM EST (§3 row 6: F-I4 — Quinbrook, Energy Capital Partners, CPP Investments — then the F-G1 prompt and this save; two attended turns, one context compaction mid-task)
-**Repo version:** v07.82r → v07.84r (two pushes: v07.83r the three dossiers, v07.84r §10 prompt + this save)
-**Branch:** `claude/friendly-johnson-hsmoru`
-**Model:** Fable 5.1 High (`claude-fable-5-1`); `get_session` exposes no cost field — six research subagents reported 2,304,771 tokens between them; no rate-limit event
-
-### What was done
-
-- **Identity check corrected all three plan rows before research.** Quinbrook: founder-owned via Quinbrook Holdings Limited (Jersey); the row missed Rory Quinlan's UK-board resignation (TM01, 18 Jul 2025 — still Managing Partner and a control person) and treated The Information's Rowan 49% / ~USD 3.8bn as announced (reported only). ECP: Bridgepoint subsidiary confirmed; the row had EnergySolutions backwards — ECP is the buyer (agreed 6 Apr 2026); ECP VI USD 8.1bn; 'USD 36.0bn' was EUR 36.0bn segment AUM. CPP: Crown corporation confirmed; the row's 'xScale limited partner' is a 37.5% controlling interest (Equinix 8-K); atNorth c. 51% at close (60% at signing).
-- **Three `investor` dossiers v1** with 84 / 69 / 73 sources, study guides (12 / 13 / 13 sections) and eight-module lesson plans; Quinbrook carries eight decision-makers with company-published portraits.
-- **Segments:** `capital` — CPP incumbent, ECP and Quinbrook challengers; Quinbrook adjacent in `storage-developers-and-ipps` and `aidc-developers-and-landlords` (its own development lines). No adjacent for ECP/CPP (holdings are not product lines).
-- **Step 7:** 24 raw aka hits (7 / 7 / 10); `equinix` v8 (atNorth completion split c. 51 / 34 / 10; reciprocal edge) and `habitat-energy` v4 (Flexitricity 0.9 GW per Drax vs c. 1.3 GW per Quinbrook stated both ways; ultimate controlling party; `quinbrook` as investor) revised and archived; a subagent's form-energy 'contradiction' verified correct and withdrawn; three crossref candidates accepted.
-- **Calendar:** three `cadence: quarterly` core rows + notes. CPP is a cadence row, not `nextReport`: no ticker, no consensus, results against benchmark portfolios.
-- **Step-5 sub-rule:** all 19 segment lessons regenerated; Classroom GAS v01.95g; `check-classroom-content.py` 71 lessons / 8 tracks / 220 gate cases — 0 errors; pipeline checker P1/P10 only.
-- **CHANGELOG rotation fired** at v07.83r: the 2026-09-21 group (23 sections) archived with SHA enrichment; counter 78/100 → 79/100 after v07.84r.
-- **v07.84r:** §3 row 7 re-timed and pointed at **§10 = the F-G1 paste-in prompt** (Clayco · Faith Technologies · EMCOR).
-
-### Where we left off
-
-- All changes committed and pushed; `main` carries v07.83r (merged) and v07.84r is on its way via the auto-merge workflow.
-- **Next: paste `phase-f-action-plan.md` §10 into a fresh Fable 5.1 High session** — F-G1, three new `epc-and-construction` dossiers; Faith Technologies' category decided on the record; EMCOR takes a `nextReport` row; regenerates `segment-epc-and-construction` and bumps Classroom GAS to v01.96g.
-- Then F-A1 (Anza, SemiAnalysis, EPRI; §3 row 8); the Dominion reframe (its own session, reminder due by Tue 10/6); wave A landscapes.
-
-### Key decisions made
-
-- A plan row's identity facts are hypotheses: every F-I4 row needed correction, so §10 tells the next session to expect the same.
-- An investor's adjacent seats come from its own development lines (Quinbrook) never from holdings (ECP, CPP) — the evidence rule applied to the capital segment.
-- Reported figures (The Information's Rowan 49%) are written as reported with the outlet named, beside the announced wording ('significant minority stake').
-- Two sources, two figures → both stated with their sources (Flexitricity capacity), never one chosen.
-- The CHANGELOG prompt blockquote was written multi-line with each line prefixed (verbatim), rather than collapsed to one line.
-
-### Known issues
-
-- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged.
-- `verify-profiler-roles.py` fails two progress-isolation fixtures in the headless harness (pre-existing; Profiler.html untouched).
-- The step-7 raw tally (24) overstates substantive reads (~18) because of name collisions (Rowan, Supernode, Cornerstone, Bridgepoint).
-- Habitat Energy's and RGS's FY2025 accounts remain overdue at Companies House (3 Oct); a mid-October manual re-check is still uncovered by any Routine.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 202 dossiers, page v01.93w. **Classroom:** GAS v01.95g, page v01.16w, content checker 0 errors. **CHANGELOG** `Sections: 79/100`.
-- **Active reminders (2):** the Dominion reframe (10/2–10/6), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
-
-### Recommendation for next session
-
-- **Paste `phase-f-action-plan.md` §10 into a fresh Fable 5.1 High session** — F-G1 (Clayco, Faith Technologies, EMCOR); the five GC dossiers that cite BD+C's 2025 ranking are the step-7 baseline and the Faith Technologies category call is the one decision the row leaves open.
-
-**To continue:** type `run F-G1` (or paste §10 directly).
 
 Developed by: LightAISolutions

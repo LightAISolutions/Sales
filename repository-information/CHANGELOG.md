@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 82/100`
+`Sections: 83/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.88r] — 2026-10-04 02:24:50 AM EST
+
+> **Prompt:** "Evaluate where I am in the overall Profiler expansion plan, tell me which phases are left (with recommended model and effort level between Fable 5.1 and Opus 5.5, Medium, High, Xhigh), give me a prompt to paste into a new session to continue the plan, then remember session."
+
+### Added
+- `repository-information/phase-f-action-plan.md` — **§12, the Classroom wave A paste-in prompt** (§3 row 9; Fable 5.1 · xhigh): re-author `landscape-neoclouds-2026-09` (overdue since 2026-09-30, roster 7 → 12), `landscape-hyperscalers-and-ai-labs-2026-09` (8 → 10) and `landscape-aidc-developers-and-landlords-2026-09` (→ 38) under the v07.60r G3 pattern; re-judge and re-pin the five rehearsal scenarios stamped on them (§11 rows 2, 5, 7, 11, 14); raise `CL_DRILL_INV_CAP` (the strict checker reads the study pool at 2,491 against 2400); Classroom GAS v01.98g; the verify list and the end report.
+
+### Changed
+- `repository-information/phase-f-action-plan.md` — §3 row 9 points at §12; the "Prompts for these sessions" paragraph names §8–§12 and makes §12 the pattern for waves B–D.
+- `repository-information/SESSION-CONTEXT.md` — Latest Session written for the F-A1 session (identity corrections, the first `unassigned[]` entry, step 7, the JSON re-serialisation lesson, the plan position, the §12 decision); the F-G1 entry moved to Previous and the F-I4 entry dropped under the 2-session cap.
+
+### Notes
+- Plan position at this version: 8 of the 10 Phase F new-dossier sessions landed (F-I2 and F-I3 remain, Opus 5.5 xhigh); ERCOT and PJM not started; the four Classroom waves not started; the Dominion reframe open until Tue 10/6; Megmeet (row 18) waits on the Q3 filing.
+- No dossier, page, GAS or diagram changed. CHANGELOG `Sections: 83/100` (sections dated 2026-10-04 EST exempt; no rotation).
 
 ## [v07.87r] — 2026-10-04 01:48:41 AM EST
 
