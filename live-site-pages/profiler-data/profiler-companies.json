@@ -1379,6 +1379,49 @@
       ]
     },
     {
+      "slug": "cpp-investments",
+      "name": "CPP Investments",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Canada Pension Plan Investment Board — C$863.6bn at 30 June 2026 and fourth in Infrastructure Investor's institutional ranking; signs for no equipment itself but is the majority shareholder of Pattern Energy (69.1% with other institutions after Cordelio), 40% of ALLETE with GIP, c. 51% of atNorth (closed 2 Sep 2026), 37.5% of Equinix's US xScale JV, 12% of AirTrunk and 50% of Inkia; ~13% of Sempra Infrastructure Partners signed, not closed",
+      "hq": "Toronto, Canada",
+      "ticker": "Crown corporation (no listed equity)",
+      "status": "active",
+      "lastUpdated": "2026-10-03",
+      "aka": [
+        "Canada Pension Plan Investment Board",
+        "CPPIB",
+        "CPP Investment Board",
+        "Canada Pension Plan Investments",
+        "CPP Investments Inc",
+        "Investissements RPC",
+        "Office d'investissement du RPC",
+        "CPP Investment Board Private Holdings",
+        "CPPIB Credit Investments",
+        "Cordelio Power",
+        "Cordelio",
+        "Reventus Power",
+        "Renewable Power Capital",
+        "Sustainable Energies Group",
+        "Maple Fund",
+        "Dyuti Private Holdings"
+      ],
+      "domains": [
+        "cppinvestments.com",
+        "cordeliopower.com"
+      ],
+      "srcTotal": 73,
+      "srcFirstPct": 60,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
       "slug": "crrc-zhuzhou",
       "name": "CRRC Zhuzhou Institute",
       "categories": [
@@ -1888,6 +1931,56 @@
       ]
     },
     {
+      "slug": "energy-capital-partners",
+      "name": "Energy Capital Partners",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Bridgepoint Group's (LSE: BPT) infrastructure platform since 20 Aug 2024; the corpus's most active seller of power in 2026 — Calpine to Constellation (closed 7 Jan 2026), Cornerstone to Talen (15 Jun 2026, 4.4x), Symmetry to NextEra — and a 4.0% holder of Constellation and 5.0% of Talen; ECP VI closed at USD 8.1bn (6 Aug 2026); KKR–ECP USD 50bn partnership's first campus (CyrusOne DFW10, Bosque County, 190 MW) due Q4 2026; majority owner of ProEnergy; DCC Energy (with KKR) and EnergySolutions pending",
+      "hq": "Summit, New Jersey, United States",
+      "ticker": "LSE: BPT (parent Bridgepoint Group plc)",
+      "status": "active",
+      "lastUpdated": "2026-10-03",
+      "aka": [
+        "ECP",
+        "Energy Capital Partners Management, LP",
+        "Energy Capital Partners Management",
+        "ECP ControlCo",
+        "ECP ControlCo, LLC",
+        "Bridgepoint Infrastructure",
+        "Bridgepoint Group",
+        "Bridgepoint",
+        "ECP V",
+        "ECP VI",
+        "ECP Calpine Continuation Fund",
+        "Cornerstone Generation",
+        "Cornerstone",
+        "Calpine Continuation Fund",
+        "Energy Capital Partners III",
+        "Energy Capital Partners IV",
+        "California Buyer Limited",
+        "Dragon Bidco",
+        "Garden Topco",
+        "Convergent Energy + Power",
+        "Convergent Energy and Power",
+        "Lightstone Generation",
+        "ECP ForeStar"
+      ],
+      "domains": [
+        "ecpgp.com",
+        "bridgepointgroup.com"
+      ],
+      "srcTotal": 69,
+      "srcFirstPct": 39,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
       "slug": "engie-north-america",
       "name": "ENGIE North America",
       "categories": [
@@ -2028,12 +2121,12 @@
       "hq": "Redwood City, CA, USA",
       "ticker": "NASDAQ: EQIX",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-03",
       "domains": [
         "equinix.com"
       ],
-      "srcTotal": 14,
-      "srcFirstPct": 50,
+      "srcTotal": 15,
+      "srcFirstPct": 53,
       "kpiNorm": true,
       "segments": [
         {
@@ -2783,7 +2876,7 @@
       "tagline": "The Oxford-born, Quinbrook-owned battery optimiser — EVOLVE desk-plus-registration service on revenue share across GB (BM Virtual Lead Party), ERCOT (Level 4 QSE) and the NEM; 5.5 GW under contract by its count, third in GB and first in ERCOT's December 2025 capture-rate table by Modo's; for sale since March 2026 with no buyer on record; FY2025 accounts overdue at Companies House since 30 Sep 2026.",
       "hq": "Oxford, United Kingdom",
       "status": "active",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-03",
       "aka": [
         "Habitat Energy Limited",
         "Habitat",
@@ -2799,7 +2892,7 @@
         "habitat.energy",
         "quinbrook.com"
       ],
-      "srcTotal": 78,
+      "srcTotal": 79,
       "srcFirstPct": 63,
       "kpiNorm": false,
       "segments": [
@@ -4904,6 +4997,73 @@
         {
           "id": "epc-and-construction",
           "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "quinbrook",
+      "name": "Quinbrook",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Founder-owned value-add manager (USD 8.95bn regulatory AUM) that builds its own assets: Supernode (520 MW / 1,858 MWh operating in Brisbane since 28 Jul 2026 on Origin tolls; Stage 3 financed for Stanwell; CATL supplier) and Rowan Digital Infrastructure (Blackstone 'significant minority' since 9 Apr 2026); owner of Habitat Energy, under a reported sale process with FY2025 accounts overdue; QRIF II closed GBP 587m (8 Jul 2026); Quinbrook III (USD 4bn target) in market",
+      "hq": "London, United Kingdom / St Helier, Jersey",
+      "ticker": "Private",
+      "status": "active",
+      "lastUpdated": "2026-10-03",
+      "aka": [
+        "Quinbrook Infrastructure Partners",
+        "QIP",
+        "Quinbrook Infrastructure Partners Limited",
+        "Quinbrook Infrastructure Partners (Jersey) Limited",
+        "Quinbrook Infrastructure Partners LLC",
+        "Quinbrook Holdings Limited",
+        "Quinbrook Renewables Impact Fund",
+        "QRIF",
+        "Renewables Impact Fund",
+        "Renewables Impact Fund II",
+        "QRIF II",
+        "Net Zero Power Fund",
+        "NZPF",
+        "QNZPF",
+        "Quinbrook III",
+        "Low Carbon Power Fund",
+        "Valley of Fire Fund",
+        "Valley of Fire Continuation Fund",
+        "Renewable and Grid Services Limited",
+        "Renewables Impact Holding Limited",
+        "Private Energy Partners",
+        "Supernode",
+        "Rowan Digital Infrastructure",
+        "Rowan",
+        "Primergy",
+        "Primergy Solar",
+        "Velox Power",
+        "Quintrace",
+        "EnerQB"
+      ],
+      "domains": [
+        "quinbrook.com",
+        "supernode.com.au",
+        "primergypower.com",
+        "primergygemini.com",
+        "rowan.com"
+      ],
+      "srcTotal": 84,
+      "srcFirstPct": 61,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        },
+        {
+          "id": "capital",
+          "role": "challenger"
         }
       ]
     },

@@ -1386,6 +1386,11 @@
           "slug": "salt-river-project",
           "role": "adjacent",
           "basis": "productsAndServices › Storage and renewable procurement: SRP owns Bolster (25 MW) and 169 MW of pumped hydro, self-built Copper Crossing's solar under direct pay, carries the Marigold 400 MW / 8-hour battery and a 1–2 GW Apache Lake pumped-storage project as self-build — the owned leg is small but growing"
+        },
+        {
+          "slug": "quinbrook",
+          "role": "adjacent",
+          "basis": "productsAndServices › Supernode (Brisbane) — Quinbrook-developed BESS campus: 'developed by Quinbrook' with its affiliate Private Energy Partners, the manager itself the procurement counterparty for CATL's EnerC Plus and TENER S and the EnerQB co-development"
         }
       ]
     },
@@ -1588,6 +1593,11 @@
           "slug": "tecfusions",
           "role": "challenger",
           "basis": "ecosystemRole: 'Design, build and lease AI-ready data centers' on a 'real estate landlord / developer business model' — TensorWave's landlord at Tucson and Keystone Connect; 55 MW live across three sites"
+        },
+        {
+          "slug": "quinbrook",
+          "role": "adjacent",
+          "basis": "productsAndServices › Rowan Digital Infrastructure — the hyperscale developer Quinbrook founded (JV 2020, wholly owned 2023, Blackstone minority 2026) under its 'Energy Intensive Industry and Industrial Precincts' strategy"
         }
       ]
     },
@@ -1941,6 +1951,21 @@
           "slug": "vantage",
           "role": "adjacent",
           "basis": "productsAndServices › Capital-markets franchise (securitization & green finance): the industry's first data-center securitization, 2018"
+        },
+        {
+          "slug": "cpp-investments",
+          "role": "incumbent",
+          "basis": "ecosystemRole: the capital segment's quiet incumbent — fourth in Infrastructure Investor's Global Investor 75 (USD 40,058m allocation) with controlling or co-controlling positions in ALLETE, Pattern Energy, atNorth and the Equinix xScale programme"
+        },
+        {
+          "slug": "energy-capital-partners",
+          "role": "challenger",
+          "basis": "ecosystemRole: the segment's generation-first investor — reaches data centres through power plants and sells them into the AI wave (Calpine, Cornerstone); a specialist ranked 28th by IPE beside the diversified giants, deploying an USD 8.1bn ECP VI"
+        },
+        {
+          "slug": "quinbrook",
+          "role": "challenger",
+          "basis": "ecosystemRole: the segment's developer-manager — a challenger by scale (USD 8.95bn regulatory AUM; IPE rank 89) whose funds originate, build and operate storage and data-centre assets rather than buying platforms"
         }
       ]
     },

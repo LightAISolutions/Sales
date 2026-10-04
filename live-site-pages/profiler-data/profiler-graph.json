@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-10-03",
- "companies": 199,
+ "built": "2026-10-04",
+ "companies": 202,
  "edges": [
   {
    "a": "5c-group",
@@ -12879,6 +12879,52 @@
   },
   {
    "a": "blackrock",
+   "b": "cpp-investments",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "CPP Investments and BlackRock's Global Infrastructure Partners jointly took ALLETE private; CPP states its stake as 40%.",
+     "context": "CPP's fiscal 2025 release describes the agreement 'to jointly acquire ALLETE, Inc. alongside Global Infrastructure Partners for US$6.2 billion, including the assumption of debt' with CPP's stake at 40% on closing; ALLETE's 8-K of 15 December 2025 records completion at USD 67 a share in cash, about USD 200m of customer benefits, and a majority-independent board. GIP's 60% split (40% GIP V plus 20% a GIP-managed CalPERS vehicle) and 'governance shared equally' appear in the `blackrock` dossier from ALLETE's proxy; they are not stated in any CPP, ALLETE 8-K, MPUC or Senate document read for this dossier.",
+     "source": "https://www.sec.gov/Archives/edgar/data/66756/000114036125045482/ef20060780_ex99-1.htm",
+     "status": "active",
+     "since": "2024-05",
+     "scale": "ALLETE: CPP 40% beside GIP (closed 15 December 2025; USD 6.2bn including debt)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Aligned is jointly controlled with MGX, CyrusOne co-owned with KKR, Coravel a 50:50 venture with ACS, ALLETE's governance shared equally with CPP Investments, and at El Paso Meta runs construction and property management despite BlackRock funds' 80%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-15",
+     "text": "CPP Investments and GIP complete the USD 6.2bn take-private of ALLETE, parent of Minnesota Power — Closed after a unanimous Minnesota commission vote on 3 October 2025, with about USD 200m of customer benefits including a base-rate freeze. Per ALLETE's proxy, GIP holds 60% but governance is shared equally.",
+     "src": "https://www.sec.gov/Archives/edgar/data/66756/000114036125045482/ef20060780_8k.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-04",
+     "text": "Senators Warren, Sanders and Blumenthal write to BlackRock on the ALLETE acquisition; CPP Investments appears only in the cited docket title — CPP is adjacent to, not a recipient of, the oversight letters.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/20251204lettertoblackrockreutilityenergycosts.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-15"
+  },
+  {
+   "a": "blackrock",
    "b": "cyrusone",
    "curated": {
     "a": {
@@ -13009,6 +13055,34 @@
     }
    ],
    "last": "2026-04-21"
+  },
+  {
+   "a": "blackrock",
+   "b": "energy-capital-partners",
+   "evid": [
+    {
+     "where": "Capabilities · ECP flagship infrastructure funds (ECP III–VI)",
+     "date": "",
+     "text": "A specialist generation investor beside diversified infrastructure giants: IPE Real Assets ranks ECP 28th among infrastructure managers (infrastructure AUM EUR 21,837m, 2025 survey) against BlackRock/GIP, KKR, Brookfield and Macquarie in the top ten.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-29",
+     "text": "Bipartisan letter led by Senator Warren urges FERC to reject the GIP/BlackRock takeover of AES — ECP not named — The appetite to block private-equity control of generation at FERC is now bipartisan; ECP's own Section 203 filings (Gavin, Cornerstone, Calpine) have each drawn protests.",
+     "src": "https://www.banking.senate.gov/newsroom/minority/in-bipartisan-letter-warren-indiana-reps-carson-d-and-spatz-r-lead-lawmakers-in-urging-federal-regulator-to-reject-proposed-private-equity-takeover-of-energy-company",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR, BlackRock, Brookfield and Blackstone on private-equity data-centre ownership; the KKR letter cites CyrusOne but names neither ECP nor the KKR–ECP partnership — ECP sits outside the oversight letters so far, though its partnership funds the campus the KKR letter's subject (CyrusOne) is building.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-29"
   },
   {
    "a": "blackrock",
@@ -13940,6 +14014,20 @@
   },
   {
    "a": "blackrock",
+   "b": "quinbrook",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Quinbrook as the capital segment's developer-manager: a challenger by scale beside Blackstone, Brookfield, Macquarie, MGX, BlackRock and KKR, but the only one of them whose funds originate, build and operate the storage and data-centre assets rather than buying platforms.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackrock",
    "b": "recurrent-energy",
    "curated": {
     "a": {
@@ -14299,6 +14387,80 @@
   },
   {
    "a": "blackstone",
+   "b": "cpp-investments",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "CPP co-invested with Blackstone in AirTrunk and Tallgrass, holds a USD 1.5bn discretionary credit account with Blackstone and sold fund interests to Blackstone Strategic Partners.",
+     "context": "CPP's release of 4 September 2024 commits to acquire a 12% interest in AirTrunk alongside Blackstone at an implied enterprise value of over A$24bn; AirTrunk's completion release of 23 December 2024 names Blackstone's real estate, infrastructure, tactical opportunities and private-wealth vehicles and CPP Investments as the buyers. CPP's August 2024 release records about USD 843m into Tallgrass Energy alongside Blackstone. Fiscal 2026 items add a USD 1.5bn Blackstone discretionary credit account, a USD 1bn financing to Blackstone Private Credit Fund and the sale of 33 fund interests to Blackstone Strategic Partners and Ardian (completed 20 May 2026).",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-announces-investment-in-asia-pacific-data-centre-operator-airtrunk-879569570.html",
+     "status": "active",
+     "since": "2024-09",
+     "scale": "AirTrunk 12% beside Blackstone (EV >A$24bn, completed 23 December 2024); Tallgrass (~USD 843m, 2024); credit SMA USD 1.5bn"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "10%; USD 4bn enterprise value — the 60% / USD 1.6bn signing term was re-cut by rollover), a 37.5% controlling partner in Equinix's more-than-USD 15bn US xScale venture, 12% of AirTrunk beside Blackstone and 50% of Inkia (Peru, USD 3.4bn EV, closed 8 June 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The buyers are its platforms — Pattern's project companies, Minnesota Power's rate base, atNorth's campuses, the xScale JV's builds — and the strategics it co-owns with (Equinix, GIP, KKR, Blackstone).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For a seller that means CPP is rarely the decision-maker on a campus's equipment; Equinix, Goodman, EdgeConneX and Blackstone are.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Credit Investments — including Real Assets Credit, the data-centre lender",
+     "date": "",
+     "text": "Named AI-infrastructure lending: a C$225m commitment, 50% of a construction loan with Deutsche Bank, for a 54 MW hyperscale data-centre expansion in Cambridge, Ontario pre-leased to a GPU-focused AI cloud provider (July 2025); a USD 250m GPU-server loan facility to CoreWeave (fiscal 2025) and a USD 150m delayed-draw term loan for four CoreWeave data centres (Q1 fiscal 2027); investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl (Q2 fiscal 2026); a USD 1.5bn separately managed account and a USD 1bn financing with Blackstone's private-credit platform; C$1.75bn supporting EQT's AI-infrastructure strategy (Q1 fiscal 2027).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Total Fund Management, Capital Markets & Factor Investing, Active Equities and Private Equity",
+     "date": "",
+     "text": "Total Fund Management (C$364.7bn of net investments at 30 June 2025; Manroop Jhooty) runs the balancing portfolio; Capital Markets & Factor Investing (C$79.0bn; Heather Tobin) runs external hedge-fund and systematic programmes; Active Equities (C$53.0bn; Frank Ieraci) holds public and pre-IPO stakes; Private Equity (C$143.8bn; Caitlin Gubbels) runs direct, Asia and funds-and-secondaries programmes — the secondaries desk sold 33 fund interests for about C$4bn to Blackstone Strategic Partners and Ardian in May 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-20",
+     "text": "Sale of 33 private-equity fund interests to Blackstone Strategic Partners and Ardian completes, about C$4bn net — An active secondaries seller as well as buyer.",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-completes-sale-of-private-equity-fund-interests-to-blackstone-strategic-partners-and-ardian-875930342.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-23",
+     "text": "AirTrunk acquisition by Blackstone and CPP Investments completes at an implied enterprise value above A$24bn; CPP's share 12%",
+     "src": "https://airtrunk.com/completion-of-airtrunk-acquisition-by-blackstone-marking-new-era-of-growth/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-09-04",
+     "text": "CPP Investments commits to acquire a 12% interest in AirTrunk alongside Blackstone at an implied enterprise value of over A$24bn",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-announces-investment-in-asia-pacific-data-centre-operator-airtrunk-879569570.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-20"
+  },
+  {
+   "a": "blackstone",
    "b": "digital-realty",
    "curated": {
     "a": {
@@ -14367,6 +14529,38 @@
    },
    "evid": [],
    "last": "2026-04"
+  },
+  {
+   "a": "blackstone",
+   "b": "energy-capital-partners",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "ECP bought Lightstone Generation — the Gavin coal plant and the gas plants later sold to Talen as Cornerstone — from Blackstone and ArcLight.",
+     "context": "Private Equity Stakeholder Project and the FERC record (docket EC24-125) show ECP acquiring Lightstone Generation from Blackstone and ArcLight, with FERC approval on 23 July 2025; ECP told FERC it would be the only holder of 10% or more of the voting equity. The price was not disclosed. The gas plants in that portfolio (Waterford, Darby, Lawrenceburg) became Cornerstone Generation and were sold to Talen in June 2026; ECP kept Gavin.",
+     "source": "https://pestakeholder.org/news/press-releaseferc-greenlights-sale-of-deadly-gavin-coal-plant-to-energy-capital-partners-puts-communities-across-the-eastern-u-s-at-risk-of-adverse-health-outcomes/",
+     "status": "historical",
+     "since": "2025",
+     "scale": "Lightstone Generation (Gavin and three Midwest plants), FERC-approved 23 July 2025"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR, BlackRock, Brookfield and Blackstone on private-equity data-centre ownership; the KKR letter cites CyrusOne but names neither ECP nor the KKR–ECP partnership — ECP sits outside the oversight letters so far, though its partnership funds the campus the KKR letter's subject (CyrusOne) is building.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-23",
+     "text": "FERC conditionally approves Constellation–Calpine with 3,546 MW of PJM divestitures and offer caps, and the same day approves ECP's purchase of Lightstone Generation (Gavin) from Blackstone and ArcLight — Protesters asked FERC to force ECP to divest from Constellation; FERC did not.",
+     "src": "https://www.utilitydive.com/news/ferc-constellation-energy-calpine-pjm/753918/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
   },
   {
    "a": "blackstone",
@@ -15030,6 +15224,129 @@
     }
    ],
    "last": "2025-03-25"
+  },
+  {
+   "a": "blackstone",
+   "b": "quinbrook",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Funds affiliated with Blackstone acquired a significant minority stake in Rowan Digital Infrastructure on 9 April 2026; Blackstone Strategic Partners had led Quinbrook's 2024 continuation fund.",
+     "context": "The joint release of 9 April 2026 states that 'funds affiliated with Blackstone have acquired a significant minority stake in Rowan' and quotes David Scaysbrook as Rowan's chairman; it gives no percentage, price or value basis, and no standalone Blackstone release was located. The Information, via IREI and The Tech Capital, reported 49% at a company valuation of about USD 3.8bn excluding debt with Quinbrook retaining operational control — reported, not announced. Blackstone Digital Infrastructure Trust's Q2 2026 10-Q does not mention Rowan.\n\nThe relationship began earlier: Quinbrook's 4 April 2024 release names Blackstone Strategic Partners as lead investor in the USD 600m Valley of Fire continuation fund that bought 51% of Gemini from the first fund.",
+     "source": "https://www.quinbrook.com/news-insights/rowan-digital-infrastructure-announces-strategic-recapitalization/",
+     "status": "active",
+     "since": "2024-04",
+     "scale": "'significant minority stake' in Rowan (reported 49% at ~USD 3.8bn ex-debt); lead LP in the USD 600m Valley of Fire fund"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** Quinbrook is the one capital-segment investor in this corpus that builds the assets itself: a founder-owned, USD 8.95bn (regulatory AUM) value-add manager whose funds developed Supernode — 520 MW / 1,858 MWh operating in Brisbane since 28 July 2026 under Origin tolls, with a 260 MW / 1,216 MWh third stage financed for Stanwell and CATL as supplier across all three — and founded Rowan Digital Infrastructure, the US hyperscale developer in which funds affiliated with Blackstone acquired 'a significant minority stake' on 9 April 2026 (reported, not announced, at 49% and about USD 3.8bn excluding debt).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BACKGROUND.** Founded in 2015 by David Scaysbrook and Rory Quinlan (Capital Dynamics Clean Energy & Infrastructure, Novera Energy), Quinbrook manages five closed funds — Low Carbon Power Fund (2017–19), Renewables Impact Fund (GBP 620m, October 2023), the USD 600m Valley of Fire continuation fund (April 2024; Blackstone Strategic Partners lead), the Net Zero Power Fund (USD 3bn including co-investment, August 2024) and Renewables Impact Fund II (GBP 587m) — plus Quinbrook III in market.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Quinbrook as the capital segment's developer-manager: a challenger by scale beside Blackstone, Brookfield, Macquarie, MGX, BlackRock and KKR, but the only one of them whose funds originate, build and operate the storage and data-centre assets rather than buying platforms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "On the data-centre side it founded Rowan (3rd-largest US hyperscale developer by capacity per Altman Solon, cited by Quinbrook) and now shares it with Blackstone; on the optimisation side it owns Habitat Energy, for sale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For a storage or power-conversion vendor, Quinbrook is a procurement counterparty in Australia in a way Blackstone, Brookfield or KKR never are.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **the Blackstone entry into Rowan is a recapitalisation of a developer that outgrew its fund, not a partial exit from a position Quinbrook wants to leave**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Rowan raised about USD 4.4bn of debt in a year and 'over 1.2 GW of leased capacity'; Quinbrook kept the chairmanship and a board seat; Blackstone Strategic Partners was already the lead investor in Quinbrook's 2024 continuation fund.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*A Rowan 8-K-equivalent or Blackstone filing stating the stake:* would convert the reported 49% into a fact.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Closed-end funds — Low Carbon Power Fund, Renewables Impact Funds I and II, Net Zero Power Fund, Valley of Fire continuation fund, and Quinbrook III in market",
+     "date": "",
+     "text": "The sequence: Quinbrook Low Carbon Power Fund (first sale June 2017, final close 2019; US, UK and Australia; now largely realised); Quinbrook Renewables Impact Fund (QRIF, UK; final close 2 October 2023 at GBP 620m against a GBP 500m target; Cleve Hill, the Rassau and Thistle synchronous condensers, Uskmouth, Habitat Energy); the Valley of Fire Fund (closed 4 April 2024 at USD 600m; lead investor Blackstone Strategic Partners, cornerstone Ares Infrastructure Secondaries; bought 51% of Gemini and the Valley of Fire development portfolio from the first fund); the Net Zero Power Fund (NZPF, 'Quinbrook Infrastructure Partners III – Net Zero Power Fund'; final close announced 1 August 2024 at USD 3bn 'across the fund and co-investment vehicles' — Infrastructure Investor reports USD 2bn of fund and USD 1bn of co-investment; the Form D for the main vehicles shows USD 1,599,813,000 sold; Primergy, Rowan, Supernode, PurposeEnergy, Project Severn); and Quinbrook Renewables Impact Fund II (QRIF II, UK and Ireland; final close 8 July 2026 at GBP 587m against GBP 500m, hard cap GBP 1bn; Mallard Pass, Wexford, Aegis Energy, Project Norton).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Rowan Digital Infrastructure — the hyperscale developer Quinbrook founded, now shared with Blackstone",
+     "date": "",
+     "text": "On 9 April 2026 Quinbrook, Rowan and Blackstone announced that 'funds affiliated with Blackstone have acquired a significant minority stake in Rowan'; no party disclosed the percentage, the price or whether the figure was equity or enterprise value.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Rowan Digital Infrastructure — the hyperscale developer Quinbrook founded, now shared with Blackstone",
+     "date": "",
+     "text": "The Information, relayed by IREI and The Tech Capital, reported 49% at a company valuation of about USD 3.8bn excluding debt, with Quinbrook retaining operational control and Blackstone taking significant control rights — those figures are reported, not announced.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-27",
+     "text": "Rowan closes about USD 2.95bn of green financing for its 300 MW turnkey campus in Temple, Texas; USD 4.4bn raised under its Green Finance Framework in a year — Rowan borrows at a scale that makes the Blackstone entry a recapitalisation, not a rescue.",
+     "src": "https://rowan.com/rowan-closes-3b-green-financing-for-turnkey-hyperscale-campus-in-high-growth-texas-market/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-09",
+     "text": "Funds affiliated with Blackstone acquire 'a significant minority stake' in Rowan Digital Infrastructure; Quinbrook retains the majority and the chairmanship; Goldman Sachs, Evercore and Kirkland & Ellis advised Quinbrook — Partial monetisation of Quinbrook's data-centre platform; The Information's 49% / ~USD 3.8bn ex-debt figures are reported, not announced.",
+     "src": "https://www.quinbrook.com/news-insights/rowan-digital-infrastructure-announces-strategic-recapitalization/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-08-13",
+     "text": "University Pension Plan Ontario completes a co-investment in Rowan Digital Infrastructure (terms undisclosed) — The first outside equity in Rowan, twenty months before Blackstone.",
+     "src": "https://www.quinbrook.com/news-insights/upp-invests-in-data-center-developer-rowan-digital-infrastructure/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-04-04",
+     "text": "USD 600m Valley of Fire continuation fund closes with Blackstone Strategic Partners as lead investor and Ares as cornerstone, buying 51% of Gemini and the Valley of Fire development portfolio from the first fund — A GP-led secondary that realised the first fund and began the Blackstone relationship.",
+     "src": "https://www.quinbrook.com/news-insights/quinbrook-closes-600m-solarstorage-continuation-fund/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-27"
   },
   {
    "a": "blackstone",
@@ -16042,6 +16359,52 @@
   },
   {
    "a": "brookfield",
+   "b": "cpp-investments",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "CPP Investments and Brookfield Asset Management launched the Maple Fund for Canadian infrastructure and strategic industries on 15 September 2026; the two also agreed to buy LXP Industrial Trust (about USD 5.2bn) in July 2026.",
+     "context": "The joint release of 15 September 2026 describes up to C$50bn of equity, 50/50, for projects of more than C$5bn of equity across Canada, open to third-party co-investors and incremental to each partner's normal investing. CPP's Q1 fiscal 2027 release records the agreement with Brookfield to acquire LXP Industrial Trust. No Maple Fund investment had been announced by 3 October 2026.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-and-brookfield-launch-50-billion-maple-fund-to-pursue-large-scale-investments-across-canada-841350467.html",
+     "status": "announced",
+     "since": "2026-09",
+     "scale": "Maple Fund: up to C$50bn, 50/50, up to C$25bn each over five years"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It sold 2,660,479 Constellation shares on 2 June 2026 (Calpine proceeds; 1.3% retained) and launched a C$50bn Maple Fund with Brookfield for Canadian infrastructure on 15 September 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **Ottawa's domestic-investment pressure will shape CPP's next infrastructure allocations more than any US regulator will**: the Maple Fund (C$50bn with Brookfield) was launched on the day the CEO told the Canada Investment Summit CPP is 'not required to invest in Canada', the Senate Finance chair favours a legislated mandate, and Bill C-30 cuts base contributions from 2027.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Canadian programmes — the Maple Fund with Brookfield and the domestic-investment response",
+     "date": "",
+     "text": "On 15 September 2026, at the first Canada Investment Summit, CPP Investments and Brookfield Asset Management launched the Maple Fund: up to C$50bn of equity, 50/50, up to C$25bn each over an initial five years, for projects of more than C$5bn of equity in 'critical infrastructure and strategic industries across Canada', open to third-party co-investors and 'incremental to normal-course' investing.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-15",
+     "text": "CPP Investments and Brookfield launch the Maple Fund — up to C$50bn, 50/50, for Canadian infrastructure and strategic industries; Graham: 'We are not required to invest in Canada' — The voluntary answer to Ottawa's and the Senate's domestic-investment pressure.",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-and-brookfield-launch-50-billion-maple-fund-to-pursue-large-scale-investments-across-canada-841350467.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-15"
+  },
+  {
+   "a": "brookfield",
    "b": "crusoe",
    "curated": {
     "a": {
@@ -16137,6 +16500,27 @@
     }
    ],
    "last": "2026-03-11"
+  },
+  {
+   "a": "brookfield",
+   "b": "energy-capital-partners",
+   "evid": [
+    {
+     "where": "Capabilities · ECP flagship infrastructure funds (ECP III–VI)",
+     "date": "",
+     "text": "A specialist generation investor beside diversified infrastructure giants: IPE Real Assets ranks ECP 28th among infrastructure managers (infrastructure AUM EUR 21,837m, 2025 survey) against BlackRock/GIP, KKR, Brookfield and Macquarie in the top ten.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR, BlackRock, Brookfield and Blackstone on private-equity data-centre ownership; the KKR letter cites CyrusOne but names neither ECP nor the KKR–ECP partnership — ECP sits outside the oversight letters so far, though its partnership funds the campus the KKR letter's subject (CyrusOne) is building.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
   },
   {
    "a": "brookfield",
@@ -16470,6 +16854,52 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "brookfield",
+   "b": "quinbrook",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Brookfield Renewable bought Scout Clean Energy, the US wind platform Quinbrook built from a USD 6m start-up stake, for about USD 1bn in cash.",
+     "context": "Quinbrook's release of 30 September 2022 records binding contracts to sell Scout Clean Energy to Brookfield Renewable for 'c. US$1 billion in cash on completion' after Quinbrook's initial USD 6m investment in 2017 and USD 470m of further equity; Scout's own release adds a potential USD 350m of additional near-term investment by Brookfield. The consideration is stated as cash, not as an enterprise value. Brookfield appears in this corpus as a capital-segment incumbent; here it is the buyer of Quinbrook's first flagship exit.",
+     "source": "https://www.quinbrook.com/news-insights/quinbrook-sells-scout-clean-energy-to-brookfield-for-us1-billion/",
+     "status": "historical",
+     "since": "2022-09",
+     "scale": "Scout Clean Energy sold for about USD 1bn in cash (binding contracts 29 September 2022)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Realised exits: Scout Clean Energy to Brookfield (about USD 1bn cash, 2022), 49% of Gemini to APG (2022), Lockyer Energy to Stanwell (2025), Energy Locals to a Palisade consortium (2024), Flexitricity to Drax (GBP 36m enterprise value, completed 31 March 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Quinbrook as the capital segment's developer-manager: a challenger by scale beside Blackstone, Brookfield, Macquarie, MGX, BlackRock and KKR, but the only one of them whose funds originate, build and operate the storage and data-centre assets rather than buying platforms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For a storage or power-conversion vendor, Quinbrook is a procurement counterparty in Australia in a way Blackstone, Brookfield or KKR never are.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · US solar-plus-storage and realised platforms — Primergy, Gemini, Valley of Fire, GlidePath; exits (Scout, Lockyer, Energy Locals)",
+     "date": "",
+     "text": "Exits: Scout Clean Energy to Brookfield Renewable for about USD 1bn in cash (September 2022, from a USD 6m start-up stake plus USD 470m of equity); Lockyer Energy to the state-owned Stanwell Corporation (June 2025; 120 MW Stage 1, price undisclosed); Energy Locals and Energy Trade to a Palisade Impact consortium (November 2024).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2022-09"
   },
   {
    "a": "brookfield",
@@ -20389,6 +20819,66 @@
   },
   {
    "a": "catl",
+   "b": "quinbrook",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "CATL supplies the battery systems for all three Supernode stages under a long-term service agreement and co-developed the 8-hour EnerQB product with Quinbrook.",
+     "context": "CATL's and Quinbrook's joint release of 15 August 2026 records CATL's EnerC Plus containers for Supernode Stages 1–2 and TENER S for Stage 3, with a long-term service agreement, and says EnerQB is 'being considered for future stages'. Quinbrook's 5 March 2025 release announced EnerQB, an 8-hour long-duration battery co-developed with CATL and its affiliate Private Energy Partners and named for Quinbrook, with more than 3 GW planned across Quinbrook's Australian sites, the first at Supernode Stage 4. The procurement counterparty in these documents is Quinbrook, not a portfolio company.",
+     "source": "https://www.prnewswire.com/news-releases/catl-and-quinbrook-build-on-supernode-partnership-following-stage-2-and-stage-3-major-milestones-302852270.html",
+     "status": "active",
+     "since": "2024",
+     "scale": "EnerC Plus (Supernode Stages 1–2) and TENER S (Stage 3); EnerQB 8-hour co-development"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** Quinbrook is the one capital-segment investor in this corpus that builds the assets itself: a founder-owned, USD 8.95bn (regulatory AUM) value-add manager whose funds developed Supernode — 520 MW / 1,858 MWh operating in Brisbane since 28 July 2026 under Origin tolls, with a 260 MW / 1,216 MWh third stage financed for Stanwell and CATL as supplier across all three — and founded Rowan Digital Infrastructure, the US hyperscale developer in which funds affiliated with Blackstone acquired 'a significant minority stake' on 9 April 2026 (reported, not announced, at 49% and about USD 3.8bn excluding debt).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Through its development affiliate Private Energy Partners it is itself the procurer at Supernode — CATL's EnerC Plus and TENER S systems, GE Vernova power conversion, Powerlink connection — and it co-developed the 8-hour EnerQB product with CATL.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Supernode was 'developed by Quinbrook' with its affiliate Private Energy Partners; the supplier agreements (CATL's EnerC Plus and TENER S; GE Vernova power conversion) and the EnerQB product were signed and announced by Quinbrook itself, not by a portfolio company; the Gladstone hub MoU is Quinbrook's.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Supernode (Brisbane) — Quinbrook-developed BESS campus and hyperscale data-centre precinct",
+     "date": "",
+     "text": "CATL supplies EnerC Plus containers for Stages 1–2 and TENER S for Stage 3 under a long-term service agreement; GE Vernova supplied power conversion and SCADA for Stages 1–2.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-15",
+     "text": "CATL and Quinbrook confirm CATL as supplier across all three Supernode stages (EnerC Plus for Stages 1–2, TENER S for Stage 3) under a long-term service agreement; EnerQB 8-hour storage 'being considered for future stages' — Names the battery supplier to Quinbrook's flagship — a Chinese supply chain the US FEOC rules do not reach in Australia.",
+     "src": "https://www.prnewswire.com/news-releases/catl-and-quinbrook-build-on-supernode-partnership-following-stage-2-and-stage-3-major-milestones-302852270.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-05",
+     "text": "Quinbrook announces EnerQB, an 8-hour long-duration battery co-developed with CATL, with more than 3 GW planned across its Australian sites — A manager co-developing a battery product with the cell maker — the clearest buyer position in the capital segment.",
+     "src": "https://www.quinbrook.com/news-insights/quinbrook-to-build-advanced-long-duration-battery-storage-in-australia/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-15"
+  },
+  {
+   "a": "catl",
    "b": "rept",
    "curated": {
     "b": {
@@ -22457,6 +22947,23 @@
   },
   {
    "a": "constellation-energy",
+   "b": "cpp-investments",
+   "curated": {
+    "b": {
+     "type": "portfolio",
+     "note": "CPP received Constellation shares for its 15.75% of Calpine and sold part of the position in June 2026.",
+     "context": "CPP's release of 10 January 2025 agreed to sell its 15.75% of Calpine to Constellation for about USD 700m in cash and USD 1.9bn of Constellation stock; Constellation's registration rights agreement of 7 January 2026 names Canada Pension Plan Investment Board as a party. In the 2 June 2026 underwritten offering CPPIB sold 2,660,479 shares (plus up to 326,516 option shares) at USD 281 public; CPP's Q1 fiscal 2027 release records 'net proceeds of US$742 million' for a 0.7% stake and says 'we continue to hold a 1.3% stake'. The 13F for 30 June 2026 lists 5,012,169 shares worth USD 1,244.9m.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-863-6-billion-at-first-quarter-fiscal-2027-819704344.html",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "1.3% after selling 2,660,479 shares (USD 742m net) on 2 June 2026; 5,012,169 shares at 30 June 2026 (13F)"
+    }
+   },
+   "evid": [],
+   "last": "2026-01"
+  },
+  {
+   "a": "constellation-energy",
    "b": "cyrusone",
    "curated": {
     "a": {
@@ -22502,6 +23009,23 @@
     }
    ],
    "last": "2026-02-09"
+  },
+  {
+   "a": "constellation-energy",
+   "b": "energy-capital-partners",
+   "curated": {
+    "b": {
+     "type": "portfolio",
+     "note": "ECP sold Calpine to Constellation (closed 7 January 2026) and received Constellation shares as two-thirds of its proceeds; it remains a 4.0% holder under a 2027 lock-up.",
+     "context": "Constellation's completion release of 7 January 2026 and the registration rights agreement filed the same day name ECP, CPP Investments and Access Industries as the Calpine holders. ECP ControlCo's Schedule 13G reported 22,043,724 shares (6.1%) at the close. In the underwritten offering of 2 June 2026 the Calpine holders sold 11,000,000 shares at USD 281 (USD 279 to the underwriters) and Constellation repurchased 2,000,000 for about USD 558m; ECP's 13G/A of 7 August 2026 shows 14,443,227 shares (4.0%). Bridgepoint states that 35% of the tranche released in 2026 was sold and the 2027 tranche is held. Bridgepoint states USD 33bn of enterprise value at closing; Constellation's 2025 announcement stated 50 million shares, about USD 4.5bn of cash and about USD 12.7bn of assumed net debt.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226036598/primary_doc.xml",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "14,443,227 shares (4.0%) after selling about 7.6m in June 2026"
+    }
+   },
+   "evid": [],
+   "last": "2026-01"
   },
   {
    "a": "constellation-energy",
@@ -23375,6 +23899,38 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "coreweave",
+   "b": "cpp-investments",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "CPP's Credit Investments department is a lender to CoreWeave.",
+     "context": "CPP's fiscal 2025 release records a USD 250m loan facility secured on GPU servers to CoreWeave; its Q1 fiscal 2027 release records a USD 150m delayed-draw term loan to a CoreWeave special-purpose vehicle for four data centres in the US and Canada. CPP holds no equity in CoreWeave per its releases.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-863-6-billion-at-first-quarter-fiscal-2027-819704344.html",
+     "status": "active",
+     "since": "2025",
+     "scale": "USD 250m GPU-server loan facility (fiscal 2025); USD 150m delayed-draw term loan for four data centres (Q1 fiscal 2027)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a seller, CPP is the counterparty that decides whether a platform is funded for its next build — and increasingly the lender too, through Real Assets Credit (a C$225m construction loan for a Cambridge, Ontario hyperscale data centre; CoreWeave facilities).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Credit Investments — including Real Assets Credit, the data-centre lender",
+     "date": "",
+     "text": "Named AI-infrastructure lending: a C$225m commitment, 50% of a construction loan with Deutsche Bank, for a 54 MW hyperscale data-centre expansion in Cambridge, Ontario pre-leased to a GPU-focused AI cloud provider (July 2025); a USD 250m GPU-server loan facility to CoreWeave (fiscal 2025) and a USD 150m delayed-draw term loan for four CoreWeave data centres (Q1 fiscal 2027); investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl (Q2 fiscal 2026); a USD 1.5bn separately managed account and a USD 1bn financing with Blackstone's private-credit platform; C$1.75bn supporting EQT's AI-infrastructure strategy (Q1 fiscal 2027).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
   },
   {
    "a": "coreweave",
@@ -24688,6 +25244,444 @@
    "last": "2024"
   },
   {
+   "a": "cpp-investments",
+   "b": "energy-capital-partners",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "CPP held 15.75% of Calpine in the ECP-led consortium and exited beside ECP into Constellation shares.",
+     "context": "Constellation's January 2025 announcement names 'Calpine's significant shareholders, including ECP, Canada Pension Plan Investments (CPP Investments) and Access Industries'; CPP's own release of the same day records its 15.75% stake. Both sold Constellation shares in the 2 June 2026 offering (ECP about 7.6m, CPP 2,660,479). The `energy-capital-partners` dossier carries the consortium from ECP's side.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-to-sell-stake-in-calpine-corporation-809390217.html",
+     "status": "historical",
+     "since": "2018",
+     "scale": "Calpine co-owners (ECP-led consortium) until 7 January 2026"
+    },
+    "b": {
+     "type": "partner",
+     "note": "CPP Investments was a Calpine co-owner in the ECP-led consortium and received Constellation shares beside ECP at the January 2026 close.",
+     "context": "Constellation's 10 January 2025 announcement names 'Calpine's significant shareholders, including ECP, Canada Pension Plan Investments (CPP Investments) and Access Industries'; the registration rights agreement of 7 January 2026 names Canada Pension Plan Investment Board as a party. In the 2 June 2026 offering CPP Investments sold 2,660,479 shares (plus up to 326,516 option shares) beside ECP's roughly 7.6m. The two also sit on opposite sides of nothing else in this corpus.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069201/tm2615509-1_424b4.htm",
+     "status": "historical",
+     "since": "2018",
+     "scale": "co-owners of Calpine until 7 January 2026; co-sellers of Constellation shares on 2 June 2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Power generation platforms — the realised set (Calpine, Cornerstone, Symmetry, Terra-Gen) and the listed stakes they left",
+     "date": "",
+     "text": "Calpine (about 23 GW of gas, geothermal, storage and solar, held through ECP III/IV vehicles, the 2022 Calpine Continuation and Rollover Funds and co-investors including CPP Investments and Access Industries) was sold to Constellation: agreed 10 January 2025 for 50 million Constellation shares, about USD 4.5bn of cash and about USD 12.7bn of assumed net debt (an equity purchase price of about USD 16.4bn per Constellation), completed 7 January 2026; Bridgepoint states USD 33bn of enterprise value at closing and that two-thirds of proceeds came as Constellation shares under lock-ups expiring 30 June 2026 (50%) and 30 June 2027 (50%).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-02",
+     "text": "Calpine's former holders sell 11,000,000 Constellation shares at USD 281 (USD 3.09bn gross); Constellation repurchases 2,000,000 for about USD 558m; ECP sells about 7.6m shares, CPP Investments 2,660,479 — First monetisation of the Calpine consideration, four weeks before the first lock-up expiry.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069201/tm2615509-1_424b4.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-07",
+     "text": "Constellation completes the Calpine acquisition from ECP; registration rights agreement signed with ECP, CPP Investments and Access Industries; share lock-ups to 30 June 2026 and 30 June 2027 — Bridgepoint calls it the largest and most profitable exit in private-equity history; ECP's 6.1% of Constellation is the residue.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926001780/tm2532248d1_ex99-1.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-02"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "equinix",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Equinix is CPP's partner in the US xScale hyperscale venture and its co-owner of atNorth, completed 2 September 2026.",
+     "context": "Equinix's 8-K of 1 October 2024 records the joint venture with CPP Investments and GIC to raise more than USD 15bn and build more than 1.5 GW of US xScale capacity; CPP states an initial equity allocation of up to USD 2.4bn and that it 'will control a 37.5% equity interest'. The atNorth agreement of 27 February 2026 gave CPP about 60% for about USD 1.6bn and Equinix about 40%; the completion release of 2 September 2026 states CPP c. 51% (USD 1.3bn), Equinix c. 34% (USD 895m) and Partners Group c. 10% (USD 260m) at a USD 4bn enterprise value with USD 4.1bn of financing. The `equinix` dossier carries the agreement figures (Equinix ~40%); the closing figures supersede them.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-and-equinix-complete-atnorth-acquisition-to-support-growth-of-leading-nordic-data-center-platform-834078322.html",
+     "status": "active",
+     "since": "2024-10",
+     "scale": "xScale US JV: CPP 37.5% controlling interest (>USD 15bn); atNorth: CPP c. 51%, Equinix c. 34%"
+    },
+    "b": {
+     "type": "partner",
+     "note": "CPP Investments is Equinix's partner in the >$15B US xScale joint venture and its co-owner of atNorth, completed 2 September 2026.",
+     "context": "Equinix's October 2024 release records the xScale JV with CPP Investments and GIC (>$15B, >1.5 GW; CPP 37.5%, GIC 37.5%, Equinix 25%). The atNorth agreement of 27 February 2026 gave Equinix ~40% and CPP ~60% at a $4B EV; the completion release of 2 September 2026 states Equinix c. 34% ($895M), CPP c. 51% ($1.3B) and Partners Group c. 10% ($260M) after rollover. Recorded here at v8 after the `cpp-investments` dossier was written (step 7 reconciliation, 2026-10-03).",
+     "source": "https://newsroom.equinix.com/2026-09-02-CPP-Investments-and-Equinix-Complete-atNorth-Acquisition-to-Support-Growth-of-Leading-Nordic-Data-Center-Platform",
+     "status": "active",
+     "since": "2024-10",
+     "scale": "xScale US JV: CPP 37.5% / GIC 37.5% / Equinix 25%; atNorth: CPP c. 51%, Equinix c. 34%"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "51% controlling owner of atNorth since 2 September 2026 (USD 1.3bn; Equinix c.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "10%; USD 4bn enterprise value — the 60% / USD 1.6bn signing term was re-cut by rollover), a 37.5% controlling partner in Equinix's more-than-USD 15bn US xScale venture, 12% of AirTrunk beside Blackstone and 50% of Inkia (Peru, USD 3.4bn EV, closed 8 June 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The buyers are its platforms — Pattern's project companies, Minnesota Power's rate base, atNorth's campuses, the xScale JV's builds — and the strategics it co-owns with (Equinix, GIP, KKR, Blackstone).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For a seller that means CPP is rarely the decision-maker on a campus's equipment; Equinix, Goodman, EdgeConneX and Blackstone are.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Total Fund Management, Capital Markets & Factor Investing, Active Equities and Private Equity",
+     "date": "",
+     "text": "The 13F for 30 June 2026 lists 1,694 US positions worth USD 180.8bn, including Constellation (USD 1,245m), Equinix (USD 1,164m), GE Vernova (USD 705m), NextEra (USD 390m) and Vistra (USD 389m).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-02",
+     "text": "atNorth acquisition completed: CPP Investments c. 51% control for USD 1.3bn, Equinix c. 34% (USD 895m), Partners Group re-invests for c. 10% (USD 260m); USD 4bn enterprise value; USD 4.1bn financing — The 60% / USD 1.6bn signing term was re-cut by seller and management rollover — CPP's first controlling European data-centre platform.",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-and-equinix-complete-atnorth-acquisition-to-support-growth-of-leading-nordic-data-center-platform-834078322.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-27",
+     "text": "CPP Investments and Equinix agree to acquire atNorth from Partners Group at a USD 4bn enterprise value — CPP about USD 1.6bn for about 60%, Equinix about 40%; about 800 MW installed and a further 1 GW of secured power — The signing terms, later re-cut at close.",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-and-equinix-to-acquire-atnorth-for-us-4-billion-805897687.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The capacity engine is the >$15B US xScale JV with CPP Investments and GIC (>1.5 GW across >100 MW campuses) plus the $4B atNorth Nordic acquisition; the power stack includes the colo industry's largest fuel-cell fleet (Bloom, >100 MW across 19+ sites), four advanced-nuclear agreements, and take-or-pay utility structures.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · xScale hyperscale program & atNorth",
+     "date": "",
+     "text": "The AI-capacity vehicle: a >$15B US JV (CPP Investments 37.5% / GIC 37.5% / Equinix 25%) building >1.5 GW across >100 MW campuses — nearly tripling the program's capital; >725 MW at full buildout pre-2024 plus the new US wave; Hampton, GA contributed January 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · xScale hyperscale program & atNorth",
+     "date": "",
+     "text": "atNorth (agreed February 2026 at a $4B EV with CPP Investments; completed 2 September 2026 with Equinix at c.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-02",
+     "text": "atNorth acquisition completed: Equinix c. 34% ($895M), CPP Investments c. 51% control ($1.3B), Partners Group re-invests for c. 10% ($260M); $4B EV; $4.1B financing package — The signing split (CPP ~60% / Equinix ~40%) was re-cut at close by Partners Group's and management's rollover — Equinix ends with a third of the platform rather than four-tenths.",
+     "src": "https://newsroom.equinix.com/2026-09-02-CPP-Investments-and-Equinix-Complete-atNorth-Acquisition-to-Support-Growth-of-Leading-Nordic-Data-Center-Platform",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-27",
+     "text": "atNorth acquisition agreed with CPP Investments ($4B EV; Equinix ~40% at signing, c. 34% at the 2 September 2026 close) — ~800 MW installed Nordic high-density platform with 1 GW secured power — Buys liquid-cooling-native capacity in power-rich Nordic markets — an end-run around the power-constrained core metros.",
+     "src": "https://investor.equinix.com/news-events/press-releases/detail/1099/cpp-investments-and-equinix-to-acquire-atnorth-for-us4",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-01",
+     "text": ">$15B US xScale JV formed with CPP Investments and GIC (Equinix 25%) targeting >1.5 GW across >100 MW campuses — Nearly tripled the xScale program's capital — the off-balance-sheet vehicle that makes the hyperscale push financeable at REIT credit metrics.",
+     "src": "https://newsroom.equinix.com/2024-10-01-Equinix-Agrees-to-Form-Greater-Than-15B-JV-to-Expand-Hyperscale-Data-Centers-in-the-U-S-and-Support-Growing-AI-and-Cloud-Innovation",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-02"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "ge-vernova",
+   "evid": [
+    {
+     "where": "Capabilities · Total Fund Management, Capital Markets & Factor Investing, Active Equities and Private Equity",
+     "date": "",
+     "text": "The 13F for 30 June 2026 lists 1,694 US positions worth USD 180.8bn, including Constellation (USD 1,245m), Equinix (USD 1,164m), GE Vernova (USD 705m), NextEra (USD 390m) and Vistra (USD 389m).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cpp-investments",
+   "b": "grid-united",
+   "evid": [
+    {
+     "where": "Capabilities · North Plains Connector — 3,000 MW HVDC link between the Western Interconnection, MISO and SPP (flagship, permitting)",
+     "date": "",
+     "text": "Its weakness is the same as its design: nothing is binding until permits are in hand, and the partner set has changed control (ALLETE to CPP Investments and GIP, December 2025) and is mid-merger (NorthWestern with Black Hills) before a definitive agreement exists.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2023-12-21",
+     "text": "ALLETE and North Plains Connector LLC sign development agreements; ALLETE to pursue 'at least 35%' ownership and operate the line — The one binding relationship on the project — ALLETE has since been taken private by CPP Investments and GIP (December 2025), the same CPP that controls Pattern Energy.",
+     "src": "https://northplainsconnector.com/allete-grid-united-sign-development-agreements-for-advancing-new-hvdc-transmission-line-in-north-dakota-and-montana/",
+     "from": "b"
+    }
+   ],
+   "last": "2023-12-21"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "CPP is the indirect co-investor in the KKR-led purchase of a 45% stake and the GP interest in Sempra Infrastructure Partners; CPP also committed USD 750m to KKR Global Infrastructure Investors V.",
+     "context": "CPP's release of 23 September 2025 records a definitive agreement to acquire 'an approximate 13% indirect equity interest … for approximately US$3.0 billion, alongside affiliates of KKR', with closing expected in Q2–Q3 2026. Sempra's 10-Q filed 6 August 2026 defines 'KKR Partners' as KKR affiliates and 'indirect co-investor Canada Pension Plan Investment Board', a base price of about USD 9.99bn for 45% of the Class A units and the GP interest, a ticking fee from 1 April 2026, a USD 414m reverse termination fee and a post-close split of KKR Partners 65%, Sempra 25%, ADIA 10%; it still 'expect[s] this sale to close in the third quarter of 2026'. No completion 8-K appeared through 21 August 2026. CPP's Q2 fiscal 2026 release also records USD 750m to KKR Global Infrastructure Investors V.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-to-acquire-stake-in-sempra-infrastructure-partners-832131905.html",
+     "status": "announced",
+     "since": "2025-09",
+     "scale": "Sempra Infrastructure Partners: CPP ~13% indirect for ~USD 3.0bn beside KKR's 65% consortium — signed, not closed in filings through 21 August 2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its ~13% indirect interest in Sempra Infrastructure Partners beside KKR (USD 3.0bn) had not closed in any filing through 21 August 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The buyers are its platforms — Pattern's project companies, Minnesota Power's rate base, atNorth's campuses, the xScale JV's builds — and the strategics it co-owns with (Equinix, GIP, KKR, Blackstone).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **the Sempra Infrastructure Partners stake is the position most likely to be reported wrongly**, because three documents give three framings: CPP (~13% indirect for ~USD 3.0bn), Sempra's 10-Q (a KKR-led 'KKR Partners' buying 45% for ~USD 9.99bn, CPPIB an 'indirect co-investor') and the corpus's KKR dossier (USD 10bn for 45%, USD 31.7bn EV).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-14",
+     "text": "Q2 fiscal 2026: net assets C$777.5bn; investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl; USD 750m to KKR Global Infrastructure Investors V",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-23",
+     "text": "Agreement to acquire an approximate 13% indirect equity interest in Sempra Infrastructure Partners for about USD 3.0bn alongside KKR affiliates; close expected Q2–Q3 2026 — LNG, pipelines and Mexican renewables; KKR's consortium takes 65% for about USD 10bn.",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-to-acquire-stake-in-sempra-infrastructure-partners-832131905.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-23",
+     "text": "Sempra agrees to sell 45% of Sempra Infrastructure Partners to KKR affiliates with CPP Investments for USD 10bn (USD 31.7bn EV) — On closing a KKR-led consortium holds 65%; Sempra expected completion in Q3 2026 and no completion notice had been found by 26 September.",
+     "src": "https://semprainfrastructure.com/news-and-events/news-releases/sempra-announces-strategic-transactions-advancing-goal-of-building-leading-u-s-utility-growth-business/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-14"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "macquarie",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Macquarie Asset Management was the seller of AirTrunk to Blackstone and CPP Investments.",
+     "context": "CPP's September 2024 release states the acquisition is 'from Macquarie Asset Management and other investors including PSP Investments'; completion followed on 23 December 2024 after FIRB approval. The `macquarie` dossier records the same sale from the seller's side.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-announces-investment-in-asia-pacific-data-centre-operator-airtrunk-879569570.html",
+     "status": "historical",
+     "since": "2024-09",
+     "scale": "AirTrunk bought from Macquarie Asset Management and PSP (EV >A$24bn)"
+    }
+   },
+   "evid": [],
+   "last": "2024-09"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "mainspring-energy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "CPP Investments joined Mainspring Energy's Series E (USD 290m, September 2022) as a new investor.",
+     "context": "Mainspring's release of 21 September 2022 records the Series E final close at USD 290m led by Lightrock with CPP Investments among the new investors. CPP's own channels do not mention the position, and CPP is not named in the April 2025 Series F list. The `mainspring-energy` dossier lists CPP among its investors.",
+     "source": "https://www.prnewswire.com/news-releases/mainspring-closes-series-e-at-290-million-301626840.html",
+     "status": "active",
+     "since": "2022-09",
+     "scale": "new investor in the USD 290m Series E final close"
+    }
+   },
+   "evid": [],
+   "last": "2022-09"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "pattern-energy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "CPP took Pattern Energy private in 2020 (USD 26.75 a share, about USD 6.1bn enterprise value including net debt) and in April 2026 folded its wholly owned Cordelio Power into Pattern for shares.",
+     "context": "The joint release of 4 November 2019 records the all-cash agreement at USD 26.75 per share, 'implying an enterprise value of approximately $6.1 billion, including net debt'. CPP's Q3 fiscal 2026 release (13 February 2026) states that the share-based Cordelio sale 'will increase our existing ownership stake in Pattern Energy, together with other institutional investors, to 69.1% upon closing' — the percentage is the combined institutional stake, not CPP alone; Pattern's completion release of 2 April 2026 calls CPP 'the majority shareholder'. A consortium headed by APG (for ABP) and Australian Retirement Trust bought Riverstone's stake in 2025 and is described as an owner 'alongside' CPP and management.\n\nThe `pattern-energy` dossier carries the same 69.1% sentence and the same ambiguity; this dossier adds CPP's own wording.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-780-7-billion-at-third-quarter-fiscal-2026-832201322.html",
+     "status": "active",
+     "since": "2020-03",
+     "scale": "'the majority shareholder'; 69.1% together with other institutional investors after Cordelio (2 April 2026)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** CPP Investments is the corpus's largest single pool of capital that signs for no equipment and the one with the most control positions behind the buyers: it is 'the majority shareholder' of Pattern Energy (69.1% together with other institutional investors after folding its wholly owned Cordelio into Pattern on 2 April 2026), 40% owner of ALLETE and Minnesota Power with GIP (closed 15 December 2025 at USD 67 a share, USD 6.2bn including debt), the c.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Pattern Energy's next step — a SunZia-scale financing, a sale, or an IPO:* any would test the 'no exit clock' judgment.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-02",
+     "text": "Pattern Energy completes the acquisition of Cordelio Power from CPP Investments for shares — 1,550 MW of operating and in-construction projects and most of Cordelio's US pipeline; Pattern now nearly 12,000 MW — CPP's wholly owned Cordelio folds into Pattern, lifting CPP's stake 'together with other institutional investors' to 69.1%.",
+     "src": "https://patternenergy.com/pattern-energy-announces-completion-of-acquisition-of-cordelio-power/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-13",
+     "text": "Q3 fiscal 2026: net assets C$780.7bn; definitive agreement to sell Cordelio Power to Pattern — 'this share-based transaction will increase our existing ownership stake in Pattern Energy, together with other institutional investors, to 69.1% upon closing' — The only ownership percentage on the Pattern record, written by CPP.",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-780-7-billion-at-third-quarter-fiscal-2026-832201322.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-16",
+     "text": "A consortium headed by APG (for ABP) and Australian Retirement Trust agrees to buy Riverstone's stake in Pattern Energy, becoming owners 'alongside Canada Pension Plan Investment Board and Pattern management' — The co-owners behind 'together with other institutional investors'.",
+     "src": "https://www.dutchnews.nl/businesswire/pattern-energy-announces-equity-investment-from-consortium-headed-by-apg-and-art/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** Pattern Energy is the largest privately owned renewables and transmission developer in North America by its own account and, since 18 June 2026, the owner-operator of SunZia — 3,650 MW of New Mexico wind and the 550-mile, ±525 kV, 3,000 MW voltage-source HVDC line that carries it to Arizona and California, financed on USD 11 billion of non-recourse debt and about USD 2.7 billion of structured and preferred equity from HASI and Nuveen; its ownership moved twice in twelve months — an APG/ABP and Australian Retirement Trust consortium bought Riverstone's founding stake (closed 9 June 2025) and the share-based purchase of CPP Investments' Cordelio Power (closed 2 April 2026) took CPP-led institutional ownership to 69.1% by CPP's own statement — and no sale, secondary or IPO process is on the record, while the company publishes no revenue, earnings or leverage figure.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "in 2013 (USD 352 million IPO); taken private by CPP Investments on 16 March 2020 at USD 26.75 a share (enterprise value about USD 6.1 billion) and recombined with the development company.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess that Pattern is now a CPP Investments platform in substance — consolidating the fund's other North American renewables holdings (Cordelio) into it for shares — and that no exit process is under way.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-13",
+     "text": "CPP Investments' quarterly release: the Cordelio sale 'will increase our existing ownership stake in Pattern Energy, together with other institutional investors, to 69.1% upon closing' — The only ownership percentage on the record, and ambiguous — CPP alone or CPP with APG/ABP and ART; management holds the balance either way.",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-780-7-billion-at-third-quarter-fiscal-2026-832201322.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-06",
+     "text": "Definitive agreement to acquire Cordelio Power from CPP Investments in a share-based transaction; Cordelio brings a 1,860 MW managed portfolio and an 18 GW US pipeline, of which Pattern takes about 1,550 MW and 'the majority'; advisers Evercore, Skadden and Osler (Pattern), JPMorgan (Cordelio) — About 310 MW and part of the pipeline stayed behind; the deal was priced in Pattern shares, so its value is unknowable from outside.",
+     "src": "https://patternenergy.com/pattern-energy-announces-agreement-to-acquire-cordelio-power/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-09",
+     "text": "A consortium headed by APG Asset Management (for ABP) and Australian Retirement Trust closes on Riverstone Holdings' equity stake; the consortium 'is now an owner in Pattern Energy alongside Canada Pension Plan Investment Board (CPP Investments) and Pattern management'; terms undisclosed — The founding private-equity backer is out after sixteen years and two pension funds are in — Pattern is now entirely long-horizon institutional and management money.",
+     "src": "https://patternenergy.com/pattern-energy-announces-closing-of-equity-investment-from-consortium-headed-by-apg-and-art/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-02"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "CPP committed to Vantage Data Centers and to Yondr in fiscal 2026.",
+     "context": "CPP's fiscal 2026 results release lists 'a combined US$310 million to U.S.-based Vantage Data Centers … as well as an additional US$200 million commitment across Vantage and Yondr'. No stake percentage is stated.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-793-3-billion-at-2026-fiscal-year-end-814459989.html",
+     "status": "active",
+     "since": "2025",
+     "scale": "USD 310m committed to Vantage Data Centers plus USD 200m across Vantage and Yondr (fiscal 2026)"
+    }
+   },
+   "evid": [],
+   "last": "2025"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "vistra",
+   "evid": [
+    {
+     "where": "Capabilities · Total Fund Management, Capital Markets & Factor Investing, Active Equities and Private Equity",
+     "date": "",
+     "text": "The 13F for 30 June 2026 lists 1,694 US positions worth USD 180.8bn, including Constellation (USD 1,245m), Equinix (USD 1,164m), GE Vernova (USD 705m), NextEra (USD 390m) and Vistra (USD 389m).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cpp-investments",
+   "b": "voltagrid",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "CPP Investments is named among VoltaGrid's institutional equity investors in two early rounds, before Blackstone's 2026 round.",
+     "context": "VoltaGrid's release on its USD 72.6m (C$92.5m) equity commitment names CPP Investments with Carnelian, Pilot Company, Walter Ventures and Longbow (the page is dated 2020 while The Logic dates the round to 2021 — unresolved), and InnovationMap records CPP in the USD 150m round of October 2022. CPP's own releases and quarterly summaries do not mention VoltaGrid; the `voltagrid` and `blackstone` dossiers carry the same early-backer list.",
+     "source": "https://voltagrid.com/voltagrid-closes-73-million-equity-commitment-from-institutional-investors",
+     "status": "active",
+     "since": "2021",
+     "scale": "investor in the USD 72.6m and USD 150m equity rounds (stake undisclosed)"
+    }
+   },
+   "evid": [],
+   "last": "2021"
+  },
+  {
    "a": "crrc-zhuzhou",
    "b": "great-power",
    "curated": {
@@ -24924,6 +25918,27 @@
      "where": "Key Judgments",
      "date": "",
      "text": "DPR's counter is to dominate the neocloud tier (Crusoe/Stargate) where single-lead awards at gigawatt scale are still available.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "crusoe",
+   "b": "energy-capital-partners",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Bridgepoint's attribution of ECP V carry to ProEnergy's turbine order book; the Crusoe 650 MW order; Bloomberg's September 2026 report.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · ProEnergy — majority-owned aeroderivative turbine and bridge-power platform",
+     "date": "",
+     "text": "ProEnergy's PE6000 is a 50 MW aeroderivative unit it describes as interchangeable with the LM6000PC; in April 2026 it announced a 650 MW, thirteen-unit power solution for Crusoe and the divestiture of its Braes Bayou and Brotman generating stations to STEC.",
      "src": "",
      "from": "b"
     }
@@ -26989,6 +28004,73 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "energy-capital-partners",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "CyrusOne is the developer of DFW10, the first campus of the KKR–ECP partnership, under a 190 MW agreement with Calpine.",
+     "context": "CyrusOne's 30 July 2025 release describes a 190 MW agreement with Calpine for a hyperscale campus adjacent to the Thad Hill Energy Center, a USD 1.2bn first phase and operations in Q4 2026; the ECP–KKR release the same day states initial IT capacity of 144 MW and 'total investment approaching $4 billion'. Neither release gives stake percentages. A project tracker records the first building topping out in March 2026; no first-party status update has followed, and Calpine passed to Constellation on 7 January 2026.",
+     "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "190 MW campus; 144 MW initial IT; USD 1.2bn first phase"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its data-centre exposure runs through the USD 50bn partnership with KKR, whose first campus (CyrusOne DFW10, Bosque County, Texas, 190 MW) is due to operate in Q4 2026 beside a Calpine plant that now belongs to Constellation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: in nine months it converted Calpine (USD 33bn EV at close per Bridgepoint), Cornerstone (USD 3,542m) and Symmetry into cash and listed stock, while its only data-centre position is a programme stake in one CyrusOne campus whose power counterparty it no longer owns.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**INDICATORS TO WATCH** — *Q4 2026, CyrusOne DFW10 operations in Bosque County:* a first-party operational release would confirm the KKR–ECP thesis; a slip would indicate the partnership's first campus is behind.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Strategic partnerships — KKR (USD 50bn, data centres and power) and ADQ (USD 25bn, US generation)",
+     "date": "",
+     "text": "Its first investment, announced 30 July 2025, is a 190 MW hyperscale campus in Bosque County, Texas (CyrusOne's DFW10), built with CyrusOne beside Calpine's Thad Hill Energy Center under a long-term dedicated power contract, with initial IT capacity of 144 MW, a USD 1.2bn first phase and 'total investment approaching $4 billion' at full build-out; operations are expected in Q4 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Strategic partnerships — KKR (USD 50bn, data centres and power) and ADQ (USD 25bn, US generation)",
+     "date": "",
+     "text": "The partnership is the mirror image of KKR's Helix vehicle: KKR brings landlords (CyrusOne, STTGDC), ECP brings generation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR, BlackRock, Brookfield and Blackstone on private-equity data-centre ownership; the KKR letter cites CyrusOne but names neither ECP nor the KKR–ECP partnership — ECP sits outside the oversight letters so far, though its partnership funds the campus the KKR letter's subject (CyrusOne) is building.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-30",
+     "text": "ECP and KKR announce the first investment of their USD 50bn partnership: a 190 MW hyperscale campus in Bosque County, Texas, built with CyrusOne beside Calpine's Thad Hill Energy Center, 144 MW of initial IT capacity, total investment approaching USD 4bn, operations expected Q4 2026 — The partnership's thesis made concrete: a landlord's building on a generator's site.",
+     "src": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
   },
   {
    "a": "cyrusone",
@@ -33130,6 +34212,377 @@
    "last": ""
   },
   {
+   "a": "energy-capital-partners",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "KKR and ECP announced a USD 50bn partnership for data centres with power generation on 30 October 2024; its first campus is CyrusOne's DFW10 in Bosque County; the two also bid jointly for DCC Energy plc in July 2026.",
+     "context": "KKR's 30 October 2024 release states that KKR funds the partnership from its infrastructure, real estate and insurance strategies and ECP 'from existing and future infrastructure capital pools'. The first investment, announced 30 July 2025, is a 190 MW hyperscale campus in Bosque County, Texas, built with CyrusOne beside Calpine's Thad Hill plant, with operations expected in Q4 2026.\n\nOn 27 July 2026 Dragon Bidco, indirectly wholly owned by ECP and KKR funds, announced a recommended cash offer for DCC Energy plc of up to 6,797.22p per share, about GBP 5.75bn of equity; 78.09% of scheme shares approved it on 18 September 2026. The ECP/KKR split of the equity is not disclosed in the Rule 2.7 announcement.",
+     "source": "https://media.kkr.com/news-details?news_id=8f924dd6-41ea-480d-9a96-d854c7232bbc",
+     "status": "active",
+     "since": "2024-10",
+     "scale": "USD 50bn strategic partnership; GBP 5.75bn DCC Energy offer"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is deploying that fund into regulated and contracted assets — Grain LNG (50/50 with Centrica), EnergySolutions (agreed 6 April 2026, pending) and the GBP 5.75bn DCC Energy take-private with KKR (approved by 78.09% of scheme shares on 18 September 2026, completion expected Q1 2027).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its data-centre exposure runs through the USD 50bn partnership with KKR, whose first campus (CyrusOne DFW10, Bosque County, Texas, 190 MW) is due to operate in Q4 2026 beside a Calpine plant that now belongs to Constellation.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The KKR–ECP partnership pairs KKR's data-centre platforms with ECP's generation, and its first campus sits on a Calpine site; the ADQ–ECP partnership (USD 25bn, 25 GW) is built to develop new gas generation for the same load.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**INDICATORS TO WATCH** — *Q4 2026, CyrusOne DFW10 operations in Bosque County:* a first-party operational release would confirm the KKR–ECP thesis; a slip would indicate the partnership's first campus is behind.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ECP flagship infrastructure funds (ECP III–VI)",
+     "date": "",
+     "text": "A specialist generation investor beside diversified infrastructure giants: IPE Real Assets ranks ECP 28th among infrastructure managers (infrastructure AUM EUR 21,837m, 2025 survey) against BlackRock/GIP, KKR, Brookfield and Macquarie in the top ten.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Strategic partnerships — KKR (USD 50bn, data centres and power) and ADQ (USD 25bn, US generation)",
+     "date": "",
+     "text": "The KKR–ECP strategic partnership (30 October 2024) commits to invest USD 50bn in data centres together with power generation and transmission; KKR funds it from infrastructure, real estate and insurance accounts, ECP 'from existing and future infrastructure capital pools', and the parties cite more than 8 GW of existing data-centre pipeline and 100 GW of operating and development-ready generation.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Strategic partnerships — KKR (USD 50bn, data centres and power) and ADQ (USD 25bn, US generation)",
+     "date": "",
+     "text": "The partnership is the mirror image of KKR's Helix vehicle: KKR brings landlords (CyrusOne, STTGDC), ECP brings generation.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Regulated and contracted platforms — Atlantica, Grain LNG, Convergent, and the pending EnergySolutions and DCC Energy acquisitions",
+     "date": "",
+     "text": "DCC Energy plc is the subject of a recommended cash offer by Dragon Bidco (indirectly wholly owned by ECP and KKR funds) of up to 6,797.22p per share, about GBP 5.75bn of equity value, approved by 78.09% of scheme shares on 18 September 2026 and expected to become effective in Q1 2027 subject to Irish High Court sanction and EU merger and foreign-subsidies clearances.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-18",
+     "text": "DCC Energy shareholders approve the Dragon Bidco (ECP and KKR) scheme — 78.09% of scheme shares in favour; completion expected Q1 2027 subject to Irish High Court sanction — ECP VI's largest named deployment clears its shareholder gate with notable dissent (21.9% against); EC merger and foreign-subsidies clearances outstanding.",
+     "src": "https://www.investegate.co.uk/announcement/rns/dcc-energy-plc--dcc/results-of-court-and-general-meetings/9780562",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-27",
+     "text": "Rule 2.7 announcement: Dragon Bidco (ECP and KKR) to acquire DCC Energy plc for up to 6,797.22p per share (about GBP 5.75bn equity value), a 24% premium, with debt from twelve banks — ECP's first FTSE take-private and its second large deal with KKR; UK and Irish downstream energy distribution is far from the US merchant-power franchise.",
+     "src": "https://www.investegate.co.uk/announcement/rns/dcc-energy-plc--dcc/recommended-acquisition-of-dcc-energy-plc/9687627",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR, BlackRock, Brookfield and Blackstone on private-equity data-centre ownership; the KKR letter cites CyrusOne but names neither ECP nor the KKR–ECP partnership — ECP sits outside the oversight letters so far, though its partnership funds the campus the KKR letter's subject (CyrusOne) is building.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-30",
+     "text": "ECP and KKR announce the first investment of their USD 50bn partnership: a 190 MW hyperscale campus in Bosque County, Texas, built with CyrusOne beside Calpine's Thad Hill Energy Center, 144 MW of initial IT capacity, total investment approaching USD 4bn, operations expected Q4 2026 — The partnership's thesis made concrete: a landlord's building on a generator's site.",
+     "src": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-30",
+     "text": "KKR and ECP announce a USD 50bn strategic partnership to invest in data centres with power generation and transmission — The programme that defines ECP's AIDC exposure.",
+     "src": "https://media.kkr.com/news-details?news_id=8f924dd6-41ea-480d-9a96-d854c7232bbc",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The USD 50bn partnership with Energy Capital Partners pairs data centres with generation, and its first campus, built with CyrusOne in Bosque County, Texas, sits beside a Calpine gas plant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · KKR–Energy Capital Partners data-centre and power partnership",
+     "date": "",
+     "text": "A USD 50bn strategic partnership with Energy Capital Partners to invest in data centres together with power generation and transmission, announced on 30 October 2024.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-18"
+  },
+  {
+   "a": "energy-capital-partners",
+   "b": "macquarie",
+   "evid": [
+    {
+     "where": "Capabilities · ECP flagship infrastructure funds (ECP III–VI)",
+     "date": "",
+     "text": "A specialist generation investor beside diversified infrastructure giants: IPE Real Assets ranks ECP 28th among infrastructure managers (infrastructure AUM EUR 21,837m, 2025 survey) against BlackRock/GIP, KKR, Brookfield and Macquarie in the top ten.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "energy-capital-partners",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "NextEra Energy Resources bought Symmetry Energy Solutions, ECP's gas supply and logistics platform, in a sale that closed on 9 January 2026.",
+     "context": "ECP's release of 9 January 2026 (Business Wire, read via a mirror) records the closing of the sale of Symmetry Energy Solutions — about 5,500 large commercial and industrial customers and more than 80,000 residential and small-business customers across 34 states — to NextEra Energy Resources; terms were undisclosed. Bridgepoint's H1 2026 report states a 6.4x money multiple.",
+     "source": "https://finance.yahoo.com/news/energy-capital-partners-ecp-successfully-162800023.html",
+     "status": "historical",
+     "since": "2026-01",
+     "scale": "Symmetry Energy Solutions sale, closed 9 January 2026 (6.4x per Bridgepoint)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Power generation platforms — the realised set (Calpine, Cornerstone, Symmetry, Terra-Gen) and the listed stakes they left",
+     "date": "",
+     "text": "Symmetry Energy Solutions, a gas supply and logistics platform, was sold to NextEra Energy Resources on 9 January 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "ECP closes the sale of Symmetry Energy Solutions to NextEra Energy Resources (6.4x money multiple per Bridgepoint) — A gas-supply platform exits to a strategic the same week as Calpine.",
+     "src": "https://finance.yahoo.com/news/energy-capital-partners-ecp-successfully-162800023.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-09"
+  },
+  {
+   "a": "energy-capital-partners",
+   "b": "proenergy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "ECP acquired a majority interest on 5 September 2024 from affiliates of Eos Partners and ACON Investments; a partial exit (the WattBridge peakers) was ECP V's first realisation in 2025.",
+     "context": "ECP's 5 September 2024 release, reachable only through mirrors from this environment, records the majority purchase with terms undisclosed. Bridgepoint's FY2025 results describe a 2025 'partial exit from ProEnergy, the first exit from the 2022 vintage ECP V', and its H1 2026 report credits 'very strong growth in the order book for the retained gas turbine business at ProEnergy' for part of ECP V's carried interest.\n\nOn 21 September 2026 Bloomberg reported that ProEnergy was weighing a US IPO at a USD 40–50bn valuation with Morgan Stanley and JPMorgan, and that ECP had paid about USD 275m for roughly 60% in 2024. Neither figure is confirmed by ECP or ProEnergy.",
+     "source": "https://www.roi-nj.com/2024/09/10/industry/energy-utilities/energy-capital-partners-acquires-majority-interest-in-proenergy/",
+     "status": "active",
+     "since": "2024-09",
+     "scale": "majority interest (about 60% for about USD 275m, per Bloomberg)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "ECP remains a 4.0% holder of Constellation and a 5.0% holder of Talen, and ProEnergy, its majority-owned turbine platform, is reported to be weighing a USD 40–50bn IPO.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "ECP itself places no equipment orders — the buyers are its platforms (ProEnergy's turbine and bridge-power business, Convergent's storage projects, Atlantica's contracted fleet, the pending EnergySolutions and DCC businesses) and, increasingly, the strategics it sells to (Constellation, Talen, NextEra).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The purchase orders a vendor wants are at the buyers of ECP's plants — Constellation and Talen — and at ProEnergy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **ProEnergy is the route by which ECP's capital most directly reaches equipment**, and that the reported IPO would list the corpus's turbine-and-bridge-power supplier under ECP's continuing control.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Bridgepoint's attribution of ECP V carry to ProEnergy's turbine order book; the Crusoe 650 MW order; Bloomberg's September 2026 report.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*An S-1 or confidential filing by ProEnergy:* would convert a press report into a listing.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ProEnergy — majority-owned aeroderivative turbine and bridge-power platform",
+     "date": "",
+     "text": "ECP acquired a majority interest in ProEnergy (Sedalia, Missouri) from affiliates of Eos Partners and ACON Investments on 5 September 2024; terms were undisclosed, and Bloomberg reported in September 2026 that ECP paid about USD 275m for roughly 60%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ProEnergy — majority-owned aeroderivative turbine and bridge-power platform",
+     "date": "",
+     "text": "ProEnergy's PE6000 is a 50 MW aeroderivative unit it describes as interchangeable with the LM6000PC; in April 2026 it announced a 650 MW, thirteen-unit power solution for Crusoe and the divestiture of its Braes Bayou and Brotman generating stations to STEC.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ProEnergy — majority-owned aeroderivative turbine and bridge-power platform",
+     "date": "",
+     "text": "Bridgepoint records a 2025 'partial exit from ProEnergy, the first exit from the 2022 vintage ECP V' — the WattBridge peaker fleet — and attributes part of ECP V's carry to 'very strong growth in the order book for the retained gas turbine business'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ProEnergy — majority-owned aeroderivative turbine and bridge-power platform",
+     "date": "",
+     "text": "On 21 September 2026 Bloomberg reported ProEnergy was weighing a US IPO at a USD 40–50bn valuation with Morgan Stanley and JPMorgan, or an outright sale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-21",
+     "text": "Bloomberg: ECP-backed ProEnergy weighs a US IPO at a USD 40–50bn valuation with Morgan Stanley and JPMorgan, or an outright sale; ECP reported to have paid about USD 275m for roughly 60% in 2024 — Press-only; if realised it would be ECP V's largest mark-up and would list the corpus's turbine-and-bridge-power supplier.",
+     "src": "https://www.thestar.com.my/business/business-news/2026/09/21/proenergy-eyes-us50bil-ipo-valuation",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-09-05",
+     "text": "ECP acquires a majority interest in ProEnergy from affiliates of Eos Partners and ACON Investments; terms undisclosed — The one equipment maker in ECP's portfolio enters twelve months before the turbine order wave.",
+     "src": "https://www.roi-nj.com/2024/09/10/industry/energy-utilities/energy-capital-partners-acquires-majority-interest-in-proenergy/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-09-05",
+     "text": "Energy Capital Partners acquires majority interest from Eos/ACON — Infrastructure-PE ownership arrives twelve months before the AIDC order wave — ECP's exit clock will shape how aggressively contracted-power deals get chased.",
+     "src": "ECP / BusinessWire",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-21"
+  },
+  {
+   "a": "energy-capital-partners",
+   "b": "talen-energy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Talen bought Cornerstone Generation (about 2.6 GW of PJM gas) from ECP on 15 June 2026 for USD 2,615m cash plus 2,399,998 shares; ECP V vehicles hold those shares.",
+     "context": "Talen's 8-K of 15 June 2026 and its Q2 2026 10-Q record the purchase price of USD 3,542m — cash of USD 2,615m and 2,399,998 shares valued at USD 927m (USD 386.21 at close) — for Waterford, Darby and Lawrenceburg, with a registration rights agreement and 90- and 180-day lock-ups on the stock. ECP ControlCo's Schedule 13G of 23 June 2026 reports 2,399,998 shares, 5.01% of 47,894,656 outstanding, held through ECP V Cornerstone vehicles; no resale filing had appeared by 3 October 2026. Bridgepoint states a 4.4x money multiple after less than a year of ownership.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226029806/primary_doc.xml",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "2,399,998 shares (5.01%) after the USD 3,542m Cornerstone sale"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The 2026 proxy shows Vanguard 10.5 percent, BlackRock 8.6 percent, Rubric Capital 7.8 percent and MFN Partners 6.6 percent as of March 2026, and Energy Capital Partners took approximately 5 percent of the pro-forma equity at the June 2026 Cornerstone close.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-15",
+     "text": "Cornerstone acquisition closes — Lawrenceburg, Waterford and Darby added for $3.5 billion — Approximately 2.6 GW bought from Energy Capital Partners at a stated 6.6x 2027 EV/EBITDA, paid $2.6 billion cash and 2,399,998 shares; ECP becomes roughly a 5 percent holder.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/a20260615pressreleasetalen.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-15",
+     "text": "Talen agrees to buy Cornerstone Generation from Energy Capital Partners for $3.45 billion — The second acquisition in six months, again of operating combined-cycle capacity at roughly half new-build cost, again mostly debt-funded.",
+     "src": "https://www.utilitydive.com/news/talen-in-deal-to-buy-26-gw-of-gas-plants-in-pjm-for-35b/809826/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-15"
+  },
+  {
+   "a": "energy-capital-partners",
+   "b": "terra-gen",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "ECP owned Terra-Gen from 2015 and sold its remaining 50% to Masdar, closing 1 October 2024 — 'ECP has fully exited its position in Terra-Gen'.",
+     "context": "The Masdar closing announcement hosted by Terra-Gen states that Masdar completed the acquisition of ECP's 50% interest in Terra-Gen Power Holdings II, LLC on 1 October 2024, that Igneo Infrastructure Partners retains the other 50%, and that ECP has fully exited. The portfolio at the time was 3.8 GW of operating generation including 5.1 GWh of storage across 30 sites.",
+     "source": "https://terra-gen.com/wp-content/uploads/2024/09/Masdar-Terra-Gen-Closing-Announcement-Eng-FINAL.docx.pdf",
+     "status": "historical",
+     "since": "2015",
+     "scale": "50% sold to Masdar, closed 1 October 2024"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "ECP exited Terra-Gen entirely on 1 October 2024 and held no Sunnova shares before that company's 2025 bankruptcy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Power generation platforms — the realised set (Calpine, Cornerstone, Symmetry, Terra-Gen) and the listed stakes they left",
+     "date": "",
+     "text": "Terra-Gen was exited entirely when Masdar bought ECP's remaining 50% on 1 October 2024.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-01",
+     "text": "Masdar closes the purchase of ECP's 50% of Terra-Gen; ECP has fully exited — The renewables platform leaves before the AI wave ECP later rode with gas.",
+     "src": "https://terra-gen.com/wp-content/uploads/2024/09/Masdar-Terra-Gen-Closing-Announcement-Eng-FINAL.docx.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2024-10-01"
+  },
+  {
+   "a": "energy-capital-partners",
+   "b": "vistra",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Vistra's chairman Scott B. Helm is a former founding partner of ECP, per Vistra's 2026 proxy; he has been a private investor for more than a decade.",
+     "context": "Vistra's definitive proxy of 18 March 2026 describes Mr Helm as having 'previously' been 'a founding partner of Energy Capital Partners' and, for over a decade, 'a private investor based out of Baltimore'. He does not appear on ECP's Form ADV Schedule A. The corpus had described him as a current ECP founding partner; the tense is corrected here and in the Vistra dossier.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1692819/000162828026019029/vistra-20260318.htm",
+     "status": "historical"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
    "a": "engie-north-america",
    "b": "flex",
    "evid": [
@@ -35338,6 +36791,20 @@
    },
    "evid": [],
    "last": "2024"
+  },
+  {
+   "a": "esvolta",
+   "b": "quinbrook",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-17",
+     "text": "Quintrace, esVolta and LevelTen publish a Google-sponsored battery storage-shift pilot (9.2 GWh shifted, EnergyTag-verified hourly certificates) — Quinbrook's carbon-accounting spin-off finds third-party adoption.",
+     "src": "https://www.prnewswire.com/news-releases/battery-storage-shift-pilot-demonstrates-how-hourly-renewable-certificates-can-power-the-next-phase-of-corporate-clean-energy-goals-302881809.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-17"
   },
   {
    "a": "esvolta",
@@ -41401,6 +42868,45 @@
   },
   {
    "a": "ge-vernova",
+   "b": "quinbrook",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "GE Vernova supplied the power-conditioning and controls for Supernode's first two stages, per trade press.",
+     "context": "pv magazine Australia reported on 23 September 2024 that Quinbrook selected GE Vernova to supply power conditioning and SCADA for Supernode's 1 GWh second stage, following the first stage's integration; Quinbrook's own releases name the project's lenders and offtakers but not the conversion supplier. The relationship is documented in trade press, not in a first-party release of either company.",
+     "source": "https://www.pv-magazine-australia.com/2024/09/23/quinbrook-picks-ge-vernona-for-1-gwh-supernode-battery-stage/",
+     "status": "active",
+     "since": "2024-09",
+     "scale": "Power conversion and SCADA for Supernode Stages 1–2 (about 1 GWh of Stage 2)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Through its development affiliate Private Energy Partners it is itself the procurer at Supernode — CATL's EnerC Plus and TENER S systems, GE Vernova power conversion, Powerlink connection — and it co-developed the 8-hour EnerQB product with CATL.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Supernode was 'developed by Quinbrook' with its affiliate Private Energy Partners; the supplier agreements (CATL's EnerC Plus and TENER S; GE Vernova power conversion) and the EnerQB product were signed and announced by Quinbrook itself, not by a portfolio company; the Gladstone hub MoU is Quinbrook's.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Supernode (Brisbane) — Quinbrook-developed BESS campus and hyperscale data-centre precinct",
+     "date": "",
+     "text": "CATL supplies EnerC Plus containers for Stages 1–2 and TENER S for Stage 3 under a long-term service agreement; GE Vernova supplied power conversion and SCADA for Stages 1–2.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-09"
+  },
+  {
+   "a": "ge-vernova",
    "b": "rwe-clean-energy",
    "curated": {
     "b": {
@@ -42721,6 +44227,20 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "google",
+   "b": "quinbrook",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-17",
+     "text": "Quintrace, esVolta and LevelTen publish a Google-sponsored battery storage-shift pilot (9.2 GWh shifted, EnergyTag-verified hourly certificates) — Quinbrook's carbon-accounting spin-off finds third-party adoption.",
+     "src": "https://www.prnewswire.com/news-releases/battery-storage-shift-pilot-demonstrates-how-hourly-renewable-certificates-can-power-the-next-phase-of-corporate-clean-energy-goals-302881809.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-17"
   },
   {
    "a": "google",
@@ -44451,6 +45971,159 @@
    },
    "evid": [],
    "last": "2024-12"
+  },
+  {
+   "a": "habitat-energy",
+   "b": "quinbrook",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Quinbrook Infrastructure Partners has owned Habitat outright since 30 November 2021 and is reported to be selling it.",
+     "context": "Quinbrook's 30 November 2021 release records the acquisition; Companies House shows Renewable and Grid Services Limited as Habitat's 75%+ PSC from that date. The `quinbrook` dossier (v1, 2026-10-03) tells the sale from the seller's side and agrees with this dossier on every dated fact; it records Quinbrook's own Flexitricity figure (c. 1.3 GW) beside Drax's (~0.9 GW) and Quinbrook Holdings Limited as the holding group's stated controlling party. Linked here at v4 (step 7 reconciliation).",
+     "source": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/",
+     "status": "active",
+     "since": "2021-11",
+     "scale": "100% owner via Renewable and Grid Services Limited (QRIF); sale process reported March 2026, unresolved"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Quinbrook acquired Habitat Energy Limited on 30 November 2021 and holds it through its UK holding group; a sale process was reported in March 2026 and remains unresolved.",
+     "context": "Quinbrook's release of 30 November 2021 records the acquisition; Companies House shows Renewable and Grid Services Limited as Habitat's 75%+ person with significant control from that date, with Scaysbrook, Quinlan and James Allan appointed directors the same day, Hank Jones on 17 June 2025 and Keith Gains on 10 December 2025. RGS's FY2024 group accounts carry Habitat's 'Optimisation services' turnover of GBP 4,169,575 (+80%) and name Quinbrook Holdings Limited as ultimate controlling party.\n\nNew Project Media reported on 17 March 2026 that Quinbrook was 'working with JLL and Boston Consulting Group' to sell Habitat; Quinbrook did not comment and no bidder, price, signing or withdrawal has been reported since. Quinbrook's Habitat portfolio page, labelled 'Operational & Expanding', has not been modified since 29 August 2025. On 3 October 2026 both Habitat Energy Limited and RGS showed FY2025 accounts overdue at Companies House. This dossier and `habitat-energy` v3 tell the same story from the two sides.",
+     "source": "https://www.quinbrook.com/news-insights/quinbrook-acquires-habitat-energy/",
+     "status": "active",
+     "since": "2021-11",
+     "scale": "100% (terms undisclosed); held in QRIF via Renewable and Grid Services Limited"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** Habitat Energy is the largest specialist third-party battery optimiser in ERCOT by its own count and the third-largest in Great Britain by independently measured megawatts, it is the one optimiser in this corpus whose ERCOT performance a third party has ranked first (Modo Energy, December 2025, 84% capture against a 35% median), and it is for sale: its owner Quinbrook engaged JLL and Boston Consulting Group in March 2026 to sell it, ten weeks after selling its sister platform Flexitricity to Drax for GBP 36 million, and as of 2026-10-02 no buyer, signing, completion or withdrawal is on the public record; its FY2025 accounts, due at Companies House by 30 September 2026, were not filed by the deadline — both Habitat Energy Limited and its parent Renewable and Grid Services Limited carried the registrar's 'Accounts overdue' warning on 2 October 2026, the first late filing after two years of year-end filings, and neither company's board, share register or control entry has changed since May 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BACKGROUND.** Founded in Oxford in 2017 by Andrew Luers, Ben Irons and Phil Robinson; wholly acquired by Quinbrook on 30 November 2021 (terms undisclosed; Canadian Solar's May 2021 minority stake exited into the deal).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Audited scale is smaller than the headline: the UK entity booked GBP 1.99 million of turnover and a GBP 5.0 million loss in FY2024, and the Quinbrook group line that consolidates all three countries' optimisation fees was GBP 4.17 million, up 80% year on year.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the New Project Media report of the JLL/BCG mandate (March 2026); Quinbrook's sale of Flexitricity to Drax ten weeks earlier; two sponsor-side board appointments in the preceding six months including the UK deal lead; and, on the other side, the unchanged Habitat PSC and board, the unchanged 'portfolio company of Quinbrook' footer, and the absence of any release, trade report or registry filing recording a transaction.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Any Companies House PSC02/PSC07 filing on Habitat Energy Limited or a TM01 for the Quinbrook directors* — a completed sale shows here before any release.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Quinbrook's portfolio page status changing from 'Operational & Expanding'* — the signal it gave for Flexitricity, though the page has not been edited since August 2025.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-17",
+     "text": "New Project Media reports Quinbrook is 'working with JLL and Boston Consulting Group' to sell Habitat Energy and would 'start sounding out the market over the coming weeks'; Quinbrook declined comment — A single-outlet report, never confirmed by either company and not followed by any signing, price or bidder; the company's footer, Quinbrook's portfolio page and Companies House all still show Quinbrook ownership at 2026-09-12.",
+     "src": "https://newprojectmedia.com/ma-advisors-emerge-on-upcoming-quinbrook-habitat-energy-sale/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-10",
+     "text": "Keith Gains, Quinbrook's UK Managing Director and Investment Committee member, appointed a Habitat director; Henry 'Hank' Jones, ex-Dynegy Chief Commercial Officer and Quinbrook senior adviser, had joined the board on 17 June 2025 — Two sponsor-side additions in six months — the UK deal lead who signed the Flexitricity sale and a US power-trading veteran — are consistent with a board being prepared for a process, though neither company has said so.",
+     "src": "https://find-and-update.company-information.service.gov.uk/company/10923911/officers",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is also the owner of Habitat Energy, whose reported sale process (JLL and Boston Consulting Group, March 2026) has produced no public step in seven months, and whose FY2025 accounts, with those of its UK holding group, were overdue at Companies House on 3 October 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "On the data-centre side it founded Rowan (3rd-largest US hyperscale developer by capacity per Altman Solon, cited by Quinbrook) and now shares it with Blackstone; on the optimisation side it owns Habitat Energy, for sale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**INDICATORS TO WATCH** — *Any Companies House PSC02/PSC07 on Habitat Energy Limited, a TM01 for the Quinbrook directors, or a Quinbrook portfolio-page status change from 'Operational & Expanding':* a completed Habitat sale shows there before any release.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Filing of the FY2025 accounts of Habitat Energy Limited and Renewable and Grid Services Limited:* the group 'Optimisation services' line (GBP 4.17m in FY2024), the going-concern wording and any post-balance-sheet note on the sale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Closed-end funds — Low Carbon Power Fund, Renewables Impact Funds I and II, Net Zero Power Fund, Valley of Fire continuation fund, and Quinbrook III in market",
+     "date": "",
+     "text": "The sequence: Quinbrook Low Carbon Power Fund (first sale June 2017, final close 2019; US, UK and Australia; now largely realised); Quinbrook Renewables Impact Fund (QRIF, UK; final close 2 October 2023 at GBP 620m against a GBP 500m target; Cleve Hill, the Rassau and Thistle synchronous condensers, Uskmouth, Habitat Energy); the Valley of Fire Fund (closed 4 April 2024 at USD 600m; lead investor Blackstone Strategic Partners, cornerstone Ares Infrastructure Secondaries; bought 51% of Gemini and the Valley of Fire development portfolio from the first fund); the Net Zero Power Fund (NZPF, 'Quinbrook Infrastructure Partners III – Net Zero Power Fund'; final close announced 1 August 2024 at USD 3bn 'across the fund and co-investment vehicles' — Infrastructure Investor reports USD 2bn of fund and USD 1bn of co-investment; the Form D for the main vehicles shows USD 1,599,813,000 sold; Primergy, Rowan, Supernode, PurposeEnergy, Project Severn); and Quinbrook Renewables Impact Fund II (QRIF II, UK and Ireland; final close 8 July 2026 at GBP 587m against GBP 500m, hard cap GBP 1bn; Mallard Pass, Wexford, Aegis Energy, Project Norton).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Habitat Energy — the optimiser for sale — and the UK flexibility franchise (Flexitricity exited, Velox retained)",
+     "date": "",
+     "text": "Quinbrook acquired Habitat Energy Limited on 30 November 2021 (terms undisclosed) and holds it in QRIF through its UK holding group, Renewable and Grid Services Limited (RGS), whose FY2024 accounts carry Habitat's 'Optimisation services' turnover of GBP 4,169,575 (up 80%) within group turnover of GBP 14,227,627 and a group loss of GBP 68.65m; RGS owed GBP 526.8m to the Jersey manager at 31 December 2024 and names Quinbrook Holdings Limited as its ultimate controlling party.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Habitat Energy — the optimiser for sale — and the UK flexibility franchise (Flexitricity exited, Velox retained)",
+     "date": "",
+     "text": "On 3 October 2026 Companies House showed FY2025 accounts 'overdue' for both Habitat Energy Limited and RGS (due 30 September 2026); the manager's own UK company filed on time.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-10-03",
+     "text": "Companies House shows FY2025 accounts 'overdue' for Habitat Energy Limited and Renewable and Grid Services Limited (due 30 September 2026); Quinbrook's own UK company filed on 24 April 2026 — The first late filing at either company after on-time FY2023 and FY2024 accounts, during an unresolved sale process.",
+     "src": "https://find-and-update.company-information.service.gov.uk/company/13250883",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-17",
+     "text": "New Project Media reports Quinbrook is 'working with JLL and Boston Consulting Group' to sell Habitat Energy; Quinbrook did not respond to a request for comment — The second optimiser exit in train; a single-outlet report with no public follow-up through October 2026.",
+     "src": "https://newprojectmedia.com/ma-advisors-emerge-on-upcoming-quinbrook-habitat-energy-sale/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-10",
+     "text": "Keith Gains, Quinbrook's UK regional leader, is appointed a director of Habitat Energy Limited (Hank Jones joined its board on 17 June 2025) — Two sponsor-side appointments in six months at the company reported to be for sale.",
+     "src": "https://find-and-update.company-information.service.gov.uk/company/10923911/officers",
+     "from": "b"
+    }
+   ],
+   "last": "2026-10-03"
   },
   {
    "a": "habitat-energy",
@@ -50305,6 +51978,27 @@
   },
   {
    "a": "kkr",
+   "b": "quinbrook",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Quinbrook as the capital segment's developer-manager: a challenger by scale beside Blackstone, Brookfield, Macquarie, MGX, BlackRock and KKR, but the only one of them whose funds originate, build and operate the storage and data-centre assets rather than buying platforms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For a storage or power-conversion vendor, Quinbrook is a procurement counterparty in Australia in a way Blackstone, Brookfield or KKR never are.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "kkr",
    "b": "stack-infrastructure",
    "curated": {
     "a": {
@@ -51911,6 +53605,20 @@
     }
    ],
    "last": "2025-07-31"
+  },
+  {
+   "a": "macquarie",
+   "b": "quinbrook",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Quinbrook as the capital segment's developer-manager: a challenger by scale beside Blackstone, Brookfield, Macquarie, MGX, BlackRock and KKR, but the only one of them whose funds originate, build and operate the storage and data-centre assets rather than buying platforms.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "macquarie",
@@ -54316,6 +56024,20 @@
     }
    ],
    "last": "2026-02-23"
+  },
+  {
+   "a": "mgx",
+   "b": "quinbrook",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Quinbrook as the capital segment's developer-manager: a challenger by scale beside Blackstone, Brookfield, Macquarie, MGX, BlackRock and KKR, but the only one of them whose funds originate, build and operate the storage and data-centre assets rather than buying platforms.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "mgx",

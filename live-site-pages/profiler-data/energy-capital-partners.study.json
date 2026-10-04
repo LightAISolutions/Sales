@@ -1,0 +1,353 @@
+{
+ "schemaVersion": 2,
+ "slug": "energy-capital-partners",
+ "title": "Energy Capital Partners — Technology Study Guide",
+ "lastUpdated": "2026-10-03",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a seller of power plants",
+   "kind": "callout",
+   "tone": "info",
+   "read": "ECP buys generation, works it, and sells it to the companies that need it most — and in 2026 those were the companies powering data centres.",
+   "ps": [
+    "**The manager.** ECP raises closed-end funds from pensions, sovereigns and insurers and buys power plants, pipelines and energy-services companies with them. Since August 2024 it has been the infrastructure arm of Bridgepoint, a London-listed asset manager.",
+    "**The funds.** ECP III, IV and V are in their harvesting years; ECP VI closed in August 2026 at USD 8.1bn and is buying. Each fund has a ten-year life, so every plant it owns has a sale date.",
+    "**The platforms.** Calpine (sold to Constellation), Cornerstone (sold to Talen), ProEnergy (turbines and bridge power), Convergent (storage), Atlantica (contracted renewables), Grain LNG (with Centrica). These are the companies with engineers and purchase orders.",
+    "**Why it matters to a seller.** When ECP sells a fleet, the buyer inherits its equipment and its suppliers. This guide teaches how a closed-end fund's clock drives what it buys and sells, what an {{enterprise value}} headline hides, how FERC decides who may own a plant, and why a gas plant beside a data centre became the most valuable asset in power."
+   ]
+  },
+  {
+   "id": "fund-clock",
+   "title": "The fund clock: why ECP must sell",
+   "kind": "prose",
+   "read": "Ten years, three phases, one obligation.",
+   "ps": [
+    "A {{closed-end fund}} raises commitments from investors, draws the money over about five years to buy assets, then has about five more years to sell them and return the cash. The manager earns a management fee on committed capital and, once investors have their money back plus a hurdle return, a share of the profits called {{carried interest}}.",
+    "ECP's record in 2026 shows the clock working. ECP V, a 2022 fund, had bought Cornerstone's gas plants in August 2025 and sold them to Talen in June 2026 for 4.4 times its money — fast enough that Bridgepoint recognised carried interest from the fund for the first time. Calpine, held by the older ECP III and IV and a continuation fund, went to Constellation after about eight years.",
+    "The measure investors watch is {{DPI}} — distributions to paid-in capital — because cash returned is proof. ECP's Fund VI raised more than its target, and its own explanation was that 'our DPI has played a very big role'. For a supplier, the clock means ECP-owned platforms spend to raise value before a sale, and the next owner is who you will deal with after it."
+   ]
+  },
+  {
+   "id": "ev-vs-equity",
+   "title": "Enterprise value versus equity: reading the Calpine headline",
+   "kind": "table",
+   "read": "USD 33bn, USD 26.6bn and USD 16.4bn describe the same sale.",
+   "intro": "Three figures for one transaction, and what each one measures.",
+   "cols": [
+    "Figure",
+    "Who stated it",
+    "What it measures"
+   ],
+   "rows": [
+    [
+     "USD 33bn",
+     "Bridgepoint, at closing (January 2026)",
+     "{{Enterprise value}} using Constellation's share price on the closing day — the whole business including its debt"
+    ],
+    [
+     "USD 26.6bn",
+     "Constellation and the press, at announcement (January 2025)",
+     "Enterprise value at the announcement share price — the same debt, a lower stock price"
+    ],
+    [
+     "USD 16.4bn",
+     "Constellation, at announcement",
+     "Equity purchase price — 50 million shares plus about USD 4.5bn of cash — the part that went to the owners"
+    ],
+    [
+     "about USD 12.7bn",
+     "Constellation",
+     "Net debt assumed — the difference between the equity price and the enterprise value"
+    ]
+   ]
+  },
+  {
+   "id": "paid-in-stock",
+   "title": "Paid in the buyer's shares — lock-ups and the slow exit",
+   "kind": "prose",
+   "read": "Two-thirds of the Calpine price arrived as Constellation stock that could not be sold for a year.",
+   "ps": [
+    "A {{lock-up}} is a contractual promise not to sell shares for a period. Constellation paid ECP's consortium mostly in its own stock and locked half of it until 30 June 2026 and half until 30 June 2027. Talen did the same with the Cornerstone shares, on 90- and 180-day terms.",
+    "When the first Calpine tranche unlocked, the holders sold 11 million shares in a single underwritten offering — ECP about 7.6 million of them — and Constellation bought back 2 million. ECP kept the rest, so it still owned 4.0% of Constellation and 5.0% of Talen in October 2026.",
+    "The consequence for the ecosystem is that the seller of a fleet remains a shareholder of its buyer for a year or more, with a {{registration rights agreement}} that lets it sell in orderly blocks. ECP described itself to Talen as 'a significant shareholder' excited about Ohio's growth — the former owner now has a voice at the new one."
+   ]
+  },
+  {
+   "id": "ferc-203",
+   "title": "Who may own a power plant: FERC Section 203",
+   "kind": "prose",
+   "read": "Every change of control over a US generator needs federal approval, and ECP has been refused once.",
+   "ps": [
+    "Under {{Section 203}} of the Federal Power Act, the Federal Energy Regulatory Commission must approve any sale or change of control of a company that owns generation or transmission. It asks whether the deal harms competition, rates or regulation, and it looks through to anyone who controls 10% or more of the voting equity.",
+    "In March 2024 FERC declined to approve Bridgepoint's purchase of ECP because the application did not explain how a minority holder — Blue Owl Capital, which owned 19.3% of ECP — was prevented from controlling it. The application was refiled with the missing information and approved; the combination closed that August.",
+    "The same gate shaped the Calpine sale: FERC approved it in July 2025 only with the divestiture of about 3.5 GW in the PJM market and offer caps on Constellation's plants there. Opponents asked FERC to make ECP sell its Constellation shares; FERC did not. When ECP bought the Lightstone portfolio, it told FERC it would be the only holder of 10% or more.",
+    "For a supplier, the lesson is timing: a signed power deal is months from closing, and the closing can carry conditions — divested plants, capped offers — that change who the customer is."
+   ]
+  },
+  {
+   "id": "plant-plus-datacenter",
+   "title": "Why a gas plant beside a data centre became the asset of 2026",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "The scarce input is not capital or chips; it is connected power.",
+   "ps": [
+    "**The queue.** A new data centre normally waits years for a grid connection and new generation. A campus built on the site of an existing plant can take power behind the meter or through a dedicated line, skipping much of that wait.",
+    "**ECP's version.** Its USD 50bn partnership with KKR pairs KKR's data-centre landlords with ECP's generation. The first campus, CyrusOne's DFW10 in Bosque County, Texas, sits beside Calpine's Thad Hill plant under a 190 MW power agreement, with 144 MW of initial IT capacity and operations expected in late 2026.",
+    "**The twist.** By the time the campus opens, Calpine belongs to Constellation. ECP sold the plant owner while the campus was being built — the premium buyers now pay for connected generation is exactly what made Calpine and Cornerstone worth selling.",
+    "**For a seller.** The equipment at such a campus — transformers, switchgear, turbines, storage for ride-through — is specified by the plant owner and the data-centre developer, not by the fund that brought them together."
+   ]
+  },
+  {
+   "id": "aeroderivative",
+   "title": "Bridge power: what an aeroderivative turbine does",
+   "kind": "prose",
+   "read": "ECP's one equipment maker sells a jet engine on a frame.",
+   "ps": [
+    "An {{aeroderivative gas turbine}} is a jet engine adapted to turn a generator. It starts in minutes, reaches full output quickly and can be installed on a trailer or skid, so it suits peaking plants and temporary 'bridge' power for sites that cannot wait for the grid.",
+    "ProEnergy, ECP's majority-owned platform, services and sells such units (its PE6000 is a 50 MW machine interchangeable with GE's LM6000PC) and builds fleets of them: in 2026 it announced a 650 MW, thirteen-unit power solution for the AI cloud provider Crusoe. Bridgepoint credits 'very strong growth in the order book for the retained gas turbine business' for part of ECP V's profit.",
+    "The trade-off against a large combined-cycle plant is efficiency: an aeroderivative burns more fuel per megawatt-hour, so it earns its keep where speed and mobility matter more than cost per unit. Batteries compete with it for short bursts; gas wins when hours stretch into days."
+   ]
+  },
+  {
+   "id": "storage-platform",
+   "title": "Storage inside a fund: Convergent",
+   "kind": "prose",
+   "read": "A developer that owns the battery and sells the service.",
+   "ps": [
+    "Convergent Energy + Power, wholly owned by ECP, develops and owns battery and solar-plus-storage systems for utilities, municipalities and large customers, and increasingly for data centres. It earns from {{capacity payments}}, peak-shaving contracts and wholesale markets rather than from selling equipment.",
+    "A storage developer buys cells, containers, inverters and controls from suppliers and finances each project on its own contracts. Its owner — here a fund with a ten-year life — wants the portfolio to be large and contracted by the time it is sold.",
+    "For a supplier of storage, Convergent is the kind of ECP company that places orders; ECP itself never does. The question to ask of any fund-owned developer is how many years remain on its owner's clock."
+   ]
+  },
+  {
+   "id": "contracted-assets",
+   "title": "What ECP VI is buying: contracted, regulated, essential",
+   "kind": "table",
+   "read": "After selling merchant generation, the new fund buys cash flows with contracts attached.",
+   "intro": "ECP VI's named deployments and the revenue behind each.",
+   "cols": [
+    "Asset",
+    "Partner",
+    "What secures the revenue"
+   ],
+   "rows": [
+    [
+     "Grain LNG terminal (UK)",
+     "Centrica, 50/50",
+     "Capacity contracts: 100% contracted to 2029, more than 70% to 2038, more than half to 2045"
+    ],
+    [
+     "EnergySolutions (nuclear decommissioning and waste)",
+     "—",
+     "Long-dated government and utility contracts; licensed facilities"
+    ],
+    [
+     "DCC Energy (UK and Irish fuel distribution)",
+     "KKR",
+     "Essential-service distribution revenues; a listed company taken private"
+    ],
+    [
+     "Atlantica (ECP V; contracted renewables and transmission)",
+     "Institutional co-investors",
+     "Long-term power purchase and transmission agreements"
+    ]
+   ]
+  },
+  {
+   "id": "listed-parent",
+   "title": "Reading ECP through its listed parent",
+   "kind": "prose",
+   "read": "ECP publishes no accounts; Bridgepoint publishes a segment.",
+   "ps": [
+    "ECP is a subsidiary, so its numbers appear only inside Bridgepoint's half-yearly reports as the Infrastructure segment: assets under management (EUR 27.7bn at June 2026, after the exits), fee-paying assets, management fees (GBP 99.7m in the first half of 2026) and performance fees. The one independent figure is ECP's own SEC registration, which reports USD 33.4bn of regulatory assets.",
+    "{{Assets under management}} and fee-paying assets differ: a fund pays fees on committed capital during its investing years and on invested capital later, so AUM can rise with valuations while fees do not. When Calpine was marked up before its sale, segment AUM rose to EUR 36.0bn; when it was sold, AUM fell and cash returned to investors jumped to EUR 16.6bn in a half-year.",
+    "A reader should also note the currency: Bridgepoint reports in euros and pounds, ECP raises in dollars. A figure quoted without its currency is a trap this corpus has already fallen into once."
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test: where ECP passes and where it fails",
+   "kind": "table",
+   "read": "Follow the engineer, not the money.",
+   "intro": "Applying the test to ECP's positions in October 2026.",
+   "cols": [
+    "Position",
+    "Does ECP decide the equipment?",
+    "Who to sell to"
+   ],
+   "rows": [
+    [
+     "ProEnergy (majority)",
+     "No — but it is the one platform that makes equipment",
+     "ProEnergy's engineering and its bridge-power projects"
+    ],
+    [
+     "Convergent (wholly owned)",
+     "No — the developer specifies",
+     "Convergent's project teams"
+    ],
+    [
+     "Bosque County campus (partnership)",
+     "No — the plant owner (Constellation) and CyrusOne",
+     "Constellation for generation; CyrusOne for the halls"
+    ],
+    [
+     "Constellation and Talen (4.0% and 5.0%)",
+     "No — a shareholder",
+     "Their fleets' engineering, as before the sales"
+    ],
+    [
+     "Grain LNG, EnergySolutions, DCC Energy",
+     "No — operating management under joint or sole control",
+     "The platforms' procurement"
+    ],
+    [
+     "ECP itself",
+     "Never — it has no sites",
+     "Nobody; ECP is the owner above the buyer"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — no dates, names or fund sizes.",
+   "cards": [
+    {
+     "q": "Why must a {{closed-end fund}} sell its power plants?",
+     "a": "It promised to return investors' money after about ten years; the manager's carried interest depends on realised cash, so every asset has a sale date."
+    },
+    {
+     "q": "What does {{DPI}} measure and why do investors prefer it to a paper multiple?",
+     "a": "Cash distributed divided by cash paid in — it counts only realised returns, which cannot be revalued away."
+    },
+    {
+     "q": "How can one sale be worth USD 33bn and USD 16.4bn at the same time?",
+     "a": "USD 33bn is enterprise value including assumed debt; USD 16.4bn is the equity paid to the owners — the difference is the debt the buyer took on."
+    },
+    {
+     "q": "What does a {{lock-up}} do after a stock-funded sale?",
+     "a": "It stops the seller selling the buyer's shares for a set period, so the seller remains a shareholder and sells later in orderly blocks."
+    },
+    {
+     "q": "What does FERC examine under {{Section 203}}?",
+     "a": "Whether a change of control over a generator harms competition, rates or regulation — looking through to anyone with 10% or more of the voting equity."
+    },
+    {
+     "q": "Why is a gas plant beside a data-centre site valuable in 2026?",
+     "a": "Connected power is the scarce input: a campus on a plant's site can take power without waiting years for a grid connection and new generation."
+    },
+    {
+     "q": "What is an {{aeroderivative gas turbine}} good at, and what does it cost?",
+     "a": "Fast start and mobility for peaking and bridge power; the price is lower fuel efficiency than a large combined-cycle plant."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "A fund bought a 2.6 GW gas fleet in August and sold it the following June for 4.4 times its money. What made the quick sale rational for the fund?",
+     "c": [
+      "Its fund life was ending",
+      "The buyer paid a premium for connected generation and realised cash is what the fund is judged on",
+      "Regulators forced the sale",
+      "Gas prices fell"
+     ],
+     "a": 1,
+     "why": "A closed-end fund is measured on distributions; a buyer willing to pay a data-centre premium turns a paper gain into DPI."
+    },
+    {
+     "q": "A headline says a plant fleet sold for USD 26.6bn; the filing says USD 16.4bn went to shareholders. Where is the difference?",
+     "c": [
+      "Fees",
+      "Assumed debt",
+      "Taxes",
+      "A typo"
+     ],
+     "a": 1,
+     "why": "Enterprise value includes the debt the buyer assumes; equity value is what the owners receive."
+    },
+    {
+     "q": "FERC declined to approve a manager's acquisition because a 19% minority holder's control rights were not explained. Which rule was it applying?",
+     "c": [
+      "The 10% voting-equity look-through under Section 203",
+      "Antitrust market-share limits",
+      "State rate regulation",
+      "Foreign-ownership rules"
+     ],
+     "a": 0,
+     "why": "Section 203 review treats a holder of 10% or more of voting equity as an affiliate whose control must be explained."
+    },
+    {
+     "q": "A fund-owned storage developer is three years from its owner's fund end. What should a supplier expect?",
+     "c": [
+      "A pause in orders",
+      "Orders aimed at making the portfolio large and contracted before a sale, then a new owner",
+      "Nationalisation",
+      "Equipment returns"
+     ],
+     "a": 1,
+     "why": "Managers build value ahead of exit; after the sale the buyer inherits the suppliers."
+    },
+    {
+     "q": "A data-centre campus is built beside a gas plant under a 190 MW power agreement, and the plant is then sold. Who is the power counterparty now?",
+     "c": [
+      "The fund that arranged the campus",
+      "The plant's new owner",
+      "The grid operator",
+      "The data-centre tenant"
+     ],
+     "a": 1,
+     "why": "The power agreement travels with the plant; the fund that paired the parties no longer owns it."
+    },
+    {
+     "q": "Why can a manager's assets under management rise while its fee income does not?",
+     "c": [
+      "Fees are paid on committed or invested capital, not on valuations",
+      "Fees are capped by law",
+      "AUM excludes debt",
+      "Fees are paid annually"
+     ],
+     "a": 0,
+     "why": "A valuation mark-up before a sale lifts AUM; fees follow commitments and invested capital."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "DPI",
+   "d": "Distributions to paid-in capital: cash a fund has returned to investors divided by the cash they contributed — the realised part of a fund's return."
+  },
+  {
+   "t": "lock-up",
+   "d": "A contractual period after a deal during which the recipient of shares may not sell them."
+  },
+  {
+   "t": "registration rights agreement",
+   "d": "A contract obliging a company to register a large holder's shares for public sale, so the holder can sell in orderly offerings after a lock-up."
+  },
+  {
+   "t": "Section 203",
+   "d": "The provision of the US Federal Power Act requiring FERC approval for any sale or change of control of a company owning generation or transmission."
+  },
+  {
+   "t": "aeroderivative gas turbine",
+   "d": "A gas turbine derived from a jet engine — light, fast-starting and mobile, used for peaking and temporary bridge power at the cost of lower fuel efficiency."
+  },
+  {
+   "t": "capacity payments",
+   "d": "Payments a generator or battery receives for being available to deliver power when called, independent of the energy it actually sells."
+  },
+  {
+   "t": "assets under management",
+   "d": "The value of the assets a manager runs for investors; it moves with valuations, while fees follow committed or invested capital."
+  }
+ ]
+}

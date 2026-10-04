@@ -1,0 +1,385 @@
+{
+  "schemaVersion": 2,
+  "slug": "cpp-investments",
+  "title": "CPP Investments — Technology Study Guide",
+  "lastUpdated": "2026-10-03",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: a pension fund that owns the buyers",
+      "kind": "callout",
+      "tone": "info",
+      "read": "One pool of money, no fund clock, and control positions behind several of the companies that actually place orders.",
+      "ps": [
+        "**The fund.** CPP Investments manages the Canada Pension Plan's assets — C$863.6bn at 30 June 2026 — for 22 million contributors. It is a Crown corporation, not a company with shareholders, and it has no customers to sell to.",
+        "**The departments.** Six investment departments; the one this guide follows is Real Assets, which holds infrastructure, property and energy. Inside it, Sustainable Energies owns power platforms and Infrastructure owns utilities, transmission and data centres.",
+        "**The platforms.** Pattern Energy builds wind, solar and transmission lines. Minnesota Power runs a regulated grid. atNorth builds Nordic data centres. The xScale venture with Equinix builds hyperscale halls in the US. These are the organisations whose engineers specify batteries, transformers, chillers and power shelves.",
+        "**Why it matters to a seller.** CPP decides whether a platform gets the capital for its next build, and increasingly lends to data-centre construction too. This guide teaches how pension capital differs from a fund manager's, what control at 40%, 51% and 69% means in practice, and where the purchase orders are written."
+      ]
+    },
+    {
+      "id": "pension-capital",
+      "title": "Pension capital versus fund capital",
+      "kind": "prose",
+      "read": "Who the money belongs to decides how long it can wait.",
+      "ps": [
+        "A {{closed-end fund}} raises money from outside investors, invests it over about five years and must return it by about year ten. Its manager earns fees and a share of profits, so every asset has a sale date built in.",
+        "A pension fund invests its members' contributions and must pay pensions for decades. CPP Investments is measured against a {{benchmark portfolio}} — a simple mix of public stocks and bonds that it could have bought instead — and against a ten-year real return the Chief Actuary assumes (about 4% above inflation). It has no fund clock: an asset is held for as long as it earns its place.",
+        "The practical difference shows in Pattern Energy. A fund manager who bought Pattern in 2020 would be selling it by now. CPP instead merged its other renewables company, Cordelio, into Pattern for shares in April 2026 and kept the enlarged company. For a supplier, a pension-owned platform is a customer whose owner is not planning to leave.",
+        "The cost of that patience is scale and benchmarking. CPP is judged every quarter against public markets: in the year to March 2026 it earned 7.8% while its benchmark earned 13.2%, because the benchmark was full of large technology stocks. Real Assets, the department with the platforms, earned about 12%."
+      ]
+    },
+    {
+      "id": "control-ladder",
+      "title": "The control ladder: 12%, 37.5%, 40%, 51%, 69%",
+      "kind": "table",
+      "read": "The percentage tells you who decides; the shareholders' agreement tells you what they decide.",
+      "intro": "CPP's platform stakes in 2026 and what each level of ownership buys.",
+      "cols": [
+        "Stake",
+        "Example",
+        "What CPP can do",
+        "Who signs the equipment order"
+      ],
+      "rows": [
+        [
+          "12% minority",
+          "AirTrunk (beside Blackstone)",
+          "A seat, information rights, consent on {{reserved matters}}; cannot direct strategy",
+          "AirTrunk's management, overseen by Blackstone"
+        ],
+        [
+          "37.5% 'controlling interest' in a JV",
+          "Equinix xScale US venture (GIC 37.5%, Equinix 25%)",
+          "Joint control: the JV cannot act without the two 37.5% partners agreeing; Equinix operates",
+          "Equinix, as developer and operator of the JV's halls"
+        ],
+        [
+          "40% co-owner",
+          "ALLETE / Minnesota Power (GIP 60%)",
+          "Board seats and shared decisions under a shareholders' agreement; the utility stays regulated",
+          "Minnesota Power's engineers, inside a plan the regulator approved"
+        ],
+        [
+          "c. 51% controlling owner",
+          "atNorth (Equinix c. 34%, Partners Group c. 10%)",
+          "Majority: appoints the board majority and sets the plan, with minority protections for the others",
+          "atNorth's management, reporting to a CPP-led board"
+        ],
+        [
+          "Majority; 69.1% with other institutions",
+          "Pattern Energy",
+          "Effective control of a developer with 12 GW; Pattern's management runs projects",
+          "Pattern's project companies, financed project by project"
+        ]
+      ]
+    },
+    {
+      "id": "signing-vs-closing",
+      "title": "Signing is not closing — and the split can move",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "Read every percentage against the completion document.",
+      "ps": [
+        "**atNorth.** In February 2026 the agreement said CPP would pay about USD 1.6bn for about 60% and Equinix would own about 40%. At completion in September the seller, Partners Group, re-invested for about 10% and managers rolled their shares, so CPP ended at about 51% for USD 1.3bn and Equinix at about 34%. Same deal, different split, seven months apart.",
+        "**Sempra Infrastructure Partners.** CPP agreed in September 2025 to buy about 13% indirectly for about USD 3.0bn beside KKR. Sempra said it expected to close in the third quarter of 2026. As of the latest filings it had not closed, and the contract carries a ticking fee and a twelve-month long-stop. Until the completion filing appears, the stake is a promise.",
+        "**The rule.** An agreement states intent and price; a completion states ownership. A seller who reads the first and skips the second will address the wrong owner."
+      ]
+    },
+    {
+      "id": "regulated-utility",
+      "title": "Owning a regulated utility: what 40% of Minnesota Power means",
+      "kind": "prose",
+      "read": "The regulator sets the return; the owner funds the plan.",
+      "ps": [
+        "A {{regulated utility}} earns a return set by a state commission on the money it has invested in its grid — its {{rate base}}. Customers pay rates calculated to cover costs plus that return. The owner cannot raise prices or cut service at will.",
+        "When CPP and GIP bought ALLETE, Minnesota's commission attached conditions: a one-year freeze on base rates, a lower allowed return (9.65%, capped at 9.78% to 2030), USD 50m of credits to customers, and a promise to fund a USD 5bn five-year capital plan. An administrative law judge had recommended rejecting the deal; the commission approved it unanimously with those terms.",
+        "For a supplier of transformers, switchgear or storage, the capital plan is the order book. The new owners committed to fund it; the regulator decides what counts as prudent spending. Minnesota Power's first rate case after the freeze, in 2027, is where the plan's cost is tested.",
+        "Why would a pension fund want this? Steady, regulated returns matched to long liabilities — the same reason an insurer buys infrastructure. The trade is lower returns for lower risk, and a public process every time the owner wants something."
+      ]
+    },
+    {
+      "id": "developer-platform",
+      "title": "Owning a developer: Pattern, SunZia and the project-finance machine",
+      "kind": "prose",
+      "read": "A developer's balance sheet is many small balance sheets.",
+      "ps": [
+        "Pattern Energy develops wind and solar farms and transmission lines, then owns and operates them. Its largest project, SunZia, is 3,650 MW of New Mexico wind plus a 550-mile high-voltage direct-current line to Arizona and California, financed on about USD 11bn of non-recourse debt.",
+        "{{Non-recourse debt}} is borrowed by a project company and repaid only from that project's revenue; the lenders cannot claim the developer's other assets. Each project is therefore its own buyer: it signs the turbine, inverter and battery contracts, and its lenders' {{independent engineer}} reviews the equipment before the money flows.",
+        "CPP's role sits above this. It funds Pattern's corporate equity, consolidates other holdings into it (Cordelio's 1,550 MW in 2026) and participates directly in some holding-company facilities. It does not pick the turbine supplier; Pattern's project teams and their lenders do.",
+        "The one number on the ownership record — 69.1% — is CPP's own sentence and includes 'other institutional investors' (APG for the Dutch pension ABP, and Australian Retirement Trust). Pattern calls CPP 'the majority shareholder'. Nobody has published the exact split."
+      ]
+    },
+    {
+      "id": "data-centre-routes",
+      "title": "Four routes into data centres",
+      "kind": "table",
+      "read": "The same asset class bought four different ways — with four different decision-makers.",
+      "intro": "CPP's data-centre commitments and where the operating decisions sit.",
+      "cols": [
+        "Route",
+        "Example",
+        "CPP's position",
+        "Who runs it"
+      ],
+      "rows": [
+        [
+          "Controlling platform",
+          "atNorth (Nordics; ~800 MW installed, 1 GW of secured power)",
+          "c. 51%, USD 1.3bn",
+          "atNorth management under a CPP-majority board"
+        ],
+        [
+          "Joint venture with an operator",
+          "Equinix xScale US (>USD 15bn, >1.5 GW); Goodman Europe (A$14bn, 435 MW)",
+          "37.5% / 50% — joint control",
+          "Equinix / Goodman build and operate"
+        ],
+        [
+          "Capital into a manager's platform",
+          "EQT / EdgeConneX (USD 1.75bn); Japan DC Partners (Ares, JPY 192.5bn)",
+          "Undisclosed stake / LP commitment",
+          "EQT and Ares, through their platforms"
+        ],
+        [
+          "Lender",
+          "Cambridge, Ontario hyperscale expansion (C$225m, half the construction loan); CoreWeave facilities",
+          "Creditor, not owner",
+          "The developer and tenant; the lender's engineer checks the build"
+        ]
+      ]
+    },
+    {
+      "id": "lender-not-owner",
+      "title": "When the pension fund is the bank",
+      "kind": "prose",
+      "read": "A construction lender sees the equipment list before the owner's board does.",
+      "ps": [
+        "CPP's Credit Investments department includes a Real Assets Credit group that lends against infrastructure under construction. In July 2025 it took half of a construction loan for a 54 MW hyperscale expansion in Cambridge, Ontario, pre-leased to an AI cloud provider; it has also lent to CoreWeave against GPU servers and for four data centres.",
+        "A {{construction loan}} is drawn in stages as work is certified. The lender's engineer reviews the design, the contractor, the equipment and the schedule, and holds back money until milestones are met. Suppliers appear in the lender's file as named vendors with warranties the lender can rely on.",
+        "For a seller, this is a second door: a lender's approved-vendor list and warranty requirements shape what a developer can buy. A pension fund that is both owner of some platforms and lender to others sees the market from both sides."
+      ]
+    },
+    {
+      "id": "why-storage-and-power",
+      "title": "Why a pension fund wants generation, storage and transmission",
+      "kind": "proscons",
+      "read": "Long-lived assets with contracted revenue match long-dated pensions — until the contract ends.",
+      "intro": "The investment case for the assets this corpus sells, from the owner's side.",
+      "cards": [
+        {
+          "t": "Owning generation, storage and transmission as a pension fund",
+          "meta": "The owner-side case, from the dossier's evidence",
+          "adv": [
+            "Contracted or regulated revenue for 10–25 years matches pension liabilities",
+            "Inflation linkage in many power contracts and regulated returns",
+            "Scarcity value: power and grid connections are the gate on data-centre growth, so platforms with secured power (atNorth's 1 GW; Pattern's SunZia line) command premiums",
+            "Scale: a C$860bn fund can write USD 1bn cheques and still be diversified"
+          ],
+          "dis": [
+            "Merchant exposure after contracts end — a battery's revenue after its toll expires is uncertain",
+            "Regulatory and political risk — a utility's return can be cut (Minnesota's 9.65%), and a pension fund can be told where to invest (Canada's domestic-investment debate)",
+            "Technology risk in storage: chemistry, degradation and warranty terms the owner must underwrite",
+            "Illiquidity: a platform cannot be sold quickly, which is tolerable only because the fund has no clock"
+          ]
+        }
+      ],
+      "note": "A pension fund underwrites the contract, the regulator and the technology before it buys the asset — the seller who answers all three questions first wins the meeting."
+    },
+    {
+      "id": "canada-politics",
+      "title": "The politics of a public fund",
+      "kind": "prose",
+      "read": "A Crown corporation's independence is a law, and laws can be amended.",
+      "ps": [
+        "CPP Investments is created by an Act of Parliament that gives it one objective — maximum return without undue risk — and keeps it at arm's length from governments. Changing that requires the federal government and two-thirds of the provinces representing two-thirds of the population.",
+        "Since late 2024 Ottawa has pushed the large pension funds to invest more in Canada: a repealed ownership rule, a programme matching pension money into AI data centres, quarterly meetings with the finance minister, and a Senate committee chair who favours a legal mandate. About 12% of CPP's assets are in Canada and about 47% in the United States.",
+        "CPP's response in September 2026 was a C$50bn 'Maple Fund' with Brookfield for Canadian infrastructure — voluntary, and announced the same day its chief executive said the fund is 'not required to invest in Canada'. For a seller, the question is whether Canadian data-centre and power projects become a larger share of CPP's future orders because of policy rather than returns."
+      ]
+    },
+    {
+      "id": "who-signs",
+      "title": "The buying-authority test: where CPP passes and where it fails",
+      "kind": "table",
+      "read": "Ask who employs the engineer who writes the specification.",
+      "intro": "Applying the test to CPP's positions.",
+      "cols": [
+        "Position",
+        "Does CPP decide the equipment?",
+        "Who to sell to"
+      ],
+      "rows": [
+        [
+          "Pattern Energy (majority)",
+          "No — project companies and their lenders decide",
+          "Pattern's procurement and the project's independent engineer"
+        ],
+        [
+          "Minnesota Power (40%)",
+          "No — the utility under its regulator-approved plan",
+          "Minnesota Power engineering; the capital plan is the order book"
+        ],
+        [
+          "atNorth (c. 51%)",
+          "No, but CPP approves the budget",
+          "atNorth's build team; the board CPP controls approves the plan"
+        ],
+        [
+          "xScale JV (37.5%)",
+          "No — Equinix designs and builds",
+          "Equinix xScale procurement"
+        ],
+        [
+          "Construction loans",
+          "No — but its engineer vets the vendor list",
+          "The developer; make sure the lender's engineer knows the product"
+        ],
+        [
+          "CPP Investments itself",
+          "Never — it has no sites and no engineers",
+          "Nobody; CPP is the owner above the buyer"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "Concept recall — no dates, names or fund sizes.",
+      "cards": [
+        {
+          "q": "Why can a pension fund hold an asset longer than a {{closed-end fund}} can?",
+          "a": "A closed-end fund must return money to its investors after about ten years; a pension fund invests its own members' contributions and has no end date, so it holds as long as the asset earns its place."
+        },
+        {
+          "q": "What is a {{benchmark portfolio}} and why does it matter to CPP?",
+          "a": "A simple mix of public stocks and bonds the fund could have bought instead; CPP's performance is judged against it every quarter, which is why a year of 7.8% can be a 'miss' when the benchmark earned 13.2%."
+        },
+        {
+          "q": "Why can the ownership split change between signing and closing?",
+          "a": "Sellers or managers may roll their equity back into the company at completion, diluting the buyers — atNorth went from 60/40 at signing to 51/34/10 at close."
+        },
+        {
+          "q": "What does a {{regulated utility}}'s owner control, and what does it not?",
+          "a": "It funds the capital plan and appoints directors; it does not set prices or the allowed return — the state commission does."
+        },
+        {
+          "q": "What is {{non-recourse debt}} and why does it make each project its own buyer?",
+          "a": "Debt repaid only from one project's revenue; because the lenders depend on that project alone, the project company signs its own equipment contracts and the lenders' engineer reviews them."
+        },
+        {
+          "q": "What does a {{construction loan}}'s lender check that an equity owner might not?",
+          "a": "Design, contractor, named equipment vendors, warranties and schedule, releasing money only as milestones are certified."
+        },
+        {
+          "q": "Where are the purchase orders in a pension fund's infrastructure portfolio?",
+          "a": "At the platforms — the developer's project companies, the utility, the data-centre operator — never at the fund itself."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "Six questions on the mechanics.",
+      "items": [
+        {
+          "q": "A pension fund owns 40% of a regulated utility that is buying 30 transformers. Who sets how much the utility can spend?",
+          "c": [
+            "The pension fund's board",
+            "The utility's state commission",
+            "The utility's lenders",
+            "The 60% co-owner"
+          ],
+          "a": 1,
+          "why": "A regulated utility recovers prudent spending through rates the commission approves; the owners fund the plan but do not set its limits."
+        },
+        {
+          "q": "An agreement says a fund will own 60% of a data-centre platform. The completion release says 51%. What most likely happened?",
+          "c": [
+            "The price fell",
+            "The seller and managers rolled equity back in at closing",
+            "The regulator capped the stake",
+            "The fund sold shares before closing"
+          ],
+          "a": 1,
+          "why": "Rollover by the seller and management dilutes the buyers' percentages without changing the enterprise value."
+        },
+        {
+          "q": "Why does a pension fund tolerate illiquid platforms that cannot be sold quickly?",
+          "c": [
+            "It has no fund clock and long-dated liabilities",
+            "Regulators require it",
+            "Illiquid assets have no risk",
+            "It cannot buy public stocks"
+          ],
+          "a": 0,
+          "why": "Pensions are paid over decades, so assets that pay over decades fit — provided the fund never needs to sell in a hurry."
+        },
+        {
+          "q": "A developer majority-owned by a pension fund is building a 3 GW wind project financed on non-recourse debt. Who signs the turbine contract?",
+          "c": [
+            "The pension fund's infrastructure team",
+            "The developer's corporate treasurer",
+            "The project company, reviewed by the lenders' engineer",
+            "The transmission operator"
+          ],
+          "a": 2,
+          "why": "Non-recourse financing makes each project company the borrower and the buyer; its lenders' independent engineer reviews the equipment."
+        },
+        {
+          "q": "Which position gives a fund joint control rather than a minority voice?",
+          "c": [
+            "12% beside a larger investor",
+            "37.5% in a three-party JV where two partners hold 37.5% each",
+            "A construction loan",
+            "A commitment to a manager's fund"
+          ],
+          "a": 1,
+          "why": "Two equal large stakes mean the venture cannot act without both — joint control; 12% is a minority with consent rights only."
+        },
+        {
+          "q": "A fund's public-market benchmark rose 13% while the fund earned 8%. What does that tell a seller about the fund's appetite for private infrastructure?",
+          "c": [
+            "It will sell its platforms",
+            "Nothing certain — but the department that beat the benchmark was Real Assets, which argues for more, not less",
+            "It must buy more public stocks",
+            "It is insolvent"
+          ],
+          "a": 1,
+          "why": "Relative underperformance in public markets does not force a sale of private assets; the department that outperformed was the one holding the platforms."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "benchmark portfolio",
+      "d": "The simple mix of public stocks and bonds a pension fund compares itself against each period; outperforming it is the fund's measure of value added."
+    },
+    {
+      "t": "reserved matters",
+      "d": "Decisions a shareholders' agreement says need every co-owner's consent — budgets, large contracts, new debt, a sale."
+    },
+    {
+      "t": "regulated utility",
+      "d": "A monopoly electricity company whose prices and allowed return are set by a public commission in exchange for an obligation to serve."
+    },
+    {
+      "t": "rate base",
+      "d": "The invested capital on which a regulated utility is allowed to earn its approved return; adding equipment adds to it."
+    },
+    {
+      "t": "non-recourse debt",
+      "d": "Project-level borrowing repaid only from that project's cash flow, with no claim on the owner's other assets."
+    },
+    {
+      "t": "independent engineer",
+      "d": "The technical reviewer a lender hires to check a project's design, equipment, contractor and schedule before and during construction."
+    },
+    {
+      "t": "construction loan",
+      "d": "A loan drawn in stages as building milestones are certified, repaid or refinanced when the asset is complete."
+    }
+  ]
+}

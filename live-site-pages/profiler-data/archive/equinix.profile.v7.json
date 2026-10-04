@@ -28,7 +28,7 @@
   },
   {
    "name": "xScale hyperscale program & atNorth",
-   "description": "The AI-capacity vehicle: a >$15B US JV (CPP Investments 37.5% / GIC 37.5% / Equinix 25%) building >1.5 GW across >100 MW campuses — nearly tripling the program's capital; >725 MW at full buildout pre-2024 plus the new US wave; Hampton, GA contributed January 2026. atNorth (agreed February 2026 at a $4B EV with CPP Investments; completed 2 September 2026 with Equinix at c. 34% for $895M, CPP c. 51% for $1.3B and Partners Group re-investing for c. 10% — the ~40% agreement figure was re-cut by seller and management rollover): ~800 MW installed Nordic high-density platform with 1 GW secured power, liquid-cooling-enabled with heat reuse.",
+   "description": "The AI-capacity vehicle: a >$15B US JV (CPP Investments 37.5% / GIC 37.5% / Equinix 25%) building >1.5 GW across >100 MW campuses — nearly tripling the program's capital; >725 MW at full buildout pre-2024 plus the new US wave; Hampton, GA contributed January 2026. atNorth (February 2026, $4B EV with CPP): ~800 MW installed Nordic high-density platform with 1 GW secured power, liquid-cooling-enabled with heat reuse.",
    "positioning": "Keeps hyperscale AI expansion largely off Equinix's balance sheet while competing for the wholesale capacity Digital Realty leads — the answer to 'colo missed the AI training wave.'",
    "soldThrough": "JV-financed build-to-lease to hyperscalers.",
    "targetSegments": [
@@ -62,13 +62,6 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-09-02",
-   "category": "ma",
-   "headline": "atNorth acquisition completed: Equinix c. 34% ($895M), CPP Investments c. 51% control ($1.3B), Partners Group re-invests for c. 10% ($260M); $4B EV; $4.1B financing package",
-   "read": "The signing split (CPP ~60% / Equinix ~40%) was re-cut at close by Partners Group's and management's rollover — Equinix ends with a third of the platform rather than four-tenths.",
-   "source": "https://newsroom.equinix.com/2026-09-02-CPP-Investments-and-Equinix-Complete-atNorth-Acquisition-to-Support-Growth-of-Leading-Nordic-Data-Center-Platform"
-  },
-  {
    "date": "2026-08-06",
    "category": "partnership",
    "headline": "Central Georgia EMC agreement for the Hampton campus — 20-year take-or-pay, Equinix funds 100% of grid upgrades and overruns plus up to $20M/yr property tax",
@@ -83,18 +76,18 @@
    "source": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results,-Raises-2026-Guidance-and-Long-Term-Outlook"
   },
   {
+   "date": "2026-02-27",
+   "category": "partnership",
+   "headline": "atNorth acquisition with CPP Investments ($4B EV; Equinix ~40%) — ~800 MW installed Nordic high-density platform with 1 GW secured power",
+   "read": "Buys liquid-cooling-native capacity in power-rich Nordic markets — an end-run around the power-constrained core metros.",
+   "source": "https://investor.equinix.com/news-events/press-releases/detail/1099/cpp-investments-and-equinix-to-acquire-atnorth-for-us4"
+  },
+  {
    "date": "2026-03-10",
    "category": "leadership",
    "headline": "Olivier Leonetti named CFO (ex-Eaton CFO); Moody's upgraded Equinix to Baa1 days earlier",
    "read": "An electrical-industry CFO for an infrastructure-heavy era — and a credit upgrade that lowers the cost of the $5-7B/yr capex program.",
    "source": "https://newsroom.equinix.com/press-releases-global?l=100"
-  },
-  {
-   "date": "2026-02-27",
-   "category": "partnership",
-   "headline": "atNorth acquisition agreed with CPP Investments ($4B EV; Equinix ~40% at signing, c. 34% at the 2 September 2026 close) — ~800 MW installed Nordic high-density platform with 1 GW secured power",
-   "read": "Buys liquid-cooling-native capacity in power-rich Nordic markets — an end-run around the power-constrained core metros.",
-   "source": "https://investor.equinix.com/news-events/press-releases/detail/1099/cpp-investments-and-equinix-to-acquire-atnorth-for-us4"
   },
   {
    "date": "2025-11-21",
@@ -179,16 +172,6 @@
    "context": "The two lead different segments of the same market. Synergy Research measures Equinix as the retail-segment leader at about 17% share and leader in 16 of the top 25 metros, while Digital Realty holds roughly 28% of the wholesale segment. On scale, Equinix is larger by revenue (USD 9.2bn against USD 6.11bn in FY2025) and by market value; Digital Realty is larger by net rentable area, by data-centre count (310 against 280) and by development pipeline.\n\nThey are also counterparties. Digital Realty's FY2025 10-K names Equinix first among its competitors and, in the same filing, lists Equinix as its sixth-largest customer at USD 95.6m of annualised recurring revenue, 2.0% of the total, across 14 locations on a 4.6-year weighted average term.",
    "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
    "status": "active"
-  },
-  {
-   "slug": "cpp-investments",
-   "type": "partner",
-   "status": "active",
-   "since": "2024-10",
-   "scale": "xScale US JV: CPP 37.5% / GIC 37.5% / Equinix 25%; atNorth: CPP c. 51%, Equinix c. 34%",
-   "note": "CPP Investments is Equinix's partner in the >$15B US xScale joint venture and its co-owner of atNorth, completed 2 September 2026.",
-   "context": "Equinix's October 2024 release records the xScale JV with CPP Investments and GIC (>$15B, >1.5 GW; CPP 37.5%, GIC 37.5%, Equinix 25%). The atNorth agreement of 27 February 2026 gave Equinix ~40% and CPP ~60% at a $4B EV; the completion release of 2 September 2026 states Equinix c. 34% ($895M), CPP c. 51% ($1.3B) and Partners Group c. 10% ($260M) after rollover. Recorded here at v8 after the `cpp-investments` dossier was written (step 7 reconciliation, 2026-10-03).",
-   "source": "https://newsroom.equinix.com/2026-09-02-CPP-Investments-and-Equinix-Complete-atNorth-Acquisition-to-Support-Growth-of-Leading-Nordic-Data-Center-Platform"
   }
  ],
  "policyExposure": [
@@ -359,11 +342,6 @@
  },
  "sources": [
   {
-   "label": "Equinix — CPP Investments and Equinix Complete atNorth Acquisition to Support Growth of Leading Nordic Data Center Platform",
-   "url": "https://newsroom.equinix.com/2026-09-02-CPP-Investments-and-Equinix-Complete-atNorth-Acquisition-to-Support-Growth-of-Leading-Nordic-Data-Center-Platform",
-   "date": "2026-09-02"
-  },
-  {
    "label": "Central Georgia EMC ratepayer agreement",
    "url": "https://newsroom.equinix.com/2026-08-06-Equinix-Partners-with-Central-Georgia-Electric-Membership-Corporation-to-Protect-Ratepayers",
    "date": "2026-08-06"
@@ -434,6 +412,6 @@
    "date": "2026-02-13"
   }
  ],
- "lastUpdated": "2026-10-03",
- "profileVersion": 8
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 7
 }

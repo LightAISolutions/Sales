@@ -1,0 +1,1300 @@
+{
+ "schemaVersion": 7,
+ "slug": "quinbrook",
+ "name": "Quinbrook Infrastructure Partners (Jersey) Limited — investment manager; group apex Quinbrook Holdings Limited (Jersey); SEC-registered US adviser Quinbrook Infrastructure Partners LLC",
+ "shortName": "Quinbrook",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.quinbrook.com/",
+ "headquarters": "London (3rd Floor, 24 Savile Row, W1S 2ES) and St Helier, Jersey (investment manager); offices in New York, Houston, Brisbane and Frankfurt",
+ "founded": 2015,
+ "employees": "82 platform-wide at March 2026 (London 39, Brisbane 18, Houston 13, New York 11, Frankfurt 1) per the 2025 Sustainability Report",
+ "ownership": {
+  "type": "private (founder-owned)",
+  "ticker": "Private — Quinbrook Holdings Limited (Jersey) is held 50–75% each by Koala Capital Limited (Rory Quinlan) and CEI Capital Management Pty Ltd as trustee of the Scaysbrook Clean Energy Trust (David Scaysbrook), per SEC Form ADV Schedules A/B (2026)",
+  "notes": "Regulatory footprint: Quinbrook Infrastructure Partners LLC (New York; SEC-registered adviser 801-112447, CRD 287822) with three exempt reporting advisers — the Jersey manager (802-112104), the UK company Quinbrook Infrastructure Partners Limited (Companies House 09741971; 802-112103) and the Australian Pty (802-112102); affiliated broker-dealer Quinbrook Capital Partners LLC (FINRA, 2022). The UK company's Companies House register states no registrable person with significant control (statement of 30 July 2024); its FY2025 accounts name the Jersey company as 'immediate and ultimate parent undertaking' and state that the directors 'consider there to be no ultimate controlling party'. Rory Quinlan resigned as a director of the UK company on 18 July 2025 but remains Co-Founder and Managing Partner, a control person on every 2026 Form ADV and a director of Habitat Energy Limited."
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Quinbrook is the one capital-segment investor in this corpus that builds the assets itself: a founder-owned, USD 8.95bn (regulatory AUM) value-add manager whose funds developed Supernode — 520 MW / 1,858 MWh operating in Brisbane since 28 July 2026 under Origin tolls, with a 260 MW / 1,216 MWh third stage financed for Stanwell and CATL as supplier across all three — and founded Rowan Digital Infrastructure, the US hyperscale developer in which funds affiliated with Blackstone acquired 'a significant minority stake' on 9 April 2026 (reported, not announced, at 49% and about USD 3.8bn excluding debt). It closed its second UK fund at GBP 587m on 8 July 2026 and is raising a third global flagship, Quinbrook III, with a USD 4bn target that it has announced only in a Companies House filing. It is also the owner of Habitat Energy, whose reported sale process (JLL and Boston Consulting Group, March 2026) has produced no public step in seven months, and whose FY2025 accounts, with those of its UK holding group, were overdue at Companies House on 3 October 2026.\n\n**BACKGROUND.** Founded in 2015 by David Scaysbrook and Rory Quinlan (Capital Dynamics Clean Energy & Infrastructure, Novera Energy), Quinbrook manages five closed funds — Low Carbon Power Fund (2017–19), Renewables Impact Fund (GBP 620m, October 2023), the USD 600m Valley of Fire continuation fund (April 2024; Blackstone Strategic Partners lead), the Net Zero Power Fund (USD 3bn including co-investment, August 2024) and Renewables Impact Fund II (GBP 587m) — plus Quinbrook III in market. Per its 28 July 2026 Form ADV the US adviser reports USD 8,952,975,521 of non-discretionary regulatory assets across 20 accounts; IPE Real Assets ranked it 89th among infrastructure managers (infrastructure AUM EUR 3,632m at 31 December 2024). Brian Restall became its first chief executive in October 2025 under the two founders. Realised exits: Scout Clean Energy to Brookfield (about USD 1bn cash, 2022), 49% of Gemini to APG (2022), Lockyer Energy to Stanwell (2025), Energy Locals to a Palisade consortium (2024), Flexitricity to Drax (GBP 36m enterprise value, completed 31 March 2026). Infrastructure Investor named it Energy Transition Investor of the Year (Global) for 2024.",
+ "ecosystemRole": "We assess Quinbrook as the capital segment's developer-manager: a challenger by scale beside Blackstone, Brookfield, Macquarie, MGX, BlackRock and KKR, but the only one of them whose funds originate, build and operate the storage and data-centre assets rather than buying platforms. Through its development affiliate Private Energy Partners it is itself the procurer at Supernode — CATL's EnerC Plus and TENER S systems, GE Vernova power conversion, Powerlink connection — and it co-developed the 8-hour EnerQB product with CATL. Its purchase orders therefore sit closer to the manager than at any peer: a storage vendor meets Quinbrook's own team on Supernode Stage 4 and the Gladstone hub, not a portfolio company's. On the data-centre side it founded Rowan (3rd-largest US hyperscale developer by capacity per Altman Solon, cited by Quinbrook) and now shares it with Blackstone; on the optimisation side it owns Habitat Energy, for sale. Its UK franchise — the largest private owner of synchronous condensers, Cleve Hill, Mallard Pass — sells grid stability and contracted power to NESO and corporate offtakers.",
+ "productsAndServices": [
+  {
+   "name": "Closed-end funds — Low Carbon Power Fund, Renewables Impact Funds I and II, Net Zero Power Fund, Valley of Fire continuation fund, and Quinbrook III in market",
+   "category": "Private markets — value-add energy-transition infrastructure",
+   "description": "Quinbrook sells closed-end drawdown funds (Jersey LPs with Delaware and Luxembourg SCSp parallel vehicles, 3(c)(7), USD 10m minimum on the flagships) to pensions, sovereigns, insurers and family offices, plus named co-investment vehicles and one GP-led continuation fund. The sequence: Quinbrook Low Carbon Power Fund (first sale June 2017, final close 2019; US, UK and Australia; now largely realised); Quinbrook Renewables Impact Fund (QRIF, UK; final close 2 October 2023 at GBP 620m against a GBP 500m target; Cleve Hill, the Rassau and Thistle synchronous condensers, Uskmouth, Habitat Energy); the Valley of Fire Fund (closed 4 April 2024 at USD 600m; lead investor Blackstone Strategic Partners, cornerstone Ares Infrastructure Secondaries; bought 51% of Gemini and the Valley of Fire development portfolio from the first fund); the Net Zero Power Fund (NZPF, 'Quinbrook Infrastructure Partners III – Net Zero Power Fund'; final close announced 1 August 2024 at USD 3bn 'across the fund and co-investment vehicles' — Infrastructure Investor reports USD 2bn of fund and USD 1bn of co-investment; the Form D for the main vehicles shows USD 1,599,813,000 sold; Primergy, Rowan, Supernode, PurposeEnergy, Project Severn); and Quinbrook Renewables Impact Fund II (QRIF II, UK and Ireland; final close 8 July 2026 at GBP 587m against GBP 500m, hard cap GBP 1bn; Mallard Pass, Wexford, Aegis Energy, Project Norton). The UK manager's FY2025 accounts state that 'the Group launched its third global fund, Quinbrook III, with a target fund size of USD 4 billion'; the Form D for Quinbrook III SCSp records a first sale on 1 October 2025 and USD 30m sold to two investors, and Quinbrook III UK Holdings Limited was incorporated on 27 July 2026. Quinbrook has issued no release on Quinbrook III.",
+   "highlights": [
+    "Gross asset values per the 28 July 2026 Form ADV: NZPF III-B USD 1,728m, QNZPF US co-investment SCSp USD 1,452m, NZPF SCSp USD 1,266m, QRIF USD 995m, Valley of Fire feeder USD 708m, QRIF II USD 655m, Quinbrook III SCSp USD 96m",
+    "LP evidence from the public pension record: Strathclyde Pension Fund GBP 50m to QRIF (2020, of about GBP 600m from 12 investors) and GBP 60m proposed to QRIF II (target net IRR 9.9%, cash yield 6%+, term 10 years plus three one-year extensions); Border to Coast GBP 40m to QRIF II (April 2025); University Pension Plan Ontario an NZPF investor and Rowan co-investor",
+    "Quinbrook counts its funds inconsistently — NZPF was 'the fifth successive fund' in August 2024 and QRIF II 'Quinbrook's fifth managed fund' in July 2026; the ADV lists five closed strategies and Quinbrook III",
+    "No fund-level IRR, multiple or DPI is disclosed anywhere first-party; realisations are stated as transaction values (Scout 'c. US$1 billion in cash'; Flexitricity GBP 36m EV)"
+   ],
+   "positioning": "A specialist, founder-owned value-add manager: IPE Real Assets ranks Quinbrook 89th (infrastructure AUM EUR 3,632m, total EUR 6,108m at 31 December 2024) against the hundreds of billions run by the segment's incumbents. Quinbrook names no competitor; its differentiation is 'asset creator and business builder that conceives, develops, constructs and operates' with 'control investor' positions. Infrastructure Investor's Energy Transition Investor of the Year (Global) for 2024.",
+   "soldThrough": "Closed-end drawdown funds (Jersey LP, Delaware LP and Luxembourg SCSp parallels), deal-specific co-investment vehicles, one GP-led continuation fund; UK funds marketed exclusively to UK and Irish institutions; distribution teams in London (Mark Burrows) and Brisbane (Ryan Gordon); an affiliated broker-dealer in New York.",
+   "targetSegments": [
+    "UK LGPS pools and Irish institutions (QRIF strategy)",
+    "North American, European and Australian pensions and sovereigns (NZPF, Quinbrook III)",
+    "Secondaries investors (continuation fund)"
+   ],
+   "roadmap": "Quinbrook III (USD 4bn target) raising since October 2025 — no target close date disclosed; Quintrace, a Quinbrook-launched hourly-carbon-accounting platform, ran a Google-sponsored storage-shift pilot with esVolta and LevelTen in September 2026."
+  },
+  {
+   "name": "Supernode (Brisbane) — Quinbrook-developed BESS campus and hyperscale data-centre precinct",
+   "category": "Platform — storage and powered land (developed, owned and operated by Quinbrook funds)",
+   "description": "Supernode, at Brendale/South Pine north of Brisbane, is the asset that makes Quinbrook a buyer: 'developed by Quinbrook' with its affiliate Private Energy Partners, held in the Net Zero Power Fund, and registered with AEMO as Supernode BESS (DUIDs SNB01 and SNB02, scheduled bidirectional units, Origin Energy Electricity Limited as intermediary from 17 February 2026). Stage 1 (260 MW / 619 MWh) reached commercial operations on 17 February 2026; Stage 2 completed construction and commenced operations on 28 July 2026, taking the operating campus to 520 MW / 1,858 MWh — 'the largest operating BESS in the National Energy Market' — under 12-year tolling agreements with Origin Energy for 100% of Stages 1–2. Stage 3 (260 MW / 1,216 MWh; Stanwell's release said 250 MW / 1,010 MWh) carries a 15-year offtake with the state-owned Stanwell Corporation signed 16 April 2025 and reached financial close on A$469m of debt on 28 July 2026 (CBA, MUFG, Deutsche Bank, DNB, Rabobank), for completion in 2027. Stages 1–2 were financed with A$722m of debt (January 2025; Bank of America, CBA, Deutsche Bank, Mizuho, MUFG), 'the largest standalone BESS project financing in Australia'; total project financing is about A$1.2bn and Quinbrook states it 'has committed A$1.4 billion to develop the first three stages'. CATL supplies EnerC Plus containers for Stages 1–2 and TENER S for Stage 3 under a long-term service agreement; GE Vernova supplied power conversion and SCADA for Stages 1–2.",
+   "highlights": [
+    "Three stages total about 780 MW / 3,073 MWh (Quinbrook's figures vary between releases: 3,073, 3,074 and 3,096 MWh); the site has 'capacity for a further 520 MW of expansion' and Stage 4 is 'in pre-construction' as the first deployment of EnerQB, the 8-hour product Quinbrook co-developed with CATL (announced 5 March 2025; '>3 GW' planned across Quinbrook's Australian sites)",
+    "The data-centre precinct ('Supernode DC', '500 MW-IT potential', three high-voltage grid connections, Torus dark fibre) is labelled 'Construction' on quinbrook.com; no tenant or hyperscale customer is named in any source read",
+    "Quinbrook's own portfolio page still labelled Supernode 'Construction' on 7 September 2026 while its text records Stages 1–2 operating",
+    "Related Queensland pipeline: an exclusivity MoU with Stanwell (3 December 2025) for the Gladstone SDA Energy Hub — up to 1,080 MW of OCGT with synchronous-condenser capability and 780 MW of 8-hour EnerQB storage — and an EnerQB demonstration at Stanwell Power Station"
+   ],
+   "positioning": "The largest operating battery in the NEM at Stage 2, built by the manager's own development team rather than bought from a developer — the opposite of how the segment's incumbents acquire storage.",
+   "soldThrough": "Long-term tolls to retailers and state generators (Origin 12 years; Stanwell 15 years); project-finance debt at the project trusts; equity from NZPF.",
+   "targetSegments": [
+    "Gentailers and state-owned generators (tolling)",
+    "Hyperscale tenants (the DC precinct — none named)"
+   ],
+   "roadmap": "Stage 3 completion 2027; Stage 4 / EnerQB pre-construction; Gladstone hub subject to Stanwell's exclusivity MoU."
+  },
+  {
+   "name": "Rowan Digital Infrastructure — the hyperscale developer Quinbrook founded, now shared with Blackstone",
+   "category": "Platform — AIDC development ('Energy Intensive Industry and Industrial Precincts' strategy)",
+   "description": "Rowan began in 2020 as a joint venture between Quinbrook and Birch Infrastructure and became 'a wholly owned portfolio company of Quinbrook' when Quinbrook internalised the team in January 2023; it is held in the Net Zero Power Fund. University Pension Plan Ontario completed a co-investment in August 2024 (terms undisclosed). On 9 April 2026 Quinbrook, Rowan and Blackstone announced that 'funds affiliated with Blackstone have acquired a significant minority stake in Rowan'; no party disclosed the percentage, the price or whether the figure was equity or enterprise value. The Information, relayed by IREI and The Tech Capital, reported 49% at a company valuation of about USD 3.8bn excluding debt, with Quinbrook retaining operational control and Blackstone taking significant control rights — those figures are reported, not announced. David Scaysbrook is Rowan's chairman and Kathryn Lin, Quinbrook's digital-infrastructure lead, sits on its board. Rowan describes itself as developing 'multiple 300 MW to 1+ GW campuses across the U.S.' with more than 20 sites, 5.8–6 GW under evaluation and 'over 1.2 GW of leased capacity with leading hyperscale customers'; Quinbrook cites Altman Solon ranking it the third-largest US hyperscale developer by capacity.",
+   "highlights": [
+    "Campuses: Bauxite I–III at Quantum Frederick, Maryland (2,000 acres; 626 MW rising to more than 1 GW of utility load; Bauxite I substantially complete July 2025; USD 975m, 1.2bn and 925m of financings in 2025); Cinco, Lytle, Texas (300 MW near-term, 400 MW secured with AEP; USD 550m construction financing February 2026); Temple, Texas (1,350+ acres, 1.6 GW of power 2026–2030; Temple I 300 MW broke ground March 2026; about USD 2.95bn of green financing closed 27 May 2026, 'the largest financing in the company's history'); campuses in development in Oregon and Virginia",
+    "Rowan has raised USD 4.4bn under its Green Finance Framework across three projects in a year and says total debt raised exceeds USD 4bn; CFO Kevin Mammel, CEO Charley Daitch",
+    "Politics: three Rowan Frederick LLCs were plaintiffs in the April 2026 suits against a referendum on Frederick County's data-centre overlay zone; the Maryland Supreme Court blocked the referendum on 30 June 2026, but the county executive rejected the neighbouring Quantum Maryland agreement on 15 September 2026 and extended a data-centre moratorium to 1 July 2027 — Rowan's existing campuses sit inside the zone, and the effect on later phases is not stated",
+    "Rowan signed the White House Ratepayer Protection Pledge (July 2026), committed USD 38m to Temple water infrastructure (17 September 2026) and published a 'Rowan Community Guarantee' (21 September 2026)",
+    "Blackstone's relationship pre-dates Rowan: Blackstone Strategic Partners was lead investor in Quinbrook's USD 600m Valley of Fire continuation fund (April 2024). Blackstone Digital Infrastructure Trust's Q2 2026 10-Q does not mention Rowan, so the stake is not in that listed vehicle"
+   ],
+   "positioning": "Quinbrook's thesis is 'powered land': siting hyperscale campuses where its energy expertise secures the utility load. Rowan is the only hyperscale developer in this corpus founded by an infrastructure manager rather than by data-centre operators or a REIT.",
+   "soldThrough": "Turnkey and powered-shell campuses leased to hyperscalers; project-level green financings; equity from NZPF, UPP and Blackstone funds.",
+   "targetSegments": [
+    "Hyperscale cloud and AI tenants",
+    "Utilities and municipalities hosting campuses (AEP, Temple)"
+   ],
+   "roadmap": "Temple I 300 MW (construction from March 2026); Cinco 700 MW before 2030; Frederick later phases subject to the county moratorium to July 2027; Oregon and Virginia campuses in development."
+  },
+  {
+   "name": "Habitat Energy — the optimiser for sale — and the UK flexibility franchise (Flexitricity exited, Velox retained)",
+   "category": "Platform — storage optimisation and flexible generation (QRIF; 'Flexibility, Firming and Grid Support' strategy)",
+   "description": "Quinbrook acquired Habitat Energy Limited on 30 November 2021 (terms undisclosed) and holds it in QRIF through its UK holding group, Renewable and Grid Services Limited (RGS), whose FY2024 accounts carry Habitat's 'Optimisation services' turnover of GBP 4,169,575 (up 80%) within group turnover of GBP 14,227,627 and a group loss of GBP 68.65m; RGS owed GBP 526.8m to the Jersey manager at 31 December 2024 and names Quinbrook Holdings Limited as its ultimate controlling party. Habitat states 5.5 GW under contract across the UK, US and Australia, 130 people, and ranked first in Modo Energy's December 2025 ERCOT table; it kept winning mandates through 2026 (PJM entry in April; Octopus Australia's Fulham and Blind Creek projects in July–August). New Project Media reported on 17 March 2026 that Quinbrook was 'working with JLL and Boston Consulting Group' to sell Habitat; Quinbrook did not comment, no bidder, price, signing or withdrawal has been reported since, and Quinbrook's own Habitat page — labelled 'Operational & Expanding' — has not been modified since 29 August 2025. On 3 October 2026 Companies House showed FY2025 accounts 'overdue' for both Habitat Energy Limited and RGS (due 30 September 2026); the manager's own UK company filed on time. Flexitricity, the Edinburgh aggregator Quinbrook bought in 2020 for GBP 15.2m, was sold to Drax at an enterprise value of GBP 36m (about GBP 42m of proceeds including a GBP 6m working-capital and cash adjustment), announced 21 January 2026 and completed on 31 March 2026 per Drax's half-year accounts, after Ofgem notification and National Security and Investment Act approval. Velox Power — more than 300 MW of UK gas peakers across 52 sites, developed since 2017 — stayed with Quinbrook.",
+   "highlights": [
+    "Quinbrook's side of the Habitat record agrees with the `habitat-energy` dossier on every dated fact (acquisition, mandate report, overdue accounts, board changes); it corrects one: Quinbrook says Flexitricity's contracted portfolio grew 'from 540 MW to c. 1.3 GW', not the ~0.9 GW Drax cited — both figures are recorded",
+    "The PSC register of RGS no longer evidences the Jersey holding: a PSC07 of 18 May 2026 ceased Renewables Impact Holding Limited as of 29 November 2021 and a PSC08 of 19 May 2026 states there is no registrable person; the economic chain to QRIF rests on the accounts, not the register",
+    "Habitat's board carries five Quinbrook-side directors — Scaysbrook (chairman per Quinbrook's March 2022 release; not restated since), Quinlan, James Allan, Hank Jones (17 June 2025) and Keith Gains (10 December 2025) — and no independent non-executive is disclosed",
+    "Any Habitat sale faces the same gates Flexitricity cleared: NSI Act review and Ofgem"
+   ],
+   "positioning": "The only capital-segment investor that owns a battery optimiser outright; Habitat is the corpus's top-ranked ERCOT optimiser and the asset Quinbrook is trying to sell.",
+   "soldThrough": "Habitat: revenue-share optimisation contracts with floors from utilities and insurers; Velox: Capacity Market and balancing revenues.",
+   "targetSegments": [
+    "Battery owners and tolling counterparties (Habitat)",
+    "NESO balancing and Capacity Market (Velox)"
+   ],
+   "roadmap": "Habitat sale process unresolved at 3 October 2026; FY2025 accounts of Habitat and RGS awaited."
+  },
+  {
+   "name": "UK and Irish grid franchise — synchronous condensers, Cleve Hill, Mallard Pass, Uskmouth, Aegis",
+   "category": "Platform — contracted grid stability, solar-plus-storage and transport energy (QRIF and QRIF II)",
+   "description": "Quinbrook calls itself 'the largest private owner of synchronous condensers in the UK': Rassau (Ebbw Vale; Pathfinder I, operating since February 2022), the four Thistle units in Scotland (Rothienorman December 2024, Thurso May 2025, Gretna August 2025, Neilston 29 April 2026; Pathfinder II, 'more than half of the GBP 323 million total contract value', 10-year CPI-linked NESO contracts) and the Severn pair (Cilfynydd 2027, Sellindge 2028; Pathfinder III), financed with GBP 120m (April 2024) and GBP 156m (29 April 2026; Standard Chartered, Barclays, Siemens Financial Services); Wexford in Ireland (963 MVA.s, EirGrid Low Carbon Inertia Services contract) was its first Irish investment (July 2025, 100% of the equity, held in QRIF II). Cleve Hill Solar Park in Kent — the UK's first solar NSIP, bought in 2021 as 'Project Fortress' — reached commercial operation on 1 July 2025 at 373 MWdc, the largest operating solar park in the UK, with a 150 MW / 300 MWh battery due in 2026, a 15-year Tesco PPA for 65% of output, a CfD and Shell route-to-market for the rest, a 15-year Capacity Market agreement and GBP 238.5m of debt (Lloyds, NatWest). Mallard Pass (373 MWdc / 240 MWac, the second solar NSIP; acquired 3 February 2025) starts construction in 2026 for a 2028 COD; Uskmouth (230 MW / 460 MWh at a former coal site; E.ON took 50% on 15 March 2025) is due to operate in 2026; Aegis Energy (up to GBP 100m for HGV refuelling hubs) and Project Norton (65 MW solar + 41 MW BESS) are QRIF II holdings.",
+   "highlights": [
+    "Eight condensers operating or under construction supported by 'over GBP 500 million in committed capital'; development partner Welsh Power; three new SPVs (Quinbrook EM1/SE1/SW1 Grid Services) incorporated 14 May 2026",
+    "Cleve Hill's contracted and index-linked revenues exceed GBP 480m; BESS up to 350 MW consented",
+    "QRIF II's thesis is Clean Power 2030 and Ireland's 80% renewables target; GBP 1.2bn of equity and GBP 1.7bn of total capital invested in UK and Irish projects to date (Quinbrook, July 2026)"
+   ],
+   "positioning": "A UK NSIP-solar and grid-stability specialist whose revenues are NESO contracts, CfDs and corporate PPAs rather than merchant power.",
+   "soldThrough": "NESO Stability Pathfinder contracts, CfD, Capacity Market, corporate PPAs; project debt; equity from QRIF and QRIF II.",
+   "targetSegments": [
+    "NESO and EirGrid (stability services)",
+    "Corporate offtakers (Tesco)",
+    "Commercial fleets (Aegis hubs)"
+   ],
+   "roadmap": "Cleve Hill BESS 2026; Uskmouth 2026; Mallard Pass construction 2026, COD 2028; Severn condensers 2027–28; Wexford 2027; first Aegis hub 2026."
+  },
+  {
+   "name": "US solar-plus-storage and realised platforms — Primergy, Gemini, Valley of Fire, GlidePath; exits (Scout, Lockyer, Energy Locals)",
+   "category": "Platform — US development and the realisation record",
+   "description": "Primergy (Oakland; 100% owned since 2020; NZPF) reports 10.3 GW of solar and 51.5 GWh of storage in development and construction, 1.2 GW and 1.5 GWh operating and more than USD 4bn of financing raised; its flagship Gemini (Clark County, Nevada; 690 MWac / 966 MWdc solar + 380 MW / 1,416 MWh BESS; 25-year NV Energy PPA; COD 2024) was financed with USD 1.9bn of debt and tax equity in April 2022, sold 49% to APG for ABP in October 2022 (price undisclosed) and 51% into the Valley of Fire continuation fund in April 2024, and refinanced in March 2026 with USD 600m of 24-year notes and a USD 160m letter-of-credit facility backed by a 10-year PTC transfer. The Valley of Fire portfolio (eight projects, more than 2.2 GW of solar and up to 2.5 GW of storage in Nevada, Colorado and Arizona) is managed by Primergy; GlidePath (acquired 2017) operates Byrd Ranch (50 MW / 50 MWh, ERCOT), Prospect and Meyersdale with a pipeline near 2 GWh. Exits: Scout Clean Energy to Brookfield Renewable for about USD 1bn in cash (September 2022, from a USD 6m start-up stake plus USD 470m of equity); Lockyer Energy to the state-owned Stanwell Corporation (June 2025; 120 MW Stage 1, price undisclosed); Energy Locals and Energy Trade to a Palisade Impact consortium (November 2024). Other holdings: PurposeEnergy and Junction City Biomethane (US biogas and RNG), Elemental Clean Fuels (Canada; majority stake from the founders and Piney Point Capital, October 2025), Cape Byron Power (two NSW biomass plants) and the Northern Quartz silicon campus in Townsville (development).",
+   "highlights": [
+    "Gemini's 51% still sits in a Quinbrook fund (Valley of Fire), so 'Gemini sold' is wrong twice over — 49% was sold to APG and 51% to Quinbrook's own continuation vehicle",
+    "Primergy's Ash Creek (409 MW, Texas) and Prairie Mist (100 MW, Arkansas) are operating; PTC transferability and FEOC rules are the direct US policy exposure of the solar fleet",
+    "Scout: Quinbrook's own release gives 'c. US$1 billion in cash on completion' — a cash consideration, not described as an enterprise value"
+   ],
+   "positioning": "The US arm is a developer-owner of utility-scale solar and storage; its realisations (Scout, Gemini) are the manager's track record for Quinbrook III.",
+   "soldThrough": "Utility PPAs and tolls; project debt and tax equity; partial sales to pensions (APG) and continuation vehicles.",
+   "targetSegments": [
+    "US utilities (NV Energy)",
+    "Corporate offtakers",
+    "Secondaries buyers"
+   ],
+   "roadmap": "Valley of Fire: 1,300 MW of solar and 1,800 MW of BESS operational by 2028 (Quinbrook target); Northern Quartz online 'by 2030'."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-10-03",
+   "category": "regulatory",
+   "headline": "Companies House shows FY2025 accounts 'overdue' for Habitat Energy Limited and Renewable and Grid Services Limited (due 30 September 2026); Quinbrook's own UK company filed on 24 April 2026",
+   "read": "The first late filing at either company after on-time FY2023 and FY2024 accounts, during an unresolved sale process.",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/13250883"
+  },
+  {
+   "date": "2026-09-21",
+   "category": "corporate",
+   "headline": "Rowan publishes a 'Community Guarantee' and commits USD 38m to Temple, Texas water infrastructure",
+   "read": "The Quinbrook-founded developer is managing ratepayer and water politics ahead of its Texas build-out.",
+   "source": "https://rowan.com/news-insights/news-perspectives/"
+  },
+  {
+   "date": "2026-09-17",
+   "category": "product",
+   "headline": "Quintrace, esVolta and LevelTen publish a Google-sponsored battery storage-shift pilot (9.2 GWh shifted, EnergyTag-verified hourly certificates)",
+   "read": "Quinbrook's carbon-accounting spin-off finds third-party adoption.",
+   "source": "https://www.prnewswire.com/news-releases/battery-storage-shift-pilot-demonstrates-how-hourly-renewable-certificates-can-power-the-next-phase-of-corporate-clean-energy-goals-302881809.html"
+  },
+  {
+   "date": "2026-09-15",
+   "category": "policy",
+   "headline": "Frederick County, Maryland rejects the Quantum Maryland development agreement and extends its data-centre moratorium to 1 July 2027",
+   "read": "Rowan's Quantum Frederick campuses sit inside the affected overlay zone; the effect on later phases is not stated.",
+   "source": "https://www.wypr.org/wypr-news/2026-09-15/frederick-county-rejects-agreement-with-data-center-developer-amidst-public-outcry"
+  },
+  {
+   "date": "2026-08-15",
+   "category": "partnership",
+   "headline": "CATL and Quinbrook confirm CATL as supplier across all three Supernode stages (EnerC Plus for Stages 1–2, TENER S for Stage 3) under a long-term service agreement; EnerQB 8-hour storage 'being considered for future stages'",
+   "read": "Names the battery supplier to Quinbrook's flagship — a Chinese supply chain the US FEOC rules do not reach in Australia.",
+   "source": "https://www.prnewswire.com/news-releases/catl-and-quinbrook-build-on-supernode-partnership-following-stage-2-and-stage-3-major-milestones-302852270.html"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "project",
+   "headline": "Supernode Stage 2 completes construction and commences operations — 520 MW / 1,858 MWh combined, 'the largest operating BESS in the NEM' — and Stage 3 (260 MW / 1,216 MWh, Stanwell offtake) reaches financial close on A$469m",
+   "read": "Quinbrook's flagship is delivered on Origin tolls; total Supernode financing about A$1.2bn, Quinbrook's commitment A$1.4bn.",
+   "source": "https://www.quinbrook.com/news-insights/supernode-stage-2-completes-construction-and-commences-operations/"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "regulatory",
+   "headline": "Form ADV amendment: Quinbrook Infrastructure Partners LLC reports regulatory AUM of USD 8,952,975,521 across 20 accounts, about 25 US staff; Quinbrook III SCSp, III (A) and III (B) and QRIF II added to the fund schedule",
+   "read": "The only regulator-held AUM figure; Brian Restall appears as chief executive from October 2025.",
+   "source": "https://reports.adviserinfo.sec.gov/reports/ADV/287822/PDF/287822.pdf"
+  },
+  {
+   "date": "2026-07-27",
+   "category": "corporate",
+   "headline": "Quinbrook III UK Holdings Limited incorporated at Companies House (directors Keith Gains, Liv Miller, Rosalind Smith-Maxwell)",
+   "read": "The new USD 4bn global fund has a UK holding vehicle before it has a press release.",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/17362634"
+  },
+  {
+   "date": "2026-07-08",
+   "category": "financial",
+   "headline": "Quinbrook Renewables Impact Fund II final close at GBP 587m, oversubscribed against a GBP 500m target; UK and Irish institutional investors; holdings Mallard Pass, Wexford, Aegis Energy, Project Norton",
+   "read": "Quinbrook's fifth closed fund; LGPS pools re-upped (Strathclyde, Border to Coast).",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-closes-gbp-587-million-renewables-impact-fund-ii-oversubscribed/"
+  },
+  {
+   "date": "2026-06-30",
+   "category": "legal",
+   "headline": "Maryland Supreme Court blocks the Frederick County referendum on the data-centre overlay zone in suits where three Rowan Frederick LLCs were plaintiffs; the county executive pauses new data-centre development",
+   "read": "A legal win and a political loss for Rowan's Maryland campus.",
+   "source": "https://www.wypr.org/wypr-news/2026-06-30/maryland-supreme-court-shuts-down-frederick-county-data-center-referendum"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "leadership",
+   "headline": "Tim Horneman appointed Regional Leader for Australia, completing the CEO-led structure under Brian Restall with Giulia Siccardo (North America) and Keith Gains (UK)",
+   "read": "The founders move to strategic guidance; day-to-day management is now a CEO and three regional leaders.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-appoints-regional-leader-for-australia/"
+  },
+  {
+   "date": "2026-06-05",
+   "category": "financial",
+   "headline": "A fixed charge and negative pledge over Quinbrook Infrastructure Partners Limited is registered in favour of Royal Bank of Scotland International (instrument redacted)",
+   "read": "The first charge ever registered against the UK manager; purpose and amount undisclosed.",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/09741971/charges"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "financial",
+   "headline": "Rowan closes about USD 2.95bn of green financing for its 300 MW turnkey campus in Temple, Texas; USD 4.4bn raised under its Green Finance Framework in a year",
+   "read": "Rowan borrows at a scale that makes the Blackstone entry a recapitalisation, not a rescue.",
+   "source": "https://rowan.com/rowan-closes-3b-green-financing-for-turnkey-hyperscale-campus-in-high-growth-texas-market/"
+  },
+  {
+   "date": "2026-05-19",
+   "category": "regulatory",
+   "headline": "Renewable and Grid Services Limited files a PSC07 ceasing Renewables Impact Holding Limited as a person with significant control (backdated to 29 November 2021) and a PSC08 stating no registrable person",
+   "read": "A register correction, not a transfer: the Jersey parent of Habitat's UK holding group is no longer evidenced on the PSC register.",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/13250883/persons-with-significant-control"
+  },
+  {
+   "date": "2026-04-29",
+   "category": "financial",
+   "headline": "GBP 156m debt financing for the Severn synchronous condensers (Cilfynydd, Sellindge) and Neilston's commercial operation complete the four-unit Thistle portfolio; Wexford construction under way",
+   "read": "The UK grid-stability franchise reaches five operating and three building condensers.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-advances-uks-largest-synchronous-condenser-portfolio-with-156m-financing-and-final-scottish-project-launch/"
+  },
+  {
+   "date": "2026-04-24",
+   "category": "financial",
+   "headline": "Quinbrook Infrastructure Partners Limited files FY2025 group accounts: turnover GBP 16.07m, profit GBP 271,594, UK headcount 41; the strategic report records the launch of Quinbrook III with a USD 4bn target and quotes Jersey-group profit of USD 1.56m (2024: USD 22.79m)",
+   "read": "The only public window on the manager's P&L shows a thin year at parent level while fundraising ramps.",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/09741971/filing-history"
+  },
+  {
+   "date": "2026-04-09",
+   "category": "ma",
+   "headline": "Funds affiliated with Blackstone acquire 'a significant minority stake' in Rowan Digital Infrastructure; Quinbrook retains the majority and the chairmanship; Goldman Sachs, Evercore and Kirkland & Ellis advised Quinbrook",
+   "read": "Partial monetisation of Quinbrook's data-centre platform; The Information's 49% / ~USD 3.8bn ex-debt figures are reported, not announced.",
+   "source": "https://www.quinbrook.com/news-insights/rowan-digital-infrastructure-announces-strategic-recapitalization/"
+  },
+  {
+   "date": "2026-04-01",
+   "category": "ma",
+   "headline": "Drax completes the acquisition of Flexitricity (acquired 31 March 2026 per Drax's accounts) for GBP 36m net of cash",
+   "read": "Quinbrook exits one of its two UK optimisers; Velox Power stays.",
+   "source": "https://www.drax.com/press_release/drax-completes-acquisition-of-ai-enabled-asset-optimisation-platform/"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "ma",
+   "headline": "New Project Media reports Quinbrook is 'working with JLL and Boston Consulting Group' to sell Habitat Energy; Quinbrook did not respond to a request for comment",
+   "read": "The second optimiser exit in train; a single-outlet report with no public follow-up through October 2026.",
+   "source": "https://newprojectmedia.com/ma-advisors-emerge-on-upcoming-quinbrook-habitat-energy-sale/"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "financial",
+   "headline": "Primergy refinances Gemini with USD 600m of 24-year senior secured notes and a USD 160m letter-of-credit facility, backed by the NV Energy PPA and a 10-year PTC transfer",
+   "read": "De-risks the flagship 51% still held in the Valley of Fire fund.",
+   "source": "https://www.pv-tech.org/primergy-closes-us760-million-refinancing-gemini-solar-plus-storage-project/"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "project",
+   "headline": "Supernode Stage 1 (260 MW / 619 MWh) commences commercial operations under Origin Energy's 12-year toll; Stage 4 in pre-construction for the first EnerQB",
+   "read": "First revenue from the A$1.4bn Australian flagship.",
+   "source": "https://www.quinbrook.com/news-insights/supernode-stage-1-commences-commercial-operations/"
+  },
+  {
+   "date": "2026-01-21",
+   "category": "ma",
+   "headline": "Quinbrook agrees to sell Flexitricity to Drax at an enterprise value of GBP 36m (about GBP 42m of proceeds), conditional on NSI Act approval and Ofgem notification; Quinbrook paid GBP 15.2m in 2020",
+   "read": "The UK NSI Act applies to Quinbrook's flexibility disposals — Habitat will face the same gate.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/"
+  },
+  {
+   "date": "2025-12-10",
+   "category": "leadership",
+   "headline": "Keith Gains, Quinbrook's UK regional leader, is appointed a director of Habitat Energy Limited (Hank Jones joined its board on 17 June 2025)",
+   "read": "Two sponsor-side appointments in six months at the company reported to be for sale.",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/10923911/officers"
+  },
+  {
+   "date": "2025-12-03",
+   "category": "partnership",
+   "headline": "Stanwell and Quinbrook sign an exclusivity MoU for the Gladstone SDA Energy Hub — up to 1,080 MW of OCGT with synchronous-condenser capability and 780 MW of 8-hour EnerQB storage — and an EnerQB demonstration at Stanwell Power Station",
+   "read": "Gas-plus-long-duration-storage firming with a state-owned offtaker; Australia's pipeline beyond Supernode.",
+   "source": "https://www.quinbrook.com/news-insights/stanwell-and-quinbrook-strengthen-partnership-with-gladstone-sda-energy-hub-agreement/"
+  },
+  {
+   "date": "2025-10-15",
+   "category": "ma",
+   "headline": "Quinbrook acquires a majority stake in Elemental Clean Fuels from its founders and Piney Point Capital — its first Canadian investment",
+   "read": "Renewable fuels enter the portfolio as Quinbrook III begins raising.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-acquires-first-canadian-investment-with-strategic-stake-in-elemental-clean-fuels/"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "financial",
+   "headline": "Form D for Quinbrook III SCSp (Luxembourg): first sale 1 October 2025, USD 30m sold to two investors, indefinite offering",
+   "read": "The regulator-held evidence that Quinbrook III is in market.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2089971/000208997125000001/primary_doc.xml"
+  },
+  {
+   "date": "2025-08-14",
+   "category": "ma",
+   "headline": "Queensland confirms Stanwell's acquisition of the Lockyer Energy Project from Quinbrook (Stanwell: acquired June 2025); 120 MW Stage 1, up to 850 MW more",
+   "read": "An exit to the state generator that is also Supernode's Stage 3 offtaker.",
+   "source": "https://statements.qld.gov.au/statements/103323"
+  },
+  {
+   "date": "2025-07-29",
+   "category": "ma",
+   "headline": "Quinbrook's first Irish investment: the 963 MVA.s Wexford synchronous condenser (EirGrid Low Carbon Inertia Services contract), 100% of the equity",
+   "read": "The UK grid-stability model exported to Ireland under QRIF II.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-makes-first-irish-investment-with-wexford-synchronous-condenser-project/"
+  },
+  {
+   "date": "2025-07-18",
+   "category": "leadership",
+   "headline": "Rory Quinlan resigns as a director of Quinbrook Infrastructure Partners Limited (TM01); CFO Stuart Palmer appointed 14 July 2025",
+   "read": "Quinlan remains Co-Founder and Managing Partner, a control person on every 2026 Form ADV and a Habitat director; the UK board seat passed to the CFO.",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/09741971/officers"
+  },
+  {
+   "date": "2025-07-01",
+   "category": "project",
+   "headline": "Cleve Hill Solar Park (373 MWdc) reaches commercial operations — the largest operating solar park in the UK; 150 MW / 300 MWh BESS to follow in 2026",
+   "read": "QRIF's anchor asset de-risked under a Tesco PPA and CfD.",
+   "source": "https://www.quinbrook.com/news-insights/landmark-cleve-hill-solar-park-reaches-commercial-operations/"
+  },
+  {
+   "date": "2025-06-13",
+   "category": "leadership",
+   "headline": "Brian Restall to become Quinbrook's first chief executive by year-end; Giulia Siccardo (ex-US DOE) joins as North America regional leader replacing John Lucas; Kathryn Lin to lead digital-infrastructure strategies",
+   "read": "Founder-to-CEO succession begins during Rowan's growth phase.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-strengthens-leadership-structure-to-support-future-growth/"
+  },
+  {
+   "date": "2025-04-16",
+   "category": "customer",
+   "headline": "Stanwell signs a 15-year offtake for Supernode Stage 3; the project is fully contracted at more than A$1.4bn of total investment",
+   "read": "Two offtakers — a gentailer and a state generator — across three stages.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-fully-contracts-supernode-battery-storage-project/"
+  },
+  {
+   "date": "2025-03-05",
+   "category": "product-launch",
+   "headline": "Quinbrook announces EnerQB, an 8-hour long-duration battery co-developed with CATL, with more than 3 GW planned across its Australian sites",
+   "read": "A manager co-developing a battery product with the cell maker — the clearest buyer position in the capital segment.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-to-build-advanced-long-duration-battery-storage-in-australia/"
+  },
+  {
+   "date": "2025-01-21",
+   "category": "financial",
+   "headline": "A$722m debt financing for Supernode Stages 1–2 (Bank of America, CBA, Deutsche Bank, Mizuho, MUFG) — 'the largest standalone BESS project financing in Australia'",
+   "read": "",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-closes-aud722-million-debt-financing-for-landmark-supernode-battery-storage-project/"
+  },
+  {
+   "date": "2024-08-13",
+   "category": "financial",
+   "headline": "University Pension Plan Ontario completes a co-investment in Rowan Digital Infrastructure (terms undisclosed)",
+   "read": "The first outside equity in Rowan, twenty months before Blackstone.",
+   "source": "https://www.quinbrook.com/news-insights/upp-invests-in-data-center-developer-rowan-digital-infrastructure/"
+  },
+  {
+   "date": "2024-08-01",
+   "category": "financial",
+   "headline": "Net Zero Power Fund strategy closes at USD 3bn of commitments across the fund and co-investment vehicles; 'over USD 4.3 billion in aggregate' across the year's three closes",
+   "read": "Quinbrook's largest raise; Infrastructure Investor reported a USD 2bn fund plus USD 1bn of co-investment.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-exceeds-target-for-net-zero-power-strategy-raising-usd-3-billion-in-capital-commitments/"
+  },
+  {
+   "date": "2024-04-04",
+   "category": "financial",
+   "headline": "USD 600m Valley of Fire continuation fund closes with Blackstone Strategic Partners as lead investor and Ares as cornerstone, buying 51% of Gemini and the Valley of Fire development portfolio from the first fund",
+   "read": "A GP-led secondary that realised the first fund and began the Blackstone relationship.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-closes-600m-solarstorage-continuation-fund/"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **Quinbrook is the one investor in this segment whose own team is the buyer**. Basis: Supernode was 'developed by Quinbrook' with its affiliate Private Energy Partners; the supplier agreements (CATL's EnerC Plus and TENER S; GE Vernova power conversion) and the EnerQB product were signed and announced by Quinbrook itself, not by a portfolio company; the Gladstone hub MoU is Quinbrook's. For a storage or power-conversion vendor, Quinbrook is a procurement counterparty in Australia in a way Blackstone, Brookfield or KKR never are.",
+  "**(High confidence)** We assess that **Quinbrook is monetising its two Habitat-era UK optimisers and keeping the hard assets**. Basis: Flexitricity sold to Drax (GBP 36m EV, completed 31 March 2026) with Velox Power explicitly retained; the JLL/BCG mandate on Habitat (New Project Media, March 2026); two sponsor-side board appointments at Habitat in six months. Cuts against: no bidder, price or signing has surfaced in seven months, Habitat kept winning mandates, and its FY2025 accounts are late — the sale may have stalled rather than progressed. Collection gap: Quinbrook has never acknowledged the process.",
+  "**(Moderate confidence)** We assess that **the Blackstone entry into Rowan is a recapitalisation of a developer that outgrew its fund, not a partial exit from a position Quinbrook wants to leave**. Basis: Rowan raised about USD 4.4bn of debt in a year and 'over 1.2 GW of leased capacity'; Quinbrook kept the chairmanship and a board seat; Blackstone Strategic Partners was already the lead investor in Quinbrook's 2024 continuation fund. The 49% and about USD 3.8bn ex-debt figures are The Information's, confirmed by no party; the equity basis (not EV) is how the report framed them. Treat the valuation as reported.",
+  "**(Moderate confidence)** We assess that **Quinbrook III (USD 4bn target) is the firm's bet that the NZPF record — Supernode delivered, Rowan recapitalised, Gemini refinanced — sells a flagship twice the size of the last**, and that the thin FY2025 at parent level (Jersey-group profit USD 1.56m against USD 22.79m; a first bank charge over the UK manager) reflects fundraising costs ahead of fees. Basis: the UK accounts' strategic report; the Form D first sale of USD 30m; the July 2026 UK holding company. Cuts against: no press release and no target close date; USD 30m sold nine months in.",
+  "**(Moderate confidence)** We assess that **Quinbrook's governance is founder control under a new CEO layer**: the founders own the manager through Quinbrook Holdings Limited and remain control persons, chair the investment committee and sit on portfolio boards, while Brian Restall and three regional leaders run the firm. Rory Quinlan's resignation from the UK board (18 July 2025) is a seat change, not a departure — he is still Managing Partner, a control person and a Habitat director. Collection gap: the UK company reports 'no ultimate controlling party' while the ADV shows the two founders' vehicles each at 50–75%; the two statements describe the same structure from different legal tests.",
+  "**(Low confidence)** We assess that **Frederick County's moratorium is the first material political risk to a Quinbrook platform**, because Rowan's largest campus sits inside the contested overlay zone and the county executive has turned against new development through July 2027. Basis: the Maryland Supreme Court ruling and the September 2026 rejection of the neighbouring Quantum Maryland agreement. Rowan's existing Bauxite phases may be unaffected; no party has said.",
+  "**INDICATORS TO WATCH** — *Any Companies House PSC02/PSC07 on Habitat Energy Limited, a TM01 for the Quinbrook directors, or a Quinbrook portfolio-page status change from 'Operational & Expanding':* a completed Habitat sale shows there before any release. *Filing of the FY2025 accounts of Habitat Energy Limited and Renewable and Grid Services Limited:* the group 'Optimisation services' line (GBP 4.17m in FY2024), the going-concern wording and any post-balance-sheet note on the sale. *A Quinbrook release or Form D amendment on Quinbrook III:* the first close and whether the USD 4bn target holds. *Supernode Stage 3 completion (2027) and a Stage 4 / EnerQB decision:* the next battery order the manager itself would sign. *A Rowan 8-K-equivalent or Blackstone filing stating the stake:* would convert the reported 49% into a fact. *Frederick County's July 2027 moratorium end:* whether Rowan's later phases proceed."
+ ],
+ "relationships": [
+  {
+   "slug": "habitat-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2021-11",
+   "scale": "100% (terms undisclosed); held in QRIF via Renewable and Grid Services Limited",
+   "note": "Quinbrook acquired Habitat Energy Limited on 30 November 2021 and holds it through its UK holding group; a sale process was reported in March 2026 and remains unresolved.",
+   "context": "Quinbrook's release of 30 November 2021 records the acquisition; Companies House shows Renewable and Grid Services Limited as Habitat's 75%+ person with significant control from that date, with Scaysbrook, Quinlan and James Allan appointed directors the same day, Hank Jones on 17 June 2025 and Keith Gains on 10 December 2025. RGS's FY2024 group accounts carry Habitat's 'Optimisation services' turnover of GBP 4,169,575 (+80%) and name Quinbrook Holdings Limited as ultimate controlling party.\n\nNew Project Media reported on 17 March 2026 that Quinbrook was 'working with JLL and Boston Consulting Group' to sell Habitat; Quinbrook did not comment and no bidder, price, signing or withdrawal has been reported since. Quinbrook's Habitat portfolio page, labelled 'Operational & Expanding', has not been modified since 29 August 2025. On 3 October 2026 both Habitat Energy Limited and RGS showed FY2025 accounts overdue at Companies House. This dossier and `habitat-energy` v3 tell the same story from the two sides.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-acquires-habitat-energy/"
+  },
+  {
+   "slug": "blackstone",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-04",
+   "scale": "'significant minority stake' in Rowan (reported 49% at ~USD 3.8bn ex-debt); lead LP in the USD 600m Valley of Fire fund",
+   "note": "Funds affiliated with Blackstone acquired a significant minority stake in Rowan Digital Infrastructure on 9 April 2026; Blackstone Strategic Partners had led Quinbrook's 2024 continuation fund.",
+   "context": "The joint release of 9 April 2026 states that 'funds affiliated with Blackstone have acquired a significant minority stake in Rowan' and quotes David Scaysbrook as Rowan's chairman; it gives no percentage, price or value basis, and no standalone Blackstone release was located. The Information, via IREI and The Tech Capital, reported 49% at a company valuation of about USD 3.8bn excluding debt with Quinbrook retaining operational control — reported, not announced. Blackstone Digital Infrastructure Trust's Q2 2026 10-Q does not mention Rowan.\n\nThe relationship began earlier: Quinbrook's 4 April 2024 release names Blackstone Strategic Partners as lead investor in the USD 600m Valley of Fire continuation fund that bought 51% of Gemini from the first fund.",
+   "source": "https://www.quinbrook.com/news-insights/rowan-digital-infrastructure-announces-strategic-recapitalization/"
+  },
+  {
+   "slug": "catl",
+   "type": "supplier",
+   "status": "active",
+   "since": "2024",
+   "scale": "EnerC Plus (Supernode Stages 1–2) and TENER S (Stage 3); EnerQB 8-hour co-development",
+   "note": "CATL supplies the battery systems for all three Supernode stages under a long-term service agreement and co-developed the 8-hour EnerQB product with Quinbrook.",
+   "context": "CATL's and Quinbrook's joint release of 15 August 2026 records CATL's EnerC Plus containers for Supernode Stages 1–2 and TENER S for Stage 3, with a long-term service agreement, and says EnerQB is 'being considered for future stages'. Quinbrook's 5 March 2025 release announced EnerQB, an 8-hour long-duration battery co-developed with CATL and its affiliate Private Energy Partners and named for Quinbrook, with more than 3 GW planned across Quinbrook's Australian sites, the first at Supernode Stage 4. The procurement counterparty in these documents is Quinbrook, not a portfolio company.",
+   "source": "https://www.prnewswire.com/news-releases/catl-and-quinbrook-build-on-supernode-partnership-following-stage-2-and-stage-3-major-milestones-302852270.html"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "supplier",
+   "status": "active",
+   "since": "2024-09",
+   "scale": "Power conversion and SCADA for Supernode Stages 1–2 (about 1 GWh of Stage 2)",
+   "note": "GE Vernova supplied the power-conditioning and controls for Supernode's first two stages, per trade press.",
+   "context": "pv magazine Australia reported on 23 September 2024 that Quinbrook selected GE Vernova to supply power conditioning and SCADA for Supernode's 1 GWh second stage, following the first stage's integration; Quinbrook's own releases name the project's lenders and offtakers but not the conversion supplier. The relationship is documented in trade press, not in a first-party release of either company.",
+   "source": "https://www.pv-magazine-australia.com/2024/09/23/quinbrook-picks-ge-vernona-for-1-gwh-supernode-battery-stage/"
+  },
+  {
+   "slug": "brookfield",
+   "type": "other",
+   "status": "historical",
+   "since": "2022-09",
+   "scale": "Scout Clean Energy sold for about USD 1bn in cash (binding contracts 29 September 2022)",
+   "note": "Brookfield Renewable bought Scout Clean Energy, the US wind platform Quinbrook built from a USD 6m start-up stake, for about USD 1bn in cash.",
+   "context": "Quinbrook's release of 30 September 2022 records binding contracts to sell Scout Clean Energy to Brookfield Renewable for 'c. US$1 billion in cash on completion' after Quinbrook's initial USD 6m investment in 2017 and USD 470m of further equity; Scout's own release adds a potential USD 350m of additional near-term investment by Brookfield. The consideration is stated as cash, not as an enterprise value. Brookfield appears in this corpus as a capital-segment incumbent; here it is the buyer of Quinbrook's first flagship exit.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-sells-scout-clean-energy-to-brookfield-for-us1-billion/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "UK National Security and Investment Act 2021 (with Ofgem notification)",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-21",
+   "exposure": "Quinbrook's sale of Flexitricity to Drax was conditional on approval under the NSI Act and notification to Ofgem, both cleared by completion on 31 March 2026; any sale of Habitat Energy, a UK-licensed optimiser, runs the same gate.",
+   "mitigation": "Quinbrook used the standard mandatory-notification route; no call-in or remedy was reported.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/"
+  },
+  {
+   "regime": "NESO Stability Pathfinder contracts, Contracts for Difference and the Capacity Market (UK)",
+   "status": "in-effect",
+   "effectiveDate": "2022-02",
+   "exposure": "Quinbrook's UK revenues are regulated-contract revenues: ten-year CPI-linked Stability Pathfinder contracts on eight synchronous condensers ('more than half of the GBP 323 million total contract value' of Pathfinder II), a 15-year CfD (AR4) and a 15-year Capacity Market agreement at Cleve Hill, and EirGrid's Low Carbon Inertia Services contract at Wexford; QRIF II is pitched on Clean Power 2030.",
+   "source": "https://www.quinbrook.com/news-insights/quinbrook-advances-uks-largest-synchronous-condenser-portfolio-with-156m-financing-and-final-scottish-project-launch/"
+  },
+  {
+   "regime": "Local data-centre zoning — Frederick County, Maryland moratorium",
+   "status": "in-effect",
+   "effectiveDate": "2026-09-15",
+   "exposure": "Rowan's Quantum Frederick campuses (Bauxite I–III) sit inside the Critical Digital Infrastructure overlay zone whose expansion was litigated in 2026; after the Maryland Supreme Court blocked a referendum (30 June 2026), the county executive rejected the neighbouring Quantum Maryland agreement and extended a moratorium on new data-centre development to 1 July 2027. Rowan entities were plaintiffs in the April 2026 suits.",
+   "mitigation": "Rowan signed the White House Ratepayer Protection Pledge (July 2026), committed USD 38m to Temple water infrastructure and published a 'Community Guarantee' (September 2026).",
+   "source": "https://www.wypr.org/wypr-news/2026-09-15/frederick-county-rejects-agreement-with-data-center-developer-amidst-public-outcry"
+  },
+  {
+   "regime": "US tax credits — PTC transferability and FEOC restrictions on Primergy's fleet",
+   "status": "in-effect",
+   "effectiveDate": "2026-03-12",
+   "exposure": "Primergy's March 2026 Gemini refinancing is backed by 'a 10-year production tax credit transfer deal', and Gemini was financed with USD 1.9bn of debt and tax equity; changes to transferability or foreign-entity-of-concern rules bear directly on the US solar-plus-storage fleet. Quinbrook's own statement is only that 'shifting US policy' is reshaping investment flows (Scaysbrook, December 2025).",
+   "source": "https://www.pv-tech.org/primergy-closes-us760-million-refinancing-gemini-solar-plus-storage-project/"
+  },
+  {
+   "regime": "Queensland state development policy and state-owned counterparties",
+   "status": "in-effect",
+   "effectiveDate": "2025-04-16",
+   "exposure": "Quinbrook's Australian pipeline runs through the state: Stanwell Corporation (state-owned) is Supernode's Stage 3 offtaker, bought Lockyer Energy from Quinbrook in 2025 and holds exclusivity on the Gladstone SDA Energy Hub; Powerlink (state-owned) provides the Supernode connection; Northern Quartz is a declared 'prescribed project'. AEMO registers Supernode BESS as a scheduled bidirectional unit with Origin as intermediary.",
+   "source": "https://www.quinbrook.com/news-insights/stanwell-and-quinbrook-strengthen-partnership-with-gladstone-sda-energy-hub-agreement/"
+  },
+  {
+   "regime": "US Investment Advisers Act — SEC registration and exempt reporting",
+   "status": "in-effect",
+   "effectiveDate": "2018-02-14",
+   "exposure": "Quinbrook Infrastructure Partners LLC is an SEC-registered adviser (801-112447) with the Jersey, UK and Australian entities as exempt reporting advisers; the funds are 3(c)(7) private funds with Luxembourg SCSp parallels (AIFMD marketing). No disciplinary disclosures appear on any Quinbrook ADV. The US Senate letters of 2025–26 on private-equity data-centre ownership do not name Quinbrook.",
+   "source": "https://reports.adviserinfo.sec.gov/reports/ADV/287822/PDF/287822.pdf"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Funds — the five closed and the one in market",
+   "specs": [
+    {
+     "band": "Low Carbon Power Fund",
+     "label": "Vintage / status",
+     "value": "First sale June 2017; final close 2019; US, UK, Australia; largely realised (Scout 2022; Gemini 51% and the Valley of Fire portfolio sold into the continuation fund 2024)"
+    },
+    {
+     "band": "Renewables Impact Fund (QRIF)",
+     "label": "Final close",
+     "value": "2 October 2023, GBP 620m (target GBP 500m); UK institutions only; Cleve Hill, Rassau and Thistle condensers, Uskmouth, Habitat Energy"
+    },
+    {
+     "band": "Valley of Fire Fund",
+     "label": "Continuation fund",
+     "value": "Closed 4 April 2024, USD 600m; lead Blackstone Strategic Partners, cornerstone Ares; 51% of Gemini plus the Valley of Fire development portfolio"
+    },
+    {
+     "band": "Net Zero Power Fund (NZPF)",
+     "label": "Final close",
+     "value": "1 August 2024, 'USD 3 billion … across the fund and co-investment vehicles' (Infrastructure Investor: USD 2bn fund + USD 1bn co-investment; Form D: USD 1,599,813,000 sold in the main vehicles); Primergy, Rowan, Supernode, PurposeEnergy, Severn"
+    },
+    {
+     "band": "Renewables Impact Fund II (QRIF II)",
+     "label": "Final close",
+     "value": "8 July 2026, GBP 587m (target GBP 500m; hard cap GBP 1bn; target net IRR 9.9%, cash yield 6%+ per Strathclyde's paper); Mallard Pass, Wexford, Aegis, Project Norton"
+    },
+    {
+     "band": "Quinbrook III",
+     "label": "In market",
+     "value": "Target USD 4bn (UK manager's FY2025 strategic report); Form D first sale 1 October 2025, USD 30m sold to two investors; GAV USD 96m (SCSp) + USD 23m (A/B) at July 2026; no press release"
+    }
+   ],
+   "notes": "Fund terms per Quinbrook's releases, the SEC Form ADV of 28 July 2026, EDGAR Form D filings and Strathclyde Pension Fund's September 2024 committee paper. Quinbrook discloses no fund-level IRR, multiple or DPI."
+  },
+  {
+   "product": "Assets under management — the measures that exist",
+   "specs": [
+    {
+     "band": "Regulatory (USD)",
+     "label": "SEC Form ADV regulatory AUM",
+     "value": "USD 8,952,975,521, all non-discretionary, 20 accounts; USD 4,691,430,917 attributable to non-US clients (28 July 2026)"
+    },
+    {
+     "band": "Ranking (EUR)",
+     "label": "IPE Real Assets Top 100 Infrastructure Managers 2025",
+     "value": "89th; infrastructure AUM EUR 3,632m; total AUM EUR 6,108m at 31 December 2024"
+    },
+    {
+     "band": "Manager accounts (GBP)",
+     "label": "Quinbrook Infrastructure Partners Limited FY2025",
+     "value": "Turnover GBP 16,074,792 (advisory fees from the Jersey manager); profit after tax GBP 271,594 (FY2024 GBP 1,818,178); UK headcount 41 at 31 December 2025"
+    },
+    {
+     "band": "Manager accounts (USD)",
+     "label": "Jersey group, as quoted in the UK accounts' going-concern note",
+     "value": "Net current assets USD 18,314,773 (2024: USD 19,483,262); profit USD 1,558,811 (2024: USD 22,794,022)"
+    },
+    {
+     "band": "Track record (as stated)",
+     "label": "Quinbrook's own figures at 31 March 2026",
+     "value": "'c. 20 GW capacity built or developed'; 'USD 20bn transaction value executed'; 'USD 4.1bn cumulative investment'; releases cite 'over 40 GW' and 'USD 27 billion' including the founders' pre-Quinbrook record"
+    }
+   ],
+   "notes": "The Jersey manager's own accounts are not public. The UK Companies House filings are scanned images read by OCR — figures were cross-checked for consistency but should be eyeballed before being quoted to the penny."
+  },
+  {
+   "product": "Supernode (Brendale, Queensland)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Stage 1",
+     "value": "260 MW / 619 MWh; COD 17 February 2026; Origin Energy 12-year toll"
+    },
+    {
+     "band": "Capacity",
+     "label": "Stage 2",
+     "value": "Combined Stages 1–2 520 MW / 1,858 MWh; operations from 28 July 2026; 'largest operating BESS in the NEM'"
+    },
+    {
+     "band": "Capacity",
+     "label": "Stage 3",
+     "value": "260 MW / 1,216 MWh (Stanwell's release: 250 MW / 1,010 MWh); 15-year Stanwell offtake; financial close A$469m, 28 July 2026; completion 2027"
+    },
+    {
+     "band": "Capacity",
+     "label": "Three stages",
+     "value": "About 780 MW / 3,073 MWh (Quinbrook's totals vary: 3,073 / 3,074 / 3,096 MWh); site capacity for a further 520 MW; Stage 4 in pre-construction (EnerQB)"
+    },
+    {
+     "band": "Supply",
+     "label": "Batteries / conversion",
+     "value": "CATL EnerC Plus (Stages 1–2) and TENER S (Stage 3) under a long-term service agreement; GE Vernova power conditioning and SCADA (Stages 1–2)"
+    },
+    {
+     "band": "Capital",
+     "label": "Debt / equity",
+     "value": "A$722m (Stages 1–2, January 2025) + A$469m (Stage 3) ≈ A$1.2bn total project financing; Quinbrook committed A$1.4bn to Stages 1–3; Stages 1–2 'a total investment of over $845 million'"
+    },
+    {
+     "band": "Grid",
+     "label": "AEMO registration",
+     "value": "Supernode BESS, DUIDs SNB01 and SNB02, QLD1, scheduled bidirectional units; intermediary Origin Energy Electricity Limited from 17 February 2026; Supernode BESS 3 and Supernode North project companies also registered"
+    },
+    {
+     "band": "Data centre",
+     "label": "Supernode DC precinct",
+     "value": "'500 MW-IT potential'; three high-voltage connections; Torus dark fibre; status 'Construction' on quinbrook.com; no tenant named"
+    }
+   ],
+   "notes": "Per Quinbrook's releases of January 2025 to July 2026, CATL's August 2026 release, pv magazine Australia and AEMO's NEM registration list (read 3 October 2026)."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "David Scaysbrook",
+   "title": "Co-Founder and Managing Partner; Chair of the Investment Committee; Chairman of Rowan Digital Infrastructure",
+   "photo": "images/execs/quinbrook-scaysbrook.jpg",
+   "linkedin": "https://www.linkedin.com/in/david-scaysbrook-b7347914/",
+   "background": [
+    "Co-founded Quinbrook in 2015; owns his share of Quinbrook Holdings Limited through CEI Capital Management Pty Ltd as trustee of the Scaysbrook Clean Energy Trust (Form ADV)",
+    "Chairman of Rowan (per the April 2026 release) and of Habitat Energy (per Quinbrook's March 2022 release; not restated since); director of Habitat Energy Limited since 30 November 2021",
+    "Capital Dynamics — Senior Managing Director, co-founder and global head of Clean Energy & Infrastructure (2010–2015)",
+    "Hastings Funds Management — Head of Climate Change & Alternative Energy (2009); Novera Energy PLC — founder (1998–2009)",
+    "LLB (Hons) and BEc, University of Sydney"
+   ]
+  },
+  {
+   "name": "Rory Quinlan",
+   "title": "Co-Founder and Managing Partner (firm management, strategy and financial oversight); member of the Investment and Executive Committees",
+   "photo": "images/execs/quinbrook-quinlan.jpg",
+   "linkedin": "https://www.linkedin.com/in/rory-quinlan-6946b018/",
+   "background": [
+    "Co-founded Quinbrook in 2015; owns his share of Quinbrook Holdings Limited through Koala Capital Limited (Form ADV); control person on every 2026 Quinbrook ADV",
+    "Resigned as a director of Quinbrook Infrastructure Partners Limited (UK) on 18 July 2025 — the UK accounts call him 'former Director' — while remaining Managing Partner and a director of Habitat Energy Limited and Renewable and Grid Services Limited",
+    "Capital Dynamics — Senior Managing Director, co-founder and Head of Europe, Clean Energy & Infrastructure (2010–2015)",
+    "Novera Energy PLC — Chief Financial Officer / Executive Finance Director (2004–2009); Hastings Funds Management (2009)",
+    "BA and MA Commerce (QUT); CPA"
+   ]
+  },
+  {
+   "name": "Brian Restall",
+   "title": "Chief Executive Officer (from October 2025; first holder of the role); member of the Investment Committee; co-chair of the Global Procurement Committee",
+   "photo": "images/execs/quinbrook-restall.jpg",
+   "linkedin": "https://www.linkedin.com/in/brian-restall-a4913355/",
+   "background": [
+    "Quinbrook Managing Director and Regional Leader, Australia (2024–2025); with Quinbrook since 2015 and with the founders since 2011; led Supernode and the Gemini PPA; inaugural CEO of Cape Byron Power",
+    "EnergyAustralia — Senior Business Development Manager (2010–2013); Drax Group (2007–2009); Shell, InterGen, Fluor Daniel",
+    "BEng (Hons), QUT; based in Brisbane"
+   ]
+  },
+  {
+   "name": "Giulia Siccardo",
+   "title": "Managing Director, Regional Leader — North America (from June 2025); member of the Investment Committee",
+   "photo": "images/execs/quinbrook-siccardo.jpg",
+   "linkedin": "https://www.linkedin.com/in/giuliasiccardo/",
+   "background": [
+    "US Department of Energy — inaugural Director, Office of Manufacturing and Energy Supply Chains",
+    "McKinsey & Company — Partner (more than ten years); co-founded Frontier, the carbon-removal advance market commitment",
+    "Adobe — clean-energy procurement and data-centre decarbonisation",
+    "BA Dartmouth; MBA Harvard"
+   ]
+  },
+  {
+   "name": "Keith Gains",
+   "title": "Managing Director, Regional Leader — UK (from January 2024); member of the Investment Committee; director of the UK manager, the Jersey manager, Habitat Energy and Renewable and Grid Services",
+   "photo": "images/execs/quinbrook-gains.jpg",
+   "linkedin": "https://www.linkedin.com/in/keith-gains-15872233/",
+   "background": [
+    "Quinbrook since 2017; appointed a director of Quinbrook Infrastructure Partners Limited on 16 January 2025 and of Habitat Energy Limited on 10 December 2025",
+    "Capital Dynamics Clean Energy & Infrastructure — Director / Vice President (2010–2017); Novera Energy (seven years, with the founders)",
+    "BA (Hons) Accounting, University of Wales"
+   ]
+  },
+  {
+   "name": "Tim Horneman",
+   "title": "Managing Director, Regional Leader — Australia (Managing Director from February 2026; Regional Leader from 11 June 2026)",
+   "photo": "images/execs/quinbrook-horneman.jpg",
+   "linkedin": "https://www.linkedin.com/in/tim-horneman-64263b5b/",
+   "background": [
+    "LD Energy — Chief Commercial Officer",
+    "Australia Pacific LNG — Chief Financial Officer and Deputy CEO (USD 8.5bn project financing)",
+    "CWP Global — President, Asia-Pacific; Origin Energy — Head of Strategic Partnerships",
+    "BBus (QUT); Chartered Accountant; GAICD"
+   ]
+  },
+  {
+   "name": "Stuart Palmer",
+   "title": "Chief Financial Officer (since May 2023); director of Quinbrook Infrastructure Partners Limited (from 14 July 2025); member of the Operations Committee",
+   "photo": "images/execs/quinbrook-palmer.jpg",
+   "linkedin": "https://www.linkedin.com/in/stuart-palmer-fca-cfa-b150aa17/",
+   "background": [
+    "Signed the UK manager's FY2025 accounts",
+    "Kreos Capital — Finance Director; AMP Capital — Financial Controller, Global Infrastructure Funds; HSBC, Schroders, JP Morgan, ICG",
+    "BA Liverpool; FCA; CFA"
+   ]
+  },
+  {
+   "name": "Daniel Chavez",
+   "title": "General Counsel; member of the Executive Committee; director of the Jersey manager",
+   "photo": "images/execs/quinbrook-chavez.jpg",
+   "linkedin": "https://www.linkedin.com/in/daniel-chavez-b7034821/",
+   "background": [
+    "Emergent Technology Holdings — Managing Director, General Counsel and Corporate Secretary",
+    "First Solar — Assistant General Counsel; McDermott Will & Emery — Partner",
+    "MBA Cornell; LLM Harvard; LLB Universidad Panamericana; based in Houston"
+   ]
+  },
+  {
+   "name": "Hilkka Komulainen",
+   "title": "Global Head of Sustainability and Impact (from November 2024); member of the Investment Committee",
+   "linkedin": "https://www.linkedin.com/in/hilkkakomulainen/",
+   "background": [
+    "Aegon UK — established and led responsible investment",
+    "Inter Fund Management (Interogo); EY; PRI; OECD; United Nations; co-chair of the DWP Taskforce on Social Factors"
+   ]
+  },
+  {
+   "name": "Mark Burrows",
+   "title": "Managing Director, Head of Relationships and Fundraising — Europe",
+   "linkedin": "https://www.linkedin.com/in/mark-burrows-11123212/",
+   "background": [
+    "Quinbrook since 2016; quoted on the QRIF II close (July 2026); former director of the UK manager (2017–2020)",
+    "Foresight Group — institutional fundraising; Goldman Sachs; Invicta Capital"
+   ]
+  },
+  {
+   "name": "Ryan Gordon",
+   "title": "Managing Director, Head of Relationships and Fundraising — APAC and Middle East (from May 2025)",
+   "linkedin": "https://www.linkedin.com/in/ryan-gordon-8651a7a/",
+   "background": [
+    "QIC — eighteen years, latterly Managing Director, Clients and Business Development",
+    "Goldman Sachs; BNY; NAB; based in Brisbane"
+   ]
+  },
+  {
+   "name": "Henry (Hank) Jones",
+   "title": "Senior Advisor (from January 2024; previously US Managing Director); director of Habitat Energy Limited (from 17 June 2025)",
+   "linkedin": "https://www.linkedin.com/in/hank-jones-599095210/",
+   "background": [
+    "Dynegy — Executive Vice President and Chief Commercial Officer (26 GW fleet)",
+    "Deutsche Bank — Head of North America Power & Gas; EDF Trading — COO / Head of Trading, North America; AEP Energy Services; Duke Energy",
+    "BS and MBA, Oklahoma State"
+   ]
+  },
+  {
+   "name": "Kathryn Lin",
+   "title": "Senior Director; leads digital-infrastructure strategies; investment lead and board director, Rowan",
+   "background": [
+    "Joined Quinbrook in 2023; named to lead digital-infrastructure strategies in June 2025",
+    "Director of Rowan Digital Infrastructure per Quinbrook's flagship page"
+   ]
+  },
+  {
+   "name": "James Allan",
+   "title": "Senior Director (Australia); director of Habitat Energy Limited (from 30 November 2021)",
+   "background": [
+    "Quinbrook's spokesman on Supernode's Stage 2 operations (July 2026)"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD / GBP / AUD as stated (manager figures in USD and GBP; project figures in the currency of the release)",
+  "type": "private (founder-owned manager; no consensus exists — figures are SEC Form ADV regulatory AUM, Companies House accounts of the UK manager and of the QRIF holding group, Quinbrook's own fund closes and the counterparties' deal documents; every `expected` field is empty by design)",
+  "periods": [
+   {
+    "period": "FY2024 (UK manager Quinbrook Infrastructure Partners Limited; QRIF holding group Renewable and Grid Services Limited; funds)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "UK manager turnover / profit after tax",
+      "actual": "GBP 14,429,661 / GBP 1,818,178 (advisory fees from the Jersey manager)",
+      "expected": "",
+      "verdict": "",
+      "result": "Companies House FY2024 accounts (scanned; OCR)."
+     },
+     {
+      "name": "Jersey group profit (quoted in the UK accounts)",
+      "actual": "USD 22,794,022; net current assets USD 19,483,262",
+      "expected": "",
+      "verdict": "",
+      "result": "The Jersey manager's own accounts are not public."
+     },
+     {
+      "name": "Renewable and Grid Services Limited (QRIF UK holding group) turnover / loss",
+      "actual": "Turnover GBP 14,227,627 — Optimisation services GBP 4,169,575 (+80%), Grid Stability services GBP 8,837,147, Energy Storage GBP 1,220,805; loss for the year GBP 68,653,393 (2023: GBP 48,043,000); GBP 526,767,626 owed to the Jersey manager",
+      "expected": "",
+      "verdict": "",
+      "result": "Construction-phase project-company losses inside QRIF (Habitat, Cleve Hill, condensers, Uskmouth), not manager P&L; filed 28 December 2025."
+     },
+     {
+      "name": "Capital raised in the year",
+      "actual": "Valley of Fire continuation fund USD 600m (April); Net Zero Power Fund USD 3bn including co-investment (August) — 'over USD 4.3 billion' across the year's three closes",
+      "expected": "",
+      "verdict": "",
+      "result": "Quinbrook releases."
+     },
+     {
+      "name": "Regulatory AUM / ranking",
+      "actual": "IPE Real Assets: infrastructure AUM EUR 3,632m, total EUR 6,108m at 31 December 2024 (rank 89)",
+      "expected": "",
+      "verdict": "",
+      "result": "IPE survey, 2025 edition."
+     }
+    ],
+    "commentary": "The year Quinbrook's fundraising peaked: three closes and the Infrastructure Investor Energy Transition Investor of the Year award."
+   },
+   {
+    "period": "FY2025 (UK manager; Jersey group as quoted; funds and realisations)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "UK manager turnover / profit after tax",
+      "actual": "GBP 16,074,792 / GBP 271,594; staff costs GBP 10,912,016; UK headcount 41 at year-end",
+      "expected": "",
+      "verdict": "",
+      "result": "Companies House FY2025 accounts, filed 24 April 2026 (scanned; OCR). Includes a GBP 257,693 balance due from 'former Director, R Quinlan'."
+     },
+     {
+      "name": "Jersey group profit (quoted in the UK accounts)",
+      "actual": "USD 1,558,811 (2024: USD 22,794,022); net current assets USD 18,314,773",
+      "expected": "",
+      "verdict": "",
+      "result": "A 93% fall at the consolidation level while Quinbrook III was launched; the Jersey accounts are not public."
+     },
+     {
+      "name": "Realisations",
+      "actual": "Lockyer Energy to Stanwell (June 2025; undisclosed); Flexitricity to Drax agreed 21 January 2026 at GBP 36m EV (about GBP 42m proceeds; GBP 15.2m paid in 2020)",
+      "expected": "",
+      "verdict": "",
+      "result": "Quinbrook and Drax releases."
+     },
+     {
+      "name": "Quinbrook III",
+      "actual": "Launched with a USD 4bn target; Form D first sale 1 October 2025, USD 30m sold to two investors",
+      "expected": "USD 4bn target (Quinbrook's own)",
+      "verdict": "",
+      "result": "UK accounts' strategic report; EDGAR Form D. No press release."
+     }
+    ],
+    "commentary": "A thin year at manager level — profit of GBP 0.27m in the UK and USD 1.56m at the Jersey consolidation — against record delivery at the platforms (Cleve Hill COD, Supernode Stage 1 energised)."
+   },
+   {
+    "period": "2026 year to date (3 October)",
+    "periodType": "other",
+    "periodEnd": "2026-10-03",
+    "metrics": [
+     {
+      "name": "SEC regulatory AUM",
+      "actual": "USD 8,952,975,521 across 20 accounts (Form ADV, 28 July 2026); about 25 US staff",
+      "expected": "",
+      "verdict": "",
+      "result": "Quinbrook Infrastructure Partners LLC; the only regulator-held AUM figure."
+     },
+     {
+      "name": "Fund close",
+      "actual": "QRIF II GBP 587m final close, 8 July 2026 (target GBP 500m)",
+      "expected": "GBP 500m target",
+      "verdict": "beat",
+      "result": "Quinbrook's own target; no analyst consensus."
+     },
+     {
+      "name": "Realisations and recapitalisations",
+      "actual": "Flexitricity completed 31 March 2026 (GBP 36m net of cash per Drax); Blackstone's 'significant minority stake' in Rowan (9 April 2026; reported 49% at ~USD 3.8bn ex-debt — unconfirmed); Gemini refinanced with USD 600m of notes + USD 160m LC (12 March 2026)",
+      "expected": "",
+      "verdict": "",
+      "result": "Drax RNS; joint Rowan release; PV Tech."
+     },
+     {
+      "name": "Project financings closed",
+      "actual": "Supernode Stage 3 A$469m (28 July 2026); Severn condensers GBP 156m (29 April 2026); Rowan Temple about USD 2.95bn (27 May 2026), USD 4.4bn under Rowan's Green Finance Framework in a year",
+      "expected": "",
+      "verdict": "",
+      "result": "Quinbrook and Rowan releases."
+     },
+     {
+      "name": "Manager-level charge",
+      "actual": "Fixed charge and negative pledge over the UK manager to Royal Bank of Scotland International, created 5 June 2026",
+      "expected": "",
+      "verdict": "",
+      "result": "Companies House MR01; instrument redacted — purpose and amount unknown."
+     }
+    ],
+    "commentary": "Collection gap: no fund-level return, DPI or fee-paying AUM is disclosed anywhere; the FY2025 accounts of Habitat Energy Limited and Renewable and Grid Services Limited (due 30 September 2026) were overdue on 3 October 2026."
+   }
+  ],
+  "commentary": "Quinbrook's 'financials' are three unrelated measures: the US adviser's regulatory AUM (USD 8.95bn), the UK advisory company's audited accounts (fees reimbursed by the Jersey manager), and the QRIF holding group's accounts (project-company losses, where Habitat's optimisation revenue sits). None is the manager's consolidated P&L, which is private in Jersey. No revenue line is invented and no consensus exists."
+ },
+ "sources": [
+  {
+   "label": "Companies House — Renewable and Grid Services Limited (13250883): overview ('Accounts overdue', read 3 October 2026)",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/13250883",
+   "date": "2026-10-03"
+  },
+  {
+   "label": "Companies House — Habitat Energy Limited (10923911): officers",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/10923911/officers",
+   "date": "2026-10-03"
+  },
+  {
+   "label": "Companies House — Renewable and Grid Services Limited: persons with significant control (PSC07/PSC08, May 2026)",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/13250883/persons-with-significant-control",
+   "date": "2026-10-03"
+  },
+  {
+   "label": "Companies House — Quinbrook Infrastructure Partners Limited (09741971): officers",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/09741971/officers",
+   "date": "2026-10-03"
+  },
+  {
+   "label": "Companies House — Quinbrook Infrastructure Partners Limited: filing history (FY2025 group accounts filed 24 April 2026)",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/09741971/filing-history",
+   "date": "2026-10-03"
+  },
+  {
+   "label": "Companies House — Quinbrook Infrastructure Partners Limited: charges (RBS International, created 5 June 2026)",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/09741971/charges",
+   "date": "2026-10-03"
+  },
+  {
+   "label": "Companies House — Quinbrook III UK Holdings Limited (17362634), incorporated 27 July 2026",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/17362634",
+   "date": "2026-10-03"
+  },
+  {
+   "label": "AEMO — NEM Registration and Exemption List (Supernode BESS, SNB01/SNB02; read 3 October 2026)",
+   "url": "https://www.aemo.com.au/-/media/files/electricity/nem/participant_information/nem-registration-and-exemption-list.xlsx",
+   "date": "2026-10-03"
+  },
+  {
+   "label": "Rowan Digital Infrastructure — News & Perspectives (Community Guarantee; Temple water commitment)",
+   "url": "https://rowan.com/news-insights/news-perspectives/",
+   "date": "2026-09-21"
+  },
+  {
+   "label": "PR Newswire — Battery Storage Shift Pilot Demonstrates How Hourly Renewable Certificates Can Power the Next Phase of Corporate Clean Energy Goals (Quintrace, esVolta, LevelTen)",
+   "url": "https://www.prnewswire.com/news-releases/battery-storage-shift-pilot-demonstrates-how-hourly-renewable-certificates-can-power-the-next-phase-of-corporate-clean-energy-goals-302881809.html",
+   "date": "2026-09-17"
+  },
+  {
+   "label": "WYPR — Frederick County rejects agreement with data center developer amidst public outcry",
+   "url": "https://www.wypr.org/wypr-news/2026-09-15/frederick-county-rejects-agreement-with-data-center-developer-amidst-public-outcry",
+   "date": "2026-09-15"
+  },
+  {
+   "label": "PR Newswire (CATL and Quinbrook) — CATL and Quinbrook Build on Supernode Partnership Following Stage 2 and Stage 3 Major Milestones",
+   "url": "https://www.prnewswire.com/news-releases/catl-and-quinbrook-build-on-supernode-partnership-following-stage-2-and-stage-3-major-milestones-302852270.html",
+   "date": "2026-08-15"
+  },
+  {
+   "label": "Quinbrook — Supernode Stage 2 Completes Construction and Commences Operations",
+   "url": "https://www.quinbrook.com/news-insights/supernode-stage-2-completes-construction-and-commences-operations/",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Maryland Daily Record — Frederick data center: MD Supreme Court explains why it blocked referendum",
+   "url": "https://thedailyrecord.com/2026/07/28/frederick-data-centers-maryland-supreme-court/",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "SEC IAPD — Form ADV, Quinbrook Infrastructure Partners LLC (CRD 287822, SEC 801-112447), other-than-annual amendment",
+   "url": "https://reports.adviserinfo.sec.gov/reports/ADV/287822/PDF/287822.pdf",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Quinbrook — Quinbrook Closes GBP 587 Million Renewables Impact Fund II Oversubscribed",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-closes-gbp-587-million-renewables-impact-fund-ii-oversubscribed/",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "ESG Today — Quinbrook Raises $780 Million for Clean Energy Infrastructure Fund",
+   "url": "https://www.esgtoday.com/quinbrook-raises-780-million-for-clean-energy-infrastructure-fund/",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "WYPR — Maryland Supreme Court shuts down Frederick County data center referendum",
+   "url": "https://www.wypr.org/wypr-news/2026-06-30/maryland-supreme-court-shuts-down-frederick-county-data-center-referendum",
+   "date": "2026-06-30"
+  },
+  {
+   "label": "Quinbrook — Quinbrook appoints Regional Leader for Australia",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-appoints-regional-leader-for-australia/",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Quinbrook — Sustainability Report 2025 (PDF; headcount and impact KPIs at 31 March 2026)",
+   "url": "https://www.quinbrook.com/wp-content/uploads/2026/06/Quinbrook_Sustainability-Report-2025.pdf",
+   "date": "2026-06"
+  },
+  {
+   "label": "Rowan Digital Infrastructure — Rowan Closes $3B Green Financing for Turnkey Hyperscale Campus in High-Growth Texas Market",
+   "url": "https://rowan.com/rowan-closes-3b-green-financing-for-turnkey-hyperscale-campus-in-high-growth-texas-market/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Quinbrook — Quinbrook advances UK's largest synchronous condenser portfolio with £156m financing and final Scottish project launch",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-advances-uks-largest-synchronous-condenser-portfolio-with-156m-financing-and-final-scottish-project-launch/",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Companies House — Quinbrook Infrastructure Partners Limited: group accounts for the year to 31 December 2025 (scanned PDF)",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/09741971/filing-history/MzUxNjg4MjcyNGFkaXF6a2N4/document?format=pdf&download=0",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "IREI — Blackstone buys significant minority stake in Rowan Digital Infrastructure",
+   "url": "https://irei.com/news/blackstone-buys-significant-minority-stake-in-rowan-digital-infrastructure/",
+   "date": "2026-04-13"
+  },
+  {
+   "label": "Kirkland & Ellis — Kirkland Advises Quinbrook on Strategic Recapitalization of Rowan Digital Infrastructure",
+   "url": "https://www.kirkland.com/news/press-release/2026/04/kirkland-advises-quinbrook-on-strategic-recapitalization-of-rowan-digital-infrastructure",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "Quinbrook — Rowan Digital Infrastructure Announces Strategic Recapitalization",
+   "url": "https://www.quinbrook.com/news-insights/rowan-digital-infrastructure-announces-strategic-recapitalization/",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "Rowan Digital Infrastructure — Rowan Digital Infrastructure Announces Strategic Recapitalization (CEO letter)",
+   "url": "https://rowan.com/rowan-digital-infrastructure-announces-strategic-recapitalization/",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "IREI — Blackstone acquires 49% stake in Rowan Digital Infrastructure (citing The Information)",
+   "url": "https://irei.com/news/blackstone-acquires-49-stake-in-rowan-digital-infrastructure/",
+   "date": "2026-04-07"
+  },
+  {
+   "label": "The Tech Capital — Blackstone to acquire 49% stake in Rowan Digital Infrastructure in $3.8 billion valuation deal",
+   "url": "https://thetechcapital.com/blackstone-to-acquire-49-stake-in-rowan-digital-infrastructure-in-3-8-billion-valuation-deal/",
+   "date": "2026-04-05"
+  },
+  {
+   "label": "Drax Group — Drax completes acquisition of AI-enabled asset optimisation platform (Flexitricity)",
+   "url": "https://www.drax.com/press_release/drax-completes-acquisition-of-ai-enabled-asset-optimisation-platform/",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "New Project Media — M&A: Advisors emerge on upcoming Quinbrook Habitat Energy sale",
+   "url": "https://newprojectmedia.com/ma-advisors-emerge-on-upcoming-quinbrook-habitat-energy-sale/",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "PV Tech — Primergy closes US$760 million refinancing for Gemini solar-plus-storage project",
+   "url": "https://www.pv-tech.org/primergy-closes-us760-million-refinancing-gemini-solar-plus-storage-project/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "Quinbrook — Supernode Stage 1 commences commercial operations",
+   "url": "https://www.quinbrook.com/news-insights/supernode-stage-1-commences-commercial-operations/",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "Solar Power Portal — Drax buys Flexitricity from Quinbrook in £42 million transaction",
+   "url": "https://www.solarpowerportal.co.uk/energy-storage/drax-buys-flexitricity-from-quinbrook-in-42-million-transaction",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "Quinbrook — Quinbrook sells Flexitricity to Drax",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "Drax Group — Acquisition of asset optimisation platform",
+   "url": "https://www.drax.com/news/acquisition-of-asset-optimisation-platform/",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "Companies House — Renewable and Grid Services Limited: group accounts for the year to 31 December 2024 (scanned PDF; 'Optimisation services' GBP 4,169,575)",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/13250883/filing-history/MzQ5NjU0Nzc1N2FkaXF6a2N4/document?format=pdf&download=0",
+   "date": "2025-12-28"
+  },
+  {
+   "label": "Quinbrook — Stanwell and Quinbrook strengthen partnership with Gladstone SDA Energy Hub agreement",
+   "url": "https://www.quinbrook.com/news-insights/stanwell-and-quinbrook-strengthen-partnership-with-gladstone-sda-energy-hub-agreement/",
+   "date": "2025-12-03"
+  },
+  {
+   "label": "Quinbrook — Quinbrook acquires first Canadian investment with strategic stake in Elemental Clean Fuels",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-acquires-first-canadian-investment-with-strategic-stake-in-elemental-clean-fuels/",
+   "date": "2025-10-15"
+  },
+  {
+   "label": "SEC EDGAR — Form D, Quinbrook III SCSp (first sale 1 October 2025)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2089971/000208997125000001/primary_doc.xml",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "Quinbrook — Quinbrook unveils brand refresh, celebrates a decade of leadership",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-unveils-brand-refresh-celebrates-a-decade-of-leadership-in-advancing-the-energy-transition/",
+   "date": "2025-09-03"
+  },
+  {
+   "label": "Queensland Government — Crisafulli Government invests more to meet Queensland's energy needs (Stanwell acquires Lockyer)",
+   "url": "https://statements.qld.gov.au/statements/103323",
+   "date": "2025-08-14"
+  },
+  {
+   "label": "Quinbrook — Quinbrook makes first Irish investment with Wexford Synchronous Condenser Project",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-makes-first-irish-investment-with-wexford-synchronous-condenser-project/",
+   "date": "2025-07-29"
+  },
+  {
+   "label": "Quinbrook — Landmark Cleve Hill Solar Park reaches commercial operations",
+   "url": "https://www.quinbrook.com/news-insights/landmark-cleve-hill-solar-park-reaches-commercial-operations/",
+   "date": "2025-07-01"
+  },
+  {
+   "label": "IPE Real Assets — Top 100 Infrastructure Investment Managers 2025 (PDF hosted by Macquarie)",
+   "url": "https://www.macquarie.com/assets/macq/mam/insights/2025/macquarie-asset-management-tops-ipe-real-assets-100-infrastructure-investment-managers-2025/ipe-top-100-infrastructure-managers-survey-2025.pdf",
+   "date": "2025-07"
+  },
+  {
+   "label": "ESG Today — Energy Transition Investor Quinbrook Appoints Brian Restall as First CEO",
+   "url": "https://www.esgtoday.com/energy-transition-investor-quinbrook-appoints-brian-restall-as-first-ceo/",
+   "date": "2025-06-16"
+  },
+  {
+   "label": "Quinbrook — Quinbrook strengthens leadership structure to support future growth",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-strengthens-leadership-structure-to-support-future-growth/",
+   "date": "2025-06-13"
+  },
+  {
+   "label": "Quinbrook — Quinbrook fully contracts 'Supernode' battery storage project (Stanwell Stage 3)",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-fully-contracts-supernode-battery-storage-project/",
+   "date": "2025-04-16"
+  },
+  {
+   "label": "Border to Coast Pensions Partnership — Border to Coast to invest £80m in UK life sciences and energy transition funds",
+   "url": "https://www.bordertocoast.org.uk/news-insights/border-to-coast-to-invest-80m-in-uk-life-sciences-and-energy-transition-funds/",
+   "date": "2025-04-08"
+  },
+  {
+   "label": "Quinbrook — Quinbrook closes UK's largest solar PV + battery storage project financing for Cleve Hill Solar Park",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-closes-uks-largest-solar-pv-battery-storage-project-financing-for-cleve-hill-solar-park/",
+   "date": "2025-03-17"
+  },
+  {
+   "label": "Quinbrook — Quinbrook to build advanced long duration battery storage in Australia (EnerQB with CATL)",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-to-build-advanced-long-duration-battery-storage-in-australia/",
+   "date": "2025-03-05"
+  },
+  {
+   "label": "Quinbrook — Quinbrook awarded Global Energy Transition Investor of the Year by Infrastructure Investor",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-awarded-global-energy-transition-investor-of-the-year-by-infrastructure-investor/",
+   "date": "2025-03-03"
+  },
+  {
+   "label": "Quinbrook — Quinbrook to construct second Nationally Significant Infrastructure Project in solar power in East Midlands (Mallard Pass)",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-to-construct-second-nationally-significant-infrastructure-project-in-solar-power-in-east-midlands/",
+   "date": "2025-02-03"
+  },
+  {
+   "label": "Quinbrook — Quinbrook closes AUD$722 million debt financing for landmark Supernode battery storage project",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-closes-aud722-million-debt-financing-for-landmark-supernode-battery-storage-project/",
+   "date": "2025-01-21"
+  },
+  {
+   "label": "Quinbrook — Quinbrook to invest up to £100m in Aegis Energy",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-to-invest-up-to-100m-in-aegis-energy-to-lead-the-deployment-of-clean-multi-energy-refuelling-hubs-for-commercial-vehicles-in-the-uk/",
+   "date": "2025-01-20"
+  },
+  {
+   "label": "pv magazine Australia — Quinbrook picks GE Vernova for 1 GWh Supernode battery stage",
+   "url": "https://www.pv-magazine-australia.com/2024/09/23/quinbrook-picks-ge-vernona-for-1-gwh-supernode-battery-stage/",
+   "date": "2024-09-23"
+  },
+  {
+   "label": "Glasgow City Council / Strathclyde Pension Fund — Investment Proposal: Quinbrook Renewables Impact Fund II (committee paper, PDF)",
+   "url": "https://onlineservices.glasgow.gov.uk/councillorsandcommittees/viewSelectedDocument.asp?c=P62AFQDN8181UTDXT1",
+   "date": "2024-09-04"
+  },
+  {
+   "label": "Quinbrook — UPP invests in data center developer Rowan Digital Infrastructure",
+   "url": "https://www.quinbrook.com/news-insights/upp-invests-in-data-center-developer-rowan-digital-infrastructure/",
+   "date": "2024-08-13"
+  },
+  {
+   "label": "Infrastructure Investor — Quinbrook eyes successor vehicle after $2bn close (paywalled teaser)",
+   "url": "https://www.infrastructureinvestor.com/quinbrook-eyes-successor-vehicle-after-2bn-close/",
+   "date": "2024-08-04"
+  },
+  {
+   "label": "Quinbrook — Quinbrook exceeds target for Net Zero Power Strategy raising USD 3 Billion in capital commitments",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-exceeds-target-for-net-zero-power-strategy-raising-usd-3-billion-in-capital-commitments/",
+   "date": "2024-08-01"
+  },
+  {
+   "label": "Quinbrook — Quinbrook closes $600m Solar+Storage 'Continuation Fund' (Valley of Fire Fund)",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-closes-600m-solarstorage-continuation-fund/",
+   "date": "2024-04-04"
+  },
+  {
+   "label": "Quinbrook — Quinbrook oversubscribed for Renewables Impact Fund (GBP 620m)",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-oversubscribed-for-renewables-impact-fund/",
+   "date": "2023-10-02"
+  },
+  {
+   "label": "Quinbrook — Quinbrook expands Rowan Green data center platform",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-expands-rowan-green-data-center-platform/",
+   "date": "2023-01-13"
+  },
+  {
+   "label": "Quinbrook — Quinbrook and Primergy Solar partner with APG on Gemini Solar + Storage project",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-and-primergy-solar-partner-with-apg-on-gemini-solar-storage-project/",
+   "date": "2022-10-12"
+  },
+  {
+   "label": "Quinbrook — Quinbrook sells Scout Clean Energy to Brookfield for US$1 billion",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-sells-scout-clean-energy-to-brookfield-for-us1-billion/",
+   "date": "2022-09-30"
+  },
+  {
+   "label": "Scout Clean Energy — Brookfield Acquires Scout Clean Energy",
+   "url": "https://www.scoutcleanenergy.com/news/scout-clean-energy-acquired-by-brookfield",
+   "date": "2022-09-29"
+  },
+  {
+   "label": "Quinbrook — Habitat Energy appoints Mike Kirschner as Managing Director, Habitat Energy USA (David Scaysbrook as Habitat Chairman)",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-portfolio-company-habitat-energy-appoints-mike-kirschner-as-managing-director-habitat-energy-usa/",
+   "date": "2022-03-22"
+  },
+  {
+   "label": "Quinbrook — Quinbrook acquires Habitat Energy",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-acquires-habitat-energy/",
+   "date": "2021-11-30"
+  },
+  {
+   "label": "Quinbrook — About us (figures as of 31 March 2026)",
+   "url": "https://www.quinbrook.com/about-us/"
+  },
+  {
+   "label": "Quinbrook — Our team (titles, committees, company-published photos and LinkedIn links)",
+   "url": "https://www.quinbrook.com/our-team/"
+  },
+  {
+   "label": "Quinbrook — Our portfolio (status labels; exited investments)",
+   "url": "https://www.quinbrook.com/our-portfolio/"
+  },
+  {
+   "label": "Quinbrook — Our capabilities (six strategies)",
+   "url": "https://www.quinbrook.com/capabilities-sectors/"
+  },
+  {
+   "label": "Quinbrook — Portfolio: Habitat Energy ('Operational & Expanding'; last modified 29 August 2025 per sitemap)",
+   "url": "https://www.quinbrook.com/portfolio/habitat-energy/"
+  },
+  {
+   "label": "Quinbrook — Portfolio: Flexitricity ('Exited')",
+   "url": "https://www.quinbrook.com/portfolio/flexitricity/"
+  },
+  {
+   "label": "Quinbrook — Flagship: Supernode",
+   "url": "https://www.quinbrook.com/our-portfolio/supernode/"
+  },
+  {
+   "label": "Quinbrook — Flagship: Rowan Digital Infrastructure",
+   "url": "https://www.quinbrook.com/our-portfolio/rowan-digital-infrastructure/"
+  },
+  {
+   "label": "Quinbrook — Portfolio: Primergy",
+   "url": "https://www.quinbrook.com/portfolio/primergy/"
+  },
+  {
+   "label": "Quinbrook — Portfolio: Gemini",
+   "url": "https://www.quinbrook.com/portfolio/gemini/"
+  },
+  {
+   "label": "Supernode — project site",
+   "url": "https://supernode.com.au/"
+  },
+  {
+   "label": "Rowan Digital Infrastructure — About / leadership",
+   "url": "https://rowan.com/about/"
+  },
+  {
+   "label": "Habitat Energy — homepage ('5.5GW under contract, 130 people, 3 countries')",
+   "url": "https://habitat.energy/"
+  },
+  {
+   "label": "SEC IAPD — firm record, Quinbrook Infrastructure Partners LLC (CRD 287822)",
+   "url": "https://api.adviserinfo.sec.gov/search/firm/287822"
+  },
+  {
+   "label": "SEC IAPD — firm record, Quinbrook Infrastructure Partners (Jersey) Limited (CRD 288840; exempt reporting adviser)",
+   "url": "https://api.adviserinfo.sec.gov/search/firm/288840"
+  },
+  {
+   "label": "Infrastructure Investor — institution profile: Quinbrook Infrastructure Partners (funds in market; sizes paywalled)",
+   "url": "https://www.infrastructureinvestor.com/institution-profiles/quinbrook-infrastructure-partners.html"
+  }
+ ],
+ "lastUpdated": "2026-10-03",
+ "profileVersion": 1
+}

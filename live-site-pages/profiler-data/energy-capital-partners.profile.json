@@ -1,0 +1,1165 @@
+{
+ "schemaVersion": 7,
+ "slug": "energy-capital-partners",
+ "name": "Energy Capital Partners Management, LP (ECP) — the infrastructure investment platform of Bridgepoint Group plc",
+ "shortName": "Energy Capital Partners",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.ecpgp.com/",
+ "headquarters": "40 Beechwood Road, Summit, New Jersey 07901, United States (offices in New York, San Diego and Seoul)",
+ "founded": 2005,
+ "employees": "~95 (57 performing investment advisory functions) per SEC Form ADV, 30 April 2026",
+ "ownership": {
+  "type": "subsidiary (Bridgepoint Group plc, LSE: BPT — combination completed 20 August 2024; ECP is Bridgepoint's Infrastructure segment)",
+  "ticker": "LSE: BPT (parent)",
+  "notes": "SEC-registered adviser 'ECP' (CRD 155020, SEC file 801-74094). Form ADV Schedule A (30 Apr 2026): owned through Energy Capital Partners Holdings, LP and Holdings II, LP with Bridgepoint Infrastructure GP Limited as general partner; Bridgepoint executives Raoul Hughes and Xavier Robert sit on the board of managers of ECP ControlCo, LLC beside the four ECP partners. Bridgepoint paid GBP 233m cash, 185.0m consideration units and 45.0m earn-out units (vesting to 2029), assuming GBP 179m of ECP debt. Blue Owl Capital held 19.3% of ECP at signing (Public Citizen, 2023), the affiliation that FERC's first order found undisclosed."
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** ECP is the corpus's most active seller of power in 2026, not a buyer of equipment. In the eighteen months to October 2026 it sold Calpine to Constellation (closed 7 January 2026; Bridgepoint states USD 33bn of enterprise value at closing, two-thirds paid in Constellation shares), sold Cornerstone's 2.6 GW of PJM gas plants to Talen (closed 15 June 2026 for USD 3,542m, 4.4x its money in under a year) and sold Symmetry to NextEra (9 January 2026, 6.4x), then closed its largest fund, ECP VI, at USD 8.1bn on 6 August 2026 against a USD 5bn target. It is deploying that fund into regulated and contracted assets — Grain LNG (50/50 with Centrica), EnergySolutions (agreed 6 April 2026, pending) and the GBP 5.75bn DCC Energy take-private with KKR (approved by 78.09% of scheme shares on 18 September 2026, completion expected Q1 2027). Its data-centre exposure runs through the USD 50bn partnership with KKR, whose first campus (CyrusOne DFW10, Bosque County, Texas, 190 MW) is due to operate in Q4 2026 beside a Calpine plant that now belongs to Constellation. ECP remains a 4.0% holder of Constellation and a 5.0% holder of Talen, and ProEnergy, its majority-owned turbine platform, is reported to be weighing a USD 40–50bn IPO.\n\n**BACKGROUND.** Founded in 2005 by Doug Kimmelman, ECP has been the Infrastructure segment of Bridgepoint Group plc (LSE: BPT) since the combination completed on 20 August 2024, after FERC declined the first application in March 2024 over an undisclosed Blue Owl affiliation. Per Bridgepoint's filings the segment's AUM was EUR 36.0bn at 31 December 2025 and EUR 27.7bn at 30 June 2026 after the Calpine and Cornerstone exits; ECP's own Form ADV reports regulatory AUM of USD 33.39bn across 64 pooled vehicles. Its flagship funds are ECP III (2014, USD 5.1bn), ECP IV (2018, USD 3.3bn), ECP V (2022, USD 4.4bn; marked at a gross 3.1x) and ECP VI (2026, USD 8.1bn). Bridgepoint recognised carried interest from ECP V for the first time in H1 2026. ECP exited Terra-Gen entirely on 1 October 2024 and held no Sunnova shares before that company's 2025 bankruptcy.",
+ "ecosystemRole": "We assess ECP as the capital segment's generation-first investor: where its peers reach data centres through landlords, ECP reaches them through power plants and sells the plants into the AI demand wave. The KKR–ECP partnership pairs KKR's data-centre platforms with ECP's generation, and its first campus sits on a Calpine site; the ADQ–ECP partnership (USD 25bn, 25 GW) is built to develop new gas generation for the same load. ECP itself places no equipment orders — the buyers are its platforms (ProEnergy's turbine and bridge-power business, Convergent's storage projects, Atlantica's contracted fleet, the pending EnergySolutions and DCC businesses) and, increasingly, the strategics it sells to (Constellation, Talen, NextEra). A seller meets ECP as a signatory on the capital side of a power deal and as a shareholder of two listed generators it has just created.",
+ "productsAndServices": [
+  {
+   "name": "ECP flagship infrastructure funds (ECP III–VI)",
+   "category": "Private markets — infrastructure equity",
+   "description": "Closed-end drawdown funds investing in power generation, renewables and storage, and sustainable infrastructure, established 2005. Bridgepoint's H1 2026 fund table: ECP III (vintage 2014, USD 5.1bn, gross MOIC 2.3x, DPI 1.9x, gross IRR 17.5%); ECP IV (2018, USD 3.3bn plus USD 3.5bn of co-investment, 2.1x, DPI 1.0x, 20.9%); ECP V (2022, USD 4.4bn final close May 2024 plus USD 2.3bn of fee-paying co-investment, 3.1x, DPI 0.6x, 65.4%; 85% deployed). ECP VI held its final close on 6 August 2026 at USD 8.1bn of commitments, more than 50% above its USD 5bn target, after the hard cap was raised from USD 7.5bn to USD 7.8bn during the raise; it became fee-paying in May 2025, made its first investment (Grain LNG) in November 2025 and was 12% deployed in July 2026. ECP VII is expected to start in 2029.",
+   "highlights": [
+    "ECP VI parallel vehicles per Form ADV: ECP VI, LP; VI-A; VI-B; VI-C and an offshore feeder; VI-D (Form D/A of 8 May 2026: USD 4.79bn sold to 21 investors); ECP VI-L, SCSp (Luxembourg) and feeder; co-investment sleeves for KPP, Oryx and ES Pinnacle (EnergySolutions)",
+    "Named ECP VI deployments: Grain LNG (completed 28 November 2025), EnergySolutions (agreed 6 April 2026) and DCC Energy (agreed 27 July 2026, with KKR)",
+    "ECP V exits in 2026: Cornerstone to Talen (4.4x money multiple in under a year), Symmetry Energy Solutions to NextEra (6.4x); ECP V has returned USD 1.3bn to investors and Bridgepoint recognised its carried interest for the first time in H1 2026",
+    "LP base per the 6 August 2026 release: sovereign wealth funds, public and private pensions, insurers, asset managers and family offices; ECP has 'secured more than $41 billion in capital commitments' since inception (Bridgepoint's annual report says 'over $37 billion')"
+   ],
+   "positioning": "A specialist generation investor beside diversified infrastructure giants: IPE Real Assets ranks ECP 28th among infrastructure managers (infrastructure AUM EUR 21,837m, 2025 survey) against BlackRock/GIP, KKR, Brookfield and Macquarie in the top ten. Its differentiation is realised returns on power — Bridgepoint calls Calpine 'the largest and most profitable exit to date in the global private equity universe' and ECP IV and V are stated as top-quartile on DPI.",
+   "soldThrough": "Closed-end drawdown LPs and Luxembourg SCSp parallel vehicles for institutions; deal-specific co-investment vehicles; continuation funds (the USD 1.6bn ECP Calpine Continuation Fund, 2022); Bridgepoint's open-ended private-wealth fund (Bridgepoint Generations) invests alongside.",
+   "targetSegments": [
+    "Sovereign wealth funds",
+    "Public and corporate pensions",
+    "Insurers",
+    "Asset managers and family offices"
+   ],
+   "roadmap": "ECP Evergreen Yield, an open-ended infrastructure vehicle, is expected to deploy USD 500m from an anchor investor in H2 2026 while raising from other institutions (Bridgepoint H1 2026); ECP VII expected to launch in 2029."
+  },
+  {
+   "name": "Strategic partnerships — KKR (USD 50bn, data centres and power) and ADQ (USD 25bn, US generation)",
+   "category": "Co-investment partnerships",
+   "description": "Two programme-level partnerships announced in the eighteen months after the Bridgepoint combination. The KKR–ECP strategic partnership (30 October 2024) commits to invest USD 50bn in data centres together with power generation and transmission; KKR funds it from infrastructure, real estate and insurance accounts, ECP 'from existing and future infrastructure capital pools', and the parties cite more than 8 GW of existing data-centre pipeline and 100 GW of operating and development-ready generation. Its first investment, announced 30 July 2025, is a 190 MW hyperscale campus in Bosque County, Texas (CyrusOne's DFW10), built with CyrusOne beside Calpine's Thad Hill Energy Center under a long-term dedicated power contract, with initial IT capacity of 144 MW, a USD 1.2bn first phase and 'total investment approaching $4 billion' at full build-out; operations are expected in Q4 2026. The ADQ–ECP partnership (19 March 2025) is a 50:50 vehicle targeting more than USD 25bn of investment across 25 GW of primarily new-build US gas generation, with an initial USD 5bn contribution; no first investment had been announced by October 2026.",
+   "highlights": [
+    "Bosque County stake splits are not disclosed by any party; CyrusOne states a '190 MW agreement' with Calpine and says the Calpine fleet can deliver 'up to 400 MW to data centers in Bosque'; a project tracker records the first building topped out in March 2026",
+    "The campus's power counterparty, Calpine, has been owned by Constellation since 7 January 2026 — ECP now sits on the capital side only",
+    "ECP and KKR extended the relationship beyond data centres with the joint GBP 5.75bn offer for DCC Energy plc (July 2026)"
+   ],
+   "positioning": "The partnership is the mirror image of KKR's Helix vehicle: KKR brings landlords (CyrusOne, STTGDC), ECP brings generation. Among the corpus's investors only ECP pairs with a sovereign (ADQ) explicitly to build gas plants for AI load.",
+   "soldThrough": "Programme agreements funded from the partners' existing funds and separate accounts; not a fund offered to third-party LPs.",
+   "targetSegments": [
+    "Hyperscale data-centre developers",
+    "Gas generation developers",
+    "Sovereign co-investors"
+   ],
+   "roadmap": "Bosque County operations expected Q4 2026 (first-party, July 2025; no later first-party update). ADQ partnership's first project undisclosed."
+  },
+  {
+   "name": "Power generation platforms — the realised set (Calpine, Cornerstone, Symmetry, Terra-Gen) and the listed stakes they left",
+   "category": "Portfolio — power generation and gas supply",
+   "description": "ECP's generation franchise has been converted into cash and listed stock since 2024. Calpine (about 23 GW of gas, geothermal, storage and solar, held through ECP III/IV vehicles, the 2022 Calpine Continuation and Rollover Funds and co-investors including CPP Investments and Access Industries) was sold to Constellation: agreed 10 January 2025 for 50 million Constellation shares, about USD 4.5bn of cash and about USD 12.7bn of assumed net debt (an equity purchase price of about USD 16.4bn per Constellation), completed 7 January 2026; Bridgepoint states USD 33bn of enterprise value at closing and that two-thirds of proceeds came as Constellation shares under lock-ups expiring 30 June 2026 (50%) and 30 June 2027 (50%). Cornerstone Generation — Waterford (869 MW) and Darby (480 MW) in Ohio and Lawrenceburg (1,218 MW) in Indiana, the gas plants ECP acquired with the Lightstone portfolio in August 2025 — was sold to Talen: signed 15 January 2026 at USD 3.45bn (about 6.6x 2027E adjusted EBITDA), closed 15 June 2026 at USD 3,542m (USD 2,615m cash plus 2,399,998 Talen shares valued at USD 927m). Symmetry Energy Solutions, a gas supply and logistics platform, was sold to NextEra Energy Resources on 9 January 2026. Terra-Gen was exited entirely when Masdar bought ECP's remaining 50% on 1 October 2024.",
+   "highlights": [
+    "Constellation stake: ECP vehicles held 22,043,724 shares (6.1%) at the 7 January 2026 close; in the 2 June 2026 underwritten offering the Calpine holders sold 11,000,000 shares at USD 281 (USD 279 to the underwriters), Constellation repurchased 2,000,000 of them for about USD 558m, and ECP's holding fell to 14,443,227 shares (4.0%) — 35% of its 2026 tranche sold, the 2027 tranche still locked (Schedule 13G/A, 7 August 2026; Bridgepoint H1 2026)",
+    "Talen stake: 2,399,998 shares (5.01% of 47,894,656 outstanding) held through ECP V Cornerstone vehicles under 90- and 180-day lock-ups (Schedule 13G, 23 June 2026); still held at 30 June 2026 and no resale filed through 3 October 2026",
+    "What ECP kept from Lightstone: the 2,709 MW General James M. Gavin coal plant in Ohio, which ECP told FERC it would run 'for so long as [it is] legally able to do so on an economic basis'; FERC approved the Lightstone purchase from Blackstone and ArcLight on 23 July 2025 (docket EC24-125)",
+    "Returns stated by Bridgepoint: Cornerstone 4.4x after less than a year; Symmetry 6.4x; ECP V marked above 3x; EUR 11bn of the record EUR 16.6bn Bridgepoint returned to fund investors in H1 2026 came from Calpine. Bloomberg's '>USD 5.5bn returned in 2025' is a press figure, not a filing"
+   ],
+   "positioning": "The seller side of the corpus's two largest 2026 generation deals; Talen's Cornerstone purchase and Constellation's Calpine purchase both carry ECP's price.",
+   "soldThrough": "Sales to listed strategics for cash plus stock, with registration-rights agreements and staged lock-ups; underwritten secondary offerings to monetise.",
+   "targetSegments": [
+    "Listed independent power producers",
+    "Hyperscale load seeking co-located generation"
+   ],
+   "roadmap": "Remaining Constellation shares unlock 30 June 2027; Talen lock-ups lapsed September and December 2026 — no resale registered as of 3 October 2026."
+  },
+  {
+   "name": "ProEnergy — majority-owned aeroderivative turbine and bridge-power platform",
+   "category": "Portfolio — equipment and contracted power",
+   "description": "ECP acquired a majority interest in ProEnergy (Sedalia, Missouri) from affiliates of Eos Partners and ACON Investments on 5 September 2024; terms were undisclosed, and Bloomberg reported in September 2026 that ECP paid about USD 275m for roughly 60%. ProEnergy's PE6000 is a 50 MW aeroderivative unit it describes as interchangeable with the LM6000PC; in April 2026 it announced a 650 MW, thirteen-unit power solution for Crusoe and the divestiture of its Braes Bayou and Brotman generating stations to STEC. Bridgepoint records a 2025 'partial exit from ProEnergy, the first exit from the 2022 vintage ECP V' — the WattBridge peaker fleet — and attributes part of ECP V's carry to 'very strong growth in the order book for the retained gas turbine business'. On 21 September 2026 Bloomberg reported ProEnergy was weighing a US IPO at a USD 40–50bn valuation with Morgan Stanley and JPMorgan, or an outright sale.",
+   "highlights": [
+    "ProEnergy is the one ECP platform in this corpus that both sells equipment (turbines, EPC) and owns bridge-power assets for data centres — the dossier `proenergy` carries the product detail",
+    "The reported USD 275m-for-60% entry against a reported USD 40–50bn IPO mark would be the largest mark-up in ECP's history; both figures are Bloomberg's, confirmed by neither ECP nor ProEnergy"
+   ],
+   "positioning": "ECP's route from capital to equipment: its only portfolio company that manufactures and services turbines for AI load.",
+   "soldThrough": "Majority equity stake held by ECP V vehicles.",
+   "targetSegments": [
+    "Neoclouds and hyperscalers needing bridge power",
+    "Utilities and IPPs buying aeroderivative capacity"
+   ],
+   "roadmap": "IPO or sale under consideration (Bloomberg, 21 September 2026); no filing located."
+  },
+  {
+   "name": "Regulated and contracted platforms — Atlantica, Grain LNG, Convergent, and the pending EnergySolutions and DCC Energy acquisitions",
+   "category": "Portfolio — contracted infrastructure",
+   "description": "Atlantica Sustainable Infrastructure (contracted renewables, transmission and water) was taken private by California Buyer Limited, 'a vehicle controlled by funds managed or advised by Energy Capital Partners' with institutional co-investors, effective 12 December 2024 after CFIUS and FERC approvals; ECP's Andrew Gilbert, Kelly Self, Scott Steimer and Sofia Galatas joined the board. Grain LNG, the Isle of Grain terminal, was bought from National Grid 50/50 with Centrica at an enterprise value of GBP 1.5bn with about GBP 1.1bn of non-recourse debt, completed 28 November 2025 — ECP VI's first investment. Convergent Energy + Power (New York and Toronto) is ECP's wholly owned storage and solar developer, with more than USD 1bn invested or committed. EnergySolutions, the nuclear decommissioning and waste business ECP previously owned in ECP II, is being re-acquired from TriArtisan under an agreement of 6 April 2026 expected to close in 2026. DCC Energy plc is the subject of a recommended cash offer by Dragon Bidco (indirectly wholly owned by ECP and KKR funds) of up to 6,797.22p per share, about GBP 5.75bn of equity value, approved by 78.09% of scheme shares on 18 September 2026 and expected to become effective in Q1 2027 subject to Irish High Court sanction and EU merger and foreign-subsidies clearances.",
+   "highlights": [
+    "Grain LNG equity: Centrica's 50% was about GBP 200m, implying a similar cheque from ECP against the GBP 1.5bn EV",
+    "DCC Energy financing: ECP and KKR equity plus debt from twelve banks; the ECP/KKR split is not disclosed; 21.9% of scheme shares voted against",
+    "Liberty Tire Recycling (owned since April 2021) was agreed for sale to I Squared Capital on 14 October 2025 (Bloomberg: USD 1.5bn); Biffa and Triton Power are listed by ECP among its UK investments",
+    "Legacy and credit vehicles on the ADV: ECP Credit Solutions II, Mezzanine Opportunities, Energy Transition Opportunities, Terra-Gen Growth Funds — all small residual values; ECP ForeStar is listed as an inactive relying adviser"
+   ],
+   "positioning": "The post-Calpine ECP: contracted, regulated or essential-service assets in the US, UK and Ireland, bought with Bridgepoint's European network, rather than merchant generation.",
+   "soldThrough": "Control or joint-control equity from ECP VI with co-investment sleeves (ES Pinnacle for EnergySolutions).",
+   "targetSegments": [
+    "Nuclear utilities and government (EnergySolutions)",
+    "UK/Irish energy customers (DCC Energy)",
+    "Gas shippers (Grain LNG)"
+   ],
+   "roadmap": "EnergySolutions close expected 2026; DCC Energy effective Q1 2027."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-29",
+   "category": "policy",
+   "headline": "Bipartisan letter led by Senator Warren urges FERC to reject the GIP/BlackRock takeover of AES — ECP not named",
+   "read": "The appetite to block private-equity control of generation at FERC is now bipartisan; ECP's own Section 203 filings (Gavin, Cornerstone, Calpine) have each drawn protests.",
+   "source": "https://www.banking.senate.gov/newsroom/minority/in-bipartisan-letter-warren-indiana-reps-carson-d-and-spatz-r-lead-lawmakers-in-urging-federal-regulator-to-reject-proposed-private-equity-takeover-of-energy-company"
+  },
+  {
+   "date": "2026-09-21",
+   "category": "market",
+   "headline": "Bloomberg: ECP-backed ProEnergy weighs a US IPO at a USD 40–50bn valuation with Morgan Stanley and JPMorgan, or an outright sale; ECP reported to have paid about USD 275m for roughly 60% in 2024",
+   "read": "Press-only; if realised it would be ECP V's largest mark-up and would list the corpus's turbine-and-bridge-power supplier.",
+   "source": "https://www.thestar.com.my/business/business-news/2026/09/21/proenergy-eyes-us50bil-ipo-valuation"
+  },
+  {
+   "date": "2026-09-18",
+   "category": "ma",
+   "headline": "DCC Energy shareholders approve the Dragon Bidco (ECP and KKR) scheme — 78.09% of scheme shares in favour; completion expected Q1 2027 subject to Irish High Court sanction",
+   "read": "ECP VI's largest named deployment clears its shareholder gate with notable dissent (21.9% against); EC merger and foreign-subsidies clearances outstanding.",
+   "source": "https://www.investegate.co.uk/announcement/rns/dcc-energy-plc--dcc/results-of-court-and-general-meetings/9780562"
+  },
+  {
+   "date": "2026-08-14",
+   "category": "corporate",
+   "headline": "Form D filed for ECP VI (ES Pinnacle Co-Invest), LP — the co-investment sleeve for the EnergySolutions acquisition",
+   "read": "Confirms the deal is being syndicated beside Fund VI, the pattern ECP used for Calpine and Cornerstone.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2142130/000214213026000001/primary_doc.xml"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "financial",
+   "headline": "Schedule 13G/A: ECP vehicles hold 14,443,227 Constellation shares (4.0%) after the June offering, down from 22,043,724",
+   "read": "Calpine proceeds are being monetised on schedule; the 2027 tranche is still locked.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226036598/primary_doc.xml"
+  },
+  {
+   "date": "2026-08-06",
+   "category": "financial",
+   "headline": "ECP VI final close at USD 8.1bn of commitments against a USD 5bn target, after the hard cap was raised during the raise; ECP VII pushed to 2029",
+   "read": "ECP's largest fund, 84% larger than ECP V; its DPI record is the stated reason LPs re-upped.",
+   "source": "https://finance.yahoo.com/energy/articles/energy-capital-partners-ecp-completes-113000452.html"
+  },
+  {
+   "date": "2026-07-27",
+   "category": "ma",
+   "headline": "Rule 2.7 announcement: Dragon Bidco (ECP and KKR) to acquire DCC Energy plc for up to 6,797.22p per share (about GBP 5.75bn equity value), a 24% premium, with debt from twelve banks",
+   "read": "ECP's first FTSE take-private and its second large deal with KKR; UK and Irish downstream energy distribution is far from the US merchant-power franchise.",
+   "source": "https://www.investegate.co.uk/announcement/rns/dcc-energy-plc--dcc/recommended-acquisition-of-dcc-energy-plc/9687627"
+  },
+  {
+   "date": "2026-07-17",
+   "category": "financial",
+   "headline": "Bridgepoint H1 2026: Infrastructure AUM EUR 27.7bn (from EUR 36.0bn) after the Calpine and Cornerstone exits; ECP V marked above 3x and its carry recognised for the first time; record EUR 16.6bn returned to fund investors including EUR 11bn from Calpine",
+   "read": "ECP is now the parent's performance-fee engine; infrastructure management fees more than doubled to GBP 99.7m.",
+   "source": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/half-year-report/9673554"
+  },
+  {
+   "date": "2026-06-23",
+   "category": "financial",
+   "headline": "Schedule 13G: ECP V Cornerstone vehicles own 2,399,998 Talen shares, 5.01% of the company",
+   "read": "ECP stays a shareholder of the buyer of its plants, as it did with Constellation.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226029806/primary_doc.xml"
+  },
+  {
+   "date": "2026-06-15",
+   "category": "ma",
+   "headline": "Talen completes the Cornerstone acquisition: USD 2,615m cash plus 2,399,998 shares (USD 927m), a USD 3,542m purchase price for about 2.6 GW of PJM gas",
+   "read": "Bridgepoint states 4.4x money multiple after less than a year of ownership — the ex-Lightstone gas plants bought in August 2025.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/tln-20260615.htm"
+  },
+  {
+   "date": "2026-06-10",
+   "category": "policy",
+   "headline": "Senator Warren writes to KKR, BlackRock, Brookfield and Blackstone on private-equity data-centre ownership; the KKR letter cites CyrusOne but names neither ECP nor the KKR–ECP partnership",
+   "read": "ECP sits outside the oversight letters so far, though its partnership funds the campus the KKR letter's subject (CyrusOne) is building.",
+   "source": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf"
+  },
+  {
+   "date": "2026-06-02",
+   "category": "financial",
+   "headline": "Calpine's former holders sell 11,000,000 Constellation shares at USD 281 (USD 3.09bn gross); Constellation repurchases 2,000,000 for about USD 558m; ECP sells about 7.6m shares, CPP Investments 2,660,479",
+   "read": "First monetisation of the Calpine consideration, four weeks before the first lock-up expiry.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069201/tm2615509-1_424b4.htm"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "regulatory",
+   "headline": "Form ADV annual update: regulatory AUM USD 33.39bn across 64 pooled vehicles, about 95 employees, offices in Summit, New York, San Diego and Seoul",
+   "read": "The authoritative identity record; Bridgepoint's control is visible through its two managers on ECP ControlCo.",
+   "source": "https://reports.adviserinfo.sec.gov/reports/ADV/155020/PDF/155020.pdf"
+  },
+  {
+   "date": "2026-04-06",
+   "category": "ma",
+   "headline": "ECP agrees to acquire EnergySolutions from TriArtisan Capital Advisors — a re-acquisition of a former ECP II portfolio company; close expected in 2026",
+   "read": "Nuclear decommissioning and waste services re-enter the portfolio as the Kewaunee new-nuclear initiative advances; the corpus had this deal's direction backwards.",
+   "source": "https://www.energysolutions.com/energysolutions-to-be-acquired-by-energy-capital-partners-ecp/"
+  },
+  {
+   "date": "2026-03-18",
+   "category": "leadership",
+   "headline": "Vistra's 2026 proxy describes chairman Scott B. Helm as a former founding partner of ECP and a private investor for over a decade",
+   "read": "Corrects the corpus: Helm is not a current ECP partner.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1692819/000162828026019029/vistra-20260318.htm"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "financial",
+   "headline": "Bridgepoint FY2025 results: Infrastructure AUM EUR 36.0bn at 31 December 2025; ECP VI at USD 3.7bn with a USD 5.0bn cover and USD 7.5bn hard cap; Calpine closed at USD 33bn of enterprise value",
+   "read": "The segment's peak AUM before the exits were booked.",
+   "source": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/final-results-/9470358"
+  },
+  {
+   "date": "2026-01-15",
+   "category": "ma",
+   "headline": "Talen agrees to buy Cornerstone Generation from ECP for USD 3.45bn — about USD 2.55bn cash and USD 900m in Talen stock, 6.6x 2027E adjusted EBITDA; ECP to own about 5% of Talen",
+   "read": "ECP sells PJM gas into the data-centre premium five months after buying it.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000004/a20260115pressreleasetalen.htm"
+  },
+  {
+   "date": "2026-01-09",
+   "category": "ma",
+   "headline": "ECP closes the sale of Symmetry Energy Solutions to NextEra Energy Resources (6.4x money multiple per Bridgepoint)",
+   "read": "A gas-supply platform exits to a strategic the same week as Calpine.",
+   "source": "https://finance.yahoo.com/news/energy-capital-partners-ecp-successfully-162800023.html"
+  },
+  {
+   "date": "2026-01-07",
+   "category": "ma",
+   "headline": "Constellation completes the Calpine acquisition from ECP; registration rights agreement signed with ECP, CPP Investments and Access Industries; share lock-ups to 30 June 2026 and 30 June 2027",
+   "read": "Bridgepoint calls it the largest and most profitable exit in private-equity history; ECP's 6.1% of Constellation is the residue.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926001780/tm2532248d1_ex99-1.htm"
+  },
+  {
+   "date": "2025-11-28",
+   "category": "ma",
+   "headline": "ECP and Centrica complete the 50/50 acquisition of Grain LNG from National Grid at an enterprise value of GBP 1.5bn with about GBP 1.1bn of project debt — ECP VI's first investment",
+   "read": "The first deal sourced through Bridgepoint's European network.",
+   "source": "https://www.investegate.co.uk/announcement/rns/centrica--cna/completion-of-grain-lng-acquisition/9263899"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "ma",
+   "headline": "I Squared Capital agrees to acquire Liberty Tire Recycling from ECP (owned since April 2021); terms undisclosed",
+   "read": "Another ECP IV realisation feeding the DPI record LPs cite.",
+   "source": "https://libertytire.com/About/News/I-Squared-Capital-to-Acquire-Liberty-Tire-Recycling-from-Energy-Capital-Partners/"
+  },
+  {
+   "date": "2025-07-30",
+   "category": "project",
+   "headline": "ECP and KKR announce the first investment of their USD 50bn partnership: a 190 MW hyperscale campus in Bosque County, Texas, built with CyrusOne beside Calpine's Thad Hill Energy Center, 144 MW of initial IT capacity, total investment approaching USD 4bn, operations expected Q4 2026",
+   "read": "The partnership's thesis made concrete: a landlord's building on a generator's site.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas"
+  },
+  {
+   "date": "2025-07-23",
+   "category": "regulatory",
+   "headline": "FERC conditionally approves Constellation–Calpine with 3,546 MW of PJM divestitures and offer caps, and the same day approves ECP's purchase of Lightstone Generation (Gavin) from Blackstone and ArcLight",
+   "read": "Protesters asked FERC to force ECP to divest from Constellation; FERC did not.",
+   "source": "https://www.utilitydive.com/news/ferc-constellation-energy-calpine-pjm/753918/"
+  },
+  {
+   "date": "2025-03-19",
+   "category": "partnership",
+   "headline": "ADQ and ECP form a 50:50 partnership targeting more than USD 25bn across 25 GW of primarily new-build US gas generation, with an initial USD 5bn contribution",
+   "read": "Sovereign capital for the generation leg of the AI build; no first project announced by October 2026 (release not reachable first-party; confirmed in Bridgepoint's annual report).",
+   "source": "https://www.marketscreener.com/news/bridgepoint-2025-annual-report-and-accounts-ce7e51dada89f12d"
+  },
+  {
+   "date": "2025-02-10",
+   "category": "financial",
+   "headline": "Schedule 13G/A: ECP III vehicles held no Sunnova shares at 31 December 2024",
+   "read": "ECP was out before Sunnova's June 2025 Chapter 11.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1772695/000095017025017110/primary_doc.xml"
+  },
+  {
+   "date": "2024-12-12",
+   "category": "ma",
+   "headline": "Atlantica Sustainable Infrastructure's take-private by California Buyer Limited (ECP funds and co-investors) becomes effective; four ECP nominees join the board",
+   "read": "Contracted renewables and transmission added as Calpine was being sold.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1601072/000114036124049098/ef20039835_6k.htm"
+  },
+  {
+   "date": "2024-10-30",
+   "category": "partnership",
+   "headline": "KKR and ECP announce a USD 50bn strategic partnership to invest in data centres with power generation and transmission",
+   "read": "The programme that defines ECP's AIDC exposure.",
+   "source": "https://media.kkr.com/news-details?news_id=8f924dd6-41ea-480d-9a96-d854c7232bbc"
+  },
+  {
+   "date": "2024-10-01",
+   "category": "ma",
+   "headline": "Masdar closes the purchase of ECP's 50% of Terra-Gen; ECP has fully exited",
+   "read": "The renewables platform leaves before the AI wave ECP later rode with gas.",
+   "source": "https://terra-gen.com/wp-content/uploads/2024/09/Masdar-Terra-Gen-Closing-Announcement-Eng-FINAL.docx.pdf"
+  },
+  {
+   "date": "2024-09-05",
+   "category": "ma",
+   "headline": "ECP acquires a majority interest in ProEnergy from affiliates of Eos Partners and ACON Investments; terms undisclosed",
+   "read": "The one equipment maker in ECP's portfolio enters twelve months before the turbine order wave.",
+   "source": "https://www.roi-nj.com/2024/09/10/industry/energy-utilities/energy-capital-partners-acquires-majority-interest-in-proenergy/"
+  },
+  {
+   "date": "2024-08-20",
+   "category": "corporate",
+   "headline": "Bridgepoint completes the ECP combination: 185.0m consideration units, 45.0m earn-out units and cash; 27,103,568 new Bridgepoint shares issued at closing",
+   "read": "ECP becomes the Infrastructure segment of a listed London manager after FERC's March refusal and April refiling.",
+   "source": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/closing-of-ecp-transaction/8376174"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **ECP is a seller of power into the AI demand wave, not a builder of data centres**. Basis: in nine months it converted Calpine (USD 33bn EV at close per Bridgepoint), Cornerstone (USD 3,542m) and Symmetry into cash and listed stock, while its only data-centre position is a programme stake in one CyrusOne campus whose power counterparty it no longer owns. The purchase orders a vendor wants are at the buyers of ECP's plants — Constellation and Talen — and at ProEnergy.",
+  "**(High confidence)** We assess that **the Lightstone-to-Cornerstone loop is ECP's model in miniature**: buy a portfolio with a coal plant nobody else wants (Gavin), sell the gas plants to a listed IPP at a data-centre premium within a year (4.4x), keep the coal plant and the Talen shares. Basis: FERC's July 2025 approval of the Lightstone purchase and Talen's June 2026 closing documents; Bridgepoint's own money-multiple statement.",
+  "**(Moderate confidence)** We assess that **ECP VI's deployment will look less like Calpine and more like Grain LNG and DCC — contracted, regulated, European and co-owned** — because the parent is a London-listed manager whose fee income now depends on fund size and whose network sourced both deals. Basis: the three named Fund VI deployments; Bridgepoint's statement that ECP VII is deferred to 2029 'to allow for deployment of a larger ECP VI'. Cuts against this: the ADQ partnership exists to build new US gas plants, and no first project has been announced after eighteen months.",
+  "**(Moderate confidence)** We assess that **ECP retains listed stakes in its buyers by design rather than by lock-up alone**. Basis: it sold only 35% of the Constellation tranche that unlocked in June 2026, kept the entire Talen position past the first lock-up lapse, and Andrew Gilbert described ECP as 'a significant shareholder' of Talen 'excited to enhance our exposure to Ohio's growth'. For a seller, that makes ECP a continuing voice at two strategics it no longer controls. Collection gap: ECP has not stated a holding policy for either stake.",
+  "**(Moderate confidence)** We assess that **ProEnergy is the route by which ECP's capital most directly reaches equipment**, and that the reported IPO would list the corpus's turbine-and-bridge-power supplier under ECP's continuing control. Basis: Bridgepoint's attribution of ECP V carry to ProEnergy's turbine order book; the Crusoe 650 MW order; Bloomberg's September 2026 report. The USD 40–50bn valuation and the USD 275m entry price are press figures confirmed by neither party.",
+  "**(Low confidence)** We assess that **FERC and congressional scrutiny of private-equity generation ownership is a rising cost for ECP's next US deal**. Basis: FERC's March 2024 refusal of the Bridgepoint combination over the Blue Owl affiliation, the protests against Calpine and Gavin, and the September 2026 bipartisan letter against GIP/AES — none of which has yet named ECP. Treat as a tripwire, not a finding.",
+  "**INDICATORS TO WATCH** — *Q4 2026, CyrusOne DFW10 operations in Bosque County:* a first-party operational release would confirm the KKR–ECP thesis; a slip would indicate the partnership's first campus is behind. *2026, EnergySolutions closing:* confirms ECP VI's second deployment. *Q1 2027, DCC Energy scheme effective:* the EC merger and foreign-subsidies clearances are the gates. *Any Talen resale prospectus supplement or Constellation 13G/A:* would show ECP monetising rather than holding. *An S-1 or confidential filing by ProEnergy:* would convert a press report into a listing. *11 March 2027, Bridgepoint FY2026 results:* the next first-party AUM, deployment and carry figures — Bridgepoint publishes no Q3 trading update."
+ ],
+ "relationships": [
+  {
+   "slug": "proenergy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2024-09",
+   "scale": "majority interest (about 60% for about USD 275m, per Bloomberg)",
+   "note": "ECP acquired a majority interest on 5 September 2024 from affiliates of Eos Partners and ACON Investments; a partial exit (the WattBridge peakers) was ECP V's first realisation in 2025.",
+   "context": "ECP's 5 September 2024 release, reachable only through mirrors from this environment, records the majority purchase with terms undisclosed. Bridgepoint's FY2025 results describe a 2025 'partial exit from ProEnergy, the first exit from the 2022 vintage ECP V', and its H1 2026 report credits 'very strong growth in the order book for the retained gas turbine business at ProEnergy' for part of ECP V's carried interest.\n\nOn 21 September 2026 Bloomberg reported that ProEnergy was weighing a US IPO at a USD 40–50bn valuation with Morgan Stanley and JPMorgan, and that ECP had paid about USD 275m for roughly 60% in 2024. Neither figure is confirmed by ECP or ProEnergy.",
+   "source": "https://www.roi-nj.com/2024/09/10/industry/energy-utilities/energy-capital-partners-acquires-majority-interest-in-proenergy/"
+  },
+  {
+   "slug": "kkr",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-10",
+   "scale": "USD 50bn strategic partnership; GBP 5.75bn DCC Energy offer",
+   "note": "KKR and ECP announced a USD 50bn partnership for data centres with power generation on 30 October 2024; its first campus is CyrusOne's DFW10 in Bosque County; the two also bid jointly for DCC Energy plc in July 2026.",
+   "context": "KKR's 30 October 2024 release states that KKR funds the partnership from its infrastructure, real estate and insurance strategies and ECP 'from existing and future infrastructure capital pools'. The first investment, announced 30 July 2025, is a 190 MW hyperscale campus in Bosque County, Texas, built with CyrusOne beside Calpine's Thad Hill plant, with operations expected in Q4 2026.\n\nOn 27 July 2026 Dragon Bidco, indirectly wholly owned by ECP and KKR funds, announced a recommended cash offer for DCC Energy plc of up to 6,797.22p per share, about GBP 5.75bn of equity; 78.09% of scheme shares approved it on 18 September 2026. The ECP/KKR split of the equity is not disclosed in the Rule 2.7 announcement.",
+   "source": "https://media.kkr.com/news-details?news_id=8f924dd6-41ea-480d-9a96-d854c7232bbc"
+  },
+  {
+   "slug": "cyrusone",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-07",
+   "scale": "190 MW campus; 144 MW initial IT; USD 1.2bn first phase",
+   "note": "CyrusOne is the developer of DFW10, the first campus of the KKR–ECP partnership, under a 190 MW agreement with Calpine.",
+   "context": "CyrusOne's 30 July 2025 release describes a 190 MW agreement with Calpine for a hyperscale campus adjacent to the Thad Hill Energy Center, a USD 1.2bn first phase and operations in Q4 2026; the ECP–KKR release the same day states initial IT capacity of 144 MW and 'total investment approaching $4 billion'. Neither release gives stake percentages. A project tracker records the first building topping out in March 2026; no first-party status update has followed, and Calpine passed to Constellation on 7 January 2026.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas"
+  },
+  {
+   "slug": "talen-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "2,399,998 shares (5.01%) after the USD 3,542m Cornerstone sale",
+   "note": "Talen bought Cornerstone Generation (about 2.6 GW of PJM gas) from ECP on 15 June 2026 for USD 2,615m cash plus 2,399,998 shares; ECP V vehicles hold those shares.",
+   "context": "Talen's 8-K of 15 June 2026 and its Q2 2026 10-Q record the purchase price of USD 3,542m — cash of USD 2,615m and 2,399,998 shares valued at USD 927m (USD 386.21 at close) — for Waterford, Darby and Lawrenceburg, with a registration rights agreement and 90- and 180-day lock-ups on the stock. ECP ControlCo's Schedule 13G of 23 June 2026 reports 2,399,998 shares, 5.01% of 47,894,656 outstanding, held through ECP V Cornerstone vehicles; no resale filing had appeared by 3 October 2026. Bridgepoint states a 4.4x money multiple after less than a year of ownership.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226029806/primary_doc.xml"
+  },
+  {
+   "slug": "constellation-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "14,443,227 shares (4.0%) after selling about 7.6m in June 2026",
+   "note": "ECP sold Calpine to Constellation (closed 7 January 2026) and received Constellation shares as two-thirds of its proceeds; it remains a 4.0% holder under a 2027 lock-up.",
+   "context": "Constellation's completion release of 7 January 2026 and the registration rights agreement filed the same day name ECP, CPP Investments and Access Industries as the Calpine holders. ECP ControlCo's Schedule 13G reported 22,043,724 shares (6.1%) at the close. In the underwritten offering of 2 June 2026 the Calpine holders sold 11,000,000 shares at USD 281 (USD 279 to the underwriters) and Constellation repurchased 2,000,000 for about USD 558m; ECP's 13G/A of 7 August 2026 shows 14,443,227 shares (4.0%). Bridgepoint states that 35% of the tranche released in 2026 was sold and the 2027 tranche is held. Bridgepoint states USD 33bn of enterprise value at closing; Constellation's 2025 announcement stated 50 million shares, about USD 4.5bn of cash and about USD 12.7bn of assumed net debt.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226036598/primary_doc.xml"
+  },
+  {
+   "slug": "cpp-investments",
+   "type": "partner",
+   "status": "historical",
+   "since": "2018",
+   "scale": "co-owners of Calpine until 7 January 2026; co-sellers of Constellation shares on 2 June 2026",
+   "note": "CPP Investments was a Calpine co-owner in the ECP-led consortium and received Constellation shares beside ECP at the January 2026 close.",
+   "context": "Constellation's 10 January 2025 announcement names 'Calpine's significant shareholders, including ECP, Canada Pension Plan Investments (CPP Investments) and Access Industries'; the registration rights agreement of 7 January 2026 names Canada Pension Plan Investment Board as a party. In the 2 June 2026 offering CPP Investments sold 2,660,479 shares (plus up to 326,516 option shares) beside ECP's roughly 7.6m. The two also sit on opposite sides of nothing else in this corpus.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069201/tm2615509-1_424b4.htm"
+  },
+  {
+   "slug": "vistra",
+   "type": "other",
+   "status": "historical",
+   "note": "Vistra's chairman Scott B. Helm is a former founding partner of ECP, per Vistra's 2026 proxy; he has been a private investor for more than a decade.",
+   "context": "Vistra's definitive proxy of 18 March 2026 describes Mr Helm as having 'previously' been 'a founding partner of Energy Capital Partners' and, for over a decade, 'a private investor based out of Baltimore'. He does not appear on ECP's Form ADV Schedule A. The corpus had described him as a current ECP founding partner; the tense is corrected here and in the Vistra dossier.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1692819/000162828026019029/vistra-20260318.htm"
+  },
+  {
+   "slug": "terra-gen",
+   "type": "portfolio",
+   "status": "historical",
+   "since": "2015",
+   "scale": "50% sold to Masdar, closed 1 October 2024",
+   "note": "ECP owned Terra-Gen from 2015 and sold its remaining 50% to Masdar, closing 1 October 2024 — 'ECP has fully exited its position in Terra-Gen'.",
+   "context": "The Masdar closing announcement hosted by Terra-Gen states that Masdar completed the acquisition of ECP's 50% interest in Terra-Gen Power Holdings II, LLC on 1 October 2024, that Igneo Infrastructure Partners retains the other 50%, and that ECP has fully exited. The portfolio at the time was 3.8 GW of operating generation including 5.1 GWh of storage across 30 sites.",
+   "source": "https://terra-gen.com/wp-content/uploads/2024/09/Masdar-Terra-Gen-Closing-Announcement-Eng-FINAL.docx.pdf"
+  },
+  {
+   "slug": "blackstone",
+   "type": "other",
+   "status": "historical",
+   "since": "2025",
+   "scale": "Lightstone Generation (Gavin and three Midwest plants), FERC-approved 23 July 2025",
+   "note": "ECP bought Lightstone Generation — the Gavin coal plant and the gas plants later sold to Talen as Cornerstone — from Blackstone and ArcLight.",
+   "context": "Private Equity Stakeholder Project and the FERC record (docket EC24-125) show ECP acquiring Lightstone Generation from Blackstone and ArcLight, with FERC approval on 23 July 2025; ECP told FERC it would be the only holder of 10% or more of the voting equity. The price was not disclosed. The gas plants in that portfolio (Waterford, Darby, Lawrenceburg) became Cornerstone Generation and were sold to Talen in June 2026; ECP kept Gavin.",
+   "source": "https://pestakeholder.org/news/press-releaseferc-greenlights-sale-of-deadly-gavin-coal-plant-to-energy-capital-partners-puts-communities-across-the-eastern-u-s-at-risk-of-adverse-health-outcomes/"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "other",
+   "status": "historical",
+   "since": "2026-01",
+   "scale": "Symmetry Energy Solutions sale, closed 9 January 2026 (6.4x per Bridgepoint)",
+   "note": "NextEra Energy Resources bought Symmetry Energy Solutions, ECP's gas supply and logistics platform, in a sale that closed on 9 January 2026.",
+   "context": "ECP's release of 9 January 2026 (Business Wire, read via a mirror) records the closing of the sale of Symmetry Energy Solutions — about 5,500 large commercial and industrial customers and more than 80,000 residential and small-business customers across 34 states — to NextEra Energy Resources; terms were undisclosed. Bridgepoint's H1 2026 report states a 6.4x money multiple.",
+   "source": "https://finance.yahoo.com/news/energy-capital-partners-ecp-successfully-162800023.html"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FERC Federal Power Act §203 — change of control over public utilities",
+   "status": "in-effect",
+   "effectiveDate": "2024-03-01",
+   "exposure": "FERC declined ECP's and Bridgepoint's first application (docket EC24-2) on 1 March 2024 for 'insufficient information' on voting restrictions over a minority holder — Blue Owl Capital, which Public Citizen said owned 19.3% of ECP and 15.5% of Bridgepoint; the refiled application (EC24-69, 11 April 2024) was approved and the combination closed on 20 August 2024. Every later ECP transaction has run the same gate: Lightstone/Gavin (EC24-125, approved 23 July 2025), Calpine/Constellation (EC25-43, conditional approval 23 July 2025 with 3,546 MW of PJM divestitures, after Earthjustice and Public Citizen asked FERC to force ECP to divest its Constellation shares) and Cornerstone/Talen (EC26-59, closed 15 June 2026).",
+   "mitigation": "ECP's filings state its ownership structure in full; the Lightstone application stated ECP would be the only 10%-plus voting holder with exclusive board rights.",
+   "source": "https://www.utilitydive.com/news/ferc-bridgepoint-energy-capital-partners-ecp/709135/"
+  },
+  {
+   "regime": "US Senate Banking Committee oversight — private-equity ownership of utilities and data centres",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-10",
+   "exposure": "Senator Warren's 10 June 2026 letters to KKR, BlackRock, Brookfield and Blackstone on data-centre ownership cite KKR and GIP's CyrusOne but do not name ECP or the KKR–ECP partnership; the 29 September 2026 bipartisan letter urging FERC to reject the GIP/AES takeover does not name ECP either. ECP is adjacent to both — it funds the campus CyrusOne is building and is itself a private-equity owner of generation.",
+   "source": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf"
+  },
+  {
+   "regime": "EU Merger Regulation 139/2004 and Foreign Subsidies Regulation 2022/2560 — DCC Energy",
+   "status": "announced",
+   "effectiveDate": "2026-07-27",
+   "exposure": "The DCC Energy scheme is conditional on a European Commission decision under the Merger Regulation, Foreign Subsidies Regulation notifications by both ECP and KKR, Canadian and Turkish competition clearances, a UK CMA briefing paper and Irish High Court sanction; no EC case number had been published by 3 October 2026. The long-stop date is 31 July 2027.",
+   "source": "https://www.investegate.co.uk/announcement/rns/dcc-energy-plc--dcc/recommended-acquisition-of-dcc-energy-plc/9687627"
+  },
+  {
+   "regime": "Coal-plant retirement pressure — Gavin (Ohio)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-23",
+   "exposure": "ECP's retained 2,709 MW Gavin coal plant is the target of a Private Equity Stakeholder Project and Sierra Club campaign against Bridgepoint's energy-transition positioning; ECP's December 2024 FERC filing pledged to keep Gavin operating 'for so long as [it is] legally able to do so on an economic basis'.",
+   "source": "https://pestakeholder.org/news/bridgepoint-owned-ecp-pledges-to-keep-operating-50-year-old-polluting-coal-plant-indefinitely/"
+  },
+  {
+   "regime": "CFIUS and UK NSI Act — foreign-controlled acquisitions of infrastructure",
+   "status": "in-effect",
+   "effectiveDate": "2024-10-25",
+   "exposure": "Atlantica's take-private by ECP funds and co-investors cleared CFIUS and FERC by 25 October 2024; since 20 August 2024 ECP's ultimate parent is a UK-listed company, so its US acquisitions carry a foreign-parent dimension. Grain LNG's NSI Act treatment is not stated in the sources read.",
+   "source": "https://www.globenewswire.com/news-release/2024/11/04/2974055/33705/en/Closing-of-Atlantica-s-Acquisition-by-Energy-Capital-Partners-and-Co-Investors-Expected-December-12.html"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Fund table (Bridgepoint H1 2026 report, performance at 30 June 2026)",
+   "specs": [
+    {
+     "band": "ECP III",
+     "label": "Vintage / size",
+     "value": "2014 / USD 5.1bn"
+    },
+    {
+     "band": "ECP III",
+     "label": "Gross MOIC / DPI / gross IRR",
+     "value": "2.3x / 1.9x / 17.5%"
+    },
+    {
+     "band": "ECP IV",
+     "label": "Vintage / size",
+     "value": "2018 / USD 3.3bn (plus USD 3.5bn of co-investment)"
+    },
+    {
+     "band": "ECP IV",
+     "label": "Gross MOIC / DPI / gross IRR",
+     "value": "2.1x / 1.0x / 20.9%"
+    },
+    {
+     "band": "ECP V",
+     "label": "Vintage / size",
+     "value": "2022 / USD 4.4bn (final close May 2024; plus USD 2.3bn of fee-paying co-investment); 85% deployed"
+    },
+    {
+     "band": "ECP V",
+     "label": "Gross MOIC / DPI / gross IRR",
+     "value": "3.1x / 0.6x / 65.4%"
+    },
+    {
+     "band": "ECP VI",
+     "label": "Final close",
+     "value": "USD 8.1bn of commitments, 6 August 2026 (target USD 5.0bn; hard cap raised from USD 7.5bn to USD 7.8bn during the raise)"
+    },
+    {
+     "band": "ECP VI",
+     "label": "Status",
+     "value": "Fee-paying since May 2025; first investment November 2025 (Grain LNG); 12% deployed at July 2026; ECP VII expected 2029"
+    },
+    {
+     "band": "Other vehicles",
+     "label": "ECP Calpine Continuation Fund",
+     "value": "USD 1.6bn single-asset continuation vehicle closed 23 June 2022; gross asset value USD 4,998m on the April 2026 Form ADV"
+    },
+    {
+     "band": "Other vehicles",
+     "label": "ECP Evergreen Yield",
+     "value": "Open-ended; USD 500m anchor expected to deploy in H2 2026 (Bridgepoint H1 2026)"
+    }
+   ],
+   "notes": "DPI is net of carry and expenses per Bridgepoint's table. The USD 8.1bn final close exceeds the USD 7.8bn hard cap Bridgepoint cited in July 2026; the August release says the hard cap 'was increased during the fundraise'."
+  },
+  {
+   "product": "Assets under management — the three measures",
+   "specs": [
+    {
+     "band": "Parent segment (EUR)",
+     "label": "Bridgepoint Infrastructure AUM",
+     "value": "EUR 28.2bn (31 Dec 2024) → EUR 36.0bn (31 Dec 2025) → EUR 27.7bn (30 Jun 2026, after the Calpine and Cornerstone exits)"
+    },
+    {
+     "band": "Parent segment (EUR)",
+     "label": "Infrastructure fee-paying AUM",
+     "value": "EUR 10.6bn (31 Dec 2024) → EUR 12.1bn (31 Dec 2025); plus EUR 2.8bn of fee-paying commitments added in H1 2026"
+    },
+    {
+     "band": "Parent segment (GBP)",
+     "label": "Infrastructure management and other fees",
+     "value": "GBP 99.7m in H1 2026 (GBP 47.2m in H1 2025)"
+    },
+    {
+     "band": "Regulatory (USD)",
+     "label": "SEC Form ADV regulatory AUM",
+     "value": "USD 33,394,983,222 across 64 pooled vehicles (discretionary USD 32.6bn), filed 30 April 2026"
+    },
+    {
+     "band": "Public equities (USD)",
+     "label": "13F portfolio at 30 June 2026",
+     "value": "USD 4.67bn: Constellation 14,370,227 shares (USD 3.57bn), Talen 2,399,998 (USD 0.92bn), PG&E 7,124,720, Shenandoah Telecommunications 3,457,105, Clean Energy Fuels 2,594,759"
+    },
+    {
+     "band": "Ranking",
+     "label": "IPE Real Assets Top 100 Infrastructure Managers 2025",
+     "value": "28th, infrastructure AUM EUR 21,837m"
+    }
+   ],
+   "notes": "The parent reports in euros; a prior brief misread the EUR 36.0bn segment figure as dollars. Bridgepoint's group AUM was USD 94.1bn (EUR 80.3bn) at 31 December 2025 and USD 97.3bn (EUR 85.1bn) at 30 June 2026."
+  },
+  {
+   "product": "Bosque County campus (CyrusOne DFW10) — the KKR–ECP partnership's first investment",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Power agreement",
+     "value": "190 MW with Calpine (Thad Hill Energy Center, adjacent); Calpine's Bosque fleet 'capable of delivering up to 400 MW to data centers'"
+    },
+    {
+     "band": "Capacity",
+     "label": "Initial IT capacity",
+     "value": "144 MW"
+    },
+    {
+     "band": "Capital",
+     "label": "Investment",
+     "value": "USD 1.2bn first phase (CyrusOne); 'total investment approaching $4 billion' at full build (ECP/KKR)"
+    },
+    {
+     "band": "Schedule",
+     "label": "Operations",
+     "value": "Expected Q4 2026 (July 2025); first building topped out March 2026 per a project tracker; no first-party update since"
+    }
+   ],
+   "notes": "Stake splits among KKR, ECP and CyrusOne are not disclosed. Calpine has been owned by Constellation since 7 January 2026."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Douglas W. (Doug) Kimmelman",
+   "title": "Founder and Executive Chairman",
+   "background": [
+    "Founded ECP in 2005; 'Founder and Senior Partner' until 2026, 'Founder and Executive Chairman' in the August 2026 Fund VI release",
+    "Manager of ECP ControlCo, LLC and listed first among the 'ECP Responsible Persons' for the DCC Energy offer",
+    "Previously a partner at Goldman Sachs (per Bridgepoint and ECP biographies, not re-verified here)"
+   ]
+  },
+  {
+   "name": "Tyler G. Reeder",
+   "title": "President and Chief Investment Officer",
+   "background": [
+    "'President and Managing Partner' at the Calpine close (January 2026); 'President and Chief Investment Officer' by August 2026",
+    "Manager of ECP ControlCo, LLC since the Bridgepoint combination (August 2024); DCC Energy responsible person",
+    "Quoted on Fund VI deployment and the 'generational opportunity' in power (Mergermarket, September 2026)"
+   ]
+  },
+  {
+   "name": "Peter (Pete) Labbat",
+   "title": "Partner; Manager, ECP ControlCo, LLC",
+   "background": [
+    "Member of the ECP ControlCo board of managers (Schedule 13G filings, 2026)",
+    "DCC Energy responsible person"
+   ]
+  },
+  {
+   "name": "Rahman D'Argenio",
+   "title": "Partner; Manager, ECP ControlCo, LLC",
+   "background": [
+    "Member of the ECP ControlCo board of managers",
+    "DCC Energy responsible person"
+   ]
+  },
+  {
+   "name": "Andrew R. Gilbert",
+   "title": "Partner",
+   "background": [
+    "Led the Cornerstone sale to Talen and the Symmetry sale to NextEra (quoted in both releases, 2026)",
+    "Director of Atlantica Sustainable Infrastructure since the December 2024 take-private",
+    "Manager on ECP's Form ADV Schedule A since January 2025"
+   ]
+  },
+  {
+   "name": "Murray D. Karp",
+   "title": "Manager and Chief Operating Officer",
+   "background": [
+    "Chief Operating Officer since 2005 per Form ADV Schedule A"
+   ]
+  },
+  {
+   "name": "Jennifer M. Gray",
+   "title": "Partner, General Counsel and Chief Compliance Officer",
+   "background": [
+    "Signs ECP's Schedule 13D, 13G and 13F filings as General Counsel; Partner since 2014 per Form ADV"
+   ]
+  },
+  {
+   "name": "Alexandra T. Termini",
+   "title": "Partner and Chief Financial Officer",
+   "background": [
+    "Partner and CFO since January 2025 per Form ADV Schedule A"
+   ]
+  },
+  {
+   "name": "Emily Zovko",
+   "title": "Senior Managing Director (investor relations)",
+   "background": [
+    "Quoted on the LP base in the Fund VI final-close release (August 2026)"
+   ]
+  },
+  {
+   "name": "Francesco Ciabatti",
+   "title": "Partner",
+   "background": [
+    "ECP's named partner on the DCC Energy offer (Rule 2.7 announcement, July 2026)"
+   ]
+  },
+  {
+   "name": "Drew Brown",
+   "title": "Partner",
+   "background": [
+    "ECP's named partner on the EnergySolutions re-acquisition (April 2026) and the Liberty Tire sale (October 2025)"
+   ]
+  },
+  {
+   "name": "Raoul Hughes",
+   "title": "Manager, ECP ControlCo, LLC (Chief Executive, Bridgepoint Group plc)",
+   "background": [
+    "Sits on ECP ControlCo's board of managers with Xavier Robert as the parent's representatives since August 2024",
+    "Bridgepoint Group chief executive"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "EUR / USD / GBP (as reported by Bridgepoint Group plc, ECP's Form ADV and counterparties' filings)",
+  "type": "subsidiary (Bridgepoint Group plc Infrastructure segment figures and ECP's SEC Form ADV; ECP publishes no standalone accounts and no consensus exists for it — every `expected` field is empty by design)",
+  "periods": [
+   {
+    "period": "FY2024 (Bridgepoint Infrastructure segment; combination completed 20 Aug 2024)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Infrastructure AUM (Bridgepoint)",
+      "actual": "EUR 28.2bn at 31 December 2024 (ECP AUM EUR 24.6bn at 30 June 2024, pre-completion)",
+      "expected": "",
+      "verdict": "",
+      "result": "Bridgepoint RNS; segment consolidated from 20 August 2024."
+     },
+     {
+      "name": "Infrastructure fee-paying AUM",
+      "actual": "EUR 10.6bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Bridgepoint FY2025 results, comparative."
+     },
+     {
+      "name": "Bridgepoint group AUM",
+      "actual": "USD 75.6bn (EUR 73.0bn)",
+      "expected": "",
+      "verdict": "",
+      "result": "Group figure, all three strategies."
+     },
+     {
+      "name": "Combination consideration",
+      "actual": "GBP 233m cash; 185.0m consideration units (170.1m unvested-free) and 45.0m earn-out units; GBP 179m of ECP debt assumed; 27,103,568 Bridgepoint shares issued at closing",
+      "expected": "",
+      "verdict": "",
+      "result": "Bridgepoint closing RNS, 20 August 2024; agreed 6 September 2023 at about GBP 810m."
+     }
+    ],
+    "commentary": "The comparative year: ECP enters the Bridgepoint perimeter; ECP V (USD 4.4bn) closes in May 2024; Terra-Gen is exited in October."
+   },
+   {
+    "period": "FY2025 (Bridgepoint Infrastructure segment)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Infrastructure AUM (Bridgepoint)",
+      "actual": "EUR 36.0bn at 31 December 2025 (+EUR 3.8bn fundraising, −EUR 1.3bn divestments, +EUR 8.6bn revaluations, −EUR 3.3bn FX)",
+      "expected": "",
+      "verdict": "",
+      "result": "Bridgepoint FY2025 results, 12 March 2026. The revaluation is the Calpine mark ahead of closing."
+     },
+     {
+      "name": "Infrastructure fee-paying AUM",
+      "actual": "EUR 12.1bn",
+      "expected": "",
+      "verdict": "",
+      "result": "ECP VI fee-paying from May 2025 (USD 3.7bn closed at year-end)."
+     },
+     {
+      "name": "Capital returned by infrastructure exits",
+      "actual": "EUR 1.9bn in 2025 (group: EUR 8.1bn)",
+      "expected": "",
+      "verdict": "",
+      "result": "Bridgepoint. Bloomberg's '>USD 5.5bn returned by ECP in 2025' is a press figure not found in any Bridgepoint filing."
+     },
+     {
+      "name": "Bridgepoint group AUM / underlying management fees / underlying EBITDA",
+      "actual": "USD 94.1bn (EUR 80.3bn) / GBP 427.7m / GBP 304.8m (52.6% margin)",
+      "expected": "",
+      "verdict": "",
+      "result": "Group figures; performance-related earnings GBP 151.6m, partly from ECP IV, ECP V and the Calpine Continuation Fund."
+     },
+     {
+      "name": "ECP regulatory AUM (Form ADV)",
+      "actual": "USD 33,394,983,222 across 64 pooled vehicles; about 95 employees",
+      "expected": "",
+      "verdict": "",
+      "result": "Form ADV filed 30 April 2026 for the fiscal year end."
+     }
+    ],
+    "commentary": "Calpine was marked up ahead of the January 2026 close; ECP IV and V were described as top-quartile on DPI."
+   },
+   {
+    "period": "H1 2026 (Bridgepoint Infrastructure segment; Calpine and Cornerstone exits booked)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Infrastructure AUM (Bridgepoint)",
+      "actual": "EUR 27.7bn at 30 June 2026, down from EUR 36.0bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Bridgepoint H1 2026 report, 17 July 2026 — the exits leave the segment."
+     },
+     {
+      "name": "Infrastructure management and other fees",
+      "actual": "GBP 99.7m (GBP 47.2m in H1 2025)",
+      "expected": "",
+      "verdict": "",
+      "result": "ECP VI fees on committed capital; EUR 2.8bn of fee-paying AUM added."
+     },
+     {
+      "name": "Capital returned to fund investors",
+      "actual": "EUR 16.6bn group-wide, including EUR 11bn from the sale of Calpine; ECP V has returned USD 1.3bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Record for Bridgepoint."
+     },
+     {
+      "name": "Realised multiples stated",
+      "actual": "Cornerstone 4.4x after less than a year; Symmetry 6.4x; ECP V marked above 3x (gross 3.1x, DPI 0.6x, gross IRR 65.4%)",
+      "expected": "",
+      "verdict": "",
+      "result": "ECP V carried interest recognised by Bridgepoint for the first time; group performance-related earnings GBP 120.7m."
+     },
+     {
+      "name": "ECP VI commitments",
+      "actual": "USD 7.0bn at 30 June 2026 (hard cap raised to USD 7.8bn); final close USD 8.1bn on 6 August 2026",
+      "expected": "USD 5.0bn target",
+      "verdict": "beat",
+      "result": "Target is ECP's own; no analyst consensus exists."
+     },
+     {
+      "name": "Bridgepoint group AUM / underlying EBITDA",
+      "actual": "USD 97.3bn (EUR 85.1bn) / GBP 227.3m (+77.6%, 61% margin)",
+      "expected": "",
+      "verdict": "",
+      "result": "Bridgepoint upgraded its guidance; next results 11 March 2027 (no Q3 trading update is published)."
+     }
+    ],
+    "commentary": "The half in which ECP became the parent's performance-fee engine. Collection gap: ECP's standalone revenue, carry and compensation are not disclosed by Bridgepoint at segment level beyond the fees above."
+   }
+  ],
+  "commentary": "ECP is an unlisted subsidiary, so 'financials' are three different measures that must not be mixed: Bridgepoint's Infrastructure segment (euros; AUM, fee-paying AUM, fees, carry recognition), ECP's own SEC Form ADV (dollars; regulatory AUM and headcount), and the realised deal figures in counterparties' filings (Constellation, Talen). No revenue line is invented and no consensus exists."
+ },
+ "sources": [
+  {
+   "label": "US Senate Banking Committee (minority) — bipartisan letter urging FERC to reject the GIP/BlackRock takeover of AES",
+   "url": "https://www.banking.senate.gov/newsroom/minority/in-bipartisan-letter-warren-indiana-reps-carson-d-and-spatz-r-lead-lawmakers-in-urging-federal-regulator-to-reject-proposed-private-equity-takeover-of-energy-company",
+   "date": "2026-09-29"
+  },
+  {
+   "label": "The Star (Bloomberg syndication) — ProEnergy eyes US$50bil IPO valuation",
+   "url": "https://www.thestar.com.my/business/business-news/2026/09/21/proenergy-eyes-us50bil-ipo-valuation",
+   "date": "2026-09-21"
+  },
+  {
+   "label": "DCC Energy plc (RNS via Investegate) — Results of Court and General Meetings",
+   "url": "https://www.investegate.co.uk/announcement/rns/dcc-energy-plc--dcc/results-of-court-and-general-meetings/9780562",
+   "date": "2026-09-18"
+  },
+  {
+   "label": "RTÉ News — DCC Energy shareholders back takeover bid from consortium",
+   "url": "https://www.rte.ie/news/business/2026/0918/1592130-dcc-takeover/",
+   "date": "2026-09-18"
+  },
+  {
+   "label": "ION Analytics / Mergermarket — Energy Capital Partners eyes generational opportunity as it deploys largest fund yet",
+   "url": "https://ionanalytics.com/insights/mergermarket/energy-capital-partners-eyes-generational-opportunity-as-it-deploys-largest-fund-yet/",
+   "date": "2026-09-15"
+  },
+  {
+   "label": "SEC EDGAR — Form D, ECP VI (ES Pinnacle Co-Invest), LP",
+   "url": "https://www.sec.gov/Archives/edgar/data/2142130/000214213026000001/primary_doc.xml",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "SEC EDGAR — ECP ControlCo, LLC Form 13F-HR information table, period 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1707921/000110465926096451/infotable.xml",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "SEC EDGAR — ECP ControlCo Schedule 13G/A on Constellation Energy (event 30 June 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226036598/primary_doc.xml",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "ECP via Yahoo Finance (Business Wire mirror) — Energy Capital Partners (ECP) Completes $8.1 Billion Fundraise for ECP VI",
+   "url": "https://finance.yahoo.com/energy/articles/energy-capital-partners-ecp-completes-113000452.html",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "IREI — Energy Capital Partners completes $8.1b fundraise for Fund VI, reaching expanded hard cap",
+   "url": "https://irei.com/news/energy-capital-partners-completes-8-1b-fundraise-for-fund-vi-reaching-expanded-hard-cap/",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "SEC EDGAR — Talen Energy Form 10-Q for the quarter ended 30 June 2026 (Cornerstone purchase price)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000066/tln-20260630.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "DCC Energy plc (RNS via Investegate) — Recommended Acquisition of DCC Energy plc by Dragon Bidco Limited (Rule 2.7)",
+   "url": "https://www.investegate.co.uk/announcement/rns/dcc-energy-plc--dcc/recommended-acquisition-of-dcc-energy-plc/9687627",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Bridgepoint Group plc (RNS via Investegate) — Half-year Report, H1 2026",
+   "url": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/half-year-report/9673554",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "SEC EDGAR — ECP ControlCo Schedule 13G on Talen Energy (event 15 June 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226029806/primary_doc.xml",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "SEC EDGAR — Talen Energy Form S-3ASR resale registration for 2,399,998 shares",
+   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000055/a20260618talens-3securities.htm",
+   "date": "2026-06-18"
+  },
+  {
+   "label": "SEC EDGAR — Talen Energy 8-K: completion of the Cornerstone acquisition (registration rights, lock-ups)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/tln-20260615.htm",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "SEC EDGAR — Talen Energy 8-K exhibit 99.1: Talen Energy Completes Acquisition of High-Quality Western PJM Generation Assets",
+   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/a20260615pressreleasetalen.htm",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "US Senate Banking Committee — Senator Warren's letter to KKR on data-centre ownership (PDF)",
+   "url": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "SEC EDGAR — Constellation Energy 424B4 prospectus supplement: 11,000,000 shares offered by selling shareholders",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069201/tm2615509-1_424b4.htm",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "SEC EDGAR — Constellation Energy 8-K Item 8.01: underwriting agreement, share repurchase and lock-up waiver",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069482/tm2616531d1_8k.htm",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "SEC EDGAR — ECP ControlCo Form 13F-HR information table, period 31 March 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1707921/000110465926061701/infotable.xml",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "SEC EDGAR — Form D/A, ECP VI-D, LP (USD 4.79bn sold to 21 investors)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2065575/000206557526000001/primary_doc.xml",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "SEC IAPD — Form ADV Part 1A, ECP (CRD 155020, SEC 801-74094), annual amendment",
+   "url": "https://reports.adviserinfo.sec.gov/reports/ADV/155020/PDF/155020.pdf",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "EnergySolutions — EnergySolutions to be Acquired by Energy Capital Partners (ECP)",
+   "url": "https://www.energysolutions.com/energysolutions-to-be-acquired-by-energy-capital-partners-ecp/",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "MarketScreener — Bridgepoint: 2025 Annual Report and Accounts (summary of the RNS)",
+   "url": "https://www.marketscreener.com/news/bridgepoint-2025-annual-report-and-accounts-ce7e51dada89f12d",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "SEC EDGAR — Vistra Corp. definitive proxy statement 2026 (Scott B. Helm biography)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000162828026019029/vistra-20260318.htm",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "Bridgepoint Group plc (RNS via Investegate) — Final Results FY2025",
+   "url": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/final-results-/9470358",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "SEC EDGAR — Talen Energy 8-K exhibit 99.1: Talen agrees to acquire Cornerstone from Energy Capital Partners",
+   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000004/a20260115pressreleasetalen.htm",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "SEC EDGAR — ECP ControlCo Schedule 13G on Constellation Energy (event 7 January 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1707921/000149315226002269/primary_doc.xml",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "ECP via Yahoo Finance (Business Wire mirror) — ECP Successfully Closes Sale of Symmetry Energy Solutions",
+   "url": "https://finance.yahoo.com/news/energy-capital-partners-ecp-successfully-162800023.html",
+   "date": "2026-01-09"
+  },
+  {
+   "label": "SEC EDGAR — Constellation Energy 8-K exhibit 99.1: Constellation Completes Calpine Transaction",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926001780/tm2532248d1_ex99-1.htm",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "SEC EDGAR — Constellation Energy 8-K exhibit 10.1: Registration Rights Agreement (ECP, CPP Investments, Access Industries)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926001780/tm2532248d1_ex10-1.htm",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "Private Equity Wire — Energy Capital Partners returns $5.5bn to investors in 2025 (relaying Bloomberg)",
+   "url": "https://www.privateequitywire.co.uk/energy-capital-partners-returns-5-5bn-to-investors-in-2025/",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Centrica plc (RNS via Investegate) — Completion of Grain LNG acquisition",
+   "url": "https://www.investegate.co.uk/announcement/rns/centrica--cna/completion-of-grain-lng-acquisition/9263899",
+   "date": "2025-11-28"
+  },
+  {
+   "label": "Liberty Tire Recycling — I Squared Capital to Acquire Liberty Tire Recycling from Energy Capital Partners",
+   "url": "https://libertytire.com/About/News/I-Squared-Capital-to-Acquire-Liberty-Tire-Recycling-from-Energy-Capital-Partners/",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "MarketScreener (Bridgepoint release) — Energy Capital Partners to acquire Grain LNG in partnership with Centrica",
+   "url": "https://www.marketscreener.com/news/bridgepoint-energy-capital-partners-to-acquire-grain-lng-in-partnership-with-centrica-ce7c51d8d181f624",
+   "date": "2025-08-14"
+  },
+  {
+   "label": "SEC EDGAR — ECP ControlCo Schedule 13D/A on Shenandoah Telecommunications (event 8 August 2025)",
+   "url": "https://www.sec.gov/Archives/edgar/data/354963/000164117225023205/primary_doc.xml",
+   "date": "2025-08-12"
+  },
+  {
+   "label": "CyrusOne — CyrusOne and Calpine Announce New Hyperscale Data Center Development in Texas",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas",
+   "date": "2025-07-30"
+  },
+  {
+   "label": "Bank Street Group (release copy, PDF) — ECP and KKR Announce Development of Hyperscale Data Center Campus in Texas",
+   "url": "https://www.bankstreet.com/app/uploads/2026/02/2025-07-30_ecp_kkr_announce_texas_hyperscale_data_center_campus.pdf",
+   "date": "2025-07-30"
+  },
+  {
+   "label": "Utility Dive — FERC approves $16.4B Constellation-Calpine deal",
+   "url": "https://www.utilitydive.com/news/ferc-constellation-energy-calpine-pjm/753918/",
+   "date": "2025-07-24"
+  },
+  {
+   "label": "Private Equity Stakeholder Project — FERC greenlights sale of Gavin coal plant to Energy Capital Partners",
+   "url": "https://pestakeholder.org/news/press-releaseferc-greenlights-sale-of-deadly-gavin-coal-plant-to-energy-capital-partners-puts-communities-across-the-eastern-u-s-at-risk-of-adverse-health-outcomes/",
+   "date": "2025-07-24"
+  },
+  {
+   "label": "Bridgepoint Group plc (RNS via Investegate) — Half-year Report, H1 2025",
+   "url": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/half-year-report/8985763",
+   "date": "2025-07-18"
+  },
+  {
+   "label": "IPE Real Assets — Top 100 Infrastructure Investment Managers 2025 (PDF hosted by Macquarie)",
+   "url": "https://www.macquarie.com/assets/macq/mam/insights/2025/macquarie-asset-management-tops-ipe-real-assets-100-infrastructure-investment-managers-2025/ipe-top-100-infrastructure-managers-survey-2025.pdf",
+   "date": "2025-07"
+  },
+  {
+   "label": "Private Equity Stakeholder Project — ECP reiterates that it will be the majority owner of Gavin after purchasing it from Blackstone",
+   "url": "https://pestakeholder.org/news/bridgepoints-energy-capital-partners-reiterates-that-ecp-will-be-the-majority-owner-of-gavin-after-the-firm-purchases-it-from-blackstone/",
+   "date": "2025-06-06"
+  },
+  {
+   "label": "Earthjustice — Environmental and Watchdog Groups Challenge Constellation's Bid to Buy Calpine",
+   "url": "https://earthjustice.org/press/2025/environmental-and-watchdog-groups-challenge-constellations-bid-to-buy-calpine",
+   "date": "2025-03-26"
+  },
+  {
+   "label": "SEC EDGAR — ECP ControlCo Schedule 13G/A on Sunnova Energy International (0 shares at 31 December 2024)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1772695/000095017025017110/primary_doc.xml",
+   "date": "2025-02-10"
+  },
+  {
+   "label": "Utility Dive — Calpine to sell 3.5 GW in PJM to avoid market power concerns from Constellation merger",
+   "url": "https://www.utilitydive.com/news/calpine-constellation-merger-pjm-market-power/738451/",
+   "date": "2025-01-28"
+  },
+  {
+   "label": "SEC EDGAR — Constellation Energy 8-K exhibit 99.1: Constellation to Acquire Calpine (50 million shares, USD 4.5bn cash, USD 12.7bn net debt)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827525000006/ceg-202501108kxexh991.htm",
+   "date": "2025-01-10"
+  },
+  {
+   "label": "Private Equity Stakeholder Project — Bridgepoint-owned ECP pledges to keep operating Gavin indefinitely",
+   "url": "https://pestakeholder.org/news/bridgepoint-owned-ecp-pledges-to-keep-operating-50-year-old-polluting-coal-plant-indefinitely/",
+   "date": "2024-12-18"
+  },
+  {
+   "label": "SEC EDGAR — Atlantica Sustainable Infrastructure plc Form 6-K: closing of the acquisition by California Buyer Limited",
+   "url": "https://www.sec.gov/Archives/edgar/data/1601072/000114036124049098/ef20039835_6k.htm",
+   "date": "2024-12-12"
+  },
+  {
+   "label": "GlobeNewswire (Atlantica) — Closing of Atlantica's Acquisition by Energy Capital Partners and Co-Investors Expected December 12",
+   "url": "https://www.globenewswire.com/news-release/2024/11/04/2974055/33705/en/Closing-of-Atlantica-s-Acquisition-by-Energy-Capital-Partners-and-Co-Investors-Expected-December-12.html",
+   "date": "2024-11-04"
+  },
+  {
+   "label": "KKR — KKR and Energy Capital Partners Announce $50 Billion Strategic Partnership to Support AI Growth",
+   "url": "https://media.kkr.com/news-details?news_id=8f924dd6-41ea-480d-9a96-d854c7232bbc",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "Terra-Gen (PDF) — Masdar Accelerates U.S. Renewables Expansion: Closes Acquisition of 50% Stake in Terra-Gen",
+   "url": "https://terra-gen.com/wp-content/uploads/2024/09/Masdar-Terra-Gen-Closing-Announcement-Eng-FINAL.docx.pdf",
+   "date": "2024-10-01"
+  },
+  {
+   "label": "ROI-NJ — Energy Capital Partners acquires majority interest in PROENERGY",
+   "url": "https://www.roi-nj.com/2024/09/10/industry/energy-utilities/energy-capital-partners-acquires-majority-interest-in-proenergy/",
+   "date": "2024-09-10"
+  },
+  {
+   "label": "Bridgepoint Group plc (RNS via Investegate) — Closing of ECP Transaction",
+   "url": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/closing-of-ecp-transaction/8376174",
+   "date": "2024-08-20"
+  },
+  {
+   "label": "Bridgepoint Group plc (RNS via Investegate) — Half-year Report, H1 2024 (ECP V final close; ECP AUM)",
+   "url": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/half-year-report/8320853",
+   "date": "2024-07-19"
+  },
+  {
+   "label": "Public Citizen — Challenge of Blue Owl Capital's Control in Energy Capital Partners / Bridgepoint merger",
+   "url": "https://www.citizen.org/article/blue-owl-capital-energy-capital-partners-bridgepoint/",
+   "date": "2024-05-02"
+  },
+  {
+   "label": "Utility Dive — FERC rejects $1.1B Bridgepoint-Energy Capital Partners private equity deal on competition concerns",
+   "url": "https://www.utilitydive.com/news/ferc-bridgepoint-energy-capital-partners-ecp/709135/",
+   "date": "2024-03-04"
+  },
+  {
+   "label": "Bridgepoint Group plc (RNS via Investegate) — Update on ECP Transaction Timetable (FERC order)",
+   "url": "https://www.investegate.co.uk/announcement/rns/bridgepoint-group-reg-s---bpt/update-on-ecp-transaction-timetable/8067486",
+   "date": "2024-03-04"
+  },
+  {
+   "label": "Public Citizen — Energy Capital Partners Merger With Bridgepoint (Blue Owl 19.3% of ECP)",
+   "url": "https://www.citizen.org/article/energy-capital-partners-bridgepoint/",
+   "date": "2023-10-24"
+  },
+  {
+   "label": "ECP via PR Newswire — ECP Announces Closing of $1.6 Billion Continuation Fund for Calpine Corporation",
+   "url": "https://www.prnewswire.com/news-releases/ecp-announces-closing-of-1-6-billion-continuation-fund-for-calpine-corporation-301574522.html",
+   "date": "2022-06-23"
+  },
+  {
+   "label": "NY Green Bank — Transaction Profile: Convergent Energy + Power (wholly owned by ECP)",
+   "url": "https://greenbank.ny.gov/-/media/Project/Greenbank/Files/NYGB-Transaction-Profile_Convergent_Energy_Power.pdf",
+   "date": "2021-03"
+  },
+  {
+   "label": "SEC IAPD — firm record, ECP (CRD 155020)",
+   "url": "https://api.adviserinfo.sec.gov/search/firm/155020"
+  },
+  {
+   "label": "SEC EDGAR — ECP ControlCo, LLC filing index (CIK 0001707921)",
+   "url": "https://data.sec.gov/submissions/CIK0001707921.json"
+  },
+  {
+   "label": "DCPulse — CyrusOne DFW10 Data Center: $1.2B Bosque County AI Campus (project tracker)",
+   "url": "https://dcpulse.com/project/cyrusone-dfw10-bosque-county-400mw-datacenter"
+  },
+  {
+   "label": "Convergent Energy + Power — Energy Capital Partners page and leadership",
+   "url": "https://convergentep.com/energy-capital-partners/"
+  },
+  {
+   "label": "PROENERGY — company site",
+   "url": "https://www.proenergyservices.com/"
+  },
+  {
+   "label": "MarketScreener — Bridgepoint Group plc company calendar (FY2026 results 11 March 2027)",
+   "url": "https://www.marketscreener.com/quote/stock/BRIDGEPOINT-GROUP-PLC-125041240/calendar/"
+  },
+  {
+   "label": "ECP — corporate site (returns a bot-challenge page to this environment; not readable)",
+   "url": "https://www.ecpgp.com/about"
+  }
+ ],
+ "lastUpdated": "2026-10-03",
+ "profileVersion": 1
+}

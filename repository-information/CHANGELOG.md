@@ -3,11 +3,160 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 78/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.83r] — 2026-10-03 08:54:06 PM EST
+
+> **Prompt:** "Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 6 as a fresh
+> session: F-I4 — `profiler Quinbrook Infrastructure Partners`, `profiler Energy Capital Partners`,
+> `profiler CPP Investments` — three new dossiers, one session, one commit. Fable 5.1 at High; check
+> Settings → Usage first.
+> 
+> STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+> HEAD || git rebase origin/main. Read the CHANGELOG counter after the rebase (100/100 at v07.82r with three
+> sections dated 2026-10-02 exempt — rotate the oldest date group only if the NON-EXEMPT count reaches 100;
+> sections dated the day you push are exempt). Run git fetch --unshallow origin main before any rotation or
+> pin read.
+> 
+> READ FIRST: repository-information/SESSION-CONTEXT.md; phase-f-action-plan.md §3 row 6 and §9 (this
+> prompt); PROFILER-COVERAGE-PLAN.md — the three F-I4 rows in §8 (quinbrook · energy-capital-partners ·
+> cpp-investments) and the C-I/C10 row for Blackstone · Brookfield · Macquarie, which is the precedent for
+> how investor dossiers go wrong (transaction-value headlines read as equity prices; 'seeded' written for
+> 'acquired'; vehicle sets asserted from secondary accounts); .claude/rules/profiler-app.md — step 1a
+> (identity), step 2 (two parallel research subagents per company, Stage 1 first-party exhaustive, Stage 2
+> third-party; run check-source-reachability.py before planning Stage 2), step 5 including the segment
+> assignment and the segment-regeneration sub-rule, step 7 (reconciliation by aka[]), the Archival Procedure
+> (no archive — these are new profiles); PROFILER-SCHEMA.md (registry schema — `investor` category; profile
+> schema v7; Segments registry; Refresh calendar: a new company gets a calendar row and a notes entry in the
+> same commit); PROFILER-STYLES.md (active style `intel-briefing`); .claude/rules/classroom-app.md (the
+> content fence, the verification list, the gateDigest obligation) because the segment sub-rule will fire.
+> 
+> IDENTITY FIRST (step 1a), from a primary source dated within twelve months, before any research prompt:
+> - Quinbrook: the legal entity (Quinbrook Infrastructure Partners Limited and its Australian and US
+>   affiliates), who owns it (founders David Scaysbrook and Rory Quinlan — confirm), its funds (Quinbrook
+>   Renewables Impact Fund (Jersey); Renewables Impact Fund II, GBP 587M oversubscribed close announced
+>   8 July 2026; the Net Zero Power Fund; any US fund), and whether it is still independent.
+> - Energy Capital Partners: a subsidiary of Bridgepoint Group plc (LSE: BPT) since August 2024 — type
+>   `ownership` subsidiary and take the facts from Bridgepoint's annual report and RNS, not from ECP's own
+>   'about' page; the ECP legal entity and the funds (ECP V, the continuation vehicles).
+> - CPP Investments: the Canada Pension Plan Investment Board, a federal Crown corporation; fiscal year ends
+>   31 March; the FY2026 annual report (May 2026) and the quarterly results releases are first-party; net
+>   assets and the Real Assets / Sustainable Energies group figures come from there, not from press.
+> Correct the coverage-plan rows in the same commit if any identity fact is stale.
+> 
+> WHAT THE RECORD ALREADY SAYS — read these dossiers' sentences before writing, because step 7 will hold the
+> new dossiers to them (or revise them):
+> - Quinbrook ← `habitat-energy` v3 (23 mentions): wholly acquired Habitat 30 Nov 2021; the ownership chain
+>   Habitat Energy Limited → Renewable and Grid Services Limited → (ceased) Renewables Impact Holding
+>   Limited, Jersey → Quinbrook Renewables Impact Fund; the May 2026 PSC07/PSC08 register correction; the
+>   JLL/BCG sale mandate (New Project Media, 17 March 2026) with no public step since; the FY2025 accounts of
+>   both UK companies OVERDUE at 2 October 2026; Quinbrook's portfolio page still 'Operational & Expanding';
+>   Flexitricity sold to Drax (GBP 36M EV, signed 21 Jan 2026). The Quinbrook dossier tells the sale from the
+>   seller's side and must agree with Habitat v3 or state the gap — never a second, differing account.
+>   Also on the record from the coverage plan: Supernode (Brisbane; stage 2 operational 28 July 2026) and
+>   Rowan Digital Infrastructure (a reported Blackstone minority stake, April 2026 — verify).
+> - ECP ← `proenergy` v4 (majority owner since 5 Sep 2024), `kkr` v1 (the USD 50bn KKR–ECP partnership;
+>   Bosque County with CyrusOne), `cyrusone` v2, `talen-energy` v3 (Cornerstone sold to Talen; ECP took about
+>   5% of Talen at the June 2026 close), `vistra` v4 (chairman Scott Helm is an ECP founding partner),
+>   `terra-gen` v5 ('ECP is fully OUT' — exited to Masdar, 1 Oct 2024). Calpine → Constellation (closed
+>   7 Jan 2026 per the plan row — verify the date and ECP's residual stake); EnergySolutions (pending?).
+> - CPP ← `pattern-energy` v1 (majority since the March 2020 take-private; Cordelio folded in 2 Apr 2026,
+>   CPP-led ownership ~69%), `grid-united` v1 and `blackrock` v1 (ALLETE/Minnesota Power with GIP, closed
+>   Dec 2025), `equinix` v7 (the >USD 15bn US xScale JV, CPP 37.5%; atNorth), `kkr` v1 (45% of Sempra
+>   Infrastructure Partners with KKR — signed, check closing), `blackstone` v2 and `macquarie` v2 (12% of
+>   AirTrunk alongside Blackstone), `voltagrid` v5 and `mainspring-energy` v4 (earlier-round investor). The
+>   plan row adds atNorth ~51% (closed 2 Sep 2026) — verify from CPP's or Partners Group's release.
+> 
+> RESEARCH: two general-purpose subagents per company (first-party / third-party), ~50–70 sources each
+> company; products-and-services depth first (funds, strategies, the AIDC and storage positions as the
+> 'product lines'); financials for a manager are AUM/net assets, fund sizes and closes, realised exits —
+> never invent a revenue line; `expected` stays empty. Every sec.gov request sends the SEC_USER_AGENT
+> string from scripts/check-source-reachability.py. Relationships: curate every covered counterparty the
+> prose names (habitat-energy, proenergy, kkr, cyrusone, talen-energy, vistra, terra-gen, pattern-energy,
+> grid-united, blackrock, equinix, blackstone, macquarie, voltagrid, mainspring-energy, constellation-energy
+> …) with `status`, `since`, `scale` verbatim-short and an exact sources[] URL; type the owner side
+> `investor`/`portfolio` correctly (the `portfolio` inverse exists since 2026-09-06).
+> 
+> SEGMENTS (step 5): all three go in `capital`; the role is decided on each dossier's own evidence — the
+> plan row types Quinbrook challenger; ECP and CPP are open (the segment holds six incumbents: Blackstone,
+> Brookfield, Macquarie, MGX, BlackRock, KKR). Add `adjacent` memberships only where the dossier records a
+> product line or buyer/supplier position in another segment (CPP's Pattern and ALLETE control are
+> holdings, not a product line — argue it from the dossier, not the holding). Then the sub-rule: python3
+> scripts/build-classroom-segments.py --check, regenerate EVERY due segment (--all), bump Classroom.gs
+> VERSION v01.94g → v01.95g and live-site-pages/gs-versions/Classroomgs.version.txt, one generic line in
+> live-site-pages/gs-changelogs/Classroomgs.changelog.md, the README tree's Classroom display; python3
+> scripts/check-classroom-content.py must report 0 errors; node --check on a .js copy of Classroom.gs; node
+> scripts/check-gas-inner-scripts.js; python3 scripts/check-classroom-pipeline.py --base origin/main (P1,
+> P2, P10 expected; refresh gateDigest only if P3 fires). Do not edit any landscape or scenario lesson —
+> `landscape-capital` is wave B's.
+> 
+> CALENDAR: three cadence rows (`quarterly`) with the tier the other `capital` investors carry (read
+> blackrock/kkr in profiler-refresh-calendar.json) unless the record argues otherwise; notes entries with
+> `source` and watch[] (Quinbrook: the Habitat sale, the overdue group accounts, Fund II deployments; ECP:
+> Bridgepoint's results, the KKR partnership's next campus, EnergySolutions; CPP: the quarterly results
+> cadence, Sempra closing, Pattern's next move). State in the summary why CPP stays a cadence row rather than
+> a nextReport row.
+> 
+> STEP 7 by aka[] for all three (populate aka[] first: 'Quinbrook', 'QIP', fund names; 'ECP', 'Energy
+> Capital Partners'; 'CPPIB', 'Canada Pension Plan Investment Board', 'CPP Investments'). Read every hit;
+> revise the other dossier where the new research contradicts it (archive + profileVersion +1); state both
+> figures where two differ; report counts reviewed and changed.
+> 
+> VERIFY: check-source-reachability.py first; sync-profiler-registry.py (write, then --check clean);
+> build-profiler-graph.py; check-profiler-relationships.py, check-profiler-crossrefs.py, check-profiler-study.py
+> clean (accept reviewed candidates with a reason); check-profiler-reports.py — four pre-existing pin
+> warnings are expected (fluence v10, jupiter-power v7, jinko v6, oracle v6); any dossier you revise in step 7
+> that a current report pins must be re-verified by reading in report-pins-verified.json; check-readme-tree.py
+> 0 findings (the README tree lists every profile and archive file — add the three new profile and study
+> entries); Playwright render of the three new dossiers at Profiler.html#<slug> and of
+> Classroom.html#lesson/segment-capital, zero page errors other than the sandbox's sign-in stubs (the
+> render recipe: serve live-site-pages over 127.0.0.1, stub script.google.com whoami as admin for Profiler;
+> for Classroom patch _e='' and AUTO_REFRESH=false on a scratch copy, seed the sessionStorage session after
+> load, override window._gasPost after load with the lesson literals parsed by
+> check-classroom-content.py's parse_literals, hide #auth-wall/.splash/#gas-pill/#verify-overlay, then
+> clHeaderShow(); clAppMount()). Study guides for the three new companies per the Profiler Command. Normal
+> Pre-Commit and Pre-Push checklists; ONE commit; push on your claude/* branch once ls-remote is empty.
+> 
+> At the end: one line per company on the identity check (what the plan row got wrong, if anything); the
+> three capital roles and any adjacent memberships; step-7 counts; the segment count regenerated and the
+> content checker's final line; and note that get_session exposes no cost field — give the subagent token
+> totals and the rate-limit status instead."
+
+F-I4 ran as one session with six research subagents (two per company: first-party, then third-party), 2,304,771 subagent tokens in all. The identity check corrected every plan row before research began: Quinbrook's row described The Information's 49% / ~USD 3.8bn Rowan figures as if announced and missed Rory Quinlan's UK-board resignation (TM01, 18 July 2025 — he remains Managing Partner and a control person); ECP's row had EnergySolutions backwards (ECP is the buyer, agreed 6 April 2026) and the brief's 'USD 36.0bn' was Bridgepoint's EUR 36.0bn segment AUM; CPP's row called the Equinix xScale position 'limited partner' when the 8-K exhibit states a 37.5% controlling interest. All three are `investor` dossiers in `capital`: CPP Investments incumbent, Energy Capital Partners and Quinbrook challengers; Quinbrook alone takes adjacent memberships (`storage-developers-and-ipps`, `aidc-developers-and-landlords`) because Primergy, GlidePath, Supernode and Rowan are its own development lines — ECP's and CPP's holdings are not product lines, so no adjacent rows.
+
+### Added
+
+#### Profiler dossiers (`live-site-pages/profiler-data/`)
+- **`quinbrook.profile.json` v1** (84 sources) — founder-owned value-add manager (Quinbrook Holdings Limited, Jersey; Form ADV regulatory AUM USD 8.95bn, 28 July 2026); the one capital-segment investor whose own team signs equipment contracts (Supernode with CATL; the Rassau and Thistle synchronous condensers); Rowan Digital Infrastructure with Blackstone's 'significant minority' (9 April 2026, terms undisclosed — the 49% / USD 3.8bn marked reported); Habitat Energy's reported sale (JLL/BCG, March 2026) seven months silent with FY2025 accounts overdue at Companies House on 3 October 2026; Flexitricity sold to Drax (GBP 36m EV, completed 31 March 2026); Quinbrook III in market (USD 4bn target per the UK accounts; Form D USD 30m first sales). Eight decision-makers with company-published portraits (`images/execs/quinbrook-*.jpg`). Relationships: `habitat-energy` portfolio, `blackstone` partner, `catl` and `ge-vernova` suppliers, `brookfield` other.
+- **`energy-capital-partners.profile.json` v1** (69 sources) — Bridgepoint Group plc's Infrastructure segment since 20 August 2024 (ownership `subsidiary`, LSE: BPT); Calpine sold to Constellation (closed 7 January 2026, USD 33bn EV) and Cornerstone to Talen; ECP VI final close USD 8.1bn (6 August 2026); majority of ProEnergy (Bloomberg: ~USD 275m for ~60%; IPO at USD 40–50bn weighed), Convergent wholly owned, Atlantica, Grain LNG (ECP VI's first deal), EnergySolutions re-acquisition and the DCC Energy offer with KKR; the USD 50bn KKR–ECP partnership and CyrusOne DFW10 beside Calpine's Thad Hill plant. Financials are the parent's segment figures and the fund table (ECP III–VI) — no revenue invented, every `expected` empty. Relationships: `proenergy`, `talen-energy`, `constellation-energy`, `terra-gen` (historical) portfolio; `kkr`, `cyrusone` partner; `cpp-investments` partner (historical, Calpine); `vistra`, `blackstone`, `nextera-energy-resources` other.
+- **`cpp-investments.profile.json` v1** (73 sources) — federal Crown corporation (ownership `public (federal Crown corporation)`), net assets C$863.6bn (Q1 fiscal 2027); majority shareholder of Pattern Energy (69.1% together with other institutions after folding Cordelio in, 2 April 2026); 40% of ALLETE with GIP (closed 15 December 2025); atNorth c. 51% at completion (2 September 2026; 60% at signing); xScale 37.5% controlling; AirTrunk 12%; Inkia 50%; ~13% of Sempra Infrastructure Partners signed, not closed; lender to CoreWeave (USD 250m + USD 150m); the Maple Fund (C$50bn with Brookfield, 15 September 2026) as the voluntary answer to the Senate's domestic-investment mandate talk. Relationships: `pattern-energy`, `constellation-energy`, `voltagrid`, `mainspring-energy`, `vantage` portfolio; `blackrock`, `equinix`, `blackstone` partner; `kkr`, `brookfield` partner (announced); `energy-capital-partners` partner (historical); `macquarie`, `coreweave` other.
+- **Study guides** — `quinbrook.study.json` (12 sections), `energy-capital-partners.study.json` (13), `cpp-investments.study.json` (13): technology lessons, not company trivia (tolled batteries and eight-hour storage, synchronous condensers, the continuation fund; the fund clock, EV vs equity value, FERC Section 203, aeroderivative turbines; pension capital without a clock, the control ladder, project finance, lending vs owning). Glossary terms registered in `profiler-concepts.json`.
+- **Lesson plans** — `repository-information/study-prep/{quinbrook,energy-capital-partners,cpp-investments}/<slug>-lesson-plan.md`, eight modules each with self-checks, a risk list and sources.
+
+### Changed
+
+#### Profiler dossiers — step 7 reconciliation by `aka[]`
+- 24 raw hits across the corpus (Quinbrook 7, ECP 7, CPP 10); 2 dossiers revised, both archived: **`equinix` v7 → v8** (atNorth completion split c. 51% CPP / c. 34% Equinix / c. 10% Partners Group — the signing 60/40 was re-cut by rollover; 2 September 2026 development and source; reciprocal partner edge to `cpp-investments`), **`habitat-energy` v3 → v4** (Flexitricity 0.9 GW per Drax and c. 1.3 GW per Quinbrook stated side by side; RGS accounts name Quinbrook Holdings Limited as ultimate controlling party; `quinbrook` added as `investor`; two sources). `form-energy`'s CPPIB claim (Series E, October 2022) verified correct — a subagent's 'contradiction' was withdrawn; `vistra`'s Helm 'founding partner' left as career history. The rest reviewed, no change.
+- `profiler-companies.json` — three entries with `aka[]` and domains (202 companies); `profiler-segments.json` — the three `capital` rows and Quinbrook's two adjacent rows, each with its evidence line; `profiler-graph.json` rebuilt (1,793 edges); `repository-information/profiler-crossref-accepted.json` — three reviewed candidates accepted with reasons.
+- `repository-information/profiler-refresh-calendar.json` — three `cadence: quarterly` core rows; `profiler-refresh-notes.json` — one note per slug with source and `watch[]`. **CPP stays a cadence row rather than `nextReport`**: it has no ticker and no consensus, its results are measured against benchmark portfolios, and the schema's `nextReport` fields are built for listed issuers' guidance — the mid-November 2026 Q2 fiscal 2027 release is a watch item, not a report pin.
+
+#### Classroom (`googleAppsScripts/Classroom/Classroom.gs`)
+- **All 19 segment lessons regenerated** under the step-5 sub-rule (`build-classroom-segments.py --all`; every lesson due because the graph `built` stamp advanced); `segment-capital` now carries the three new investors. `VERSION` v01.94g → v01.95g, `Classroomgs.version.txt` and the README display to match; `Classroomgs.changelog.md` v01.95g section. `check-classroom-content.py`: 71 lesson(s), 8 track(s), 220 gate case(s) — 0 error(s), 0 warning(s); `check-classroom-pipeline.py --base origin/main`: P1 and P10 only (expected; no P3, so no `gateDigest` refresh); selftest 15 fixtures, 0 failures; `node --check` and `check-gas-inner-scripts.py` clean. Landscape and scenario lessons untouched.
+
+#### Repository documents
+- `repository-information/PROFILER-COVERAGE-PLAN.md` — the three F-I4 rows rewritten with the verified roles, step-7 tallies and premise verdicts (what each row got wrong); `repository-information/phase-f-action-plan.md` — §3 row 6 marked landed (v07.83r).
+- `README.md` — profile, study-guide, two archive and three curriculum entries added; Classroom GAS display v01.95g.
+
+### Notes
+- **Checkers.** `check-source-reachability.py` OK (every disclosure-tier host 200); `sync-profiler-registry.py --check` clean; relationships, crossrefs and study checkers 0 errors; `check-profiler-reports.py` the four pre-existing pin warnings only (fluence v10, jupiter-power v7, jinko v6, oracle v6); `check-readme-tree.py` 0 findings. Playwright renders of `Profiler.html#quinbrook`, `#energy-capital-partners`, `#cpp-investments` (wall none, BLUF present) and `Classroom.html#lesson/segment-capital` (11 sections, 151 rows) with no errors beyond the sandbox stubs.
+- **CHANGELOG rotation.** Counter was 100/100 with 100 non-exempt after this section was inserted (no section dated 2026-10-03 existed before it), so the oldest date group (2026-09-21, 23 sections) rotated to `CHANGELOG-archive.md` with SHA enrichment.
+- **Subagent usage.** Six general-purpose subagents, 2,304,771 tokens (305,715 · 332,173 · 371,681 · 368,665 · 413,958 · 512,579); no rate-limit event during the session. `SEC_USER_AGENT` sent to SEC hosts only; `CORPUS_TOKEN` not used.
+- **Remote branch.** `claude/friendly-johnson-hsmoru` already existed on the remote pointing at `origin/main` (a leftover from the previous session's merged push, not a run in flight) — pushed over per Pre-Push item 5 case B.
+- No page HTML, no diagram changed.
 
 ## [v07.82r] — 2026-10-02 08:33:24 PM EST
 
@@ -3607,627 +3756,3 @@ E5 session 2 — the post-event close-out, the ROI line and the `events plan <ev
 
 **No rotation:** 102 raw but 78 non-exempt (24 sections dated 2026-09-21 EST).
 
-## [v07.05r] — 2026-09-21 11:16:23 PM EST
-
-> **Prompt:** "I have rebuilt all my routines; verify them and then delete the old ones."
-
-### Added
-
-#### `repository-information/routine-prompts-archive.md` (new)
-- **Verbatim prompt text of the four agent-created Routines, archived immediately before deleting them.** A Routine prompt has no export and no version history — delete the Routine and the text is gone.
-- **Written because a pre-delete check found the claim "the 21 companies’ priorities live on in `watch[]`" was only mostly true.** All 21 do carry a non-empty `watch[]`, and most match the old prompt almost verbatim, but `crusoe` had been summarised to three short phrases, dropping Abilene, the ~900 MW Microsoft deal, GE Vernova, Bergen and Form Energy. Deleting without archiving would have lost that detail irreversibly.
-- **Credential-guarded.** The four prompts were machine-scanned before writing and the written file independently re-scanned; the earnings desk is excluded because its prompt carries a real corpus token and the repo is public via Pages. The first scan fired on C2’s `CORPUS TOKEN: none is supplied` — a false positive, confirmed by inspection and by the absence of any key-shaped run, and the guard was narrowed rather than dropped.
-
-### Verified
-
-#### All ten Routines audited against the live API before any deletion
-- Five rebuilt Routines confirmed `created_via: http_api` with the right cron, model and **zero connectors on every one**: earnings desk (weekdays), C2 (Wed, Opus 5), Industry Guidance (quarterly 15th, Opus 5), quarterly check (quarterly 1st, Sonnet 5), opportunity report (monthly 1st, Sonnet 5).
-- **The ACL health check is `meta_mcp` and must not be deleted** — it is read-only, never pushes, and was deliberately never rebuilt. `created_via` alone is therefore not a safe delete filter; the rule is `meta_mcp` **minus** the ACL check.
-- The repository attachment itself remains unverifiable from the API — `sources` reads empty even on Routines that have demonstrably committed (v06.70r). The **Runs with** card is still the only reliable check.
-
-## [v07.04r] — 2026-09-21 06:26:05 PM EST
-
-> **Prompt:** "make the --check fix. Then, recommend me to either start the three remaining rebuilds now or wait and why."
-
-### Changed
-
-#### `scripts/build-classroom-segments.py`
-- **`--check` now separates the two kinds of due.** The 2026-09-21 pipeline run reported 16 of 19 segments due; **15 were `sections differing: none`** — pure pin churn from one rebuilt `profiler-graph`, with a real workload of one. That is a 1:15 signal-to-noise ratio that does not self-clear, and it is the same false-staleness class CLAUDE.md already documents for shallow clones, arriving through a different door.
-- Output now groups **section changes — real work** separately from **pin-only**, and the summary carries both counts.
-- **Strictly additive, because the format is a contract between two scripts.** `check-classroom-curriculum.py` line 539 parses the summary with `r"(\d+)\s+segment\(s\),\s*(\d+)\s+due"`, so the leading clause is unchanged and the new counts are appended after it; each per-segment line keeps its exact historical wording, which CLAUDE.md quotes. Verified end-to-end: the regex still matches (19, 16) and the consumer renders the new grouping verbatim.
-- **What did not change:** what counts as due, the exit code (1 when any are due), and the generation path — confirmed with `--dry-run` leaving `Classroom.gs` untouched. The split is reporting only; `G3` already declines to revise a segment whose sections do not differ, so the behaviour was right and only the report was misleading.
-
-### Fixed
-
-#### A finding the pipeline could not act on itself
-- The run that surfaced this closed with *"type `continue with your recommendation`"*, but **`scripts/` appears zero times in the committer contract’s §3 write set, which is closed.** A pipeline run editing the generator would be a P1 violation. Recorded because the report reads as actionable inside that session and is not — a fix here needs a developer session.
-
-### Verified
-
-#### The 2026-09-21 pipeline commit `70a0c488`, audited independently
-- Merged to `main`; **7 changed paths, all inside §3**; nothing forbidden touched (no `SESSION-CONTEXT.md`, no `REMINDERS.md`/`TODO.md`, no `Classroom.html`, nothing under `profiler-data/`); ledger watermark advanced off `null`; content checker 0 errors / 0 warnings; pipeline checker **0 findings against the pipeline commit alone**.
-- A P1 seen on a first pass was an artefact of testing against current `main`, which includes the auto-merge workflow’s own `.github/last-processed-commit.sha` bookkeeping commit — not the run’s write.
-
-**No rotation:** 100 raw but **79 non-exempt** (21 sections dated 2026-09-21 EST are same-day exempt), and the trigger is 100 non-exempt. The counter reading `100/100` is expected and is not a rotation signal on its own.
-
-## [v07.03r] — 2026-09-21 06:04:03 PM EST
-
-> **Prompt:** "You are one run of the Classroom curriculum pipeline (C2) in LightAISolutions/Sales. Nobody is watching this session and you cannot ask anyone anything. READ FIRST: `repository-information/CLASSROOM-COMMITTER-CONTRACT.md`, `repository-information/CLASSROOM-SCHEMA.md`, `.claude/rules/classroom-app.md`. Then run the contract's own pre-flight (§5.1) — repo identity, a clean tree, a fresh `claude/classroom-pipeline-<YYYY-MM-DD>` branch off a just-fetched `origin/main`, a green `check-classroom-content.py` baseline with its warning count recorded, the gate-surface digest matching the ledger's `gateDigest`, and schema versions still v1/v1. CORPUS TOKEN: <no corpus token> — per §5.1 step 5, skip corpus reads entirely; refresh only from the Pages-served and repo-resident layers, and do not author a briefing from memory in their place. BUDGET: 45 minutes wall-clock and 120 assistant turns. BEFORE COMMITTING, and again immediately before `git commit`, all of these must pass: `check-classroom-content.py` (zero errors, no new warnings), `check-classroom-pipeline.py --base origin/main` (zero findings), `node --check` on a `.js` copy of `Classroom.gs`, and `node scripts/check-gas-inner-scripts.js`. END THE RUN with the §5.4 report verbatim."
-
-### Added
-
-- **briefing-2026-09-21** (tracks) — the first registered briefing edition: eight dated developments across three refreshed dossiers, covering Oracle's Q1 FY2027 print and its restructuring, the Project Jupiter renewable procurement and generation mix, the HPE networking agreement with warrants, IREN's Sweetwater Hub clearing into ERCOT Batch Zero Base Load, and Jinko's Middle East ESS distribution agreement and proposed holding-company rename; inputs: profile:oracle@2026-09-21, profile:iren@2026-09-21, profile:jinko@2026-09-21. All-public stamp, so the edition folds to `tracks` — the analyst-visible public-only edition. `reviewBy` 2026-10-21, the Jinko AGM, which is the nearest dated gate among the items.
-
-### Changed
-
-- **segment-neoclouds** (tracks, unchanged) — IREN's latest normalized annual revenue moved from FY2025 $501m to FY2026 $707m, and the segment timeline picked up the Sweetwater ERCOT item; changed sections: the-numbers, what-moved; inputs re-pinned: profile:iren 2026-08-30→2026-09-21, graph:profiler-graph 2026-09-19→2026-09-21.
-- **segment-aidc-developers-and-landlords** (tracks, unchanged) — the same IREN figure moved in this segment's numbers table, its curated edges changed with the graph rebuild, and the timeline picked up Sweetwater; changed sections: the-numbers, what-moved, who-is-connected; inputs re-pinned: profile:iren 2026-08-30→2026-09-21, graph:profiler-graph 2026-09-19→2026-09-21.
-- **segment-storage-integrators-and-containers** (tracks, unchanged) — Jinko's policy-exposure row moved and the timeline picked up the Middle East agreement and the proposed rename; changed sections: the-fence, what-moved; inputs re-pinned: profile:jinko 2026-09-05→2026-09-21, graph:profiler-graph 2026-09-19→2026-09-21.
-
-All three revisions were produced by `scripts/build-classroom-segments.py --segment <id>`, the repo's own segment generator, so `revisions[].changed[]` is the generator's differs set rather than a hand-named one.
-
-### Notes
-
-```
-CLASSROOM PIPELINE — 2026-09-21 — COMMIT
-Covered through: 2026-09-01 → 2026-09-21
-Sources seen: 317 fetched · 299 unchanged · 18 moved · 0 unknown
-Wrote: briefing-2026-09-21 (tracks) — 8 qualifying items across 3 sources, bar is 3/2; segment-neoclouds (tracks) — IREN normalized revenue FY2025 $501m → FY2026 $707m; segment-aidc-developers-and-landlords (tracks) — same IREN figure plus curated-edge changes; segment-storage-integrators-and-containers (tracks) — Jinko policy exposure moved
-Skipped at caps: segment-hyperscalers-and-ai-labs — due on profile:oracle 2026-08-30→2026-09-21, sections differing: what-moved only
-Frozen (unknown source): none
-Blocked by: —
-Needs the developer: 15 segment lessons are due on graph:profiler-graph 2026-09-19→2026-09-21 with "sections differing: none" — left untouched, pins included, per G3; they will re-present next run
-Needs the developer: the corpus layer was not read this run (no token supplied), so no corpus: ref was written and no corpus item counted toward the briefing bar
-```
-
-Checkers: `check-classroom-content.py` 71 lessons, 8 tracks, 220 gate cases — 0 errors, 0 warnings (baseline 0/0). `check-classroom-pipeline.py --base origin/main` — 0 findings. `node --check` on a `.js` copy of `Classroom.gs` — clean. `node scripts/check-gas-inner-scripts.js` — clean.
-
-Classroom.gs VERSION v01.86g → v01.87g.
-
-## [v07.02r] — 2026-09-21 05:36:22 PM EST
-
-> **Prompt:** "Regarding coverage, I approve of your fix and appreciate that the sweet prompt now reads tiers instead of specific companies so that widening coverage does not force me to rebuild the Routines every time. If I wanted to refresh the relevant dossiers now, how much work would that be?\n\nRegarding the cache levers, is there any way you can automate the process? If not and I need to do some manual work, then give me step by step instructions on what to do."
-
-### Changed
-
-#### `repository-information/profiler-refresh-calendar.json` — 384,240 → 21,576 bytes (−94%)
-- **Asked whether lever 1 could be automated, measured the file instead of answering, and found the lever did not need a prompt at all.** `watch` was **66.4%** of the calendar and `source` **31.6%** — **98% between them** — while the queue logic (due-date comparison, tier selection, the cap of three) reads neither. The scheduling fields are ~7 KB of values.
-- Payload moved to the new `profiler-refresh-notes.json`; the calendar went to **21,576 bytes and 1,069 lines**, back under the Read tool’s 2,000-line default. **The truncation bug is now retired structurally rather than by instruction.**
-- **This makes lever 1 automatic.** A prompt cannot be edited after its Routine is created, so a lever living in a prompt cannot reach an already-rebuilt Routine; a lever living in the data reaches every Routine on its next fire. **The rebuilt earnings desk gets ~94% of the saving with nothing done to it.**
-- Verified non-destructive: 177 rows in and out, 177 note entries, every field round-trips byte-for-byte.
-
-### Added
-
-#### `repository-information/profiler-refresh-notes.json` (new)
-- Per-company `source` and `watch`, keyed by slug, one entry per calendar row. `profiler-queue.py` joins it per-slug onto the due rows so a run never loads the 369 KB payload whole.
-
-#### `scripts/sync-profiler-registry.py`
-- The non-empty check on `source`/`watch` followed them into the notes file, plus a **two-way bijection check** between calendar rows and note entries. Both directions were tested by deliberately breaking them and confirming the checker fires; it is back to 0 findings.
-
-#### `repository-information/PROFILER-SCHEMA.md`
-- New **Refresh notes** section; `companies[].tier` documented on the calendar (the field the sweep now selects on); `source`/`watch` rows moved across.
-
-### Fixed
-
-#### Stale figures left behind by the split
-- Every "~384 KB / 2,573 lines" claim in `profiler-app.md`, `ROUTINES-OPERATIONS.md`, `profiler-queue.py` and the README tree corrected, and the warning re-pointed at the file that is now the large one. **The general rule was recorded with it: before writing a prompt instruction to work around a file, measure the file — a data fix outlives every prompt that would have worked around it.**
-
-## [v07.01r] — 2026-09-21 04:43:23 PM EST
-
-> **Prompt:** "Regarding the Edit shortcut, I successfully clicked "Edit" on "Classroom curriculum pipeline (C2) - weekly", but there was no interactable repositories field. Thus, the shortcut doesn't functionally work.\n\nRegarding the Routines and AI model, you mentioned that the Profiler earnings desk only goes through 3 companies and the Profiler quarterly check only reads 21 dossiers and refreshes those that move. However, my current Profiler has 177 dossiers. Shouldn't my routines cover all of them? Even if not all of them, I would like you to consider which dossiers are important from Megmeet's point of view (I will most likely join them as a "Senior Sales Manager - SST Solutions" soon) and make sure these relevant dossiers are updated. Also, I would like you to specify Opus 5 as the AI model for Industry Guidance Quarterly and Classroom C2 pipeline as you recommended.\n\nRegarding the cache-read cost, I would like to apply both lever 1 and 2. However, I am not sure how to implement them myself. Can you implement both yourself?\n\nRegarding deleting the old desk, I would like you to delete the old desk that failed earlier today and keep the new desk that successfully pushed. I give permission.\n\nI will tackle rebuilding the Routines afterwards."
-
-### Added
-
-#### `scripts/profiler-queue.py` (new)
-- **Lever 1, implemented as a script rather than an inline snippet so it is testable and version-controlled.** `--desk` returns the ≤3 due earnings rows oldest-first, carry-over, the unconfirmed-within-7-days set and the counts the stand-down report quotes; `--quarterly [--tier core|watch]` returns cadence rows past their tier interval. **5,075 bytes against the calendar’s 384,240** — a 76× reduction in what enters a run’s context. Carries an explicit sandbox fallback for the “Code from External” denial observed 2026-09-16.
-
-#### `repository-information/ROUTINES-OPERATIONS.md` (new)
-- **Lever 2.** The `## Scheduled Refreshes` section was **186 of `profiler-app.md`’s 347 lines** — Routine wiring, repo-access post-mortems, the A/B proof, cost and model analysis, rebuild prompts. All developer-session material that **no run consumes and every run re-read on every turn**. Moved here; `profiler-app.md` drops **82,893 → 51,571 bytes (−38%)**, leaving a pointer plus the only two facts a run needs.
-- Both rebuild prompts rewritten against the script and the tiers, ready to paste.
-
-#### `repository-information/profiler-refresh-calendar.json`
-- **A `tier` on every cadence row: 52 `core` (90-day sweep), 33 `watch` (180-day), 0 untiered.** Verified non-destructive — 177 rows before and after, no pre-existing field altered.
-
-### Fixed
-
-#### Coverage — 64 of 177 dossiers were covered by no Routine at all
-- **The earnings desk covers the 92 public rows; the quarterly sweep named 21 companies inline; that left 64 cadence rows (36% of the corpus) with no refresh path.** Worst segments: `storage-developers-and-ipps` 26 of 34 uncovered, `aidc-developers-and-landlords` 12 of 30.
-- **31 of the 64 sit in Megmeet-adjacent segments**, including the four closest SST peers — `amperesand`, `dg-matrix`, `heron-power`, `novos-power` — all refreshed by hand in named developer sessions on 2026-09-12/19, which is the evidence the gap was being absorbed manually rather than noticed.
-- **Root cause was the hardcoded list, not the cadence**: a company list inside a Routine prompt cannot be diffed against the corpus and cannot be edited after a rebuild. Coverage is now read from calendar tiers, so it changes by commit.
-
-#### `repository-information/ROUTINES-OPERATIONS.md`
-- **Resolved the v07.00r amendment against a live re-test: the documentation is wrong and the original 2026-09-16 finding stands.** Edit opens without an interactable repositories field; the **Runs with** card shows only environment and model. **Rebuild is mandatory**, and this is not to be re-litigated from the docs a third time.
-
-### Changed
-
-#### Routine configuration (API state, not repo files)
-- `Classroom curriculum pipeline (C2)` and `Industry Guidance quarterly review` set to **`claude-opus-5`** per the v07.00r analysis.
-- **Old earnings desk `trig_01UyH77BMKJnxzBUZJ11ej6A` deleted** on explicit developer permission — created 2026-09-02, no repository, every run ~30s, no commit ever. The repo-attached desk created 2026-09-19 is retained.
-
-## [v07.00r] — 2026-09-21 03:39:15 PM EST
-
-> **Prompt:** "A few questions:\n- How difficult to execute are my routines? You mentioned that they are currently using the default model which is sonnet 5. Evaluate if sonnet 5 is capable enough for my routines. If not, recommend me a different model to use and why. \n- the biggest expense in my last earnings desk run was cache reading. Is there any way to reduce that?\n- I want to delete the old non-functional earnings desk routines, but am worried I will delete the wrong one. Can you give me a link to the old desk to be deleted? Make things as easy as possible. \n\nThen, give me step by step instructions on how to rebuild C2 and my other routines, if needed."
-
-### Changed
-
-#### `.claude/rules/profiler-app.md`
-- **Model selection per Routine, decided on evidence rather than on task difficulty.** Every failure in the 2026-09-16→21 saga was infrastructural, not a run reasoning badly — so the default stays. The test that earns an upgrade is narrow: **can a checker see the failure?** `check-classroom-content.py` and `check-classroom-pipeline.py` verify structure only and cannot tell a real freshness pin from a fabricated one, so a structurally perfect lesson with an invented input passes every gate. **Opus 5 for C2 and the Industry Guidance review; Sonnet 5 for the earnings desk, ACL check, opportunity report and quarterly sweep.**
-- **Priced the alternatives on the 2026-09-21 run's real token mix.** Sonnet 5 $13.76 · Opus 5 $34.39 · Fable 5.1 $36.61 · Haiku 4.5 disqualified by arithmetic (200K context against runs of 335K and 361K). Two non-obvious results recorded: **Fable 5.1 lands only 6% above Opus 5**, not the 2× its headline price implies, because its cache reads are $0.25/MTok against Opus 5's $0.50; and C2 on Opus 5 costs ≈$42/month of plan allowance.
-- **Reframed the cache-read line and then found the thing actually worth cutting.** 42.9M cache-read tokens billed $8.58 but would bill $85.79 uncached — the cache saved $77 and dominating a long run is what it looks like working. The quantity behind it is the lever: **the 384,240-byte / ~96,000-token refresh calendar is read whole to act on one due row worth ~1,300 tokens**, costing ≈$2.46 a run (~29% of the cache-read bill). Added a tested extraction snippet returning 5,075 bytes instead of 384,240.
-- **Found a latent correctness bug while measuring it:** the calendar is **2,573 lines against the Read tool's 2,000-line default**, so a plain Read silently truncates the tail of the queue.
-- **Named this file's own cost honestly** — 74,675 bytes at the time of writing, seven edits during this investigation, ≈$1.64 a run in per-turn re-reads alongside CLAUDE.md and PROFILER-SCHEMA.md, with a split proposed for when it next grows.
-
-### Fixed
-
-#### `.claude/rules/profiler-app.md`
-- **Corrected the "a Routine's repository can never be edited, it must be recreated" claim, which the current documentation contradicts.** `code.claude.com/docs/en/routines` states that **Edit** changes "the name, prompt, **repositories**, environment, connectors, or any of the routine's triggers." The 2026-09-16 observation predates that reading by five days and looked in the "Runs with" card rather than the menu beside the routine's name. **Four rebuilds were about to be recommended on the strength of a claim that may no longer hold** — the amendment requires a two-minute re-test first, and records `/schedule update` in a local terminal as a second editing surface the MCP tools do not expose. What stands: `create_trigger`/`update_trigger` carry no repository parameter, so no session here can attach one by any means.
-- **Corrected the v06.19r `fire_trigger` "prompt-injection refusal" post-mortem.** It was a build behaviour, not an anomaly: before v2.1.213 a fired prompt arrived framed as an untrusted background notification and could be refused. Both the refusal and the compliance were correct for their builds. Retiring the diagnostic was still right; the recorded reason was not.
-
-### Added
-
-#### `.claude/rules/profiler-app.md`
-- Two operational facts not previously recorded: Routines carry a **daily per-account run cap** separate from subscription limits (so a duplicate left enabled spends cap as well as allowance), and a lapsed GitHub connection makes a Routine **skip runs for 72 hours and then disable itself** — a second, independent cause of "no repository access" to rule out before re-deriving the whole diagnosis.
-- The documented canonical Routines URL, `claude.ai/code/routines`.
-
-## [v06.99r] — 2026-09-21 03:18:20 PM EST
-
-> Also, is it using up any of my weekly Fable usage limit?
-
-### Changed
-
-#### `.claude/rules/profiler-app.md`
-- **No — and the reason is worth writing down, because "weekly Fable limit" is not the shape the limit actually has.** Verified on the run's own session record rather than inferred: the 2026-09-21 earnings-desk run shows `last_served_model: "claude-sonnet-5"`. All five committing Routines carry `"model": ""`, so a fired session takes the platform default and not whatever model the developer happens to be authoring in.
-- **Fable has no separate weekly bucket.** Per Anthropic's help centre, Fable models *"draw from your plan's regular weekly usage limits and use them faster than other Claude models"*; on Max *"you can use up to 50% of your weekly usage limits on Fable models at no extra cost,"* after which Fable alone moves to usage credits while the rest of the weekly limit stays spendable elsewhere. A desk run therefore spends the **shared weekly all-model limit and none of the Fable half**.
-- **Recorded the scheduling consequence, which points the opposite way from intuition:** interactive authoring sessions over 2026-09-19..21 valued at **$27-$179 each** against the desk's $14, and the only `seven_day` / `allowed_warning` rate-limit state in this account's session data sat on a **Fable 5.1 interactive session**, never on a scheduled run. Thinning the desk cadence would not protect Fable headroom. The actionable corollary is the inverse: **pinning a Routine to Fable would start drawing the 50% sub-allocation** - leave a Routine's model unset unless there is a reason.
-
-## [v06.98r] — 2026-09-21 03:05:14 PM EST
-
-> A successful run costs $14? Where does that come out from? My claude console balance?
-
-### Changed
-
-#### `.claude/rules/profiler-app.md`
-- **v06.97r's "$14 a run" was true but readable as money out of pocket, which it is not. Corrected.** `get_session`'s `usage.cost_usd` is the **API list-price valuation of the tokens consumed**, not a charge against a balance. Verified rather than assumed: the 2026-09-21 run's 42,896,504 cache-read + 1,072,155 cache-write + 557,346 input + 138,201 output tokens at Claude Sonnet 5 rates ($2.00 / $10.00 per MTok, cache write 1.25×, cache read 0.1×) compute to **$13.76 against a reported $13.86 — 0.75% apart**, which identifies the field beyond reasonable doubt.
-- **On a Pro or Max plan that value is drawn from the plan allocation, not billed.** Limits are shared across Claude and Claude Code on a five-hour session window plus a weekly cap; Claude Code uses plan allocation only, and API credits are opt-in requiring explicit consent — so a scheduled Routine never silently spends money. The same run's `rate_limit_info` recorded **`isUsingOverage: false`**, confirming it independently.
-- **The scheduling-relevant line, added: cache reads were 62% of the cost** ($8.58 of $13.76, on 42.9M tokens) — the agentic loop re-reading its context every turn. Five committing Routines consume **plan allowance in five-hour windows shared with interactive work**, which is the real constraint to plan around, not a dollar figure.
-
-### Notes
-
-- **Why this correction was worth a version.** The distinction changes a decision that is live right now: four Routines are still to be rebuilt, and "five scheduled jobs at $14 each" reads very differently as a monthly invoice than as consumption of a shared five-hour allowance. Sources: [Use Claude Code with your Pro or Max plan](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), [Manage usage credits for paid Claude plans](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans).
-
-## [v06.97r] — 2026-09-21 12:04:57 PM EST
-
-> *(Scheduled check-in, fired by the Routine armed at v06.70r: "Monday's two earnings-desk runs should both be finished by now. Close out the 'Repo access denied' issue.")*
-
-### Fixed
-
-- **THE "REPO ACCESS DENIED" ISSUE IS CLOSED. THE REBUILD WORKS, AND A CONTROLLED A/B PROVED IT.** Both desks were deliberately left live for one Monday firing, identical in every respect except the attached repository. The OLD desk (`trig_01UyH77BMKJnxzBUZJ11ej6A`, no repository) fired 13:05:18Z and stood down in **33 seconds** — 48,101 context tokens, 1,200 output tokens, $0.11, no commit. The NEW desk (`trig_01HkrwpCULei8Gje6RGqcp1B`, `LightAISolutions/Sales` attached) fired 13:15:53Z and landed **`cdfafb36` — v06.96r, 13 files, +2,020 lines**: IREN, JinkoSolar and Oracle refreshed, archived at v4 / v5 / v4, registry and graph updated. **That is the first commit a scheduled run has ever landed in this repository.**
-- **THE MECHANISM IS VISIBLE IN THE SESSION RECORDS, not merely inferred.** The old run's `session_context` carries **neither `sources` nor `outcomes`**; the new run's carries `sources: [{git_repository: …/Sales}]` and `outcomes: [{… branches: ["claude/funny-shannon-0mrb4f"]}]` — exactly the shape an interactive session has, and exactly what has been missing from every fired session since August. It appears only because the repository was selected on the New routine form.
-- **The queue moved as designed.** `profiler-refresh-calendar.json` `updated` 2026-09-13 → 2026-09-21, four rows due → **one**: `iren` (due 2026-08-27) and `jinko` (2026-08-27) and `oracle` (2026-09-10) taken oldest-first, `novonix` (2026-09-14) correctly left for the next run by the cap of three. `iren` and `jinko` had been overdue since 27 August.
-
-### Changed
-
-#### `.claude/rules/profiler-app.md`
-- **The A/B recorded as a table beside the 2026-09-18 "cannot push" finding it confirms**, with both sessions' `session_context`, durations, token counts, costs and outcomes, so the proof sits next to the claim rather than in a changelog entry alone.
-- **The real cost of a working run recorded: about $14 and a quarter of the context window** for three companies, against eleven cents for each of the 34-second runs that did nothing. **The cheap runs were the broken ones** — a line worth keeping, because cost is the one signal that looked healthy throughout the failure.
-
-### Notes
-
-- **The old earnings desk can now be deleted.** It has served both purposes it was kept for: fallback, and control arm. Left for the developer to do — deletion loses its run history and is assumed irreversible, so it is not something a session should do unasked.
-- **C2 is the next rebuild and it fires Wednesday 2026-09-23 04:00 PDT.** Then the two Routines due 1 October and Industry Guidance on 15 October. The ACL health check stays as it is — read-only, working, nothing to gain.
-- **The reminder in `REMINDERS.md` is deliberately NOT marked complete.** It is the developer's note; per the User-Owned Content rule a session surfaces and answers it but does not close it.
-- **No rotation needed** — another session rotated the archive over the weekend, so the counter stands at **93 raw / 78 non-exempt** against a 100 trigger with fifteen sections dated 2026-09-21 EST.
-
-## [v06.96r] — 2026-09-21 09:28:13 AM EST
-
-> **Prompt:** "[Profiler earnings desk Routine, scheduled fire] STEP 0 — clone, prove push works, before any research. Then: read repository-information/profiler-refresh-calendar.json as the queue. DUE = any row whose nextReport is yesterday or earlier. Take at most THREE due rows this run, oldest nextReport first. For each: (1) verify the report actually published, (2) run the Profiler Command end to end including the news-triage step against the Scraper corpus (token supplied in the Routine prompt only, never written to the repo), (3) advance the row's nextReport/confirmed/source/lastRefreshed/watch[]. Also confirm any unconfirmed row due within seven days. Land one commit per run under the repo's normal Pre-Commit/Pre-Push checklists. Never create/update/delete a Routine or trigger. If nothing is due, stand down with no commit."
-
-### Fixed
-
-#### Scheduled Routines — the earnings desk landed a commit for the first time
-- **The push path held this run.** `git clone` + `git push --dry-run` both succeeded before any research began, confirming the 2026-09-18 finding (Routine recreated with the repository attached at creation) is holding — the desk has now gone clone→research→commit→push clean, closing the loop that failed 7-for-7 in August and again on 2026-09-16 (`a378a96`, unrecoverable) and 2026-09-18 (34-second stand-down, no repo access).
-
-### Changed
-
-#### `live-site-pages/profiler-data/iren.profile.json` — profileVersion 4 → 5
-- **FY2026 annual results (fiscal year ended 2026-06-30) added** — confirmed published 2026-08-27 via IREN's own wire release, corroborated by GlobeNewswire/StockTitan/Barchart/TradingView (sec.gov/data.sec.gov 403-blocked from this network for the whole session, per `check-source-reachability.py`; the 10-K itself was not read directly, and the dossier says so). Revenue $707.0M (+41% YoY; mining $578.2M / AI Cloud $128.8M) — a 2.2% miss vs the $722.9M consensus already on file. Net loss $702.6M (including $638.8M of non-cash Bitcoin-hardware impairment) vs FY2025's $86.9M profit; diluted loss per share -$2.06 against the -$1.57 consensus — a wider miss than revenue. Adj. EBITDA $245.7M. Cash $5.9B unrestricted + $1.7B restricted (~$7.6B total, now final, not preliminary). $4B contracted 2026 ARR (largely sold out) / $1B operating ARR as of Aug 26. New named customers disclosed: Cohere, Prometheus, Fal AI, Higgsfield AI, plus an unnamed "leading frontier AI lab" — none are covered companies, so no new `relationships[]` entries. Management gave the first hard mining-exit date: "effectively decommissioned" by end of December 2026
-- **Two new `recentDevelopments[]` entries**: Sweetwater's 2GW hub conditionally entering ERCOT Batch Zero as Base Load (2026-09-08, still no named tenant) and the PUCT's approval of a 765kV transmission route benefiting Sweetwater (2026-09-01, Oncor targeting 2028-2029). `strategyRead[]` bullets on the mining exit and the FY26 miss updated with the confirmed figures. 5 new `sources[]`, chronological
-- **Honest gaps recorded rather than guessed**: no updated Bitcoin EH/s hashrate found anywhere in the FY26 release (last published figure remains October 2025); convertible-note tranche breakdown inside the 10-K itself not independently re-verified (the ~$6.3B total stands, consistent with the prior derived estimate); FY26-close GPU fleet unit count not disclosed
-
-#### `live-site-pages/profiler-data/jinko.profile.json` — profileVersion 5 → 6
-- **Q2/H1 2026 results added** — confirmed published 2026-08-26 via JinkoSolar's own PRNewswire release. Q2: revenue RMB 12.36B/$1.82B (-31.3% YoY, +0.9% QoQ); gross margin **4.2%, down from Q1's 8.3%** — a reversal, not the continued recovery the prior dossier version was tracking; net loss RMB 697.3M/$102.8M; module shipments 15.96 GW. H1: revenue RMB 24.61B/$3.63B; net loss RMB 1.16B/$171.1M; 29.6 GW modules; 3.1 GWh ESS shipped. **FY2026 module guidance cut to 60-70 GW** (from 75-85 GW)
-- **Rebranding proposal verified, NOT yet effective** — board proposed renaming to "Jinko Holdings Limited" (晶科控股有限公司) on 2026-09-09, pending a shareholder vote at the 2026-10-21 AGM; ticker JKS unaffected. Recorded as a `corporate` recentDevelopment with an explicit pending-vote flag — `name`/`shortName` intentionally left unchanged per the schema's rename rules until the vote actually happens. Registry `aka[]` (`profiler-companies.json`, "jinko" entry) gained "Jinko Holdings Limited" / "Jinko Holdings" / 晶科控股有限公司 plus other existing-name variants for the step-7 reconciliation grep; collision test on "Jinko Holdings" returned zero corpus hits
-- **CEO change found and incorporated**: founder Li Xiande stepped down as JinkoSolar Holding CEO 2026-08-26 (remains Chairman); Wei "Dimi" Du succeeded him — `decisionMakers[]` updated, new `leadership` recentDevelopment added
-- **FEOC exposure found and incorporated**: the Jacksonville, FL plant's 75.1% stake was sold to FH JKV Holdings (~$191.5M, closed 2026-05-31, deconsolidated 2026-06-01) under FEOC 25%-ownership-threshold pressure — new `policyExposure` entry added, AD/CVD mitigation text updated accordingly
-- **Also**: SunGiga G2/IES Middle East ESS distribution deal (2026-09-10, BNEF Tier-1 status now 10 consecutive quarters); Tiger Neo 5.0 mass production noted (25.91% efficiency, >700W) as the platform's next step
-
-#### `live-site-pages/profiler-data/oracle.profile.json` — profileVersion 4 → 5
-- **Q1 FY2027 results added** (quarter ended 2026-08-31) — confirmed published 2026-09-10, matching the calendar's mid-September tracker estimate. Revenue $19.3B (+30% YoY, beat ~$19.14B consensus); OCI infrastructure revenue $7.4B (+121% YoY); total cloud $11.6B (+62%). **RPO $664B, up only +$26B sequentially versus +$85B the prior quarter** — the backlog-growth deceleration the calendar's watch item was tracking, addressed as a new `strategyRead[]` bullet rather than a resolved question, since FCF and capex held at similar order of magnitude to FY2026's run rate (FCF -$5.4B on capex $28.5B). GAAP EPS $1.56 (beat); FY2027 guidance held (gross capex $90-95B, net cash capex <=$70B)
-- **The ~$40B financing-form watch item**: evidence points equity-first — the $20B ATM equity program was reported completed during the quarter, no new bond issuance found in the window, and Oracle's own February guidance said it didn't expect further CY2026 bond issuance. No evidence found that it's asset-secured; recorded at moderate confidence, not asserted as certain
-- **5 new `recentDevelopments[]` entries**: the 2026 Restructuring Plan supplemented ~$700M (total ~$2.8B, 2026-09-14); the Oracle/OpenAI Project Jupiter (NM) solar push to counter community pushback plus an emissions dashboard and $1M carbon-capture commitment (2026-09-11); the Q1 FY2027 release itself (2026-09-10); a 2GW New Mexico renewable-capacity RFP (2026-09-08); and an expanded HPE partnership for OCI fabric networking under which HPE reportedly received Oracle warrants (2026-09-04)
-- **Step-7 full cross-dossier reconciliation deliberately NOT attempted** — Oracle remains in the 40+-inbound-mention class per the calendar's explicit scope note, deferred as a session of its own
-
-#### `live-site-pages/profiler-data/archive/` and registry
-- Three archived snapshots added (`iren.profile.v4.json`, `jinko.profile.v5.json`, `oracle.profile.v4.json`) with matching `archive-index.json` entries. `sync-profiler-registry.py` reconciled all three roster entries (`lastUpdated`, `srcTotal`, `srcFirstPct`); `build-profiler-graph.py` regenerated the ecosystem graph (1,482 edges); `check-profiler-relationships.py` and `check-profiler-crossrefs.py` both ran clean (0 findings across 440 examined pairs, corpus-wide). Manual step-7 grep-and-read reconciliation for IREN (8 inbound files) and Jinko (3 inbound files) found only peer-comparison mentions, no contradicted claims — segment memberships in `profiler-segments.json` checked against the revised `ecosystemRole` for all three companies and found still consistent, no reassignment needed
-
-#### `repository-information/profiler-refresh-calendar.json`
-- All three rows advanced: `iren` → nextReport 2026-11-05 (tracker estimate off IREN's own Q1 FY2026 precedent, not company-confirmed), `jinko` → nextReport 2026-11-10 (tracker estimate, prior quarters reported at inconsistent lags), `oracle` → nextReport 2026-12-10 (tracker estimate off Oracle's own ~3-month filing cadence). `lastRefreshed` set to 2026-09-21 on all three; `watch[]` rewritten around each company's actual post-refresh open questions. `novonix` (nextReport 2026-09-14) left untouched — over the three-row cap this run, due again tomorrow
-
-### Notes
-
-- **News triage ran against the Scraper corpus for all three companies** — 50 (IREN) / 16 (Jinko) / 26 (Oracle) scored items pulled since each dossier's prior `lastUpdated`, each promoted item verified against its underlying article/press release before being written into a dossier rather than taken on headline/score alone
-
-## [v06.95r] — 2026-09-21 07:50:53 AM EST
-
-> **Prompt:** "Run E0 — the Events registry and source roster — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.4 is the brief (follow its reading list in order, then its five steps exactly — the corpus pass first, then the organiser-page research, the live-probed roster, the checker, the files), §5.1–5.2 and Appendix A the design and the 64-row seed calendar, and repository-information/EVENTS-SCHEMA.md §1, §3, §4, §11, §12 the shapes. This is research and data, not app code: create live-site-pages/events-data/events.json and events-sources.json, scripts/extract-corpus-events.py and scripts/check-events-registry.py, and nothing under Events.html / Events.gs (that is E1). Every event is `confirmed` only on an organiser page you read this session (WebFetch); a row you could not read stays `tentative` with the third-party listing as its `manual` source and a note. Probe every roster row live before writing it, the .claude/rules/scraper-sources.md way (curl status, JSON-LD Event or VEVENT count, newest item, robots), and record a Cloudflare challenge as `blocked: "<reason> <date>"` — keep the row, never try another URL or User-Agent; 10times, DCD, OCP and Enlit are known blocked and hand-maintained. Never add LinkedIn, 10times, a Google-News feed or an attendee list as a source. All 31 corpus events must end with ≥ 1 mentions[] entry; target ≥ 60 events; the checker must exit 0 on the files you commit. Current state: the repo is at v06.94r, N2 is Done (§11), and the E1 brief already exists as §13.7 — so ignore §13.4's closing line about writing E1 as §13.6: write nothing new in §13, only flip §11's E0 row to Done with the version and the counts (verified on the organiser's page, still tentative, blocked sources with reasons). README tree entries for the new events-data/ folder, both files and both scripts; mirror profiler-data/'s treatment in REPO-ARCHITECTURE.md if it appears there; CHANGELOG entry naming those same counts. Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first. The repo CHANGELOG stands at Sections: 90/100 — no rotation is due (90 < 100). One push — or two if the roster runs as its own Fable 5.1 Medium session per §13.4 step 3."
-
-### Added
-
-#### `live-site-pages/events-data/events.json`
-- **The public Events registry — 100 events: 72 `confirmed`, 27 `tentative`, 1 `past`.** One row per edition per `EVENTS-SCHEMA.md` §3 — slug, series, organiser, kind, `start`/`end`, IANA `tz`, city/region/country, venue and `venueLatLng` where the organiser publishes one, website plus registration / exhibitor-list / agenda / speakers / floor-plan URLs, `audience[]` segment ids from `profiler-segments.json`, `relevance` 1–5, a `tierNote`, show-floor `hours[]` where published, and `editions[]` for the prior year
-- **`confirmed` means an organiser page was read this session** — 72 rows clear that bar, plus the one `past` row (NAATBatt 2026) which was organiser-read before the checker flipped its status. The other 27 stay `tentative`, each with a `manual` source and a `tierNote` saying exactly why: eleven because the organiser blocks non-browser clients, the rest because the organiser has published no dates for that edition. **No row is ever `confirmed` on a third-party listing**
-- **Sub-mega and social tiers the dossier corpus never names** are now carried: nine iMasons chapter socials and webinars, seven Bisnow one-day regionals, four GCPA rows, eleven Infocast conferences, and the two ESIG workshops
-- **Appendix A caveats resolved.** The DCD>Connect New York 2027 date conflict stands unresolved *by design* and is recorded as such — Clocate's JSON-LD (read this session) gives 17–18 Mar 2027 at the New York Marriott Marquis, a second mirrored listing gives 17–18 May, and DCD's own page is Cloudflare-blocked, so both are written into the `tierNote` and the row is `tentative`. NAATBatt's weakly-sourced Aug 1–5 2027 row is **dropped**: the organiser publishes only the Feb 9–12 2026 edition and no 2027 dates. From the "not yet dated for 2027" list, **Wood Mackenzie North American Power & Renewables (Apr 28–29 2027, Omni Interlocken, Denver) and Datacloud USA (Aug 31–Sep 2 2027, Fairmont Austin) are now dated and confirmed**; Solar & Storage Live USA, DCD Silicon Valley/Dallas, Bisnow DICE South/West and Uptime 2027 remain undated
-- **Three seed-calendar errors corrected against the organiser**: ACP Siting + Permitting and ACP PEAK are two events (Apr 13–15 and Apr 15–17 2027), not one Apr 13–17 row; Energy Storage Summit USA 2027 moves to the Renaissance Dallas at Plano Legacy West (the seed's Hilton Lincoln Centre was the 2026 venue); and six rows the seed calendar could only source third-party — GTC 2027, InterBattery 2027, CIGRE Grid of the Future 2026, IEEE PES General Meeting 2027, The Battery Show Europe 2027 and AWS re:Invent 2026 — are now read from the organiser's own page
-
-#### `live-site-pages/events-data/events-sources.json`
-- **The source roster — 58 rows, every one probed live before it was written** (HTTP status, `Event`/`VEVENT` count, newest item, and `robots.txt` evaluated for the fetched path), the `.claude/rules/scraper-sources.md` discipline verbatim
-- **11 live JSON-LD feeds** the E2 poller can read: The Battery Show NA, DISTRIBUTECH, Data Center World, POWERGEN, Yotta, MWC Barcelona, Datacloud USA, AI Infra Summit, Clocate — and two the seed calendar did not know about, **iMasons (11 `Event` objects) and ESIG (12)**, which between them carry the entire sub-mega and social tier
-- **24 blocked rows, each kept with its reason and date so it is never re-proposed**: `cloudflare-challenge` on OCP, DCD, Enlit, 10times, SEMI/SEMICON West and Gartner; `403-akamai-non-browser` on CERAWeek; `403-datadome` on Reuters Events; `403-azure-waf` on GCPA and NAATBatt; `no-feed` on Uptime Institute (its `/events` path 302s off-site to google.com), Hannover Messe, Microsoft Ignite, EEI, NARUC and Hot Chips; and 404 / 503 / DNS failures on Solar & Storage Live, SNEC, CIBF, ESIE, IDEE Shenzhen, Battery Japan and AMD. No alternative URL or browser User-Agent was tried on any of them
-- **COMPUTEX is on the roster with `robots: disallowed`** for the fetched path — the row records that the poller must skip it and the registry entry is hand-maintained
-- **The 10times row exists only as a never-re-propose marker.** It is cited by no event and never may be: `check-events-registry.py` rejects any event source whose host is LinkedIn, 10times or Google News
-
-#### `scripts/extract-corpus-events.py`
-- Walks all 177 dossiers' `recentDevelopments[]`, `productsAndServices[]`, `technicalSpecs[]`, `strategyRead[]` and `sources[]` against a table of **33 corpus events** (one regex and one target edition per row), emitting **256 `mentions[]` rows across 90 dossiers onto 32 registry rows** — every corpus event ends with at least one mention (`ees Europe` and `The smarter E` resolve to the same edition, which is why 33 keys land on 32 rows)
-- Idempotent — rewrites every `mentions[]` from scratch each run; `--check` fails when the file is stale and `--report` prints the per-event table. Seeds a `tentative` row for any table event with no registry row, so a new corpus event is never silently dropped
-- The table documents what was **checked and rejected** as not being events: `SNE Research` (a research firm, 9 files), an `ESIG` report, `Data Center Frontier` the publication, the `Uptime Institute M&O Stamp` certification, `Supercomputing centres` as a noun phrase, and the `OCP-Ready` / `Open Rack Wide` specifications
-
-#### `scripts/check-events-registry.py`
-- Implements every assertion in `EVENTS-SCHEMA.md` §12 — slug rule and uniqueness, `start` ≤ `end`, IANA `tz` resolved through `zoneinfo`, `audience[]` ids present in `profiler-segments.json`, every `sources[].sourceKey` in the roster **with its URL host matching that roster row**, every `mentions[].slug` resolving to a dossier, `lastUpdated` and ≥ 1 source with `lastConfirmed` on every row, no roster row without a `lastProbe`, and `status = past` iff `end` < today. `--fix-past` flips `status` and nothing else
-- Two assertions beyond the schema, both earned this session: a `confirmed` row must carry at least one source whose `kind` is not `manual` (a listing can never confirm), and no event source may have a LinkedIn, 10times or Google-News host
-- A minimal RFC 5545 `VEVENT` walker runs over `events.ics` when E1 publishes one — unfolding continuation lines and requiring `UID`, `DTSTART` and `SUMMARY` per event with no duplicate `UID`. An absent file is not a finding
-- Exits 0 on the files committed here
-
-### Changed
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- §11's **E0 row flipped to Done** with the version and all three count sets the brief asks for — verified on the organiser's page, still tentative, and every blocked source with its reason. Nothing new written in §13: E0's brief closes by asking for an E1 brief as §13.6, but N2 already wrote E1 as §13.7, so that line is stale and was not acted on
-
-#### `README.md`
-- Structure-tree entries for the new `live-site-pages/events-data/` folder and both its files, and for both new scripts (`extract-corpus-events.py` placed beside `check-events-registry.py` rather than alphabetically, matching how the Scripts group is organised by subsystem)
-
-#### `repository-information/SESSION-CONTEXT.md`
-- Latest Session rewritten at the close of N2 (v06.94r; the phone check pending; E0 next with its prompt handed over in chat); the earlier entry moved to Previous Sessions under the two-session cap
-
-## [v06.94r] — 2026-09-21 06:47:37 AM EST
-
-> **Prompt:** "Run N2 — accounts and the corpus attachment — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.6 is the brief (follow its reading list in order, then its five build steps exactly), §4.1 and D4 the design, and repository-information/NETWORK-SCHEMA.md §3 (Accounts), §4, §12, §13 the shapes. N1 is done (v06.90r; Network.html v01.10w, Network.gs v01.05g): every saved contact already has an Account, the review card already resolves the company against the public registry and the D5 stage rule is enforced on both sides — build the Accounts surface, nop=account, the Profiler.html#<slug> deep links, the propose-a-dossier hook and the on-the-record check against decisionMakers[] on top of that, in the PROJECT regions of Network.gs and Network.html only. Keep every UI rule N1 set (no ids or confidence numbers on a card, the pill rows, the two-half control rows, the paper-and-ink family) and never touch the IndexedDB name, version or pending store. List ops stay minimum-necessary (§12); audit rows carry ids and counts only; the dossier file is fetched only when a detail opens. Verify with node --check on a .js copy of Network.gs, scripts/check-gas-inner-scripts.js, python3 scripts/check-readme-tree.py, scripts/verify-network-roles.py (zero page errors at phone width) and scripts/check-network-schema.py (exit 0). Page + GAS bumps with changelogs, CHANGELOG entry, flip §11's N2 row to Done with the versions and write the E1 brief as §13.7 (or the next free number) before closing — then hand off in chat what to check on the phone: an account row for every company saved from the 20 cards, the Profiler link on a covered one, the profiler <Company> line copied from an uncovered one, and the on-the-record title for any contact who is in a dossier's decision-makers. Do not touch Events, the bridge (B), the list's filters or exports (N3), or any interval (Q). Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first. The repo CHANGELOG stands at Sections: 86/100 with eight sections dated 2026-09-21 EST — no rotation is due on any later date either (86 < 100), so expect none. One push."
-
-### Added
-
-#### `googleAppsScripts/Network/Network.gs` — v01.07g
-- **N2 — `nop=account`** (body-POST, `nwAccountOp_`): edits one owned Account row through `nwAccountFullFromPayload_` — the save-path validator (`nwAccountFromPayload_`: relationship / stage enums, the D5 `STAGE_NEEDS_TARGET_OR_CUSTOMER` rule, the slug shape) plus `Tags`, `Newsroom URL` (a bare host prefixed `https://`) and `Notes`; the row is rewritten with `Updated At`, a rename rewrites `Normalised Name` and is refused with `account_name_taken` when another live account of the owner holds the key; audit row `{ accountId, renamed, tags: <count> }`
-- **The list op's one widening** (§12): `contactCount` per account, counted server-side from the live contacts already in the payload — tags, HQ, notes and the newsroom URL stay detail-only
-- **`nop=get` on an `a-` id** answers the live contacts beneath the account (`contacts[] { id, name, title, role }`); `nwAccountPublic_` now carries `newsroomUrl`
-
-#### `live-site-pages/Network.html` — v01.14w
-- **The Accounts card** under the Contacts list (`nwAccountsCard` / `nwAccountRow`): one row per live account — name · relationship · stage · contact count, the `Profiler ↗` link on the row when covered, Delete → Restore on the side; tap → `nwAccountDetail` (`nop=get` with the `a-` id): relationship, the dossier link or the propose state, segments as registry labels, tags, HQ, newsroom, notes, the contacts beneath, **Edit** and **Propose a dossier**. The card's own status line (`nwAcctStatus`, kept across the post-write re-render like the Contacts card's) shows the `account_has_contacts` refusal with its count — nothing cascades
-- **`nwAccountBlock`** — the account block lifted out of `nwReviewSection` (covered / uncovered chip, the Profiler link checkbox, the relationship + stage two-half row under the D5 `gateStage`, the segments) and shared: the review card calls it as before; `nwEditAccount` calls it in full (name, tags, HQ, newsroom URL, notes) and writes back through `nop=account`; an unlinked account is offered the registry match for its name
-- **The Profiler deep link** (`nwProfilerHref` → relative `Profiler.html#<slug>`, same origin) on the account row, the account detail and the contact detail's account line (`nwAccountLine`); segments as their labels from `profiler-segments.json` (`nwSegments`, fetched once like the companies file)
-- **Propose a dossier** (D4, `nwProposeDossier`): the exact `profiler <Company Name>` line copied to the clipboard when the browser allows and always shown in a selectable `<code>` line; the account marked `dossier-proposed` through `nop=account`. Nothing is generated in-app
-- **The on-the-record check** (`nwRecordCheck`): for a contact at a covered account, `profiler-data/<slug>.profile.json` is fetched only when the detail opens (cached per slug for the page's lifetime — never on the list paint) and the contact's romanised name is compared with `decisionMakers[].name` through `nwNameKey` (the client mirror of `nwNameKey_`); a match shows "On the record as <title> — Profiler, <source or dossier date>", and a differing card title is a note under it, never written anywhere
-- **§6 folder rename on the next save** (`nwFolderRenameIfDrifted` in `nwEnsureAccountFolder`): one `files.get` for the folder's name, one `files.update` when it drifted from `nwSafeFolderName(accountName)` — a Tidy or an account edit that renamed the company now renames its Drive folder when the next card is filed there; soft on any Drive error
-
-### Changed
-
-#### `scripts/check-network-schema.py`
-- Asserts the D5 validator is reached by **both** write paths — `op === 'save'` → `nwSaveOp_` and `op === 'account'` → `nwAccountOp_` must each call the function that throws `STAGE_NEEDS_TARGET_OR_CUSTOMER` (directly or through `nwAccountFullFromPayload_`); `renamed` (a flag) and `tags` (a count) join the audit-row allow-list
-
-#### `scripts/verify-network-roles.py`
-- The stub answers `nop=account`, `nop=get` for an `a-` id (with the contacts beneath), `contactCount` on the list and the `account_has_contacts` refusal with its count; the probe reports the Accounts card and every turned-away tier asserts its absence; the accounts round-trip — rows read name · relationship · stage · count, the `Profiler.html#abb` href on the covered row, no dossier fetched on the list paint, the account detail with its contacts and the segment label, Edit flipping Acme to `partner` with the stage select disabled and reset to `none` and the `nop=account` payload asserted, the on-the-record line from the **served** `abb.profile.json` (a real covered slug, the shipped shape) with the differing-title note, the `profiler Acme Energy` line and the `dossier-proposed` tag, the refusal with the count leaving the rows untouched; two new screenshots. Clipboard permission granted to the stub origin (best-effort)
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- §11 N2 row → **Done — v06.94r**; **§13.7 written** — the E1 brief (Events scaffold + calendar, two sessions, E0 as a stated prerequisite) and its paste-in prompt
-
-#### `repository-information/NETWORK-SCHEMA.md`
-- §3: the `dossier-proposed` tag and the Accounts-card edit of `Newsroom URL` recorded; §12: `contactCount` named as the list op's one widening and the `a-` detail's contacts; §14: the checker's both-paths assertion
-
-#### `repository-information/SESSION-CONTEXT.md`
-- Latest Session rewritten at the close of the previous session (four pushes v06.90r–v06.93r; Tidy confirmed working on the phone; N2 next); the earlier entry moved to Previous Sessions under the two-session cap
-
-#### `README.md`
-- Display v01.14w / v01.07g; the two checkers' descriptions carry N2
-
-### Notes
-- Still 2026-09-21 EST — 90 sections, twelve dated today and exempt; no rotation. CHANGELOG `Sections: 78/100` → `90/100`
-- The brief's numbers were a session behind: the repo stood at v06.93r (`Network.html` v01.13w, `Network.gs` v01.06g, CHANGELOG 89/100) when N2 started, not v06.90r / v01.10w / v01.05g / 86 — nothing in the build depended on them
-
-## [v06.93r] — 2026-09-21 06:25:15 AM EST
-
-> **Prompt:** "I tapped "Tidy titles and companies" and nothing happened. Fix it."
-
-### Fixed
-
-#### `live-site-pages/Network.html` — v01.13w
-- **Tidy gave no feedback where the developer was looking.** `nwTidySaved` reported only through `nwCaptureStatus` (the capture card's line at the top of the page — off-screen from the Contacts card on a phone) and called `nwAfterWrite()` only after the whole run, which takes 30–60 s against the real backend at one `nop=get` (+ one `nop=update`) per contact; from the list, nothing visibly changed. Now: the pill (`#nw-tidy-btn`) reads "Tidying N of M…" and is marked busy while it runs; a status line inside the Contacts card (`#nw-list-status`, `nwListStatus`, kept in `_nwListStatus` so it survives the list re-render — built directly into the new card rather than looked up, because the card is not in the DOM yet when it is assembled) carries progress and the result, including "everything was already in the standard form"; each changed row re-cases in place as its update lands (`nwRowRecase`); the per-contact work is wrapped so an exception or a failed `get` / `update` is counted and named in the result instead of ending the run silently
-
-### Changed
-
-#### `scripts/verify-network-roles.py`
-- The Tidy round-trip now asserts the result line inside the Contacts card (shown, ok-styled) and the button back at its label; a timeout on that wait reports the two status texts and the last page errors
-
-#### `README.md`
-- Display v01.13w
-
-### Notes
-- Still 2026-09-21 EST — 89 sections, eleven dated today and exempt; no rotation. CHANGELOG `Sections: 78/100` → `89/100`
-- Verified: `check-gas-inner-scripts.js`, `check-readme-tree.py` (0 findings), `verify-network-roles.py` (all checks passed), `check-network-schema.py` (exit 0). `Network.gs` untouched
-
-## [v06.92r] — 2026-09-21 05:53:43 AM EST
-
-> **Prompt:** "A few changes to the saved contacts that I want you to remember and use for new entries:
->
-> * Justin Garver:
->    * VICE PRESIDENT, PRE-CONSTRUCTION -> VP, Pre-Construction
-> * David Jeon:
->    * Vice President -> VP
-> * Ryan De La Cruz:
->    * Vice President -> VP
-> * Rubin Sidhu, Ph.D.:
->    * Director of Onshore Renewables -> Director, Onshore Renewables
-> * Keith Allen:
->    * Senior Manager -> Sr. Manager
-> * Mark Christensen:
->    * DIRECTOR, STORAGE ENGINEERING -> Director, Storage Engineering
->    * AVANTUS -> Avantus (apply this change to all "AVANTUS" employees)
-> * David Olmos:
->    * SR. MANAGER, STORAGE ENGINEERING -> Sr. Manager, Storage Engineering
-> * Austin York:
->    * DEVELOPMENT COORDINATOR -> Development Coordinator
->    * Jupiter POWER -> Jupiter Power
-> * Chris Page:
->    * CYPRESS CREEK RENEWABLES -> Cypress Creek Renewables
-> * Randi Tveitaraas Jack:
->    * DEPUTY DIRECTOR -> Deputy Director
-> * Kamran Moradi, Ph.D.:
->    * SR. DIRECTOR, STORAGE ENGINEERING -> Sr. Director, Storage Engineering
-> * Brian Grummel, Ph.D.:
->    * SR. DIRECTOR, STORAGE ENGINEERING -> Sr. Director, Storage Engineering
-> * Mohammed S. Alrai:
->    * RAI ENERGY -> RAI Energy"
-
-### Added
-
-#### `live-site-pages/Network.html` — v01.12w
-- **Tidy saved contacts** (`nwTidySaved`): a pill at the top of the Contacts card runs the standardisation over every saved row — `nop=get` → `nwRecFromRow` → `nwResolveCard` (registry casing) → `nwTidyNames` → `nop=update` only when title / department / company moved — and reports "N of M changed" with the first changes named. The spreadsheet is not reachable from a session, so this is how the fourteen corrections land on the phone (and how any later rule change reaches rows saved before it)
-- `NW_CASE_FIXES` carries the developer's ruled-on words (`rai` → `RAI`); `NW_RANK_OF_RE` turns "<rank> of <dept>" into "<rank>, <dept>" for Director / Manager / VP / EVP / Coordinator / Engineer / Analyst / Specialist / Lead / Supervisor / Officer (with Sr. / Deputy / Assistant / Associate / Executive prefixes) — "Head of IT" and "Chief of Staff" are untouched. All fourteen of the developer's cases assert in Node and in the verifier
-
-### Changed
-
-#### `scripts/verify-network-roles.py`
-- The developer's fifteen cases (the fourteen plus the two "of" exceptions) asserted; a Tidy round-trip (a row seeded with "SR. DIRECTOR, STORAGE ENGINEERING" re-cased through one `nop=update`); the two earlier expectations that carried "of" updated to the comma form
-
-#### `repository-information/NETWORK-SCHEMA.md`
-- §3 Contacts: the display-casing rule for Title / Department / Account Name recorded with a pointer to `nwStdField` and the remembered word list
-
-#### `README.md`
-- Tree: `Network.html` description; display v01.12w
-
-### Notes
-- Still 2026-09-21 EST — 88 sections, ten dated today and exempt; no rotation. CHANGELOG `Sections: 78/100` → `88/100`
-- Verified: `check-gas-inner-scripts.js`, `check-readme-tree.py` (0 findings), `verify-network-roles.py` (all checks passed, 0 page errors), `check-network-schema.py` (exit 0). `Network.gs` untouched
-
-## [v06.91r] — 2026-09-21 05:39:58 AM EST
-
-> **Prompt:** "Standardize titles, departments, and company names to first-letter-capitalized-rest-not unless the titles are of a C-suite or reasonably-assumed to be a 3-letter acronym. If a title is Vice President or VP, standardize to VP. If a title is Executive Vice President or EVP, standardize to EVP. If a title has Senior in it, standardize to Sr. Also, allow me to edit saved contacts."
-
-### Added
-
-#### `googleAppsScripts/Network/Network.gs` — v01.06g
-- `nop=update` (`nwUpdateOp_`, body-POST): the save validators (`nwContactFromPayload_` / `nwAccountFromPayload_`, enums + the D5 stage rule) on an existing owned row, rewritten in place with its id, `Raw Extraction`, `Created At`, `Deleted At` and (when the payload carries none) its card links kept; the account re-resolved through `nwAccountResolve_`; an `account-change` Interaction with the previous `a-` id when the employer differs (D4). No dedupe on an update. Audit `{ contactId, accountId, accountCreated, accountChanged }`; dispatcher case
-
-#### `live-site-pages/Network.html` — v01.11w
-- **`nwStdField(s, isTitle)`** — the standardisation rule for titles, departments and company names: word-wise First-letter caps, rest lower; kept in capitals: a C-suite title (`NW_CSUITE`), a listed abbreviation (`NW_ACRONYMS` — VP, EVP, IT, HR, EMEA, LLC, R&D …), in a mixed-case string any 2–4-letter capital token, in an ALL-CAPS string a 2–4-letter token with no vowel (TSMC) or a lone ≤3-letter name (ABB); a token already in mixed case (McKinsey, iPhone) left as printed; `NW_CASE_FIXES` for GmbH / LLC / Ltd / Inc / PhD; connector words (of, and, for, de, von …) lower unless leading; parentheses never touched. `nwTitleAbbrev` on titles first: Executive Vice President → EVP, Senior Vice President / SVP → Sr. VP, Vice President / V.P. → VP, Senior / Sr → Sr.  Applied through `nwTidyNames` (extraction, held-card load, Retry) and on the editor's title / department / company fields; a company resolved to the registry takes the registry's `name` casing (`nwResolveCard`)
-- **Edit a saved contact**: the row detail gains an **Edit** pill; `nwRecFromRow` builds the editor's record from the `nop=get` response (`saved: true`, review block pre-filled from the contact and its account); `nwEditCard` takes `{ host, onSave }` so the same form mounts inside the row detail and submits through `nwUpdateContact` → `nop=update` → `nwAfterWrite()`; `nwPendingSave` ignores a saved record so nothing is written to IndexedDB
-
-### Changed
-
-#### `scripts/verify-network-roles.py`
-- The stub answers `nop=update` (row rewritten, account re-resolved, `accountChanged`); after delete → restore: 17 `nwStdField` cases asserted, then the saved-row Edit — editor pre-filled (name, company, role, stage, source event), title set to "senior vice president, grid" and role to champion, the `nop=update` payload carries `Sr. VP, Grid` / `champion` / the met date, the row re-renders with the new title, no held record written; the merge-sheet assertion now accepts several differing fields as long as every checked radio is the new card
-
-#### `scripts/check-network-schema.py`
-- `accountChanged` added to the audit-key allow-list (a flag)
-
-#### `README.md`
-- Tree: `Network.html` description extended (standardisation, edit-in-place); displays v01.11w · v01.06g
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- §11 N1 row and §13.6 prompt: versions advanced to v01.11w / v01.06g, v06.91r
-
-### Notes
-- Still 2026-09-21 EST — 87 sections, nine dated today and exempt, 78 non-exempt; no rotation. CHANGELOG `Sections: 78/100` → `87/100`
-- Verified: `node --check` on the `.gs` copy, `check-gas-inner-scripts.js`, `check-readme-tree.py` (0 findings), `verify-network-roles.py` (all checks passed, 0 page errors), `check-network-schema.py` (exit 0)
-
-## [v06.90r] — 2026-09-21 05:01:07 AM EST
-
-> **Prompt:** "Run N1 session 2 — review, dedupe, save — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.5's Session 2 paragraph (steps 6–10) is the brief, §4.2 the pipeline, and repository-information/NETWORK-SCHEMA.md §1, §3, §4, §6, §7 (dedupe paragraph), §12, §13 and §14 the shapes and the checker spec. Read first, in this order: the plan's §3 (D4, D5, D8, D9, D14), the Network.gs PROJECT region as it stands after session 1 (nwExtractOp_, nop=newid, handleNetworkOp_, nwNewId_, nwNormaliseCompany_, nwFoldersGet_ / nwFoldersSet_ with its accounts map, nwListRows_, the enum lists), the Network.html PROJECT region (nwProcessPair, the IndexedDB pending store and its record shape — id, extraction in the §7 shape with confidence{}, viaQr, sides, frontLink, backLink, driveError, createdAt, dismissed{}, edited — nwRenderStrip, nwEditCard / NW_EDIT_FIELDS, nwDeleteCard, nwApiBody, nwUploadPair, nwEnsureFolders, _nwFolders, nwCapName, nwAfterWrite), then in Receipts.gs saveReceipt and in Receipts.html the review card only for the select idiom. Session 1's UI decisions stand: no c- id and no confidence numbers shown on a card, no "missing field" cues, names ALL CAPS or all-lower become First-letter caps and mixed case is never touched, the Front / Back / Edit / Delete pill row, and the two-half control rows. The developer scanned 20 real cards (three Chinese-script, two two-sided) into v01.09w; they are held in that phone's IndexedDB pending store with their photos in Drive Network App/_inbox/. Do not change the IndexedDB name or version and do not drop or rewrite pending — session 2's save reads exactly those records.
->
-> Build, in the PROJECT regions of Network.gs and Network.html only: (6) the review card on the existing editor — add role from NW_ENUMS.role, the account block (company name pre-filled from extraction.company, relationship defaulting to target, stage: none, the D5 rule that stage may leave none only for target · customer), Source Event free text, Met Date defaulting to the record's createdAt date, Consent Marketing defaulting to unknown, Do Not Contact off, the low-confidence outline reusing the existing note/nwUnclearFields, Retry extraction (re-runs nop=extract with the same c- id from the held base64 if still present, else from the Drive files via the user's token) and Swap front / back; a Save pill on every held card and a Save all for the stack. (7) Company resolution against live-site-pages/profiler-companies.json (name / aka[] / domains[], one public fetch cached page-lifetime) proposing the slug and pre-filling Segment IDs from the registry's segments[]; otherwise a new local Account keyed by nwNormaliseCompany_; the developer confirms in the account block. (8) nwFindDuplicate_ server-side on normalised email → E.164 phone → normalised name + Account, answered before the write so the client can offer merge field-by-field (newest wins by default, both card pairs kept, the absorbed c- id recorded in a merge Interaction) — never a silent reject, never a bare "save anyway". (9) nop=save (body-POST — Raw Extraction carries the model response): validate every enum against the flat lists and the D5 stage rule, write the Contact + the new-or-existing Account + one scan Interaction; then browser-side move the two Drive files from _inbox/ to <Company>/ (files.update with addParents / removeParents; the per-Account folder created on first save and parked through setfolders accounts), write the new links back, delete the pending record, and call nwAfterWrite() (D14). The list rows then need a row surface: name · title · company, tap for the full row (nop=get), soft delete with one-tap restore (nop=delete / nop=restore set and clear Deleted At); an Account with live Contacts cannot be deleted (account_has_contacts). Audit rows carry ids and counts only (§12). (10) scripts/check-network-schema.py per §14 — the three enum mirrors identical to the schema's lists, every test id matching NW_ID_RE, no id-generating function taking a name or a date, every auditLog( details argument built from ids and counts only — plus a README tree entry for it; extend scripts/verify-network-roles.py with a save round-trip against the stub (the review card, a duplicate offering merge, the Drive move requests in order, the pending record gone, the list row present, delete → restore).
->
-> Verify with node --check on a .js copy of Network.gs, scripts/check-gas-inner-scripts.js, python3 scripts/check-readme-tree.py, scripts/verify-network-roles.py (zero page errors at phone width) and scripts/check-network-schema.py (exit 0). Page + GAS bumps with changelogs, CHANGELOG entry, flip §11's N1 row to Done with the versions, and write the N2 brief as §13.6 (or §13.7 if E0 has taken 13.6 by then) before closing — then hand off in chat: which of the 20 held cards to save first (a two-sided one, a Chinese-script one, then the pair of Avantus cards that share a title and must NOT merge), and what "done when" looks like in the Contacts list and the Drive tree. Do not touch Events, the list's filters or exports (N3), accounts beyond what save needs (N2), or any interval (Q). Session-1 lessons that still apply: GEMINI_API_KEY is set on the Network project and the drive.file consent has been given once; Android kills the browser tab when memory is low while the camera is open, so test on the gallery path first. Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first. The repo CHANGELOG stands at Sections: 85/100 with seven sections dated 2026-09-21 EST — no rotation is due on any later date either (85 < 100), so expect none. One push per session.
->
-> Then, give me a prompt to paste into a new session (with recommended model/effort) to continue the action plan, then remember session."
-
-### Added
-
-#### `googleAppsScripts/Network/Network.gs` — v01.05g
-- **The write path (N1 session 2, §4.2 steps 8–9).** `nop=dupcheck` — `nwFindDuplicate_` on normalised email → E.164 phone (`nwPhoneKey_`) → normalised name (`nwNameKey_`, romanised part only) + Account, scoped to the owner set, soft-deleted rows excluded, answered BEFORE any write with the matching contact in full; `nop=save` (body-POST, `Raw Extraction` from the body) — `nwContactFromPayload_` / `nwAccountFromPayload_` validate every enum against the flat lists and refuse a stage other than `none` unless the relationship is `target` · `customer` (`STAGE_NEEDS_TARGET_OR_CUSTOMER`, D5), `nwAccountResolve_` reuses an owned Account by id or by `Normalised Name` and otherwise mints an `a-` row, then the Contact row + one `scan` Interaction; `mergeInto=<c-id>` folds the card into the existing contact (survivor keeps its id; a `merge` Interaction carries the absorbed `c-` id as Evidence Link and the card pair that did not win the row in its Summary — both pairs kept; an `account-change` Interaction when the employer differs); `distinct=<c-id>` is the developer's considered "two people" after seeing the match — any other duplicate refuses with the row (`error: 'duplicate'`), never silently; `nop=links` writes the post-move Drive links back (to the row, or to the scan Interaction when the older pair kept the row); `nop=get` returns the full row + account + interactions (soft-deleted rows still answer, so Restore can show); `nop=delete` / `nop=restore` set and clear `Deleted At`, an Account with live Contacts refusing with `account_has_contacts` + count. All audit rows ids and counts only (§12)
-- Sheet helpers `nwSheetRead_` / `nwRowObj_` / `nwFindRow_` / `nwOwned_` / `nwWriteRow_` (header-keyed rows), `nwContactPublic_` / `nwAccountPublic_` (the §3 JSON columns parsed), `nwEmailKey_` / `nwPhoneKey_` / `nwNameKey_` / `nwDomainOf_`; dispatcher cases for the six ops
-
-#### `live-site-pages/Network.html` — v01.10w
-- **Review card on the existing editor (step 6):** `nwReviewSection` appends role (`NW_ENUMS.role`), the account block (company from the extraction, the "In the Profiler record as …" / "Not in the Profiler record" chip, the link-to-record checkbox, relationship defaulting to `target`, stage `none` with `gateStage` disabling the select outside `target` · `customer`, segment ids), source event, met date (from the record's `createdAt`), consent (`unknown`), do-not-contact, notes; choices persist as `rec.review` on the held record (`nwReviewOf` supplies the defaults) and show in the strip detail. Low-confidence inputs carry `.nw-low` from the same `nwUnclearFields` reading as the note. **Retry** (`nwRetryExtraction` — `nop=extract` with the same `c-` id from `_nwHeldB64` when this tab scanned the card, else the two files read back from Drive with the user's token) and **Swap** (`nwSwapSides` — links and held base64 swapped, files renamed best-effort) join the pill row with **Save**; a **Save all** bar over the stack (`nwSaveAll`, in `createdAt` order, a card needing a merge decision is left open and the run goes on)
-- **Company resolution (step 7):** `nwRegistry` fetches `profiler-data/profiler-companies.json` once per page (relative URL — never a GitHub API endpoint) into name/aka and domain indexes; `nwResolveCompany` matches the normalised name (`nwNormaliseCompany`, the client mirror of `nwNormaliseCompany_`) then the card's domain and its parents; `nwExistingAccount` reuses an owned Account from the list payload (its relationship / stage / slug win); `nwResolveCard` caches per company+domain key
-- **Save (steps 8–9):** `nwSaveCard` → `nop=dupcheck` → the merge sheet (`nwMergeSheet`: one row per differing field, radios with the new card checked by default, unchanged fields listed once, **Merge into …** / **Keep as a separate contact** / Cancel; emails and phones unioned on merge) or `nop=save` → `nwFileCard` moves both files browser-side (`nwEnsureAccountFolder` creates `<Company>/` under `Network App/` on first save and parks it through `nop=setfolders` `accounts`; `nwDriveMove` = `files.update` with `addParents` / `removeParents`) → `nop=links` → the pending record deleted → `nwAfterWrite()`. A Drive failure after the rows are written is soft (the contact is saved, the status says the photos stayed in `_inbox/`)
-- **List rows:** `nwContactRow` — name · title · company (accounts joined from the list payload into `_nwAccountsById`), tap → `nwRowDetail` fetches `nop=get` and shows every field, the account line with slug, photo links and the history; **Delete** → `nop=delete` marks the row struck through with **Restore** → `nop=restore`; rows sorted newest-updated first
-- CSS for the review selects and date input, the covered chip, the low-confidence outline, the second pill row, the Save-all bar, the merge sheet and the list-row detail
-
-#### `scripts/check-network-schema.py` (new)
-- The §14 checker: the six §4 enums (relationship, stage, role, interaction kind, signal kind, consent — plus draft status and signal source) byte-identical across `NETWORK-SCHEMA.md`, the `Network.gs` flat lists and the `Network.html` `NW_ENUMS` map with the schema's labels; the D5 stage rule mirrored on both sides (`NW_STAGE_RELATIONSHIPS`, `gateStage`, the server's refusal); every id literal in `verify-network-roles.py` and in itself matching `NW_ID_RE`; `nwNewId_` / `nwRandomBase36_` taking no name / email / company / date and every `nwNewId_(` call passing a one-letter prefix literal; every `auditLog(` in the PROJECT region with a `details` argument built from ids and counts only — a lexical check with an allow-list of keys, a forbidden-identifier list, id/count shapes (`.id`, `.length`, `nwFieldCount_(…)`, `? 1 : 0`) stripped first, and a bare identifier traced to its assignments in the same function. Exit 1 on any finding; negative-tested against `name: c.fullName`, `raw` and a traced `details[...] = name`
-
-### Changed
-
-#### `scripts/verify-network-roles.py`
-- The GAS stub keeps state (contacts, accounts, folders, the body-POST log) and answers `nop=dupcheck` (a match on email), `nop=save` (the D5 refusal, account reuse, merge), `nop=links`, `nop=get`, `nop=delete` / `nop=restore`; the Drive stub answers the `PATCH … addParents=` move and the `<Company>` folder creation. After the session-1 checks: registry resolution (`ABB Ltd` and `new.global.abb` → `abb`, `Advanced Micro Devices, Inc.` → `amd`, `Acme Energy` → none), the review block's defaults (role other, target, stage none and enabled, consent unknown, DNC off, met date today, the actions row last), the D5 gate on `partner`, the choices persisted and shown, Retry issuing a fresh extract, Save with the request order asserted (`dupcheck`, `save`, then folder → setfolders → move → links → list), the payload (role, source event, consent, met date, account name / relationship / stage, empty slug, `raw` carrying `confidence`), the pending store empty, the account folder parked, the list row name · title · company, tap → `nop=get` detail, delete → restore, the merge sheet on a same-email card (`network-save-merge.png`) with Merge sending `mergeInto=` and the second card's two sides moved, Keep-separate sending `distinct=`, Save all filing two seeded cards, and the held-card delete on a seeded record
-
-#### `README.md`
-- Tree: `check-network-schema.py` entry; `verify-network-roles.py` and `Network.html` descriptions extended for session 2; Network displays v01.10w · v01.05g
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- §11: the N1 row flipped to **Done — v06.90r** with the versions and the done-when as it stands (the 20-card round-trip runs on the phone after this push); §13.6 written — the paste-in brief and prompt for N2 (accounts and the corpus attachment)
-
-#### `repository-information/SESSION-CONTEXT.md`
-- Latest Session rewritten for this run; the prior entry moved to Previous Sessions under the two-session cap
-
-### Notes
-- Still 2026-09-21 EST — 86 sections, eight dated today and exempt, 78 non-exempt; no rotation. CHANGELOG `Sections: 78/100` → `86/100`. On any later EST date all 86 are non-exempt and still under the trigger
-- Verified: `node --check` on the `.gs` copy, `check-gas-inner-scripts.js` (96 blocks clean), `check-readme-tree.py` (0 findings), `verify-network-roles.py` (all checks passed, 0 page errors at 390 × 844), `check-network-schema.py` (exit 0)
-
-## [v06.89r] — 2026-09-21 04:38:22 AM EST
-
-> **Prompt:** "I scanned 20 cards into Network. Give me a prompt to paste into a new session (recommend model/effort) to run N1 session 2, then remember session."
-
-### Added
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- **The paste-in prompt for N1 session 2** (Fable 5.1 High, with the rationale that session 1 over-delivered an editor, notes, delete, rescan, the batch toggle and the name rule, so the review card builds on that editor), verbatim, as a block under §13.5 after session 1's: the reading list against the code as it now stands, the IndexedDB `pending` record shape and the instruction never to drop it (the developer's 20 cards are in it), steps 6–10 restated with the session-1 UI decisions that stand, Save / Save all, `nop=get`, the verification train including `check-network-schema.py` and the verifier's save round-trip, the §11 flip and the N2 brief as §13.6 / §13.7, the hand-off to write, the session-1 lessons, and the CHANGELOG state (85 sections, no rotation due on any later date)
-
-### Changed
-
-#### `repository-information/SESSION-CONTEXT.md`
-- Latest Session rewritten for the N1 session-1 run (seven pushes v06.82r–v06.88r, the first rotation, the live card run, the UX rules the developer set); recommendation: paste the N1 session-2 prompt. The prior entry moved to Previous Sessions under the two-session cap
-
-### Notes
-- Still 2026-09-21 EST — 85 sections, seven exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `85/100`. On any later EST date all 85 are non-exempt and still under the trigger
-
-## [v06.88r] — 2026-09-21 04:12:37 AM EST
-
-> **Prompt:** "A few more changes:
-
-* change "one-sided" and "two-sided" from a side-by-side format to a stacked format with "one-" and "two-" on top of "sided"; Format the "Front", "Back", "One-sided", and "Two-sided" buttons to take up the the left half of the row with the "Scan" and "Choose Photos" buttons also being the same size taking up the right half of the row. 
-* move the "Extract" and "Clear" buttons above the "One-sided", "Two-sided", and "Choose Photos" buttons."
-
-### Changed
-
-#### `live-site-pages/Network.html` — v01.09w
-- Capture-card control rows are two-column grids (`1fr 1fr`, `align-items: stretch`): Front / Back and Scan on the first row, Extract / Clear on the second, One- / Two-sided and Choose photos on the third — each toggle fills the left half as a two-cell grid, each button the right half at the same size (selectors scoped under `#nw-capture` to outrank the base `.nw-seg` inline-flex rule)
-- The sides toggle renders stacked: "One-" / "Two-" over a small "sided" (`aria-label` keeps the full word for screen readers)
-- Extract / Clear now sit above the sides + Choose photos row
-
-#### `scripts/verify-network-roles.py`
-- Asserts the row order (scan, extract, sides), that the two halves of the top row measure the same width and height, and that the sides buttons are stacked
-
-### Notes
-- Still 2026-09-21 EST — 84 sections, six exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `84/100`
-
-## [v06.87r] — 2026-09-21 04:03:50 AM EST
-
-> **Prompt:** "If a scanned card shows fully capitalized names like MOHAMMED S. ALRAI, then change that to a standard first-letter-capitalized-rest-not standard. However, do not automatically change anything other than these two use cases (fully capitalized and fully uncapitalized)."
-
-### Changed
-
-#### `live-site-pages/Network.html` — v01.08w
-- `nwCapName` now handles exactly two cases: a name whose letters are ALL upper-case or all lower-case (judged on the romanised part, parentheses excluded) becomes First-letter-capitalised, the rest lower-cased, with a capital after each space, hyphen, apostrophe or period ("MOHAMMED S. ALRAI" → "Mohammed S. Alrai", "austin york" → "Austin York", "MARY-ANNE LEE" → "Mary-Anne Lee"); any mixed-case name is returned untouched ("Kamran Moradi, PhD", "Ronald McDonald"); a parenthesised native script is never changed. Applied on receipt, on edit and once to held cards, as before
-
-#### `scripts/verify-network-roles.py`
-- Seven `nwCapName` cases asserted in the page context: both conversions, mixed-case pass-through, hyphen and apostrophe handling, and the native-script parenthesis
-
-### Notes
-- Still 2026-09-21 EST — 83 sections, five exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `83/100`
-
-## [v06.86r] — 2026-09-21 03:59:29 AM EST
-
-> **Prompt:** "For all contact entries, make sure the first letter of both first and last names are capitalized even if the card isn't. Also, dont show any reminders for missing information anymore because there is too much variance in business cards. However, if a scanned picture is unclear somewhere, pop up a notification for me to either rescan or manually input the missing information. Also, for mass uploading contacts, make sure to give me a toggle between one- or two-sided cards, similar to the one  between front and back of a photograph. Rename "photograph" with "scan" and move the button to the right of the "front/back" toggle. In its original spot, that's where I want the "one/two" sided toggle. Also, give me the option to delete saved contacts."
-
-### Added
-
-#### `live-site-pages/Network.html` — v01.07w
-- **Name capitalisation** (`nwCapName` / `nwTidyNames`): the first letter of every word in `fullName`, `firstName`, `lastName` (and after a hyphen or apostrophe) is upper-cased on receipt from the extraction, on an edit, and once for held cards at mount; nothing else in the name is touched, so "McDonald", "PhD" and a native script in parentheses survive
-- **"Unclear in the scan" notification** on a held card, one per field read below `NW_CONFIDENCE_FLOOR`: **Rescan** (confirm → `nwDeleteCard(rec, true)` removes the held record and its Drive photos, resets the pair to Front and opens the camera), **Enter manually** (the editor on that field) and **Looks right**; the filed status says which fields looked unclear instead of the plain green signal
-- **One-sided / Two-sided toggle for batches** (`_nwBatchSides`, `nwSetBatchSides`) in the slot Photograph used to occupy: a two-sided batch pairs consecutive photos (front, back, …) into one card each, an odd last photo is a front alone; `NW_MAX_BATCH` now counts cards
-- **Delete on every held card** (`nwDeleteCard`): confirm, remove the strip and the IndexedDB record, and best-effort `DELETE /drive/v3/files/<id>` for each photo with the user's own `drive.file` token (`nwDriveIdFromLink` parses the id from the stored link; `nwDriveFetch` accepts a 204)
-
-### Changed
-
-#### `live-site-pages/Network.html` — v01.07w
-- Photograph renamed **📷 Scan** and moved beside the Front / Back toggle (`.nw-toprow`); the batch button is now "🖼 Choose photos" (the 15-card cap is in its tooltip and the status line)
-- The "Missing: …" cue and `nwMissingFields` are removed — cards vary too much for an absent field to mean anything
-
-#### `scripts/verify-network-roles.py`
-- The stub returns a lower-case, punctuated name and the assertions check it is capitalised ("Jane O’Doe-Smith"), no Missing cue, the sides toggle and Scan beside the side toggle, the unclear note with its Rescan button, Enter manually opening the editor, and the delete round-trip (dialog accepted, strip and record gone, a Drive DELETE issued; the Drive stub answers 204)
-
-### Notes
-- Still 2026-09-21 EST — 82 sections, four exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `82/100`
-- Delete and Rescan act on held cards (nothing is in the spreadsheet yet); session 2's `nop=delete` soft-deletes saved rows per NETWORK-SCHEMA.md §13
-
-## [v06.85r] — 2026-09-21 03:36:02 AM EST
-
-> **Prompt:** "Rename "front photo" and "back photo" to "front" and "back", respectively and resize the buttons as needed so that they are all on the same row. Also, hide "one side" and "two sides". The existence of the front and back pictures will tell me how many sides the card has."
-
-### Changed
-
-#### `live-site-pages/Network.html` — v01.06w
-- Held-card pills relabelled **Front** / **Back**; `.nw-strip-photos` is now a no-wrap row with each pill `flex: 1 1 0`, so Front, Back and ✎ Edit share one row at phone width (the Edit pill takes the same rule with an ink colour instead of its own)
-- The meta line drops "one side / two sides" — the pills say it; "from QR" and "edited" remain
-
-#### `scripts/verify-network-roles.py`
-- Strip assertion follows the relabel and checks the side count is gone
-
-### Notes
-- Still 2026-09-21 EST — 81 sections, three exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `81/100`
-
-## [v06.84r] — 2026-09-21 03:30:03 AM EST
-
-> **Prompt:** "Hide each contact's identifier and the low-confidence list either. Instead, give me a removeable note that asks me to check a low-confidence source and an option to edit the contacts after they are saved. That way, I can manually add the low-confidence information and remove the reminder. If one card didn't successfully extract a field (ie: website) that other cards did, I want to see that this contact is missing that information field, so I can try to make it up."
-
-### Added
-
-#### `live-site-pages/Network.html` — v01.05w
-- **Removable "check" notes** on a held card: one per field the model read with confidence below `NW_CONFIDENCE_FLOOR` ("Check the website against the card — it was read with low confidence"), each with **Fix** (opens the editor on that field) and **Looks right** (dismisses it — `rec.dismissed[field]`, confidence set to 1, persisted to the IndexedDB `pending` record so it stays gone after a reload)
-- **"Missing: …" line** (`nwMissingFields`): fields empty on this card that at least one other held card carries, with **Add** opening the editor on the first of them; repainted for every held card after any edit, since an added field changes what counts as usual for the stack
-- **Inline editor** (`nwEditCard`, `NW_EDIT_FIELDS`): name, title, company, department, emails, phones, address, website, LinkedIn on every held card (✎ Edit, or from a note); emails and phones as comma-separated text keeping the kinds already read; an edited field becomes confidence 1 and its note clears; the record is written back to IndexedDB (`nwPendingSave`) and flagged `edited`. Nothing leaves the phone — the same form becomes session 2's review card ahead of `nop=save`
-
-### Changed
-
-#### `live-site-pages/Network.html` — v01.05w
-- The strip no longer shows the `c-` id or the raw `check:` list (both stay in the record); the meta line reads sides · from QR · edited · held on this phone; `nwRenderStrip` replaces an existing strip in place, keeping its open state
-
-#### `scripts/verify-network-roles.py`
-- The stub now returns a low-confidence website; the drain scenario asserts no id and no `check:` on the strip, exactly one check note, Fix focusing the website input, and after a save no note, no editor, the "edited" flag, the new phone on the strip and the updated record in IndexedDB (`network-capture-edited.png`)
-
-### Notes
-- Prompted after the first live card showed `c-09zfk101vmaah · check: website` under the name. Still 2026-09-21 EST — 80 sections, two exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `80/100`
-- Editing a held card is session 2's step 6 pulled forward at the developer's request; dedupe, company resolution and `nop=save` (steps 7–9) remain session 2's
-
-## [v06.83r] — 2026-09-21 03:17:50 AM EST
-
-> **Prompt:** "Ok, closing the other open apps resolved that issue. I want to be able to clearly see the progress so create a visible, easy to understand progress bat and status. When a card is successfully filled away, give a clear signal to continue scanning. Also, I want to be able to easily choose to view the original picture for all filed cards. Currently, I have no way to interact with the saved contacts."
-
-### Added
-
-#### `live-site-pages/Network.html` — v01.04w
-- **A four-step progress bar** (Id → Upload → Read → Filed) under the capture buttons, driven by the pipeline: `nwProcessPair` now reports a step with every status (`onStatus(text, level, step)`), `nwCaptureStatus` forwards it to `nwProgressSet`, and the batch and the queue drain title the bar with "card *i* of *n*"; a failure turns the bar red at the step it stopped, Clear hides it
-- **The "go on" signal** (`nwCaptureDone`): a green bold "✓ Filed — ready for the next card. Tap Photograph." line, a short vibration where the phone allows it, and a two-beat green pulse on the Photograph button; the batch summary and the drain end the same way
-- **Photo links on every held card**: `nwRenderStrip` adds "🖼 Front photo" / "🖼 Back photo" pills opening the Drive links the upload returned (new tab, `noopener`), or a "photos not filed — retried on save" note when Drive was skipped
-- **Tap a name for the fields read**: the strip head toggles a definition list of every extracted field (name, title, company, department, emails, phones, address, website, LinkedIn, other, languages, capture time), with fields below `NW_CONFIDENCE_FLOOR` in the low-confidence colour — view only; editing and saving are session 2's review card
-
-### Changed
-
-#### `scripts/verify-network-roles.py`
-- Asserts the idle progress bar for admin, and after the drain the green Filed signal on both bar and status, one photo link and at least four detail rows on the strip; taps the strip and checks it opens (`network-capture-detail.png`)
-
-### Notes
-- Prompted by the first live card (v01.03w / v01.04g on the phone, one side, filed in Drive, `check: website`): the pipeline worked but showed its progress as one line of text
-- **"No way to interact with the saved contacts" — nothing is saved yet.** A strip is a card held on the phone after extraction; the Contacts list stays at 0 until session 2's `nop=save`. This pass makes held cards viewable (photos, fields), not editable
-- **First rotation on the new EST day**: 104 sections, none exempt (today's is the new one), 104 non-exempt ≥ 100 → the 2026-09-15 date group (26 sections, v05.79r–v06.04r) moved to `CHANGELOG-archive.md` with SHA enrichment on every header (26 of 26 resolved on the deep clone; v05.90r's push commit carries no version prefix and was matched by its 04:43 timestamp). 79 sections remain, 78 non-exempt. CHANGELOG `Sections: 78/100` → `79/100`
-
-Developed by: LightAISolutions

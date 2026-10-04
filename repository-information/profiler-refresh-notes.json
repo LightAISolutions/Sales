@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "description": "Research payload for repository-information/profiler-refresh-calendar.json, keyed by slug. `source` says where to verify the next report; `watch` is the research priority list a refresh works from. Split out of the calendar on 2026-09-21 (v07.02r) because these two fields were 98% of that file's 375 KB while the scheduling logic needs none of them: a Routine reading the queue now reads ~20 KB instead of ~375 KB, and pulls notes only for the handful of rows it actually works on. One entry per calendar row, enforced by scripts/sync-profiler-registry.py.",
   "notes": {
     "abb": {
@@ -2204,6 +2204,42 @@
         "Gas: Cumberland commercial operation (by December 2026), the Kingston combined cycle (2027) and its NEPA/CAA litigation (appeal of the September 2026 ruling), New Caledonia (May 2028), the site and OEM of the $3.5B 'New Gas Facility 2032', the three 7F.05 turbines",
         "Nuclear: Clinch River after the 2026-09-29 construction permit — a Board construction-funding decision, the DOE grant agreement (~$400M), the operating-license application; Kairos Hermes 2 (2030), ENTRA1/NuScale and Oklo moving from non-binding to binding",
         "The IRP's NEPA record of decision in the Federal Register, and the coal fleet: Kingston and Cumberland permits for continued operation, Shawnee and Gallatin dates, the DOE Cumberland grant"
+      ]
+    },
+    "cpp-investments": {
+      "source": "NOT LISTED — a federal Crown corporation (Canada Pension Plan Investment Board; fiscal year ends 31 March) with no ticker and no consensus, so the schema's nextReport/confirmed fields do not apply and the row is a cadence row carried by the quarterly sweep (Jan/Apr/Jul/Oct 1). It publishes quarterly results on a regular clock — mid-Aug (Q1), mid-Nov (Q2; Q2 FY2026 was 14 Nov 2025), mid-Feb (Q3) and ~21 May (annual) — on newswire.ca (cppinvestments.com HTML returns an AWS WAF challenge to this environment; PDFs under /wp-content/uploads/ are readable). Each results release carries the quarter's transaction list, which is where platform moves are disclosed. The fiscal 2026 annual report PDF could not be located at v1 (department sizes are last read at 31 Mar 2025).",
+      "watch": [
+        "Sempra Infrastructure Partners: a Sempra 8-K announcing completion (CPP ~13% indirect for ~USD 3.0bn; KKR consortium 65%; Sempra expected Q3 2026; ticking fee from 1 Apr 2026; twelve-month long-stop from the Sept 2025 signing) — or a termination notice. Not closed in filings through 21 Aug 2026.",
+        "Q2 fiscal 2027 results (~mid-Nov 2026): net assets, the transaction list (Tarchon closing, Maple Fund deployments, further Constellation sales from the 1.3% retained, the ReNew scheme), and whether the fiscal 2026 annual report PDF has become locatable (department sizes at 31 Mar 2026; Real Assets 12.2% return per press).",
+        "Pattern Energy's next move: a SunZia-scale financing, a sale, secondary or IPO would test the 'no exit clock' judgment; any statement resolving whether 69.1% is CPP alone or CPP with APG/ART (CPP's own wording: 'together with other institutional investors').",
+        "atNorth under CPP control (c. 51% since 2 Sep 2026): the four mega-sites (Kouvola, Ølgod, Sollefteå, Haugaland), the USD 4.1bn financing draw-down and any equipment or power contract the platform signs.",
+        "ALLETE / Minnesota Power: the first rate case after the one-year freeze (2027), the USD 5bn capital plan, and any Minnesota PUC compliance filing on the GIP/CPP governance terms (the 60/40 split is from ALLETE's proxy, not from CPP).",
+        "Domestic-investment politics: any CPPIB Act amendment bill or Senate committee recommendation of a mandate; Maple Fund's first investments; the Alberta CPP-exit question."
+      ]
+    },
+    "energy-capital-partners": {
+      "source": "UNLISTED SUBSIDIARY — Energy Capital Partners Management, LP is the Infrastructure segment of Bridgepoint Group plc (LSE: BPT), which reports half-yearly: FY2025 results 12 Mar 2026, H1 2026 report 17 Jul 2026, FY2026 results scheduled 11 Mar 2027 (MarketScreener calendar); Bridgepoint publishes no Q3 trading update. ECP has no earnings clock of its own, so the row is a cadence row swept quarterly; Bridgepoint's RNS on Investegate is the first-party channel (bridgepointgroup.com and ecpgp.com return challenge pages to this environment; Business Wire originals 403 — use the Yahoo Finance mirrors). ECP's own SEC filings (ECP ControlCo 13G/13G-A/13F; Form ADV CRD 155020) are the other first-party record.",
+      "watch": [
+        "Bosque County / CyrusOne DFW10 (190 MW; the KKR–ECP partnership's first campus): a first-party operational release for the Q4 2026 target, or a slip; the Calpine power contract now sits with Constellation.",
+        "Bridgepoint FY2026 results (11 Mar 2027): Infrastructure AUM after the Calpine and Cornerstone exits (EUR 27.7bn at 30 Jun 2026), ECP VI deployment (12% at Jul 2026), ECP V carry, ECP Evergreen Yield's USD 500m anchor.",
+        "EnergySolutions re-acquisition from TriArtisan (agreed 6 Apr 2026; 'expected to close in 2026') — closing release; the ECP VI (ES Pinnacle Co-Invest) Form D of 14 Aug 2026 shows syndication under way.",
+        "DCC Energy plc scheme (ECP + KKR; ~GBP 5.75bn; 78.09% approval 18 Sep 2026): EC merger and foreign-subsidies clearances, Irish High Court sanction, effective date (expected Q1 2027; long-stop 31 Jul 2027).",
+        "Listed stakes: any Constellation 13G/A or 424B (14,443,227 shares = 4.0%; 2027 tranche locked to 30 Jun 2027) and any Talen resale prospectus supplement (2,399,998 shares = 5.01%; lock-ups lapsed Sep/Dec 2026).",
+        "ProEnergy: Bloomberg (21 Sep 2026) reports a US IPO at USD 40–50bn or a sale under consideration, and ECP's entry at ~USD 275m for ~60% — confirm from a filing; the `proenergy` dossier carries the platform.",
+        "The ADQ–ECP USD 25bn / 25 GW gas-generation partnership (19 Mar 2025): a first project, eighteen months on.",
+        "FERC and Senate scrutiny of private-equity generation ownership (EC24-2 refusal precedent; Gavin coal plant campaign) — any filing or letter that names ECP."
+      ]
+    },
+    "quinbrook": {
+      "source": "PRIVATE, FOUNDER-OWNED MANAGER — no earnings clock; the row is a cadence row swept quarterly. First-party record: quinbrook.com news and portfolio pages (the portfolio-sitemap lastmod dates show when a status label was last touched), Companies House for Quinbrook Infrastructure Partners Limited 09741971 (FY accounts due 30 Sep; FY2025 filed 24 Apr 2026, scanned PDFs read by OCR), Renewable and Grid Services Limited 13250883 (the QRIF UK holding group that carries Habitat) and Habitat Energy Limited 10923911, SEC Form ADV for Quinbrook Infrastructure Partners LLC (CRD 287822; RAUM USD 8.95bn at 28 Jul 2026) and EDGAR Form Ds for each fund vehicle. Tier core rather than watch because the Habitat sale and the overdue group accounts are live items the quarterly sweep must catch — `habitat-energy` itself is watch tier and is skipped by the sweep.",
+      "watch": [
+        "The Habitat Energy sale (JLL/BCG mandate reported 17 Mar 2026; no public step since): any PSC02/PSC07 on Habitat Energy Limited, a TM01 for the Quinbrook directors, a change in Quinbrook's Habitat portfolio-page status from 'Operational & Expanding' (unmodified since 29 Aug 2025), or a release naming a buyer, price, signing or withdrawal. Flexitricity's exit (GBP 36m EV, completed 31 Mar 2026) is the comparable; NSI Act and Ofgem are the gates.",
+        "The overdue FY2025 accounts of Habitat Energy Limited and Renewable and Grid Services Limited (due 30 Sep 2026; 'Accounts overdue' on 3 Oct 2026): when filed, the group 'Optimisation services' line (GBP 4.17m in FY2024), the going-concern and support-letter wording, the intercompany balance to the Jersey manager (GBP 526.8m at end-2024) and any post-balance-sheet note on the sale.",
+        "Quinbrook III (USD 4bn target; Form D first sale 1 Oct 2025, USD 30m to two investors): a first-close release or Form D amendment; the fund's first UK deployment through Quinbrook III UK Holdings Limited (incorporated 27 Jul 2026).",
+        "Net Zero Power Fund II / QRIF II deployments: Mallard Pass construction start (2026), Uskmouth and Cleve Hill BESS CODs (2026), Severn condensers (2027–28), Wexford (2027), the first Aegis hub.",
+        "Supernode: Stage 3 completion (2027), a Stage 4 / EnerQB order — the next battery contract the manager itself would sign — and any tenant for the 'Supernode DC' precinct (500 MW-IT potential; none named).",
+        "Rowan: any filing or release stating Blackstone's percentage (reported 49% at ~USD 3.8bn ex-debt — unconfirmed); Frederick County's moratorium (to 1 Jul 2027) and its effect on Bauxite's later phases; Temple I and Cinco construction.",
+        "The manager itself: the FY2026 accounts of Quinbrook Infrastructure Partners Limited (due 30 Sep 2027) for the Jersey-group profit line (USD 1.56m in FY2025 vs USD 22.79m) and the purpose of the RBS International charge of 5 Jun 2026; Rory Quinlan's roles after his UK-board resignation (18 Jul 2025)."
       ]
     }
   }

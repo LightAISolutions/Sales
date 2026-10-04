@@ -643,6 +643,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-09-06",
       "supersededBy": 7
+    },
+    {
+      "file": "equinix.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-10-03",
+      "supersededBy": 8
     }
   ],
   "eve-energy": [
@@ -2899,6 +2905,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-10-02",
       "supersededBy": 3
+    },
+    {
+      "file": "habitat-energy.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-10-03",
+      "supersededBy": 4
     }
   ],
   "gridmatic": [

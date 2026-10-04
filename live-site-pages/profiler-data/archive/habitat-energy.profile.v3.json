@@ -290,7 +290,7 @@
     {
       "date": "2026-01-21",
       "category": "corporate",
-      "headline": "Quinbrook sells sister optimiser Flexitricity to Drax at a GBP 36 million enterprise value (about GBP 42 million proceeds) for roughly 0.9 GW under management per Drax — Quinbrook's own release says the contracted portfolio grew 'from 540 MW to c. 1.3 GW'; no source reconciles the two figures — and about 85 staff; completed by 1 April 2026",
+      "headline": "Quinbrook sells sister optimiser Flexitricity to Drax at a GBP 36 million enterprise value (about GBP 42 million proceeds) for roughly 0.9 GW under management and about 85 staff; completed by 1 April 2026",
       "read": "The only hard comparable for a Habitat sale, and a low one: about GBP 40,000 per MW under management for a single-market platform against Habitat's three markets and larger fleet.",
       "source": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/"
     },
@@ -441,16 +441,6 @@
       "note": "Eku Energy, the Macquarie-backed storage developer, contracts Habitat for Williamsdale in the ACT (250 MW/500 MWh, operational 2026) and Basildon in Essex (28 MW/56 MWh).",
       "context": "Williamsdale is the ACT's largest battery, built under a 15-year ACT revenue swap; Habitat provides FCAS and energy trading. Basildon extended the relationship to the UK in April 2025. The counterparty is Eku, not Macquarie itself, so the link is to the sponsor.",
       "source": "https://habitat.energy/habitat-energy-partners-with-eku-energy-to-optimise-basildon-battery-energy-storage-system/"
-    },
-    {
-      "slug": "quinbrook",
-      "type": "investor",
-      "status": "active",
-      "since": "2021-11",
-      "scale": "100% owner via Renewable and Grid Services Limited (QRIF); sale process reported March 2026, unresolved",
-      "note": "Quinbrook Infrastructure Partners has owned Habitat outright since 30 November 2021 and is reported to be selling it.",
-      "context": "Quinbrook's 30 November 2021 release records the acquisition; Companies House shows Renewable and Grid Services Limited as Habitat's 75%+ PSC from that date. The `quinbrook` dossier (v1, 2026-10-03) tells the sale from the seller's side and agrees with this dossier on every dated fact; it records Quinbrook's own Flexitricity figure (c. 1.3 GW) beside Drax's (~0.9 GW) and Quinbrook Holdings Limited as the holding group's stated controlling party. Linked here at v4 (step 7 reconciliation).",
-      "source": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/"
     }
   ],
   "policyExposure": [
@@ -710,7 +700,7 @@
             "actual": "Wholly acquired by Quinbrook Infrastructure Partners on 30 November 2021; terms undisclosed; early investors Liger Holdings and Delph25 and Canadian Solar's May 2021 minority stake exited",
             "expected": "",
             "verdict": "inline",
-            "result": "Ultimate parent per FY2024 accounts: Quinbrook Renewables Impact Fund (Jersey); immediate parent Renewable and Grid Services Limited. The parent's own FY2024 group accounts (filed 28 December 2025) name Renewables Impact Holding Limited (Jersey) as immediate parent, Quinbrook Holdings Limited (Jersey) — the founders' holding company that also owns the Quinbrook manager — as 'ultimate parent undertaking and controlling party', and Quinbrook Renewables Impact Fund LP as 'primary lender'; two documents frame the top of the chain differently, and both are recorded"
+            "result": "Ultimate parent per FY2024 accounts: Quinbrook Renewables Impact Fund (Jersey); immediate parent Renewable and Grid Services Limited"
           },
           {
             "name": "Pre-acquisition funding",
@@ -731,7 +721,7 @@
             "actual": "Quinbrook 'working with JLL and Boston Consulting Group' (New Project Media, March 2026); no price, bidder, shortlist, signing, completion or withdrawal reported at 2026-10-02 — the March report remains the only public source, and Quinbrook's September 2026 newsroom items (a GBP 587 million fund close in July, Supernode stage 2, two insight pieces) do not mention Habitat",
             "expected": "",
             "verdict": "inline",
-            "result": "Comparable: Flexitricity sold to Drax at GBP 36 million enterprise value, about GBP 42 million proceeds, for about 0.9 GW under management per Drax (c. 1.3 GW per Quinbrook; unreconciled) (signed 21 January 2026, completed by 1 April 2026)"
+            "result": "Comparable: Flexitricity sold to Drax at GBP 36 million enterprise value, about GBP 42 million proceeds, for about 0.9 GW under management (signed 21 January 2026, completed by 1 April 2026)"
           },
           {
             "name": "Registered control",
@@ -864,11 +854,6 @@
       "label": "Habitat Energy insight — You should be hedging with batteries this winter (Adam Krivisky)",
       "url": "https://habitat.energy/insight/winterhedging/",
       "date": "2026-01-23"
-    },
-    {
-      "label": "Quinbrook Infrastructure Partners — Quinbrook sells Flexitricity to Drax ('from 540 MW to c. 1.3 GW'; EV GBP 36m)",
-      "url": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/",
-      "date": "2026-01-21"
     },
     {
       "label": "Quinbrook Infrastructure Partners — Quinbrook sells Flexitricity to Drax",
@@ -1149,6 +1134,6 @@
       "url": "https://www.quinbrook.com/news-insights/"
     }
   ],
-  "lastUpdated": "2026-10-03",
-  "profileVersion": 4
+  "lastUpdated": "2026-10-02",
+  "profileVersion": 3
 }

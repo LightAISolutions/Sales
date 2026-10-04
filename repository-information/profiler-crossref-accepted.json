@@ -97,6 +97,24 @@
       "pair": "iren x microsoft",
       "why": "Reopened by the IREN v6 ClusterMAX 3.0 note (2026-10-02). Microsoft's development records the USD 9.7B Childress contract; IREN's open question is the absence of an independent re-rating since the Mirantis close and the class action's status. The Microsoft passage answers neither; ClusterMAX 3.0 holds the rating. No change.",
       "when": "2026-10-02"
+    },
+    {
+      "id": "b97ac2f3b0ee",
+      "pair": "cpp-investments x blackstone",
+      "why": "The 'unresolved' marker is the date of VoltaGrid's USD 72.6m round (VoltaGrid's page says 2020, The Logic 2021); Blackstone's passage dates the 2026 round and the early-backer list, not that round. Nothing to close. F-I4 accept 1 of 2.",
+      "when": "2026-10-03"
+    },
+    {
+      "id": "7483db2c124b",
+      "pair": "cpp-investments x voltagrid",
+      "why": "Same marker; VoltaGrid's ownership field lists the early backers without dating the USD 72.6m round. The open date stays open in the CPP dossier. F-I4 accept 2 of 2.",
+      "when": "2026-10-03"
+    },
+    {
+      "id": "8f7f20668e1d",
+      "pair": "habitat-energy x quinbrook",
+      "why": "The 'unresolved' marker is the Habitat sale process (JLL/BCG mandate, March 2026); Quinbrook's fund description lists Habitat as a QRIF holding and says nothing about the sale — the question stays open in both dossiers by design. F-I4 accept 3 of 3.",
+      "when": "2026-10-03"
     }
   ]
 }

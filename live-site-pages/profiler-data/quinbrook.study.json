@@ -1,0 +1,309 @@
+{
+ "schemaVersion": 2,
+ "slug": "quinbrook",
+ "title": "Quinbrook — Technology Study Guide",
+ "lastUpdated": "2026-10-03",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the investor that builds the asset itself",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Most capital-segment investors buy platforms; Quinbrook's funds originate, build and operate them, so the manager's own team is sometimes the buyer.",
+   "ps": [
+    "**The manager.** A founder-owned firm (two co-founders own the holding company) that raises closed-end funds from pensions and insurers and describes itself as 'developers, builders, owners, and operators'.",
+    "**The funds.** Five closed — including a UK fund for grid and solar assets, a global Net Zero Power Fund and a continuation fund — and a sixth, Quinbrook III, raising toward USD 4bn.",
+    "**The assets.** Supernode, a battery campus in Brisbane that is the largest operating battery in Australia's market; Rowan, a US hyperscale data-centre developer it founded and now shares with Blackstone; Habitat Energy, a battery optimiser it is reported to be selling; the UK's largest private fleet of synchronous condensers; Cleve Hill, the UK's largest solar park.",
+    "**Why it matters to a seller.** At Supernode the battery supplier's counterparty was Quinbrook. This guide teaches what a value-add infrastructure manager does differently, how a tolled battery earns, what a synchronous condenser is for, how a continuation fund recycles a project, and what 'significant minority stake' does and does not tell you."
+   ]
+  },
+  {
+   "id": "value-add",
+   "title": "Core, value-add and the developer-manager",
+   "kind": "prose",
+   "read": "The return a fund targets tells you what kind of risk it takes — and whether it signs equipment contracts.",
+   "ps": [
+    "Infrastructure funds sort themselves by risk. {{Core infrastructure}} buys finished, contracted assets for steady income. {{Value-add}} funds develop, build or repurpose assets and accept construction and commissioning risk for a higher return. One UK pension's committee paper for Quinbrook's second UK fund records a target net return of about 10% a year with a 6% cash yield — value-add territory.",
+    "A value-add manager that develops its own projects employs the people who choose sites, win permits, sign grid connections and procure equipment. Quinbrook does this through an affiliate, Private Energy Partners, which 'hosts our enhanced capability in project execution'. That is why Supernode's battery supply agreement with CATL and the co-developed eight-hour product were announced by Quinbrook rather than by a portfolio company.",
+    "The trade-off is scale. Building one asset at a time is slower than buying platforms, and Quinbrook's regulatory assets are about USD 9bn against hundreds of billions at the segment's largest managers. It is a challenger by size and a specialist by method."
+   ]
+  },
+  {
+   "id": "tolled-battery",
+   "title": "How a tolled battery earns: Supernode's model",
+   "kind": "prose",
+   "read": "The owner builds and maintains the battery; the toller decides when it charges and discharges, and pays a fixed fee for the right.",
+   "ps": [
+    "A {{tolling agreement}} gives a counterparty — at Supernode, the retailer Origin Energy for Stages 1–2 and the state generator Stanwell for Stage 3 — the right to operate the battery in the market for a term (12 and 15 years here) in exchange for a fixed payment. The owner carries construction, availability and degradation risk; the toller carries price risk.",
+    "Because the revenue is fixed and long-dated, banks will lend against it: Supernode's first two stages were financed with A$722m of project debt and the third with A$469m. Lenders hired an independent engineer to review the battery supplier, the warranty and the degradation curve before the money flowed.",
+    "The alternative — merchant operation, where the owner itself trades energy and services — pays more in good years and nothing in bad ones. Quinbrook chose tolls at Supernode and kept the merchant skill in-house through Habitat Energy, the optimiser it owns. Supernode's own release names Habitat's platform as its optimisation technology."
+   ]
+  },
+  {
+   "id": "energy-versus-power",
+   "title": "Energy and power: reading Supernode's three stages",
+   "kind": "bars",
+   "read": "MWh is how much a battery stores; MW is how fast it delivers. Divide one by the other for duration.",
+   "unit": "MWh of storage",
+   "intro": "Supernode's stages as Quinbrook reports them; the ratio shows the design duration.",
+   "items": [
+    {
+     "label": "Stage 1 (Origin, 12-year toll)",
+     "sub": "619 MWh ÷ 260 MW ≈ 2.4 h",
+     "v": 619
+    },
+    {
+     "label": "Stage 2 (Origin; Stages 1–2 = 520 MW / 1,858 MWh)",
+     "sub": "1,239 MWh ÷ 260 MW ≈ 4.8 h",
+     "v": 1239
+    },
+    {
+     "label": "Stage 3 (Stanwell, 15-year toll; 2027)",
+     "sub": "1,216 MWh ÷ 260 MW ≈ 4.7 h",
+     "v": 1216
+    },
+    {
+     "label": "Stage 4 — EnerQB (planned)",
+     "sub": "8-hour product co-developed with CATL; size not announced",
+     "v": 0
+    }
+   ]
+  },
+  {
+   "id": "long-duration",
+   "title": "Why an eight-hour battery is a different product",
+   "kind": "prose",
+   "read": "Duration changes the chemistry trade-offs, the revenue stack and the competitor set.",
+   "ps": [
+    "A two-hour battery earns mostly from fast services and the evening peak; an eight-hour battery is built to shift a whole afternoon of solar into the night and to replace a gas peaker's firming role. The longer the duration, the more the cost is dominated by cells and the less by inverters and grid connection.",
+    "Quinbrook and CATL co-developed 'EnerQB', an eight-hour system Quinbrook says is named for it, with more than 3 GW planned across its Australian sites and a first deployment at Supernode's fourth stage. The same idea underpins its proposed Gladstone hub, which pairs 780 MW of eight-hour storage with fast-start gas turbines and synchronous-condenser capability.",
+    "The competitors change with duration: at eight hours, {{LFP}} lithium systems compete with flow batteries, iron-air and pumped hydro. A manager that co-develops a product with a cell maker is betting on one chemistry and one supplier — a concentration a buyer of finished platforms would never carry."
+   ]
+  },
+  {
+   "id": "synchronous-condensers",
+   "title": "What a synchronous condenser does — and why a grid pays for one",
+   "kind": "prose",
+   "read": "A spinning machine that generates no energy but keeps the grid stable.",
+   "ps": [
+    "A {{synchronous condenser}} is a large synchronous motor spinning freely on the grid. It stores energy in its rotating mass ({{inertia}}), so when a fault or a sudden loss of generation jolts the system frequency, the machine's momentum resists the change for the critical first seconds. It also supplies the short-circuit current that lets protection equipment detect and clear faults, and it absorbs or injects reactive power to hold voltage.",
+    "Coal and gas plants used to provide these services for free as a by-product of generating. As wind and solar — which connect through inverters and have no spinning mass — replace them, the grid operator must buy stability separately. Great Britain's operator did so through 'Stability Pathfinder' tenders with ten-year, inflation-linked contracts; Ireland's operator did the same with its Low Carbon Inertia Services contracts.",
+    "Quinbrook calls itself the largest private owner of synchronous condensers in the UK: one in Wales, four in Scotland, two more being built, and one in Ireland. The revenue is a fixed availability payment from the grid operator, which is why banks lend against it (GBP 120m in 2024, GBP 156m in 2026). For a supplier, the buyer is Quinbrook's project company with Siemens and others as equipment makers."
+   ]
+  },
+  {
+   "id": "powered-land",
+   "title": "Powered land: founding a data-centre developer",
+   "kind": "prose",
+   "read": "The asset a hyperscaler wants is a site with power secured; Quinbrook's thesis is that an energy developer can deliver that faster than a real-estate developer.",
+   "ps": [
+    "Rowan Digital Infrastructure began as a joint venture Quinbrook formed in 2020 and became wholly owned when Quinbrook brought the team in-house in 2023. Its business is 'powered land' — assembling large sites (1,350 acres at Temple, Texas; 2,000 acres at Frederick, Maryland), securing utility capacity (400 MW with AEP at its San Antonio campus) and building turnkey halls for hyperscale tenants.",
+    "Each campus is financed on its own: nearly USD 3bn for Temple in May 2026, USD 975m, 1.2bn and 925m for the Maryland phases in 2025. Under its Green Finance Framework Rowan raised USD 4.4bn in a year. Debt at that scale means the developer, not the fund, is the borrower, and its lenders' engineers review the electrical design.",
+    "In April 2026 funds affiliated with Blackstone bought 'a significant minority stake'. No party disclosed the percentage or price; press reports of 49% and about USD 3.8bn excluding debt are reports, not announcements. Quinbrook kept the chairmanship and a board seat. The lesson is a recapitalisation, not an exit: the developer had outgrown one fund's capacity and brought in a second owner."
+   ]
+  },
+  {
+   "id": "continuation-fund",
+   "title": "The continuation fund: how a manager sells to itself",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "A GP-led secondary moves an asset from an old fund to a new one run by the same manager — useful, and worth reading carefully.",
+   "ps": [
+    "**The mechanics.** Quinbrook's first fund owned 51% of the Gemini solar-plus-storage project in Nevada and a pipeline of development projects. In 2024 a new vehicle, the Valley of Fire Fund, raised USD 600m from Blackstone Strategic Partners and Ares and bought those assets from the first fund, which returned cash to its investors.",
+    "**Why do it.** The first fund's clock was running out while the assets still had growth ahead; a {{continuation fund}} lets the manager keep operating them with fresh capital and gives old investors liquidity. The 49% of Gemini had already been sold to a Dutch pension fund in 2022.",
+    "**Why read carefully.** The manager sits on both sides of the sale, so the price is set by the new investors' due diligence rather than an open auction; prices are usually undisclosed, as here. For a seller to the project, nothing changed at Gemini — Primergy still operates it — but the owner's clock was reset."
+   ]
+  },
+  {
+   "id": "optimiser-for-sale",
+   "title": "Owning an optimiser, then selling it",
+   "kind": "prose",
+   "read": "Habitat Energy is the corpus's top-ranked ERCOT optimiser and the asset its owner is reported to be selling.",
+   "ps": [
+    "A {{battery optimiser}} operates other people's batteries in wholesale markets for a share of the revenue, often with a floor guaranteed through a utility or insurer. Habitat says it has 5.5 GW under contract across the UK, US and Australia and was ranked first in ERCOT by an independent benchmark in late 2025.",
+    "Quinbrook bought Habitat outright in 2021 and holds it inside its UK fund's holding group, whose accounts show Habitat's optimisation revenue at about GBP 4.2m in 2024, growing 80%. In early 2026 Quinbrook sold Habitat's sister aggregator Flexitricity to Drax for GBP 36m of enterprise value, and a trade report in March said advisers had been hired to sell Habitat too. Seven months later nothing public has followed, and the UK accounts of Habitat and its holding group were late.",
+    "Two numbers show how the same sale reads differently from two sides: Drax described Flexitricity as about 0.9 GW under management; Quinbrook said its contracted portfolio grew to about 1.3 GW. Both are recorded; neither party reconciled them. A UK sale of this kind also needs approval under the National Security and Investment Act, which Flexitricity obtained."
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test: where Quinbrook passes and where it fails",
+   "kind": "table",
+   "read": "Unusually for the capital segment, the manager passes the test at one asset.",
+   "intro": "Applying the test to Quinbrook's positions in October 2026.",
+   "cols": [
+    "Position",
+    "Does Quinbrook decide the equipment?",
+    "Who to sell to"
+   ],
+   "rows": [
+    [
+     "Supernode (developed by Quinbrook)",
+     "Yes, through its development affiliate — the CATL and GE Vernova contracts are Quinbrook's",
+     "Quinbrook / Private Energy Partners for Stage 4 and the Gladstone hub"
+    ],
+    [
+     "Synchronous condensers (UK, Ireland)",
+     "Yes — Quinbrook project companies with a development partner",
+     "Quinbrook's UK team and Welsh Power"
+    ],
+    [
+     "Rowan (majority, Blackstone minority)",
+     "No — Rowan's engineers and its lenders' reviewers",
+     "Rowan's design and construction team"
+    ],
+    [
+     "Primergy / Gemini (51% via the continuation fund)",
+     "No — Primergy develops and operates",
+     "Primergy procurement"
+    ],
+    [
+     "Habitat Energy (for sale)",
+     "No — a service company that buys software and people, not hardware",
+     "Habitat, mindful that a new owner may arrive"
+    ],
+    [
+     "Cleve Hill, Mallard Pass, Uskmouth",
+     "Partly — Quinbrook project companies with EPC contractors",
+     "The project companies and their EPCs"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — no dates, names or fund sizes.",
+   "cards": [
+    {
+     "q": "What separates a {{value-add}} infrastructure fund from a {{core infrastructure}} fund?",
+     "a": "Value-add develops, builds or repurposes assets and accepts construction risk for a higher target return; core buys finished, contracted assets for steady income."
+    },
+    {
+     "q": "In a {{tolling agreement}}, who carries price risk and who carries availability risk?",
+     "a": "The toller carries price risk because it operates the battery in the market; the owner carries construction, availability and degradation risk and receives a fixed payment."
+    },
+    {
+     "q": "Why can a battery owner borrow more against a toll than against merchant revenue?",
+     "a": "The toll is a fixed, long-dated payment from a creditworthy counterparty, so lenders can size debt to it; merchant revenue varies with prices."
+    },
+    {
+     "q": "What does a {{synchronous condenser}} provide that an inverter-connected solar farm cannot?",
+     "a": "Rotating {{inertia}}, short-circuit current for protection and reactive power for voltage — stability services, not energy."
+    },
+    {
+     "q": "What is a {{continuation fund}} and what should a reader watch in one?",
+     "a": "A new vehicle run by the same manager that buys assets from the manager's older fund; watch the price, because the manager sits on both sides."
+    },
+    {
+     "q": "Why does duration change a battery's competitor set?",
+     "a": "Longer duration shifts cost toward cells and the job toward overnight shifting and firming, where flow, iron-air and pumped hydro compete with lithium."
+    },
+    {
+     "q": "What does 'significant minority stake' tell you, and what does it not?",
+     "a": "That the buyer owns less than half and more than a token; it does not tell you the percentage, the price or whether the figure was equity or enterprise value."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "A manager's own team signs a battery supply agreement for a campus its fund owns. Which kind of manager is this?",
+     "c": [
+      "A core infrastructure fund",
+      "A value-add developer-manager with in-house project execution",
+      "A listed utility",
+      "A sovereign wealth fund"
+     ],
+     "a": 1,
+     "why": "Only a manager that develops its own projects employs the people who procure equipment; core funds buy finished assets."
+    },
+    {
+     "q": "A retailer holds a 12-year toll on a battery and the owner receives a fixed fee. Who decides when the battery discharges?",
+     "c": [
+      "The owner",
+      "The toller",
+      "The grid operator",
+      "The battery supplier"
+     ],
+     "a": 1,
+     "why": "The toll transfers the right to operate the battery in the market to the toller; the owner keeps it available."
+    },
+    {
+     "q": "Why will a grid operator pay a fixed availability fee for a machine that generates no energy?",
+     "c": [
+      "It is a tax",
+      "Inverter-based generation removed the inertia and fault current that old plants provided free, so stability must now be bought",
+      "Energy is cheaper than capacity",
+      "It is a subsidy to the owner"
+     ],
+     "a": 1,
+     "why": "Synchronous condensers supply inertia, short-circuit current and voltage support that wind and solar do not."
+    },
+    {
+     "q": "A manager's old fund sells a project to a new fund the same manager runs. What is the main thing a careful reader checks?",
+     "c": [
+      "The project's capacity",
+      "Whether the price was set by independent new investors' diligence rather than an auction",
+      "The weather",
+      "The manager's logo"
+     ],
+     "a": 1,
+     "why": "In a continuation fund the manager is on both sides; the new investors' diligence stands in for a competitive price."
+    },
+    {
+     "q": "A data-centre developer raises USD 3bn of debt for one campus. Who reviews the electrical design before the money is drawn?",
+     "c": [
+      "The fund manager's investment committee",
+      "The lenders' independent engineer",
+      "The tenant's marketing team",
+      "The county council"
+     ],
+     "a": 1,
+     "why": "Construction lenders release money against certified milestones after their engineer reviews design, equipment and contractor."
+    },
+    {
+     "q": "Two companies describe the same sold business as 0.9 GW and 1.3 GW. What should a dossier do?",
+     "c": [
+      "Pick the larger",
+      "Pick the seller's",
+      "Record both and say no source reconciles them",
+      "Average them"
+     ],
+     "a": 2,
+     "why": "Different definitions (managed versus contracted) can both be true; stating both and the gap is more honest than choosing."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "value-add",
+   "d": "An infrastructure strategy that develops, builds or repositions assets, accepting construction and commissioning risk for a higher target return than core."
+  },
+  {
+   "t": "tolling agreement",
+   "d": "A contract in which a counterparty pays a fixed fee for the right to operate an asset — here a battery — in the market for a term, leaving the owner with availability and degradation risk."
+  },
+  {
+   "t": "synchronous condenser",
+   "d": "A free-spinning synchronous machine connected to the grid that supplies inertia, short-circuit current and reactive power without generating energy."
+  },
+  {
+   "t": "inertia",
+   "d": "The resistance of a power system's rotating machines to sudden frequency change, provided by their spinning mass in the first seconds after a disturbance."
+  },
+  {
+   "t": "continuation fund",
+   "d": "A new fund, run by the same manager, that buys assets from the manager's older fund so the old fund can return cash while the manager keeps operating the assets."
+  },
+  {
+   "t": "battery optimiser",
+   "d": "A service company that operates other owners' batteries in wholesale and ancillary markets for a share of revenue, often with a guaranteed floor."
+  }
+ ]
+}
