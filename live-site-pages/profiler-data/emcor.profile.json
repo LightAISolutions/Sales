@@ -1,0 +1,1075 @@
+{
+  "schemaVersion": 7,
+  "slug": "emcor",
+  "name": "EMCOR Group, Inc.",
+  "shortName": "EMCOR",
+  "categories": [
+    "epc"
+  ],
+  "website": "https://www.emcorgroup.com",
+  "headquarters": "Norwalk, Connecticut, USA (301 Merritt Seven)",
+  "employees": "~44,000 (31 December 2025; all in the United States after the UK sale — about 62% union under roughly 450 collective bargaining agreements); ~40,400 a year earlier",
+  "ownership": {
+    "type": "public",
+    "ticker": "NYSE: EME",
+    "notes": "Delaware corporation; Commission file 1-8267; fiscal year ends 31 December. 44,109,901 shares outstanding at 2026-07-24; non-affiliate market value about USD 17.26bn at 2025-06-30. Holders above 5%: BlackRock 8.03% and FMR 5.94% (2026 proxy); Vanguard disclaimed beneficial ownership in a March 2026 13G/A. Directors and officers together hold 0.73%."
+  },
+  "summary": "BOTTOM LINE UP FRONT: EMCOR is the largest US mechanical and electrical construction and facilities-services contractor — FY2025 revenue USD 16.99bn, record remaining performance obligations of USD 17.14bn at 30 June 2026 (up 43.9% in a year) — and the data-centre build is now its largest end market: the network and communications sector produced USD 973m of electrical and USD 799m of mechanical revenue in Q2 2026 alone, 58% and 35% of those segments, up from 50% and 22% a year earlier. Management raised FY2026 guidance twice to USD 20.0–20.5bn of revenue and USD 32.00–33.25 of diluted EPS after beating consensus by 25% in Q2. BACKGROUND. Norwalk, Connecticut; about 100 operating subsidiaries and 44,000 employees, 62% union; four US segments after the December 2025 sale of the UK business (USD 256.6m net proceeds, USD 144.9m gain). It bought Miller Electric (Jacksonville; ESOP-owned since 2012) for USD 865m cash on 3 February 2025 — USD 1.09bn of 2025 revenue — and five further electrical contractors in 2026 for USD 750m upfront (B&B, Sidney, Connelly, Giles, Schmidt; about USD 625m of trailing revenue). ENR ranks it second among specialty contractors behind Quanta (2024 revenue USD 14.57bn); EC&M ranks its electrical business third (USD 5.1bn of 2025 sales) behind Quanta and Rosendin. Filings name no customer; the chief executive says the data-centre customers are 'who you would think they would be' — the major cloud operators — across '17 electrical and seven mechanical data center markets'. Collection gap: network-and-communications RPO is disclosed only as a chart (about USD 4.46bn, 33% of total, at end-2025 per the Q4 call); the UK buyer is unnamed; no hyperscaler is named in any filing or call.",
+  "ecosystemRole": "We assess EMCOR as a build-segment incumbent on the record of two rankers — ENR's No. 2 specialty contractor and EC&M's No. 3 electrical contractor — and the one covered contractor that self-performs both the electrical and the mechanical scope of a data hall at scale: the switchgear, UPS and distribution on one side, the chilled-water plant, piping, air handling and fire protection on the other, with fabrication shops of up to 250,000 sq ft feeding them. In this corpus it is the largest procurement channel into the AIDC supply chain among specialty contractors, buying equipment and materials under its own purchase orders for fixed-price and GMP contracts, and the clearest public read on data-centre construction demand each quarter through its market-sector table.",
+  "productsAndServices": [
+    {
+      "name": "US electrical construction and facilities services",
+      "category": "Segment · USD 5.07bn FY2025 revenue (30%), 12.1% operating margin",
+      "description": "Design, integration, installation, start-up and maintenance of 'systems for electrical power transmission, distribution, and generation, including power cables, conduits, distribution panels, transformers, generators, uninterruptible power supply systems, and related switch gear and controls', premises electrical and lighting, low-voltage fire-alarm, security and process control, voice and data cabling, solar and EV-charging installation, and transit signalling — delivered through subsidiaries including Miller Electric (Florida and the Southeast), the Dynalectric companies (Arizona, Oregon, Colorado, Nevada, Ohio, San Diego and the Washington DC division in Sterling, Virginia), Forest Electric (New York and New Jersey), Gibson Electric, Baker Electric and the five 2026 acquisitions. Network and communications — 'including data centers, data and fiber projects, and cabling' — was 48% of segment revenue in FY2025 (USD 2,461.9m) and 58% in Q2 2026 (USD 973.0m).",
+      "highlights": [
+        "Q2 2026: revenue USD 1,662.5m (+24.0%), operating income USD 231.4m, margin 13.9% (11.8% a year earlier); RPO USD 6.27bn at 30 June 2026 (USD 3.07bn at end-2024)",
+        "FY2025 margin dipped to 12.1% from 13.4% on 'lower profitability on certain projects in new geographies where we encountered reduced labor productivity or availability while investing in the development of a workforce' plus about 80 bp of Miller amortisation",
+        "Miller Electric contributed USD 1.09bn of 2025 revenue and about USD 1.0bn of RPO at acquisition; Dynalectric's DC division employs about 2,500 in Loudoun County's data-centre market (trade press)",
+        "Guzzi: 'We operate in 17 electrical and seven mechanical data center markets and expect to add a few more'; roughly 'two-thirds of the electrical division's total quarterly revenue growth' in Q1 2026 came from data centres (Zacks)"
+      ],
+      "positioning": "EC&M's No. 3 electrical contractor on 2025 sales of USD 5.1bn (+42.5%), behind Quanta (USD 23.0bn) and Rosendin (USD 5.5bn) and ahead of Everus, MYR, IES, M.C. Dean, MMR and Faith Technologies; the 10-K names APi, Comfort Systems, Dycom, Everus, IES, MasTec, MYR, Quanta and Tutor Perini as competitors. Differentiation is union craft that 'will travel themselves' into rural campus markets, a decentralised subsidiary model that keeps local supervision, and the mechanical scope under the same roof.",
+      "soldThrough": "Direct contracts with owners and developers and as subcontractor to general contractors and construction managers; 'a majority of our revenues are derived from projects requiring competitive bids'; fixed-price, GMP and cost-plus contracts",
+      "targetSegments": [
+        "Network and communications (data centres) — 48% of FY2025 segment revenue",
+        "Healthcare",
+        "Manufacturing and industrial",
+        "Commercial, institutional, transportation"
+      ],
+      "roadmap": "Five 2026 electrical acquisitions (about USD 625m of trailing revenue; USD 250–275m expected in H2 2026); Q3 2026 results expected Thursday 29 October 2026 (inferred from cadence; no notice yet)"
+    },
+    {
+      "name": "US mechanical construction and facilities services",
+      "category": "Segment · USD 7.05bn FY2025 revenue (42%), 12.8% operating margin",
+      "description": "HVAC and refrigeration 'including both traditional mechanical systems as well as geothermal solutions', clean-room process ventilation, fire protection and suppression, 'plumbing, process and high-purity piping systems', controls and filtration, water and wastewater treatment, central plants 'including manufacturing and installing sheet metal air handling systems', millwright, and steel fabrication and erection — the scope that in a data hall covers the chilled-water plant, piping, air handling, fire protection and the liquid-cooling distribution. Subsidiaries with mission-critical practices include Upland Mechanical (250,000 sq ft fabrication facility), Batchelor & Kimball (90,000 sq ft prefabrication plant), Bahnson, Shambaugh & Son with Progressive Pipe Fabricators, Tucker Mechanical and the University Mechanical companies. Network and communications was 23% of segment revenue in FY2025 (USD 1,670.4m) and 35% in Q2 2026 (USD 799.3m), having 'more than doubled year-over-year'.",
+      "highlights": [
+        "Q2 2026: revenue USD 2,300.9m (+31.1%), operating income USD 286.6m, margin 12.5% (13.6% a year earlier); RPO USD 9.37bn — 55% of the group total",
+        "The 110 bp margin decline in H1 2026 was 'a change in project mix' — more construction-manager and prime-contractor roles at lower margins and 'an increase in the number of guaranteed maximum price and cost plus contracts, particularly in newer geographies or on projects where design or scope is still evolving'",
+        "Guzzi: AI data centres carry 'a multiplier of 1.5 to 2' on mechanical scope versus traditional cloud builds, 'probably 1.5' on electrical",
+        "FY2025 gross profit gains came from 'investments in virtual design and construction, prefabrication, and automation… the most significant increase in gross profit coming from network and communications'"
+      ],
+      "positioning": "The larger of the two construction segments and the one with the AI multiplier; competes with Comfort Systems USA (technology 58% of Q2 2026 revenue), APi and Southland rather than with the GCs. Of the covered EPC and GC set only EMCOR self-performs mechanical and electrical at this scale.",
+      "soldThrough": "Direct owner contracts and subcontracts to general contractors; increasingly GMP and cost-plus where 'design is still changing'",
+      "targetSegments": [
+        "Network and communications (data centres)",
+        "High-tech manufacturing (semiconductor, biotech, EV chain) — USD 998m FY2025",
+        "Manufacturing and industrial",
+        "Healthcare, institutional, water and wastewater"
+      ],
+      "roadmap": "Fabrication facilities 'leased with a payback target of three years or less'; capex growing 28–30% a year against 14–15% revenue growth (Laguna conference, September 2026)"
+    },
+    {
+      "name": "US building services",
+      "category": "Segment · USD 3.12bn FY2025 revenue (18%), 6.0% operating margin",
+      "description": "Maintenance and repair of 'mechanical, electrical, plumbing, fire safety, and building automation systems', HVAC retrofits, energy-efficiency programmes, commercial and government site-based operations and facilities management; 77% mechanical services, 18% commercial site-based, 5% government site-based (NARA, FDIC, GAO and other federal buildings). Nine 2025 tuck-ins added building-automation and controls companies.",
+      "highlights": [
+        "Q2 2026: revenue USD 837.7m (+5.6%), operating income USD 63.4m, margin 7.6%",
+        "RPO USD 1.36bn at 30 June 2026; service RPO limited to notice periods where cancellable",
+        "Competes 'with entities such as APi Group Corporation, Comfort Systems USA, Inc., and Service Logic LLC, as well as Carrier Global Corporation and Trane Technologies plc' in mechanical services"
+      ],
+      "positioning": "The recurring-revenue base under the construction cycle — the lifecycle layer FTI ON imitates at a fraction of the scale.",
+      "soldThrough": "Multi-year service agreements and federal site-based contracts with termination-for-convenience risk",
+      "targetSegments": [
+        "Commercial property owners",
+        "Federal agencies",
+        "Mission-critical operators"
+      ],
+      "roadmap": "Building-automation acquisitions continue (Southeast company, H1 2026)"
+    },
+    {
+      "name": "US industrial services",
+      "category": "Segment · USD 1.27bn FY2025 revenue (7%), 2.0% operating margin",
+      "description": "Refinery and petrochemical turnarounds, specialty welding, overhaul of alkylation, cracking and coking units, design, manufacture and repair of shell-and-tube heat exchangers (Ohmstede), refractory and acid-proofing, and 'renewable energy services, including large scale solar projects, energy storage, and waste to biogas solutions'. Brands include Ohmstede, AltairStrickland, Repcon, Rabalais and MOR PPM.",
+      "highlights": [
+        "Q2 2026: revenue USD 353.8m (+25.9%), operating income USD 9.6m (2.7%) after a loss-making Q2 2025; work-in-process rising on 'greater new build heat exchanger orders'",
+        "Guzzi (Q2 2026): the autumn turnaround season 'will not be as strong as it normally can be because of what's happening in the Middle East'",
+        "MSHA imminent-danger order to MOR PPM at the Sivells Bend mine, Texas, 28 July 2026 — no injuries (8-K)"
+      ],
+      "positioning": "The lowest-margin segment and the one furthest from the AIDC chain; relevant here only for its energy-storage and solar service line, which the 10-K names without figures.",
+      "soldThrough": "Direct contracts with refineries and petrochemical plants",
+      "targetSegments": [
+        "Gulf Coast refining and petrochemicals",
+        "Renewables and storage owners (unquantified)"
+      ],
+      "roadmap": "Heat-exchanger new-build backlog growing (H1 2026)"
+    },
+    {
+      "name": "Acquisition programme — Miller Electric and the 2026 electrical roll-up",
+      "category": "Capital deployment",
+      "description": "EMCOR buys regional specialty contractors and leaves them under their own names and leaders. Miller Electric Company (Jacksonville, founded 1928; ESOP-owned since 2012) was bought from its ESOP trust and the Walden and Brown family trusts for USD 865m cash on 3 February 2025 (USD 876.8m after adjustments; about USD 805m of 2024 revenue, USD 80m of EBITDA, USD 755m of RPO at announcement; 90% of revenue in Florida and the Southeast; 'more than 1,000 clients in sectors like data centers, manufacturing, and healthcare'); it reports to Dan Fitzgibbons with Henry K. Brown remaining CEO. In 2026 five electrical contractors — B&B Electric (Wisconsin), Sidney Electric (Ohio), Connelly Electric (Illinois), Giles Electric (Daytona Beach, folded into Miller) and Schmidt Electric (Austin, 'data center focus') — were acquired for USD 750m upfront with up to USD 90m of earn-outs: about USD 625m of trailing revenue, USD 105m of EBITDA and 1,500 employees. Nine 2025 tuck-ins cost USD 182.1m.",
+      "highlights": [
+        "Miller's 2025 contribution: USD 1.09bn of revenue and USD 21.3m of operating income after USD 40.5m of amortisation; intangibles USD 475m (customer relationships USD 280m over 16 years)",
+        "Miller's Flexential relationship spans five of six Atlanta sites plus Jacksonville, Tampa and Charlotte — 'white space fit-outs' (Miller's own news page)",
+        "The UK business (USD 471m of 2025 revenue) was sold on 1 December 2025 for USD 256.6m net, buyer unnamed; proceeds redirected to US M&A and prefabrication",
+        "Funding: cash on hand (USD 924m at 30 June 2026) and an undrawn revolver; total debt USD 6.1m"
+      ],
+      "positioning": "The roll-up is explicitly geographic — 'low- and medium-voltage contractors to expand its geographic reach and strengthen market density' — buying the local supervision that Guzzi calls the real bottleneck rather than the labour brokers it refuses to use.",
+      "soldThrough": "Not applicable — internal capital allocation (acquisitions, capex, dividends, buybacks roughly 50/50 since 2017)",
+      "targetSegments": [
+        "Electrical contractors in Texas, the Midwest and the Southeast",
+        "Mechanical and building-automation tuck-ins"
+      ],
+      "roadmap": "Schmidt and Sidney were pending at 30 July 2026 and now appear on the EMCOR Construction roster; H2 2026 contribution USD 250–275m"
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-10-02",
+      "category": "financial",
+      "headline": "Regular quarterly dividend of USD 0.40 declared, payable 30 October to holders of record 15 October; no Q3 2026 earnings-date notice issued yet (precedent: notice 16 October 2025 for a 30 October release)",
+      "read": "The Q3 release is expected Thursday 29 October by cadence — an inference until the company's notice lands around 15–16 October.",
+      "source": "https://emcorgroup.com/investor-relations/press-releases/2026-news/emcor-group-inc-declares-regular-quarterly-dividend-4"
+    },
+    {
+      "date": "2026-09-17",
+      "category": "market",
+      "headline": "At Morgan Stanley's Laguna conference Guzzi says an AI data centre needs 1.5–2× the mechanical and 1.25–1.5× the electrical scope of a cloud build, that EMCOR is present in 50–60% of relevant markets electrically and 40–50% mechanically, that 'supervision capacity, not the availability of tradespeople' is the bottleneck, and that gas turbines are 'largely sold out through 2031'",
+      "read": "The clearest public framing of why AI campuses expand a mechanical contractor's scope and why power, not labour, is the long-run constraint.",
+      "source": "https://www.investing.com/news/transcripts/emcor-at-morgan-stanley-laguna-conference-ai-data-centers-drive-growth-93CH-4906082"
+    },
+    {
+      "date": "2026-09-16",
+      "category": "market",
+      "headline": "EC&M 2026 Top 50 Electrical Contractors: EMCOR No. 3 on 2025 electrical sales of USD 5.1bn (+42.46%), behind Quanta (USD 23.0bn) and Rosendin (USD 5.5bn)",
+      "read": "Electrical-only sales are less than a third of the group; the ranking understates EMCOR's data-centre position because the mechanical half sits outside it.",
+      "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf"
+    },
+    {
+      "date": "2026-08-17",
+      "category": "legal",
+      "headline": "IBEW Local 357 files an NLRB representation petition for a ten-person controls unit at Mesa Energy Systems d/b/a EMCOR in Las Vegas (case 28-RC-393141)",
+      "read": "A small matter, but the only labour-board item in the record of a company that is 62% union by design.",
+      "source": "https://www.nlrb.gov/case/28-RC-393141"
+    },
+    {
+      "date": "2026-07-31",
+      "category": "incident",
+      "headline": "8-K: MSHA imminent-danger order (28 July) to subsidiary MOR PPM at the Sivells Bend mine, Texas — a welder working 25 feet up on a forklift-lifted platform; no injuries",
+      "read": "Routine mine-safety disclosure; the industrial-services unit, not the data-centre business.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000115/eme-20260728.htm"
+    },
+    {
+      "date": "2026-07-30",
+      "category": "financial",
+      "headline": "Q2 2026: record revenue USD 5.15bn (+19.8%, organic +19.6%), operating margin 10.6%, diluted EPS USD 9.06 (+34.8%) against consensus USD 7.23; RPO USD 17.14bn (+43.9%); FY2026 guidance raised to USD 20.0–20.5bn, 9.5–9.8% margin and EPS USD 32.00–33.25; shares +18% on the day",
+      "read": "Network and communications revenue rose 45% in electrical and more than doubled in mechanical — the quarter the AI build showed up in both segments at once.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000112/eme-ex991_2026630xq2.htm"
+    },
+    {
+      "date": "2026-07-30",
+      "category": "ma",
+      "headline": "Five 2026 electrical acquisitions disclosed — B&B Electric, Sidney Electric, Connelly Electric, Giles Electric and Schmidt Electric: about USD 625m of trailing revenue, USD 105m of EBITDA, USD 750m upfront, 1,500 employees; two closed in July, two pending in Q3",
+      "read": "The largest electrical roll-up since Miller, aimed at Texas, the Midwest and the Southeast where the campuses are.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000110/eme-20260630.htm"
+    },
+    {
+      "date": "2026-06-26",
+      "category": "market",
+      "headline": "Shares fall 6.8% as investors trim 'richly valued engineering and data-center construction names'; insider sales of USD 38.9m including USD 26.3m by Guzzi",
+      "read": "The stock trades on AI-capex sentiment regardless of backlog; the sales were pre-planned filings, not guidance.",
+      "source": "https://www.quiverquant.com/news/EMCOR+Group+Slides+As+Investors+Appear+To+Rotate+Out+Of+High-Flying+Infrastructure+Contractors"
+    },
+    {
+      "date": "2026-06-04",
+      "category": "corporate",
+      "headline": "Annual meeting re-elects nine directors (Pat Roche of Moog newly among them); say-on-pay approved; EY ratified",
+      "read": "No governance friction; Guzzi remains chairman, president and CEO with no announced successor.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000085/eme-20260604.htm"
+    },
+    {
+      "date": "2026-04-29",
+      "category": "financial",
+      "headline": "Q1 2026: revenue USD 4.63bn (+19.7%), EPS USD 6.84 against consensus USD 5.85; RPO USD 15.62bn; FY2026 guidance raised to USD 18.5–19.25bn and EPS USD 28.25–29.75",
+      "read": "Network and communications revenue up nearly 50%, with mechanical N&C up 86%.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000048/eme-ex991_2026331xq1.htm"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "corporate",
+      "headline": "2026 proxy: BlackRock 8.03% and FMR 5.94% are the only 5% holders; Vanguard disclaimed beneficial ownership on 26 March; CEO 2025 pay USD 14.38m",
+      "read": "A widely held register with no controlling shareholder.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000114036126015809/ny20062562x1_def14a.htm"
+    },
+    {
+      "date": "2026-04-16",
+      "category": "market",
+      "headline": "Stifel raises its target to USD 901: data centres 'approximately 30% of the company's backlog' at end-2025; Miller amortisation and a Q4 2025 'challenged project' roll off",
+      "read": "Sell-side consensus on data-centre exposure sits at roughly a third of backlog and of US construction revenue.",
+      "source": "https://www.investing.com/news/analyst-ratings/stifel-raises-emcor-group-stock-price-target-to-901-on-data-center-strength-93CH-4618161"
+    },
+    {
+      "date": "2026-02-26",
+      "category": "financial",
+      "headline": "FY2025: record revenue USD 16.99bn (+16.6%), operating income USD 1.71bn (10.1%; 9.4% excluding the USD 144.9m UK gain), diluted EPS USD 28.19 (non-GAAP USD 25.87 against consensus USD 25.19); RPO USD 13.25bn; network and communications RPO 'a record $4.46 billion… nearly 60% year-over-year'; initial FY2026 guidance USD 17.75–18.5bn and EPS USD 27.25–29.25",
+      "read": "Shares fell about 3.5% on guidance read as conservative — the pattern of 2025: beats punished, raises rewarded late.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000027/eme-ex991_20251231xq4.htm"
+    },
+    {
+      "date": "2025-12-18",
+      "category": "financial",
+      "headline": "Quarterly dividend raised 60% to USD 0.40 from Q1 2026 and buyback authorisation increased by USD 500m to USD 3.65bn cumulative",
+      "read": "Capital return stepped up as the UK proceeds arrived.",
+      "source": "https://emcorgroup.com/investor-relations/press-releases/2025-news/emcor-group-inc-announces-dividend-increase-and-increase-in-share-repurchase-authorization"
+    },
+    {
+      "date": "2025-12-01",
+      "category": "ma",
+      "headline": "Sale of EMCOR (UK) Limited and EMCOR Group (UK) plc completed for net proceeds of about USD 256.6m, a pre-tax gain of USD 144.9m; buyer not named in filings (trade press: OCS Group, about GBP 190m)",
+      "read": "EMCOR is now a US-only company; the UK's USD 471m of 2025 revenue is replaced by acquisitions.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm"
+    },
+    {
+      "date": "2025-10-30",
+      "category": "financial",
+      "headline": "Q3 2025: revenue USD 4.30bn (+16.4%), EPS USD 6.57 — a 1.2% miss against Zacks' USD 6.65 (in line per other trackers); guidance narrowed; shares fall 13–17% in the session",
+      "read": "Electrical revenue grew 52% while other segments grew single digits, and the market priced concentration risk.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000082/eme-ex991_2025930xq3.htm"
+    },
+    {
+      "date": "2025-07-31",
+      "category": "financial",
+      "headline": "Q2 2025: revenue USD 4.30bn (+17.4%), EPS USD 6.72 (+28%) against consensus USD 5.68; RPO USD 11.91bn; FY2025 EPS guidance raised to USD 24.50–25.75",
+      "read": "First full quarter with Miller inside the electrical segment.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000049/eme-ex991_2025630xq2.htm"
+    },
+    {
+      "date": "2025-04-30",
+      "category": "financial",
+      "headline": "Q1 2025: revenue USD 3.87bn (+12.7%), EPS USD 5.41 non-GAAP; RPO USD 11.75bn 'inclusive of $1.0 billion of RPOs from Miller Electric' (Miller added USD 183m of revenue and about USD 400m of data-centre RPO)",
+      "read": "The Miller book is largely data-centre work in the Southeast.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000032/eme-ex991_2025331xq1.htm"
+    },
+    {
+      "date": "2025-02-03",
+      "category": "ma",
+      "headline": "Miller Electric Company acquired for USD 865m in cash from its Employee Stock Ownership Trust and the Walden and Brown family trusts under a stock purchase agreement dated 13 January 2025; Miller becomes a wholly owned subsidiary under EMCOR Electrical Construction Services",
+      "read": "An ESOP seller with about USD 805m of revenue and USD 755m of RPO — the Southeast data-centre footprint in one purchase.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000006/eme-20250203.htm"
+    },
+    {
+      "date": "2025-01-27",
+      "category": "market",
+      "headline": "Shares fall 17% in the DeepSeek sell-off alongside Comfort Systems (−21%) — '60% to 70% of data-center-construction costs are tied to wiring, HVAC and other E&M work' (WSJ via syndication)",
+      "read": "The first demonstration that EMCOR trades as an AI-capex proxy.",
+      "source": "https://www.fool.com/investing/2025/02/03/emcor-stock-deepsunk-or-on-sale/"
+    }
+  ],
+  "strategyRead": [
+    "1. (High confidence) We assess that EMCOR's data-centre franchise is a two-trade position no covered peer matches: it installs both halves of the hall — the electrical chain from switchgear to UPS and the mechanical chain from chiller plant to liquid-cooling distribution — and the AI transition widens the mechanical half most. Basis: Q2 2026 network and communications revenue of USD 973m electrical and USD 799m mechanical; management's 1.5–2× mechanical multiplier; mechanical RPO at 55% of the USD 17.14bn total.",
+    "2. (High confidence) We assess that the strategy is to buy local supervision rather than to broker labour. Basis: Guzzi — 'we're not going to be the contractor that uses a labor broker'; 'our real bottleneck… is supervision'; Miller (USD 865m) and five 2026 electrical deals (USD 750m) all bought in the Southeast, Texas and the Midwest, left under their own names, with union craft that 'will travel themselves'. The acquisitions are geography and foremen, not technology.",
+    "3. (Moderate confidence) We assess that margin, not growth, is the next test. Basis: mechanical margin fell 110 bp in H1 2026 on more construction-manager roles and 'guaranteed maximum price and cost plus contracts… in newer geographies or on projects where design or scope is still evolving'; electrical margin was hit in 2025 by productivity in new geographies and a fixed-price 'challenged project' in a new market. Guidance of 9.5–9.8% assumes the mix stabilises; a second challenged project would reprice the stock faster than a revenue miss.",
+    "4. (Moderate confidence) We assess that the stock's repeated post-beat sell-offs (January 2025, October 2025, February and June 2026) reflect concentration pricing rather than operating doubt. Basis: electrical grew 52% while other segments grew single digits in Q3 2025; sell-side puts data centres at about 30% of backlog and 33% of US construction revenue; the company itself names a decline in data-centre capital spending as its first demand risk. Holders are paying for a cycle and exit on any sign it is slowing.",
+    "5. (Moderate confidence) We assess that EMCOR's visibility is lengthening with project size and that this cuts both ways. Basis: RPO completed within twelve months fell from about 85% to 75–76%, and in-year bookings from about 60% to 40–45% of RPO (management and Zacks). Longer, larger campus contracts mean two to three years of visibility — and more exposure to owner pauses, power delays and the local moratoria EC&M's 2026 survey calls a new risk factor.",
+    "6. (Low confidence) We assess that the industrial-services renewables line (solar, energy storage, biogas) will remain immaterial to the AIDC chain. Basis: the 10-K names it without a figure, the segment earns 2–3% margins, and no storage project is disclosed; EMCOR's relevance to battery sellers runs through the data-hall UPS and the generator-paralleling scope, not through a storage EPC practice."
+  ],
+  "relationships": [
+    {
+      "slug": "quanta-services",
+      "type": "competitor",
+      "note": "Named competitor in the 10-K; ENR's No. 1 specialty contractor (USD 23.67bn) to EMCOR's No. 2 (USD 14.57bn); EC&M No. 1 to No. 3.",
+      "context": "The 10-K lists Quanta among 'larger companies focused on providing electrical and/or mechanical construction services'. On ENR's 2025 Top 600 Quanta led with USD 23,672.8m of 2024 revenue against EMCOR's USD 14,566.1m; on EC&M's 2026 table Quanta's USD 23.0bn of electrical sales is 4.5 times EMCOR's USD 5.1bn. Quanta's franchise is transmission and utility; EMCOR's is inside the building.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm",
+      "status": "active"
+    },
+    {
+      "slug": "rosendin",
+      "type": "competitor",
+      "note": "EC&M 2026 No. 2 (USD 5.5bn, +49%) immediately above EMCOR's electrical business (No. 3, USD 5.1bn, +42%).",
+      "context": "Rosendin is the one private electrical contractor larger than EMCOR's electrical segment and, like EMCOR, union and prefabrication-led; it publishes a 15 GW data-centre record where EMCOR discloses only sector revenue. The two meet on hyperscale electrical packages in Virginia, Texas and Arizona.",
+      "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+      "status": "active"
+    },
+    {
+      "slug": "mastec",
+      "type": "competitor",
+      "note": "Named competitor in the 10-K; MasTec's record USD 21.4bn backlog (Q2 2026) is the peer figure analysts set beside EMCOR's USD 17.14bn RPO.",
+      "context": "Listed in the same 10-K competitor sentence as Quanta; Zacks pairs the two on backlog. MasTec's data-centre exposure is outside-the-fence (power and communications infrastructure) where EMCOR's is inside the hall.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm",
+      "status": "active"
+    },
+    {
+      "slug": "trane-technologies",
+      "type": "competitor",
+      "note": "Named competitor in mechanical services ('Carrier Global Corporation and Trane Technologies plc'); also the kind of OEM whose equipment EMCOR's mechanical subsidiaries install.",
+      "context": "The 10-K places Trane among the competitors to EMCOR's mechanical-services division alongside APi, Comfort Systems and Service Logic. No supply agreement is disclosed; the relationship on data-centre projects is installer-to-OEM in practice and competitor in service.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm",
+      "status": "active"
+    },
+    {
+      "slug": "faith-technologies",
+      "type": "competitor",
+      "note": "EC&M 2026 No. 9 (USD 2.28bn, +62.6%) — the merit-shop prefabrication-led rival to EMCOR's union electrical subsidiaries.",
+      "context": "Both name supervision and prefabrication as the constraint and the answer; FTI's five new 500,000 sq ft plants and ABC's No. 1 data-centre ranking by hours contrast with EMCOR's leased fabrication shops and union craft. They compete for the same hyperscale electrical packages in the Southeast and Midwest.",
+      "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+      "status": "active"
+    },
+    {
+      "slug": "blackrock",
+      "type": "investor",
+      "note": "Largest disclosed holder: 3,566,461 shares, 8.03% (13G/A, October 2025).",
+      "context": "A passive index holding reported in the 2026 proxy; FMR holds 5.94% and Vanguard disclaimed beneficial ownership in March 2026.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000114036126015809/ny20062562x1_def14a.htm",
+      "status": "active",
+      "scale": "8.03%"
+    },
+    {
+      "slug": "amd",
+      "type": "customer",
+      "note": "Historical: Dynalectric Colorado and Trautman & Shreve performed electrical and mechanical work on Xilinx's Longmont data-centre expansion (Xilinx is now part of AMD).",
+      "context": "Data Center Dynamics reported the two EMCOR subsidiaries teaming on the Xilinx Longmont expansion before AMD's 2022 acquisition of Xilinx; the page is behind a script wall and its date was not retrievable. Recorded as a historical reference, not a current engagement.",
+      "source": "https://www.datacenterdynamics.com/en/news/emcor-group-inc-subsidiaries-team-up-to-perform-electrical-and-mechanical-construction-for-expansion-of-xilinx-datacenter-2/",
+      "status": "historical"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Tariffs and trade policy",
+      "status": "in-effect",
+      "exposure": "The 10-K warns that 'changes in U.S. foreign trade policies could lead to the imposition of additional trade barriers and tariffs', that 'certain of our fixed price contracts do not allow us to adjust our prices and, as a result, increases in material costs could reduce our profitability', and that judicial review of executive-order tariffs could reverse policies again. No Section 232 or 301 line is named and no tariff cost is quantified; inventories rose in 2026 on 'advanced purchases of materials and equipment… to mitigate the impact of long lead times'.",
+      "mitigation": "Management states it will 'pass on price increases and protect ourselves through favorable contractual terms' and manage tariffs as it managed COVID-era supply disruption.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm"
+    },
+    {
+      "regime": "CHIPS and Science Act and Inflation Reduction Act appropriations",
+      "status": "in-effect",
+      "exposure": "'Our business may be adversely affected by… the failure to fully fund or implement legislation such as the CHIPS and Science Act of 2022 and the Inflation Reduction Act' — the high-tech manufacturing sector (semiconductor, biotech, EV chain) fell to USD 998m of mechanical revenue in 2025 from USD 1,453m in 2024 as fab and EV programmes slowed. No 45X or credit-transfer exposure is stated.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm"
+    },
+    {
+      "regime": "Multiemployer pension plans (ERISA withdrawal liability)",
+      "status": "in-effect",
+      "exposure": "About 62% of employees are union under roughly 450 collective bargaining agreements and the company contributes to about 200 multiemployer pension plans; the 10-K states that 'our potential liability for unfunded liabilities could be material' on withdrawal. The union model is also the stated competitive advantage in rural campus markets.",
+      "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm"
+    },
+    {
+      "regime": "Local data-centre moratoria and power availability",
+      "status": "in-effect",
+      "exposure": "The 10-K names 'the availability or price of electricity' as a risk to customers' data-centre buildouts; Guzzi (Q2 2026) says the company works where owners 'have power and they're willing to build power' — Virginia and Texas first — and that moratoria are 'difficult to maintain long term' given county tax revenues; EC&M's 2026 survey records moratoriums and permitting delays as a new risk factor for three-quarters of top electrical contractors.",
+      "source": "https://www.fool.com/earnings/call-transcripts/2026/07/30/emcor-eme-q2-2026-earnings-call-transcript/"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Segment results (USD millions, as filed)",
+      "specs": [
+        {
+          "band": "FY2025",
+          "label": "Electrical construction",
+          "value": "Revenue 5,074.3 (30%); operating income 612.0 (12.1%); FY2024 3,342.9 / 447.2 (13.4%)"
+        },
+        {
+          "band": "FY2025",
+          "label": "Mechanical construction",
+          "value": "Revenue 7,050.5 (42%); operating income 905.3 (12.8%); FY2024 6,405.7 / 799.6 (12.5%)"
+        },
+        {
+          "band": "FY2025",
+          "label": "Building services · Industrial · UK",
+          "value": "3,122.2 / 187.2 (6.0%) · 1,268.1 / 25.0 (2.0%) · 471.3 / 21.0 (4.4%, sold 2025-12-01); consolidated 16,986.4 / 1,713.4 (10.1%)"
+        },
+        {
+          "band": "Q2 2026",
+          "label": "Electrical · Mechanical",
+          "value": "1,662.5 / 231.4 (13.9%) · 2,300.9 / 286.6 (12.5%); building services 837.7 / 63.4 (7.6%); industrial 353.8 / 9.6 (2.7%); consolidated 5,154.9 / 547.3 (10.6%)"
+        },
+        {
+          "band": "Acquisition revenue",
+          "label": "Incremental",
+          "value": "FY2025 about 1,270 (Miller 1,110 of it); Q2 2026 169.2; H1 2026 403.3"
+        }
+      ],
+      "notes": "Operating income includes the USD 144.9m UK gain in FY2025 (85 bp of margin); non-GAAP FY2025 margin 9.4%."
+    },
+    {
+      "product": "Network and communications (data centres) by segment (USD thousands, as filed)",
+      "specs": [
+        {
+          "band": "Electrical",
+          "label": "FY2023 → FY2024 → FY2025",
+          "value": "934,455 (34%) → 1,442,877 (43%) → 2,461,883 (48%)"
+        },
+        {
+          "band": "Electrical",
+          "label": "Q2 2025 → Q2 2026 · H1 2026",
+          "value": "669,966 (50%) → 973,046 (58%) · 1,730,417 (56%)"
+        },
+        {
+          "band": "Mechanical",
+          "label": "FY2023 → FY2024 → FY2025",
+          "value": "410,397 (8%) → 818,991 (13%) → 1,670,355 (23%)"
+        },
+        {
+          "band": "Mechanical",
+          "label": "Q2 2025 → Q2 2026 · H1 2026",
+          "value": "389,676 (22%) → 799,293 (35%) · 1,413,117 (33%)"
+        },
+        {
+          "band": "Combined (derived)",
+          "label": "Share of consolidated revenue",
+          "value": "FY2025 4,132,238 = 24.3%; Q2 2026 1,772,339 = 34.4%"
+        },
+        {
+          "band": "RPO",
+          "label": "Network and communications",
+          "value": "'a record $4.46 billion' at 31 December 2025, 'nearly 60% year-over-year' (Q4 call) — about 33% of total RPO; 'approximately 85% of the network and communications work is directly tied to data center construction' (Zacks, 2025)"
+        }
+      ],
+      "notes": "The sector table is the corpus's only quarterly, audited read on data-centre construction spend by trade; N&C RPO in dollars is not disclosed in filings."
+    },
+    {
+      "product": "Remaining performance obligations (USD thousands)",
+      "specs": [
+        {
+          "band": "Series",
+          "label": "Total",
+          "value": "2024-12-31 10,102,199 · 2025-03-31 11,750,053 · 2025-06-30 11,914,388 · 2025-09-30 12,613,893 · 2025-12-31 13,253,664 · 2026-03-31 15,620,670 · 2026-06-30 17,143,101"
+        },
+        {
+          "band": "Mix",
+          "label": "30 June 2026",
+          "value": "Electrical 6,271,919 (36%); mechanical 9,366,637 (55%); building services 1,358,017 (8%); industrial 146,528 (1%)"
+        },
+        {
+          "band": "Timing",
+          "label": "30 June 2026",
+          "value": "Within one year 13,023,427; beyond one year 4,119,674 — conversion within twelve months has fallen from about 85% to 75–76%"
+        },
+        {
+          "band": "Definition",
+          "label": "10-K",
+          "value": "Includes original contract amounts and confirmed and pending change orders; construction RPO not reduced for cancellation rights 'due to the inherent substantial economic penalty'"
+        }
+      ],
+      "notes": "Acquisitions including Miller accounted for about USD 1.61bn of the 2025 increase; the UK sale removed USD 185.5m."
+    },
+    {
+      "product": "Delivery capacity — fabrication, workforce, fleet, safety",
+      "specs": [
+        {
+          "band": "Fabrication",
+          "label": "Subsidiary shops (Profile book, March 2026)",
+          "value": "Upland Mechanical >250,000 sq ft; Dynalectric Arizona 200,000 (180,000 sq ft Mesa facility opened 2023); Dynalectric Oregon 175,000; Gowan/Garrett 125,000; Batchelor & Kimball 90,000; Air Systems 70,000; Trautman & Shreve 60,000; Baker Electric 50,000; Tucker 40,000; Progressive Pipe Fabricators (Shambaugh) — no group total disclosed"
+        },
+        {
+          "band": "Workforce",
+          "label": "31 December 2025",
+          "value": "Approximately 44,000 employees, all US; 'approximately 62% of our employees are represented by various unions pursuant to approximately 450 collective bargaining agreements'; about 200 multiemployer pension plans"
+        },
+        {
+          "band": "Safety",
+          "label": "2025",
+          "value": "'nearly 100 million hours'; TRIR 'just under 1.0', about 60% below the BLS average of 2.4 for NAICS 2382; 'seventeenth consecutive year' below half the industry average; EMR not published"
+        },
+        {
+          "band": "Fleet and footprint",
+          "label": "2026",
+          "value": "Approximately 15,000 vehicles (14,400 at year-end 2025); about 100 operating subsidiaries; 'majority of our operations are conducted at leased properties… offices, warehouses, fabrication shops'"
+        },
+        {
+          "band": "Balance sheet",
+          "label": "30 June 2026",
+          "value": "Cash 924,411; total debt 6,115 (0.1% of capitalisation); stockholders' equity 4,079,944; goodwill 1,457,924; retainage receivable 944.5m at end-2025"
+        }
+      ],
+      "notes": "Guzzi (September 2026): fabrication facilities 'leased with a payback target of three years or less'; capex compounding 28–30% a year."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Anthony J. (Tony) Guzzi",
+      "title": "Chairman, President and Chief Executive Officer",
+      "photo": "images/execs/emcor-guzzi.png",
+      "background": [
+        "CEO since January 2011; President since October 2004 (COO 2004–2011); Chairman since June 2018; director since December 2009; age 61",
+        "President, North American Distribution and Aftermarket Division, Carrier Corporation (from August 2001); earlier engagement manager at McKinsey & Company",
+        "Lead director of Hubbell Incorporated; co-founder of the Johnny Mac Soldiers Fund; 2025 total compensation USD 14,380,630; owns 170,299 shares",
+        "On the model: 'We're not going to be the contractor that uses a labor broker and places labor around the country'; 'our real bottleneck… is supervision'"
+      ]
+    },
+    {
+      "name": "Jason R. Nalbandian",
+      "title": "Senior Vice President, Chief Financial Officer and Chief Accounting Officer",
+      "photo": "images/execs/emcor-nalbandian.png",
+      "background": [
+        "CFO since April 2024 (succeeding Mark A. Pompa); SVP and CAO since January 2022; Controller 2019–2022; joined May 2014 as Director of Accounting and Analysis; age 38",
+        "Previously Ernst & Young assurance practice; CPA; BS and MS in accounting, Fairfield University"
+      ]
+    },
+    {
+      "name": "Maxine L. Mauricio",
+      "title": "Executive Vice President, Chief Administrative Officer, General Counsel and Corporate Secretary",
+      "photo": "images/execs/emcor-mauricio.png",
+      "background": [
+        "General Counsel and Secretary since January 2016; EVP since February 2021; CAO since December 2023; joined 2002 as Assistant General Counsel from Ropes & Gray; age 54",
+        "Dartmouth BA; Harvard JD; director of Novanta Inc."
+      ]
+    },
+    {
+      "name": "Daniel Fitzgibbons",
+      "title": "President and Chief Executive Officer, EMCOR Electrical Construction Services",
+      "photo": "images/execs/emcor-fitzgibbons.png",
+      "background": [
+        "Miller Electric and the 2026 electrical acquisitions report to him; 'actively involved in EMCOR's acquisition program'",
+        "More than 35 years in the electrical industry 'with a specialty in communications and technology'; co-founded Communications & Data Services in 1992 (acquired by Gibson Electric 1998); President and CEO of Gibson Electric for 13 years from 2006",
+        "On Miller: 'By leveraging advanced technologies such as virtual design and construction, along with prefabrication techniques, they have a proven record of continually improving project efficiency'"
+      ]
+    },
+    {
+      "name": "Brian D. Batchelor",
+      "title": "President and Chief Executive Officer, EMCOR Mechanical Construction Services",
+      "photo": "images/execs/emcor-batchelor.png",
+      "background": [
+        "Former CEO of Batchelor & Kimball (Conyers, Georgia), which he 'grew fourfold… developing their manufacturing and fabrication capabilities' — the 90,000 sq ft prefabrication plant that now serves data centres",
+        "Earlier Johnson Controls engineer and Jones Day attorney; Vanderbilt BSME; Emory MBA and JD"
+      ]
+    },
+    {
+      "name": "Henry K. Brown",
+      "title": "Chief Executive Officer, Miller Electric Company",
+      "background": [
+        "Retained as CEO after the February 2025 sale; seller-side representative in the stock purchase agreement and beneficiary of the Henry K. Brown Trust I; Daniel A. Brown is Chairman and Ed Witt Jr. President and COO",
+        "'Joining forces with EMCOR will allow us to further enhance our services… in the evolving energy and infrastructure landscape' (January 2025); Miller's Brian Yarber is Vice President of Data Center Services"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "public",
+    "periods": [
+      {
+        "period": "Q2 2026 (quarter ended 30 June 2026)",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "USD 5,154.9m (+19.8%; organic +19.6%)",
+            "expected": "USD 4.73bn (Zacks consensus; MarketBeat and StockStory USD 4.71bn)",
+            "verdict": "beat",
+            "result": "Beat by 9%; electrical USD 1,662.5m vs USD 1.52bn and mechanical USD 2,300.9m vs USD 2.13bn estimates",
+            "kpi": "revenue",
+            "usdMillions": 5154.9,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Operating income",
+            "actual": "USD 547.3m, 10.6% margin (9.6% a year earlier)",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Electrical margin 13.9%; mechanical 12.5%",
+            "kpi": "operating-profit",
+            "usdMillions": 547.3,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Diluted EPS",
+            "actual": "USD 9.06 (+34.8%)",
+            "expected": "USD 7.23 (Zacks, Nasdaq, MarketBeat consensus; StockStory USD 7.20, Investing.com USD 7.25)",
+            "verdict": "beat",
+            "result": "Beat by 25.3%; shares +11% pre-market and +18.4% on the session (Investing.com)",
+            "kpi": "eps",
+            "usdMillions": 9.06,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Remaining performance obligations",
+            "actual": "USD 17,143.1m (+43.9% year on year; +10% sequential)",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Record; 95% of the increase organic (Zacks)",
+            "kpi": "backlog",
+            "usdMillions": 17143.1,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "FY2026 guidance",
+            "actual": "Revenue USD 20.0–20.5bn; operating margin 9.5–9.8%; diluted EPS USD 32.00–33.25",
+            "expected": "Pre-raise consensus EPS USD 29.31 and revenue USD 19.0bn (MarketBeat)",
+            "verdict": "beat",
+            "result": "Second raise of the year; the EPS midpoint beat consensus by 11.4% (StockStory)"
+          }
+        ],
+        "commentary": "Network and communications revenue rose 45% in electrical and more than doubled in mechanical. Mechanical margin fell 110 bp on project mix (more CM and prime roles; more GMP and cost-plus contracts in new geographies); electrical margin rose 210 bp. H1 2026 operating cash flow of USD 289.9m against USD 302.2m a year earlier reflects working capital on 'strong organic revenue growth'."
+      },
+      {
+        "period": "Q1 2026 (quarter ended 31 March 2026)",
+        "periodType": "quarter",
+        "periodEnd": "2026-03-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "USD 4,628.2m (+19.7%; organic +16.8%)",
+            "expected": "USD 4.22bn (Zacks); USD 4.20bn (MarketBeat, Investing.com, StockStory)",
+            "verdict": "beat",
+            "result": "Beat by about 10%",
+            "kpi": "revenue",
+            "usdMillions": 4628.2,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Diluted EPS",
+            "actual": "USD 6.84 (+30.0%)",
+            "expected": "USD 5.85 (Zacks, Nasdaq); USD 5.90 (MarketBeat, Investing.com)",
+            "verdict": "beat",
+            "result": "Beat by 16.9% against Zacks; trackers disagree on the day's move (+3.3% to +4.4% versus −1.8%)",
+            "kpi": "eps",
+            "usdMillions": 6.84,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Remaining performance obligations",
+            "actual": "USD 15,620.7m",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Guidance raised to USD 18.5–19.25bn revenue and EPS USD 28.25–29.75",
+            "kpi": "backlog",
+            "usdMillions": 15620.7,
+            "fxBasis": "as reported"
+          }
+        ],
+        "commentary": "Network and communications revenue up nearly 50%: about USD 240m of growth in electrical and USD 280m in mechanical (mechanical N&C +86%). Operating margin 8.7%, the seasonal low."
+      },
+      {
+        "period": "FY2025 (year ended 31 December 2025)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "USD 16,986.4m (+16.6%; organic +7.9%; about USD 1.27bn from acquisitions, USD 1.11bn of it Miller)",
+            "expected": "USD 16.81bn (Zacks consensus, 30 October 2025)",
+            "verdict": "beat",
+            "result": "Record; guidance had been USD 16.1–16.9bn at the start of the year",
+            "kpi": "revenue",
+            "usdMillions": 16986.4,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Operating income",
+            "actual": "USD 1,713.4m, 10.1% (non-GAAP USD 1.59bn, 9.4%, excluding the USD 144.9m UK gain)",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Up from USD 1,344.9m (9.2%)",
+            "kpi": "operating-profit",
+            "usdMillions": 1713.4,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income attributable",
+            "actual": "USD 1,272.8m",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Up from USD 1,007.1m",
+            "kpi": "net-income",
+            "usdMillions": 1272.8,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Diluted EPS",
+            "actual": "USD 28.19 GAAP; USD 25.87 non-GAAP",
+            "expected": "USD 25.19 non-GAAP (Zacks, 30 October 2025); USD 23.06 a year earlier (GuruFocus, February 2025)",
+            "verdict": "beat",
+            "result": "Q4 non-GAAP USD 7.19 against USD 6.68 consensus; shares −3.3% pre-market on 2026 guidance",
+            "kpi": "eps",
+            "usdMillions": 28.19,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Remaining performance obligations",
+            "actual": "USD 13,253.7m; network and communications 'a record $4.46 billion'",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Acquisitions about USD 1.61bn of the increase; UK sale removed USD 185.5m",
+            "kpi": "backlog",
+            "usdMillions": 13253.7,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Operating cash flow",
+            "actual": "USD 1,302.1m (USD 1,407.9m in 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Working-capital build on contracts previously billed ahead; retainage receivable USD 944.5m"
+          }
+        ],
+        "commentary": "Electrical margin fell to 12.1% on new-geography productivity and Miller amortisation; mechanical rose to 12.8% on VDC, prefabrication and automation. Q3 2025 was the year's one wobble: EPS USD 6.57 against Zacks' USD 6.65 and the shares fell 13–17%. Dividend USD 1.00; buybacks USD 578.9m."
+      },
+      {
+        "period": "FY2024 (year ended 31 December 2024)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "USD 14,566.1m (+15.8%)",
+            "expected": "USD 14.60bn (GuruFocus consensus, 25 February 2025)",
+            "verdict": "inline",
+            "result": "Fractionally below the consensus figure; record year",
+            "kpi": "revenue",
+            "usdMillions": 14566.1,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Operating income",
+            "actual": "USD 1,344.9m, 9.2%",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Up from 7.5% a year earlier",
+            "kpi": "operating-profit",
+            "usdMillions": 1344.9,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Diluted EPS",
+            "actual": "USD 21.52",
+            "expected": "USD 20.99 (GuruFocus consensus)",
+            "verdict": "beat",
+            "result": "Q4 EPS USD 6.32 against USD 5.76–5.79; shares +7.3%",
+            "kpi": "eps",
+            "usdMillions": 21.52,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Remaining performance obligations",
+            "actual": "USD 10,102.2m",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Electrical 31%, mechanical 54%",
+            "kpi": "backlog",
+            "usdMillions": 10102.2,
+            "fxBasis": "as reported"
+          }
+        ],
+        "commentary": "The year before Miller: 40,400 employees including 2,900 in the UK; network and communications 43% of electrical and 13% of mechanical revenue."
+      }
+    ],
+    "commentary": "Consensus figures are Zacks/Nasdaq where available with other trackers' spreads noted; the Q3 2025 'miss' exists only on Zacks' USD 6.65 (StockStory, Investing.com and MarketBeat had USD 6.53–6.57). Forward consensus at 4 October 2026: FY2026 EPS USD 32.98 (six estimates) and revenue about USD 20.3bn (StockAnalysis, ten analysts); FY2027 EPS USD 37.23; Q3 2026 EPS USD 8.33 and revenue USD 5.19bn. No reachable FY2027 revenue consensus."
+  },
+  "sources": [
+    {
+      "label": "EMCOR — Declares regular quarterly dividend (USD 0.40; payable 2026-10-30)",
+      "url": "https://emcorgroup.com/investor-relations/press-releases/2026-news/emcor-group-inc-declares-regular-quarterly-dividend-4",
+      "date": "2026-10-02"
+    },
+    {
+      "label": "Nasdaq/Zacks — EME earnings date and consensus (10/29/2026 estimated; FY2026 EPS USD 32.98; Q3 USD 8.33)",
+      "url": "https://api.nasdaq.com/api/analyst/EME/earnings-date",
+      "date": "2026-10-04"
+    },
+    {
+      "label": "StockAnalysis — EME forecast (FY2026 revenue USD 20.3bn, EPS USD 32.85; 10 analysts)",
+      "url": "https://stockanalysis.com/stocks/eme/forecast/",
+      "date": "2026-10-04"
+    },
+    {
+      "label": "MarketBeat — EMCOR earnings history and estimates",
+      "url": "https://www.marketbeat.com/stocks/NYSE/EME/earnings/",
+      "date": "2026-10-04"
+    },
+    {
+      "label": "Investing.com — EMCOR earnings page (next release listed 22 October 2026)",
+      "url": "https://www.investing.com/equities/emcor-group-inc-earnings",
+      "date": "2026-10-04"
+    },
+    {
+      "label": "Zacks via Yahoo — Comfort Systems vs. EMCOR (technology 58% of FIX revenue; EMCOR 'more balanced')",
+      "url": "https://sg.finance.yahoo.com/news/comfort-systems-vs-emcor-stock-124800312.html",
+      "date": "2026-09-29"
+    },
+    {
+      "label": "Investing.com — EMCOR at Morgan Stanley Laguna conference: AI data centers drive growth (1.5–2× mechanical; supervision bottleneck; turbines sold out through 2031)",
+      "url": "https://www.investing.com/news/transcripts/emcor-at-morgan-stanley-laguna-conference-ai-data-centers-drive-growth-93CH-4906082",
+      "date": "2026-09-17"
+    },
+    {
+      "label": "EC&M — 2026 Top 50 Electrical Contractors rankings table (EMCOR No. 3, 2025 sales USD 5,100,000,000, +42.46%)",
+      "url": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+      "date": "2026-09-16"
+    },
+    {
+      "label": "EC&M — Data Center Buildout Fuels Revenue Blowout: 2026 Top 50 special report (moratoriums as a new risk factor)",
+      "url": "https://www.ecmweb.com/top-50-electrical-contractors/article/55404067/data-center-buildout-fuels-revenue-blowout-ecms-2026-top-50-electrical-contractors-special-report",
+      "date": "2026-09-15"
+    },
+    {
+      "label": "Zacks via Yahoo — Will EMCOR's 19.6% organic growth stay elevated into 2027?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/emcors-19-6-organic-growth-151700275.html",
+      "date": "2026-09-11"
+    },
+    {
+      "label": "NLRB — Case 28-RC-393141, Mesa Energy Systems d/b/a Emcor (IBEW Local 357)",
+      "url": "https://www.nlrb.gov/case/28-RC-393141",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "Zacks via Yahoo — Could rising RPOs strengthen EMCOR's revenue growth prospects? (85% → 75–76% completed within 12 months)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/could-rising-rpos-strengthen-emcors-150600328.html",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "SEC — 8-K Item 1.04: MSHA imminent danger order to MOR PPM, Inc. (Sivells Bend mine)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000115/eme-20260728.htm",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "SEC — Q2 2026 Form 10-Q (segment and market-sector tables; RPO USD 17,143,101K; 2026 acquisitions note)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000110/eme-20260630.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "SEC — Q2 2026 earnings release (8-K Ex. 99.1): record revenue USD 5.15bn, EPS USD 9.06, guidance raised",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000112/eme-ex991_2026630xq2.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "EMCOR — Q2 2026 earnings presentation (five electrical acquisitions: ~USD 625M revenue, ~USD 105M EBITDA, USD 750M upfront)",
+      "url": "https://emcorgroup.com/download_file/view/f4d1195c-4f3e-4a08-991d-89aa1d1faa57/1",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Motley Fool — EMCOR Q2 2026 earnings call transcript",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/emcor-eme-q2-2026-earnings-call-transcript/",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Zacks via Yahoo — EME Q2 earnings beat estimates on broad-based growth (consensus USD 7.23 / USD 4.73bn)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/eme-q2-earnings-beat-estimates-164000756.html",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Investing.com — EMCOR Q2 2026 slides: record earnings drive major guidance raise (shares +18.42%)",
+      "url": "https://www.investing.com/news/company-news/emcor-q2-2026-slides-record-earnings-drive-major-guidance-raise-93CH-4825723",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "EMCOR — Sets second quarter 2026 earnings release date and webcast (notice cadence precedent)",
+      "url": "https://emcorgroup.com/investor-relations/press-releases/2026-news/emcor-group-inc-sets-second-quarter-2026-earnings-release-date-and-webcast",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "Quiver Quantitative — EMCOR slides as investors rotate out of high-flying infrastructure contractors (insider sales USD 38.9m)",
+      "url": "https://www.quiverquant.com/news/EMCOR+Group+Slides+As+Investors+Appear+To+Rotate+Out+Of+High-Flying+Infrastructure+Contractors",
+      "date": "2026-06-26"
+    },
+    {
+      "label": "Zacks via Yahoo — EMCOR focuses on electrical construction deals (low- and medium-voltage contractors for density)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/emcor-focuses-electrical-construction-deals-141200625.html",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "SEC — 8-K annual meeting results (nine directors; say-on-pay; EY)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000085/eme-20260604.htm",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "Zacks via Yahoo — EMCOR's data center revenues jump nearly 50% (Q1 2026 N&C growth split)",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/emcors-data-center-revenues-jump-144700995.html",
+      "date": "2026-05-18"
+    },
+    {
+      "label": "SEC — Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000046/eme-20260331.htm",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "SEC — Q1 2026 earnings release (8-K Ex. 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000048/eme-ex991_2026331xq1.htm",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "Zacks via Yahoo — EMCOR Q1 earnings and revenues beat estimates (consensus USD 5.85 / USD 4.22bn)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/emcor-q1-earnings-revenues-beat-151300894.html",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "SEC — 2026 DEF 14A proxy (BlackRock 8.03%, FMR 5.94%; Vanguard disclaimer; CEO pay USD 14,380,630)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000114036126015809/ny20062562x1_def14a.htm",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "Investing.com — Stifel raises EMCOR target to USD 901 on data center strength (~30% of backlog)",
+      "url": "https://www.investing.com/news/analyst-ratings/stifel-raises-emcor-group-stock-price-target-to-901-on-data-center-strength-93CH-4618161",
+      "date": "2026-04-16"
+    },
+    {
+      "label": "EMCOR — Company Profile book, as of March 26, 2026 (subsidiary roster; fabrication facility sizes)",
+      "url": "https://emcorgroup.com/application/files/8917/7453/6187/EME_ProfileMaster_260326.pdf",
+      "date": "2026-03-26"
+    },
+    {
+      "label": "Investing.com — DA Davidson raises EMCOR target on data center growth (~33% of US construction revenue)",
+      "url": "https://www.investing.com/news/analyst-ratings/da-davidson-raises-emcor-stock-price-target-on-data-center-growth-93CH-4532182",
+      "date": "2026-02-27"
+    },
+    {
+      "label": "SEC — FY2025 Form 10-K (segments, market-sector table, RPO, Miller purchase accounting, UK sale, risk factors)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "SEC — FY2025 earnings release (8-K Ex. 99.1): revenue USD 16.99bn, EPS USD 28.19, initial 2026 guidance",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000027/eme-ex991_20251231xq4.htm",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Motley Fool — EMCOR Q4 2025 earnings call transcript (N&C RPO USD 4.4bn; 17 electrical and 7 mechanical data center markets)",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/21/emcor-eme-q4-2025-earnings-call-transcript/",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Investing.com — EMCOR Q4 2025 earnings call transcript (record N&C RPOs USD 4.46bn; shares dip)",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-emcor-group-q4-2025-sees-earnings-beat-but-stock-dips-93CH-4529038",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Zacks via Yahoo — EMCOR's Q4 earnings and revenues beat estimates (USD 7.19 vs USD 6.68)",
+      "url": "https://finance.yahoo.com/news/emcors-q4-earnings-revenues-beat-154400643.html",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "EMCOR — Announces dividend increase (USD 0.40) and USD 500 million increase in share repurchase authorization",
+      "url": "https://emcorgroup.com/investor-relations/press-releases/2025-news/emcor-group-inc-announces-dividend-increase-and-increase-in-share-repurchase-authorization",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "ENR — 2025 Top 600 Specialty Contractors issue (EMCOR No. 2, 2024 revenue USD 14,566.1M; Quanta No. 1) — Browning Chapman repost",
+      "url": "http://www.browningchapman.com/wp-content/uploads/2025/11/ENR10272025_Top600_compressed.pdf",
+      "date": "2025-10-27"
+    },
+    {
+      "label": "SEC — Q3 2025 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000078/eme-20250930.htm",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "SEC — Q3 2025 earnings release (8-K Ex. 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000082/eme-ex991_2025930xq3.htm",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Zacks via Yahoo — Emcor Group (EME) Q3 earnings and revenues lag estimates (USD 6.57 vs USD 6.65)",
+      "url": "https://finance.yahoo.com/news/emcor-group-eme-q3-earnings-124002335.html",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Motley Fool — Why EMCOR Group plunged today (electrical +52.1%; 25.6× earnings)",
+      "url": "https://www.fool.com/investing/2025/10/30/why-emcor-group-plunged-today",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "WMBF — OSHA vacates fine against Santee Cooper over not reporting deadly coal-mound collapse (Winyah; contractor named as EMCOR by Santee Cooper)",
+      "url": "https://www.wmbfnews.com/2025/10/23/osha-vacates-fine-against-santee-cooper-over-not-reporting-deadly-coal-mound-collapse/",
+      "date": "2025-10-23"
+    },
+    {
+      "label": "Miller Electric — Powering legacy and trust: Miller Electric's enduring partnership with Flexential",
+      "url": "https://mecojax.com/news/powering-legacy-trust-miller-electrics-enduring-partnership-flexential",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "EMCOR — Sets third quarter 2025 earnings release date and webcast (notice 16 October for 30 October)",
+      "url": "https://emcorgroup.com/investor-relations/press-releases/2025-news/emcor-group-inc-sets-third-quarter-2025-earnings-release-date-and-webcast",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "SEC — Q2 2025 earnings release (8-K Ex. 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000049/eme-ex991_2025630xq2.htm",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "Zacks via Yahoo — Can EMCOR's data center expansion fuel long-term growth? (N&C RPO USD 3.6bn; ~85% data centres)",
+      "url": "https://finance.yahoo.com/news/emcors-data-center-expansion-fuel-133900844.html",
+      "date": "2025-06-30"
+    },
+    {
+      "label": "SEC — Q1 2025 earnings release (8-K Ex. 99.1): RPO inclusive of USD 1.0 billion from Miller Electric",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000032/eme-ex991_2025331xq1.htm",
+      "date": "2025-04-30"
+    },
+    {
+      "label": "Investing.com — EMCOR Q1 2025 earnings call transcript (Miller USD 183M revenue; ~USD 400M data center RPOs)",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-emcor-group-q1-2025-beats-forecasts-stock-drops-93CH-4014032",
+      "date": "2025-04-30"
+    },
+    {
+      "label": "SEC — FY2024 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000015/eme-20241231.htm",
+      "date": "2025-02-26"
+    },
+    {
+      "label": "GuruFocus — What to expect from EMCOR Q4 2024 earnings (FY2024 consensus EPS USD 20.99; FY2025 USD 23.06)",
+      "url": "https://www.gurufocus.com/news/2713635/what-to-expect-from-emcor-group-inc-eme-q4-2024-earnings",
+      "date": "2025-02-25"
+    },
+    {
+      "label": "SEC — 8-K Item 2.01: completion of the Miller Electric acquisition (USD 865 million cash; ESOP and family trust sellers)",
+      "url": "https://www.sec.gov/Archives/edgar/data/105634/000010563425000006/eme-20250203.htm",
+      "date": "2025-02-03"
+    },
+    {
+      "label": "Motley Fool — EMCOR stock: DeepSunk or on sale? (−17% on 2025-01-27)",
+      "url": "https://www.fool.com/investing/2025/02/03/emcor-stock-deepsunk-or-on-sale/",
+      "date": "2025-02-03"
+    },
+    {
+      "label": "EMCOR — Agreement to acquire Miller Electric Company (USD 805M 2024 revenue; USD 80M EBITDA; USD 755M RPO)",
+      "url": "https://emcorgroup.com/investor-relations/press-releases/2025-news/emcor-group-inc-release",
+      "date": "2025-01-14"
+    },
+    {
+      "label": "Benzinga via Yahoo — EMCOR expands Southeast footprint with USD 865 million Miller Electric deal",
+      "url": "https://finance.yahoo.com/news/emcor-expands-southeast-footprint-865-170331998.html",
+      "date": "2025-01-14"
+    },
+    {
+      "label": "MarketScreener/BusinessWire — Dynalectric Arizona opens new electrical services and fabrication facility in Mesa (180,000 sq ft)",
+      "url": "https://www.marketscreener.com/quote/stock/EMCOR-GROUP-INC-12447/news/Dynalectric-Arizona-Opens-New-Electrical-Services-and-Fabrication-Facility-in-Mesa-AZ-44302722/",
+      "date": "2023-07-10"
+    },
+    {
+      "label": "EMCOR — Executive team",
+      "url": "https://emcorgroup.com/about-us/executive-team"
+    },
+    {
+      "label": "EMCOR — Anthony J. Guzzi biography",
+      "url": "https://emcorgroup.com/about-us/executive-team/anthony-j-guzzi"
+    },
+    {
+      "label": "EMCOR — Daniel Fitzgibbons biography",
+      "url": "https://emcorgroup.com/about-us/executive-team/daniel-fitzgibbons"
+    },
+    {
+      "label": "EMCOR — Brian Batchelor biography",
+      "url": "https://emcorgroup.com/about-us/executive-team/brian-batchelor"
+    },
+    {
+      "label": "EMCOR Construction Services — Our companies (2026 roster incl. B&B, Connelly, Sidney, Schmidt)",
+      "url": "https://emcorconstruction.com/companies"
+    },
+    {
+      "label": "Miller Electric — Leadership (Henry Brown CEO; Brian Yarber VP of Data Center Services)",
+      "url": "https://mecojax.com/who-we-are/leadership"
+    },
+    {
+      "label": "Miller Electric — Giles Electric Company is now part of Miller Electric",
+      "url": "https://mecojax.com/giles-electric"
+    },
+    {
+      "label": "Certified EO — Miller Electric Company (ESOP since 2012)",
+      "url": "https://www.certifiedeo.com/company/miller-electric-company"
+    },
+    {
+      "label": "Constructionplacements — 11 best data center electrical contractors in the USA (Dynalectric DC division ~2,500 staff, Loudoun County)",
+      "url": "https://www.constructionplacements.com/best-data-center-electrical-contractors-usa/"
+    },
+    {
+      "label": "Data Center Dynamics — EMCOR subsidiaries team up on the Xilinx Longmont data center expansion (date not retrievable)",
+      "url": "https://www.datacenterdynamics.com/en/news/emcor-group-inc-subsidiaries-team-up-to-perform-electrical-and-mechanical-construction-for-expansion-of-xilinx-datacenter-2/"
+    },
+    {
+      "label": "SEC — EDGAR submissions index, CIK 0000105634 (Delaware; NYSE: EME; SIC 1731)",
+      "url": "https://data.sec.gov/submissions/CIK0000105634.json"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}

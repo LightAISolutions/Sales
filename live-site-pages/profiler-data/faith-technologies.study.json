@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 2,
+  "slug": "faith-technologies",
+  "title": "Faith Technologies — Technology Study Guide",
+  "lastUpdated": "2026-10-04",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: the electrical contractor that built a factory",
+      "kind": "callout",
+      "tone": "info",
+      "read": "An electrical contractor installs what the supply segments sell; this one moved half the installing indoors.",
+      "ps": [
+        "**The trade.** An {{electrical contractor}} takes the owner's or the general contractor's drawings and installs the power path — from the utility's {{medium voltage}} service through {{switchgear}}, {{transformer}}s, generators, the {{UPS}}, {{busway}} and {{PDU}}s to the rack whip — then tests it until it is safe to energise.",
+        "**The move.** This company runs factories — modular electrical buildings, e-houses, cable trestles, skids and, since 2026, catalogue products — so that work once done on a muddy site is done on a factory floor and shipped.",
+        "**Why a seller cares.** An electrical contractor is the hands that mount, wire and commission a UPS, a switchboard or a battery cabinet. It is sometimes the buyer of that gear and always the gatekeeper on whether it installs cleanly. This guide teaches the trade, the factory model, the product-versus-project question and the labour system behind it.",
+        "**Not here.** Founding dates, executives and headcount stay in the dossier."
+      ]
+    },
+    {
+      "id": "the-power-path",
+      "title": "What an electrical contractor installs in a data hall",
+      "kind": "prose",
+      "ps": [
+        "Power arrives at the fence at medium voltage — typically 12 to 35 kV. The contractor builds the {{service entrance}}: terminating the utility cable, setting the {{switchgear}} that can interrupt a fault, and the {{transformer}}s that step voltage down to the 480 V the building uses. Terminating medium-voltage cable is skilled work; a bad termination is a fault waiting for a hot day.",
+        "Behind the transformers sit the generators and their {{paralleling switchgear}}, the {{UPS}} with its batteries, and the distribution: {{busway}} or cable to {{PDU}}s, then branch circuits to each rack. The contractor sets every one of these, pulls and lands every conductor, and labels every breaker. The manufacturer builds the UPS; the contractor makes it part of a system.",
+        "Then comes {{commissioning}}: proving the system under load, step by step, from factory tests of individual pieces (Level 1–2) to a full integrated systems test with the generators carrying the building (Level 5). Contractors that can run Level 3 tests in their own factory ship equipment that has already been proven once."
+      ]
+    },
+    {
+      "id": "who-buys-the-gear",
+      "title": "Owner-furnished or contractor-furnished: who signs the purchase order",
+      "kind": "table",
+      "read": "The same transformer can be bought by three different parties; the seller must know which.",
+      "intro": "Both models appear in this company's own project record.",
+      "cols": [
+        "Model",
+        "Who buys the equipment",
+        "What the contractor does",
+        "Where it shows up"
+      ],
+      "rows": [
+        [
+          "{{owner-furnished equipment}}",
+          "The data-centre owner, often under a frame agreement with the OEM",
+          "Receives, stores, sets, wires and commissions it",
+          "A colocation client in Atlanta 'purchased equipment and FTI stored and installed it'"
+        ],
+        [
+          "Contractor-furnished",
+          "The electrical contractor, inside its lump-sum or GMP price",
+          "Specifies, procures, installs — and carries lead-time risk",
+          "A battery plant in Tennessee where about a fifth of a USD 24m package was 'sourcing and installing the necessary switchgear'"
+        ],
+        [
+          "Contractor-manufactured",
+          "The contractor's own factory builds it",
+          "Designs, assembles, tests, ships, installs",
+          "Modular electrical buildings and the 2 MW power module"
+        ],
+        [
+          "Design-build single source",
+          "One contract covers design, procurement and construction",
+          "Owns the whole chain, including the OEM choice",
+          "The company's stated 'EPC' model for its own projects"
+        ]
+      ]
+    },
+    {
+      "id": "prefabrication",
+      "title": "Why factory hours beat field hours",
+      "kind": "prose",
+      "ps": [
+        "A field electrician works at height, in weather, around other trades, with material that arrived that morning. A factory electrician works at bench height, under a crane, with material staged the day before. The same task takes fewer hours and fewer injuries indoors, and the finished assembly can be tested before it leaves. That is the whole case for {{offsite fabrication}}.",
+        "What gets prefabricated: a {{modular electrical building}} (a complete electrical room on a steel base — switchgear, UPS, batteries, controls — dropped onto a pad and cabled up), an {{e-house}} (the same idea for medium-voltage gear), skids carrying a transformer or a distribution panel, cable {{trestle}} sections that carry conductors overhead between buildings instead of in buried duct banks, and plain electrical assemblies — conduit racks, hangers, pre-cut whips.",
+        "The company's own claims give the scale: 'more than 50% of project labor' moved to the factory for modular data-centre power; '67% of labor hours offsite' on a duct-bank job that then 'installs three times faster'. These are company statements, not audited numbers, but the direction is what every hyperscale schedule now assumes.",
+        "The cost is capital: a factory is a fixed asset that must be fed. Five 500,000 sq ft plants announced in ten months is a bet that hyperscale demand keeps them full."
+      ]
+    },
+    {
+      "id": "inside-a-power-module",
+      "title": "What a 2 MW power module is, and the question it raises",
+      "kind": "prose",
+      "ps": [
+        "A {{power module}} packages the electrical room's contents — the {{UPS}}, its battery strings, the low-voltage switchboards and the monitoring — into one factory-built enclosure rated here at 2 MW. Set two mirror-image modules side by side and you have a {{2N}} pair: two independent paths so that either can carry the load alone. The enclosure is built to {{UL 891}} (the switchboard standard), the 2023 {{NEC}} and {{NEMA 3R}} (rain-tight for outdoor placement), with {{SCADA}} and a PLC reporting breaker states and temperatures.",
+        "The module does not make the company a UPS manufacturer. The UPS, the breakers and the batteries come from OEMs — 'we partner with leading OEMs'. What the contractor adds is the integration, the testing and the schedule. That is also why the OEMs inside such modules are often invisible to the end buyer.",
+        "The category question. A contractor becomes a supplier when it sells manufactured product to parties it does not also install for. The evidence that would settle it: a named outside buyer, an order or shipment count, a distributor agreement, or a UL file number that others cite. As of this guide none exists — the module is sold under buyer terms and priced for volume, but every recorded destination is the company's own project. So the dossier files it as a contractor and names the trigger that would change that."
+      ]
+    },
+    {
+      "id": "merit-shop",
+      "title": "Merit shop and union shop: the labour system behind the bid",
+      "kind": "prose",
+      "ps": [
+        "US electrical construction runs on two labour systems. A {{union shop}} hires journeymen and apprentices from an IBEW local under a {{collective bargaining agreement}} that sets wages, benefits and travel terms; labour can be called from other locals when a campus needs thousands of hands. A {{merit shop}} (open shop) hires and trains its own workforce directly, sets its own wages, and belongs to a different trade body — ABC rather than NECA.",
+        "Each wins somewhere. Union contractors dominate Northern Virginia, California and the big Northeastern cities and can surge labour through the hall; merit-shop contractors dominate right-to-work states across the South and Midwest, where hyperscalers are now siting campuses for power and land. A merit-shop contractor's constraint is training its own people fast enough — hence in-house apprenticeship programmes and a hiring rate above a thousand a year.",
+        "Rankings reflect the system. ABC's Top Performers list ranks by hours worked on member projects with a safety qualification; it will place a merit-shop contractor first in data centres while a revenue table places it ninth. Neither is wrong; they measure different things."
+      ]
+    },
+    {
+      "id": "safety-numbers",
+      "title": "Reading a contractor's safety numbers",
+      "kind": "table",
+      "read": "Owners prequalify on these three figures before they read a price.",
+      "intro": "Definitions, with the company's published 2025 figures as a worked example.",
+      "cols": [
+        "Metric",
+        "What it measures",
+        "How to read it",
+        "Worked example (2025)"
+      ],
+      "rows": [
+        [
+          "{{total recordable incident rate}} (TRIR)",
+          "Recordable injuries per 200,000 hours worked (100 full-time workers for a year)",
+          "Specialty-trade average about 2.4; under 1.0 is strong",
+          "0.18 on 10.8 million hours"
+        ],
+        [
+          "Lost-time incident rate (LTIR)",
+          "Injuries causing days away, per 200,000 hours",
+          "Zero means no lost-time injury all year",
+          "0.00"
+        ],
+        [
+          "{{experience modification rate}} (EMR)",
+          "Insurer's ratio of actual to expected workers'-compensation losses",
+          "1.0 is average; below 0.5 is rare and lowers insurance cost and bid eligibility",
+          "0.37"
+        ]
+      ]
+    },
+    {
+      "id": "rankings-decoder",
+      "title": "Four rankings, four different rulers",
+      "kind": "table",
+      "read": "A contractor can be first, ninth and thirty-second at once without any list being wrong.",
+      "intro": "Each publisher measures something different; a dossier states the basis with the rank.",
+      "cols": [
+        "Ranking",
+        "What it ranks on",
+        "What it tells a seller"
+      ],
+      "rows": [
+        [
+          "EC&M Top 50 Electrical Contractors",
+          "Prior-year electrical sales, self-reported",
+          "Size of the electrical book — the budget that buys gear"
+        ],
+        [
+          "ENR Top 600 Specialty Contractors",
+          "Prior-year construction revenue, self-reported, by trade code",
+          "Size and trade mix; lets you compare electrical with mechanical firms"
+        ],
+        [
+          "ABC Top Performers",
+          "Hours worked on member jobs, with STEP safety status required",
+          "Craft volume in merit-shop markets; a sector rank shows where the hours went"
+        ],
+        [
+          "Deloitte Wisconsin 75",
+          "Sales revenue of private Wisconsin-headquartered companies (figures unpublished)",
+          "That the company is private and growing; no number"
+        ]
+      ]
+    },
+    {
+      "id": "employee-ownership",
+      "title": "Three kinds of 'employee-owned', and how to tell them apart",
+      "kind": "prose",
+      "ps": [
+        "'Employee-owned' covers three structures. An {{ESOP}} is a tax-qualified trust that holds shares for all employees and files a Form 5500 with the Department of Labor; Rosendin and the former Miller Electric are ESOPs. Direct shareholding means managers and selected employees own shares personally, usually in an {{S corporation}} that passes income through to them; shares change hands only by private sale. An employee ownership trust holds shares permanently for the workforce.",
+        "How to check: DOL Form 5500 filings are public. An ESOP shows up as its own plan with employer-securities codes; a company whose only plans are a 401(k) and a welfare plan, with the employer-securities line blank, is not an ESOP whatever its press says. The structure matters to a seller because it decides how the company funds a factory — retained earnings and bank debt, municipal bonds, or a share issue — and who can approve a sale."
+      ]
+    },
+    {
+      "id": "microgrid-at-a-data-centre",
+      "title": "A microgrid behind a data centre's meter",
+      "kind": "prose",
+      "ps": [
+        "A {{microgrid}} is a local grid — generation, storage, loads and a controller — that normally runs connected to the utility but can {{islanded}} itself and keep running when the utility fails. At a data centre, solar plus a {{BESS}} behind the meter can trim peak demand charges, carry part of the load through a short outage before generators start, and earn utility programme revenue.",
+        "The contractor's role is EPC: engineer the interconnection, procure the inverters and batteries, install and commission. When the contractor also finances and owns the asset under a lease or energy-service agreement, it becomes the battery buyer itself. That is the one place this company's clean-energy arm meets the storage segments directly."
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "Mechanisms only — no dates, names or revenue figures.",
+      "cards": [
+        {
+          "q": "In a data hall, what does the electrical contractor do with a UPS that the manufacturer does not?",
+          "a": "Sets it, lands every conductor, integrates it with switchgear and controls, and proves it under load during commissioning."
+        },
+        {
+          "q": "What is the difference between {{owner-furnished equipment}} and contractor-furnished equipment?",
+          "a": "Owner-furnished gear is bought by the data-centre owner (often under an OEM frame agreement) and the contractor only installs it; contractor-furnished gear is procured by the contractor inside its price, with the lead-time risk."
+        },
+        {
+          "q": "Why does moving electrical work into a factory cut hours and injuries?",
+          "a": "Bench-height work under a crane with staged material, no weather and no trade stacking — and the assembly can be tested before it ships."
+        },
+        {
+          "q": "What is inside a 2 MW {{power module}}, and what does the integrator not make?",
+          "a": "UPS, battery strings, low-voltage switchboards and SCADA/PLC monitoring in one enclosure; the UPS, breakers and batteries come from OEMs."
+        },
+        {
+          "q": "What evidence would show a contractor's manufacturing arm has become a merchant supplier?",
+          "a": "A named outside buyer, an order or shipment count, a distributor agreement, or a UL listing cited by others — not a product page or buyer terms alone."
+        },
+        {
+          "q": "What does ABC's Top Performers list rank on, and why can it disagree with a revenue table?",
+          "a": "Hours worked on member projects with a safety qualification; a merit-shop contractor can be first by hours and ninth by revenue."
+        },
+        {
+          "q": "How do you tell an {{ESOP}} from direct employee shareholding?",
+          "a": "An ESOP files its own Form 5500 with employer-securities codes; direct shareholding shows no such plan — only a 401(k) or welfare plan with the employer-securities line blank."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "Six questions on the mechanics.",
+      "items": [
+        {
+          "q": "A project page says 'the client purchased equipment and we stored and installed it'. Which procurement model is this?",
+          "c": [
+            "Contractor-furnished",
+            "Owner-furnished",
+            "Contractor-manufactured",
+            "Design-build single source"
+          ],
+          "a": 1,
+          "why": "The owner signed the purchase order; the contractor's scope was receipt, installation and commissioning."
+        },
+        {
+          "q": "Two mirror-image 2 MW modules are set side by side so either can carry the full load. What topology is that?",
+          "c": [
+            "N+1",
+            "2N",
+            "N",
+            "Distributed redundant"
+          ],
+          "a": 1,
+          "why": "Two complete, independent paths each sized for the whole load is 2N."
+        },
+        {
+          "q": "Which commissioning level can a prefabricator complete inside its own factory for an e-house?",
+          "c": [
+            "Only Level 1",
+            "Up to Level 3, potentially Level 5",
+            "Level 5 only",
+            "None — commissioning is always on site"
+          ],
+          "a": 1,
+          "why": "Factory acceptance testing covers Levels 1–3; integrated systems testing with the site's generators (Level 5) usually needs the site."
+        },
+        {
+          "q": "A contractor is first on ABC's data-centre list and ninth on EC&M's. What explains the gap?",
+          "c": [
+            "One list is wrong",
+            "ABC ranks hours worked on member jobs; EC&M ranks electrical sales",
+            "EC&M excludes data centres",
+            "ABC counts mechanical work"
+          ],
+          "a": 1,
+          "why": "Different rulers: craft hours in merit-shop markets versus dollars of electrical revenue."
+        },
+        {
+          "q": "A company's Form 5500 filings show a 401(k), a 401(a) and a welfare plan, and the employer-securities line is blank. What is its ownership structure?",
+          "c": [
+            "An ESOP",
+            "An employee ownership trust",
+            "Direct shareholding by employees, not an ESOP",
+            "A public company"
+          ],
+          "a": 2,
+          "why": "An ESOP would appear as its own plan holding employer stock; none does."
+        },
+        {
+          "q": "When does a contractor's clean-energy arm become a battery buyer rather than an installer?",
+          "c": [
+            "Whenever it installs a BESS",
+            "When it finances and owns the microgrid asset under a lease or energy-service agreement",
+            "When the owner furnishes the batteries",
+            "Never — contractors only install"
+          ],
+          "a": 1,
+          "why": "Ownership of the asset puts the purchase order, and the supplier choice, in the contractor's hands."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "electrical contractor",
+      "d": "A specialty contractor that installs, tests and commissions a building's electrical power and low-voltage systems, under contract to an owner or a general contractor."
+    },
+    {
+      "t": "service entrance",
+      "d": "The point where the utility's supply enters the site — the incoming cable termination, metering and the first switchgear that can interrupt a fault."
+    },
+    {
+      "t": "paralleling switchgear",
+      "d": "Switchgear and controls that synchronise several generators onto one bus so they share load and can be added or dropped without interrupting the building."
+    },
+    {
+      "t": "modular electrical building",
+      "d": "A complete electrical room — switchgear, UPS, batteries and controls — built on a steel base in a factory, tested, shipped and set on a pad at site."
+    },
+    {
+      "t": "trestle",
+      "d": "An above-ground steel structure that carries power cables overhead between buildings and equipment yards, replacing buried concrete duct banks."
+    },
+    {
+      "t": "2N",
+      "d": "A redundancy topology with two complete, independent power paths, each sized to carry the full load alone."
+    },
+    {
+      "t": "UL 891",
+      "d": "The UL standard for dead-front low-voltage switchboards; a switchboard or module 'built to UL 891' meets it, which is not the same as carrying a UL listing others can cite."
+    },
+    {
+      "t": "NEC",
+      "d": "The National Electrical Code, the US installation code adopted by states and cities; the 2023 edition is current in most jurisdictions."
+    },
+    {
+      "t": "union shop",
+      "d": "A contractor that hires craft labour from a union local under a collective bargaining agreement setting wages, benefits and travel terms."
+    },
+    {
+      "t": "merit shop",
+      "d": "An open-shop contractor that hires and trains its own workforce directly rather than through a union hall; the model ABC represents."
+    },
+    {
+      "t": "collective bargaining agreement",
+      "d": "The contract between an employer (or trade association) and a union local that fixes wages, benefits, work rules and dispute procedures for the craft it covers."
+    },
+    {
+      "t": "S corporation",
+      "d": "A US corporation that elects to pass its income through to shareholders for tax; limited to a small number of individual shareholders, so it cannot be widely held."
+    }
+  ]
+}

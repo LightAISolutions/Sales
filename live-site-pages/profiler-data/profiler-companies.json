@@ -6583,6 +6583,139 @@
           "role": "incumbent"
         }
       ]
+    },
+    {
+      "slug": "clayco",
+      "name": "Clayco",
+      "categories": [
+        "gc"
+      ],
+      "tagline": "Chicago design-build GC and BD+C's #4 data-centre builder (USD 3.64bn of 2024 data-centre revenue) — 72 active data-centre projects and '10.20GW' delivered or underway; GC for Galaxy's Helios Phase 1 (133 MW for CoreWeave; Phase 2 went to HITT); Power & Energy solar-and-BESS EPC launched 2026.",
+      "hq": "Chicago, IL, USA",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "Clayco Inc",
+        "Clayco, Inc.",
+        "Clayco Compute",
+        "Clayco Construction Company",
+        "Clayco Enterprise",
+        "Clayco Power & Energy",
+        "Clayco SEI",
+        "CRG",
+        "Lamar Johnson Collaborative",
+        "LJC",
+        "Concrete Strategies",
+        "Ventana"
+      ],
+      "domains": [
+        "claycorp.com",
+        "bobclarkbeyond.com",
+        "theljc.com",
+        "concretestrategies.com",
+        "ventana.vc",
+        "realcrg.com"
+      ],
+      "srcTotal": 75,
+      "srcFirstPct": 51,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "faith-technologies",
+      "name": "Faith Technologies",
+      "categories": [
+        "epc"
+      ],
+      "tagline": "Merit-shop electrical contractor — EC&M #9 at USD 2.28bn of 2025 sales (+62.6%) and ABC's #1 data-centre contractor by hours; five 500,000 sq ft Excellerate prefabrication plants announced in ten months; the Excellerate Products OEM line (2 MW power module) has no named outside buyer yet.",
+      "hq": "Menasha, WI, USA",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "Faith Technologies Incorporated",
+        "Faith Technologies, Inc.",
+        "FTI",
+        "Excellerate",
+        "Excellerate Products",
+        "EnTech Solutions",
+        "Town & Country Electric",
+        "SKC Electric",
+        "National Solution Services",
+        "NS2",
+        "FTI ON"
+      ],
+      "domains": [
+        "faithtechinc.com"
+      ],
+      "srcTotal": 78,
+      "srcFirstPct": 58,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "emcor",
+      "name": "EMCOR",
+      "categories": [
+        "epc"
+      ],
+      "tagline": "Largest US mechanical and electrical contractor (NYSE: EME; FY2025 revenue USD 16.99bn, record RPO USD 17.14bn at June 2026) — network and communications is now 58% of electrical and 35% of mechanical revenue; bought Miller Electric for USD 865m in February 2025.",
+      "hq": "Norwalk, CT, USA",
+      "ticker": "NYSE: EME",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "EMCOR Group",
+        "EMCOR Group, Inc.",
+        "Emcor",
+        "Miller Electric",
+        "Dynalectric",
+        "Shambaugh & Son",
+        "Shambaugh",
+        "Upland Mechanical",
+        "Batchelor & Kimball",
+        "Bahnson",
+        "Tucker Mechanical",
+        "ConCor Networks",
+        "Forest Electric",
+        "Mesa Energy Systems",
+        "Ohmstede",
+        "MOR PPM",
+        "Giles Electric",
+        "Schmidt Electric",
+        "Connelly Electric",
+        "B&B Electric",
+        "Sidney Electric",
+        "University Mechanical",
+        "Poole & Kent",
+        "Gibson Electric",
+        "Baker Electric",
+        "Hill York",
+        "Trautman & Shreve"
+      ],
+      "domains": [
+        "emcorgroup.com",
+        "emcorconstruction.com",
+        "mecojax.com"
+      ],
+      "srcTotal": 67,
+      "srcFirstPct": 46,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     }
   ]
 }

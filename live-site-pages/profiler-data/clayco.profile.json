@@ -1,0 +1,1097 @@
+{
+  "schemaVersion": 7,
+  "slug": "clayco",
+  "name": "Clayco, Inc.",
+  "shortName": "Clayco",
+  "categories": [
+    "gc"
+  ],
+  "website": "https://claycorp.com",
+  "headquarters": "Chicago, Illinois, USA (35 East Wacker Drive; headquarters moved from St. Louis in 2013 — the original St. Louis office at 8640 Evans Avenue remains the registered head office and the larger campus)",
+  "founded": "1984 (formed 23 July 1984 in St. Louis by Bob Clark, then 25; Missouri corporation, formerly Clayco Construction Company, Inc.)",
+  "employees": "'more than 4,000 employees across the country' (company-overview page, 2026); 'more than 3,800 employees nationwide, with about 1,600 in Chicago' (Chicago Sun-Times, March 2026)",
+  "ownership": {
+    "type": "private",
+    "notes": "Privately owned. Founder and executive chairman Bob Clark 'owns most of the company' (Forbes profile, October 2026; net worth USD 7bn, Forbes 400 No. 245); Bloomberg reported in December 2024 that 'Clayco's top executives own 40% of the company' (search snippet of a paywalled article — read as reported). Two executive titles carry 'Shareholder' (CEO Anthony Johnson; Enterprise President and COO Steve Sieckhaus). No ESOP, outside investor or sale process appears in any first-party or credible third-party source. Clayco Compute (January 2025) and Clayco Power & Energy (March 2026) are business units, not legal entities; the operating subsidiaries are LJC (The Lamar Johnson Collaborative, which absorbed Clayco Design & Engineering Inc. in January 2026), Concrete Strategies, Ventana and CRG."
+  },
+  "summary": "BOTTOM LINE UP FRONT: Clayco is the fourth-largest US data-centre builder on the only published ranking — BD+C's 2025 Giants 400 table, USD 3.64bn of 2024 data-centre revenue behind HITT (USD 6.74bn), Holder (USD 6.48bn) and DPR (USD 3.65bn), USD 30m ahead of Turner — and it is converting a vertically integrated design-build model (in-house architecture and engineering, self-performed concrete, enclosure, mechanical and electrical) into a data-centre franchise that Forbes reports will be 75% of nearly USD 12bn of 2026 revenue. The counter-fact is Galaxy Digital's decision to move Helios Phase 2 (260 MW) to HITT in 2026, citing Clayco's 'project commitments' and labour. BACKGROUND. Chicago-based, founded 1984 in St. Louis by Bob Clark, who still owns most of it; CEO Anthony Johnson since January 2025. ENR 2026 Top 400 No. 20 on 2025 revenue of USD 8.1bn (No. 21 and USD 6.8bn a year earlier); No. 1 on BD+C's 2026 design-build list and No. 5 on ENR's, both at USD 7.05bn of design-build revenue. Clayco Compute, the mission-critical unit launched January 2025 under Ryan McGuire, reports 72 active data-centre projects, '10.20GW' delivered or underway and USD 42bn of mission-critical revenue delivered or underway; named live campuses are Galaxy's Helios Phase 1 (133 MW critical IT for CoreWeave, complete July 2026), Related Digital's Cheyenne campus (construction manager, 88 MW of up to 302 MW, CoreWeave anchor) and the PsiQuantum-anchored Illinois Quantum and Microelectronics Park. Clayco Power & Energy (March 2026) adds solar and BESS EPC with a USD 300m revenue target for 2027, and CRG, the development arm, is pursuing a USD 6bn, roughly 600 MW campus at Festus, Missouri that has already cost the city council its majority. Collection gap: fully private — no audited revenue, margin or backlog; the company's own 2025 revenue boilerplate reads USD 7.6bn in January–March 2026 releases and USD 8.1bn from June 2026, and its 'Top 3 ENR data center contractors' claim could not be matched to any ENR table.",
+  "ecosystemRole": "We assess Clayco as an incumbent of the EPC-and-construction segment on the ranking the segment's other GC incumbents cite — fourth on BD+C's 2025 data-centre table, within USD 10m of DPR and ahead of Turner, Whiting-Turner and Mortenson — and the most vertically integrated of them: it owns the architect (LJC), the concrete and enclosure subcontractors and a mechanical-electrical self-perform arm (Clayco SEI), and it develops campuses through CRG. In this corpus it is a procurement channel for generators, chillers and power assemblies on the campuses it builds (more than 100 integrated power assemblies and 90 chillers at Helios), a prospective BESS buyer through Clayco Power & Energy, and a developer counterparty at Festus; the equipment it furnishes versus what owners furnish is not disclosed.",
+  "productsAndServices": [
+    {
+      "name": "Clayco Compute — mission-critical design-build and construction management",
+      "category": "Data-centre general contracting · the growth franchise",
+      "description": "The mission-critical business unit launched 2025-01-15 under Ryan McGuire, 'focused on hyperscale, cloud, AI-ready, colocation, and enterprise data centers', handling 'site selection, utility strategy, architecture and engineering, procurement, vendor management, off-site modular construction, self-perform concrete, mechanical and electrical systems, integrated quality and commissioning'. Company metrics (undated page, read October 2026): 72 active data-centre projects; '10.20GW' of data-centre density delivered or underway (Bob Clark's August 2026 split: about 2.2 GW completed, more than 8,000 MW under construction); USD 42bn of mission-critical revenue delivered or underway; EMR 0.46. Data-centre revenue was USD 3.6bn in 2024 — 'half of our total revenue and more than double 2023's $1.5 billion' (company) and USD 3.64bn on BD+C's 2025 table; Forbes reports 75% of nearly USD 12bn in 2026.",
+      "highlights": [
+        "Galaxy Digital Helios, Afton TX — general contractor for Phase 1: 133 MW critical IT (about 200 MW gross) of liquid-cooled capacity for CoreWeave on a former 180 MW bitcoin site, complete July 2026; 'more than 100 integrated power assemblies and more than 90 chillers', an on-site batch plant and 'significant off-site assembly' (company). Phase 2 (260 MW) went to HITT in 2026 — Galaxy: 'given their project commitments and our timeline requirements and the necessary labor and workforces'",
+        "Related Digital Cheyenne, WY — construction manager for Phase 1: 184,000 sq ft, 88 MW of critical IT anchored by CoreWeave, of a USD 1.2bn, up-to-302 MW campus on 115 acres with Black Hills Energy; first building late 2026 (Related, 2025-10-07)",
+        "Illinois Quantum and Microelectronics Park, Chicago — general contractor for phase 1 of the 128-acre PsiQuantum-anchored campus (LJC designer; CRG co-developer with Related Midwest; groundbreaking 2025-09-30; first unit online 2026)",
+        "Microsoft Elk Grove Village campus named by Crain's among the 57 active projects (January 2025); Forbes names Amazon, Microsoft and Oracle as clients; DCD relayed a company list of Microsoft, Amazon, Google, NTT, QTS, Stream, CyrusOne, Stack, Equinix and Prologis",
+        "Deep Atomic consortium — Clayco provides 'early-stage delivery planning, constructability analysis, and integrated design-build expertise' for a proposed nuclear-powered AI data-centre campus at Idaho National Laboratory (60 MW MK60 small modular reactors; DOE proposal pending)"
+      ],
+      "positioning": "Fourth on BD+C's 2025 data-centre ranking (USD 3.64bn of 2024 revenue) — behind HITT, Holder and DPR, ahead of Turner, Whiting-Turner, Fortis, JE Dunn and Mortenson; No. 1 on BD+C's and No. 5 on ENR's 2026 design-build lists. Differentiation is vertical integration — architect, engineers, concrete, enclosure and an MEP self-perform arm under one owner — and speed of design-build delivery; the company's 'Top 3 ENR data center contractors' claim could not be matched to an ENR table, and the Helios Phase 2 loss shows capacity is the constraint HITT exploited.",
+      "soldThrough": "Design-build and construction-management contracts with data-centre owners and developers (Galaxy, Related Digital, Related Midwest/CRG) and hyperscalers; on Helios 'under a construction management structure' with more than 100 subcontractors",
+      "targetSegments": [
+        "AI neocloud campuses (Galaxy/CoreWeave)",
+        "Developers (Related Digital, CRG)",
+        "Hyperscalers (Microsoft, Amazon, Oracle named by press)",
+        "Quantum and research campuses (PsiQuantum, IBM)"
+      ],
+      "roadmap": "Clayco Compute revenue 'expected to exceed $4.5 billion by 2026' (January 2025); Forbes' 2026 figures imply roughly USD 9bn of data-centre revenue; 77 data centres in progress across 13 states; Cheyenne first building late 2026; IQMP phase 1 complete 2027"
+    },
+    {
+      "name": "Self-perform trades — Concrete Strategies, Ventana and Clayco SEI",
+      "category": "Owned subcontractors",
+      "description": "'Self-perform has long been a differentiator for Clayco… Concrete, building enclosure, mechanical and electrical systems' (release naming Jason Mrozek President of Self Perform, 2026-01-29). Concrete Strategies: USD 550m of 2025 revenue, 940,000 cubic yards poured in a year, more than 1,000 personnel, tilt-up, foundations, slabs and precast erection across 46 states, including 'Confidential Data Center Foundations'. Ventana: curtain-wall and enclosure systems, 'Top 10 curtainwall provider in the United States', about USD 75m a year. Clayco Systems & Equipment Innovations (SEI): 'preconstruction, design, purchasing, and installation of mechanical, electrical, and process scopes of work', with 'modular site prefabrication opportunities' and a procurement team that 'works with vendors to solicit competitive pricing'.",
+      "highlights": [
+        "Concrete Strategies and Ventana 'function as independent firms performing substantial work for other firms, not just Clayco' (company)",
+        "Jason Mrozek, ex-Cal Solar and McCarthy, named to the new President of Self Perform role in January 2026: 'Self-perform gives us the ability to control the work that matters most'",
+        "Collection gap: no first-party or third-party page states what share of a data-centre job Clayco self-performs, or whether generators, switchgear, UPS or chillers are bought under Clayco purchase orders or owner-furnished"
+      ],
+      "positioning": "The structural answer to the craft-labour ceiling ENR's 2026 Top 400 report describes; comparable to DPR's 6,000 self-perform craft workers, and the capability HITT lacks — yet Helios Phase 1 ran as construction management over subcontractors, so the self-perform share on hyperscale work is unproven on the record.",
+      "soldThrough": "Internal to Clayco design-build contracts and as third-party subcontractors (Concrete Strategies, Ventana)",
+      "targetSegments": [
+        "Clayco's own data-centre and industrial projects",
+        "Third-party general contractors (concrete, enclosure)"
+      ],
+      "roadmap": "Self-perform leadership consolidated under one president (2026); Power & Energy targets nearly 1,000 craft professionals by 2027"
+    },
+    {
+      "name": "Clayco Power & Energy — utility-scale solar and BESS EPC",
+      "category": "Energy EPC · launched 2026-03-04",
+      "description": "'Design, engineering, procurement, and construction services for utility-scale solar and distributed commercial battery energy storage systems (BESS)', led by Ryan Johnson (Vice President of Power and Energy; previously president of Signal Energy Constructors per ENR). Targets: 'Expected $300 million revenue by 2027' and 'nearly 1,000 craft professionals targeted by 2027'; one Illinois solar-plus-storage project under contract, mobilising 2026. The page offers 'comprehensive EPC… for Solar Power and Battery Energy Storage System (BESS) projects nationwide' to 'utilities, independent power producers, financial sponsors, and data center operators'.",
+      "highlights": [
+        "The one covered-corpus purchase channel Clayco opens for storage: the unit 'engineers, procures and builds battery energy storage systems' — the supplier is not named",
+        "Market framing in the release: electricity demand 'projected to grow 15-20% by 2030'; '85% of new U.S. electric generating capacity in 2025 comprised utility-scale solar and battery storage'",
+        "No project page, MW figure, module, inverter or battery supplier is published — 'Confidential Client Photovoltaic & BESS Plant' (Illinois) is the only reference"
+      ],
+      "positioning": "A late entrant against SOLV, Blattner, Primoris, Rosendin Energy Group and Mortenson in renewables EPC; its edge is the captive data-centre customer base the release itself names as a target segment.",
+      "soldThrough": "EPC contracts with utilities, IPPs, financial sponsors and data-centre operators",
+      "targetSegments": [
+        "Utilities",
+        "Independent power producers",
+        "Financial sponsors",
+        "Data-centre operators"
+      ],
+      "roadmap": "USD 300m revenue and about 1,000 craft by 2027; Illinois PV+BESS mobilising 2026"
+    },
+    {
+      "name": "Industrial and advanced-manufacturing design-build",
+      "category": "The historical core franchise",
+      "description": "Bob Clark's bio places Clayco 'among the largest builders of industrial, advanced manufacturing, food & beverage and hyperscale data facilities'. Current work: Rivian's USD 5bn Georgia EV plant (originally selected 2023; construction resuming 2026 with JE Dunn alongside; production late 2028), Rivian's R2 expansion in Normal, Illinois, ENTEK's USD 1.5bn lithium-battery separator plant in Terre Haute, WEG Transformers USA's Washington, Missouri expansion (31,300 sq ft, groundbreaking April 2026 — transformers for Ameren), and Amazon fulfilment centres of 500,000 to more than 1 million sq ft.",
+      "highlights": [
+        "AESC Florence, South Carolina EV-battery plant: USD 1.6bn design-build with LJC, about 75% complete when AESC suspended work in June 2025; Clayco filed a USD 26.2m lien-foreclosure suit in July 2026 after performing 'over $1 billion in work' and paying 'every subcontractor in full… using our own funds'",
+        "ENR Top 100 Design-Build Firms 2026: No. 5 at USD 7,047m; BD+C 2026: No. 1 at the same figure",
+        "Obama Presidential Center (USD 850m), O'Hare Concourse D (USD 1.3bn), St. Louis Lambert terminal (USD 3bn CMAR) — the civic and aviation book"
+      ],
+      "positioning": "The design-build model that the data-centre unit inherited — speed and single-source responsibility — and the exposure the AESC stall revealed: a private GC carrying subcontractor payments on a stalled federal-policy-sensitive plant.",
+      "soldThrough": "Design-build and CM-at-risk contracts; CRG develop-design-build packages",
+      "targetSegments": [
+        "EV and battery manufacturers",
+        "Advanced manufacturing and transformers",
+        "E-commerce logistics",
+        "Civic and aviation"
+      ],
+      "roadmap": "Rivian Georgia production late 2028; AESC litigation filed 2026-07-14"
+    },
+    {
+      "name": "LJC — The Lamar Johnson Collaborative (architecture and engineering)",
+      "category": "Owned design firm",
+      "description": "Clayco's in-house architecture practice (founded 1999 as BatesForum, acquired Lamar Johnson Collaborative in October 2018) which absorbed Clayco Design & Engineering Inc. on 2026-01-08 — 'Engineering team of 100+ merging into LJC' — under CEO Zac House with Elizabeth Zucker as President. 240-plus professionals in seven offices; disciplines span architecture, building-services, process and structural engineering; 'Mission Critical' is a listed market and LJC is architect of record for the IQMP first phase.",
+      "highlights": [
+        "Anu Russell Tharanath, ex-Burns & McDonnell mission-critical A&E leader, named VP of Design & Engineering in April 2025 to work 'closely with Clayco Compute'",
+        "Design-build integration: 'one entity' responsibility for design and construction is the company's stated route to a shorter 'path to power-on'"
+      ],
+      "positioning": "The piece that makes Clayco a true design-builder rather than a GC with design-assist; comparable in-house design capacity exists at Burns & McDonnell and Black & Veatch (engineer-led) rather than at the GC peers.",
+      "soldThrough": "Integrated into Clayco design-build contracts and as a standalone architecture firm",
+      "targetSegments": [
+        "Clayco projects",
+        "Mission-critical, industrial, healthcare and civic clients"
+      ],
+      "roadmap": "Design and engineering unified under LJC from January 2026"
+    },
+    {
+      "name": "CRG — real-estate development, including powered-land data-centre campuses",
+      "category": "Development arm (privately held affiliate; Shawn Clark CEO)",
+      "description": "CRG, 'a privately held national real estate development and investment firm', offers 'speculative powered shells or fully customized build-to-suit facilities' through a 'vertically integrated Develop-Design-Build platform' with Clayco. Named: the Festus, Missouri campus — 'approximately 600 megawatts across four single-story buildings', 'estimated $6 billion investment', 361 acres, agreement approved 6–2 on 2026-03-30 with no operator identified — and Quantum Shore Chicago (440 acres, with Related Midwest). A USD 1bn, 440-acre 'Project Cumulus' in St. Charles, Missouri was withdrawn in August 2025 amid opposition; Sunshine-Law documents linked it to an LLC with ties to Google.",
+      "highlights": [
+        "Festus: one week after approval four incumbent council members were defeated by anti-data-centre candidates, and a 12-count Sunshine-Law and spot-zoning suit (Wake Up Jeffco LLC v. City of Festus and CRG Acquisition LLC) was filed 2026-04-08; Bob Clark expects 'vested rights' to allow groundbreaking 'possibly in nine months'",
+        "St. Charles passed a one-year data-centre moratorium in August 2025 and weighed a permanent ban in May 2026",
+        "CRG portfolio: USD 14bn-plus developed, 15,000 acres, 250 million sq ft since 1993"
+      ],
+      "positioning": "Makes Clayco one of the few GCs that is also a developer counterparty for powered land; the Missouri record is the corpus's clearest case of community backlash against a GC-affiliated developer.",
+      "soldThrough": "Land, powered shells and build-to-suit leases to hyperscalers and colocation operators; Clayco builds",
+      "targetSegments": [
+        "Hyperscale and colocation tenants",
+        "Institutional capital (Blue Owl at Quantum Shore)"
+      ],
+      "roadmap": "Festus completion target 2028 subject to litigation; St. Charles ban outcome not captured"
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-30",
+      "category": "market",
+      "headline": "Forbes: data centres to be 75% of Clayco's nearly USD 12bn 2026 revenue, up 43% on 2025; 16 data centres completed in 2025 and 77 in progress across 13 states; clients 'including Amazon, Microsoft and Oracle'; Bob Clark debuts on the Forbes 400 at No. 245 with USD 7bn",
+      "read": "The only forward figures in the record, and they imply about USD 9bn of 2026 data-centre revenue — double the USD 4.5bn Clayco Compute target set in January 2025.",
+      "source": "https://www.forbes.com/sites/christopherhelman/2026/09/30/billionaire-data-center-builder-insists-theres-no-ai-bubble/"
+    },
+    {
+      "date": "2026-09-10",
+      "category": "market",
+      "headline": "BD+C Top 100 Design-Build Construction Firms for 2026: Clayco No. 1 at USD 7,047,000,000 of 2025 design-build revenue, ahead of Turner and ARCO",
+      "read": "Design-build is the delivery model the data-centre unit runs on; the figure matches ENR's design-build number exactly.",
+      "source": "https://www.bdcnetwork.com/giants-400/article/55404251/top-100-design-build-construction-firms-for-2026"
+    },
+    {
+      "date": "2026-08-05",
+      "category": "customer",
+      "headline": "Galaxy Digital tells investors HITT replaced Clayco as general contractor for Helios Phase 2 (260 MW), mobilised since April, 'given their project commitments and our timeline requirements and the necessary labor and workforces'",
+      "read": "A marquee AI client doubled the phase size and chose the capacity leader — the clearest evidence of Clayco's labour ceiling.",
+      "source": "https://equibles.com/stocks/glxy/calls/2026-q2"
+    },
+    {
+      "date": "2026-07-22",
+      "category": "legal",
+      "headline": "Clayco sues AESC for USD 26.2m over the stalled USD 1.6bn Florence, South Carolina battery plant (about 75% complete when suspended June 2025; more than USD 1bn of work performed)",
+      "read": "Working-capital exposure of a private design-builder when a federal-policy-sensitive owner stops paying.",
+      "source": "https://www.enr.com/articles/63358-clayco-seeks-262m-for-stalled-south-carolina-ev-battery-plant-work"
+    },
+    {
+      "date": "2026-07-06",
+      "category": "project",
+      "headline": "Galaxy completes Helios Phase 1 — 133 MW of critical IT load (about 200 MW gross) delivered to CoreWeave; Clayco was the Phase 1 GC",
+      "read": "The first completed hyperscale-class AI phase in Clayco's public record.",
+      "source": "https://www.prnewswire.com/news-releases/galaxy-completes-phase-i-of-its-helios-data-center-campus-delivering-133-megawatts-of-critical-it-load-to-coreweave-302818664.html"
+    },
+    {
+      "date": "2026-06-16",
+      "category": "leadership",
+      "headline": "Zack Kass, former OpenAI head of go-to-market, joins Clayco's Board of Advisors; boilerplate now states USD 8.1bn of 2025 revenue",
+      "read": "An AI-demand signal on the advisory board, and the point at which the company's 2025 revenue figure moved from USD 7.6bn to USD 8.1bn.",
+      "source": "https://claycorp.com/latest/clayco-appoints-ai-leader-zack-kass-to-board-of-advisors"
+    },
+    {
+      "date": "2026-05-21",
+      "category": "project",
+      "headline": "ENR: Clayco partners with Deep Atomic on the DOE proposal for a nuclear-powered AI data-centre campus at Idaho National Laboratory (MK60 60 MW SMRs; grid, geothermal and solar first)",
+      "read": "A constructor seat on a speculative federal-site campus — pending DOE approval, no award reported.",
+      "source": "https://www.enr.com/articles/63037-clayco-partners-with-deep-atomic-for-doe-nuclear-powered-data-center-proposal"
+    },
+    {
+      "date": "2026-04-09",
+      "category": "regulatory",
+      "headline": "Festus, Missouri voters oust four council members a week after the council approved CRG's USD 6bn, roughly 600 MW campus 6–2; a 12-count Sunshine-Law suit follows on 2026-04-08",
+      "read": "The developer arm's Missouri campaign is now the corpus's reference case for local backlash against a GC-affiliated developer.",
+      "source": "https://www.kcur.org/politics-elections-and-government/2026-04-09/festus-missouri-data-center-election-city-council"
+    },
+    {
+      "date": "2026-03-04",
+      "category": "corporate",
+      "headline": "Clayco launches Power & Energy — solar and BESS EPC under Ryan Johnson; USD 300m revenue and nearly 1,000 craft professionals targeted by 2027; an Illinois PV-plus-BESS project mobilising 2026",
+      "read": "Opens a battery-procurement channel inside a data-centre GC.",
+      "source": "https://claycorp.com/latest/clayco-launches-power-and-energy-a-new-business-unit-providing-solar-and-energy-storage-to-support-americas-energy-growth"
+    },
+    {
+      "date": "2026-02-12",
+      "category": "partnership",
+      "headline": "Clayco supports the Deep Atomic consortium's DOE submissions for the 'first nuclear-powered AI data center campus in U.S.' with delivery planning and constructability analysis",
+      "read": "First-party confirmation of the nuclear-campus role.",
+      "source": "https://claycorp.com/latest/clayco-supports-deep-atomic-consortium-with-department-of-energy-submissions-for-proposed-first-nuclear-powered-ai-data-center-campus-in-u-s"
+    },
+    {
+      "date": "2026-01-29",
+      "category": "leadership",
+      "headline": "Jason Mrozek named President of Self Perform (new role), covering concrete, enclosure, mechanical and electrical",
+      "read": "Self-perform consolidated under one executive as the labour constraint bites.",
+      "source": "https://claycorp.com/latest/clayco-advances-integrated-delivery-model-with-expanded-self-perform-leadership"
+    },
+    {
+      "date": "2026-01-08",
+      "category": "corporate",
+      "headline": "Clayco Design & Engineering Inc. merges into The Lamar Johnson Collaborative; Zac House named CEO of LJC, Elizabeth Zucker President",
+      "read": "Design and engineering unified under one subsidiary — the design-build thesis made structural.",
+      "source": "https://claycorp.com/latest/clayco-announces-leadership-changes-and-strategic-realignment-across-design-and-engineering-business"
+    },
+    {
+      "date": "2025-10-07",
+      "category": "customer",
+      "headline": "Related Digital breaks ground on its USD 1.2bn, up-to-302 MW Cheyenne campus with Clayco as construction manager; 88 MW first building anchored by CoreWeave, expected late 2026",
+      "read": "A developer-side CM award in a power-rich Western market.",
+      "source": "https://www.related.com/press-releases/2025-10-07/related-digital-breaks-ground-302-mw-data-center-campus-cheyenne-wyoming"
+    },
+    {
+      "date": "2025-10-07",
+      "category": "market",
+      "headline": "BD+C 2025 Giants 400: Clayco No. 4 data-centre contractor with USD 3,640,000,000 of 2024 data-centre revenue (HITT USD 6.74bn, Holder USD 6.48bn, DPR USD 3.65bn, Turner USD 3.61bn)",
+      "read": "The ranking every GC dossier in this corpus cites; Clayco sits USD 10m behind DPR and USD 30m ahead of Turner.",
+      "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025"
+    },
+    {
+      "date": "2025-09-30",
+      "category": "project",
+      "headline": "Related Midwest and CRG break ground on Quantum Shore Chicago; Clayco is general contractor for the first phase of the 128-acre Illinois Quantum and Microelectronics Park anchored by PsiQuantum, with IBM, Diraq and Infleqtion",
+      "read": "A quantum campus delivered by the same design-build-develop platform as the data-centre work.",
+      "source": "https://claycorp.com/latest/related-midwest-crg-break-ground-on-first-phase-of-quantum-shore-chicago-pioneering-technology-and-innovation-hub-along-chicago-lakefront"
+    },
+    {
+      "date": "2025-08-18",
+      "category": "regulatory",
+      "headline": "CRG withdraws 'Project Cumulus', a USD 1bn, 440-acre St. Charles, Missouri data-centre campus, the day before a council vote; the city passes a one-year moratorium",
+      "read": "The first of two Missouri setbacks for the developer arm; documents later tied the project to an LLC with Google ties.",
+      "source": "https://www.stlpr.org/economy-business/2025-09-08/documents-link-secretive-st-charles-data-center-google"
+    },
+    {
+      "date": "2025-08-05",
+      "category": "customer",
+      "headline": "Galaxy Digital names Clayco general contractor for Helios Phase 1 (133 MW critical IT for CoreWeave) with 'over 100 subcontractors and trade partners currently on-site'",
+      "read": "Flagship AI award run as construction management over a large subcontractor base.",
+      "source": "https://equibles.com/stocks/glxy/calls/2025-q2"
+    },
+    {
+      "date": "2025-05-28",
+      "category": "leadership",
+      "headline": "Ryan McGuire promoted to President, Construction while continuing to lead Clayco Compute; Conor Tighe VP Preconstruction & Procurement Strategy",
+      "read": "The data-centre unit's leader now runs all of construction.",
+      "source": "https://claycorp.com/latest/clayco-announces-strategic-leadership-promotions-to-drive-operational-excellence-and-growth"
+    },
+    {
+      "date": "2025-05-21",
+      "category": "market",
+      "headline": "ENR 2025 Top 400: Clayco No. 21 on USD 6.8bn of 2024 revenue (No. 20 and USD 8.1bn a year later on the 2026 list)",
+      "read": "ENR's construction-revenue basis runs below the company's USD 7.6bn boilerplate for the same year.",
+      "source": "https://www.enr.com/articles/62622-clayco-launches-new-solar-and-energy-storage-business-unit"
+    },
+    {
+      "date": "2025-01-15",
+      "category": "corporate",
+      "headline": "Clayco launches Clayco Compute under Ryan McGuire — 57 active data-centre projects, USD 12.7bn of advanced-technology work completed or underway, 2024 data-centre revenue USD 3.6bn (half of total), revenue 'expected to exceed $4.5 billion by 2026'",
+      "read": "The data-centre business formalised as a unit with its own targets.",
+      "source": "https://claycorp.com/latest/clayco-announces-launch-of-advanced-technologies-construction-business-unit-clayco-compute"
+    },
+    {
+      "date": "2025-01-15",
+      "category": "leadership",
+      "headline": "Anthony Johnson becomes CEO as Russ Burns retires after 17 years; Shawn Clark adds Chief Strategy Officer; Steve Sieckhaus Enterprise President and COO; Justin Lienemann CFO",
+      "read": "An orderly succession that keeps the founder as executive chairman and majority owner.",
+      "source": "https://claycorp.com/latest/clayco-announces-ceo-succession-plan-executive-leadership-changes"
+    }
+  ],
+  "strategyRead": [
+    "1. (High confidence) We assess that Clayco's data-centre position rests on vertical integration rather than on speed or scale: it is the only top-five BD+C builder that owns its architect, its concrete and enclosure subcontractors, an MEP self-perform arm and a development company. Basis: BD+C No. 4 (USD 3.64bn) and No. 1 design-build (USD 7.05bn); LJC absorbed engineering in January 2026; CRG develops powered land. The model sells single-source responsibility to owners who want one neck to wring.",
+    "2. (High confidence) We assess that labour capacity, not demand, is the binding constraint. Basis: Galaxy moved Helios Phase 2 (260 MW) to HITT citing Clayco's 'project commitments' and 'the necessary labor and workforces'; Power & Energy targets nearly 1,000 new craft by 2027; a President of Self Perform was created in January 2026; ENR's 2026 report describes the whole Top 400 hitting a 'craft ceiling'. A GC that cannot staff a doubled follow-on phase will lose share to HITT and DPR on the largest campuses whatever its ranking.",
+    "3. (Moderate confidence) We assess that the company's revenue figures are directionally right and specifically unreliable. Basis: 2025 revenue is USD 7.6bn in January–March 2026 releases, USD 8.1bn from June 2026 and USD 8.1bn on ENR's 2026 list, while an August 2026 release labels USD 8.1bn as 2024; Bob Clark's blog cites 'sales to $9 billion in 2024'. Treat any single Clayco revenue number as a boilerplate value, and prefer the ranker's figure with its basis stated.",
+    "4. (Moderate confidence) We assess that CRG's Missouri campaigns are a strategic liability for the construction business. Basis: St. Charles withdrawn under 6,000 signatures and a moratorium; Festus approved then met with a council wipe-out and a Sunshine-Law suit; Bob Clark's August 2026 essay titled the problem 'trust'. A GC whose affiliate is the face of local opposition carries reputational risk into every Midwestern campus bid, including the hyperscalers' own.",
+    "5. (Moderate confidence) We assess that the AESC stall is the realised version of the policy-concentration risk Bloomberg flagged in December 2024. Basis: a USD 1.6bn EV-battery plant suspended at 75% complete with more than USD 1bn performed and Clayco paying subcontractors from its own funds; the USD 26.2m lien suit covers only the unpaid tail. A private balance sheet that absorbs owner defaults on industrial-policy projects is the under-reported exposure behind the data-centre growth story.",
+    "6. (Low confidence) We assess that Clayco Power & Energy will first serve Clayco's own data-centre clients rather than utilities. Basis: the release names 'data center operators' among target clients and the only project is a confidential Illinois PV-plus-BESS job; the hire of a former Signal Energy president suggests utility-scale ambition. Whether the unit becomes a meaningful BESS buyer depends on one named award — none exists yet."
+  ],
+  "relationships": [
+    {
+      "slug": "galaxy-digital",
+      "type": "customer",
+      "note": "General contractor for Helios Phase 1 (133 MW critical IT for CoreWeave, complete July 2026); Phase 2 (260 MW) awarded to HITT.",
+      "context": "Galaxy's COO told investors in August 2025 that Clayco was GC for Phase 1 under a construction-management structure with more than 100 subcontractors on site, delivering in tranches through H1 2026. A year later Galaxy said 'Clayco was our GC on phase one. They were an absolute great partner' but that HITT 'joined the project this year as our new general contractor' for the 260 MW Phase 2, 'given their project commitments and our timeline requirements and the necessary labor and workforces'. Clayco's own page claims more than 100 integrated power assemblies and 90 chillers on Phase 1.",
+      "source": "https://equibles.com/stocks/glxy/calls/2026-q2",
+      "status": "historical",
+      "since": "2025",
+      "scale": "133 MW critical IT (Phase 1)"
+    },
+    {
+      "slug": "coreweave",
+      "type": "other",
+      "note": "Tenant of two Clayco-built shells — Helios Phase 1 (133 MW) and Related Digital Cheyenne (88 MW) — not a direct client.",
+      "context": "CoreWeave leases the capacity Clayco builds for Galaxy (15-year leases totalling 526 MW across three Helios phases) and anchors Related Digital's Cheyenne first building. Clayco's counterparties are the owners; CoreWeave's requirements set the liquid-cooled, high-density design.",
+      "source": "https://www.related.com/press-releases/2025-10-07/related-digital-breaks-ground-302-mw-data-center-campus-cheyenne-wyoming",
+      "status": "active",
+      "scale": "133 MW + 88 MW"
+    },
+    {
+      "slug": "hitt",
+      "type": "competitor",
+      "note": "BD+C 2025 No. 1 (USD 6.74bn) to Clayco's No. 4; replaced Clayco as Helios Phase 2 GC in 2026.",
+      "context": "The two sit at opposite ends of the BD+C top five on scale and on model: HITT's velocity culture and NoVA base against Clayco's vertical integration. At Helios Galaxy chose HITT for the doubled follow-on phase, citing labour and commitments.",
+      "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "status": "active"
+    },
+    {
+      "slug": "holder-construction",
+      "type": "competitor",
+      "note": "BD+C 2025 No. 2 at USD 6.48bn of 2024 data-centre revenue.",
+      "context": "Holder led BD+C's 2024 table ahead of HITT, Turner, DPR and Clayco, and sits second on the 2025 table; both pursue hyperscale campus programmes in the Midwest and South.",
+      "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "status": "active"
+    },
+    {
+      "slug": "dpr",
+      "type": "competitor",
+      "note": "BD+C 2025 No. 3 at USD 3,650,423,000 — about USD 10m ahead of Clayco.",
+      "context": "DPR's self-performing model (about 6,000 craft) is the closest structural comparator to Clayco's self-perform thesis; the two are separated by USD 10m on the 2024 data-centre revenue table.",
+      "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "status": "active"
+    },
+    {
+      "slug": "turner-construction",
+      "type": "competitor",
+      "note": "BD+C 2025 No. 5 (USD 3.61bn), USD 30m behind Clayco; No. 2 on BD+C's 2026 design-build list behind Clayco.",
+      "context": "Turner is ENR's No. 1 contractor overall (USD 28.3bn) but trails Clayco on BD+C's data-centre and design-build tables; Clayco's design-build revenue of USD 7.05bn is nearly half again Turner's USD 4.79bn.",
+      "source": "https://www.bdcnetwork.com/giants-400/article/55404251/top-100-design-build-construction-firms-for-2026",
+      "status": "active"
+    },
+    {
+      "slug": "whiting-turner",
+      "type": "competitor",
+      "note": "BD+C 2025 No. 6 (USD 2.49bn); ENR 2026 Top 400 No. 5 against Clayco's No. 20.",
+      "context": "Ranking peers on the data-centre table; Whiting-Turner's own dossier places it sixth 'behind HITT, Holder, DPR, Clayco and Turner'.",
+      "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "status": "active"
+    },
+    {
+      "slug": "mortenson",
+      "type": "competitor",
+      "note": "BD+C 2025 No. 9 (USD 1.72bn); the GC peer with self-performed power that Clayco's Power & Energy unit now emulates.",
+      "context": "Mortenson's substation and onsite-generation self-performance is the capability Clayco added in March 2026 through Power & Energy; on the 2024 data-centre revenue table Clayco is more than twice Mortenson's size.",
+      "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "status": "active"
+    },
+    {
+      "slug": "mccarthy",
+      "type": "competitor",
+      "note": "St. Louis rival; BD+C 2025 No. 20 (USD 679m) and No. 11 design-build; source of two Clayco hires in 2025–26.",
+      "context": "McCarthy sits far below Clayco on BD+C's data-centre table and has been a talent source: Jason Mrozek (President of Self Perform) and Chad Dorgan (SVP Enterprise Quality) both came from McCarthy or its affiliates.",
+      "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "status": "active"
+    },
+    {
+      "slug": "kiewit",
+      "type": "competitor",
+      "note": "ENR 2026 Top 100 Design-Build No. 4 (USD 8.10bn) to Clayco's No. 5 (USD 7.05bn); a Microsoft Mount Pleasant contractor where Clayco is not attributed.",
+      "context": "Design-build ranking neighbours; Mount Pleasant coverage names Walsh, Kiewit and Boldt, so the Microsoft Wisconsin campus some aggregators attach to Clayco is not corroborated.",
+      "source": "https://www.enr.com/toplists/2026-Top-100-Design-Build-Firms-preview",
+      "status": "active"
+    },
+    {
+      "slug": "microsoft",
+      "type": "customer",
+      "note": "Crain's names a Microsoft data-centre campus in Elk Grove Village among Clayco's active projects; Forbes names Microsoft among its clients.",
+      "context": "The Real Deal, relaying Crain's (January 2025): 57 active data-centre projects 'including a Microsoft data center campus in Elk Grove Village'. Forbes (September 2026) lists clients 'including Amazon, Microsoft and Oracle'. No first-party page names Microsoft, and the Mount Pleasant, Wisconsin campus is attributed by every third party to Walsh, Kiewit and Boldt.",
+      "source": "https://therealdeal.com/chicago/2025/01/21/new-clayco-ceo-steers-into-data-center-boom/",
+      "status": "active"
+    },
+    {
+      "slug": "amazon",
+      "type": "customer",
+      "note": "Long-standing e-commerce-centre client (500,000 to 1 million-plus sq ft buildings); named by Forbes among data-centre clients.",
+      "context": "Clayco's own pages describe Amazon choosing it 'on many very complex, fast-track projects' including a 1.12 million sq ft Baltimore sorting facility; Forbes (September 2026) names Amazon among the clients for whom Clayco is 'erecting self-contained billion-dollar cities'. No named Amazon data-centre campus appears in third-party press.",
+      "source": "https://claycorp.com/project/amazon-e-commerce-centers",
+      "status": "active"
+    },
+    {
+      "slug": "oracle",
+      "type": "customer",
+      "note": "Named by Forbes among Clayco's data-centre clients; no campus identified.",
+      "context": "Forbes (2026-09-30, snippet-confirmed): clients 'including Amazon, Microsoft and Oracle'. Reported, not confirmed by either company.",
+      "source": "https://www.forbes.com/sites/christopherhelman/2026/09/30/billionaire-data-center-builder-insists-theres-no-ai-bubble/",
+      "status": "active"
+    },
+    {
+      "slug": "google",
+      "type": "other",
+      "note": "Implied end user of CRG's withdrawn USD 1bn St. Charles 'Project Cumulus' — documents show NDAs with an LLC 'with ties to Google'.",
+      "context": "St. Louis Public Radio's Sunshine-Law documents (September 2025) tie the withdrawn 440-acre campus to Spark Innovations, whose manager appears on Google data-centre entities in other states. Neither CRG nor Google confirmed; the project was withdrawn and the city imposed a moratorium.",
+      "source": "https://www.stlpr.org/economy-business/2025-09-08/documents-link-secretive-st-charles-data-center-google",
+      "status": "historical"
+    },
+    {
+      "slug": "equinix",
+      "type": "customer",
+      "note": "Built the core and shell of Equinix's 240,000 sq ft Tier IV CH3 in Elk Grove Village (USD 29m, c. 2008).",
+      "context": "A historical reference on Clayco's own portfolio page — the largest of Equinix's 35 data centres at the time; no third-party attribution and no recent Equinix work recorded.",
+      "source": "https://claycorp.com/project/equinix-ch3",
+      "status": "historical",
+      "scale": "240,000 sq ft, USD 29m"
+    },
+    {
+      "slug": "eaton",
+      "type": "supplier",
+      "note": "Three 825 kVA Eaton UPS units at the University of Chicago Pod B data centre (historical).",
+      "context": "The only equipment brand named on a Clayco data-centre page; whether Clayco or the owner bought it is not stated.",
+      "source": "https://claycorp.com/project/university-of-chicago-pod-b-data-center",
+      "status": "historical",
+      "scale": "3 × 825 kVA"
+    },
+    {
+      "slug": "openai",
+      "type": "other",
+      "note": "Zack Kass, OpenAI's former head of go-to-market, joined Clayco's Board of Advisors in June 2026 — an advisory hire, not a commercial tie.",
+      "context": "ENR: 'Clayco Recruits Former OpenAI Exec Zack Kass as Board Advisor' (2026-06-19); no Stargate or OpenAI construction award is attributed to Clayco anywhere.",
+      "source": "https://www.enr.com/articles/63198-clayco-recruits-former-openai-exec-zack-kass-as-board-advisor",
+      "status": "active",
+      "since": "2026-06"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Local data-centre moratoria and zoning (Missouri)",
+      "status": "in-effect",
+      "effectiveDate": "2025-08",
+      "exposure": "CRG's USD 1bn St. Charles campus was withdrawn on 2025-08-18 and the city passed a one-year moratorium, later weighing a permanent ban (May 2026). Festus approved CRG's USD 6bn agreement 6–2 on 2026-03-30; a week later four council incumbents lost to anti-data-centre candidates and a 12-count Sunshine-Law and spot-zoning suit was filed against the city and CRG Acquisition LLC.",
+      "mitigation": "Community-benefit terms in the Festus agreement (USD 3m a year for five years, then USD 5m; water, sewer and street upgrades) and Bob Clark's stated reliance on 'vested rights' to break ground.",
+      "source": "https://www.myleaderpaper.com/news/data-center-lawsuit-wake-up-jeffco/article_d264f593-f2c3-4684-90a1-f26e04bfd6ba.html"
+    },
+    {
+      "regime": "DOE federal-site AI data-centre and nuclear co-location initiative",
+      "status": "proposed",
+      "exposure": "Clayco is the constructor in the Deep Atomic-led consortium proposing a nuclear-powered AI data-centre campus at Idaho National Laboratory (MK60 60 MW small modular reactors), submitted to DOE's Office of Nuclear Energy at the end of 2025 under the 2025 federal-sites programme. No award has been reported.",
+      "source": "https://www.constructiondive.com/news/clayco-doe-bid-nuclear-powered-data-center/812552/"
+    },
+    {
+      "regime": "Federal EV and battery manufacturing incentives (IRA)",
+      "status": "in-effect",
+      "exposure": "AESC suspended its USD 1.6bn Florence, South Carolina battery plant on 2025-06-08 citing 'policy and market uncertainties' with Clayco's design-build about 75% complete; Clayco sued for USD 26.2m of unpaid work in July 2026 after paying its subcontractors from its own funds. Rivian's Georgia plant, also Clayco's, paused in 2024 and resumes in 2026.",
+      "source": "https://wpde.com/news/local/company-seeks-262m-from-aesc-over-suspended-florence-co-battery-plant-project-june-1-obligations-services-equipment-tools-07202026"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Clayco Compute delivery record (company metrics)",
+      "specs": [
+        {
+          "band": "Scale",
+          "label": "Mission-critical page (undated, read 2026-10)",
+          "value": "72 active data center projects; 10.20GW data center density delivered or underway; $42B mission critical revenue delivered or underway; 0.46 current EMR"
+        },
+        {
+          "band": "Scale",
+          "label": "Founder's split (2026-08-04)",
+          "value": "'completed 2.2k GW [sic] of data center capacity with more than 8,000 megawatts under ongoing construction'"
+        },
+        {
+          "band": "Trajectory",
+          "label": "January 2025 baseline",
+          "value": "57 active data center projects; 'over $12.7 billion in advanced technology projects completed or underway'; 2024 data-centre revenue $3.6 billion, 'half of our total revenue'"
+        },
+        {
+          "band": "Trajectory",
+          "label": "Forbes, September 2026",
+          "value": "16 data centers completed in 2025; 77 in the works across 13 states; 75% of nearly $12 billion 2026 revenue"
+        },
+        {
+          "band": "Delivery model",
+          "label": "Scope statement",
+          "value": "'site selection, utility strategy, architecture and engineering, procurement, vendor management, off-site modular construction, self-perform concrete, mechanical and electrical systems, integrated quality and commissioning'"
+        }
+      ],
+      "notes": "All figures are company statements except Forbes'; no independent audit of MW or project counts exists, and 'Top 3 ENR data center contractors' on the same page could not be matched to an ENR table."
+    },
+    {
+      "product": "Galaxy Digital Helios Phase 1 — Afton, Texas",
+      "specs": [
+        {
+          "band": "Capacity",
+          "label": "Critical IT",
+          "value": "133 MW critical IT load, approximately 200 MW gross power, delivered to CoreWeave; Phase I complete July 2026 (Galaxy)"
+        },
+        {
+          "band": "Design",
+          "label": "Cooling",
+          "value": "'Liquid-cooled data center with significant off-site assembly included in design'; conversion of a 180 MW bitcoin-mining site"
+        },
+        {
+          "band": "Scope",
+          "label": "Clayco",
+          "value": "'more than 100 integrated power assemblies and more than 90 chillers with associated piping, installation', concrete and structural steel, on-site batch plant for slab and foundation upgrades (company)"
+        },
+        {
+          "band": "Structure",
+          "label": "Contract",
+          "value": "Construction-management structure with 'over 100 subcontractors and trade partners currently on-site' (Galaxy, August 2025)"
+        },
+        {
+          "band": "Follow-on",
+          "label": "Phase 2",
+          "value": "260 MW critical IT, data halls from H1 2027 — general contractor HITT, mobilised April 2026"
+        }
+      ],
+      "notes": "Clayco-channel claims of 95 prefabricated chiller skids, 952,000 labour hours and USD 24.5m saved circulate only in company material and are not independently reported."
+    },
+    {
+      "product": "Related Digital Cheyenne and Illinois Quantum and Microelectronics Park",
+      "specs": [
+        {
+          "band": "Cheyenne",
+          "label": "Campus",
+          "value": "115 acres; first 36-acre parcel hosts a 184,000 SF facility delivering 88 MW of critical IT; long-term expansion up to 302 MW; USD 1.2bn (Related); high-efficiency air-cooled chillers; Black Hills Energy"
+        },
+        {
+          "band": "Cheyenne",
+          "label": "Role and timing",
+          "value": "Clayco construction manager for Phase 1; groundbreaking 2025-10-07; first building expected late 2026; more than 700 construction jobs"
+        },
+        {
+          "band": "IQMP",
+          "label": "Site",
+          "value": "440-acre Quantum Shore Chicago (former U.S. Steel South Works); 128-acre quantum campus; first phase about 30 acres designed by LJC; PsiQuantum facility 80,700 sq ft; USD 200m-plus cryogenic plant (ENR)"
+        },
+        {
+          "band": "IQMP",
+          "label": "Role and timing",
+          "value": "Clayco general contractor for phase 1; groundbreaking 2025-09-30; first unit online 2026, phase 1 complete 2027; co-developers Related Midwest and CRG"
+        }
+      ],
+      "notes": "Earlier reference projects on the company site: Actapio Wenatchee (two 2 MW design-build halls), Equinix CH3 (240,000 sq ft core and shell), NCSA Petascale (24 MW, 5,400 tons), University of Chicago Pod B (2.125 MW, 85 rear-door-cooled cabinets at 25 kW, three 825 kVA Eaton UPS)."
+    },
+    {
+      "product": "Rankings and revenue bases",
+      "specs": [
+        {
+          "band": "Data centres",
+          "label": "BD+C 2025 (2024 revenue)",
+          "value": "No. 4, $3,640,000,000 — HITT $6,743,277,987; Holder $6,480,000,000; DPR $3,650,423,000; Turner $3,609,682,969; Whiting-Turner $2,494,706,395; Mortenson $1,723,273,000"
+        },
+        {
+          "band": "Overall",
+          "label": "ENR Top 400",
+          "value": "2026: No. 20, $8,100.0M of 2025 revenue; 2025: No. 21, $6.8B of 2024 revenue"
+        },
+        {
+          "band": "Design-build",
+          "label": "2026 lists",
+          "value": "BD+C No. 1 at $7,047,000,000; ENR No. 5 at $7,047.00M (2025: ENR No. 4 at $6,840.00M)"
+        },
+        {
+          "band": "Subsidiaries",
+          "label": "Scale",
+          "value": "Concrete Strategies $550 million 2025 revenue, 940,000 cubic yards, 46 states; Ventana averaged over $75 million annually; LJC 240-plus professionals"
+        },
+        {
+          "band": "Safety",
+          "label": "Company",
+          "value": "EMR 0.46 current (0.48 in 2023); OSHA VPP Star in 15 states; TRIR not published"
+        }
+      ],
+      "notes": "BD+C's 2026 data-centre ranking had not been published as of 2026-10-04; ENR's telecommunications/data-centre sector table was not reachable."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Bob Clark",
+      "title": "Founder and Executive Chairman; Board of Advisors (majority owner)",
+      "photo": "images/execs/clayco-clark.png",
+      "background": [
+        "Formed Clayco on 23 July 1984 in St. Louis at 25; 'owns most of the company' (Forbes); net worth USD 7bn, Forbes 400 No. 245 (2026)",
+        "Stepped down briefly as executive chairman in September 2021 to serve as commissioner general of the US pavilion at Expo 2020 Dubai",
+        "Executive chairman and founder of CRG; trustee roles at the University of Chicago Medical Center, Loyola University Chicago, Saint Louis University and Washington University",
+        "Publishes at bobclarkbeyond.com — the August 2026 essay 'We Don't Have a Data Center Problem. We Have a Trust Problem' is the company's clearest statement on community opposition"
+      ]
+    },
+    {
+      "name": "Anthony Johnson",
+      "title": "Chief Executive Officer and Shareholder",
+      "photo": "images/execs/clayco-johnson.jpg",
+      "background": [
+        "CEO since January 2025, succeeding Russ Burns (retired 31 December 2024 after 17 years)",
+        "Joined Clayco in 2008; previously Executive Vice President and President of the Industrial Business Unit, credited by Bob Clark with 'driving sales to $9 billion in 2024'",
+        "Describes Clayco as 'the premier vertically integrated design-build/EPC and real estate development company'; on data centres: 'It needs specialization, mechanical and electrical experts'"
+      ]
+    },
+    {
+      "name": "Ryan McGuire",
+      "title": "President, Construction, and President, Clayco Compute",
+      "photo": "images/execs/clayco-mcguire.png",
+      "background": [
+        "Named President of Clayco Compute at its launch in January 2025 as 'a 20-year industry veteran'; promoted to President, Construction in May 2025 while keeping the data-centre unit",
+        "On power: 'If you can't get the power to the site, you can't build and turn on and activate your data centers' (Bloomberg, January 2025)"
+      ]
+    },
+    {
+      "name": "Ryan Johnson",
+      "title": "Vice President, Power and Energy (Solar and Energy Storage)",
+      "photo": "images/execs/clayco-ryan-johnson.jpg",
+      "background": [
+        "Leads Clayco Power & Energy, launched 2026-03-04; previously president of Signal Energy Constructors (ENR)",
+        "Target: USD 300m of revenue and nearly 1,000 craft professionals by 2027"
+      ]
+    },
+    {
+      "name": "Steve Sieckhaus",
+      "title": "Enterprise President, Chief Operating Officer and Shareholder",
+      "background": [
+        "More than 30 years in operations and project management; oversees the construction-management organisation; named Enterprise President in the January 2025 succession"
+      ]
+    },
+    {
+      "name": "Justin Lienemann",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/clayco-lienemann.png",
+      "background": [
+        "CFO of the Clayco enterprise since January 2025, succeeding Jim Havel after more than 40 years; also CFO of the Clayco Foundation and CCDI",
+        "Former Express Scripts finance executive (a Clayco client); CPA; Kellogg MBA, Indiana University BS"
+      ]
+    },
+    {
+      "name": "Shawn Clark",
+      "title": "Chief Strategy Officer, Clayco; Chief Executive Officer, CRG",
+      "photo": "images/execs/clayco-shawn-clark.png",
+      "background": [
+        "Added Chief Strategy Officer in the January 2025 succession; leads CRG, the development arm pursuing the Festus, Missouri campus and Quantum Shore Chicago",
+        "More than 17 years in commercial real estate; USD 7bn of transactions, five fund vehicles, 80-plus projects; Crain's 40 Under 40 (2023)"
+      ]
+    },
+    {
+      "name": "Jason Mrozek",
+      "title": "President of Self Perform",
+      "background": [
+        "Appointed to the newly created role in January 2026 over concrete, enclosure, mechanical and electrical self-perform; formerly EVP of Cal Solar Inc. and earlier at McCarthy Building Companies",
+        "'Owners are asking for faster schedules, fewer handoffs, and greater certainty. Self-perform gives us the ability to control the work that matters most.'"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private (majority-owned by founder Bob Clark; no audited public financials — revenue is self-reported to ENR and BD+C or stated in company boilerplate, and the boilerplate figures conflict)",
+    "periods": [
+      {
+        "period": "2025 (ENR 2026 Top 400; company boilerplate)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "USD 8,100.0m (ENR 2026 Top 400, No. 20); company boilerplate: 'more than $7.6 billion in revenue for 2025' (January–March 2026 releases), '$8.1 billion for 2025' (June 2026), 'over $8.1+ billion' (company-overview page)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Two company figures for the same year; ENR's construction-revenue basis agrees with the later one"
+          },
+          {
+            "name": "Design-build revenue",
+            "actual": "USD 7,047m — BD+C Top 100 Design-Build No. 1; ENR Top 100 Design-Build No. 5",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Both lists carry the identical figure"
+          },
+          {
+            "name": "Data-centre activity",
+            "actual": "16 data centres completed in 2025 (Forbes); BD+C's 2025 data-centre revenue figure for 2025 not yet published",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Forbes, 2026-09-30 (snippet-confirmed)"
+          },
+          {
+            "name": "Concrete Strategies revenue",
+            "actual": "USD 550m; 940,000 cubic yards",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Subsidiary website, undated"
+          }
+        ],
+        "commentary": "No margin, backlog or balance-sheet disclosure. Forbes' forward figures — nearly USD 12bn of 2026 revenue, up 43%, 75% data centres — imply a 2025 base of about USD 8.4bn, consistent with ENR's USD 8.1bn rather than the USD 7.6bn boilerplate."
+      },
+      {
+        "period": "2024 (ENR 2025 Top 400; BD+C 2025; company)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "USD 6.8bn (ENR 2025 Top 400, No. 21); 'roughly $7.5 billion', '+29 percent' (Crain's via The Real Deal; Bloomberg); '$7.6 billion in revenue for 2024' (all 2025 company releases); '$8.1 billion in revenue for 2024' (one August 2026 release, most plausibly a mislabelled 2025 figure)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR counts construction revenue only; the higher figures appear to include development and other lines"
+          },
+          {
+            "name": "Data-centre revenue",
+            "actual": "USD 3,640,000,000 (BD+C 2025 Giants 400, No. 4); '$3.6 billion—half of our total revenue' (company, January 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Up from USD 1.5bn in 2023 per the company"
+          },
+          {
+            "name": "Design-build revenue",
+            "actual": "USD 6,840m — ENR Top 100 Design-Build 2025, No. 4",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR, June 2025"
+          }
+        ],
+        "commentary": "The breakout year for data centres: the share of revenue doubled to half and the BD+C rank reached fourth. Bob Clark's blog separately cites 'sales to $9 billion in 2024' — read as bookings, unlabelled."
+      },
+      {
+        "period": "2023 (company; Construction Dive)",
+        "periodType": "annual",
+        "periodEnd": "2023-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "USD 5.8bn (company releases, January 2025); USD 5.3bn (Construction Dive, relaying a company announcement)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Pre-breakout baseline; 2022 was USD 5.2bn per the November 2023 office-move release"
+          },
+          {
+            "name": "Data-centre revenue",
+            "actual": "USD 1.5bn",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company, January 2025 (ENR repeats it)"
+          }
+        ],
+        "commentary": "Historical markers: USD 1.2m in 1984; USD 3.8bn in 2020 (BD+C No. 1 design-builder that year); USD 5.2bn in 2022."
+      }
+    ],
+    "commentary": "Expectations: no consensus exists for a private company and none is manufactured here. Company-stated targets: Clayco Compute 'expected to exceed $4.5 billion by 2026' (January 2025); Power & Energy USD 300m by 2027; Forbes' ~USD 12bn / 75% data-centre 2026 figures. Capital exposure visible in the record: more than USD 1bn performed on the stalled AESC plant with USD 26.2m unpaid, and CRG's USD 6bn Festus campus in litigation."
+  },
+  "sources": [
+    {
+      "label": "Forbes — Billionaire data center builder insists there's no AI bubble (Christopher Helman; ~USD 12bn 2026 revenue, 75% data centres, 16 completed / 77 in progress)",
+      "url": "https://www.forbes.com/sites/christopherhelman/2026/09/30/billionaire-data-center-builder-insists-theres-no-ai-bubble/",
+      "date": "2026-09-30"
+    },
+    {
+      "label": "BD+C — Top 100 Design-Build Construction Firms for 2026 (Clayco No. 1, USD 7,047,000,000)",
+      "url": "https://www.bdcnetwork.com/giants-400/article/55404251/top-100-design-build-construction-firms-for-2026",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "ENR — Top 400 Review: data center boom raises stakes (Rivian Georgia with JE Dunn)",
+      "url": "https://www.enr.com/articles/63598-enr-top-400-review-data-center-boom-raises-stakes",
+      "date": "2026-09-03"
+    },
+    {
+      "label": "Galaxy Digital — Q2 2026 earnings call transcript (HITT replaces Clayco as Helios Phase 2 GC)",
+      "url": "https://equibles.com/stocks/glxy/calls/2026-q2",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Bob Clark — We don't have a data center problem. We have a trust problem (2.2 GW completed; >8,000 MW under construction)",
+      "url": "https://www.bobclarkbeyond.com/blog-post/we-dont-have-a-data-center-problem-we-have-a-trust-problem",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "Clayco — Life Time Living topping out, North Phoenix (boilerplate: '$8.1 billion in revenue for 2024')",
+      "url": "https://claycorp.com/latest/life-time-living-reaches-construction-milestone-with-topping-out-ceremony-at-pv-in-north-phoenix",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "ENR — Clayco seeks USD 26.2M for stalled South Carolina EV battery plant work (AESC)",
+      "url": "https://www.enr.com/articles/63358-clayco-seeks-262m-for-stalled-south-carolina-ev-battery-plant-work",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "WPDE — Company seeks USD 26.2M from AESC over suspended Florence battery plant project",
+      "url": "https://wpde.com/news/local/company-seeks-262m-from-aesc-over-suspended-florence-co-battery-plant-project-june-1-obligations-services-equipment-tools-07202026",
+      "date": "2026-07-20"
+    },
+    {
+      "label": "Galaxy Digital — Galaxy completes Phase I of its Helios data center campus, delivering 133 MW of critical IT load to CoreWeave",
+      "url": "https://www.prnewswire.com/news-releases/galaxy-completes-phase-i-of-its-helios-data-center-campus-delivering-133-megawatts-of-critical-it-load-to-coreweave-302818664.html",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "ENR — Clayco recruits former OpenAI exec Zack Kass as board advisor (No. 5 design-delivery firm; 'just over $7 billion')",
+      "url": "https://www.enr.com/articles/63198-clayco-recruits-former-openai-exec-zack-kass-as-board-advisor",
+      "date": "2026-06-19"
+    },
+    {
+      "label": "Clayco — Clayco appoints AI leader Zack Kass to Board of Advisors (boilerplate: '$8.1 billion for 2025')",
+      "url": "https://claycorp.com/latest/clayco-appoints-ai-leader-zack-kass-to-board-of-advisors",
+      "date": "2026-06-16"
+    },
+    {
+      "label": "ENR — Top 100 Design-Build Firms 2026 preview (Clayco No. 5, USD 7,047.00M)",
+      "url": "https://www.enr.com/toplists/2026-Top-100-Design-Build-Firms-preview",
+      "date": "2026-06"
+    },
+    {
+      "label": "ENR — Clayco partners with Deep Atomic for DOE nuclear-powered data center proposal",
+      "url": "https://www.enr.com/articles/63037-clayco-partners-with-deep-atomic-for-doe-nuclear-powered-data-center-proposal",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "ENR — 2026 Top 400 Contractors (Clayco No. 20; 2025 rank 21)",
+      "url": "https://www.enr.com/toplists/2026-Top-400-Contractors-1",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "First Alert 4 — St. Charles weighs data center ban; developer says project would have upgraded water system",
+      "url": "https://www.firstalert4.com/2026/05/18/st-charles-weighs-data-center-ban-developer-says-project-would-have-upgraded-water-system/",
+      "date": "2026-05-18"
+    },
+    {
+      "label": "Leader (Jefferson County) — Data center lawsuit: Wake Up Jeffco LLC v. City of Festus and CRG Acquisition LLC (12 counts)",
+      "url": "https://www.myleaderpaper.com/news/data-center-lawsuit-wake-up-jeffco/article_d264f593-f2c3-4684-90a1-f26e04bfd6ba.html",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "Spectrum News — Festus data center: CRG and Bob Clark respond (USD 6bn; 'vested rights'; groundbreaking possibly in nine months)",
+      "url": "https://spectrumlocalnews.com/mo/st-louis/news/2026/04/13/st-louis-festus-data-center-crg-bob-clark",
+      "date": "2026-04-13"
+    },
+    {
+      "label": "KCUR — Festus voters oust four council members over the data center a week after approval",
+      "url": "https://www.kcur.org/politics-elections-and-government/2026-04-09/festus-missouri-data-center-election-city-council",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "St. Louis Public Radio — Festus council approves CRG data center development agreement 6–2",
+      "url": "https://www.stlpr.org/government-politics-issues/2026-03-31/festus-data-center-development-approval",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "ENR — Clayco launches new solar and energy storage business unit (ENR 2025 Top 400 No. 21, USD 6.8bn; USD 300M by 2027; Ryan Johnson ex-Signal Energy)",
+      "url": "https://www.enr.com/articles/62622-clayco-launches-new-solar-and-energy-storage-business-unit",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "Chicago Sun-Times — Chicago-based construction firm Clayco launches solar energy business (3,800 employees; ~1,000 craft by 2027)",
+      "url": "https://chicago.suntimes.com/money/2026/03/04/chicago-construction-clayco-solar-power-energy-business",
+      "date": "2026-03-04"
+    },
+    {
+      "label": "Clayco — Clayco launches Power & Energy, a new business unit providing solar and energy storage",
+      "url": "https://claycorp.com/latest/clayco-launches-power-and-energy-a-new-business-unit-providing-solar-and-energy-storage-to-support-americas-energy-growth",
+      "date": "2026-03-04"
+    },
+    {
+      "label": "Construction Dive — Clayco joins DOE bid for nuclear-powered data center (MK60; build first on grid, geothermal and solar)",
+      "url": "https://www.constructiondive.com/news/clayco-doe-bid-nuclear-powered-data-center/812552/",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Nuclear Engineering International — Deep Atomic eyes AI nuclear hubs (Clayco: master planning, engineering and construction)",
+      "url": "https://www.neimagazine.com/news/deep-atomic-eyes-ai-nuclear-hubs/",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "The Register — US moving ahead with co-located nukes and datacenters (DOE federal sites; Deep Atomic at INL)",
+      "url": "https://www.theregister.com/on-prem/2026/02/13/us-moving-ahead-with-colocated-nukes-and-datacenters/5186970",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Clayco — Clayco supports Deep Atomic consortium with DOE submissions for proposed first nuclear-powered AI data center campus in US",
+      "url": "https://claycorp.com/latest/clayco-supports-deep-atomic-consortium-with-department-of-energy-submissions-for-proposed-first-nuclear-powered-ai-data-center-campus-in-u-s",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Clayco — Clayco advances integrated delivery model with expanded self-perform leadership (Jason Mrozek)",
+      "url": "https://claycorp.com/latest/clayco-advances-integrated-delivery-model-with-expanded-self-perform-leadership",
+      "date": "2026-01-29"
+    },
+    {
+      "label": "Clayco — Clayco announces leadership changes and strategic realignment across design and engineering business (LJC merger)",
+      "url": "https://claycorp.com/latest/clayco-announces-leadership-changes-and-strategic-realignment-across-design-and-engineering-business",
+      "date": "2026-01-08"
+    },
+    {
+      "label": "Related — Related Digital breaks ground on 302 MW data center campus in Cheyenne, Wyoming (Clayco construction manager; USD 1.2bn; CoreWeave 88 MW)",
+      "url": "https://www.related.com/press-releases/2025-10-07/related-digital-breaks-ground-302-mw-data-center-campus-cheyenne-wyoming",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "BD+C — Top data center construction firms for 2025 (Clayco No. 4, USD 3,640,000,000 of 2024 data center facility revenue)",
+      "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "ENR — Nation's largest quantum computing hub breaks ground at former Chicago steel mill site (Clayco GC, phase 1)",
+      "url": "https://www.enr.com/articles/61458-nations-largest-quantum-computing-hub-breaks-ground-at-former-chicago-steel-mill-site",
+      "date": "2025-10-02"
+    },
+    {
+      "label": "Clayco — Related Midwest, CRG break ground on first phase of Quantum Shore Chicago (boilerplate: '$7.6 billion… 2024')",
+      "url": "https://claycorp.com/latest/related-midwest-crg-break-ground-on-first-phase-of-quantum-shore-chicago-pioneering-technology-and-innovation-hub-along-chicago-lakefront",
+      "date": "2025-09-30"
+    },
+    {
+      "label": "St. Louis Public Radio — Documents link secretive St. Charles data center to Google (Project Cumulus withdrawn)",
+      "url": "https://www.stlpr.org/economy-business/2025-09-08/documents-link-secretive-st-charles-data-center-google",
+      "date": "2025-09-08"
+    },
+    {
+      "label": "ENR — Rivian to resume construction of USD 5B Georgia EV plant in 2026 (Clayco remains contractor)",
+      "url": "https://www.enr.com/articles/61200-rivian-to-resume-construction-of-5b-georgia-ev-plant-in-2026",
+      "date": "2025-08-15"
+    },
+    {
+      "label": "Galaxy Digital — Q2 2025 earnings call transcript (Clayco GC for Helios Phase 1; >100 subcontractors on site)",
+      "url": "https://equibles.com/stocks/glxy/calls/2025-q2",
+      "date": "2025-08-05"
+    },
+    {
+      "label": "Clayco — New survey finds most Americans support data centers ('top five builder of data centers in the U.S.')",
+      "url": "https://claycorp.com/latest/new-survey-finds-most-americans-support-data-centers-if-they-create-jobs-boost-economic-development-and-reduce-rates",
+      "date": "2025-07-16"
+    },
+    {
+      "label": "Clayco — Clayco announces strategic leadership promotions (Ryan McGuire President, Construction)",
+      "url": "https://claycorp.com/latest/clayco-announces-strategic-leadership-promotions-to-drive-operational-excellence-and-growth",
+      "date": "2025-05-28"
+    },
+    {
+      "label": "The Job Walk — ENR 2026 Top 400: the data behind every move in the top 10 (telecom shares: HITT 82%, DPR 57%, Mortenson 45%, Turner 33%)",
+      "url": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "Clayco — Clayco names Anu Russell Tharanath Vice President of Design & Engineering ('advanced technology business unit')",
+      "url": "https://claycorp.com/latest/clayco-names-anu-russell-tharanath-vice-president-of-design-engineering",
+      "date": "2025-04-14"
+    },
+    {
+      "label": "Construction Dive — Clayco's new CEO on the data center boom (USD 3.6B, half of 2024 revenue)",
+      "url": "https://www.constructiondive.com/news/clayco-ceo-data-center-boom/738021/",
+      "date": "2025-01-23"
+    },
+    {
+      "label": "The Real Deal (relaying Crain's) — Clayco's new CEO guiding firm through data center boom (~USD 7.5bn 2024, +29%; Microsoft Elk Grove Village)",
+      "url": "https://therealdeal.com/chicago/2025/01/21/new-clayco-ceo-steers-into-data-center-boom/",
+      "date": "2025-01-21"
+    },
+    {
+      "label": "ENR — Clayco dives deep into data center construction (Clayco Compute; USD 3.6B 2024; USD 4.5B+ by 2026)",
+      "url": "https://www.enr.com/articles/60154-clayco-dives-deep-into-data-center-construction",
+      "date": "2025-01-15"
+    },
+    {
+      "label": "Construction Dive — Clayco announces CEO change, new data center division",
+      "url": "https://www.constructiondive.com/news/clayco-new-ceo-data-center-expansion/737390/",
+      "date": "2025-01-15"
+    },
+    {
+      "label": "Bloomberg via Insurance Journal — Chicago construction billionaire deepens bet on data centers",
+      "url": "https://www.insurancejournal.com/news/midwest/2025/01/15/808336.htm",
+      "date": "2025-01-15"
+    },
+    {
+      "label": "Clayco — Clayco announces launch of advanced technologies construction business unit, Clayco Compute",
+      "url": "https://claycorp.com/latest/clayco-announces-launch-of-advanced-technologies-construction-business-unit-clayco-compute",
+      "date": "2025-01-15"
+    },
+    {
+      "label": "Clayco — Clayco announces CEO succession plan, executive leadership changes",
+      "url": "https://claycorp.com/latest/clayco-announces-ceo-succession-plan-executive-leadership-changes",
+      "date": "2025-01-15"
+    },
+    {
+      "label": "Bob Clark — A new era at Clayco: welcoming new leadership and a business unit ('sales to $9 billion in 2024'; 'almost $7.5 billion')",
+      "url": "https://www.bobclarkbeyond.com/blog-post/www-bobclarkbeyond-com-a-new-era-at-clayco-welcoming-new-leadership-business-unit",
+      "date": "2025-01-15"
+    },
+    {
+      "label": "Bloomberg Law — Biden made this billionaire much richer; Trump is a threat (USD 7.5bn revenue; 'top executives own 40%' per snippet)",
+      "url": "https://news.bloomberglaw.com/daily-labor-report/biden-made-this-billionaire-much-richer-trump-is-a-threat",
+      "date": "2024-12-11"
+    },
+    {
+      "label": "Clayco — Clayco announces St. Louis office move (USD 5.2 billion 2022 revenue; 230,000 sq ft campus)",
+      "url": "https://claycorp.com/latest/clayco-announces-st-louis-office-move",
+      "date": "2023-11-06"
+    },
+    {
+      "label": "The Lumberjack — Cal Poly Humboldt considers Clayco, a company with a record of wrongful death, wage theft and malpractice, for a USD 100 million contract",
+      "url": "https://thelumberjack.org/2023/09/06/cal-poly-humboldt-considers-clayco-a-company-with-record-of-wrongful-death-wage-theft-and-malpractice-for-100-million-construction-contract/",
+      "date": "2023-09-06"
+    },
+    {
+      "label": "Clayco — Clayco tops BD+C Giants 400 as nation's largest design-build firm (USD 3.8B 2020; No. 11 data center contractor)",
+      "url": "https://claycorp.com/latest/clayco-tops-building-designconstructions-giants-400-rankings-as-nations-largest-design-build-construction-firm",
+      "date": "2021-11-20"
+    },
+    {
+      "label": "Forbes — Robert Clark profile ('owns most of the company'; USD 7B; USD 7.6 billion 2024 revenue)",
+      "url": "https://www.forbes.com/profile/robert-clark/"
+    },
+    {
+      "label": "Clayco — Company overview (Chicago HQ since 2013; 'over $8.1+ billion in revenue for 2025'; 'more than 4,000 employees'; 'privately-owned')",
+      "url": "https://claycorp.com/company-overview/"
+    },
+    {
+      "label": "Clayco — Mission critical / Clayco Compute (72 active projects; 10.20GW; $42B; EMR 0.46; 'TOP 3' ENR)",
+      "url": "https://claycorp.com/work/mission-critical/"
+    },
+    {
+      "label": "Clayco — Services (self-perform; Clayco SEI; Consolidated Distribution Company procurement)",
+      "url": "https://claycorp.com/services/"
+    },
+    {
+      "label": "Clayco — Power + Energy (solar and BESS EPC)",
+      "url": "https://claycorp.com/power-energy-storage"
+    },
+    {
+      "label": "Clayco — Galaxy Digital Helios conversion project page",
+      "url": "https://claycorp.com/project/galaxy-digital-helios-renovation"
+    },
+    {
+      "label": "Clayco — Related Digital Cheyenne data center campus project page",
+      "url": "https://claycorp.com/project/related-digital-cheyenne-data-center-campus"
+    },
+    {
+      "label": "Clayco — PsiQuantum campus / Illinois Quantum and Microelectronics Park project page",
+      "url": "https://claycorp.com/project/psiquantum-campus"
+    },
+    {
+      "label": "Clayco — Equinix CH3 project page",
+      "url": "https://claycorp.com/project/equinix-ch3"
+    },
+    {
+      "label": "Clayco — University of Chicago Pod B data center project page (Eaton UPS)",
+      "url": "https://claycorp.com/project/university-of-chicago-pod-b-data-center"
+    },
+    {
+      "label": "Clayco — Amazon e-commerce centers project page",
+      "url": "https://claycorp.com/project/amazon-e-commerce-centers"
+    },
+    {
+      "label": "Clayco — People: Bob Clark",
+      "url": "https://claycorp.com/people/bob-clark"
+    },
+    {
+      "label": "Clayco — People: Anthony Johnson ('Chief Executive Officer & Shareholder')",
+      "url": "https://claycorp.com/people/anthony-johnson"
+    },
+    {
+      "label": "Clayco — People: Ryan McGuire",
+      "url": "https://claycorp.com/people/ryan-mcguire"
+    },
+    {
+      "label": "Clayco — People: Steve Sieckhaus ('Enterprise President, Chief Operating Officer & Shareholder')",
+      "url": "https://claycorp.com/people/steve-sieckhaus"
+    },
+    {
+      "label": "Clayco — People: Justin Lienemann",
+      "url": "https://claycorp.com/people/justin-lienemann"
+    },
+    {
+      "label": "Clayco — People: Shawn Clark",
+      "url": "https://claycorp.com/people/shawn-clark"
+    },
+    {
+      "label": "Clayco — Privacy policy (St. Louis mailing address)",
+      "url": "https://claycorp.com/privacy-policy/"
+    },
+    {
+      "label": "LJC — Studio / about (Clayco's in-house design firm since 1999)",
+      "url": "https://theljc.com/studio/about"
+    },
+    {
+      "label": "Concrete Strategies — Home ($550 Million in 2025 Revenue; 940 Thousand Cubic Yards)",
+      "url": "https://www.concretestrategies.com/"
+    },
+    {
+      "label": "Ventana — Company overview (Clayco subsidiary; top-10 US curtainwall provider)",
+      "url": "https://ventana.vc/company-overview"
+    },
+    {
+      "label": "CRG — Data centers (Festus ~600 MW, USD 6 billion; Quantum Shore Chicago)",
+      "url": "https://www.realcrg.com/data-centers"
+    },
+    {
+      "label": "OpenCorporates — Clayco, Inc., Missouri 00266787 (formerly Clayco Construction Company, Inc.; good standing)",
+      "url": "https://opencorporates.com/companies/us_mo/00266787"
+    },
+    {
+      "label": "Bridgit — 50 largest general contractors in the United States (ENR 2026 Top 400 revenue transcription: Clayco $8,100.0M)",
+      "url": "https://gobridgit.com/blog/50-largest-general-contractors-in-the-united-states/"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}

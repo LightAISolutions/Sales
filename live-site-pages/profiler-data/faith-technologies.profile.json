@@ -1,0 +1,1018 @@
+{
+  "schemaVersion": 7,
+  "slug": "faith-technologies",
+  "name": "Faith Technologies, Inc.",
+  "shortName": "Faith Technologies",
+  "categories": [
+    "epc"
+  ],
+  "website": "https://www.faithtechinc.com",
+  "headquarters": "Menasha, Wisconsin, USA (manufacturing: Appleton and Little Chute WI, Olathe KS; El Paso TX, Opelika AL, Pittsboro IN and Monroe LA plants announced November 2025 to August 2026)",
+  "founded": "1972 (Town & Country Electric, Appleton WI; SKC Electric 1980; bought back from Encompass Services and re-formed as Faith Technologies, Inc. in October 2002)",
+  "employees": "~4,600 (December 2025, per Insight on Business); company boilerplate ranged from 'more than 4,500' (November 2025) to 'more than 6,000 team members' (May–July 2026); 3,735 at year-end 2024 (Deloitte Wisconsin 75 book)",
+  "ownership": {
+    "type": "private",
+    "notes": "Wisconsin business corporation (DFI F033755) registered with SAM as a Subchapter S corporation; the company's only ownership statement is that the 2002 buyback from Encompass put the business 'under team member ownership'. Department of Labor Form 5500 filings (EIN 41-2065665) show a 401(k), a 401(a) and a welfare plan and no ESOP — the retirement plans hold no employer securities — so the structure is direct shareholding by employees (about 80 shareholders in 2004; current breadth undisclosed), not an ESOP. Not on the NCEO Employee Ownership 100."
+  },
+  "summary": "BOTTOM LINE UP FRONT: Faith Technologies Incorporated (FTI) is a merit-shop electrical contractor whose data-centre business is now the fastest-growing in EC&M's Top 50 — 2025 electrical sales of USD 2.28bn, up 62.6%, ninth in the September 2026 ranking — and whose defining bet is industrialised construction: five new Excellerate prefabrication plants of about 500,000 sq ft each announced between November 2025 and August 2026 (El Paso, Opelika, Pittsboro, Monroe and an Olathe expansion, roughly USD 550m of announced capex), feeding modular electrical buildings and power modules to hyperscale sites. BACKGROUND. Menasha, Wisconsin; founded 1972 as Town & Country Electric; privately held under direct employee shareholding since the 2002 buyback (an S corporation, not an ESOP, per DOL filings). Three brands: Faith Technologies (electrical contracting — design-build, medium-voltage, critical power), Excellerate (manufacturing — modular electrical buildings, e-houses, trestles, skids; from April 2026 an OEM brand, Excellerate Products, selling UL 891 switchboards, a 2 MW power module and the eSkid EV-charging skid) and EnTech Solutions (microgrids, solar, storage, EV charging). The company states more than 950 MW of greenfield data-centre work and 1.5 GW of modular solutions delivered over ten years; the one named hyperscale campus is Meta's Lebanon, Indiana build with Turner and Mortenson. ABC ranked it the No. 1 high-tech/data-centre contractor by hours worked in 2025 and 2026; ENR placed it 32nd among specialty contractors on 2023 revenue of USD 1.06bn. Collection gap: no company-published revenue, margin or backlog exists — every figure above is a ranker's; the Excellerate OEM line has no named third-party buyer in any reachable source, which is why the dossier files FTI as an EPC and not a supplier.",
+  "ecosystemRole": "We assess FTI as a build-segment electrical contractor on the record — ENR type code E, EC&M's Top 50 Electrical Contractors, ABC's No. 1 high-tech/data-centre contractor — that has moved further than any peer except Rosendin toward owning its own factory: Excellerate's plants pre-build the electrical rooms, trestles and power modules FTI's crews then install. The category is `epc`, not `supplier`, because every revenue figure is contracting revenue and every reachable description of the factories' output routes it to FTI's own project sites; Excellerate Products (OEM, April 2026) has standalone buyer terms and a national sales manager but no named outside purchaser, so the adjacent in-hall-power seat is withheld until one is recorded.",
+  "productsAndServices": [
+    {
+      "name": "Data-centre electrical construction (Faith Technologies brand)",
+      "category": "Electrical contracting · the flagship franchise",
+      "description": "Design-build and design-assist electrical delivery for hyperscale, colocation and enterprise data centres: medium-voltage service and distribution, generator and switchboard installation, UPS and battery systems, overhead cable trestles between buildings, and Level 1–5 commissioning support. The company states that over the past ten years it has 'provided more than 950 megawatts in greenfield data center construction sites and delivered more than 1.5 gigawatts in modular solutions'. Merit-shop (open-shop) labour; ABC ranked FTI the No. 1 high-tech/data-centre contractor by hours worked in both 2025 and 2026.",
+      "highlights": [
+        "Meta Lebanon, Indiana — named with Turner and Mortenson on Meta's 1,500-acre, roughly 4 million sq ft, more than USD 10bn campus (1 GW at completion per Construction Dive; first phase early 2028); FTI's stated role is near-site manufacturing and integration facilities, two warehouse hubs and 'millions of labor hours with an industrialized approach'",
+        "Overhead conveyance trestles for a confidential client 'across several states' — low-, medium- and high-voltage cabling carried on modularised 50-foot sections fabricated at Excellerate, replacing underground duct banks",
+        "Atlanta colocation operator (relationship since 2014): USD 3.25m electrical-room build-out — four 600 kW generators, two 4,000 A generator switchboards, a new 4,000 A utility service; 'the client purchased equipment and FTI stored and installed it'",
+        "Medium-voltage self-perform: 'tens of thousands of MV terminations annually', with a 3M cable-preparation robot used for terminations and cutbacks",
+        "EC&M 2026 Top 50 Electrical Contractors: No. 9 on 2025 sales of USD 2,283,638,907, up 62.64% — the largest growth rate in the top ten; ENR 2024 Top 600 Specialty Contractors No. 32 (type E) on 2023 revenue of USD 1,063.6m"
+      ],
+      "positioning": "Against Rosendin (EC&M No. 2, USD 5.5bn) and EMCOR's electrical segment (No. 3, USD 5.1bn), FTI is less than half the size but growing faster; against M.C. Dean and MMR it competes for the same hyperscale electrical packages. Its differentiation is the share of labour it moves into its own factories ('more than 50% of project labor' for modular data-centre power, per the company) and a merit-shop labour model that ABC's hours-based rankings reward; it lacks the mechanical scope EMCOR brings and the owner-reported MW record Rosendin publishes.",
+      "soldThrough": "Direct contracts with owners and with general contractors (Turner and Mortenson at Meta Lebanon; DPR on the Clarksville battery plant); design-build, design-assist and EPC under a single contract",
+      "targetSegments": [
+        "Hyperscalers (Meta named)",
+        "Colocation operators (confidential Atlanta client)",
+        "Advanced-manufacturing and battery plants (DPR / Clarksville)",
+        "Healthcare, industrial and commercial electrical"
+      ],
+      "roadmap": "Meta Lebanon first phase online early 2028; four 500,000 sq ft Excellerate plants opening mid-2026 (El Paso) to spring 2027 (Monroe) to feed data-centre modular work; ENR 2026 Top 600 (publishes 2026-10-22) is the next independent revenue read"
+    },
+    {
+      "name": "Excellerate — industrialised construction (engineer-to-order)",
+      "category": "Prefabrication and modular manufacturing",
+      "description": "FTI's manufacturing arm since 2014: modular electrical buildings (MEBs) for data centres, e-houses housing MV and LV switchgear and motor-control equipment, skidded substations and distribution, overhead trestle sections, electrical assemblies (hangers, conduit, duct banks, underground racks) and mechanical pipe skids. Commissioning through Level 3 is done in the factory, 'potentially up to Level 5'. Plants: Appleton and Little Chute (385,000 sq ft, opened November 2023) in Wisconsin, Olathe KS (roughly 442,000 + 438,000 sq ft, with a 2.16 MW rooftop array), and five announcements in ten months — El Paso TX (500,000 sq ft, USD 81.6m, operations mid-2026), Opelika AL (USD 79m, former JoAnn distribution centre), Pittsboro IN (500,000 sq ft, USD 67.5m), Monroe LA (500,000 sq ft, USD 80.5m, spring 2027) and an Olathe expansion backed by USD 239.8m of industrial revenue bonds (about 1.4–1.5 million sq ft, 1,153 jobs over ten years).",
+      "highlights": [
+        "Every state economic-development release routes the factories' output to 'hyperscale data centers' or 'large-scale infrastructure projects'; Inside Indiana Business ties Pittsboro to FTI's own Meta Lebanon role",
+        "Modular data-centre power: 'shifts more than 50% of project labor' to the factory; MEBs 'eliminating the majority of on-site electrical work' (company)",
+        "Duct-bank prefabrication case: '67% of labor hours offsite', 'installs three times faster', roughly USD 1m saved per 10,000 hours moved (company)",
+        "Crypto-mining e-house spec: 40-ft containers at 2.5 MVA, 415/240 VAC, three 1,200 A I-LINE mains and 28 Powerlink panelboards per container (Schneider Electric / Square D product names)",
+        "About USD 550m of announced plant capex and roughly 1,950 announced jobs between November 2025 and August 2026 (derived from the state releases)"
+      ],
+      "positioning": "The closest analogue in the covered set is Rosendin's Modular Power Solutions; FTI's plant footprint (seven sites built or announced) is the larger of the two by announced square footage. Unlike a merchant OEM, every reachable description routes Excellerate output to FTI's own installations.",
+      "soldThrough": "Integrated with FTI's project contracts; engineer-to-order quotes for third parties are offered on the website but no outside buyer is named",
+      "targetSegments": [
+        "FTI's own data-centre and industrial projects",
+        "Owners wanting off-site commissioned electrical rooms",
+        "Crypto and modular compute operators (historical)"
+      ],
+      "roadmap": "El Paso operational mid-2026; Pittsboro and Opelika 2026–27; Monroe spring 2027; Olathe three-building expansion approved August 2026"
+    },
+    {
+      "name": "Excellerate Products — the OEM line (UL 891 LV switchboards, Power Module 2 MW, eSkid)",
+      "category": "Manufactured products · launched as an OEM brand April 2026",
+      "description": "Standardised, configure-to-order products sold under standalone buyer terms (net 30, FOB origin, title retained until paid, 12 months from installation or 18 from shipment warranty, aftermarket parts by catalogue). UL 891 LV switchboards in 2,000/3,000/4,000 A frames, indoor or outdoor, 'works with industry-leading breaker brands'; the Power Module 2 MW, which 'consolidates multiple electrical components including integrated UPS systems, switchboards and batteries into a single, scalable power distribution module' with SCADA/PLC/HMI monitoring, walk-in serviceability and 2N options; and the eSkid, an above-ground EV-charging skid powering up to eight DC fast chargers (1 MW today, 2.5 MW planned). Jon Branson is VP and GM of Products; Matt Smith National Sales Manager.",
+      "highlights": [
+        "OEM launch 2026-04-07: 'First to market is the Excellerate Products UL891 LV Switchboards', shown at Data Center World (booth 1220)",
+        "Power Module 2 MW: UL 891, NEC 2023, NEMA 3R, ISO 14001 and RoHS; '30% shorter lead times'; voltage, ampacity, enclosure and monitoring configurable",
+        "The company's NOC now monitors 'products we manufacture as an original equipment manufacturer (OEM)' alongside its installations",
+        "Collection gap: no named third-party buyer, order, shipment, UL file number or distributor appears in any first-party or third-party source as of October 2026 — the line is intended for merchant sale but there is no evidence a merchant sale has occurred"
+      ],
+      "positioning": "Enters the prefabricated power-module space occupied by Schneider Electric, Vertiv and Eaton's Fibrebond and by Rosendin's MPS; FTI's module integrates other OEMs' UPS, breakers and batteries rather than its own ('we partner with leading OEMs'). Until a buyer is recorded this is a product line in the catalogue sense, not in the revenue sense.",
+      "soldThrough": "Direct sales team (National Sales Manager), quote or order by contact form; volume pricing offered; e-commerce parts catalogue referenced in the terms",
+      "targetSegments": [
+        "Colocation and high-density data-centre power rooms",
+        "EV fleet and corridor charging",
+        "Industrial, healthcare and utility switchboard buyers"
+      ],
+      "roadmap": "eSkid capacity to 2.5 MW (company); first named external order is the trigger that would move FTI's segment role (see ecosystemRole)"
+    },
+    {
+      "name": "Critical power, National Solution Services (NS2) and FTI ON",
+      "category": "Lifecycle services",
+      "description": "Single-source critical-power work — generators, UPS systems and batteries, DC plants, switchgear and PDUs, cooling and containment — 'which we source, permit, install and fully implement', plus the NS2 network operations centre and the FTI ON lifecycle service launched 2025-11-11 for data centres: monitoring deployment, preventive maintenance, UPS and battery validation, BMS/EPMS/SCADA expertise, with 250-plus client-certified ICIAN technicians, a one-hour confirmation and four-hour response SLA.",
+      "highlights": [
+        "Shawn Blair hired SVP of NS2 in March 2026 from Schneider Electric, where he 'helped develop a nationwide field services partnership network program with FTI'",
+        "Chad Carter (ex-AWS senior operations manager) hired as data-centre operations director, February 2026",
+        "NOC grew from one to seven staff in two and a half years; EV-charger alerts resolved remotely '95% of the time'"
+      ],
+      "positioning": "Recurring-revenue layer on the installed base, comparable to EMCOR's Building Services at a far smaller scale; the Schneider field-services tie is the only named OEM partnership.",
+      "soldThrough": "Service-level agreements and maintenance contracts, available 'only through NS2'",
+      "targetSegments": [
+        "Data-centre operators",
+        "Commercial and industrial owners with FTI-installed systems",
+        "EV-charging site owners"
+      ],
+      "roadmap": "National hub for technician training explored (Fox Cities campus LOI, abandoned February 2026 in favour of leasing)"
+    },
+    {
+      "name": "EnTech Solutions — microgrids, solar, storage and EV charging",
+      "category": "Distributed energy · clean-energy brand since 2020",
+      "description": "Feasibility modelling (Energy DNA), engineering, procurement and construction of microgrids, solar arrays, battery storage and EV-charging infrastructure, with FTI-owned or leased-back assets offered as energy-as-a-service. Named work: a solar-plus-storage microgrid under construction for Mastercard's O'Fallon, Missouri data centre with BioStar Renewables (collaboration announced 2026-03-10); the 3.3 MW Mason City, Iowa array (self-performed over 80%); 26-plus NEVI corridor charging sites in California with Zero6 Energy (USD 15.2m of awards); Pierce fire-apparatus charging.",
+      "highlights": [
+        "Mastercard O'Fallon data-centre microgrid — the one storage-at-a-data-centre engagement in the record (via BioStar; BioStar's CEO Bill Love founded SKC Electric, an FTI predecessor)",
+        "Schneider Electric EcoStruxure microgrid integrator; global Schneider Sustainability Impact Award 2023",
+        "Solar Power World 2025 Top Solar Contractors No. 155 (294 MW cumulative, 11.4 MW installed in 2024)"
+      ],
+      "positioning": "A small C&I distributed-energy EPC relative to the storage-developer segment; relevant to this corpus because it is the arm that buys BESS and inverters for FTI-built microgrids.",
+      "soldThrough": "EPC contracts, PPAs, leases and energy-service agreements for FTI-owned assets; financing via BioStar and bank partners",
+      "targetSegments": [
+        "Commercial and industrial owners",
+        "Data-centre operators (Mastercard)",
+        "Fleet and corridor EV-charging developers (Zero6, Pierce)"
+      ],
+      "roadmap": "BioStar nationwide collaboration (2026); Zero 60 charging initiative continues"
+    },
+    {
+      "name": "Industrial, advanced-manufacturing and institutional electrical contracting",
+      "category": "The base business",
+      "description": "Electrical construction across healthcare, science and technology, industrial, transportation and entertainment markets with more than 180 designers, CAD technicians and engineers in-house. Reference: the Clarksville, Tennessee EV-battery plant where DPR selected FTI to lead budget and design for a USD 24m package that rebuilt site power from under 10 MW to nearly 18 MW, with 'approximately $5 million of the project allocated to sourcing and installing the necessary switchgear' and a Schneider Electric partnership on the design.",
+      "highlights": [
+        "Children's Wisconsin PICU — AGC of Wisconsin 2025 BUILD award and ABC Wisconsin Projects of Distinction Gold (three 15 kV Caterpillar generators, 2.5 MW)",
+        "Safety record 2025: 10.8 million hours, TRIR 0.18, LTIR 0.00, EMR 0.37; AGC Construction Safety Excellence first place (specialty, >5m hours) four years running",
+        "Johnson Controls engineering centre (with Mortenson), Thermo Fisher lab, Exact Sciences — Wisconsin institutional base"
+      ],
+      "positioning": "The revenue floor the data-centre surge sits on; the Clarksville job shows FTI furnishing switchgear under its own purchase orders where the owner does not.",
+      "soldThrough": "Design-build, design-assist and bid-build subcontracts to general contractors and owners",
+      "targetSegments": [
+        "Healthcare",
+        "Advanced manufacturing and EV battery",
+        "Science and technology",
+        "Transportation"
+      ],
+      "roadmap": "Growth guided qualitatively only ('a similar growth pattern in 2026' — CEO, December 2025)"
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-16",
+      "category": "market",
+      "headline": "EC&M 2026 Top 50 Electrical Contractors: FTI No. 9 on 2025 sales of USD 2.284bn, up 62.64% — the fastest growth in the top ten",
+      "read": "The first independent revenue figure above USD 2bn; the growth rate is the data-centre build showing up in a ranker's table rather than in company boilerplate.",
+      "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf"
+    },
+    {
+      "date": "2026-08-25",
+      "category": "capacity",
+      "headline": "Olathe city council approves USD 239.8m of industrial revenue bonds for a three-building, roughly 1.4–1.5 million sq ft Excellerate expansion with an 80% ten-year property-tax abatement and 1,153 jobs",
+      "read": "The largest single capacity commitment in the record, and the clearest sign the prefab thesis is being funded for a multi-year hyperscale pipeline.",
+      "source": "https://johnsoncountypost.com/2026/08/25/faith-technologies-irbs-294754/"
+    },
+    {
+      "date": "2026-08-05",
+      "category": "capacity",
+      "headline": "Groundbreaking in Monroe, Louisiana: 500,000 sq ft, USD 80m Excellerate plant with 200-plus jobs, ARCO National as design-build partner, completion spring 2027",
+      "read": "Fourth greenfield plant in ten months; the Gulf South site sits between Texas and Southeast data-centre markets.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/community-leaders-celebrate-groundbreaking-for-ftis-new-manufacturing-facility-in-monroe/"
+    },
+    {
+      "date": "2026-07-09",
+      "category": "capacity",
+      "headline": "Pittsboro, Indiana hiring event for the 500,000 sq ft plant (47 acres, 200 new jobs); boilerplate now reads 'more than 6,000 team members'",
+      "read": "Headcount boilerplate moved from 4,500 to 6,000 in eight months — the labour build is running ahead of the plants.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-to-host-pittsboro-career-hiring-event-to-fill-skilled-manufacturing-and-electrical-roles/"
+    },
+    {
+      "date": "2026-06-09",
+      "category": "capacity",
+      "headline": "Monroe, Louisiana expansion announced: USD 80.5m, 500,000 sq ft, 200 direct jobs, LED FastStart and ITEP incentives; FTI as general contractor",
+      "read": "Louisiana Economic Development describes the output as 'electrical assemblies and energy solutions for large-scale infrastructure projects' — project-bound, not merchant.",
+      "source": "https://www.opportunitylouisiana.gov/news/faith-technologies-incorporated-to-power-northeast-louisiana-growth-with-80-5-million-investment"
+    },
+    {
+      "date": "2026-04-09",
+      "category": "capacity",
+      "headline": "Pittsboro, Indiana plant announced: USD 67.5m, 500,000 sq ft, up to 200 jobs by end-2027, IEDC tax credits up to USD 3m; Inside Indiana Business ties it to FTI's Meta Lebanon role",
+      "read": "Near-site manufacturing for a named hyperscale campus — the Excellerate model made explicit.",
+      "source": "https://iedc.in.gov/events/news/details/2026/04/09/governor-braun-welcomes-faith-technologies-incorporated-200-new-jobs-to-pittsboro"
+    },
+    {
+      "date": "2026-04-07",
+      "category": "product-launch",
+      "headline": "Excellerate Products launched as FTI's OEM brand; UL 891 LV switchboards 'first to market', shown at Data Center World; Jon Branson VP/GM of Products, Matt Smith National Sales Manager",
+      "read": "The move from captive prefabrication to catalogue products — the category question for this dossier turns on whether an outside buyer follows.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-introduces-excellerate-products/"
+    },
+    {
+      "date": "2026-03-31",
+      "category": "leadership",
+      "headline": "Shawn Blair hired as SVP of National Solution Services from Schneider Electric to meet 'growing demand for data center servicing and maintenance nationwide'",
+      "read": "Services leadership bought from the OEM that already ran a field-services partnership with FTI.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-adds-leader-to-national-solution-services-team-to-meet-demand-for-data-center-services/"
+    },
+    {
+      "date": "2026-03-10",
+      "category": "partnership",
+      "headline": "FTI and BioStar Renewables collaborate nationwide on microgrid and BESS EPC and financing; Mastercard O'Fallon data-centre microgrid under construction",
+      "read": "The one storage-at-a-data-centre engagement in the record, and a route to FTI-owned energy assets.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-and-biostar-renewables-collaborate-to-support-clean-energy-infrastructure-nationwide/"
+    },
+    {
+      "date": "2026-02-25",
+      "category": "capacity",
+      "headline": "Opelika, Alabama: USD 79m to buy and convert the former JoAnn Stores distribution centre, about 200 jobs at an average wage above USD 65,000",
+      "read": "A brownfield conversion for speed — the Southeast site nearest the Georgia and Carolina data-centre markets.",
+      "source": "https://www.madeinalabama.com/2026/02/faith-technologies-to-invest-79-million-in-opelika-manufacturing-expansion/"
+    },
+    {
+      "date": "2026-02-24",
+      "category": "leadership",
+      "headline": "Chad Carter, ex-AWS senior operations manager, hired as data-centre operations director in NS2",
+      "read": "Hyperscaler operations experience brought into the services arm.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-expands-nationwide-data-center-service-capabilities-and-talent-to-meet-rapid-growth/"
+    },
+    {
+      "date": "2026-02-17",
+      "category": "corporate",
+      "headline": "FTI ends due diligence on the former UW Oshkosh Fox Cities campus without buying it; will seek leased space for a national training hub",
+      "read": "Capital kept for plants rather than a campus — consistent with the ten-month factory programme.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-concludes-due-diligence-period-on-former-university-of-wisconsin-oshkosh-fox-cities-campus/"
+    },
+    {
+      "date": "2026-02-11",
+      "category": "customer",
+      "headline": "Meta names Mortenson, Turner Construction and Faith Technologies as partners on its Lebanon, Indiana campus (about 4 million sq ft, more than USD 10bn, 1 GW per Construction Dive, first phase early 2028)",
+      "read": "The only hyperscaler that names FTI; the campus is the anchor for the Pittsboro plant and the Indiana hiring.",
+      "source": "https://datacenters.atmeta.com/2026/02/hello-lebanon/"
+    },
+    {
+      "date": "2026-02-09",
+      "category": "market",
+      "headline": "ABC 2026 Top Performers: FTI No. 9 overall, No. 1 High-Tech/Data Center contractor for the second year, No. 2 electrical, No. 3 trade contractor",
+      "read": "An hours-worked ranking with a safety qualification, not a revenue ranking — it measures merit-shop craft volume on data-centre sites.",
+      "source": "https://www.globenewswire.com/news-release/2026/02/09/3234663/0/en/top-performing-2026-construction-companies-named-by-abc.html"
+    },
+    {
+      "date": "2026-01-20",
+      "category": "corporate",
+      "headline": "2025 in review: 10.8 million hours, TRIR 0.18, LTIR 0.00, EMR 0.37; 1,827 new hires; FTI ON launched; El Paso 200-plus jobs",
+      "read": "Safety statistics at this level are a bid credential with hyperscalers; the hiring figure is the labour side of the capacity build.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-highlights-safety-growth-and-industry-achievements-in-2025/"
+    },
+    {
+      "date": "2025-12-16",
+      "category": "market",
+      "headline": "ABC 2025 Top 250 Performers: No. 11 overall; No. 1 High-Tech/Data Center; No. 2 electrical; No. 4 trade; No. 9 renewables",
+      "read": "First year at the top of ABC's data-centre category.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-ranks-no-11-on-abcs-2025-top-250-performers-list/"
+    },
+    {
+      "date": "2025-11-18",
+      "category": "market",
+      "headline": "Deloitte Wisconsin 75: No. 27 (from No. 35), ranked by sales revenue (figures unpublished); 3,735 team members at year-end 2024 per the programme book",
+      "read": "The only independent confirmation of year-end 2024 headcount.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-named-to-deloittes-2025-wisconsin-75-ranking/"
+    },
+    {
+      "date": "2025-11-11",
+      "category": "product-launch",
+      "headline": "FTI ON lifecycle support service for data centres launched through NS2: 250-plus ICIAN technicians, one-hour confirmation, four-hour response",
+      "read": "A recurring-service product on top of the installed base.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/keeping-data-centers-on-faith-technologies-incorporated-unveils-innovative-lifecycle-support-service/"
+    },
+    {
+      "date": "2025-11-04",
+      "category": "capacity",
+      "headline": "El Paso, Texas: USD 81.6m, 500,000 sq ft Excellerate plant on 48 acres, 200-plus jobs, county Chapter 381 rebate of up to USD 52.5m; operations late spring 2026",
+      "read": "The first of the five plant announcements and the one with the largest public incentive.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-expands-in-el-paso-creating-200-jobs/"
+    },
+    {
+      "date": "2025-03-24",
+      "category": "product-launch",
+      "headline": "Excellerate eSkid launched — above-ground EV-charging skid for up to eight DC fast chargers, 1 MW today and 2.5 MW planned; 'the inaugural product under FTI's product brand, Excellerate'",
+      "read": "The first catalogue product, a year before the OEM brand itself.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-introduces-breakthrough-in-electric-vehicle-charging-installation-with-its-excellerate-eskid/"
+    },
+    {
+      "date": "2025-01-07",
+      "category": "market",
+      "headline": "ENR 2024 Top 600 Specialty Contractors: No. 32 (from 38) on 2023 revenue of USD 1,063.6m; No. 12 among electrical contractors",
+      "read": "The baseline the 2025 EC&M figure doubles.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/fti-ranks-in-top-50-on-2024-enr-top-600-special-contractors-and-top-50-electrical-contractors-lists/"
+    }
+  ],
+  "strategyRead": [
+    "1. (High confidence) We assess that FTI's strategy is to win hyperscale electrical packages on labour certainty: by moving half or more of the hours into its own factories it can promise schedule on sites where craft supervision, not equipment, is the constraint — the same bottleneck EMCOR's chief executive names. Basis: five 500,000 sq ft plants and an Olathe expansion announced in ten months, all described by the host states as serving hyperscale data centres.",
+    "2. (High confidence) We assess that the correct category is electrical contractor, not supplier. Basis: every revenue figure is contracting revenue (ENR type E, EC&M, ABC electrical); every reachable description of Excellerate output routes it to FTI's own sites; Excellerate Products has buyer terms and a sales manager but, as of October 2026, no named outside purchaser. The decision flips on the first named third-party order.",
+    "3. (Moderate confidence) We assess that the 62.6% growth in 2025 electrical sales is largely one hyperscaler's programme. Basis: Meta Lebanon is the only named hyperscale customer, the Pittsboro plant is tied to it by Indiana press, and the company's own project list names no other hyperscale campus; a Microsoft or Amazon attribution exists only on a jobs aggregator. Concentration risk is therefore high and unmeasurable.",
+    "4. (Moderate confidence) We assess that the merit-shop model is both the growth engine and the ceiling. Basis: ABC's hours-based rankings put FTI first in data centres while EC&M's revenue table puts it ninth — FTI sells craft hours cheaply relative to union peers, which suits owners in right-to-work Southern and Midwestern markets but limits it in Northern Virginia and California, where the covered union contractors dominate.",
+    "5. (Moderate confidence) We assess that direct employee shareholding in an S corporation, rather than an ESOP, leaves succession and plant financing dependent on retained earnings, bank debt and municipal bonds (the USD 239.8m Olathe IRBs). Basis: DOL filings show no employer securities in any plan; the company has published no revenue, margin or balance sheet since 2002. A capital event — outside investor, ESOP conversion or sale — is the structural indicator to watch.",
+    "6. (Low confidence) We assess that the 2 MW power module is positioned as a colocation product that will first ship on FTI's own jobs. Basis: the page calls it 'proven, productized' without a reference site; the module integrates other OEMs' UPS and breakers; FTI's NOC already monitors OEM units. Treat any 'deployed' claim as unverified until a buyer or site is named."
+  ],
+  "relationships": [
+    {
+      "slug": "meta",
+      "type": "customer",
+      "note": "Named by Meta as a delivery partner, with Turner and Mortenson, on the Lebanon, Indiana campus.",
+      "context": "Meta's 2026-02-11 announcement lists 'Mortenson, Turner Construction, Faith Technologies' among its partners on the roughly 4 million sq ft, more than USD 10bn Lebanon campus (1 GW at completion per Construction Dive; first phase early 2028). FTI's own recruiting page describes its role as near-site manufacturing and integration facilities, two warehouse hubs and millions of labour hours. Meta does not state FTI's trade scope; it is implied by FTI's business. The Pittsboro plant is connected to this campus by Indiana press.",
+      "source": "https://datacenters.atmeta.com/2026/02/hello-lebanon/",
+      "status": "active",
+      "since": "2026",
+      "scale": "~4M sq ft campus, >USD 10bn"
+    },
+    {
+      "slug": "turner-construction",
+      "type": "partner",
+      "note": "Co-delivery partner on Meta Lebanon.",
+      "context": "Meta and Mortenson both name Turner and Faith Technologies together on the Lebanon campus; Turner is the general contractor appointed by Meta per World Construction Network. FTI's position is the electrical trade and modular-manufacturing partner alongside the two GCs.",
+      "source": "https://www.mortenson.com/news-insights/mortenson-begins-indiana-data-center-construction",
+      "status": "active",
+      "since": "2026"
+    },
+    {
+      "slug": "mortenson",
+      "type": "partner",
+      "note": "Co-delivery partner on Meta Lebanon; earlier electrical partner on Johnson Controls' Glendale engineering centre.",
+      "context": "Mortenson: 'Mortenson is proud to collaborate with Turner Construction and Faith Technologies to help deliver a worldclass data center campus' (2026-02-16). FTI also 'partnered with Mortenson Construction and Weas Development' on Johnson Controls' 105,000 sq ft Warren Johnson engineering centre in Glendale, Wisconsin.",
+      "source": "https://www.mortenson.com/news-insights/mortenson-begins-indiana-data-center-construction",
+      "status": "active",
+      "since": "2026"
+    },
+    {
+      "slug": "dpr",
+      "type": "customer",
+      "note": "DPR selected FTI to lead budget and design on the USD 24m Clarksville, Tennessee battery-plant electrical upgrade.",
+      "context": "'FTI was invited by DPR Construction to participate in a site walk… DPR selected us to lead the budget management and design for this $24 million project', rebuilding site power from under 10 MW to nearly 18 MW with about USD 5m of switchgear sourced and installed by FTI; a further USD 3.4m contract followed for processing-equipment connections and West Coast battery-storage installs.",
+      "source": "https://www.faithtechinc.com/project/confidential-client-battery-manufacturing-facility/",
+      "status": "active",
+      "scale": "USD 24m package; ~18 MW"
+    },
+    {
+      "slug": "schneider-electric",
+      "type": "supplier",
+      "note": "Switchgear partner on Clarksville; EcoStruxure microgrid integrator; the field-services partnership Shawn Blair built before joining FTI.",
+      "context": "FTI 'leveraged our partnership with Schneider Electric to optimize the design, reducing lead times and costs' on the Clarksville switchgear; installs EcoStruxure Power Monitoring Expert and Microgrid Operation on its microgrids (Schneider case study; 2023 global Sustainability Impact Award); its crypto e-houses use I-LINE mains and Powerlink panelboards; and in March 2026 it hired Schneider's Shawn Blair, who 'helped develop a nationwide field services partnership network program with FTI'. No source names the UPS or breaker OEM inside the Power Module 2 MW.",
+      "source": "https://www.se.com/us/en/work/campaign/life-is-on/case-study/faith-technologies-incorporated.jsp",
+      "status": "active"
+    },
+    {
+      "slug": "caterpillar",
+      "type": "supplier",
+      "note": "Three 15 kV Caterpillar generators (2.5 MW) installed by FTI at Children's Wisconsin.",
+      "context": "FTI's Children's Wisconsin project page: the new generator facility 'was designed with three 15KV Caterpillar generators to replace four smaller units, generating 2.5 megawatts (MW) of power'. An installation reference, not a stated supply agreement.",
+      "source": "https://www.faithtechinc.com/project/childrens-wisconsin/",
+      "status": "historical",
+      "scale": "3 × 15 kV, 2.5 MW"
+    },
+    {
+      "slug": "rosendin",
+      "type": "competitor",
+      "note": "EC&M 2026 No. 2 (USD 5.5bn, +49%) against FTI's No. 9 (USD 2.28bn, +62.6%); the closest analogue for a contractor-owned prefab operation.",
+      "context": "Both are private electrical contractors that moved manufacturing in-house — Rosendin's Modular Power Solutions and Rosendin Energy Group against FTI's Excellerate and EnTech. Rosendin is union (and an ESOP), FTI merit-shop and directly employee-held; Rosendin publishes a 15 GW data-centre record, FTI a 950 MW greenfield claim.",
+      "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+      "status": "active"
+    },
+    {
+      "slug": "emcor",
+      "type": "competitor",
+      "note": "EMCOR's electrical segment ranks No. 3 on EC&M's 2026 table (USD 5.1bn) against FTI's No. 9.",
+      "context": "EMCOR competes for the same hyperscale electrical packages through union subsidiaries such as Dynalectric and Miller Electric, and brings the mechanical scope FTI lacks. Both name supervision and prefabrication as the constraint and the answer.",
+      "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+      "status": "active"
+    },
+    {
+      "slug": "quanta-services",
+      "type": "competitor",
+      "note": "EC&M 2026 No. 1 (USD 23.0bn) — the scale ceiling of the electrical-contractor ranking FTI sits ninth in.",
+      "context": "Quanta's electrical sales are ten times FTI's; the comparison bounds what 'top ten electrical contractor' means in this corpus.",
+      "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+      "status": "active"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "NEVI formula program",
+      "status": "in-effect",
+      "exposure": "FTI designs, develops and installs the NEVI-funded corridor charging stations that Zero6 Energy finances, owns and operates: USD 14.4m from Caltrans and the California Energy Commission and USD 879,169 from WisDOT, covering at least 26 California sites, were awarded to Zero6 in December 2024. The awards sit with the owner, so FTI's exposure is as the installer of record, not the grantee.",
+      "source": "https://www.faithtechinc.com/news-and-insights/news/zero6-energy-awarded-more-than-15-2-million-in-california-and-wisconsin-national-electrical-vehicle-infrastructure-funding/"
+    },
+    {
+      "regime": "State manufacturing incentives (Chapter 381, IEDC credits, LED FastStart/ITEP, Kansas IRBs)",
+      "status": "in-effect",
+      "exposure": "Each 2025–26 plant carries a public incentive: El Paso County's Chapter 381 rebate of up to USD 52.5m; Indiana EDC performance-based tax credits of up to USD 3m plus a Hendricks County abatement; Louisiana's FastStart, High Impact Jobs and Industrial Tax Exemption programmes; and Olathe's USD 239.8m of industrial revenue bonds with an 80% ten-year property-tax abatement tied to 1,153 jobs. The incentives are job-contingent, so a slower data-centre cycle would claw back part of the capex economics.",
+      "source": "https://johnsoncountypost.com/2026/08/25/faith-technologies-irbs-294754/"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Excellerate Power Module 2 MW",
+      "specs": [
+        {
+          "band": "Power",
+          "label": "Rating",
+          "value": "2 MW; 'the modular design allows for phased expansion and redundancy (Power or 2N)'"
+        },
+        {
+          "band": "Contents",
+          "label": "Integrated equipment",
+          "value": "'integrated UPS systems, switchboards and batteries into a single, scalable power distribution module'; 'Integrated SCADA, PLC and HMI systems enable real-time diagnostics and predictive maintenance'"
+        },
+        {
+          "band": "Compliance",
+          "label": "Standards",
+          "value": "UL 891, NEC 2023, NEMA 3R, ISO 14001, RoHS"
+        },
+        {
+          "band": "Design",
+          "label": "Configuration",
+          "value": "'Voltage, ampacity, enclosure type and monitoring systems are configurable'; 'Walk-In, Serviceable Design'; 'side-by-side placement of mirror image modules'"
+        },
+        {
+          "band": "Delivery",
+          "label": "Lead time",
+          "value": "'Typical lead times are up to 30% shorter than traditional construction'"
+        },
+        {
+          "band": "Service",
+          "label": "Warranty",
+          "value": "'one-year standard product warranty' (product page); 'twelve (12) months from Product installation; or eighteen (18) months from date of shipment… whichever occurs first' (Excellerate Products general terms)"
+        }
+      ],
+      "notes": "Not stated: UPS or battery OEM, kVA/kW detail beyond 2 MW, voltage class, dimensions, chemistry, UL file number, price, factory of manufacture, or any named deployment."
+    },
+    {
+      "product": "Excellerate Products UL 891 LV switchboards and eSkid",
+      "specs": [
+        {
+          "band": "Switchboards",
+          "label": "Ratings",
+          "value": "'2000A, 3000A and 4000A switchboard options'; 'indoor or outdoor options and power levels up to 4000 amps'; 'works with industry-leading breaker brands'"
+        },
+        {
+          "band": "Switchboards",
+          "label": "Standards",
+          "value": "UL 891, NEMA PB2, UL 50 and UL 50E; 'configure-to-order and custom-engineered'; assembled and tested at the Excellerate facility before shipment"
+        },
+        {
+          "band": "eSkid",
+          "label": "Capacity",
+          "value": "'each Excellerate eSkid can power up to eight DC fast chargers… up to 1 megawatt of EV charging today — and plans to expand capacity to 2.5 megawatts'; 1,200 A switchboard, maximum four chargers per side"
+        },
+        {
+          "band": "eSkid",
+          "label": "Deployment",
+          "value": "NEMA 3R and NEC compliant; forklift-placed and relocatable; 'most sites to be up and running in just a few days'"
+        }
+      ],
+      "notes": "Commercial terms for the OEM line: net 30, FOB origin, title retained until payment, restocking fee on returns, aftermarket parts by catalogue or e-commerce."
+    },
+    {
+      "product": "Engineer-to-order modular builds (e-houses, trestles, skids)",
+      "specs": [
+        {
+          "band": "E-houses",
+          "label": "Scope",
+          "value": "'accommodate medium-voltage (MV) and low-voltage (LV) switchgear equipment, MV and LV electric motor control equipment and auxiliary equipment'; 'Commissioning can be done at Excellerate for Levels 1, 2 and 3, and potentially up to Level 5'"
+        },
+        {
+          "band": "E-houses",
+          "label": "Crypto reference",
+          "value": "40-foot shipping containers, '2.5MVA, 3 phase, 4 wire, 415/240 VAC service to feed three 1,200A I-LINE mains with 28 250A Powerlink panelboards per container', 588 power and network drops, 14 PoE switches, 14 48-inch exhaust fans"
+        },
+        {
+          "band": "Trestles",
+          "label": "Modules",
+          "value": "'modularized 50-foot sections' carrying low-, medium- and high-voltage conveyance between electrical buildings and generators, replacing underground duct banks"
+        },
+        {
+          "band": "Labour shift",
+          "label": "Company claims",
+          "value": "Modular data-centre power 'shifts more than 50% of project labor' to the factory; duct banks '67% of labor hours offsite', 'installs three times faster'; Mason City solar 'self-performed over 80%'"
+        }
+      ],
+      "notes": "All labour-shift figures are company statements with no independent corroboration."
+    },
+    {
+      "product": "Excellerate manufacturing footprint",
+      "specs": [
+        {
+          "band": "Operating",
+          "label": "Wisconsin",
+          "value": "Appleton; Little Chute — 385,000 sq ft at 2125 W. Evergreen Dr., opened 2023-11-09, 60- and 30-ton crane bays, 4.3 MW rooftop solar (Deloitte book); Neenah and Milwaukee listed in 2023, absent from the 2026 roster"
+        },
+        {
+          "band": "Operating",
+          "label": "Olathe, Kansas",
+          "value": "About 442,000 sq ft (2019) plus 438,000 sq ft ARCO-built (2025) with a 2.16 MW rooftop array; expansion of three ~500,000 sq ft buildings approved 2026-08-18 on USD 239.8m of IRBs"
+        },
+        {
+          "band": "Announced",
+          "label": "El Paso, Texas",
+          "value": "500,000 sq ft, 48 acres, USD 81.6m, 200-plus jobs, Chapter 381 rebate up to USD 52.5m; operations late spring/early summer 2026"
+        },
+        {
+          "band": "Announced",
+          "label": "Opelika, Alabama",
+          "value": "Former JoAnn Stores distribution centre, more than USD 79m, about 200 jobs (2026-02-25)"
+        },
+        {
+          "band": "Announced",
+          "label": "Pittsboro, Indiana",
+          "value": "500,000 sq ft, 47 acres, USD 67.5m, up to 200 jobs by end-2027; FTI as general contractor (2026-04-09)"
+        },
+        {
+          "band": "Announced",
+          "label": "Monroe, Louisiana",
+          "value": "500,000 sq ft, USD 80.5m, 200-plus jobs, 535 Highway 594; ARCO design-build; completion spring 2027 (groundbreaking 2026-08-05)"
+        },
+        {
+          "band": "Safety",
+          "label": "2025 / 2024",
+          "value": "10.8 million hours, TRIR 0.18, LTIR 0.00, EMR 0.37 (2025); more than 9 million hours, TRIR 0.20, EMR 0.38 (2024)"
+        }
+      ],
+      "notes": "Roughly USD 550m of announced plant capex and about 1,950 announced jobs between November 2025 and August 2026 — a derived aggregate, not a company figure."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Michael J. (Mike) Jansen",
+      "title": "Chief Executive Officer and Chairman of the Board",
+      "photo": "images/execs/faith-technologies-jansen.jpg",
+      "background": [
+        "CEO since 1 October 2013, succeeding founder Rollie Stephenson; now also chairman",
+        "Joined the company in 1984 as an electrical apprentice; co-president with Rich Schinke after the 2002 buyback from Encompass",
+        "National Safety Council 'CEOs Who Get It' 2025 — one of six nationally; panelist at the AGC Construction Safety & Health Conference, July 2025",
+        "Named to the Insight on Business 2025 fastest-growing list interview: 'We plan to continue adding employees locally and nationally in a similar growth pattern in 2026'"
+      ]
+    },
+    {
+      "name": "Patrick (Pat) McGettigan",
+      "title": "Executive Vice President (Excellerate manufacturing)",
+      "background": [
+        "Spokesperson for every Excellerate plant announcement from the Little Chute groundbreaking (2022) to Pittsboro and Monroe (2026); titled 'executive vice president of Excellerate' in 2022–23",
+        "'Our Excellerate work has been growing exponentially over the past several years' (2023)"
+      ]
+    },
+    {
+      "name": "David Jahner",
+      "title": "Executive Vice President",
+      "background": [
+        "Spokesperson for the El Paso (November 2025) and Opelika (February and May 2026) expansions",
+        "Listed among the company's officers on its federal SAM registration (with Kristin Ausloos, Chris Yakes and Geri Waack)"
+      ]
+    },
+    {
+      "name": "Charlie Fredrickson",
+      "title": "Executive Vice President",
+      "background": [
+        "Quoted on 'Our EPC model' at the El Paso announcement; led the Fox Cities campus evaluation and the BioStar Renewables collaboration (2026)",
+        "In 2022, executive vice president and managing director of Solvare, the capital-development vehicle that built the Little Chute plant"
+      ]
+    },
+    {
+      "name": "Wade Leipold",
+      "title": "Executive Vice President (services, automation and clean energy)",
+      "background": [
+        "Spokesperson for the FTI ON launch (November 2025) and the NS2 hire of Shawn Blair (March 2026); quoted in EC&M's 2026 Top 50 report on planning earlier with customers and suppliers",
+        "Earlier spokesperson for the Rockwell Automation partnership (2023), the ChargePoint/Wells Fargo eSkid financing (2024) and the Zero6 NEVI awards (2024)"
+      ]
+    },
+    {
+      "name": "Jon Branson",
+      "title": "Vice President and General Manager of Products (Excellerate Products)",
+      "background": [
+        "Leads the OEM business launched 2026-04-07; quoted at the eSkid launch (March 2025) and the Excellerate Products launch",
+        "'Excellerate Products was created to meet customers where speed, reliability and scale matter most' (Insight on Business, 2026-04-07)"
+      ]
+    },
+    {
+      "name": "Shawn Blair",
+      "title": "Senior Vice President, National Solution Services (NS2)",
+      "background": [
+        "Hired March 2026 from Schneider Electric, where as vice president of global strategic accounts he 'helped develop a nationwide field services partnership network program with FTI'",
+        "Earlier at Rockwell Automation; 'immediate focus is on meeting the growing demand for data center servicing and maintenance nationwide'"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private (direct employee shareholding, Subchapter S corporation; no company-published revenue, margin or backlog — every figure is a ranker's or a filing's)",
+    "periods": [
+      {
+        "period": "2025 (EC&M 2026 Top 50 list)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Electrical sales (EC&M basis)",
+            "actual": "USD 2,283,638,907, +62.64% year on year — No. 9 on the 2026 table (No. 10 in 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EC&M ranks on prior-year electrical sales; the basis differs from ENR's construction revenue"
+          },
+          {
+            "name": "Work hours and safety",
+            "actual": "More than 10.8 million hours; TRIR 0.18; LTIR 0.00; EMR 0.37",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company 2025 highlights release, 2026-01-20"
+          },
+          {
+            "name": "Headcount",
+            "actual": "4,600 (Insight on Business, December 2025); 1,827 hires in 2025",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company boilerplate climbed to 'more than 6,000 team members' by May–July 2026"
+          }
+        ],
+        "commentary": "The growth year: electrical sales up 62.6% on the EC&M basis while the company announced five plants worth about USD 550m. No margin, backlog or balance-sheet figure exists; the Olathe expansion is financed with USD 239.8m of industrial revenue bonds."
+      },
+      {
+        "period": "2024 (EC&M 2025 list; Deloitte Wisconsin 75)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Electrical sales (EC&M basis)",
+            "actual": "USD 1.4bn, +32% — No. 10 (reported second-hand by Siteline and FSG; arithmetically consistent with the 2026 table: 2,283.6 ÷ 1.6264 = 1,404)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EC&M's own 2025 rankings-table PDF was not reachable"
+          },
+          {
+            "name": "Headcount",
+            "actual": "3,735 team members at year-end 2024 (Deloitte Wisconsin 75 programme book); 3,723 active 401(k) participants (Form 5500, plan year 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Deloitte ranks by sales revenue but publishes no figures: No. 35 (2024), No. 27 (2025)"
+          }
+        ],
+        "commentary": "Company release: 'In 2024, FTI achieved significant revenue growth' — the only first-party revenue statement, with no number."
+      },
+      {
+        "period": "2023 (ENR 2024 Top 600 Specialty Contractors)",
+        "periodType": "annual",
+        "periodEnd": "2023-12-31",
+        "metrics": [
+          {
+            "name": "Construction revenue (ENR basis)",
+            "actual": "USD 1,063.6m; new contracts USD 1,328.8m — No. 32 (from 38), type E; No. 12 among electrical contractors",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR's 2025 Top 600 (2024 revenue) and 2026 Top 600 (2025 revenue, publishing 2026-10-22) were not retrievable"
+          }
+        ],
+        "commentary": "Three independent series reconcile: ENR's USD 1,064m for 2023 × 1.32 ≈ EC&M's USD 1.4bn for 2024 × 1.6264 ≈ EC&M's USD 2,284m for 2025."
+      }
+    ],
+    "commentary": "Expectations: none exist — no consensus, no guidance, and the company has published no revenue figure since the 2002 buyback (USD 125m combined at the time). Retirement-plan filings (401(k) assets USD 377.9m at end-2024; employer contributions USD 14.7m plus USD 14.9m to the 401(a)) are the only audited financial data in the public record."
+  },
+  "sources": [
+    {
+      "label": "EC&M — 2026 Top 50 Electrical Contractors rankings table (FTI No. 9, 2025 sales USD 2,283,638,907, +62.64%)",
+      "url": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+      "date": "2026-09-16"
+    },
+    {
+      "label": "EC&M — Data Center Buildout Fuels Revenue Blowout: 2026 Top 50 special report (FTI No. 9; Wade Leipold quoted)",
+      "url": "https://www.ecmweb.com/top-50-electrical-contractors/article/55404067/data-center-buildout-fuels-revenue-blowout-ecms-2026-top-50-electrical-contractors-special-report",
+      "date": "2026-09-15"
+    },
+    {
+      "label": "Johnson County Post — Olathe approves USD 239.8m in industrial revenue bonds for Faith Technologies' expansion",
+      "url": "https://johnsoncountypost.com/2026/08/25/faith-technologies-irbs-294754/",
+      "date": "2026-08-25"
+    },
+    {
+      "label": "FTI — Community leaders celebrate groundbreaking for FTI's new manufacturing facility in Monroe",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/community-leaders-celebrate-groundbreaking-for-ftis-new-manufacturing-facility-in-monroe/",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Hoodline (citing Kansas City Business Journal) — Faith Tech's Olathe land push adds 1.4 million more square feet",
+      "url": "https://hoodline.com/2026/07/faith-tech-s-olathe-land-push-piles-on-1-4-million-more-square-feet/",
+      "date": "2026-07-28"
+    },
+    {
+      "label": "FTI — Pittsboro career hiring event ('more than 6,000 team members')",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-to-host-pittsboro-career-hiring-event-to-fill-skilled-manufacturing-and-electrical-roles/",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "Construction Executive — ABC Top Electrical Contractors 2026 (FTI No. 2; ranked by 2025 STEP hours)",
+      "url": "https://www.constructionexec.com/abc-electrical-contractors-2026/",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "Louisiana Economic Development — Faith Technologies Incorporated to power Northeast Louisiana growth with USD 80.5m investment",
+      "url": "https://www.opportunitylouisiana.gov/news/faith-technologies-incorporated-to-power-northeast-louisiana-growth-with-80-5-million-investment",
+      "date": "2026-06-09"
+    },
+    {
+      "label": "FTI — FTI announces expansion in Monroe, La., creating 200 jobs",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-announces-expansion-in-monroe-la-creating-200-jobs/",
+      "date": "2026-06-09"
+    },
+    {
+      "label": "FTI — Opelika career hiring event",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-to-host-opelika-career-hiring-event-to-fill-skilled-manufacturing-and-electrical-roles/",
+      "date": "2026-05-19"
+    },
+    {
+      "label": "WBAY — Former UW Oshkosh Fox Cities campus reopens under new management (FTI backed out of the purchase)",
+      "url": "https://www.wbay.com/2026/04/28/theater-fieldhouse-former-uwo-fox-cities-campus-reopen-under-new-management/",
+      "date": "2026-04-28"
+    },
+    {
+      "label": "Indiana Economic Development Corporation — Governor Braun welcomes Faith Technologies Incorporated, 200 new jobs to Pittsboro",
+      "url": "https://iedc.in.gov/events/news/details/2026/04/09/governor-braun-welcomes-faith-technologies-incorporated-200-new-jobs-to-pittsboro",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "Inside Indiana Business — Wisconsin-based Faith Technologies to build USD 67.5m manufacturing plant in Pittsboro (tied to Meta Lebanon)",
+      "url": "https://www.insideindianabusiness.com/articles/wisconsin-based-faith-technologies-to-build-67-5m-manufacturing-plant-in-pittsboro",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "FTI — FTI announces Pittsboro expansion, creating 200 jobs",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-announces-pittsboro-expansion-creating-200-jobs/",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "EC&M — FTI introduces Excellerate Products",
+      "url": "https://www.ecmweb.com/product-sourcing-supply/news/55369462/fti-introduces-excellerate-products",
+      "date": "2026-04-08"
+    },
+    {
+      "label": "FTI — FTI introduces Excellerate Products (OEM brand launch; UL 891 LV switchboards first to market)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-introduces-excellerate-products/",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "Insight on Business — FTI launches Excellerate Products",
+      "url": "http://www.insightonbusiness.com/fti-launches-excellerate-products/",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "FTI — FTI adds leader to National Solution Services team to meet demand for data center services (Shawn Blair)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-adds-leader-to-national-solution-services-team-to-meet-demand-for-data-center-services/",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "FTI — FTI and BioStar Renewables collaborate to support clean energy infrastructure nationwide (Mastercard O'Fallon microgrid)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-and-biostar-renewables-collaborate-to-support-clean-energy-infrastructure-nationwide/",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "Made in Alabama — Faith Technologies to invest USD 79 million in Opelika manufacturing expansion",
+      "url": "https://www.madeinalabama.com/2026/02/faith-technologies-to-invest-79-million-in-opelika-manufacturing-expansion/",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "FTI — FTI expands nationwide data center service capabilities and talent (Chad Carter, ex-AWS)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-expands-nationwide-data-center-service-capabilities-and-talent-to-meet-rapid-growth/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "FTI — FTI concludes due diligence period on former UW Oshkosh Fox Cities campus",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-concludes-due-diligence-period-on-former-university-of-wisconsin-oshkosh-fox-cities-campus/",
+      "date": "2026-02-17"
+    },
+    {
+      "label": "Mortenson — Mortenson begins Indiana data center construction (with Turner Construction and Faith Technologies)",
+      "url": "https://www.mortenson.com/news-insights/mortenson-begins-indiana-data-center-construction",
+      "date": "2026-02-16"
+    },
+    {
+      "label": "Construction Dive — Mortenson, Turner win Meta data center in Indiana (1 GW, first phase early 2028)",
+      "url": "https://www.constructiondive.com/news/mortenson-turner-win-meta-data-center-indiana/812139/",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Meta — Hello, Lebanon! (Mortenson, Turner Construction, Faith Technologies named as partners)",
+      "url": "https://datacenters.atmeta.com/2026/02/hello-lebanon/",
+      "date": "2026-02-11"
+    },
+    {
+      "label": "GlobeNewswire — Top-performing 2026 construction companies named by ABC (FTI No. 1 High Tech/Data Centers)",
+      "url": "https://www.globenewswire.com/news-release/2026/02/09/3234663/0/en/top-performing-2026-construction-companies-named-by-abc.html",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "Daily Reporter — Faith Technologies Inc. named 2026 top performer by ABC",
+      "url": "https://dailyreporter.com/2026/02/09/faith-technologies-inc-named-2026-top-performer-by-abc/",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "FTI — FTI highlights safety, growth and industry achievements in 2025",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-highlights-safety-growth-and-industry-achievements-in-2025/",
+      "date": "2026-01-20"
+    },
+    {
+      "label": "FTI — FTI ranks No. 11 on ABC's 2025 Top 250 Performers list (No. 1 High-Tech/Data Center)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-ranks-no-11-on-abcs-2025-top-250-performers-list/",
+      "date": "2025-12-16"
+    },
+    {
+      "label": "Insight on Business — 2025 No. 2 Fastest Growing Company: Faith Technologies Incorporated (4,600 employees)",
+      "url": "https://insightonbusiness.com/2025-2-fastest-growing-company-faith-technologies-incorporated-fti/",
+      "date": "2025-12-04"
+    },
+    {
+      "label": "FTI — FTI named to Deloitte's 2025 Wisconsin 75 ranking (No. 27)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-named-to-deloittes-2025-wisconsin-75-ranking/",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "FTI — Keeping data centers ON: FTI unveils lifecycle support service (FTI ON)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/keeping-data-centers-on-faith-technologies-incorporated-unveils-innovative-lifecycle-support-service/",
+      "date": "2025-11-11"
+    },
+    {
+      "label": "KVIA — 200 skilled manufacturing jobs coming to El Paso (Chapter 381 rebate up to USD 52.5m)",
+      "url": "https://kvia.com/news/business-technology/2025/11/12/200-skilled-manufacturing-jobs-coming-to-el-paso/",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "FTI — FTI expands in El Paso, creating 200 jobs (USD 81.6m, 500,000 sq ft)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-expands-in-el-paso-creating-200-jobs/",
+      "date": "2025-11-04"
+    },
+    {
+      "label": "ENR — 2025 Top 600 Specialty Contractors preview (FTI's 2025 rank paywalled)",
+      "url": "https://www.enr.com/toplists/2025-Top-600-Specialty-Contractors-Preview",
+      "date": "2025-10-27"
+    },
+    {
+      "label": "Deloitte — Wisconsin 75 honorees 2025 programme book (FTI: 3,735 team members at year-end 2024)",
+      "url": "https://www.deloitte.com/content/dam/assets-zone3/us/en/docs/programs/2025/wisconsin-75-honorees-2025.pdf",
+      "date": "2025-09"
+    },
+    {
+      "label": "FTI — FTI's CEO Mike Jansen champions culture-first safety at national AGC forum",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/ftis-ceo-mike-jansen-champions-culture%E2%80%91first-safety-at-national-agc-forum/",
+      "date": "2025-08-05"
+    },
+    {
+      "label": "FTI — When opportunity NOCs: insights from a customer experience leader (NOC now monitors OEM products)",
+      "url": "https://www.faithtechinc.com/news-and-insights/blog/when-opportunity-nocs-insights-from-a-customer-experience-leader/",
+      "date": "2025-07-09"
+    },
+    {
+      "label": "FTI — FTI wins 2025 AGC Construction Safety Excellence Award (2024: >9 million hours, TRIR 0.20, EMR 0.38)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-wins-2025-construction-safety-excellence-award-from-associated-general-contractors-of-america/",
+      "date": "2025-05-01"
+    },
+    {
+      "label": "FTI — Excellerate's Olathe facility goes solar with 2.16 MW rooftop installation",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/excellerates-olathe-facility-goes-solar-with-massive-2-16-mw-rooftop-installation/",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "FTI — FTI introduces breakthrough in EV charging installation with its Excellerate eSkid",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-introduces-breakthrough-in-electric-vehicle-charging-installation-with-its-excellerate-eskid/",
+      "date": "2025-03-24"
+    },
+    {
+      "label": "ABC — 2025 Top Performers list PDF (FTI No. 11 overall; No. 1 High-Tech/Data Center)",
+      "url": "https://www.abc.org/Portals/1/2025/top%20performers/ABC_TopPerformers_2025_FINAL.pdf",
+      "date": "2025-02-18"
+    },
+    {
+      "label": "FTI — FTI ranks in top 50 on 2024 ENR Top 600 Specialty Contractors and Top 50 Electrical Contractors lists (No. 32; No. 12)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/fti-ranks-in-top-50-on-2024-enr-top-600-special-contractors-and-top-50-electrical-contractors-lists/",
+      "date": "2025-01-07"
+    },
+    {
+      "label": "FTI — Zero6 Energy awarded more than USD 15.2 million in California and Wisconsin NEVI funding (FTI designs and installs)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/zero6-energy-awarded-more-than-15-2-million-in-california-and-wisconsin-national-electrical-vehicle-infrastructure-funding/",
+      "date": "2024-12-11"
+    },
+    {
+      "label": "ENR — 2024 Top 600 Specialty Contractors table (FTI No. 32, type E, 2023 revenue USD 1,063.6m) — Malcolm Drilling repost",
+      "url": "https://www.malcolmdrilling.com/wp-content/uploads/2024/10/ENR-TOP-600-2024.pdf",
+      "date": "2024-10"
+    },
+    {
+      "label": "FTI — Excellerate opens clean energy smart manufacturing facility in Little Chute, Wisconsin (MEBs for data centers)",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/2023-11-08-excellerate-opens-clean-energy-smart-manufacturing-facility-in-little-chute-wisconsin/",
+      "date": "2023-11-08"
+    },
+    {
+      "label": "FTI — Faith Technologies Incorporated receives global Sustainability Impact Award from Schneider Electric",
+      "url": "https://www.faithtechinc.com/news-and-insights/news/2023-04-19-faith-technologies-incorporated-receives-global-sustainability-impact-award-from-schneider-electric/",
+      "date": "2023-04-19"
+    },
+    {
+      "label": "EC&M — Faith Technologies announces upcoming leadership transition (Jansen CEO from October 2013)",
+      "url": "https://www.ecmweb.com/construction/article/20897825/faith-technologies-announces-upcoming-leadership-transition",
+      "date": "2013-08-16"
+    },
+    {
+      "label": "Daily Reporter — Faith Technologies practices what it preaches (about 80 employee shareholders in 2004)",
+      "url": "https://dailyreporter.com/2004/07/13/faith-technologies-practices-what-it-preaches/",
+      "date": "2004-07-13"
+    },
+    {
+      "label": "Daily Reporter — Town & Country buys back its business (2002 buyback from Encompass; USD 125m combined revenue)",
+      "url": "https://dailyreporter.com/2002/11/18/town-country-buys-back-its-business/",
+      "date": "2002-11-18"
+    },
+    {
+      "label": "FTI — Data center services (950+ MW greenfield; 1.5 GW modular solutions)",
+      "url": "https://www.faithtechinc.com/services-and-solutions/data-center/"
+    },
+    {
+      "label": "FTI — Power Module 2 MW product page",
+      "url": "https://www.faithtechinc.com/products/power-module-2-mw/"
+    },
+    {
+      "label": "FTI — UL 891 LV Switchboards product page",
+      "url": "https://www.faithtechinc.com/products/ul-891-lv-switchboards/"
+    },
+    {
+      "label": "FTI — Excellerate eSkid product page",
+      "url": "https://www.faithtechinc.com/products/eskid/"
+    },
+    {
+      "label": "FTI — Excellerate Products general terms and conditions",
+      "url": "https://www.faithtechinc.com/excellerate-products-general-terms-and-conditions/"
+    },
+    {
+      "label": "FTI — Products: ETO and OEM lines",
+      "url": "https://www.faithtechinc.com/products/"
+    },
+    {
+      "label": "FTI — E-houses (industrialized construction builds)",
+      "url": "https://www.faithtechinc.com/products/industrialized-construction-builds/e-houses/"
+    },
+    {
+      "label": "FTI — Modular data center power",
+      "url": "https://www.faithtechinc.com/products/industrialized-construction-builds/modular-data-center-power/"
+    },
+    {
+      "label": "FTI — Critical power services",
+      "url": "https://www.faithtechinc.com/services-and-solutions/critical-power/"
+    },
+    {
+      "label": "FTI — Medium voltage installation",
+      "url": "https://www.faithtechinc.com/services-and-solutions/electrical-installation/medium-voltage/"
+    },
+    {
+      "label": "FTI — Lebanon, Indiana (Meta campus) recruiting page",
+      "url": "https://www.faithtechinc.com/lebanon/"
+    },
+    {
+      "label": "FTI — Overhead conveyance trestle project",
+      "url": "https://www.faithtechinc.com/project/overhead-conveyance-trestle/"
+    },
+    {
+      "label": "FTI — Confidential client data hall expansion, Atlanta (USD 3.25m; owner-furnished equipment)",
+      "url": "https://www.faithtechinc.com/project/confidential-client-data-hall-expansion/"
+    },
+    {
+      "label": "FTI — Confidential client battery manufacturing facility, Clarksville TN (DPR; Schneider Electric switchgear)",
+      "url": "https://www.faithtechinc.com/project/confidential-client-battery-manufacturing-facility/"
+    },
+    {
+      "label": "FTI — Confidential client duct bank (67% of labor hours offsite)",
+      "url": "https://www.faithtechinc.com/project/confidential-client-duct-bank/"
+    },
+    {
+      "label": "FTI — Cryptocurrency mining e-house project",
+      "url": "https://www.faithtechinc.com/project/cryptocurrency-mining-e-house/"
+    },
+    {
+      "label": "FTI — Children's Wisconsin project (three 15 kV Caterpillar generators)",
+      "url": "https://www.faithtechinc.com/project/childrens-wisconsin/"
+    },
+    {
+      "label": "FTI — Mason City solar project (3.3 MW; self-performed over 80%)",
+      "url": "https://www.faithtechinc.com/project/mason-city-solar-project/"
+    },
+    {
+      "label": "FTI — Company history (2002: 'operating under team member ownership')",
+      "url": "https://www.faithtechinc.com/culture/history/"
+    },
+    {
+      "label": "FTI — Website terms of use (Faith Technologies, Inc.; Wisconsin)",
+      "url": "https://www.faithtechinc.com/website-terms-of-use/"
+    },
+    {
+      "label": "Schneider Electric — Faith Technologies Incorporated case study (EcoStruxure microgrids)",
+      "url": "https://www.se.com/us/en/work/campaign/life-is-on/case-study/faith-technologies-incorporated.jsp"
+    },
+    {
+      "label": "ABC — Top Performers methodology and lists (hours worked; STEP Gold+; AQC)",
+      "url": "https://www.abc.org/topperformers"
+    },
+    {
+      "label": "OpenGovUS — SAM entity registration: Faith Technologies, Inc. (Subchapter S corporation; business start 2002-10-31; NAICS 238210)",
+      "url": "https://opengovus.com/sam-entity/NFTAPC2123Y8"
+    },
+    {
+      "label": "OpenCorporates — Faith Technologies, Inc., Wisconsin F033755 (domestic business corporation)",
+      "url": "https://opencorporates.com/companies/us_wi/F033755"
+    },
+    {
+      "label": "US Department of Labor EBSA — Form 5500 bulk data 2024 (EIN 41-2065665: 401(k), 401(a) and welfare plans; no ESOP; no employer securities)",
+      "url": "https://askebsa.dol.gov/FOIA%20Files/2024/Latest/F_5500_2024_Latest.zip"
+    },
+    {
+      "label": "NCEO — Employee Ownership 100 (FTI not listed)",
+      "url": "https://www.nceo.org/research/employee-ownership-100"
+    },
+    {
+      "label": "Solar Power World — Faith Technologies supplier profile (EPC; No. 155 on the 2025 Top Solar Contractors)",
+      "url": "https://www.solarpowerworldonline.com/suppliers/faith-technologies/"
+    },
+    {
+      "label": "ARCO National Construction — Manufacturing facility completion for Faith Technologies (438,000 sq ft, Olathe; MEBs for hyperscale data centers)",
+      "url": "https://www.arconational.com/manufacturing-facility-completion-for-faith-technologies/"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}

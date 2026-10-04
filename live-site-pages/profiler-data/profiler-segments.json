@@ -1146,6 +1146,16 @@
           "basis": "registry tagline: the invisible fifth of US renewables — 75,000+ MW, 3,300+ storage containers built; Quanta's renewables engine"
         },
         {
+          "slug": "clayco",
+          "role": "incumbent",
+          "basis": "ecosystemRole: fourth on BD+C's 2025 data-centre table (USD 3.64bn of 2024 revenue), within USD 10m of DPR and ahead of Turner, Whiting-Turner and Mortenson; the most vertically integrated of the GC incumbents"
+        },
+        {
+          "slug": "emcor",
+          "role": "incumbent",
+          "basis": "ecosystemRole: ENR's No. 2 specialty contractor and EC&M's No. 3 electrical contractor; the one covered contractor that self-performs both the electrical and the mechanical scope of a data hall at scale; RPO USD 17.14bn"
+        },
+        {
           "slug": "mccarthy",
           "role": "challenger",
           "basis": "ecosystemRole: the GC whose data-centre position is most clearly in transition — 418 MW delivered against 2 GW+ in preconstruction; ENR rank slipped 20 → 22"
@@ -1154,6 +1164,11 @@
           "slug": "samsung-ct",
           "role": "challenger",
           "basis": "productsAndServices › Global EPC (E&C group): top-tier global EPC with BESS execution in Australia and the Middle East; the US platform is a developer, not an EPC"
+        },
+        {
+          "slug": "faith-technologies",
+          "role": "challenger",
+          "basis": "ecosystemRole: a build-segment electrical contractor on the record — EC&M No. 9 (USD 2.28bn, +62.6%, the fastest riser in the top ten), ABC's No. 1 high-tech/data-centre contractor by hours; not yet in the leading set by revenue"
         },
         {
           "slug": "strata-clean-energy",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "description": "Research payload for repository-information/profiler-refresh-calendar.json, keyed by slug. `source` says where to verify the next report; `watch` is the research priority list a refresh works from. Split out of the calendar on 2026-09-21 (v07.02r) because these two fields were 98% of that file's 375 KB while the scheduling logic needs none of them: a Routine reading the queue now reads ~20 KB instead of ~375 KB, and pulls notes only for the handful of rows it actually works on. One entry per calendar row, enforced by scripts/sync-profiler-registry.py.",
   "notes": {
     "abb": {
@@ -2240,6 +2240,43 @@
         "Supernode: Stage 3 completion (2027), a Stage 4 / EnerQB order — the next battery contract the manager itself would sign — and any tenant for the 'Supernode DC' precinct (500 MW-IT potential; none named).",
         "Rowan: any filing or release stating Blackstone's percentage (reported 49% at ~USD 3.8bn ex-debt — unconfirmed); Frederick County's moratorium (to 1 Jul 2027) and its effect on Bauxite's later phases; Temple I and Cinco construction.",
         "The manager itself: the FY2026 accounts of Quinbrook Infrastructure Partners Limited (due 30 Sep 2027) for the Jersey-group profit line (USD 1.56m in FY2025 vs USD 22.79m) and the purpose of the RBS International charge of 5 Jun 2026; Rory Quinlan's roles after his UK-board resignation (18 Jul 2025)."
+      ]
+    },
+    "clayco": {
+      "source": "PRIVATE, FOUNDER-MAJORITY-OWNED GC — no earnings clock; a cadence row swept quarterly, tier core because the data-centre book is moving fast (Helios Phase 2 lost to HITT in 2026, Festus litigation, Power & Energy's first BESS award pending). First-party record: claycorp.com/latest (releases carry a revenue boilerplate that changed from USD 7.6bn to USD 8.1bn for 2025 mid-year — read the latest), claycorp.com/work/mission-critical (72 projects / 10.20 GW / USD 42bn counters), bobclarkbeyond.com (the founder's essays carry figures the company site does not). Independent: BD+C Giants 400 (data-centre table publishes October–December; 2025 edition = No. 4, USD 3.64bn of 2024 revenue), ENR Top 400 (May) and Top 100 Design-Build (June), Galaxy Digital earnings calls (Helios), Related Digital releases (Cheyenne), ENR and STLPR for Festus and AESC.",
+      "watch": [
+        "BD+C's 2026 data-centre contractor table (Giants 400 2026; not posted as of 2026-10-04): Clayco's rank and 2025 data-centre revenue against HITT, Holder, DPR and Turner — the segment role rests on this ranking.",
+        "ENR 2027 Top 400 (May 2027) and whether ENR's telecommunications/data-centre sector table can be read — the company's 'Top 3 ENR' claim is unverified.",
+        "Clayco Compute's first named hyperscale campus beyond Helios and Cheyenne, and whether any Phase 2-type follow-on is retained rather than lost on capacity (the Galaxy precedent).",
+        "Clayco Power & Energy: the first named solar-plus-BESS award, its MW and its battery supplier; the USD 300m-by-2027 target.",
+        "CRG Festus: the Wake Up Jeffco v. City of Festus and CRG Acquisition LLC ruling, the new council's actions, any named operator; St. Charles's permanent-ban vote outcome.",
+        "AESC Florence lien suit (USD 26.2m; filed 2026-07-14) — settlement or judgment, and whether the plant restarts.",
+        "Deep Atomic / DOE Idaho National Laboratory proposal — any award.",
+        "Ownership: any ESOP, outside investor or succession step beyond 'owns most of the company' (Forbes) and the Bloomberg-reported 40% executive stake."
+      ]
+    },
+    "faith-technologies": {
+      "source": "PRIVATE, DIRECTLY EMPLOYEE-HELD S CORPORATION — no earnings clock and no company-published revenue; a cadence row swept quarterly, tier core because the category decision (epc, not supplier) hangs on a single trigger the sweep must catch. First-party record: faithtechinc.com/news-and-insights/in-the-news (the working news index; /news-and-insights/news/ returns 404), the Excellerate Products pages and general terms, culture/history (the only ownership statement). Independent: EC&M Top 50 (September; 2026 = No. 9, USD 2,283.6m), ENR Top 600 Specialty Contractors (late October; 2026 edition publishes 2026-10-22), ABC Top Performers (February), Deloitte Wisconsin 75 (September), state economic-development releases for each plant, DOL Form 5500 bulk files (ownership structure).",
+      "watch": [
+        "THE CATEGORY TRIGGER: the first named third-party buyer, order, shipment, distributor or UL file for an Excellerate Products unit (Power Module 2 MW, UL 891 switchboard, eSkid). If one is recorded, add `supplier` as a secondary category and grant the `in-hall-power` adjacent seat; until then FTI stays `epc` with no adjacent membership.",
+        "ENR 2026 Top 600 Specialty Contractors (2026-10-22): FTI's rank and 2025 construction revenue against EC&M's USD 2.28bn electrical sales.",
+        "ABC 2027 Top Performers (February 2027): whether FTI holds the No. 1 high-tech/data-centre position for a third year.",
+        "Plant milestones: El Paso operational (mid-2026 — confirm), Opelika and Pittsboro openings, Monroe completion (spring 2027), the Olathe three-building expansion under the USD 239.8m IRBs.",
+        "Meta Lebanon: first-phase progress toward early 2028 and any second named hyperscale customer; Microsoft or Amazon attributions exist only on a jobs aggregator.",
+        "Headcount: the company boilerplate ran from 4,500 to 6,000 in eight months — the next independent count (Deloitte 2026 book, IOB).",
+        "Ownership: any ESOP conversion, outside investor or sale — the S-corp direct-shareholding structure has no public liquidity mechanism."
+      ]
+    },
+    "emcor": {
+      "source": "PUBLIC COMPANY — NYSE: EME (EMCOR Group, Inc., CIK 0000105634, Delaware, fiscal year end 31 December). THE Q3 2026 DATE IS NOT COMPANY-CONFIRMED as of 2026-10-04: no 'Sets Third Quarter 2026 Earnings Release Date' notice had been issued; 2026-10-29 (Thursday) is inferred from cadence — Q3 2025 notice 2025-10-16 for a 2025-10-30 release, Q2 2026 notice 2026-07-16 for 2026-07-30 — and matches Nasdaq's and MarketBeat's estimated date (Investing.com shows 22 October unlabelled). HOW TO CONFIRM: emcorgroup.com/investor-relations/press-releases (the notice lands about two weeks ahead) and the 8-K carrying Exhibit 99.1 on the day (EDGAR CIK 0000105634). Every sec.gov request sends SEC_USER_AGENT.",
+      "watch": [
+        "Q3 2026 release (expected 2026-10-29): revenue against the USD 5.19bn / EPS USD 8.33 consensus; the network and communications line in both segments (Q2 2026: USD 973.0m electrical, USD 799.3m mechanical) and whether mechanical N&C keeps doubling.",
+        "RPO: the series stands at USD 17.14bn (30 June 2026); the within-twelve-months share (75–76%) and any N&C RPO figure management gives on the call.",
+        "Mechanical margin: the 110 bp H1 2026 decline on GMP/cost-plus mix in new geographies — does Q3 stabilise it inside the 9.5–9.8% group guidance?",
+        "Acquisitions: confirmation that Schmidt Electric and Sidney Electric closed in Q3 2026; the H2 contribution (USD 250–275m guided); any further electrical deal.",
+        "FY2026 guidance (USD 20.0–20.5bn; EPS USD 32.00–33.25) — a third raise or a hold; initial FY2027 guidance in February 2027.",
+        "ENR 2026 Top 600 Specialty Contractors (2026-10-22): the rank against Quanta and the 2025 revenue figure.",
+        "Named customers: any hyperscaler or developer named in a filing, call or release — none exists as of October 2026."
       ]
     }
   }

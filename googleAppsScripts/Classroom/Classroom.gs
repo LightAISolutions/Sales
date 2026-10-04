@@ -1,4 +1,4 @@
-var VERSION = "v01.95g";
+var VERSION = "v01.96g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -6539,7 +6539,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (56 edges) · AIDC developers and landlords (26 edges) · Utilities (19 edges) · Hyperscalers and AI labs (12 edges) · Clean firm and nuclear (10 edges) · Neoclouds (7 edges) · Capital (7 edges) · Grid equipment (4 edges) · EPC and construction (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
+     "Storage developers and IPPs (56 edges) · AIDC developers and landlords (26 edges) · Utilities (19 edges) · Hyperscalers and AI labs (12 edges) · Clean firm and nuclear (10 edges) · Neoclouds (7 edges) · Capital (7 edges) · EPC and construction (5 edges) · Grid equipment (4 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -9075,6 +9075,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "changed": [
     "where-it-sits"
    ]
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -9305,7 +9312,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (35 edges) · Storage developers and IPPs (31 edges) · Hyperscalers and AI labs (23 edges) · Neoclouds (15 edges) · Utilities (13 edges) · Storage integrators and containers (6 edges) · Clean firm and nuclear (6 edges) · Grid equipment (4 edges) · Cells and chemistry (3 edges) · In-hall power (3 edges) · Bridge and on-site generation (3 edges) · Cooling (3 edges) · Capital (3 edges) · Compute and the rack (2 edges) · EPC and construction (2 edges) · Software and optimization (1 edge)",
+     "AIDC developers and landlords (35 edges) · Storage developers and IPPs (31 edges) · Hyperscalers and AI labs (23 edges) · Neoclouds (15 edges) · Utilities (13 edges) · Storage integrators and containers (6 edges) · Clean firm and nuclear (6 edges) · Grid equipment (4 edges) · EPC and construction (4 edges) · Cells and chemistry (3 edges) · In-hall power (3 edges) · Bridge and on-site generation (3 edges) · Cooling (3 edges) · Capital (3 edges) · Compute and the rack (2 edges) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -11546,6 +11553,13 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "changed": [
     "where-it-sits"
    ]
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -11728,7 +11742,7 @@ function clLessonSegmentGridEquipment_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (24 edges) · Utilities (23 edges) · Storage developers and IPPs (20 edges) · Hyperscalers and AI labs (16 edges) · Clean firm and nuclear (11 edges) · Storage integrators and containers (4 edges) · Neoclouds (4 edges) · Capital (4 edges) · Cells and chemistry (3 edges) · Bridge and on-site generation (3 edges) · Software and optimization (3 edges) · Power conversion and rack-power silicon (2 edges) · In-hall power (1 edge) · Compute and the rack (1 edge) · EPC and construction (1 edge)",
+     "AIDC developers and landlords (24 edges) · Utilities (23 edges) · Storage developers and IPPs (20 edges) · Hyperscalers and AI labs (16 edges) · Clean firm and nuclear (11 edges) · Storage integrators and containers (4 edges) · Neoclouds (4 edges) · Capital (4 edges) · Cells and chemistry (3 edges) · Bridge and on-site generation (3 edges) · EPC and construction (3 edges) · Software and optimization (3 edges) · Power conversion and rack-power silicon (2 edges) · In-hall power (1 edge) · Compute and the rack (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -13320,6 +13334,13 @@ function clLessonSegmentGridEquipment_() {
    "changed": [
     "where-it-sits"
    ]
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -13592,7 +13613,7 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (31 edges) · Hyperscalers and AI labs (23 edges) · Storage developers and IPPs (22 edges) · Storage integrators and containers (17 edges) · Utilities (17 edges) · Power conversion and rack-power silicon (16 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (10 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Compute and the rack (3 edges) · Bridge and on-site generation (2 edges) · Grid equipment (1 edge)",
+     "AIDC developers and landlords (31 edges) · Hyperscalers and AI labs (23 edges) · Storage developers and IPPs (22 edges) · Storage integrators and containers (17 edges) · Utilities (17 edges) · Power conversion and rack-power silicon (16 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (10 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Compute and the rack (3 edges) · EPC and construction (3 edges) · Bridge and on-site generation (2 edges) · Grid equipment (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -16043,6 +16064,13 @@ function clLessonSegmentInHallPower_() {
    "date": "2026-10-03",
    "note": "regenerated: graph:profiler-graph 2026-10-03→2026-10-04",
    "changed": []
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -16243,7 +16271,7 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (25 edges) · Hyperscalers and AI labs (20 edges) · Utilities (18 edges) · Storage developers and IPPs (15 edges) · Clean firm and nuclear (11 edges) · Neoclouds (11 edges) · Capital (5 edges) · Grid equipment (3 edges) · Storage integrators and containers (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Software and optimization (1 edge)",
+     "AIDC developers and landlords (25 edges) · Hyperscalers and AI labs (20 edges) · Utilities (18 edges) · Storage developers and IPPs (15 edges) · Clean firm and nuclear (11 edges) · Neoclouds (11 edges) · Capital (5 edges) · Grid equipment (3 edges) · Storage integrators and containers (2 edges) · EPC and construction (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -17747,6 +17775,13 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
   {
    "date": "2026-10-03",
    "note": "regenerated: graph:profiler-graph 2026-10-03→2026-10-04",
+   "changed": [
+    "where-it-sits"
+   ]
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "where-it-sits"
    ]
@@ -19540,7 +19575,7 @@ function clLessonSegmentCooling_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (10 edges) · Neoclouds (5 edges) · Power conversion and rack-power silicon (3 edges) · Compute and the rack (3 edges) · Capital (2 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Utilities (1 edge) · Software and optimization (1 edge)",
+     "AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (10 edges) · Neoclouds (5 edges) · Power conversion and rack-power silicon (3 edges) · Compute and the rack (3 edges) · EPC and construction (2 edges) · Capital (2 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Utilities (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -20707,6 +20742,13 @@ function clLessonSegmentCooling_() {
    "date": "2026-10-03",
    "note": "regenerated: graph:profiler-graph 2026-10-03→2026-10-04",
    "changed": []
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -20828,7 +20870,7 @@ function clLessonSegmentComputeAndTheRack_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Power conversion and rack-power silicon (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · AIDC developers and landlords (2 edges) · EPC and construction (1 edge)",
+     "Power conversion and rack-power silicon (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · EPC and construction (2 edges) · AIDC developers and landlords (2 edges)",
      "who this segment buys from"
     ]
    ]
@@ -21075,6 +21117,14 @@ function clLessonSegmentComputeAndTheRack_() {
      "GB200/GB300 NVL72 power shelves"
     ],
     [
+     "**EMCOR**",
+     "**AMD**",
+     "customer",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
      "**Eaton**",
      "**Flex**",
      "competitor",
@@ -21267,7 +21317,7 @@ function clLessonSegmentComputeAndTheRack_() {
      "800 VDC power systems"
     ]
    ],
-   "note": "Curated edges among members: 7 · to the neighbouring segments: 29 · derived-only mentions (no curated typing): 0 among members, 2 to the neighbours."
+   "note": "Curated edges among members: 7 · to the neighbouring segments: 30 · derived-only mentions (no curated typing): 0 among members, 2 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -21595,6 +21645,14 @@ function clLessonSegmentComputeAndTheRack_() {
    "date": "2026-10-03",
    "note": "regenerated: graph:profiler-graph 2026-10-03→2026-10-04",
    "changed": []
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -21638,9 +21696,27 @@ function clLessonSegmentEpcAndConstruction_() {
    },
    {
     "kind": "public",
+    "ref": "profile:clayco",
+    "date": "2026-10-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:dpr",
     "date": "2026-09-06",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:emcor",
+    "date": "2026-10-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:faith-technologies",
+    "date": "2026-10-04",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -21742,22 +21818,22 @@ function clLessonSegmentEpcAndConstruction_() {
  },
  "tiles": [
   {
-   "k": "19",
+   "k": "22",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
   {
-   "k": "16",
+   "k": "18",
    "v": "incumbents",
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "2",
+   "k": "3",
    "v": "challengers",
    "sub": "contesting that set; 1 adjacent"
   },
   {
-   "k": "57",
+   "k": "75",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -21801,12 +21877,12 @@ function clLessonSegmentEpcAndConstruction_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (39 edges) · AIDC developers and landlords (24 edges) · Utilities (20 edges) · Hyperscalers and AI labs (18 edges) · Capital (9 edges) · Clean firm and nuclear (8 edges) · Grid equipment (5 edges) · Neoclouds (4 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Compute and the rack (1 edge) · Software and optimization (1 edge)",
+     "Storage developers and IPPs (39 edges) · AIDC developers and landlords (26 edges) · Hyperscalers and AI labs (22 edges) · Utilities (20 edges) · Capital (10 edges) · Clean firm and nuclear (8 edges) · Grid equipment (5 edges) · Neoclouds (4 edges) · Compute and the rack (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (3 edges) · Cells and chemistry (2 edges) · Power conversion and rack-power silicon (2 edges) · Software and optimization (2 edges) · Grid equipment (1 edge) · Utilities (1 edge)",
+     "Storage integrators and containers (5 edges) · Power conversion and rack-power silicon (4 edges) · Grid equipment (3 edges) · In-hall power (3 edges) · Software and optimization (3 edges) · Cells and chemistry (2 edges) · Bridge and on-site generation (2 edges) · Cooling (2 edges) · Utilities (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -21885,10 +21961,22 @@ function clLessonSegmentEpcAndConstruction_() {
      "registry tagline: ENR's #1 power design firm eleven years running; the largest US substation design group"
     ],
     [
+     "**Clayco**",
+     "clayco",
+     "incumbent",
+     "ecosystemRole: fourth on BD+C's 2025 data-centre table (USD 3.64bn of 2024 revenue), within USD 10m of DPR and ahead of Turner, Whiting-Turner and Mortenson; the most vertically integrated of the GC incumbents"
+    ],
+    [
      "**DPR Construction**",
      "dpr",
      "incumbent",
      "registry tagline: the technical builder of Stargate Abilene; ENR #7 at $14.0B; self-performing GC with ~6,000 craft workers"
+    ],
+    [
+     "**EMCOR**",
+     "emcor",
+     "incumbent",
+     "ecosystemRole: ENR's No. 2 specialty contractor and EC&M's No. 3 electrical contractor; the one covered contractor that self-performs both the electrical and the mechanical scope of a data hall at scale; RPO USD 17.14bn"
     ],
     [
      "**HITT Contracting**",
@@ -21957,6 +22045,12 @@ function clLessonSegmentEpcAndConstruction_() {
      "ecosystemRole: one of the small set of general contractors capable of a hyperscale data-hall building at gigawatt-campus scale; ENR #5; a Lighthouse campus builder"
     ],
     [
+     "**Faith Technologies**",
+     "faith-technologies",
+     "challenger",
+     "ecosystemRole: a build-segment electrical contractor on the record — EC&M No. 9 (USD 2.28bn, +62.6%, the fastest riser in the top ten), ABC's No. 1 high-tech/data-centre contractor by hours; not yet in the leading set by revenue"
+    ],
+    [
      "**McCarthy**",
      "mccarthy",
      "challenger",
@@ -21993,6 +22087,16 @@ function clLessonSegmentEpcAndConstruction_() {
     "MW contracted"
    ],
    "rows": [
+    [
+     "**EMCOR**",
+     "FY2025 · 2025-12-31",
+     "16,986.4",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
     [
      "**Primoris**",
      "FY2025 · 2025-12-31",
@@ -22051,7 +22155,7 @@ function clLessonSegmentEpcAndConstruction_() {
      "—",
      "—",
      "—",
-     "Bechtel, Black & Veatch, Blattner, Burns & McDonnell, DPR Construction, HITT Contracting, Holder Construction, Kiewit, MasTec, Mortenson, Rosendin, SOLV, Samsung C&T, Strata Clean Energy"
+     "Bechtel, Black & Veatch, Blattner, Burns & McDonnell, Clayco, DPR Construction, HITT Contracting, Holder Construction, Kiewit, MasTec, Mortenson, Rosendin, SOLV, Faith Technologies, Samsung C&T, Strata Clean Energy"
     ]
    ]
   },
@@ -22143,10 +22247,154 @@ function clLessonSegmentEpcAndConstruction_() {
      "—"
     ],
     [
+     "**Clayco**",
+     "**DPR Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clayco**",
+     "**HITT Contracting**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clayco**",
+     "**Holder Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clayco**",
+     "**Kiewit**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clayco**",
+     "**McCarthy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clayco**",
+     "**Mortenson**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clayco**",
+     "**Turner Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clayco**",
+     "**Whiting-Turner**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**DPR Construction**",
      "**Mortenson**",
      "partner",
      "—",
+     "—",
+     "—"
+    ],
+    [
+     "**EMCOR**",
+     "**Faith Technologies**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EMCOR**",
+     "**MasTec**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EMCOR**",
+     "**Quanta Services**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EMCOR**",
+     "**Rosendin**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Faith Technologies**",
+     "**DPR Construction**",
+     "customer",
+     "active",
+     "USD 24m package; ~18 MW",
+     "—"
+    ],
+    [
+     "**Faith Technologies**",
+     "**EMCOR**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Faith Technologies**",
+     "**Mortenson**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Faith Technologies**",
+     "**Quanta Services**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Faith Technologies**",
+     "**Rosendin**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Faith Technologies**",
+     "**Turner Construction**",
+     "partner",
+     "active",
      "—",
      "—"
     ],
@@ -22623,6 +22871,14 @@ function clLessonSegmentEpcAndConstruction_() {
      "Electrical EPC"
     ],
     [
+     "**EMCOR**",
+     "AMD",
+     "customer",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
      "**Eolian**",
      "**Mortenson**",
      "supplier",
@@ -22837,17 +23093,9 @@ function clLessonSegmentEpcAndConstruction_() {
      "historical",
      "Tranquility 72 MWac / 288 MWh at $12.5m over 15.8 months; Mustang 75 MW battery retrofit",
      "Electrical EPC on battery retrofits to operating solar plants"
-    ],
-    [
-     "**SOLV**",
-     "Arevon",
-     "customer",
-     "active",
-     "Vikings + Eland (>$2B complex)",
-     "utility-scale solar + storage EPC"
     ]
    ],
-   "note": "Curated edges among members: 57 · to the neighbouring segments: 48 (the first 40 shown, by company) · derived-only mentions (no curated typing): 8 among members, 7 to the neighbours."
+   "note": "Curated edges among members: 75 · to the neighbouring segments: 49 (the first 40 shown, by company) · derived-only mentions (no curated typing): 13 among members, 7 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -22862,74 +23110,74 @@ function clLessonSegmentEpcAndConstruction_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-10-02 — Regular quarterly dividend of USD 0.40 declared, payable 30 October to holders of record 15 October; no Q3 2026 earnings-date notice issued yet (precedent: notice 16 October 2025 for a 30 October release)",
+     "sub": "EMCOR · financial"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-30 — Forbes: data centres to be 75% of Clayco's nearly USD 12bn 2026 revenue, up 43% on 2025; 16 data centres completed in 2025 and 77 in progress across 13 states; clients 'including Amazon, Microsoft and Oracle'; Bob Clark debuts on the Forbes 400 at No. 245 with USD 7bn",
+     "sub": "Clayco · market"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-17 — At Morgan Stanley's Laguna conference Guzzi says an AI data centre needs 1.5–2× the mechanical and 1.25–1.5× the electrical scope of a cloud build, that EMCOR is present in 50–60% of relevant markets electrically and 40–50% mechanically, that 'supervision capacity, not the availability of tradespeople' is the bottleneck, and that gas turbines are 'largely sold out through 2031'",
+     "sub": "EMCOR · market"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-16 — EC&M 2026 Top 50 Electrical Contractors: FTI No. 9 on 2025 sales of USD 2.284bn, up 62.64% — the fastest growth in the top ten",
+     "sub": "Faith Technologies · market"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-09-16 — EC&M 2026 Top 50 Electrical Contractors: EMCOR No. 3 on 2025 electrical sales of USD 5.1bn (+42.46%), behind Quanta (USD 23.0bn) and Rosendin (USD 5.5bn)",
+     "sub": "EMCOR · market"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-09-10 — BD+C Top 100 Design-Build Construction Firms for 2026: Clayco No. 1 at USD 7,047,000,000 of 2025 design-build revenue, ahead of Turner and ARCO",
+     "sub": "Clayco · market"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-25 — Olathe city council approves USD 239.8m of industrial revenue bonds for a three-building, roughly 1.4–1.5 million sq ft Excellerate expansion with an 80% ten-year property-tax abatement and 1,153 jobs",
+     "sub": "Faith Technologies · capacity"
+    },
+    {
+     "x": 8,
+     "lane": "record",
      "label": "2026-08-20 — Q2 2026 call: 'majority of projects are solar plus storage now'; SOLV 'actively exploring storage for data centers'; storage backlog $2.5B",
      "sub": "SOLV · aidc"
     },
     {
-     "x": 2,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-18 — Securities class action advances: Hagens Berman's case covers PRIM purchasers 2025-08-05 to 2026-06-22, alleging 'woefully deficient' estimating and project-oversight processes; lead-plaintiff deadline 2026-09-21",
      "sub": "Primoris · Risk"
     },
     {
-     "x": 3,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-17 — Cathy Orquiola joins as Regional CEO and executive committee member from PCL Construction, focused on self-perform leadership and the mission-critical market",
      "sub": "McCarthy · leadership"
     },
     {
-     "x": 4,
-     "lane": "record",
-     "label": "2026-08-13 — Q2 2026: revenue $951.2M (+77%), backlog $8.9B; FY2026 guidance raised to $3.87-3.97B revenue",
-     "sub": "SOLV · financial"
-    },
-    {
-     "x": 5,
-     "lane": "record",
-     "label": "2026-08-12 — Breaks ground on a 12-acre national employee development campus in Tempe, Arizona, opening early 2028",
-     "sub": "McCarthy · capacity"
-    },
-    {
-     "x": 6,
-     "lane": "record",
-     "label": "2026-08-07 — Takes over the Choczewo project site for Poland's first nuclear power plant (3x Westinghouse AP1000, ~3 GW, client PEJ); 400+ on site, new Gdańsk office planned",
-     "sub": "Bechtel · Project"
-    },
-    {
-     "x": 7,
-     "lane": "record",
-     "label": "2026-08-06 — Q2 2026 call: record backlog $21.4B; FY2026 guidance raised to $18.2B revenue / $9.30 adj. EPS; multiple hyperscaler projects >$1B each in pursuit",
-     "sub": "MasTec · financial"
-    },
-    {
-     "x": 8,
-     "lane": "record",
-     "label": "2026-08-04 — Q2 2026: net loss $(24.2)M, adjusted EPS $(0.27), adjusted EBITDA $11.4M (-92.6% YoY) — but a record $13.9B backlog; slashed FY2026 guidance reaffirmed; dividend maintained",
-     "sub": "Primoris · Financial"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-08-04 — ConstructionPlacements' Top-25 US data-center builders ranks Holder #2 and reports $10.23B of 2025 revenue at ENR 2026 rank #12",
-     "sub": "Holder Construction · Recognition"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-04 — Virginia Court of Appeals affirms St. Paul's denial of HITT's ~$24-25M excess-insurance claim from the $51M Glenstone Museum settlement (late notice)",
-     "sub": "HITT Contracting · Risk"
-    },
-    {
      "x": 11,
      "lane": "record",
-     "label": "2026-08-03 — Dhruv Patel named President and Chief Operating Officer of McCarthy Holdings; Joe Jouvenal moves to Chief Transformation Officer; Ray Sedey remains Chairman and CEO",
-     "sub": "McCarthy · leadership"
+     "label": "2026-08-17 — IBEW Local 357 files an NLRB representation petition for a ten-person controls unit at Mesa Energy Systems d/b/a EMCOR in Las Vegas (case 28-RC-393141)",
+     "sub": "EMCOR · legal"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-07-30 — Q2 2026 blowout: revenue $9.56B (+41%), adjusted EPS $4.24 (+29% beat), backlog record $53.4B — FY guidance raised to $39.5B midpoint; stock +13.5%",
-     "sub": "Quanta Services · financial"
+     "label": "2026-08-13 — Q2 2026: revenue $951.2M (+77%), backlog $8.9B; FY2026 guidance raised to $3.87-3.97B revenue",
+     "sub": "SOLV · financial"
     }
    ]
   },
@@ -22959,6 +23207,12 @@ function clLessonSegmentEpcAndConstruction_() {
      "Mortenson"
     ],
     [
+     "CHIPS and Science Act and Inflation Reduction Act appropriations",
+     "in-effect",
+     "—",
+     "EMCOR"
+    ],
+    [
      "Craft labour supply and the data-centre crowding-out effect",
      "in-effect",
      "—",
@@ -22975,6 +23229,18 @@ function clLessonSegmentEpcAndConstruction_() {
      "in-effect",
      "2024-06-24",
      "McCarthy"
+    ],
+    [
+     "DOE federal-site AI data-centre and nuclear co-location initiative",
+     "proposed",
+     "—",
+     "Clayco"
+    ],
+    [
+     "Federal EV and battery manufacturing incentives (IRA)",
+     "in-effect",
+     "—",
+     "Clayco"
     ],
     [
      "FEOC restrictions",
@@ -23007,16 +23273,40 @@ function clLessonSegmentEpcAndConstruction_() {
      "Strata Clean Energy"
     ],
     [
+     "Local data-centre moratoria and power availability",
+     "in-effect",
+     "—",
+     "EMCOR"
+    ],
+    [
+     "Local data-centre moratoria and zoning (Missouri)",
+     "in-effect",
+     "2025-08",
+     "Clayco"
+    ],
+    [
      "Maryland hospital procurement governance reform",
      "in-effect",
      "2019",
      "Whiting-Turner"
     ],
     [
+     "Multiemployer pension plans (ERISA withdrawal liability)",
+     "in-effect",
+     "—",
+     "EMCOR"
+    ],
+    [
      "NDAA §154",
      "in-effect",
      "—",
      "Blattner, SOLV"
+    ],
+    [
+     "NEVI formula program",
+     "in-effect",
+     "—",
+     "Faith Technologies"
     ],
     [
      "OBBBA clean-energy credit termination",
@@ -23035,6 +23325,18 @@ function clLessonSegmentEpcAndConstruction_() {
      "in-effect",
      "—",
      "Strata Clean Energy"
+    ],
+    [
+     "State manufacturing incentives (Chapter 381, IEDC credits, LED FastStart/ITEP, Kansas IRBs)",
+     "in-effect",
+     "—",
+     "Faith Technologies"
+    ],
+    [
+     "Tariffs and trade policy",
+     "in-effect",
+     "—",
+     "EMCOR"
     ],
     [
      "Title VII and EEOC enforcement",
@@ -23058,7 +23360,7 @@ function clLessonSegmentEpcAndConstruction_() {
    "ps": [
     "**Mechanism lessons for this segment:** *From Site Control to Commercial Operation* · *Reading the Named Projects* · *The Failure-Point Map*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-epc-and-construction-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** Bechtel, Black & Veatch, Blattner, Burns & McDonnell, DPR Construction, HITT Contracting, Holder Construction, Kiewit, MasTec, Mortenson, Primoris, Quanta Services, Rosendin, SOLV, Turner Construction, Whiting-Turner, McCarthy, Samsung C&T, Strata Clean Energy — each member's dossier carries one in Profiler."
+    "**Study guides:** Bechtel, Black & Veatch, Blattner, Burns & McDonnell, Clayco, DPR Construction, EMCOR, HITT Contracting, Holder Construction, Kiewit, MasTec, Mortenson, Primoris, Quanta Services, Rosendin, SOLV, Turner Construction, Whiting-Turner, Faith Technologies, McCarthy, Samsung C&T, Strata Clean Energy — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -23166,6 +23468,19 @@ function clLessonSegmentEpcAndConstruction_() {
    "date": "2026-10-03",
    "note": "regenerated: graph:profiler-graph 2026-10-03→2026-10-04",
    "changed": []
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: profile:clayco added@2026-10-04; profile:emcor added@2026-10-04; profile:faith-technologies added@2026-10-04",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -26514,7 +26829,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Utilities (60 edges) · Power conversion and rack-power silicon (35 edges) · In-hall power (31 edges) · Storage developers and IPPs (27 edges) · Storage integrators and containers (26 edges) · Bridge and on-site generation (25 edges) · Grid equipment (24 edges) · Clean firm and nuclear (24 edges) · EPC and construction (24 edges) · Software and optimization (19 edges) · Cooling (18 edges) · Compute and the rack (18 edges) · Cells and chemistry (8 edges) · Insurance and risk transfer (1 edge)",
+     "Utilities (60 edges) · Power conversion and rack-power silicon (35 edges) · In-hall power (31 edges) · Storage developers and IPPs (27 edges) · Storage integrators and containers (26 edges) · EPC and construction (26 edges) · Bridge and on-site generation (25 edges) · Grid equipment (24 edges) · Clean firm and nuclear (24 edges) · Software and optimization (19 edges) · Cooling (18 edges) · Compute and the rack (18 edges) · Cells and chemistry (8 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -29277,6 +29592,13 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     "where-it-sits",
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -29434,7 +29756,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (63 edges) · Utilities (55 edges) · AIDC developers and landlords (44 edges) · Neoclouds (36 edges) · Clean firm and nuclear (25 edges) · Power conversion and rack-power silicon (23 edges) · In-hall power (23 edges) · Bridge and on-site generation (20 edges) · Compute and the rack (19 edges) · EPC and construction (18 edges) · Grid equipment (16 edges) · Software and optimization (14 edges) · Storage integrators and containers (12 edges) · Cells and chemistry (10 edges) · Cooling (10 edges) · Capital (10 edges) · Insurance and risk transfer (1 edge)",
+     "Storage developers and IPPs (63 edges) · Utilities (55 edges) · AIDC developers and landlords (44 edges) · Neoclouds (36 edges) · Clean firm and nuclear (25 edges) · Power conversion and rack-power silicon (23 edges) · In-hall power (23 edges) · EPC and construction (22 edges) · Bridge and on-site generation (20 edges) · Compute and the rack (19 edges) · Grid equipment (16 edges) · Software and optimization (14 edges) · Storage integrators and containers (12 edges) · Cells and chemistry (10 edges) · Cooling (10 edges) · Capital (10 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -30450,6 +30772,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    "note": "regenerated: graph:profiler-graph 2026-10-03→2026-10-04",
    "changed": [
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
    ]
   }
  ]
@@ -34281,7 +34610,7 @@ function clLessonSegmentCapital_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "EPC and construction (9 edges) · Storage integrators and containers (7 edges) · Utilities (6 edges) · Bridge and on-site generation (5 edges) · Software and optimization (5 edges) · Cells and chemistry (4 edges) · Grid equipment (4 edges) · In-hall power (4 edges) · Storage developers and IPPs (4 edges) · Power conversion and rack-power silicon (3 edges) · Cooling (2 edges) · Insurance and risk transfer (2 edges) · Clean firm and nuclear (1 edge)",
+     "EPC and construction (10 edges) · Storage integrators and containers (7 edges) · Utilities (6 edges) · Bridge and on-site generation (5 edges) · Software and optimization (5 edges) · Cells and chemistry (4 edges) · Grid equipment (4 edges) · In-hall power (4 edges) · Storage developers and IPPs (4 edges) · Power conversion and rack-power silicon (3 edges) · Cooling (2 edges) · Insurance and risk transfer (2 edges) · Clean firm and nuclear (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -35581,6 +35910,13 @@ function clLessonSegmentCapital_() {
     "where-it-sits",
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -36783,7 +37119,7 @@ function clLessonSegmentSoftwareAndOptimization_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (24 edges) · AIDC developers and landlords (19 edges) · Hyperscalers and AI labs (14 edges) · Utilities (10 edges) · Storage integrators and containers (9 edges) · Clean firm and nuclear (8 edges) · Cells and chemistry (6 edges) · Capital (5 edges) · Power conversion and rack-power silicon (4 edges) · In-hall power (4 edges) · Neoclouds (3 edges) · EPC and construction (2 edges) · Grid equipment (1 edge)",
+     "Storage developers and IPPs (24 edges) · AIDC developers and landlords (19 edges) · Hyperscalers and AI labs (14 edges) · Utilities (10 edges) · Storage integrators and containers (9 edges) · Clean firm and nuclear (8 edges) · Cells and chemistry (6 edges) · Capital (5 edges) · Power conversion and rack-power silicon (4 edges) · In-hall power (4 edges) · EPC and construction (3 edges) · Neoclouds (3 edges) · Grid equipment (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -38134,6 +38470,13 @@ function clLessonSegmentSoftwareAndOptimization_() {
    "date": "2026-10-03",
    "note": "regenerated: graph:profiler-graph 2026-10-03→2026-10-04; profile:habitat-energy 2026-10-02→2026-10-03",
    "changed": []
+  },
+  {
+   "date": "2026-10-03",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };

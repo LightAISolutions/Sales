@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 2,
+  "slug": "emcor",
+  "title": "EMCOR — Technology Study Guide",
+  "lastUpdated": "2026-10-04",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: both halves of the data hall under one roof",
+      "kind": "callout",
+      "tone": "info",
+      "read": "A specialty contractor installs what the supply segments sell; this one installs the electrical and the mechanical halves at the largest scale in the country.",
+      "ps": [
+        "**The trade.** A {{specialty contractor}} performs one or more building trades under contract to an owner or a general contractor. An {{electrical contractor}} builds the power path from the service entrance to the rack; a {{mechanical contractor}} builds the chilled-water plant, the piping, the air handling, the plumbing and the fire protection — in an AI hall, the liquid-cooling distribution as well.",
+        "**The model here.** About a hundred local subsidiaries kept under their own names and leaders, 62% union, with fabrication shops of up to 250,000 sq ft, reporting through four segments to a listed parent that publishes a market-sector revenue table every quarter.",
+        "**Why a seller cares.** The contractor sets, pipes, wires and commissions the chillers, CDUs, UPS and switchgear the supply segments sell, buys much of it under fixed-price or GMP contracts, and its filings are the only audited quarterly read on data-centre construction spend by trade. This guide teaches the mechanical scope, how a contractor reports, backlog and conversion, the union labour model and how to read a beat.",
+        "**Not here.** Executives, share counts and acquisition prices stay in the dossier."
+      ]
+    },
+    {
+      "id": "mechanical-scope",
+      "title": "What the mechanical contractor builds in an AI data hall",
+      "kind": "prose",
+      "ps": [
+        "Every watt a GPU draws becomes heat that must leave the building. The mechanical contractor builds the path: {{chiller}}s or dry coolers outside, pumps and piping to the halls, {{CRAH}} units for air-cooled rooms and {{CDU}}s with secondary loops to the racks for liquid-cooled ones, plus the controls that balance it. It also installs plumbing, process piping and the {{fire protection}} systems.",
+        "The AI multiplier. Management's own figure is that an AI campus needs 1.5 to 2 times the mechanical scope of a traditional cloud build and 1.25 to 1.5 times the electrical. The reason is density: a 100 kW rack needs liquid to every rack, bigger pipes, more pumps and more {{heat rejection}} per square foot. Mechanical revenue grows faster than electrical when the mix shifts to AI.",
+        "Prefabrication matters as much as in electrical: pipe racks, pump skids and air-handling assemblies are welded and tested in a shop and set as units. The largest shops in this group run to 250,000 sq ft."
+      ]
+    },
+    {
+      "id": "how-a-contractor-reports",
+      "title": "How a specialty contractor reports: percentage of completion, RPO and the sector table",
+      "kind": "table",
+      "read": "Three disclosures turn a 10-K into a demand indicator for the whole AIDC supply chain.",
+      "intro": "What each line means and how to read it.",
+      "cols": [
+        "Disclosure",
+        "What it is",
+        "How to read it"
+      ],
+      "rows": [
+        [
+          "Revenue by {{percentage-of-completion}}",
+          "Revenue recognised as costs are incurred against the estimated total cost of each fixed-price job ({{cost-to-cost method}})",
+          "Revenue tracks work done, not cash; a cost overrun on one job cuts the margin of the whole segment in the quarter it is recognised"
+        ],
+        [
+          "{{Remaining performance obligations}} (RPO)",
+          "Signed contract value not yet recognised as revenue — backlog, including confirmed and pending change orders",
+          "Growth shows demand; the share due within twelve months shows how fast it converts; a falling share means larger, longer projects"
+        ],
+        [
+          "Market-sector table",
+          "Segment revenue split by end market — network and communications (data centres) among them",
+          "The only audited quarterly read on data-centre construction spend by trade; compare the sector's share of each segment over time"
+        ],
+        [
+          "Segment operating margin",
+          "Operating income over revenue, per segment",
+          "Mix tells the story: construction-manager roles and GMP contracts earn less than self-performed fixed-price work"
+        ]
+      ]
+    },
+    {
+      "id": "backlog-conversion",
+      "title": "Reading backlog: growth, conversion and what a slowing share means",
+      "kind": "prose",
+      "ps": [
+        "Backlog grows when bookings outrun revenue. The second figure to read is conversion: the share of {{remaining performance obligations}} the company expects to recognise within twelve months. When it falls — here from about 85% to about 75% — projects are getting larger and longer, which lengthens visibility and also lengthens exposure to owner pauses and power delays.",
+        "A third figure is the in-year booking share — how much of this year's revenue was booked this year. When it drops from about 60% to 40–45%, the company is living more on last year's signings; a slowdown in bookings would show up a year later in revenue, not immediately.",
+        "For a seller these are leading indicators: a contractor's data-centre backlog is equipment that has not yet been bought or installed."
+      ]
+    },
+    {
+      "id": "contract-mix",
+      "title": "Fixed price, GMP and cost-plus: why margin moves with mix",
+      "kind": "prose",
+      "ps": [
+        "Under a {{lump sum}} (fixed-price) contract the contractor keeps every dollar it saves and eats every overrun; margins are highest when execution is good and the job is familiar. Under a {{guaranteed maximum price}} the owner pays actual cost up to a cap and usually shares savings; the contractor's margin is a fee. Under cost-plus the owner pays cost plus a fee with no cap.",
+        "Owners choose GMP and cost-plus when the design is still moving — which describes much AI campus work, where rack densities and cooling choices change mid-build. More GMP work in new geographies is exactly what the record shows lowering the mechanical margin even as revenue surges.",
+        "The lesson for reading results: a margin dip can be mix, not mistakes. The tell is whether the company names a 'challenged project' — a fixed-price job that went wrong — or a mix shift."
+      ]
+    },
+    {
+      "id": "union-model",
+      "title": "The union labour model at scale",
+      "kind": "prose",
+      "ps": [
+        "A {{union shop}} contractor hires craft from local unions under {{collective bargaining agreement}}s — here roughly 450 of them across about 200 multiemployer pension plans. The advantages: a deep, trained pool that can be called from other locals when a campus needs thousands of hands, standard wage and travel terms, and workers who 'will travel themselves' to rural sites.",
+        "The costs: wage floors set by agreement, and {{withdrawal liability}} — if the contractor ever leaves a multiemployer pension plan it owes its share of the plan's unfunded obligations, which the filings warn 'could be material'. Merit-shop rivals avoid both and win where union density is low.",
+        "The constraint this model does not solve is supervision. Management says its 'core product is really field labor supervision and leadership' and that the bottleneck is superintendents, not tradespeople — which is why it buys local contractors with their foremen rather than brokering labour."
+      ]
+    },
+    {
+      "id": "buying-local-contractors",
+      "title": "Why a national contractor buys local ones",
+      "kind": "prose",
+      "ps": [
+        "A hyperscale campus in a new state needs a contractor with local supervision, local union relationships and a local shop. Building that from scratch takes years; buying a contractor that already has it takes a quarter. The acquisition programme here is explicitly 'low- and medium-voltage contractors to expand its geographic reach and strengthen market density' — Florida and the Southeast, Texas, the Midwest.",
+        "What is bought is people and relationships, recorded in the accounts as customer relationships and trade names amortised over years. The acquired company keeps its name because the name is the relationship. For a seller, the map of subsidiaries is the map of where the group can take your equipment."
+      ]
+    },
+    {
+      "id": "reading-a-beat",
+      "title": "Reading a beat: consensus, guidance and why the stock can fall anyway",
+      "kind": "prose",
+      "ps": [
+        "{{Consensus}} is the average of published analyst estimates for a quarter's revenue and earnings per share; trackers differ by a few cents, so a 'miss' on one tracker can be a 'beat' on another. Guidance is the company's own range for the year; a raise matters more than any single quarter.",
+        "A stock can fall on a beat when the market had priced a bigger one, when guidance is held rather than raised, or when growth concentrates in one segment and investors price the risk of that segment turning. The record here has all three: a 13–17% drop on an in-line quarter, a drop on conservative annual guidance, and an 18% rise when guidance was raised twice in a year.",
+        "For a seller the signal is the guidance path: two raises in a year is a contractor telling its suppliers to expect more purchase orders."
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "Mechanisms only — no dates, names or dollar figures.",
+      "cards": [
+        {
+          "q": "Which systems in a liquid-cooled AI hall does the mechanical contractor install?",
+          "a": "Chillers or dry coolers, pumps and piping, CRAH units and CDUs with the secondary loops to the racks, plumbing, process piping and fire protection, plus the controls."
+        },
+        {
+          "q": "Why does the mechanical scope grow faster than the electrical when a campus shifts to AI?",
+          "a": "Density: 100 kW racks need liquid to every rack, bigger pipes, more pumps and more heat rejection per square foot — management's multiplier is 1.5–2× mechanical versus 1.25–1.5× electrical."
+        },
+        {
+          "q": "What is RPO and what does a falling within-twelve-months share mean?",
+          "a": "Signed contract value not yet recognised as revenue; a falling share means projects are getting larger and longer — more visibility, more exposure to pauses."
+        },
+        {
+          "q": "Why can a contractor's margin fall while its revenue surges?",
+          "a": "Mix: more construction-manager roles and GMP or cost-plus contracts, which earn a fee rather than fixed-price savings, especially in new geographies where design is still moving."
+        },
+        {
+          "q": "What is {{withdrawal liability}}?",
+          "a": "A union contractor's share of a multiemployer pension plan's unfunded obligations, owed if it stops contributing to the plan."
+        },
+        {
+          "q": "What does a national contractor acquire when it buys a local one?",
+          "a": "Local supervision, union relationships and a shop — recorded as customer relationships and trade names — and the name is kept because the name is the relationship."
+        },
+        {
+          "q": "Why might shares fall after an earnings beat?",
+          "a": "The market priced a bigger beat, guidance was held rather than raised, or growth is concentrated in one segment whose turn investors fear."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "Six questions on the mechanics.",
+      "items": [
+        {
+          "q": "A contractor recognises revenue as costs are incurred against each job's estimated total cost. What is this method called?",
+          "c": [
+            "Completed contract",
+            "Cost-to-cost percentage of completion",
+            "Cash basis",
+            "Milestone billing"
+          ],
+          "a": 1,
+          "why": "Revenue follows the cost curve; an estimate change on one job flows through the segment's margin in the quarter it is made."
+        },
+        {
+          "q": "RPO rises 44% in a year while the share due within twelve months falls from 85% to 75%. What has changed?",
+          "c": [
+            "Bookings slowed",
+            "Projects are larger and longer",
+            "Revenue was pulled forward",
+            "The company stopped signing service work"
+          ],
+          "a": 1,
+          "why": "More backlog converting later means bigger, longer campus contracts."
+        },
+        {
+          "q": "Mechanical margin falls 110 basis points while mechanical revenue grows 31%. Which explanation does the record support?",
+          "c": [
+            "A failed project",
+            "A mix shift to CM, GMP and cost-plus work in new geographies",
+            "Rising copper prices",
+            "Union wage increases"
+          ],
+          "a": 1,
+          "why": "The company attributes the decline to project mix — fee-based contracts where design is still evolving."
+        },
+        {
+          "q": "Why does a union contractor's filing warn about multiemployer pension plans?",
+          "c": [
+            "They cannot be joined",
+            "Leaving one triggers withdrawal liability for unfunded obligations",
+            "They pay no benefits",
+            "They are illegal in some states"
+          ],
+          "a": 1,
+          "why": "A contributing employer owes its share of the plan's shortfall if it withdraws."
+        },
+        {
+          "q": "A national contractor buys a regional electrical contractor and keeps its name and chief executive. What is it mainly buying?",
+          "c": [
+            "A brand to retire",
+            "Equipment inventory",
+            "Local supervision, union relationships and customer ties",
+            "A patent portfolio"
+          ],
+          "a": 2,
+          "why": "The acquisition programme targets geographic density; the people and relationships are the asset."
+        },
+        {
+          "q": "Earnings beat consensus but the shares fall 15%. Which is NOT a plausible reason?",
+          "c": [
+            "Guidance was held rather than raised",
+            "Growth concentrated in one segment",
+            "The market expected a larger beat",
+            "Revenue was recognised on a cash basis"
+          ],
+          "a": 3,
+          "why": "Construction revenue is recognised on percentage of completion, not cash; the other three are the usual causes."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "specialty contractor",
+      "d": "A contractor that performs one or more building trades — electrical, mechanical, plumbing, fire protection — under contract to an owner or a general contractor, rather than managing the whole project."
+    },
+    {
+      "t": "electrical contractor",
+      "d": "A specialty contractor that installs, tests and commissions a building's electrical power and low-voltage systems."
+    },
+    {
+      "t": "mechanical contractor",
+      "d": "A specialty contractor that installs HVAC, chilled-water plant, piping, plumbing and fire-protection systems — in a data hall, the heat-rejection path from rack to roof."
+    },
+    {
+      "t": "chiller",
+      "d": "A machine that removes heat from a water loop using a refrigeration cycle, supplying chilled water to air handlers or coolant distribution units."
+    },
+    {
+      "t": "fire protection",
+      "d": "Sprinkler, clean-agent and detection systems installed by a mechanical or fire-protection contractor; in data halls often pre-action sprinklers plus gas suppression."
+    },
+    {
+      "t": "heat rejection",
+      "d": "Moving the heat removed from the IT equipment out of the building — through cooling towers, dry coolers or air-cooled chillers."
+    },
+    {
+      "t": "percentage-of-completion",
+      "d": "Revenue recognition that books a fixed-price contract's revenue progressively as work is performed, in proportion to costs incurred against estimated total costs."
+    },
+    {
+      "t": "cost-to-cost method",
+      "d": "The usual input measure for percentage of completion: costs incurred to date divided by estimated total costs gives the share of revenue to recognise."
+    },
+    {
+      "t": "union shop",
+      "d": "A contractor that hires craft labour from a union local under a collective bargaining agreement setting wages, benefits and travel terms."
+    },
+    {
+      "t": "collective bargaining agreement",
+      "d": "The contract between an employer (or trade association) and a union local that fixes wages, benefits, work rules and dispute procedures for the craft it covers."
+    },
+    {
+      "t": "withdrawal liability",
+      "d": "The share of a multiemployer pension plan's unfunded obligations an employer must pay if it stops contributing to the plan."
+    },
+    {
+      "t": "consensus",
+      "d": "The average of published sell-side analyst estimates for a company's revenue or earnings in a period; different trackers aggregate different analyst sets, so figures differ by a few cents."
+    }
+  ]
+}

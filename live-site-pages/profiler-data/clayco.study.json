@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 2,
+  "slug": "clayco",
+  "title": "Clayco — Technology Study Guide",
+  "lastUpdated": "2026-10-04",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: the general contractor that owns the whole chain",
+      "kind": "callout",
+      "tone": "info",
+      "read": "A GC turns a permit into commissioned megawatts; this one owns its architect, its concrete and enclosure trades, an MEP arm and a developer.",
+      "ps": [
+        "**The trade.** A {{general contractor}} holds the owner's construction contract, plans and sequences the job, hires and coordinates the trades, and carries schedule and safety responsibility. In a data hall the critical trades are electrical and mechanical; the GC decides how they overlap and when the building is ready for them.",
+        "**The model here.** Vertical integration — in-house architecture and engineering, a self-performed concrete company, an enclosure company, a mechanical-electrical self-perform arm, and a real-estate developer that assembles land and power — sold as design-build: one contract, one responsible party.",
+        "**Why a seller cares.** On a design-build campus the GC's engineers write the basis of design, its procurement team runs the bid for generators and chillers, and its self-perform crews install them. On a construction-management campus the owner furnishes the equipment and the GC coordinates a hundred subcontractors. This guide teaches which is which, what a data-centre ranking measures, how speed to power is built, and why land and local politics are now part of the GC's business.",
+        "**Not here.** Founding dates, executives and revenue stay in the dossier."
+      ]
+    },
+    {
+      "id": "delivery-models",
+      "title": "Design-build, CM at risk and construction management: who holds the risk",
+      "kind": "table",
+      "read": "The contract form decides whether the GC buys your equipment or merely installs it.",
+      "intro": "The three forms a data-centre owner chooses among, and what each means for procurement.",
+      "cols": [
+        "Model",
+        "Who holds design",
+        "Who buys major equipment",
+        "Where the GC's profit comes from"
+      ],
+      "rows": [
+        [
+          "{{design-build}}",
+          "The GC (through its own or a contracted designer)",
+          "Usually the GC, inside a lump sum or {{guaranteed maximum price}}",
+          "Speed and single-source responsibility; it carries design and cost risk"
+        ],
+        [
+          "{{CM at risk}}",
+          "The owner's architect and engineer",
+          "Often the owner for long-lead gear; the GC buys the rest under the GMP",
+          "A fee plus savings under the GMP; it carries construction cost risk"
+        ],
+        [
+          "Construction management (agency)",
+          "The owner's team",
+          "The owner — {{owner-furnished equipment}} is the norm on hyperscale campuses",
+          "A fee for coordinating subcontractors; little cost risk"
+        ],
+        [
+          "{{turnkey EPC}}",
+          "The contractor",
+          "The contractor",
+          "A margin on the whole plant; used for solar and storage, now offered by this GC's energy unit"
+        ]
+      ]
+    },
+    {
+      "id": "self-perform",
+      "title": "Why a GC self-performs concrete, enclosure and MEP",
+      "kind": "prose",
+      "ps": [
+        "Most general contractors subcontract every trade and manage; a {{self-perform}} GC employs its own craft for the trades that drive the schedule. Concrete is first — foundations, slabs and tilt-up or precast walls are the critical path for the first months of a data hall — and a GC that owns a concrete company controls when the building is ready for the trades that follow.",
+        "Enclosure is second: a watertight shell lets electrical and mechanical rough-in start. Mechanical and electrical self-perform is the hardest to build and the most valuable, because those trades are where hyperscale schedules slip; a GC with its own MEP crews can promise sequence rather than negotiate it.",
+        "The limit is labour. Self-performed craft must be hired, trained and kept busy; when a marquee client doubles the size of a follow-on phase on the same timeline, the GC either has the crews or it loses the phase to a rival that does. The dossier records exactly that case."
+      ]
+    },
+    {
+      "id": "speed-to-power",
+      "title": "Speed to power: how a data hall is sequenced",
+      "kind": "prose",
+      "ps": [
+        "Owners pay for time to energised capacity. The sequence runs site and civil work, then foundations and shell, then the equipment yard — generators, {{switchgear}}, transformers — while the building's electrical and mechanical rough-in proceeds inside, then equipment set, then {{commissioning}} from Level 1 through the integrated systems test, then {{energization}}.",
+        "Three levers compress it. {{Offsite fabrication}} of power assemblies and chiller skids moves hours off the critical path; design-build removes the redesign cycle between an owner's engineer and a builder; and concurrent engineering lets foundations pour while the electrical design is still closing.",
+        "On this company's flagship AI job the record names 'more than 100 integrated power assemblies and more than 90 chillers' with 'significant off-site assembly' and an on-site concrete batch plant. Those are the speed levers applied to a liquid-cooled retrofit of a former bitcoin site."
+      ]
+    },
+    {
+      "id": "liquid-cooled-retrofit",
+      "title": "Converting a bitcoin site into an AI data centre",
+      "kind": "prose",
+      "ps": [
+        "A bitcoin mine has what an AI campus needs most — a grid interconnection and transformers — and almost nothing else it needs: no {{UPS}}, no redundant distribution, air cooling sized for cheap ASICs rather than {{liquid cooling}} for GPUs. Converting one means keeping the power entry and rebuilding everything downstream.",
+        "{{Rack power density}} drives the rebuild. Racks that drew 10–15 kW now draw past 100 kW, which pushes the design from air to liquid: chillers and {{CDU}}s instead of CRAH units, piping to every rack, and far more {{power module}}s per hall. The structure changes too — heavier floors for liquid-cooled racks and larger equipment yards.",
+        "The GC's contribution is sequencing a live site: new foundations and structural steel beside operating infrastructure, chiller skids set as they arrive, and a phased hand-over so the tenant takes capacity in tranches rather than all at once."
+      ]
+    },
+    {
+      "id": "rankings",
+      "title": "What a data-centre contractor ranking measures",
+      "kind": "table",
+      "read": "The trade press ranks GCs on self-reported revenue by building type — read the basis before the rank.",
+      "intro": "The two rankings every GC dossier in this corpus cites.",
+      "cols": [
+        "Ranking",
+        "What it ranks on",
+        "What it does not tell you"
+      ],
+      "rows": [
+        [
+          "BD+C Giants 400 data-centre table",
+          "Prior-year revenue the firm attributes to data-centre facilities, self-reported in a survey",
+          "MW delivered, self-perform share, or whether the firm was GC or CM; a firm USD 10m behind another is statistically tied"
+        ],
+        [
+          "ENR Top 400 and sector tables",
+          "Prior-year construction revenue overall and by market sector, self-reported",
+          "Development revenue, so a GC with a developer arm reports a smaller number here than in its own boilerplate"
+        ],
+        [
+          "Design-build lists (BD+C, ENR)",
+          "Revenue delivered under design-build contracts",
+          "Whether the firm designed in-house or hired the designer"
+        ],
+        [
+          "A company's own 'top three' claim",
+          "Whatever page it appears on",
+          "Anything, until matched to the publisher's table"
+        ]
+      ]
+    },
+    {
+      "id": "powered-land",
+      "title": "Powered land: when the builder is also the developer",
+      "kind": "prose",
+      "ps": [
+        "A {{powered shell}} is a building with grid power and cooling capacity ready for a tenant's racks; {{powered land}} is a site with the interconnection, water and zoning secured but nothing built. Developers sell or lease both to hyperscalers and colocation operators who want to skip the years of entitlement.",
+        "A GC with a development affiliate can offer develop-design-build: assemble the land, win the rezoning and the utility agreement, design and build the shell, and lease it. The attraction is control of the whole timeline; the exposure is political. Rezoning a few hundred acres for a gigawatt campus is a public act, and the record here shows what happens when it goes wrong — a withdrawn campus and a moratorium in one city, an approval followed by a council wipe-out and a {{Sunshine Law}} suit in another.",
+        "For a seller the developer arm is a second door: it signs for substations and sometimes for generation and storage before a tenant is named."
+      ]
+    },
+    {
+      "id": "stalled-owner",
+      "title": "When the owner stops paying: liens and working capital",
+      "kind": "prose",
+      "ps": [
+        "A design-builder on a billion-dollar plant pays its subcontractors monthly and bills the owner for progress. If the owner suspends the project — a battery plant stopped at three-quarters complete when federal incentives looked uncertain — the builder is left holding the last months of unpaid work. The legal tool is a {{mechanic's lien}}: a claim against the property itself for the value of work performed, enforced by a foreclosure suit.",
+        "The scale of the exposure is the lesson, not the lawsuit. A private GC that pays every subcontractor from its own funds while it waits is lending the owner working capital; the amount sued for is only the unpaid tail of a much larger receivable."
+      ]
+    },
+    {
+      "id": "energy-epc-adjacency",
+      "title": "A GC's solar-and-storage unit: who it buys from and sells to",
+      "kind": "prose",
+      "ps": [
+        "Utility-scale solar and {{BESS}} are built under {{turnkey EPC}}: the contractor engineers the plant, procures modules, inverters and batteries, and builds it for a utility, an independent power producer or a financial sponsor. A general contractor entering this market brings craft labour and project controls but no supplier relationships; its first projects reveal which battery and inverter makers it chooses.",
+        "The twist here is the customer list: the unit names 'data center operators' among its targets, which suggests behind-the-meter storage at campuses the GC already builds. For a storage seller, a GC's energy unit is a new procurement channel whose first named award is the thing to watch."
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "Mechanisms only — no dates, names or revenue figures.",
+      "cards": [
+        {
+          "q": "Under which delivery model does the general contractor most often buy the major electrical and mechanical equipment itself?",
+          "a": "Design-build (and turnkey EPC): the GC holds design and procurement inside its price. Under construction management the owner furnishes it."
+        },
+        {
+          "q": "Why does a GC self-perform concrete before any other trade?",
+          "a": "Foundations, slabs and walls are the critical path of a data hall's first months; owning the concrete crew controls when the building is ready for the trades that follow."
+        },
+        {
+          "q": "What are the three levers that compress time to energised capacity?",
+          "a": "Offsite fabrication of power and cooling assemblies, design-build to remove the redesign cycle, and concurrent engineering so civil work proceeds while design closes."
+        },
+        {
+          "q": "What does a bitcoin mine already have that an AI data centre needs, and what must be rebuilt?",
+          "a": "The grid interconnection and transformers; everything downstream — UPS, redundant distribution, liquid cooling, heavier structure — must be added."
+        },
+        {
+          "q": "What does BD+C's data-centre contractor table rank on?",
+          "a": "Prior-year revenue the firm attributes to data-centre facilities, self-reported in a survey — not MW delivered or contract role."
+        },
+        {
+          "q": "What is {{powered land}} and why does a GC want a developer affiliate?",
+          "a": "A site with interconnection, water and zoning secured; a developer affiliate lets the GC control the timeline from land to lease and signs for infrastructure before a tenant is named."
+        },
+        {
+          "q": "What is a {{mechanic's lien}}?",
+          "a": "A claim against the property for the value of work performed, which a builder can foreclose when the owner stops paying."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "Six questions on the mechanics.",
+      "items": [
+        {
+          "q": "An owner's engineer designs the data hall and the owner buys the generators and UPS; the GC coordinates a hundred subcontractors for a fee. Which model is this?",
+          "c": [
+            "Design-build",
+            "Construction management",
+            "Turnkey EPC",
+            "CM at risk with GC-furnished gear"
+          ],
+          "a": 1,
+          "why": "Owner-held design, owner-furnished equipment and a coordination fee are agency construction management."
+        },
+        {
+          "q": "A client doubles the size of a follow-on phase on the same timeline and moves it to a rival GC, citing labour. Which capability was the binding constraint?",
+          "c": [
+            "Design capacity",
+            "Self-performed and supervised craft labour",
+            "Bonding capacity",
+            "Equipment procurement"
+          ],
+          "a": 1,
+          "why": "Schedule on a doubled phase is set by how many crews and superintendents the GC can field."
+        },
+        {
+          "q": "Which change most forces a bitcoin-site conversion from air to liquid cooling?",
+          "c": [
+            "Longer cables",
+            "Rack power density rising past 100 kW",
+            "Smaller transformers",
+            "Lower utility voltage"
+          ],
+          "a": 1,
+          "why": "Air cannot remove the heat of 100 kW racks; liquid cooling with CDUs and chillers is required."
+        },
+        {
+          "q": "Two GCs are USD 10m apart on a self-reported data-centre revenue table. What can you conclude?",
+          "c": [
+            "The higher one builds more megawatts",
+            "The higher one self-performs more",
+            "Little — the gap is inside survey noise",
+            "The lower one is a construction manager"
+          ],
+          "a": 2,
+          "why": "The table measures self-reported revenue attributed to a building type; a USD 10m gap on billions is not a ranking difference."
+        },
+        {
+          "q": "Why is a GC's development affiliate politically exposed in a way the construction business is not?",
+          "c": [
+            "It pays higher wages",
+            "Rezoning hundreds of acres is a public act that invites organised opposition",
+            "It cannot bond its work",
+            "It must publish its revenue"
+          ],
+          "a": 1,
+          "why": "Entitlement is decided in council chambers and elections; a builder hired after entitlement avoids that stage."
+        },
+        {
+          "q": "A design-builder sues for USD 26m on a plant where it performed more than USD 1bn of work. What does the suit measure?",
+          "c": [
+            "Its total loss",
+            "The unpaid tail after it paid subcontractors from its own funds",
+            "The owner's penalty",
+            "Its profit on the job"
+          ],
+          "a": 1,
+          "why": "The lien covers unpaid progress billings; the working capital lent to the owner is the larger exposure."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "energization",
+      "d": "The moment utility or generator power is applied to a facility's electrical system for the first time, after commissioning tests pass — the milestone data-centre owners schedule around."
+    },
+    {
+      "t": "Sunshine Law",
+      "d": "A state open-meetings and open-records law; a suit alleging a council deliberated in private or gave inadequate notice can void the approval it produced."
+    },
+    {
+      "t": "mechanic's lien",
+      "d": "A statutory claim a contractor or supplier records against real property for the value of unpaid work or materials, enforceable by foreclosure."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-10-04",
- "companies": 202,
+ "companies": 205,
  "edges": [
   {
    "a": "5c-group",
@@ -4318,6 +4318,36 @@
   },
   {
    "a": "amazon",
+   "b": "clayco",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Long-standing e-commerce-centre client (500,000 to 1 million-plus sq ft buildings); named by Forbes among data-centre clients.",
+     "context": "Clayco's own pages describe Amazon choosing it 'on many very complex, fast-track projects' including a 1.12 million sq ft Baltimore sorting facility; Forbes (September 2026) names Amazon among the clients for whom Clayco is 'erecting self-contained billion-dollar cities'. No named Amazon data-centre campus appears in third-party press.",
+     "source": "https://claycorp.com/project/amazon-e-commerce-centers",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Industrial and advanced-manufacturing design-build",
+     "date": "",
+     "text": "Current work: Rivian's USD 5bn Georgia EV plant (originally selected 2023; construction resuming 2026 with JE Dunn alongside; production late 2028), Rivian's R2 expansion in Normal, Illinois, ENTEK's USD 1.5bn lithium-battery separator plant in Terre Haute, WEG Transformers USA's Washington, Missouri expansion (31,300 sq ft, groundbreaking April 2026 — transformers for Ameren), and Amazon fulfilment centres of 500,000 to more than 1 million sq ft.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-30",
+     "text": "Forbes: data centres to be 75% of Clayco's nearly USD 12bn 2026 revenue, up 43% on 2025; 16 data centres completed in 2025 and 77 in progress across 13 states; clients 'including Amazon, Microsoft and Oracle'; Bob Clark debuts on the Forbes 400 at No. 245 with USD 7bn — The only forward figures in the record, and they imply about USD 9bn of 2026 data-centre revenue — double the USD 4.5bn Clayco Compute target set in January 2025.",
+     "src": "https://www.forbes.com/sites/christopherhelman/2026/09/30/billionaire-data-center-builder-insists-theres-no-ai-bubble/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-30"
+  },
+  {
+   "a": "amazon",
    "b": "compass-datacenters",
    "curated": {
     "b": {
@@ -4614,6 +4644,20 @@
     }
    ],
    "last": "2025-11-21"
+  },
+  {
+   "a": "amazon",
+   "b": "faith-technologies",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Meta Lebanon is the only named hyperscale customer, the Pittsboro plant is tied to it by Indiana press, and the company's own project list names no other hyperscale campus; a Microsoft or Amazon attribution exists only on a jobs aggregator.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "amazon",
@@ -6167,6 +6211,21 @@
      "from": "b"
     }
    ],
+   "last": ""
+  },
+  {
+   "a": "amd",
+   "b": "emcor",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Historical: Dynalectric Colorado and Trautman & Shreve performed electrical and mechanical work on Xilinx's Longmont data-centre expansion (Xilinx is now part of AMD).",
+     "context": "Data Center Dynamics reported the two EMCOR subsidiaries teaming on the Xilinx Longmont expansion before AMD's 2022 acquisition of Xilinx; the page is behind a script wall and its date was not retrievable. Recorded as a historical reference, not a current engagement.",
+     "source": "https://www.datacenterdynamics.com/en/news/emcor-group-inc-subsidiaries-team-up-to-perform-electrical-and-mechanical-construction-for-expansion-of-xilinx-datacenter-2/",
+     "status": "historical"
+    }
+   },
+   "evid": [],
    "last": ""
   },
   {
@@ -12304,6 +12363,20 @@
   },
   {
    "a": "black-veatch",
+   "b": "clayco",
+   "evid": [
+    {
+     "where": "Capabilities · LJC — The Lamar Johnson Collaborative (architecture and engineering)",
+     "date": "",
+     "text": "The piece that makes Clayco a true design-builder rather than a GC with design-assist; comparable in-house design capacity exists at Burns & McDonnell and Black & Veatch (engineer-led) rather than at the GC peers.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "black-veatch",
    "b": "dnv",
    "curated": {
     "b": {
@@ -13051,6 +13124,30 @@
      "date": "2026-04-21",
      "text": "USD 1.5 billion of construction financing for the two fully leased Sterling data centers (114 MW, 685,000 sq ft): two senior secured limited-recourse term loans from Apterra, Global Infrastructure Partners (BlackRock) and ING; occupancy November 2026 and July 2027 — GIP as a lender rather than an owner shows where the infrastructure funds sit in EdgeCore's stack; the release also restates '1.8 gigawatts' and '1.4 GWs under development in Northern and Central Virginia'.",
      "src": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-21"
+  },
+  {
+   "a": "blackrock",
+   "b": "emcor",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Largest disclosed holder: 3,566,461 shares, 8.03% (13G/A, October 2025).",
+     "context": "A passive index holding reported in the 2026 proxy; FMR holds 5.94% and Vanguard disclaimed beneficial ownership in March 2026.",
+     "source": "https://www.sec.gov/Archives/edgar/data/105634/000114036126015809/ny20062562x1_def14a.htm",
+     "status": "active",
+     "scale": "8.03%"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-21",
+     "text": "2026 proxy: BlackRock 8.03% and FMR 5.94% are the only 5% holders; Vanguard disclaimed beneficial ownership on 26 March; CEO 2025 pay USD 14.38m — A widely held register with no controlling shareholder.",
+     "src": "https://www.sec.gov/Archives/edgar/data/105634/000114036126015809/ny20062562x1_def14a.htm",
      "from": "b"
     }
    ],
@@ -15465,6 +15562,20 @@
   },
   {
    "a": "blattner",
+   "b": "clayco",
+   "evid": [
+    {
+     "where": "Capabilities · Clayco Power & Energy — utility-scale solar and BESS EPC",
+     "date": "",
+     "text": "A late entrant against SOLV, Blattner, Primoris, Rosendin Energy Group and Mortenson in renewables EPC; its edge is the captive data-centre customer base the release itself names as a target segment.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blattner",
    "b": "clearway-energy",
    "curated": {
     "a": {
@@ -16930,6 +17041,20 @@
     }
    ],
    "last": "2026-06-25"
+  },
+  {
+   "a": "burns-mcdonnell",
+   "b": "clayco",
+   "evid": [
+    {
+     "where": "Capabilities · LJC — The Lamar Johnson Collaborative (architecture and engineering)",
+     "date": "",
+     "text": "The piece that makes Clayco a true design-builder rather than a GC with design-assist; comparable in-house design capacity exists at Burns & McDonnell and Black & Veatch (engineer-led) rather than at the GC peers.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "burns-mcdonnell",
@@ -19308,6 +19433,22 @@
     }
    ],
    "last": "2025-11-18"
+  },
+  {
+   "a": "caterpillar",
+   "b": "faith-technologies",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Three 15 kV Caterpillar generators (2.5 MW) installed by FTI at Children's Wisconsin.",
+     "context": "FTI's Children's Wisconsin project page: the new generator facility 'was designed with three 15KV Caterpillar generators to replace four smaller units, generating 2.5 megawatts (MW) of power'. An installation reference, not a stated supply agreement.",
+     "source": "https://www.faithtechinc.com/project/childrens-wisconsin/",
+     "status": "historical",
+     "scale": "3 × 15 kV, 2.5 MW"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "caterpillar",
@@ -22083,6 +22224,452 @@
    },
    "evid": [],
    "last": "2022-11"
+  },
+  {
+   "a": "clayco",
+   "b": "coreweave",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Tenant of two Clayco-built shells — Helios Phase 1 (133 MW) and Related Digital Cheyenne (88 MW) — not a direct client.",
+     "context": "CoreWeave leases the capacity Clayco builds for Galaxy (15-year leases totalling 526 MW across three Helios phases) and anchors Related Digital's Cheyenne first building. Clayco's counterparties are the owners; CoreWeave's requirements set the liquid-cooled, high-density design.",
+     "source": "https://www.related.com/press-releases/2025-10-07/related-digital-breaks-ground-302-mw-data-center-campus-cheyenne-wyoming",
+     "status": "active",
+     "scale": "133 MW + 88 MW"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Clayco Compute, the mission-critical unit launched January 2025 under Ryan McGuire, reports 72 active data-centre projects, '10.20GW' delivered or underway and USD 42bn of mission-critical revenue delivered or underway; named live campuses are Galaxy's Helios Phase 1 (133 MW critical IT for CoreWeave, complete July 2026), Related Digital's Cheyenne campus (construction manager, 88 MW of up to 302 MW, CoreWeave anchor) and the PsiQuantum-anchored Illinois Quantum and Microelectronics Park.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-06",
+     "text": "Galaxy completes Helios Phase 1 — 133 MW of critical IT load (about 200 MW gross) delivered to CoreWeave; Clayco was the Phase 1 GC — The first completed hyperscale-class AI phase in Clayco's public record.",
+     "src": "https://www.prnewswire.com/news-releases/galaxy-completes-phase-i-of-its-helios-data-center-campus-delivering-133-megawatts-of-critical-it-load-to-coreweave-302818664.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-07",
+     "text": "Related Digital breaks ground on its USD 1.2bn, up-to-302 MW Cheyenne campus with Clayco as construction manager; 88 MW first building anchored by CoreWeave, expected late 2026 — A developer-side CM award in a power-rich Western market.",
+     "src": "https://www.related.com/press-releases/2025-10-07/related-digital-breaks-ground-302-mw-data-center-campus-cheyenne-wyoming",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-05",
+     "text": "Galaxy Digital names Clayco general contractor for Helios Phase 1 (133 MW critical IT for CoreWeave) with 'over 100 subcontractors and trade partners currently on-site' — Flagship AI award run as construction management over a large subcontractor base.",
+     "src": "https://equibles.com/stocks/glxy/calls/2025-q2",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-06"
+  },
+  {
+   "a": "clayco",
+   "b": "dpr",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "BD+C 2025 No. 3 at USD 3,650,423,000 — about USD 10m ahead of Clayco.",
+     "context": "DPR's self-performing model (about 6,000 craft) is the closest structural comparator to Clayco's self-perform thesis; the two are separated by USD 10m on the 2024 data-centre revenue table.",
+     "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "eaton",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Three 825 kVA Eaton UPS units at the University of Chicago Pod B data centre (historical).",
+     "context": "The only equipment brand named on a Clayco data-centre page; whether Clayco or the owner bought it is not stated.",
+     "source": "https://claycorp.com/project/university-of-chicago-pod-b-data-center",
+     "status": "historical",
+     "scale": "3 × 825 kVA"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "equinix",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Built the core and shell of Equinix's 240,000 sq ft Tier IV CH3 in Elk Grove Village (USD 29m, c. 2008).",
+     "context": "A historical reference on Clayco's own portfolio page — the largest of Equinix's 35 data centres at the time; no third-party attribution and no recent Equinix work recorded.",
+     "source": "https://claycorp.com/project/equinix-ch3",
+     "status": "historical",
+     "scale": "240,000 sq ft, USD 29m"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "galaxy-digital",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "General contractor for Helios Phase 1 (133 MW critical IT for CoreWeave, complete July 2026); Phase 2 (260 MW) awarded to HITT.",
+     "context": "Galaxy's COO told investors in August 2025 that Clayco was GC for Phase 1 under a construction-management structure with more than 100 subcontractors on site, delivering in tranches through H1 2026. A year later Galaxy said 'Clayco was our GC on phase one. They were an absolute great partner' but that HITT 'joined the project this year as our new general contractor' for the 260 MW Phase 2, 'given their project commitments and our timeline requirements and the necessary labor and workforces'. Clayco's own page claims more than 100 integrated power assemblies and 90 chillers on Phase 1.",
+     "source": "https://equibles.com/stocks/glxy/calls/2026-q2",
+     "status": "historical",
+     "since": "2025",
+     "scale": "133 MW critical IT (Phase 1)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The counter-fact is Galaxy Digital's decision to move Helios Phase 2 (260 MW) to HITT in 2026, citing Clayco's 'project commitments' and labour.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-05",
+     "text": "Galaxy Digital tells investors HITT replaced Clayco as general contractor for Helios Phase 2 (260 MW), mobilised since April, 'given their project commitments and our timeline requirements and the necessary labor and workforces' — A marquee AI client doubled the phase size and chose the capacity leader — the clearest evidence of Clayco's labour ceiling.",
+     "src": "https://equibles.com/stocks/glxy/calls/2026-q2",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-05",
+     "text": "Galaxy Digital names Clayco general contractor for Helios Phase 1 (133 MW critical IT for CoreWeave) with 'over 100 subcontractors and trade partners currently on-site' — Flagship AI award run as construction management over a large subcontractor base.",
+     "src": "https://equibles.com/stocks/glxy/calls/2025-q2",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-05"
+  },
+  {
+   "a": "clayco",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Implied end user of CRG's withdrawn USD 1bn St. Charles 'Project Cumulus' — documents show NDAs with an LLC 'with ties to Google'.",
+     "context": "St. Louis Public Radio's Sunshine-Law documents (September 2025) tie the withdrawn 440-acre campus to Spark Innovations, whose manager appears on Google data-centre entities in other states. Neither CRG nor Google confirmed; the project was withdrawn and the city imposed a moratorium.",
+     "source": "https://www.stlpr.org/economy-business/2025-09-08/documents-link-secretive-st-charles-data-center-google",
+     "status": "historical"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · CRG — real-estate development, including powered-land data-centre campuses",
+     "date": "",
+     "text": "Charles, Missouri was withdrawn in August 2025 amid opposition; Sunshine-Law documents linked it to an LLC with ties to Google.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-18",
+     "text": "CRG withdraws 'Project Cumulus', a USD 1bn, 440-acre St. Charles, Missouri data-centre campus, the day before a council vote; the city passes a one-year moratorium — The first of two Missouri setbacks for the developer arm; documents later tied the project to an LLC with Google ties.",
+     "src": "https://www.stlpr.org/economy-business/2025-09-08/documents-link-secretive-st-charles-data-center-google",
+     "from": "a"
+    }
+   ],
+   "last": "2025-08-18"
+  },
+  {
+   "a": "clayco",
+   "b": "hitt",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "BD+C 2025 No. 1 (USD 6.74bn) to Clayco's No. 4; replaced Clayco as Helios Phase 2 GC in 2026.",
+     "context": "The two sit at opposite ends of the BD+C top five on scale and on model: HITT's velocity culture and NoVA base against Clayco's vertical integration. At Helios Galaxy chose HITT for the doubled follow-on phase, citing labour and commitments.",
+     "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Mission Critical / Data Center Construction",
+     "date": "",
+     "text": "#1 ENR 2025 Telecommunications/Data Center Contractor and listed first on BD+C's 2025 data-center ranking, ahead of Holder, DPR, Clayco, Turner, Whiting-Turner, Fortis, JE Dunn, and Mortenson.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-07",
+     "text": "Listed first among top data-center construction firms in BD+C's 2025 Giants 400 ranking — Independent corroboration of the #1 position beyond ENR's survey — ahead of Holder, DPR, Clayco, Turner, and Whiting-Turner on trailing data-center revenue.",
+     "src": "BD+C Giants 400, 2025-10-07",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-07"
+  },
+  {
+   "a": "clayco",
+   "b": "holder-construction",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "BD+C 2025 No. 2 at USD 6.48bn of 2024 data-centre revenue.",
+     "context": "Holder led BD+C's 2024 table ahead of HITT, Turner, DPR and Clayco, and sits second on the 2025 table; both pursue hyperscale campus programmes in the Midwest and South.",
+     "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-11-27",
+     "text": "BD+C 2024 Giants: Holder #1 data-center contractor, ahead of HITT, Turner, DPR, and Clayco — The second consecutive #1 — the public peak of the franchise so far.",
+     "src": "BD+C, 2024-11-27",
+     "from": "b"
+    }
+   ],
+   "last": "2024-11-27"
+  },
+  {
+   "a": "clayco",
+   "b": "kiewit",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "ENR 2026 Top 100 Design-Build No. 4 (USD 8.10bn) to Clayco's No. 5 (USD 7.05bn); a Microsoft Mount Pleasant contractor where Clayco is not attributed.",
+     "context": "Design-build ranking neighbours; Mount Pleasant coverage names Walsh, Kiewit and Boldt, so the Microsoft Wisconsin campus some aggregators attach to Clayco is not corroborated.",
+     "source": "https://www.enr.com/toplists/2026-Top-100-Design-Build-Firms-preview",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "mccarthy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "St. Louis rival; BD+C 2025 No. 20 (USD 679m) and No. 11 design-build; source of two Clayco hires in 2025–26.",
+     "context": "McCarthy sits far below Clayco on BD+C's data-centre table and has been a talent source: Jason Mrozek (President of Self Perform) and Chad Dorgan (SVP Enterprise Quality) both came from McCarthy or its affiliates.",
+     "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Mission critical — data centres and secure facilities",
+     "date": "",
+     "text": "McCarthy does not appear in the named leaders of ENR's or Building Design+Construction's data-centre rankings, nor in Construction Dive's roundup of multibillion-dollar hyperscaler projects — those name HITT, Holder, DPR, Clayco, Turner, Whiting-Turner, Fortis, JE Dunn and Mortenson.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Crain's names a Microsoft data-centre campus in Elk Grove Village among Clayco's active projects; Forbes names Microsoft among its clients.",
+     "context": "The Real Deal, relaying Crain's (January 2025): 57 active data-centre projects 'including a Microsoft data center campus in Elk Grove Village'. Forbes (September 2026) lists clients 'including Amazon, Microsoft and Oracle'. No first-party page names Microsoft, and the Mount Pleasant, Wisconsin campus is attributed by every third party to Walsh, Kiewit and Boldt.",
+     "source": "https://therealdeal.com/chicago/2025/01/21/new-clayco-ceo-steers-into-data-center-boom/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-30",
+     "text": "Forbes: data centres to be 75% of Clayco's nearly USD 12bn 2026 revenue, up 43% on 2025; 16 data centres completed in 2025 and 77 in progress across 13 states; clients 'including Amazon, Microsoft and Oracle'; Bob Clark debuts on the Forbes 400 at No. 245 with USD 7bn — The only forward figures in the record, and they imply about USD 9bn of 2026 data-centre revenue — double the USD 4.5bn Clayco Compute target set in January 2025.",
+     "src": "https://www.forbes.com/sites/christopherhelman/2026/09/30/billionaire-data-center-builder-insists-theres-no-ai-bubble/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-30"
+  },
+  {
+   "a": "clayco",
+   "b": "mortenson",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "BD+C 2025 No. 9 (USD 1.72bn); the GC peer with self-performed power that Clayco's Power & Energy unit now emulates.",
+     "context": "Mortenson's substation and onsite-generation self-performance is the capability Clayco added in March 2026 through Power & Energy; on the 2024 data-centre revenue table Clayco is more than twice Mortenson's size.",
+     "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Clayco as an incumbent of the EPC-and-construction segment on the ranking the segment's other GC incumbents cite — fourth on BD+C's 2025 data-centre table, within USD 10m of DPR and ahead of Turner, Whiting-Turner and Mortenson — and the most vertically integrated of them: it owns the architect (LJC), the concrete and enclosure subcontractors and a mechanical-electrical self-perform arm (Clayco SEI), and it develops campuses through CRG.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Clayco Compute — mission-critical design-build and construction management",
+     "date": "",
+     "text": "Fourth on BD+C's 2025 data-centre ranking (USD 3.64bn of 2024 revenue) — behind HITT, Holder and DPR, ahead of Turner, Whiting-Turner, Fortis, JE Dunn and Mortenson; No.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Clayco Power & Energy — utility-scale solar and BESS EPC",
+     "date": "",
+     "text": "A late entrant against SOLV, Blattner, Primoris, Rosendin Energy Group and Mortenson in renewables EPC; its edge is the captive data-centre customer base the release itself names as a target segment.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "openai",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Zack Kass, OpenAI's former head of go-to-market, joined Clayco's Board of Advisors in June 2026 — an advisory hire, not a commercial tie.",
+     "context": "ENR: 'Clayco Recruits Former OpenAI Exec Zack Kass as Board Advisor' (2026-06-19); no Stargate or OpenAI construction award is attributed to Clayco anywhere.",
+     "source": "https://www.enr.com/articles/63198-clayco-recruits-former-openai-exec-zack-kass-as-board-advisor",
+     "status": "active",
+     "since": "2026-06"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-16",
+     "text": "Zack Kass, former OpenAI head of go-to-market, joins Clayco's Board of Advisors; boilerplate now states USD 8.1bn of 2025 revenue — An AI-demand signal on the advisory board, and the point at which the company's 2025 revenue figure moved from USD 7.6bn to USD 8.1bn.",
+     "src": "https://claycorp.com/latest/clayco-appoints-ai-leader-zack-kass-to-board-of-advisors",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-16"
+  },
+  {
+   "a": "clayco",
+   "b": "oracle",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Named by Forbes among Clayco's data-centre clients; no campus identified.",
+     "context": "Forbes (2026-09-30, snippet-confirmed): clients 'including Amazon, Microsoft and Oracle'. Reported, not confirmed by either company.",
+     "source": "https://www.forbes.com/sites/christopherhelman/2026/09/30/billionaire-data-center-builder-insists-theres-no-ai-bubble/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-30",
+     "text": "Forbes: data centres to be 75% of Clayco's nearly USD 12bn 2026 revenue, up 43% on 2025; 16 data centres completed in 2025 and 77 in progress across 13 states; clients 'including Amazon, Microsoft and Oracle'; Bob Clark debuts on the Forbes 400 at No. 245 with USD 7bn — The only forward figures in the record, and they imply about USD 9bn of 2026 data-centre revenue — double the USD 4.5bn Clayco Compute target set in January 2025.",
+     "src": "https://www.forbes.com/sites/christopherhelman/2026/09/30/billionaire-data-center-builder-insists-theres-no-ai-bubble/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-30"
+  },
+  {
+   "a": "clayco",
+   "b": "primoris",
+   "evid": [
+    {
+     "where": "Capabilities · Clayco Power & Energy — utility-scale solar and BESS EPC",
+     "date": "",
+     "text": "A late entrant against SOLV, Blattner, Primoris, Rosendin Energy Group and Mortenson in renewables EPC; its edge is the captive data-centre customer base the release itself names as a target segment.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "rosendin",
+   "evid": [
+    {
+     "where": "Capabilities · Clayco Power & Energy — utility-scale solar and BESS EPC",
+     "date": "",
+     "text": "A late entrant against SOLV, Blattner, Primoris, Rosendin Energy Group and Mortenson in renewables EPC; its edge is the captive data-centre customer base the release itself names as a target segment.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "turner-construction",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "BD+C 2025 No. 5 (USD 3.61bn), USD 30m behind Clayco; No. 2 on BD+C's 2026 design-build list behind Clayco.",
+     "context": "Turner is ENR's No. 1 contractor overall (USD 28.3bn) but trails Clayco on BD+C's data-centre and design-build tables; Clayco's design-build revenue of USD 7.05bn is nearly half again Turner's USD 4.79bn.",
+     "source": "https://www.bdcnetwork.com/giants-400/article/55404251/top-100-design-build-construction-firms-for-2026",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "clayco",
+   "b": "whiting-turner",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "BD+C 2025 No. 6 (USD 2.49bn); ENR 2026 Top 400 No. 5 against Clayco's No. 20.",
+     "context": "Ranking peers on the data-centre table; Whiting-Turner's own dossier places it sixth 'behind HITT, Holder, DPR, Clayco and Turner'.",
+     "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Construction management and general contracting",
+     "date": "",
+     "text": "Competes with Turner, HITT, Holder, DPR, Clayco, Fortis, JE Dunn, Mortenson, Clune, Hensel Phelps, Gilbane and Skanska USA.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-07",
+     "text": "Building Design+Construction's 2025 data-centre contractor ranking places Whiting-Turner sixth, behind HITT, Holder, DPR, Clayco and Turner — It ranks fifth overall and sixth in data centres — the gap is the whole story of a diversified builder in a specialist's market.",
+     "src": "Building Design+Construction, 2025-10-07",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Clayco as an incumbent of the EPC-and-construction segment on the ranking the segment's other GC incumbents cite — fourth on BD+C's 2025 data-centre table, within USD 10m of DPR and ahead of Turner, Whiting-Turner and Mortenson — and the most vertically integrated of them: it owns the architect (LJC), the concrete and enclosure subcontractors and a mechanical-electrical self-perform arm (Clayco SEI), and it develops campuses through CRG.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Clayco Compute — mission-critical design-build and construction management",
+     "date": "",
+     "text": "Fourth on BD+C's 2025 data-centre ranking (USD 3.64bn of 2024 revenue) — behind HITT, Holder and DPR, ahead of Turner, Whiting-Turner, Fortis, JE Dunn and Mortenson; No.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-07"
   },
   {
    "a": "clearway-energy",
@@ -31512,6 +32099,22 @@
   },
   {
    "a": "dpr",
+   "b": "faith-technologies",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "DPR selected FTI to lead budget and design on the USD 24m Clarksville, Tennessee battery-plant electrical upgrade.",
+     "context": "'FTI was invited by DPR Construction to participate in a site walk… DPR selected us to lead the budget management and design for this $24 million project', rebuilding site power from under 10 MW to nearly 18 MW with about USD 5m of switchgear sourced and installed by FTI; a further USD 3.4m contract followed for processing-equipment connections and West Coast battery-storage installs.",
+     "source": "https://www.faithtechinc.com/project/confidential-client-battery-manufacturing-facility/",
+     "status": "active",
+     "scale": "USD 24m package; ~18 MW"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "dpr",
    "b": "hitt",
    "curated": {
     "b": {
@@ -32720,6 +33323,20 @@
   },
   {
    "a": "eaton",
+   "b": "faith-technologies",
+   "evid": [
+    {
+     "where": "Capabilities · Excellerate Products — the OEM line (UL 891 LV switchboards, Power Module 2 MW, eSkid)",
+     "date": "",
+     "text": "Enters the prefabricated power-module space occupied by Schneider Electric, Vertiv and Eaton's Fibrebond and by Rosendin's MPS; FTI's module integrates other OEMs' UPS, breakers and batteries rather than its own ('we partner with leading OEMs').",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eaton",
    "b": "firmus",
    "curated": {
     "b": {
@@ -33906,6 +34523,154 @@
     }
    ],
    "last": "2026-05-21"
+  },
+  {
+   "a": "emcor",
+   "b": "faith-technologies",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "EMCOR's electrical segment ranks No. 3 on EC&M's 2026 table (USD 5.1bn) against FTI's No. 9.",
+     "context": "EMCOR competes for the same hyperscale electrical packages through union subsidiaries such as Dynalectric and Miller Electric, and brings the mechanical scope FTI lacks. Both name supervision and prefabrication as the constraint and the answer.",
+     "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+     "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "EC&M 2026 No. 9 (USD 2.28bn, +62.6%) — the merit-shop prefabrication-led rival to EMCOR's union electrical subsidiaries.",
+     "context": "Both name supervision and prefabrication as the constraint and the answer; FTI's five new 500,000 sq ft plants and ABC's No. 1 data-centre ranking by hours contrast with EMCOR's leased fabrication shops and union craft. They compete for the same hyperscale electrical packages in the Southeast and Midwest.",
+     "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that FTI's strategy is to win hyperscale electrical packages on labour certainty: by moving half or more of the hours into its own factories it can promise schedule on sites where craft supervision, not equipment, is the constraint — the same bottleneck EMCOR's chief executive names.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre electrical construction (Faith Technologies brand)",
+     "date": "",
+     "text": "2, USD 5.5bn) and EMCOR's electrical segment (No.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre electrical construction (Faith Technologies brand)",
+     "date": "",
+     "text": "Its differentiation is the share of labour it moves into its own factories ('more than 50% of project labor' for modular data-centre power, per the company) and a merit-shop labour model that ABC's hours-based rankings reward; it lacks the mechanical scope EMCOR brings and the owner-reported MW record Rosendin publishes.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Critical power, National Solution Services (NS2) and FTI ON",
+     "date": "",
+     "text": "Recurring-revenue layer on the installed base, comparable to EMCOR's Building Services at a far smaller scale; the Schneider field-services tie is the only named OEM partnership.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · US electrical construction and facilities services",
+     "date": "",
+     "text": "Dean, MMR and Faith Technologies; the 10-K names APi, Comfort Systems, Dycom, Everus, IES, MasTec, MYR, Quanta and Tutor Perini as competitors.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "emcor",
+   "b": "mastec",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named competitor in the 10-K; MasTec's record USD 21.4bn backlog (Q2 2026) is the peer figure analysts set beside EMCOR's USD 17.14bn RPO.",
+     "context": "Listed in the same 10-K competitor sentence as Quanta; Zacks pairs the two on backlog. MasTec's data-centre exposure is outside-the-fence (power and communications infrastructure) where EMCOR's is inside the hall.",
+     "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · US electrical construction and facilities services",
+     "date": "",
+     "text": "Dean, MMR and Faith Technologies; the 10-K names APi, Comfort Systems, Dycom, Everus, IES, MasTec, MYR, Quanta and Tutor Perini as competitors.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "emcor",
+   "b": "quanta-services",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named competitor in the 10-K; ENR's No. 1 specialty contractor (USD 23.67bn) to EMCOR's No. 2 (USD 14.57bn); EC&M No. 1 to No. 3.",
+     "context": "The 10-K lists Quanta among 'larger companies focused on providing electrical and/or mechanical construction services'. On ENR's 2025 Top 600 Quanta led with USD 23,672.8m of 2024 revenue against EMCOR's USD 14,566.1m; on EC&M's 2026 table Quanta's USD 23.0bn of electrical sales is 4.5 times EMCOR's USD 5.1bn. Quanta's franchise is transmission and utility; EMCOR's is inside the building.",
+     "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "emcor",
+   "b": "rosendin",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "EC&M 2026 No. 2 (USD 5.5bn, +49%) immediately above EMCOR's electrical business (No. 3, USD 5.1bn, +42%).",
+     "context": "Rosendin is the one private electrical contractor larger than EMCOR's electrical segment and, like EMCOR, union and prefabrication-led; it publishes a 15 GW data-centre record where EMCOR discloses only sector revenue. The two meet on hyperscale electrical packages in Virginia, Texas and Arizona.",
+     "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "ENR ranks it second among specialty contractors behind Quanta (2024 revenue USD 14.57bn); EC&M ranks its electrical business third (USD 5.1bn of 2025 sales) behind Quanta and Rosendin.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · US electrical construction and facilities services",
+     "date": "",
+     "text": "3 electrical contractor on 2025 sales of USD 5.1bn (+42.5%), behind Quanta (USD 23.0bn) and Rosendin (USD 5.5bn) and ahead of Everus, MYR, IES, M.C.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-16",
+     "text": "EC&M 2026 Top 50 Electrical Contractors: EMCOR No. 3 on 2025 electrical sales of USD 5.1bn (+42.46%), behind Quanta (USD 23.0bn) and Rosendin (USD 5.5bn) — Electrical-only sales are less than a third of the group; the ranking understates EMCOR's data-centre position because the mechanical half sits outside it.",
+     "src": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-16"
+  },
+  {
+   "a": "emcor",
+   "b": "trane-technologies",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named competitor in mechanical services ('Carrier Global Corporation and Trane Technologies plc'); also the kind of OEM whose equipment EMCOR's mechanical subsidiaries install.",
+     "context": "The 10-K places Trane among the competitors to EMCOR's mechanical-services division alongside APi, Comfort Systems and Service Logic. No supply agreement is disclosed; the relationship on data-centre projects is installer-to-OEM in practice and competitor in service.",
+     "source": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "enchanted-rock",
@@ -37946,6 +38711,231 @@
     }
    ],
    "last": "2025-11-21"
+  },
+  {
+   "a": "faith-technologies",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Named by Meta as a delivery partner, with Turner and Mortenson, on the Lebanon, Indiana campus.",
+     "context": "Meta's 2026-02-11 announcement lists 'Mortenson, Turner Construction, Faith Technologies' among its partners on the roughly 4 million sq ft, more than USD 10bn Lebanon campus (1 GW at completion per Construction Dive; first phase early 2028). FTI's own recruiting page describes its role as near-site manufacturing and integration facilities, two warehouse hubs and millions of labour hours. Meta does not state FTI's trade scope; it is implied by FTI's business. The Pittsboro plant is connected to this campus by Indiana press.",
+     "source": "https://datacenters.atmeta.com/2026/02/hello-lebanon/",
+     "status": "active",
+     "since": "2026",
+     "scale": "~4M sq ft campus, >USD 10bn"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The company states more than 950 MW of greenfield data-centre work and 1.5 GW of modular solutions delivered over ten years; the one named hyperscale campus is Meta's Lebanon, Indiana build with Turner and Mortenson.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-09",
+     "text": "Pittsboro, Indiana plant announced: USD 67.5m, 500,000 sq ft, up to 200 jobs by end-2027, IEDC tax credits up to USD 3m; Inside Indiana Business ties it to FTI's Meta Lebanon role — Near-site manufacturing for a named hyperscale campus — the Excellerate model made explicit.",
+     "src": "https://iedc.in.gov/events/news/details/2026/04/09/governor-braun-welcomes-faith-technologies-incorporated-200-new-jobs-to-pittsboro",
+     "from": "a"
+    }
+   ],
+   "last": "2026-04-09"
+  },
+  {
+   "a": "faith-technologies",
+   "b": "microsoft",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Meta Lebanon is the only named hyperscale customer, the Pittsboro plant is tied to it by Indiana press, and the company's own project list names no other hyperscale campus; a Microsoft or Amazon attribution exists only on a jobs aggregator.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "faith-technologies",
+   "b": "mortenson",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-delivery partner on Meta Lebanon; earlier electrical partner on Johnson Controls' Glendale engineering centre.",
+     "context": "Mortenson: 'Mortenson is proud to collaborate with Turner Construction and Faith Technologies to help deliver a worldclass data center campus' (2026-02-16). FTI also 'partnered with Mortenson Construction and Weas Development' on Johnson Controls' 105,000 sq ft Warren Johnson engineering centre in Glendale, Wisconsin.",
+     "source": "https://www.mortenson.com/news-insights/mortenson-begins-indiana-data-center-construction",
+     "status": "active",
+     "since": "2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-12",
+     "text": "Meta awards Mortenson and Turner (with Faith Technologies) the >$10B, ~4M sq ft, 1 GW Lebanon, Indiana AI campus; first phase online early 2028 — Second co-prime award alongside Turner in fourteen months — Meta is treating Mortenson as a peer of the ENR #1, not a regional specialist.",
+     "src": "Construction Dive, 2026-02-12; Mortenson release, 2026-02-16",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The company states more than 950 MW of greenfield data-centre work and 1.5 GW of modular solutions delivered over ten years; the one named hyperscale campus is Meta's Lebanon, Indiana build with Turner and Mortenson.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-11",
+     "text": "Meta names Mortenson, Turner Construction and Faith Technologies as partners on its Lebanon, Indiana campus (about 4 million sq ft, more than USD 10bn, 1 GW per Construction Dive, first phase early 2028) — The only hyperscaler that names FTI; the campus is the anchor for the Pittsboro plant and the Indiana hiring.",
+     "src": "https://datacenters.atmeta.com/2026/02/hello-lebanon/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-12"
+  },
+  {
+   "a": "faith-technologies",
+   "b": "quanta-services",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "EC&M 2026 No. 1 (USD 23.0bn) — the scale ceiling of the electrical-contractor ranking FTI sits ninth in.",
+     "context": "Quanta's electrical sales are ten times FTI's; the comparison bounds what 'top ten electrical contractor' means in this corpus.",
+     "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "faith-technologies",
+   "b": "rosendin",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "EC&M 2026 No. 2 (USD 5.5bn, +49%) against FTI's No. 9 (USD 2.28bn, +62.6%); the closest analogue for a contractor-owned prefab operation.",
+     "context": "Both are private electrical contractors that moved manufacturing in-house — Rosendin's Modular Power Solutions and Rosendin Energy Group against FTI's Excellerate and EnTech. Rosendin is union (and an ESOP), FTI merit-shop and directly employee-held; Rosendin publishes a 15 GW data-centre record, FTI a 950 MW greenfield claim.",
+     "source": "https://img.ecmweb.com/files/base/ebm/ecmweb/document/2026/09/6aaaaec07409c76e85fd4e20-2026_electrical_contractors_rankings_table.pdf",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "1 high-tech/data-centre contractor — that has moved further than any peer except Rosendin toward owning its own factory: Excellerate's plants pre-build the electrical rooms, trestles and power modules FTI's crews then install.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data-centre electrical construction (Faith Technologies brand)",
+     "date": "",
+     "text": "Against Rosendin (EC&M No.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data-centre electrical construction (Faith Technologies brand)",
+     "date": "",
+     "text": "Its differentiation is the share of labour it moves into its own factories ('more than 50% of project labor' for modular data-centre power, per the company) and a merit-shop labour model that ABC's hours-based rankings reward; it lacks the mechanical scope EMCOR brings and the owner-reported MW record Rosendin publishes.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Excellerate — industrialised construction (engineer-to-order)",
+     "date": "",
+     "text": "The closest analogue in the covered set is Rosendin's Modular Power Solutions; FTI's plant footprint (seven sites built or announced) is the larger of the two by announced square footage.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Excellerate Products — the OEM line (UL 891 LV switchboards, Power Module 2 MW, eSkid)",
+     "date": "",
+     "text": "Enters the prefabricated power-module space occupied by Schneider Electric, Vertiv and Eaton's Fibrebond and by Rosendin's MPS; FTI's module integrates other OEMs' UPS, breakers and batteries rather than its own ('we partner with leading OEMs').",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "faith-technologies",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Switchgear partner on Clarksville; EcoStruxure microgrid integrator; the field-services partnership Shawn Blair built before joining FTI.",
+     "context": "FTI 'leveraged our partnership with Schneider Electric to optimize the design, reducing lead times and costs' on the Clarksville switchgear; installs EcoStruxure Power Monitoring Expert and Microgrid Operation on its microgrids (Schneider case study; 2023 global Sustainability Impact Award); its crypto e-houses use I-LINE mains and Powerlink panelboards; and in March 2026 it hired Schneider's Shawn Blair, who 'helped develop a nationwide field services partnership network program with FTI'. No source names the UPS or breaker OEM inside the Power Module 2 MW.",
+     "source": "https://www.se.com/us/en/work/campaign/life-is-on/case-study/faith-technologies-incorporated.jsp",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Excellerate Products — the OEM line (UL 891 LV switchboards, Power Module 2 MW, eSkid)",
+     "date": "",
+     "text": "Enters the prefabricated power-module space occupied by Schneider Electric, Vertiv and Eaton's Fibrebond and by Rosendin's MPS; FTI's module integrates other OEMs' UPS, breakers and batteries rather than its own ('we partner with leading OEMs').",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Industrial, advanced-manufacturing and institutional electrical contracting",
+     "date": "",
+     "text": "Reference: the Clarksville, Tennessee EV-battery plant where DPR selected FTI to lead budget and design for a USD 24m package that rebuilt site power from under 10 MW to nearly 18 MW, with 'approximately $5 million of the project allocated to sourcing and installing the necessary switchgear' and a Schneider Electric partnership on the design.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-31",
+     "text": "Shawn Blair hired as SVP of National Solution Services from Schneider Electric to meet 'growing demand for data center servicing and maintenance nationwide' — Services leadership bought from the OEM that already ran a field-services partnership with FTI.",
+     "src": "https://www.faithtechinc.com/news-and-insights/news/fti-adds-leader-to-national-solution-services-team-to-meet-demand-for-data-center-services/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-31"
+  },
+  {
+   "a": "faith-technologies",
+   "b": "turner-construction",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-delivery partner on Meta Lebanon.",
+     "context": "Meta and Mortenson both name Turner and Faith Technologies together on the Lebanon campus; Turner is the general contractor appointed by Meta per World Construction Network. FTI's position is the electrical trade and modular-manufacturing partner alongside the two GCs.",
+     "source": "https://www.mortenson.com/news-insights/mortenson-begins-indiana-data-center-construction",
+     "status": "active",
+     "since": "2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-11",
+     "text": "Meta names Mortenson, Turner Construction and Faith Technologies as partners on its Lebanon, Indiana campus (about 4 million sq ft, more than USD 10bn, 1 GW per Construction Dive, first phase early 2028) — The only hyperscaler that names FTI; the campus is the anchor for the Pittsboro plant and the Indiana hiring.",
+     "src": "https://datacenters.atmeta.com/2026/02/hello-lebanon/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-11"
+  },
+  {
+   "a": "faith-technologies",
+   "b": "vertiv",
+   "evid": [
+    {
+     "where": "Capabilities · Excellerate Products — the OEM line (UL 891 LV switchboards, Power Module 2 MW, eSkid)",
+     "date": "",
+     "text": "Enters the prefabricated power-module space occupied by Schneider Electric, Vertiv and Eaton's Fibrebond and by Rosendin's MPS; FTI's module integrates other OEMs' UPS, breakers and batteries rather than its own ('we partner with leading OEMs').",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "fermi-america",
