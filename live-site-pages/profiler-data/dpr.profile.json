@@ -258,6 +258,16 @@
    "context": "Digital Realty is named on DPR's colocation and wholesale client roster. The attribution is DPR's own client list: no specific Digital Realty project, campus or contract value is named by either party.\n\nDigital Realty publishes no general-contractor relationships at all, and a search of industry contractor rankings establishes only that both companies appear in the same market listings rather than that one builds for the other. The edge is recorded at the level the source supports.",
    "source": "https://www.dpr.com/company/advanced-technology",
    "status": "active"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "customer",
+   "status": "active",
+   "since": "2026",
+   "via": "Milam County Data Center (with Sundt)",
+   "note": "General contractor, with Sundt, for SB Energy's Milam County data-centre campus, which is leased to OpenAI.",
+   "context": "SB Energy's Milam campus site says it 'has partnered with DPR and SUNDT for the construction of the Milam Data Center'. The S-1 names DPR among the EPC providers SB Energy assigns across phases of the same site.",
+   "source": "https://milamdc.com/"
   }
  ],
  "technicalSpecs": [
@@ -462,6 +472,11 @@
  },
  "sources": [
   {
+   "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+   "date": "2026-09-21"
+  },
+  {
    "label": "TIME — Investigation into worker injuries at the Stargate Abilene AI data center (DPR lead contractor)",
    "url": "https://time.com/article/2026/06/24/ai-data-center-stargate-abilene-texas-injuries/",
    "date": "2026-06-24"
@@ -600,8 +615,12 @@
   {
    "label": "Wikipedia — DPR Construction (revenue history; CalSTRS case status)",
    "url": "https://en.wikipedia.org/wiki/DPR_Construction"
+  },
+  {
+   "label": "SB Energy — Milam Data Center microsite (DPR and Sundt)",
+   "url": "https://milamdc.com/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 7
 }

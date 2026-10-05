@@ -1,0 +1,1034 @@
+{
+  "schemaVersion": 7,
+  "slug": "g42",
+  "name": "Group 42 Holding Ltd (G42)",
+  "shortName": "G42",
+  "categories": [
+    "developer",
+    "neocloud"
+  ],
+  "website": "https://www.g42.ai",
+  "headquarters": "Abu Dhabi, United Arab Emirates",
+  "founded": 2018,
+  "employees": "Group total not disclosed; Core42 cites '1100+ AI & Cloud Experts' and Khazna's NexOps unit 230+ operations staff",
+  "ownership": {
+    "type": "private",
+    "notes": "Chaired by Sheikh Tahnoon bin Zayed Al Nahyan, the UAE's National Security Adviser, who also chairs MGX. G42's own site names its investors as 'Mubadala, SilverLake, Microsoft, and the Dalio Family Office', with no percentages. Microsoft invested US$1.5B for a minority stake in April 2024, and Brad Smith joined the board. Two subsidiaries are listed on ADX: Presight and Space42. Khazna Data Center Holdings Limited is majority-owned by G42; MGX and Silver Lake became minority shareholders in March 2025, when e& sold its 40% for US$2.2B (AED 8.0B), and their percentages are undisclosed. Bloomberg reports exploratory talks on selling a majority stake to US companies or creating a US-based vehicle (4 Sep 2026) and on raising 'billions of dollars' (2 Sep 2026); no decision is reported."
+  },
+  "summary": "BOTTOM LINE UP FRONT: G42 is Abu Dhabi's state-aligned AI group, and through Khazna Data Centers it owns the UAE's dominant data-centre landlord. Khazna 'designs, builds and operates' 30 live data centres totalling almost 650 MW, holds a 73% share of the UAE market and is developing more than 1 GW more. It is building the 1 GW Stargate UAE cluster for OpenAI and Oracle inside the 5 GW UAE–US AI Campus. The first 200 MW is targeted for 2026, and G42 said in October 2025 the project had 'completed procurement of all long-lead equipment'. No supplier, and no signing entity, is named. Core42, its neocloud arm, sells sovereign AI cloud and is a 60 MW tenant at TeraWulf's Lake Mariner campus. On 10 Jul 2026 the US moved the UAE to Country Group A:5 and named G42 and Core42 licence-free recipients of advanced chips — an approval that 'shall automatically expire on April 6, 2027' unless they become US companies. The only named power-architecture link is a Khazna–Siemens memorandum (15 Sep 2026): 'The companies will continue to progress next-generation 800 VDC power architectures' — a memorandum, not an award. BACKGROUND: Founded in 2018, chaired by Sheikh Tahnoon bin Zayed, run by Group CEO Peng Xiao. Microsoft invested US$1.5B in 2024 under an Intergovernmental Assurance Agreement and runs Azure in the UAE through Core42's sovereign cloud; Khazna is delivering a 200 MW Azure expansion from the end of 2026. G42 publishes no group financials. Khazna's implied equity value at e&'s exit was about US$5.5B, and it carries a US$2.62B, up-to-10-year facility from ADCB and FAB. Reuters (11 Sep 2026) reports the 5 GW campus will likely be spread across the UAE after the Iranian strikes on Gulf data centres. The FT reported in 2025 US intelligence findings that G42 technology reached Huawei, which G42 calls 'false and defamatory'.",
+  "ecosystemRole": "We assess G42 as the corpus's first Gulf landlord-and-neocloud group, and — through Khazna — the named builder and most likely equipment buyer for Stargate UAE, OpenAI's first 'OpenAI for Countries' campus. Basis: e&'s ADX filing says 'Khazna designs, builds and operates wholesale data centers'. G42's construction update says Stargate UAE is 'being developed by Khazna Data Centers' on a 'design-to-build approach' and that 'the project has completed procurement of all long-lead equipment'. Khazna carries its own debt, buys its own land and appoints its own general contractors (Laing O'Rourke on earlier sites). Core42, by contrast, leases shells and buys IT. For a power-equipment seller the door is Khazna's engineering organisation, the one G42 entity with an 800 VDC conversation on the record (Siemens memorandum, September 2026). The constraint is US export policy: the group's chip access sunsets on 6 Apr 2027 unless it restructures as a US company.",
+  "productsAndServices": [
+    {
+      "name": "Khazna Data Centers — wholesale and hyperscale campuses",
+      "category": "Data-centre development and leasing (wholesale landlord)",
+      "description": "Khazna is G42's data-centre landlord: 'Khazna designs, builds and operates wholesale data centers' (e& ADX filing). It runs '30 live data centers, representing a portfolio of almost 650MW' (Dec 2025), claims a 73% share of the UAE market, and is 'delivering over 1GW of additional AI-ready capacity across the UAE, Saudi Arabia, Italy and other key markets'. Its designs are NVIDIA-certified for Blackwell: 'data halls with capacities of up to 50MW, developing individual AI clusters of up to 250MW'. The UAE pipeline includes Ajman QAJ1 (100 MW IT in 20 halls of 5 MW, liquid-cooled, initial phase due December 2026), AUH4 at Mafraq and AUH8 at Masdar City (60 MW combined), and Microsoft's 200 MW Azure expansion from the end of 2026. Abroad: Dammam (land of 225,000 m² for up to 200 MW), Lombardy with Eni (500 MW IT, heads of terms; the European Commission cleared the joint venture in August 2026) and Ankara (up to 100 MW). Tenants include e& ('a major tenant'), Microsoft and the Stargate UAE operators.",
+      "highlights": [
+        "Financing: 'a $2.62 billion financing facility … with two top UAE banks – Abu Dhabi Commercial Bank (ADCB) and First Abu Dhabi Bank (FAB). With a tenor lasting up to 10 years' (Sep 2025)",
+        "Build model: 'modular design and construction strategy'; 'adiabatic free cooling and liquid-to-liquid cooling solutions'; AUH6 has '7MW of energy that's solar generated'",
+        "22 of 30 UAE facilities hold Uptime Tier III Constructed Facility certification (Feb 2026); in-house operations through Khazna NexOps (230+ staff, Feb 2026)",
+        "Power: Ajman QAJ1's grid supply is 'primarily provided by Etihad Water and Electricity Company (EtihadWE)'; Lombardy would draw on an Eni combined-cycle plant designed with CO2 capture"
+      ],
+      "positioning": "The UAE's dominant wholesale operator (73% share, company); a regional challenger abroad, entering Saudi Arabia, Italy and Türkiye against incumbent landlords",
+      "soldThrough": "Direct long-term wholesale leases and build-to-suit for hyperscalers, telcos and AI operators; general contractors appointed per site",
+      "targetSegments": [
+        "hyperscalers (Microsoft Azure)",
+        "AI labs and their operators (OpenAI, Oracle)",
+        "telcos (e&)",
+        "UAE government"
+      ],
+      "roadmap": "More than 1 GW of new capacity within five years, over 400 MW of it international (Oct 2025); QAJ1 initial phase and AUH4 by December 2026; AUH8 August 2026; Microsoft 200 MW online from end-2026"
+    },
+    {
+      "name": "Stargate UAE and the 5 GW UAE–US AI Campus",
+      "category": "Gigawatt AI campus (developer)",
+      "description": "Stargate UAE is 'a 1-gigawatt compute cluster' that 'will be built by G42 and operated by OpenAI and Oracle', with Cisco on security and connectivity, SoftBank as a partner and NVIDIA supplying 'the latest NVIDIA Grace Blackwell GB300 systems' (launch, 22 May 2025). It sits within the UAE–US AI Campus, a planned 5 GW, 10-square-mile hub in Abu Dhabi 'powered by nuclear, solar, and natural gas', unveiled on 15 May 2025. G42's October 2025 update: 'being developed by Khazna Data Centers', on a 'design-to-build approach'; 'Mechanical, electrical, and plumbing systems are also being finalized, and key modular components have entered production. The project has completed procurement of all long-lead equipment and has already received its first deliveries of mechanical systems'. Chips deploy inside G42's 'Regulated Technology Environment', approved under BIS guidelines.",
+      "highlights": [
+        "First 200 MW targeted for 2026; Khaldoon Al Mubarak said it would be 'in place and ready at some point in the third quarter' of 2026 (The National, Dec 2025); no first-party confirmation of energisation by 26 Sep 2026",
+        "Reuters (11 Sep 2026): the campus 'will now likely comprise a network of data centers spread across the UAE' after Iranian attacks on Gulf data centres; G42 says the project is 'subject to continuous review'",
+        "No power, cooling or electrical supplier and no EPC contractor is named for Stargate UAE in any first-party or third-party source found",
+        "Sam Altman: 'the first major milestone in our OpenAI for Countries initiative'"
+      ],
+      "positioning": "The flagship of the US–UAE AI Acceleration Partnership; physically and politically the anchor of G42's export-control arrangements",
+      "soldThrough": "Built by Khazna for operation by OpenAI and Oracle",
+      "targetSegments": [
+        "OpenAI and Oracle",
+        "US and UAE hyperscale tenants of the wider 5 GW campus"
+      ],
+      "roadmap": "First 200 MW in 2026; the full 1 GW over about three years (Khazna CEO, The National, Oct 2025); campus siting under revision (Reuters, Sep 2026)"
+    },
+    {
+      "name": "Core42 — sovereign cloud and AI compute",
+      "category": "GPU cloud / neocloud and sovereign cloud",
+      "description": "Core42 (Core42 Technology Projects LLC), founded by G42 in 2023, is 'the core of G42's Intelligence Grid, building and operating the systems that turn power and silicon into tokens'. Products: a Sovereign AI Cloud ('Harness the power of NVIDIA, AMD, Qualcomm, Microsoft, or Cerebras'; 'Access 86K+ GPUs across sovereign data centers globally'), with self-service H100 capacity launched at GITEX in October 2025 under a 'tiered vetting system aligned with license conditions'. Also a Sovereign Public Cloud on Microsoft Azure regional infrastructure with the Core42 Insight control layer, a Signature Private Cloud for secret and top-secret workloads, and the Compass model gateway. Its capacity is mostly leased: 60 MW of critical IT at TeraWulf's Lake Mariner, New York, where the Maximus-01 cluster of 'more than 9,000 AMD Instinct MI300X GPUs' ranked 20th on the TOP500. Other sites include Dallas, Sunnyvale, Stockton and Minneapolis (the Condor Galaxy systems with Cerebras), Grenoble with DataOne, an Italian cluster with Domyn, and a framework for up to 10,000 GPUs from Northern Data's Taiga Cloud.",
+      "highlights": [
+        "'10 operational sites globally and additional deployments planned for 2026' (June 2026)",
+        "Financing: 'two structured trade finance facilities … amounting to USD550 million with HSBC', non-dilutive (Feb and May 2026)",
+        "SemiAnalysis ClusterMAX 3.0 (23 Sep 2026): Participation Ribbon — 'a dark horse … solid team, allocation of GPUs, political backing'; ClusterMAX 2.1 noted compliance restrictions preventing testing, or renting by anyone outside the UAE, at the UAE sites",
+        "'500+ Enterprise & Government Clients' (company)"
+      ],
+      "positioning": "A sovereign-first neocloud: licence-compliant access and government-grade controls rather than price; rated below the medallion tiers by SemiAnalysis",
+      "soldThrough": "Direct to UAE government and enterprise; self-service cloud; e& UAE 'Sovereign AI Compute' channel (Jul 2026); Mubadala's Solutions+ for Oracle services",
+      "targetSegments": [
+        "UAE government and Abu Dhabi entities",
+        "regulated enterprises",
+        "AI labs and developers (US and Europe)"
+      ],
+      "roadmap": "European headquarters in Dublin operating from early 2026; the 108 MW expansion option at Lake Mariner not shown exercised"
+    },
+    {
+      "name": "Sovereign-AI programmes and models abroad",
+      "category": "Government AI infrastructure and models",
+      "description": "G42 exports the sovereign-AI model through G42 International, whose chief executive's mandate includes 'the UAE–US 5GW AI Campus and Stargate UAE'. Programmes: Condor Galaxy India, an '8-exaflop AI supercomputing cluster comprising 64 Cerebras CS-3 systems' (commercial terms May 2026); a Vietnam framework with FPT and Viet Thai Group 'backed by consumption commitments of up to $1 billion' across three data-centre locations (framework only); 'Digital Embassies' and the Greenshield control layer (Jan 2026); a Kenya geothermal-powered data-centre plan with Microsoft (2024). Models come from Inception and MBZUAI: Jais (Arabic), NANDA (Hindi-English) and K2 Think.",
+      "highlights": [
+        "Assurance Compute Framework (Feb 2026): 'intent to develop' geolocation verification and cryptographic tracking of US-origin chips inside the Regulated Technology Environment"
+      ],
+      "positioning": "G42 sells sovereignty as a service to governments that cannot build it themselves",
+      "soldThrough": "Government-to-government frameworks and consortia",
+      "targetSegments": [
+        "national governments (India, Vietnam, Kenya)"
+      ],
+      "roadmap": "Vietnam site development after the framework; Condor Galaxy India installation by G42 with C-DAC"
+    },
+    {
+      "name": "Other operating companies — Presight, Space42, M42, CPX",
+      "category": "Group portfolio (analytics, space, health, cyber)",
+      "description": "G42's group also holds Presight (big-data analytics, ADX-listed; Q1 2026 revenue AED 689.0M, +22.2%), Space42 (satellites, ADX-listed), M42 (health, with Mubadala), CPX (cyber security, acquired October 2024), AIQ (the Presight–ADNOC joint venture) and Astratech. G42 sold about 2% of Presight through an accelerated bookbuild in September 2025.",
+      "highlights": [
+        "None of these units is an equipment buyer for data-centre power on the record"
+      ],
+      "positioning": "Diversified state technology holding; data-centre relevance sits in Khazna and Core42",
+      "soldThrough": "Separate operating companies",
+      "targetSegments": [
+        "UAE government and regional enterprise"
+      ],
+      "roadmap": "No dated data-centre roadmap for these units"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Stargate UAE (1 GW cluster within the 5 GW UAE–US AI Campus, Abu Dhabi)",
+      "specs": [
+        {
+          "band": "Scale",
+          "label": "Cluster",
+          "value": "a 1-gigawatt compute cluster"
+        },
+        {
+          "band": "Scale",
+          "label": "First phase",
+          "value": "The first 200-megawatt AI cluster is expected to go live in 2026"
+        },
+        {
+          "band": "Scale",
+          "label": "Campus",
+          "value": "Spanning 10 square miles … 5 gigawatts of AI data center capacity"
+        },
+        {
+          "band": "Power",
+          "label": "Campus fuel mix",
+          "value": "powered by nuclear, solar, and natural gas"
+        },
+        {
+          "band": "Compute",
+          "label": "Systems",
+          "value": "the latest NVIDIA Grace Blackwell GB300 systems"
+        },
+        {
+          "band": "Delivery",
+          "label": "Developer",
+          "value": "being developed by Khazna Data Centers, a G42 company"
+        },
+        {
+          "band": "Delivery",
+          "label": "Approach",
+          "value": "Khazna has adopted a design-to-build approach"
+        },
+        {
+          "band": "Delivery",
+          "label": "Procurement (Oct 2025)",
+          "value": "The project has completed procurement of all long-lead equipment and has already received its first deliveries of mechanical systems"
+        },
+        {
+          "band": "Operation",
+          "label": "Operators",
+          "value": "operated by OpenAI and Oracle"
+        }
+      ],
+      "notes": "G42 releases of 22 May 2025 (launch) and 16 Oct 2025 (construction update). No supplier, equipment category beyond 'long-lead equipment' and 'mechanical systems', or signing entity is named. The campus's utility counterparty is not named first-party; Reuters (Sep 2026) reports the campus may be dispersed across the UAE."
+    },
+    {
+      "product": "Khazna AI-ready data-centre standard",
+      "specs": [
+        {
+          "band": "Portfolio",
+          "label": "Live capacity",
+          "value": "30 live data centers, representing a portfolio of almost 650MW"
+        },
+        {
+          "band": "Portfolio",
+          "label": "UAE share",
+          "value": "73% market share in the UAE"
+        },
+        {
+          "band": "Design",
+          "label": "Hall size",
+          "value": "data halls with capacities of up to 50MW"
+        },
+        {
+          "band": "Design",
+          "label": "Cluster size",
+          "value": "individual AI clusters of up to 250MW"
+        },
+        {
+          "band": "Design",
+          "label": "NVIDIA certification",
+          "value": "certified … to support the NVIDIA Blackwell architecture"
+        },
+        {
+          "band": "Cooling",
+          "label": "Methods",
+          "value": "adiabatic free cooling and liquid-to-liquid cooling solutions"
+        },
+        {
+          "band": "Construction",
+          "label": "Method",
+          "value": "modular design and construction strategy"
+        }
+      ],
+      "notes": "Company releases (Jun, Sep and Dec 2025) and Khazna's build page. Khazna's partnerships page adds 'future-proofing for Rubin as standard'."
+    },
+    {
+      "product": "Ajman QAJ1 AI data centre (Khazna)",
+      "specs": [
+        {
+          "band": "Capacity",
+          "label": "IT load",
+          "value": "100 MW (20 data halls of 5 MW)"
+        },
+        {
+          "band": "Cooling",
+          "label": "Method",
+          "value": "advanced liquid-cooling systems"
+        },
+        {
+          "band": "Power",
+          "label": "Grid supply",
+          "value": "primarily provided by Etihad Water and Electricity Company (EtihadWE)"
+        },
+        {
+          "band": "Delivery",
+          "label": "Main contractor (MEED)",
+          "value": "Laing O'Rourke"
+        },
+        {
+          "band": "Delivery",
+          "label": "Schedule",
+          "value": "initial project phase is due for completion in December 2026"
+        },
+        {
+          "band": "Certification",
+          "label": "Uptime",
+          "value": "Tier III Certification of Design Documents (Feb 2026)"
+        }
+      ],
+      "notes": "Hall layout and contractor per MEED (Oct 2024); power, cooling and schedule per Khazna and G42 releases. The original target was 'operational by Q3 2025' (Oct 2024)."
+    },
+    {
+      "product": "Core42 at Lake Mariner, New York (TeraWulf lease)",
+      "specs": [
+        {
+          "band": "Lease",
+          "label": "Capacity",
+          "value": "60 megawatts of critical IT load, which is equivalent to 72.5 megawatts gross, assuming an approximate PUE of 1.25"
+        },
+        {
+          "band": "Lease",
+          "label": "Term",
+          "value": "a 10-year initial term with two five-year extensions"
+        },
+        {
+          "band": "Lease",
+          "label": "Rent",
+          "value": "$125 per kilowatt-month, which equates to $1.5 million per megawatt per year, with a 3% annual escalator"
+        },
+        {
+          "band": "Lease",
+          "label": "Credit support",
+          "value": "backed by a parent guarantee from G42"
+        },
+        {
+          "band": "Compute",
+          "label": "Maximus-01",
+          "value": "more than 9,000 AMD Instinct MI300X GPUs; TOP500 #20"
+        },
+        {
+          "band": "Status",
+          "label": "Operational",
+          "value": "60 MW of operational critical IT HPC capacity for Core42 at Lake Mariner as of March 31, 2026"
+        }
+      ],
+      "notes": "TeraWulf's 8-K exhibit (Dec 2024) and Q1 2026 release; G42's Maximus-01 release (Nov 2025). TeraWulf puts the contracted revenue at about US$1.1B over ten years; the option for a further 108 MW of critical IT is not shown exercised."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-23",
+      "category": "market",
+      "headline": "SemiAnalysis ClusterMAX 3.0 places Core42 in its new Participation Ribbon tier: 'a dark horse … solid team, allocation of GPUs, political backing'",
+      "read": "The neocloud arm is rated below the medallion tiers; its UAE capacity cannot be tested or rented from abroad.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "date": "2026-09-15",
+      "category": "partnership",
+      "headline": "Khazna and Siemens sign a memorandum on next-generation AI data-centre technologies: 'The companies will continue to progress next-generation 800 VDC power architectures'",
+      "read": "The group's first named power-architecture conversation — a memorandum, not an award.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-data-centers-and-siemens-sign-mou-to-explore-next-generation-ai-data-center-technologies/"
+    },
+    {
+      "date": "2026-09-11",
+      "category": "project",
+      "headline": "Reuters: the 5 GW UAE–US AI Campus 'will now likely comprise a network of data centers spread across the UAE' after Iranian attacks; G42 says Stargate UAE is 'subject to continuous review'",
+      "read": "Siting, hardening and power for the campus are back in design — a new layout means new electrical scope.",
+      "source": "https://www.jpost.com/business-and-innovation/article-908379"
+    },
+    {
+      "date": "2026-09-04",
+      "category": "corporate",
+      "headline": "Bloomberg: G42 executives held exploratory talks on selling a majority stake to US companies or creating a US-based vehicle",
+      "read": "The response to the 6 April 2027 sunset in its US chip approval; no buyer named, no decision.",
+      "source": "https://finance.yahoo.com/technology/ai/articles/uae-top-ai-firm-g42-143857969.html"
+    },
+    {
+      "date": "2026-08-10",
+      "category": "regulatory",
+      "headline": "The European Commission clears the Eni–Khazna joint venture for a Lombardy AI data-centre campus",
+      "read": "Khazna's European route is cleared; the 500 MW project is still at heads-of-terms stage.",
+      "source": "https://en.ilsole24ore.com/art/data-centre-eu-gives-green-light-to-eni-khazna-joint-venture-lombardy-hub-to-be-accelerated-AJl2Zcj"
+    },
+    {
+      "date": "2026-07-10",
+      "category": "regulatory",
+      "headline": "BIS moves the UAE to Country Group A:5 and names G42 (including G42 Cloud Technology LLC) and Core42 approved licence-free recipients of advanced computing items — an approval that 'shall automatically expire on April 6, 2027' unless they become US companies",
+      "read": "Licence-free chips with a deadline; Senator Warren calls for Commerce testimony the same day.",
+      "source": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/html/2026-14132.htm"
+    },
+    {
+      "date": "2026-06-02",
+      "category": "capacity",
+      "headline": "Core42 expands its Lake Mariner deployment from 18 MW to 60 MW and reports 10 operational sites globally",
+      "read": "The US footprint is leased; the landlord, not Core42, buys the power chain.",
+      "source": "https://www.g42.ai/resources/news/core42-advances-us-ai-infrastructure-strategy-expanded-new-york-deployment"
+    },
+    {
+      "date": "2026-05-21",
+      "category": "financial",
+      "headline": "Core42 raises US$550M in structured trade-finance facilities from HSBC (US$240M in February, US$310M in May)",
+      "read": "Non-dilutive money for GPU deployments abroad.",
+      "source": "https://www.core42.ai/resources/news/core42-raises-usd-550-million-from-hsbc-to-scale-global-ai-infrastructure"
+    },
+    {
+      "date": "2026-05-15",
+      "category": "partnership",
+      "headline": "G42 and the Government of India formalise commercial terms for Condor Galaxy India — 64 Cerebras CS-3 systems, 8 exaflops",
+      "read": "G42 installs and operates sovereign compute abroad.",
+      "source": "https://www.g42.ai/resources/news/g42-and-government-india-formalize-commercial-framework-condor-galaxy-india-ai-supercomputer"
+    },
+    {
+      "date": "2026-02-23",
+      "category": "policy",
+      "headline": "G42 announces an Assurance Compute Framework: geolocation verification and cryptographic tracking of US-origin chips",
+      "read": "Compliance engineering as the price of chip access.",
+      "source": "https://www.g42.ai/resources/news/g42-announces-assurance-compute-framework-secure-advanced-us-ai-infrastructure-across-pax-silica-ecosystem"
+    },
+    {
+      "date": "2026-02-09",
+      "category": "partnership",
+      "headline": "Framework with FPT and Viet Thai Group for national AI infrastructure in Vietnam, backed by consumption commitments of up to US$1B across three data-centre locations",
+      "read": "Framework only; site development is a next step.",
+      "source": "https://www.g42.ai/resources/news/g42-and-vietnamese-consortium-commit-build-national-ai-infrastructure-and-develop-southeast-asias-intelligence-capacity"
+    },
+    {
+      "date": "2025-12-09",
+      "category": "capacity",
+      "headline": "Khazna names a Saudi country head and buys 225,000 m² in Dammam for up to 200 MW; portfolio 'almost 650MW' across 30 live data centres",
+      "read": "Khazna enters HUMAIN's home market as a landlord.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-data-centers-names-new-country-head-and-advances-expansion-plans-in-saudi-arabia-in-support-of-vision-2030/"
+    },
+    {
+      "date": "2025-12-05",
+      "category": "project",
+      "headline": "Mubadala's Khaldoon Al Mubarak: Stargate UAE's first 200 MW phase 'will be in place and ready at some point in the third quarter' of 2026",
+      "read": "The dated milestone to test; no energisation is confirmed by late September 2026.",
+      "source": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/"
+    },
+    {
+      "date": "2025-11-20",
+      "category": "regulatory",
+      "headline": "G42 receives US approval for advanced AI chip exports — up to 35,000 GB300-equivalent — deployed inside its Regulated Technology Environment",
+      "read": "Unlocked the Stargate UAE GPUs under conditions, before the July 2026 rule.",
+      "source": "https://www.g42.ai/resources/news/g42-receives-us-approval-advanced-ai-chip-exports-enabling-full-scale-deployment-trusted-ai-infrastructure"
+    },
+    {
+      "date": "2025-11-05",
+      "category": "customer",
+      "headline": "Microsoft and G42 announce a 200 MW data-centre expansion for Azure, 'delivered through Khazna Data Centers', starting to come online before the end of 2026",
+      "read": "Microsoft is investor and tenant at once.",
+      "source": "https://www.g42.ai/resources/news/microsoft-and-g42-accelerate-uaes-digital-future-major-data-centre-expansion"
+    },
+    {
+      "date": "2025-10-27",
+      "category": "legal",
+      "headline": "The FT reports US intelligence learned in 2022 that G42 technology passed to Huawei and was used for PLA missile upgrades; G42 calls it 'false and defamatory'",
+      "read": "The China-ties question that shadows every export decision is live.",
+      "source": "https://www.middleeasteye.net/news/uae-firm-provided-technology-china-upgrade-missiles-report"
+    },
+    {
+      "date": "2025-10-16",
+      "category": "project",
+      "headline": "Stargate UAE construction update: developed by Khazna on a design-to-build approach; 'completed procurement of all long-lead equipment'; first mechanical deliveries on site",
+      "read": "The long-lead window for the first 200 MW is closed; the suppliers are unnamed.",
+      "source": "https://www.prnewswire.com/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586401.html"
+    },
+    {
+      "date": "2025-10-14",
+      "category": "capacity",
+      "headline": "Khazna plans more than 1 GW of new capacity within five years, over 400 MW of it in international markets, and 'the infrastructure layer for Stargate UAE'",
+      "read": "The group's build pipeline in one number.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-data-centers-to-add-over-1gw-hyperscale-capacity-across-multiple-countries-by-2030/"
+    },
+    {
+      "date": "2025-09-03",
+      "category": "financial",
+      "headline": "Khazna signs a US$2.62B financing facility with ADCB and FAB, tenor up to 10 years, for AUH4, AUH8, Ajman QAJ1 and a Dubai project",
+      "read": "The landlord funds its own builds — the equipment budget sits at Khazna.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-data-centers-unlocks-2-62bn-facility-in-one-of-regions-largest-ever-financing-deals/"
+    },
+    {
+      "date": "2025-07-11",
+      "category": "partnership",
+      "headline": "Khazna and Eni sign heads of terms for a 500 MW AI data-centre campus at Ferrera Erbognone, Lombardy, powered by an Eni combined-cycle plant with CO2 capture",
+      "read": "A generation-first European campus — heads of terms, not a final investment decision.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-data-centers-and-eni-partner-to-develop-500-mw-ai-data-center-campus-near-milan/"
+    },
+    {
+      "date": "2025-06-11",
+      "category": "product-launch",
+      "headline": "NVIDIA certifies Khazna's next-generation designs for Blackwell: halls up to 50 MW, AI clusters up to 250 MW",
+      "read": "A standard hall size a power vendor can design to.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-data-centers-and-nvidia-collaborate-to-accelerate-ai-infrastructure-development-across-the-mea-region/"
+    },
+    {
+      "date": "2025-05-22",
+      "category": "project",
+      "headline": "Stargate UAE launched: a 1 GW cluster built by G42 and operated by OpenAI and Oracle, with NVIDIA GB300, Cisco and SoftBank; first 200 MW expected in 2026",
+      "read": "OpenAI's first 'OpenAI for Countries' campus.",
+      "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae"
+    },
+    {
+      "date": "2025-05-15",
+      "category": "project",
+      "headline": "The 5 GW UAE–US AI Campus is unveiled — 'Built by G42 in partnership with U.S. technology leaders'",
+      "read": "The frame for every later G42 export arrangement.",
+      "source": "https://www.g42.ai/resources/news/g42-lead-consortium-us-partners-build-5gw-uae-us-ai-campus"
+    },
+    {
+      "date": "2025-04-21",
+      "category": "capacity",
+      "headline": "Khazna breaks ground on AUH4 (Mafraq) and AUH8 (Masdar City), 60 MW combined; Ajman QAJ1's initial phase re-set to December 2026",
+      "read": "The UAE pipeline slipped once; the new dates are the ones to test.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-expands-infrastructure-to-accelerate-uaes-leadership-in-artificial-intelligence/"
+    },
+    {
+      "date": "2025-03-26",
+      "category": "ma",
+      "headline": "MGX and Silver Lake become minority shareholders in Khazna as e& exits its 40% stake (US$2.2B)",
+      "read": "Abu Dhabi's AI fund and a US buyout firm now sit beside G42 in the landlord.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "microsoft",
+      "type": "investor",
+      "status": "active",
+      "since": "2024-04",
+      "scale": "US$1.5B minority stake; a board seat",
+      "via": "Azure (Core42 Sovereign Public Cloud); 200 MW expansion delivered through Khazna",
+      "note": "Microsoft invested US$1.5B in G42 for a minority stake in April 2024, Brad Smith joined the G42 board, and the work is governed by an Intergovernmental Assurance Agreement.",
+      "context": "The April 2024 announcement also moved G42's AI applications onto Microsoft Azure and created a US$1B developer fund. The percentage has never been disclosed.\n\nMicrosoft is also Khazna's tenant: the November 2025 release announced a 200 MW Azure expansion 'delivered through Khazna Data Centers', to start coming online before the end of 2026. Microsoft's own November 2025 account of its UAE programme counts the US$1.5B as part of US$15.2B of UAE spending from 2023 to 2029.",
+      "source": "https://www.g42.ai/resources/news/microsoft-invests-abu-dhabis-g42"
+    },
+    {
+      "slug": "mgx",
+      "type": "investor",
+      "status": "active",
+      "since": "2025-03",
+      "note": "MGX holds an undisclosed minority stake in Khazna alongside Silver Lake, bought as e& exited in March 2025; G42 was one of MGX's two foundational partners at its creation in 2024.",
+      "context": "Khazna's March 2025 release welcomed 'MGX and Silver Lake as new minority shareholders, alongside majority shareholder G42'. e& sold its 40% for US$2.2B under a binding agreement with G42 and Khazna of 25 Feb 2025.\n\nThe two share a chairman: Sheikh Tahnoon bin Zayed chairs both G42 and MGX. MGX's board has described the Khazna stake as its route into Stargate UAE.",
+      "source": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/"
+    },
+    {
+      "slug": "openai",
+      "type": "customer",
+      "status": "active",
+      "since": "2025-05",
+      "scale": "Stargate UAE: 1 GW cluster; first 200 MW in 2026",
+      "via": "Stargate UAE (OpenAI for Countries)",
+      "note": "Stargate UAE, a 1 GW cluster, 'will be built by G42 and operated by OpenAI and Oracle' — the first project of OpenAI's 'OpenAI for Countries' initiative.",
+      "context": "Announced 22 May 2025 with Oracle, NVIDIA, Cisco and SoftBank. G42's November 2025 wording is 'being built by G42 for OpenAI in partnership with Oracle, Cisco, NVIDIA, and SoftBank Group'. Khazna is the developer. Commercial terms between G42 and OpenAI are not disclosed. OpenAI told Reuters in September 2026 it was making 'good progress on the infrastructure and adoption priorities needed to deliver it'.",
+      "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae"
+    },
+    {
+      "slug": "oracle",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-05",
+      "via": "Stargate UAE (operator alongside OpenAI)",
+      "note": "Oracle co-operates Stargate UAE with OpenAI on the cluster G42 builds.",
+      "context": "The launch release names Oracle as operator with OpenAI. No Oracle-side release or contract terms for Stargate UAE were found.",
+      "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae"
+    },
+    {
+      "slug": "nvidia",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-05",
+      "via": "NVIDIA Grace Blackwell GB300 systems",
+      "note": "NVIDIA supplies the GB300 systems for Stargate UAE and has certified Khazna's data-hall designs for Blackwell.",
+      "context": "NVIDIA's own Q1 FY2026 results release lists Stargate UAE with 'strategic partners G42, OpenAI, Oracle, SoftBank Group and Cisco'. In June 2025 NVIDIA certified Khazna's next-generation designs for Blackwell (halls up to 50 MW, clusters up to 250 MW). US approvals allowed G42 up to 35,000 GB300-equivalent chips in November 2025, and licence-free access from July 2026.",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026"
+    },
+    {
+      "slug": "terawulf",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024-12",
+      "scale": "60 MW critical IT (72.5 MW gross); about US$1.1B over ten years",
+      "via": "turn-key data-centre leases at Lake Mariner, New York",
+      "note": "TeraWulf is Core42's US landlord: 60 MW of critical IT at Lake Mariner on 10-year leases backed by a G42 parent guarantee.",
+      "context": "TeraWulf announced 'over 70 MW' gross in December 2024 (2 + 16 + 42 MW critical IT). Its 8-K call transcript gives $125 per kW-month with a 3% escalator and a 12-month revenue prepayment. All 60 MW was operational by 31 Mar 2026. An option for a further 108 MW of critical IT is not shown exercised, and TeraWulf's Q2 2026 release does not mention Core42.",
+      "source": "https://www.g42.ai/resources/news/g42-expands-us-operations-70mw-data-center-infrastructure-agreement-terawulf"
+    },
+    {
+      "slug": "amd",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024",
+      "via": "AMD Instinct MI300X (Maximus-01); MI350X cluster with Cisco",
+      "note": "AMD supplies the GPUs in Core42's Maximus-01 cluster at Lake Mariner — more than 9,000 MI300X, ranked 20th on the TOP500.",
+      "context": "G42's November 2025 release reports Maximus-01's TOP500 ranking (114.50 PF Rmax). A Cisco-integrated AMD MI350X cluster in the UAE was announced in October 2025, 'pending final approvals'. G42 and AMD also partnered on AI compute in France (Grenoble with DataOne, 2025).",
+      "source": "https://www.g42.ai/resources/news/core42-maximus-01-cluster-secures-top-20-ranking-global-top500-supercomputers-list"
+    },
+    {
+      "slug": "humain",
+      "type": "competitor",
+      "status": "active",
+      "note": "HUMAIN is the Gulf's other sovereign AI builder; the US approved both for up to 35,000 GB300-equivalent chips on the same day, and since July 2026 only G42 holds licence-free access.",
+      "context": "US Commerce's 19 Nov 2025 statement covered 'G42 … and Humain' together. The July 2026 BIS rule moved the UAE, not Saudi Arabia, to Country Group A:5. Khazna's entry into Dammam (up to 200 MW, December 2025) puts G42's landlord in HUMAIN's home market.",
+      "source": "https://www.globalsecurity.org/military/library/news/2025/11/mil-251119-commerce01.htm"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "US export controls (advanced computing)",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-10",
+      "exposure": "BIS moved the UAE from Country Groups D:3 and D:4 to A:5. It listed 'Group 42 Holding Ltd d/b/a/G42, including G42 Cloud Technology LLC' and 'Core42 Technology Projects LLC d/b/a/ Core42' as approved recipients of advanced computing items in Supplement No. 8 to Part 740 — not for the wider STA licence exception. The approval 'shall automatically expire on April 6, 2027' unless 'the two UAE-based AI companies … become U.S. companies', and it 'does not overcome the end-use and end-user based license requirements in part 744'. Before this rule G42 held a November 2025 approval for up to 35,000 GB300-equivalent chips.",
+      "mitigation": "Deployment inside G42's 'Regulated Technology Environment … approved under U.S. Department of Commerce and Bureau of Industry and Security (BIS) guidelines'; the Assurance Compute Framework (Feb 2026). G42's statement welcoming the rule does not mention the April 2027 condition.",
+      "source": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/html/2026-14132.htm"
+    },
+    {
+      "regime": "Microsoft Intergovernmental Assurance Agreement",
+      "status": "in-effect",
+      "effectiveDate": "2024-04",
+      "exposure": "G42's Microsoft partnership 'is governed by a detailed Intergovernmental Assurance Agreement between G42 and Microsoft', developed with the UAE and US governments. G42 says that as corporate policy it and its affiliates 'do not conduct business with any entity listed on the U.S. Government Consolidated Screening List', with a Microsoft–G42 compliance committee meeting quarterly (Sep 2024).",
+      "source": "https://www.g42.ai/resources/news/another-important-step-advancing-responsible-ai-serve-world"
+    },
+    {
+      "regime": "US congressional scrutiny of China ties",
+      "status": "in-effect",
+      "exposure": "Members of Congress have pressed repeatedly on G42's China links: a January 2024 Select Committee letter, a July 2024 request by the House Foreign Affairs and China Select Committee chairs for an intelligence-community assessment, and Senator Warren's July 2026 statement on the A:5 decision. The FT's October 2025 report of US intelligence findings is denied by G42 as 'false and defamatory'.",
+      "mitigation": "G42 (Jan 2024): 'we have pursued a commercial strategy since 2022 to fully align with our U.S. partners and not to engage with Chinese companies'",
+      "source": "https://www.banking.senate.gov/newsroom/minority/senator-warren-statement-on-trump-administrations-removing-export-controls-on-ai-chips-to-uae"
+    },
+    {
+      "regime": "EU merger control (Eni–Khazna joint venture)",
+      "status": "in-effect",
+      "effectiveDate": "2026-08",
+      "exposure": "The European Commission found the Eni–Khazna Lombardy joint venture 'would not raise competition concerns, given the limited combined market positions'; the stake split is undisclosed and the project remains at heads-of-terms stage.",
+      "source": "https://en.ilsole24ore.com/art/data-centre-eu-gives-green-light-to-eni-khazna-joint-venture-lombardy-hub-to-be-accelerated-AJl2Zcj"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "H.H. Sheikh Tahnoon bin Zayed Al Nahyan",
+      "title": "Chairman",
+      "background": [
+        "National Security Adviser and Deputy Ruler of Abu Dhabi; Chairman of the Artificial Intelligence and Advanced Technology Council",
+        "Also chairs MGX"
+      ]
+    },
+    {
+      "name": "Peng Xiao",
+      "title": "Group Chief Executive Officer",
+      "photo": "images/execs/g42-xiao.jpg",
+      "background": [
+        "Group CEO, G42 — sets group strategy and oversees the operating companies (company)",
+        "Former SEVP, CTO and CIO of MicroStrategy",
+        "Board member of MBZUAI; Chairman of Cleveland Clinic Abu Dhabi"
+      ]
+    },
+    {
+      "name": "H.E. Mansoor Al Mansoori",
+      "title": "CEO, G42 International — responsible for the 5 GW UAE–US AI Campus and Stargate UAE",
+      "photo": "images/execs/g42-almansoori.jpg",
+      "background": [
+        "G42 Group COO (2020-2023)",
+        "Member of the Abu Dhabi Executive Council; Chairman of Space42; Vice Chairman of Presight; board member of e&"
+      ]
+    },
+    {
+      "name": "Ali Dalloul",
+      "title": "Group Chief Strategy Officer and CEO, G42 US (from October 2024)",
+      "photo": "images/execs/g42-dalloul.jpg",
+      "background": [
+        "About 30 years at Microsoft, most recently VP, Azure AI Customer Experience Engineering"
+      ]
+    },
+    {
+      "name": "Brad Smith",
+      "title": "Board member (Microsoft's seat, from 2024)",
+      "background": [
+        "Vice Chair and President, Microsoft"
+      ]
+    },
+    {
+      "name": "Marty Edelman",
+      "title": "Board member; General Counsel, G42 USA",
+      "photo": "images/execs/g42-edelman.jpg",
+      "background": [
+        "Partner, Paul Hastings",
+        "Co-chair, G42 Europe & UK"
+      ]
+    },
+    {
+      "name": "Hassan Alnaqbi",
+      "title": "Chief Executive Officer, Khazna Data Centers",
+      "photo": "images/execs/g42-alnaqbi.jpg",
+      "background": [
+        "CEO of Khazna since its Mubadala era; led the Stargate UAE build and signed the Eni heads of terms (2025)",
+        "Earlier Senior Director, Business Support (datamena and broadcast), du"
+      ]
+    },
+    {
+      "name": "Fabio Cattaneo",
+      "title": "Chief Financial Officer, Khazna Data Centers",
+      "photo": "images/execs/g42-cattaneo.jpg",
+      "background": [
+        "Led Khazna's US$2.62B bank facility (2025)"
+      ]
+    },
+    {
+      "name": "Abdulmajeed Harmoodi",
+      "title": "Chief Technology Officer, Khazna Data Centers",
+      "photo": "images/execs/g42-harmoodi.jpg",
+      "background": [
+        "Company spokesman on the Ajman QAJ1 Tier III design (Feb 2026)"
+      ]
+    },
+    {
+      "name": "Sultan Alowais",
+      "title": "Vice President, International Execution, Khazna Data Centers",
+      "background": [
+        "Khazna's spokesman on the Siemens memorandum and 800 VDC power architectures (Sep 2026)"
+      ]
+    },
+    {
+      "name": "Talal M. Al Kaissi",
+      "title": "Chief Executive Officer, Core42; Acting Group Chief Global Affairs Officer, G42",
+      "photo": "images/execs/g42-alkaissi.jpg",
+      "background": [
+        "Interim CEO of Core42 from December 2025, then CEO (2026); succeeded Kiril Evtimov",
+        "Earlier EVP, Chief Partnerships and Government Affairs Officer, Core42 — credited with the Microsoft collaboration"
+      ]
+    },
+    {
+      "name": "Neha Gupta",
+      "title": "Chief Financial Officer, Core42",
+      "background": [
+        "Arranged Core42's US$550M HSBC trade-finance facilities (2026)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2025 (no group statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Group revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "G42 publishes no group financials; Bloomberg's September 2026 fundraising report carries no valuation or revenue figure"
+          },
+          {
+            "name": "Khazna stake sale (e&)",
+            "actual": "40% sold for US$2.2B (AED 8.0B); binding 25 Feb 2025, completed end-March 2025",
+            "expected": "",
+            "verdict": "inline",
+            "result": "e& ADX filing and Q1 2025 results; implied 100% equity value about US$5.5B (arithmetic, not a disclosed valuation); e& booked a US$1.4B gain before royalty and tax"
+          },
+          {
+            "name": "Khazna debt",
+            "actual": "US$2.62B facility with ADCB and FAB, tenor up to 10 years (Sep 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release"
+          },
+          {
+            "name": "Khazna operating capacity",
+            "actual": "Almost 650 MW across 30 live data centres (Dec 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release",
+            "kpi": "mw-energized",
+            "qty": 650
+          }
+        ],
+        "commentary": "Presight, the listed analytics unit, reported FY2025 revenue of AED 3.03B (+36.9%) per trade press — a small part of a group whose financial weight sits in unlisted Khazna and Core42."
+      },
+      {
+        "period": "2026 year to date (September)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Core42 financing",
+            "actual": "US$550M structured trade finance from HSBC (US$240M Feb, US$310M May 2026), non-dilutive",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release"
+          },
+          {
+            "name": "Core42 lease obligation (TeraWulf)",
+            "actual": "About US$1.1B of contracted revenue to TeraWulf over ten years for 72.5 MW gross (60 MW critical IT)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "TeraWulf Q3 2025 release; backed by a G42 parent guarantee"
+          },
+          {
+            "name": "Presight Q1 2026",
+            "actual": "Revenue AED 689.0M (+22.2%); profit after tax AED 133.8M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Presight results as published on g42.ai"
+          },
+          {
+            "name": "Reported fundraising",
+            "actual": "'Exploratory talks' to raise billions of dollars (Bloomberg, 2 Sep 2026); talks on a majority sale to US companies (Bloomberg, 4 Sep 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No terms, buyers or decision reported"
+          }
+        ],
+        "commentary": "No consensus exists for a private group; 'expected' fields are left empty."
+      }
+    ],
+    "commentary": "The financial record is the counterparties' — e&'s exchange filing on Khazna, TeraWulf's on Core42 — plus Khazna's and Core42's own financing releases and the listed Presight. Collection gap: group revenue, Khazna's revenue and EBITDA, capex on Stargate UAE, and the ownership percentages of G42, MGX, Silver Lake and Microsoft."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Khazna, not G42 group or Core42, is the entity that buys power equipment, and that Stargate UAE's first 200 MW is already bought. Basis: e&'s filing — 'Khazna designs, builds and operates wholesale data centers'. G42's October 2025 update: Stargate UAE is 'being developed by Khazna' on a 'design-to-build approach' and 'has completed procurement of all long-lead equipment'. Khazna carries its own debt (US$2.62B), buys its own land and appoints its own contractors (Laing O'Rourke at Ajman), while Core42 leases shells (TeraWulf) and buys IT. The first 200 MW's suppliers are undisclosed, so the open door is the next 800 MW and the rest of Khazna's more-than-1 GW pipeline. Indicator to watch: a named EPC or electrical supplier for Stargate UAE's later phases, or for the dispersed campus sites Reuters describes.",
+    "(High confidence) We assess that the 6 April 2027 sunset in the BIS approval is the single fact most likely to change G42's structure in the next six months. Basis: the rule text makes G42's and Core42's licence-free status expire unless they 'become U.S. companies'. Bloomberg reports talks on a majority sale to US companies or a US vehicle (4 Sep 2026), and on raising billions (2 Sep 2026). G42's own statement on the rule omits the condition. Indicator to watch: a US-domiciled G42 or Core42 entity, a named US acquirer, or a BIS notice extending the date.",
+    "(Moderate confidence) We assess that Khazna has an 800 VDC conversation under way, making it the one Gulf landlord on the record with a DC-architecture opening. Basis: the Siemens memorandum (15 Sep 2026) says 'The companies will continue to progress next-generation 800 VDC power architectures and their potential in AI data centers'. 'Continue' implies earlier work. Khazna's designs carry NVIDIA's Blackwell certification and 'future-proofing for Rubin as standard'. The memorandum is not an award, and no SST, HVDC or battery supplier is named. Indicator to watch: an 800 VDC pilot hall or a Siemens award at a Khazna site.",
+    "(Moderate confidence) We assess that Stargate UAE's power and physical design is back in flux. Basis: Reuters (11 Sep 2026, six people familiar) reports the 5 GW campus will likely become a network of sites across the UAE, with air defences and possibly underground construction, after Iranian drones struck AWS data centres in the UAE and Bahrain on 1 Mar 2026. The campus's utility counterparty is not named first-party; only 'nuclear, solar, and natural gas' is. Khaldoon Al Mubarak's third-quarter 2026 date for the first 200 MW is unconfirmed. Indicator to watch: an energisation announcement for the first 200 MW, or a new site list.",
+    "(Moderate confidence) We assess that the China-ties question is a standing risk to every US decision G42 depends on, not a closed file. Basis: congressional letters in 2024 and 2026 and the FT's October 2025 report of US intelligence findings, which G42 calls 'false and defamatory'. Senator Warren's statement ties the A:5 decision to a Tahnoon-linked investment in a Trump-family crypto company. Indicator to watch: any BIS action under Part 744 end-user rules, or Commerce testimony on the UAE decision."
+  ],
+  "sources": [
+    {
+      "label": "SemiAnalysis — ClusterMAX 3.0 (Core42: Participation Ribbon)",
+      "url": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna and Siemens sign MoU to explore next-generation AI data center technologies (800 VDC power architectures)",
+      "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-and-siemens-sign-mou-to-explore-next-generation-ai-data-center-technologies/",
+      "date": "2026-09-15"
+    },
+    {
+      "label": "Reuters (via The Jerusalem Post) — UAE revises AI data center plan after Iranian attacks, sources say",
+      "url": "https://www.jpost.com/business-and-innovation/article-908379",
+      "date": "2026-09-11"
+    },
+    {
+      "label": "Bloomberg (via Yahoo Finance) — UAE's top AI firm G42 weighs selling majority stake to US companies",
+      "url": "https://finance.yahoo.com/technology/ai/articles/uae-top-ai-firm-g42-143857969.html",
+      "date": "2026-09-04"
+    },
+    {
+      "label": "Bloomberg (via Investing.com) — G42 explores multibillion-dollar fundraising round",
+      "url": "https://ca.investing.com/news/stock-market-news/g42-explores-multibilliondollar-fundraising-round--bloomberg-93CH-4826356",
+      "date": "2026-09-02"
+    },
+    {
+      "label": "Il Sole 24 Ore — Data centre: EU gives green light to Eni–Khazna joint venture",
+      "url": "https://en.ilsole24ore.com/art/data-centre-eu-gives-green-light-to-eni-khazna-joint-venture-lombardy-hub-to-be-accelerated-AJl2Zcj",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "G42 — G42 welcomes new milestone in the US–UAE AI partnership (A:5; G42 and Core42 approved recipients)",
+      "url": "https://www.g42.ai/resources/news/g42-welcomes-new-milestone-us-uae-ai-partnership",
+      "date": "2026-07-17"
+    },
+    {
+      "label": "Federal Register 91 FR 43034 (via govinfo) — Enhanced Favorable Treatment for the United Arab Emirates under the Export Administration Regulations (effective 10 Jul 2026)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/html/2026-14132.htm",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "Bureau of Industry and Security — Department of Commerce eases export controls for the UAE",
+      "url": "https://www.bis.gov/press-release/department-commerce-eases-export-controls-uae",
+      "date": "2026-07-10"
+    },
+    {
+      "label": "US Senate Banking Committee (minority) — Senator Warren statement on removing export controls on AI chips to the UAE",
+      "url": "https://www.banking.senate.gov/newsroom/minority/senator-warren-statement-on-trump-administrations-removing-export-controls-on-ai-chips-to-uae",
+      "date": "2026-07-10"
+    },
+    {
+      "label": "G42 — Core42 advances US AI infrastructure strategy with expanded New York deployment (18 MW to 60 MW; 10 sites)",
+      "url": "https://www.g42.ai/resources/news/core42-advances-us-ai-infrastructure-strategy-expanded-new-york-deployment",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "Core42 — Core42 raises USD 550 million from HSBC to scale global AI infrastructure",
+      "url": "https://www.core42.ai/resources/news/core42-raises-usd-550-million-from-hsbc-to-scale-global-ai-infrastructure",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "G42 — G42 and the Government of India formalize commercial framework for Condor Galaxy India",
+      "url": "https://www.g42.ai/resources/news/g42-and-government-india-formalize-commercial-framework-condor-galaxy-india-ai-supercomputer",
+      "date": "2026-05-15"
+    },
+    {
+      "label": "G42 — Presight delivers 22.2% revenue increase in Q1 2026",
+      "url": "https://www.g42.ai/resources/news/presight-delivers-222-revenue-increase-and-double-digit-growth-ebitda-and-profit-after-tax-q1-2026",
+      "date": "2026-05-13"
+    },
+    {
+      "label": "TeraWulf — First-quarter 2026 results (60 MW operational for Core42 at 31 Mar 2026)",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/140/terawulf-reports-first-quarter-2026-results",
+      "date": "2026-05-04"
+    },
+    {
+      "label": "Georgia Tech (The Conversation) — Why Iran targeted Amazon data centers",
+      "url": "https://news.research.gatech.edu/2026/04/01/why-iran-targeted-amazon-data-centers-and-what-does-and-doesnt-change-about-warfare",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "G42 — G42 announces Assurance Compute Framework to secure advanced US AI infrastructure",
+      "url": "https://www.g42.ai/resources/news/g42-announces-assurance-compute-framework-secure-advanced-us-ai-infrastructure-across-pax-silica-ecosystem",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "Middle East AI News — Presight 2025 revenue jumps 37%",
+      "url": "https://www.middleeastainews.com/p/presight-2025-revenue-jumps-37-g42",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "G42 — G42 and Vietnamese consortium commit to build national AI infrastructure",
+      "url": "https://www.g42.ai/resources/news/g42-and-vietnamese-consortium-commit-build-national-ai-infrastructure-and-develop-southeast-asias-intelligence-capacity",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "MGX — Sheikh Tahnoon bin Zayed chairs MGX's final board meeting of 2025 (Khazna and Stargate UAE)",
+      "url": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-al-nahyan-chairs-mgxs-final-board-meeting-2025",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna names new country head and advances expansion plans in Saudi Arabia (almost 650 MW, 30 live data centres)",
+      "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-names-new-country-head-and-advances-expansion-plans-in-saudi-arabia-in-support-of-vision-2030/",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "The National — Stargate UAE's first phase to be completed in third quarter of 2026",
+      "url": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "G42 — G42 receives US approval for advanced AI chip exports",
+      "url": "https://www.g42.ai/resources/news/g42-receives-us-approval-advanced-ai-chip-exports-enabling-full-scale-deployment-trusted-ai-infrastructure",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "US Department of Commerce statement on UAE and Saudi chip exports (G42 and HUMAIN; GlobalSecurity mirror)",
+      "url": "https://www.globalsecurity.org/military/library/news/2025/11/mil-251119-commerce01.htm",
+      "date": "2025-11-19"
+    },
+    {
+      "label": "G42 — Core42 Maximus-01 cluster secures top-20 ranking on the TOP500",
+      "url": "https://www.g42.ai/resources/news/core42-maximus-01-cluster-secures-top-20-ranking-global-top500-supercomputers-list",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "TeraWulf — Third-quarter 2025 results (Core42: 72.5 MW, about US$1.1B over ten years)",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/126/terawulf-reports-third-quarter-2025-results",
+      "date": "2025-11-10"
+    },
+    {
+      "label": "G42 — Microsoft and G42 accelerate the UAE's digital future with major data-centre expansion (200 MW via Khazna)",
+      "url": "https://www.g42.ai/resources/news/microsoft-and-g42-accelerate-uaes-digital-future-major-data-centre-expansion",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "Microsoft On the Issues — Microsoft's US$15.2 billion investment in the UAE",
+      "url": "https://blogs.microsoft.com/on-the-issues/2025/11/03/microsofts-15-2-billion-usd-investment-in-the-uae/",
+      "date": "2025-11-03"
+    },
+    {
+      "label": "G42 — Cisco and G42 deepen US–UAE technology partnership (AMD MI350X cluster)",
+      "url": "https://www.g42.ai/resources/news/cisco-and-g42-deepen-us-uae-technology-partnership-build-secure-end-end-ai-infrastructure-uae",
+      "date": "2025-10-28"
+    },
+    {
+      "label": "Middle East Eye — UAE firm provided technology to China to upgrade missiles, report says (FT report; G42 denial)",
+      "url": "https://www.middleeasteye.net/news/uae-firm-provided-technology-china-upgrade-missiles-report",
+      "date": "2025-10-27"
+    },
+    {
+      "label": "The Week — G42 calls the FT report 'false and defamatory'",
+      "url": "https://www.theweek.in/news/middle-east/2025/10/26/uae-allegedly-gave-china-the-key-pl-15-missile-tech-that-pakistan-used-against-india.html",
+      "date": "2025-10-26"
+    },
+    {
+      "label": "G42 (PR Newswire) — G42 provides update on construction of Stargate UAE AI infrastructure cluster",
+      "url": "https://www.prnewswire.com/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586401.html",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "The National — G42 unit Khazna targets full build-out of 1GW Stargate UAE project in three years",
+      "url": "https://www.thenationalnews.com/business/2025/10/16/g42-unit-khazna-targets-full-build-out-of-1gw-stargate-uae-project-in-three-years/",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna to add over 1GW of hyperscale capacity across multiple countries by 2030",
+      "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-to-add-over-1gw-hyperscale-capacity-across-multiple-countries-by-2030/",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna unlocks US$2.62bn facility (ADCB and FAB)",
+      "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-unlocks-2-62bn-facility-in-one-of-regions-largest-ever-financing-deals/",
+      "date": "2025-09-03"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna and Eni partner to develop 500 MW AI data center campus near Milan",
+      "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-and-eni-partner-to-develop-500-mw-ai-data-center-campus-near-milan/",
+      "date": "2025-07-11"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna and NVIDIA collaborate to accelerate AI infrastructure development across the MEA region",
+      "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-and-nvidia-collaborate-to-accelerate-ai-infrastructure-development-across-the-mea-region/",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "NVIDIA — Financial results for first quarter fiscal 2026 (Stargate UAE with G42, OpenAI, Oracle, SoftBank, Cisco)",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+      "date": "2025-05-28"
+    },
+    {
+      "label": "G42 — Global tech alliance launches Stargate UAE",
+      "url": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+      "date": "2025-05-22"
+    },
+    {
+      "label": "G42 — G42 to lead consortium with US partners to build the 5GW UAE–US AI Campus",
+      "url": "https://www.g42.ai/resources/news/g42-lead-consortium-us-partners-build-5gw-uae-us-ai-campus",
+      "date": "2025-05-15"
+    },
+    {
+      "label": "e& — Q1 2025 results (Khazna divestment completed; proceeds received)",
+      "url": "https://www.eand.com/en/news/29-4-25-eand-achieves-aed-16-9-billion-consolidated-revenue-growing-18-7-percentage.html",
+      "date": "2025-04-29"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna expands infrastructure to accelerate UAE's leadership in AI (AUH4, AUH8, QAJ1)",
+      "url": "https://khaznadatacenters.com/press-release/khazna-expands-infrastructure-to-accelerate-uaes-leadership-in-artificial-intelligence/",
+      "date": "2025-04-21"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna welcomes MGX and Silver Lake as strategic minority investors",
+      "url": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/",
+      "date": "2025-03-26"
+    },
+    {
+      "label": "e& (ADX announcement) — Divestment of 40% stake in Khazna to G42 for US$2.2 billion",
+      "url": "https://www.eand.com/content/dam/eand/assets/docs/latest-announcements/2025/eand-adx-announcement-khazna-en-25-02-25.pdf",
+      "date": "2025-02-25"
+    },
+    {
+      "label": "TeraWulf (8-K exhibit 99.1) — Core42 lease call transcript: 60 MW critical IT, $125/kW-month, G42 parent guarantee",
+      "url": "https://investors.terawulf.com/sec-filings/all-sec-filings/content/0000950142-24-002999/eh240572111_ex9901.htm",
+      "date": "2024-12-26"
+    },
+    {
+      "label": "G42 — G42 expands US operations with 70MW data center infrastructure agreement with TeraWulf",
+      "url": "https://www.g42.ai/resources/news/g42-expands-us-operations-70mw-data-center-infrastructure-agreement-terawulf",
+      "date": "2024-12-23"
+    },
+    {
+      "label": "MEED — Construction begins on Khazna data centre in Ajman (Laing O'Rourke main contractor)",
+      "url": "https://www.meed.com/construction-begins-on-khazna-data-centre-in-ajman",
+      "date": "2024-10-18"
+    },
+    {
+      "label": "G42 — Another important step in advancing responsible AI to serve the world (compliance commitments)",
+      "url": "https://www.g42.ai/resources/news/another-important-step-advancing-responsible-ai-serve-world",
+      "date": "2024-09-17"
+    },
+    {
+      "label": "US House Foreign Affairs and China Select Committee chairs — letter requesting an intelligence assessment of G42",
+      "url": "https://foreignaffairs.house.gov/sites/evo-subsites/republicans-foreignaffairs.house.gov/files/migrated/uploads/2024/07/G42-Letter-to-WH-HFAC-SCC-Majority-7.10.24.pdf",
+      "date": "2024-07-10"
+    },
+    {
+      "label": "G42 — Microsoft invests in Abu Dhabi's G42 (US$1.5B; board seat; Intergovernmental Assurance Agreement)",
+      "url": "https://www.g42.ai/resources/news/microsoft-invests-abu-dhabis-g42",
+      "date": "2024-04-16"
+    },
+    {
+      "label": "G42 — Statement on the New York Times article and the letter from the House Select Committee on the CCP",
+      "url": "https://www.g42.ai/resources/news/Statement-on-the-New-York-Times-article-and-the-letter-from-the-United-States-Congress-House-Select-Committee-on-the-CCP",
+      "date": "2024-01-11"
+    },
+    {
+      "label": "G42 — About (investors: Mubadala, Silver Lake, Microsoft, Dalio Family Office; leadership)",
+      "url": "https://www.g42.ai/about"
+    },
+    {
+      "label": "G42 — Companies (Khazna, Core42, Presight, Space42, M42, CPX, Inception42)",
+      "url": "https://www.g42.ai/companies"
+    },
+    {
+      "label": "Khazna Data Centers — About us (leadership)",
+      "url": "https://khaznadatacenters.com/about-us/"
+    },
+    {
+      "label": "Khazna Data Centers — Build (modular design, cooling, solar)",
+      "url": "https://khaznadatacenters.com/solutions-services/build/"
+    },
+    {
+      "label": "Core42 — About",
+      "url": "https://www.core42.ai/about"
+    },
+    {
+      "label": "Core42 — Sovereign AI Cloud",
+      "url": "https://www.core42.ai/products/ai-cloud"
+    }
+  ],
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 1
+}

@@ -547,6 +547,16 @@
    "note": "Fluence supplies Akaysha, an Australian battery developer trade press describes as BlackRock-owned, and AES — whose take-private GIP leads — is Fluence's anchor shareholder.",
    "context": "Energy-Storage.news reported in July 2024 that Fluence would use its Mosaic software across 3.6 GWh of Akaysha batteries in Australia; Akaysha was bought by BlackRock's Climate Infrastructure business in 2022 per trade press, and its own site does not name its owner. Separately, AES held about 22% of Fluence after May 2026, so if the GIP-led take-private closes, a GIP-controlled company will be Fluence's anchor shareholder. Neither is a direct BlackRock–Fluence contract, so the link is typed 'other'.",
    "source": "https://www.energy-storage.news/fluence-to-use-mosaic-technology-for-3-6gwh-of-akaysha-bess-in-australia/"
+  },
+  {
+   "slug": "blue-owl",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-09",
+   "via": "AI Infrastructure Partnership (with IFM Investors), reported STACK Asia-Pacific talks",
+   "note": "Reported only: Bloomberg says the BlackRock-backed AIP and IFM Investors are in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn.",
+   "context": "Reuters, carrying Bloomberg's 24 September 2026 report, could not verify it, and no party commented. A report, not a transaction.",
+   "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports"
   }
  ],
  "policyExposure": [
@@ -1460,6 +1470,6 @@
    "url": "https://dps.ny.gov/event/comments-due-petition-horizon-merger-sub-inc-and-aes-corporation-seeking-authorization-merger"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 1
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 2
 }

@@ -251,6 +251,15 @@
       "note": "Equal partners with Aecon in Cascade Nuclear Partners, design-builder for the first four Xe-100s at Energy Northwest; elsewhere rivals (the Black & Veatch dossier records the same seat and the competition).",
       "context": "Per the Energy Northwest release carried on Kiewit's newsroom (23 October 2025). The Black & Veatch dossier already curated this link from its side and notes the two firms' complementary roles on IPP Renewed and their rivalry on behind-the-meter gas awards.",
       "source": "https://www.kiewit.com/newsroom/energy-northwest-selects-design-builder-for-cascade-advanced-energy-facility-in-washington-state/"
+    },
+    {
+      "slug": "sb-energy",
+      "type": "customer",
+      "status": "active",
+      "via": "Data-centre EPC",
+      "note": "SB Energy's S-1 names Kiewit among the EPC providers it assigns across phases of its data-centre sites; no specific project is named.",
+      "context": "The S-1 names Kiewit with Turner, DPR and SOLV Energy. The gas generation planned for SB Energy's PORTS-Pike campus is developed by a different SoftBank affiliate, not by SB Energy.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
     }
   ],
   "policyExposure": [
@@ -425,6 +434,11 @@
   },
   "sources": [
     {
+      "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+      "date": "2026-09-21"
+    },
+    {
       "label": "NYSERDA — Governor Hochul celebrates completion of Champlain Hudson Power Express",
       "url": "https://www.nyserda.ny.gov/About/Newsroom/2026-Announcements/2026-06-16-Governor-Hochul-Celebrates-Completion-Of-Champlain-Hudson-Power-Express-Project",
       "date": "2026-06-16"
@@ -567,6 +581,6 @@
       "url": "https://www.datacenterdynamics.com/en/news/homer-city-and-kiewit-unveil-plans-for-45gw-natural-gas-powered-ai-data-center-in-pennsylvania/"
     }
   ],
-  "lastUpdated": "2026-09-05",
-  "profileVersion": 7
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 8
 }

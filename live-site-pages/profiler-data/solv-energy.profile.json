@@ -216,6 +216,15 @@
    "source": "Dossier assessment — AIDC angle",
    "via": "O&M services",
    "status": "active"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "customer",
+   "status": "active",
+   "via": "Operations and maintenance; power and data-centre EPC",
+   "note": "Long-standing O&M customer; SB Energy's S-1 names SOLV Energy among its principal power EPCs and among the EPCs it assigns across data-centre phases.",
+   "context": "SOLV's April 2025 release lists SB Energy among long-standing customers that selected it for O&M. The S-1 names SOLV with Turner, DPR and Kiewit as data-centre EPC providers, and among its principal EPC counterparties for power infrastructure.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
   }
  ],
  "policyExposure": [
@@ -293,6 +302,11 @@
  },
  "sources": [
   {
+   "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+   "date": "2026-09-21"
+  },
+  {
    "label": "Motley Fool — SOLV Q2 2026 earnings call transcript (data-center storage exploration)",
    "url": "https://www.fool.com/earnings/call-transcripts/2026/08/20/solv-energy-mwh-q2-2026",
    "date": "2026-08-20"
@@ -358,6 +372,11 @@
    "date": "2025-04-21"
   },
   {
+   "label": "SOLV Energy — Continues expansion of solar and storage O&M business (SB Energy among long-standing customers)",
+   "url": "https://www.solvenergy.com/news/solv-energy-continues-expansion-of-solar-and-storage-operations-maintenance-business-including-major-repowering-projects",
+   "date": "2025-04-21"
+  },
+  {
    "label": "Arevon — Vikings COD (SOLV EPC; Tesla Lathrop; union labor)",
    "url": "https://arevonenergy.com/news/releases/",
    "date": "2024-11-21"
@@ -376,6 +395,6 @@
    "date": "2021-12"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 4
 }

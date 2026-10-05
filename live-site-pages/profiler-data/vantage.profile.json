@@ -333,6 +333,16 @@
    "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
    "status": "active",
    "since": "2026-09"
+  },
+  {
+   "slug": "softbank",
+   "type": "investor",
+   "status": "active",
+   "since": "2026-09",
+   "via": "DigitalBridge (SoftBank-owned since 30 September 2026), manager of the funds that lead Vantage's ownership",
+   "note": "Indirect: since 30 September 2026 SoftBank Group has owned DigitalBridge, the manager of the funds that lead Vantage's ownership. The equity stays with those funds and their co-investors.",
+   "context": "DigitalBridge's Form 8-K of 30 September 2026 records the completion of its merger into a SoftBank Group subsidiary at USD 16.00 a share in cash. SoftBank's Q3 FY2025 earnings presentation lists Vantage first among DigitalBridge's 'Key Portfolio Companies'. SoftBank bought the manager, not Vantage: the equity remains with DigitalBridge-managed funds and the co-investors named in this dossier, and SoftBank's reach runs through DigitalBridge's fund governance.",
+   "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf"
   }
  ],
  "policyExposure": [
@@ -631,6 +641,11 @@
  },
  "sources": [
   {
+   "label": "DigitalBridge Group — Form 8-K: completion of the mergers, delisting, change in control (accession 0001104659-26-112148)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1679688/000110465926112148/tm2626145d9_8k.htm",
+   "date": "2026-09-30"
+  },
+  {
    "label": "Reuters (via Yahoo Finance) — Vantage explores IPO at ~$100B valuation or sale",
    "url": "https://finance.yahoo.com/technology/articles/exclusive-vantage-data-centers-explores-100830274.html",
    "date": "2026-08-13"
@@ -684,6 +699,11 @@
    "label": "Vantage — Alicia Ruckteschler appointed chief procurement officer (ex-Equinix)",
    "url": "https://vantage-dc.com/news/vantage-data-centers-appoints-alicia-ruckteschler-as-chief-procurement-officer/",
    "date": "2026-02-19"
+  },
+  {
+   "label": "SoftBank Group — Q3 FY2025 earnings presentation (DigitalBridge key portfolio companies)",
+   "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf",
+   "date": "2026-02-12"
   },
   {
    "label": "Vantage — joins Open Compute Project Foundation Advisory Board",
@@ -855,6 +875,6 @@
    "date": "2026-09-02"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 9
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 10
 }

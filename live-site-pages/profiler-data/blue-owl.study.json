@@ -1,0 +1,438 @@
+{
+ "schemaVersion": 2,
+ "slug": "blue-owl",
+ "title": "Blue Owl — Technology Study Guide",
+ "lastUpdated": "2026-10-04",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a manager whose funds own campuses and lend against chips",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Blue Owl the listed company signs no equipment order; the companies and ventures its funds back do.",
+   "ps": [
+    "**The firm.** Blue Owl Capital Inc. is a listed {{asset manager}}. It earns fees for investing other people's money across three platforms: Credit, Real Assets and GP Strategic Capital.",
+    "**The funds.** Blue Owl-managed funds own STACK Infrastructure, hold 80% of Meta's Hyperion campus venture in Louisiana, co-sponsor Crusoe's Abilene campus in Texas, and lend against GPUs to IREN and Nscale.",
+    "**The buyers.** Equipment is ordered by STACK at its own campuses, by Meta as construction manager at Hyperion, by Crusoe at Abilene and by the borrowers that buy the chips.",
+    "This guide teaches the mechanics behind that: what a manager owns and earns, owning pieces of other managers, funds that let investors withdraw, buying a fund-management business, how a campus is financed off a hyperscaler's balance sheet, lending against chips, and how to read a reported dispute."
+   ]
+  },
+  {
+   "id": "manager-and-funds",
+   "title": "What a listed manager owns and earns",
+   "kind": "prose",
+   "read": "Shareholders own the management company; fund investors own the assets.",
+   "ps": [
+    "Blue Owl reported USD 319.0bn of {{assets under management}} at 30 June 2026. Only USD 190.6bn of it was {{fee-earning AUM}} — money currently paying a management fee. The rest is committed but not yet invested, or invested in ways that pay no fee.",
+    "Much of its capital has no date by which it must be returned: {{permanent capital}}, such as listed and non-traded funds that can keep raising money. Managers prize it because the fees do not stop when a fund's life ends.",
+    "Three earnings measures tell different stories. {{fee-related earnings}} — profit from management fees alone — were about USD 1.5bn in 2025. {{distributable earnings}}, the measure managers pay dividends from, were about USD 1.3bn. Net income under accounting rules was about USD 79m, because it deducts items the manager's own measures leave out, such as the amortisation of intangible assets bought with other managers.",
+    "None of these figures says what any data centre bought. They measure the manager's business, not the platforms' purchasing."
+   ]
+  },
+  {
+   "id": "three-platforms",
+   "title": "Where the money sits",
+   "kind": "bars",
+   "read": "Credit is the largest platform; data centres sit inside Real Assets.",
+   "unit": "USD billions of AUM, 30 June 2026",
+   "intro": "Blue Owl's three platforms; Digital Infrastructure, the former IPI Partners business, is USD 18.4bn of Real Assets.",
+   "items": [
+    {
+     "label": "Credit",
+     "sub": "Direct lending, technology lending, alternative and investment-grade credit",
+     "v": 158.1
+    },
+    {
+     "label": "Real Assets",
+     "sub": "Net lease, real-estate credit and Digital Infrastructure",
+     "v": 89.4
+    },
+    {
+     "label": "GP Strategic Capital",
+     "sub": "Minority stakes in other asset managers",
+     "v": 71.5
+    }
+   ]
+  },
+  {
+   "id": "gp-stakes",
+   "title": "Owning a piece of other managers",
+   "kind": "prose",
+   "read": "A GP stake earns from another manager's fees, not from its deals.",
+   "ps": [
+    "A {{GP stake}} is a minority share in another asset manager's own business — a slice of its management fees and often of its {{carried interest}}. Blue Owl's GP Strategic Capital platform, formerly Dyal Capital, specialises in it and claims an 87% market share of minority-stake deals above USD 600m.",
+    "The result is that Blue Owl can hold part of a rival capital firm. Public Citizen put its holding at 19.3% of Energy Capital Partners, the generation-focused investor, when ECP agreed to combine with Bridgepoint; FERC's first order on that deal cited an undisclosed affiliation.",
+    "A GP stake gives no say over the other manager's portfolio companies. For a seller it is a web of financial links, not a line of authority."
+   ]
+  },
+  {
+   "id": "semi-liquid-funds",
+   "title": "Funds that let investors withdraw — up to a point",
+   "kind": "prose",
+   "read": "A fund that lends for years but lets investors leave each quarter must ration the exits.",
+   "ps": [
+    "A {{business development company}} is a US fund that lends to mid-sized private companies. Some trade on an exchange; others are non-traded, sold to wealthy individuals, who can withdraw only when the fund makes a {{tender offer}} to buy back shares, usually up to 5% a quarter.",
+    "The loans inside run for years, so the fund cannot return everyone's money at once. When requests exceed the offer, the {{redemption gate}} applies: each investor is paid a prorated share and the rest stays in.",
+    "Blue Owl's largest non-traded credit fund, OCIC, received requests for 21.9%, 18.8% and 16.8% of its shares in the first three quarters of 2026, against a 5% quarterly offer. Heavy withdrawals slow the new money a manager can lend — including to data centres and GPU buyers."
+   ]
+  },
+  {
+   "id": "withdrawal-requests",
+   "title": "Withdrawal requests against the 5% offer",
+   "kind": "bars",
+   "read": "For three quarters running, investors asked for three to four times what the fund would buy back.",
+   "unit": "% of shares requested",
+   "intro": "Blue Owl Credit Income Corp. (OCIC), 2026.",
+   "items": [
+    {
+     "label": "First quarter",
+     "sub": "About USD 4.2bn requested",
+     "v": 21.9
+    },
+    {
+     "label": "Second quarter",
+     "sub": "About USD 3.6bn requested",
+     "v": 18.8
+    },
+    {
+     "label": "Third quarter",
+     "sub": "About USD 3.1bn requested",
+     "v": 16.8
+    },
+    {
+     "label": "Quarterly tender offer",
+     "sub": "What the fund offers to buy back; requests above it are prorated",
+     "v": 5
+    }
+   ]
+  },
+  {
+   "id": "buying-a-manager",
+   "title": "What Blue Owl bought when it bought IPI Partners",
+   "kind": "prose",
+   "read": "The contracts to manage data-centre funds, not the data centres.",
+   "ps": [
+    "On 3 January 2025 Blue Owl completed its purchase of IPI Partners' business. Its filing says it bought 'the rights to investment management agreements, investor relationships, related assets and personnel'. STACK Infrastructure and the other platforms stayed with the funds and their {{limited partner}}s.",
+    "That is why Blue Owl's own annual report never names STACK, while a Blue Owl-managed REIT's report calls STACK 'a portfolio company owned by certain Other Blue Owl Accounts'. The manager decides; the funds own.",
+    "Blue Owl added a fund for wealthy individuals in December 2025: a non-traded {{REIT}} that owns finished, leased data centres rather than developing them. It held 12 buildings, 235 MW, 99.7% leased, at 30 June 2026."
+   ]
+  },
+  {
+   "id": "off-balance-sheet-campus",
+   "title": "Financing a campus off a hyperscaler's balance sheet",
+   "kind": "prose",
+   "read": "At Hyperion the investor owns most of the venture, the hyperscaler builds and leases it, and the bond market supplies much of the money.",
+   "ps": [
+    "In October 2025 Meta contributed USD 4.3bn, largely assets, to a {{joint venture}} for its Hyperion campus in Louisiana; an affiliate of Blue Owl-managed funds contributed USD 7.0bn in cash. Meta took a one-time USD 2.6bn distribution and kept 20%; the Blue Owl funds hold 80%.",
+    "Meta manages construction and leases the buildings, starting in 2029 with an initial four-year term renewable up to 20 years. Because Meta does not direct the activities that most affect the venture's results, it does not consolidate it: the venture is an unconsolidated {{variable interest entity}}, and its debt stays off Meta's balance sheet.",
+    "Meta also gives a 16-year {{residual value guarantee}}: if the campus is worth less than a threshold when Meta stops leasing, Meta pays the difference. That guarantee is what lets investors and bondholders accept short initial leases.",
+    "The scale words need care. About USD 27bn is the campus's total development cost; USD 7.0bn is the Blue Owl funds' cash in. Part of Blue Owl's capital came from debt issued to PIMCO and other bond investors."
+   ]
+  },
+  {
+   "id": "capital-stack",
+   "title": "The Hyperion capital stack",
+   "kind": "table",
+   "read": "Each layer of the deal is provided by someone different and protects something different.",
+   "intro": "From Meta's Q3 2025 10-Q and its October 2025 release.",
+   "cols": [
+    "Layer",
+    "Provided by",
+    "What it does"
+   ],
+   "rows": [
+    [
+     "Bonds",
+     "PIMCO and other bond investors, through Blue Owl's side of the venture",
+     "Funds part of the Blue Owl side's capital; repaid from the venture's income"
+    ],
+    [
+     "Equity, 80%",
+     "An affiliate of Blue Owl-managed funds — USD 7.0bn cash at closing",
+     "Owns most of the venture and its returns"
+    ],
+    [
+     "Equity, 20%",
+     "Meta — USD 4.3bn, largely assets",
+     "Keeps a stake; Meta took a USD 2.6bn distribution"
+    ],
+    [
+     "The lease",
+     "Meta, from 2029",
+     "Pays the rent: an initial four-year term, renewable up to 20 years"
+    ],
+    [
+     "The residual value guarantee",
+     "Meta, for 16 years",
+     "Covers a shortfall in the campus's value if Meta stops leasing"
+    ],
+    [
+     "Construction",
+     "Meta, as construction manager",
+     "Specifies and buys the equipment"
+    ]
+   ]
+  },
+  {
+   "id": "lending-against-chips",
+   "title": "Lending against GPUs",
+   "kind": "prose",
+   "read": "A loan secured on chips that lose value fast has to be short, expensive and drawn as the chips arrive.",
+   "ps": [
+    "Blue Owl's credit funds lend to AI cloud companies that are buying GPUs, taking the chips as collateral. IREN's August 2026 financing for its Mackenzie, British Columbia campus is about USD 2.4bn: a USD 1.2bn term loan and USD 1.2bn of {{senior secured notes}}, both at 9.0% fixed, with a Blue Owl BDC as agent and lender.",
+    "Three features follow from the collateral. The loan is short — about 30 months — because a GPU's resale value falls quickly as newer chips arrive. The rate is high for secured debt, pricing that risk. And it is drawn in stages as chips are delivered, like a {{delayed-draw term loan}}, so the lender is never owed more than the equipment in place.",
+    "The lender has no say over which switchgear or batteries the borrower's campus uses. It lends against the chips; the borrower builds the site."
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test across Blue Owl's positions",
+   "kind": "table",
+   "read": "An investor passes only through a platform it controls that buys power equipment.",
+   "intro": "Each position, the kind it is, and who signs for equipment. The {{buying-authority test}} is defined in this guide's glossary.",
+   "cols": [
+    "Position",
+    "Kind",
+    "Who signs for power equipment",
+    "Passes?"
+   ],
+   "rows": [
+    [
+     "STACK Infrastructure",
+     "Owned by Blue Owl-managed funds",
+     "STACK's own management, at its campuses including Project Jupiter",
+     "Through the platform"
+    ],
+    [
+     "Hyperion (Meta)",
+     "80% joint-venture equity",
+     "Meta, as construction manager",
+     "No — Meta specifies"
+    ],
+    [
+     "Abilene (Crusoe)",
+     "Equity co-sponsor of a joint venture",
+     "Crusoe, as developer",
+     "No — Crusoe builds"
+    ],
+    [
+     "Chirisa campuses for CoreWeave",
+     "Joint-venture equity",
+     "The joint venture's developer",
+     "Through the developer"
+    ],
+    [
+     "IREN, Nscale",
+     "Lender",
+     "The borrower",
+     "No"
+    ],
+    [
+     "Finished data centres in its REIT",
+     "Owner of leased buildings",
+     "Mostly nobody — already built",
+     "Rarely"
+    ]
+   ]
+  },
+  {
+   "id": "reported-dispute",
+   "title": "Reading a reported dispute",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "A force-majeure notice reported by the press is a claim, not an outcome.",
+   "ps": [
+    "**What happened.** On 24 September 2026 Bloomberg reported, and TechCrunch relayed, that Oracle had sent STACK a {{force majeure}} notice on Project Jupiter in New Mexico, tied to power commitments.",
+    "**What the parties said.** Oracle said such notices 'are common on developments of this scale' and that Jupiter 'remains on our planned schedule'. The notice itself has not been published, so its terms are reported only.",
+    "**What force majeure does.** A force-majeure clause excuses a party from a duty while an event beyond its control prevents performance. Sending a notice preserves the right to rely on it; it does not cancel a contract.",
+    "**How to record it.** State that a notice was reported, quote the parties' statements and do not infer delays or cancellations until a party confirms them."
+   ]
+  },
+  {
+   "id": "deal-ladder",
+   "title": "The deal ladder for Blue Owl's 2025–2026 transactions",
+   "kind": "table",
+   "read": "Record the rung a deal has reached — and note when one falls off the ladder.",
+   "intro": "As of 4 October 2026.",
+   "cols": [
+    "Rung",
+    "What it binds",
+    "Blue Owl example"
+   ],
+   "rows": [
+    [
+     "Report",
+     "Nobody",
+     "Bloomberg's report of a sale of STACK's Asia-Pacific portfolio at USD 20–25bn"
+    ],
+    [
+     "{{exclusive talks}}",
+     "The seller, to negotiate with one bidder for a while",
+     "The same report: a BlackRock-backed group and IFM in exclusive talks"
+    ],
+    [
+     "Signing ({{definitive agreement}})",
+     "Both sides, subject to conditions",
+     "IREN's GPU financing, signed 25 August 2026"
+    ],
+    [
+     "Closing",
+     "Money moves and control passes",
+     "IPI Partners, 3 January 2025; Hyperion, October 2025; the Lancaster joint venture with Chirisa, 25 August 2025"
+    ],
+    [
+     "Terminated",
+     "Nobody any more",
+     "The merger of two Blue Owl BDCs, called off in November 2025 'given current market conditions'"
+    ]
+   ]
+  },
+  {
+   "id": "directory",
+   "title": "A directory, not a door",
+   "kind": "proscons",
+   "read": "Blue Owl tells a seller where the money is; the orders are signed elsewhere.",
+   "intro": "Weigh the reach of its funds against the fact that the manager buys nothing.",
+   "cards": [
+    {
+     "t": "Why Blue Owl is worth knowing",
+     "meta": "A map of funded campuses",
+     "adv": [
+      "**Large positions.** Its funds own STACK and hold most of Hyperion, two of the largest AI campus programmes in the corpus.",
+      "**Early signals.** A new fund close or joint venture often precedes a developer's equipment plan.",
+      "**Lender's view.** Its GPU loans show which AI cloud companies are expanding."
+     ],
+     "dis": [
+      "**No purchase order.** Blue Owl Capital Inc. signs none; STACK, Meta, Crusoe and the borrowers do.",
+      "**No filing trail.** Blue Owl's own reports name none of these deals; the record is the counterparties'.",
+      "**Funding pressure.** Heavy withdrawals from its non-traded funds can slow new lending."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date, a name or a fund size.",
+   "cards": [
+    {
+     "q": "Why is an asset manager's {{fee-earning AUM}} smaller than its {{assets under management}}?",
+     "a": "AUM includes money committed but not yet invested and capital that pays no fee; fee-earning AUM counts only what is paying fees now."
+    },
+    {
+     "q": "What does a {{GP stake}} earn from?",
+     "a": "A share of another manager's own fees and often its carried interest — not the returns of any single deal."
+    },
+    {
+     "q": "Why does a non-traded {{business development company}} limit withdrawals?",
+     "a": "Its loans run for years, so it can buy back only a fixed share each quarter through a {{tender offer}}; excess requests are prorated."
+    },
+    {
+     "q": "When a manager buys another manager, what passes to it?",
+     "a": "The management contracts, investor relationships and staff — the portfolio companies stay with the funds."
+    },
+    {
+     "q": "Why can a hyperscaler keep a campus venture off its balance sheet?",
+     "a": "If it does not direct the activities that most affect the venture's results, it does not consolidate it; the venture is an unconsolidated {{variable interest entity}}."
+    },
+    {
+     "q": "What does a residual value guarantee protect against?",
+     "a": "A fall in the asset's value: the guarantor pays the shortfall below a threshold if the lease is not renewed."
+    },
+    {
+     "q": "Why are loans against GPUs short and drawn in stages?",
+     "a": "The chips lose resale value quickly, and drawing as they arrive keeps the loan no larger than the collateral in place."
+    },
+    {
+     "q": "What does sending a {{force majeure}} notice do?",
+     "a": "It preserves a party's right to be excused while an event beyond its control prevents performance; it does not end the contract."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "Blue Owl-managed funds own STACK. Who signs STACK's switchgear orders?",
+     "c": [
+      "Blue Owl Capital Inc.",
+      "STACK's own management",
+      "The funds' limited partners",
+      "Oracle"
+     ],
+     "a": 1,
+     "why": "The platform's management buys, under the governance of the funds that own it."
+    },
+    {
+     "q": "At Hyperion, who specifies and buys the equipment?",
+     "c": [
+      "Blue Owl's funds",
+      "The bondholders",
+      "Meta, as construction manager",
+      "PIMCO"
+     ],
+     "a": 2,
+     "why": "Meta manages construction and leases the campus; the Blue Owl funds hold 80% of the {{joint venture}} as investors."
+    },
+    {
+     "q": "A news story says Blue Owl invested 'USD 27bn' in Hyperion. What is wrong with it?",
+     "c": [
+      "Nothing",
+      "USD 27bn is the campus's total development cost; the Blue Owl funds' cash at closing was USD 7.0bn",
+      "Blue Owl invested more",
+      "Meta paid the USD 27bn"
+     ],
+     "a": 1,
+     "why": "Never state a project's total cost as one investor's cheque."
+    },
+    {
+     "q": "Investors in a non-traded credit fund ask to withdraw 18% of shares; the fund offers 5%. What happens?",
+     "c": [
+      "Everyone is paid in full",
+      "The fund is wound up",
+      "Each investor is paid a prorated share; the rest stays invested",
+      "The fund borrows to pay everyone"
+     ],
+     "a": 2,
+     "why": "The {{redemption gate}} caps withdrawals at the {{tender offer}} amount."
+    },
+    {
+     "q": "Why is a GPU-backed loan typically about 30 months rather than ten years?",
+     "c": [
+      "Banks prefer short loans",
+      "The chips' resale value falls quickly",
+      "Tax rules require it",
+      "The borrower asked for it"
+     ],
+     "a": 1,
+     "why": "Collateral that loses value fast supports only a short loan."
+    },
+    {
+     "q": "A press report says a customer sent a force-majeure notice. What should a dossier record?",
+     "c": [
+      "That the project is cancelled",
+      "That a notice was reported, with the parties' statements",
+      "Nothing until it is resolved",
+      "That the developer is in default"
+     ],
+     "a": 1,
+     "why": "Record the rung the evidence supports: a reported notice, not an outcome."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "buying-authority test",
+   "d": "The Phase F screen for this corpus: does a company, or a platform it controls alone or jointly, sign for batteries, medium-voltage switchgear, generation or solid-state transformers? An investor passes only through a platform it controls."
+  },
+  {
+   "t": "residual value guarantee",
+   "d": "In a building lease, the tenant's promise to pay the owner if the property is worth less than an agreed threshold when the lease ends and is not renewed. It lets owners and lenders accept a short initial lease on an asset built for one tenant."
+  }
+ ]
+}

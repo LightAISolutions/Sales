@@ -462,6 +462,16 @@
    "note": "CPP committed to Vantage Data Centers and to Yondr in fiscal 2026.",
    "context": "CPP's fiscal 2026 results release lists 'a combined US$310 million to U.S.-based Vantage Data Centers … as well as an additional US$200 million commitment across Vantage and Yondr'. No stake percentage is stated.",
    "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-793-3-billion-at-2026-fiscal-year-end-814459989.html"
+  },
+  {
+   "slug": "blue-owl",
+   "type": "partner",
+   "status": "active",
+   "since": "2025",
+   "via": "Abilene campus, phase 2",
+   "note": "Co-investor alongside Blue Owl in the second phase of a hyperscale data centre in Abilene, Texas, per CPP Investments' results for the quarter to 30 September 2025; size undisclosed.",
+   "context": "CPP Investments lists 'an investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl'.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html"
   }
  ],
  "policyExposure": [
@@ -1201,6 +1211,6 @@
    "url": "https://www.cppinvestments.com/"
   }
  ],
- "lastUpdated": "2026-10-03",
- "profileVersion": 1
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 2
 }

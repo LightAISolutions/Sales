@@ -1288,6 +1288,16 @@
    ]
   },
   {
+   "slug": "business-development-company",
+   "term": "business development company",
+   "def": "A US closed-end investment company that lends to, or invests in, mid-sized private businesses and must pay out most of its income as dividends. Some trade on an exchange; non-traded ones sell shares to wealthy individuals and let them withdraw only through periodic tender offers, so heavy withdrawal demand shows up as requests that exceed the offer and are paid pro rata.",
+   "aliases": [
+    "BDC",
+    "BDCs",
+    "business development companies"
+   ]
+  },
+  {
    "slug": "business-interruption",
    "term": "business interruption",
    "def": "Insurance for the revenue a plant loses while it is out of action after an insured physical loss — the money side of a property claim, paid for the period repair takes.",
@@ -5656,6 +5666,16 @@
    ]
   },
   {
+   "slug": "gp-stake",
+   "term": "GP stake",
+   "def": "A minority share in an asset manager's own business — a slice of its management fees and usually of its carried interest — rather than in any fund it runs. A GP-stakes fund buys such shares in many managers, so it earns when private-markets firms grow, whatever the individual deals do.",
+   "aliases": [
+    "GP stakes",
+    "GP-stakes",
+    "GP minority stake"
+   ]
+  },
+  {
    "slug": "gpu",
    "term": "GPU",
    "def": "Graphics processing unit — a processor with thousands of simple cores designed to do the same operation on very many numbers at once. That shape turned out to suit neural networks far better than a conventional CPU, which is why the graphics part of the name is now mostly historical.",
@@ -7631,6 +7651,15 @@
    ]
   },
   {
+   "slug": "margin-loan",
+   "term": "margin loan",
+   "def": "A loan secured by listed shares the borrower pledges. If the share price falls far enough, the lender can demand more collateral or sell the pledged shares, so the borrower's room to borrow moves with the market value of what it has pledged.",
+   "aliases": [
+    "margin loans",
+    "share-backed loan"
+   ]
+  },
+  {
    "slug": "marginal-loss-factor",
    "term": "marginal loss factor",
    "def": "A per-connection factor applied to every megawatt-hour a plant sells, scaling its output for the losses between where it connects and the reference point where prices are set. Used in the Australian market and recalculated periodically, so a revision can move a plant's revenue by several per cent with nothing having changed at the plant.",
@@ -8185,6 +8214,14 @@
    ]
   },
   {
+   "slug": "national-security-agreement",
+   "term": "National Security Agreement",
+   "def": "A binding agreement a foreign investor signs with US government agencies as the condition for CFIUS clearing its deal. It can limit board seats, access to sites and data and — the part a supplier feels — require government approval before the company buys certain equipment or uses certain vendors.",
+   "aliases": [
+    "CFIUS mitigation agreement"
+   ]
+  },
+  {
    "slug": "natural-circulation",
    "term": "natural circulation",
    "def": "Fluid moving through a loop because hot fluid is less dense than cold, with no pump. A reactor that can remove decay heat this way keeps cooling itself after losing all electrical power."
@@ -8198,6 +8235,15 @@
    "slug": "natural-hedge",
    "term": "natural hedge",
    "def": "An offset that comes from owning two businesses whose exposures point in opposite directions, rather than from buying a financial contract. A company that both generates electricity and sells it to retail customers is long supply and short demand at the same time, so a price move that hurts one side helps the other."
+  },
+  {
+   "slug": "nav-discount",
+   "term": "NAV discount",
+   "def": "The amount by which a holding company's market value sits below the value of the stakes it owns (its net asset value). Investors apply it for the holding company's debt and costs, the tax due on a sale and doubts about how the stakes will be used; buying back shares or selling assets at full value narrows it.",
+   "aliases": [
+    "holding-company discount",
+    "discount to NAV"
+   ]
   },
   {
    "slug": "nca",
@@ -9642,6 +9688,15 @@
    ]
   },
   {
+   "slug": "prepaid-forward",
+   "term": "prepaid forward",
+   "def": "A contract in which an investor pays today for shares it will receive later, at a price set by a formula such as a discount to a future IPO price. The company gets cash before it lists; the investor gets the discount and a guaranteed allocation.",
+   "aliases": [
+    "prepaid forward contract",
+    "prepaid forwards"
+   ]
+  },
+  {
    "slug": "prepayment",
    "term": "prepayment",
    "def": "Paying for capacity before it is delivered. In compute contracts a prepayment funds the supplier's build and shifts delivery risk onto the buyer, who has paid for something that does not yet exist.",
@@ -10409,6 +10464,16 @@
    "def": "The working fluid in a cooling circuit, which absorbs heat where it evaporates and releases it where it condenses. Which one a product uses is increasingly a regulatory matter as well as an engineering one, since refrigerants differ widely in flammability and in their effect on the atmosphere.",
    "aliases": [
     "refrigerants"
+   ]
+  },
+  {
+   "slug": "registration-statement",
+   "term": "registration statement",
+   "def": "The disclosure document a company files with the SEC before selling shares to the public — Form S-1 for a US IPO. It is amended as the SEC's questions are answered; shares are priced and sold only after it is declared effective, and the final prospectus filed under Rule 424(b) records the price.",
+   "aliases": [
+    "S-1",
+    "Form S-1",
+    "S-1/A"
    ]
   },
   {
@@ -12646,6 +12711,15 @@
    ]
   },
   {
+   "slug": "tender-offer",
+   "term": "tender offer",
+   "def": "An offer to buy shares directly from their holders at a stated price within a set window. Non-traded funds use quarterly tender offers, usually capped at about 5% of shares, as their redemption route; when more holders tender than the cap allows, each is paid a prorated share and the rest stays invested.",
+   "aliases": [
+    "tender offers",
+    "issuer tender offer"
+   ]
+  },
+  {
    "slug": "test-year",
    "term": "test year",
    "def": "The twelve-month period of actual costs and sales a rate case uses as its base. A historic test year uses costs already incurred; a forecast or future test year projects them forward. The choice matters: a utility investing faster than it depreciates recovers less under a historic year, which is why commissions sometimes impose one as a discipline.",
@@ -13540,6 +13614,14 @@
     "construction warehouse",
     "warehouse line",
     "warehouse revolver"
+   ]
+  },
+  {
+   "slug": "warrant",
+   "term": "warrant",
+   "def": "A right, issued by a company, to buy its shares later at a fixed price. Companies attach warrants to a financing or a commercial contract so the counterparty shares in the upside; they often vest only as milestones are met.",
+   "aliases": [
+    "warrants"
    ]
   },
   {

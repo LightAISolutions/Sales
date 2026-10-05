@@ -306,6 +306,16 @@
    "context": "Digital Realty leads the wholesale colocation segment at about 28% share on Synergy Research's measure, and is second to Equinix in North American retail. Switch competes with it on campus power depth, single-operator design control and its five-zone latency lattice, rather than on the interconnection ecosystem where Equinix leads.\n\nThe structural contrast Switch's own dossier draws — that it prices delivery credibility without public-REIT overhead — applies to Digital Realty specifically: as a REIT it must distribute most of its taxable income and therefore funds development through equity issuance, debt and third-party funds rather than retained earnings.",
    "source": "Dossier competitive assessment — wholesale colocation",
    "status": "active"
+  },
+  {
+   "slug": "softbank",
+   "type": "investor",
+   "status": "active",
+   "since": "2026-09",
+   "via": "DigitalBridge (SoftBank-owned since 30 September 2026), manager of the funds that co-own Switch with IFM Investors",
+   "note": "Indirect: since 30 September 2026 SoftBank Group has owned DigitalBridge, whose managed funds took Switch private with IFM Investors in December 2022. The equity stays with those funds.",
+   "context": "DigitalBridge's Form 8-K of 30 September 2026 records the completion of its merger into a SoftBank Group subsidiary. SoftBank's Q3 FY2025 earnings presentation lists Switch among DigitalBridge's 'Key Portfolio Companies'. SoftBank's link is the manager, not Switch's equity, which DigitalBridge-managed vehicles hold with IFM Investors and Aware Super.",
+   "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf"
   }
  ],
  "policyExposure": [
@@ -645,6 +655,11 @@
  },
  "sources": [
   {
+   "label": "DigitalBridge Group — Form 8-K: completion of the mergers, delisting, change in control (accession 0001104659-26-112148)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1679688/000110465926112148/tm2626145d9_8k.htm",
+   "date": "2026-09-30"
+  },
+  {
    "label": "Switch — statement supporting Governor Abbott's Texas data-center standards",
    "url": "https://www.switch.com/statement-on-gov-abbotts-data-center-standards/",
    "date": "2026-08"
@@ -698,6 +713,11 @@
    "label": "Switch/PRNewswire — NVIDIA Omniverse DSX Blueprint integrated into EVO AI Factories (LDC EVO)",
    "url": "https://www.switch.com/switch-integrates-nvidia-omniverse-dsx-blueprint-into-switchs-evo-ai-factories/",
    "date": "2026-03-16"
+  },
+  {
+   "label": "SoftBank Group — Q3 FY2025 earnings presentation (DigitalBridge key portfolio companies)",
+   "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf",
+   "date": "2026-02-12"
   },
   {
    "label": "DCD — Switch buys 176 acres at Apex Industrial Park, North Las Vegas ($85.5M, closed Dec 2025)",
@@ -850,6 +870,6 @@
    "url": "https://www.switch.com/atlanta/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 8
 }

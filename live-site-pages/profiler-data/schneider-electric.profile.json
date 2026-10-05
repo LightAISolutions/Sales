@@ -231,6 +231,16 @@
    "status": "active",
    "since": "2025-11",
    "scale": "USD 373m"
+  },
+  {
+   "slug": "softbank",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-05",
+   "via": "Dunkirk power-module integration facility (SoftBank's French data-centre programme)",
+   "note": "Named in SoftBank's May 2026 French programme as operator of a Dunkirk facility integrating data-centre power modules; an announced plan, with no order or volume stated.",
+   "context": "SoftBank's announcement of up to 5 GW of AI data-centre capacity in France describes two facilities at the Port of Dunkirk: one operated by SoftBank to manufacture enclosures and one operated by Schneider Electric to integrate data-centre power modules.",
+   "source": "https://group.softbank/en/news/press/20260531_0"
   }
  ],
  "policyExposure": [
@@ -446,6 +456,11 @@
  },
  "sources": [
   {
+   "label": "SoftBank Group — SoftBank Group to build 5 GW of AI data-centre capacity in France",
+   "url": "https://group.softbank/en/news/press/20260531_0",
+   "date": "2026-05-31"
+  },
+  {
    "label": "Facilities Dive — LiquidStack buy gives Trane AI data-centre cooling exposure",
    "url": "https://www.facilitiesdive.com/news/liquidstack-buy-gives-trane-ai-data-center-cooling-exposure/812053/",
    "date": "2026-02-12"
@@ -536,6 +551,6 @@
    "date": "2025-11-19"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 9
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 10
 }

@@ -289,6 +289,18 @@
       "since": "2026-09",
       "note": "Digital Realty's former CEO Bill Stein (2014–2022; co-founder and CIO 2004–2014) joined Crusoe's board on 17 September 2026 as an independent director; he is CIO of Primary Digital Infrastructure, Crusoe's Abilene joint-venture partner.",
       "source": "https://www.crusoe.ai/resources/newsroom/crusoe-appoints-seifert-stein-straubel-board-of-directors"
+    },
+    {
+      "slug": "blue-owl",
+      "type": "partner",
+      "status": "active",
+      "since": "2024",
+      "scale": "USD 15bn joint venture; 1.2 GW",
+      "via": "Abilene joint venture (with Primary Digital Infrastructure)",
+      "project": "stargate",
+      "note": "Equity co-sponsor, through Blue Owl Real Assets funds, of the USD 15bn joint venture funding Crusoe's 1.2 GW Abilene campus.",
+      "context": "Crusoe's 21 May 2025 release: 'Crusoe in combination with funds managed by Blue Owl's Real Assets platform along with Primary Digital Infrastructure will jointly sponsor the construction of six new buildings'. It does not split debt and equity or state Blue Owl's share.",
+      "source": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture"
     }
   ],
   "policyExposure": [
@@ -615,6 +627,11 @@
       "date": "2025-07"
     },
     {
+      "label": "Crusoe — Crusoe, Blue Owl Capital and Primary Digital Infrastructure enter second phase of USD 15bn joint venture (Abilene)",
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture",
+      "date": "2025-05-21"
+    },
+    {
       "label": "Data Center Frontier — Crusoe adds 4.5 GW gas JV; Abilene to 1.2 GW",
       "url": "https://www.datacenterfrontier.com/hyperscale/article/55276169/crusoe-adds-45-gw-natural-gas-to-fuel-ai-expands-abilene-data-center-to-12-gw",
       "date": "2025-03-24"
@@ -639,6 +656,6 @@
       "url": "https://sacra.com/c/crusoe/"
     }
   ],
-  "lastUpdated": "2026-10-02",
-  "profileVersion": 7
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 8
 }

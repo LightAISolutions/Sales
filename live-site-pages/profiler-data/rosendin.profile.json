@@ -197,6 +197,15 @@
    "context": "Rosendin records Project Goliath, a CyrusOne facility in Sterling, Virginia, as a construction speed record: 20 diesel generators, 40 uninterruptible power supplies and 120 distribution devices — 20 MW of electrical infrastructure — installed in 26 weeks.\n\nThe relationship extends beyond that project: industry coverage records Rosendin as the electrical subcontractor on CyrusOne's Project Kincora, also in Sterling, which took an ENR Award of Merit. Both attributions come from the builder's side; CyrusOne itself names no contractor on any project anywhere in its public record.",
    "source": "https://www.enr.com/articles/45505-award-of-merit-manufacturing-cyrusone-project-kincora-data-center",
    "status": "historical"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "customer",
+   "status": "active",
+   "via": "Power EPC",
+   "note": "SB Energy's S-1 lists Rosendin Electric among its principal EPC counterparties for power infrastructure; no specific project is named.",
+   "context": "The S-1 names 'SOLV Energy, Blattner Energy, Dashiell Corporation, CSI Electrical Contractors and Rosendin Electric', each engaged project by project on a turnkey, fixed-scope basis.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
   }
  ],
  "technicalSpecs": [
@@ -358,6 +367,11 @@
  },
  "sources": [
   {
+   "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+   "date": "2026-09-21"
+  },
+  {
    "label": "Rosendin Energy Group leadership PR (Feb 2026)",
    "url": "https://www.rosendin.com/news-updates/rosendin-energy-group-names-new-leadership-to-drive-strategic-growth/",
    "date": "2026-02-19"
@@ -433,6 +447,6 @@
    "date": "2018-10-16"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 8
 }

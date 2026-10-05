@@ -270,6 +270,16 @@
       "note": "Fluence's Rexford 2 customer, Avantus, has been majority-owned by KKR since July 2024.",
       "context": "Fluence will supply a domestic-content Smartstack system and turnkey EPC for Avantus's 200 MW / 800 MWh Rexford 2 project in California (July 2026). Avantus is owned by KKR-managed funds, with EIG. The contract is with Avantus, not KKR, hence 'other'.",
       "source": "https://www.globenewswire.com/news-release/2026/07/13/3326469/0/en/Fluence-to-Provide-U-S-Domestic-Content-Smartstack-System-for-Avantus-800-MWh-Rexford-2-Project-in-Southern-California.html"
+    },
+    {
+      "slug": "sb-energy",
+      "type": "customer",
+      "status": "active",
+      "scale": "1.6 GWh",
+      "via": "Athos Storage (Riverside County, California)",
+      "note": "SB Energy's Athos Storage, 1.6 GWh under construction in California, uses Fluence storage technology; SB Energy procures the system itself.",
+      "context": "SB Energy's project page lists 'Fluence Storage' as the technology and says SB Energy is overseeing development, construction and procurement of the battery system.",
+      "source": "https://sbenergy.com/project/athos-storage/"
     }
   ],
   "policyExposure": [
@@ -749,8 +759,12 @@
     {
       "label": "Fluence — Domestic content page",
       "url": "https://fluenceenergy.com/domestic-content/"
+    },
+    {
+      "label": "SB Energy — Athos Storage project page (Fluence Storage, 1.6 GWh)",
+      "url": "https://sbenergy.com/project/athos-storage/"
     }
   ],
-  "lastUpdated": "2026-09-26",
-  "profileVersion": 10
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 11
 }

@@ -1,4 +1,4 @@
-var VERSION = "v01.99g";
+var VERSION = "v02.00g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -6341,7 +6341,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "profile:fluence",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -6467,13 +6467,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -6539,7 +6539,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (56 edges) · AIDC developers and landlords (26 edges) · Utilities (19 edges) · Hyperscalers and AI labs (12 edges) · Clean firm and nuclear (10 edges) · Neoclouds (7 edges) · Capital (7 edges) · EPC and construction (5 edges) · Grid equipment (4 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
+     "Storage developers and IPPs (58 edges) · AIDC developers and landlords (28 edges) · Utilities (19 edges) · Hyperscalers and AI labs (12 edges) · Clean firm and nuclear (10 edges) · Neoclouds (7 edges) · Capital (7 edges) · EPC and construction (5 edges) · Grid equipment (4 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -9087,6 +9087,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "date": "2026-10-04",
    "note": "regenerated: profile:vertiv 2026-09-05→2026-10-04",
    "changed": []
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:fluence 2026-09-26→2026-10-04",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -13428,7 +13435,7 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "profile:abb",
-    "date": "2026-09-04",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -13572,7 +13579,7 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "profile:rosendin",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -13584,7 +13591,7 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "profile:schneider-electric",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -13608,13 +13615,13 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -13680,7 +13687,7 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (31 edges) · Hyperscalers and AI labs (23 edges) · Storage developers and IPPs (22 edges) · Storage integrators and containers (17 edges) · Utilities (17 edges) · Power conversion and rack-power silicon (16 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (10 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Compute and the rack (3 edges) · EPC and construction (3 edges) · Bridge and on-site generation (2 edges) · Grid equipment (1 edge)",
+     "AIDC developers and landlords (33 edges) · Storage developers and IPPs (24 edges) · Hyperscalers and AI labs (23 edges) · Storage integrators and containers (17 edges) · Utilities (17 edges) · Power conversion and rack-power silicon (16 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (10 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Compute and the rack (3 edges) · EPC and construction (3 edges) · Bridge and on-site generation (2 edges) · Grid equipment (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -16145,6 +16152,13 @@ function clLessonSegmentInHallPower_() {
    "changed": [
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:abb 2026-09-04→2026-10-04; profile:rosendin 2026-09-06→2026-10-04; profile:schneider-electric 2026-09-06→2026-10-04",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -17928,7 +17942,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    {
     "kind": "public",
     "ref": "profile:kiewit",
-    "date": "2026-09-05",
+    "date": "2026-10-04",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -17982,13 +17996,13 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -18054,7 +18068,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (25 edges) · AIDC developers and landlords (22 edges) · Utilities (11 edges) · Storage developers and IPPs (6 edges) · Bridge and on-site generation (3 edges) · Neoclouds (3 edges) · Grid equipment (2 edges) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Capital (1 edge) · Software and optimization (1 edge)",
+     "Hyperscalers and AI labs (25 edges) · AIDC developers and landlords (24 edges) · Utilities (11 edges) · Storage developers and IPPs (8 edges) · Bridge and on-site generation (3 edges) · Neoclouds (3 edges) · Grid equipment (2 edges) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Capital (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -19502,6 +19516,13 @@ function clLessonSegmentCleanFirmAndNuclear_() {
   {
    "date": "2026-10-04",
    "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "where-it-sits"
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:kiewit 2026-09-05→2026-10-04",
    "changed": [
     "where-it-sits"
    ]
@@ -21759,8 +21780,8 @@ function clLessonSegmentEpcAndConstruction_() {
  "title": "EPC and construction",
  "short": "The engineers, EPCs, general contractors and electrical contractors that turn a permit into commissioned megawatts — the data-hall builders, the storage and…",
  "group": "The Value Chain",
- "updated": "2026-10-03",
- "reviewBy": "2027-04-03",
+ "updated": "2026-10-04",
+ "reviewBy": "2027-04-04",
  "provenance": {
   "inputs": [
    {
@@ -21778,7 +21799,7 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "profile:blattner",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -21796,7 +21817,7 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "profile:dpr",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -21826,7 +21847,7 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "profile:kiewit",
-    "date": "2026-09-05",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -21862,7 +21883,7 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "profile:rosendin",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -21874,7 +21895,7 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "profile:solv-energy",
-    "date": "2026-08-30",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -21886,7 +21907,7 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "profile:turner-construction",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -21898,13 +21919,13 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -21970,7 +21991,7 @@ function clLessonSegmentEpcAndConstruction_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (39 edges) · AIDC developers and landlords (26 edges) · Hyperscalers and AI labs (22 edges) · Utilities (20 edges) · Capital (10 edges) · Clean firm and nuclear (8 edges) · Grid equipment (5 edges) · Neoclouds (4 edges) · Compute and the rack (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Software and optimization (1 edge)",
+     "Storage developers and IPPs (51 edges) · AIDC developers and landlords (38 edges) · Hyperscalers and AI labs (22 edges) · Utilities (20 edges) · Capital (10 edges) · Clean firm and nuclear (8 edges) · Grid equipment (5 edges) · Neoclouds (4 edges) · Compute and the rack (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -22940,6 +22961,14 @@ function clLessonSegmentEpcAndConstruction_() {
      "Solar EPC on Recurrent-developed projects"
     ],
     [
+     "**Blattner**",
+     "SB Energy",
+     "customer",
+     "active",
+     "—",
+     "EPC for the Orion Solar Belt (Milam County, Texas)"
+    ],
+    [
      "**Burns & McDonnell**",
      "Vistra",
      "customer",
@@ -22962,6 +22991,14 @@ function clLessonSegmentEpcAndConstruction_() {
      "historical",
      "320 MW / 1,280 MWh (Honeycomb Portfolio)",
      "Electrical EPC"
+    ],
+    [
+     "**DPR Construction**",
+     "SB Energy",
+     "customer",
+     "active",
+     "—",
+     "Milam County Data Center (with Sundt)"
     ],
     [
      "**EMCOR**",
@@ -23034,6 +23071,14 @@ function clLessonSegmentEpcAndConstruction_() {
      "active",
      "USD 1.7bn combined with Kiewit Energy Group",
      "Grain Belt Express Phase 1 HVDC construction (Infrastructure Solutions Group)"
+    ],
+    [
+     "**Kiewit**",
+     "SB Energy",
+     "customer",
+     "active",
+     "—",
+     "Data-centre EPC"
     ],
     [
      "**Lightsource**",
@@ -23162,33 +23207,9 @@ function clLessonSegmentEpcAndConstruction_() {
      "active",
      "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
      "Arizona Public Service storage procurement"
-    ],
-    [
-     "**Rosendin**",
-     "Arevon",
-     "customer",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Rosendin**",
-     "Clearway Energy",
-     "customer",
-     "historical",
-     "320 MW / 1,280 MWh (Honeycomb Portfolio)",
-     "Electrical EPC on a four-project battery portfolio"
-    ],
-    [
-     "**Rosendin**",
-     "Recurrent Energy",
-     "customer",
-     "historical",
-     "Tranquility 72 MWac / 288 MWh at $12.5m over 15.8 months; Mustang 75 MW battery retrofit",
-     "Electrical EPC on battery retrofits to operating solar plants"
     ]
    ],
-   "note": "Curated edges among members: 75 · to the neighbouring segments: 49 (the first 40 shown, by company) · derived-only mentions (no curated typing): 13 among members, 7 to the neighbours."
+   "note": "Curated edges among members: 75 · to the neighbouring segments: 61 (the first 40 shown, by company) · derived-only mentions (no curated typing): 13 among members, 8 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -23574,6 +23595,14 @@ function clLessonSegmentEpcAndConstruction_() {
     "where-it-sits",
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:blattner 2026-09-06→2026-10-04; profile:dpr 2026-09-06→2026-10-04; profile:kiewit 2026-09-05→2026-10-04; profile:rosendin 2026-09-06→2026-10-04; profile:solv-energy 2026-08-30→2026-10-04; profile:turner-construction 2026-09-06→2026-10-04",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -23624,7 +23653,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "profile:berkshire-hathaway-energy",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -23809,6 +23838,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    },
    {
     "kind": "public",
+    "ref": "profile:sb-energy",
+    "date": "2026-10-04",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:spearmint-energy",
     "date": "2026-09-05",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
@@ -23816,7 +23851,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "profile:stem",
-    "date": "2026-09-09",
+    "date": "2026-10-04",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -23852,20 +23887,20 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "43",
+   "k": "44",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -23875,12 +23910,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "8",
+   "k": "9",
    "v": "challengers",
    "sub": "contesting that set; 16 adjacent"
   },
   {
-   "k": "96",
+   "k": "100",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -23924,12 +23959,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (63 edges) · AIDC developers and landlords (27 edges) · Utilities (15 edges) · Neoclouds (7 edges) · Clean firm and nuclear (5 edges) · Capital (4 edges) · Cells and chemistry (2 edges) · Storage integrators and containers (2 edges) · Power conversion and rack-power silicon (2 edges) · Software and optimization (2 edges)",
+     "Hyperscalers and AI labs (67 edges) · AIDC developers and landlords (27 edges) · Utilities (15 edges) · Neoclouds (7 edges) · Clean firm and nuclear (5 edges) · Capital (4 edges) · Cells and chemistry (2 edges) · Storage integrators and containers (2 edges) · Power conversion and rack-power silicon (2 edges) · Software and optimization (2 edges)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (58 edges) · EPC and construction (38 edges) · Cells and chemistry (37 edges) · Power conversion and rack-power silicon (31 edges) · Software and optimization (27 edges) · Grid equipment (24 edges) · In-hall power (22 edges) · Bridge and on-site generation (16 edges) · Assurance (13 edges) · Utilities (9 edges) · Clean firm and nuclear (5 edges) · Insurance and risk transfer (3 edges)",
+     "Storage integrators and containers (60 edges) · EPC and construction (50 edges) · Cells and chemistry (37 edges) · Power conversion and rack-power silicon (31 edges) · Software and optimization (29 edges) · Grid equipment (24 edges) · In-hall power (24 edges) · Bridge and on-site generation (16 edges) · Assurance (13 edges) · Utilities (9 edges) · Clean firm and nuclear (7 edges) · Insurance and risk transfer (3 edges)",
      "who this segment buys from"
     ]
    ]
@@ -24134,6 +24169,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "ecosystemRole: the captive-channel developer inside a manufacturer — 84.1 GWh pipeline, 85 % early-stage, against ~1.5 GWh of net operating storage"
     ],
     [
+     "**SB Energy**",
+     "sb-energy",
+     "challenger",
+     "productsAndServices › Solar and storage power business: the source of 'substantially all' revenue today — ~2.2 GW operating at 30 June 2026, mainly ERCOT solar, with its first batteries under construction (Athos Storage 1.6 GWh with Fluence, Pelicans Jaw 954 MWh, Libra 2,800 MWh); a mid-tier IPP contesting the set, not an adjacent line"
+    ],
+    [
      "**Spearmint Energy**",
      "spearmint-energy",
      "challenger",
@@ -24317,6 +24358,16 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "as reported",
      "—",
      "83.5",
+     "—",
+     "—"
+    ],
+    [
+     "**SB Energy**",
+     "FY2025 · 2025-12-31",
+     "213.5",
+     "as reported",
+     "—",
+     "—",
      "—",
      "—"
     ],
@@ -24580,6 +24631,14 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "active",
      "Spring Valley 152 MW wind",
      "NV Energy PPA"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**SB Energy**",
+     "supplier",
+     "active",
+     "700 MWac solar + 700 MW / 2,800 MWh storage; 25-year PPA",
+     "NV Energy — Libra solar-plus-storage PPA"
     ],
     [
      "**Clearway Energy**",
@@ -24998,6 +25057,22 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "Arizona Public Service storage procurement"
     ],
     [
+     "**SB Energy**",
+     "**Berkshire Hathaway Energy**",
+     "customer",
+     "active",
+     "700 MWac solar + 700 MW / 2,800 MWh storage; 25-year PPA",
+     "NV Energy — Libra solar-plus-storage PPA"
+    ],
+    [
+     "**SB Energy**",
+     "**Stem**",
+     "partner",
+     "announced",
+     "10 GWh over five years (in principle)",
+     "Energy-management software (Athena) for storage"
+    ],
+    [
      "**Salt River Project**",
      "**Aypa Power**",
      "supplier",
@@ -25076,6 +25151,14 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "historical",
      "—",
      "—"
+    ],
+    [
+     "**Stem**",
+     "**SB Energy**",
+     "partner",
+     "announced",
+     "10 GWh over five years (in principle)",
+     "Energy-management software for storage"
     ],
     [
      "**Strata Clean Energy**",
@@ -25302,6 +25385,14 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "Solar EPC on Recurrent-developed projects"
     ],
     [
+     "**Blattner**",
+     "**SB Energy**",
+     "customer",
+     "active",
+     "—",
+     "EPC for the Orion Solar Belt (Milam County, Texas)"
+    ],
+    [
      "**Burns & McDonnell**",
      "**Vistra**",
      "customer",
@@ -25380,6 +25471,14 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "active",
      "200 MW campus",
      "Chisholm Grid BESS"
+    ],
+    [
+     "**DPR Construction**",
+     "**SB Energy**",
+     "customer",
+     "active",
+     "—",
+     "Milam County Data Center (with Sundt)"
     ],
     [
      "**Duke Energy**",
@@ -25508,25 +25607,9 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "historical",
      "100 MW wind PPA (Wake Wind, ERCOT)",
      "Power purchase agreement"
-    ],
-    [
-     "**Invenergy**",
-     "Kiewit",
-     "supplier",
-     "active",
-     "USD 1.7bn combined with Quanta Services",
-     "Grain Belt Express Phase 1 HVDC engineering, procurement and construction"
-    ],
-    [
-     "**Invenergy**",
-     "Quanta Services",
-     "supplier",
-     "active",
-     "USD 1.7bn combined with Kiewit Energy Group",
-     "Grain Belt Express Phase 1 HVDC construction (Infrastructure Solutions Group)"
     ]
    ],
-   "note": "Curated edges among members: 96 · to the neighbouring segments: 81 (the first 40 shown, by company) · derived-only mentions (no curated typing): 40 among members, 13 to the neighbours."
+   "note": "Curated edges among members: 100 · to the neighbouring segments: 93 (the first 40 shown, by company) · derived-only mentions (no curated typing): 40 among members, 18 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -25547,68 +25630,68 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     {
      "x": 2,
      "lane": "record",
+     "label": "2026-09-26 — IFR reports the IPO roadshow on hold after investors indicated interest below a USD 50bn valuation",
+     "sub": "SB Energy · financial"
+    },
+    {
+     "x": 3,
+     "lane": "record",
      "label": "2026-09-25 — Joyce Mullen, former Insight Enterprises CEO, joins the board effective September 28 (audit; operations and nuclear oversight)",
      "sub": "Duke Energy · leadership"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-09-25 — Wayne County executive Warren Evans vetoes Van Buren Township's $125M local tax break for the Google data center (Detroit News, Crain's — headlines only, articles paywalled)",
      "sub": "DTE Energy · regulatory"
     },
     {
-     "x": 4,
+     "x": 5,
      "lane": "record",
      "label": "2026-09-24 — Amperical's ERCOT leaderboard (public settlements, 1 January–24 July 2026) ranks Endurance Park 11th of 312 at USD 3.41/kW-month against a USD 1.55 median and Cross Trails 38th; its scheduling-entity table lists Gridmatic Equisetum LLC with '2 sites, 110 MW'",
      "sub": "Gridmatic · market"
     },
     {
-     "x": 5,
+     "x": 6,
      "lane": "record",
      "label": "2026-09-24 — DOE selects Duke for a $50M SPARK award for advanced conductors and dynamic line ratings in Greenville and Spartanburg, SC and Henderson and Polk, NC ($201M total)",
      "sub": "Duke Energy · policy"
     },
     {
-     "x": 6,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-24 — DTE Electric files its 2026 Integrated Resource Plan (Case U-22168): 15 GW of renewables, 4.5 GW of storage, certificates of necessity for ~1,400 MW (Livingston County, 2031, $3.9B) and ~700 MW (Monroe County, 2032, $2.5B) combined cycles, Fermi 2 +177 MW, coal exit 2032",
      "sub": "DTE Energy · regulatory"
     },
     {
-     "x": 7,
+     "x": 8,
      "lane": "record",
      "label": "2026-09-24 — Abel calls AI data-center demand a 'significant opportunity' for BHE while repeating that energy and site preparation are the constraint and that hyperscalers will be served 'if there was no impact to the rates'",
      "sub": "Berkshire Hathaway Energy · market"
     },
     {
-     "x": 8,
+     "x": 9,
      "lane": "record",
      "label": "2026-09-22 — Ozaukee County judge dismisses with prejudice the challenge to Port Washington's tax-increment district for the Vantage campus",
      "sub": "WEC Energy Group · legal"
     },
     {
-     "x": 9,
+     "x": 10,
+     "lane": "record",
+     "label": "2026-09-22 — AEP Ohio announces the Hanging Rock–Baku 765 kV line (about 33 new miles), needed to serve the PORTS campus; 'the customer is committed to paying' for the transmission",
+     "sub": "SB Energy · regulatory"
+    },
+    {
+     "x": 11,
      "lane": "record",
      "label": "2026-09-22 — Siting committee hears Marigold CEC Cases 267 and 268 in Casa Grande (September 21–25); residents and the Sierra Club raise air-quality and cumulative-impact objections; SRP says the plant will use long-term storage credits rather than new groundwater",
      "sub": "Salt River Project · regulatory"
     },
     {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-09-21 — Rowan publishes a 'Community Guarantee' and commits USD 38m to Temple, Texas water infrastructure",
-     "sub": "Quinbrook · corporate"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-09-19 — NCUC denies the certificate for the 255 MW Smith Energy Complex combustion turbine ($584M, Richmond County), 3–1, finding about 70 percent of the modeled load growth was data centers 'never tested in contested proceedings'; Duke may refile after the resource-plan order and must show compliance with the Ratepayer Protection Pledge",
-     "sub": "Duke Energy · regulatory"
-    },
-    {
      "x": 12,
      "lane": "record",
-     "label": "2026-09-18 — ATC refiles the Port Washington transmission project at $2.48–2.72B, including about $1.1B of Oracle-funded stabilization at the Decker substation, after the PSCW revoked the completeness of its $1.39–1.67B application",
-     "sub": "WEC Energy Group · project"
+     "label": "2026-09-21 — S-1 Amendment No. 2: backlog about USD 439bn, backlog-associated capex about USD 178bn, a USD 3.0bn Citibank-led credit facility at the IPO; price range still blank",
+     "sub": "SB Energy · financial"
     }
    ]
   },
@@ -25698,6 +25781,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "Aypa Power"
     ],
     [
+     "CFIUS National Security Agreement",
+     "in-effect",
+     "2019-12",
+     "SB Energy"
+    ],
+    [
      "Chapter 2026-65, Laws of Florida (SB 484) — s. 366.043 large-load tariffs",
      "in-effect",
      "2026-07-01",
@@ -25708,6 +25797,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "in-effect",
      "2026-01-15",
      "Aypa Power"
+    ],
+    [
+     "DOE emergency order on foreign bulk-power equipment",
+     "in-effect",
+     "2026-08-26",
+     "SB Energy"
     ],
     [
      "DOE Loan Programs Office",
@@ -25839,7 +25934,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "FEOC restrictions",
      "in-effect",
      "—",
-     "Apex Clean Energy, Arevon, Eolian, Florida Power & Light, Hunt Energy Network, Jupiter, Key Capture, Lightsource, NextEra, ON.energy, Plus Power, ProEnergy, Salt River Project, Samsung C&T, Strata Clean Energy, Terra-Gen, esVolta"
+     "Apex Clean Energy, Arevon, Eolian, Florida Power & Light, Hunt Energy Network, Jupiter, Key Capture, Lightsource, NextEra, ON.energy, Plus Power, ProEnergy, SB Energy, Salt River Project, Samsung C&T, Strata Clean Energy, Terra-Gen, esVolta"
     ],
     [
      "FEOC restrictions",
@@ -26340,6 +26435,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "NRG Energy"
     ],
     [
+     "Texas large-load rules (SB 6) and ERCOT Batch Zero",
+     "in-effect",
+     "—",
+     "SB Energy"
+    ],
+    [
      "Texas retail electric provider certification (PUCT Chapter 25)",
      "in-effect",
      "2022-03-16",
@@ -26457,7 +26558,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "ps": [
     "**Mechanism lessons for this segment:** *Eleven Buyer Classes* · *From Site Control to Commercial Operation* · *Who Carries Which Risk* · *One Dollar, Four Names*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-storage-developers-and-ipps-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, Spearmint Energy, Strata Clean Energy, Berkshire Hathaway Energy, Constellation Energy, DTE Energy, Duke Energy, Florida Power & Light, Gridmatic, NiSource, ON.energy, Pattern Energy, PPL, ProEnergy, Quinbrook, Salt River Project, Samsung C&T, Stem, WEC Energy Group — each member's dossier carries one in Profiler."
+    "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, SB Energy, Spearmint Energy, Strata Clean Energy, Berkshire Hathaway Energy, Constellation Energy, DTE Energy, Duke Energy, Florida Power & Light, Gridmatic, NiSource, ON.energy, Pattern Energy, PPL, ProEnergy, Quinbrook, Salt River Project, Samsung C&T, Stem, WEC Energy Group — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -26604,6 +26705,19 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "changed": [
     "where-it-sits"
    ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:berkshire-hathaway-energy 2026-09-26→2026-10-04; profile:sb-energy added@2026-10-04; profile:stem 2026-09-09→2026-10-04",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -26672,7 +26786,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:crusoe",
-    "date": "2026-10-02",
+    "date": "2026-10-04",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26726,7 +26840,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:g42",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26762,13 +26876,13 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:nscale",
-    "date": "2026-10-02",
+    "date": "2026-10-04",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:powerhouse-data-centers",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26797,8 +26911,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    },
    {
     "kind": "public",
+    "ref": "profile:sb-energy",
+    "date": "2026-10-04",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:stack-infrastructure",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26810,7 +26930,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:switch",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26840,7 +26960,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:vantage",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26852,20 +26972,20 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "38",
+   "k": "39",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -26875,7 +26995,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "18",
+   "k": "19",
    "v": "challengers",
    "sub": "contesting that set; 11 adjacent"
   },
@@ -26924,12 +27044,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (44 edges) · Neoclouds (17 edges) · Utilities (5 edges) · Storage developers and IPPs (4 edges) · Clean firm and nuclear (2 edges) · Compute and the rack (2 edges) · Power conversion and rack-power silicon (1 edge)",
+     "Hyperscalers and AI labs (48 edges) · Neoclouds (17 edges) · Utilities (7 edges) · Storage developers and IPPs (6 edges) · Clean firm and nuclear (2 edges) · Compute and the rack (2 edges) · Power conversion and rack-power silicon (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Utilities (60 edges) · Power conversion and rack-power silicon (35 edges) · In-hall power (31 edges) · Storage developers and IPPs (27 edges) · Storage integrators and containers (26 edges) · EPC and construction (26 edges) · Grid equipment (25 edges) · Bridge and on-site generation (25 edges) · Clean firm and nuclear (24 edges) · Software and optimization (20 edges) · Cooling (18 edges) · Compute and the rack (18 edges) · Cells and chemistry (8 edges) · Assurance (2 edges) · Insurance and risk transfer (1 edge)",
+     "Utilities (60 edges) · EPC and construction (38 edges) · Power conversion and rack-power silicon (35 edges) · In-hall power (33 edges) · Storage integrators and containers (28 edges) · Storage developers and IPPs (27 edges) · Clean firm and nuclear (26 edges) · Grid equipment (25 edges) · Bridge and on-site generation (25 edges) · Software and optimization (22 edges) · Cooling (18 edges) · Compute and the rack (18 edges) · Cells and chemistry (8 edges) · Assurance (2 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -27120,6 +27240,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "prime-data-centers",
      "challenger",
      "ecosystemRole: the mid-tier build-to-suit developer — ~151 MW operating, CoreWeave's Chicago and Lambda's Los Angeles landlord, recapitalised five times"
+    ],
+    [
+     "**SB Energy**",
+     "sb-energy",
+     "challenger",
+     "ecosystemRole: a power developer converting its base into AIDC landlord — ~8.8 GW-IT leased to OpenAI at Milam County (~753 MW-IT) and PORTS-Pike (~8.0 GW-IT) under triple-net leases, none yet in operation; scope runs 'to the rack', buying substation, switchyard and electrical packages itself"
     ],
     [
      "**TECfusions**",
@@ -27344,6 +27470,16 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "**IREN**",
      "FY2026 · 2026-06-30",
      "707",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**SB Energy**",
+     "FY2025 · 2025-12-31",
+     "213.5",
      "as reported",
      "—",
      "—",
@@ -28461,6 +28597,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     ],
     [
      "**Berkshire Hathaway Energy**",
+     "**SB Energy**",
+     "supplier",
+     "active",
+     "700 MWac solar + 700 MW / 2,800 MWh storage; 25-year PPA",
+     "NV Energy — Libra solar-plus-storage PPA"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
      "**Switch**",
      "customer",
      "active",
@@ -28626,17 +28770,9 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "active",
      "—",
      "Azure ExpressRoute"
-    ],
-    [
-     "**Digital Realty**",
-     "Oracle",
-     "customer",
-     "active",
-     "9.0% of annualised recurring revenue; 42 locations",
-     "—"
     ]
    ],
-   "note": "Curated edges among members: 111 · to the neighbouring segments: 134 (the first 40 shown, by company) · derived-only mentions (no curated typing): 30 among members, 54 to the neighbours."
+   "note": "Curated edges among members: 111 · to the neighbouring segments: 142 (the first 40 shown, by company) · derived-only mentions (no curated typing): 34 among members, 54 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -28705,20 +28841,20 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     {
      "x": 10,
      "lane": "record",
-     "label": "2026-09-25 — TechCrunch and SiliconANGLE: USD 3.36 billion of convertible financing led by Third Point, with Apollo, Citadel and more than a dozen institutions, 'USD 2.36 billion available to the company immediately' and USD 1 billion from NVIDIA 'in mid-November'; the S-1 records the 15 September subscription agreement at 'a minimum of $3.1 billion', converting automatically at the IPO and maturing 15 June 2028",
-     "sub": "Nscale · financial"
+     "label": "2026-09-26 — IFR reports the IPO roadshow on hold after investors indicated interest below a USD 50bn valuation",
+     "sub": "SB Energy · financial"
     },
     {
      "x": 11,
      "lane": "record",
-     "label": "2026-09-25 — Cipher 8-K: the Barber Lake lease is amended — 'individual data halls expected to be delivered from the fourth quarter of 2026 through the first quarter of 2027' instead of September 2026, first rent in Q4 2026; Cipher bears 'the first $359.3 million of costs in excess of the initial budgeted amount', the tenant reimburses 50% above that over twenty years; 'a binding commitment with a leading AI lab' adds a second ten-year term, taking contracted revenue to 'over $9 billion'",
-     "sub": "Fluidstack · project"
+     "label": "2026-09-25 — TechCrunch and SiliconANGLE: USD 3.36 billion of convertible financing led by Third Point, with Apollo, Citadel and more than a dozen institutions, 'USD 2.36 billion available to the company immediately' and USD 1 billion from NVIDIA 'in mid-November'; the S-1 records the 15 September subscription agreement at 'a minimum of $3.1 billion', converting automatically at the IPO and maturing 15 June 2028",
+     "sub": "Nscale · financial"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-09-25 — TechCrunch: the USD 1.25 billion order for 29 Boom Supersonic Superpower turbines (first deliveries 2027) is off — Boom's CEO: 'Crusoe and Boom are no longer launching our Superpower turbine together'; Crusoe: energy plans 'haven't changed', it still intends turbines 'just not Boom's'; Boom says it will deliver 'about 250MW of Superpowers next year to other sites'",
-     "sub": "Crusoe · procurement"
+     "label": "2026-09-25 — Cipher 8-K: the Barber Lake lease is amended — 'individual data halls expected to be delivered from the fourth quarter of 2026 through the first quarter of 2027' instead of September 2026, first rent in Q4 2026; Cipher bears 'the first $359.3 million of costs in excess of the initial budgeted amount', the tenant reimburses 50% above that over twenty years; 'a binding commitment with a leading AI lab' adds a second ten-year term, taking contracted revenue to 'over $9 billion'",
+     "sub": "Fluidstack · project"
     }
    ]
   },
@@ -28772,6 +28908,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "Prime Data Centers"
     ],
     [
+     "CFIUS National Security Agreement",
+     "in-effect",
+     "2019-12",
+     "SB Energy"
+    ],
+    [
      "Chapter 312 abatement",
      "in-effect",
      "2018-01",
@@ -28812,6 +28954,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "in-effect",
      "—",
      "Galaxy Digital"
+    ],
+    [
+     "DOE emergency order on foreign bulk-power equipment",
+     "in-effect",
+     "2026-08-26",
+     "SB Energy"
     ],
     [
      "Dual US and Canadian reporting obligations",
@@ -28925,7 +29073,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "FEOC restrictions",
      "in-effect",
      "—",
-     "Apex Clean Energy, Eolian, Samsung C&T, Strata Clean Energy"
+     "Apex Clean Energy, Eolian, SB Energy, Samsung C&T, Strata Clean Energy"
     ],
     [
      "FEOC restrictions",
@@ -29378,6 +29526,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "Tract"
     ],
     [
+     "Texas large-load rules (SB 6) and ERCOT Batch Zero",
+     "in-effect",
+     "—",
+     "SB Energy"
+    ],
+    [
      "Texas SB 6 (large-load interconnection and co-location, 2025)",
      "in-effect",
      "2025-06-21",
@@ -29561,7 +29715,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The Fence Line: Interconnection and the Substation* · *Bridge Power: Building the Plant Before the Grid Arrives* · *Reading the Named Projects* · *N+1, 2N, and Six Nines*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-aidc-developers-and-landlords-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** Aligned Data Centers, Compass Datacenters, CyrusOne, Digital Realty, Equinix, QTS Data Centers, STACK Infrastructure, Switch, Vantage Data Centers, 5C Group, Applied Digital, Chindata, Cipher Digital, Core Scientific, Crusoe, EdgeCore, Fermi America, G42, Galaxy Digital, Hut 8, IREN, PowerHouse Data Centers, Prime Data Centers, TECfusions, TeraWulf, Tract, WhiteFiber, Apex Clean Energy, Eolian, Firmus, Fluidstack, HUMAIN, Intersect, Nscale, Quinbrook, Samsung C&T, Strata Clean Energy, Talen Energy — each member's dossier carries one in Profiler."
+    "**Study guides:** Aligned Data Centers, Compass Datacenters, CyrusOne, Digital Realty, Equinix, QTS Data Centers, STACK Infrastructure, Switch, Vantage Data Centers, 5C Group, Applied Digital, Chindata, Cipher Digital, Core Scientific, Crusoe, EdgeCore, Fermi America, G42, Galaxy Digital, Hut 8, IREN, PowerHouse Data Centers, Prime Data Centers, SB Energy, TECfusions, TeraWulf, Tract, WhiteFiber, Apex Clean Energy, Eolian, Firmus, Fluidstack, HUMAIN, Intersect, Nscale, Quinbrook, Samsung C&T, Strata Clean Energy, Talen Energy — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -29706,6 +29860,19 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    "changed": [
     "where-it-sits"
    ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:crusoe 2026-10-02→2026-10-04; profile:g42 2026-09-26→2026-10-04; profile:nscale 2026-10-02→2026-10-04; profile:powerhouse-data-centers 2026-09-26→2026-10-04; profile:sb-energy added@2026-10-04; profile:stack-infrastructure 2026-09-26→2026-10-04; profile:switch 2026-09-06→2026-10-04; profile:vantage 2026-09-06→2026-10-04",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -29750,13 +29917,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    {
     "kind": "public",
     "ref": "profile:google",
-    "date": "2026-09-07",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:meta",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -29768,13 +29935,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    {
     "kind": "public",
     "ref": "profile:openai",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:oracle",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -29786,13 +29953,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -29863,7 +30030,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (63 edges) · Utilities (55 edges) · AIDC developers and landlords (44 edges) · Neoclouds (36 edges) · Clean firm and nuclear (25 edges) · Power conversion and rack-power silicon (23 edges) · In-hall power (23 edges) · EPC and construction (22 edges) · Bridge and on-site generation (20 edges) · Compute and the rack (19 edges) · Grid equipment (16 edges) · Software and optimization (14 edges) · Storage integrators and containers (12 edges) · Cells and chemistry (10 edges) · Cooling (10 edges) · Capital (10 edges) · Assurance (4 edges) · Insurance and risk transfer (1 edge)",
+     "Storage developers and IPPs (67 edges) · Utilities (55 edges) · AIDC developers and landlords (48 edges) · Neoclouds (36 edges) · Clean firm and nuclear (25 edges) · Power conversion and rack-power silicon (23 edges) · In-hall power (23 edges) · EPC and construction (22 edges) · Bridge and on-site generation (20 edges) · Compute and the rack (19 edges) · Grid equipment (16 edges) · Software and optimization (14 edges) · Storage integrators and containers (12 edges) · Cells and chemistry (10 edges) · Cooling (10 edges) · Capital (10 edges) · Assurance (4 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -30536,7 +30703,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
      "Barber Lake recognition agreement"
     ]
    ],
-   "note": "Curated edges among members: 19 · to the neighbouring segments: 97 (the first 40 shown, by company) · derived-only mentions (no curated typing): 10 among members, 41 to the neighbours."
+   "note": "Curated edges among members: 19 · to the neighbouring segments: 101 (the first 40 shown, by company) · derived-only mentions (no curated typing): 10 among members, 41 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -30894,6 +31061,14 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    "changed": [
     "where-it-sits"
    ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:google 2026-09-07→2026-10-04; profile:meta 2026-09-26→2026-10-04; profile:openai 2026-09-26→2026-10-04; profile:oracle 2026-09-26→2026-10-04",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -30920,13 +31095,13 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "profile:coreweave",
-    "date": "2026-10-02",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:crusoe",
-    "date": "2026-10-02",
+    "date": "2026-10-04",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -30944,7 +31119,7 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "profile:g42",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -30974,7 +31149,7 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "profile:nscale",
-    "date": "2026-10-02",
+    "date": "2026-10-04",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -30986,13 +31161,13 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -31063,7 +31238,7 @@ function clLessonSegmentNeoclouds_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (24 edges) · Compute and the rack (18 edges) · Power conversion and rack-power silicon (15 edges) · Bridge and on-site generation (11 edges) · In-hall power (10 edges) · Storage integrators and containers (7 edges) · Storage developers and IPPs (7 edges) · Cooling (5 edges) · Utilities (5 edges) · Capital (5 edges) · Grid equipment (4 edges) · EPC and construction (4 edges) · Clean firm and nuclear (3 edges) · Software and optimization (3 edges) · Cells and chemistry (2 edges)",
+     "AIDC developers and landlords (24 edges) · Compute and the rack (18 edges) · Power conversion and rack-power silicon (15 edges) · Bridge and on-site generation (11 edges) · In-hall power (10 edges) · Storage integrators and containers (7 edges) · Storage developers and IPPs (7 edges) · Capital (7 edges) · Cooling (5 edges) · Utilities (5 edges) · Grid equipment (4 edges) · EPC and construction (4 edges) · Clean firm and nuclear (3 edges) · Software and optimization (3 edges) · Cells and chemistry (2 edges)",
      "who this segment buys from"
     ]
    ]
@@ -32212,6 +32387,13 @@ function clLessonSegmentNeoclouds_() {
    "date": "2026-10-04",
    "note": "regenerated: profile:firmus 2026-09-26→2026-10-04; profile:fluidstack 2026-10-02→2026-10-04; profile:iren 2026-10-02→2026-10-04",
    "changed": []
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:coreweave 2026-10-02→2026-10-04; profile:crusoe 2026-10-02→2026-10-04; profile:g42 2026-09-26→2026-10-04; profile:nscale 2026-10-02→2026-10-04",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -32232,13 +32414,13 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "profile:aep",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:berkshire-hathaway-energy",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -32382,13 +32564,13 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -32459,7 +32641,7 @@ function clLessonSegmentUtilities_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (26 edges) · Assurance (24 edges) · Cells and chemistry (22 edges) · Grid equipment (21 edges) · EPC and construction (20 edges) · Bridge and on-site generation (19 edges) · In-hall power (17 edges) · Clean firm and nuclear (17 edges) · Storage developers and IPPs (17 edges) · Power conversion and rack-power silicon (13 edges) · Software and optimization (8 edges) · AIDC developers and landlords (5 edges) · Cooling (1 edge) · Capital (1 edge) · Insurance and risk transfer (1 edge)",
+     "Storage integrators and containers (26 edges) · Assurance (24 edges) · Cells and chemistry (22 edges) · Grid equipment (21 edges) · EPC and construction (20 edges) · Bridge and on-site generation (19 edges) · Storage developers and IPPs (19 edges) · In-hall power (17 edges) · Clean firm and nuclear (17 edges) · Power conversion and rack-power silicon (13 edges) · Software and optimization (8 edges) · AIDC developers and landlords (7 edges) · Cooling (1 edge) · Capital (1 edge) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -33622,7 +33804,7 @@ function clLessonSegmentUtilities_() {
      "Duke Energy Carolinas electric service at NC-1"
     ]
    ],
-   "note": "Curated edges among members: 59 · to the neighbouring segments: 30 · derived-only mentions (no curated typing): 16 among members, 9 to the neighbours."
+   "note": "Curated edges among members: 59 · to the neighbouring segments: 30 · derived-only mentions (no curated typing): 16 among members, 10 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -34561,6 +34743,14 @@ function clLessonSegmentUtilities_() {
    "changed": [
     "where-it-sits"
    ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:aep 2026-09-26→2026-10-04; profile:berkshire-hathaway-energy 2026-09-26→2026-10-04",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -34574,20 +34764,26 @@ function clLessonSegmentCapital_() {
  "title": "Capital",
  "short": "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a…",
  "group": "The Value Chain",
- "updated": "2026-10-03",
+ "updated": "2026-10-04",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
    {
     "kind": "public",
     "ref": "profile:blackrock",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:blackstone",
     "date": "2026-09-26",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:blue-owl",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -34599,7 +34795,7 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "profile:cpp-investments",
-    "date": "2026-10-03",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -34641,7 +34837,7 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "profile:mgx",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -34652,32 +34848,38 @@ function clLessonSegmentCapital_() {
    },
    {
     "kind": "public",
+    "ref": "profile:softbank",
+    "date": "2026-10-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:vantage",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "13",
+   "k": "15",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
   {
-   "k": "7",
+   "k": "9",
    "v": "incumbents",
    "sub": "the established leading set, per the dossiers"
   },
@@ -34687,7 +34889,7 @@ function clLessonSegmentCapital_() {
    "sub": "contesting that set; 3 adjacent"
   },
   {
-   "k": "43",
+   "k": "51",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -34731,7 +34933,7 @@ function clLessonSegmentCapital_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (10 edges) · Neoclouds (5 edges) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
+     "Hyperscalers and AI labs (10 edges) · Neoclouds (7 edges) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -34799,6 +35001,12 @@ function clLessonSegmentCapital_() {
      "ecosystemRole: the ecosystem's largest single landlord-by-proxy (QTS) and one of its largest lenders; the largest alternative asset manager by AUM"
     ],
     [
+     "**Blue Owl**",
+     "blue-owl",
+     "incumbent",
+     "ecosystemRole: the capital segment's most AI-campus-concentrated investor — ~9 GW of data-centre capacity through fund-owned STACK, 80% of Meta's ~USD 27bn Hyperion campus, co-sponsor of the USD 15bn Abilene joint venture, and lead lender on GPU financings (IREN USD 2.4bn)"
+    ],
+    [
      "**Brookfield**",
      "brookfield",
      "incumbent",
@@ -34827,6 +35035,12 @@ function clLessonSegmentCapital_() {
      "mgx",
      "incumbent",
      "ecosystemRole: the sovereign capital behind the largest AI build-outs — Stargate initial equity funder, AIP co-founder, an owner of Aligned and Vantage"
+    ],
+    [
+     "**SoftBank**",
+     "softbank",
+     "incumbent",
+     "ecosystemRole: three counterparties under one name — Stargate's initial equity funder with 'financial responsibility', ~13% of OpenAI after USD 64.6bn, owner of SB Energy and, since 30 September 2026, of DigitalBridge (USD 40.2bn fee-earning equity); a controlling owner of the landlords and storage platforms the segment defines"
     ],
     [
      "**Energy Capital Partners**",
@@ -34904,6 +35118,16 @@ function clLessonSegmentCapital_() {
      "—"
     ],
     [
+     "**Blue Owl**",
+     "FY2025 · 2025-12-31",
+     "2,870.2",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**Brookfield**",
      "FY2025 · 2025-12-31",
      "4,817",
@@ -34951,7 +35175,7 @@ function clLessonSegmentCapital_() {
      "—",
      "—",
      "—",
-     "CPP Investments, Macquarie, MGX, Energy Capital Partners, Excelsior Energy Capital, Quinbrook, Vantage Data Centers"
+     "CPP Investments, Macquarie, MGX, SoftBank, Energy Capital Partners, Excelsior Energy Capital, Quinbrook, Vantage Data Centers"
     ]
    ]
   },
@@ -34977,6 +35201,14 @@ function clLessonSegmentCapital_() {
      "active",
      "—",
      "—"
+    ],
+    [
+     "**BlackRock**",
+     "**Blue Owl**",
+     "other",
+     "announced",
+     "—",
+     "AI Infrastructure Partnership (with IFM Investors), reported STACK Asia-Pacific talks"
     ],
     [
      "**BlackRock**",
@@ -35059,6 +35291,22 @@ function clLessonSegmentCapital_() {
      "—"
     ],
     [
+     "**Blue Owl**",
+     "**BlackRock**",
+     "other",
+     "announced",
+     "—",
+     "AI Infrastructure Partnership (with IFM Investors)"
+    ],
+    [
+     "**Blue Owl**",
+     "**CPP Investments**",
+     "partner",
+     "active",
+     "—",
+     "Abilene campus, phase 2"
+    ],
+    [
      "**Brookfield**",
      "**BlackRock**",
      "competitor",
@@ -35113,6 +35361,14 @@ function clLessonSegmentCapital_() {
      "active",
      "AirTrunk 12% beside Blackstone (EV >A$24bn, completed 23 December 2024); Tallgrass (~USD 843m, 2024); credit SMA USD 1.5bn",
      "—"
+    ],
+    [
+     "**CPP Investments**",
+     "**Blue Owl**",
+     "partner",
+     "active",
+     "—",
+     "Abilene campus, phase 2"
     ],
     [
      "**CPP Investments**",
@@ -35244,6 +35500,14 @@ function clLessonSegmentCapital_() {
     ],
     [
      "**MGX**",
+     "**SoftBank**",
+     "partner",
+     "active",
+     "—",
+     "Stargate (fellow initial equity funder)"
+    ],
+    [
+     "**MGX**",
      "**Vantage Data Centers**",
      "portfolio",
      "active",
@@ -35307,12 +35571,36 @@ function clLessonSegmentCapital_() {
      "—"
     ],
     [
+     "**SoftBank**",
+     "**MGX**",
+     "partner",
+     "active",
+     "—",
+     "Stargate (initial equity funder)"
+    ],
+    [
+     "**SoftBank**",
+     "**Vantage Data Centers**",
+     "portfolio",
+     "active",
+     "—",
+     "DigitalBridge (manager of the funds that lead Vantage's ownership)"
+    ],
+    [
      "**Vantage Data Centers**",
      "**Digital Realty**",
      "partner",
      "active",
      "—",
      "—"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "**SoftBank**",
+     "investor",
+     "active",
+     "—",
+     "DigitalBridge (SoftBank-owned since 30 September 2026), manager of the funds that lead Vantage's ownership"
     ],
     [
      "**AEP**",
@@ -35515,7 +35803,7 @@ function clLessonSegmentCapital_() {
      "Dedicated electricity rate (VLC tariff); payment-and-cancellation agreements"
     ]
    ],
-   "note": "Curated edges among members: 43 · to the neighbouring segments: 25 · derived-only mentions (no curated typing): 14 among members, 6 to the neighbours."
+   "note": "Curated edges among members: 51 · to the neighbouring segments: 25 · derived-only mentions (no curated typing): 18 among members, 7 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -35536,68 +35824,68 @@ function clLessonSegmentCapital_() {
     {
      "x": 2,
      "lane": "record",
+     "label": "2026-10-01 — Third and final USD 10bn tranche of the 2026 OpenAI round executed; cumulative investment USD 64.6bn, about 13%; the bridge facility fully repaid and its last USD 10bn of capacity cancelled",
+     "sub": "SoftBank · financial"
+    },
+    {
+     "x": 3,
+     "lane": "record",
      "label": "2026-10-01 — Agreed sale of 10.5% of WestConnex and 25% of NorthWestern Roads Group to Transurban, about A$4.5bn gross",
      "sub": "CPP Investments · ma"
     },
     {
-     "x": 3,
+     "x": 4,
+     "lane": "record",
+     "label": "2026-10-01 — Q3 2026 results set for Thursday 29 October before market open; OCIC's Q3 window closes with USD 3.1bn of redemption requests (16.8%), filled pro rata at the 5% tender",
+     "sub": "Blue Owl · financial"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-09-30 — DigitalBridge acquisition completed: USD 16.00 a share in cash, about USD 3.1bn for all common stock; DigitalBridge delisted from the NYSE and becomes a controlled subsidiary",
+     "sub": "SoftBank · ma"
+    },
+    {
+     "x": 6,
      "lane": "record",
      "label": "2026-09-29 — Bipartisan letter led by Senator Warren urges FERC to reject the GIP/BlackRock takeover of AES — ECP not named",
      "sub": "Energy Capital Partners · policy"
     },
     {
-     "x": 4,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-25 — KKR's third-quarter update: more than USD 750m of monetisation income so far in the quarter",
      "sub": "KKR · financial"
     },
     {
-     "x": 5,
+     "x": 8,
+     "lane": "record",
+     "label": "2026-09-24 — About USD 11.1bn of foreign-currency senior notes issued, USD coupons 8.625%–9.750%",
+     "sub": "SoftBank · financial"
+    },
+    {
+     "x": 9,
      "lane": "record",
      "label": "2026-09-24 — Bloomberg reports an AIP- and IFM-backed group in an exclusive window for STACK's Asia-Pacific data centres",
      "sub": "KKR · market"
     },
     {
-     "x": 6,
-     "lane": "record",
-     "label": "2026-09-24 — Bloomberg reports AIP and IFM Investors in exclusive talks with Blue Owl for STACK Infrastructure's Asia-Pacific data centres at up to USD 25bn",
-     "sub": "BlackRock · market"
-    },
-    {
-     "x": 7,
-     "lane": "record",
-     "label": "2026-09-23 — Schedule 13E-3 filed for the ReNew Energy Global take-private by CPP Investments and founder Sumant Sinha at USD 7.02 a share; CPP holds 34.4%",
-     "sub": "CPP Investments · ma"
-    },
-    {
-     "x": 8,
-     "lane": "record",
-     "label": "2026-09-21 — Rowan publishes a 'Community Guarantee' and commits USD 38m to Temple, Texas water infrastructure",
-     "sub": "Quinbrook · corporate"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-09-21 — Bloomberg: ECP-backed ProEnergy weighs a US IPO at a USD 40–50bn valuation with Morgan Stanley and JPMorgan, or an outright sale; ECP reported to have paid about USD 275m for roughly 60% in 2024",
-     "sub": "Energy Capital Partners · market"
-    },
-    {
      "x": 10,
      "lane": "record",
-     "label": "2026-09-18 — DCC Energy shareholders approve the Dragon Bidco (ECP and KKR) scheme — 78.09% of scheme shares in favour; completion expected Q1 2027 subject to Irish High Court sanction",
-     "sub": "Energy Capital Partners · ma"
+     "label": "2026-09-24 — Bloomberg reports the AIP (BlackRock-backed) and IFM Investors in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn",
+     "sub": "Blue Owl · market"
     },
     {
      "x": 11,
      "lane": "record",
-     "label": "2026-09-17 — Quintrace, esVolta and LevelTen publish a Google-sponsored battery storage-shift pilot (9.2 GWh shifted, EnergyTag-verified hourly certificates)",
-     "sub": "Quinbrook · product"
+     "label": "2026-09-24 — Bloomberg reports Oracle sent a force-majeure notice on Project Jupiter to STACK, the Blue Owl-owned developer; Blue Owl says 'This notice does not change the financial commitments to this multi-year project'",
+     "sub": "Blue Owl · customer"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-09-17 — PUCO approves the change of control of AES Ohio in the AES take-private",
-     "sub": "BlackRock · regulatory"
+     "label": "2026-09-24 — Bloomberg reports AIP and IFM Investors in exclusive talks with Blue Owl for STACK Infrastructure's Asia-Pacific data centres at up to USD 25bn",
+     "sub": "BlackRock · market"
     }
    ]
   },
@@ -35657,6 +35945,12 @@ function clLessonSegmentCapital_() {
      "Energy Capital Partners"
     ],
     [
+     "CFIUS National Security Agreement",
+     "in-effect",
+     "2019-12",
+     "SoftBank"
+    ],
+    [
      "Coal-plant retirement pressure — Gavin (Ohio)",
      "in-effect",
      "2025-07-23",
@@ -35705,6 +35999,12 @@ function clLessonSegmentCapital_() {
      "Energy Capital Partners"
     ],
     [
+     "FERC Section 203",
+     "in-effect",
+     "2024-03",
+     "Blue Owl"
+    ],
+    [
      "FERC Section 203 — acquisitions of public utilities and generators",
      "in-effect",
      "2026-08-12",
@@ -35721,6 +36021,12 @@ function clLessonSegmentCapital_() {
      "in-effect",
      "2025-07",
      "Galaxy Digital"
+    ],
+    [
+     "Investment Company Act §36(b) — adviser fee suits",
+     "in-effect",
+     "2026-04",
+     "Blue Owl"
     ],
     [
      "Ireland — CRU large energy user connection policy and the EirGrid Dublin constraint",
@@ -35837,6 +36143,12 @@ function clLessonSegmentCapital_() {
      "Galaxy Digital"
     ],
     [
+     "U.S.–Japan Strategic Trade and Investment Agreement",
+     "announced",
+     "2026-02",
+     "SoftBank"
+    ],
+    [
      "UK AI Growth Zone",
      "in-effect",
      "—",
@@ -35906,7 +36218,7 @@ function clLessonSegmentCapital_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The Independent Engineer's Report* · *Who Carries Which Risk* · *One Dollar, Four Names*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-capital-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** BlackRock, Blackstone, Brookfield, CPP Investments, KKR, Macquarie, MGX, Energy Capital Partners, Excelsior Energy Capital, Quinbrook, Digital Realty, Galaxy Digital, Vantage Data Centers — each member's dossier carries one in Profiler."
+    "**Study guides:** BlackRock, Blackstone, Blue Owl, Brookfield, CPP Investments, KKR, Macquarie, MGX, SoftBank, Energy Capital Partners, Excelsior Energy Capital, Quinbrook, Digital Realty, Galaxy Digital, Vantage Data Centers — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -36042,6 +36354,19 @@ function clLessonSegmentCapital_() {
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "where-it-sits"
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:blackrock 2026-09-26→2026-10-04; profile:blue-owl added@2026-10-04; profile:cpp-investments 2026-10-03→2026-10-04; profile:mgx 2026-09-26→2026-10-04; profile:softbank added@2026-10-04; profile:vantage 2026-09-06→2026-10-04",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
    ]
   }
  ]
@@ -37207,7 +37532,7 @@ function clLessonSegmentSoftwareAndOptimization_() {
    {
     "kind": "public",
     "ref": "profile:fluence",
-    "date": "2026-09-26",
+    "date": "2026-10-04",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -37261,13 +37586,13 @@ function clLessonSegmentSoftwareAndOptimization_() {
    {
     "kind": "public",
     "ref": "profile:schneider-electric",
-    "date": "2026-09-06",
+    "date": "2026-10-04",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:stem",
-    "date": "2026-09-09",
+    "date": "2026-10-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -37297,13 +37622,13 @@ function clLessonSegmentSoftwareAndOptimization_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-30",
+    "date": "2026-10-04",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -37369,7 +37694,7 @@ function clLessonSegmentSoftwareAndOptimization_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (27 edges) · AIDC developers and landlords (20 edges) · Hyperscalers and AI labs (14 edges) · Utilities (10 edges) · Storage integrators and containers (9 edges) · Clean firm and nuclear (8 edges) · Cells and chemistry (6 edges) · Capital (5 edges) · Power conversion and rack-power silicon (4 edges) · In-hall power (4 edges) · EPC and construction (3 edges) · Neoclouds (3 edges) · Grid equipment (1 edge)",
+     "Storage developers and IPPs (29 edges) · AIDC developers and landlords (22 edges) · Hyperscalers and AI labs (14 edges) · Utilities (10 edges) · Storage integrators and containers (9 edges) · Clean firm and nuclear (8 edges) · Cells and chemistry (6 edges) · Capital (5 edges) · Power conversion and rack-power silicon (4 edges) · In-hall power (4 edges) · EPC and construction (3 edges) · Neoclouds (3 edges) · Grid equipment (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -38809,6 +39134,13 @@ function clLessonSegmentSoftwareAndOptimization_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-30→2026-10-04; graph:profiler-graph 2026-10-04→2026-10-05; profile:fluence 2026-09-26→2026-10-04; profile:schneider-electric 2026-09-06→2026-10-04; profile:stem 2026-09-09→2026-10-04",
+   "changed": [
+    "where-it-sits"
    ]
   }
  ]

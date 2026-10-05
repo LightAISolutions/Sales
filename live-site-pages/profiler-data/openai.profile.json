@@ -267,6 +267,29 @@
       "note": "Firmus announced OpenAI as anchor customer for dedicated compute at two new Firmus AI factory sites in Malaysia.",
       "context": "Firmus's 8 Sep 2026 release quotes Sachin Katti, OpenAI's VP of Compute Strategy; no OpenAI-hosted release was found. Site locations, MW and financial terms are undisclosed.",
       "source": "https://firmus.co/newsroom/firmus-surpasses-900-mw-contracted-capacity-adds-openai-as-anchor-customer-and-expands-into-malaysia"
+    },
+    {
+      "slug": "softbank",
+      "type": "investor",
+      "status": "active",
+      "since": "2024-09",
+      "scale": "USD 64.6bn invested; ~13% (1 Oct 2026)",
+      "via": "SoftBank Vision Fund 2",
+      "note": "Minority investor holding about 13% after USD 64.6bn of investment, per SoftBank on 1 October 2026, and the Stargate partner with 'financial responsibility'.",
+      "context": "SoftBank's 1 October 2026 release records the final USD 10bn tranche of its 2026 commitment, taking cumulative investment to USD 64.6bn and its holding to about 13%. SoftBank calls itself 'a minority shareholder of OpenAI' with 'only a limited ability to influence' it. Its 22 January 2025 release named SoftBank and OpenAI the lead partners in Stargate, SoftBank with financial and OpenAI with operational responsibility. SoftBank's subsidiary SB Energy is separately OpenAI's landlord at Milam County and PORTS-Pike.",
+      "source": "https://group.softbank/en/news/press/20261001"
+    },
+    {
+      "slug": "sb-energy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026-01",
+      "scale": "~8.8 GW-IT leased (Milam ~753 MW-IT; PORTS-Pike ~8.0 GW-IT)",
+      "via": "Triple-net data-centre leases (Milam County, Texas; PORTS-Pike, Ohio)",
+      "project": "stargate",
+      "note": "Landlord and developer of OpenAI's Milam County campus (two 15-year leases, January 2026) and PORTS-Pike campus (17 leases of 20 years, August 2026); OpenAI also holds USD 500m of SB Energy preferred equity with warrants.",
+      "context": "SB Energy's S-1 records two leases signed on 9 January 2026 for Milam County Buildings 1 and 2, about 308 and 445 MW-IT, and 17 leases signed on 17 August 2026 covering about 8.0 GW-IT at PORTS-Pike. OpenAI's announcements put the Milam campus at 1.2 GW; the S-1's ~753 MW-IT measures IT load, and no source reconciles the two. The S-1 does not use the word Stargate; SB Energy's January 2026 release described the OpenAI and SoftBank investments as advancing Stargate.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
     }
   ],
   "technicalSpecs": [
@@ -417,6 +440,16 @@
   },
   "sources": [
     {
+      "label": "SoftBank Group — Execution of follow-on investment (third tranche) in OpenAI; cumulative USD 64.6bn, ~13%",
+      "url": "https://group.softbank/en/news/press/20261001",
+      "date": "2026-10-01"
+    },
+    {
+      "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+      "date": "2026-09-21"
+    },
+    {
       "label": "Firmus — Firmus surpasses 900 MW contracted capacity, adds OpenAI as anchor customer and expands into Malaysia",
       "url": "https://firmus.co/newsroom/firmus-surpasses-900-mw-contracted-capacity-adds-openai-as-anchor-customer-and-expands-into-malaysia",
       "date": "2026-09-08"
@@ -440,6 +473,11 @@
       "label": "$122B round close at $852B",
       "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
       "date": "2026-03-31"
+    },
+    {
+      "label": "SB Energy — OpenAI and SoftBank Group partner with SB Energy to build and operate AI data centres",
+      "url": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/",
+      "date": "2026-01-09"
     },
     {
       "label": "AWS — OpenAI workloads compute infrastructure ($38B)",
@@ -546,6 +584,6 @@
       "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
     }
   ],
-  "lastUpdated": "2026-09-26",
-  "profileVersion": 6
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 7
 }

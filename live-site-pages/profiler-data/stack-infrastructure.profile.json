@@ -321,6 +321,16 @@
    "note": "Reported only: KKR was named among suitors for STACK's Asia-Pacific portfolio in June 2026; by September an AIP- and IFM-backed group was reported in exclusive talks.",
    "context": "The June 2026 Bloomberg reporting listed KKR with Brookfield, IFM and DigitalBridge as potential suitors. The September report of an exclusive window for the AIP and IFM group does not rule other buyers out. No party has confirmed either report.",
    "source": "https://www.thestar.com.my/business/business-news/2026/06/25/blackrock-backed-aip-eyes-stack-data-centres"
+  },
+  {
+   "slug": "blue-owl",
+   "type": "investor",
+   "status": "active",
+   "since": "2025-01",
+   "via": "Blue Owl Digital Infrastructure funds (the former IPI Partners funds)",
+   "note": "Owner: STACK is 'a portfolio company owned by certain Other Blue Owl Accounts', the funds Blue Owl has managed since buying IPI Partners' business on 3 January 2025.",
+   "context": "Blue Owl bought IPI Partners' management business, not STACK's equity, which stays with the funds; no fund-by-fund percentage is disclosed. Bloomberg reported on 24 September 2026 that the BlackRock-backed AI Infrastructure Partnership and IFM Investors were in exclusive talks for STACK's Asia-Pacific portfolio at USD 20–25bn. That is a report, not a transaction.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2069692/000206969226000016/osnl-20251231.htm"
   }
  ],
  "technicalSpecs": [
@@ -804,6 +814,6 @@
    "date": "2026-02-13"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 8
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 9
 }

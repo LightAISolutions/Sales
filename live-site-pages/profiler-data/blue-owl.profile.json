@@ -1,0 +1,882 @@
+{
+  "schemaVersion": 7,
+  "slug": "blue-owl",
+  "name": "Blue Owl Capital Inc.",
+  "shortName": "Blue Owl",
+  "categories": [
+    "investor"
+  ],
+  "website": "https://www.blueowl.com/",
+  "headquarters": "399 Park Avenue, New York, NY 10022, United States",
+  "founded": 2021,
+  "employees": "~1,365 (10-K, 31 December 2025); 'over 1,380' (July 2026)",
+  "ownership": {
+    "type": "public",
+    "ticker": "NYSE: OWL",
+    "notes": "Delaware; fiscal year ends 31 December. A controlled company: the Principals hold 80% of the voting power through Class D shares, and Doug Ostrover's and Dyal Capital's holdings carry 45.7% and 35.1% of the combined vote (2026 proxy)."
+  },
+  "summary": "**BOTTOM LINE UP FRONT:** Blue Owl signs for no equipment itself, but the funds it manages hold some of the largest AI-campus positions in the corpus. They own STACK Infrastructure, the developer of Oracle's Project Jupiter in New Mexico. They hold 80% of Meta's Hyperion campus venture in Louisiana, contributing USD 7.0bn in cash against about USD 27bn of total development cost. They co-sponsor the USD 15bn, 1.2 GW Abilene campus with Crusoe. Its credit funds lend against GPUs (IREN, Nscale). Blue Owl Capital Inc.'s own 10-K and 10-Qs name none of these deals; the record comes from counterparties' filings and from vehicles Blue Owl manages. For a vendor, Blue Owl is a directory: the orders are signed at STACK, at the joint ventures' developers, and at Meta, which manages construction at Hyperion.\n\n**BACKGROUND.** Per company filings, Blue Owl Capital Inc. (NYSE: OWL) is a Delaware alternative asset manager formed in May 2021 by combining Owl Rock and Dyal Capital through a SPAC. It added Oak Street (December 2021), Kuvare and Atalaya (2024), and on 3 January 2025 IPI Partners' data-centre fund-management business, for USD 1.306bn of booked consideration. It had USD 319.0bn of assets under management and USD 190.6bn of fee-paying AUM at 30 June 2026, across Credit (USD 158.1bn), Real Assets (USD 89.4bn, including Digital Infrastructure at USD 18.4bn) and GP Strategic Capital (USD 71.5bn). FY2025 fee-related earnings were USD 1,496.5m and distributable earnings USD 1,309.1m; GAAP net income attributable was USD 78.8m. The shares closed at USD 9.08 on 2 October 2026, down 43.4% on a year earlier and about 47% below their 52-week high. At its largest non-traded credit fund (OCIC), redemption requests ran at 21.9%, 18.8% and 16.8% of shares in the first three quarters of 2026, against a 5% quarterly tender.",
+  "ecosystemRole": "We assess Blue Owl as the capital segment's most AI-campus-concentrated investor. Its Digital Infrastructure strategy reported about 9 GW of leased and owned data-centre capacity at the end of 2025. Its Real Assets funds sit in the equity of Hyperion and Abilene, and its credit funds finance GPUs. In every case another party signs for the equipment: STACK (fund-owned) at its own campuses including Jupiter, Meta as construction manager at Hyperion, Crusoe as developer at Abilene. A power-equipment seller reaches Blue Owl's capital through STACK's procurement and the joint ventures' developers, not through Blue Owl Capital Inc.",
+  "productsAndServices": [
+    {
+      "name": "Digital Infrastructure (formerly IPI Partners)",
+      "category": "Real Assets — data-centre equity",
+      "description": "Blue Owl entered data-centre equity on 3 January 2025 by buying IPI Partners' business. It bought 'the rights to investment management agreements, investor relationships, related assets and personnel', not the portfolio companies. The strategy had USD 18.4bn of AUM and USD 12.4bn of fee-paying AUM at 30 June 2026. Its flagship funds are Blue Owl Digital Infrastructure Fund II (USD 5.2bn AUM) and Fund III, which closed at its USD 7bn hard cap in May 2025. Blue Owl Digital Infrastructure Trust (ODIT), a private-wealth evergreen REIT, opened with USD 1.7bn on 1 December 2025. ODIT's 10-K describes the strategy as having 'approximately 9 gigawatts of leased and owned data center capacity and over 90 operational and under-construction facilities worldwide' at 31 December 2025.",
+      "highlights": [
+        "STACK Infrastructure is 'a portfolio company owned by certain Other Blue Owl Accounts' (ODIT 10-K); Blue Owl's own 10-K never names STACK",
+        "Other fund-owned platforms named by ODIT: Beale Infrastructure (large campus developer) and RadiusDC (colocation); Kirkwood Infrastructure Group (fibre across Louisiana and Mississippi) launched in July 2026, wholly owned by Blue Owl-managed funds",
+        "ODIT owned 12 stabilised data centres, 235 MW and 99.7% leased, at 30 June 2026, including a 72 MW Gainesville, Virginia building bought for about USD 860.6m",
+        "Project Jupiter (New Mexico): STACK delivers Oracle's 1 GW+ campus, 'driven by investment from funds managed by Blue Owl Capital'",
+        "Reported only: Blue Owl in exclusive talks with the AIP and IFM Investors to sell STACK's Asia-Pacific portfolio at USD 20–25bn (Bloomberg, 24 September 2026)"
+      ],
+      "positioning": "Blue Owl presents itself as 'one of the world's largest private investors in the space', serving hyperscalers with build-to-suit campuses. Against BlackRock (GIP) and KKR it is smaller in infrastructure AUM but more concentrated in single-tenant AI campuses.",
+      "soldThrough": "Closed-end drawdown funds for institutions; ODIT and a planned data-centre REIT for private wealth; partnerships such as the QIA platform (more than USD 3bn of initial data-centre assets, September 2025)",
+      "targetSegments": [
+        "Hyperscalers and AI labs leasing build-to-suit campuses",
+        "Institutional and private-wealth investors"
+      ],
+      "roadmap": "STACK Asia-Pacific sale (reported talks); a data-centre REIT listing seeded with about USD 6.5bn of assets (reported, The Real Deal, September 2026)"
+    },
+    {
+      "name": "Net lease and real-estate credit (formerly Oak Street)",
+      "category": "Real Assets — triple-net lease",
+      "description": "Long-term triple-net leases and build-to-suit projects for investment-grade tenants. Net lease had USD 53.4bn of AUM and real-estate credit USD 17.5bn at 30 June 2026. Products include the Blue Owl Real Estate Net Lease Trust (USD 14.9bn AUM) and the drawdown funds, whose seventh vintage raised USD 2.0bn in Q2 2026. Blue Owl's 10-Q says 'the appetite for data centers and build-to-suit net lease projects has continued to grow meaningfully' and that it sees 'nearly $160 billion of near-term opportunities across both our digital infrastructure and net lease pipelines'.",
+      "highlights": [
+        "Real Assets ranked second on PERE's Top 100 real-estate fundraisers globally (Blue Owl Q2 2026 10-Q)",
+        "Meta's Hyperion venture: 'an affiliate of funds managed by Blue Owl Capital, Inc.' holds 80% (Meta 10-Q)",
+        "Abilene, Texas: 'funds managed by Blue Owl's Real Assets platform' co-sponsor a USD 15bn joint venture for the 1.2 GW campus with Crusoe and Primary Digital Infrastructure (Crusoe release)"
+      ],
+      "positioning": "The vehicle for Blue Owl's largest AI-campus equity cheques, structured as joint ventures in which the hyperscaler or developer runs construction.",
+      "soldThrough": "Non-traded REITs and long-dated private funds",
+      "targetSegments": [
+        "Investment-grade corporate and hyperscale tenants"
+      ],
+      "roadmap": ""
+    },
+    {
+      "name": "Credit (direct lending, technology lending, alternative and investment-grade credit)",
+      "category": "Private credit",
+      "description": "Blue Owl's largest platform: USD 158.1bn of AUM at 30 June 2026, of which direct lending was USD 115.1bn, including USD 51.5bn in non-traded BDCs. Its funds include the listed BDCs OBDC and OTF and the non-traded OCIC and OTIC. In AI infrastructure its credit funds lend against GPUs. They led a USD 2.4bn equipment financing for IREN's Mackenzie campus (a USD 1.2bn senior secured term loan plus USD 1.2bn of senior secured notes, 9.0% fixed). They co-led a USD 1.4bn GPU-backed delayed-draw term loan for Nscale with PIMCO and LuminArx.",
+      "highlights": [
+        "IREN: Blue Owl Capital Corporation (OBDC) is administrative, collateral, intercreditor and note agent and a lender (IREN 10-K); funding in tranches to 31 December 2026",
+        "OCIC redemption requests: USD 4.2bn (21.9%) in Q1, USD 3.6bn (18.8%) in Q2, USD 3.1bn (16.8%) in Q3 2026, against a 5% quarterly tender paid pro rata",
+        "OBDC II's merger with OBDC was terminated on 19 November 2025 'given current market conditions'"
+      ],
+      "positioning": "Credit is where Blue Owl began (Owl Rock, 2016) and where its private-credit stress shows: redemption caps, a Moody's negative outlook on OCIC (April 2026) and Section 36(b) fee suits.",
+      "soldThrough": "BDCs (listed and non-traded), private funds and managed accounts; private-wealth and institutional channels",
+      "targetSegments": [
+        "Sponsor-backed middle-market and technology borrowers",
+        "GPU and AI-infrastructure borrowers"
+      ],
+      "roadmap": ""
+    },
+    {
+      "name": "GP Strategic Capital (formerly Dyal)",
+      "category": "Minority stakes in asset managers",
+      "description": "Minority equity and debt investments in other alternative asset managers, plus professional-sports stakes. It had USD 71.5bn of AUM at 30 June 2026, and Blue Owl claims an '87% Market Share for GP Minority Stakes Deals $600 Million+'. Through it Blue Owl has held stakes in managers that are themselves in this corpus's capital segment. Public Citizen put its holding at 19.3% of Energy Capital Partners when ECP agreed to combine with Bridgepoint.",
+      "highlights": [
+        "The ECP stake became a FERC issue: the regulator's first order on the Bridgepoint combination (March 2024) cited an undisclosed affiliation (energy-capital-partners dossier)"
+      ],
+      "positioning": "",
+      "soldThrough": "Closed-end GP Stakes funds",
+      "targetSegments": [
+        "Alternative asset managers"
+      ],
+      "roadmap": ""
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-10-01",
+      "category": "financial",
+      "headline": "Q3 2026 results set for Thursday 29 October before market open; OCIC's Q3 window closes with USD 3.1bn of redemption requests (16.8%), filled pro rata at the 5% tender",
+      "read": "Requests are falling for a third quarter but still run at more than three times the cap.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1812554/000119312526411315/d136475dex991.htm"
+    },
+    {
+      "date": "2026-09-24",
+      "category": "customer",
+      "headline": "Bloomberg reports Oracle sent a force-majeure notice on Project Jupiter to STACK, the Blue Owl-owned developer; Blue Owl says 'This notice does not change the financial commitments to this multi-year project'",
+      "read": "The notice's existence is acknowledged by Oracle and Blue Owl, but its terms are reported only: a possible three-year rent deferral if power misses the 2028 start. Oracle says Jupiter 'remains on our planned schedule'.",
+      "source": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/"
+    },
+    {
+      "date": "2026-09-24",
+      "category": "market",
+      "headline": "Bloomberg reports the AIP (BlackRock-backed) and IFM Investors in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn",
+      "read": "Reported only; no party has confirmed. Blue Owl had reportedly sought more than USD 30bn.",
+      "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports"
+    },
+    {
+      "date": "2026-09-08",
+      "category": "financial",
+      "headline": "Loparex restructuring led by Monarch reported to wipe out a junior loan held by Blue Owl (about USD 130m, reported)",
+      "read": "A visible private-credit loss during the redemption cycle; the holding fund is not confirmed.",
+      "source": "https://news.bloomberglaw.com/bankruptcy-law/blue-owl-hit-as-monarch-leads-1-billion-loparex-restructuring"
+    },
+    {
+      "date": "2026-08-28",
+      "category": "financial",
+      "headline": "Blue Owl-managed funds lead a USD 2.4bn compute-equipment financing for IREN's Mackenzie campus: USD 1.2bn senior secured term loan plus USD 1.2bn senior secured notes",
+      "read": "Debt, not equity. IREN's 10-K dates the agreements 25 August, sets 9.0% fixed and 30-month maturities, and names Blue Owl Capital Corporation as agent and lender.",
+      "source": "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren"
+    },
+    {
+      "date": "2026-08-18",
+      "category": "financial",
+      "headline": "USD 750m of 6.750% senior notes due 2036 issued (S&P BBB / Fitch BBB+, both stable) to repay the revolving credit facility",
+      "read": "Parent investment-grade ratings held through the private-credit stress.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1823945/000119312526355671/d166284d8k.htm"
+    },
+    {
+      "date": "2026-07-30",
+      "category": "financial",
+      "headline": "Q2 2026: distributable earnings USD 351.2m (USD 0.22 a share, in line with consensus); fee-related earnings USD 392.2m (USD 0.25); AUM USD 319.0bn",
+      "read": "Fees still grow as AUM rises 12% year on year, while GAAP net income is USD 11.4m.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1823945/000182394526000036/owl-20260730.htm"
+    },
+    {
+      "date": "2026-07-08",
+      "category": "corporate",
+      "headline": "Funds managed by Blue Owl launch Kirkwood Infrastructure Group, building more than 200 miles of fibre from Shreveport to Vicksburg 'to support the significant growth of hyperscale data center development in the region'",
+      "read": "Fibre for the Louisiana data-centre build-out, which includes Hyperion and STACK's Amazon campuses.",
+      "source": "https://www.blueowl.com/news/funds-managed-blue-owl-digital-infrastructure-strategy-launch-kirkwood-infrastructure-group"
+    },
+    {
+      "date": "2026-06-23",
+      "category": "ma",
+      "headline": "ODIT buys a 72 MW Gainesville, Virginia data centre, fully leased to a hyperscaler, for about USD 860.6m",
+      "read": "The private-wealth vehicle buys stabilised capacity, mostly STACK-operated.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2069692/000206969226000057/osnl-20260630.htm"
+    },
+    {
+      "date": "2026-04-08",
+      "category": "financial",
+      "headline": "Moody's moves Blue Owl Credit Income Corp. (OCIC) to a negative outlook on elevated redemptions (reported)",
+      "read": "Fund-level, not the parent, but it marks the stress in the non-traded credit products.",
+      "source": "https://www.bloomberg.com/news/articles/2026-04-08/blue-owl-fund-outlook-cut-to-negative-by-moody-s-on-redemptions"
+    },
+    {
+      "date": "2026-03-31",
+      "category": "financial",
+      "headline": "OTIC's Q1 tender: requests for 40.4% of shares, 14.38% of tendered shares accepted and paid with non-interest-bearing promissory notes",
+      "read": "The technology-lending fund carried the sharpest redemption pressure in the group.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1869453/000162828026027573/otic-scheduletoa.htm"
+    },
+    {
+      "date": "2026-02-18",
+      "category": "financial",
+      "headline": "USD 1.4bn of loans sold across OBDC II, OBDC and OTIC; OBDC II plans to return up to about 30% of NAV",
+      "read": "Asset sales to meet liquidity needs after the cancelled merger.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1655887/000162828026009025/obdc-20260217.htm"
+    },
+    {
+      "date": "2025-12-17",
+      "category": "market",
+      "headline": "Financial Times reports Blue Owl out of the financing for Oracle's Related Digital campus in Saline Township, Michigan; Oracle: Related 'selected the best equity partner … which in this instance was not Blue Owl'",
+      "read": "Reported, and disputed in part by Related Digital. Blackstone and PIMCO later financed the project (USD 16bn, April 2026).",
+      "source": "https://www.michiganpublic.org/transportation-infrastructure/2025-12-18/developers-dispute-published-report-that-financing-for-controversial-michigan-data-center-project-is-in-limbo"
+    },
+    {
+      "date": "2025-12-01",
+      "category": "financial",
+      "headline": "Blue Owl Digital Infrastructure Trust (ODIT) opens with USD 1.7bn and buys 11 stabilised data centres from the BODI I funds (USD 3.3bn gross enterprise value; USD 1.5bn net)",
+      "read": "Recycles the oldest fund's STACK-operated assets into a permanent wealth vehicle.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2069692/000206969225000025/osnl-20251201.htm"
+    },
+    {
+      "date": "2025-11-19",
+      "category": "corporate",
+      "headline": "Proposed merger of OBDC and OBDC II terminated 'given current market conditions'; OBDC II to reinstate tenders",
+      "read": "The first public sign of redemption pressure in Blue Owl's non-traded BDCs.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1655888/000162828025053061/exhibit991-obdc8xk.htm"
+    },
+    {
+      "date": "2025-10-21",
+      "category": "partnership",
+      "headline": "Meta forms the Hyperion joint venture with funds managed by Blue Owl: Blue Owl funds 80% (USD 7.0bn cash at closing), Meta 20%, about USD 27bn of total development cost",
+      "read": "Moves Meta's largest campus off its balance sheet. Meta manages construction and leases the campus back from 2029, with a 16-year residual value guarantee.",
+      "source": "https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/"
+    },
+    {
+      "date": "2025-09-26",
+      "category": "project",
+      "headline": "STACK to deliver the Stargate campus in Doña Ana County, New Mexico (Project Jupiter), 'driven by investment from funds managed by Blue Owl Capital'",
+      "read": "Blue Owl's funds reach an Oracle Stargate site through their developer, STACK.",
+      "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/"
+    },
+    {
+      "date": "2025-09-25",
+      "category": "partnership",
+      "headline": "Strategic partnership with the Qatar Investment Authority for a digital-infrastructure platform with more than USD 3bn of initial data-centre assets",
+      "read": "Sovereign permanent capital alongside Blue Owl's funds.",
+      "source": "https://www.blueowl.com/news/qatar-investment-authority-and-blue-owl-capital-partnership"
+    },
+    {
+      "date": "2025-08-25",
+      "category": "partnership",
+      "headline": "Blue Owl and Chirisa Technology Parks close a USD 4bn joint venture (with Machine Investment Group) for the Lancaster, Pennsylvania campus to be leased by CoreWeave",
+      "read": "Blue Owl says it intends to fund up to USD 20bn of developments for Chirisa.",
+      "source": "https://chirisatechnologyparks.com/blue-owl-and-chirisa-technology-parks-close-4-billion-joint-venture-partnership-including-machine-investment-group-for-lancaster-campus/"
+    },
+    {
+      "date": "2025-05-21",
+      "category": "partnership",
+      "headline": "Crusoe, Blue Owl and Primary Digital Infrastructure enter the second phase of a USD 15bn joint venture to fund the 1.2 GW Abilene, Texas campus",
+      "read": "Blue Owl Real Assets funds are equity co-sponsors; the developer is Crusoe and the tenant Oracle. Blue Owl's share is not disclosed.",
+      "source": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture"
+    },
+    {
+      "date": "2025-05-15",
+      "category": "financial",
+      "headline": "Blue Owl Digital Infrastructure Fund III closes at its USD 7bn hard cap (target USD 4bn)",
+      "read": "The first flagship close under Blue Owl's name after the IPI acquisition.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1823945/000182394526000009/owl-20251231.htm"
+    }
+  ],
+  "strategyRead": [
+    "**(High confidence)** We assess that **Blue Owl is a directory of AI-campus buyers, not a door**. Blue Owl Capital Inc. places no equipment orders. Its funds own STACK, which develops and procures for its campuses including Project Jupiter. At Hyperion, Meta 'provide[s] construction management, administrative and property management services' despite Blue Owl funds' 80%. At Abilene, Crusoe develops. Basis: the ODIT 10-K on STACK, Meta's Q3 2025 10-Q and Crusoe's May 2025 release. A seller sells to STACK, Crusoe or Meta's construction team.",
+    "**(High confidence)** We assess that **Blue Owl's control runs through fund ownership and, at the hyperscale joint ventures, stops at the equity**. The IPI deal bought management contracts, not STACK, and Blue Owl's 10-K never names STACK. At Hyperion the funds hold 80% but Meta says Meta 'do[es] not direct the activities that most significantly impact the Venture's economic performance', and the venture is unconsolidated by Meta. The judgment is high because both counterparties say so in filings. Inference: Blue Owl's funds are price-and-structure capital at Hyperion, with design and procurement left to Meta.",
+    "**(Moderate confidence)** We assess that **Blue Owl's AI-campus exposure is concentrated on two tenants, Oracle and Meta, and the market is pricing that risk**. Oracle is the capacity counterparty at Jupiter (STACK) and Abilene (Crusoe), and Meta at Hyperion. Oracle's force-majeure notice on Jupiter (acknowledged; terms reported) and the reported Michigan withdrawal both turned on Oracle-linked campuses. The shares fell 43% over the year to 2 October 2026. Basis: counterparty statements and market data. Inference: Blue Owl's next AI-campus commitments are likelier to come with residual-value guarantees like Meta's, or with tenants other than Oracle.",
+    "**(Moderate confidence)** We assess that **private-credit redemptions, not data-centre returns, are the binding constraint on Blue Owl's growth in 2026**. OCIC's redemption requests ran at 21.9%, 18.8% and 16.8% of shares in the first three quarters against a 5% tender. OTIC's ran near 40%. Moody's put OCIC on a negative outlook, and the OBDC II merger was abandoned. Fee-related earnings still rose to USD 392.2m in Q2. Basis: the funds' own filings and Blue Owl's 10-Q.",
+    "**(Low confidence)** We assess that **Blue Owl is recycling STACK rather than adding to it**. It sold eleven stabilised data centres to ODIT, its own wealth vehicle, and STACK's European colocation business to Apollo (signed April 2025, per Apollo). Bloomberg reports exclusive talks to sell the Asia-Pacific portfolio, and The Real Deal reports a planned data-centre REIT listing. Weak because the Asia-Pacific sale and the REIT are reported, not announced.",
+    "**Collection gaps:** Blue Owl funds' percentage ownership of STACK and which funds hold it; Blue Owl's share of the Abilene joint venture and of Project Jupiter's equity (about USD 3bn is reported only); the Oracle force-majeure notice itself; the current status of the Goldman v. Blue Owl securities class action (the Q2 10-Q discloses only Section 36(b) suits); a published consensus for fee-related earnings per share; any Moody's rating on the parent.",
+    "**INDICATORS TO WATCH** — *Q3 2026 results, 29 October:* Digital Infrastructure fee-paying AUM and any comment on Jupiter. *Oracle–STACK resolution of the Jupiter notice and the NMED air-permit decision on the Bloom fuel cells (due 23 November 2026):* power on time would close the notice. *STACK Asia-Pacific signing:* a sale at USD 20–25bn would confirm Judgment 5 and fund the next build cycle. *OCIC and OTIC Q4 tender results:* requests below 10% would ease Judgment 4. *Hyperion leases commencing in 2029:* the first rent from the largest single Blue Owl AI exposure."
+  ],
+  "relationships": [
+    {
+      "slug": "stack-infrastructure",
+      "type": "portfolio",
+      "status": "active",
+      "since": "2025-01",
+      "via": "Blue Owl Digital Infrastructure funds (the former IPI Partners funds)",
+      "note": "STACK is 'a portfolio company owned by certain Other Blue Owl Accounts': the funds Blue Owl has managed since the IPI acquisition closed on 3 January 2025.",
+      "context": "Blue Owl's purchase of IPI Partners' business (closed 3 January 2025; USD 1.306bn booked consideration) bought the management contracts, investor relationships and staff, not STACK itself. Blue Owl's 10-K does not name STACK. The Blue Owl-managed ODIT REIT's 10-K calls STACK 'a portfolio company owned by certain Other Blue Owl Accounts', and Apollo's April 2025 release calls it 'a portfolio company of Blue Owl Digital Infrastructure'. No fund-by-fund percentage is disclosed. STACK delivers Project Jupiter for Oracle, 'driven by investment from funds managed by Blue Owl Capital'. Bloomberg reports Blue Owl in exclusive talks to sell STACK's Asia-Pacific portfolio (reported only).",
+      "source": "https://www.sec.gov/Archives/edgar/data/2069692/000206969226000016/osnl-20251231.htm"
+    },
+    {
+      "slug": "meta",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-10",
+      "scale": "80% Blue Owl funds / 20% Meta; USD 7.0bn cash at closing; ~USD 27bn total development cost",
+      "via": "Hyperion joint venture (Richland Parish, Louisiana)",
+      "project": "hyperion",
+      "note": "Joint-venture partner in Meta's Hyperion campus: an affiliate of Blue Owl-managed funds holds 80% and Meta 20%, with Meta leasing the campus back and managing construction.",
+      "context": "Meta's Q3 2025 10-Q: 'At closing, we contributed $4.3 billion … while the Investor contributed $7.0 billion in cash to the Venture', with a one-time USD 2.6bn distribution to Meta and an 80% / 20% split. Leases begin in 2029, with an initial four-year commitment of about USD 12.3bn renewable up to 20 years. Meta gives a 16-year residual value guarantee that 'effectively begins at $28 billion'. Meta's release puts total development cost at about USD 27bn, partly funded by debt sold to PIMCO and other bond investors; IFR reports the Beignet Investor bond at USD 27.3bn. Meta provides construction and property management and does not consolidate the venture.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm"
+    },
+    {
+      "slug": "crusoe",
+      "type": "partner",
+      "status": "active",
+      "since": "2024",
+      "scale": "USD 15bn joint venture; 1.2 GW",
+      "via": "Abilene joint venture (with Primary Digital Infrastructure)",
+      "project": "stargate",
+      "note": "Equity co-sponsor, through Blue Owl Real Assets funds, of the USD 15bn joint venture funding Crusoe's 1.2 GW Abilene campus.",
+      "context": "Crusoe's 21 May 2025 release announced 'the second phase of a $15 billion joint-venture to fund the 1.2 gigawatt AI data center in Abilene, Texas'. Under it, 'Crusoe in combination with funds managed by Blue Owl's Real Assets platform along with Primary Digital Infrastructure will jointly sponsor the construction of six new buildings'. The first phase (two buildings, 200+ MW) began construction in June 2024. The release does not split debt and equity or state Blue Owl's share. Bloomberg reports JPMorgan lent USD 2.3bn and USD 7.1bn for the two phases. Crusoe has said 'Our customer is Oracle. OpenAI is Oracle's customer' (reported).",
+      "source": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture"
+    },
+    {
+      "slug": "oracle",
+      "type": "other",
+      "status": "active",
+      "since": "2025-09",
+      "via": "Project Jupiter (STACK) and Abilene (Crusoe joint venture)",
+      "project": "jupiter-nm",
+      "note": "The capacity counterparty at two Blue Owl-funded campuses — Project Jupiter, developed by Blue Owl fund-owned STACK, and Abilene — and the sender of a reported force-majeure notice on Jupiter in September 2026.",
+      "context": "STACK's 26 September 2025 release says it will deliver 'the planned Stargate campus in Doña Ana County, New Mexico, part of Oracle's commitment to deliver up to 4.5 gigawatts of additional Stargate capacity', driven by Blue Owl-managed funds' investment. Bloomberg reported on 24 September 2026 that Oracle sent STACK a force-majeure notice tied to power commitments. Oracle said such notices 'are common on developments of this scale' and that Jupiter 'remains on our planned schedule'. Blue Owl said the notice 'does not change the financial commitments to this multi-year project'. The notice's terms are reported only. Separately, the Financial Times reported in December 2025 that Blue Owl did not proceed with Oracle's Michigan campus financing.",
+      "source": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/"
+    },
+    {
+      "slug": "iren",
+      "type": "other",
+      "status": "active",
+      "since": "2026-08",
+      "scale": "USD 2.4bn (USD 1.2bn term loan + USD 1.2bn senior secured notes; 9.0% fixed)",
+      "via": "Blue Owl Capital Corporation — lead lender and agent",
+      "note": "Lead lender on IREN's USD 2.4bn GPU equipment financing for its Mackenzie, British Columbia campus (signed 25 August 2026).",
+      "context": "Blue Owl's 28 August 2026 release: 'funds managed by Blue Owl led a $2.4 billion compute equipment financing for IREN Limited', comprising 'a $1.2 billion senior secured term loan and $1.2 billion of senior secured notes' to buy NVIDIA Blackwell Ultra systems. IREN's 10-K dates the agreements 25 August 2026 and names Blue Owl Capital Corporation as administrative, collateral, intercreditor and note agent and a lender, with PIMCO advising certain note purchasers. Interest is 9.0% fixed, maturities are 30 months, and draws run to 31 December 2026. It is lending, not ownership.",
+      "source": "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren"
+    },
+    {
+      "slug": "nscale",
+      "type": "portfolio",
+      "status": "active",
+      "since": "2025-09",
+      "via": "Blue Owl-managed funds (equity) and credit funds (GPU-backed loan)",
+      "note": "Minority equity investor through Blue Owl-managed funds (Series B and pre-Series C SAFE, 2025) and co-lead lender with PIMCO and LuminArx on a USD 1.4bn GPU-backed loan (February 2026).",
+      "context": "Nscale's pre-Series C SAFE release (October 2025) names 'Blue Owl Managed Funds, Dell, NVIDIA, Nokia' among investors in USD 433m, and its Series B (September 2025) lists Blue Owl among participants. In February 2026 funds managed by PIMCO, Blue Owl and LuminArx led a USD 1.4bn delayed-draw term loan secured on GPU infrastructure for Nscale's European clusters. These are minority and lending positions, not control.",
+      "source": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe"
+    },
+    {
+      "slug": "powerhouse-data-centers",
+      "type": "partner",
+      "status": "active",
+      "since": "2024-08",
+      "scale": "USD 5bn programme; two USD 750m tranches",
+      "via": "Blue Owl / Chirisa Technology Parks joint venture",
+      "note": "Joint-venture partner, with Chirisa Technology Parks, in the USD 5bn development programme whose Chesterfield, Virginia campus is leased to CoreWeave.",
+      "context": "The three companies announced a USD 5bn joint-venture development partnership in August 2024, with a first USD 750m tranche, and closed a second USD 750m tranche in May 2025 for 120 MW at Chesterfield for CoreWeave. A USD 600m construction loan led by Société Générale financed a 50 MW build-to-suit. PowerHouse's parent describes the Blue Owl programme as '95/5', its own funds putting in the smaller share.",
+      "source": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html"
+    },
+    {
+      "slug": "coreweave",
+      "type": "customer",
+      "status": "active",
+      "since": "2024-08",
+      "via": "Blue Owl / Chirisa joint ventures (Chesterfield, Virginia; Lancaster, Pennsylvania)",
+      "note": "Tenant of campuses built by Blue Owl's joint ventures with Chirisa Technology Parks — Chesterfield, Virginia and Lancaster, Pennsylvania.",
+      "context": "Chirisa's 25 August 2025 release says Blue Owl and Chirisa 'closed on a joint venture partnership' of USD 4bn, including Machine Investment Group, for the Lancaster campus, which CoreWeave will lease. Blue Owl stated an intention to fund up to USD 20bn of developments for Chirisa. The earlier Chesterfield programme with PowerHouse is built to suit for CoreWeave.",
+      "source": "https://chirisatechnologyparks.com/blue-owl-and-chirisa-technology-parks-close-4-billion-joint-venture-partnership-including-machine-investment-group-for-lancaster-campus/"
+    },
+    {
+      "slug": "cpp-investments",
+      "type": "partner",
+      "status": "active",
+      "since": "2025",
+      "via": "Abilene campus, phase 2",
+      "note": "Co-investor: CPP Investments reported an investment in the second phase of a hyperscale data centre in Abilene, Texas, alongside Blue Owl.",
+      "context": "CPP Investments' results for the quarter to 30 September 2025 list 'an investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl'. Neither party discloses the size.",
+      "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html"
+    },
+    {
+      "slug": "blackrock",
+      "type": "other",
+      "status": "announced",
+      "since": "2026-09",
+      "via": "AI Infrastructure Partnership (with IFM Investors)",
+      "note": "Reported only: Bloomberg says the BlackRock-backed AIP and IFM Investors are in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn.",
+      "context": "Bloomberg's 24 September 2026 report, carried by Reuters, described Blue Owl as STACK's owner and the AIP–IFM group as in exclusive talks; Reuters could not verify it, and no party commented. Earlier reporting had Blue Owl seeking more than USD 30bn, with Brookfield, KKR and DigitalBridge among possible bidders. A report, not a transaction.",
+      "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Investment Company Act §36(b) — adviser fee suits",
+      "status": "in-effect",
+      "effectiveDate": "2026-04",
+      "exposure": "Blue Owl's Q2 2026 10-Q discloses a Section 36(b) excessive-fee suit filed on 27 April 2026 on behalf of OBDC against Blue Owl Credit Advisors (S.D.N.Y.). It also discloses three suits filed in June and July 2026 on behalf of Blue Owl Technology Finance Corp. against its adviser (S.D.N.Y. and D. Md.), one naming directors and officers. The company calls them without merit.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1823945/000182394526000040/owl-20260630.htm"
+    },
+    {
+      "regime": "FERC Section 203",
+      "status": "in-effect",
+      "effectiveDate": "2024-03",
+      "exposure": "Blue Owl's GP stakes in power-sector managers are visible to FERC. In March 2024 FERC declined the first application for Energy Capital Partners' combination with Bridgepoint over insufficient information on voting restrictions over a minority holder. Public Citizen identified that holder as Blue Owl Capital, with 19.3% of ECP and 15.5% of Bridgepoint. A refiled application was approved and the combination closed in August 2024.",
+      "source": "https://www.citizen.org/article/energy-capital-partners-bridgepoint/"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "AUM and fee-paying AUM at 30 June 2026",
+      "specs": [
+        {
+          "band": "Firm",
+          "label": "AUM / FPAUM / permanent capital",
+          "value": "$319.0 billion / $190.6 billion / $225.0 billion"
+        },
+        {
+          "band": "Credit",
+          "label": "AUM / FPAUM",
+          "value": "$158,123m / $97,169m (direct lending $115,059m, of which non-traded BDCs $51,491m)"
+        },
+        {
+          "band": "Real Assets",
+          "label": "AUM / FPAUM",
+          "value": "$89,368m / $52,039m"
+        },
+        {
+          "band": "Real Assets",
+          "label": "Net lease / real estate credit",
+          "value": "$53,383m / $17,543m"
+        },
+        {
+          "band": "Real Assets",
+          "label": "Digital Infrastructure",
+          "value": "$18,442m AUM / $12,416m FPAUM"
+        },
+        {
+          "band": "GP Strategic Capital",
+          "label": "AUM / FPAUM",
+          "value": "$71,522m / $41,382m"
+        }
+      ],
+      "notes": "From Blue Owl's Q2 2026 earnings presentation."
+    },
+    {
+      "product": "Digital Infrastructure vehicles",
+      "specs": [
+        {
+          "band": "Drawdown funds",
+          "label": "Fund II (2020 vintage)",
+          "value": "AUM $5,242m; raised $3,805m"
+        },
+        {
+          "band": "Drawdown funds",
+          "label": "Fund III (2022 vintage)",
+          "value": "AUM $8,058m; raised $7,170m; final close at the $7bn hard cap, May 2025"
+        },
+        {
+          "band": "Evergreen",
+          "label": "ODIT (private wealth)",
+          "value": "first close approximately $1.7 billion (1 December 2025); 12 data centres, 235 MW, 99.7% leased at 30 June 2026"
+        },
+        {
+          "band": "Strategy scale",
+          "label": "Capacity (31 December 2025)",
+          "value": "approximately 9 gigawatts of leased and owned data center capacity and over 90 operational and under-construction facilities worldwide"
+        }
+      ],
+      "notes": "The flagship funds are the former IPI Partners funds; Fund I is fully realised."
+    },
+    {
+      "product": "AI-campus and AI-compute positions on the record",
+      "specs": [
+        {
+          "band": "Equity — control or joint venture",
+          "label": "STACK Infrastructure",
+          "value": "portfolio company owned by Blue Owl-managed funds; share not disclosed"
+        },
+        {
+          "band": "Equity — control or joint venture",
+          "label": "Hyperion (Meta), Louisiana",
+          "value": "80% Blue Owl funds; $7.0bn cash at closing; ~$27bn total development cost; Meta manages construction"
+        },
+        {
+          "band": "Equity — control or joint venture",
+          "label": "Abilene (Crusoe), Texas",
+          "value": "$15 billion joint venture; 1.2 GW; Blue Owl share not disclosed"
+        },
+        {
+          "band": "Equity — control or joint venture",
+          "label": "Chirisa campuses for CoreWeave",
+          "value": "$4bn Lancaster JV (closed 25 Aug 2025); $5bn Chesterfield programme with PowerHouse"
+        },
+        {
+          "band": "Debt",
+          "label": "IREN (Mackenzie, BC)",
+          "value": "$2.4bn: $1.2bn senior secured term loan + $1.2bn senior secured notes; 9.0% fixed"
+        },
+        {
+          "band": "Debt",
+          "label": "Nscale (Europe)",
+          "value": "$1.4bn GPU-backed delayed-draw term loan, co-led with PIMCO and LuminArx"
+        }
+      ],
+      "notes": "Blue Owl Capital Inc.'s own filings name none of these; figures come from counterparties' filings and releases and from Blue Owl-managed vehicles' filings."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Douglas I. Ostrover",
+      "title": "Chairman and Co-Chief Executive Officer",
+      "photo": "images/execs/blue-owl-ostrover.jpg",
+      "background": [
+        "Co-founded Owl Rock Capital Partners (2016) with Marc Lipschultz and Craig Packer; Chairman and Co-CEO of Blue Owl since May 2021",
+        "A founder of GSO Capital Partners, Blackstone's credit platform; Senior Managing Director at Blackstone until 2015",
+        "Chairman and Global Co-Head of Leveraged Finance, Credit Suisse First Boston; joined DLJ in 1992",
+        "Controls 45.7% of Blue Owl's combined voting power (2026 proxy)",
+        "MBA NYU Stern; BA Economics, University of Pennsylvania"
+      ]
+    },
+    {
+      "name": "Marc S. Lipschultz",
+      "title": "Co-Chief Executive Officer and Director",
+      "photo": "images/execs/blue-owl-lipschultz.jpg",
+      "background": [
+        "Co-founded Owl Rock; Co-CEO of Blue Owl",
+        "More than 20 years at KKR, as a member of its Management Committee and Global Head of Energy and Infrastructure",
+        "Earlier at Goldman Sachs (M&A and principal investing); Hess Corporation director, December 2016 to July 2025",
+        "MBA Harvard (Baker Scholar); AB Stanford"
+      ]
+    },
+    {
+      "name": "Marc Zahr",
+      "title": "Co-President; Global Head of Real Assets; Chairman of ODIT and ORENT",
+      "photo": "images/execs/blue-owl-zahr.jpg",
+      "background": [
+        "Co-President since December 2021; manages the Real Assets platform's investment activities, including digital infrastructure and net lease",
+        "Chairman of the boards of Blue Owl Digital Infrastructure Trust and Blue Owl Real Estate Net Lease Trust; Co-Chairman of STORE Capital",
+        "Founded Oak Street (2009); earlier at American Realty Capital and Merrill Lynch",
+        "Quoted for Blue Owl on the Abilene joint venture (May 2025)"
+      ]
+    },
+    {
+      "name": "Matt A'Hearn",
+      "title": "Senior Managing Director; Head of Digital Infrastructure",
+      "background": [
+        "Leads Blue Owl's Digital Infrastructure strategy and chairs its investment committee; reports to Marc Zahr",
+        "Managing Partner and a founder of IPI Partners, the predecessor firm to Blue Owl Digital Infrastructure",
+        "Led the global communications-infrastructure investment-banking practice at Moelis & Company; earlier at BofA Merrill Lynch, UBS and DLJ",
+        "Quoted in STACK's Project Jupiter release (September 2025)"
+      ]
+    },
+    {
+      "name": "Craig W. Packer",
+      "title": "Co-President; Global Head of Credit; CEO of each Blue Owl BDC",
+      "photo": "images/execs/blue-owl-packer.jpg",
+      "background": [
+        "Co-founded Owl Rock; leads the Credit platform and its BDCs (OBDC, OTF, OCIC, OTIC)",
+        "Partner and Co-Head of Leveraged Finance Americas, Goldman Sachs (joined 2006)",
+        "Global Head of High Yield Capital Markets, Credit Suisse First Boston; DLJ",
+        "MBA Harvard; BS University of Virginia"
+      ]
+    },
+    {
+      "name": "Michael D. Rees",
+      "title": "Co-President; Head of GP Strategic Capital",
+      "photo": "images/execs/blue-owl-rees.jpg",
+      "background": [
+        "Founded Dyal Capital (2010); Dyal Capital SLP holds 35.1% of Blue Owl's combined voting power",
+        "Founding employee of Neuberger Berman Group and first COO of its alternatives business; Lehman Brothers 2001–2009",
+        "MS Mechanical Engineering and MS Technology Policy, MIT"
+      ]
+    },
+    {
+      "name": "Alan Kirshenbaum",
+      "title": "Chief Financial Officer; Co-Chair, Operating Committee",
+      "photo": "images/execs/blue-owl-kirshenbaum.jpg",
+      "background": [
+        "CFO of Sixth Street Specialty Lending (2011–2015), through its 2014 IPO",
+        "CFO of TPG Special Situations Partners; CFO of Bear Stearns Asset Management (2003–2006)",
+        "MBA NYU Stern; BS Rutgers"
+      ]
+    },
+    {
+      "name": "Kurt Tenenbaum",
+      "title": "Senior Managing Director, Direct Lending Investment Team",
+      "background": [
+        "Leads Blue Owl's technology-lending investments from Menlo Park",
+        "Spoke for Blue Owl on the USD 2.4bn IREN equipment financing (August 2026): 'This is equipment finance at AI scale'",
+        "Previously in technology, media and telecom leveraged finance at Goldman Sachs"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "public",
+    "periods": [
+      {
+        "period": "Q2 2026",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Distributable earnings per adjusted share",
+            "actual": "USD 0.22 (USD 351.2m)",
+            "expected": "USD 0.22 (Zacks consensus; FactSet also USD 0.22)",
+            "verdict": "inline",
+            "result": "In line; Q2 2025 was USD 0.21."
+          },
+          {
+            "name": "Fee-related earnings",
+            "actual": "USD 392.2m; USD 0.25 per adjusted share; FRE margin 58.5%",
+            "expected": "",
+            "verdict": "",
+            "result": "No published FRE-per-share consensus was found."
+          },
+          {
+            "name": "GAAP revenues",
+            "actual": "USD 753.1m",
+            "expected": "",
+            "verdict": "",
+            "result": "Consensus revenue definitions differ by provider; not compared.",
+            "kpi": "revenue",
+            "usdMillions": 753.1,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "GAAP net income attributable to Blue Owl Capital Inc.",
+            "actual": "USD 11.4m; USD 0.02 per Class A share",
+            "expected": "",
+            "verdict": "",
+            "result": "GAAP earnings are small against fee earnings because of amortisation, equity compensation and the Up-C structure.",
+            "kpi": "net-income",
+            "usdMillions": 11.4,
+            "fxBasis": "as reported"
+          }
+        ],
+        "commentary": "AUM USD 319.0bn (+12% year on year); USD 7.8bn of new commitments; dividend USD 0.23. Zacks consensus for Q3 2026 distributable earnings is USD 0.23 a share, and USD 0.87 for FY2026."
+      },
+      {
+        "period": "FY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "GAAP total revenues, net",
+            "actual": "USD 2,870.2m",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-reported.",
+            "kpi": "revenue",
+            "usdMillions": 2870.2,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "GAAP net income attributable to Blue Owl Capital Inc.",
+            "actual": "USD 78.8m; diluted USD 0.10 per Class A share",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-reported.",
+            "kpi": "net-income",
+            "usdMillions": 78.8,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Fee-related earnings / distributable earnings",
+            "actual": "USD 1,496.5m (USD 0.96 per adjusted share) / USD 1,309.1m (USD 0.84)",
+            "expected": "",
+            "verdict": "",
+            "result": "No full-year consensus was read from a primary account. Q4 2025 distributable earnings of USD 0.24 beat a Zacks consensus of USD 0.23."
+          }
+        ],
+        "commentary": "Digital infrastructure management fees were USD 130.9m in the first year after the IPI acquisition, which contributed USD 164.6m of GAAP revenue. AUM rose to USD 307.4bn."
+      },
+      {
+        "period": "FY2024",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "GAAP total revenues, net",
+            "actual": "USD 2,295.4m",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-reported.",
+            "kpi": "revenue",
+            "usdMillions": 2295.4,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "GAAP net income attributable to Blue Owl Capital Inc.",
+            "actual": "USD 109.6m",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-reported.",
+            "kpi": "net-income",
+            "usdMillions": 109.6,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Fee-related earnings / distributable earnings",
+            "actual": "USD 1,253.4m (USD 0.86) / USD 1,129.2m (USD 0.77)",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-reported."
+          }
+        ],
+        "commentary": "The year before IPI; AUM USD 251.1bn."
+      }
+    ],
+    "commentary": "Company figures are from Blue Owl's 10-K, 10-Qs and earnings decks; consensus from Zacks as reported by Yahoo Finance. Blue Owl gives no earnings guidance but set a 2026 dividend of USD 0.92 a share. Parent ratings: S&P BBB and Fitch BBB+, both stable (August 2026 notes). Q3 2026 results are due on 29 October 2026."
+  },
+  "sources": [
+    {
+      "label": "Blue Owl Credit Income Corp. — Form 8-K Exhibit 99.1: October 2026 shareholder update (Q3 tender requests USD 3.1bn, 16.8%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1812554/000119312526411315/d136475dex991.htm",
+      "date": "2026-10-01"
+    },
+    {
+      "label": "Blue Owl — to announce third-quarter 2026 results on 29 October 2026",
+      "url": "https://ir.blueowl.com/Investors/news/news-details/2026/Blue-Owl-Capital-Inc--to-Announce-Third-Quarter-2026-Results/default.aspx",
+      "date": "2026-10-01"
+    },
+    {
+      "label": "TechCrunch — Oracle sends force-majeure notice on its New Mexico Stargate data center (Blue Owl statement)",
+      "url": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+      "date": "2026-09-24"
+    },
+    {
+      "label": "Bloomberg via The Star (Reuters) — BlackRock, IFM close in on USD 25bn STACK data-centre deal (reported)",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+      "date": "2026-09-24"
+    },
+    {
+      "label": "Bloomberg Law — Blue Owl hit as Monarch leads USD 1bn Loparex restructuring (reported)",
+      "url": "https://news.bloomberglaw.com/bankruptcy-law/blue-owl-hit-as-monarch-leads-1-billion-loparex-restructuring",
+      "date": "2026-09-08"
+    },
+    {
+      "label": "Blue Owl — Blue Owl-managed funds lead USD 2.4bn AI-factory financing for IREN",
+      "url": "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "IREN Limited — Form 10-K for the year ended 30 June 2026 (August 2026 financing agreements)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm",
+      "date": "2026-08-27"
+    },
+    {
+      "label": "Blue Owl Capital Inc. — Form 8-K: USD 750m 6.750% senior notes due 2036 completed",
+      "url": "https://www.sec.gov/Archives/edgar/data/1823945/000119312526355671/d166284d8k.htm",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "Blue Owl Digital Infrastructure Trust — Form 10-Q, quarter ended 30 June 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2069692/000206969226000057/osnl-20260630.htm",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "Blue Owl Finance LLC — free writing prospectus for the 6.750% notes due 2036 (S&P BBB / Fitch BBB+)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1823945/000119312526345048/d32150dfwp.htm",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "Blue Owl Capital Inc. — Form 10-Q, quarter ended 30 June 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1823945/000182394526000040/owl-20260630.htm",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Blue Owl Capital Inc. — Form 8-K: second-quarter 2026 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/1823945/000182394526000036/owl-20260730.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Blue Owl — Q2 2026 earnings presentation (AUM by strategy)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1823945/000182394526000036/blueowlearningsdeck63026.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Zacks via Yahoo Finance — Blue Owl Capital Q2 2026 distributable earnings in line with consensus",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/blue-owl-capital-inc-owl-123508916.html",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Blue Owl — Funds managed by Blue Owl launch Kirkwood Infrastructure Group",
+      "url": "https://www.blueowl.com/news/funds-managed-blue-owl-digital-infrastructure-strategy-launch-kirkwood-infrastructure-group",
+      "date": "2026-07-08"
+    },
+    {
+      "label": "Blue Owl Technology Income Corp. — Schedule TO-I/A: Q2 2026 tender results (38.1% requested; 13.1% accepted)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1869453/000162828026049599/otic-scheduletoajuly2026.htm",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Blue Owl Capital Inc. — Definitive proxy statement 2026 (executive officers, voting power)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1823945/000182394526000017/owl-20260417.htm",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "Bloomberg — Blue Owl fund outlook cut to negative by Moody's on redemptions (reported)",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-08/blue-owl-fund-outlook-cut-to-negative-by-moody-s-on-redemptions",
+      "date": "2026-04-08"
+    },
+    {
+      "label": "Blue Owl Technology Income Corp. — Schedule TO-I/A: Q1 2026 tender results (40.4% requested; 14.380% accepted)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1869453/000162828026027573/otic-scheduletoa.htm",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "Blue Owl Digital Infrastructure Trust — Form 10-K for 2025 (STACK 'a portfolio company owned by certain Other Blue Owl Accounts'; ~9 GW)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2069692/000206969226000016/osnl-20251231.htm",
+      "date": "2026-03-11"
+    },
+    {
+      "label": "Blue Owl Capital Inc. — Form 10-K for 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1823945/000182394526000009/owl-20251231.htm",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Blue Owl Capital Corp II — Form 8-K: USD 1.4bn loan sales and return of capital",
+      "url": "https://www.sec.gov/Archives/edgar/data/1655887/000162828026009025/obdc-20260217.htm",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "Michigan Public — Developers dispute report that financing for the Michigan data-centre project is in limbo (Blue Owl)",
+      "url": "https://www.michiganpublic.org/transportation-infrastructure/2025-12-18/developers-dispute-published-report-that-financing-for-controversial-michigan-data-center-project-is-in-limbo",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "Blue Owl Digital Infrastructure Trust — Form 8-K: first close and acquisition of 11 data centres",
+      "url": "https://www.sec.gov/Archives/edgar/data/2069692/000206969225000025/osnl-20251201.htm",
+      "date": "2025-12-04"
+    },
+    {
+      "label": "Blue Owl Capital Corporation — Form 8-K Exhibit 99.1: OBDC and OBDC II merger terminated",
+      "url": "https://www.sec.gov/Archives/edgar/data/1655888/000162828025053061/exhibit991-obdc8xk.htm",
+      "date": "2025-11-19"
+    },
+    {
+      "label": "CPP Investments — net assets total C$777.5bn at second quarter fiscal 2026 (Abilene alongside Blue Owl)",
+      "url": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html",
+      "date": "2025-11-14"
+    },
+    {
+      "label": "Meta Platforms — Form 10-Q for Q3 2025, Note 13 (Hyperion joint venture)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Meta — Meta and Blue Owl Capital to develop the Hyperion data center",
+      "url": "https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/",
+      "date": "2025-10-21"
+    },
+    {
+      "label": "Nscale — pre-Series C SAFE of USD 433 million (Blue Owl Managed Funds among investors)",
+      "url": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "STACK Infrastructure — delivers digital infrastructure for data center campus in New Mexico (Project Jupiter)",
+      "url": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
+      "date": "2025-09-26"
+    },
+    {
+      "label": "Blue Owl — Qatar Investment Authority and Blue Owl Capital partnership",
+      "url": "https://www.blueowl.com/news/qatar-investment-authority-and-blue-owl-capital-partnership",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "Nscale — Series B of USD 1.1 billion",
+      "url": "https://www.nscale.com/press-releases/nscale-series-b",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "Chirisa Technology Parks — Blue Owl and Chirisa close USD 4bn joint venture for the Lancaster campus",
+      "url": "https://chirisatechnologyparks.com/blue-owl-and-chirisa-technology-parks-close-4-billion-joint-venture-partnership-including-machine-investment-group-for-lancaster-campus/",
+      "date": "2025-08-25"
+    },
+    {
+      "label": "PR Newswire — Blue Owl, Chirisa Technology Parks and PowerHouse announce next phase of USD 5bn joint venture",
+      "url": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html",
+      "date": "2025-05-28"
+    },
+    {
+      "label": "Crusoe — Crusoe, Blue Owl Capital and Primary Digital Infrastructure enter second phase of USD 15bn joint venture (Abilene)",
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture",
+      "date": "2025-05-21"
+    },
+    {
+      "label": "Apollo — funds to acquire pan-European colocation business from STACK Infrastructure, a portfolio company of Blue Owl Digital Infrastructure",
+      "url": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871",
+      "date": "2025-04-29"
+    },
+    {
+      "label": "Blue Owl Capital Inc. — Form 8-K: agreement to acquire IPI Partners' business (about USD 1.0bn)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1823945/000119312524233331/d869362d8k.htm",
+      "date": "2024-10-07"
+    },
+    {
+      "label": "Public Citizen — Energy Capital Partners merger with Bridgepoint (Blue Owl 19.3% of ECP)",
+      "url": "https://www.citizen.org/article/energy-capital-partners-bridgepoint/",
+      "date": "2023-10-24"
+    },
+    {
+      "label": "Blue Owl — Our team (leadership, Digital Infrastructure team)",
+      "url": "https://www.blueowl.com/our-team"
+    },
+    {
+      "label": "Blue Owl — Matt A'Hearn, Head of Digital Infrastructure",
+      "url": "https://www.blueowl.com/our-team/matt-ahearn"
+    },
+    {
+      "label": "Yahoo Finance — OWL price history (close USD 9.08 on 2 Oct 2026; USD 16.05 on 2 Oct 2025)",
+      "url": "https://finance.yahoo.com/quote/OWL/history/"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}

@@ -2,7 +2,7 @@
  "schemaVersion": 2,
  "slug": "vantage",
  "title": "Vantage Data Centers \u2014 Study Guide",
- "lastUpdated": "2026-08-21",
+ "lastUpdated": "2026-10-04",
  "sections": [
   {
    "id": "wholesale-colocation-the-operator-landlord-model",
@@ -102,7 +102,7 @@
    "title": "The competitive map: where Vantage sits",
    "kind": "prose",
    "ps": [
-    "Wholesale/build-to-suit pure-plays: Vantage, Aligned (Tier-II US metros, ODATA in LatAm), STACK (also DigitalBridge-family), CloudHQ, QTS (Blackstone; the largest US land bank), Yondr (absorbed partly into Vantage APAC) \u2014 all compete on time-to-power and delivery credibility",
+    "Wholesale/build-to-suit pure-plays: Vantage, Aligned (Tier-II US metros, ODATA in LatAm), STACK (owned by Blue Owl-managed funds), CloudHQ, QTS (Blackstone; the largest US land bank), Yondr (absorbed partly into Vantage APAC) \u2014 all compete on time-to-power and delivery credibility",
     "Retail/interconnection incumbents: Equinix and Digital Realty are public REITs whose premium is network density and enterprise ecosystems; they build hyperscale through JVs (xScale, etc.) rather than pure landlord bets",
     "Switch: high-density US wholesale with a design-patent identity, taken private by DigitalBridge \u2014 a sibling more than a rival",
     "AI-era entrants from the energy side: Crusoe (owns its generation), miner-pivots (Applied Digital, TeraWulf, Core Scientific) converting power positions into leases \u2014 competing for the same hyperscaler leases with cheaper power but shorter delivery track records",

@@ -1250,6 +1250,24 @@
       "cadence": "quarterly",
       "lastRefreshed": "2026-10-04",
       "tier": "watch"
+    },
+    {
+      "slug": "softbank",
+      "nextReport": "2026-11-10",
+      "confirmed": true,
+      "lastRefreshed": "2026-10-04"
+    },
+    {
+      "slug": "sb-energy",
+      "cadence": "quarterly",
+      "lastRefreshed": "2026-10-04",
+      "tier": "core"
+    },
+    {
+      "slug": "blue-owl",
+      "nextReport": "2026-10-29",
+      "confirmed": true,
+      "lastRefreshed": "2026-10-04"
     }
   ]
 }

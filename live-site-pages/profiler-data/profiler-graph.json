@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-10-04",
- "companies": 208,
+ "built": "2026-10-05",
+ "companies": 211,
  "edges": [
   {
    "a": "5c-group",
@@ -1284,6 +1284,77 @@
   },
   {
    "a": "abb",
+   "b": "softbank",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Agreed buyer of ABB's Robotics division for USD 5.375bn, signed on 8 October 2025 and not completed as of 1 October 2026.",
+     "context": "ABB's 8 October 2025 release states an enterprise value of USD 5.375bn; SoftBank's release calls the same figure the total purchase price. Both expected closing in mid-to-late 2026, subject to EU, Chinese and US approvals. SoftBank's August 2026 investor presentation still lists the ABB Robotics business as 'Planned in 2026', with part of USD 1.75bn of LBO financing allocated to it. Neither party had announced completion by 1 October 2026.",
+     "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/investor-presentation_q1fy2026_01_en.pdf",
+     "status": "announced",
+     "since": "2025-10",
+     "scale": "USD 5.375bn",
+     "via": "Agreed sale of ABB Robotics"
+    },
+    "b": {
+     "type": "other",
+     "note": "Agreed buyer of ABB's robotics business for USD 5.375bn; signed on 8 October 2025 and not completed as of 1 October 2026.",
+     "context": "SoftBank's 8 October 2025 release states a total purchase price of USD 5.375bn and expected closing in mid-to-late 2026, subject to EU, Chinese and US approvals. Its August 2026 investor deck lists the deal as 'Planned in 2026' and notes USD 1.75bn of non-recourse acquisition financing. No completion has been announced.",
+     "source": "https://group.softbank/en/news/press/20251008",
+     "status": "announced",
+     "since": "2025-10",
+     "scale": "USD 5.375bn",
+     "via": "ABB Robotics"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Under CEO Morten Wierod (since August 2024) the portfolio is being aggressively reshaped: Robotics agreed to be sold to SoftBank for $5.375B (scrapping a planned spin-off; signed October 2025, not completed as of 1 October 2026), a $5.5B recommended offer for UK valve-actuator maker Rotork (ABB's biggest-ever deal, received as 'pricy' — shares fell 4%), a $2B buyback, and ~$14B of remaining M&A firepower.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-08",
+     "text": "Agreement to divest Robotics to SoftBank for $5.375B — spin-off plan scrapped; ~$5.3B of expected net cash earmarked for the M&A pivot (closing expected mid-to-late 2026; not completed as of 1 October 2026) — Wierod's defining portfolio move: exit a #2-global robotics franchise ('limited synergies') to double down on electrification and automation. The expected proceeds are already earmarked — ~$4.8B toward Rotork — with ~$14B of stated remaining firepower that the press flags as an 'M&A-risk discount' on the multiple.",
+     "src": "https://new.abb.com/news/detail/129685/abb-to-divest-robotics-division-to-softbank-group",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The USD 5.375bn purchase of ABB's robotics business is signed, not closed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*ABB Robotics closing:* expected in the second half of 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Holding-company investments and pending acquisitions",
+     "date": "",
+     "text": "SoftBank agreed on 8 October 2025 to buy ABB's robotics business for USD 5.375bn.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-08",
+     "text": "Agreement to buy ABB's robotics business for USD 5.375bn — Signed, not closed at 1 October 2026; SoftBank lists it as 'Planned in 2026'.",
+     "src": "https://group.softbank/en/news/press/20251008",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-08"
+  },
+  {
+   "a": "abb",
    "b": "sungrow",
    "evid": [
     {
@@ -2325,6 +2396,42 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "aep",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Customer-funded transmission partner at PORTS-Pike: an Electric Service Agreement covers 0.8 GW, while the remaining 9.2 GW and the 765 kV build SB Energy pays for await definitive agreements and OPSB, FERC and PUCO approvals.",
+     "context": "AEP's 20 March 2026 release says SB Energy is committed to paying for USD 4.2bn of new transmission investment for the 10 GW campus. SB Energy's S-1 says AEP Ohio and its affiliates 'intend to incur approximately $5.1 billion in capital costs', to be passed on to SB Energy with a regulated return. The two figures may cover different scopes; no source reconciles them.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "since": "2026-03",
+     "scale": "USD 4.2bn of new transmission paid for by SB Energy (AEP); ~USD 5.1bn of AEP Ohio capital costs passed through (S-1)",
+     "via": "AEP Ohio service and 765 kV transmission for the PORTS-Pike campus"
+    },
+    "b": {
+     "type": "partner",
+     "note": "AEP Ohio serves PORTS-Pike: an Electric Service Agreement covers 0.8 GW, and service for a further 9.2 GW, with the 765 kV build SB Energy pays for, awaits definitive agreements and OPSB, FERC and PUCO approvals.",
+     "context": "AEP's 20 March 2026 release says 'SB Energy is committed to paying for the $4.2 billion in new transmission investments' for a 10 GW campus, with power expected from 2029. The S-1 records an Electric Service Agreement and Letter of Agreement with AEP Ohio for 0.8 GW. It says agreements for the 9.2 GW of transmission capacity are 'at various stages of execution and are subject to final regulatory approvals'. It puts AEP's capital costs at about USD 5.1bn, passed through to SB Energy with a regulated return, and the credit support needed at more than USD 6bn. On 30 July 2026 AEP still called SB Energy the 'prospective offtaker'. The USD 4.2bn and USD 5.1bn figures may cover different scopes; no source reconciles them.",
+     "source": "https://www.aep.com/news/stories/view/10823/",
+     "status": "active",
+     "since": "2026-03",
+     "scale": "USD 4.2bn of transmission paid for by SB Energy (AEP); ~USD 5.1bn of AEP capital costs passed through (S-1)",
+     "via": "AEP Ohio Electric Service Agreement (0.8 GW) and 765 kV transmission for PORTS-Pike"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-20",
+     "text": "Piketon: the Department of Energy, SB Energy and AEP Ohio announced new 765 kV transmission for a 10 GW data-center campus at the former Portsmouth gaseous diffusion plant, with SB Energy committing to pay the entire $4.2B and power expected in 2029 — A customer paying the full transmission cost is the cleanest version of cost-causation in the corpus, and it sits outside the capital plan.",
+     "src": "https://www.aep.com/news/stories/view/10823/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-20"
   },
   {
    "a": "aep",
@@ -4266,6 +4373,20 @@
     }
    ],
    "last": "2025-10-23"
+  },
+  {
+   "a": "amazon",
+   "b": "blue-owl",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-08",
+     "text": "Funds managed by Blue Owl launch Kirkwood Infrastructure Group, building more than 200 miles of fibre from Shreveport to Vicksburg 'to support the significant growth of hyperscale data center development in the region' — Fibre for the Louisiana data-centre build-out, which includes Hyperion and STACK's Amazon campuses.",
+     "src": "https://www.blueowl.com/news/funds-managed-blue-owl-digital-infrastructure-strategy-launch-kirkwood-infrastructure-group",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-08"
   },
   {
    "a": "amazon",
@@ -9415,6 +9536,20 @@
   },
   {
    "a": "anthropic",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Capabilities · Sites, leases and power — TeraWulf Justified, Fluidstack's five campuses, Riot Rockdale, Hut 8 River Bend and Beacon Point, ERock generation, Theseus",
+     "date": "",
+     "text": "Among frontier labs Anthropic sits between OpenAI (Stargate's landlord-financed campuses through Oracle, Crusoe and SoftBank) and xAI (self-built Colossus): it contracts directly for buildings and generation but owns neither, and its chips at leased sites are owned by lessors.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "anthropic",
    "b": "terawulf",
    "curated": {
     "a": {
@@ -12264,6 +12399,34 @@
   },
   {
    "a": "bechtel",
+   "b": "sb-energy",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The gas-plant supplier roster belongs to the SoftBank affiliate developing the plants, not to SB Energy.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-21"
+  },
+  {
+   "a": "bechtel",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched with SoftBank Group as secretariat: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The supplier roster for the gas plant beside PORTS. It records intentions, not contracts.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-21"
+  },
+  {
+   "a": "bechtel",
    "b": "tva",
    "curated": {
     "b": {
@@ -12620,6 +12783,32 @@
      "status": "active",
      "scale": "Spring Valley 152 MW wind",
      "via": "NV Energy PPA"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "NV Energy buys the output of SB Energy's Libra solar-plus-storage project in Nevada under a fixed-price 25-year PPA; Libra is under construction.",
+     "context": "SB Energy's S-1 describes Libra, in Mineral and Lyon counties, as '700 MWac (910 MWdc) of PV and 700 MW / 2,800 MWh of BESS' with 'a fixed-price 25-year PPA with NV Energy'. It is SB Energy's largest solar-plus-storage hybrid.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "scale": "700 MWac solar + 700 MW / 2,800 MWh storage; 25-year PPA",
+     "via": "NV Energy — Libra solar-plus-storage PPA"
+    },
+    "b": {
+     "type": "customer",
+     "note": "NV Energy, a Berkshire Hathaway Energy utility, buys the output of SB Energy's Libra solar-plus-storage project in Nevada under a fixed-price 25-year PPA.",
+     "context": "The S-1 describes Libra, in Mineral and Lyon counties, Nevada, as '700 MWac (910 MWdc) of PV and 700 MW / 2,800 MWh of BESS' with 'a fixed-price 25-year PPA with NV Energy'. It is SB Energy's largest solar-plus-storage hybrid, financed with a USD 2.4bn construction and bridge commitment on 13 March 2026 and under construction.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "scale": "700 MWac solar + 700 MW / 2,800 MWh storage; 25-year PPA",
+     "via": "NV Energy — Libra solar-plus-storage PPA"
     }
    },
    "evid": [],
@@ -13258,6 +13447,54 @@
     }
    ],
    "last": "2026-08-10"
+  },
+  {
+   "a": "blackrock",
+   "b": "blue-owl",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Reported only: Bloomberg says the BlackRock-backed AIP and IFM Investors are in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn.",
+     "context": "Reuters, carrying Bloomberg's 24 September 2026 report, could not verify it, and no party commented. A report, not a transaction.",
+     "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+     "status": "announced",
+     "since": "2026-09",
+     "via": "AI Infrastructure Partnership (with IFM Investors), reported STACK Asia-Pacific talks"
+    },
+    "b": {
+     "type": "other",
+     "note": "Reported only: Bloomberg says the BlackRock-backed AIP and IFM Investors are in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn.",
+     "context": "Bloomberg's 24 September 2026 report, carried by Reuters, described Blue Owl as STACK's owner and the AIP–IFM group as in exclusive talks; Reuters could not verify it, and no party commented. Earlier reporting had Blue Owl seeking more than USD 30bn, with Brookfield, KKR and DigitalBridge among possible bidders. A report, not a transaction.",
+     "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+     "status": "announced",
+     "since": "2026-09",
+     "via": "AI Infrastructure Partnership (with IFM Investors)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-24",
+     "text": "Bloomberg reports AIP and IFM Investors in exclusive talks with Blue Owl for STACK Infrastructure's Asia-Pacific data centres at up to USD 25bn — A report, not a deal: Reuters could not verify it, and BlackRock, IFM, STACK and AIP did not respond. The '~1.1 GW' figure in circulation is RuntimeWire's own sum of STACK's site list, against 470 MW in another profile. If it signs, it would be AIP's second investment and its first outside the Americas.",
+     "src": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Digital Infrastructure (formerly IPI Partners)",
+     "date": "",
+     "text": "Against BlackRock (GIP) and KKR it is smaller in infrastructure AUM but more concentrated in single-tenant AI campuses.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-24",
+     "text": "Bloomberg reports the AIP (BlackRock-backed) and IFM Investors in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn — Reported only; no party has confirmed. Blue Owl had reportedly sought more than USD 30bn.",
+     "src": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-24"
   },
   {
    "a": "blackrock",
@@ -14268,7 +14505,7 @@
     {
      "where": "Capabilities · AI Infrastructure & Superclusters",
      "date": "",
-     "text": "Financing model: SPV/JV structures — Blue Owl (Hyperion: ~$27B, 80/20, $26B PIMCO debt) and BlackRock (El Paso: ~$14B, 80/20) — moving the build off Meta's balance sheet.",
+     "text": "Financing model: SPV/JV structures — Blue Owl (Hyperion: ~$27B total development cost, 80/20, part of Blue Owl's capital raised as debt from PIMCO and other bond investors) and BlackRock (El Paso: ~$14B, 80/20) — moving the build off Meta's balance sheet.",
      "src": "",
      "from": "b"
     },
@@ -14692,6 +14929,20 @@
      "where": "Key Judgments",
      "date": "",
      "text": "Basis: RWE's shareholder register at 12 March 2026 shows Qatar Holding at 9.3% and BlackRock at 5.9% with no Amazon holding, and German voting-rights notifications begin at 3%.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackrock",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "SoftBank therefore reaches Vantage and Switch the way BlackRock reaches Aligned through GIP: by appointing the manager, under duties owed to outside investors (the duties are our inference from the managers' SEC registration, not a filed statement).",
      "src": "",
      "from": "b"
     }
@@ -16475,6 +16726,38 @@
    "last": "2026-05-12"
   },
   {
+   "a": "blattner",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "SB Energy chose Blattner as EPC for Orion I–III (875 MWdc, commercial operation 2024) and lists it among its principal power EPCs.",
+     "context": "SB Energy's October 2024 release says it 'selected Blattner to provide the engineering, procurement and construction services' for Orion I–III. The S-1 lists Blattner Energy among its principal EPC counterparties for power infrastructure.",
+     "source": "https://sbenergy.com/american-made-solar-projects-power-google-data/",
+     "status": "active",
+     "via": "EPC for the Orion Solar Belt (Milam County, Texas)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "EPC for the Orion Solar Belt and one of SB Energy's principal power EPCs.",
+     "context": "SB Energy's October 2024 release says it 'selected Blattner to provide the engineering, procurement and construction services' for Orion I–III. The S-1 lists Blattner Energy among its 'principal EPC counterparties for power infrastructure'.",
+     "source": "https://sbenergy.com/american-made-solar-projects-power-google-data/",
+     "status": "active",
+     "via": "Power EPC (Orion Solar Belt)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It names Turner, DPR, Kiewit and SOLV Energy as its data-centre EPC providers, and SOLV, Blattner, Dashiell, CSI Electrical and Rosendin as its principal power EPCs, each on turnkey, fixed-scope contracts.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "bloom-energy",
    "b": "brookfield",
    "curated": {
@@ -16799,6 +17082,823 @@
     }
    ],
    "last": "2026-08-28"
+  },
+  {
+   "a": "blue-owl",
+   "b": "coreweave",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Capital behind two campuses CoreWeave leases: Chesterfield, Virginia (with Chirisa and PowerHouse) and Lancaster, Pennsylvania (a USD 4bn joint venture with Chirisa closed in August 2025).",
+     "context": "Chirisa's 25 August 2025 release says Blue Owl and Chirisa 'closed on a joint venture partnership' for the Lancaster campus, which CoreWeave will lease, and that Blue Owl intends to fund up to USD 20bn of Chirisa developments.",
+     "source": "https://chirisatechnologyparks.com/blue-owl-and-chirisa-technology-parks-close-4-billion-joint-venture-partnership-including-machine-investment-group-for-lancaster-campus/",
+     "status": "active",
+     "since": "2024-08",
+     "via": "Blue Owl / Chirisa joint ventures (Chesterfield, Virginia; Lancaster, Pennsylvania)"
+    },
+    "a": {
+     "type": "customer",
+     "note": "Tenant of campuses built by Blue Owl's joint ventures with Chirisa Technology Parks — Chesterfield, Virginia and Lancaster, Pennsylvania.",
+     "context": "Chirisa's 25 August 2025 release says Blue Owl and Chirisa 'closed on a joint venture partnership' of USD 4bn, including Machine Investment Group, for the Lancaster campus, which CoreWeave will lease. Blue Owl stated an intention to fund up to USD 20bn of developments for Chirisa. The earlier Chesterfield programme with PowerHouse is built to suit for CoreWeave.",
+     "source": "https://chirisatechnologyparks.com/blue-owl-and-chirisa-technology-parks-close-4-billion-joint-venture-partnership-including-machine-investment-group-for-lancaster-campus/",
+     "status": "active",
+     "since": "2024-08",
+     "via": "Blue Owl / Chirisa joint ventures (Chesterfield, Virginia; Lancaster, Pennsylvania)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-25",
+     "text": "Blue Owl and Chirisa Technology Parks close a USD 4bn joint venture (with Machine Investment Group) for the Lancaster, Pennsylvania campus to be leased by CoreWeave — Blue Owl says it intends to fund up to USD 20bn of developments for Chirisa.",
+     "src": "https://chirisatechnologyparks.com/blue-owl-and-chirisa-technology-parks-close-4-billion-joint-venture-partnership-including-machine-investment-group-for-lancaster-campus/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-08-25"
+  },
+  {
+   "a": "blue-owl",
+   "b": "cpp-investments",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Co-investor alongside Blue Owl in the second phase of a hyperscale data centre in Abilene, Texas, per CPP Investments' results for the quarter to 30 September 2025; size undisclosed.",
+     "context": "CPP Investments lists 'an investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl'.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html",
+     "status": "active",
+     "since": "2025",
+     "via": "Abilene campus, phase 2"
+    },
+    "a": {
+     "type": "partner",
+     "note": "Co-investor: CPP Investments reported an investment in the second phase of a hyperscale data centre in Abilene, Texas, alongside Blue Owl.",
+     "context": "CPP Investments' results for the quarter to 30 September 2025 list 'an investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl'. Neither party discloses the size.",
+     "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html",
+     "status": "active",
+     "since": "2025",
+     "via": "Abilene campus, phase 2"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Credit Investments — including Real Assets Credit, the data-centre lender",
+     "date": "",
+     "text": "Named AI-infrastructure lending: a C$225m commitment, 50% of a construction loan with Deutsche Bank, for a 54 MW hyperscale data-centre expansion in Cambridge, Ontario pre-leased to a GPU-focused AI cloud provider (July 2025); a USD 250m GPU-server loan facility to CoreWeave (fiscal 2025) and a USD 150m delayed-draw term loan for four CoreWeave data centres (Q1 fiscal 2027); investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl (Q2 fiscal 2026); a USD 1.5bn separately managed account and a USD 1bn financing with Blackstone's private-credit platform; C$1.75bn supporting EQT's AI-infrastructure strategy (Q1 fiscal 2027).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-14",
+     "text": "Q2 fiscal 2026: net assets C$777.5bn; investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl; USD 750m to KKR Global Infrastructure Investors V",
+     "src": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-14"
+  },
+  {
+   "a": "blue-owl",
+   "b": "crusoe",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Equity co-sponsor, through Blue Owl Real Assets funds, of the USD 15bn joint venture funding Crusoe's 1.2 GW Abilene campus.",
+     "context": "Crusoe's 21 May 2025 release: 'Crusoe in combination with funds managed by Blue Owl's Real Assets platform along with Primary Digital Infrastructure will jointly sponsor the construction of six new buildings'. It does not split debt and equity or state Blue Owl's share.",
+     "source": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture",
+     "status": "active",
+     "since": "2024",
+     "scale": "USD 15bn joint venture; 1.2 GW",
+     "via": "Abilene joint venture (with Primary Digital Infrastructure)",
+     "project": "stargate"
+    },
+    "a": {
+     "type": "partner",
+     "note": "Equity co-sponsor, through Blue Owl Real Assets funds, of the USD 15bn joint venture funding Crusoe's 1.2 GW Abilene campus.",
+     "context": "Crusoe's 21 May 2025 release announced 'the second phase of a $15 billion joint-venture to fund the 1.2 gigawatt AI data center in Abilene, Texas'. Under it, 'Crusoe in combination with funds managed by Blue Owl's Real Assets platform along with Primary Digital Infrastructure will jointly sponsor the construction of six new buildings'. The first phase (two buildings, 200+ MW) began construction in June 2024. The release does not split debt and equity or state Blue Owl's share. Bloomberg reports JPMorgan lent USD 2.3bn and USD 7.1bn for the two phases. Crusoe has said 'Our customer is Oracle. OpenAI is Oracle's customer' (reported).",
+     "source": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture",
+     "status": "active",
+     "since": "2024",
+     "scale": "USD 15bn joint venture; 1.2 GW",
+     "via": "Abilene joint venture (with Primary Digital Infrastructure)",
+     "project": "stargate"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · AI-factory campus development (design-build-operate)",
+     "date": "",
+     "text": "Financing via JVs (Blue Owl/Primary Digital $15B at Abilene; $7.1B JPMorgan-led construction loan).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "They co-sponsor the USD 15bn, 1.2 GW Abilene campus with Crusoe.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In every case another party signs for the equipment: STACK (fund-owned) at its own campuses including Jupiter, Meta as construction manager at Hyperion, Crusoe as developer at Abilene.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "At Abilene, Crusoe develops.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the ODIT 10-K on STACK, Meta's Q3 2025 10-Q and Crusoe's May 2025 release.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A seller sells to STACK, Crusoe or Meta's construction team.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Oracle is the capacity counterparty at Jupiter (STACK) and Abilene (Crusoe), and Meta at Hyperion.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024"
+  },
+  {
+   "a": "blue-owl",
+   "b": "energy-capital-partners",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BACKGROUND.** Founded in 2005 by Doug Kimmelman, ECP has been the Infrastructure segment of Bridgepoint Group plc (LSE: BPT) since the combination completed on 20 August 2024, after FERC declined the first application in March 2024 over an undisclosed Blue Owl affiliation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: FERC's March 2024 refusal of the Bridgepoint combination over the Blue Owl affiliation, the protests against Calpine and Gavin, and the September 2026 bipartisan letter against GIP/AES — none of which has yet named ECP.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GP Strategic Capital (formerly Dyal)",
+     "date": "",
+     "text": "Public Citizen put its holding at 19.3% of Energy Capital Partners when ECP agreed to combine with Bridgepoint.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blue-owl",
+   "b": "entergy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: a 15-year phase-one ESA (three five-year extensions, one-year notice) and a 20-year phase-two ESA (five-year renewals, three-year notice) against combined-cycle units the company depreciates over decades; UCS's estimate that ratepayers could fund up to 75 percent of a plant's capital where a 30-year life exceeds a 15-year contract; the intervenors' unanswered question about the phase-one parent guaranty after the Blue Owl joint venture; and the Arkansas staff's testimony that Google is paying 'well below the full cost' of Cypress.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-18",
+     "text": "Alliance for Affordable Energy report: the LPSC rejected calls to investigate the Meta campus's move into an 80/20 Blue Owl financing joint venture; the lease structure could let Meta exit as early as 2033 — The counterparty behind the phase-one guaranty changed after the vote; the intervenors' question is whether the guaranty still binds the customer.",
+     "src": "https://www.all4energy.org/wp-content/uploads/2026/05/2026-05-18-Data-Centers-Financing-Energy-Overview-Report.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-14",
+     "text": "Alliance for Affordable Energy and UCS move for an LPSC investigation: Meta moved the campus into a Blue Owl joint venture registered the day of the vote; 'Meta is no longer Laidley's parent, so the only signed parent guaranty is from an entity that has no connection to the customer' — The collateral finding in a one-customer order depends on who owns the customer; the intervenors say that changed after the order.",
+     "src": "https://www.all4energy.org/wp-content/uploads/2026/01/2026-01-14-U-37425-AAE-UCS-Mtn-for-Investigation.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-22",
+     "text": "Bisnow: Meta moves the Louisiana campus into a $27B joint venture with Blue Owl (80/20), a four-year initial lease with extensions and a residual-value guarantee — The customer's financing changed after the certificate; the utility's counterparty did not, on paper.",
+     "src": "https://www.bisnow.com/national/news/data-center-capital-markets/meta-pushes-its-largest-data-center-project-off-its-books-with-27b-joint-venture-131490",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-18"
+  },
+  {
+   "a": "blue-owl",
+   "b": "iren",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Lead lender: Blue Owl-managed funds led IREN's USD 2.4bn GPU equipment financing for the Mackenzie, British Columbia campus, signed 25 August 2026.",
+     "context": "IREN's FY2026 10-K describes 'an aggregate financing of approximately $2.4 billion': a USD 1.2bn master financing agreement with Blue Owl Capital Corporation as administrative, collateral and intercreditor agent and a lender, and USD 1.2bn of senior secured notes with Blue Owl Capital Corporation as note agent and PIMCO advising certain purchasers.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm",
+     "status": "active",
+     "since": "2026-08",
+     "scale": "USD 2.4bn (USD 1.2bn term loan + USD 1.2bn senior secured notes)",
+     "via": "Blue Owl Capital Corporation — lead lender and agent"
+    },
+    "a": {
+     "type": "other",
+     "note": "Lead lender on IREN's USD 2.4bn GPU equipment financing for its Mackenzie, British Columbia campus (signed 25 August 2026).",
+     "context": "Blue Owl's 28 August 2026 release: 'funds managed by Blue Owl led a $2.4 billion compute equipment financing for IREN Limited', comprising 'a $1.2 billion senior secured term loan and $1.2 billion of senior secured notes' to buy NVIDIA Blackwell Ultra systems. IREN's 10-K dates the agreements 25 August 2026 and names Blue Owl Capital Corporation as administrative, collateral, intercreditor and note agent and a lender, with PIMCO advising certain note purchasers. Interest is 9.0% fixed, maturities are 30 months, and draws run to 31 December 2026. It is lending, not ownership.",
+     "source": "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren",
+     "status": "active",
+     "since": "2026-08",
+     "scale": "USD 2.4bn (USD 1.2bn term loan + USD 1.2bn senior secured notes; 9.0% fixed)",
+     "via": "Blue Owl Capital Corporation — lead lender and agent"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-28",
+     "text": "Blue Owl-managed funds lead a $2.4B AI-factory equipment financing ($1.2B term loan + $1.2B senior secured notes at 9.0% fixed; PIMCO advising certain note purchasers) for the Mackenzie, BC Blackwell Ultra expansion — GPU-secured private credit funds ~90% of the Mackenzie capex — the financing template moves beyond the Microsoft-contract facility.",
+     "src": "https://www.stocktitan.net/news/OWL/blue-owl-managed-funds-lead-2-4-billion-ai-factory-financing-for-n5sfwyw6ua9x.html",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its credit funds lend against GPUs (IREN, Nscale).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Credit (direct lending, technology lending, alternative and investment-grade credit)",
+     "date": "",
+     "text": "They led a USD 2.4bn equipment financing for IREN's Mackenzie campus (a USD 1.2bn senior secured term loan plus USD 1.2bn of senior secured notes, 9.0% fixed).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-28",
+     "text": "Blue Owl-managed funds lead a USD 2.4bn compute-equipment financing for IREN's Mackenzie campus: USD 1.2bn senior secured term loan plus USD 1.2bn senior secured notes — Debt, not equity. IREN's 10-K dates the agreements 25 August, sets 9.0% fixed and 30-month maturities, and names Blue Owl Capital Corporation as agent and lender.",
+     "src": "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-28"
+  },
+  {
+   "a": "blue-owl",
+   "b": "kkr",
+   "evid": [
+    {
+     "where": "Capabilities · Digital Infrastructure (formerly IPI Partners)",
+     "date": "",
+     "text": "Against BlackRock (GIP) and KKR it is smaller in infrastructure AUM but more concentrated in single-tenant AI campuses.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blue-owl",
+   "b": "meta",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Joint-venture partner in Hyperion: an affiliate of Blue Owl-managed funds holds 80% and Meta 20%, with Meta leasing the campus and managing construction.",
+     "context": "Meta's Q3 2025 10-Q: 'At closing, we contributed $4.3 billion … while the Investor contributed $7.0 billion in cash to the Venture', with a one-time USD 2.6bn distribution to Meta and an 80/20 split; the venture is unconsolidated. Meta's release puts total development cost at about USD 27bn and says part of Blue Owl's capital is 'debt issued to PIMCO and select other bond investors'. The USD 7.0bn is Blue Owl's equity in; the USD 27bn is the project.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "80% Blue Owl funds / 20% Meta; USD 7.0bn cash at closing; ~USD 27bn total development cost",
+     "via": "Hyperion joint venture (Richland Parish, Louisiana)",
+     "project": "hyperion"
+    },
+    "a": {
+     "type": "partner",
+     "note": "Joint-venture partner in Meta's Hyperion campus: an affiliate of Blue Owl-managed funds holds 80% and Meta 20%, with Meta leasing the campus back and managing construction.",
+     "context": "Meta's Q3 2025 10-Q: 'At closing, we contributed $4.3 billion … while the Investor contributed $7.0 billion in cash to the Venture', with a one-time USD 2.6bn distribution to Meta and an 80% / 20% split. Leases begin in 2029, with an initial four-year commitment of about USD 12.3bn renewable up to 20 years. Meta gives a 16-year residual value guarantee that 'effectively begins at $28 billion'. Meta's release puts total development cost at about USD 27bn, partly funded by debt sold to PIMCO and other bond investors; IFR reports the Beignet Investor bond at USD 27.3bn. Meta provides construction and property management and does not consolidate the venture.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "80% Blue Owl funds / 20% Meta; USD 7.0bn cash at closing; ~USD 27bn total development cost",
+     "via": "Hyperion joint venture (Richland Parish, Louisiana)",
+     "project": "hyperion"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Meta is running the steepest AI-infrastructure escalation of any hyperscaler — capex guidance of $130–145B for 2026 (vs $39B actual in 2024), multi-gigawatt named campuses (Hyperion at 5 GW/$50B+, Prometheus ~1 GW, El Paso ~1 GW), and up to 6.6 GW of contracted nuclear — funded off-balance-sheet through JVs with Blue Owl and BlackRock while free cash flow collapsed to under $1B a quarter; it is the only member of the big four with no external cloud/AI revenue line to absorb the spend.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the SPV/JV financing model (Blue Owl, BlackRock — ~$41B of announced development cost moved off-balance-sheet) is now core strategy: it preserves reported capex optics and credit capacity while transferring residual-value risk to private capital; expect it on every subsequent gigawatt campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure & Superclusters",
+     "date": "",
+     "text": "Financing model: SPV/JV structures — Blue Owl (Hyperion: ~$27B total development cost, 80/20, part of Blue Owl's capital raised as debt from PIMCO and other bond investors) and BlackRock (El Paso: ~$14B, 80/20) — moving the build off Meta's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-28",
+     "text": "BlackRock JV for the ~1 GW El Paso campus (~$14B, 80/20, $12.5B debt; Meta receives ~$1B distribution) — The Blue Owl playbook repeated — Meta is industrializing off-balance-sheet AI-campus finance, keeping guidance-capex lower than economic capex.",
+     "src": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-21",
+     "text": "Blue Owl JV: ~$27B Hyperion development (80/20; Blue Owl funds put in $7.0B cash at closing, part of their capital raised as debt from PIMCO and other bond investors; 4-yr leases + 16-yr residual guarantee) — The template deal for AI-campus SPV finance — private credit is now load-bearing in hyperscale AI.",
+     "src": "https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "They hold 80% of Meta's Hyperion campus venture in Louisiana, contributing USD 7.0bn in cash against about USD 27bn of total development cost.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a vendor, Blue Owl is a directory: the orders are signed at STACK, at the joint ventures' developers, and at Meta, which manages construction at Hyperion.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In every case another party signs for the equipment: STACK (fund-owned) at its own campuses including Jupiter, Meta as construction manager at Hyperion, Crusoe as developer at Abilene.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "At Hyperion, Meta 'provide[s] construction management, administrative and property management services' despite Blue Owl funds' 80%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the ODIT 10-K on STACK, Meta's Q3 2025 10-Q and Crusoe's May 2025 release.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A seller sells to STACK, Crusoe or Meta's construction team.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "At Hyperion the funds hold 80% but Meta says Meta 'do[es] not direct the activities that most significantly impact the Venture's economic performance', and the venture is unconsolidated by Meta.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Inference: Blue Owl's funds are price-and-structure capital at Hyperion, with design and procurement left to Meta.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **Blue Owl's AI-campus exposure is concentrated on two tenants, Oracle and Meta, and the market is pricing that risk**.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Oracle is the capacity counterparty at Jupiter (STACK) and Abilene (Crusoe), and Meta at Hyperion.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Inference: Blue Owl's next AI-campus commitments are likelier to come with residual-value guarantees like Meta's, or with tenants other than Oracle.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-28"
+  },
+  {
+   "a": "blue-owl",
+   "b": "nscale",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Minority investor and lender: Blue Owl-managed funds joined the Series B and pre-Series C SAFE in 2025 and co-led, with PIMCO and LuminArx, a USD 1.4bn GPU-backed loan in February 2026.",
+     "context": "Nscale's pre-Series C SAFE release names 'Blue Owl Managed Funds, Dell, NVIDIA, Nokia' among investors in USD 433m. These are minority and lending positions, not control.",
+     "source": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe",
+     "status": "active",
+     "since": "2025-09",
+     "via": "Blue Owl-managed funds (equity) and credit funds (GPU-backed loan)"
+    },
+    "a": {
+     "type": "portfolio",
+     "note": "Minority equity investor through Blue Owl-managed funds (Series B and pre-Series C SAFE, 2025) and co-lead lender with PIMCO and LuminArx on a USD 1.4bn GPU-backed loan (February 2026).",
+     "context": "Nscale's pre-Series C SAFE release (October 2025) names 'Blue Owl Managed Funds, Dell, NVIDIA, Nokia' among investors in USD 433m, and its Series B (September 2025) lists Blue Owl among participants. In February 2026 funds managed by PIMCO, Blue Owl and LuminArx led a USD 1.4bn delayed-draw term loan secured on GPU infrastructure for Nscale's European clusters. These are minority and lending positions, not control.",
+     "source": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe",
+     "status": "active",
+     "since": "2025-09",
+     "via": "Blue Owl-managed funds (equity) and credit funds (GPU-backed loan)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-12",
+     "text": "USD 1.4 billion GPU-backed delayed-draw term loan led by PIMCO, Blue Owl and LuminArx with Goldman Sachs as sole structuring and placement agent, collateralised by GPU infrastructure, financing clusters in Norway, Portugal, Iceland and the UK against 'multiple executed customer contracts' — GPUs as collateral at the European sites — the CoreWeave structure, a year on.",
+     "src": "https://www.nscale.com/press-releases/nscale-signs-1-4bn-delayed-draw-term-loan",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-01",
+     "text": "USD 433 million pre-Series C SAFE from Blue Owl managed funds, Dell, NVIDIA and Nokia plus existing investors; boilerplate: 'operates across 50+ data centers' — Suppliers as shareholders — NVIDIA, Dell and Nokia in successive rounds.",
+     "src": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-25",
+     "text": "Series B: USD 1.1 billion led by Aker ASA (USD 285 million in cash and Narvik land, 9.3% fully diluted, earn-out to 12.2%) with Sandton, Blue Owl, Dell, Fidelity, G Squared, Nokia, NVIDIA, Point72 and T.Capital; Payne: 'Europe needs a Hyperscaler' — Europe's largest Series B, part-paid in land — Aker's Narvik portfolio after 'multiple failed attempts' to develop it.",
+     "src": "https://www.nscale.com/press-releases/nscale-series-b",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its credit funds lend against GPUs (IREN, Nscale).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Credit (direct lending, technology lending, alternative and investment-grade credit)",
+     "date": "",
+     "text": "They co-led a USD 1.4bn GPU-backed delayed-draw term loan for Nscale with PIMCO and LuminArx.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-12"
+  },
+  {
+   "a": "blue-owl",
+   "b": "oracle",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Capital behind Project Jupiter: STACK, owned by Blue Owl-managed funds, is developing Oracle's New Mexico Stargate campus; a reported force-majeure notice from Oracle followed in September 2026.",
+     "context": "STACK's 26 September 2025 release ties Jupiter in Doña Ana County to Oracle's commitment to deliver up to 4.5 GW of additional Stargate capacity, driven by investment from Blue Owl-managed funds. TechCrunch reported on 24 September 2026, citing Bloomberg, that Oracle sent a force-majeure notice; Oracle said such notices 'are common on developments of this scale' and that Jupiter 'remains on our planned schedule'. The notice's terms are reported only.",
+     "source": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+     "status": "active",
+     "since": "2025-09",
+     "via": "Project Jupiter (developed by Blue Owl fund-owned STACK)",
+     "project": "jupiter-nm"
+    },
+    "a": {
+     "type": "other",
+     "note": "The capacity counterparty at two Blue Owl-funded campuses — Project Jupiter, developed by Blue Owl fund-owned STACK, and Abilene — and the sender of a reported force-majeure notice on Jupiter in September 2026.",
+     "context": "STACK's 26 September 2025 release says it will deliver 'the planned Stargate campus in Doña Ana County, New Mexico, part of Oracle's commitment to deliver up to 4.5 gigawatts of additional Stargate capacity', driven by Blue Owl-managed funds' investment. Bloomberg reported on 24 September 2026 that Oracle sent STACK a force-majeure notice tied to power commitments. Oracle said such notices 'are common on developments of this scale' and that Jupiter 'remains on our planned schedule'. Blue Owl said the notice 'does not change the financial commitments to this multi-year project'. The notice's terms are reported only. Separately, the Financial Times reported in December 2025 that Blue Owl did not proceed with Oracle's Michigan campus financing.",
+     "source": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+     "status": "active",
+     "since": "2025-09",
+     "via": "Project Jupiter (STACK) and Abilene (Crusoe joint venture)",
+     "project": "jupiter-nm"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "They own STACK Infrastructure, the developer of Oracle's Project Jupiter in New Mexico.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **Blue Owl's AI-campus exposure is concentrated on two tenants, Oracle and Meta, and the market is pricing that risk**.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Oracle's force-majeure notice on Jupiter (acknowledged; terms reported) and the reported Michigan withdrawal both turned on Oracle-linked campuses.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Inference: Blue Owl's next AI-campus commitments are likelier to come with residual-value guarantees like Meta's, or with tenants other than Oracle.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** Blue Owl funds' percentage ownership of STACK and which funds hold it; Blue Owl's share of the Abilene joint venture and of Project Jupiter's equity (about USD 3bn is reported only); the Oracle force-majeure notice itself; the current status of the Goldman v.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Oracle–STACK resolution of the Jupiter notice and the NMED air-permit decision on the Bloom fuel cells (due 23 November 2026):* power on time would close the notice.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-24",
+     "text": "Bloomberg reports Oracle sent a force-majeure notice on Project Jupiter to STACK, the Blue Owl-owned developer; Blue Owl says 'This notice does not change the financial commitments to this multi-year project' — The notice's existence is acknowledged by Oracle and Blue Owl, but its terms are reported only: a possible three-year rent deferral if power misses the 2028 start. Oracle says Jupiter 'remains on our planned schedule'.",
+     "src": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Financial Times reports Blue Owl out of the financing for Oracle's Related Digital campus in Saline Township, Michigan; Oracle: Related 'selected the best equity partner … which in this instance was not Blue Owl' — Reported, and disputed in part by Related Digital. Blackstone and PIMCO later financed the project (USD 16bn, April 2026).",
+     "src": "https://www.michiganpublic.org/transportation-infrastructure/2025-12-18/developers-dispute-published-report-that-financing-for-controversial-michigan-data-center-project-is-in-limbo",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-26",
+     "text": "STACK to deliver the Stargate campus in Doña Ana County, New Mexico (Project Jupiter), 'driven by investment from funds managed by Blue Owl Capital' — Blue Owl's funds reach an Oracle Stargate site through their developer, STACK.",
+     "src": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-21",
+     "text": "Crusoe, Blue Owl and Primary Digital Infrastructure enter the second phase of a USD 15bn joint venture to fund the 1.2 GW Abilene, Texas campus — Blue Owl Real Assets funds are equity co-sponsors; the developer is Crusoe and the tenant Oracle. Blue Owl's share is not disclosed.",
+     "src": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-24"
+  },
+  {
+   "a": "blue-owl",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Joint-venture partner, with Chirisa Technology Parks, in the USD 5bn development programme whose Chesterfield, Virginia campus is built to suit for CoreWeave.",
+     "context": "The three announced the USD 5bn partnership in August 2024 with a first USD 750m tranche, and a second USD 750m tranche in May 2025 for 120 MW at Chesterfield.",
+     "source": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html",
+     "status": "active",
+     "since": "2024-08",
+     "scale": "USD 5bn programme; two USD 750m tranches",
+     "via": "Blue Owl / Chirisa Technology Parks joint venture"
+    },
+    "a": {
+     "type": "partner",
+     "note": "Joint-venture partner, with Chirisa Technology Parks, in the USD 5bn development programme whose Chesterfield, Virginia campus is leased to CoreWeave.",
+     "context": "The three companies announced a USD 5bn joint-venture development partnership in August 2024, with a first USD 750m tranche, and closed a second USD 750m tranche in May 2025 for 120 MW at Chesterfield for CoreWeave. A USD 600m construction loan led by Société Générale financed a 50 MW build-to-suit. PowerHouse's parent describes the Blue Owl programme as '95/5', its own funds putting in the smaller share.",
+     "source": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html",
+     "status": "active",
+     "since": "2024-08",
+     "scale": "USD 5bn programme; two USD 750m tranches",
+     "via": "Blue Owl / Chirisa Technology Parks joint venture"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: PowerHouse Data Centers is the data-center division of American Real Estate Partners (AREP), a private McLean, Virginia fund manager, and a developer of powered core-and-shell and build-to-suit campuses for hyperscalers that it finances project by project through joint ventures with institutional capital (Harrison Street, Blue Owl/Chirisa, Provident, Hillwood, Poe, Town Lane, Pennsylvania Data Center Partners) in which AREP's own funds contribute roughly 5–10% of the equity; its boilerplate has climbed from 57 buildings and 4.1 GW (December 2024) to '140 data centers' and '~10 GW' (September 2026), but only one building is documented as delivered — ABX-1 in Ashburn, leased for 30 years to CyrusOne and sold to it for USD 154.1 million — and its flagship 1.8 GW Joliet Technology Center, annexed 8–1 in March 2026, lost its ComEd transmission security agreement in July 2026 and is now in litigation with the utility and with residents.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Capital: AREP Strategic Opportunity Fund III (USD 63 million, 2022) and Fund IV (USD 309 million, February 2025, 80% to PowerHouse), Harrison Street's USD 3.2 billion committed, the Blue Owl/Chirisa USD 5 billion programme (two USD 750 million tranches), a USD 600 million Société Générale-led construction loan for the CoreWeave building.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is CoreWeave's Chesterfield landlord through the Blue Owl/Chirisa joint venture, a Dominion Energy and Oncor large-load customer, DPR Construction's client on ABX-1, and the developer whose Joliet transmission security agreement with ComEd — accepted by FERC in March 2026 and cancelled by ComEd in July — is the live test of Illinois's new large-load rules.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that tenant demand behind the pipeline is thin on the public record: two named tenants (CyrusOne at ABX-1, CoreWeave at Chesterfield through the Blue Owl/Chirisa vehicle) and one unnamed hyperscale lease at Arcola across a claimed 140 buildings.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Low confidence)** We assess that the Harrison Street and Blue Owl relationships are drifting toward the partners' own platforms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: PowerHouse is absent from the August 2025 USD 4 billion Blue Owl/Chirisa/Machine Investment Group close for CoreWeave that includes the same Chesterfield campus; Harrison Street's February 2026 Arcola release counts the asset in its own USD 6.5 billion digital platform; and Katz's stated aim is 12–15 new projects from a GP fund, which favours new partners over deeper ones.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A Blue Owl or Harrison Street financing that names PowerHouse would weaken this judgment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Reed (Pacific); the City of Joliet's own notice, the FERC docket, Hillwood's newsroom (no Joliet item), Blue Owl's and Provident's sites and all Data Center Dynamics coverage were unreadable; the brief's domains (powerhousedatacenters.com, areprealestate.com) are not the company's — it publishes at powerhousedata.com and americanrepartners.com — and its headquarters is McLean, not Reston.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*A third Blue Owl or Harrison Street tranche that names PowerHouse:* would weaken Judgment 6.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Programmatic joint-venture capital model (AREP funds plus institutional partners)",
+     "date": "",
+     "text": "AREP contributes 10% of the equity while large institutional partners provide 90%', and the Blue Owl programme '95/5'; AREP's Strategic Opportunity Fund IV is a 'USD 300m GP fund with over USD 9bn total buying power' targeting '12-to-15 new PowerHouse projects'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-27",
+     "text": "Blue Owl, Chirisa Technology Parks and PowerHouse close the second 'USD 750 million' tranche of the 'USD 5 billion' programme: 120 MW at Chesterfield for CoreWeave, delivery 2025–2026 — The only PowerHouse programme with a named neocloud tenant; PowerHouse is absent from the partners' August 2025 USD 4 billion close.",
+     "src": "https://www.powerhousedata.com/news/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-16",
+     "text": "'USD 600 million' construction loan led by Société Générale and arranged by Newmark for the 50 MW CoreWeave build-to-suit near Richmond under the Blue Owl/Chirisa/PowerHouse joint venture — The only construction loan on the public record for a PowerHouse project.",
+     "src": "https://www.bisnow.com/national/news/data-center/coreweave-data-center-in-virginia-lands-600m-loan-127230",
+     "from": "b"
+    }
+   ],
+   "last": "2025-05-27"
+  },
+  {
+   "a": "blue-owl",
+   "b": "stack-infrastructure",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Owner: STACK is 'a portfolio company owned by certain Other Blue Owl Accounts', the funds Blue Owl has managed since buying IPI Partners' business on 3 January 2025.",
+     "context": "Blue Owl bought IPI Partners' management business, not STACK's equity, which stays with the funds; no fund-by-fund percentage is disclosed. Bloomberg reported on 24 September 2026 that the BlackRock-backed AI Infrastructure Partnership and IFM Investors were in exclusive talks for STACK's Asia-Pacific portfolio at USD 20–25bn. That is a report, not a transaction.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2069692/000206969226000016/osnl-20251231.htm",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Blue Owl Digital Infrastructure funds (the former IPI Partners funds)"
+    },
+    "a": {
+     "type": "portfolio",
+     "note": "STACK is 'a portfolio company owned by certain Other Blue Owl Accounts': the funds Blue Owl has managed since the IPI acquisition closed on 3 January 2025.",
+     "context": "Blue Owl's purchase of IPI Partners' business (closed 3 January 2025; USD 1.306bn booked consideration) bought the management contracts, investor relationships and staff, not STACK itself. Blue Owl's 10-K does not name STACK. The Blue Owl-managed ODIT REIT's 10-K calls STACK 'a portfolio company owned by certain Other Blue Owl Accounts', and Apollo's April 2025 release calls it 'a portfolio company of Blue Owl Digital Infrastructure'. No fund-by-fund percentage is disclosed. STACK delivers Project Jupiter for Oracle, 'driven by investment from funds managed by Blue Owl Capital'. Bloomberg reports Blue Owl in exclusive talks to sell STACK's Asia-Pacific portfolio (reported only).",
+     "source": "https://www.sec.gov/Archives/edgar/data/2069692/000206969226000016/osnl-20251231.htm",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Blue Owl Digital Infrastructure funds (the former IPI Partners funds)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: STACK Infrastructure is the Blue Owl-managed wholesale developer-landlord executing two of the largest named-tenant data-center programs in the United States — developer and owner of all three campuses in Amazon's $18B northwest Louisiana buildout (raised from $12B on 18 August 2026) and of Project Jupiter, the 1GW+ Stargate campus in Santa Teresa, New Mexico serving Oracle/OpenAI — on a platform the company states at 13GW of current and pipeline capacity across three regionally financed businesses (December 2025).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Ownership is in motion at both ends of the structure: Blue Owl acquired STACK's fund manager IPI Partners (~$1.0B, closed January 2025), carved the pan-European colocation business out to Apollo funds (April 2025), seeded a perpetual non-traded REIT with 11 stabilized STACK data centers at $3.3B gross value (December 2025), and — per Bloomberg-sourced reporting, June 2026 — is preparing a sale of the APAC portfolio that could exceed $30B.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess STACK as the Blue Owl complex's build engine and, alongside Vantage, one of the two most consequential private wholesale landlords in the current hyperscaler/Stargate buildout.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess STACK is the Blue Owl complex's named-tenant build engine — the only private platform holding developer-owner roles in both an Amazon state-scale program and a Stargate site.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · APAC platform (reported sale process)",
+     "date": "",
+     "text": "Per Bloomberg-sourced reporting (June 2026), Blue Owl is preparing a sale of the APAC portfolio that could exceed $30B, with the BlackRock/Microsoft/MGX-backed AI Infrastructure Partnership, Brookfield, IFM, KKR and DigitalBridge among reported suitors.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Capital-markets & securitization franchise",
+     "date": "",
+     "text": "At the sponsor level, Blue Owl seeded its perpetual non-traded REIT (Blue Owl Digital Infrastructure Trust) with 11 stabilized STACK-operated data centers — $3.3B gross enterprise value, $1.5B net of assumed debt, 163MW at 99.6% leased — on 1 December 2025.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Capital-markets & securitization franchise",
+     "date": "",
+     "text": "Smaller cumulative program than Vantage's (which invented the asset class in 2018 and opened the sterling/euro markets) but among the sector's most consistent issuers — six-plus funding events across 2023-2026 through rate cycles; the Blue Owl relationship adds a perpetual-vehicle takeout no independent developer can replicate.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-25",
+     "text": "Bloomberg-sourced reports: Blue Owl preparing a sale of STACK's APAC data-center portfolio (Tokyo, Osaka, Sydney, Melbourne, Johor) that could exceed $30B — the BlackRock/Microsoft/MGX-backed AIP, Brookfield, IFM, KKR and DigitalBridge among reported suitors, process as soon as July — The sponsor is monetizing an entire region at AI-era marks — a whole-platform exit lane that reframes every regional buildout as inventory.",
+     "src": "https://www.thestar.com.my/business/business-news/2026/06/25/blackrock-backed-aip-eyes-stack-data-centres",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-04",
+     "text": "Blue Owl launches Blue Owl Digital Infrastructure Trust, a perpetual non-traded REIT, with $1.7B raised — seeded 1 December 2025 with 11 stabilized STACK-operated data centers across seven US markets ($3.3B gross enterprise value; 163MW, 99.6% leased) bought from the BODI I funds — Fund-to-permanent-capital recycling made explicit: finite-life fund assets roll into a perpetual vehicle instead of a third-party sale, keeping STACK as operator throughout.",
+     "src": "https://altswire.com/blue-owl-launches-digital-infrastructure-reit-with-1-7-billion-in-capital/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-26",
+     "text": "STACK named developer of a 1GW+ AI campus in Doña Ana County, New Mexico (Project Jupiter, with BorderPlex Digital Assets) — part of Oracle's 4.5GW additional Stargate capacity; on-site microgrid, closed-loop cooling holding water use to office-building levels; Blue Owl funds the development — STACK joins Vantage as a named Stargate landlord — and the microgrid-first design sidesteps the interconnection queue the same way Vantage's Frontier does.",
+     "src": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-29",
+     "text": "Apollo-managed funds agree to acquire STACK's pan-European colocation business — seven data centers across Stockholm, Oslo, Copenhagen, Milan and Geneva serving carriers, IT and financial-institution clients — to operate standalone under CEO Sherif Rizkalla and drop the STACK name — Portfolio pruned to hyperscale: the enterprise/interconnection business Blue Owl inherited is sold to a rival sponsor rather than run as a second product line.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "They own STACK Infrastructure, the developer of Oracle's Project Jupiter in New Mexico.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-25"
   },
   {
    "a": "brookfield",
@@ -22688,6 +23788,20 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-30",
+     "text": "SoftBank Group takes a USD 50m PIPE, about 10.4 million shares, funded from treasury stock — SoftBank does not appear as a greater-than-5% holder in the April 2026 proxy, so the position was not maintained at that level.",
+     "src": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-mining-announces-50-million-pipe-investment-softbank",
+     "from": "a"
+    }
+   ],
+   "last": "2025-01-30"
   },
   {
    "a": "cipher-mining",
@@ -29941,6 +31055,34 @@
   },
   {
    "a": "cyrusone",
+   "b": "sb-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+     "date": "",
+     "text": "The S-1 names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and says SB Energy is 'developing four of the seven largest data center sites by IT capacity in the United States'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "SB Energy names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and Clearway, NextEra and AES in power.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
    "b": "switch",
    "evid": [
     {
@@ -31695,6 +32837,20 @@
   },
   {
    "a": "digital-realty",
+   "b": "sb-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+     "date": "",
+     "text": "The S-1 names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and says SB Energy is 'developing four of the seven largest data center sites by IT capacity in the United States'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
    "b": "schneider-electric",
    "curated": {
     "a": {
@@ -31754,6 +32910,20 @@
     }
    ],
    "last": "2025-11-19"
+  },
+  {
+   "a": "digital-realty",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "SB Energy names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and Clearway, NextEra and AES in power.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "digital-realty",
@@ -33205,6 +34375,32 @@
     }
    ],
    "last": "2022"
+  },
+  {
+   "a": "dpr",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "General contractor, with Sundt, for SB Energy's Milam County data-centre campus, which is leased to OpenAI.",
+     "context": "SB Energy's Milam campus site says it 'has partnered with DPR and SUNDT for the construction of the Milam Data Center'. The S-1 names DPR among the EPC providers SB Energy assigns across phases of the same site.",
+     "source": "https://milamdc.com/",
+     "status": "active",
+     "since": "2026",
+     "via": "Milam County Data Center (with Sundt)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "General contractor, in partnership with Sundt, for the Milam County data-centre campus leased to OpenAI.",
+     "context": "SB Energy's Milam campus site says it 'has partnered with DPR and SUNDT for the construction of the Milam Data Center', which is under construction. The S-1 names DPR among the EPC providers SB Energy assigns across phases of the same site.",
+     "source": "https://milamdc.com/",
+     "status": "active",
+     "since": "2026",
+     "via": "Milam County Data Center (with Sundt)"
+    }
+   },
+   "evid": [],
+   "last": "2026"
   },
   {
    "a": "dpr",
@@ -39183,6 +40379,34 @@
   },
   {
    "a": "equinix",
+   "b": "sb-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+     "date": "",
+     "text": "The S-1 names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and says SB Energy is 'developing four of the seven largest data center sites by IT capacity in the United States'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "equinix",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "SB Energy names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and Clearway, NextEra and AES in power.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "equinix",
    "b": "stack-infrastructure",
    "evid": [
     {
@@ -42928,6 +44152,68 @@
   },
   {
    "a": "fluence",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "SB Energy's Athos Storage, 1.6 GWh under construction in California, uses Fluence storage technology; SB Energy procures the system itself.",
+     "context": "SB Energy's project page lists 'Fluence Storage' as the technology and says SB Energy is overseeing development, construction and procurement of the battery system.",
+     "source": "https://sbenergy.com/project/athos-storage/",
+     "status": "active",
+     "scale": "1.6 GWh",
+     "via": "Athos Storage (Riverside County, California)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Battery technology provider for Athos Storage, SB Energy's 1.6 GWh project in California, which SB Energy procures itself.",
+     "context": "SB Energy's Athos Storage page lists 'Fluence Storage' as the technology and says SB Energy is 'overseeing development, construction, procurement of battery energy storage solution and other major components'. The project is under construction. The California Energy Commission approved a USD 25m grant on 8 October 2025 for a 75 MW portion of the 402.3 MW / four-hour system, and the construction and bridge financing (USD 679.4m) closed in March 2026.",
+     "source": "https://sbenergy.com/project/athos-storage/",
+     "status": "active",
+     "scale": "1.6 GWh",
+     "via": "Athos Storage (Riverside County, California)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its storage fleet (Athos Storage with Fluence, Pelicans Jaw and Libra) makes it a battery buyer as well.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Athos Storage (1.6 GWh, Fluence), Pelicans Jaw (954 MWh) and Libra (2,800 MWh) are financed and under construction.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** no equipment supplier is named anywhere in the S-1 (First Solar, Nextracker and Fluence appear only on SB Energy's website); the OEMs for Pelicans Jaw and Libra storage; the name and ownership of the SoftBank affiliate developing the PORTS gas and who holds the turbine reservations; ownership percentages after the IPO; whether AEP Ohio's definitive agreements for the 9.2 GW were signed in Q3 2026; how 'Customer D' (29% of FY2025 revenue) is named; the gap between AEP's USD 4.2bn and the S-1's USD 5.1bn of PORTS grid investment, which may count different scopes.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Standalone Power (SP) — utility-scale solar and battery storage",
+     "date": "",
+     "text": "Named projects include the Orion Solar Belt in Milam County (900 MWdc on SB Energy's site; 875 MWdc in its 2024 release; Google the anchor customer), Pelicans Jaw in Kern County, California (440 MWac solar plus 239 MW / 954 MWh of storage for San Diego Community Power), Libra in Nevada (700 MWac solar plus 700 MW / 2,800 MWh of storage for NV Energy) and Athos Storage in Riverside County, California (1.6 GWh, Fluence technology).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-08",
+     "text": "California Energy Commission approves a USD 25m grant for a 75 MW portion of the 402.3 MW / four-hour Athos battery — Public funding for a Fluence-supplied battery that SB Energy procures itself.",
+     "src": "https://efiling.energy.ca.gov/GetDocument.aspx?tn=266466&DocumentContentId=103516",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-08"
+  },
+  {
+   "a": "fluence",
    "b": "stem",
    "curated": {
     "b": {
@@ -44457,6 +45743,20 @@
   },
   {
    "a": "form-energy",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-12",
+     "text": "Navneet Govil joins as Chief Financial Officer from SoftBank Investment Advisers, and Wes Sloan as Chief Operating Officer from Panasonic Energy North America — Both hires point at the same problem. A CFO from a late-stage investment platform and a COO who ran Panasonic's Nevada cell production is the pairing a company makes when the next task is financing and building a factory rather than proving a chemistry.",
+     "src": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-12"
+  },
+  {
+   "a": "form-energy",
    "b": "southern-company",
    "curated": {
     "a": {
@@ -44926,6 +46226,47 @@
     }
    ],
    "last": "2026-09-23"
+  },
+  {
+   "a": "g42",
+   "b": "softbank",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Partner in Stargate UAE, the 1 GW Abu Dhabi cluster G42 builds and OpenAI and Oracle operate; SoftBank's specific role is not stated.",
+     "context": "SoftBank's 22 May 2025 release says Stargate UAE 'will be built by G42 and operated by OpenAI and Oracle', and that the collaboration 'will also include Cisco … and SoftBank Group'.",
+     "source": "https://group.softbank/en/news/press/20250522",
+     "status": "active",
+     "since": "2025-05",
+     "via": "Stargate UAE"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Partner in Stargate UAE, the 1 GW Abu Dhabi cluster G42 builds and OpenAI and Oracle operate.",
+     "context": "SoftBank's 22 May 2025 release says Stargate UAE 'will be built by G42 and operated by OpenAI and Oracle', and that the collaboration 'will also include Cisco … and SoftBank Group'. SoftBank's specific role is not stated.",
+     "source": "https://group.softbank/en/news/press/20250522",
+     "status": "active",
+     "since": "2025-05",
+     "via": "Stargate UAE"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Stargate UAE and the 5 GW UAE–US AI Campus",
+     "date": "",
+     "text": "Stargate UAE is 'a 1-gigawatt compute cluster' that 'will be built by G42 and operated by OpenAI and Oracle', with Cisco on security and connectivity, SoftBank as a partner and NVIDIA supplying 'the latest NVIDIA Grace Blackwell GB300 systems' (launch, 22 May 2025).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-22",
+     "text": "Stargate UAE launched: a 1 GW cluster built by G42 and operated by OpenAI and Oracle, with NVIDIA GB300, Cisco and SoftBank; first 200 MW expected in 2026 — OpenAI's first 'OpenAI for Countries' campus.",
+     "src": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+     "from": "a"
+    }
+   ],
+   "last": "2025-05-22"
   },
   {
    "a": "g42",
@@ -46120,6 +47461,20 @@
   },
   {
    "a": "ge-vernova",
+   "b": "sb-energy",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The gas-plant supplier roster belongs to the SoftBank affiliate developing the plants, not to SB Energy.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-21"
+  },
+  {
+   "a": "ge-vernova",
    "b": "siemens-energy",
    "curated": {
     "a": {
@@ -46203,6 +47558,27 @@
     }
    ],
    "last": "2025-06-03"
+  },
+  {
+   "a": "ge-vernova",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "An SB Energy spokesperson told Inside Climate News that SoftBank 'has reserved sufficient gas turbines from multiple sources including GE Vernova' (reported).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched with SoftBank Group as secretariat: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The supplier roster for the gas plant beside PORTS. It records intentions, not contracts.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-21"
   },
   {
    "a": "ge-vernova",
@@ -47478,6 +48854,40 @@
     }
    ],
    "last": "2026-01-12"
+  },
+  {
+   "a": "google",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "SB Energy's Orion Solar Belt in Milam County, Texas, supplies power to help run Google's data centres; Google is its anchor customer.",
+     "context": "SB Energy's October 2024 release announced commercial operation of Orion I–III, 875 MWdc 'to help power Google data centers', with First Solar modules and Blattner as EPC.",
+     "source": "https://sbenergy.com/american-made-solar-projects-power-google-data/",
+     "status": "active",
+     "since": "2022",
+     "via": "Orion Solar Belt PPA (Milam County, Texas)"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Anchor customer of the Orion Solar Belt in Milam County, whose output helps power Google's Texas data centres.",
+     "context": "SB Energy's October 2024 release announced commercial operation of Orion I–III, 875 MWdc 'to help power Google data centers'. It named First Solar modules, Nextracker trackers, Gerdau steel and Blattner as EPC. SB Energy's projects page lists Google as Orion's anchor customer at 900 MWdc. The Orion projects also feed the Milam County data-centre campus through phased interconnections.",
+     "source": "https://sbenergy.com/american-made-solar-projects-power-google-data/",
+     "status": "active",
+     "since": "2022",
+     "via": "Orion Solar Belt PPA (Milam County, Texas)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Standalone Power (SP) — utility-scale solar and battery storage",
+     "date": "",
+     "text": "Named projects include the Orion Solar Belt in Milam County (900 MWdc on SB Energy's site; 875 MWdc in its 2024 release; Google the anchor customer), Pelicans Jaw in Kern County, California (440 MWac solar plus 239 MW / 954 MWh of storage for San Diego Community Power), Libra in Nevada (700 MWac solar plus 700 MW / 2,800 MWh of storage for NV Energy) and Athos Storage in Riverside County, California (1.6 GWh, Fluence technology).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2022"
   },
   {
    "a": "google",
@@ -54276,7 +55686,7 @@
     {
      "where": "Recent Reporting",
      "date": "2026-08-28",
-     "text": "Blue Owl-managed funds lead a $2.4B AI-factory equipment financing ($2.8B total at 9.0% fixed, PIMCO advising) for the Mackenzie, BC Blackwell Ultra expansion — GPU-secured private credit funds ~90% of the Mackenzie capex — the financing template moves beyond the Microsoft-contract facility.",
+     "text": "Blue Owl-managed funds lead a $2.4B AI-factory equipment financing ($1.2B term loan + $1.2B senior secured notes at 9.0% fixed; PIMCO advising certain note purchasers) for the Mackenzie, BC Blackwell Ultra expansion — GPU-secured private credit funds ~90% of the Mackenzie capex — the financing template moves beyond the Microsoft-contract facility.",
      "src": "https://www.stocktitan.net/news/OWL/blue-owl-managed-funds-lead-2-4-billion-ai-factory-financing-for-n5sfwyw6ua9x.html",
      "from": "a"
     },
@@ -55094,6 +56504,66 @@
     }
    ],
    "last": "2019-12"
+  },
+  {
+   "a": "kiewit",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "SB Energy's S-1 names Kiewit among the EPC providers it assigns across phases of its data-centre sites; no specific project is named.",
+     "context": "The S-1 names Kiewit with Turner, DPR and SOLV Energy. The gas generation planned for SB Energy's PORTS-Pike campus is developed by a different SoftBank affiliate, not by SB Energy.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "via": "Data-centre EPC"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Named in the S-1 among SB Energy's data-centre EPC providers; separately a Portsmouth Consortium member and reported contractor for the PORTS gas plants, which belong to another SoftBank affiliate.",
+     "context": "The S-1 names Kiewit with Turner, DPR and SOLV Energy as data-centre EPC providers. Kiewit is also one of 21 companies that 'expressed their intention to participate' in the Portsmouth Consortium. The Boilermakers union reported in July 2026 that 'Kiewit is the contractor for construction of the power generation facilities' at PORTS (reported, not confirmed by Kiewit or SoftBank). That plant is not SB Energy's.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "via": "Data-centre EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It names Turner, DPR, Kiewit and SOLV Energy as its data-centre EPC providers, and SOLV, Blattner, Dashiell, CSI Electrical and Rosendin as its principal power EPCs, each on turnkey, fixed-scope contracts.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The gas-plant supplier roster belongs to the SoftBank affiliate developing the plants, not to SB Energy.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-21"
+  },
+  {
+   "a": "kiewit",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Through SB Energy it is a buyer: SB Energy's S-1 says it buys solar modules, battery components, high-voltage transformers, switchgear and inverters itself, lets construction to EPC contractors (Turner, DPR, Kiewit, SOLV Energy and others), and has not yet chosen the backup-generation engines for PORTS.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched with SoftBank Group as secretariat: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The supplier roster for the gas plant beside PORTS. It records intentions, not contracts.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-21"
   },
   {
    "a": "kiewit",
@@ -55970,6 +57440,27 @@
     }
    ],
    "last": "2026-09-23"
+  },
+  {
+   "a": "lambda",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Michel Combes (ex-Sprint, Alcatel-Lucent, SoftBank International) replaced founder Stephen Balaban as CEO in May 2026; stated target is 3 GW of AI compute under management by 2030 against a footprint whose largest disclosed site is ~100 MW potential.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-05",
+     "text": "Michel Combes (ex-Sprint/Alcatel-Lucent/SoftBank International CEO) appointed CEO; founder Stephen Balaban moves to CTO, Michael Balaban to CPO; John Donovan (ex-AT&T Communications CEO) becomes chairman — A telecom-infrastructure operator installed for gigawatt-scale capex and public markets — the clearest pre-IPO professionalization signal a private company can send.",
+     "src": "https://lambda.ai/blog/lambda-assembles-leadership-team-to-power-gigawatt-scale-ai-infrastructure",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05-05"
   },
   {
    "a": "lambda",
@@ -59428,6 +60919,105 @@
   },
   {
    "a": "mgx",
+   "b": "softbank",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Fellow initial equity funder of Stargate, named with SoftBank, OpenAI and Oracle in the January 2025 announcement; SoftBank holds financial responsibility.",
+     "context": "SoftBank's 22 January 2025 release names MGX among the four initial equity funders. Neither SoftBank nor MGX discloses its commitment.",
+     "source": "https://group.softbank/en/news/press/20250122",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Stargate (fellow initial equity funder)",
+     "project": "stargate"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Fellow initial equity funder of Stargate, named with SoftBank, OpenAI and Oracle in the January 2025 announcement.",
+     "context": "SoftBank's 22 January 2025 release names MGX among the four initial equity funders, with SoftBank holding 'financial responsibility'. Neither SoftBank nor MGX discloses its commitment. SoftBank's September 2025 expansion release does not name MGX.",
+     "source": "https://group.softbank/en/news/press/20250122",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Stargate (initial equity funder)",
+     "project": "stargate"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The sovereign capital behind the largest AI build-outs this corpus tracks: an initial equity funder of Stargate LLC (with SoftBank, OpenAI and Oracle), co-founder and Vice Chair seat-holder of the AI Infrastructure Partnership whose first investment was Aligned Data Centers, an owner in Vantage Data Centers 'to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin', a repeat investor in OpenAI, Anthropic and xAI, and — through AIP's agreements with GE Vernova and NextEra Energy — a stated backer of 'all forms of energy' for AI data centres.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: created by a government council with the UAE's National Security Advisor as chairman and the Mubadala and G42 chiefs on its board; the 'differentiated and restricted opportunities' language in its own fund-close release; co-lead roles in OpenAI and Anthropic rounds within two years of formation; Semafor's account of a 'playbook' built on leadership relationships and co-investment with Silver Lake, BlackRock/GIP and SoftBank.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: initial equity funder of Stargate LLC (SoftBank release), owner of Aligned (about USD 40 billion EV, 6.4 GW) with AIP and GIP, investor in Vantage 'to support the Stargate build-out of 2.3 gigawatts', and repeat investor in OpenAI, Anthropic and xAI — while every ticket, stake and the Stargate contribution are undisclosed (Bloomberg's about USD 7 billion is press-reported).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MGX has never issued a Stargate release; SoftBank's September 2025 expansion and every Stargate UAE release omit MGX; The Information (February 2026) reports the JV never hired staff and that OpenAI works bilaterally with Oracle.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · MGX Fund I — the USD 49 billion AI fund",
+     "date": "",
+     "text": "Larger than any single AI-dedicated private vehicle on the record and sovereign-backed, MGX's stated differentiator is access — 'differentiated and restricted opportunities' — through its chairman's and Mubadala's relationships (Semafor's 'playbook' account) and co-investment with Silver Lake, BlackRock/GIP, SoftBank and Bpifrance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · MGX Fund I — the USD 49 billion AI fund",
+     "date": "",
+     "text": "Comparable pools of AI-infrastructure capital in the corpus are AIP itself (USD 30 billion equity / USD 100 billion with debt), Brookfield's and Blackstone's infrastructure funds, and SoftBank's Vision Funds; none is a state AI champion in the way MGX describes itself.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Compute campuses and colocation — Stargate LLC, Vantage, Khazna, Campus AI (France)",
+     "date": "",
+     "text": "Stargate LLC: SoftBank's 22 January 2025 release names 'SoftBank, OpenAI, Oracle, and MGX' as 'the initial equity funders' of the USD 500 billion, four-year programme (SoftBank financial responsibility, OpenAI operational); Bloomberg reported MGX 'is contributing approximately $7 billion', which no principal has confirmed, and MGX's own channels carry no Stargate release.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-31",
+     "text": "OpenAI closes a USD 122 billion round at USD 852 billion; SoftBank and a16z as co-leads per SiliconANGLE, MGX among the major investors (MGX and the Abu Dhabi Media Office say MGX co-led) — Fifth follow-on in a single company — the concentration MGX's 'high conviction' language describes.",
+     "src": "https://siliconangle.com/2026/03/31/openai-just-closed-record-breaking-122b-funding-round-brings-value-852b/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-22",
+     "text": "Stargate announced: USD 500 billion over four years with 'SoftBank, OpenAI, Oracle, and MGX' as initial equity funders; Bloomberg reports MGX contributing about USD 7 billion — MGX's most-cited role in this corpus rests on one sentence in a SoftBank release and a press-reported number.",
+     "src": "https://group.softbank/en/news/press/20250122",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · OpenAI stake and the Stargate programme",
+     "date": "",
+     "text": "Its 'initial equity funders' were SoftBank, OpenAI, Oracle and MGX, 'with SoftBank having financial responsibility and OpenAI having operational responsibility', and Masayoshi Son as chairman.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-31"
+  },
+  {
+   "a": "mgx",
    "b": "stack-infrastructure",
    "curated": {
     "a": {
@@ -60816,6 +62406,20 @@
   },
   {
    "a": "mitsubishi-electric",
+   "b": "sb-energy",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The gas-plant supplier roster belongs to the SoftBank affiliate developing the plants, not to SB Energy.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-21"
+  },
+  {
+   "a": "mitsubishi-electric",
    "b": "schneider-electric",
    "curated": {
     "a": {
@@ -60921,6 +62525,20 @@
     }
    ],
    "last": "2021-06-08"
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched with SoftBank Group as secretariat: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The supplier roster for the gas plant beside PORTS. It records intentions, not contracts.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-21"
   },
   {
    "a": "mitsubishi-electric",
@@ -63539,6 +65157,56 @@
   },
   {
    "a": "nvidia",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Investor and credit support: NVIDIA prepaid USD 1.5bn in August 2026, committed USD 1.5bn more at the IPO, guarantees the OpenAI tenant's obligations on the first ~4.25 GW-IT at PORTS-Pike and is to be its exclusive AI compute provider.",
+     "context": "SB Energy's 17 August 2026 release names NVIDIA 'the exclusive AI compute infrastructure provider at PORTS-Pike', with credit support on the initial 4.25 GW-IT and an option on the rest. The S-1 adds that NVIDIA funded USD 1.5bn under a prepaid forward on 17 August 2026, at 90% of the IPO price, and committed to buy USD 1.5bn of non-voting Class N stock alongside the offering, which has not priced.",
+     "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+     "status": "active",
+     "since": "2026-08",
+     "scale": "USD 3.0bn (USD 1.5bn prepaid forward funded; USD 1.5bn of Class N stock committed at the IPO)",
+     "via": "Prepaid forward and Class N common stock; residual value guaranties at PORTS-Pike"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Investor and credit support at PORTS-Pike: NVIDIA prepaid USD 1.5bn, commits USD 1.5bn more at the IPO, guarantees the OpenAI tenant's obligations on the first ~4.25 GW-IT, and is the campus's exclusive compute provider.",
+     "context": "SB Energy's 17 August 2026 release says NVIDIA will be 'the exclusive AI compute infrastructure provider at PORTS-Pike' and will provide credit support on the initial 4.25 GW-IT, with an option on the rest. The S-1 adds that NVIDIA funded USD 1.5bn under a prepaid forward on 17 August 2026, at 90% of the IPO price. It is committed to buy USD 1.5bn of non-voting Class N stock in a concurrent private placement. Its residual value guaranties carry an aggregate cap of USD 105bn. SB Energy pays NVIDIA nothing for them; OpenAI compensates NVIDIA separately.",
+     "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+     "status": "active",
+     "since": "2026-08",
+     "scale": "USD 3.0bn (USD 1.5bn prepaid forward funded; USD 1.5bn Class N at the IPO); guaranties up to USD 105bn",
+     "via": "Class N common stock; residual value guaranties at PORTS-Pike"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NVIDIA is putting in USD 3.0bn around the IPO and guarantees the first 4.25 GW-IT of the PORTS leases.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "An IPO that prices proceeds as planned; a long delay leaves NVIDIA's guarantee and SoftBank's support carrying the equity.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-17",
+     "text": "17 PORTS-Pike leases signed with an OpenAI affiliate (about 8.0 GW-IT, 20 years); NVIDIA becomes exclusive compute provider, guarantees the first 4.25 GW-IT and invests USD 1.5bn (USD 3.0bn with a prepaid forward) — Turns PORTS from a plan into the bulk of the backlog. NVIDIA's guarantee, not SB Energy's balance sheet, anchors the financing.",
+     "src": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-17"
+  },
+  {
+   "a": "nvidia",
    "b": "schneider-electric",
    "curated": {
     "b": {
@@ -63708,6 +65376,54 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "nvidia",
+   "b": "softbank",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "SoftBank named NVIDIA a Stargate technology partner in January 2025; since August 2026 NVIDIA's largest commitment to the group runs through SoftBank's subsidiary SB Energy at PORTS-Pike.",
+     "context": "The 22 January 2025 Stargate announcement lists NVIDIA among the initial technology partners. On 17 August 2026 NVIDIA agreed to make SB Energy's PORTS-Pike campus the exclusive host of its AI compute there, to provide residual value guaranties on the first 4.25 GW-IT and to invest in SB Energy, which SoftBank controls.",
+     "source": "https://group.softbank/en/news/press/20250122",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Stargate technology partner; PORTS-Pike campus of SoftBank's subsidiary SB Energy"
+    },
+    "b": {
+     "type": "partner",
+     "note": "A Stargate technology partner, and since August 2026 the exclusive compute provider and lead credit support at SoftBank's PORTS-Pike campus; SoftBank sold its NVIDIA shares in October 2025.",
+     "context": "The January 2025 Stargate announcement names NVIDIA among the technology partners. On 17 August 2026 NVIDIA agreed to host its compute exclusively at SB Energy's PORTS-Pike campus, to give residual value guaranties on the first 4.25 GW-IT, and to invest USD 1.5bn in SB Energy (USD 3.0bn in total with a prepaid forward). SoftBank had sold its whole NVIDIA holding, 32.1m shares for USD 5.83bn, in October 2025 to fund OpenAI.",
+     "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Stargate technology partner; exclusive compute provider at SB Energy's PORTS-Pike campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** SoftBank's dollar commitment to, and share of, the Stargate entity; the name and ownership of the SoftBank affiliate developing PORTS gas and who holds the turbine reservations; SoftBank's economic share of SB Energy after the OpenAI, Ares and NVIDIA instruments (the S-1's percentages are blank); the current SoftBank titles of Ippei Mimura and Varun Aravapally, two of DigitalBridge's new directors; whether Lordstown remains a data-centre site; the USD amount of the Arm margin loan (reports conflict); a full-year consensus for FY2025 (none located in a loadable source).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI Computing — Arm, Ampere and Graphcore",
+     "date": "",
+     "text": "Arm sits in NVIDIA's Grace CPUs, and Ampere sells Arm-based server CPUs.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-17",
+     "text": "NVIDIA guarantees SB Energy's PORTS-Pike campus to host NVIDIA compute exclusively; OpenAI signs a 20-year lease for about 8 GW-IT; NVIDIA invests USD 1.5bn in SB Energy — The largest contracted data-centre commitment in the corpus sits in SoftBank's subsidiary, with NVIDIA's credit support behind the first 4.25 GW-IT.",
+     "src": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-17"
   },
   {
    "a": "nvidia",
@@ -64936,6 +66652,135 @@
   },
   {
    "a": "openai",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Landlord and developer of OpenAI's Milam County campus (two 15-year leases, January 2026) and PORTS-Pike campus (17 leases of 20 years, August 2026); OpenAI also holds USD 500m of SB Energy preferred equity with warrants.",
+     "context": "SB Energy's S-1 records two leases signed on 9 January 2026 for Milam County Buildings 1 and 2, about 308 and 445 MW-IT, and 17 leases signed on 17 August 2026 covering about 8.0 GW-IT at PORTS-Pike. OpenAI's announcements put the Milam campus at 1.2 GW; the S-1's ~753 MW-IT measures IT load, and no source reconciles the two. The S-1 does not use the word Stargate; SB Energy's January 2026 release described the OpenAI and SoftBank investments as advancing Stargate.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "~8.8 GW-IT leased (Milam ~753 MW-IT; PORTS-Pike ~8.0 GW-IT)",
+     "via": "Triple-net data-centre leases (Milam County, Texas; PORTS-Pike, Ohio)",
+     "project": "stargate"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Tenant of the Milam County campus (15-year leases, January 2026) and the PORTS-Pike campus (17 leases of 20 years, August 2026); also a USD 500m preferred investor with warrants and a board seat.",
+     "context": "On 9 January 2026 an OpenAI affiliate (Orion DC I, LLC) signed two leases for Milam County Buildings 1 and 2 (about 308 and 445 MW-IT), and OpenAI invested USD 500m of preferred equity in Energy Global. SB Energy's release said OpenAI and SoftBank were each investing USD 500m 'to Advance Stargate'. On 17 August 2026 an OpenAI affiliate signed 17 leases covering about 8.0 GW-IT at PORTS-Pike. OpenAI holds 3,991,809 warrants (pre-split) vesting on milestones and valuation thresholds; their fair value was about USD 5.5bn at 30 June 2026. It designates director Sachin Katti and holds consent rights over materially important design contracts on its projects. The S-1 itself never uses the word 'Stargate'.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "~8.8 GW-IT leased (Milam ~753 MW-IT; PORTS ~8.0 GW-IT)",
+     "via": "Triple-net data-centre leases (Milam County, PORTS-Pike)",
+     "project": "stargate"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Stargate (US AI-infrastructure program)",
+     "date": "",
+     "text": "US sites: Abilene TX (flagship — 4 of 8 buildings active, ~0.3 GW live, 1.2 GW projected by Q4 2026), Shackelford County TX (2.0 GW, gas microgrid), Doña Ana County NM (2.2 GW, gas microgrids with Bloom fuel cells via Oracle), Milam County TX (1.2 GW, SB Energy), Port Washington WI (1.3 GW, ~70% solar/wind/battery), Saline Township MI (1.4 GW, DTE grid + batteries), Lordstown OH (server manufacturing), plus Project Camellia in Effingham County, GA (July 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "SB Energy partnership for multi-gigawatt AI campuses including a 1.2 GW Texas facility — The most explicit power-development tie-up: OpenAI contracting generation-side development directly rather than through cloud landlords.",
+     "src": "https://openai.com/index/stargate-sb-energy-partnership",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** SB Energy is the SoftBank-controlled developer that will own the land, shells and power systems of OpenAI's largest leased campuses: Milam County, Texas (about 753 MW-IT, under construction) and PORTS-Pike, Ohio (about 8.0 GW-IT, leased to OpenAI on 17 August 2026, construction not started).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "H1 2026 revenue was USD 138.7m with a net loss of USD 3,208.9m, including a USD 2,573.1m non-cash charge on OpenAI's warrants.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "OpenAI invested USD 500m of preferred equity in January 2026 and holds warrants.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Two constraints shape every sale: a CFIUS National Security Agreement that requires approval of certain vendors, and OpenAI's consent rights over 'materially important design contracts' on OpenAI-tenanted projects.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **OpenAI is SB Energy's customer, investor and design gatekeeper at once**, which narrows the specification for any equipment sold into Milam and PORTS.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "OpenAI leases about 8.8 GW-IT, holds USD 500m of preferred equity and warrants, designates a director, and under the Foundation Agreement holds consent and participation rights over 'materially important design contracts' on its projects.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Inference: on OpenAI-tenanted campuses, a power-architecture choice such as an SST or 800 VDC distribution would need OpenAI's agreement as well as SB Energy's.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**INDICATORS TO WATCH** — *424B4 / Form 8-A:* pricing sets SoftBank's and OpenAI's stakes and funds the equity for PORTS.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+     "date": "",
+     "text": "Three campuses are leased: Cosmos in Austin (about 50 MW-IT, a SoftBank affiliate), Milam County, Texas (about 753 MW-IT across two buildings, OpenAI) and PORTS-Pike in Ohio (17 buildings of about 472 MW-IT each, about 8.0 GW-IT, OpenAI).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+     "date": "",
+     "text": "Its concentration is the reverse: OpenAI and SoftBank are its tenants and investors.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-17",
+     "text": "17 PORTS-Pike leases signed with an OpenAI affiliate (about 8.0 GW-IT, 20 years); NVIDIA becomes exclusive compute provider, guarantees the first 4.25 GW-IT and invests USD 1.5bn (USD 3.0bn with a prepaid forward) — Turns PORTS from a plan into the bulk of the backlog. NVIDIA's guarantee, not SB Energy's balance sheet, anchors the financing.",
+     "src": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "OpenAI and SoftBank each invest USD 500m; OpenAI leases Milam County Buildings 1 and 2 (about 753 MW-IT) for 15 years and receives warrants — Makes OpenAI both tenant and investor, with consent rights over key design contracts on its projects.",
+     "src": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-17"
+  },
+  {
+   "a": "openai",
    "b": "semianalysis",
    "evid": [
     {
@@ -64961,6 +66806,294 @@
     }
    ],
    "last": "2025-10-09"
+  },
+  {
+   "a": "openai",
+   "b": "softbank",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Minority investor holding about 13% after USD 64.6bn of investment, per SoftBank on 1 October 2026, and the Stargate partner with 'financial responsibility'.",
+     "context": "SoftBank's 1 October 2026 release records the final USD 10bn tranche of its 2026 commitment, taking cumulative investment to USD 64.6bn and its holding to about 13%. SoftBank calls itself 'a minority shareholder of OpenAI' with 'only a limited ability to influence' it. Its 22 January 2025 release named SoftBank and OpenAI the lead partners in Stargate, SoftBank with financial and OpenAI with operational responsibility. SoftBank's subsidiary SB Energy is separately OpenAI's landlord at Milam County and PORTS-Pike.",
+     "source": "https://group.softbank/en/news/press/20261001",
+     "status": "active",
+     "since": "2024-09",
+     "scale": "USD 64.6bn invested; ~13% (1 Oct 2026)",
+     "via": "SoftBank Vision Fund 2"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "SoftBank's largest asset: about 13% of OpenAI after USD 64.6bn of investment, and the lead partner in Stargate.",
+     "context": "SoftBank invested USD 2.2bn from September 2024 and USD 30.0bn in the 2025 round (about 11% at 26 December 2025). It then committed USD 30.0bn in 2026 at a USD 730bn pre-money valuation, paid in three USD 10bn tranches, the last on 1 October 2026. SoftBank describes itself as 'a minority shareholder of OpenAI' with 'only a limited ability to influence' it. Separately, OpenAI is SB Energy's tenant at Milam County and PORTS-Pike, OpenAI and SoftBank each put USD 500m into SB Energy in January 2026, and the two run SB OAI Japan as a 50:50 venture.",
+     "source": "https://group.softbank/en/news/press/20261001",
+     "status": "active",
+     "since": "2024-09",
+     "scale": "USD 64.6bn invested; ~13% (1 Oct 2026)",
+     "via": "SoftBank Vision Fund 2"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Founded 2015 as a nonprofit; recapitalized October 28, 2025 into OpenAI Group PBC under the nonprofit OpenAI Foundation (~26%), with Microsoft at ~27% as-converted (~$135B); 800M+ weekly users as of October 2025; valuation $852B post-money after a $122B round closed March 2026 (SoftBank $30B, NVIDIA $30B, Amazon $50B reported — of which ~$35B contingent on an IPO by end-2028 or an AGI determination); a confidential S-1 was filed June 8, 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Stargate (US AI-infrastructure program)",
+     "date": "",
+     "text": "The flagship buildout vehicle (announced January 2025: $500B over four years; SoftBank financial responsibility, OpenAI operational responsibility, Oracle and MGX equity partners).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-31",
+     "text": "$122B round closed at $852B post-money — reported SoftBank $30B, NVIDIA $30B, Amazon $50B (~$35B IPO/AGI-contingent); first retail-channel participation (>$3B) — Suppliers became shareholders at record scale — the equity round is also a vendor-financing instrument.",
+     "src": "https://openai.com/index/accelerating-the-next-phase-ai/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-23",
+     "text": "Five new US Stargate sites with Oracle and SoftBank — ~7 GW planned, >$400B over three years, 'ahead of schedule' on the $500B/10 GW commitment — The announcement cadence that turned Stargate from a Texas project into a national program.",
+     "src": "https://openai.com/index/five-new-stargate-sites/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SB Energy is building OpenAI's Milam County campus in Texas (about 753 MW-IT), has leased its planned 8.0 GW-IT PORTS-Pike campus in Ohio to OpenAI, and is in IPO registration; its S-1 says the roughly 9.2 GW of gas generation planned beside PORTS is being developed by a different SoftBank affiliate.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Everything else is capital: about 13% of OpenAI (USD 64.6bn invested), 86.7% of Arm, and all of Ampere and Graphcore.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "FY2025 (to 31 March 2026) net income attributable to owners was ¥5,002.3bn on net sales of ¥7,798.7bn, driven by a ¥6,730.4bn investment gain on OpenAI.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Through Stargate, OpenAI and the Portsmouth Consortium it is a convenor and financier that buys nothing.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "DigitalBridge, the Vision Funds and the OpenAI stake hold equity; Arm, Ampere and Graphcore design chips.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Its delivered sites — Milam County and PORTS-Pike — are owned by SB Energy and leased to OpenAI.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **OpenAI concentration, not appetite, limits how much SoftBank itself can commit to equipment**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "OpenAI is SoftBank's largest asset (USD 64.6bn invested), is pledged against a USD 10bn loan, and pushed S&P's outlook to negative.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** SoftBank's dollar commitment to, and share of, the Stargate entity; the name and ownership of the SoftBank affiliate developing PORTS gas and who holds the turbine reservations; SoftBank's economic share of SB Energy after the OpenAI, Ares and NVIDIA instruments (the S-1's percentages are blank); the current SoftBank titles of Ippei Mimura and Varun Aravapally, two of DigitalBridge's new directors; whether Lordstown remains a data-centre site; the USD amount of the Arm margin loan (reports conflict); a full-year consensus for FY2025 (none located in a loadable source).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Q2 FY2026 results, 10 November 2026:* the first quarter consolidating DigitalBridge and the first with a full OpenAI position at about 13%.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "Its campuses are Cosmos (Austin, about 50 MW-IT, leased to a SoftBank affiliate), Milam County (about 753 MW-IT, leased to OpenAI) and PORTS-Pike in Ohio (about 8.0 GW-IT, leased to OpenAI on 17 August 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "Its distinguishing feature is that it is tenanted by its own investors: SoftBank at Cosmos and OpenAI at Milam and PORTS.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · OpenAI stake and the Stargate programme",
+     "date": "",
+     "text": "SoftBank Vision Fund 2 has invested USD 64.6bn in OpenAI since September 2024; SoftBank puts its ownership at about 13% after the third USD 10bn tranche of the 2026 round, executed 1 October 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · OpenAI stake and the Stargate programme",
+     "date": "",
+     "text": "SoftBank calls itself 'a minority shareholder of OpenAI' with 'only a limited ability to influence' it.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · OpenAI stake and the Stargate programme",
+     "date": "",
+     "text": "Its 'initial equity funders' were SoftBank, OpenAI, Oracle and MGX, 'with SoftBank having financial responsibility and OpenAI having operational responsibility', and Masayoshi Son as chairman.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · OpenAI stake and the Stargate programme",
+     "date": "",
+     "text": "SoftBank is the largest outside financier in OpenAI's 2025 and 2026 rounds.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SoftBank Vision Funds (SVF1, SVF2, Latin America)",
+     "date": "",
+     "text": "SVF2 is effectively SoftBank's own money: SoftBank committed USD 140.6bn of its USD 143.2bn, with management co-investment making up the rest, and SVF2 holds the OpenAI stake.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SoftBank Vision Funds (SVF1, SVF2, Latin America)",
+     "date": "",
+     "text": "Vision Fund gains were ¥6,638.6bn in FY2025, ¥6,465.5bn of which came from OpenAI, against ¥387.6bn in FY2024.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SoftBank Vision Funds (SVF1, SVF2, Latin America)",
+     "date": "",
+     "text": "Its AI-infrastructure relevance now runs almost entirely through SVF2's OpenAI position.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-10-01",
+     "text": "Third and final USD 10bn tranche of the 2026 OpenAI round executed; cumulative investment USD 64.6bn, about 13%; the bridge facility fully repaid and its last USD 10bn of capacity cancelled — The OpenAI funding cycle that drove SoftBank's 2026 borrowing is complete. The tranche was paid from the September senior notes rather than the bridge.",
+     "src": "https://group.softbank/en/news/press/20261001",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-24",
+     "text": "About USD 11.1bn of foreign-currency senior notes issued, USD coupons 8.625%–9.750% — High-yield coupons on the largest high-yield sale of the year (Reuters) are the market's price for SoftBank's OpenAI concentration.",
+     "src": "https://group.softbank/en/news/press/20260924",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-09",
+     "text": "Early repayment of the outstanding USD 25.9bn under the USD 40bn bridge loan, effective 15 September — The bridge taken for OpenAI is refinanced in the bond and secured-loan markets.",
+     "src": "https://group.softbank/en/news/press/20260909",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-17",
+     "text": "NVIDIA guarantees SB Energy's PORTS-Pike campus to host NVIDIA compute exclusively; OpenAI signs a 20-year lease for about 8 GW-IT; NVIDIA invests USD 1.5bn in SB Energy — The largest contracted data-centre commitment in the corpus sits in SoftBank's subsidiary, with NVIDIA's credit support behind the first 4.25 GW-IT.",
+     "src": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-06",
+     "text": "Q1 FY2026: net income ¥347.3bn (−17.7%) against an LSEG consensus of ¥120.23bn; NAV a record ¥72.3tn; LTV 13.0%; next results 10 November 2026 — An Intel share gain of ¥1,332.9bn drove the beat; OpenAI was unchanged in the quarter.",
+     "src": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-05",
+     "text": "USD 10bn two-year loan to SoftBank Vision Fund 2 secured on its OpenAI preferred shares — OpenAI shares are now collateral as well as SoftBank's largest asset; a fall in their value can force a top-up.",
+     "src": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-13",
+     "text": "FY2025 results: net income ¥5,002.3bn on net sales ¥7,798.7bn; Vision Fund gains ¥6,638.6bn; NAV ¥40.1tn; LTV 17.0% — A record year made almost entirely of OpenAI's revaluation.",
+     "src": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q4fy2025_01_en.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-27",
+     "text": "USD 40bn unsecured bridge facility signed with JPMorgan, Goldman Sachs, Mizuho, SMBC and MUFG, mainly for the OpenAI follow-on — The facility that funded two OpenAI tranches; repaid and cancelled by 30 September.",
+     "src": "https://group.softbank/en/news/press/20260327",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-03",
+     "text": "S&P revises SoftBank's BB+ outlook to negative over the OpenAI follow-on — The rating agencies treat OpenAI as SoftBank's weakest-credit major holding.",
+     "src": "https://www.siliconrepublic.com/business/openai-softbank-sp-financial-analysis",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-27",
+     "text": "USD 30bn follow-on investment in OpenAI agreed at a USD 730bn pre-money valuation, in three USD 10bn tranches — Takes SoftBank's cumulative OpenAI investment to USD 64.6bn and about 13%.",
+     "src": "https://group.softbank/en/news/press/20260227",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "OpenAI and SoftBank Group each invest USD 500m in SB Energy; OpenAI selects SB Energy to build and operate its 1.2 GW Milam County site — SoftBank's Stargate role becomes a property relationship: its subsidiary owns the campus and OpenAI is the tenant.",
+     "src": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-31",
+     "text": "Second closing of the 2025 OpenAI round: USD 22.5bn invested on 26 December 2025, taking SoftBank to about 11% — The USD 41bn round SoftBank led is fully funded.",
+     "src": "https://group.softbank/en/news/press/20251231",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-05",
+     "text": "SB OAI Japan launched to sell OpenAI's 'Crystal intelligence' in Japan — OpenAI distribution for Japanese enterprises sits in a 50:50 venture.",
+     "src": "https://group.softbank/en/news/press/20251105",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-24",
+     "text": "OpenAI, Oracle and SoftBank add five Stargate sites; the two SoftBank-partnered sites are Lordstown, Ohio and Milam County, Texas (with SB Energy) — The only Stargate release naming sites SoftBank delivers. Lordstown has not reappeared in SoftBank's later materials.",
+     "src": "https://group.softbank/en/news/press/20250924",
+     "from": "b"
+    }
+   ],
+   "last": "2026-10-01"
   },
   {
    "a": "openai",
@@ -65425,6 +67558,70 @@
     }
    ],
    "last": "2025-11-06"
+  },
+  {
+   "a": "oracle",
+   "b": "softbank",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Fellow initial equity funder of Stargate with SoftBank, OpenAI and MGX; Oracle also sold its Ampere Computing stake to SoftBank in 2025.",
+     "context": "SoftBank's 22 January 2025 release names 'SoftBank, OpenAI, Oracle, and MGX' as Stargate's initial equity funders, with SoftBank holding financial responsibility. Neither SoftBank nor Oracle discloses its commitment. SoftBank's USD 6.5bn acquisition of Ampere Computing, whose sellers included Oracle, completed on 25 November 2025.",
+     "source": "https://group.softbank/en/news/press/20250122",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Stargate (fellow initial equity funder)",
+     "project": "stargate"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Fellow initial equity funder of Stargate and partner in its September 2025 site expansion; also the seller of its Ampere stake to SoftBank.",
+     "context": "The 22 January 2025 announcement names 'SoftBank, OpenAI, Oracle, and MGX' as Stargate's initial equity funders. The September 2025 release added five sites, three led with Oracle and two partnered by SoftBank (Lordstown, Ohio and Milam County, Texas). Separately, Oracle's Project Denver Holdings held 32.27% of Ampere Computing and sold it to SoftBank in the USD 6.5bn acquisition completed on 25 November 2025.",
+     "source": "https://group.softbank/en/news/press/20250122",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Stargate (initial equity funder)",
+     "project": "stargate"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Stargate campus buildout (compute landlord role)",
+     "date": "",
+     "text": "Oracle owns the hardware at all US Stargate sites except the two SoftBank-led ones.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-23",
+     "text": "Five new Stargate sites announced with OpenAI/SoftBank — Stargate reaches ~7 GW planned, >$400B over three years — Oracle-partnered sites (Shackelford, Doña Ana, Wisconsin) formalized the multi-campus landlord role beyond Abilene.",
+     "src": "https://openai.com/index/five-new-stargate-sites/",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · OpenAI stake and the Stargate programme",
+     "date": "",
+     "text": "Its 'initial equity funders' were SoftBank, OpenAI, Oracle and MGX, 'with SoftBank having financial responsibility and OpenAI having operational responsibility', and Masayoshi Son as chairman.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI Computing — Arm, Ampere and Graphcore",
+     "date": "",
+     "text": "SoftBank completed its USD 6.5bn purchase of Ampere Computing on 25 November 2025, buying from Carlyle, Oracle and Arm.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-24",
+     "text": "OpenAI, Oracle and SoftBank add five Stargate sites; the two SoftBank-partnered sites are Lordstown, Ohio and Milam County, Texas (with SB Energy) — The only Stargate release naming sites SoftBank delivers. Lordstown has not reappeared in SoftBank's later materials.",
+     "src": "https://group.softbank/en/news/press/20250924",
+     "from": "b"
+    }
+   ],
+   "last": "2025-09-24"
   },
   {
    "a": "oracle",
@@ -68002,6 +70199,38 @@
   },
   {
    "a": "rosendin",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "SB Energy's S-1 lists Rosendin Electric among its principal EPC counterparties for power infrastructure; no specific project is named.",
+     "context": "The S-1 names 'SOLV Energy, Blattner Energy, Dashiell Corporation, CSI Electrical Contractors and Rosendin Electric', each engaged project by project on a turnkey, fixed-scope basis.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "via": "Power EPC"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Named in the S-1 among SB Energy's principal EPC counterparties for power infrastructure.",
+     "context": "The S-1 lists 'SOLV Energy, Blattner Energy, Dashiell Corporation, CSI Electrical Contractors and Rosendin Electric', each engaged project by project on a turnkey, fixed-scope basis. No specific Rosendin project for SB Energy is named.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "via": "Power EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It names Turner, DPR, Kiewit and SOLV Energy as its data-centre EPC providers, and SOLV, Blattner, Dashiell, CSI Electrical and Rosendin as its principal power EPCs, each on turnkey, fixed-scope contracts.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "rosendin",
    "b": "siemens-energy",
    "evid": [
     {
@@ -68505,6 +70734,490 @@
    "last": "2020-01"
   },
   {
+   "a": "sb-energy",
+   "b": "softbank",
+   "curated": {
+    "b": {
+     "type": "portfolio",
+     "note": "SoftBank's controlled subsidiary and the group's only equipment buyer — the developer, owner and operator of OpenAI's Milam County and PORTS-Pike campuses.",
+     "context": "SB Energy's S-1 calls SoftBank its 'founding sponsor and ultimate parent company'. It says SoftBank's affiliates have contributed about USD 3.2bn and that SoftBank expects to control more than 50% of the vote after the IPO, making SB Energy a controlled company. SoftBank's Securities Report lists Energy Global, LP at 100% at 31 March 2026. Outside instruments have since been added: OpenAI's USD 500m preferred equity and warrants, Ares's preferred equity (to be redeemed at the IPO) and NVIDIA's USD 3.0bn of Class N stock and prepaid forward. SoftBank's economic share after the IPO is therefore unstated. SoftBank designates six of SB Energy's nine directors, among them Alex Clavel as chairman.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "since": "2019",
+     "scale": "Energy Global, LP 100% (31 Mar 2026); ~USD 3.2bn of cash contributed",
+     "via": "SoftBank Group Capital Limited and SB Energy HoldCo, LLC"
+    },
+    "a": {
+     "type": "investor",
+     "note": "Founding sponsor and ultimate parent; SoftBank designates six of nine directors, and a SoftBank affiliate is the tenant at the Cosmos campus.",
+     "context": "The S-1 names SoftBank its 'founding sponsor and ultimate parent company' and says its affiliates have contributed about USD 3.2bn. After the offering SoftBank expects to control more than 50% of the vote, making SB Energy a controlled company. It designates William Bice, Alex Clavel (chairman), Ron Fisher, Kimberly Johnson, Seiichi Morooka and Alexi Wellman. SB Energy pays SoftBank a royalty of 1% of gross profit for the 'SB Energy' name. A SoftBank affiliate leases the Cosmos campus for 15 years under a SoftBank Group Capital guarantee of about USD 2.9bn. The roughly 9.2 GW of PORTS gas generation is being developed by another SoftBank affiliate.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "since": "2019",
+     "scale": "~USD 3.2bn of cash contributions; >50% of the vote expected after the IPO",
+     "via": "SB Energy HoldCo, LLC and SVF II Energy (DE) LLC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** SoftBank Group signs for power and data-centre equipment through one subsidiary, SB Energy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SB Energy is building OpenAI's Milam County campus in Texas (about 753 MW-IT), has leased its planned 8.0 GW-IT PORTS-Pike campus in Ohio to OpenAI, and is in IPO registration; its S-1 says the roughly 9.2 GW of gas generation planned beside PORTS is being developed by a different SoftBank affiliate.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a vendor, SoftBank is a door at SB Energy and a directory at DigitalBridge.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Through SB Energy it is a buyer: SB Energy's S-1 says it buys solar modules, battery components, high-voltage transformers, switchgear and inverters itself, lets construction to EPC contractors (Turner, DPR, Kiewit, SOLV Energy and others), and has not yet chosen the backup-generation engines for PORTS.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A seller works SB Energy directly and uses DigitalBridge to find the platforms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess that **SoftBank is a door at SB Energy and a directory everywhere else**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "SB Energy's S-1 says it procures 'solar modules, battery energy storage system components, high-voltage transformers, switchgear, inverters' itself and lets turnkey construction to named EPC contractors.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A power-equipment seller qualifies at SB Energy's supply-chain team and its EPCs, not at SoftBank Group.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **SoftBank's Stargate role has turned into a landlord relationship run through SB Energy**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Its delivered sites — Milam County and PORTS-Pike — are owned by SB Energy and leased to OpenAI.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "SB Energy's S-1 never uses the word 'Stargate'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The DOE fact sheet says 'SB Energy will build new gas-fired generation', and SB Energy's PORTS microsite says the plants 'will be owned by the U.S.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "An SB Energy spokesperson told Inside Climate News that SoftBank 'has reserved sufficient gas turbines from multiple sources including GE Vernova' (reported).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Expect project-level, non-recourse buyers (SB Energy's project companies, SB Neo's special-purpose companies), not SoftBank Group, on the purchase orders.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** SoftBank's dollar commitment to, and share of, the Stargate entity; the name and ownership of the SoftBank affiliate developing PORTS gas and who holds the turbine reservations; SoftBank's economic share of SB Energy after the OpenAI, Ares and NVIDIA instruments (the S-1's percentages are blank); the current SoftBank titles of Ippei Mimura and Varun Aravapally, two of DigitalBridge's new directors; whether Lordstown remains a data-centre site; the USD amount of the Arm margin loan (reports conflict); a full-year consensus for FY2025 (none located in a loadable source).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**INDICATORS TO WATCH** — *SB Energy IPO pricing (reported delayed to mid-to-late October):* a 424B4 would give the first public value for the platform and SoftBank's stake.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "The listing vehicle, SB Energy, Inc.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "After the IPO SoftBank expects to hold more than 50% of the vote, making SB Energy a 'controlled company'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "SB Energy names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and Clearway, NextEra and AES in power.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI Computing — Arm, Ampere and Graphcore",
+     "date": "",
+     "text": "Graphcore is wholly owned and is the first tenant at SB Energy's Cosmos campus in Austin.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · France AI data-centre programme",
+     "date": "",
+     "text": "SoftBank 'will work with SB Energy and other strategic partners'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · France AI data-centre programme",
+     "date": "",
+     "text": "The only place SoftBank itself, rather than SB Energy, is the stated developer and operator of data-centre capacity.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-21",
+     "text": "SB Energy files S-1 Amendment No. 2: backlog about USD 439bn, about USD 178bn of capex tied to signed contracts; price range and ownership percentages still blank — The first public account of what SoftBank's power subsidiary buys and builds. The roadshow is reported on hold over a valuation gap below USD 50bn (IFR, reported).",
+     "src": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-17",
+     "text": "NVIDIA guarantees SB Energy's PORTS-Pike campus to host NVIDIA compute exclusively; OpenAI signs a 20-year lease for about 8 GW-IT; NVIDIA invests USD 1.5bn in SB Energy — The largest contracted data-centre commitment in the corpus sits in SoftBank's subsidiary, with NVIDIA's credit support behind the first 4.25 GW-IT.",
+     "src": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-02",
+     "text": "SoftBank Corp. (51%) and SoftBank Group (49%) form SB Neo, a US neocloud, to start services in FY2027 — The group plans to sell compute on the energy and data-centre capacity SB Energy is building.",
+     "src": "https://group.softbank/en/news/press/20260702",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-20",
+     "text": "DOE, Commerce, SoftBank, SB Energy and AEP Ohio announce the Piketon partnership: 10 GW of data centres, 'at least 9.2 GW of natural gas generation' backed by USD 33.3bn of Japanese funding, and USD 4.2bn of SB Energy-funded transmission — The government frames the gas as SB Energy's to build; SB Energy's S-1 says a different SoftBank affiliate is developing it. Both accounts are stated here.",
+     "src": "https://www.energy.gov/sites/default/files/2026-03/FACT_SHEET_Portsmouth_AI.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-23",
+     "text": "The Information reports the Stargate joint venture 'hasn't hired any staff' and that the partners' work has become bilateral — A report, not a statement: all three companies declined to comment. It fits SoftBank's own sites being delivered through SB Energy rather than through Stargate.",
+     "src": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "OpenAI and SoftBank Group each invest USD 500m in SB Energy; OpenAI selects SB Energy to build and operate its 1.2 GW Milam County site — SoftBank's Stargate role becomes a property relationship: its subsidiary owns the campus and OpenAI is the tenant.",
+     "src": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-24",
+     "text": "OpenAI, Oracle and SoftBank add five Stargate sites; the two SoftBank-partnered sites are Lordstown, Ohio and Milam County, Texas (with SB Energy) — The only Stargate release naming sites SoftBank delivers. Lordstown has not reappeared in SoftBank's later materials.",
+     "src": "https://group.softbank/en/news/press/20250924",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** SB Energy is the SoftBank-controlled developer that will own the land, shells and power systems of OpenAI's largest leased campuses: Milam County, Texas (about 753 MW-IT, under construction) and PORTS-Pike, Ohio (about 8.0 GW-IT, leased to OpenAI on 17 August 2026, construction not started).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The roughly 9.2 GW of gas generation planned beside PORTS is being developed by another SoftBank affiliate, not SB Energy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BACKGROUND.** Per its registration statement, SB Energy began in 2019 with SoftBank backing as a solar and storage developer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SoftBank has contributed about USD 3.2bn.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess SB Energy as the AIDC landlord in the corpus that is also its own power developer, and the only part of the SoftBank group that signs purchase orders for power equipment.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The S-1 says the roughly 9.2 GW of gas-fired generation is being developed by a SoftBank affiliate that is not its subsidiary, which SB Energy does 'not expect to own or operate'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "An IPO that prices proceeds as planned; a long delay leaves NVIDIA's guarantee and SoftBank's support carrying the equity.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** no equipment supplier is named anywhere in the S-1 (First Solar, Nextracker and Fluence appear only on SB Energy's website); the OEMs for Pelicans Jaw and Libra storage; the name and ownership of the SoftBank affiliate developing the PORTS gas and who holds the turbine reservations; ownership percentages after the IPO; whether AEP Ohio's definitive agreements for the 9.2 GW were signed in Q3 2026; how 'Customer D' (29% of FY2025 revenue) is named; the gap between AEP's USD 4.2bn and the S-1's USD 5.1bn of PORTS grid investment, which may count different scopes.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**INDICATORS TO WATCH** — *424B4 / Form 8-A:* pricing sets SoftBank's and OpenAI's stakes and funds the equity for PORTS.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+     "date": "",
+     "text": "Three campuses are leased: Cosmos in Austin (about 50 MW-IT, a SoftBank affiliate), Milam County, Texas (about 753 MW-IT across two buildings, OpenAI) and PORTS-Pike in Ohio (17 buildings of about 472 MW-IT each, about 8.0 GW-IT, OpenAI).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+     "date": "",
+     "text": "Its concentration is the reverse: OpenAI and SoftBank are its tenants and investors.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Co-located power for data centres",
+     "date": "",
+     "text": "At PORTS the gas generation is not SB Energy's: the S-1 says the roughly 9.2 GW of gas-fired plants are 'being developed by an affiliate of SoftBank that is not our subsidiary' and that SB Energy 'may provide development, construction management or operational services'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "Public S-1 filed to list on the Nasdaq Global Select Market and Nasdaq Texas under 'SBE'; joint bookrunners J.P. Morgan, Goldman Sachs, Morgan Stanley, Citigroup and Mizuho — The first SoftBank power business to seek a listing.",
+     "src": "https://group.softbank/en/news/press/20260902",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-07",
+     "text": "USD 999.0m of 8.875% senior secured notes due 2031 issued to finance the Cosmos campus in Austin — High-yield project debt for a 50 MW-IT campus leased to a SoftBank affiliate under a SoftBank Group Capital guarantee of about USD 2.9bn.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-21",
+     "text": "Portsmouth Consortium launched: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project — The gas-plant supplier roster belongs to the SoftBank affiliate developing the plants, not to SB Energy.",
+     "src": "https://group.softbank/en/news/press/20260321",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-20",
+     "text": "DOE, Commerce, SoftBank, SB Energy and AEP Ohio announce the Piketon campus: 10 GW of data centres, 'at least 9.2 GW of natural gas generation', USD 4.2bn of transmission paid for by SB Energy, power from 2029; DOE leases about 189 acres for the first phase — The government says 'SB Energy will build new gas-fired generation'; the S-1 says SB Energy will not own or operate it. Both accounts are recorded.",
+     "src": "https://www.energy.gov/sites/default/files/2026-03/FACT_SHEET_Portsmouth_AI.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "OpenAI and SoftBank each invest USD 500m; OpenAI leases Milam County Buildings 1 and 2 (about 753 MW-IT) for 15 years and receives warrants — Makes OpenAI both tenant and investor, with consent rights over key design contracts on its projects.",
+     "src": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-07",
+     "text": "Cosmos Technology Campus (HighPoint 2222, Austin) leased to a SoftBank affiliate for 15 years; Graphcore to be the first tenant — SB Energy's first data-centre lease is to its own parent's group.",
+     "src": "https://sbenergy.com/app/uploads/2026/09/HP-OS-2026-0909.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-21"
+  },
+  {
+   "a": "sb-energy",
+   "b": "solv-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Long-standing O&M customer; SB Energy's S-1 names SOLV Energy among its principal power EPCs and among the EPCs it assigns across data-centre phases.",
+     "context": "SOLV's April 2025 release lists SB Energy among long-standing customers that selected it for O&M. The S-1 names SOLV with Turner, DPR and Kiewit as data-centre EPC providers, and among its principal EPC counterparties for power infrastructure.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "via": "Operations and maintenance; power and data-centre EPC"
+    },
+    "a": {
+     "type": "supplier",
+     "note": "Builder of SB Energy's Eiffel solar project and a long-standing O&M provider; named in the S-1 among SB Energy's data-centre and power EPCs.",
+     "context": "The S-1 names SOLV Energy among the EPC providers SB Energy assigns across data-centre phases, and among its principal power EPCs. SOLV's April 2025 release lists SB Energy among the long-standing customers that selected it for O&M. Its project page records the EPC on Eiffel (314 MWdc, Paris, Texas), owned by SB Energy Global, LLC.",
+     "source": "https://www.solvenergy.com/news/solv-energy-continues-expansion-of-solar-and-storage-operations-maintenance-business-including-major-repowering-projects",
+     "status": "active",
+     "via": "EPC (Eiffel) and operations and maintenance"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web it is the physical link between Batch B's buyers and Batch A's suppliers — it built Arevon's Tesla flagships, services Intersect Power (Google's co-location partner) and SB Energy (the Stargate-linked developer) under O&M, and its Sungrow experience is inverter-side only.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the AIDC angle as forming, not formed: 'actively exploring storage for data centers,' the Roberson Waite urban-BESS/substation capability, and O&M relationships with Stargate-linked SB Energy and Google-partnered Intersect Power put SOLV one contract away from AIDC-adjacent storage construction — worth monitoring for the first named award.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · O&M / services platform (the annuity — and the OEM entry point)",
+     "date": "",
+     "text": "Named O&M customers: Intersect Power, SB Energy (longstanding), Greenalia, Matrix Renewables (new 2025).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It names Turner, DPR, Kiewit and SOLV Energy as its data-centre EPC providers, and SOLV, Blattner, Dashiell, CSI Electrical and Rosendin as its principal power EPCs, each on turnkey, fixed-scope contracts.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-21",
+     "text": "SOLV Energy names SB Energy among the longstanding customers that selected it for operations and maintenance — SOLV built SB Energy's Eiffel project and maintains its fleet.",
+     "src": "https://www.solvenergy.com/news/solv-energy-continues-expansion-of-solar-and-storage-operations-maintenance-business-including-major-repowering-projects",
+     "from": "a"
+    }
+   ],
+   "last": "2025-04-21"
+  },
+  {
+   "a": "sb-energy",
+   "b": "stem",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Alliance announced in November 2023 'in principle' to make Stem SB Energy's preferred energy-management partner for 10 GWh of storage; no deployment has been named since.",
+     "context": "SB Energy's S-1 (September 2026) does not name Stem, and SB Energy's Athos Storage page lists Fluence hardware without stating which software runs it.",
+     "source": "https://investors.stem.com/news-events/press-releases/detail/133/stem-and-sb-energy-announce-technology-and-commercial-alliance-to-advance-ai-enabled-energy-management-of-utility-scale-renewables",
+     "status": "announced",
+     "since": "2023-11",
+     "scale": "10 GWh over five years (in principle)",
+     "via": "Energy-management software for storage"
+    },
+    "a": {
+     "type": "partner",
+     "note": "Announced in November 2023 as SB Energy's preferred energy-management partner for 10 GWh of storage 'in principle'; no deployment is on the record since.",
+     "context": "Stem's 2 November 2023 release describes a multi-year technology and commercial alliance 'entered in principle', making Stem the preferred energy-management partner for 10 GWh of SB Energy's North American storage pipeline in CAISO and ERCOT over five years. No project has been named since. SB Energy's Athos Storage uses Fluence hardware, and which software runs it is not stated.",
+     "source": "https://investors.stem.com/news-events/press-releases/detail/133/stem-and-sb-energy-announce-technology-and-commercial-alliance-to-advance-ai-enabled-energy-management-of-utility-scale-renewables",
+     "status": "announced",
+     "since": "2023-11",
+     "scale": "10 GWh over five years (in principle)",
+     "via": "Energy-management software (Athena) for storage"
+    }
+   },
+   "evid": [],
+   "last": "2023-11"
+  },
+  {
+   "a": "sb-energy",
+   "b": "switch",
+   "evid": [
+    {
+     "where": "Capabilities · Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+     "date": "",
+     "text": "The S-1 names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and says SB Energy is 'developing four of the seven largest data center sites by IT capacity in the United States'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "sb-energy",
+   "b": "turner-construction",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "SB Energy's S-1 names Turner among the EPC providers it assigns across phases of its data-centre sites; no specific project is named.",
+     "context": "The S-1 says SB Energy partners with multiple EPC providers, 'including Turner, DPR, Kiewit and SOLV Energy', and assigns them across phases of the same site.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "via": "Data-centre EPC"
+    },
+    "a": {
+     "type": "supplier",
+     "note": "Named in the S-1 among the EPC providers SB Energy assigns across phases of its data-centre sites.",
+     "context": "The S-1 says SB Energy partners 'with multiple qualified engineering, procurement and construction (“EPC”) providers, including Turner, DPR, Kiewit and SOLV Energy, and assign[s] them across phases of the same site'. No specific Turner project for SB Energy is named.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "via": "Data-centre EPC"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
    "a": "schneider-electric",
    "b": "sinexcel",
    "curated": {
@@ -68526,6 +71239,47 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "schneider-electric",
+   "b": "softbank",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Named in SoftBank's May 2026 French programme as operator of a Dunkirk facility integrating data-centre power modules; an announced plan, with no order or volume stated.",
+     "context": "SoftBank's announcement of up to 5 GW of AI data-centre capacity in France describes two facilities at the Port of Dunkirk: one operated by SoftBank to manufacture enclosures and one operated by Schneider Electric to integrate data-centre power modules.",
+     "source": "https://group.softbank/en/news/press/20260531_0",
+     "status": "announced",
+     "since": "2026-05",
+     "via": "Dunkirk power-module integration facility (SoftBank's French data-centre programme)"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Partner in SoftBank's French data-centre programme: Schneider Electric is to operate a facility at the Port of Dunkirk integrating data-centre power modules.",
+     "context": "SoftBank's 30 May 2026 announcement of up to 5 GW in France describes two facilities at Dunkirk: one operated by SoftBank to manufacture enclosures, and one operated by Schneider Electric to integrate data-centre power modules. It is an announced plan, with no order or volume stated.",
+     "source": "https://group.softbank/en/news/press/20260531_0",
+     "status": "announced",
+     "since": "2026-05",
+     "via": "Dunkirk power-module integration facility (France programme)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · France AI data-centre programme",
+     "date": "",
+     "text": "At the Port of Dunkirk there will be two facilities: one operated by SoftBank to manufacture enclosures, and one operated by Schneider Electric to integrate data-centre power modules.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-31",
+     "text": "SoftBank commits to 5 GW of AI data-centre capacity in France (up to €75bn); a SoftBank-majority joint venture with Sesterce to build 1 GW at Bosquel; Schneider Electric to run a power-module facility at Dunkirk — A commitment, not a build. It is the one market where SoftBank names itself developer and operator.",
+     "src": "https://group.softbank/en/news/press/20260531_0",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-31"
   },
   {
    "a": "schneider-electric",
@@ -69085,6 +71839,108 @@
     }
    ],
    "last": "2025-10-09"
+  },
+  {
+   "a": "softbank",
+   "b": "solv-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Through SB Energy it is a buyer: SB Energy's S-1 says it buys solar modules, battery components, high-voltage transformers, switchgear and inverters itself, lets construction to EPC contractors (Turner, DPR, Kiewit, SOLV Energy and others), and has not yet chosen the backup-generation engines for PORTS.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "softbank",
+   "b": "switch",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Indirect: since 30 September 2026 SoftBank Group has owned DigitalBridge, whose managed funds took Switch private with IFM Investors in December 2022. The equity stays with those funds.",
+     "context": "DigitalBridge's Form 8-K of 30 September 2026 records the completion of its merger into a SoftBank Group subsidiary. SoftBank's Q3 FY2025 earnings presentation lists Switch among DigitalBridge's 'Key Portfolio Companies'. SoftBank's link is the manager, not Switch's equity, which DigitalBridge-managed vehicles hold with IFM Investors and Aware Super.",
+     "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf",
+     "status": "active",
+     "since": "2026-09",
+     "via": "DigitalBridge (SoftBank-owned since 30 September 2026), manager of the funds that co-own Switch with IFM Investors"
+    },
+    "a": {
+     "type": "portfolio",
+     "note": "A DigitalBridge portfolio company: SoftBank now owns the manager of the funds that took Switch private with IFM Investors in 2022.",
+     "context": "SoftBank's Q3 FY2025 deck lists Switch among DigitalBridge's 'Key Portfolio Companies', as 'focused on developing AI-ready, large-scale campus data centers across the U.S.'. DigitalBridge's 10-K and 10-Q do not name Switch; it is held in DigitalBridge-managed funds alongside IFM Investors and Aware Super, and DigitalBridge does not consolidate it. SoftBank's link is the manager, not the equity.",
+     "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf",
+     "status": "active",
+     "since": "2026-09",
+     "via": "DigitalBridge (manager of the funds that co-own Switch with IFM)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Since 30 September 2026 SoftBank has also owned DigitalBridge, which manages, but does not own, the funds that control Vantage, Switch, DataBank and other platforms.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Through DigitalBridge it is a manager: it owns the general partner of funds whose capital is almost entirely third-party, so Vantage, Switch and DataBank sign their own orders under fund governance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "SoftBank therefore reaches Vantage and Switch the way BlackRock reaches Aligned through GIP: by appointing the manager, under duties owed to outside investors (the duties are our inference from the managers' SEC registration, not a filed statement).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+     "date": "",
+     "text": "SB Energy names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and Clearway, NextEra and AES in power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · DigitalBridge — digital-infrastructure investment manager",
+     "date": "",
+     "text": "The platforms' equity belongs to third-party investors such as Silver Lake, PSP, GIC, ADIA, AustralianSuper and MEAG at Vantage, and IFM and Aware Super at Switch.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09"
+  },
+  {
+   "a": "softbank",
+   "b": "vantage",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Indirect: since 30 September 2026 SoftBank Group has owned DigitalBridge, the manager of the funds that lead Vantage's ownership. The equity stays with those funds and their co-investors.",
+     "context": "DigitalBridge's Form 8-K of 30 September 2026 records the completion of its merger into a SoftBank Group subsidiary at USD 16.00 a share in cash. SoftBank's Q3 FY2025 earnings presentation lists Vantage first among DigitalBridge's 'Key Portfolio Companies'. SoftBank bought the manager, not Vantage: the equity remains with DigitalBridge-managed funds and the co-investors named in this dossier, and SoftBank's reach runs through DigitalBridge's fund governance.",
+     "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf",
+     "status": "active",
+     "since": "2026-09",
+     "via": "DigitalBridge (SoftBank-owned since 30 September 2026), manager of the funds that lead Vantage's ownership"
+    },
+    "a": {
+     "type": "portfolio",
+     "note": "A DigitalBridge portfolio company: since 30 September 2026 SoftBank owns the manager whose funds lead Vantage's ownership.",
+     "context": "SoftBank's Q3 FY2025 deck lists Vantage first among DigitalBridge's 'Key Portfolio Companies', describing it as 'building and operating hyperscale campus data centers globally'. The equity belongs to DigitalBridge-managed funds and co-investors, including Silver Lake, PSP, GIC, ADIA, AustralianSuper and MEAG. DigitalBridge's own balance sheet holds only a minority equity-method stake in Vantage NA SDC, the stabilised North American portfolio. SoftBank's reach into Vantage's equipment decisions runs through DigitalBridge's board and fund governance, not through ownership. DigitalBridge's merger proxy records that Vantage's October 2025 Stargate site partnership with OpenAI and Oracle came before the deal.",
+     "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf",
+     "status": "active",
+     "since": "2026-09",
+     "via": "DigitalBridge (manager of the funds that lead Vantage's ownership)"
+    }
+   },
+   "evid": [],
+   "last": "2026-09"
   },
   {
    "a": "solv-energy",

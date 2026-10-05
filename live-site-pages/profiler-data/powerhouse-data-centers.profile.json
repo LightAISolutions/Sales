@@ -537,6 +537,17 @@
    "note": "ComEd (Exelon) is Joliet's utility under a transmission security agreement accepted by FERC in March 2026, cancelled by ComEd on 24 July 2026 over the timing and form of the initial security, and kept in force by FERC's 22 September 2026 order rejecting the cancellation — with the USD 1 letter-of-credit question left to the Northern District of Illinois.",
    "context": "The Exelon dossier carries the utility's framework: ICC deposit rules at 50 MW and FERC-jurisdictional TSAs with ramp, readiness, credit, committed-revenue, shortfall and termination-fee terms; Utility Dive's suggestion that Joliet was 'classified as speculative under new vetting process' is the article's framing, and no ComEd statement on the cancellation was found.",
    "source": "https://www.utilitydive.com/news/ferc-exelon-comed-powerhouse-hillwood-data-center/831127/"
+  },
+  {
+   "slug": "blue-owl",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-08",
+   "scale": "USD 5bn programme; two USD 750m tranches",
+   "via": "Blue Owl / Chirisa Technology Parks joint venture",
+   "note": "Joint-venture partner, with Chirisa Technology Parks, in the USD 5bn development programme whose Chesterfield, Virginia campus is built to suit for CoreWeave.",
+   "context": "The three announced the USD 5bn partnership in August 2024 with a first USD 750m tranche, and a second USD 750m tranche in May 2025 for 120 MW at Chesterfield.",
+   "source": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html"
   }
  ],
  "policyExposure": [
@@ -1433,6 +1444,6 @@
    "url": "https://www.pecva.org/region/loudoun/loudoun-updates-summer-2025/"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 3
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 4
 }

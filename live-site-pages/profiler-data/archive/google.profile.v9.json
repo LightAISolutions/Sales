@@ -1,0 +1,870 @@
+{
+ "schemaVersion": 7,
+ "slug": "google",
+ "name": "Alphabet Inc. (Google LLC)",
+ "shortName": "Google",
+ "categories": [
+  "hyperscaler"
+ ],
+ "website": "https://abc.xyz",
+ "headquarters": "Mountain View, CA, USA",
+ "founded": 1998,
+ "employees": "190,820 (Dec 31, 2025)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: GOOGL"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power — announced at ~$4.75B in cash plus assumed debt, booked at USD 5,868m total purchase price in Alphabet's Q2 2026 10-Q; 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee). BACKGROUND: Founded 1998; Alphabet holding structure since 2015. FY2025 revenue $402.8B (+15%), net income $132.2B; Google Cloud accelerated to +82% in Q2 2026 ($24.8B, backlog $514B); 2026 capex guided $195–205B after three raises; Gemini 3 launched November 2025 (app at 950M MAU); Apple selected Gemini to power the revamped Siri. THE OTHER HALF OF THE BALANCE SHEET — AND THE PART GOOGLE DOES NOT DISCLOSE: since August 2025 Google has been underwriting the rent of a chain of AI data-centre campuses it neither owns nor leases. Under per-building Recognition Agreements it promises the LANDLORD that, on a payment default or insolvency of the tenant — Fluidstack Ltd in every case — it will either pay the termination fee or pay all rent currently due and assume the lease itself. Disclosed support: ~$3.2B at TeraWulf's Lake Mariner, $1.3B at Abernathy, $1.73B at Cipher's Barber Lake, and the full 15-year base term of Hut 8's $7.0B River Bend lease. (A fifth Fluidstack campus, New Lebanon, Indiana — 430 MW behind USD 5.7bn of Meridian Arc notes — is often grouped with these, but NO public filing establishes Google support there; it is excluded from the totals here.) THE PRICE IS PER-INSTRUMENT, AND IT WENT TO ZERO: the equity strip attached only to the FIRST tranche at each of the two landlords that paid one — USD 1.8bn for ~41m TeraWulf warrants (~8% pro forma) in August 2025, raised days later to USD 3.2bn for ~14%, and USD 1.4bn for 24,178,576 Cipher warrants at USD 0.01 (~5.4%, with a USD 430.0m value floor). Every instrument after that carried NOTHING: TeraWulf's own Abernathy joint venture states plainly that 'no TeraWulf equity securities or warrants were issued in connection with this transaction', Cipher's USD 333m increase added no warrants, and Hut 8's entire USD 7.0bn River Bend deal — the largest in the set — carried no equity and no warrants at all. Hut 8 is the clearest case, not the only one. THE DISCLOSURE ASYMMETRY IS THE FINDING, AND IT IS NOT THE ONE MOST READERS EXPECT: Alphabet DOES disclose the programme, in aggregate and quantified — its Q2 2026 10-Q accounts for these arrangements as **credit derivatives**, with gross notional rising from USD 16,940m at 31 December 2025 to USD 43,785m at 30 June 2026, remaining terms of up to fifteen years, and the explicit note that on default it may assume the leases 'for internal use or to sublease to third parties' and that a termination payment 'may be partially offset by equity or cash receipts from counterparties'. What Alphabet does NOT do is name anyone: 'Fluidstack' appears ZERO times in that 10-Q and zero times in any Alphabet filing indexed by EDGAR full-text search, against 143 corpus-wide hits. So the aggregate is Alphabet's; the counterparties, the per-campus amounts and the price paid are legible only from the landlords' 8-Ks and 10-Qs. Reconciling the two halves is the whole analytical task. Anthropic, an Alphabet investee and Google's largest external TPU customer, is the end user at River Bend.",
+ "ecosystemRole": "We assess Google as the ecosystem's most storage-forward buyer and its most vertically integrated: the Intersect acquisition brings development in-house ('energy parks' co-locating data centers with behind-the-meter solar+BESS to bypass interconnection queues — first: Haskell County TX, 640 MW solar + 1.3 GWh BESS beside a new campus), 1 GW of data-center demand response is signed across five utilities, and the Form Energy deal legitimizes multi-day (100-hour) storage for AI load. Its 24/7 CFE goal (66% hourly matched; footprint nonetheless +81% vs 2019) is the structural driver of all of it. We further assess the Fluidstack backstop programme as capacity procurement wearing the clothes of credit support: Google obtains first call on gigawatts of AI capacity — at campuses that sometimes run its own silicon for its own investee — without the leases, the land or the project debt touching Alphabet's balance sheet, while the landlords obtain paper financeable at investment grade. The instrument is measured and load-bearing on the other side of the trade: Cipher carries a $544.5M asset for 'the value of Google agreeing to make the lease payments from Fluidstack', and its project notes amortise against the backstop rather than a fixed schedule. Three cautions follow. The equity strip is NEGOTIATED, NOT STRUCTURAL, and the record shows it being negotiated away: it attached to the first tranche at TeraWulf and at Cipher and to nothing afterwards — not to the Abernathy joint venture, not to Cipher's USD 333m increase, and not to any part of Hut 8's larger and later River Bend deal. The ~14% and ~5.4% are opening prices, not a standing tariff. Second, THE CAPS ARE DEBT-SIZED, NOT LEASE-SIZED: USD 3.2bn matches TeraWulf's 7.750% notes, USD 1.733bn matches Cipher's 7.125% notes and USD 1.3bn matches the Abernathy 7.250% notes, almost exactly — the backstop is scaled to what the lenders needed, not to the rent. And the exposure RAMPS WITH DELIVERED CAPACITY, not with announcements: the backstops switch on at lease commencement, which is why TeraWulf recorded only $600M of it becoming effective when CB-3 was delivered. No source publishes a programme-level total, and River Bend's 'full base term' is a description rather than a dollar cap, so the components cannot honestly be summed into one exposure number.",
+ "productsAndServices": [
+  {
+   "name": "Google Cloud & TPU Silicon",
+   "category": "Cloud + custom silicon · the accelerating franchise",
+   "description": "Google Cloud: $24.8B in Q2 2026 (+82%, fastest of the big three), $8.8B operating income, backlog $514B (nearly doubled sequentially in Q1). TPU line: v6 Trillium → v7 Ironwood (4.6 PFLOPS FP8/chip, 192 GB HBM3e, 9,216-chip pods at 42.5 exaFLOPS; GA November 2025) — now sold to select external customers rather than cloud-rental only, with Anthropic as anchor (up to ~1M TPUs) and Meta signed as a multi-year, multi-billion-dollar TPU lessee (Feb 2026). Axion Arm CPUs; Gemini 3/3.5 models; DeepMind research arm.",
+   "highlights": [
+    "SemiAnalysis called Ironwood 'the 900lb gorilla' — Google's first credible merchant-silicon threat to NVIDIA; reported (not guided) internal goal of capturing ~10% of NVIDIA-class revenue",
+    "Q2 2026 headline EPS $9.11 was almost entirely mark-to-market gains on equity stakes (reported to include Anthropic and SpaceX); ex-gains ~$2.85 — roughly in line",
+    "Apple chose Gemini for the revamped Siri (2026) — distribution the antitrust remedies were designed to constrain",
+    "Cloud growth outpaced Azure (+40%) and AWS (+28%) in Q1 2026"
+   ],
+   "positioning": "The TPU vertical-integration cost edge is the analyst consensus differentiator vs NVIDIA-dependent rivals; the search-antitrust remedies (no Chrome divestiture, but exclusive-deal bans and data-sharing; DOJ cross-appeal pending) are the open regulatory overhang",
+   "soldThrough": "Cloud consumption; TPU external sales/leases to select customers; ads auction for the core business",
+   "targetSegments": "Enterprises, frontier labs (Anthropic), Meta, consumers (Gemini app 950M MAU)",
+   "roadmap": "TPU v8 training/inference split ('Sunfish'/'Zebrafish') reported for ~2027 — not company-confirmed; 2027 capex guided to 'significantly increase' again"
+  },
+  {
+   "name": "Energy Parks & Storage Procurement",
+   "category": "Power · the most BESS-relevant hyperscaler program",
+   "description": "Intersect Power owned outright (announced December 2025 at ~$4.75B cash plus debt assumption; final purchase-price allocation USD 5,868m per Alphabet's Q2 2026 10-Q — goodwill USD 2,174m, property and equipment USD 5,129m, debt assumed USD 1,214m; ~2.2 GW solar + 2.4 GWh BESS operating/under construction; energy-park model co-locating DCs with behind-the-meter generation+storage — first park at Haskell County, TX: 640 MW solar + 1.3 GWh BESS). Form Energy iron-air multi-day storage: 300 MW / 30 GWh with Xcel serving the Pine Island, MN data center (largest battery project by energy capacity announced worldwide; Google pays full costs via a new tariff + $50M into Xcel's distributed-battery program). Steel River (Cypress Creek, AR): VPPA for 100% of initial output — phase 1: 1.6 GW solar + ~2 GWh BESS, full build 2.5 GW/2.9 GWh, the largest US solar+storage project to break ground. Texas: 6,200+ MW of PPAs incl. co-located solar+BESS at the Haskell DC. Demand response: 1 GW signed across I&M, TVA, Entergy Arkansas, Minnesota Power, DTE. Nuclear: Kairos master agreement (up to 500 MW; Hermes 2 groundbreaking April 2026, ops ~2030 — nothing flows before ~2030). Fusion: Commonwealth Fusion Systems 200 MW offtake (early 2030s). Hydro: Brookfield framework up to 3 GW (670 MW/$3B+ initial). Geothermal: Fervo EGS operating since 2024.",
+   "highlights": [
+    "The only hyperscaler that owns a major renewables developer — vertical integration into generation+storage development itself",
+    "24/7 CFE reality check: 66% hourly matched, 12+ GW contracted in 2025 alone — but total carbon footprint +18% in 2025 and +81% vs 2019; Google concedes the moonshot is 'getting harder'",
+    "~35 GW contracted across 240+ agreements since 2010",
+    "The Fort Wayne I&M deal (Clean Capacity Arrangement + ML-workload-shifting demand response) is filed as a model tariff structure for AI load"
+   ],
+   "positioning": "Where Amazon buys storage through developer PPAs and Microsoft buys grid firmness, Google builds and owns the storage-anchored infrastructure — the deepest direct BESS demand signal in the covered set",
+   "soldThrough": "Owned development (Intersect), VPPAs, utility tariffs, DR programs",
+   "targetSegments": "Counterparties: utilities (Xcel, TVA, I&M), developers (Cypress Creek), storage innovators (Form Energy, Energy Dome)",
+   "roadmap": "Haskell energy park completing ~2026; Steel River phases through decade-end; Hermes 2 ~2030; CFS fusion early 2030s"
+  },
+  {
+   "name": "Search, Ads & Named Campus Investments",
+   "category": "Core business + infrastructure footprint",
+   "description": "Search & other ads $63.1B in Q4 2025; YouTube ads+subs >$60B FY2025; 325M+ paid subscriptions. US campus program ~$78B announced across six states in 2025 (Oklahoma $9B, South Carolina $9B, Virginia $9B, Iowa $7B, Arkansas $4B, Texas $40B through 2027) plus Pine Island MN and Fort Wayne IN.",
+   "highlights": [
+    "Capex arc: $52.5B (2024) → $91.4B (2025) → $195–205B guided (2026, raised three times); FCF −$5.9B in Q2 2026",
+    "Funding shifted to capital markets: $24.8B notes (Nov 2025), ~$49.6B equity/convertible raise + $20.3B notes (2026)",
+    "AI-search cannibalization is the standing bear question; Google's counter: AI features drive query growth"
+   ],
+   "soldThrough": "Ads auction; subscriptions",
+   "targetSegments": "Advertisers, consumers"
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-03",
+   "category": "market",
+   "headline": "Fluidstack — the tenant Google's whole backstop programme stands behind — valued at USD 18B, explicitly on the strength of building Google's and Anthropic's data centres",
+   "read": "The backstop is doing double duty: it de-risks the landlords' paper AND capitalises the tenant. Google has never named Fluidstack publicly, yet the market prices Fluidstack largely on that relationship.",
+   "source": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "financial",
+   "headline": "USD 600M of Google's TeraWulf support became effective on CB-3 delivery — the backstops switch on at lease commencement, not at signing",
+   "read": "The programme's exposure ramps with delivered capacity rather than with announcements, so the headline backstop totals overstate what is live at any date. Track energisation, not signings.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "financial",
+   "headline": "Alphabet's Q2 2026 10-Q records the final Intersect Power purchase-price allocation: USD 5,868m total — goodwill USD 2,174m, property and equipment USD 5,129m, debt assumed USD 1,214m",
+   "read": "The 10-Q figure is the one to carry: it sits about USD 1.1bn above the ~$4.75B cash headline because it folds in assumed debt and purchase-price adjustments — the same allocation Intersect Power's own dossier reads from this filing. The announced figure is kept in this dossier as the announcement, not the price.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  },
+  {
+   "date": "2026-07-22",
+   "category": "financial",
+   "headline": "Q2 2026: revenue $119.8B (+24%) beat; Cloud +82%; capex raised a third time to $195–205B — stock fell up to ~7%",
+   "read": "The Alphabet version of the sector pattern: fundamentals beat, capex shocks — with the added wrinkle that headline EPS was mostly unrealized equity gains (composition disputed across outlets; verify in the 10-Q).",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "order-win",
+   "headline": "Steel River VPPA (Cypress Creek, Arkansas): 100% of initial output — 1.6 GW solar + ~2 GWh BESS phase 1, 2.5 GW/2.9 GWh full build",
+   "read": "The largest US solar+storage PPA — and evidence that hyperscaler 24/7 goals have made BESS a core reliability asset in PPA structures. An LGES ~2.9 GWh supply role is reported but unconfirmed.",
+   "source": "https://www.pv-magazine.com/2026/07/15/google-agrees-to-purchase-100-of-power-from-largest-solar-plus-storage-project-in-u-s/"
+  },
+  {
+   "date": "2026-06-05",
+   "category": "capacity",
+   "headline": "$920M/month SpaceX-xAI compute deal: ~110,000 NVIDIA GPUs at xAI data centers, October 2026 through June 2029 (~$30B)",
+   "read": "A frontier-lab competitor becomes a compute supplier — bridge capacity for Gemini Enterprise demand, with termination rights if GPUs slip past September 2026.",
+   "source": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/"
+  },
+  {
+   "date": "2026-03-10",
+   "category": "partnership",
+   "headline": "Intersect Power acquisition closed (announced ~$4.75B plus assumed debt; Alphabet's Q2 2026 10-Q later books USD 5,868m total purchase price): ~2.2 GW solar + 2.4 GWh BESS and the energy-park development model brought in-house",
+   "read": "The first Big Tech acquisition of a major renewables developer — Google now competes with the developers other hyperscalers buy from; initial focus California and Texas solar+storage.",
+   "source": "https://www.pv-tech.org/google-finalises-intersect-acquisition-to-bring-data-centre-power-in-house/"
+  },
+  {
+   "date": "2026-03-31",
+   "category": "capacity",
+   "headline": "Revealed as end user of the ~700 MW Hermantown, MN data center Mortenson's development arm is entitling",
+   "read": "A new siting channel: hyperscale capacity originated by a GC's land-development arm, pending an updated environmental review.",
+   "source": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-d"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "partnership",
+   "headline": "1 GW of data-center demand response signed across five US utilities; ML workloads shift off-peak",
+   "read": "Google is making flexible AI load a grid asset — demand response at this scale substitutes for peaker capacity and competes with (while also complementing) storage.",
+   "source": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/demand-response-data-center-milestone/"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "partnership",
+   "headline": "Pine Island, MN data center powered via Xcel: 1,400 MW wind + 200 MW solar + 300 MW/30 GWh Form Energy iron-air battery — the largest battery project by energy capacity announced anywhere",
+   "read": "Multi-day (100-hour) storage enters hyperscale procurement — a category-defining deal for LDES and a template (Google pays full costs via a dedicated tariff).",
+   "source": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/data-center-pine-island/"
+  },
+  {
+   "date": "2026-02-20",
+   "category": "financial",
+   "headline": "WSJ reports Google exploring a ~USD 100M equity investment in Fluidstack tied to TPU distribution (reported, not confirmed by either party)",
+   "read": "Would convert an arm's-length credit relationship into an ownership one and tie the backstop programme directly to TPU placement. Single-outlet reporting — treat as unconfirmed.",
+   "source": "https://siliconangle.com/2026/02/20/google-reportedly-invest-100m-ai-cloud-operator-fluidstack/"
+  },
+  {
+   "date": "2026-02-04",
+   "category": "financial",
+   "headline": "FY2025: revenue $402.8B, net income $132.2B; 2026 capex guided $175–185B (~doubling) — stock fell ~3% on the number",
+   "read": "The original 2026 capex reset, since raised twice more — Alphabet 'reset the bar for AI infrastructure spending' (CNBC).",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm"
+  },
+  {
+   "date": "2025-12-17",
+   "category": "partnership",
+   "headline": "Hut 8 River Bend: Google backstops the full 15-year, USD 7.0B base term with a springing Alphabet guarantee — and takes NO warrants and NO equity",
+   "read": "The control case for the whole programme. Same service, same tenant, zero equity — so the 14% and 5.4% taken elsewhere were negotiated, not structural.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217x8k.htm"
+  },
+  {
+   "date": "2025-12-08",
+   "category": "partnership",
+   "headline": "NextEra co-development framework: gigawatt-scale data-center campuses, 15 GW of new generation by 2035 (30-35 GW upside) — after the October Duane Arnold 615 MW nuclear restart under a 25-year Google PPA",
+   "read": "Google is buying generation development itself, not just PPAs — the deepest energy partnership any hyperscaler holds with an IPP.",
+   "source": "https://www.cnbc.com/2025/12/08/nextera-to-build-15-gigawatts-power-data-centers-google.html"
+  },
+  {
+   "date": "2025-11-20",
+   "category": "partnership",
+   "headline": "Cipher Barber Lake expansion: Google backstop increased by USD 333M to USD 1.73B as Fluidstack takes the whole 300 MW campus",
+   "read": "Backstops are amended upward with the tenant's footprint — the instrument scales with the lease rather than being fixed at signing.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm"
+  },
+  {
+   "date": "2025-11-18",
+   "category": "product-launch",
+   "headline": "Gemini 3 launched (Deep Think mode; 1501 LMArena Elo)",
+   "read": "The model line whose demand pull Pichai credits for Cloud's acceleration — and the Siri win that followed extends it into Apple's installed base.",
+   "source": "https://blog.google/products/gemini/gemini-3/"
+  },
+  {
+   "date": "2025-11-14",
+   "category": "capacity",
+   "headline": "$40B Texas commitment through 2027; 6,200+ MW of Texas PPAs including co-located solar+BESS at the Haskell County campus",
+   "read": "The energy-park model at state scale — generation, storage, and data centers procured as one program.",
+   "source": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-texas/"
+  },
+  {
+   "date": "2025-10-28",
+   "category": "partnership",
+   "headline": "Abernathy, Texas: USD 1.3B of Google support behind the 168 MW TeraWulf-Fluidstack joint venture",
+   "read": "Extends the programme from leases into a JV structure, and became the collateral story for USD 1.3B of 7.25% project notes two months later.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925102858/tm2529509d1_ex99-1.htm"
+  },
+  {
+   "date": "2025-09-25",
+   "category": "partnership",
+   "headline": "Cipher Barber Lake: USD 1.4B Google backstop bought with penny warrants over 24,178,576 Cipher shares (~5.4% pro forma, USD 430.0M value floor)",
+   "read": "Second landlord, second equity strip — and the first time the price of the backstop is disclosed with a floor, making the trade explicit rather than inferable.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_8k.htm"
+  },
+  {
+   "date": "2025-09-02",
+   "category": "regulatory",
+   "headline": "Search antitrust remedies: no Chrome divestiture, but exclusive-distribution bans (incl. Gemini) and mandated data-sharing; DOJ + 38 states cross-appealed (Feb 2026)",
+   "read": "Better than the worst case, unresolved into 2027 — data-sharing remedies already bind while the appeal runs.",
+   "source": "https://www.yahoo.com/news/articles/google-not-forced-divest-chrome-203808656.html"
+  },
+  {
+   "date": "2025-08-18",
+   "category": "financial",
+   "headline": "TeraWulf backstops rise to $3.2B as Fluidstack's Lake Mariner leases expand — Google warrants reach ~14% of TeraWulf pro forma",
+   "read": "Google is underwriting AI-buildout credit: downside protection via lease backstops, upside via penny warrants — ~$4.5B of support across the Fluidstack chain.",
+   "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner"
+  },
+  {
+   "date": "2025-08-14",
+   "category": "partnership",
+   "headline": "Programme begins: Google signs the first per-building Recognition Agreements behind Fluidstack USA I's 200+ MW of Lake Mariner leases",
+   "read": "The template for everything that follows — on a Fluidstack default or insolvency Google may pay the termination fee or assume the lease as tenant, which is what makes the landlords' project debt financeable.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925078084/tm2523008d2_8k.htm"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess Google has chosen ownership over procurement in energy: buying Intersect Power, co-developing energy parks, and anchoring first-of-kind storage (iron-air 30 GWh) and fusion offtakes make it the hyperscaler most likely to shape — rather than just consume — the storage market. Basis: closed acquisition, first-party project announcements.",
+  "(High confidence) We assess the TPU program has crossed from internal cost lever to competitive weapon: external sales, the Anthropic ~1M-TPU anchor, and Meta as a lessee give Google the only at-scale merchant alternative to NVIDIA among hyperscalers — with reported ambitions (~10% of NVIDIA-class revenue; 4.3M→35M unit projections) that remain analyst/reported figures, not guidance.",
+  "(Moderate confidence) We assess the interconnection queue is the strategic enemy Google is engineering around: energy parks (behind-the-meter generation+storage), 1 GW of demand response, and model tariff structures (Fort Wayne) all exist to add load without waiting for the grid — the playbook rivals will copy.",
+  "(Moderate confidence) We assess the sustainability gap is now structural: 66% hourly CFE but emissions +81% vs the 2019 baseline and 'moonshot getting harder' concessions — nuclear (nothing before ~2030) and fusion (early 2030s) cannot close it this decade, which keeps Google buying storage and renewables at maximum pace.",
+  "(Moderate confidence) We assess funding has shifted decisively to capital markets (~$95B of debt/equity raised across late 2025–2026) with FCF negative — sustainable at Alphabet's earnings power, but it makes the capex program hostage to equity-market patience in a way it wasn't in 2024.",
+  "(Low confidence) The Q2 2026 equity-gain composition (reported Anthropic/SpaceX marks; $37.7B vs $99B figures conflict across outlets) and Meta's reported outright TPU purchases from 2027 are unverified — treat both as unresolved.",
+  "The Fluidstack backstop programme is capacity procurement dressed as credit support. Google gets first call on gigawatts of AI capacity — at campuses whose end user is sometimes its own investee and whose silicon is sometimes its own TPU — without the leases, the land or the project debt appearing on Alphabet's balance sheet. The landlords get financeable paper; Google gets optionality it never had to capitalise.",
+  "The price of that support is negotiated, not structural — and Hut 8 proves it. Google took warrants over ~14% of TeraWulf and ~5.4% of Cipher, and nothing at all at Hut 8 for the same service on a larger lease. Any read that treats the equity strip as the standard cost of a Google backstop is wrong; the strip tracks the landlord's negotiating position, and the trend across the three deals runs downward."
+ ],
+ "relationships": [
+  {
+   "slug": "nextera-energy-resources",
+   "type": "partner",
+   "note": "Co-developing gigawatt-scale data-center campuses — 15 GW by 2035 base case — plus the Duane Arnold nuclear restart under a 25-year PPA.",
+   "context": "December 2025: Google and NextEra agreed to co-develop gigawatt-scale campuses (first three in development; 15 GW of new generation for data-center hubs by 2035, 30-35 GW upside), with a technology leg putting Google Cloud AI into NextEra's grid software. It followed October's Duane Arnold deal — the 615 MW Iowa nuclear plant restarting Q1 2029 under a 25-year Google PPA. The deepest hyperscaler-IPP energy partnership on record.",
+   "source": "https://www.cnbc.com/2025/12/08/nextera-to-build-15-gigawatts-power-data-centers-google.html",
+   "status": "active",
+   "since": "2025-10",
+   "scale": "15-35 GW framework + 615 MW nuclear"
+  },
+  {
+   "slug": "xai",
+   "type": "supplier",
+   "note": "$920M/month for ~110,000 NVIDIA GPUs at xAI data centers (Oct 2026 - Jun 2029, ~$30B).",
+   "context": "Announced June 5, 2026: Google buys bridge capacity for Gemini Enterprise demand from SpaceX-xAI — ramp at reduced fees through September 2026, termination right if GPUs slip past end-September (one-month grace), and mutual 90-day cancellation after December 2026. A frontier-lab rival as compute landlord — the starkest sign that capacity scarcity outranks competitive hygiene.",
+   "source": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
+   "via": "NVIDIA GPUs",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "$920M/month (~$30B)"
+  },
+  {
+   "slug": "terawulf",
+   "type": "partner",
+   "note": "The programme's first and largest counterparty: USD 3.2bn of backstops across two tranches, bought with penny warrants now ~14% of TeraWulf — plus USD 1.3bn at Abernathy that cost nothing.",
+   "context": "Google's support here came in three steps, not one. **USD 1.8bn** on 13-14 August 2025 behind Fluidstack USA I's Lake Mariner leases, for warrants over about 41 million shares (~8% pro forma); **a further USD 1.4bn** days later on 17-18 August with the CB-5 lease, taking the backstop to **USD 3.2bn** and the warrants to about 14%; and **USD 1.3bn** in October 2025 behind the 168 MW Abernathy joint venture — where TeraWulf states plainly that 'no TeraWulf equity securities or warrants were issued in connection with this transaction'. The first two caps match TeraWulf's USD 3.2bn 7.750% notes and the third the USD 1.3bn 7.250% Flash Compute notes, which is the clearest evidence that these backstops are sized to the project debt rather than to the rent.\n\nThe backstop attaches at lease commencement, not signing: TeraWulf's Q2 2026 10-Q records USD 600m becoming effective on delivery of CB-3, and its FY2025 10-K says the Google credit support 'was a key factor in enabling efficient financing and phased development'. TeraWulf carries a USD 515.5m deferred charge for the issuance-date fair value of the warrants — the mirror of Cipher's USD 544.5m — while the warrant liability itself ran to USD 1.82bn by June 2026, producing a USD 972.0m fair-value loss in H1 2026 alone. In July 2026 TeraWulf agreed to sell its entire 50.1% of the Abernathy JV to a Fluidstack-led group for about USD 530m, taking that instrument outside its reporting perimeter; what becomes of the USD 1.3bn backstop on transfer is not disclosed. This pair is recorded `partner` here and `investor` from TeraWulf's side and sits on the checker's accept list: both are true at once.",
+   "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner",
+   "via": "Fluidstack lease backstops",
+   "status": "active",
+   "since": "2025-08",
+   "scale": "$4.5B across three instruments; ~14% warrants"
+  },
+  {
+   "slug": "holder-construction",
+   "type": "supplier",
+   "note": "GC of the ~$2B Fort Wayne campus and the New Albany 'Mustang Project'.",
+   "context": "Holder is the confirmed GC of Google's ~$2B, 700+ acre Fort Wayne, Indiana data center (ground broken April 2024) and holds the OSHA-documented 'Mustang Project' in New Albany, Ohio — the low-profile incumbent of Google's hyperscale build program, with 60-70% of its projects in data centers.",
+   "source": "https://www.constructiondive.com/news/data-center-projects-construction-2025/738160/",
+   "status": "active",
+   "since": "2024-04",
+   "scale": "~$2B Fort Wayne campus"
+  },
+  {
+   "slug": "mortenson",
+   "type": "supplier",
+   "note": "End user of the ~700 MW Hermantown, MN site Mortenson Properties is entitling.",
+   "context": "March 2026: the city of Hermantown revealed Google as end user of the ~700 MW data center Mortenson's development arm is entitling — hyperscale capacity originated through a GC's land-development channel, pending an updated environmental review with the MCEA lawsuit on hold.",
+   "source": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-d",
+   "status": "announced",
+   "since": "2026-03",
+   "scale": "~700 MW site"
+  },
+  {
+   "slug": "lightsource-bp",
+   "type": "supplier",
+   "note": "Honeysuckle solar (188 MW, Indiana) contracted — 'supporting Google's Fort Wayne data center campus'.",
+   "context": "Lightsource bp's Honeysuckle project delivers 188 MW of Indiana solar under a Google offtake explicitly framed as supporting the Fort Wayne data-center campus — PPA-mediated energy supply attached to the same campus Holder builds.",
+   "source": "https://lightsourcebp.com/news/honeysuckle-solar-goes-online/",
+   "via": "Honeysuckle solar",
+   "status": "active",
+   "scale": "188 MW"
+  },
+  {
+   "slug": "coreweave",
+   "type": "supplier",
+   "note": "Reuters-reported capacity supply to Google Cloud — never company-confirmed.",
+   "context": "June 2025 Reuters reporting had CoreWeave providing compute capacity to Google Cloud (which in turn supplies OpenAI); earlier reports had Google in talks to rent Blackwell GPUs. Neither company has confirmed — held as reported-only.",
+   "source": "Reuters-reported (Jun 2025) — not company-confirmed",
+   "status": "announced"
+  },
+  {
+   "slug": "openai",
+   "type": "customer",
+   "note": "Reported Google Cloud compute supply to OpenAI after exclusivity ended — terms unconfirmed; also the defining model rival.",
+   "context": "Reuters reported (June 2025) OpenAI adding Google Cloud as a compute provider, and the April 2026 Microsoft restructuring formally freed OpenAI to buy Google capacity — no primary announcement or terms. Simultaneously Gemini's chief rival: supplier economics and existential competition in one relationship.",
+   "source": "Reuters-reported (Jun 2025) — unverified",
+   "status": "announced"
+  },
+  {
+   "slug": "flex",
+   "type": "supplier",
+   "status": "active",
+   "note": "Zacks reports Flex has secured substantial incremental business from hyperscaler and data-centre customers including Google, with those projects moving into the capital deployment phase.",
+   "context": "Curated on a single third-party source that names the counterparty explicitly, and flagged as such rather than presented as firmly established.\n\nFlex itself has never named Google as a customer. Its own material mentions Google only in a sentence listing hyperscalers as participants in the data-centre market, which is commentary and not a customer statement — and Flex's annual report discloses that its ten largest customers were 45% of FY2026 net sales while naming none of them.\n\nThe link carries less weight than Flex's Amazon relationship, which rests on a filed warrant agreement. It should not be read as establishing the unnamed customer that reached 12% of Flex's net sales in the quarter ended June 2026.",
+   "source": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html"
+  },
+  {
+   "slug": "form-energy",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-02",
+   "scale": "300 MW / 30 GWh",
+   "via": "Xcel Energy Electric Service Agreement and Clean Energy Accelerator Charge",
+   "note": "Form Energy supplies the 300 MW / 30 GWh iron-air battery serving Google's Pine Island data centre through Xcel Energy's tariff.",
+   "context": "The largest battery project by energy capacity announced anywhere, and Google pays for it: all costs of the new service and any new grid infrastructure sit with Google under a Clean Energy Accelerator Charge modelled on the Clean Transition Tariff it developed with NV Energy, plus $50m into Xcel's Capacity*Connect programme. TechCrunch, citing The Information, reported the price to Form as about $1bn — roughly $33 per kilowatt-hour — while Canary Media called it undisclosed and Xcel's release does not state it.\n\nOne characterisation to avoid, because several outlets use it: Google is not an investor in Form Energy. No Alphabet, GV or CapitalG entity appears in any Form funding round from Series A through the August 2026 Series G, on Form's investor wall, or in the investor list Form filed to ISO New England. Headlines describing Google as 'backing' Form, or as having 'invested $1 billion', are loose language for this offtake. The Electric Service Agreement remains pending before the Minnesota commission in docket E002/M-26-170.",
+   "source": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota"
+  },
+  {
+   "slug": "fluidstack",
+   "type": "partner",
+   "note": "The tenant Google's whole lease-backstop programme stands behind — Fluidstack is the lessee of record at every campus, and Google has never published a page naming it.",
+   "context": "Fluidstack Ltd is the counterparty at the centre of the programme: it signs the lease with the landlord, and Google signs a Recognition Agreement per building promising to step in on a Fluidstack payment default or insolvency event. Disclosed support runs to roughly USD 3.2bn at TeraWulf's Lake Mariner, USD 1.3bn at the Abernathy joint venture, USD 1.73bn at Cipher's Barber Lake (USD 1.4bn at signing plus a USD 333m increase) and the full fifteen-year base term at Hut 8's River Bend. A fifth campus — New Lebanon, Indiana, 430 MW behind USD 5.7bn of Meridian Arc HoldCo notes — is usually grouped with these, but no public filing establishes Google support there and no source quantifies it.\n\nThe relationship is almost entirely one-directional in public: the mechanics live in the LANDLORDS' 8-Ks, Fluidstack's single joint release calls Google 'a leading global hyperscale partner', and Google has published nothing naming Fluidstack. The Wall Street Journal reported in February 2026 that Google was exploring a ~USD 100m equity investment tied to TPU distribution. Fluidstack itself has raised repeatedly through 2026 and Forbes put it at an USD 18bn valuation in September 2026, explicitly on the strength of building Google's and Anthropic's data centres.",
+   "source": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "via": "Fluidstack lease backstops",
+   "status": "active",
+   "since": "2025-08",
+   "scale": "~$6.2B+ of disclosed backstops"
+  },
+  {
+   "slug": "hut-8",
+   "type": "partner",
+   "note": "Backstops the full 15-year, USD 7.0bn River Bend base term for no warrants and no equity — the largest instrument in the programme and the clearest of the three that carried no consideration.",
+   "context": "Hut 8's River Bend campus in West Feliciana Parish, Louisiana is 245 MW of critical IT on 330 MW of Entergy capacity, leased to Fluidstack USA IV Inc. on a 15-year triple-net lease worth USD 7.0bn over the base term. Hut 8's FY2025 10-K says only that Google 'is expected to provide a financial backstop that covers the lease payments and related pass-through obligations for the 15-year base lease term'. **No dollar cap is disclosed anywhere**, and neither the lease nor the recognition agreement was filed as an exhibit — Hut 8 disclosed the deal under Item 8.01.\n\nTwo widely-repeated details about this instrument are NOT in the filings and are flagged here rather than asserted: a **springing Alphabet guarantee** triggered if Google's revenue falls below 50% of consolidated Alphabet revenue, and a **six-year novation window**. Both come from trade coverage of the 144A offering memorandum; 'Alphabet' appears zero times in Hut 8's FY2025 10-K, and the only executed recognition agreement in the public record — TeraWulf's — names Google LLC alone, with Alphabet expressly not a guarantor and Google's liability capped at the termination fee.\n\nWhat IS established is the consideration: Hut 8's own investor deck states 'No equity or warrants issued' and 'no equity dilution required to secure transaction'. No source explains why, and management has never addressed it on the record. It is not unique — Abernathy and Cipher's USD 333m increase also carried none — but it is the largest.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217x8k.htm",
+   "via": "River Bend recognition agreement",
+   "status": "active",
+   "since": "2025-12",
+   "scale": "$7.0B base term, no cap disclosed; no warrants",
+   "project": "river-bend-campus"
+  },
+  {
+   "slug": "cipher-mining",
+   "type": "portfolio",
+   "note": "Backstops USD 1.73bn of Fluidstack's Barber Lake rent and holds penny warrants over ~5.4% of Cipher pro forma — Cipher's landlord equity sits in Google's hands as consideration for the credit support.",
+   "context": "Cipher Digital Inc. (renamed from Cipher Mining in February 2026) is Fluidstack's landlord at Barber Lake, Mitchell County, Texas: 300 MW gross / 207 MW critical IT on a ten-year modified-gross lease worth about USD 3.8bn over the initial term. Google backstops USD 1.73bn of Fluidstack's obligations there — USD 1.4bn at signing in September 2025 plus a USD 333m increase in November — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor.\n\nCipher's Q2 2026 10-Q carries a USD 544.5m asset for 'the value of Google agreeing to make the lease payments from Fluidstack', and the amortisation of Cipher's USD 1,733m of 7.125% project notes tracks the Google backstop rather than a fixed schedule — so the credit support is measured, capitalised and structurally load-bearing on the landlord's balance sheet. Cipher types Google `investor` and this side is its coherent inverse, `portfolio` — a value the schema enum gained on 2026-09-06 precisely because pairs like this one had been accumulating as hand-written accepts.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_8k.htm",
+   "via": "Barber Lake recognition agreement",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "$1.73B backstop; ~5.4% warrants"
+  },
+  {
+   "slug": "anthropic",
+   "type": "customer",
+   "note": "Buys TPUs at gigawatt scale ('up to one million') and is the end user at River Bend, the campus Google's own backstop underwrites.",
+   "context": "Anthropic is Google's largest external TPU customer — 'up to one million' chips, with 'well over a gigawatt' of capacity in 2026 — and Alphabet is also an Anthropic shareholder. The two strands meet at River Bend: Anthropic is the end user of the Hut 8 campus that Fluidstack leases and Google backstops, under the AI infrastructure partnership Hut 8, Anthropic and Fluidstack announced on 17 December 2025.\n\nThat makes the backstop programme legible as something more than credit support: Google is underwriting the rent of a campus that runs its own silicon for its own investee. Anthropic types Google `supplier`; this side is the coherent inverse.",
+   "source": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+   "via": "TPU supply; River Bend end user",
+   "status": "active",
+   "since": "2025-11"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US search antitrust remedies",
+   "status": "in-effect",
+   "effectiveDate": "2025-09",
+   "exposure": "The September 2025 search-antitrust remedies bar exclusive distribution deals (Gemini included) and mandate data-sharing, though Chrome was not divested; the DOJ and 38 states cross-appealed (February 2026, argued late 2026/early 2027), and the data-sharing remedies already bind while the appeal runs. The dossier reads the Apple-Siri Gemini win as exactly the distribution the remedies were designed to constrain — better than the worst case, but unresolved into 2027.",
+   "source": "https://www.yahoo.com/news/articles/google-not-forced-divest-chrome-203808656.html"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "TPU v7 'Ironwood'",
+   "specs": [
+    {
+     "band": "Silicon",
+     "label": "Per chip",
+     "value": "4.6 PFLOPS FP8 · 192 GB HBM3e · 7.37 TB/s bandwidth"
+    },
+    {
+     "band": "Scale",
+     "label": "Pod",
+     "value": "9,216 chips = 42.5 exaFLOPS"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Per watt",
+     "value": "2x perf/W vs TPU v6 (Trillium)"
+    },
+    {
+     "band": "Availability",
+     "label": "Access",
+     "value": "GA November 2025; external sales to select customers (Anthropic up to ~1M TPUs; Meta multi-year lease)"
+    }
+   ],
+   "notes": "TPU v8 training/inference split ('Sunfish'/'Zebrafish') is trade-press reporting, not company-confirmed."
+  },
+  {
+   "product": "Storage-anchored energy portfolio",
+   "specs": [
+    {
+     "band": "Owned assets",
+     "label": "Intersect Power",
+     "value": "USD 5,868m total purchase price (Alphabet Q2 2026 10-Q final allocation; announced ~$4.75B plus assumed debt); ~2.2 GW solar + 2.4 GWh BESS; energy-park model; first park Haskell TX (640 MW solar + 1.3 GWh BESS)"
+    },
+    {
+     "band": "Long-duration",
+     "label": "Form Energy iron-air (via Xcel)",
+     "value": "300 MW / 30 GWh, 100-hour duration — largest battery by energy capacity announced worldwide"
+    },
+    {
+     "band": "Contracted",
+     "label": "Steel River VPPA",
+     "value": "Phase 1: 1.6 GW solar + ~2 GWh BESS; full build 2.5 GW + 2.9 GWh"
+    },
+    {
+     "band": "Flexibility",
+     "label": "Demand response",
+     "value": "1 GW signed across 5 utilities (I&M, TVA, Entergy AR, MN Power, DTE)"
+    },
+    {
+     "band": "Portfolio",
+     "label": "Totals",
+     "value": "~35 GW across 240+ agreements since 2010; >12 GW signed in 2025"
+    }
+   ]
+  },
+  {
+   "product": "Fluidstack lease credit-support programme",
+   "specs": [
+    {
+     "band": "Alphabet's own aggregate",
+     "label": "Credit derivatives, gross notional",
+     "value": "USD 0 (FY2024) → USD 16,940m (31 Dec 2025) → USD 28,436m (31 Mar 2026) → USD 43,785m (30 Jun 2026)"
+    },
+    {
+     "band": "Alphabet's own aggregate",
+     "label": "Fair-value liability",
+     "value": "USD 69m → USD 339m → USD 815m over the same three dates; Level 3"
+    },
+    {
+     "band": "Alphabet's own aggregate",
+     "label": "Forward commitment",
+     "value": "Up to USD 33.3bn of future backstops (Q1 2026), restated to an estimated USD 24.1bn (Q2 2026), 'subject to finalization of terms with data center providers'"
+    },
+    {
+     "band": "Alphabet's own aggregate",
+     "label": "NOT the same instrument",
+     "value": "Energy-equipment backstops (USD 5.7bn → 9.0bn → 7.6bn) are FINANCIAL GUARANTEES in Note 10, a separate programme — a reader who goes to the guarantees footnote for this one finds the wrong instrument"
+    },
+    {
+     "band": "Mechanism",
+     "label": "Instrument",
+     "value": "Per-building Recognition Agreement signed by Google LLC with the landlord; on a Fluidstack payment default or insolvency event Google may pay the termination fee OR pay all rent currently due and assume the lease as tenant"
+    },
+    {
+     "band": "Mechanism",
+     "label": "Effective date",
+     "value": "At lease commencement, not at signing — TeraWulf recorded USD 600m switching on when CB-3 was delivered"
+    },
+    {
+     "band": "Mechanism",
+     "label": "Caps are debt-sized",
+     "value": "Each disclosed cap matches the associated project notes almost exactly — USD 3.2bn / 7.750%, USD 1.733bn / 7.125%, USD 1.3bn / 7.250%. The backstop is scaled to what the lenders required, not to the rent"
+    },
+    {
+     "band": "TeraWulf",
+     "label": "Lake Mariner, NY — two tranches",
+     "value": "USD 1.8bn (13-14 Aug 2025) then +USD 1.4bn (17-18 Aug 2025) = USD 3.2bn behind Fluidstack USA I's 378 MW"
+    },
+    {
+     "band": "TeraWulf",
+     "label": "Abernathy, TX",
+     "value": "USD 1.3bn behind the 168 MW joint venture — and 'no TeraWulf equity securities or warrants were issued in connection with this transaction'"
+    },
+    {
+     "band": "Cipher",
+     "label": "Barber Lake, TX",
+     "value": "USD 1.4bn at signing (Sept 2025) + USD 333m increase (Nov 2025, no new warrants) = USD 1.73bn behind Fluidstack USA II's 300 MW gross / 207 MW critical IT"
+    },
+    {
+     "band": "Hut 8",
+     "label": "River Bend, LA",
+     "value": "Full 15-year base term of a USD 7.0bn lease, 245 MW critical IT, Fluidstack USA IV as tenant. NO dollar cap is disclosed anywhere, and the lease and recognition agreement were never filed as exhibits — Hut 8 disclosed the deal under Item 8.01"
+    },
+    {
+     "band": "Not established",
+     "label": "New Lebanon, IN",
+     "value": "430 MW on a 15-year master lease behind USD 5.7bn of Meridian Arc HoldCo 6.25% notes due 2031 (priced 20 Apr 2026). Frequently grouped with the programme, but NO public filing establishes Google support and no source quantifies it — excluded from the totals here"
+    },
+    {
+     "band": "Price paid",
+     "label": "First tranches only",
+     "value": "~41m TeraWulf warrants (~8%) then a further ~32.5m (~14% total); 24,178,576 Cipher warrants at USD 0.01 (~5.4%, USD 430.0m value floor with a top-up obligation raised to USD 435m in November 2025)"
+    },
+    {
+     "band": "Price paid",
+     "label": "Everything after that",
+     "value": "NOTHING — not for Abernathy, not for Cipher's USD 333m increase, and not for any part of Hut 8's River Bend"
+    },
+    {
+     "band": "Landlord accounting",
+     "label": "Both landlords capitalise it",
+     "value": "Cipher USD 544.5m and TeraWulf USD 515.5m — in each case the ISSUANCE-DATE FAIR VALUE OF THE WARRANTS, booked as an asset for 'the value of Google agreeing to make the lease payments' and amortised straight-line. They measured what they gave, not what they got"
+    },
+    {
+     "band": "Landlord accounting",
+     "label": "The warrant liability moves against them",
+     "value": "TeraWulf's Google warrant liability ran USD 844.7m (Dec 2025) → USD 1.82bn (Jun 2026), producing a USD 329.2m fair-value loss in FY2025 and USD 972.0m in H1 2026 — the better the landlord's stock does, the larger its reported loss"
+    },
+    {
+     "band": "Ownership reporting",
+     "label": "No 13D, 13G, Form 3 or Form 4",
+     "value": "Neither Google LLC nor Alphabet has ever filed an ownership report on any of the three landlords, and Google LLC is not an EDGAR filer at all. The warrants carry no beneficial-ownership blocker; their exercise period opens only at lease commencement, and an HSR cooperation clause gates exercise — so the position is not yet reportable under Rule 13d-3(d)(1). Whether it becomes reportable as leases commence is an open question"
+    },
+    {
+     "band": "Reconciliation gap",
+     "label": "Named instruments do not add up to the aggregate",
+     "value": "Disclosed caps total ~USD 6.233bn; adding Hut 8's uncapped USD 7.0bn base term as a proxy gives ~USD 13.2bn against Alphabet's USD 16,940m at 31 Dec 2025 — and the 2026 growth of +USD 26.8bn is entirely unattributed, since no landlord announced a new Google-backstopped lease to the SEC in 2026. The two figures are also measured differently (Alphabet's is undiscounted full-term maximum exposure), so they should not simply be netted"
+    }
+   ],
+   "notes": "Two halves that must be read together: Alphabet publishes the AGGREGATE and names nobody; the landlords publish the NAMES and the per-campus amounts. Neither half is complete. 'Fluidstack', 'TeraWulf', 'Cipher', 'Hut 8' and 'Recognition Agreement' appear zero times in Alphabet's FY2025 10-K and both 2026 10-Qs; conversely no landlord publishes a programme total. The springing Alphabet guarantee and the six-year novation window reported at River Bend come from trade coverage of the 144A offering memorandum, NOT from any SEC filing — 'Alphabet' appears zero times in Hut 8's FY2025 10-K, and the executed recognition agreement filed by TeraWulf names Google LLC alone with Alphabet expressly not a guarantor."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Sundar Pichai",
+   "photo": "images/execs/google-pichai.jpg",
+   "photoCredit": "Maurizio Pesce from Milan, Italy, CC BY 2.0, via Wikimedia Commons",
+   "title": "CEO — Alphabet & Google",
+   "background": [
+    "CEO Google since 2015, Alphabet since 2019; previously led Chrome/Android",
+    "Personally quotes the capex guidance each quarter"
+   ]
+  },
+  {
+   "name": "Anat Ashkenazi",
+   "title": "SVP & CFO — Alphabet/Google (since mid-2024)",
+   "background": [
+    "Former CFO — Eli Lilly",
+    "Owns the thrice-raised 2026 capex guidance and the 2026 capital raises"
+   ]
+  },
+  {
+   "name": "Thomas Kurian",
+   "photo": "images/execs/google-kurian.jpg",
+   "photoCredit": "Eric Dietrich, Public domain, via Wikimedia Commons",
+   "title": "CEO — Google Cloud (since 2019)",
+   "background": [
+    "22 years at Oracle, ex-President of Product Development"
+   ]
+  },
+  {
+   "name": "Demis Hassabis",
+   "title": "CEO & co-founder — Google DeepMind",
+   "photo": "images/execs/google-hassabis.jpg",
+   "photoCredit": "John Sears, CC BY-SA 4.0, via Wikimedia Commons",
+   "background": [
+    "2024 Nobel laureate (Chemistry); leads the Gemini model program"
+   ]
+  },
+  {
+   "name": "Amin Vahdat",
+   "title": "VP/GM, AI & Infrastructure — Google Cloud",
+   "background": [
+    "Public face of TPU and data-center systems announcements (Ironwood)"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "Q2 2026 (latest)",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$119.8B (+24%)",
+      "expected": "~$116.5–116.8B consensus",
+      "verdict": "beat",
+      "result": ""
+     },
+     {
+      "name": "EPS",
+      "actual": "$9.11 headline; ~$2.85 ex-equity-gains",
+      "expected": "~$2.88–2.95",
+      "verdict": "inline",
+      "result": "headline inflated by unrealized equity marks (composition disputed; verify vs 10-Q)"
+     },
+     {
+      "name": "Google Cloud",
+      "actual": "$24.8B (+82%); OI $8.8B; backlog $514B",
+      "expected": "",
+      "verdict": "beat",
+      "result": "fastest growth of the big three"
+     },
+     {
+      "name": "Capex",
+      "actual": "$44.9B (quarter); guide raised to $195–205B",
+      "expected": "$180–190B prior",
+      "verdict": "miss",
+      "result": "stock −~7%; FCF −$5.9B"
+     }
+    ],
+    "commentary": "Third capex raise of 2026; ~$49.6B equity/convertible + $20.3B notes raised; 2027 capex guided to 'significantly increase' again."
+   },
+   {
+    "period": "FY2025",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$402.8B (+15%) — first $400B year",
+      "expected": "Q4: beat",
+      "verdict": "beat",
+      "result": "Q4 EPS $2.82; Cloud Q4 $17.7B (+48%)",
+      "kpi": "revenue",
+      "usdMillions": 402800,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income",
+      "actual": "$132.2B",
+      "expected": "",
+      "verdict": "beat",
+      "result": ""
+     },
+     {
+      "name": "Capex",
+      "actual": "$91.4B (guidance ladder $75B→$85B→$91–93B)",
+      "expected": "2026 initial guide $175–185B",
+      "verdict": "miss",
+      "result": "stock −3% AH on the guide"
+     }
+    ],
+    "commentary": "FY2024 for reference: revenue $350.0B, EPS $8.04, capex $52.5B; the Feb 2025 '$75B' guide was the cycle's first Alphabet capex shock.",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31"
+   }
+  ],
+  "commentary": "Antitrust: search remedies (Sept 2025) bar exclusive distribution and mandate data-sharing; no Chrome divestiture; DOJ/38-state cross-appeal argued late 2026/early 2027. EU cumulative fines >€8B incl. €2.95B adtech (Sept 2025). Sustainability: 66% hourly CFE; total footprint +18% in 2025, +81% vs 2019."
+ },
+ "sources": [
+  {
+   "label": "Alphabet Inc. Form 10-Q, quarter ended 30 June 2026 — Note 3: data-centre payment backstops accounted for as CREDIT DERIVATIVES; gross notional USD 16,940m (31 Dec 2025) → USD 43,785m (30 Jun 2026) · Intersect Power acquisition: final purchase-price allocation USD 5,868m (goodwill USD 2,174m; property and equipment USD 5,129m; debt assumed USD 1,214m)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — can Flex's hyperscaler wins drive sustained revenue growth (names Google)",
+   "url": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "Alphabet — Q2 2026 earnings (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "pv magazine — Steel River 100% output VPPA",
+   "url": "https://www.pv-magazine.com/2026/07/15/google-agrees-to-purchase-100-of-power-from-largest-solar-plus-storage-project-in-u-s/",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "TechCrunch — Google to pay SpaceX $920M/month for xAI compute",
+   "url": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
+   "date": "2026-06-05"
+  },
+  {
+   "label": "Google — 2026 Environmental Report",
+   "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/2026-environmental-report/",
+   "date": "2026-06"
+  },
+  {
+   "label": "KAXE — Hermantown ~700 MW data center review (Google end user)",
+   "url": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-d",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Google — 1 GW demand-response milestone",
+   "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/demand-response-data-center-milestone/",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "PV Tech — Intersect Power acquisition closed",
+   "url": "https://www.pv-tech.org/google-finalises-intersect-acquisition-to-bring-data-centre-power-in-house/",
+   "date": "2026-03"
+  },
+  {
+   "label": "Google — Pine Island MN data center (Form Energy iron-air)",
+   "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/data-center-pine-island/",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Xcel Energy — Pine Island supply package",
+   "url": "https://newsroom.xcelenergy.com/news/xcel-energy-to-power-new-google-data-center-in-minnesota",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Alphabet — Q4/FY2025 earnings (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "CNBC — NextEra to build 15 GW powering Google data centers",
+   "url": "https://www.cnbc.com/2025/12/08/nextera-to-build-15-gigawatts-power-data-centers-google.html",
+   "date": "2025-12-08"
+  },
+  {
+   "label": "Google — Gemini 3 launch",
+   "url": "https://blog.google/products/gemini/gemini-3/",
+   "date": "2025-11-18"
+  },
+  {
+   "label": "Google — $40B Texas investment (6,200+ MW PPAs)",
+   "url": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-texas/",
+   "date": "2025-11-14"
+  },
+  {
+   "label": "SemiAnalysis — TPUv7 analysis",
+   "url": "https://newsletter.semianalysis.com/p/tpuv7-google-takes-a-swing-at-the",
+   "date": "2025-11"
+  },
+  {
+   "label": "Yahoo/AP — search antitrust remedies ruling",
+   "url": "https://www.yahoo.com/news/articles/google-not-forced-divest-chrome-203808656.html",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "TeraWulf — Fluidstack CB-5 expansion; Google backstop to $3.2B",
+   "url": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner",
+   "date": "2025-08-18"
+  },
+  {
+   "label": "Commonwealth Fusion Systems — 200 MW Google partnership",
+   "url": "https://cfs.energy/news-and-media/google-and-commonwealth-fusion-systems-sign-strategic-partnership/",
+   "date": "2025-06-30"
+  },
+  {
+   "label": "Google — Ironwood TPU announcement",
+   "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/",
+   "date": "2025-04-09"
+  },
+  {
+   "label": "Construction Dive — Holder confirmed as GC of Google's ~$2B Fort Wayne data center",
+   "url": "https://www.constructiondive.com/news/data-center-projects-construction-2025/738160/",
+   "date": "2025-01-28"
+  },
+  {
+   "label": "Google — Kairos Power nuclear master agreement",
+   "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/google-kairos-power-nuclear-energy-agreement/",
+   "date": "2024-10-14"
+  },
+  {
+   "label": "Google — operating sustainably (CFE portfolio)",
+   "url": "https://datacenters.google/operating-sustainably/"
+  },
+  {
+   "label": "Lightsource bp — Honeysuckle solar online (supporting Google Fort Wayne)",
+   "url": "https://lightsourcebp.com/news/honeysuckle-solar-goes-online/"
+  },
+  {
+   "label": "Xcel Energy — Xcel Energy to power a new Google data centre in Minnesota: 1,400 MW wind, 200 MW solar and a 300 MW / 30 GWh Form iron-air battery",
+   "url": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Hut 8 Corp. Form 8-K — River Bend lease, Fluidstack tenant, Google backstop (Items 8.01/9.01)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217x8k.htm",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Hut 8 — 8-K Ex. 99.1: 15-year, 245 MW River Bend lease with Fluidstack, USD 7.0B, Google backstop",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Cipher Mining — 8-K body: Fluidstack USA II Inc. lease, Recognition Agreement, Google warrants",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_8k.htm",
+   "date": "2025-09-25"
+  },
+  {
+   "label": "Cipher Mining — 8-K Ex. 99.1: additional 39 MW critical IT at Barber Lake; Google backstop +USD 333M",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+   "date": "2025-11-20"
+  },
+  {
+   "label": "Cipher Digital Inc. Form 10-Q, quarter ended 30 June 2026 — USD 544.5M asset for the Google backstop",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000041/cifr-20260630.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "TeraWulf — 8-K body: CB-5 lease; 32,568,197 Google warrants",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925079463/tm2523651d3_8k.htm",
+   "date": "2025-08-18"
+  },
+  {
+   "label": "TeraWulf — 8-K body: Fluidstack USA I Inc. leases; Google Recognition Agreements",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925078084/tm2523008d2_8k.htm",
+   "date": "2025-08-14"
+  },
+  {
+   "label": "TeraWulf — 8-K Ex. 99.1: 168 MW Abernathy, Texas joint venture with Fluidstack; Google support",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925102858/tm2529509d1_ex99-1.htm",
+   "date": "2025-10-28"
+  },
+  {
+   "label": "TeraWulf — Form 10-Q Q2 2026: Fluidstack lease amendments, Google Recognition Agreements, USD 600M effective on CB-3 delivery",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Anthropic — invests USD 50 billion in American AI infrastructure with Fluidstack",
+   "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "Forbes (Iain Martin) — Fluidstack hit an USD 18 billion valuation helping build Google and Anthropic's data centres",
+   "url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "SiliconANGLE (citing the Wall Street Journal) — Google reportedly to invest USD 100M in Fluidstack",
+   "url": "https://siliconangle.com/2026/02/20/google-reportedly-invest-100m-ai-cloud-operator-fluidstack/",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "DCD — TeraWulf secures 200 MW Fluidstack lease, Google to take stake",
+   "url": "https://www.datacenterdynamics.com/en/news/cryptominer-terawulf-secures-200mw-lease-with-fluidstack-google-to-take-stake",
+   "date": "2025-08-14"
+  },
+  {
+   "label": "SEC EDGAR full-text search — 'Fluidstack' restricted to Alphabet Inc. (CIK 0001652044): zero hits, against 143 corpus-wide",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Fluidstack%22&ciks=0001652044",
+   "date": "2026-09-06"
+  },
+  {
+   "label": "Alphabet Inc. Form 10-K, FY2025 — first disclosure of the programme: credit derivatives USD 16,940m notional (USD 0 at FY2024), energy financial guarantees USD 5.7bn",
+   "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Alphabet Inc. Form 10-Q, quarter ended 31 March 2026 — credit derivatives USD 28,436m; April 2026 additional backstops of ~USD 15.3bn; forward commitment up to USD 33.3bn",
+   "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "TeraWulf — 8-K Ex. 99.1: first instrument, USD 1.8bn backstop for ~41m warrants (~8% pro forma)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925078084/tm2523008d2_ex99-1.htm",
+   "date": "2025-08-14"
+  },
+  {
+   "label": "Global Data Center Hub — Hut 8 prices USD 3.25bn investment-grade notes; the only source for the six-year novation window and the springing Alphabet guarantee, both sourced to the 144A offering memorandum rather than to any filing",
+   "url": "https://www.globaldatacenterhub.com/p/hut-8-prices-325b-investment-grade",
+   "date": "2026-05-04"
+  }
+ ],
+ "lastUpdated": "2026-09-07",
+ "profileVersion": 9
+}

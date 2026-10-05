@@ -1,0 +1,1473 @@
+{
+ "schemaVersion": 7,
+ "slug": "stem",
+ "name": "Stem, Inc.",
+ "shortName": "Stem",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.stem.com",
+ "headquarters": "Houston, Texas, United States",
+ "founded": 2009,
+ "employees": "423 (as of 2025-12-31; 268 United States, 155 international) — down from 569 a year earlier after a 27% reduction in April 2025",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: STEM"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Stem's headline revenue line and Stem's business are moving in opposite directions, and a dossier that reads only the top line will get this company exactly backwards. Total revenue fell from $461.5m in FY2023 to $156.3m in FY2025 — but that is one line disappearing: battery hardware resale went $360.2m to $31.3m to $14.8m to $0.3m in the first half of 2026. Over the same two years the software, edge-hardware and professional-services core grew from $76.0m to $111.2m, gross margin swung from minus 8% to 38%, and adjusted EBITDA turned positive at $6.7m in FY2025 and $8.2m in the first half of 2026. What remains is a hardware-agnostic asset-performance software business running 38.3 GW of solar and 1.8 GWh of storage, and a balance sheet that has not recovered with it: a $270.0m stockholders' deficit, $38.4m of cash and about $347m of debt principal against a company whose whole market capitalisation is a fraction of that. BACKGROUND. Delaware-incorporated 16 March 2009, listed on the New York Stock Exchange as STEM (CIK 0001758766, file 001-39455) since the April 2021 de-SPAC with Star Peak Energy Transition Corp. Headquarters moved to 1400 Post Oak Boulevard, Suite 560, Houston, Texas — it is no longer a Bay Area company. 423 employees at 31 December 2025, of whom 268 in the United States. A 1-for-20 reverse stock split took effect 23 June 2025 to cure NYSE minimum-price non-compliance, so every per-share figure and share count published before that date is off by a factor of twenty; 9,626,744 shares were outstanding at 5 August 2026. The flagship platform was renamed from Athena to PowerTrack Optimizer on 5 September 2025 — the FY2025 10-K dates that event a year earlier and is wrong, since its own announcement quotes a chief executive who took office in January 2025 — and the Athena name appears nowhere in the Q2 2026 10-Q. PowerTrack EMS, launched three days before the rebrand, won The smarter E AWARD 2026 in Munich and carries every named customer win of 2026. The Q2 2026 10-Q carries no going-concern qualification and states management's belief that cash is sufficient for at least the next twelve months.",
+ "ecosystemRole": "The corpus's first listed pure-play energy-optimisation software company, and the one that shows what that business looks like when it is not attached to a hardware maker. Every other software position in this corpus's software-and-optimization segment except FlexGen is a division of something else — Fluence's Mosaic and Nispera, Wartsila's GEMS, Tesla's Autobidder, Canadian Solar's EQ-S, Prevalon's insightOS, Rolls-Royce's mtu EnergetIQ, Schneider's AVEVA layer — sold with, or to protect, the vendor's own equipment. Stem sells against all of them on the opposite premise: the PowerTrack suite and its OEM-agnostic edge devices exist to standardise a fleet built from many vendors onto one application, which is the segment's first buying criterion and the retrofit path off an orphaned EMS. Its weight is heavily on the solar side of that fleet — 38.3 GW of solar assets under management against 1.8 GWh of storage, a storage figure that has been flat for two years and sits an order of magnitude below the 25+ GWh FlexGen records under HybridOS. So Stem is an incumbent by fleet scale and by recurring-revenue base, and specifically an incumbent of solar and hybrid asset-performance management rather than of merchant storage bidding. It also holds a small position on the ownership side of the chain that its category tag does not show: since January 2022 it has run consolidated DevCo joint ventures originating battery-storage projects, and it still carries $34.0m of energy storage systems on its own balance sheet earning Host Customer and merchant revenue — both in run-off, but both real. For a corpus whose subject is what gets built and who decides, Stem is the layer that decides what an already-built asset earns, and the only such layer here whose survival depends on selling that layer alone.",
+ "productsAndServices": [
+  {
+   "name": "PowerTrack Software (solar and storage monitoring, analytics and asset performance management)",
+   "category": "Asset-performance software (SaaS)",
+   "description": "The core recurring-revenue product and the largest single line in the company. PowerTrack Software is a hardware-agnostic monitoring and analytics application for solar, storage and hybrid portfolios: it standardises a fleet built from many OEMs' inverters, trackers, meters and batteries onto one interface, and adds fault detection, performance analytics and solar generation forecasting. The 10-K describes it as letting customers 'monitor and control individual solar assets and portfolios' across 'a diverse fleet of hardware throughout multiple geographies and energy markets'. It is the surviving core of AlsoEnergy, which Stem acquired in February 2022 and whose name no longer appears in the FY2025 10-Q; PowerTrack revenue was $37.6m in FY2025 against $32.8m in FY2024 and $28.7m in FY2023, and $20.8m in the first half of 2026 against $18.4m a year earlier.",
+   "highlights": [
+    "36.1 GW of solar assets under management at 2025-12-31, 38.3 GW at 2026-06-30 — up from 29.9 GW a year earlier",
+    "SaaS revenue grew 14.3% in FY2024 and 14.7% in FY2025 and 13.3% in H1 2026, through two years in which total company revenue fell by two thirds",
+    "Sold as a subscription; the 10-K frames the installed fleet as a data advantage — 'this large network generates a significant amount of operational data which drives enhanced software performance'",
+    "484 MW Hungarian solar deployment for Neovolt announced in early 2025, standardising that owner's asset management on PowerTrack"
+   ],
+   "positioning": "Stem's FY2025 10-K names no competitor at all — it lists 'energy monitoring and optimization software providers, energy storage and edge device OEMs, hardware integration providers, renewable project developers, EPC firms, and consulting firms' as categories. Two other dossiers in this corpus name the product as a competitor under its pre-acquisition brand: DNV positions GreenPowerMonitor against 'Power Factors, Also Energy and the OEM EMS layer', and kWh Analytics lists 'Raptor Maps, Power Factors, Also Energy' as the asset-management platforms its data product sits beside. Neither names Stem.",
+   "soldThrough": "Direct software subscription to asset owners, operators and portfolio managers; recognised as recurring SaaS revenue.",
+   "targetSegments": [
+    "Solar and storage asset owners",
+    "Independent power producers",
+    "Utilities",
+    "Project developers",
+    "Commercial and industrial hosts"
+   ],
+   "roadmap": "The April 2026 raicoon acquisition adds automated fault detection and event management, bought as developed technology with a five-year amortisation life."
+  },
+  {
+   "name": "PowerTrack EMS (energy management system for standalone storage and hybrid plants)",
+   "category": "Storage and hybrid plant control",
+   "description": "Launched 2 September 2025 and the clearest evidence that the software turn is a product programme rather than a cost exercise. PowerTrack EMS is an intelligent control system managing battery charge and discharge, coordinating grid services and enabling revenue streams for storage projects, sold as an integrated stack: PowerTrack Software for portfolio management, the Power Plant Controller and SCADA capabilities, an on-premise edge operator interface, and — the commercial point — 'hardware-agnostic unit controllers that eliminate vendor lock-in'. It is the line carrying every named 2026 win, and all of them are European or Latin American retrofits of storage onto operating solar plants.",
+   "highlights": [
+    "Won The smarter E AWARD 2026 in the Smart Integrated Energy category, announced 1 July 2026 at The smarter E Europe in Munich — the company's first third-party recognition since 2022 and the only recent one located",
+    "Published performance claims: a 32% reduction in commissioning engineering hours and 99.99% controller reliability",
+    "Named 2026 deployments: Everyray GmbH, 100 MWh across two German sites (90 MWh Kolsa, 10 MWh Elsterwerda), commercial operation expected summer 2026; Copec Flux at Granja Solar, Chile, a 135 MW PV plant retrofitted with 420 MWh of storage with PowerTrack EMS as master control; Solarmarkt Group in Hungary, two operating 60 MWp solar plants each adding 40 MW / 80 MWh",
+    "'Transform solar projects into hybrid systems with minimal infrastructure changes' — the hybridisation retrofit is the stated wedge, not greenfield storage",
+    "Advanced Scheduler supports temporal, priority and mode-based scheduling with day-ahead state-of-charge targeting"
+   ],
+   "positioning": "Sold explicitly against vendor lock-in, which is the segment's first buying criterion and the opposite of how the integrator-owned EMS arms in this corpus reach market. The April 2026 Nuvation Energy agreement sharpens it into a policy position: PowerTrack EMS plus Stem's unit controller paired with Nuvation's battery management system as a 'fully North American-made BESS control stack', pitched at developers seeking alternatives to 'control architectures that rely on foreign-manufactured or controlled components' under FEOC restrictions, and at competitors 'relying on rebranded products or minimally modified designs'.",
+   "soldThrough": "Direct, with the PowerTrack subscription; co-marketed with Nuvation Energy for the North-American-made control stack.",
+   "targetSegments": [
+    "Standalone utility-scale storage",
+    "Solar-plus-storage hybrids",
+    "Operating solar plants being retrofitted with storage",
+    "European and Latin American developers"
+   ],
+   "roadmap": "Further control modes are stated as in development on the Power Plant Controller page, with no date. Everyray's Kolsa and Elsterwerda sites are guided to commercial operation in summer 2026."
+  },
+  {
+   "name": "PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
+   "category": "Storage optimisation and market bidding",
+   "description": "The storage-side optimiser: forecasting, value stacking, real-time dispatch, constraint management and financial optimisation. It is the renamed Athena — and the date of that rename is a live conflict between two first-party sources this dossier does not resolve silently. Stem's own press release announcing it is dated 5 September 2025 ('today announced the rebranding of its flagship enterprise platform, Athena, to PowerTrack Optimizer'), issued alongside a full website refresh and quoting chief executive Arun Narayanan, who did not take office until January 2025. The FY2025 10-K, filed six months later, says 'In September 2024, we announced the rebranding'. The press release is the better evidence on three independent grounds — its own dateline, the CEO quote that could not have existed in September 2024, and the simultaneous website launch — so this dossier uses September 2025 and records the filing's date as an error. Athena's trademarked applications, Analyzer, Supervisor, Explorer and PowerBidder, are sold inside PowerTrack Optimizer. **Optimizer is not sold standalone**: the product page describes it as tools that 'work with Stem's Managed Services', and the 10-Q describes Managed Services as 'enabled by our PowerTrack Optimizer software'.",
+   "highlights": [
+    "1.8 GWh of energy storage under management at 2026-06-30, against 1.7 GWh at both 2025-12-31 and a year earlier — broadly flat for two years while the solar fleet grew 28%",
+    "Company page counters: 800+ assets under management, 1.5 GWh+ of BESS capacity unlocked, 25,000+ issues resolved annually by the Remote Operating Center, and the claim 'Largest VPP Operator in North America'",
+    "Four published use cases — project valuation, wholesale market participation, utility bill optimisation and grid services across North America",
+    "PowerBidder Pro has no current product page; its last first-party announcement was 2024-12-17 (a second Mercuria Energy Trading asset in ERCOT) and the 10-K now treats PowerBidder as a trademark sold inside Optimizer rather than as a product"
+   ],
+   "positioning": "The 10-K asserts scale, not rank: 'we believe we operate one of the largest global distributed clean energy networks'. On storage that claim is weaker than on solar — 1.8 GWh under management is an order of magnitude below the 25+ GWh FlexGen's dossier records under HybridOS, and Fluence disclosed 22.0 GW of renewable assets on its digital offerings at 2025-09-30. Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that its qualified-scheduling-entity service is delivered through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus. No third-party ranking placing Stem in storage optimisation was located.",
+   "soldThrough": "Software subscription, and embedded in the Managed Services contract where Stem operates the asset.",
+   "targetSegments": [
+    "Storage asset owners",
+    "Independent power producers",
+    "Utilities running aggregation or VPP programmes"
+   ],
+   "roadmap": "No dated roadmap item is published for Optimizer. The 2026 priorities stated on the Q2 2026 deck are 'drive operational leverage', 'continue to strengthen core business' and 'build the foundation for accelerated growth in 2027+'."
+  },
+  {
+   "name": "PowerTrack SCADA, Power Plant Controller and Logger (the site control layer)",
+   "category": "Plant control and supervisory software",
+   "description": "Four named site-level products sold inside the PowerTrack suite — an Energy Management System, a SCADA layer, a Power Plant Controller and a Logger — occupying the layer between the fleet application and the plant equipment. The Power Plant Controller is the most technically documented product on the site: it 'implements active and reactive power control algorithms across multiple operating modes, coordinating command distribution to Power Conversion Systems (PCS) and PV inverters', executes control actions in less than a cycle, and publishes a twelve-mode matrix mapping each control mode to its North American and European market revenue. SCADA publishes sub-second data and alarm activation, a native OPC-UA server, and hot-standby redundancy with automatic failover.",
+   "highlights": [
+    "Twelve published control modes across frequency (Fast Frequency Response / FCR, Frequency Watt, Power Oscillation Damping), voltage (Automatic Voltage Regulation, Volt-VAR / Q(U), VAR control), power (active power limiting and curtailment, fixed power factor, dispatch regulation reserve / aFRR) and system (dynamic state-of-charge control, Automatic Generation Control / mFRR, state-of-charge waypoint scheduling)",
+    "A NEGATIVE WORTH STATING: no current Stem product page names CAISO, ERCOT, PJM, ISO-NE, NYISO or AESO. The control stack describes markets in regional and regulatory terms — North America against Europe, Day-Ahead / Intraday / FCR / aFRR / mFRR. Named-ISO participation sits on the Managed Services and Optimizer side, not on the control products",
+    "SCADA: sub-second data updates and alarm activation, native OPC-UA server, hot standby with automatic failover, automatic data recovery from loggers after communications outages",
+    "Protocols supported across the delivery stack: DNP 3.0, Modbus TCP/IP, OPC-UA, IEC 61850, IEC 60870",
+    "Stem's patent portfolio covers power electronics — 'the basic interaction of batteries with the power grid where such electronics convert direct current (DC) battery power to alternating current (AC) compatible grid power' — despite Stem making no conversion hardware"
+   ],
+   "positioning": "This is the layer where an integrator's bundled EMS is the default alternative. The corpus's software-and-optimization segment is dominated by exactly those bundled arms — Fluence's Mosaic, Wartsila's GEMS, Canadian Solar's EQ-S, Prevalon's insightOS, Rolls-Royce's mtu EnergetIQ — and the segment's first buying criterion is 'hardware-agnostic control across vendors and the retrofit path off an orphaned EMS'. Stem sells against the bundle rather than with one.",
+   "soldThrough": "Part of the PowerTrack subscription and project scope; deployed with Stem edge hardware.",
+   "targetSegments": [
+    "Utility-scale solar and storage plants",
+    "Hybrid solar-plus-storage sites",
+    "Commercial and industrial sites"
+   ]
+  },
+  {
+   "name": "Edge hardware (OEM-agnostic data loggers, gateways and site controllers)",
+   "category": "Edge devices",
+   "description": "Commercial- and utility-scale edge devices that connect a customer's solar and storage assets to the PowerTrack applications. The 10-Q describes them as 'original equipment manufacturer (OEM)-agnostic devices that are used to connect customers' solar and storage assets to our software applications in a unified view' and as aiding 'the collection of site data and the real-time operation and control of sites'. It is the single largest revenue line in the company — larger than the software it feeds — at $53.7m in FY2025 against $45.4m in FY2024 and $38.8m in FY2023, and $25.1m in H1 2026 against $22.3m.",
+   "highlights": [
+    "Edge hardware is 34% of FY2025 revenue and 40% of H1 2026 revenue — the largest single line, growing 18.3% and 12.2% respectively",
+    "It is a hardware line inside a company that describes itself as a software business, and it is booked as hardware revenue",
+    "PowerTrack Logger: a 2.3 TOPS on-board neural processing unit for edge AI with no cloud dependency, 32 GB internal storage expandable by microSD, 180-day offline retention at 60-second intervals across 100 devices, a minus-40 to 80 degree Celsius operating range, UL 62368-1 and CE certification as a single SKU for North America and Europe, Linux-based BalenaOS for remote fleet updates, secure boot and TLS with IEC 62443 alignment, a 15-year tested design life and a five-year warranty",
+    "The Logger is a drop-in replacement for the prior PowerLogger 1000 — same mounting, same driver libraries, existing configurations carry over — with 2.5x the device capacity and 16x the storage",
+    "Pre-configured data-acquisition assemblies are UL 508A listed and built in Stem's ISO 9001-certified Longmont, Colorado facility, which the company says handles 2,800+ site deployments a year"
+   ],
+   "positioning": "Not a competitive product in its own right so much as the mechanism by which the software attaches to sites Stem does not equip. The 10-K's list of competitive factors closes with 'seamless edge hardware, software, and service offerings', which is the bundle this line exists to complete.",
+   "soldThrough": "Direct, with the PowerTrack subscription and project services.",
+   "targetSegments": [
+    "Solar and storage asset owners standardising a multi-OEM fleet"
+   ]
+  },
+  {
+   "name": "Managed Services (full-lifecycle storage services and operated portfolios)",
+   "category": "Managed services",
+   "description": "The line where Stem operates the asset rather than selling the tool. It covers, in the company's own breakdown, recurring revenue from the operation and optimisation of storage and hybrid portfolios Stem manages; full-lifecycle storage services spanning design, procurement and commissioning; and Host Customer recurring and merchant revenues, where Stem owns systems sited at a customer's premises and earns from them. It is the line in retreat: $30.2m in FY2025 against $23.4m in FY2024, but $12.6m in H1 2026 against $16.1m a year earlier — a 22% decline.",
+   "highlights": [
+    "Enabled by PowerTrack Optimizer — the same software sold standalone in the Optimizer line",
+    "Carries Stem's own balance-sheet exposure: energy storage systems, net stood at $34.0m at 2026-06-30, down from $43.9m at 2025-12-31",
+    "H1 2026 revenue fell 21.7% year on year while the software and edge lines grew",
+    "Includes merchant revenue, which makes part of this line market-price exposed rather than contracted"
+   ],
+   "positioning": "This is the legacy of the pre-2024 business — an operated fleet with Stem capital in it — being run down while the asset-light lines grow. The impairment of assets held for sale of $2.8m recorded in H1 2026 sits against this side of the business.",
+   "soldThrough": "Long-term services agreements; Host Customer arrangements where Stem owns the system.",
+   "targetSegments": [
+    "Commercial and industrial hosts",
+    "Storage portfolio owners outsourcing operations"
+   ]
+  },
+  {
+   "name": "Project and Professional Services, and the DevCo storage-development joint ventures",
+   "category": "Services and development",
+   "description": "Advisory and delivery services 'spanning development and engineering, procurement and integration, and performance and operations', sold to PowerTrack customers to design and commission solutions — plus, inside the same revenue line, the DevCo JVs. Beginning in January 2022 Stem entered strategic joint ventures with unrelated third parties through wholly-owned development subsidiaries 'with the purpose of originating potential battery storage facility projects in specific locations and conducting early-stage planning and development activities'. Stem is the primary beneficiary and consolidates them, with the third-party minority owners shown as non-controlling interests. The combined line was $19.9m in FY2025 against $11.6m in FY2024 and $8.5m in FY2023.",
+   "highlights": [
+    "The DevCo JVs are variable interest entities consolidated onto Stem's balance sheet — the company originates storage projects, it does not only serve them",
+    "Stem recorded a $6.4m impairment of DevCo project assets in FY2025",
+    "Professional services grew 71% in FY2025 — the fastest-growing line — then fell 6% in H1 2026",
+    "Non-controlling interests stood at negative $0.4m at 2026-06-30"
+   ],
+   "positioning": "A development position inside a software company, which is why this dossier records a storage-developer adjacency rather than treating Stem as purely a services vendor.",
+   "soldThrough": "Project contracts and joint ventures with development partners.",
+   "targetSegments": [
+    "PowerTrack customers commissioning new sites",
+    "Storage development partners"
+   ]
+  },
+  {
+   "name": "AIONA (AI consulting and implementation practice)",
+   "category": "Professional services",
+   "description": "Launched 17 June 2026 and the newest line. AIONA is an AI consulting and implementation practice sold to existing Stem customers AND to other energy-market organisations in North America and select international markets — so it is sold outside the installed base, which makes it a genuine new business rather than an attach. The chief executive frames it as internalised capability taken to market: 'AIONA is not a new capability we built for the market. It reflects AI expertise we have developed and deployed internally for years... We are not just advising on AI. We identify the right problems to solve, engineer purpose-built agents, integrate them into operations, and deliver measurable outcomes.' Its technical stance is model-agnostic and integration-led: 'we build custom MCP servers that connect AI directly to your ERP, CRM, monitoring platform, and document systems', with more than ten in production, built on 'OpenAI, Azure, Google, or any open-source model'. **It is not a data-centre offering** — it sells AI capability to energy organisations, and this dossier states that because the name invites the opposite reading in an AI-infrastructure corpus.",
+   "highlights": [
+    "Three commercial models: a fixed-fee AI Opportunity Assessment, a scoped AI Solutions engagement, and an ongoing Dedicated AI Team retainer",
+    "Published internal-adoption figures: 100% of employees with AI access, 40+ AI use cases in production, 10+ MCP servers developed, 15+ live integrations with ERP, SCADA and other databases, and a claimed 2x developer velocity gain",
+    "Published customer-reported outcomes: report generation time down 30-50%, unplanned downtime down 15-25%, document retrieval speed up 60-80%, operational efficiency up 10-20%",
+    "Solution catalogue spans operational efficiency, data and document intelligence (contract clause extraction, warranty administration, engineering-drawing parsing) and knowledge and decision support",
+    "No revenue is broken out for AIONA in any filing; it is not a reported product line"
+   ],
+   "positioning": "Sold into the energy market broadly rather than as an attach to PowerTrack, which distinguishes it from every other line here. No third-party assessment of it was located; it is three months old at the date of this dossier.",
+   "soldThrough": "Direct — fixed fee, scoped engagement, or retainer.",
+   "targetSegments": [
+    "Existing Stem customers",
+    "Energy-market organisations in North America",
+    "Select international markets"
+   ],
+   "roadmap": "None published."
+  },
+  {
+   "name": "Battery hardware resale (in run-off)",
+   "category": "Hardware resale",
+   "description": "Sales of energy storage systems through partnership arrangements — Stem buying batteries and reselling them alongside its software. This was the company for most of its listed life and it is now almost gone: $360.2m in FY2023, $31.3m in FY2024, $14.8m in FY2025, and $0.3m in the whole of the first half of 2026 against $10.0m a year earlier. The 96% two-year collapse is the single fact that explains Stem's revenue line, its FY2024 loss and its balance sheet.",
+   "highlights": [
+    "FY2023: $360.2m, 78% of total revenue. H1 2026: $0.286m, 0.5% of total revenue",
+    "It was the negative-margin line — FY2024 GAAP gross margin was minus 8% with this business in it, and 38% in FY2025 without most of it",
+    "Removing it is what turned adjusted EBITDA from minus $22.8m in FY2024 to plus $6.7m in FY2025",
+    "Stem has not announced a formal exit; the line simply is not being written"
+   ],
+   "positioning": "Not a market position but the thing being exited. Its disappearance is why total revenue fell from $461.5m to $156.3m in two years while every other line grew.",
+   "soldThrough": "Partnership arrangements with battery suppliers; effectively discontinued.",
+   "targetSegments": [
+    "Historically storage developers and IPPs buying integrated systems"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "PowerTrack suite — fleet under management and platform scale",
+   "specs": [
+    {
+     "band": "Fleet",
+     "label": "Solar operating assets under management",
+     "value": "38.3 GW at 2026-06-30 (32.7 GW at 2025-06-30; 36.1 GW at 2025-12-31; 29.9 GW at 2024-12-31)"
+    },
+    {
+     "band": "Fleet",
+     "label": "Storage operating assets under management",
+     "value": "1.8 GWh at 2026-06-30 (1.7 GWh at 2025-06-30, 2025-12-31; 1.8 GWh at 2024-12-31)"
+    },
+    {
+     "band": "Fleet",
+     "label": "Company characterisation of that scale",
+     "value": "\"We believe we operate one of the largest global distributed clean energy networks\" — FY2025 10-K, competitive strengths"
+    },
+    {
+     "band": "Fleet",
+     "label": "Countries of operation",
+     "value": "More than 50, including the United States and Canada, multiple European Union and Latin American countries, and Asia"
+    },
+    {
+     "band": "Fleet",
+     "label": "Countries before the AlsoEnergy acquisition",
+     "value": "Three"
+    },
+    {
+     "band": "Suite",
+     "label": "Named products in the PowerTrack suite",
+     "value": "PowerTrack Software, PowerTrack Energy Management System, PowerTrack SCADA, PowerTrack Power Plant Controller, PowerTrack Logger, PowerTrack Optimizer"
+    },
+    {
+     "band": "Suite",
+     "label": "Applications inherited from the Athena platform",
+     "value": "Analyzer, Supervisor, Explorer and PowerBidder — \"sold as a part of our PowerTrack Optimizer offerings\""
+    },
+    {
+     "band": "Suite",
+     "label": "Rebranding date",
+     "value": "5 September 2025 — Athena rebranded to PowerTrack Optimizer (the FY2025 10-K says September 2024; the press release dateline and its CEO quote establish 2025)"
+    },
+    {
+     "band": "Suite",
+     "label": "Edge hardware",
+     "value": "Commercial- and utility-scale \"original equipment manufacturer (OEM)-agnostic devices\" for site data collection and real-time operation and control"
+    },
+    {
+     "band": "Intellectual property",
+     "label": "Patents",
+     "value": "More than 90 across storage and solar asset performance as of 2025-12-31"
+    },
+    {
+     "band": "Intellectual property",
+     "label": "Patent categories",
+     "value": "Power electronics; analytics and control; networked operations and grid services; monitoring and control of solar PV with fault detection, performance analytics and solar generation forecasting"
+    },
+    {
+     "band": "Recurring revenue",
+     "label": "Annual Recurring Revenue (ARR)",
+     "value": "$62.4m at 2026-06-30 (58.5 at 2025-06-30; $61.1m at 2025-12-31; $52.8m at 2024-12-31)"
+    },
+    {
+     "band": "Recurring revenue",
+     "label": "Contracted Annual Recurring Revenue (CARR)",
+     "value": "$69.0m at 2026-06-30 ($69.2m at 2025-06-30; $67.2m at 2025-12-31; $64.5m at 2024-12-31)"
+    },
+    {
+     "band": "Recurring revenue",
+     "label": "Remaining performance obligations",
+     "value": "$366.6m at 2026-06-30, about 22% expected in revenue within twelve months ($382.6m and about 19% at 2025-12-31)"
+    },
+    {
+     "band": "Suite",
+     "label": "PowerTrack EMS launch",
+     "value": "2 September 2025; winner of The smarter E AWARD 2026, Smart Integrated Energy category, announced 2026-07-01"
+    },
+    {
+     "band": "Suite",
+     "label": "Power Plant Controller",
+     "value": "Twelve published control modes across frequency, voltage, power and system categories, each mapped to a North American and a European market application; control actions execute in under one cycle"
+    },
+    {
+     "band": "Suite",
+     "label": "SCADA",
+     "value": "Sub-second data updates and alarm activation, native OPC-UA server, hot standby with automatic failover"
+    },
+    {
+     "band": "Suite",
+     "label": "PowerTrack Logger",
+     "value": "2.3 TOPS on-board neural processing unit, 32 GB storage, 180-day offline retention at 60-second intervals across 100 devices, minus 40 to 80 degrees Celsius, UL 62368-1 and CE, 15-year design life, five-year warranty"
+    },
+    {
+     "band": "Recurring revenue",
+     "label": "ARR split at 2026-06-30",
+     "value": "PowerTrack $42.8m and Managed Services $19.6m of the $62.4m total"
+    },
+    {
+     "band": "Intellectual property",
+     "label": "Trademarks",
+     "value": "9 registered US trademarks as of 2025-12-31"
+    }
+   ],
+   "notes": "Stem does not publish per-module specifications, throughput figures, latency targets or market-participation performance for the PowerTrack applications, and no independent benchmark of them was found. The figures above are the platform-scale and portfolio metrics the company itself reports each quarter. CARR and ARR were redefined beginning with the first quarter of 2025, so pre-2025 values are not stated on the same basis. A first-party inconsistency worth carrying: stem.com's 'Stem by the Numbers' panel still shows 30+ GW of solar assets under management, 1.5+ GWh of storage and 50+ countries, against 35+ GW / 55+ countries on the March 2026 investor deck and 38.3 GW in the Q2 2026 10-Q. The website is the stale side; the per-site counts that appear nowhere else are 800+ storage sites, 200,000+ solar sites, 16,000 customers, 750+ battery systems deployed and 83,000+ grid-service dispatches."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-12",
+   "category": "financial",
+   "headline": "Q2 2026: revenue $33.7m down 12.3%, GAAP gross margin up eight points to 41%, record 55% non-GAAP gross margin, adjusted EBITDA up 63% to $6.2m — a fifth consecutive positive quarter; FY2026 guidance reaffirmed unchanged",
+   "read": "The quarter that makes the transition legible: the software, edge and services core grew 14.8% while managed services fell 34.5% and battery resale went to $0.3m. Operating cash flow was positive at $0.3m against minus $21.3m. The market read it the other way — shares fell 7.47% to $5.45 before recovering after hours — because the reaffirmed guidance midpoint sits below the consensus Investing.com carried at $158.1m. Reaffirming was itself taken as negative.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/215/stem-announces-second-quarter-2026-results"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "customer",
+   "headline": "Solarmarkt Group selects PowerTrack EMS to hybridise two operating Hungarian utility-scale solar plants — 40 MW / 80 MWh added to each 60 MWp site, with EPC partner Pannonwatt",
+   "read": "The 2026 pattern in one line: European, solar-led, and a retrofit of storage onto an operating PV plant rather than a US merchant battery win. Stem had already supplied the power plant controller for those solar assets on what it calls a hybrid-ready architecture — the land-and-expand motion the EMS launch was designed for.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/214/stems-powertrack-ems-enables-hybridization-of-two-operating-utility-scale-solar-plants-in-hungary"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "product-launch",
+   "headline": "PowerTrack EMS wins The smarter E AWARD 2026 in the Smart Integrated Energy category, announced at The smarter E Europe in Munich",
+   "read": "The company's first third-party recognition since Guidehouse ranked AlsoEnergy first in solar and storage monitoring in August 2022, and the only recent one located in this research. It matters disproportionately because Stem appears on none of the current tier-one analyst leaderboards — an award for the newest product is the single contemporary external validation on the record.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/212/stem-wins-the-smarter-e-award-2026-for-powertrack-energy-management-system"
+  },
+  {
+   "date": "2026-06-17",
+   "category": "product-launch",
+   "headline": "Launched AIONA, an AI consulting and implementation practice sold to energy-market organisations beyond Stem's own customer base",
+   "read": "A genuine new business rather than an attach — it is sold outside the installed base — and explicitly not a data-centre play. Stem says it runs more than ten custom MCP servers in production internally and is taking that capability to market model-agnostically. No revenue is broken out for it in any filing.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/211/stem-launches-aiona-a-dedicated-ai-services-offering-built-for-operational-impact"
+  },
+  {
+   "date": "2026-06-03",
+   "category": "corporate",
+   "headline": "2026 annual meeting: three Class II directors re-elected, the equity plan expanded by 425,000 shares, and RSM US LLP ratified as auditor; quorum was 4,532,097 shares, about 53% of those entitled to vote",
+   "read": "The quorum figure is the point. In October 2025 the board had already cut the bylaw quorum requirement from a majority to one-third because 'the Company has encountered difficulties reaching a quorum in the past due to the size and dispersed nature of the Company's stockholder base' — a retail-heavy register that is itself a legacy of the de-SPAC.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000059/stem-20260603.htm"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "customer",
+   "headline": "Copec Flux deploys PowerTrack EMS as master control at Granja Solar in Chile — a 135 MW PV plant retrofitted with 420 MWh of storage, Stem's first Latin American utility-scale hybrid",
+   "read": "The largest single storage figure in the 2026 deal book and it is in Chile. Management's demand commentary on the Q2 call pointed to Chile, Colombia and Europe rather than to US markets.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/210/stem-brings-powertrack-ems-to-latin-americas-utility-scale-hybrid-market-with-granja-solar-project-in-chile"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "customer",
+   "headline": "Bluesphere Ventures selects Stem for revenue modelling and market intelligence on a standalone storage pipeline in Con Edison territory, New York City, under the VDER programme",
+   "read": "An advisory engagement rather than a software subscription — the Managed Services and Optimizer side of the business, and one of the few 2026 items with a named US market attached.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/209/bluesphere-ventures-selects-stem-for-new-york-vder-storage-advisory"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "financial",
+   "headline": "Q1 2026: revenue $29.0m down 11%, missing the Zacks consensus of about $37.2m by 22%; a record 52% non-GAAP gross margin and a fourth consecutive positive adjusted EBITDA of $2.0m; shares fell about 26%",
+   "read": "The worst market reaction of the series and the clearest statement of how this equity trades. Earnings per share beat at $(1.55) and the margin was a record; the market took the top line and ignored both.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/208/stem-announces-first-quarter-2026-results"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "partnership",
+   "headline": "Agreement with Nuvation Energy to deliver a fully North-American-made BESS control stack — PowerTrack EMS and Stem's unit controller paired with Nuvation's battery management system",
+   "read": "Stem monetising the policy regime rather than only absorbing it. The release names FEOC restrictions and state legislation as the demand driver and takes an explicit swipe at competitors 'relying on rebranded products or minimally modified designs'. It is the sharpest competitive positioning the company has published.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/207/stem-and-nuvation-energy-enter-into-agreement-to-deliver-north-american-made-bess-control-solution"
+  },
+  {
+   "date": "2026-04-22",
+   "category": "ma",
+   "headline": "Acquired 100% of the assets of raicoon GmbH, a Vienna software company doing automated fault detection and event management for solar asset performance, for $4.3m paid solely in stock",
+   "read": "Small but directionally clear: Stem is still buying software capability, in Europe, and paying in equity rather than the cash it does not have. The allocation records $1.5m of developed technology and $0.2m of customer relationships, both on five-year lives, plus $2.5m of goodwill 'primarily attributable to the assembled workforce and expected synergies' — the first goodwill on the balance sheet since the FY2024 write-off took it to zero. 389,569 shares were issued on 23 April; the announcement followed on 28 April.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/206/stem-acquires-raicoon-to-expand-powertrack-capabilities"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "corporate",
+   "headline": "Auditor change: Deloitte & Touche LLP dismissed 12 March 2026 and RSM US LLP engaged, beginning with the Q1 2026 review and the FY2026 audit",
+   "read": "A change of auditor five days after the FY2025 10-K was filed. The 8-K records no disagreements and no reportable events, and states Deloitte's FY2024 and FY2025 opinions carried no adverse opinion, disclaimer, qualification or modification. Worth recording precisely because the timing invites the opposite inference and the filing forecloses it.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000031/stem-20260312.htm"
+  },
+  {
+   "date": "2026-03-06",
+   "category": "financial",
+   "headline": "Established a $30.0m at-the-market equity programme with Jefferies under a Form S-3 shelf; 595,303 shares were sold through 30 June at a weighted-average $9.63 for $5.6m net, leaving about $24.2m of capacity",
+   "read": "The dilution machinery is live and its cost scales inversely with the share price. At $9.63 the programme raised $5.8m gross for 0.6m shares; at the 8 September 2026 price of $5.64 the remaining $24.2m would issue roughly 4.3m shares against 9.6m outstanding.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000023/stem2026atm-prospectussupp.htm"
+  },
+  {
+   "date": "2026-03-04",
+   "category": "financial",
+   "headline": "FY2025: revenue $156.3m up 8.1%, GAAP gross margin swings from minus 8% to 38%, and the first positive full-year adjusted EBITDA in company history at $6.7m; FY2026 guidance introduced at $140–190m",
+   "read": "Guidance was met across all metrics, with adjusted EBITDA and operating cash flow above the top of their ranges. The reported net income of $137.8m is not an operating result — $220.0m of it is the June 2025 debt-extinguishment gain — and the sell-side consensus carried a year earlier had been $261.2m, which the actual missed by about 40%. Software, services and edge revenue was $141.4m, up 25%.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/86/stem-announces-fourth-quarter-and-full-year-2025-results"
+  },
+  {
+   "date": "2026-03-04",
+   "category": "customer",
+   "headline": "Everyray GmbH selects PowerTrack EMS for 100 MWh of German utility-scale storage — 90 MWh at Kolsa and 10 MWh at Elsterwerda, commercial operation expected summer 2026",
+   "read": "The first of the 2026 European EMS wins and the template for the three that followed: storage attached to, or beside, existing solar, controlled by a vendor-independent stack.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/87/stems-powertrack-ems-selected-for-100-mwh-of-utility-scale-energy-storage-projects-in-germany"
+  },
+  {
+   "date": "2026-02-10",
+   "category": "corporate",
+   "headline": "Decided to sell Logan Energy Storage ULC, which owns four battery projects in Ontario, held through Stem Finance SPV VI ULC",
+   "read": "The visible edge of the retreat from owning assets. A $3.3m held-for-sale impairment followed in Q1 2026; in Q2 one project ceased to meet the criteria and was partly reversed, leaving $1.2m of held-for-sale carrying value with disposal expected within a year.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000081/stem-20260630.htm"
+  },
+  {
+   "date": "2025-12-19",
+   "category": "legal",
+   "headline": "Securities class action dismissed with prejudice — In re Stem, Inc. Securities Litigation, No. 23-cv-02329-MMC (N.D. Cal.), dismissed 17 December 2025",
+   "read": "Closes the largest legal overhang from the de-SPAC era. The consolidated action had alleged material weaknesses in internal control, overstated post-merger prospects and a false claim that software was 100% of services revenue, over a class period running from March 2021 to February 2023. The Q2 2026 10-Q states management believes the probability of a material loss on any pending proceeding is remote.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000085/stem-20251217.htm"
+  },
+  {
+   "date": "2025-12-09",
+   "category": "customer",
+   "headline": "Took over operation and optimisation of a four-site battery portfolio, one of them a solar-plus-storage hybrid, serving a Southern California water utility and participating in California demand-response programmes",
+   "read": "Notable for how it was won — 'following the transition from a previous service provider'. It is a displacement rather than a new build, which is what a shrinking-market optimiser has to be good at.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/89/stem-partners-with-clean-energy-asset-owner-to-operate-and-optimize-energy-storage-portfolio-for-southern-california-utility"
+  },
+  {
+   "date": "2025-12-01",
+   "category": "leadership",
+   "headline": "Arun Narayanan appointed to the board as a Class I director, expanding it from seven to eight; the chief accounting officer changed the same month, Rahul Shukla out and Jeffrey Cabot in from 5 January 2026",
+   "read": "The FY2025 10-K names the turnover itself as a risk factor — a new chief executive in January 2025, a new chief financial officer in July 2025 and a new chief accounting officer in December 2025, in a company of 423 people. The finance function turned over completely inside a year.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000076/stem-20251201.htm"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "corporate",
+   "headline": "Consolidated European operations into Berlin and designated it Stem's European competence centre for utility-scale solar, storage and hybrid",
+   "read": "The investment side of the same year as the 27% headcount cut. Read with the 2026 deal book — Germany, Hungary twice, Chile — the European build-out is where the growth actually came from.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/92/stem-expands-its-european-operations-as-demand-surges-for-solar-storage-and-hybrid-energy-solutions"
+  },
+  {
+   "date": "2025-09-09",
+   "category": "corporate",
+   "headline": "Letter to shareholders twelve months after the strategy realignment: 'One Brand, Amplified Impact' — a new stem.com, a refreshed mission, the tagline 'Energy Intelligence', and every product consolidated under PowerTrack",
+   "read": "The document that frames the whole turn as deliberate. It is also where PowerTrack Sage, the AI layer inside PowerTrack Software, is described prospectively as 'available soon' — the chief executive counted it as launched in the FY2025 results six months later, and no dedicated Sage product page or datasheet exists.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000045/exhibit99-ceoletter.htm"
+  },
+  {
+   "date": "2025-09-05",
+   "category": "product-launch",
+   "headline": "Athena, the registered-trademark flagship enterprise platform, rebranded to PowerTrack Optimizer alongside a full website relaunch — and the FY2025 10-K dates this event a year earlier, in September 2024",
+   "read": "THE DATE IS A FIRST-PARTY CONFLICT AND THIS DOSSIER RESOLVES IT AGAINST THE FILING. The press release is datelined 5 September 2025, says 'today announced the rebranding', launches the website 'live on Sept. 5', and quotes chief executive Arun Narayanan, who did not take office until January 2025. The 10-K's 'In September 2024' cannot be reconciled with the quote. Separately, the corpus should note the consequence: three other dossiers here still describe Stem's software under retired names — Available Power records the February 2022 award as 'Athena software', and DNV and kWh Analytics both list 'Also Energy' as an independent competitor. No dossier in this corpus mentioned PowerTrack before this one.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/95/stem-unveils-powertrack-optimizer-flagship-enterprise-platform-powering-managed-services-strategically-rebranded-to-integrate-into-comprehensive-product-stack"
+  },
+  {
+   "date": "2025-09-02",
+   "category": "product-launch",
+   "headline": "Launched PowerTrack EMS — an energy management system for standalone storage and hybrid plants, built on hardware-agnostic unit controllers 'that eliminate vendor lock-in'",
+   "read": "The most consequential product event in the record and the one the 2026 deal book runs on: every named 2026 win is an EMS win. Three days before the Athena rebrand and part of the same relaunch — the company rebuilt its product identity in a single week.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/96/stem-launches-powertrack-ems-expanding-global-product-suite-for-standalone-and-hybrid-energy-storage-control"
+  },
+  {
+   "date": "2025-07-02",
+   "category": "leadership",
+   "headline": "Chief financial officer transition: Doran Hole departs after about eleven months and Brian Musfeldt — formerly chief financial officer of AlsoEnergy — is appointed",
+   "read": "The acquired business's finance chief now runs the acquirer's finances. Read with the September 2025 consolidation of every product under the PowerTrack name, it is the clearest personnel signal that AlsoEnergy's solar asset-performance business, not Stem's original storage-optimisation business, is the surviving core.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/100/stem-appoints-new-chief-financial-officer"
+  },
+  {
+   "date": "2025-06-30",
+   "category": "financial",
+   "headline": "Debt exchange: $228.8m of 2028 Convertible Notes and $121.3m of 2030 Convertible Notes exchanged for $155.4m of new first-lien 2030 Senior Secured PIK Toggle Notes plus 439,919 warrants at $30.00 and $10.0m of cash to Stem, producing a $220.0m gain on extinguishment",
+   "read": "About $350m of principal retired for $155m of new paper, with maturities pushed to 2030. It rescued the maturity profile and produced the whole of FY2025's reported net income, but it moved the company from unsecured convertible debt into debt secured by a first-priority lien on substantially all assets, at 12% if paid in kind against 11% in cash. The new notes were valued at a 14.6% yield.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/101/stem-inc-significantly-strengthens-balance-sheet-through-convertible-notes-exchange-and-new-notes-issuance"
+  },
+  {
+   "date": "2025-06-23",
+   "category": "corporate",
+   "headline": "1-for-20 reverse stock split takes effect at 12:01 a.m. Eastern — 167,169,140 shares become 8,358,370; authorised common cut from 500.0 million to 250.0 million and the CUSIP changes to 85859N300",
+   "read": "The cure for the August 2024 NYSE minimum-price notice. It is also a permanent trap in the record: every per-share price, earnings-per-share figure and share count published before this date is off by a factor of twenty. The 2028 notes' conversion price restated from $29.24 to $584.86 and the 2030 notes' from $7.13 to $142.55 — which is why both are cash obligations rather than dilution risks.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/103/stem-inc-announces-1-for-20-reverse-stock-split"
+  },
+  {
+   "date": "2025-04-09",
+   "category": "corporate",
+   "headline": "Announced a reduction of about 27% of the global workforce — roughly 154 roles — and closed the San Francisco headquarters at 4 Embarcadero Center; expected savings $24m in 2025 and about $30m in 2026 against $6.0–6.5m of severance",
+   "read": "The deepest cut of the restructuring and what made the FY2025 margin swing possible; FY2025 restructuring cost was $6.1m and headcount fell from 569 to 423. Roles cut in San Francisco included the chief platform architect, the senior vice-president of policy and regulatory affairs, the senior vice-president of cloud software and services, four software engineers and five data scientists. In an email to employees quoted by the San Francisco Examiner the chief executive said the company 'faces a large debt burden, limited operating cash, and is not operationally profitable'.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000119312525079764/d946758d8k.htm"
+  },
+  {
+   "date": "2025",
+   "category": "corporate",
+   "headline": "Headquarters of record moves from San Francisco to 1400 Post Oak Boulevard, Houston — never announced, and visible only on SEC cover pages between 14 April and 5 June 2025",
+   "read": "This dossier brackets the move rather than dating it: the 8-K filed 2025-04-14 still gives 4 Embarcadero Center, San Francisco, and the 8-K filed 2025-06-05 gives Houston. No press release, 8-K item or trade-press report of the relocation was found on either research pass. The FY2024 10-K describes a 6,500 square foot San Francisco headquarters; the FY2025 10-K describes 2,500 square feet in Houston. Any source calling Stem a Bay Area company is describing a state that ended in 2025.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000016/stem-20251231.htm"
+  },
+  {
+   "date": "2025-03-04",
+   "category": "customer",
+   "headline": "Summit Ridge Energy standardises its 514 MW commercial solar portfolio on PowerTrack",
+   "read": "The largest named US software win in the record and a reminder of where the fleet growth actually comes from — community and commercial solar, not storage.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/108/stems-powertrack-standard-on-summit-ridge-energys-514-mw-commercial-solar-portfolio"
+  },
+  {
+   "date": "2025-01-16",
+   "category": "leadership",
+   "headline": "Arun Narayanan named chief executive, ending a four-month interim under chairman David Buzby; he comes from RES Digital Solutions and, before that, was chief data officer of Anglo American",
+   "read": "A data-and-digital career rather than an energy-trading one. The board did not hire a merchant optimiser to run a merchant optimiser; it hired a data executive to run a software company, which is consistent with everything the product line has done since.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/111/stem-names-software-veteran-arun-narayanan-as-chief-executive-officer"
+  },
+  {
+   "date": "2025-01-14",
+   "category": "customer",
+   "headline": "Neovolt selects PowerTrack for a 484 MW Hungarian solar portfolio — the company's largest software deal in EMEA",
+   "read": "The named reference for both the solar asset-performance business and the international footprint the AlsoEnergy acquisition bought. Stem operates in more than 50 countries but books about 95% of revenue in the United States, so wins like this are the test of whether the footprint converts.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/112/stem-to-support-484-mw-hungarian-solar-portfolio-in-companys-largest-software-deal-in-emea"
+  },
+  {
+   "date": "2024-12-17",
+   "category": "customer",
+   "headline": "PowerBidder Pro selected for a second Mercuria Energy Trading asset in the ERCOT portfolio",
+   "read": "The last first-party PowerBidder announcement on the record. The product has no current page and the 10-K now treats PowerBidder as a trademark sold inside PowerTrack Optimizer — so this is the high-water mark of Stem's merchant-bidding push, not a current position.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/113/stems-ai-enabled-powerbidder-pro-to-help-drive-returns-for-second-asset-in-mercuria-energy-trading-ercot-portfolio"
+  },
+  {
+   "date": "2024-10-30",
+   "category": "financial",
+   "headline": "Second FY2024 guidance cut — revenue to $135–155m from $200–270m and bookings to $100–500m — alongside a $104.1m bad-debt charge on contracts carrying parent-company guarantees",
+   "read": "The end of the old model. Stem had written hardware price guarantees in 2022 and 2023 and accounted for them as variable consideration; it stopped writing them in June 2023 and by this quarter had written the affected assets to zero. The 10-K now states there are no remaining parent company guarantees outstanding. Original FY2024 revenue guidance had been $567–667m.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876624000174/exhibit99-8xkx20241030xq32.htm"
+  },
+  {
+   "date": "2024-10-01",
+   "category": "corporate",
+   "headline": "Announced a new software and services-centric strategy 'to drive scalable growth and profitability' — the pivot the whole record turns on",
+   "read": "Everything after this date is the execution of it: the president-software role, the 27% headcount cut, the debt exchange, the PowerTrack consolidation, the European build-out, and battery resale falling to near zero. Everything before it is the business being exited.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/116/stem-announces-new-software-and-services-centric-strategy-to-drive-scalable-growth-and-profitability"
+  },
+  {
+   "date": "2024-09-16",
+   "category": "leadership",
+   "headline": "Chief executive John Carrington steps down; chairman David Buzby takes over on an interim basis",
+   "read": "Covered by the trade press as a de-SPAC distress story rather than a leadership upgrade — Energy-Storage.news filed it under 'SPAC firms: Stem Inc CEO steps down, Energy Vault warned over share price'. Carrington is now chief executive of Enchanted Rock, which this corpus also covers, and that dossier reads his storage background as a signal about Enchanted Rock's future battery attach.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/118/stem-announces-ceo-transition"
+  },
+  {
+   "date": "2024-08-30",
+   "category": "regulatory",
+   "headline": "NYSE notice of non-compliance with Section 802.01C — the average closing share price had been below $1.00 for 30 consecutive trading days",
+   "read": "The proximate cause of everything in the 2025 record: the reverse split, the authorised-share reduction and the scale break that makes pre-2025 per-share data unusable. Compliance was regained after the split and the listing was never lost. No source located gives the date of the formal compliance notice.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/119/stem-inc-receives-continued-listing-standard-notice-from-nyse"
+  },
+  {
+   "date": "2024-08-06",
+   "category": "financial",
+   "headline": "First FY2024 guidance cut — revenue to $200–270m from $567–667m with adjusted-EBITDA guidance withdrawn outright — and a formal strategic review announced; shares fall more than 40%",
+   "read": "The inflection point. The strategic review was never reported as concluding in a transaction; what followed was the chief-executive change six weeks later and the software pivot eight weeks after that. No SC 13D has ever been filed against this registrant, so no activist forced it.",
+   "source": "https://www.energy-storage.news/stem-inc-slashes-fy-guidance-launches-strategic-review-after-plummeting-sales-and-bookings/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "excelsior-energy-capital",
+   "type": "partner",
+   "status": "historical",
+   "since": "2022-12",
+   "note": "Stem, Regis Energy Partners and Excelsior Energy Capital jointly announced a $400m portfolio of Texas energy-storage projects, announced through Stem's own investor-relations newsroom.",
+   "context": "The most concretely documented tie between Stem and another covered company. Excelsior's own dossier cites this same Stem release and records a partner quoted on 'the Fluence, LG Energy Solution Vertech, Stem/REX, Unico, Stella and Lydian' announcements, so the relationship is registered from both sides of the corpus.\n\nIt is typed historical rather than active deliberately. The announcement is from December 2022, when Stem still sold batteries — battery hardware resale was $360.2m of revenue that year and is $0.3m in the first half of 2026 — and neither company has published anything about the portfolio since. No source located in this research states whether the portfolio was built, sold or abandoned, and this dossier does not infer one.\n\nStem's Managed Services page separately quotes Daniel Senneff, co-founder and managing partner of Regis Energy Partners, about the Texas portfolio, which establishes the commercial relationship continued past the announcement without dating its end.",
+   "source": "https://investors.stem.com/news-events/press-releases/detail/159/stem-regis-energy-partners-and-excelsior-energy-capital-announce-400m-portfolio-of-energy-storage-projects-in-texas"
+  },
+  {
+   "slug": "available-power",
+   "type": "customer",
+   "status": "historical",
+   "since": "2022-02",
+   "scale": "up to 100 front-of-meter sites",
+   "note": "Available Power selected Stem to supply hardware and the then-Athena software for up to 100 front-of-meter sites in Texas, per the milestone record in Available Power's own dossier.",
+   "context": "Recorded here because Available Power's dossier carries it from the other side and dates it February 2022, alongside Stem's own statement that the 100-site, 1 GW / 2 GWh Texas portfolio was 'expected to have a value of more than $500 million'.\n\nTwo things about it need saying plainly. The software is named 'Athena' in that record, which was correct in February 2022 and has been PowerTrack Optimizer since 5 September 2025. And the portfolio's fate is unresolved: Available Power's dossier tracks the associated Greenport project slipping from mid-2024 to Q1 2025 to February 2026, Stem's battery hardware resale line has since fallen 96%, and no source located in either dossier's citations states whether the 100-site award was delivered. Neither dossier should be read as asserting that it was.",
+   "source": "Available Power dossier milestone record (Stem award, February 2022); no current Stem-side source located"
+  },
+  {
+   "slug": "fluence",
+   "type": "competitor",
+   "status": "active",
+   "note": "The nearest listed comparator — Fluence's Mosaic bidding software and Nispera asset-performance management address the same two jobs as PowerTrack Optimizer and PowerTrack Software.",
+   "context": "The comparison is instructive in both directions. Fluence disclosed 22.0 GW of renewable assets on its digital offerings at 30 September 2025 against Stem's 36.1 GW of solar and 1.7 GWh of storage at 31 December 2025 — so on fleet Stem is larger, and on storage specifically Fluence's Mosaic page claims over 10 GW against Stem's 1.8 GWh.\n\nThe structural difference is that Fluence's software attaches to Fluence's own hardware while Stem's is sold explicitly against vendor lock-in, and the commercial difference is that Fluence has the data-centre exposure Stem does not: it disclosed master supply agreements with two hyperscalers and a record $5.6bn backlog in May 2026. Fluence also holds S&P Global Commodity Insights Tier 1 status for a second year, a list on which Stem does not appear.",
+   "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+  },
+  {
+   "slug": "flexgen",
+   "type": "competitor",
+   "status": "active",
+   "note": "The other incumbent of this corpus's software-and-optimization segment, and the closer competitor on storage specifically — FlexGen's HybridOS is a hardware-agnostic EMS sold on the same premise as PowerTrack EMS.",
+   "context": "Both companies sell a vendor-independent control layer into storage plants, which is the segment's first buying criterion, and both are typed incumbent in this corpus. On the storage fleet the gap is large and runs the other way from the solar comparison: FlexGen's dossier records 25+ GWh across 200+ systems under software against Stem's 1.8 GWh.\n\nNO THIRD-PARTY SOURCE LOCATED IN THIS RESEARCH NAMES THE TWO AS HEAD-TO-HEAD COMPETITORS, and Stem's own 10-K names no competitor at all — only categories, of which 'energy monitoring and optimization software providers' is the one FlexGen occupies. This link is therefore recorded on the overlap of the two dossiers' documented product positions rather than on an external assertion, and the basis is stated so a reader can discount it accordingly.",
+   "source": "Product-position overlap between this dossier's PowerTrack EMS entry and the flexgen dossier's HybridOS record; no third-party source names them head-to-head"
+  },
+  {
+   "slug": "tesla",
+   "type": "competitor",
+   "status": "active",
+   "note": "Autobidder occupies the merchant-bidding position PowerTrack Optimizer competes for, and Modo Energy's US optimizer directory lists both.",
+   "context": "Modo Energy's April 2025 directory of seventeen US battery optimizers and operators includes both companies, and the asymmetry in how it describes them is the substance of this link: Tesla's Autobidder is recorded as number one in Modo's ERCOT rankings for 2022 and 2023, while Stem appears in capability-only language with no quantified revenue-performance claim and a qualified-scheduling-entity service delivered through third-party partners.\n\nAs with every software position in this corpus except FlexGen and Stem, Autobidder is a division of a hardware manufacturer and is sold alongside Tesla's own Megapack fleet — the structural distinction Stem sells against.",
+   "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+  },
+  {
+   "slug": "dnv",
+   "type": "competitor",
+   "status": "active",
+   "note": "DNV's own dossier positions GreenPowerMonitor against 'Power Factors, Also Energy and the OEM EMS layer' — naming Stem's platform under the pre-acquisition brand it has not carried since the PowerTrack consolidation.",
+   "context": "This is a competitor relationship the corpus already recorded without knowing it was about Stem. AlsoEnergy has been Stem's since February 2022 and its platform is now PowerTrack; DNV's positioning line, written before this dossier existed, names it as an independent rival to GreenPowerMonitor in solar asset-performance monitoring.\n\nThe claim is accurate as written — alsoenergy.com still resolves and the brand persists in the market — so this dossier does not revise DNV's. What it does instead is register 'AlsoEnergy' and 'Also Energy' in Stem's alias list, so the next corpus reconciliation finds the connection by search rather than by luck. kWh Analytics' dossier carries the same 'Also Energy' name in its own positioning but explicitly lists those platforms as Solar Risk Assessment contributors 'rather than as rivals', so no competitor link to kWh Analytics is asserted here.",
+   "source": "DNV dossier, productsAndServices positioning line (GreenPowerMonitor); no Stem-side source names DNV"
+  },
+  {
+   "slug": "engie-north-america",
+   "type": "partner",
+   "status": "historical",
+   "note": "ENGIE North America partnered with Stem to integrate storage management with electric-vehicle charging, reported by Utility Dive.",
+   "context": "Recorded with its status set to historical and a gap stated. The partnership is real and independently reported, but it predates the software pivot — the Utility Dive item is undated on its page and belongs to the Athena era around 2022 — and neither company has published anything about it since.\n\nThis sits inside a broader unresolved question about Stem's legacy customer base. The names attached to the pre-2024 business — ENGIE North America, SB Energy with a 10 GWh partnership cited in 2023, CleanCapital as a preferred storage provider, and REX with a $400m ERCOT pipeline — have all gone quiet, and no source located in this research confirms whether any remains a customer or was lost. The 10-K discloses customer concentration only as unnamed Customers A through D.",
+   "source": "https://www.utilitydive.com/news/stem-engie-north-america-partner-to-integrate-storage-management-and-ev-ch/616730/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "ITC/45X — Sections 48E and 45X as amended by the One Big Beautiful Bill Act",
+   "status": "in-effect",
+   "effectiveDate": "2025-07",
+   "exposure": "Stem claims no manufacturing credit itself, so its exposure is entirely to its customers' project economics — and the OBBB treats Stem's two markets very differently. For SOLAR, Section 48E credits 'will no longer be available for solar-only projects placed in service after December 31, 2027, unless construction begins on or before July 4, 2026, pursuant to a grandfathering rule', and qualifying projects must still meet continuity requirements. For STORAGE the picture is materially better: 'energy storage projects are not subject to this placed-in-service deadline; however, the ITC for storage systems will begin to phase down in 2034 — decreasing to 75% in 2034, 50% in 2035 and phasing out entirely by 2036'. Domestic-content thresholds escalate — 45% for construction commencing after 2025-06-16 and before 2026-01-01, 50% for 2026 starts, 55% thereafter. The Section 25D residential credit expired 2025-12-31. Stem also tracks Treasury Notice 2025-42 of 2025-08-15, which eliminates the long-standing 5% safe harbour for solar projects larger than 1.5 MW AC for construction beginning on or after 2025-09-02. THE TAX EFFECT ON STEM ITSELF IS NIL: the Q2 2026 10-Q states the OBBB 'did not result in any material changes to tax expense or cash tax... primarily as a result of the valuation allowance we have on our deferred tax assets'. This is a demand-side and compliance-side exposure, not a tax-line one.",
+   "mitigation": "None stated as a tax mitigation. The company's response is commercial: it markets compliance capability, including automated regulatory reporting for programmes such as California's Self-Generation Incentive Program and CleanPeaks.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000081/stem-20260630.htm"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2025-07",
+   "exposure": "The OBBB 'introduces new compliance requirements under the Foreign Entity of Concern (FEOC) provisions for both Section 48E and the Advanced Manufacturing Production Tax Credit (AMPTC) under Section 45X', limiting 'material assistance' from FEOCs — defined as China, Russia, Iran and North Korea — and establishing 'an escalating threshold of non-FEOC content that must be met by solar and storage projects beginning construction in 2026 and by manufactured components produced beginning in 2026'. It also prohibits transferring credits to specified foreign entities, which the filing notes 'may affect the market for transferable tax credits'. The burden the company names is diligence rather than sourcing: 'enhanced due diligence, component-level sourcing verification, and ongoing monitoring across vendor supply chains'. THE EXPOSURE THAT MATTERS IS CONTRACTUAL: the 10-K states that failing to interpret the requirements correctly or to update internal processes 'may result [in] a partial or full reduction in the related federal tax benefit, and our customers, financiers and equity investors may require us to indemnify them for certain of such reductions'. NOTE: no reference to NDAA Section 154 appears anywhere in the FY2025 10-K or the Q2 2026 10-Q — Stem frames its FEOC exposure entirely under 48E and 45X.",
+   "mitigation": "Stem has turned the regime into a product position rather than only absorbing it. The April 2026 agreement with Nuvation Energy pairs PowerTrack EMS and Stem's unit controller with Nuvation's battery management system as a 'fully North American-made BESS control stack', marketed on the company's own words that 'as regulatory requirements tighten across the United States, including Foreign Entity of Concern (FEOC) restrictions, and growing state-level legislation, developers and asset owners are actively seeking alternatives to control architectures that rely on foreign-manufactured or controlled components'.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000081/stem-20260630.htm"
+  },
+  {
+   "regime": "FERC Orders 841, 2222 and 2023 — wholesale market access for storage and distributed resources",
+   "status": "in-effect",
+   "effectiveDate": "2018-02",
+   "exposure": "The demand-side regime Stem names as its market-making condition rather than its risk. Order 841 (February 2018) removed barriers to storage participation in wholesale markets; Order 2222 (September 2020) opened distributed-energy-resource aggregation and is 'in various stages of implementation across the U.S.'; Order 2023 addresses interconnection process improvements, which the 10-K flags because 'the pace of wholesale interconnection is often a source of delay for project implementation'. Stem states it is not itself regulated as a utility, but that 'federal, state and local government statutes and regulations concerning electricity heavily influence the demand for our products and services'. It names ten states whose portfolio standards or storage incentives its technology is eligible under: California, Connecticut, Hawaii, Illinois, Massachusetts, Maryland, Michigan, New Jersey, New York and Texas.",
+   "mitigation": "Not applicable — this regime creates the addressable market rather than constraining it.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000016/stem-20251231.htm"
+  },
+  {
+   "regime": "NYSE continued-listing standards (Section 802.01C)",
+   "status": "in-effect",
+   "effectiveDate": "2024-08-28",
+   "exposure": "Stem received formal notice from the New York Stock Exchange, announced 30 August 2024, that it was not in compliance with Section 802.01C of the NYSE Listed Company Manual, its average closing share price having fallen below $1.00 over 30 consecutive trading days. This is the regime that produced the reverse split and with it the 20x scale break that makes every pre-June-2025 per-share figure for this company unusable without adjustment.",
+   "mitigation": "Cured. Stockholders approved a reverse split on 4 June 2025; the board set the ratio at 1-for-20 on 9 June and it took effect at 12:01 a.m. Eastern on 23 June 2025, taking shares outstanding from 167,169,140 to 8,358,370, cutting authorised common stock from 500.0 million to 250.0 million and changing the CUSIP to 85859N300. The 10-K states the company 'regained compliance with the requirement of Section 802.01C, as our share price promptly exceeded $1.00 per share, and remained above that level for the following 30 trading days'. No source located in this research gives the date of the formal compliance notice.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000081/stem-20260630.htm"
+  },
+  {
+   "regime": "Trade tariffs",
+   "status": "in-effect",
+   "exposure": "Disclosed only as risk language, never quantified. The Risk Factors Summary carries 'our business could be adversely affected by trade tariffs or other trade barriers'; Item 1 notes that Stem and its suppliers must comply with regulations covering 'battery safety, transportation of batteries, tariffs, and disposal of hazardous materials'; and every earnings release since Q3 2025 carries a standing paragraph naming 'the effects of increased import tariffs and retaliatory trade policies' alongside government shutdowns, the wars in Ukraine and the Middle East, and China-United States tensions. NO QUANTIFIED TARIFF COST OR MARGIN IMPACT IS DISCLOSED ANYWHERE IN THE FILINGS — which is consistent with a company whose remaining hardware line is edge devices assembled in Colorado rather than batteries imported in volume.",
+   "mitigation": "None stated.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000016/stem-20251231.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Arun Narayanan",
+   "title": "Chief Executive Officer (since January 2025) and Class I Director (since December 2025)",
+   "background": [
+    "Chief Executive Officer, Stem, Inc. — appointed 16 January 2025 (age 51 as of 2026-01-31); added to the board as a Class I director on 1 December 2025, expanding it from seven members to eight",
+    "Chief Executive Officer, RES Digital Solutions — a division of RES, a global independent renewable energy company — April 2024 to January 2025",
+    "Chief Digital Officer, RES — August 2023 to March 2024",
+    "Chief Data Officer, Anglo American plc — January 2018 to June 2023; built the VOXEL data analytics platform",
+    "21+ years at Schlumberger; 27 years in software and data overall",
+    "M.S. computer science, Iowa State University; MBAs from the University of Houston and the University of Texas at Austin; B.A. University of Mumbai",
+    "The appointment is a data-and-digital career rather than an energy-trading one — the clearest single signal of the direction the board chose in 2025"
+   ],
+   "photo": "images/execs/stem-narayanan.jpg"
+  },
+  {
+   "name": "Brian Musfeldt",
+   "title": "Chief Financial Officer (since July 2025)",
+   "background": [
+    "Chief Financial Officer, Stem, Inc. — effective July 2025 (age 51 as of 2026-01-31)",
+    "Chief Financial Officer, ikeGPS — a platform technology company supporting above-ground grid resiliency and capacity expansion for utilities — June 2023 to July 2025",
+    "Chief Financial Officer, Also Energy, Inc. — 2017 to 2023, through its sale to Stem in February 2022",
+    "Chief Financial Officer, MST Global Inc.; began as a CPA with six years at KPMG and Arthur Andersen as an audit manager",
+    "MBA, Colorado State University",
+    "The acquired company's finance chief now runs the acquirer's finances, four years after the deal"
+   ]
+  },
+  {
+   "name": "Ryan McCool",
+   "title": "Chief Technology Officer (since May 2025)",
+   "background": [
+    "Chief Technology Officer, Stem, Inc. — joined May 2025",
+    "Global Director of Digital Product Development, FLSmidth",
+    "20+ years, with on-premise to multi-tenant SaaS transformations and teams across Asia, Europe, Australia, South America and North America",
+    "Succeeded Albert Hofeldt, who had been appointed chief technology officer on 23 October 2024. No first-party announcement of Hofeldt's departure was located; McCool's start date is known only from his own leadership-page biography"
+   ],
+   "photo": "images/execs/stem-mccool.jpg"
+  },
+  {
+   "name": "Michael Carlson",
+   "title": "President, Managed Services and OEM Hardware (Chief Operating Officer since September 2022)",
+   "background": [
+    "President, Managed Services and OEM Hardware per the current leadership page (age 62 as of 2026-01-31). The FY2025 10-K, current as of 31 January 2026, still lists him as 'Chief Operating Officer, since September 2022' — the website title is the newer of the two and this dossier records both",
+    "Vice President, Koch Engineered Solutions — Electric Technologies strategy — August 2020 to September 2022",
+    "President, Digital Grid North America, Siemens Industries, Inc. — July 2014 to March 2019",
+    "12+ years across GE, Siemens and ABB; 30 years in total",
+    "MBA Finance, Pepperdine; B.S. Union College",
+    "The only executive whose background is utility grid software at scale, and the one whose title still carries OEM hardware — the business the company is exiting"
+   ],
+   "photo": "images/execs/stem-carlson.jpg"
+  },
+  {
+   "name": "Matthew Tappin",
+   "title": "President, Software Products (since September 2024)",
+   "background": [
+    "President, Software, Stem, Inc. — since September 2024 (age 38 as of 2026-01-31)",
+    "President, Asset Management Division, Stem — March 2023 to September 2024",
+    "Vice President, Corporate Development, Stem — May 2021 to March 2023",
+    "Corporate Development, New Energies, Shell — August 2019 to May 2021; earlier Centrica distributed energy, Lazard's power, energy and infrastructure group, and Simpson Thacher",
+    "J.D. Duke; B.A. Washington University in St. Louis",
+    "The creation of a President, Software role in September 2024 is the organisational marker of the software-first turn, a year before the brand consolidation that followed it"
+   ],
+   "photo": "images/execs/stem-tappin.jpg"
+  },
+  {
+   "name": "Saul R. Laureles",
+   "title": "Chief Legal Officer and Corporate Secretary (since May 2021)",
+   "background": [
+    "Chief Legal Officer and Corporate Secretary, Stem, Inc. — since May 2021 (age 60 as of 2026-01-31)",
+    "Director, Corporate Legal Affairs and Assistant Corporate Secretary, Schlumberger Limited — 2007 to 2021",
+    "J.D. University of Michigan; B.A. University of Chicago",
+    "Appointed the month after the de-SPAC completed and the only executive officer continuously in post since then; signatory on the recent 8-K series"
+   ],
+   "photo": "images/execs/stem-laureles.jpg"
+  },
+  {
+   "name": "Jeffrey Cabot",
+   "title": "Chief Accounting Officer (since January 2026)",
+   "background": [
+    "Chief Accounting Officer, Stem, Inc. — effective 5 January 2026 (age 56); base salary $325,000 with an initial equity award of 14,000 shares vesting ratably over three years",
+    "Chief Accounting Officer, Oak View Group — August 2023 to December 2025",
+    "Chief Accounting Officer, Air Methods — July 2022 to June 2023",
+    "Sonoco Products and Ball Metalpack — August 2018 to April 2022",
+    "CPA; B.S. accounting, Elon University",
+    "Succeeded Rahul Shukla, who stepped down by mutual agreement effective 19 December 2025. Not listed on the public leadership page"
+   ]
+  },
+  {
+   "name": "David Buzby",
+   "title": "Chairman of the Board (interim Chief Executive Officer, September 2024 to January 2025)",
+   "background": [
+    "Chairman of the board of Stem, Inc.; served as interim chief executive between John Carrington's departure in September 2024 and Arun Narayanan's appointment in January 2025",
+    "Chairman of Wondrwall Holdco; boards of Spring Valley Acquisition Corp. III and IV",
+    "Early investor and board member of Sunrun; founding investor, chairman and chief executive of SunEdison before its sale to MEMC; founding investor, board member and audit chair of ValueClick",
+    "MBA Harvard 1988; B.A. Middlebury 1982",
+    "35 years in impact businesses"
+   ],
+   "photo": "images/execs/stem-buzby.jpg"
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Read this record on the product-line table, not the revenue line. Total revenue fell 66% in two years because battery hardware resale — 78% of FY2023 revenue at negative margin — was exited; the software, edge-hardware and services core grew 46% over the same period and gross margin swung 46 points. Three cautions apply to any comparison. First, FY2025 net income of $137.8m is a debt-extinguishment gain, not an operating result, and the company was still loss-making before it. Second, bookings, contracted backlog and CARR were all REDEFINED beginning with the first quarter of 2025 — narrowed to executed purchase orders — so pre-2025 values for those three metrics are not like-for-like with anything after. Third, a 1-for-20 reverse split took effect 2025-06-23 and the company has retroactively restated all per-share figures and share counts in the FY2025 10-K and Q2 2026 10-Q to the post-split scale; a raw source dated before that which was not restated will be twenty times off. Customer concentration eased: no single customer reached 10% of revenue in FY2024 or FY2025, against three that did in FY2023, though Customer A stood at 17% of receivables at 2025-12-31. The effective tax rate is nil against a full valuation allowance on US deferred tax assets.",
+  "periods": [
+   {
+    "period": "FY2024 (ended 2024-12-31)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The year the prior business model was written off. Gross margin was negative, a $547.2m goodwill impairment cleared the balance sheet of the AlsoEnergy premium, and a further ~$146m of receivable, inventory and supplier-cost impairments plus a $38.7m negative revenue adjustment and a $10.0m contract-termination payment produced the $854.0m loss. Underneath it, the three lines that make up today's company grew 18% to $89.9m.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$144.6m, down 68.7% from $461.5m in FY2023",
+      "expected": "$135–155m — the third and final FY2024 revenue guidance, cut on 2024-10-30",
+      "verdict": "inline",
+      "result": "Landed inside the final guided range, but that range was the survivor of two cuts from an original $567–667m issued at the start of the year: to $200–270m on 2024-08-06, then to $135–155m on 2024-10-30. Bookings guidance fell $1,500–2,000m to $100–500m over the same year, and adjusted-EBITDA guidance was withdrawn outright at the August cut. No published full-year revenue or adjusted-EBITDA consensus for FY2024 was found in this research, so no consensus verdict is stated.",
+      "kpi": "revenue",
+      "usdMillions": 144.6,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Core lines — PowerTrack software, edge hardware, project and professional services",
+      "actual": "$89.9m, up 18.3% from $76.0m",
+      "expected": "",
+      "verdict": "",
+      "result": "PowerTrack software $32.8m, edge hardware $45.4m, project and professional services $11.6m."
+     },
+     {
+      "name": "GAAP gross profit (loss)",
+      "actual": "$(11.1)m, a gross margin of minus 8%",
+      "expected": "",
+      "verdict": "",
+      "result": "Non-GAAP gross margin 35%."
+     },
+     {
+      "name": "Net loss",
+      "actual": "$(854.0)m",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes a $547.2m goodwill impairment, $104.1m of impairment and accounts-receivable write-off, $18.1m of inventory and deferred-cost impairment, $13.4m of impairment of deferred costs with suppliers, a $38.7m net revenue reduction and a $10.0m contract termination payment.",
+      "kpi": "net-income",
+      "usdMillions": -854.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$(22.8)m",
+      "expected": "Withdrawn",
+      "verdict": "",
+      "result": "Original FY2024 guidance was positive adjusted EBITDA; the guidance was withdrawn at the 2024-08-06 cut rather than reset. Shares fell more than 40% on that announcement."
+     },
+     {
+      "name": "Annual Recurring Revenue at period end",
+      "actual": "$52.8m",
+      "expected": "",
+      "verdict": "",
+      "result": "CARR $64.5m; both on the definition in force before the Q1 2025 redefinition."
+     },
+     {
+      "name": "Solar assets under management at period end",
+      "actual": "29.9 GW",
+      "expected": "",
+      "verdict": "",
+      "result": "Storage assets under management 1.8 GWh."
+     }
+    ]
+   },
+   {
+    "period": "FY2025 (ended 2025-12-31)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "The recovery year on every operating measure and a distorted one on the bottom line. Revenue grew for the first time since the resale business began shrinking, gross margin swung 46 points, and adjusted EBITDA turned positive. Reported net income of $137.8m is not an operating result: it is the $220.0m gain on extinguishing convertible debt in the 30 June 2025 exchange. Excluding that gain the company still lost money.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$156.3m, up 8.1%",
+      "expected": "$135–160m — guidance tightened at Q3 on 2025-10-29, from $125–175m issued 2025-03-04",
+      "verdict": "beat",
+      "result": "Upper half of the guided range. Set against the sell-side rather than the guidance the verdict inverts: the current-fiscal-year consensus carried in a Zacks writeup on 2025-03-04 was $261.21m, which the actual missed by about 40%. The two benchmarks disagree because the company reset guidance during the year and the consensus panel did not follow it down; this dossier states both rather than choosing.",
+      "kpi": "revenue",
+      "usdMillions": 156.3,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP gross profit",
+      "actual": "$60.0m, a gross margin of 38%",
+      "expected": "",
+      "verdict": "",
+      "result": "A 46-point swing from minus 8%. Non-GAAP gross margin 46%, up from 35%."
+     },
+     {
+      "name": "Net income",
+      "actual": "$137.8m",
+      "expected": "",
+      "verdict": "",
+      "result": "Driven by the $220.0m gain on extinguishment of debt recognised in Q2 2025; the operating result remained a loss.",
+      "kpi": "net-income",
+      "usdMillions": 137.8,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$6.7m",
+      "expected": "$(5)m to $(+5)m",
+      "verdict": "beat",
+      "result": "Above the top of the guided range. First positive full year, from $(22.8)m."
+     },
+     {
+      "name": "Bookings",
+      "actual": "$131.8m, up 13.7%",
+      "expected": "",
+      "verdict": "",
+      "result": "Redefined from Q1 2025 as the total value of executed purchase orders; the prior-year figure is not stated on the same basis."
+     },
+     {
+      "name": "Annual Recurring Revenue at period end",
+      "actual": "$61.1m, up 15.7%",
+      "expected": "",
+      "verdict": "",
+      "result": "CARR $67.2m, up 4.2% — the gap between contracted and operating recurring revenue narrowed from $11.7m to $6.1m."
+     },
+     {
+      "name": "Solar assets under management at period end",
+      "actual": "36.1 GW, up 20.7%",
+      "expected": "",
+      "verdict": "",
+      "result": "Storage assets under management fell to 1.7 GWh from 1.8 GWh."
+     },
+     {
+      "name": "Remaining performance obligations at period end",
+      "actual": "$382.6m",
+      "expected": "",
+      "verdict": "",
+      "result": "About 19% expected to be recognised within twelve months."
+     },
+     {
+      "name": "Headcount at period end",
+      "actual": "423 employees — 268 United States, 155 international",
+      "expected": "",
+      "verdict": "",
+      "result": "The 10-K discusses cost reduction, workforce reduction and restructuring efforts; restructuring expense is employee severance and other exit costs."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026 (ended 2026-06-30)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "The clearest single quarter of the transition. Revenue fell 12.3% while gross margin rose eight points and adjusted EBITDA grew 63%, because what fell was managed services and the last of the battery resale while the software, edge and services core grew 14.8%.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$33.7m, down 12.3% from $38.4m",
+      "expected": "$31.62m (Zacks panel) / $36.76m (Investing.com panel)",
+      "verdict": "",
+      "result": "THE TWO PUBLISHED PANELS DISAGREE AND NO SOURCE RECONCILES THEM. Against the Zacks consensus of $31.62m this is a 6.50% beat; against the Investing.com consensus of $36.76m it is a miss of about $3.1m. Coverage is five to seven analysts, so panel composition moves the number by roughly 16%. The market traded it as a miss — the shares fell 7.47% in regular trading to $5.45, then recovered 7.52% after hours to $5.86 — which suggests the buy-side number was nearer the higher panel. Any citation of this quarter as a beat or a miss must name the panel.",
+      "kpi": "revenue",
+      "usdMillions": 33.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "PowerTrack software revenue",
+      "actual": "$10.5m, up 10.7%",
+      "expected": "",
+      "verdict": "",
+      "result": "Recurring SaaS revenue from the PowerTrack platform."
+     },
+     {
+      "name": "GAAP gross profit",
+      "actual": "$13.9m, a gross margin of 41%",
+      "expected": "",
+      "verdict": "",
+      "result": "Up from 33%. Non-GAAP gross margin 55%, from 49%."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$6.2m",
+      "expected": "",
+      "verdict": "",
+      "result": "From $3.8m."
+     },
+     {
+      "name": "Net loss",
+      "actual": "$(14.4)m; basic loss per share $(1.58)",
+      "expected": "$(1.76) (Zacks) / $(1.79) (Investing.com)",
+      "verdict": "beat",
+      "result": "The prior-year quarter's $202.5m of net income was the debt-extinguishment gain, so the year-on-year net line is not comparable. Weighted-average basic shares 9,110,452 — post the 1-for-20 reverse split of 2025-06-23. On earnings per share the panels agree: a beat on both, by $0.18 and $0.21 respectively. The pattern across every print since Q4 2025 is the same — Stem beats on earnings and margin and misses or splits on revenue, and the market trades the revenue line.",
+      "kpi": "net-income",
+      "usdMillions": -14.4,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Bookings",
+      "actual": "$36.8m, up 7.3%",
+      "expected": "",
+      "verdict": "",
+      "result": "Contracted backlog $27.1m against $26.8m."
+     }
+    ]
+   },
+   {
+    "period": "H1 2026 (six months ended 2026-06-30)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "commentary": "Half-year framing of the same picture, plus the balance sheet that constrains it. Cash fell $10.5m to $38.4m, stockholders' deficit widened to $270.0m, and share count rose 13% in six months. Management states the cash position is sufficient for at least the next twelve months and the filing carries no going-concern qualification.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$62.7m, down 11.6% from $70.9m",
+      "expected": "",
+      "verdict": "",
+      "result": "Core lines $49.8m, up 11.0%; managed services $12.6m, down 21.7%; battery hardware resale $0.3m, down from $10.0m. United States $60.0m of $62.7m — 95.7%.",
+      "kpi": "revenue",
+      "usdMillions": 62.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP gross profit",
+      "actual": "$24.7m, a gross margin of 40%",
+      "expected": "",
+      "verdict": "",
+      "result": "From 33%. Non-GAAP gross margin 54%, from 47%."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$8.2m",
+      "expected": "",
+      "verdict": "",
+      "result": "From $(0.8)m."
+     },
+     {
+      "name": "Net loss",
+      "actual": "$(33.3)m; basic loss per share $(3.78)",
+      "expected": "",
+      "verdict": "",
+      "result": "Research and development fell 38.9% to $13.0m and general and administrative fell 24.9% to $16.9m; sales and marketing was held flat at $14.0m.",
+      "kpi": "net-income",
+      "usdMillions": -33.3,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Cash and cash equivalents at period end",
+      "actual": "$38.4m, from $48.9m at 2025-12-31",
+      "expected": "",
+      "verdict": "",
+      "result": "Operating cash outflow $8.0m against $12.7m a year earlier; $5.6m raised under an at-the-market equity programme; cash interest paid $18.4m."
+     },
+     {
+      "name": "Total stockholders' deficit at period end",
+      "actual": "$(270.0)m",
+      "expected": "",
+      "verdict": "",
+      "result": "Total assets $279.8m against total liabilities $549.8m; accumulated deficit $1,522.1m; negative working capital $18.2m."
+     },
+     {
+      "name": "Debt outstanding at period end",
+      "actual": "2028 Convertible Notes $68.2m principal at 0.50%, maturing 2028-12-01; 2030 Convertible Notes $118.7m principal at 4.25%, maturing 2030-04-01; 2030 Senior Secured PIK Toggle Notes $160.0m principal — $155.4m issued plus $4.6m of paid-in-kind interest — at 12.0% if paid in kind or 11.0% in cash, maturing 2030-12-30",
+      "expected": "",
+      "verdict": "",
+      "result": "Total principal about $347m against $279.8m of total assets. The company ELECTED to pay in kind on 1 January 2026, choosing 12% accretion over an 11% cash outflow — the clearest statement in the filings about how tight cash is. The 2030 Convertible Notes were marked at a fair value of $46.3m against $118.7m of principal, about 39 cents on the dollar; the senior secured notes at $145.8m on a Level 3 lattice model. Post-split conversion prices are $584.86 for the 2028 notes and $142.55 for the 2030 notes, both far out of the money, so neither is a dilution risk. The senior notes are secured by a first-priority lien on substantially all assets and are callable at 105.0% through 2027, 102.5% in 2028 and par from 2029."
+     },
+     {
+      "name": "Shares outstanding",
+      "actual": "9,607,873 at 2026-06-30, from 8,489,540 at 2025-12-31; 9,626,744 at 2026-08-05",
+      "expected": "",
+      "verdict": "",
+      "result": "A 13.2% increase in six months, from at-the-market issuance, stock compensation and the raicoon consideration."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that Stem's falling revenue and Stem's business are two different events, and that any reading of the top line alone inverts the picture. Basis: the FY2025 10-K's own product-line table. Battery hardware resale went $360.2m in FY2023 to $31.3m in FY2024 to $14.8m in FY2025 to $0.286m in the whole of H1 2026 — a 96% collapse in the line that was 78% of FY2023 revenue. Over the same period PowerTrack software, edge hardware and professional services together went $76.0m to $89.9m to $111.2m, and grew a further 11.0% year on year in H1 2026. GAAP gross margin swung from minus 8% to 38%; adjusted EBITDA from minus $22.8m to plus $6.7m and then plus $8.2m in the half. The company is smaller and, on every operating measure, better.",
+  "2. **(High confidence)** We assess that Stem is an incumbent of solar and hybrid asset-performance management and a present-but-unranked participant in storage market bidding, and that the two must not be averaged into one verdict. Basis: 38.3 GW of solar operating assets under management against 1.8 GWh of storage at 2026-06-30, the storage figure flat since 2024 while solar grew 28%. The only third-party rank located is Guidehouse Insights' first place for AlsoEnergy in Solar and Storage Monitoring and Control — dated 2 August 2022 and still the company's most recent accolade. Stem appears on none of Guidehouse's 2024 VPP, Grid DERMS or grid-edge DERMS leaderboards and is not named in S&P Global Commodity Insights' 2026 Tier 1 cleantech list. Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that it delivers qualified-scheduling-entity services through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus. **One recent counter-datum, and it points at the newest product rather than the fleet:** PowerTrack EMS won The smarter E AWARD 2026 in the Smart Integrated Energy category, announced in Munich on 1 July 2026 — the only contemporary third-party recognition located, and evidence that the EMS launched in September 2025 is being judged on its merits even while the company is absent from the analyst leaderboards. **Collection gap:** Wood Mackenzie's 'Global BESS software landscape 2026' is the one source that would place Stem against its peers on the record and it is paywalled; this judgment rests on the rankings that were reachable, not on all rankings that exist.",
+  "3. **(High confidence)** We assess that the business which survived is the one Stem bought, not the one Stem listed with. Basis: four independent markers point the same way. The acquired platform's name became the suite name when Athena was rebranded to PowerTrack Optimizer in September 2024; the acquired company's chief financial officer became Stem's chief financial officer in July 2025; every unit of fleet growth is on the solar side the acquisition brought, 29.9 GW to 38.3 GW, while the storage side Stem built organically has not grown in two years; and the 10-K states that before the AlsoEnergy acquisition Stem 'operated in only three countries' against more than 50 now. The de-SPAC identity — an AI storage optimiser called Athena — no longer appears in the company's filings at all.",
+  "4. **(Moderate confidence)** We assess that the recurring-revenue engine has stalled at the moment the pivot was supposed to begin paying. Basis: ARR grew 15.7% in FY2025 to $61.1m, then approximately 2% sequentially in each of the next two quarters — $61.2m at Q1 2026 and $62.4m at Q2 2026. CARR is flat year on year at $69.0m against $69.2m, so the contracted-but-not-yet-operating pipeline narrowed from $11.7m to $6.6m rather than filling. Remaining performance obligations fell from $382.6m to $366.6m in six months. Guidance for year-end ARR of $65–70m therefore requires an acceleration that two consecutive quarters have not shown. Confidence is moderate rather than high because the series is short and because CARR, bookings and contracted backlog were all redefined from Q1 2025, so the pre-2025 comparison is not like-for-like.",
+  "5. **(Moderate confidence)** We assess that the binding constraint on this company is the balance sheet rather than the product. Basis: total stockholders' deficit of $270.0m at 2026-06-30, with $549.8m of liabilities against $279.8m of assets and an accumulated deficit of $1,522.1m; $38.4m of cash against $18.4m of cash interest paid in the same six months; roughly $347m of principal across three instruments — $68.2m, $118.7m and $160.0m, of which the $155.4m secured tranche pays itself in kind and had accreted $4.6m by June. The 2030 convertible notes are marked at a fair value of $46.3m against $118.7m of principal — about 39 cents on the dollar, which is the market's own statement about recovery. The $30m at-the-market programme established in March 2026 modelled 2.46m new shares at $12.18; at the 8 September 2026 price of $5.64 the same authorisation would issue roughly 5.3m against 9.6m outstanding. Against all of that, management states cash is sufficient for at least twelve months and the Q2 2026 10-Q carries no going-concern qualification — which is why this is a constraint judgment and not a solvency one.",
+  "6. **(High confidence)** We assess that Stem is not an AI-data-centre story, and that any framing placing it in the data-centre power trade is wrong. Basis: no data-centre product, contract or revenue exists in any source located. The single mention anywhere is one sentence by the chief executive on the Q1 2026 call — 'we are exploring how our core strength in energy optimization software and deep energy market expertise can support data center developers and operators as they navigate rising power costs' — with no product, pilot, counterparty, timeline or revenue attached. It was not repeated on the Q2 2026 call, where neither covering analyst raised the subject and management's demand commentary pointed to Chile, Colombia and Europe. AIONA, launched 17 June 2026, is an AI professional-services practice sold to energy organisations, not a data-centre offering. This dossier records the aspiration and states that it is one.",
+  "7. **(Low confidence)** We assess that whether the exit from battery hardware resale was chosen or forced cannot be settled on the public record, and we decline to characterise it. Basis: the company has never announced an exit; the line simply stopped being written. What is documented around it is uniformly adverse — FY2024 revenue guidance cut twice from $567–667m to $135–155m with adjusted-EBITDA guidance withdrawn rather than reset, a $104.1m bad-debt charge on contracts carrying parent-company guarantees, a $38.7m negative revenue adjustment on hardware price guarantees the company stopped writing in June 2023, a $547.2m goodwill impairment, and a formal strategic review announced on 6 August 2024 that was never reported as concluding in anything. A deliberate asset-light turn and a hardware business that failed and was rationalised afterwards fit every figure located equally well. **Collection gap:** no source located distinguishes them, and no SC 13D has ever been filed against this registrant, so the reading that an activist forced it is affirmatively excluded.",
+  "8. **(Moderate confidence)** We assess that the market prices this company on revenue and ignores its profitability, and that the gap is now the dominant fact about the equity. Basis: the pattern is consistent across four consecutive prints — an earnings and margin beat with a revenue miss or split. Q1 2026 missed revenue by 22% against the Zacks panel and beat on earnings per share; the shares fell about 26%. Q2 2026 beat earnings on both published panels and the shares still fell 7.47% intraday. Reaffirming FY2026 guidance of $140–190m was read negatively because its midpoint sits below the $158.1m consensus Investing.com carried. Six analysts rate the stock Hold at an average target of $7.45 against $5.64 on 8 September 2026, and every target was cut between 30% and 56% in the week after the Q2 print, with no upgrades. **Two collection gaps qualify this.** First, the published consensus panels disagree materially: Zacks put Q2 2026 revenue consensus at $31.62m, making the print a 6.50% beat, while Investing.com put it at $36.76m, making it a roughly $3.1m miss — a 16% spread on five to seven analysts, and no source reconciles them. Second, no full-year published consensus for FY2024 or FY2025 was located, so no annual beat-or-miss verdict is stated in this dossier.",
+  "9. **(Moderate confidence)** We assess that Stem's disappearance from the storage trade press is itself a finding, and one a reader should weigh against the improving financials. Basis: Energy-Storage.news, which covered essentially every prior Stem quarter — 2023-02-17, 2023-08-07, 2023-11-22, 2024-05-09, 2024-08-07, 2024-09-18, 2024-10-10, 2024-10-31, 2025-05-05 — has published nothing on the company since 5 May 2025, and Utility Dive nothing substantive since 4 November 2024. Every 2026 customer announcement located reached the record through the company's own newsroom; the only genuinely third-party 2026 story found was pv magazine USA's coverage of the raicoon acquisition. The relocation of the headquarters from San Francisco to Houston was never announced at all and is visible only as a change of address between two 10-Q cover pages. This is an absence-based judgment and is stated as such: it establishes that salience fell, not that the business did — and one datum cuts against it, since The smarter E AWARD 2026 was a European industry jury reaching the opposite conclusion about the newest product in the same period."
+ ],
+ "sources": [
+  {
+   "label": "Stock Analysis — Stem analyst coverage, price targets and forward estimates (aggregator-only for the consensus figures)",
+   "url": "https://stockanalysis.com/stocks/stem/forecast/",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "Stem — Insight: Multi-Mode Revenue Stacking, why single-function EMS platforms leave money on the table",
+   "url": "https://www.stem.com/insights-library/",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "Defense World — Stem receives a $7.45 average target price from analysts (aggregator-only)",
+   "url": "https://www.defenseworld.net/2026/08/24/stem-inc-nysestem-receives-7-45-average-target-price-from-analysts.html",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "SEC — Stem Form 10-Q for the quarter ended 2026-06-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000081/stem-20260630.htm",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Stem IR — Q2 2026 results",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/215/stem-announces-second-quarter-2026-results",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Stem IR — PowerTrack EMS enables hybridisation of two operating utility-scale solar plants in Hungary (Solarmarkt Group)",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/214/stems-powertrack-ems-enables-hybridization-of-two-operating-utility-scale-solar-plants-in-hungary",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "SEC — Stem Q2 2026 earnings release (Exhibit 99)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000078/exhibit99-8xkx20260812xq22.htm",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Investing.com — Stem Q2 2026 earnings call transcript, guidance against consensus and share reaction",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-stem-tops-eps-view-in-q2-2026-as-stock-rebounds-93CH-4856340",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Stem Q2 2026 against the Zacks consensus panel",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stem-inc-stem-reports-q2-214005110.html",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Stem IR — PowerTrack EMS wins The smarter E AWARD 2026 for Smart Integrated Energy",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/212/stem-wins-the-smarter-e-award-2026-for-powertrack-energy-management-system",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "SEC — Stem 424B5 registering resale of raicoon consideration shares",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000074/a424braicoonprosupp.htm",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Stem IR — AIONA launch, a dedicated AI services offering",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/211/stem-launches-aiona-a-dedicated-ai-services-offering-built-for-operational-impact",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "SEC — Stem 8-K: 2026 annual meeting results, equity plan amendment and auditor ratification",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000059/stem-20260603.htm",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "Stem IR — Copec Flux brings PowerTrack EMS to Granja Solar, Chile",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/210/stem-brings-powertrack-ems-to-latin-americas-utility-scale-hybrid-market-with-granja-solar-project-in-chile",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Stem IR — Bluesphere Ventures selects Stem for New York VDER storage advisory",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/209/bluesphere-ventures-selects-stem-for-new-york-vder-storage-advisory",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "SEC — Stem Form 10-Q for the quarter ended 2026-03-31",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000045/stem-20260331.htm",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "Stem IR — Q1 2026 results",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/208/stem-announces-first-quarter-2026-results",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Stem Q1 2026 revenue miss and EPS beat",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stem-inc-stem-reports-q1-223009131.html",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Stem IR — agreement with Nuvation Energy for a North-American-made BESS control solution",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/207/stem-and-nuvation-energy-enter-into-agreement-to-deliver-north-american-made-bess-control-solution",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "pv magazine USA — Stem acquires raicoon to automate solar asset monitoring",
+   "url": "https://pv-magazine-usa.com/2026/04/28/stem-acquires-raicoon-to-automate-solar-asset-monitoring/",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "Stem IR — Stem acquires raicoon to expand PowerTrack capabilities",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/206/stem-acquires-raicoon-to-expand-powertrack-capabilities",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "SEC — Stem DEF 14A, 2026 proxy statement",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000037/stem-20260424.htm",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "SEC — Stem 8-K: Deloitte dismissed, RSM US LLP engaged as auditor",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000031/stem-20260312.htm",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "SEC — Stem 424B5 prospectus supplement for the $30m at-the-market programme with Jefferies",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000023/stem2026atm-prospectussupp.htm",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "SEC — Stem Form 10-K for the year ended 2025-12-31",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876626000016/stem-20251231.htm",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "Stem IR — Q4 and full-year 2025 results",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/86/stem-announces-fourth-quarter-and-full-year-2025-results",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "Stem IR — PowerTrack EMS selected for 100 MWh of utility-scale storage in Germany (Everyray)",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/87/stems-powertrack-ems-selected-for-100-mwh-of-utility-scale-energy-storage-projects-in-germany",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "Investing.com — Stem Q4 2025 slides: first profitable year, software pivot succeeds",
+   "url": "https://www.investing.com/news/company-news/stem-q4-2025-slides-first-profitable-year-software-pivot-succeeds-93CH-4542576",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "SEC — Stem 8-K: securities class action dismissed with prejudice (N.D. Cal., 2025-12-17)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000085/stem-20251217.htm",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "SEC — Stem 8-K: chief accounting officer transition, Shukla out and Cabot in",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000081/stem-20251211.htm",
+   "date": "2025-12-16"
+  },
+  {
+   "label": "Stem IR — operating and optimising a storage portfolio for a Southern California utility",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/89/stem-partners-with-clean-energy-asset-owner-to-operate-and-optimize-energy-storage-portfolio-for-southern-california-utility",
+   "date": "2025-12-09"
+  },
+  {
+   "label": "SEC — Stem 8-K: chief executive appointed to the board, expanding it to eight",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000076/stem-20251201.htm",
+   "date": "2025-12-03"
+  },
+  {
+   "label": "SEC — Stem Form 10-Q for the quarter ended 2025-09-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000066/stem-20250930.htm",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Stem — PowerTrack EMS Solution Technical Overview handout (PDF)",
+   "url": "https://www.stem.com/wp-content/uploads/2025/10/Stem.PowerTrackEMSTechnicalOverview.Handout.100225.pdf",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Stem — PowerTrack Software Overview handout (PDF)",
+   "url": "https://www.stem.com/wp-content/uploads/2025/10/Stem.PowerTrack.Software-Overview.Handout.101625.pdf",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Stem IR — Q3 2025 results",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/91/stem-announces-third-quarter-2025-results",
+   "date": "2025-10-29"
+  },
+  {
+   "label": "SEC — Stem 8-K: bylaw amendment reducing the quorum requirement to one third",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000061/stem-20251015.htm",
+   "date": "2025-10-16"
+  },
+  {
+   "label": "Stem IR — European operations expanded, Berlin designated the European competence centre",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/92/stem-expands-its-european-operations-as-demand-surges-for-solar-storage-and-hybrid-energy-solutions",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "Stem — PowerTrack EMS Solution Brochure (PDF)",
+   "url": "https://www.stem.com/wp-content/uploads/2025/09/PowerTrack-EMS-Solution-Brochure_092425.pdf",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "SEC — Stem letter to shareholders on the strategic realignment (Exhibit 99)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000045/exhibit99-ceoletter.htm",
+   "date": "2025-09-09"
+  },
+  {
+   "label": "Stem — PowerTrack Logger data sheet (PDF)",
+   "url": "https://www.stem.com/wp-content/uploads/2025/09/090325_PowerTrack-Logger-Data-Sheet_V4.pdf",
+   "date": "2025-09-09"
+  },
+  {
+   "label": "Stem — Managed Services brochure (PDF)",
+   "url": "https://www.stem.com/wp-content/uploads/2025/09/Managed-Services-Brochure_Brochure_V5.pdf",
+   "date": "2025-09-09"
+  },
+  {
+   "label": "Stem IR — Athena rebranded to PowerTrack Optimizer",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/95/stem-unveils-powertrack-optimizer-flagship-enterprise-platform-powering-managed-services-strategically-rebranded-to-integrate-into-comprehensive-product-stack",
+   "date": "2025-09-05"
+  },
+  {
+   "label": "Stem IR — PowerTrack EMS launched for standalone and hybrid storage control",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/96/stem-launches-powertrack-ems-expanding-global-product-suite-for-standalone-and-hybrid-energy-storage-control",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "SEC — Stem Form 10-Q for the quarter ended 2025-06-30 (first filing showing the Houston address)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000027/stem-20250630.htm",
+   "date": "2025-08-08"
+  },
+  {
+   "label": "Stem IR — Q2 2025 results",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/97/stem-announces-second-quarter-2025-results",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "Stem IR — new chief financial officer appointed",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/100/stem-appoints-new-chief-financial-officer",
+   "date": "2025-07-02"
+  },
+  {
+   "label": "Stem IR — balance sheet strengthened through the convertible notes exchange and new notes issuance",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/101/stem-inc-significantly-strengthens-balance-sheet-through-convertible-notes-exchange-and-new-notes-issuance",
+   "date": "2025-06-30"
+  },
+  {
+   "label": "SEC — Stem 8-K: reverse stock split, Items 3.03 and 5.03",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000020/stem-20250611.htm",
+   "date": "2025-06-16"
+  },
+  {
+   "label": "Stem IR — 1-for-20 reverse stock split announced",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/103/stem-inc-announces-1-for-20-reverse-stock-split",
+   "date": "2025-06-11"
+  },
+  {
+   "label": "SEC — Stem Form 10-Q for the quarter ended 2025-03-31 (last filing showing the San Francisco address)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000012/stem-20250331.htm",
+   "date": "2025-04-30"
+  },
+  {
+   "label": "San Francisco Examiner — Stem to close its San Francisco headquarters and cut a quarter of staff",
+   "url": "https://www.sfexaminer.com/news/technology/green-tech-company-stem-to-close-sf-hq-cut-quarter-of-staff/article_e4610e41-5125-4958-bc06-4b406ed24e35.html",
+   "date": "2025-04-17"
+  },
+  {
+   "label": "Modo Energy — directory of US battery energy storage optimizers and operators",
+   "url": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+   "date": "2025-04-16"
+  },
+  {
+   "label": "SEC — Stem 8-K: workforce reduction of about 27%, Items 2.05 and 8.01",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000119312525079764/d946758d8k.htm",
+   "date": "2025-04-14"
+  },
+  {
+   "label": "Stem IR — software and finance veterans appointed to the board",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/107/stem-appoints-software-and-finance-veterans-to-board-of-directors",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "SEC — Stem Form 10-K for the year ended 2024-12-31",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876625000005/stem-20241231.htm",
+   "date": "2025-03-05"
+  },
+  {
+   "label": "Energy-Storage.news — Stem revenue down 69% in 2024 amid the strategic shift away from battery hardware",
+   "url": "https://www.energy-storage.news/stem-revenue-down-69-in-2024-amid-strategic-shift-away-from-battery-hardware/",
+   "date": "2025-03-05"
+  },
+  {
+   "label": "Stem IR — PowerTrack standard on Summit Ridge Energy's 514 MW commercial solar portfolio",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/108/stems-powertrack-standard-on-summit-ridge-energys-514-mw-commercial-solar-portfolio",
+   "date": "2025-03-04"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Stem Q4 2024 results against consensus (pre-split per-share figures)",
+   "url": "https://finance.yahoo.com/news/stem-inc-stem-reports-q4-232002696.html",
+   "date": "2025-03-04"
+  },
+  {
+   "label": "Stem — SaaS terms of service (PDF)",
+   "url": "https://www.stem.com/wp-content/uploads/2025/01/2025.1.21-SaaS-Terms-of-Service.pdf",
+   "date": "2025-01-23"
+  },
+  {
+   "label": "Stem IR — Arun Narayanan named chief executive",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/111/stem-names-software-veteran-arun-narayanan-as-chief-executive-officer",
+   "date": "2025-01-16"
+  },
+  {
+   "label": "Stem IR — 484 MW Hungarian solar portfolio for Neovolt, the largest EMEA software deal",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/112/stem-to-support-484-mw-hungarian-solar-portfolio-in-companys-largest-software-deal-in-emea",
+   "date": "2025-01-14"
+  },
+  {
+   "label": "Stem IR — PowerBidder Pro selected for a second Mercuria Energy Trading ERCOT asset",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/113/stems-ai-enabled-powerbidder-pro-to-help-drive-returns-for-second-asset-in-mercuria-energy-trading-ercot-portfolio",
+   "date": "2024-12-17"
+  },
+  {
+   "label": "Utility Dive — Stem third-quarter earnings, strategy, solar and battery",
+   "url": "https://www.utilitydive.com/news/stem-third-quarter-earnings-strategy-solar-battery/731878/",
+   "date": "2024-11-04"
+  },
+  {
+   "label": "Energy-Storage.news — Stem revenue and bookings plummet but margins rise as it shifts to software and services",
+   "url": "https://www.energy-storage.news/stem-inc-revenue-and-bookings-plummet-but-margins-up-as-it-shifts-to-software-and-services/",
+   "date": "2024-10-31"
+  },
+  {
+   "label": "SEC — Stem Q3 2024 earnings release (Exhibit 99): second guidance cut and the parent-company-guarantee charge",
+   "url": "https://www.sec.gov/Archives/edgar/data/1758766/000175876624000174/exhibit99-8xkx20241030xq32.htm",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "Stem IR — new software and services-centric strategy announced",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/116/stem-announces-new-software-and-services-centric-strategy-to-drive-scalable-growth-and-profitability",
+   "date": "2024-10-01"
+  },
+  {
+   "label": "Energy-Storage.news — SPAC firms: Stem chief executive steps down",
+   "url": "https://www.energy-storage.news/spac-firms-stem-inc-ceo-steps-down-energy-vault-warned-over-share-price/",
+   "date": "2024-09-18"
+  },
+  {
+   "label": "Stem IR — chief executive transition announced",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/118/stem-announces-ceo-transition",
+   "date": "2024-09-16"
+  },
+  {
+   "label": "Stem IR — continued listing standard notice received from the NYSE",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/119/stem-inc-receives-continued-listing-standard-notice-from-nyse",
+   "date": "2024-08-30"
+  },
+  {
+   "label": "Energy-Storage.news — Stem slashes full-year guidance and launches a strategic review",
+   "url": "https://www.energy-storage.news/stem-inc-slashes-fy-guidance-launches-strategic-review-after-plummeting-sales-and-bookings/",
+   "date": "2024-08-07"
+  },
+  {
+   "label": "Stem IR — Stem, Regis Energy Partners and Excelsior Energy Capital announce a $400m portfolio of Texas energy-storage projects",
+   "url": "https://investors.stem.com/news-events/press-releases/detail/159/stem-regis-energy-partners-and-excelsior-energy-capital-announce-400m-portfolio-of-energy-storage-projects-in-texas",
+   "date": "2022-12-12"
+  },
+  {
+   "label": "Business Wire — Stem's AlsoEnergy ranked first in solar and storage monitoring and control by Guidehouse Insights",
+   "url": "https://www.businesswire.com/news/home/20220802005449/en/Stem%E2%80%99s-AlsoEnergy-Ranked-1-in-Solar-and-Storage-Monitoring-and-Control-by-Guidehouse-Insights",
+   "date": "2022-08-02"
+  },
+  {
+   "label": "Stem — PowerTrack Software product page",
+   "url": "https://www.stem.com/products/powertrack-suite/powertrack-software/"
+  },
+  {
+   "label": "Stem — PowerTrack EMS product page",
+   "url": "https://www.stem.com/products/powertrack-suite/powertrack-ems/"
+  },
+  {
+   "label": "Stem — PowerTrack Optimizer product page (formerly Athena)",
+   "url": "https://www.stem.com/products/powertrack-suite/powertrack-optimizer/"
+  },
+  {
+   "label": "Stem — PowerTrack Power Plant Controller product page, with the twelve-mode control matrix",
+   "url": "https://www.stem.com/products/powertrack-suite/powertrack-ppc/"
+  },
+  {
+   "label": "Stem — PowerTrack SCADA product page",
+   "url": "https://www.stem.com/products/powertrack-suite/powertrack-scada/"
+  },
+  {
+   "label": "Stem — PowerTrack Logger product page",
+   "url": "https://www.stem.com/products/powertrack-suite/powertrack-logger/"
+  },
+  {
+   "label": "Stem — Managed Services page",
+   "url": "https://www.stem.com/managed-services/"
+  },
+  {
+   "label": "Stem — Project Delivery page",
+   "url": "https://www.stem.com/project-delivery/"
+  },
+  {
+   "label": "Stem — DAS and SCADA hardware solutions catalogue",
+   "url": "https://www.stem.com/das-and-scada-solutions/"
+  },
+  {
+   "label": "Stem — AI Services (AIONA) page",
+   "url": "https://www.stem.com/ai-services/"
+  },
+  {
+   "label": "Stem — About Stem, with the 'Stem by the Numbers' panel",
+   "url": "https://www.stem.com/about-stem/"
+  },
+  {
+   "label": "Stem — Leadership page (executive team and board)",
+   "url": "https://www.stem.com/leadership/"
+  },
+  {
+   "label": "Stem investor relations — IR calendar (no Q3 2026 date announced as of 2026-09-09)",
+   "url": "https://investors.stem.com/news-events/ir-calendar"
+  },
+  {
+   "label": "SEC EDGAR — Stem, Inc. entity submissions index, CIK 0001758766",
+   "url": "https://data.sec.gov/submissions/CIK0001758766.json"
+  },
+  {
+   "label": "Fluence — Mosaic intelligent bidding software product page",
+   "url": "https://fluenceenergy.com/mosaic-intelligent-bidding-software/"
+  },
+  {
+   "label": "Utility Dive — Stem and ENGIE North America partner to integrate storage management and EV charging",
+   "url": "https://www.utilitydive.com/news/stem-engie-north-america-partner-to-integrate-storage-management-and-ev-ch/616730/"
+  },
+  {
+   "label": "Stanford Securities Class Action Clearinghouse — Stem, Inc. (f/k/a Star Peak Energy Transition Corp.), case 108152",
+   "url": "https://securities.stanford.edu/filings-case.html?id=108152"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}

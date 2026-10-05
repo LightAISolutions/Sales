@@ -74,13 +74,13 @@
       "hq": "Zurich, Switzerland",
       "ticker": "SIX: ABBN",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "global.abb",
         "abb.com"
       ],
-      "srcTotal": 19,
-      "srcFirstPct": 68,
+      "srcTotal": 21,
+      "srcFirstPct": 62,
       "kpiNorm": true,
       "segments": [
         {
@@ -107,7 +107,7 @@
       "hq": "Columbus, OH, USA",
       "ticker": "NASDAQ: AEP",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "aep.com",
         "docs.aep.com",
@@ -120,8 +120,8 @@
         "swepco.com",
         "aepenergy.com"
       ],
-      "srcTotal": 143,
-      "srcFirstPct": 50,
+      "srcTotal": 144,
+      "srcFirstPct": 51,
       "kpiNorm": true,
       "segments": [
         {
@@ -594,7 +594,7 @@
       "hq": "Des Moines, IA, USA",
       "ticker": null,
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "aka": [
         "BHE",
         "Berkshire Hathaway Energy Company",
@@ -630,7 +630,7 @@
         "bherenewables.com",
         "northernnaturalgas.com"
       ],
-      "srcTotal": 88,
+      "srcTotal": 89,
       "srcFirstPct": 40,
       "kpiNorm": true,
       "segments": [
@@ -685,7 +685,7 @@
       "hq": "New York, NY, United States",
       "ticker": "NYSE: BLK",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "aka": [
         "BlackRock, Inc.",
         "BlackRock Inc.",
@@ -776,11 +776,11 @@
       "hq": "Avon, MN, US",
       "ticker": "NYSE: PWR (parent Quanta)",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "blattnercompany.com"
       ],
-      "srcTotal": 21,
+      "srcTotal": 23,
       "srcFirstPct": 52,
       "kpiNorm": false,
       "segments": [
@@ -1300,11 +1300,11 @@
       "hq": "Livingston, NJ, USA",
       "ticker": "NASDAQ: CRWV",
       "status": "active",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "coreweave.com"
       ],
-      "srcTotal": 24,
+      "srcTotal": 26,
       "srcFirstPct": 50,
       "kpiNorm": true,
       "segments": [
@@ -1388,7 +1388,7 @@
       "hq": "Toronto, Canada",
       "ticker": "Crown corporation (no listed equity)",
       "status": "active",
-      "lastUpdated": "2026-10-03",
+      "lastUpdated": "2026-10-04",
       "aka": [
         "Canada Pension Plan Investment Board",
         "CPPIB",
@@ -1456,12 +1456,12 @@
       "tagline": "The energy-first AI factory builder — Abilene 1.2 GW for OpenAI/Oracle (618 MW delivered), Google's Armstrong County campus, '6GW+' contracted and '$140B+' TCV by its count; USD 3.9bn Series F at USD 30.9bn post (Sep 2026); ClusterMAX 3.0 Bronze; the Boom turbine order dropped.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "crusoe.ai"
       ],
-      "srcTotal": 33,
-      "srcFirstPct": 52,
+      "srcTotal": 34,
+      "srcFirstPct": 53,
       "kpiNorm": false,
       "segments": [
         {
@@ -1734,12 +1734,12 @@
       "tagline": "The technical builder of Stargate Abilene — self-performing GC with ~6,000 craft workers and prefab on 90%+ of new work; ENR #7 at $14.0B with $26.1B of new contracts booked.",
       "hq": "Redwood City, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "dpr.com"
       ],
-      "srcTotal": 30,
-      "srcFirstPct": 43,
+      "srcTotal": 32,
+      "srcFirstPct": 44,
       "kpiNorm": false,
       "segments": [
         {
@@ -2430,12 +2430,12 @@
       "hq": "Arlington, VA, USA",
       "ticker": "NASDAQ: FLNC",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "fluenceenergy.com"
       ],
-      "srcTotal": 34,
-      "srcFirstPct": 62,
+      "srcTotal": 35,
+      "srcFirstPct": 60,
       "kpiNorm": true,
       "segments": [
         {
@@ -2527,7 +2527,7 @@
       "tagline": "Abu Dhabi AI group whose Khazna unit is the UAE's dominant data-centre landlord (~650 MW, 73% share) and the builder of the 1 GW Stargate UAE for OpenAI and Oracle; Core42 is its neocloud; licence-free US chip access expires 6 Apr 2027 unless it becomes a US company; a Khazna–Siemens 800 VDC memorandum, no award",
       "hq": "Abu Dhabi, United Arab Emirates",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "aka": [
         "Group 42",
         "Group 42 Holding Ltd",
@@ -2558,8 +2558,8 @@
         "core42.ai",
         "presight.ai"
       ],
-      "srcTotal": 57,
-      "srcFirstPct": 56,
+      "srcTotal": 58,
+      "srcFirstPct": 55,
       "kpiNorm": false,
       "segments": [
         {
@@ -2646,14 +2646,14 @@
       "hq": "Mountain View, CA, USA",
       "ticker": "NASDAQ: GOOGL",
       "status": "active",
-      "lastUpdated": "2026-09-07",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "abc.xyz",
         "google",
         "google.com"
       ],
-      "srcTotal": 43,
-      "srcFirstPct": 58,
+      "srcTotal": 44,
+      "srcFirstPct": 57,
       "kpiNorm": true,
       "segments": [
         {
@@ -3357,7 +3357,7 @@
         "iren.com",
         "iren.gcs-web.com"
       ],
-      "srcTotal": 39,
+      "srcTotal": 40,
       "srcFirstPct": 62,
       "kpiNorm": true,
       "segments": [
@@ -3466,12 +3466,12 @@
       "tagline": "The power picks-and-shovels of the AI boom — ~11 GW of gas EPC (Homer City 4.5 GW), completed HVDC (CHPE), and the Oklo SMR constructor seat; employee-owned at ENR #4.",
       "hq": "Omaha, NE, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "kiewit.com"
       ],
-      "srcTotal": 30,
-      "srcFirstPct": 20,
+      "srcTotal": 31,
+      "srcFirstPct": 23,
       "kpiNorm": false,
       "segments": [
         {
@@ -3903,14 +3903,14 @@
       "hq": "Menlo Park, CA, USA",
       "ticker": "NASDAQ: META",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "meta.com",
         "fb.com",
         "atmeta.com"
       ],
-      "srcTotal": 23,
-      "srcFirstPct": 43,
+      "srcTotal": 24,
+      "srcFirstPct": 46,
       "kpiNorm": true,
       "segments": [
         {
@@ -3928,7 +3928,7 @@
       "tagline": "Abu Dhabi's state-backed AI investment vehicle (Mubadala and G42 founding partners; chaired by Sheikh Tahnoon bin Zayed) — USD 49bn Fund I, Stargate initial equity funder, AIP co-founder and owner of Aligned Data Centers, repeat investor in OpenAI, Anthropic and xAI.",
       "hq": "Abu Dhabi, United Arab Emirates",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "mgx.ae"
       ],
@@ -4347,7 +4347,7 @@
       "tagline": "Microsoft- and Anthropic-anchored European neocloud that owns its ground — S-1 of 18 Sep 2026: USD 103.4bn contracted TCV (Microsoft up to USD 43.8bn, Anthropic up to USD 44.6bn) on USD 140.6M H1 2026 revenue and a USD 1.02bn loss; 1 GW of 1.37 GW owned; USD 3.1bn+ convertible notes; NYSE 'NSCL' unpriced; ClusterMAX 3.0 'Unavailable'.",
       "hq": "London, United Kingdom",
       "status": "active",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "nscale.com",
         "docs.nscale.com"
@@ -4388,12 +4388,12 @@
       "hq": "Santa Clara, CA, USA",
       "ticker": "NASDAQ: NVDA",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "nvidia.com"
       ],
-      "srcTotal": 27,
-      "srcFirstPct": 63,
+      "srcTotal": 30,
+      "srcFirstPct": 60,
       "kpiNorm": true,
       "segments": [
         {
@@ -4497,12 +4497,12 @@
       "tagline": "Anchor demand — ~$1.4T / ~30 GW committed against ~0.3 GW operational; the circular-financing debate is, in large part, the OpenAI-solvency debate.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "openai.com"
       ],
-      "srcTotal": 26,
-      "srcFirstPct": 42,
+      "srcTotal": 29,
+      "srcFirstPct": 41,
       "kpiNorm": false,
       "segments": [
         {
@@ -4521,12 +4521,12 @@
       "hq": "Austin, TX, USA",
       "ticker": "NYSE: ORCL",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "oracle.com"
       ],
-      "srcTotal": 25,
-      "srcFirstPct": 36,
+      "srcTotal": 29,
+      "srcFirstPct": 31,
       "kpiNorm": false,
       "segments": [
         {
@@ -4774,7 +4774,7 @@
       "tagline": "American Real Estate Partners' powered-shell and build-to-suit platform: AREP's GP funds put 5–10% into project JVs with Harrison Street (USD 3.2bn), Blue Owl/Chirisa (USD 5bn, CoreWeave at Chesterfield), Provident, Hillwood, Poe and others; one building delivered and sold (ABX-1 to CyrusOne, USD 154.1m); the 1.8 GW Joliet campus annexed 8–1 in March 2026 lost its ComEd transmission security agreement in July and is in litigation.",
       "hq": "McLean, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "powerhousedata.com",
         "americanrepartners.com",
@@ -5198,12 +5198,12 @@
       "tagline": "#2 US electrical contractor (ESOP, $5.6B revenue) — 15+ GW of data-center power built; BESSUPS with FlexGen moves BESS inside the fence.",
       "hq": "San Jose, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "rosendin.com"
       ],
-      "srcTotal": 16,
-      "srcFirstPct": 50,
+      "srcTotal": 17,
+      "srcFirstPct": 53,
       "kpiNorm": false,
       "segments": [
         {
@@ -5344,12 +5344,12 @@
       "hq": "Rueil-Malmaison, France",
       "ticker": "EPA: SU",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "se.com"
       ],
-      "srcTotal": 18,
-      "srcFirstPct": 67,
+      "srcTotal": 19,
+      "srcFirstPct": 63,
       "kpiNorm": true,
       "segments": [
         {
@@ -5440,12 +5440,12 @@
       "hq": "San Diego, CA, US",
       "ticker": "NASDAQ: MWH",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "solvenergy.com"
       ],
-      "srcTotal": 17,
-      "srcFirstPct": 53,
+      "srcTotal": 19,
+      "srcFirstPct": 58,
       "kpiNorm": false,
       "segments": [
         {
@@ -5522,7 +5522,7 @@
       "tagline": "Blue Owl's named-tenant build engine — developer-owner of all three campuses in Amazon's $18B Louisiana program plus the 1 GW+ Stargate 'Project Jupiter'; 13 GW stated pipeline across three ring-fenced regions, ten ABS series since 2019, a reported $30B+ APAC sale in motion.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "stackinfra.com"
       ],
@@ -5546,7 +5546,7 @@
       "hq": "Houston, United States",
       "ticker": "NYSE: STEM",
       "status": "active",
-      "lastUpdated": "2026-09-09",
+      "lastUpdated": "2026-10-04",
       "aka": [
         "Stem",
         "Stem, Inc.",
@@ -5567,7 +5567,7 @@
         "stem.com",
         "alsoenergy.com"
       ],
-      "srcTotal": 90,
+      "srcTotal": 92,
       "srcFirstPct": 80,
       "kpiNorm": true,
       "segments": [
@@ -5720,12 +5720,12 @@
       "tagline": "Patent-moated Tier 5 landlord of the AI-factory era — five US Prime campuses, 2 MW-per-rack EVO halls, a 12 GW Oklo nuclear option and $24B raised since 2024; a confidential S-1 is filed at a reported $50–80B.",
       "hq": "Las Vegas, NV, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "switch.com"
       ],
-      "srcTotal": 43,
-      "srcFirstPct": 79,
+      "srcTotal": 45,
+      "srcFirstPct": 78,
       "kpiNorm": false,
       "segments": [
         {
@@ -5988,12 +5988,12 @@
       "tagline": "ENR's #1 US contractor six years running — data-center revenue tripling toward a $20B-by-2030 target on Meta, CoreWeave, and Stargate mega-campuses; SourceBlue buys the gear.",
       "hq": "New York, NY, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "turnerconstruction.com"
       ],
-      "srcTotal": 25,
-      "srcFirstPct": 32,
+      "srcTotal": 26,
+      "srcFirstPct": 35,
       "kpiNorm": true,
       "segments": [
         {
@@ -6068,12 +6068,12 @@
       "tagline": "The giga-scale Stargate landlord — 41 campuses / ~9 GW on five continents, 1.4 GW Frontier + 902 MW Lighthouse for Oracle/OpenAI behind a record $38B loan; invented the data-center ABS, now reportedly exploring a ~$100B IPO.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-04",
       "domains": [
         "vantage-dc.com"
       ],
-      "srcTotal": 46,
-      "srcFirstPct": 83,
+      "srcTotal": 48,
+      "srcFirstPct": 81,
       "kpiNorm": false,
       "segments": [
         {
@@ -6814,6 +6814,196 @@
         {
           "id": "assurance",
           "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "softbank",
+      "name": "SoftBank",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Tokyo investment holding company (TSE: 9984) that buys power equipment only through SB Energy — the developer and owner of OpenAI's Milam County and 8.0 GW-IT PORTS-Pike campuses, in IPO registration — and, since 30 Sep 2026, owns DigitalBridge, the manager of the funds that control Vantage, Switch and DataBank; ~13% of OpenAI (USD 64.6bn), 86.7% of Arm, Ampere, Graphcore; Stargate's lead financial partner; ABB Robotics signed, not closed",
+      "hq": "Tokyo, Japan",
+      "ticker": "TSE: 9984",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "SoftBank Group Corp.",
+        "SoftBank Group",
+        "SBG",
+        "ソフトバンクグループ",
+        "ソフトバンクグループ株式会社",
+        "SoftBank Corp.",
+        "SoftBank Vision Fund",
+        "SoftBank Vision Fund 2",
+        "Vision Fund",
+        "SVF",
+        "SVF2",
+        "SB Investment Advisers",
+        "SoftBank Investment Advisers",
+        "SB Global Advisers",
+        "SoftBank Group Capital",
+        "SoftBank Group Overseas",
+        "SoftBank Group International",
+        "SBGI",
+        "SB Northstar",
+        "SB OAI Japan",
+        "SB Neo",
+        "Duncan Holdco",
+        "DigitalBridge",
+        "DigitalBridge Group",
+        "Digital Bridge",
+        "Digital Colony",
+        "Colony Capital",
+        "DigitalBridge Partners",
+        "InfraBridge",
+        "DataBank",
+        "Zayo",
+        "AtlasEdge",
+        "Yondr",
+        "Landmark Dividend",
+        "Scala Data Centers",
+        "Vertical Bridge",
+        "Takanock",
+        "Ampere Computing",
+        "Ampere",
+        "Graphcore",
+        "Arm Holdings",
+        "Arm"
+      ],
+      "domains": [
+        "group.softbank",
+        "softbank.jp",
+        "visionfund.com",
+        "digitalbridge.com",
+        "sbenergy.com",
+        "portscampus.com"
+      ],
+      "srcTotal": 74,
+      "srcFirstPct": 78,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "sb-energy",
+      "name": "SB Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "SoftBank-controlled developer and owner of OpenAI-leased AI campuses — Milam County, TX (~753 MW-IT, under construction) and PORTS-Pike, OH (~8.0 GW-IT leased Aug 2026, NVIDIA-guaranteed, not started) — and of ~2.2 GW of operating solar and storage; buys transformers, switchgear, modules and batteries directly (Fluence at Athos); PORTS gas belongs to another SoftBank affiliate; Nasdaq/Nasdaq Texas IPO (SBE) filed, unpriced",
+      "hq": "Redwood City, CA, United States",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "SB Energy, Inc.",
+        "SB Energy Global",
+        "SB Energy Global, LLC",
+        "SB Energy Global Holdings",
+        "SE Global Holdings",
+        "SE Global Holdings, LLC",
+        "SE Global Holdings, Inc.",
+        "SBE Global",
+        "Energy Global, LP",
+        "Energy Global",
+        "SB Energy HoldCo",
+        "SBE",
+        "Studio 151",
+        "Orion Solar Belt",
+        "PORTS-Pike Technology Campus",
+        "PORTS-Pike",
+        "PORTS Technology Campus",
+        "Cosmos Technology Campus",
+        "HighPoint 2222",
+        "Milam County Data Center",
+        "Athos Storage",
+        "Pelicans Jaw",
+        "Pelican's Jaw"
+      ],
+      "domains": [
+        "sbenergy.com",
+        "portscampus.com",
+        "milamdc.com"
+      ],
+      "srcTotal": 32,
+      "srcFirstPct": 44,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "blue-owl",
+      "name": "Blue Owl",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "USD 319bn alternative asset manager (NYSE: OWL) whose funds own STACK (Project Jupiter, Oracle), hold 80% of Meta's Hyperion venture (USD 7.0bn in, ~USD 27bn development cost) and co-sponsor the USD 15bn, 1.2 GW Abilene campus with Crusoe; its credit funds lend against GPUs (IREN USD 2.4bn, Nscale); signs for no equipment itself; shares ~USD 9, down 43% in a year amid private-credit redemption caps",
+      "hq": "New York, NY, United States",
+      "ticker": "NYSE: OWL",
+      "status": "active",
+      "lastUpdated": "2026-10-04",
+      "aka": [
+        "Blue Owl Capital Inc.",
+        "Blue Owl Capital",
+        "Blue Owl Capital Holdings",
+        "Owl Rock",
+        "Owl Rock Capital",
+        "Dyal",
+        "Dyal Capital",
+        "Dyal Capital Partners",
+        "Oak Street",
+        "Oak Street Real Estate Capital",
+        "IPI Partners",
+        "IPI",
+        "Blue Owl Digital Infrastructure",
+        "Blue Owl Digital Infrastructure Trust",
+        "ODIT",
+        "Blue Owl Real Estate",
+        "Blue Owl Real Estate Net Lease Trust",
+        "ORENT",
+        "Blue Owl Capital Corporation",
+        "OBDC",
+        "OBDC II",
+        "Blue Owl Credit Income Corp.",
+        "OCIC",
+        "Blue Owl Technology Finance",
+        "OTF",
+        "Blue Owl Technology Income Corp.",
+        "OTIC",
+        "Blue Owl Finance",
+        "Atalaya",
+        "Atalaya Capital Management",
+        "Kuvare",
+        "Beignet Investor",
+        "Beignet Investor LLC",
+        "Kirkwood Infrastructure Group",
+        "Beale Infrastructure",
+        "RadiusDC"
+      ],
+      "domains": [
+        "blueowl.com"
+      ],
+      "srcTotal": 41,
+      "srcFirstPct": 63,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
         }
       ]
     }

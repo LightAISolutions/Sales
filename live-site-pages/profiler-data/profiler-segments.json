@@ -1411,6 +1411,11 @@
           "slug": "quinbrook",
           "role": "adjacent",
           "basis": "productsAndServices › Supernode (Brisbane) — Quinbrook-developed BESS campus: 'developed by Quinbrook' with its affiliate Private Energy Partners, the manager itself the procurement counterparty for CATL's EnerC Plus and TENER S and the EnerQB co-development"
+        },
+        {
+          "slug": "sb-energy",
+          "role": "challenger",
+          "basis": "productsAndServices › Solar and storage power business: the source of 'substantially all' revenue today — ~2.2 GW operating at 30 June 2026, mainly ERCOT solar, with its first batteries under construction (Athos Storage 1.6 GWh with Fluence, Pelicans Jaw 954 MWh, Libra 2,800 MWh); a mid-tier IPP contesting the set, not an adjacent line"
         }
       ]
     },
@@ -1618,6 +1623,11 @@
           "slug": "quinbrook",
           "role": "adjacent",
           "basis": "productsAndServices › Rowan Digital Infrastructure — the hyperscale developer Quinbrook founded (JV 2020, wholly owned 2023, Blackstone minority 2026) under its 'Energy Intensive Industry and Industrial Precincts' strategy"
+        },
+        {
+          "slug": "sb-energy",
+          "role": "challenger",
+          "basis": "ecosystemRole: a power developer converting its base into AIDC landlord — ~8.8 GW-IT leased to OpenAI at Milam County (~753 MW-IT) and PORTS-Pike (~8.0 GW-IT) under triple-net leases, none yet in operation; scope runs 'to the rack', buying substation, switchyard and electrical packages itself"
         }
       ]
     },
@@ -1986,6 +1996,16 @@
           "slug": "quinbrook",
           "role": "challenger",
           "basis": "ecosystemRole: the segment's developer-manager — a challenger by scale (USD 8.95bn regulatory AUM; IPE rank 89) whose funds originate, build and operate storage and data-centre assets rather than buying platforms"
+        },
+        {
+          "slug": "softbank",
+          "role": "incumbent",
+          "basis": "ecosystemRole: three counterparties under one name — Stargate's initial equity funder with 'financial responsibility', ~13% of OpenAI after USD 64.6bn, owner of SB Energy and, since 30 September 2026, of DigitalBridge (USD 40.2bn fee-earning equity); a controlling owner of the landlords and storage platforms the segment defines"
+        },
+        {
+          "slug": "blue-owl",
+          "role": "incumbent",
+          "basis": "ecosystemRole: the capital segment's most AI-campus-concentrated investor — ~9 GW of data-centre capacity through fund-owned STACK, 80% of Meta's ~USD 27bn Hyperion campus, co-sponsor of the USD 15bn Abilene joint venture, and lead lender on GPU financings (IREN USD 2.4bn)"
         }
       ]
     },

@@ -1,0 +1,411 @@
+{
+ "schemaVersion": 2,
+ "slug": "sb-energy",
+ "title": "SB Energy — Technology Study Guide",
+ "lastUpdated": "2026-10-04",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a power developer turning into a data-centre landlord",
+   "kind": "callout",
+   "tone": "info",
+   "read": "SB Energy earns almost all its revenue from solar and batteries today, while most of its future spending is data-centre campuses.",
+   "ps": [
+    "**Today.** SB Energy owns and operates about 2.2 GW of solar and battery projects in Texas and California and sells their power under long contracts. That business produces 'substantially all' of its revenue.",
+    "**Tomorrow.** It has leased about 8.8 GW of data-centre IT capacity to OpenAI and a SoftBank affiliate on three campuses, none yet operating. Building them is the bulk of the roughly USD 178bn it expects to spend on contracted projects.",
+    "**Why a seller cares.** It is the one company in the SoftBank group that buys power equipment itself: solar modules, battery components, high-voltage transformers, switchgear and inverters.",
+    "This guide teaches the ideas behind that: power contracts against leases, IT load against total load, what a landlord builds 'to the rack', why owners buy their own equipment, who pays for the transmission, how a lease is made bankable, how an IPO works, and the rules that shape which suppliers it may use."
+   ]
+  },
+  {
+   "id": "two-businesses",
+   "title": "Two businesses: selling power and renting campuses",
+   "kind": "prose",
+   "read": "A power contract and a data-centre lease both turn a big construction bill into decades of predictable income — in different ways.",
+   "ps": [
+    "As an {{independent power producer}}, SB Energy builds solar and battery plants and sells their output under a {{PPA}}: a buyer, such as a utility or a large company, agrees to buy the power at a fixed price for 10 to 25 years. The plant's revenue is set by the contract, which is what lets the owner borrow against it.",
+    "As a data-centre landlord, it builds a campus and leases it on {{triple-net lease}} terms for 15 to 20 years: the tenant pays rent and also the property's running costs, taxes and insurance. SB Energy sets the rent with a {{yield on cost}} formula — a target return on what the building cost — and it rises 2% to 3% a year by a {{rent escalator}}.",
+    "Both businesses carry one shared risk: building costs. A PPA price or a rent is fixed before every piece of equipment is bought. SB Energy's leases say cost overruns above an agreed cap are 'generally borne by us', which is why it buys the most expensive items itself, early."
+   ]
+  },
+  {
+   "id": "it-load",
+   "title": "IT load and total load: why one campus has two sizes",
+   "kind": "prose",
+   "read": "A data centre is sized by the power its computers use, but the grid must deliver more than that.",
+   "ps": [
+    "{{critical IT load}} is the power the servers, chips and network equipment themselves draw, measured in megawatts of IT (MW-IT). It is what a tenant leases and what rent is based on.",
+    "The building draws more: cooling, power conversion losses, lighting and offices. The ratio of total power to IT power is the {{PUE}}. A PUE of 1.25 means a 100 MW-IT hall needs about 125 MW from the grid.",
+    "So SB Energy's PORTS-Pike campus in Ohio is about 8.0 GW-IT but about 10 GW of gross power load. Its Milam County campus in Texas is about 753 MW-IT in the S-1, while OpenAI's announcements called it 1.2 GW. No source reconciles the Milam figures; the gap is consistent with IT load against a larger site figure, but that is an inference.",
+    "When two numbers for one campus differ, ask first whether one is IT load and the other total load, before assuming either is wrong."
+   ]
+  },
+  {
+   "id": "two-sizes",
+   "title": "One campus, two sizes",
+   "kind": "bars",
+   "read": "IT load is always the smaller number; the grid connection must carry the larger one.",
+   "unit": "GW",
+   "intro": "SB Energy's S-1 and the announced figures.",
+   "items": [
+    {
+     "label": "PORTS-Pike — IT load",
+     "sub": "17 buildings of about 472 MW-IT each",
+     "v": 8.0
+    },
+    {
+     "label": "PORTS-Pike — gross power load",
+     "sub": "What the utility must deliver",
+     "v": 10
+    },
+    {
+     "label": "Milam County — IT load (S-1)",
+     "sub": "Two buildings, about 308 and 445 MW-IT",
+     "v": 0.753
+    },
+    {
+     "label": "Milam County — announced size",
+     "sub": "OpenAI's figure; no source reconciles it with the S-1",
+     "v": 1.2
+    }
+   ]
+  },
+  {
+   "id": "to-the-rack",
+   "title": "Delivered 'to the rack': who supplies each layer",
+   "kind": "table",
+   "read": "The landlord builds everything up to the server rack; the tenant brings the computers; the utility brings the wires.",
+   "intro": "The split at SB Energy's leased campuses, from its S-1.",
+   "cols": [
+    "Layer",
+    "Who provides it",
+    "Who buys the equipment"
+   ],
+   "rows": [
+    [
+     "Transmission to the site",
+     "The utility (AEP Ohio at PORTS-Pike)",
+     "The utility, paid for by SB Energy as the customer"
+    ],
+    [
+     "High-voltage switchyard and interconnection",
+     "SB Energy",
+     "SB Energy, through a power EPC package"
+    ],
+    [
+     "Building shell, {{MEP}}, power distribution and cooling",
+     "SB Energy",
+     "SB Energy and its data-centre EPC contractors"
+    ],
+    [
+     "Racks, servers and chips",
+     "The tenant",
+     "The tenant — 'customers bring their own racks and semiconductors'"
+    ],
+    [
+     "Co-located solar and storage (Milam County)",
+     "SB Energy",
+     "SB Energy"
+    ],
+    [
+     "Gas generation beside PORTS-Pike",
+     "A SoftBank affiliate that is not SB Energy's subsidiary",
+     "That affiliate"
+    ]
+   ]
+  },
+  {
+   "id": "owner-furnished",
+   "title": "Why the owner buys the big equipment itself",
+   "kind": "prose",
+   "read": "A developer that carries the cost risk buys the long-lead items directly and pays contractors only to install them.",
+   "ps": [
+    "Under a {{turnkey}} {{EPC}} contract, one contractor engineers, procures and builds for a fixed price. SB Energy uses that model for construction — Turner, DPR, Kiewit and SOLV Energy on data centres; SOLV, Blattner, Dashiell, CSI Electrical and Rosendin on power — but keeps the biggest purchases for itself.",
+    "Those are {{owner-furnished equipment}}: SB Energy names solar modules, battery components, high-voltage transformers, switchgear and inverters. It buys them from the manufacturer and hands them to the contractor to install. That gives it the supply agreement and warranty directly, lets it reserve factory slots before construction contracts are signed, and keeps the contractor's mark-up off the most expensive items.",
+    "At PORTS-Pike it lists the {{lead time}} items as gas turbines, transformers, power electronics, cooling systems and modular data-centre elements. The contractors carry their own protections in turn: {{liquidated damages}} for delay or lost capacity, two-to-three-year warranties, replacement of serial defects and {{parent company guarantee}}s."
+   ]
+  },
+  {
+   "id": "power-configurations",
+   "title": "Four ways to power a campus",
+   "kind": "table",
+   "read": "SB Energy's S-1 chooses the arrangement site by site; each one moves equipment buying between parties.",
+   "intro": "The four configurations the S-1 names.",
+   "cols": [
+    "Configuration",
+    "What it means",
+    "Equipment implication"
+   ],
+   "rows": [
+    [
+     "Grid-only",
+     "All power comes from the utility through a new connection",
+     "Transmission and the main substation are the utility's; the switchyard and everything inside the fence are the developer's"
+    ],
+    [
+     "Hybrid",
+     "Grid power plus generation the developer controls",
+     "The developer also buys generation and storage"
+    ],
+    [
+     "{{behind-the-meter}}",
+     "Generation feeds the campus directly, without passing through the utility's meter",
+     "The developer, or an affiliate, buys turbines, engines or batteries and the protection to run them"
+    ],
+    [
+     "{{bridge power}}",
+     "Temporary generation until the grid connection is ready",
+     "Short-lived equipment, often rented or leased, then retired or kept as backup"
+    ]
+   ]
+  },
+  {
+   "id": "who-pays-transmission",
+   "title": "When the customer pays for the transmission",
+   "kind": "prose",
+   "read": "A giant new load can be required to fund the lines that serve it — and to accept being cut off first.",
+   "ps": [
+    "An {{ESA}}, or electric service agreement, is the contract between a utility and one large customer that fixes the megawatts served, the term, the minimum bill and the collateral. SB Energy has one with AEP Ohio for the first 0.8 GW at PORTS-Pike. The other 9.2 GW awaits definitive agreements and approvals from the Ohio Power Siting Board, FERC and the Public Utilities Commission of Ohio.",
+    "Serving 10 GW needs new {{765 kV}} lines. AEP's March 2026 release says SB Energy is committed to paying USD 4.2bn for them; SB Energy's S-1 says AEP expects about USD 5.1bn of capital costs, passed on to SB Energy with a regulated return. The two figures may cover different scopes; no source reconciles them.",
+    "Texas sets similar rules by law. Under {{SB 6}}, a {{large load}} pays for its interconnection and must shed load first in an emergency; SB Energy's Milam County site says it will do both."
+   ]
+  },
+  {
+   "id": "bankable-lease",
+   "title": "What makes a 20-year lease bankable",
+   "kind": "prose",
+   "read": "A lender values a lease by the strength of whoever stands behind the rent.",
+   "ps": [
+    "A campus costs tens of billions of dollars before the first month's rent. Lenders will fund it only if the rent is likely to be paid for the whole term, so the tenant's financial strength — and anyone guaranteeing it — decides how much can be borrowed and at what price.",
+    "At PORTS-Pike, NVIDIA guarantees the OpenAI tenant's obligations on the first nine buildings, about 4.25 GW-IT, up to USD 105bn. The guarantee moves part of the credit risk from a young, loss-making tenant to a very large, profitable chipmaker, which is what lets SB Energy finance construction.",
+    "The tenant also gets rights in return. OpenAI holds consent and participation rights over 'specified materially important design contracts' on the projects it leases. For a supplier that means the tenant can shape the specification even though the landlord signs the order."
+   ]
+  },
+  {
+   "id": "ipo-steps",
+   "title": "How an IPO works, and where SB Energy stands",
+   "kind": "table",
+   "read": "Filing is the start of the process, not the sale.",
+   "intro": "The usual US sequence, with SB Energy's position as of 4 October 2026.",
+   "cols": [
+    "Step",
+    "What happens",
+    "SB Energy"
+   ],
+   "rows": [
+    [
+     "File the {{registration statement}}",
+     "The company files Form S-1 with the SEC: business, risks, financial statements",
+     "Done, 1 September 2026"
+    ],
+    [
+     "Amend",
+     "The company answers SEC comments and updates figures",
+     "Amendment No. 2 filed 21 September 2026"
+    ],
+    [
+     "Set a price range and market the shares",
+     "Bankers set a range and take orders from investors",
+     "No price range filed"
+    ],
+    [
+     "Price and sell",
+     "The final price is set and the final prospectus is filed",
+     "Not done; trade press reported a delay"
+    ],
+    [
+     "Trade",
+     "Shares list on the exchange",
+     "Planned as SBE on Nasdaq and Nasdaq Texas"
+    ]
+   ]
+  },
+  {
+   "id": "instruments",
+   "title": "Warrants, prepaid forwards and preferred shares",
+   "kind": "prose",
+   "read": "Before listing, investors bought in through instruments that convert or deliver shares later.",
+   "ps": [
+    "{{preferred equity}} ranks ahead of common shares for dividends and repayment. OpenAI invested USD 500m in SB Energy's preferred equity in January 2026; preferred equity held by Ares is to be redeemed at the IPO.",
+    "A {{warrant}} is a right to buy shares later at a fixed price. OpenAI holds warrants that vest as milestones are met. Because their value rises with SB Energy's expected value, SB Energy recorded a USD 2.57bn non-cash charge for them in the first half of 2026 — a loss on paper, with no cash leaving the company.",
+    "A {{prepaid forward}} lets an investor pay now for shares delivered later. NVIDIA prepaid USD 1.5bn in August 2026 for shares at 90% of the IPO price, and committed to buy USD 1.5bn of non-voting shares alongside the offering.",
+    "After the IPO SoftBank expects to keep more than half the votes, making SB Energy a {{controlled company}}, which exempts it from some exchange governance rules."
+   ]
+  },
+  {
+   "id": "storage-fleet",
+   "title": "The battery projects under construction",
+   "kind": "bars",
+   "read": "Energy (MWh) is power (MW) multiplied by how many hours the battery can sustain it.",
+   "unit": "MWh of storage",
+   "intro": "SB Energy's three battery projects in construction at mid-2026; none was yet operating.",
+   "items": [
+    {
+     "label": "Libra, Nevada",
+     "sub": "700 MW for four hours, beside 700 MWac of solar; NV Energy buys the output",
+     "v": 2800
+    },
+    {
+     "label": "Athos Storage, California",
+     "sub": "About 402 MW for four hours; Fluence technology",
+     "v": 1600
+    },
+    {
+     "label": "Pelicans Jaw, California",
+     "sub": "239 MW for four hours, beside 440 MWac of solar",
+     "v": 954
+    }
+   ]
+  },
+  {
+   "id": "supplier-rules",
+   "title": "The rules that decide who may supply",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Four constraints can rule a product out before price is discussed.",
+   "ps": [
+    "**The security agreement.** Since 2019 SoftBank and SB Energy have operated under a {{National Security Agreement}} with CFIUS that imposes 'restrictions on vendors', including approval for certain vendor relationships.",
+    "**Tax-credit origin rules.** Projects starting construction after 2025 must meet {{FEOC}} rules to keep US clean-energy tax credits, which screen where batteries, inverters and their components come from.",
+    "**The emergency order.** On 26 August 2026 the US Department of Energy gained power to prohibit the purchase or installation of foreign-produced bulk-power equipment involving a covered foreign entity. SB Energy says it does 'not yet know the impact'.",
+    "**The tenant's say.** OpenAI's consent rights over important design contracts let the tenant shape the specification."
+   ]
+  },
+  {
+   "id": "door",
+   "title": "A real door, with gates",
+   "kind": "proscons",
+   "read": "SB Energy buys equipment directly; the gates are approvals, timing and the tenant.",
+   "intro": "Weigh the size and directness of the buying against what stands in the way.",
+   "cards": [
+    {
+     "t": "Why SB Energy is a buyer worth working",
+     "meta": "Owner-furnished buying at gigawatt scale",
+     "adv": [
+      "**It buys directly.** Modules, battery components, high-voltage transformers, switchgear and inverters are owner-furnished.",
+      "**Batteries now.** Three battery projects totalling about 5.35 GWh are financed and under construction.",
+      "**Campuses next.** About 8.8 GW-IT is leased, with the switchyards, distribution and cooling still to be bought."
+     ],
+     "dis": [
+      "**Not yet operating.** No data-centre capacity is in service, and PORTS-Pike's power approvals are pending.",
+      "**Approval gates.** Vendors may need clearance under the security agreement, and the tenant can shape key designs.",
+      "**Not the gas plant.** The 9.2 GW of generation beside PORTS-Pike belongs to another SoftBank affiliate."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date, a name or a project size.",
+   "cards": [
+    {
+     "q": "What is the difference between a {{PPA}} and a {{triple-net lease}}?",
+     "a": "A PPA sells a plant's electricity at a fixed price for years; a triple-net lease rents a building, with the tenant also paying its running costs, taxes and insurance."
+    },
+    {
+     "q": "Why is a campus's IT load smaller than its grid connection?",
+     "a": "{{critical IT load}} counts only the computers; cooling, conversion losses and other loads come on top, as the {{PUE}} measures."
+    },
+    {
+     "q": "Why would a developer buy transformers and switchgear itself instead of through its EPC contractor?",
+     "a": "To secure factory slots early, hold the supply contract and warranty directly, and keep the contractor's mark-up off the most expensive items — as {{owner-furnished equipment}}."
+    },
+    {
+     "q": "What does an {{ESA}} fix between a utility and a large customer?",
+     "a": "The megawatts served, the term, the minimum bill and the collateral."
+    },
+    {
+     "q": "Why does a guarantee from a large company make a long lease easier to finance?",
+     "a": "Lenders value the lease by who stands behind the rent; a strong guarantor lowers the risk that rent stops."
+    },
+    {
+     "q": "Why can a {{warrant}} create a large loss with no cash leaving the company?",
+     "a": "Its estimated value is re-measured each period; when the company's expected value rises, the warrant's value rises and is booked as a non-cash charge."
+    },
+    {
+     "q": "What does energy in MWh equal for a battery?",
+     "a": "Its power in MW multiplied by the hours it can sustain that power — a 400 MW four-hour battery stores about 1,600 MWh."
+    },
+    {
+     "q": "Name two rules that can rule a supplier out before price is discussed.",
+     "a": "A {{National Security Agreement}} requiring vendor approval, and {{FEOC}} origin rules for tax credits."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "At SB Energy's leased campuses, who buys the servers and chips?",
+     "c": [
+      "SB Energy",
+      "Its EPC contractor",
+      "The tenant",
+      "The utility"
+     ],
+     "a": 2,
+     "why": "The landlord builds 'to the rack'; customers bring their own racks and semiconductors."
+    },
+    {
+     "q": "A campus is 8 GW-IT and 10 GW gross. What does the 2 GW gap mostly represent?",
+     "c": [
+      "Spare capacity for growth",
+      "Cooling, conversion losses and other non-IT load",
+      "Power sold back to the grid",
+      "Backup generation"
+     ],
+     "a": 1,
+     "why": "The ratio of total to IT power is the {{PUE}}."
+    },
+    {
+     "q": "Which item is owner-furnished at SB Energy?",
+     "c": [
+      "Office furniture",
+      "High-voltage transformers",
+      "The tenant's GPUs",
+      "The utility's 765 kV towers"
+     ],
+     "a": 1,
+     "why": "The S-1 lists modules, battery components, high-voltage transformers, switchgear and inverters as {{owner-furnished equipment}}."
+    },
+    {
+     "q": "An S-1 is filed and amended, but no price range is set. What stage is the IPO at?",
+     "c": [
+      "Completed",
+      "Registration in progress, not yet marketed or priced",
+      "Withdrawn",
+      "Trading"
+     ],
+     "a": 1,
+     "why": "Shares are sold only after pricing; the {{registration statement}} is amended until then."
+    },
+    {
+     "q": "Who buys the gas turbines for the generation planned beside PORTS-Pike?",
+     "c": [
+      "SB Energy",
+      "AEP Ohio",
+      "A SoftBank affiliate that is not SB Energy's subsidiary",
+      "OpenAI"
+     ],
+     "a": 2,
+     "why": "SB Energy's S-1 says that generation is being developed by another SoftBank affiliate."
+    },
+    {
+     "q": "A 239 MW battery stores 954 MWh. About how many hours can it run at full power?",
+     "c": [
+      "One",
+      "Two",
+      "Four",
+      "Eight"
+     ],
+     "a": 2,
+     "why": "954 ÷ 239 ≈ 4 hours."
+    }
+   ]
+  }
+ ]
+}

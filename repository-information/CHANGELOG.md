@@ -3,11 +3,201 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.93r] — 2026-10-04 08:54:32 PM EST
+
+> **Prompt:** "Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 11 as a fresh
+> session: F-I2 — SoftBank Group, SB Energy and Blue Owl — the three capital-and-developer names the
+> corpus cites most and does not yet cover. This session runs on Opus 5.5 at xhigh (§2: SB Energy's S-1 is
+> a long first-party record to mine, and the §11.3 Model cells already read "Opus 5.5 xhigh" — keep
+> them). Opus draws on the shared weekly limit, not the Fable half; check Settings → Usage first. If the
+> weekly cap binds mid-session, land what is written, record every deferred slug by name in the ledger and
+> the hand-off, and stop — never skim a reconciliation to finish.
+>
+> WHY NOW: the gate was the DigitalBridge close. Trade press (DCD, Mobile Europe) reports SoftBank
+> completed the ~USD 3.1bn take-private on 30 September 2026 and DigitalBridge delisted from the NYSE —
+> VERIFY THAT FIRST from DigitalBridge's completion Form 8-K (CIK 1679688) or SoftBank's own release,
+> dated, before any research prompt is written; then write SoftBank's dossier once, with the close as a
+> fact and DigitalBridge's platforms as controlled platforms. Classroom wave B (§3 row 15, by Wed 10/14)
+> re-authors landscape-capital-2026-09 and scenario-capital-objection (reviewBy 10/14) and needs both
+> capital dossiers on the record first. Do NOT run F-I3 (Apollo, Ares, Stonepeak — row 12 follows this
+> one), ERCOT, PJM, or any Classroom wave.
+>
+> STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+> HEAD || git rebase origin/main; git fetch --unshallow origin main before any pin read. Read the
+> counters after the rebase: repository-information/CHANGELOG.md is 87/100 at v07.92r (sections dated the
+> push day are exempt; no rotation expected); live-site-pages/gs-changelogs/Classroomgs.changelog.md and
+> Profilergs.changelog.md are both 40/50.
+>
+> READ FIRST, in this order: repository-information/SESSION-CONTEXT.md (the row 10 hand-off);
+> phase-f-action-plan.md §2, §3 rows 11–17 and this §14 (§6 is the F-I1 prompt this one adapts, and the
+> v07.66r CHANGELOG section is F-I1 as it landed — the capital-session pattern); PROFILER-COVERAGE-PLAN.md
+> §2, §7, §11.1 (the buying-authority test — an investor passes it through a platform it controls and
+> fails it through one it merely funds) and §11.3 (the three F-I2 rows are yours; the DigitalBridge line
+> under "Not covered" says "covered through SoftBank (F-I2)"); .claude/rules/profiler-app.md (Profiler
+> Command — step 1a identity, step 5 and its segment sub-rule, step 7 reconciliation; Profiler Prep
+> Command; Scheduled Refreshes); repository-information/PROFILER-SCHEMA.md (Naming and renames, Segments
+> registry, Refresh calendar); repository-information/PROFILER-STYLES.md (active style). Read blackrock,
+> kkr, cpp-investments, energy-capital-partners and quinbrook (the five capital dossiers written in Phase
+> F) as the house pattern for an investor that signs for nothing itself; mgx and openai for Stargate;
+> vantage (v9) and switch — DigitalBridge's two covered platforms, which now take a reciprocal investor
+> edge; stack-infrastructure (v8) — IPI's, hence Blue Owl's; meta (v10), crusoe (v7), iren (v7), oracle
+> (v6) and aep (v2) — they carry the Hyperion, Abilene, IREN, Jupiter and PORTS claims you will test.
+> `project:stargate` is an entry in profiler-projects.json; link through it, never by a new project.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, active style) and study guide (schema v2) with its lesson plan under
+> repository-information/study-prep/<slug>/, written skeleton-first and filled by Edit. Proposed slugs:
+> softbank, sb-energy, blue-owl. Category hypotheses: ["investor"] for softbank and blue-owl,
+> ["developer"] for sb-energy. Populate aka[] BEFORE the step-7 grep — SoftBank Group Corp., SoftBank
+> Vision Fund / SVF, SB Investment Advisers, DigitalBridge and whichever of its platforms the record puts
+> under SoftBank's control, Arm, Ampere, and decide whether the listed telco SoftBank Corp. is an alias
+> or a distinct subject; for Blue Owl — Blue Owl Capital Inc., Blue Owl Real Estate (formerly Oak
+> Street), IPI Partners / IPI, Blue Owl Digital Infrastructure, Dyal, Owl Rock, and the JV vehicles the
+> filings name (Beignet Investor for Hyperion); for SB Energy — the S-1 registrant's legal name, SB Energy
+> Global and its project entities. Assign segments in live-site-pages/profiler-data/profiler-segments.json
+> with a basis line, verified against the dossier you wrote and never against the category — hypotheses:
+> softbank capital · incumbent; blue-owl capital · incumbent or challenger (decide on the record; the
+> segment holds thirteen members today, 7 · 3 · 3); sb-energy aidc-developers-and-landlords · challenger
+> and storage-developers-and-ipps · adjacent. Then the registry sync, the graph build, a calendar row per
+> company (SoftBank Group, TSE 9984, and Blue Owl, NYSE OWL, are listed — take each next results date from
+> its own IR site and mark it unconfirmed until announced; SB Energy gets a cadence row unless it has
+> listed, in which case its row follows the 424B4), README tree entries, and rewrite and flip your §11.3
+> rows with a premise verdict per clause.
+>
+> IDENTITY (step 1a) — establish each of these, do not assume it; every one of rows 6, 7 and 8 found all
+> three of its plan rows wrong somewhere:
+> - SoftBank: the registrant (SoftBank Group Corp., TSE 9984, its FY ends 31 March — the latest annual
+>   report and the Q1 FY2026 results of August); the DigitalBridge completion date, consideration and
+>   the governance DigitalBridge keeps (the press says Ganzi stays and the platform is "separately
+>   managed" — read the 8-K, not the press); which DigitalBridge platforms (Vantage, Switch, DataBank,
+>   Zayo, Landmark) are controlled rather than fund-managed, with the share and a source for each;
+>   SoftBank's Stargate position (the January 2026 and later releases — equity funder, operating
+>   partner, or both) and its OpenAI stake after the 2025–2026 rounds; Arm's ownership share.
+> - SB Energy: the S-1 cover (legal name, state, proposed ticker and exchange), whether the IPO has
+>   PRICED OR LISTED since 1 September 2026 (EDGAR: 424B4, 8-A12B, or an amended S-1 with a date), who
+>   owns it pre- and post-IPO (SoftBank Group's share), and the one operating fact the plan row rests
+>   on — the PORTS campus in Pike County, Ohio (≥9.2 GW of gas on AEP Ohio's 765 kV, per the row) — read
+>   off the S-1 and AEP's record, not the row.
+> - Blue Owl: Blue Owl Capital Inc. (NYSE: OWL) and its Q2 2026 10-Q; the IPI acquisition date and what
+>   it brought (STACK's ownership); the Hyperion JV (80 per cent via Blue Owl-managed funds, ~USD 27bn —
+>   read Meta's and Blue Owl's own releases); the Crusoe Abilene JV (1.2 GW); Project Jupiter in New
+>   Mexico and what Oracle's 24 September force-majeure notice actually said and to whom; the USD 2.4bn
+>   IREN financing of 28 August (read iren v7 and the IREN release); and the share price claim ("~USD 9,
+>   down more than 45% in a year") — state it dated or drop it.
+> - For all three: list the platforms each controls or co-controls that sign for batteries, MV gear,
+>   generation or SSTs (§11.1 test 2), with the ownership share and a source for each. SB Energy is the
+>   one direct buyer among the three — substations, gas turbines, solar and batteries — so its
+>   productsAndServices and technicalSpecs carry the equipment record, and its decision makers are the
+>   people who sign.
+>
+> THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. Verify every clause against first-party sources
+> (filings and results releases from each company's own IR site, counterparties' filings and releases,
+> regulator records), record a premise verdict per clause, and rewrite the cells. sec.gov answers 200 to
+> the SEC_USER_AGENT string the probe sends since v07.68r — run check-source-reachability.py before
+> planning Stage 2 and say what it read; every subagent request to sec.gov sends that exact string.
+>
+> RECONCILIATION (step 7) — measured 2026-10-04 by word-bounded grep of the current corpus (the plan rows
+> say 9 / 0 / 9): \bSoftBank\b matches 12 dossiers (lambda, whiting-turner, mgx, oracle, anthropic,
+> cipher-mining, bytedance, g42, nvidia, abb, form-energy, openai), \bSB Energy\b 4 (aep, stem,
+> solv-energy, openai), \bBlue Owl\b 15 (nscale, kkr, energy-capital-partners, clayco, mgx, meta, entergy,
+> iren, powerhouse-data-centers, blackrock, brookfield, dte-energy and three more), and \bDigitalBridge\b
+> 10 (kkr, tract, mgx, blackstone, vantage, blackrock, edgecore, switch, brookfield,
+> stack-infrastructure) — the last group is SoftBank's inbound set now. Grep again with the full aka[]
+> and read every hit against the pre-revision copies; classify career-only mentions and collisions ("SB"
+> alone collides; "Vision Fund" is SoftBank's but a Vision Fund stake is not control). Add the reciprocal
+> edge wherever a new dossier curates a counterparty, revising that dossier under the Archival Procedure
+> and re-verifying any report pin on it only when your change is edge-only; when it is substantive, leave
+> the pin loud and write down why. Expect about forty substantive reads across the three; if SoftBank's
+> set outgrows the session, land all three dossiers and guides, reconcile Blue Owl and SB Energy in full
+> and SoftBank's controlled platforms first, and record every remaining slug by name as deferred.
+>
+> LESSONS FROM ROWS 5–8 — apply them: every counterparty named in prose rests on a source in
+> sources[]; a tender, an MOU, "exclusive talks" or a signed-but-not-closed deal is not a completed
+> transaction — type each on the record's own word and state the gap; a press identification of an
+> unnamed party is carried as reported and unconfirmed; an unattributed figure is stated as unverified;
+> count inbound hits against the archive copies so the ledger's counts are exact; do not edit an existing
+> concept in profiler-concepts.json, and check new terms and aliases for collisions before adding them;
+> if an existing study guide contradicts a verified finding, correct it minimally and record it.
+>
+> THE STEP-5 SUB-RULE (developer-approved 2026-09-30): the three memberships make the generated segment
+> lessons stale, and the weekly Classroom pipeline may not regenerate them. After the registry writes,
+> run python3 scripts/build-classroom-segments.py --check and regenerate exactly the segments it lists
+> with sections differing (`--segment <id>` each, or `--all` when every one differs) — expect capital,
+> aidc-developers-and-landlords and storage-developers-and-ipps at least; leave pin-only segments alone
+> (G3). Never edit a segment-* lesson, a landscape, a scenario or anything else in Classroom.gs by hand.
+> Then bump Classroom.gs VERSION v01.99g → v02.00g (the +0.01 step crosses the minor boundary — write it
+> exactly so) and live-site-pages/gs-versions/Classroomgs.version.txt → |v02.00g| together, add one
+> generic line to Classroomgs.changelog.md ("Market-structure lessons updated with the latest company
+> coverage"; 40/50, no rotation), and set the README tree's Classroom display to v02.00g
+> (scripts/check-readme-tree.py, 0 findings). The Classroom page and Profiler.gs are not touched.
+> landscape-capital-2026-09 and scenario-capital-objection stay stale by design — wave B's; the AIDC
+> landlords and storage-developers landscapes take SB Energy as a count correction at wave D (§3 row 17).
+> Say all of that in the CHANGELOG entry and the hand-off (§11.2, the landscape coupling), and retire the
+> DigitalBridge fallback in §3 row 15 if the close is verified.
+>
+> FOR THE MEGMEET JOB: in the hand-off, one short paragraph on which platforms these three control that
+> buy medium-voltage or DC power equipment (SSTs, 800 VDC, HVDC, batteries, gas turbines) — SB Energy
+> directly, DigitalBridge's and Blue Owl's platforms through their operators — and whether capital here
+> is a door an SST seller can use or only a way to find the buyers.
+>
+> VERIFY: check-source-reachability.py before Stage 2; sync-profiler-registry.py --check clean (208 → 211
+> in bijection, calendar included); build-profiler-graph.py; check-profiler-study.py,
+> check-profiler-relationships.py and check-profiler-crossrefs.py clean (accept reviewed candidates with a
+> reason); check-profiler-reports.py warnings read; check-classroom-content.py 0 errors after the
+> regeneration (71 lessons / 8 tracks / 220 gate cases today); node --check on a .js copy of
+> Classroom.gs; check-readme-tree.py 0 findings; every new and revised dossier and guide renders under
+> Playwright with zero page errors other than the sandbox's gis_load_failed (the guide overlay closes with
+> its ✕ button, not Escape). Normal Pre-Commit and Pre-Push checklists; ONE commit; push on your claude/*
+> branch once git ls-remote shows it absent. Flip §3 row 11 to landed in the pattern of rows 1–10, write
+> the CHANGELOG section with this prompt verbatim as the blockquote, and remember session.
+>
+> NEVER: edit a Classroom lesson, landscape or scenario by hand; create a project entry for Stargate;
+> state an equity cheque as an enterprise value or the reverse; name a deal closed on a press report
+> alone; close or edit the developer's reminders.
+>
+> At the end: one line per company (identity verdicts, segments and roles, inbound read/revised counts,
+> calendar row); the DigitalBridge close as verified, with the document; the segments regenerated and the
+> Classroom version written; the --check and content-checker final lines; and the session's cost from
+> get_session's usage.cost_usd if it exposes one, with the rate-limit status."
+
+§3 row 11, F-I2: three new dossiers (`softbank`, `sb-energy`, `blue-owl`), each with a v2 study guide and a lesson plan, written after the **DigitalBridge close was verified** from DigitalBridge's completion Form 8-K (CIK 1679688, accession 0001104659-26-112148): the merger completed on **30 September 2026** at USD 16.00 a share in cash, the parent wholly owned by SoftBank Group Overseas GK. SoftBank's dossier is therefore written once, with the close as fact and DigitalBridge's platforms as controlled through its manager. Step 7 then revised 29 inbound dossiers and regenerated the 11 Classroom segment lessons whose sections changed.
+
+### Added
+
+- **`live-site-pages/profiler-data/softbank.profile.json`** (schema v7, profileVersion 1, intel-briefing; 74 sources) — SoftBank Group Corp. (TSE: 9984) as three counterparties under one name: the holding company (NAV ¥72.3tn and LTV 13.0% at 30 June 2026; ~13% of OpenAI after USD 64.6bn; Arm 86.7%), the owner since 30 September of **DigitalBridge, the manager** (USD 40.2bn fee-earning equity; GP commitments 0.03%–0.72% per fund — the platforms' equity stays with the funds), and the parent of **SB Energy, its one equipment buyer**. USD 3.1bn equity value and ~USD 4.0bn enterprise value are stated as each; ABB Robotics is signed, not closed; the France programme is an announced plan.
+- **`sb-energy.profile.json`** (profileVersion 1; 32 sources) — SB Energy, Inc. from its S-1/A No. 2: owner-furnished modules, battery components, high-voltage transformers, switchgear and inverters; Milam County ~753 MW-IT and PORTS-Pike ~8.0 GW-IT leased to OpenAI, none operating; the ~9.2 GW of PORTS gas developed by a different SoftBank affiliate; NVIDIA's USD 3.0bn and its guarantee of the first ~4.25 GW-IT; the CFIUS National Security Agreement's vendor restrictions; IPO filed 1 September, **unpriced** (the delay is reported only).
+- **`blue-owl.profile.json`** (profileVersion 1; 41 sources) — Blue Owl Capital Inc. (NYSE: OWL): funds own STACK (bought the IPI Partners manager, 3 January 2025), hold 80% of Meta's Hyperion venture (**USD 7.0bn cash** against **~USD 27bn total development cost**), co-sponsor the USD 15bn Abilene JV, and lead GPU loans (IREN USD 2.4bn, signed 25 August). Blue Owl itself has filed nothing on these deals; the record is the counterparties'.
+- **Study guides** `softbank.study.json` (15 sections), `sb-energy.study.json` (16), `blue-owl.study.json` (16) at schema v2, concept-only flashcards and quizzes; **lesson plans** under `repository-information/study-prep/{softbank,sb-energy,blue-owl}/`, written skeleton-first.
+- **Nine concepts** in `profiler-concepts.json`, collision-checked: business development company, GP stake, margin loan, NAV discount, National Security Agreement, prepaid forward, registration statement, tender offer, warrant. No existing concept edited; the guide-specific 'residual value guarantee' (a building-lease sense the registry's chip-hardware entry does not carry) lives in `blue-owl.study.json`'s glossary.
+- **Registry, segments, calendar** — three `profiler-companies.json` entries with full `aka[]` (populated before the step-7 grep); segments: `softbank` and `blue-owl` **capital incumbents** (capital is now 15 members, 9 · 3 · 3), `sb-energy` **challenger in `aidc-developers-and-landlords` and — changed from the hypothesis' 'adjacent' — challenger in `storage-developers-and-ipps`**, because solar and storage produce 'substantially all' its revenue. Calendar: `softbank` 2026-11-10 and `blue-owl` 2026-10-29, both confirmed by their own IR notices; `sb-energy` a quarterly core cadence row until it lists. Notes in `profiler-refresh-notes.json`. 16 exec photos (company-published) in `images/execs/`.
+
+### Changed
+
+- **Step 7 — 66 raw `aka[]` hits (SoftBank 35 · SB Energy 14 · Blue Owl 17)**, read against the pre-revision copies. SoftBank: 3 collisions, 6 career-only, 6 list mentions, 20 substantive; SB Energy: 10 collisions ('Energy Global' the trade publication; Nova SBE), 4 substantive; Blue Owl: 1 career-only, 1 source label, 15 substantive. **29 dossiers revised** under the Archival Procedure (archived, profileVersion +1) with the reciprocal edge for every counterparty the new dossiers curate: `abb`, `aep`, `berkshire-hathaway-energy`, `blackrock`, `blattner`, `coreweave`, `cpp-investments`, `crusoe`, `dpr`, `fluence`, `g42`, `google`, `iren`, `kiewit`, `meta`, `mgx`, `nscale`, `nvidia`, `openai`, `oracle`, `powerhouse-data-centers`, `rosendin`, `schneider-electric`, `solv-energy`, `stack-infrastructure`, `stem`, `switch`, `turner-construction`, `vantage`.
+- **Three substantive corrections** — `abb`: Robotics 'sold/divested to SoftBank' → agreed 8 October 2025, not completed as of 1 October 2026 (SoftBank's August deck: 'Planned in 2026'). `iren`: '$2.8B total' → USD 1.2bn term loan + USD 1.2bn notes, ~USD 2.4bn aggregate, as IREN's own FY2026 10-K and the cited release state. `meta`: '$26B PIMCO debt' → the cited release's 'debt issued to PIMCO and select other bond investors'. Two figure pairs stated, not picked: AEP's USD 4.2bn against the S-1's ~USD 5.1bn; OpenAI's 1.2 GW Milam against the S-1's ~753 MW-IT.
+- **`vantage.study.json`** — 'STACK (also DigitalBridge-family)' corrected to 'STACK (owned by Blue Owl-managed funds)'; the only contradicting guide found.
+- **Report pins** — 11 edge-only revisions re-verified in `report-pins-verified.json` (every cited source byte-identical; earlier verification notes kept); `abb` (two reports) and `meta` left loud because their changes are substantive. Four accepts in `profiler-relationships-accepted.json` (abb×softbank, blackrock×blue-owl, blue-owl×iren, blue-owl×oracle — `other` on both sides by design).
+- **Classroom (step-5 sub-rule)** — `build-classroom-segments.py --check` listed 19 due: **11 with section changes regenerated** (`storage-integrators-and-containers`, `in-hall-power`, `clean-firm-and-nuclear`, `epc-and-construction`, `storage-developers-and-ipps`, `aidc-developers-and-landlords`, `hyperscalers-and-ai-labs`, `neoclouds`, `utilities`, `capital`, `software-and-optimization`), **8 pin-only left alone**; nothing hand-edited. `Classroom.gs` v01.99g → **v02.00g** with `Classroomgs.version.txt`, one generic GAS changelog line (`Sections: 41/50`) and the README tree display. `landscape-capital-2026-09` and `scenario-capital-objection` stay stale by design for wave B; the AIDC-landlords and storage landscapes take SB Energy at wave D.
+- **`PROFILER-COVERAGE-PLAN.md`** — the three §11.3 F-I2 rows rewritten with a verdict per clause and flipped (Dossier v1 · Guide v2); the DigitalBridge 'Not covered' line records the close. **`phase-f-action-plan.md`** — §3 row 11 landed; **row 15's DigitalBridge fallback retired** (the close is verified, so `scenario-capital-objection` keeps reviewBy 10/14).
+- **README.md** — tree entries for the six new data files, three study-prep directories and 34 archive files (29 from this session plus five earlier archives the tree had missed: `firmus` v1, `fluidstack` v3, `iren` v6, `quanta-services` v5, `vertiv` v9); timestamp and repo version.
+- **`SESSION-CONTEXT.md`** — remember session.
+
+### Fixed
+
+- Two shell-expansion corruptions in this session's own `sb-energy` draft, caught before commit: an AEP quote reading 'the .2 billion' (restored 'the $4.2 billion') and the backlog-capex spec reading 'approximately 78 billion' (restored verbatim from the S-1: '$178 billion; ~$48 billion … ~$69 billion … ~$61 billion'). Cause: an unquoted heredoc expanded `$4`, `$1`. All later writes used quoted heredocs or files.
+
+### Notes
+
+- Checkers: `check-source-reachability.py` OK (sec.gov and data.sec.gov 200); `sync-profiler-registry.py --check` 0 of 211 out of sync, roster and calendar in bijection; `build-profiler-graph.py` 1,974 edges (1,477 curated); relationships 0 findings (25 accepted); crossrefs 0 candidates; study 211 guides and 1,609 concepts, 0 errors; reports 0 errors, 7 warnings (abb ×2 and meta loud by design; fluence, jinko, jupiter-power and oracle aged before this session); `check-classroom-content.py` 71 lessons · 8 tracks · 220 gate cases, 0 errors; `node --check` and inner scripts clean; `check-readme-tree.py` 0 findings. `check-classroom-pipeline.py` reports its unattended-committer findings (11 lessons against a cap of 3; same-day `updated`), which a developer regeneration session is outside.
+- Playwright: all 32 new and revised dossiers render on `Profiler.html` with every tab, no literal `{{` or `**`, and no page error but the sandbox's `gis_load_failed`; the four new or changed guides open and close with ✕. `Profiler.html` is unchanged (data-only).
+- Process slip, recorded: one research subagent made a single WebFetch to sec.gov with the default User-Agent instead of `SEC_USER_AGENT`.
+- CHANGELOG `Sections: 87/100` → 88/100 (no rotation). The developer's reminders were not touched.
 
 ## [v07.92r] — 2026-10-04 05:30:08 PM EST
 

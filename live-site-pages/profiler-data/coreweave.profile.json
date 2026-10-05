@@ -234,6 +234,16 @@
       "context": "June 2025 Reuters reporting had CoreWeave supplying compute capacity to Google Cloud (in turn serving OpenAI); neither company has announced it. Held as reported-only.",
       "source": "Reuters-reported (Jun 2025) — not company-confirmed",
       "status": "announced"
+    },
+    {
+      "slug": "blue-owl",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024-08",
+      "via": "Blue Owl / Chirisa joint ventures (Chesterfield, Virginia; Lancaster, Pennsylvania)",
+      "note": "Capital behind two campuses CoreWeave leases: Chesterfield, Virginia (with Chirisa and PowerHouse) and Lancaster, Pennsylvania (a USD 4bn joint venture with Chirisa closed in August 2025).",
+      "context": "Chirisa's 25 August 2025 release says Blue Owl and Chirisa 'closed on a joint venture partnership' for the Lancaster campus, which CoreWeave will lease, and that Blue Owl intends to fund up to USD 20bn of Chirisa developments.",
+      "source": "https://chirisatechnologyparks.com/blue-owl-and-chirisa-technology-parks-close-4-billion-joint-venture-partnership-including-machine-investment-group-for-lancaster-campus/"
     }
   ],
   "technicalSpecs": [
@@ -494,6 +504,11 @@
       "date": "2025-09"
     },
     {
+      "label": "Chirisa Technology Parks — Blue Owl and Chirisa close USD 4bn joint venture for the Lancaster campus",
+      "url": "https://chirisatechnologyparks.com/blue-owl-and-chirisa-technology-parks-close-4-billion-joint-venture-partnership-including-machine-investment-group-for-lancaster-campus/",
+      "date": "2025-08-25"
+    },
+    {
       "label": "Construction Dive — Turner-Wohlsen JV for CoreWeave Lancaster PA",
       "url": "https://www.constructiondive.com/news/turner-wohlsen-pennsylvania-data-center-coreweave/753877/",
       "date": "2025-07-24"
@@ -507,6 +522,11 @@
       "label": "Applied Digital — 250 MW AI data-center lease with CoreWeave",
       "url": "https://ir.applieddigital.com/news-events/press-releases/detail/123/applied-digital-announces-250mw-ai-data-center-lease-with",
       "date": "2025-06-02"
+    },
+    {
+      "label": "PR Newswire — Blue Owl, Chirisa Technology Parks and PowerHouse announce next phase of USD 5bn joint venture",
+      "url": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html",
+      "date": "2025-05-28"
     },
     {
       "label": "PRNewswire — CoreWeave-OpenAI master agreement ($11.9B + $350M equity)",
@@ -532,6 +552,6 @@
       "url": "https://electroneconomics.substack.com/p/coreweaves-customers-are-becoming"
     }
   ],
-  "lastUpdated": "2026-10-02",
-  "profileVersion": 5
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 6
 }

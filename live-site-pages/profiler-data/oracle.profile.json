@@ -258,6 +258,28 @@
    "note": "G42 is building Stargate UAE, the 1 GW Abu Dhabi cluster that Oracle will operate with OpenAI.",
    "context": "G42's 22 May 2025 release: 'will be built by G42 and operated by OpenAI and Oracle', with NVIDIA, Cisco and SoftBank. No Oracle-side release or contract terms for Stargate UAE were found. G42's Khazna is the developer, and the first 200 MW was targeted for 2026.",
    "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae"
+  },
+  {
+   "slug": "softbank",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-01",
+   "via": "Stargate (fellow initial equity funder)",
+   "project": "stargate",
+   "note": "Fellow initial equity funder of Stargate with SoftBank, OpenAI and MGX; Oracle also sold its Ampere Computing stake to SoftBank in 2025.",
+   "context": "SoftBank's 22 January 2025 release names 'SoftBank, OpenAI, Oracle, and MGX' as Stargate's initial equity funders, with SoftBank holding financial responsibility. Neither SoftBank nor Oracle discloses its commitment. SoftBank's USD 6.5bn acquisition of Ampere Computing, whose sellers included Oracle, completed on 25 November 2025.",
+   "source": "https://group.softbank/en/news/press/20250122"
+  },
+  {
+   "slug": "blue-owl",
+   "type": "other",
+   "status": "active",
+   "since": "2025-09",
+   "via": "Project Jupiter (developed by Blue Owl fund-owned STACK)",
+   "project": "jupiter-nm",
+   "note": "Capital behind Project Jupiter: STACK, owned by Blue Owl-managed funds, is developing Oracle's New Mexico Stargate campus; a reported force-majeure notice from Oracle followed in September 2026.",
+   "context": "STACK's 26 September 2025 release ties Jupiter in Doña Ana County to Oracle's commitment to deliver up to 4.5 GW of additional Stargate capacity, driven by investment from Blue Owl-managed funds. TechCrunch reported on 24 September 2026, citing Bloomberg, that Oracle sent a force-majeure notice; Oracle said such notices 'are common on developments of this scale' and that Jupiter 'remains on our planned schedule'. The notice's terms are reported only.",
+   "source": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/"
   }
  ],
  "policyExposure": [
@@ -487,6 +509,11 @@
  },
  "sources": [
   {
+   "label": "TechCrunch — Oracle sends force-majeure notice on its New Mexico Stargate data center (Blue Owl statement)",
+   "url": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+   "date": "2026-09-24"
+  },
+  {
    "label": "Yahoo Finance — Oracle expands 2026 layoff plan by $700M amid AI costs",
    "url": "https://finance.yahoo.com/technology/ai/articles/oracle-expands-2026-layoff-plan-132318715.html",
    "date": "2026-09-14"
@@ -557,6 +584,11 @@
    "date": "2025-12"
   },
   {
+   "label": "SoftBank Group — Completion of acquisition of Ampere Computing Holdings LLC",
+   "url": "https://group.softbank/en/news/press/20251126",
+   "date": "2025-11-26"
+  },
+  {
    "label": "Bloomberg — record ~$38B debt package for Oracle-tied Vantage campuses",
    "url": "https://www.bloomberg.com/news/articles/2025-10-23/record-38-billion-debt-sale-nears-for-oracle-tied-data-centers",
    "date": "2025-10-23"
@@ -570,6 +602,11 @@
    "label": "CNBC — leaked GPU-rental margins",
    "url": "https://www.cnbc.com/2025/10/07/oracle-stock-nvidia-chip-margins.html",
    "date": "2025-10-07"
+  },
+  {
+   "label": "STACK Infrastructure — delivers digital infrastructure for data center campus in New Mexico (Project Jupiter)",
+   "url": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
+   "date": "2025-09-26"
   },
   {
    "label": "El Paso Matters — Project Jupiter (Stargate New Mexico, 18-yr OCI lease)",
@@ -602,6 +639,11 @@
    "date": "2025-05-22"
   },
   {
+   "label": "SoftBank Group — Announcing The Stargate Project (initial equity funders SoftBank, OpenAI, Oracle, MGX)",
+   "url": "https://group.softbank/en/news/press/20250122",
+   "date": "2025-01-22"
+  },
+  {
    "label": "Oracle data-center hub (site power detail)",
    "url": "https://www.oracle.com/data-centers/"
   },
@@ -610,6 +652,6 @@
    "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 6
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 7
 }

@@ -876,6 +876,16 @@
    "note": "Kiewit runs a multi-year PacifiCorp distribution program of at least 350 miles a year over five years; historically Peter Kiewit Sons' part-owned CalEnergy, and the Walter Scott Jr. family's Kiewit-derived stake was the last outside interest in BHE, bought out by Berkshire in 2024.",
    "context": "Recorded from the corpus's Kiewit dossier and Berkshire's 2025 annual report.",
    "source": "Kiewit dossier (v7) — Power market page, PacifiCorp program"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "supplier",
+   "status": "active",
+   "scale": "700 MWac solar + 700 MW / 2,800 MWh storage; 25-year PPA",
+   "via": "NV Energy — Libra solar-plus-storage PPA",
+   "note": "NV Energy buys the output of SB Energy's Libra solar-plus-storage project in Nevada under a fixed-price 25-year PPA; Libra is under construction.",
+   "context": "SB Energy's S-1 describes Libra, in Mineral and Lyon counties, as '700 MWac (910 MWdc) of PV and 700 MW / 2,800 MWh of BESS' with 'a fixed-price 25-year PPA with NV Energy'. It is SB Energy's largest solar-plus-storage hybrid.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
   }
  ],
  "policyExposure": [
@@ -1006,6 +1016,11 @@
   {
    "label": "ConstructConnect — Nevada regulators approve 362 MW of temporary power projects for data centers",
    "url": "https://news.constructconnect.com/nevada-regulators-approve-362-mw-of-temporary-power-projects-for-data-centers",
+   "date": "2026-09-21"
+  },
+  {
+   "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
    "date": "2026-09-21"
   },
   {
@@ -1423,6 +1438,6 @@
    "url": "https://en.wikipedia.org/wiki/Berkshire_Hathaway_Energy"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 1
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 2
 }

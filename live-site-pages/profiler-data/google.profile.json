@@ -367,6 +367,16 @@
    "via": "TPU supply; River Bend end user",
    "status": "active",
    "since": "2025-11"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2022",
+   "via": "Orion Solar Belt PPA (Milam County, Texas)",
+   "note": "SB Energy's Orion Solar Belt in Milam County, Texas, supplies power to help run Google's data centres; Google is its anchor customer.",
+   "context": "SB Energy's October 2024 release announced commercial operation of Orion I–III, 875 MWdc 'to help power Google data centers', with First Solar modules and Blattner as EPC.",
+   "source": "https://sbenergy.com/american-made-solar-projects-power-google-data/"
   }
  ],
  "policyExposure": [
@@ -757,6 +767,11 @@
    "date": "2025-01-28"
   },
   {
+   "label": "SB Energy — Commercial operation of American-made solar projects to help power Google data centres (Orion I–III)",
+   "url": "https://sbenergy.com/american-made-solar-projects-power-google-data/",
+   "date": "2024-10-18"
+  },
+  {
    "label": "Google — Kairos Power nuclear master agreement",
    "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/google-kairos-power-nuclear-energy-agreement/",
    "date": "2024-10-14"
@@ -865,6 +880,6 @@
    "date": "2026-05-04"
   }
  ],
- "lastUpdated": "2026-09-07",
- "profileVersion": 9
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 10
 }

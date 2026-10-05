@@ -1,0 +1,430 @@
+{
+ "schemaVersion": 2,
+ "slug": "softbank",
+ "title": "SoftBank Group — Technology Study Guide",
+ "lastUpdated": "2026-10-04",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: three counterparties under one name",
+   "kind": "callout",
+   "tone": "info",
+   "read": "SoftBank is a holding company, the owner of a fund manager and the parent of one equipment buyer — and only the last signs purchase orders.",
+   "ps": [
+    "**The holding company.** SoftBank Group Corp. owns stakes: about 13% of OpenAI, most of Arm, all of Ampere and Graphcore, 40.1% of the Japanese telco SoftBank Corp. It earns and loses money on what those stakes are worth, and it signs no order for a transformer or a battery.",
+    "**The manager's owner.** Since 30 September 2026 it has owned DigitalBridge, a firm that manages funds which control data-centre, tower and fibre companies. SoftBank bought the manager; the funds' money still belongs to outside investors.",
+    "**The buyer.** SB Energy, its US developer of solar, storage and AI data-centre campuses, buys modules, battery components, high-voltage transformers, switchgear and inverters itself.",
+    "This guide teaches how to tell those three apart: how a holding company is valued and funded, what a minority stake decides, what buying a fund manager buys, how a foreign owner is screened, and the test a seller applies before treating any investor as a customer."
+   ]
+  },
+  {
+   "id": "holding-company",
+   "title": "How a holding company is valued and funded",
+   "kind": "prose",
+   "read": "SoftBank is measured by what its stakes are worth and by how much it has borrowed against them.",
+   "ps": [
+    "A {{holding company}} owns shares in other companies rather than running a business of its own. SoftBank calls itself a pure holding company. Its scorecard is {{net asset value}}: the market or estimated value of everything it owns, less its net debt. SoftBank reported NAV of ¥40.1 trillion on 31 March 2026 and ¥72.3 trillion three months later.",
+    "The second number it manages is {{loan-to-value}}: net debt divided by the value of the holdings. SoftBank's policy is to stay below 25% in normal times and never above 35%. It reported 13.0% on 30 June 2026. A rising share price for a big holding, such as Arm, lowers loan-to-value without any debt being repaid.",
+    "Holding companies borrow in ways an operating company rarely does. A {{margin loan}} is secured by listed shares: Arm's annual report says 72.0% of its shares were pledged under a SoftBank margin loan. Selling a stake raises cash too. SoftBank sold its whole NVIDIA holding in October 2025 to help pay for OpenAI.",
+    "The market rarely values a holding company at its full NAV. The gap is the {{NAV discount}}, and buying back shares or selling a stake at full value are the usual ways to narrow it. None of this involves buying equipment: it is how the money for SB Energy's campuses and OpenAI's computers is raised."
+   ]
+  },
+  {
+   "id": "nav-moves",
+   "title": "Net asset value moves with the stakes, not with sales",
+   "kind": "bars",
+   "read": "NAV nearly tripled in fifteen months because the value of what SoftBank owns rose, not because it sold more of anything.",
+   "unit": "¥ trillions",
+   "intro": "SoftBank's reported net asset value on three dates.",
+   "items": [
+    {
+     "label": "31 March 2025",
+     "sub": "Before the 2025 OpenAI investments",
+     "v": 25.7
+    },
+    {
+     "label": "31 March 2026",
+     "sub": "After a ¥6.7 trillion investment gain on OpenAI in the year",
+     "v": 40.1
+    },
+    {
+     "label": "30 June 2026",
+     "sub": "Arm alone was worth ¥49.9 trillion of the holdings on this date",
+     "v": 72.3
+    }
+   ]
+  },
+  {
+   "id": "minority-not-control",
+   "title": "What a 13% stake decides",
+   "kind": "prose",
+   "read": "Owning a large slice of a company is not the same as deciding what it buys.",
+   "ps": [
+    "SoftBank had invested USD 64.6bn in OpenAI by 1 October 2026 for about 13% of it. In SoftBank's own words it is 'a minority shareholder of OpenAI' with 'only a limited ability to influence' the company. A minority holder can be very large and still have no say over budgets, suppliers or sites.",
+    "Under {{IFRS}}, the accounting standard SoftBank reports in, such a stake is carried at its estimated current value, so each new funding round that prices OpenAI higher shows up as a gain. That is why one investment can dominate a year's profit — and why the profit says nothing about orders placed.",
+    "Control is different. A company controls another when it can direct its decisions, usually through a voting majority and the board. SoftBank controls SB Energy: it designates six of nine directors and expects to keep more than half the votes after the IPO, so SB Energy will be a {{controlled company}}."
+   ]
+  },
+  {
+   "id": "stargate",
+   "title": "Stargate: a programme with funders, not a buyer",
+   "kind": "prose",
+   "read": "The name covers an investment plan and many separately owned campuses.",
+   "ps": [
+    "{{Stargate}} was announced on 22 January 2025 as a new company intending to invest USD 500bn over four years in AI infrastructure for OpenAI. Its initial equity funders were SoftBank, OpenAI, Oracle and MGX, 'with SoftBank having financial responsibility and OpenAI having operational responsibility'. Neither SoftBank nor the others disclose how much each has committed.",
+    "In practice the campuses are built and owned by different companies. Oracle's sites are developed by partners such as Crusoe and Vantage; SoftBank's subsidiary SB Energy develops the Milam County, Texas campus and the PORTS-Pike campus in Ohio; Stargate UAE is built by G42. Each developer chooses its own contractors and equipment.",
+    "So 'a Stargate order' always belongs to a named developer. When a release says a site is part of Stargate, the useful question is which company owns the building and signs for the switchgear."
+   ]
+  },
+  {
+   "id": "buying-a-manager",
+   "title": "What SoftBank bought when it bought DigitalBridge",
+   "kind": "prose",
+   "read": "A team, its fee contracts and a small stake in each fund — not the data centres those funds own.",
+   "ps": [
+    "DigitalBridge is an {{asset manager}}. It runs funds whose money comes from {{limited partner}}s — pension and sovereign funds, insurers — and it acts as {{general partner}}, choosing investments and earning a {{management fee}} plus {{carried interest}} on gains. At 30 June 2026 it reported USD 40.2bn of {{fee-earning AUM}}.",
+    "Its own money in those funds is small. Its 10-Q gives minimum commitments of 0.03% to 0.72% of each fund, plus 1.43% to 4.29% as a general-partner affiliate in the flagship funds. Vantage, Switch and DataBank belong to the funds and to {{co-investment}} partners such as Silver Lake, PSP, GIC, ADIA, AustralianSuper and IFM.",
+    "So SoftBank now owns the decision-maker above those platforms, not the platforms themselves. Each platform has its own board and management, and they sign for equipment. The pattern is the same one BlackRock followed when it bought Global Infrastructure Partners in 2024."
+   ]
+  },
+  {
+   "id": "two-prices",
+   "title": "Two prices for one deal",
+   "kind": "bars",
+   "read": "The price paid for the shares and the value of the whole business are different numbers — never swap one for the other.",
+   "unit": "USD billions, at announcement",
+   "intro": "SoftBank's own figures for the DigitalBridge purchase.",
+   "items": [
+    {
+     "label": "Equity value: all DigitalBridge common stock",
+     "sub": "USD 16.00 a share in cash — what shareholders received; {{equity value}}",
+     "v": 3.1
+    },
+    {
+     "label": "Enterprise value",
+     "sub": "Adds debt and preferred stock, less cash — the value of the business as a whole; {{enterprise value}}",
+     "v": 4.0
+    }
+   ]
+  },
+  {
+   "id": "deal-timeline",
+   "title": "From signing to closing: nine months",
+   "kind": "timeline",
+   "read": "Every gate the DigitalBridge purchase passed, in order — a deal is not done until the last one.",
+   "intro": "Months after the merger agreement was signed on 29 December 2025.",
+   "unit": "months since signing (29 December 2025 = 0)",
+   "lanes": {
+    "deal": "The deal",
+    "ok": "Approvals"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "deal",
+     "label": "Merger agreement signed",
+     "sub": "USD 16.00 a share in cash"
+    },
+    {
+     "x": 2.8,
+     "lane": "deal",
+     "label": "Definitive proxy filed",
+     "sub": "The document shareholders vote on"
+    },
+    {
+     "x": 3.8,
+     "lane": "ok",
+     "label": "Stockholders approve",
+     "sub": "About 96% of votes cast, 23 April 2026"
+    },
+    {
+     "x": 4.9,
+     "lane": "deal",
+     "label": "DigitalBridge agrees to buy ArcLight",
+     "sub": "A separate deal, conditional on the SoftBank merger closing"
+    },
+    {
+     "x": 8.8,
+     "lane": "ok",
+     "label": "All regulatory approvals received",
+     "sub": "Including the energy regulator and the foreign-investment review, 22 September 2026"
+    },
+    {
+     "x": 9.0,
+     "lane": "deal",
+     "label": "Merger completed",
+     "sub": "30 September 2026; common stock delisted"
+    }
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test across SoftBank's holdings",
+   "kind": "table",
+   "read": "An investor passes the test only through a company it controls that buys power equipment.",
+   "intro": "Each SoftBank position, the kind of ownership it is, and who signs for equipment. The {{buying-authority test}} is defined in this guide's glossary.",
+   "cols": [
+    "Holding",
+    "Kind of position",
+    "Who signs for power equipment",
+    "Passes?"
+   ],
+   "rows": [
+    [
+     "SB Energy",
+     "Controlled subsidiary",
+     "SB Energy itself: modules, battery components, high-voltage transformers, switchgear, inverters",
+     "Yes"
+    ],
+    [
+     "Vantage, Switch, DataBank",
+     "Funds run by a SoftBank-owned manager",
+     "Each platform's own management, under fund governance",
+     "Through the platform, not SoftBank"
+    ],
+    [
+     "OpenAI",
+     "Minority stake, about 13%",
+     "OpenAI and its landlords",
+     "No"
+    ],
+    [
+     "Arm, Ampere, Graphcore",
+     "Controlled chip companies",
+     "They design and sell chips; they are not campus builders",
+     "No — wrong product"
+    ],
+    [
+     "Stargate",
+     "Initial equity funder",
+     "The developer of each campus",
+     "No — a programme"
+    ],
+    [
+     "ABB Robotics",
+     "Signed purchase, not closed",
+     "Not yet SoftBank's",
+     "No — not owned"
+    ]
+   ]
+  },
+  {
+   "id": "foreign-owner",
+   "title": "A foreign owner of US energy assets",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Japanese ownership brings a US security review whose conditions can reach the supplier list.",
+   "ps": [
+    "**{{CFIUS}}.** The US Committee on Foreign Investment reviews foreign purchases of US companies that touch security-sensitive assets, including power plants and data centres. The DigitalBridge purchase needed its clearance among the approvals received on 22 September 2026.",
+    "**The agreement that follows.** A clearance can come with a {{National Security Agreement}}. SB Energy's S-1 says it operates under one that requires government approval of certain vendors. A supplier to SB Energy can therefore need clearance as well as a good price.",
+    "**Country-of-origin rules.** Separately, US tax credits for solar and storage exclude equipment tied to a {{FEOC}} — a 'foreign entity of concern' — which shapes where a US developer buys batteries and inverters.",
+    "**What it means for a seller.** Ask early whether a product's origin or software needs approval under the buyer's security agreement; it can decide the shortlist before price does."
+   ]
+  },
+  {
+   "id": "power-for-campuses",
+   "title": "Who buys the power plant beside a campus",
+   "kind": "prose",
+   "read": "The landlord, the utility and the generator can be three different companies, even inside one group.",
+   "ps": [
+    "A large AI campus needs power on three layers: the high-voltage lines that reach it, the generation that feeds those lines, and the equipment inside the fence that steps power down and distributes it. Each layer can have a different owner.",
+    "At PORTS-Pike in Ohio, the utility AEP Ohio builds new {{765 kV}} transmission, paid for by SB Energy as the customer. About 9.2 GW of gas-fired generation is planned beside the campus, but SB Energy's S-1 says it is being developed by 'an affiliate of SoftBank that is not our subsidiary'. The turbines or engines will be bought by that affiliate, not by SB Energy.",
+    "In France, SoftBank announced a plan for up to 5 GW of AI data-centre capacity. At the Port of Dunkirk it plans one facility of its own to manufacture enclosures, and Schneider Electric is to run another integrating data-centre power modules — {{prefabricated}} electrical rooms built in a factory and shipped to site. It is an announced plan, not an order."
+   ]
+  },
+  {
+   "id": "deal-ladder",
+   "title": "The deal ladder: where each SoftBank transaction stands",
+   "kind": "table",
+   "read": "Record the rung a deal has reached, not the size of its headline.",
+   "intro": "As of 4 October 2026.",
+   "cols": [
+    "Rung",
+    "What it binds",
+    "SoftBank example"
+   ],
+   "rows": [
+    [
+     "Announced plan",
+     "Nobody to a purchase",
+     "France: up to 5 GW and €75bn, May 2026"
+    ],
+    [
+     "{{registration statement}} filed",
+     "Nobody; shares not yet priced",
+     "SB Energy's IPO, S-1 filed 1 September 2026"
+    ],
+    [
+     "Signing ({{definitive agreement}})",
+     "Both sides, subject to conditions",
+     "ABB Robotics, USD 5.375bn, signed 8 October 2025"
+    ],
+    [
+     "Conditional signing",
+     "Both sides, if another deal closes first",
+     "DigitalBridge's purchase of ArcLight"
+    ],
+    [
+     "Closing",
+     "Money moves and control passes",
+     "DigitalBridge, 30 September 2026; Ampere, 25 November 2025"
+    ]
+   ]
+  },
+  {
+   "id": "door-or-directory",
+   "title": "Door or directory: what SoftBank is worth to a seller",
+   "kind": "proscons",
+   "read": "One subsidiary is a door; the rest of the group is a map of who else might buy.",
+   "intro": "Weigh the one controlled buyer against the much larger set of companies SoftBank can only point to.",
+   "cards": [
+    {
+     "t": "Where SoftBank is a door",
+     "meta": "SB Energy",
+     "adv": [
+      "**It buys owner-furnished equipment.** SB Energy purchases modules, battery components, high-voltage transformers, switchgear and inverters itself and hands them to its EPC contractors.",
+      "**Scale.** About 8.8 GW of IT load is leased to OpenAI across two campuses, with more under the France plan.",
+      "**One parent.** Group plans, such as the Dunkirk power-module facility, show where the next requirements will come from."
+     ],
+     "dis": [
+      "**Approval gates.** A security agreement requires government approval of certain vendors, and the tenant has consent rights over some choices.",
+      "**Not yet operating.** Most of the data-centre buying is ahead: Milam County is under construction and PORTS-Pike is contracted, not started.",
+      "**The power plant is elsewhere.** The gas generation at PORTS belongs to a different SoftBank affiliate."
+     ]
+    },
+    {
+     "t": "Where SoftBank is a directory",
+     "meta": "DigitalBridge, OpenAI, Stargate",
+     "adv": [
+      "**A map of platforms.** DigitalBridge's funds sit above Vantage, Switch, DataBank and others — data-centre builders with their own procurement.",
+      "**Early signals.** A new SoftBank commitment often tells a seller which developer will soon have a capital plan."
+     ],
+     "dis": [
+      "**No purchase order.** The holding company, the manager and the OpenAI stake buy nothing.",
+      "**Third-party money.** The platforms' equity belongs to outside investors, and their boards decide."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date, a name or a deal size.",
+   "cards": [
+    {
+     "q": "What two numbers does a holding company like SoftBank manage itself by?",
+     "a": "{{net asset value}} — what its holdings are worth less net debt — and {{loan-to-value}}, net debt as a share of those holdings."
+    },
+    {
+     "q": "How can a holding company's loan-to-value fall without it repaying any debt?",
+     "a": "If the market value of its holdings rises, the same debt is a smaller share of them."
+    },
+    {
+     "q": "What is a {{margin loan}}, and what is its risk to the borrower?",
+     "a": "A loan secured by pledged listed shares. If the share price falls far enough, the lender can call for more collateral or sell the shares."
+    },
+    {
+     "q": "Why does a large minority stake not make an investor a customer?",
+     "a": "A minority holder does not control the board or management, so it does not decide budgets, suppliers or sites."
+    },
+    {
+     "q": "When an investor buys an {{asset manager}}, what does it own afterwards?",
+     "a": "The manager's team, fee contracts and its small commitments to each fund. The assets belong to the funds and their limited partners."
+    },
+    {
+     "q": "What is the difference between {{equity value}} and {{enterprise value}}?",
+     "a": "Equity value is what the shares are worth. Enterprise value adds debt and preferred stock and subtracts cash, giving the value of the whole business."
+    },
+    {
+     "q": "What can a {{National Security Agreement}} require that matters to a supplier?",
+     "a": "Government approval before the company uses certain vendors or equipment."
+    },
+    {
+     "q": "Why can the landlord of an AI campus and the buyer of its power plant be different companies?",
+     "a": "Generation, transmission and the campus can each sit in a separate legal entity. At PORTS-Pike the gas generation is developed by a SoftBank affiliate that is not SB Energy's subsidiary."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "Which SoftBank holding passes the buying-authority test for power equipment?",
+     "c": [
+      "The OpenAI stake",
+      "SB Energy",
+      "Arm",
+      "The DigitalBridge management company"
+     ],
+     "a": 1,
+     "why": "SB Energy is a controlled subsidiary that buys transformers, switchgear, inverters and battery components itself. The others either do not control a buyer or do not build campuses."
+    },
+    {
+     "q": "SoftBank's net asset value nearly triples in fifteen months. What is the most likely cause?",
+     "c": [
+      "It sold more products",
+      "The value of its stakes rose",
+      "It issued new shares",
+      "It repaid all its debt"
+     ],
+     "a": 1,
+     "why": "{{net asset value}} is the value of the holdings less net debt; for SoftBank it rose mainly because OpenAI and Arm were valued higher."
+    },
+    {
+     "q": "A deal is reported at a price for the shares and at a larger 'value' for the company. Which describes the whole business?",
+     "c": [
+      "The share price times the shares",
+      "The enterprise value",
+      "The equity value",
+      "The fee-earning assets"
+     ],
+     "a": 1,
+     "why": "{{enterprise value}} adds debt and preferred stock and subtracts cash. Stating one as the other overstates or understates the deal."
+    },
+    {
+     "q": "After buying a fund manager, whose money owns the data centres in the manager's funds?",
+     "c": [
+      "The buyer's",
+      "The manager's own balance sheet",
+      "The funds' limited partners and co-investors",
+      "The data centres' tenants"
+     ],
+     "a": 2,
+     "why": "A manager typically commits well under 5% of a fund; the rest comes from {{limited partner}}s and co-investors."
+    },
+    {
+     "q": "A supplier wins on price but the buyer operates under a security agreement with the US government. What may still be needed?",
+     "c": [
+      "A shareholder vote",
+      "Government approval of the vendor or equipment",
+      "A new interconnection request",
+      "Nothing further"
+     ],
+     "a": 1,
+     "why": "A {{National Security Agreement}} can require approval before certain vendors are used."
+    },
+    {
+     "q": "A company has filed an S-1 but not priced its shares. Where is its IPO on the deal ladder?",
+     "c": [
+      "Closed",
+      "Registration filed, not yet sold",
+      "Signed with an underwriter and complete",
+      "Abandoned"
+     ],
+     "a": 1,
+     "why": "A {{registration statement}} is amended until the SEC declares it effective; shares are sold only when priced, and the final prospectus records the price."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "buying-authority test",
+   "d": "The Phase F screen for this corpus: does a company, or a platform it controls alone or jointly, sign for batteries, medium-voltage switchgear, generation or solid-state transformers? An investor passes only through a platform it controls."
+  }
+ ]
+}

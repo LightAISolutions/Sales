@@ -517,6 +517,17 @@
       "note": "Co-founder with MGX, GIP and Microsoft of the AI Infrastructure Partnership, which Larry Fink chairs, and co-acquirer of joint control of Aligned through GIP's managing entity.",
       "context": "BlackRock and its Global Infrastructure Partners launched the partnership with Microsoft and MGX on 17 September 2024. The European Commission's Aligned decision names GIP's Global Infrastructure Management, LLC and MGX Fund Management Limited as the two parties acquiring joint control. BlackRock's own releases call Fink AIP's chairman and MGX's chief executive its vice chairman. The BlackRock dossier (2026-09-26) found no first-party statement of AIP's legal form or of any member's commitment.",
       "source": "https://www.mgx.ae/news-insights/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership"
+    },
+    {
+      "slug": "softbank",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-01",
+      "via": "Stargate (fellow initial equity funder)",
+      "project": "stargate",
+      "note": "Fellow initial equity funder of Stargate, named with SoftBank, OpenAI and Oracle in the January 2025 announcement; SoftBank holds financial responsibility.",
+      "context": "SoftBank's 22 January 2025 release names MGX among the four initial equity funders. Neither SoftBank nor MGX discloses its commitment.",
+      "source": "https://group.softbank/en/news/press/20250122"
     }
   ],
   "policyExposure": [
@@ -1303,6 +1314,6 @@
       "party": "disclosure"
     }
   ],
-  "lastUpdated": "2026-09-26",
-  "profileVersion": 4
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 5
 }

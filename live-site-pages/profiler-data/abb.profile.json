@@ -12,7 +12,7 @@
  "ownership": "public",
  "employees": "~105,000 (continuing operations, ex-Robotics)",
  "website": "https://global.abb",
- "summary": "BOTTOM LINE UP FRONT: ABB's Electrification business is running the hottest data-center order book of any diversified electrical: Q2 2026 orders hit $7.2B (+60%, first quarter ever above $7B), data-center order growth was 'triple-digit', Americas Electrification orders rose +114%, and segment backlog swelled to $13.7B (+57%). Its differentiated AIDC weapons are HiPerGuard — the industry's first static medium-voltage UPS (2.5-25 MW, 98% efficiency, new 34.5 kV direct-grid-connect class) — and Motion's flywheel synchronous condensers, 62 of which VoltaGrid has ordered for behind-the-meter AI campuses. BACKGROUND: Under CEO Morten Wierod (since August 2024) the portfolio is being aggressively reshaped: Robotics sold to SoftBank for $5.375B (scrapping a planned spin-off), a $5.5B recommended offer for UK valve-actuator maker Rotork (ABB's biggest-ever deal, received as 'pricy' — shares fell 4%), a $2B buyback, and ~$14B of remaining M&A firepower. Context worth holding: ABB is a top-5 but not the leader in data-center power (Schneider leads; in UPS ABB ranks behind Schneider, Vertiv, Eaton, and Huawei), it sold its grid business to Hitachi before the grid supercycle, and it is a three-time US bribery settler (2004, 2010, and the 2022 $315M Kusile/Eskom FCPA resolution) — a standing counterparty-diligence flag.",
+ "summary": "BOTTOM LINE UP FRONT: ABB's Electrification business is running the hottest data-center order book of any diversified electrical: Q2 2026 orders hit $7.2B (+60%, first quarter ever above $7B), data-center order growth was 'triple-digit', Americas Electrification orders rose +114%, and segment backlog swelled to $13.7B (+57%). Its differentiated AIDC weapons are HiPerGuard — the industry's first static medium-voltage UPS (2.5-25 MW, 98% efficiency, new 34.5 kV direct-grid-connect class) — and Motion's flywheel synchronous condensers, 62 of which VoltaGrid has ordered for behind-the-meter AI campuses. BACKGROUND: Under CEO Morten Wierod (since August 2024) the portfolio is being aggressively reshaped: Robotics agreed to be sold to SoftBank for $5.375B (scrapping a planned spin-off; signed October 2025, not completed as of 1 October 2026), a $5.5B recommended offer for UK valve-actuator maker Rotork (ABB's biggest-ever deal, received as 'pricy' — shares fell 4%), a $2B buyback, and ~$14B of remaining M&A firepower. Context worth holding: ABB is a top-5 but not the leader in data-center power (Schneider leads; in UPS ABB ranks behind Schneider, Vertiv, Eaton, and Huawei), it sold its grid business to Hitachi before the grid supercycle, and it is a three-time US bribery settler (2004, 2010, and the 2022 $315M Kusile/Eskom FCPA resolution) — a standing counterparty-diligence flag.",
  "ecosystemRole": "We assess ABB as the AIDC power chain's medium-voltage innovator — the vendor pushing the UPS and stability functions up to MV where gigawatt campuses actually need them, while competing as a strong #2-5 across the broader data-center electrical stack. Basis: HiPerGuard is the industry's first static MV UPS and the centerpiece of NVIDIA-ecosystem 800 VDC architecture work (with SACE Infinitus, the first IEC-certified solid-state breaker); the VoltaGrid orders (62 flywheel synchronous condensers) put ABB inside the fastest-moving behind-the-meter AI power deployments; and third-party rankings place the top five (Schneider, ABB, Eaton, Vertiv, Delta) at ~41-43% of the $35B data-center power market. ~40% of ABB's electrification research is aimed at next-generation data-center technologies. Its scope overlaps Eaton and Schneider on distribution/UPS, Vertiv on critical power, and increasingly Hitachi Energy at the grid interface.",
  "productsAndServices": [
   {
@@ -124,8 +124,8 @@
   {
    "date": "2025-10-08",
    "category": "other",
-   "headline": "Robotics divested to SoftBank for $5.375B — spin-off plan scrapped; ~$5.3B net cash funds the M&A pivot",
-   "read": "Wierod's defining portfolio move: exit a #2-global robotics franchise ('limited synergies') to double down on electrification and automation. The proceeds are already committed — ~$4.8B toward Rotork — with ~$14B of stated remaining firepower that the press flags as an 'M&A-risk discount' on the multiple.",
+   "headline": "Agreement to divest Robotics to SoftBank for $5.375B — spin-off plan scrapped; ~$5.3B of expected net cash earmarked for the M&A pivot (closing expected mid-to-late 2026; not completed as of 1 October 2026)",
+   "read": "Wierod's defining portfolio move: exit a #2-global robotics franchise ('limited synergies') to double down on electrification and automation. The expected proceeds are already earmarked — ~$4.8B toward Rotork — with ~$14B of stated remaining firepower that the press flags as an 'M&A-risk discount' on the multiple.",
    "source": "https://new.abb.com/news/detail/129685/abb-to-divest-robotics-division-to-softbank-group"
   }
  ],
@@ -234,6 +234,17 @@
    "note": "Memorandum of understanding under which a monitoring room was commissioned for Oklo operator training.",
    "context": "Announced 21 August 2025 as an MOU rather than a supply contract, with a commissioned monitoring room supporting operator training as the described deliverable.\n\nIt connects to Oklo's licensing strategy: the company is designing for a high degree of automation and has a Licensed Operator topical report before the NRC proposing that operators be licensed to the technology rather than to a single site, which would allow one control room to monitor several plants.",
    "source": "Oklo press release archive, 2025-08-21 (ABB memorandum of understanding; monitoring room commissioned for operator training)"
+  },
+  {
+   "slug": "softbank",
+   "type": "other",
+   "status": "announced",
+   "since": "2025-10",
+   "scale": "USD 5.375bn",
+   "via": "Agreed sale of ABB Robotics",
+   "note": "Agreed buyer of ABB's Robotics division for USD 5.375bn, signed on 8 October 2025 and not completed as of 1 October 2026.",
+   "context": "ABB's 8 October 2025 release states an enterprise value of USD 5.375bn; SoftBank's release calls the same figure the total purchase price. Both expected closing in mid-to-late 2026, subject to EU, Chinese and US approvals. SoftBank's August 2026 investor presentation still lists the ABB Robotics business as 'Planned in 2026', with part of USD 1.75bn of LBO financing allocated to it. Neither party had announced completion by 1 October 2026.",
+   "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/investor-presentation_q1fy2026_01_en.pdf"
   }
  ],
  "technicalSpecs": [
@@ -401,7 +412,7 @@
    "title": "CEO (since August 2024)",
    "background": [
     "ABB lifer — previously President of Motion and of Electrification; succeeded Björn Rosengren",
-    "First full year (2025) delivered record results; reversed the Robotics spin-off into the SoftBank sale and pivoted to large-scale M&A (Rotork, ~$14B stated remaining firepower)",
+    "First full year (2025) delivered record results; reversed the Robotics spin-off into an agreed SoftBank sale (not completed as of 1 October 2026) and pivoted to large-scale M&A (Rotork, ~$14B stated remaining firepower)",
     "Frames ABB as 'at the core of electrification and automation megatrends'"
    ]
   },
@@ -536,6 +547,11 @@
  },
  "sources": [
   {
+   "label": "SoftBank Group — Q1 FY2026 investor presentation (key upcoming investments: ABB Robotics 'Planned in 2026', DigitalBridge 'Second half of 2026')",
+   "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/investor-presentation_q1fy2026_01_en.pdf",
+   "date": "2026-08-06"
+  },
+  {
    "label": "MarketsandMarkets — data centre busway market report 2026-2032",
    "url": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
    "date": "2026-01"
@@ -601,6 +617,11 @@
    "date": "2025-10-08"
   },
   {
+   "label": "SoftBank Group — Acquisition of ABB Ltd's robotics business (USD 5.375bn)",
+   "url": "https://group.softbank/en/news/press/20251008",
+   "date": "2025-10-08"
+  },
+  {
    "label": "ABB — 800 VDC white paper (Purgat/Strassel)",
    "url": "https://resources.news.e.abb.com/attachments/published/129788/en-US/3515A12A5C51/ABB_800_VDC_NVIDIA_white_paper.pdf",
    "date": "2025-10"
@@ -628,6 +649,6 @@
    "url": "https://www.investing.com/equities/abb-ltd-earnings"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 7
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 8
 }

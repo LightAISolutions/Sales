@@ -2315,6 +2315,39 @@
         "DCFlex's planned end 'by the end of 2027' — renewal, a numbered programme, or a standing body; membership count past 'more than 65'",
         "Any EPRI statement on transformer lead times (none found) and the next Bobby Noble gas-turbine lead-time figure the mitsubishi-power dossier would carry"
       ]
+    },
+    "softbank": {
+      "source": "PUBLIC COMPANY — TSE Prime: 9984 (SoftBank Group Corp.; fiscal year April–March, so 'FY2026' runs April 2026 to March 2027). COMPANY-CONFIRMED: SoftBank's IR calendar lists 'Nov. 10, 2026 Earnings Results for Q2/FY2026', and its 2 October 2026 notice announced the results-briefing webcast (group.softbank/en/news/info/20261002). Results are IFRS, in JPY; there is no reliable consensus for the profit line, which swings on Vision Fund and OpenAI valuations, so the dossier compares against the one LSEG figure it could source and says so. The DigitalBridge merger closed on 30 September 2026 (DigitalBridge Form 8-K, CIK 1679688): Q2 FY2026 is the first period that can consolidate it. HOW TO CONFIRM later dates: the IR calendar at group.softbank/en/ir.",
+      "watch": [
+        "Q2 FY2026 results (10 Nov 2026): the first period with DigitalBridge consolidated — purchase-price allocation, goodwill, and how SoftBank reports DigitalBridge's fee-earning equity (USD 40.2bn at 30 June 2026); NAV and LTV after the final USD 10bn OpenAI tranche of 1 Oct 2026.",
+        "ABB Robotics: completion of the USD 5.375bn purchase signed 8 Oct 2025 ('Planned in 2026' in the August 2026 investor deck; scheduled by end-2026 per the Group Report). Record the close only from SoftBank's or ABB's own notice.",
+        "SB Energy's IPO: pricing (a 424B4 on EDGAR, CIK 2133037) or a further S-1 amendment; SoftBank's retained voting control (>50% expected) and the Ares preferred redemption at the IPO.",
+        "DigitalBridge's ArcLight acquisition (up to USD 1.05bn, conditional on the SoftBank merger, outside date the later of 31 Mar 2027 and six months after the SoftBank close), and the delisting of DigitalBridge's preferred stock (expected around 5 Oct 2026).",
+        "PORTS-Pike gas generation (~9.2 GW, developed by a SoftBank affiliate that is not SB Energy's subsidiary): turbine or engine orders, the developer entity's name, and OPSB/FERC/PUCO filings.",
+        "France programme (up to 5 GW, announced 30 May 2026): site permits at Dunkirk and Bosquel, and whether the Schneider Electric power-module facility turns into an order."
+      ]
+    },
+    "sb-energy": {
+      "source": "NOT LISTED — SB Energy, Inc. (CIK 2133037) filed an S-1 on 1 Sep 2026 and S-1/A No. 2 on 21 Sep 2026 for a proposed Nasdaq listing as 'SBE'; the offering had not priced at 4 Oct 2026 (no 424B4), and IFR, Nikkei and the NYT reported a delay (reported, not confirmed by the company). Until it lists the row is a cadence row (tier core: an AIDC landlord and battery buyer in Megmeet-adjacent segments) carried by the quarterly sweep. The S-1 is the primary record: owner-furnished equipment, EPC panel, leases to OpenAI, NVIDIA's commitments, the AEP Ohio agreements and the CFIUS National Security Agreement. sbenergy.com, portscampus.com and milamdc.com are first-party. When it lists, convert this row to nextReport/confirmed from its own IR notice.",
+      "watch": [
+        "IPO pricing or withdrawal: a 424B4 (or an RW) on EDGAR; the concurrent NVIDIA Class N purchase (USD 1.5bn) and the Ares preferred redemption at closing.",
+        "PORTS-Pike power: definitive AEP Ohio agreements for the remaining 9.2 GW and the OPSB, FERC and PUCO approvals; the 765 kV build; the S-1's ~USD 5.1bn of AEP capital costs against AEP's USD 4.2bn transmission figure (unreconciled).",
+        "Backup generation at PORTS: the S-1 says the engines are not yet chosen — any order, and which affiliate places it.",
+        "Milam County: Buildings 1 and 2 (~308 and ~445 MW-IT) construction progress under DPR and Sundt; lease commencement dates.",
+        "Batteries: commercial operation of Athos Storage (1.6 GWh, Fluence), Pelicans Jaw (954 MWh) and Libra (2,800 MWh); any named energy-management software (Stem's 2023 'in principle' alliance has produced no named deployment).",
+        "CFIUS National Security Agreement: any disclosed vendor-approval constraint that names equipment classes or suppliers."
+      ]
+    },
+    "blue-owl": {
+      "source": "PUBLIC COMPANY — NYSE: OWL (Blue Owl Capital Inc., CIK 1823945; fiscal year ends 31 December). COMPANY-CONFIRMED: Blue Owl's 1 October 2026 release says it will announce third-quarter 2026 results 'on Thursday, October 29, 2026 before market open', with a 10:00 a.m. ET call. ir.blueowl.com HTML returns 403 to curl; its JSON press-release and event feeds and EDGAR are readable. Consensus is per-share distributable earnings; the dossier compares against the figure it could source and states the source. Blue Owl Capital Inc. has filed nothing on Hyperion, Abilene or Jupiter — the record for each is the counterparty's (Meta 10-Q, Crusoe and STACK releases) — and the BDCs (OBDC, OCIC, OTIC) file separately.",
+      "watch": [
+        "Q3 2026 results (29 Oct 2026): Real Assets and Digital Infrastructure AUM, fundraising, and the redemption picture at OCIC and OTIC (OCIC's Q3 tender requests were 16.8% against a 5% offer).",
+        "STACK Asia-Pacific: whether the reported exclusive talks with the BlackRock-backed AIP and IFM (Bloomberg, 24 Sep 2026, USD 20–25bn) become a signed sale — record it only from a party's own release.",
+        "Project Jupiter: the reported Oracle force-majeure notice (Bloomberg via TechCrunch, 24 Sep 2026) — any first-party statement from STACK, Oracle or Blue Owl, and whether the schedule moves.",
+        "Hyperion: Meta's 10-Q updates on the venture (80/20, USD 7.0bn Blue Owl cash at closing) and any Blue Owl disclosure; leases start in 2029.",
+        "GPU lending: IREN's staged draws under the USD 2.4bn financing (funding to 31 Dec 2026), the Nscale USD 1.4bn loan, and any new GPU-backed facility led by Blue Owl credit funds.",
+        "Litigation: the Section 36(b) suits and any regulatory action on the BDC redemption gates."
+      ]
     }
   }
 }

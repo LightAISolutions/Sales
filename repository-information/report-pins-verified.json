@@ -54,17 +54,17 @@
       "report": "named-project-bess-attach--opportunity--2026-09-08",
       "slug": "openai",
       "pinnedVersion": 5,
-      "verifiedAt": 6,
-      "when": "2026-09-26",
-      "why": "Short-gap pin (v5 -> v6, 1 version): the one cited openai source is unchanged (label, url and date identical). The v6 revision (F-N1 step 7, 2026-09-26) only added two curated supplier relationships — g42 (Stargate UAE) and firmus (the Malaysian sites) — and their two sources; every other field is byte-identical. Every cited figure holds."
+      "verifiedAt": 7,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v6 -> v7, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to softbank, sb-energy and 3 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v6. 1 of 1 cited openai source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved. Earlier verification (v6, 2026-09-26): Short-gap pin (v5 -> v6, 1 version): the one cited openai source is unchanged (label, url and date identical). The v6 revision (F-N1 step 7, 2026-09-26) only added two curated supplier relationships — g42 (Stargate UAE) and firmus (the Malaysian sites) — and their two sources; every other field is byte-identical. Every cited figure holds."
     },
     {
       "report": "named-project-bess-attach--opportunity--2026-09-08",
       "slug": "aep",
       "pinnedVersion": 1,
-      "verifiedAt": 2,
-      "when": "2026-09-26",
-      "why": "Edge-only revision (F-I1 step 7, 2026-09-26): v2 adds one curated relationship to the new kkr dossier (the KKR and PSP 19.9% transmission stake), citing a source already in v1. Every other field is byte-identical to the archived v1; the one aep source the report cites is unchanged, and the report does not mention KKR."
+      "verifiedAt": 3,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v2 -> v3, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to sb-energy and 1 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v2. 1 of 1 cited aep source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved. Earlier verification (v2, 2026-09-26): Edge-only revision (F-I1 step 7, 2026-09-26): v2 adds one curated relationship to the new kkr dossier (the KKR and PSP 19.9% transmission stake), citing a source already in v1. Every other field is byte-identical to the archived v1; the one aep source the report cites is unchanged, and the report does not mention KKR."
     },
     {
       "report": "named-project-bess-attach--opportunity--2026-09-08",
@@ -78,9 +78,9 @@
       "report": "named-project-bess-attach--opportunity--2026-09-08",
       "slug": "stack-infrastructure",
       "pinnedVersion": 7,
-      "verifiedAt": 8,
-      "when": "2026-09-26",
-      "why": "Edge-only revision (F-I1 step 7, 2026-09-26): v8 adds curated 'other'/'announced' relationships to the new blackrock and kkr dossiers and one source (Bloomberg via The Star, 24 Sep 2026, on AIP and IFM exclusive talks). Every other field is byte-identical to the archived v7; both stack sources the report cites are unchanged, and the report does not mention BlackRock, KKR or the Asia-Pacific sale."
+      "verifiedAt": 9,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v8 -> v9, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to blue-owl and 0 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v8. 2 of 2 cited stack-infrastructure source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved. Earlier verification (v8, 2026-09-26): Edge-only revision (F-I1 step 7, 2026-09-26): v8 adds curated 'other'/'announced' relationships to the new blackrock and kkr dossiers and one source (Bloomberg via The Star, 24 Sep 2026, on AIP and IFM exclusive talks). Every other field is byte-identical to the archived v7; both stack sources the report cites are unchanged, and the report does not mention BlackRock, KKR or the Asia-Pacific sale."
     },
     {
       "report": "named-project-bess-attach--opportunity--2026-09-08",
@@ -102,10 +102,9 @@
       "report": "named-project-bess-attach--opportunity--2026-09-08",
       "slug": "crusoe",
       "pinnedVersion": 5,
-      "verifiedAt": 7,
-      "when": "2026-09-08",
-      "why": "Crusoe v7 (2026-10-02) adds the USD 3.9bn Series F at USD 30.9bn post-money, Google named as the Armstrong County customer, the Boom turbine order dropped, ClusterMAX 3.0 Bronze and three directors. None of the report's Crusoe claims moves: Crusoe remains Abilene's developer-operator (Oracle: 618 MW, six of eight buildings delivered), the ON.energy 5 GW AI-UPS and Form Energy 12 GWh fleet contracts stand, and the Microsoft 900 MW Abilene campus is unchanged. Read 2026-10-02.",
-      "verifiedOn": "2026-10-02"
+      "verifiedAt": 8,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v7 -> v8, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to blue-owl and 1 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v7. 4 of 4 cited crusoe source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved. Earlier verification (v7, 2026-09-08): Crusoe v7 (2026-10-02) adds the USD 3.9bn Series F at USD 30.9bn post-money, Google named as the Armstrong County customer, the Boom turbine order dropped, ClusterMAX 3.0 Bronze and three directors. None of the report's Crusoe claims moves: Crusoe remains Abilene's developer-operator (Oracle: 618 MW, six of eight buildings delivered), the ON.energy 5 GW AI-UPS and Form Energy 12 GWh fleet contracts stand, and the Microsoft 900 MW Abilene campus is unchanged. Read 2026-10-02."
     },
     {
       "report": "named-project-bess-attach--opportunity--2026-09-08",
@@ -138,6 +137,62 @@
       "verifiedAt": 10,
       "when": "2026-10-04",
       "why": "Short-gap pin (v9 -> v10, 1 version): the v10 revision changed one sentence of strategyRead (the SemiAnalysis 800 VDC market sizing — the SST figure corrected from a third-party ~$13B to the post's own ~$32B by 2030, both now stated) and nothing else; sources[] unchanged, so every citation this edition copies from vertiv is identical; the edition's text does not carry the SST market figure (checked by grep), so no claim it makes moved."
+    },
+    {
+      "report": "aidc-power-conversion-rev2--competitive--2026-09-25",
+      "slug": "schneider-electric",
+      "pinnedVersion": 9,
+      "verifiedAt": 10,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v9 -> v10, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to softbank and 1 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v9. 1 of 1 cited schneider-electric source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved."
+    },
+    {
+      "report": "sst-hall-edge-block-rev2--competitive--2026-09-23",
+      "slug": "schneider-electric",
+      "pinnedVersion": 9,
+      "verifiedAt": 10,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v9 -> v10, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to softbank and 1 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v9. 1 of 1 cited schneider-electric source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "dpr",
+      "pinnedVersion": 6,
+      "verifiedAt": 7,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v6 -> v7, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to sb-energy and 2 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v6. 1 of 1 cited dpr source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "google",
+      "pinnedVersion": 9,
+      "verifiedAt": 10,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v9 -> v10, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to sb-energy and 1 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v9. 1 of 1 cited google source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "kiewit",
+      "pinnedVersion": 7,
+      "verifiedAt": 8,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v7 -> v8, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to sb-energy and 1 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v7. 1 of 1 cited kiewit source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "turner-construction",
+      "pinnedVersion": 8,
+      "verifiedAt": 9,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v8 -> v9, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to sb-energy and 1 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v8. 1 of 1 cited turner-construction source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "vantage",
+      "pinnedVersion": 9,
+      "verifiedAt": 10,
+      "when": "2026-10-04",
+      "why": "Edge-only revision (v9 -> v10, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to softbank and 2 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v9. 5 of 5 cited vantage source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved."
     }
   ]
 }

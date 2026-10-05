@@ -13,7 +13,7 @@
   "ownership": "public",
   "employees": "257 (Jun 30, 2025) + ~200 site contractors; >3,000 across the Childress build with contractors",
   "website": "https://iren.com",
-  "summary": "BOTTOM LINE UP FRONT: IREN is the most vertically integrated of the miner-pivots — it owns the land, the substations, the buildings, AND runs the GPU cloud on top — with 5 GW of secured power across three continents, a $9.7B five-year Microsoft GB300 contract whose first liquid-cooled data center (Horizon 1, Childress TX) was delivered and accepted on August 13, 2026, a $3.4B NVIDIA cloud contract plus a 5 GW 'DSX' strategic partnership carrying a $2.1B NVIDIA share-purchase right, and a year-end 2026 ARR target above $4B (~85% contracted). The tension: every quarter of the trailing year missed sell-side consensus (Q3 FY26 revenue missed by 34%), SemiAnalysis ClusterMAX rates the cloud 'Not Recommended – Underperforming' for a third cycle (ClusterMAX 3.0, 23 September 2026: Prince George is 'The #1 worst site in the industry according to users', though 'the new builds in Childress and Sweetwater look much better') even as NVIDIA grants Exemplar Cloud status, and the stock sits ~46% below its November 2025 peak against a Street average target near $80. BACKGROUND: Founded 2018 in Sydney by ex-Macquarie brothers Daniel and Will Roberts as renewable-powered bitcoin miner Iris Energy; peaked at 50 EH/s (June 2025), then began decommissioning miners for GPUs — $172M of ASIC impairments across two quarters, and Bitcoin has vanished from the company boilerplate. FY2025: revenue $501.0M, net income $86.9M. FY2026 (ended Jun 30, 2026, reported Aug 27): revenue $707.0M (+41%; a $15.9M / 2.2% miss on the $722.9M consensus), net loss $702.6M including $638.8M of non-cash Bitcoin-hardware impairments (EPS -$2.06 vs -$1.57 consensus — a wider miss than the revenue line), adj. EBITDA $245.7M; $4B contracted ARR for 2026 capacity (largely sold out) and $1B operating ARR as of Aug 26; management guides mining 'effectively decommissioned' by end of December 2026. Cash $5.9B unrestricted + $1.7B restricted (~$7.6B total, Jun 30, final); ~$6.3B of converts outstanding (unchanged from the prior derived estimate; SEC EDGAR is unreachable from this network so the 10-K's own tranche breakdown could not be directly verified); the $3.65B investment-grade GPU financing (Fitch A, June 2026) plus a further $2.8B at 9.0% for the Mackenzie expansion (Aug 2026).",
+  "summary": "BOTTOM LINE UP FRONT: IREN is the most vertically integrated of the miner-pivots — it owns the land, the substations, the buildings, AND runs the GPU cloud on top — with 5 GW of secured power across three continents, a $9.7B five-year Microsoft GB300 contract whose first liquid-cooled data center (Horizon 1, Childress TX) was delivered and accepted on August 13, 2026, a $3.4B NVIDIA cloud contract plus a 5 GW 'DSX' strategic partnership carrying a $2.1B NVIDIA share-purchase right, and a year-end 2026 ARR target above $4B (~85% contracted). The tension: every quarter of the trailing year missed sell-side consensus (Q3 FY26 revenue missed by 34%), SemiAnalysis ClusterMAX rates the cloud 'Not Recommended – Underperforming' for a third cycle (ClusterMAX 3.0, 23 September 2026: Prince George is 'The #1 worst site in the industry according to users', though 'the new builds in Childress and Sweetwater look much better') even as NVIDIA grants Exemplar Cloud status, and the stock sits ~46% below its November 2025 peak against a Street average target near $80. BACKGROUND: Founded 2018 in Sydney by ex-Macquarie brothers Daniel and Will Roberts as renewable-powered bitcoin miner Iris Energy; peaked at 50 EH/s (June 2025), then began decommissioning miners for GPUs — $172M of ASIC impairments across two quarters, and Bitcoin has vanished from the company boilerplate. FY2025: revenue $501.0M, net income $86.9M. FY2026 (ended Jun 30, 2026, reported Aug 27): revenue $707.0M (+41%; a $15.9M / 2.2% miss on the $722.9M consensus), net loss $702.6M including $638.8M of non-cash Bitcoin-hardware impairments (EPS -$2.06 vs -$1.57 consensus — a wider miss than the revenue line), adj. EBITDA $245.7M; $4B contracted ARR for 2026 capacity (largely sold out) and $1B operating ARR as of Aug 26; management guides mining 'effectively decommissioned' by end of December 2026. Cash $5.9B unrestricted + $1.7B restricted (~$7.6B total, Jun 30, final); ~$6.3B of converts outstanding (unchanged from the prior derived estimate; SEC EDGAR is unreachable from this network so the 10-K's own tranche breakdown could not be directly verified); the $3.65B investment-grade GPU financing (Fitch A, June 2026) plus a further $2.4B at 9.0% for the Mackenzie expansion (Aug 2026).",
   "ecosystemRole": "We assess IREN as the test of whether one company can hold both ends of the AI-infrastructure stack — landlord-grade power ownership (5 GW secured: Childress 750 MW, Sweetwater 2 GW, Oklahoma 1.6 GW, British Columbia 160 MW, Spain 490 MW, Bundey Australia 800 MW) and a climbing cloud business (Mirantis software acquisition, managed services for NVIDIA itself). For power-chain vendors the buildout is unusually visible: IREN owns its ERCOT substations, energized Sweetwater 1's 1.4 GW bulk substation (345/138 kV) on schedule in April 2026, builds 130–200 kW-rack liquid-cooled Horizons at 50 MW IT each, and pairs air-cooled halls (PUE 1.1, BC) with direct-to-chip conversions. Basis: company site-level disclosures and independent trade coverage. The Diligence Stack's taxonomy places IREN between the full-stack platforms ($10–12M revenue/MW) and the pure landlords (~$1.4M/MW) — it is deliberately trying to be both, with newest contracts pricing ~$15M/MW.",
   "productsAndServices": [
     {
@@ -109,7 +109,7 @@
     {
       "date": "2026-08-28",
       "category": "financial",
-      "headline": "Blue Owl-managed funds lead a $2.4B AI-factory equipment financing ($2.8B total at 9.0% fixed, PIMCO advising) for the Mackenzie, BC Blackwell Ultra expansion",
+      "headline": "Blue Owl-managed funds lead a $2.4B AI-factory equipment financing ($1.2B term loan + $1.2B senior secured notes at 9.0% fixed; PIMCO advising certain note purchasers) for the Mackenzie, BC Blackwell Ultra expansion",
       "read": "GPU-secured private credit funds ~90% of the Mackenzie capex — the financing template moves beyond the Microsoft-contract facility.",
       "source": "https://www.stocktitan.net/news/OWL/blue-owl-managed-funds-lead-2-4-billion-ai-factory-financing-for-n5sfwyw6ua9x.html"
     },
@@ -240,6 +240,17 @@
       "status": "active",
       "since": "2026-05",
       "scale": "5GW partnership + $3.4B contract"
+    },
+    {
+      "slug": "blue-owl",
+      "type": "other",
+      "status": "active",
+      "since": "2026-08",
+      "scale": "USD 2.4bn (USD 1.2bn term loan + USD 1.2bn senior secured notes)",
+      "via": "Blue Owl Capital Corporation — lead lender and agent",
+      "note": "Lead lender: Blue Owl-managed funds led IREN's USD 2.4bn GPU equipment financing for the Mackenzie, British Columbia campus, signed 25 August 2026.",
+      "context": "IREN's FY2026 10-K describes 'an aggregate financing of approximately $2.4 billion': a USD 1.2bn master financing agreement with Blue Owl Capital Corporation as administrative, collateral and intercreditor agent and a lender, and USD 1.2bn of senior secured notes with Blue Owl Capital Corporation as note agent and PIMCO advising certain purchasers.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm"
     }
   ],
   "technicalSpecs": [
@@ -526,6 +537,11 @@
       "date": "2026-08-27"
     },
     {
+      "label": "IREN Limited — Form 10-K for the year ended 30 June 2026 (August 2026 financing agreements)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm",
+      "date": "2026-08-27"
+    },
+    {
       "label": "IREN — Horizon 1 delivered to Microsoft; NVIDIA Exemplar Cloud on GB300 NVL72",
       "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-delivers-horizon-1-microsoft-and-achieves-nvidia-exemplar",
       "date": "2026-08-13"
@@ -683,5 +699,5 @@
     }
   ],
   "lastUpdated": "2026-10-04",
-  "profileVersion": 7
+  "profileVersion": 8
 }

@@ -527,6 +527,16 @@
       "note": "HUMAIN is the Gulf's other sovereign AI builder; the US approved both for up to 35,000 GB300-equivalent chips on the same day, and since July 2026 only G42 holds licence-free access.",
       "context": "US Commerce's 19 Nov 2025 statement covered 'G42 … and Humain' together. The July 2026 BIS rule moved the UAE, not Saudi Arabia, to Country Group A:5. Khazna's entry into Dammam (up to 200 MW, December 2025) puts G42's landlord in HUMAIN's home market.",
       "source": "https://www.globalsecurity.org/military/library/news/2025/11/mil-251119-commerce01.htm"
+    },
+    {
+      "slug": "softbank",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-05",
+      "via": "Stargate UAE",
+      "note": "Partner in Stargate UAE, the 1 GW Abu Dhabi cluster G42 builds and OpenAI and Oracle operate; SoftBank's specific role is not stated.",
+      "context": "SoftBank's 22 May 2025 release says Stargate UAE 'will be built by G42 and operated by OpenAI and Oracle', and that the collaboration 'will also include Cisco … and SoftBank Group'.",
+      "source": "https://group.softbank/en/news/press/20250522"
     }
   ],
   "policyExposure": [
@@ -945,6 +955,11 @@
       "date": "2025-05-22"
     },
     {
+      "label": "SoftBank Group — Global tech alliance launches Stargate UAE",
+      "url": "https://group.softbank/en/news/press/20250522",
+      "date": "2025-05-22"
+    },
+    {
       "label": "G42 — G42 to lead consortium with US partners to build the 5GW UAE–US AI Campus",
       "url": "https://www.g42.ai/resources/news/g42-lead-consortium-us-partners-build-5gw-uae-us-ai-campus",
       "date": "2025-05-15"
@@ -1029,6 +1044,6 @@
       "url": "https://www.core42.ai/products/ai-cloud"
     }
   ],
-  "lastUpdated": "2026-09-26",
-  "profileVersion": 1
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 2
 }

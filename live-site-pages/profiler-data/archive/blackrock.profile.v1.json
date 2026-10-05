@@ -1,0 +1,1465 @@
+{
+ "schemaVersion": 7,
+ "slug": "blackrock",
+ "name": "BlackRock, Inc.",
+ "shortName": "BlackRock",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.blackrock.com/",
+ "headquarters": "50 Hudson Yards, New York, NY 10001, United States",
+ "founded": 1988,
+ "employees": "~26,200 (30 June 2026); ~24,900 (31 December 2025)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: BLK"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power. It also leads the take-private of AES, which on 26 September 2026 still awaited FERC and the New York commission. For a vendor BlackRock is a directory of buyers, not a door: every order is signed at the platform.\n\n**BACKGROUND.** Per company filings, the registrant is BlackRock, Inc. (NYSE: BLK; CIK 0002012383), a Delaware holding company that became the parent on the GIP closing date through a holding-company merger; the former BlackRock Inc. was renamed BlackRock Finance, Inc. and survives as a subsidiary guarantor. It reports one operating segment. Assets under management were USD 15.34 trillion at 30 June 2026, of which private markets were USD 329.1bn. Three acquisitions in nine months rebuilt that private-markets arm: GIP, Preqin (3 March 2025, about USD 3.2bn in cash) and HPS Investment Partners (1 July 2025, about USD 12.2bn of consideration net of cash). FY2025 revenue was USD 24,216m and as-adjusted diluted EPS USD 48.09. Infrastructure Investor's 2026 ranking puts BlackRock first in five-year infrastructure fundraising at USD 113.4bn. This dossier carries GIP, the AI Infrastructure Partnership (AIP) and HPS under one slug: GIP and HPS are wholly owned subsidiaries with no separate accounts, and AIP is a BlackRock-chaired partnership with no disclosed legal form.",
+ "ecosystemRole": "We assess BlackRock as the corpus's clearest case of an investor that buys nothing and controls a great deal. BlackRock, Inc. places no equipment orders; the GIP-branded funds it manages own or co-own two of the largest US data-centre landlords (Aligned, CyrusOne), a new data-centre developer (Coravel), a regulated Minnesota utility (ALLETE), a renewables-and-storage sponsor (Clearway Energy Group), merchant battery owners (Eolian and Jupiter Power; Akaysha in Australia per trade press) and, if the deal closes, AES. Separately, its index funds hold 8–11% of several listed utilities and generators as a passive investor, and a July 2026 FERC protest asks regulators to force the two businesses apart. For a seller the door is always the platform's engineering and procurement team. BlackRock's value is that one sponsor sits above that many of them.",
+ "productsAndServices": [
+  {
+   "name": "Global Infrastructure Partners (GIP) — infrastructure equity",
+   "category": "Private markets — infrastructure",
+   "description": "BlackRock's infrastructure equity franchise, branded 'Global Infrastructure Partners (GIP), a part of BlackRock' and led by Bayo Ogunlesi. At the 1 October 2024 closing BlackRock folded its own infrastructure businesses into the GIP brand. BlackRock reports infrastructure fee-paying AUM of USD 113.5bn at 30 June 2026 against USD 197bn of infrastructure client assets; GIP describes itself as managing 'over $200 billion'. The three figures count different things and do not contradict each other. GIP V closed at USD 25.2bn, which BlackRock calls 'the largest-ever client capital raise in a private infrastructure fund'. The GIP team pages also show a Mid-Market Fund (USD 19bn of commitments) and a Transition Fund.",
+   "highlights": [
+    "Data centres: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR, since March 2022), Coravel (50:50 with ACS, completed January 2026)",
+    "Utilities: ALLETE and Minnesota Power (closed 15 December 2025; GIP 60% including a GIP-managed CalPERS vehicle, CPP Investments 40%); AES take-private signed 1 March 2026 and pending",
+    "Renewables and storage: Clearway Energy Group (50:50 with TotalEnergies), Eolian (wholly owned battery projects), Vena Energy (Asia-Pacific; India unit sold August 2026), Atlas Renewable Energy (Latin America)",
+    "Exits and lending: Guernsey Power Station sold to Talen with Caithness (November 2025); GIP a lender on EdgeCore's USD 1.5bn Sterling construction financing (April 2026)",
+    "Infrastructure Investor 2026: first by five-year infrastructure equity fundraising at USD 113,365m, ahead of KKR (USD 100,475m), Brookfield (USD 99,112m) and Macquarie (USD 87,887m)"
+   ],
+   "positioning": "Ranked first by Infrastructure Investor on five-year fundraising, a lead the ranking owes to the GIP acquisition. BlackRock's own framing at its 2025 Investor Day was 'top three in each of infrastructure, cash and outsourcing'. The distinguishing feature against Brookfield and KKR is the pairing: the same parent runs the largest index-fund business and a controlling infrastructure business, which is exactly what the July 2026 FERC protest attacks.",
+   "soldThrough": "Closed-end drawdown funds and co-investment vehicles for institutional limited partners, including separately managed vehicles such as the CalPERS vehicle GIP manages in ALLETE and AES; private-wealth access through BlackRock's retail channel.",
+   "targetSegments": [
+    "Pension funds",
+    "Sovereign wealth funds",
+    "Insurers",
+    "Private-wealth investors"
+   ],
+   "roadmap": "BlackRock targets USD 400bn of private-markets gross fundraising by 2030 (Investor Day, 12 June 2025). A GCC and Central Asia infrastructure partnership with L'IMAD, ADNOC and Temasek targeting USD 30bn was announced on 14 May 2026, subject to definitive agreements."
+  },
+  {
+   "name": "AI Infrastructure Partnership (AIP)",
+   "category": "Private markets — AI data centres and power",
+   "description": "A capital partnership launched on 17 September 2024 as the Global AI Infrastructure Investment Partnership by BlackRock, GIP, Microsoft and MGX, seeking 'to unlock $30 billion of private equity capital' and 'up to $100 billion in total investment potential when including debt financing' for data centres and the power to run them, chiefly in the United States. Renamed on 19 March 2025, when NVIDIA and xAI joined and GE Vernova and NextEra Energy 'agreed to collaborate with AIP'. The Kuwait Investment Authority joined on 3 June 2025 as 'the first non-founder financial anchor investor', and Temasek is named as a second anchor. Larry Fink is AIP's chairman and MGX's chief executive its vice chairman. No first-party source gives AIP's legal form, its manager or any member's commitment.",
+   "highlights": [
+    "First investment: 100% of Aligned Data Centers from Macquarie-managed funds, about USD 40bn enterprise value, 51 campuses and more than 6.4 GW, closed 21 July 2026, with USD 5bn of growth capital committed",
+    "The European Commission's clearance (Case M.12259, 19 January 2026) names only Global Infrastructure Management, LLC (ultimately BlackRock) and MGX Fund Management Limited as acquiring joint control; AIP is not a notifying party",
+    "Founders as listed in October 2025: BlackRock, GIP, MGX, Microsoft and NVIDIA; Cisco is a technology partner",
+    "Reported only: Bloomberg (24 September 2026) says AIP and IFM Investors are in exclusive talks with Blue Owl for STACK Infrastructure's Asia-Pacific portfolio at up to USD 25bn; no party has confirmed"
+   ],
+   "positioning": "AIP's distinguishing feature is its membership: the demand side (Microsoft, NVIDIA, xAI) sits beside sovereign money (MGX, KIA, Temasek) and an infrastructure manager (GIP). The one regulator to rule on its deal named GIP's managing entity and MGX, not AIP, as the acquirers of control.",
+   "soldThrough": "Equity from founding members and anchor investors, deployed alongside direct co-investment by GIP and MGX.",
+   "targetSegments": [
+    "Hyperscale data-centre platforms",
+    "Power generation for data centres",
+    "US and OECD markets"
+   ],
+   "roadmap": "No second AIP investment had been signed by 26 September 2026. The STACK Asia-Pacific talks are the only reported candidate."
+  },
+  {
+   "name": "Private Financing Solutions — HPS Investment Partners",
+   "category": "Private markets — private credit",
+   "description": "BlackRock's private-credit arm, created when HPS Investment Partners closed on 1 July 2025 and led by HPS's Scott Kapnick, Scot French and Michael Patterson. HPS keeps its brand as 'HPS, a part of BlackRock'. At closing HPS added USD 165bn of client assets and USD 118bn of fee-paying AUM. Private-credit fee-paying AUM was USD 150.9bn at 30 June 2026 against USD 212bn of private-credit client assets. The ElmTree net-lease business (closed 2 September 2025) sits in the same group.",
+   "highlights": [
+    "Private-credit AUM USD 145.4bn at 31 December 2025 and USD 150.9bn at 30 June 2026",
+    "In this corpus: HPS was term lender on Intersect Power's USD 837m Texas battery financing (July 2024) and its earlier portfolio rounds",
+    "Private-credit net inflows of about USD 6bn in Q2 2026, per trade-press accounts of the results"
+   ],
+   "positioning": "A lender, not an owner: an HPS appearance in a dossier is a loan to the company, not a shareholding.",
+   "soldThrough": "Direct lending and structured financing to companies and projects; funds for institutional and private-wealth investors.",
+   "targetSegments": [
+    "Corporate borrowers",
+    "Project developers",
+    "Institutional and private-wealth investors"
+   ],
+   "roadmap": "BlackRock's 2026 fundraising plan names 'private financing solutions' alongside infrastructure equity and debt."
+  },
+  {
+   "name": "iShares and ETFs",
+   "category": "Index — exchange-traded funds",
+   "description": "BlackRock's exchange-traded fund business and its largest line. ETF AUM was USD 5.47 trillion at 31 December 2025 and USD 6.25 trillion at 30 June 2026, when BlackRock said 'iShares crossed $6 trillion in AUM'. Q2 2026 ETF net inflows were USD 178bn and year-to-date USD 310bn. FY2025 ETF base fees were USD 6,043m for equity and USD 1,532m for fixed income.",
+   "highlights": [
+    "ETF AUM USD 6.25 trillion at 30 June 2026, about 41% of total AUM",
+    "Index holdings in listed companies are reported on Schedule 13G as a passive investor by BlackRock Portfolio Management LLC",
+    "Per the PJM market monitor's July 2026 filing, BlackRock's index-fund stakes include Exelon 11.02%, PSEG 10.41%, Talen 9.01%, NextEra 8.58%, FirstEnergy 8.49% and NRG 8.48%, held under a FERC blanket authorisation"
+   ],
+   "positioning": "The scale of the index business is the source of the political exposure: a passive holder of 8–11% of several utilities that also controls utilities through GIP.",
+   "soldThrough": "Listed on stock exchanges and bought by individuals, advisers and institutions.",
+   "targetSegments": [
+    "Retail investors",
+    "Financial advisers",
+    "Institutions"
+   ],
+   "roadmap": "No infrastructure-specific ETF roadmap is relevant to this dossier."
+  },
+  {
+   "name": "Institutional index and active mandates",
+   "category": "Index and active management",
+   "description": "Separately managed index and active mandates for pensions, insurers and sovereign funds. Institutional index AUM was USD 3.95 trillion and institutional active AUM USD 2.69 trillion at 30 June 2026. In Q2 2026 institutional index lost USD 41.5bn and institutional active gained USD 43.8bn. The line includes outsourcing mandates and LifePath target-date funds.",
+   "highlights": [
+    "Institutional index USD 3.70tn to USD 3.95tn, and institutional active USD 2.52tn to USD 2.69tn, between 31 December 2025 and 30 June 2026",
+    "Retail AUM USD 1.40tn and cash management USD 1.07tn at 30 June 2026"
+   ],
+   "positioning": "The legacy core of the firm; relevant here only because index stewardship and GIP control sit in the same parent.",
+   "soldThrough": "Direct institutional mandates.",
+   "targetSegments": [
+    "Pension funds",
+    "Insurers",
+    "Sovereign funds"
+   ],
+   "roadmap": "BlackRock's 2030 targets call for organic base-fee growth of 5% or more."
+  },
+  {
+   "name": "Aladdin and technology services, including Preqin",
+   "category": "Technology",
+   "description": "Portfolio-management and risk software sold to other investment firms, plus Preqin's private-markets data, which BlackRock bought for about USD 3.2bn in cash (closed 3 March 2025) and 'unified … onto Aladdin'. Technology services revenue was USD 1,981m in FY2025 (+24%) and USD 1,096m in H1 2026. Annual contract value grew 31% in 2025 (16% excluding Preqin) and 15% in Q2 2026.",
+   "highlights": [
+    "FY2025 revenue USD 1,981m",
+    "Annual contract value +15% in Q2 2026"
+   ],
+   "positioning": "Not an AIDC business; recorded because BlackRock's 2030 target counts private markets and technology together as 30% or more of revenue.",
+   "soldThrough": "Subscription software and data.",
+   "targetSegments": [
+    "Asset managers",
+    "Insurers",
+    "Wealth managers"
+   ],
+   "roadmap": "Low-to-mid-teens annual-contract-value growth targeted to 2030."
+  },
+  {
+   "name": "Legacy climate and diversified infrastructure funds",
+   "category": "Private markets — energy transition",
+   "description": "The infrastructure funds BlackRock ran before GIP, now under the GIP brand. The Climate Infrastructure franchise put USD 500m into Recurrent Energy for 20% on an as-converted basis from 'the fourth vintage of BlackRock's Climate Infrastructure fund franchise' (announced January 2024, closed October 2024). A fund of the Diversified Infrastructure business agreed to buy Jupiter Power in November 2022. The Evergreen Infrastructure Partners Fund bought 38 operating solar and storage projects from Excelsior Energy Capital (announced March 2024). Akaysha Energy in Australia is described by trade press as a 2022 Climate Infrastructure acquisition; Akaysha's own site does not name its owner.",
+   "highlights": [
+    "Recurrent Energy: a minority preferred position, not control",
+    "Jupiter Power and Eolian: merchant battery owners; Jupiter's September 2026 financing release names no owner",
+    "Akaysha: reported in January 2026 to be weighing a minority stake sale"
+   ],
+   "positioning": "Where BlackRock's battery exposure sits. The record is uneven: Eolian's homepage names GIP as its owner and Canadian Solar's FY2025 20-F sets out the Recurrent terms, but Jupiter's and Akaysha's 2026 releases name no owner.",
+   "soldThrough": "Closed-end funds for institutional investors.",
+   "targetSegments": [
+    "Battery storage developers",
+    "Solar and storage developers"
+   ],
+   "roadmap": "Which GIP fund now holds each of these positions is not stated in any source read for this dossier."
+  },
+  {
+   "name": "Meta El Paso data-centre venture",
+   "category": "Private markets — data-centre joint venture",
+   "description": "A roughly USD 14bn, 1 GW data-centre campus in El Paso announced by Meta on 28 July 2026, in which 'funds managed by BlackRock will own an 80% interest' and Meta 20%. Meta contributes about USD 2.3bn of assets and construction in progress, BlackRock about USD 4.9bn of cash, and a USD 12.5bn debt financing funds part of BlackRock's share. Meta provides construction management and property management, is the sole tenant on a four-year lease extendable to twenty years, and gives a residual value guarantee of about USD 13bn.",
+   "highlights": [
+    "Meta's Q2 10-Q (filed 30 July 2026) describes an 'exclusivity agreement' subject to 'the execution of definitive agreements'; no first-party closing notice was found",
+    "El Paso Matters reports that an issuer named Sopaipilla Investor sold about USD 12.3bn of bonds",
+    "Marsh McLennan is reported as technical adviser to the BlackRock funds on the transaction"
+   ],
+   "positioning": "An 80% owner that does not run construction: Meta manages the build and property and is the only tenant.",
+   "soldThrough": "Funds managed by BlackRock, together with GIP and HPS per the announcement.",
+   "targetSegments": [
+    "Hyperscale tenant (Meta)"
+   ],
+   "roadmap": "Online from 2028 per the announcement."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-24",
+   "category": "market",
+   "headline": "Bloomberg reports AIP and IFM Investors in exclusive talks with Blue Owl for STACK Infrastructure's Asia-Pacific data centres at up to USD 25bn",
+   "read": "A report, not a deal: Reuters could not verify it, and BlackRock, IFM, STACK and AIP did not respond. The '~1.1 GW' figure in circulation is RuntimeWire's own sum of STACK's site list, against 470 MW in another profile. If it signs, it would be AIP's second investment and its first outside the Americas.",
+   "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports"
+  },
+  {
+   "date": "2026-09-17",
+   "category": "regulatory",
+   "headline": "PUCO approves the change of control of AES Ohio in the AES take-private",
+   "read": "With CFIUS (27 August) and the stockholder vote (26 June) done, FERC (Docket EC26-99) and the New York commission (Case 26-E-0348) are the approvals still outstanding. Per trade press, PUCO's conditions include no rate changes from the merger and recusal of directors with data-centre interests.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000114036126036994/ef20082051_8k.htm"
+  },
+  {
+   "date": "2026-09-03",
+   "category": "regulatory",
+   "headline": "Indiana regulators reopen the AES Indiana rate case, citing Google's Monrovia data centre and the BlackRock-led acquisition",
+   "read": "Not a closing condition for the merger, but the first state action to tie a BlackRock-controlled utility's rates to data-centre load.",
+   "source": "https://www.ipm.org/news/2026-09-03/iurc-agrees-to-reconsider-aes-indiana-rate-case-following-google-blackrock-developments"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "partnership",
+   "headline": "NVIDIA signs memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn",
+   "read": "MOUs, not definitive agreements: NVIDIA's release says 'These partnerships remain subject to execution of the final agreements' and gives no per-firm allocation. Fink tied it to AIP ('including through the AI Infrastructure Partnership').",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "ma",
+   "headline": "Meta announces a roughly USD 14bn, 1 GW El Paso data-centre venture in which funds managed by BlackRock will own 80%",
+   "read": "Meta's own 10-Q two days later calls it an 'exclusivity agreement' subject to definitive agreements, and no closing notice has been found. BlackRock would own the campus, while Meta builds it, manages it and is its only tenant.",
+   "source": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "ma",
+   "headline": "AIP, MGX and GIP complete the acquisition of 100% of Aligned Data Centers from Macquarie-managed funds at about USD 40bn enterprise value",
+   "read": "AIP's first investment and the largest data-centre transaction on record. Control sits with GIP's managing entity and MGX per the European Commission.",
+   "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
+  },
+  {
+   "date": "2026-07-20",
+   "category": "regulatory",
+   "headline": "Consumer groups protest the AES deal at FERC and ask it to separate BlackRock's index business from its utility control; PJM's market monitor opposes the deal absent behavioural commitments",
+   "read": "The protest reopens BlackRock's blanket authorisation to hold utility shares (EC16-77, EC25-12). The market monitor lists BlackRock's passive stakes: Exelon 11.02%, PSEG 10.41%, Talen 9.01%, NextEra 8.58%, FirstEnergy 8.49% and NRG 8.48%. The same passive positions are now being argued as a reason to condition the controlling one.",
+   "source": "https://www.citizen.org/wp-content/uploads/PESP-PC-CAC-FERC-BlackRock-EQT-AES-protest-072026.pdf"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "financial",
+   "headline": "Q2 2026: revenue USD 7,084m and as-adjusted diluted EPS USD 13.91 against LSEG consensus of USD 12.59; AUM USD 15.34 trillion",
+   "read": "A beat on EPS and revenue (Zacks revenue consensus USD 6.82bn), with the as-adjusted operating margin at 45.9% and the shares up more than 7% per Reuters.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-ex99_1.htm"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "project",
+   "headline": "ACS and GIP brand their data-centre venture Coravel and sign an approximately 140 MW hyperscale lease at Dallas–Fort Worth",
+   "read": "The first tenant for the ACS–GIP 50:50 venture, six months after it was completed.",
+   "source": "https://pressroom.grupoacs.com/en/news/hyperscale-dallas-fort-worth-campus-coravel-new-brand"
+  },
+  {
+   "date": "2026-06-26",
+   "category": "regulatory",
+   "headline": "AES stockholders approve the take-private by the GIP- and EQT-led consortium",
+   "read": "About 98% of votes cast were in favour; the regulatory approvals that followed are listed above.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000114036126026562/ef20076870_ex99-1.htm"
+  },
+  {
+   "date": "2026-06-10",
+   "category": "policy",
+   "headline": "Senate Banking Committee Ranking Member Warren writes to Larry Fink about BlackRock's data-centre ownership and electricity costs",
+   "read": "Parallel letters went to KKR, Blackstone and Brookfield. The letter asks who controls each data-centre holding and how decisions are made, with a reply due 27 June. No BlackRock response was found.",
+   "source": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_blackrock.pdf"
+  },
+  {
+   "date": "2026-05-14",
+   "category": "partnership",
+   "headline": "GIP agrees to partner with L'IMAD, ADNOC and Temasek on a Gulf and Central Asia infrastructure partnership targeting USD 30bn",
+   "read": "Subject to definitive agreements; a second sovereign-anchored platform alongside AIP.",
+   "source": "https://www.global-infra.com/news/global-infrastructure-partners-a-part-of-blackrock-to-partner-with-limad-adnoc-and-temasek-to-launch-gulf-cooperation-council-gcc-and-central-asia-focused-infrastructure-partnership-targ/"
+  },
+  {
+   "date": "2026-04-27",
+   "category": "policy",
+   "headline": "Interior agrees to cancel the Bluepoint Wind lease, of which GIP owns 50%, once GIP invests up to USD 765m in a US LNG facility",
+   "read": "Not a payment to exit: the bid payment is reimbursed only in the amount GIP reinvests in LNG. GIP's offshore-wind exposure is traded for gas infrastructure.",
+   "source": "https://www.doi.gov/pressreleases/interior-announces-two-historic-agreements-promote-affordable-reliable-energy"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "financial",
+   "headline": "GIP co-leads USD 1.5bn of construction debt for EdgeCore's two fully leased Northern Virginia data centres (114 MW)",
+   "read": "GIP as a lender, not an owner: a data-centre appearance by BlackRock is not always equity.",
+   "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia"
+  },
+  {
+   "date": "2026-03-02",
+   "category": "ma",
+   "headline": "A GIP- and EQT-led consortium agrees to take AES private at USD 15.00 a share — about USD 10.7bn of equity and USD 33.4bn of enterprise value",
+   "read": "The merger agreement was signed on 1 March. After closing, GIP-managed vehicles would control AES, a large US buyer of batteries and generation and an anchor shareholder of Fluence.",
+   "source": "https://www.global-infra.com/news/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes/"
+  },
+  {
+   "date": "2026-01-15",
+   "category": "financial",
+   "headline": "FY2025: revenue USD 24,216m; as-adjusted diluted EPS USD 48.09; net inflows USD 698bn; AUM USD 14.04 trillion",
+   "read": "The figures are BlackRock's own. The Q4 and full-year consensus comparisons found in research came from search summaries only and are not carried here.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526013503/blk-ex99_1.htm"
+  },
+  {
+   "date": "2026-01-09",
+   "category": "ma",
+   "headline": "ACS and GIP complete their 50:50 global data-centre development platform (initial 1.7 GW in Europe, the US and Australia)",
+   "read": "A development platform rather than an acquisition of operating halls. The venture buys land, power and shells from scratch.",
+   "source": "https://pressroom.grupoacs.com/en/news/acs-group-and-global-infrastructure-partners-complete-the-creation-of-global-data-center-platform"
+  },
+  {
+   "date": "2025-12-15",
+   "category": "ma",
+   "headline": "CPP Investments and GIP complete the USD 6.2bn take-private of ALLETE, parent of Minnesota Power",
+   "read": "Closed after a unanimous Minnesota commission vote on 3 October 2025, with about USD 200m of customer benefits including a base-rate freeze. Per ALLETE's proxy, GIP holds 60% but governance is shared equally.",
+   "source": "https://www.sec.gov/Archives/edgar/data/66756/000114036125045482/ef20060780_8k.htm"
+  },
+  {
+   "date": "2025-11-25",
+   "category": "ma",
+   "headline": "Talen completes its purchase of Guernsey Power Station 'from Caithness Energy and BlackRock'",
+   "read": "An exit: a 1.8 GW PJM gas plant sold to a generator whose shares BlackRock's index funds also hold (9.01% per the PJM market monitor).",
+   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000037/ex99120251125pressreleasec.htm"
+  },
+  {
+   "date": "2025-10-15",
+   "category": "ma",
+   "headline": "AIP, MGX and GIP agree to acquire all equity in Aligned Data Centers (50 campuses, more than 5 GW at signing)",
+   "read": "The announcement named AIP's founders as BlackRock, GIP, MGX, Microsoft and NVIDIA, and Fink as AIP's chairman.",
+   "source": "https://www.global-infra.com/news/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/"
+  },
+  {
+   "date": "2025-07-15",
+   "category": "financial",
+   "headline": "BlackRock reports GIP V closed at USD 25.2bn",
+   "read": "'The largest-ever client capital raise in a private infrastructure fund' — the fund that anchors GIP's 60% of ALLETE and its AES stake.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2012383/000095017025095711/blk-ex99_1.htm"
+  },
+  {
+   "date": "2025-07-01",
+   "category": "ma",
+   "headline": "BlackRock completes the acquisition of HPS Investment Partners and forms Private Financing Solutions",
+   "read": "About USD 12.2bn of consideration net of cash; adds USD 165bn of client assets.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525153573/d78785dex991.htm"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that BlackRock is a **directory of equipment buyers, not a door to one**. BlackRock, Inc. places no orders. The GIP-branded funds it manages own or co-own Aligned, CyrusOne, Coravel, ALLETE, Clearway Energy Group, Eolian and Jupiter Power, and would add AES on closing, and each of those signs its own purchase orders. Basis: BlackRock's single-segment 10-K, the platform list on GIP's portfolio pages, and the counterparties' own releases and filings. A seller uses BlackRock to find the buyers and then sells to each platform's engineering team.",
+  "**(Moderate confidence)** We assess that **BlackRock's first place in infrastructure was largely acquired with GIP**. Infrastructure Investor's 2026 ranking puts it first at USD 113.4bn of five-year fundraising, USD 12.9bn ahead of KKR, counting funds closed in 2021–2025 — a window in which the GIP team BlackRock bought in October 2024 closed GIP V alone at USD 25.2bn. The ranking does not itemise funds, so the share owed to GIP is inferred. Its own infrastructure figures run three ways — USD 113.5bn fee-paying, USD 197bn of client assets, 'over $200 billion' in GIP's words — and all three are consistent once the definitions are read.",
+  "**(Moderate confidence)** We assess that **the AES deal is the test of whether one firm may be both the largest passive owner of US utilities and a controlling owner of some of them**. Basis: the July 2026 protest asks FERC to force BlackRock to separate its index business from its utility control; PJM's market monitor opposes the deal without behavioural commitments and lists 8–11% passive stakes in Exelon, PSEG, Talen, NextEra, FirstEnergy and NRG; FERC's April 2025 blanket-authorisation order had already recorded 'some concern' about 'a novel degree of influence'. No FERC order in EC26-99 had been found by 26 September 2026. A conditioned approval would set the template for every future utility take-private BlackRock leads.",
+  "**(Moderate confidence)** We assess that **AIP is a capital-pooling frame rather than a controlling owner**. Basis: the European Commission's decision on Aligned names Global Infrastructure Management, LLC and MGX Fund Management Limited as the acquirers of joint control, and AIP is not a notifying party; no first-party source gives AIP's legal form, manager or members' commitments. For a seller AIP's significance is its membership, which puts Microsoft, NVIDIA and xAI — the tenants — among the owners of the landlord.",
+  "**(Moderate confidence)** We assess that **BlackRock shares control at nearly every AIDC platform it holds**, so no equipment decision there is BlackRock's alone. Aligned is jointly controlled with MGX, CyrusOne co-owned with KKR, Coravel a 50:50 venture with ACS, ALLETE's governance shared equally with CPP Investments, and at El Paso Meta runs construction and property management despite BlackRock funds' 80%. In practice (inference) the platform's management and the co-owner's representatives decide on equipment, not GIP's investment committee.",
+  "**(Low confidence)** We assess that **BlackRock's battery exposure is losing weight against its data-centre exposure**. Basis: Jupiter Power's and Akaysha's 2026 releases do not name their owner; Akaysha was reported in January 2026 to be weighing a minority sale; Vena sold its India unit in August 2026 and GIP is reported (unconfirmed) to be exploring a controlling-stake sale. Against that, Aligned, Coravel and El Paso were all added in 2025–26. The judgment is weak because no fund-level disclosure confirms which positions GIP intends to hold.",
+  "**Collection gaps:** AIP's legal form, manager and members' commitments; the Aligned equity split between AIP, MGX and GIP (the USD 21bn equity cheque is trade press only); the CyrusOne split with KKR (widely called 50:50, stated by no first-party source); which GIP fund now holds Jupiter Power, Akaysha and Eolian; whether the Meta El Paso venture has closed; the FERC order in EC26-99. Search-summary-only items were excluded, including a reported HPS write-down and the Q4 2025 consensus.",
+  "**INDICATORS TO WATCH** — *Q3 2026 results (about 13 October, not yet announced):* infrastructure fee-paying AUM moving toward the USD 197bn of client assets would show GIP V and the AIP capital being deployed. *FERC order in EC26-99 and on the blanket authorisation:* approval with conditions on passive holdings would confirm Judgment 3; a hearing order would push AES past its 1 June 2027 outside date. *STACK Asia-Pacific:* a signing would be AIP's second investment and its first in Asia; a collapse would leave AIP a one-asset partnership. *CyrusOne IPO filing (as early as 2027, reported):* the first public disclosure of the KKR–GIP split. *NVIDIA compute-financing definitive agreements:* any per-firm allocation would size BlackRock's role for the first time."
+ ],
+ "relationships": [
+  {
+   "slug": "aligned",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2026-07",
+   "scale": "~USD 40bn EV; 51 campuses; >6.4 GW",
+   "via": "GIP and the AI Infrastructure Partnership",
+   "note": "Owned since 21 July 2026 by AIP, MGX and GIP, which bought 100% of the equity from Macquarie-managed funds; AIP's first investment.",
+   "context": "Aligned's closing release names 'AIP, MGX, and BlackRock's Global Infrastructure Partners' as the buyers of 100% of the equity at about USD 40bn of enterprise value, with 51 campuses, more than 6.4 GW of operational and planned capacity and an additional USD 5bn of growth capital. The European Commission's clearance (Case M.12259, 19 January 2026) names Global Infrastructure Management, LLC, 'ultimately controlled by BlackRock', and MGX Fund Management Limited as acquiring joint control; AIP is not a notifying party.\n\nThe split between AIP, MGX and GIP is undisclosed, and the USD 21bn equity cheque is a trade-press figure no party has confirmed. Aligned is the platform that buys the power and cooling equipment; BlackRock reaches it through its board seats.",
+   "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
+  },
+  {
+   "slug": "cyrusone",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2022-03",
+   "scale": "~USD 15bn including assumed debt (2022)",
+   "via": "Global Infrastructure Partners",
+   "note": "Co-owned with KKR since the March 2022 take-private; GIP's Will Brilliant sits on CyrusOne's board.",
+   "context": "GIP's release of 25 March 2022 records the completion of CyrusOne's acquisition 'by funds managed by KKR … and Global Infrastructure Partners' for about USD 15bn including assumed debt. Four years on the sponsors still speak jointly: CyrusOne's 30 July 2026 release naming John Hatem chief executive quotes 'Waldemar Szlezak, Partner at KKR, and Will Brilliant, Partner at Global Infrastructure Partners', and GIP's portfolio page still lists CyrusOne as unrealised.\n\nThe ownership split is widely reported as 50:50 but is stated in no first-party source read for this dossier. Reuters reported on 10 August 2026 that the owners are preparing an IPO as early as 2027; that is a plan reported by unnamed sources, not a filing. The flagged conflict — whether GIP still holds CyrusOne — is settled: it does.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-names-john-hatem-chief-executive-officer-to-accelerate-its-global-digital-infrastructure-strategy"
+  },
+  {
+   "slug": "kkr",
+   "type": "partner",
+   "status": "active",
+   "since": "2022-03",
+   "via": "CyrusOne",
+   "note": "Co-owner of CyrusOne with GIP since 2022, and BlackRock's nearest rival in infrastructure fundraising (second to BlackRock in Infrastructure Investor's 2026 ranking).",
+   "context": "The two firms share one platform and compete for the next. They jointly own CyrusOne; both signed NVIDIA's compute-financing memoranda on 10 August 2026; both received Senator Warren's June 2026 letters. Infrastructure Investor's 2026 ranking puts BlackRock first at USD 113,365m and KKR second at USD 100,475m. In June 2026 Bloomberg reported KKR among the suitors for STACK's Asia-Pacific portfolio, for which an AIP-led group was reported in exclusive talks in September.",
+   "source": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/"
+  },
+  {
+   "slug": "mgx",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-09",
+   "via": "AI Infrastructure Partnership (AIP)",
+   "note": "Co-founder of AIP with BlackRock, GIP and Microsoft, and co-acquirer of joint control of Aligned with GIP's managing entity.",
+   "context": "The 17 September 2024 launch release announced the Global AI Infrastructure Investment Partnership by BlackRock, GIP, Microsoft and MGX, seeking 'to unlock $30 billion of private equity capital' and 'up to $100 billion in total investment potential when including debt financing'. MGX's chief executive is AIP's vice chairman and Larry Fink its chairman. In the Aligned deal MGX is both inside AIP and a direct co-buyer, and the European Commission names MGX Fund Management Limited and GIP's managing entity as the two parties acquiring joint control.",
+   "source": "https://www.global-infra.com/news/global-infrastructure-partners-blackrock-microsoft-and-mgx-launch-new-ai-partnership-to-invest-in-data-centers-and-supporting-power-infrastructure/"
+  },
+  {
+   "slug": "microsoft",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-09",
+   "via": "AI Infrastructure Partnership (AIP)",
+   "note": "Co-founder of the AI Infrastructure Partnership with BlackRock, GIP and MGX.",
+   "context": "Microsoft was one of the four launching parties on 17 September 2024, providing funding and expertise per the launch release. It is listed among AIP's founders in the October 2025 Aligned announcement, so a Microsoft-backed partnership owns part of a landlord Microsoft may lease from. Its commitment and stake are undisclosed.",
+   "source": "https://www.global-infra.com/news/global-infrastructure-partners-blackrock-microsoft-and-mgx-launch-new-ai-partnership-to-invest-in-data-centers-and-supporting-power-infrastructure/"
+  },
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-09",
+   "via": "AI Infrastructure Partnership; compute-financing MOU",
+   "note": "AIP's technical adviser from launch and a member from March 2025; one of six financiers in NVIDIA's August 2026 compute-financing memoranda.",
+   "context": "The launch release named NVIDIA as supporting and advising AIP. On 19 March 2025 NVIDIA and xAI joined the renamed AI Infrastructure Partnership, with NVIDIA continuing as technical adviser, and the October 2025 Aligned announcement lists NVIDIA among AIP's founders. On 10 August 2026 NVIDIA signed memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn. The release says they 'remain subject to execution of the final agreements' and gives no per-firm allocation. Fink: the deal 'deepens our relationship with NVIDIA, including through the AI Infrastructure Partnership'.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+  },
+  {
+   "slug": "xai",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-03",
+   "via": "AI Infrastructure Partnership (AIP)",
+   "note": "Joined the AI Infrastructure Partnership with NVIDIA on 19 March 2025.",
+   "context": "BlackRock's 19 March 2025 release announced that NVIDIA and xAI would join the partnership, renamed the AI Infrastructure Partnership, and that GE Vernova and NextEra Energy had agreed to collaborate with it. xAI is named among Aligned's strategic partners after the AIP acquisition. Its commitment is undisclosed.",
+   "source": "https://www.blackrock.com/corporate/newsroom/media/press-releases/ai-infrastructure-partnership"
+  },
+  {
+   "slug": "clearway-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2018",
+   "via": "Clearway Energy Group (GIP 50%, TotalEnergies 50%)",
+   "note": "GIP co-owns Clearway Energy Group, the sponsor that controls the listed Clearway Energy, Inc.; BlackRock Portfolio Management files the 13D for the GIP entities.",
+   "context": "Clearway Energy Group's own page says it 'is owned by Global Infrastructure Partners and TotalEnergies'. BlackRock Portfolio Management LLC's Schedule 13D/A No. 3 of May 2026 reports 85,181,445 shares of Clearway Energy, Inc., 41.5% on an as-exchanged basis, beneficially owned through GIP and Clearway Energy Group; the April 13D/A No. 2 put the same holding at 49.9% of Class C. That filing is a 13D, the control filing, where BlackRock's index holdings elsewhere are filed on the passive 13G. Clearway Energy Group develops wind, solar and storage and offers assets down to the listed company.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926054174/primary_doc.xml"
+  },
+  {
+   "slug": "eolian",
+   "type": "portfolio",
+   "status": "active",
+   "via": "Global Infrastructure Partners",
+   "note": "'A portfolio company of Global Infrastructure Partners (GIP), part of BlackRock', owning its battery projects outright.",
+   "context": "Eolian's homepage describes it as 'a portfolio company of Global Infrastructure Partners (GIP), part of BlackRock' that 'operates a growing portfolio of wholly-owned utility-scale battery energy storage projects', and a July 2024 financing release says it is owned by its employees and by funds managed by GIP. GIP launched it by buying MAP Energy's renewables business in December 2020. Which GIP fund holds it and at what share is not stated. Eolian is a buyer of batteries and power conversion in its own right.",
+   "source": "https://www.eolianenergy.com/"
+  },
+  {
+   "slug": "jupiter-power",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2022-11",
+   "via": "BlackRock Diversified Infrastructure fund",
+   "note": "Agreed in November 2022 to be acquired from EnCap by a fund managed by BlackRock's Diversified Infrastructure business.",
+   "context": "The EnCap and Jupiter release of 15 November 2022 says 'BlackRock Alternatives (BlackRock), through a fund managed by its Diversified Infrastructure business, has agreed to acquire Jupiter Power LLC'. No first-party closing notice was found, and Jupiter's 2026 releases, including a USD 1.4bn financing for ten battery projects on 16 September 2026, name no owner. Its homepage, read on 26 September 2026, names none either. BlackRock's infrastructure businesses were combined under the GIP brand in October 2024, but no source states which GIP fund now holds Jupiter. Jupiter is a direct buyer of battery systems.",
+   "source": "https://jupiterpower.io/encap-investments-sells-jupiter-power-to-blackrock/"
+  },
+  {
+   "slug": "aes-clean-energy",
+   "type": "portfolio",
+   "status": "announced",
+   "since": "2026-03",
+   "scale": "USD 15.00/share; ~USD 10.7bn equity; ~USD 33.4bn EV",
+   "note": "GIP leads the consortium taking The AES Corporation private; signed 1 March 2026, awaiting FERC and New York approval on 26 September 2026.",
+   "context": "GIP's release of 2 March 2026: 'Global Infrastructure Partners, a part of BlackRock, and the EQT Infrastructure VI fund, along with co-underwriters' CalPERS and the Qatar Investment Authority, agreed to acquire AES for USD 15.00 a share in cash, funded entirely with equity. Per PJM's market monitor, the post-closing ownership would be GIP 36.625%, EQT 33.375%, CalPERS 20% through a GIP-managed vehicle, and QIA 10% — a controlling 56.625% managed by GIP.\n\nStockholders approved on 26 June, CFIUS cleared on 27 August and PUCO approved on 17 September 2026. FERC (EC26-99) and the New York commission are outstanding, and the outside date is 1 June 2027. The covered slug is AES's US clean-energy development business, which buys batteries and generation; until closing AES remains a listed company, and this link stays 'announced'.",
+   "source": "https://www.global-infra.com/news/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes/"
+  },
+  {
+   "slug": "recurrent-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2024-06",
+   "scale": "USD 500m for 20% on an as-converted basis",
+   "note": "A minority preferred position: BlackRock's Climate Infrastructure fund holds Series A convertible preferred representing 20% of Recurrent Energy.",
+   "context": "Recurrent's release of 3 October 2024 records the final closing of 'a $500 million investment … by BlackRock through a fund managed by its Climate Infrastructure business … representing 20% of the outstanding fully diluted shares of Recurrent Energy on an as-converted basis', with Canadian Solar keeping the majority. Canadian Solar's filings describe it as coming from the fourth vintage of the Climate Infrastructure fund franchise, with a 9% compounding dividend, a 1.3x liquidation preference, one board seat and an exit right from May 2029. This position funds Recurrent but does not control it, so it does not pass the buying-authority test.",
+   "source": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/"
+  },
+  {
+   "slug": "meta",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-07",
+   "scale": "~USD 14bn; 1 GW; 80% BlackRock funds / 20% Meta",
+   "note": "Partner in the El Paso data-centre venture announced 28 July 2026, in which funds managed by BlackRock will own 80%.",
+   "context": "Meta's announcement: 'Funds managed by BlackRock will own an 80% interest' and Meta the remaining 20% in a roughly USD 14bn, 1 GW campus. Meta contributes about USD 2.3bn of assets, BlackRock about USD 4.9bn in cash, and a USD 12.5bn debt financing funds part of BlackRock's share. Meta provides construction management, administrative and property management services, is the sole tenant on a four-year lease extendable to twenty years, and gives a residual value guarantee of about USD 13bn.\n\nMeta's Q2 10-Q, filed two days later, describes an 'exclusivity agreement … subject to the execution of definitive agreements'. El Paso Matters reports about USD 12.3bn of bonds sold by an issuer named Sopaipilla Investor, but no first-party closing notice was found, so the link stays 'announced'.",
+   "source": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/"
+  },
+  {
+   "slug": "talen-energy",
+   "type": "other",
+   "status": "historical",
+   "since": "2025-11",
+   "note": "Talen bought Guernsey Power Station from Caithness Energy and BlackRock; closed 25 November 2025.",
+   "context": "Talen's closing release says it completed the acquisitions of 'the Freedom Generating Station in Pennsylvania and the Guernsey Power Station in Ohio from Caithness Energy and Caithness Energy and BlackRock, respectively'. The release states no price and does not say which BlackRock fund sold; the Talen dossier's USD 3.8bn is from Talen's other filings. This is a GIP exit, not a continuing tie. Separately, BlackRock's index funds hold 9.01% of Talen as a passive investor per PJM's market monitor.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000037/ex99120251125pressreleasec.htm"
+  },
+  {
+   "slug": "excelsior-energy-capital",
+   "type": "other",
+   "status": "historical",
+   "since": "2024-03",
+   "note": "BlackRock's Evergreen Infrastructure Partners Fund bought Excelsior's 38-project distributed solar and storage portfolio.",
+   "context": "Excelsior's release of 12 March 2024 announces the 'sale of a portfolio of 38 solar energy and solar plus storage projects … to BlackRock's Evergreen Infrastructure Partners Fund' — 89 MWdc of operating assets across six states and a 100% divestment. A December 2023 closing is recorded by trade press and the sell-side adviser, not by the release.",
+   "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-sells-sub-portfolio-of-solar-and-solar-plus-storage-assets-to-blackrock/"
+  },
+  {
+   "slug": "edgecore",
+   "type": "other",
+   "status": "active",
+   "since": "2026-04",
+   "scale": "USD 1.5bn construction debt (with Apterra and ING)",
+   "note": "GIP is a lead lender, with Apterra and ING, on EdgeCore's USD 1.5bn construction financing for two leased Sterling, Virginia data centres.",
+   "context": "EdgeCore's 21 April 2026 release: the USD 1.5bn financing for sites AS01 and AS02 (114 MW) was 'led by … Apterra Infrastructure Capital, LLC; Global Infrastructure Partners (GIP), a part of BlackRock; and ING Capital LLC'. GIP is a lender here, not an owner.",
+   "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia"
+  },
+  {
+   "slug": "intersect-power",
+   "type": "other",
+   "status": "historical",
+   "since": "2021-11",
+   "via": "HPS Investment Partners",
+   "note": "HPS, now part of BlackRock, was term lender on Intersect's portfolio financings, including the USD 837m Texas battery round of July 2024.",
+   "context": "Intersect's July 2024 release on the USD 837m financing for about 1 GWh of Texas batteries names HPS for construction and term debt, and Intersect's earlier 2021 and 2022 portfolio rounds used HPS as term lender. HPS became part of BlackRock on 1 July 2025, after these loans were made. This is a lending tie, not ownership.",
+   "source": "https://www.intersect.com/historical-releases/intersect-power-secures-837-million-in-project-financing-to-build-1-gwh-of-battery-energy-storage-systems-bess-in-texas"
+  },
+  {
+   "slug": "blackstone",
+   "type": "competitor",
+   "status": "active",
+   "note": "A different firm that is routinely confused with BlackRock; eighth in Infrastructure Investor's 2026 ranking against BlackRock's first.",
+   "context": "Blackstone owns QTS and lends to Aligned, which BlackRock's GIP co-owns. Both firms signed NVIDIA's August 2026 compute-financing memoranda and received Senator Warren's June 2026 letters. Infrastructure Investor's 2026 ranking puts BlackRock first at USD 113,365m of five-year infrastructure fundraising and Blackstone eighth.",
+   "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/"
+  },
+  {
+   "slug": "brookfield",
+   "type": "competitor",
+   "status": "active",
+   "note": "Third in Infrastructure Investor's 2026 ranking (USD 99,112m), behind BlackRock and KKR.",
+   "context": "Brookfield competes with GIP for utility, data-centre and renewables platforms, and was among the reported suitors for STACK's Asia-Pacific portfolio in June 2026. Both firms signed NVIDIA's August 2026 compute-financing memoranda and received Senator Warren's June 2026 letters.",
+   "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/"
+  },
+  {
+   "slug": "macquarie",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fourth in Infrastructure Investor's 2026 ranking (USD 87,887m), and the seller of Aligned to the AIP, MGX and GIP consortium.",
+   "context": "Macquarie Asset Management's funds sold 100% of Aligned to AIP, MGX and GIP, closing on 21 July 2026 at about USD 40bn of enterprise value. The two firms otherwise compete for the same infrastructure platforms and investors.",
+   "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
+  },
+  {
+   "slug": "stack-infrastructure",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-09",
+   "note": "Reported only: Bloomberg says AIP and IFM Investors are in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at up to USD 25bn.",
+   "context": "Bloomberg's report of 24 September 2026, relayed by Reuters, says an AIP and IFM group 'has locked in an exclusive window' for STACK's Tokyo, Osaka, Sydney, Melbourne and Johor portfolio. Reuters could not verify it, no party commented, and 'talks could be prolonged or fail'. In June Bloomberg had listed AIP among several suitors, alongside Brookfield, IFM, KKR and DigitalBridge. The '~1.1 GW' figure in circulation is RuntimeWire's own sum of STACK's site list, against 470 MW in another profile. Recorded as 'announced' until a party confirms.",
+   "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports"
+  },
+  {
+   "slug": "marsh-mclennan",
+   "type": "supplier",
+   "status": "active",
+   "since": "2026-07",
+   "note": "Reported as technical adviser to the BlackRock funds on the El Paso data-centre venture while advising Meta on the other side.",
+   "context": "Insurance Business reported on 31 July 2026 that Marsh provided project risk analysis and insurance services to Meta on the El Paso campus and acted as technical adviser to the BlackRock funds. Neither BlackRock nor Marsh has confirmed the mandate in a release, so it is carried as reported.",
+   "source": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx"
+  },
+  {
+   "slug": "fluence",
+   "type": "other",
+   "status": "active",
+   "via": "Akaysha Energy; AES",
+   "note": "Fluence supplies Akaysha, an Australian battery developer trade press describes as BlackRock-owned, and AES — whose take-private GIP leads — is Fluence's anchor shareholder.",
+   "context": "Energy-Storage.news reported in July 2024 that Fluence would use its Mosaic software across 3.6 GWh of Akaysha batteries in Australia; Akaysha was bought by BlackRock's Climate Infrastructure business in 2022 per trade press, and its own site does not name its owner. Separately, AES held about 22% of Fluence after May 2026, so if the GIP-led take-private closes, a GIP-controlled company will be Fluence's anchor shareholder. Neither is a direct BlackRock–Fluence contract, so the link is typed 'other'.",
+   "source": "https://www.energy-storage.news/fluence-to-use-mosaic-technology-for-3-6gwh-of-akaysha-bess-in-australia/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FERC Section 203 — utility acquisitions and BlackRock's blanket authorisation to hold utility shares",
+   "status": "in-effect",
+   "effectiveDate": "2025-04",
+   "exposure": "BlackRock holds voting securities of US utilities under a FERC blanket authorisation (Dockets EC16-77 and EC25-12), reauthorised in April 2025 with the Commission noting 'some concern' that the breadth of the holdings, together with controlling positions through GIP such as ALLETE, 'may allow for a novel degree of influence'. The AES application (EC26-99, filed 21 May 2026) is pending. On 20 July 2026 Public Citizen, the Private Equity Stakeholder Project and Citizens Action Coalition protested in all three dockets and asked FERC to 'compel BlackRock to legally and fully separate its non-controlling asset management business from its active management of utilities', and PJM's market monitor opposed the AES deal absent behavioural commitments.",
+   "mitigation": "No published BlackRock response to the protest was located.",
+   "source": "https://www.citizen.org/wp-content/uploads/PESP-PC-CAC-FERC-BlackRock-EQT-AES-protest-072026.pdf"
+  },
+  {
+   "regime": "State utility commission change-of-control review",
+   "status": "in-effect",
+   "effectiveDate": "2025-10",
+   "exposure": "Each utility take-private GIP leads needs state approval. Minnesota approved ALLETE unanimously on 3 October 2025 with customer benefits of about USD 200m, including a one-year base-rate freeze and USD 50m of rate credits. PUCO approved AES Ohio on 17 September 2026; per trade press its conditions include no merger-related rate changes and recusal of directors with data-centre interests. New York's review of AES (Case 26-E-0348) had comments due on 29 September 2026. Indiana reopened the AES Indiana rate case on 2 September 2026, citing the BlackRock-led acquisition.",
+   "source": "https://www.sec.gov/Archives/edgar/data/66756/000114036125045482/ef20060780_8k.htm"
+  },
+  {
+   "regime": "Senate Banking Committee oversight — data-centre ownership and retail electricity prices",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-10",
+   "exposure": "Ranking Member Warren's letter to Larry Fink asks for every BlackRock data-centre holding with acquisition terms, 'who currently controls the company and how decisions are made', supply-chain holdings and 'how you are ensuring that your significant footprint in both energy supply and demand will not allow you to increase energy costs', with a reply due 27 June 2026. Parallel letters went to KKR, Blackstone and Brookfield.",
+   "mitigation": "No published BlackRock response was located.",
+   "source": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_blackrock.pdf"
+  },
+  {
+   "regime": "Antitrust — Texas et al. v. BlackRock (coal markets)",
+   "status": "in-effect",
+   "exposure": "Texas and other states allege that BlackRock, Vanguard and State Street used their index holdings in coal producers to reduce output. The motion to dismiss was largely denied on 1 August 2025 and the Sherman and Clayton Act claims proceed. The theory — that common passive ownership can be used to steer an industry — is the same one raised against BlackRock's utility holdings at FERC.",
+   "source": "https://www.esgdive.com/news/blackrock-vanguard-state-street-motion-to-dismiss-coal-antitrust-case-denied-texas-ag/757336/"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Assets under management by line at 30 June 2026",
+   "specs": [
+    {
+     "band": "Scale",
+     "label": "Total AUM",
+     "value": "USD 15.34 trillion (USD 14.04 trillion at 31 December 2025)"
+    },
+    {
+     "band": "Scale",
+     "label": "Net inflows",
+     "value": "USD 192bn in Q2 2026; USD 321bn in H1 2026; USD 698bn in FY2025"
+    },
+    {
+     "band": "Scale",
+     "label": "Organic base-fee growth",
+     "value": "8% in Q2 2026; 10% over the last twelve months; 9% in FY2025"
+    },
+    {
+     "band": "Index and active",
+     "label": "iShares / ETFs",
+     "value": "USD 6.25 trillion"
+    },
+    {
+     "band": "Index and active",
+     "label": "Institutional index",
+     "value": "USD 3.95 trillion"
+    },
+    {
+     "band": "Index and active",
+     "label": "Institutional active",
+     "value": "USD 2.69 trillion"
+    },
+    {
+     "band": "Index and active",
+     "label": "Retail",
+     "value": "USD 1.40 trillion"
+    },
+    {
+     "band": "Index and active",
+     "label": "Cash management",
+     "value": "USD 1.07 trillion"
+    },
+    {
+     "band": "Alternatives",
+     "label": "Liquid alternatives",
+     "value": "USD 120.3bn"
+    },
+    {
+     "band": "Alternatives",
+     "label": "Private markets (total)",
+     "value": "USD 329.1bn"
+    },
+    {
+     "band": "Private markets",
+     "label": "Private credit",
+     "value": "USD 150.9bn"
+    },
+    {
+     "band": "Private markets",
+     "label": "Infrastructure",
+     "value": "USD 113.5bn"
+    },
+    {
+     "band": "Private markets",
+     "label": "Private equity",
+     "value": "USD 32.3bn"
+    },
+    {
+     "band": "Private markets",
+     "label": "Real estate",
+     "value": "USD 22.0bn"
+    },
+    {
+     "band": "Private markets",
+     "label": "Multi-alternatives",
+     "value": "USD 10.4bn"
+    }
+   ],
+   "notes": "Per BlackRock's Q2 2026 earnings release. Private-markets figures are fee-paying AUM; the earnings supplement's slide 9 reports alternatives client assets of USD 715bn, of which infrastructure USD 197bn and private credit USD 212bn."
+  },
+  {
+   "product": "Infrastructure — the three numbers",
+   "specs": [
+    {
+     "band": "BlackRock reporting",
+     "label": "Infrastructure fee-paying AUM (30 June 2026)",
+     "value": "USD 113.5bn"
+    },
+    {
+     "band": "BlackRock reporting",
+     "label": "Infrastructure client assets (Q2 2026 supplement)",
+     "value": "USD 197bn"
+    },
+    {
+     "band": "GIP self-description",
+     "label": "GIP assets under management",
+     "value": "'over $200 billion' (14 May and 21 July 2026)"
+    },
+    {
+     "band": "Funds",
+     "label": "GIP V",
+     "value": "USD 25.2bn — 'the largest-ever client capital raise in a private infrastructure fund'"
+    },
+    {
+     "band": "Funds",
+     "label": "GIP Mid-Market Fund",
+     "value": "'US$19 billion of capital commitments' since the franchise started in 2009 (GIP team page for its head, Mark Florian)"
+    },
+    {
+     "band": "Third-party rank",
+     "label": "Infrastructure Investor 100, 2026",
+     "value": "First: USD 113,365m raised for infrastructure equity funds closed 2021–2025"
+    }
+   ],
+   "notes": "Fee-paying AUM excludes committed capital not yet earning a fee and co-investment that pays none; client assets include both; GIP's figure is its own. None is wrong, and the gap between them is largely capital not yet earning a fee."
+  },
+  {
+   "product": "The platform map — who signs for equipment (§11.1 test)",
+   "specs": [
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Aligned Data Centers",
+     "value": "Joint control with MGX (EC Case M.12259); 100% of equity bought 21 July 2026; about USD 40bn EV; 51 campuses; more than 6.4 GW"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "CyrusOne",
+     "value": "Co-owned with KKR since 25 March 2022; split not stated in any first-party source; KKR and GIP partners jointly quoted 30 July 2026"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Coravel (ACS–GIP data-centre venture)",
+     "value": "50:50 joint venture; 1.7 GW initial portfolio; completed per ACS January 2026; about 140 MW hyperscale lease at Dallas–Fort Worth (July 2026)"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "ALLETE / Minnesota Power",
+     "value": "GIP 60% (40% GIP V plus 20% a GIP-managed CalPERS vehicle), CPP Investments 40%, governance shared equally per ALLETE's proxy; closed 15 December 2025"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Clearway Energy Group",
+     "value": "50:50 with TotalEnergies; BlackRock Portfolio Management's 13D/A No. 3 (May 2026) reports 85,181,445 shares of Clearway Energy, Inc. held through GIP — 41.5% on an as-exchanged basis (49.9% of Class C in the April 13D/A No. 2)"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Eolian",
+     "value": "'A portfolio company of Global Infrastructure Partners (GIP), part of BlackRock'; wholly owned battery projects; fund and share not stated"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Jupiter Power",
+     "value": "Agreed November 2022 by a fund of BlackRock's Diversified Infrastructure business; no 2026 first-party ownership statement"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Vena Energy; Atlas Renewable Energy",
+     "value": "GIP portfolio pages show both as unrealised; Vena sold its India unit in August 2026"
+    },
+    {
+     "band": "Pending",
+     "label": "AES Corporation",
+     "value": "Signed 1 March 2026; after closing GIP-managed vehicles would hold 56.625% (GIP 36.625% plus the CalPERS vehicle's 20%) per the PJM market monitor; FERC and New York approvals outstanding on 26 September 2026"
+    },
+    {
+     "band": "Announced",
+     "label": "Meta El Paso venture",
+     "value": "80% BlackRock funds / 20% Meta; Meta runs construction and property management; closing not confirmed first-party"
+    },
+    {
+     "band": "Funds only",
+     "label": "Minority, lender or passive",
+     "value": "Recurrent Energy (20% as-converted preferred); EdgeCore and Intersect Power (lender); index stakes of 8–11% in several listed utilities (passive)"
+    }
+   ],
+   "notes": "An investor passes the buying-authority test only through a platform it controls. BlackRock passes through the first eight rows, would pass through AES on closing, and fails through the last row. At El Paso BlackRock is the majority owner but Meta runs the build."
+  },
+  {
+   "product": "The AES take-private — terms and approvals",
+   "specs": [
+    {
+     "band": "Terms",
+     "label": "Price",
+     "value": "USD 15.00 per share in cash; about USD 10.7bn of equity and USD 33.4bn of enterprise value; funded 100% with equity"
+    },
+    {
+     "band": "Terms",
+     "label": "Buyers",
+     "value": "GIP and the EQT Infrastructure VI fund, with CalPERS and the Qatar Investment Authority as co-underwriters, through Horizon Parent, L.P."
+    },
+    {
+     "band": "Terms",
+     "label": "Post-closing ownership (per PJM market monitor)",
+     "value": "GIP 36.625%; EQT 33.375%; CalPERS 20% (through a GIP-managed vehicle); QIA 10%"
+    },
+    {
+     "band": "Approvals",
+     "label": "Stockholders",
+     "value": "Approved 26 June 2026"
+    },
+    {
+     "band": "Approvals",
+     "label": "CFIUS",
+     "value": "Cleared 27 August 2026"
+    },
+    {
+     "band": "Approvals",
+     "label": "PUCO (AES Ohio)",
+     "value": "Approved 17 September 2026, with conditions"
+    },
+    {
+     "band": "Approvals",
+     "label": "FERC (Docket EC26-99)",
+     "value": "Application filed 21 May 2026; no order found by 26 September 2026"
+    },
+    {
+     "band": "Approvals",
+     "label": "New York PSC (Case 26-E-0348)",
+     "value": "Comments due 29 September 2026"
+    },
+    {
+     "band": "Timing",
+     "label": "Expected close",
+     "value": "'Late 2026 or early 2027'; outside date 1 June 2027 with two three-month extensions"
+    }
+   ],
+   "notes": "Signed 1 March 2026, announced 2 March. Sources: GIP's release, AES's proxy and 8-Ks, and the PJM market monitor's FERC comments."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Laurence D. (Larry) Fink",
+   "title": "Chairman and Chief Executive Officer; Chairman of the AI Infrastructure Partnership",
+   "photo": "images/execs/blackrock-fink.jpg",
+   "background": [
+    "Co-founded BlackRock in 1988 and has led it since",
+    "Chairman of the AI Infrastructure Partnership (named in the October 2025 Aligned announcement)",
+    "Co-chair of the World Economic Forum's Board of Trustees"
+   ]
+  },
+  {
+   "name": "Robert S. (Rob) Kapito",
+   "title": "President and Director; Chair of the Global Executive Committee",
+   "photo": "images/execs/blackrock-kapito.jpg",
+   "background": [
+    "Co-founder of BlackRock (1988)",
+    "Previously head of BlackRock's Portfolio Management Group",
+    "Vice President, Mortgage Products, at First Boston before BlackRock"
+   ]
+  },
+  {
+   "name": "Martin S. Small",
+   "title": "Senior Managing Director, Chief Financial Officer and Global Head of Corporate Strategy",
+   "photo": "images/execs/blackrock-small.jpg",
+   "background": [
+    "Chief Financial Officer since February 2023",
+    "Head of US Wealth Advisory (2018–2022)",
+    "Head of US and Canada iShares (2014–2018)",
+    "Financial Markets Advisory (2008–2014); joined BlackRock's legal and compliance group in 2006 from Davis Polk"
+   ]
+  },
+  {
+   "name": "Robert L. (Rob) Goldstein",
+   "title": "Senior Managing Director and Chief Operating Officer",
+   "photo": "images/execs/blackrock-goldstein.jpg",
+   "background": [
+    "Chief Operating Officer since 2014; oversees Aladdin",
+    "Head of the Institutional Client Business (2012–2014)",
+    "Joined BlackRock in 1994 in the Portfolio Analytics Group"
+   ]
+  },
+  {
+   "name": "Adebayo (Bayo) Ogunlesi",
+   "title": "Chairman and Chief Executive Officer, Global Infrastructure Partners; Senior Managing Director; Director of BlackRock",
+   "photo": "images/execs/blackrock-ogunlesi.jpg",
+   "background": [
+    "Founded Global Infrastructure Partners in 2006; became part of BlackRock's leadership and a BlackRock director on the October 2024 closing",
+    "Credit Suisse for 23 years, including Head of Global Investment Banking (2002–2004)",
+    "Earlier a lawyer at Cravath and a law clerk to US Supreme Court Justice Thurgood Marshall",
+    "Other boards include OpenAI"
+   ]
+  },
+  {
+   "name": "Raj Rao",
+   "title": "President and Chief Operating Officer, Global Infrastructure Partners; Senior Managing Director",
+   "photo": "images/execs/blackrock-rao.jpg",
+   "background": [
+    "Founding partner of GIP; previously its Global Head of Energy",
+    "Earlier in Credit Suisse's Global Energy Group and at Barclays Capital",
+    "Boards include Naturgy and Vena Energy"
+   ]
+  },
+  {
+   "name": "Michael McGhee",
+   "title": "Deputy Chairman, Global Infrastructure Partners; Senior Managing Director",
+   "photo": "images/execs/blackrock-mcghee.jpg",
+   "background": [
+    "Founding partner of GIP; leads its transport investing",
+    "Head of Global Transportation, Credit Suisse (1998–2006)",
+    "BZW (1990–1998)"
+   ]
+  },
+  {
+   "name": "Will Brilliant",
+   "title": "Partner and Global Head of Digital Infrastructure, Global Infrastructure Partners",
+   "photo": "images/execs/blackrock-brilliant.jpg",
+   "background": [
+    "Oversees GIP's digital infrastructure investing globally, including data centres; member of GIP's Investment and Operating Committees",
+    "Board member of CyrusOne",
+    "Joined GIP in 2007 from Lehman Brothers' Global Financial Sponsors Group"
+   ]
+  },
+  {
+   "name": "Jonathan Bram",
+   "title": "Founding Partner, Global Infrastructure Partners",
+   "photo": "images/execs/blackrock-bram.jpg",
+   "background": [
+    "Founding partner of GIP, focused on power and renewables and on its core infrastructure strategy",
+    "Fifteen years at Credit Suisse, including co-head of Global Industrial and Services and chief operating officer of the Investment Banking Division"
+   ]
+  },
+  {
+   "name": "Matt Harris",
+   "title": "Founding Partner, Global Infrastructure Partners; Chair of the GIP Transition Fund",
+   "photo": "images/execs/blackrock-harris.jpg",
+   "background": [
+    "Founding partner of GIP; chairs its energy-transition fund",
+    "Board member of GE Vernova and of Decarbonization Partners"
+   ]
+  },
+  {
+   "name": "Scott Kapnick",
+   "title": "Chairman of the Private Financing Solutions Executive Office; Chief Executive Officer, HPS Investment Partners",
+   "photo": "images/execs/blackrock-kapnick.jpg",
+   "background": [
+    "Led HPS into BlackRock on 1 July 2025",
+    "Chief Executive of Highbridge (2013–2016) before the HPS separation",
+    "Goldman Sachs: co-head of Global Investment Banking (2001–2006) and co-CEO of Goldman Sachs International"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "USD 20,407m",
+      "expected": "",
+      "verdict": "",
+      "result": "No full-year consensus was read from a primary aggregator; left empty rather than reconstructed.",
+      "kpi": "revenue",
+      "usdMillions": 20407,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to BlackRock (GAAP)",
+      "actual": "USD 6,369m; diluted EPS USD 42.01",
+      "expected": "",
+      "verdict": "",
+      "result": "As adjusted: USD 6,612m, diluted EPS USD 43.61.",
+      "kpi": "net-income",
+      "usdMillions": 6369,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating income",
+      "actual": "USD 7,574m GAAP; USD 8,110m as adjusted (44.5% margin)",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "AUM and net inflows",
+      "actual": "USD 11.55 trillion at year end; USD 641bn of net inflows",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     }
+    ],
+    "commentary": "The comparative year, before GIP's first full year of fees and before HPS and Preqin."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "USD 24,216m (+19%)",
+      "expected": "",
+      "verdict": "",
+      "result": "Consensus comparisons found in research were search-summary only and are not carried.",
+      "kpi": "revenue",
+      "usdMillions": 24216,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to BlackRock (GAAP)",
+      "actual": "USD 5,553m; diluted EPS USD 35.31",
+      "expected": "",
+      "verdict": "",
+      "result": "GAAP profit fell while adjusted profit rose. As adjusted: USD 7,736m, diluted EPS USD 48.09.",
+      "kpi": "net-income",
+      "usdMillions": 5553,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating income",
+      "actual": "USD 7,045m GAAP; USD 9,600m as adjusted (44.1% margin)",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "AUM, net inflows and organic base-fee growth",
+      "actual": "USD 14.04 trillion at year end; USD 698bn of net inflows; 9% organic base-fee growth",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "Technology services revenue",
+      "actual": "USD 1,981m (+24%)",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes Preqin from 3 March 2025."
+     }
+    ],
+    "commentary": "The first full year with GIP, and the year HPS (1 July), Preqin (3 March) and ElmTree (2 September) closed."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "USD 7,084m",
+      "expected": "USD 6.82bn (Zacks consensus)",
+      "verdict": "beat",
+      "result": "About 4% above consensus per Zacks.",
+      "kpi": "revenue",
+      "usdMillions": 7084,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS as adjusted",
+      "actual": "USD 13.91 (GAAP USD 12.19)",
+      "expected": "USD 12.59 (LSEG, per Reuters)",
+      "verdict": "beat",
+      "result": "Zacks's consensus was USD 12.67. The shares rose more than 7% on the day, per Reuters."
+     },
+     {
+      "name": "Net income attributable to BlackRock (GAAP)",
+      "actual": "USD 1,914m",
+      "expected": "",
+      "verdict": "",
+      "result": "As adjusted: USD 2,291m.",
+      "kpi": "net-income",
+      "usdMillions": 1914,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating margin as adjusted",
+      "actual": "45.9%",
+      "expected": "",
+      "verdict": "",
+      "result": "Above the 45% floor in BlackRock's 2030 targets."
+     },
+     {
+      "name": "AUM and net inflows",
+      "actual": "USD 15.34 trillion; USD 192bn of net inflows (USD 321bn in H1 2026)",
+      "expected": "",
+      "verdict": "",
+      "result": "H1 2026 revenue USD 13,782m; H1 GAAP diluted EPS USD 26.25."
+     }
+    ],
+    "commentary": "Q1 2026 revenue was USD 6,698m with as-adjusted diluted EPS of USD 12.53. The quarterly dividend is USD 5.73 and 2026 buybacks were raised to USD 2bn."
+   }
+  ],
+  "commentary": "Company figures are from BlackRock's earnings releases, 10-K and 10-Q. Consensus appears only where a primary account was read: Reuters (LSEG) and Zacks for Q2 2026. BlackRock reports one operating segment, so GIP, HPS and Aladdin appear only as AUM, fee and revenue lines, never as segment profit."
+ },
+ "sources": [
+  {
+   "label": "RuntimeWire — BlackRock and IFM in STACK Asia talks; capacity summed from STACK's site list",
+   "url": "https://runtimewire.com/article/blackrock-ifm-stack-asia-data-centers-talks",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Bloomberg via The Star (Reuters relay) — BlackRock- and IFM-backed group close in on USD 25bn STACK Asia-Pacific data-centre deal; exclusive talks, unconfirmed",
+   "url": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "Private Equity Stakeholder Project — PUCO approves the AES takeover; FERC approval still required",
+   "url": "https://pestakeholder.org/news/puco-approves-blackrock-aes-takeover-despite-rate-and-profit-concerns/",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "County News Online — PUCO approves change in ownership of AES Ohio (conditions)",
+   "url": "https://countynewsonline.org/2026/09/18/puco-approves-change-in-ownership-of-aes-ohio-renewable-certifications/",
+   "date": "2026-09-18"
+  },
+  {
+   "label": "The AES Corporation — Form 8-K: PUCO approval of the merger",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126036994/ef20082051_8k.htm",
+   "date": "2026-09-17"
+  },
+  {
+   "label": "Jupiter Power — secures USD 1.4 billion of project financing for ten battery storage projects (names no owner)",
+   "url": "https://jupiterpower.io/jupiter-power-secures-1-4-billion-in-project-financing-for-ten-utility-scale-battery-energy-storage-projects/",
+   "date": "2026-09-16"
+  },
+  {
+   "label": "Indiana Public Media — IURC agrees to reconsider the AES Indiana rate case after the Google and BlackRock developments",
+   "url": "https://www.ipm.org/news/2026-09-03/iurc-agrees-to-reconsider-aes-indiana-rate-case-following-google-blackrock-developments",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "The AES Corporation — Form 8-K: CFIUS approval of the merger",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126034714/ef20081101_8k.htm",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Vena Group — completes the sale of Vena Energy India",
+   "url": "https://venagroup.com/vena-group-completes-sale-of-vena-energy-india/",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "NVIDIA — partners with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute infrastructure financing platforms (memoranda of understanding)",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Reuters via Yahoo Finance — CyrusOne plans an IPO as early as 2027 (owners KKR and BlackRock's GIP)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/data-center-operator-cyrusone-plans-100520897.html",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "El Paso Matters — the Meta and BlackRock El Paso financing: Sopaipilla Investor bonds",
+   "url": "https://elpasomatters.org/2026/08/09/el-paso-meta-data-center-blackrock-texas-ai-finance-tax-agreement/",
+   "date": "2026-08-09"
+  },
+  {
+   "label": "BlackRock, Inc. — Form 10-Q for the quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526337177/blk-20260630.htm",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "Insurance Business — USD 14 billion El Paso data centre puts Marsh on both sides of the table",
+   "url": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "CyrusOne — names John Hatem Chief Executive Officer (KKR and GIP partners quoted)",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-names-john-hatem-chief-executive-officer-to-accelerate-its-global-digital-infrastructure-strategy",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Meta Platforms — Form 10-Q for the quarter ended 30 June 2026 (El Paso exclusivity agreement)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Meta — announces new venture with BlackRock to develop a data center in El Paso",
+   "url": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Aligned Data Centers — AIP, MGX and BlackRock's GIP close acquisition of Aligned Data Centers",
+   "url": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Monitoring Analytics (PJM Independent Market Monitor) — comments in FERC Docket EC26-99 on the AES transaction",
+   "url": "https://www.monitoringanalytics.com/filings/2026/IMM_Comments_Docket_No_EC26-99_20260720-PUBLIC.pdf",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Public Citizen, Private Equity Stakeholder Project and Citizens Action Coalition — protest in FERC Dockets EC26-99, EC25-12-001 and EC16-77-005",
+   "url": "https://www.citizen.org/wp-content/uploads/PESP-PC-CAC-FERC-BlackRock-EQT-AES-protest-072026.pdf",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "BlackRock — second-quarter 2026 earnings release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-ex99_1.htm",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "BlackRock — second-quarter 2026 earnings supplement (Form 8-K Exhibit 99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-ex99_2.htm",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Reuters via Investing.com — BlackRock profit jumps as buoyant markets boost assets (LSEG consensus)",
+   "url": "https://www.investing.com/news/stock-market-news/blackrock-profit-jumps-as-buoyant-markets-boost-assets-4792726",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — BlackRock tops second-quarter earnings and revenue estimates",
+   "url": "https://ca.finance.yahoo.com/news/blackrock-blk-tops-q2-earnings-111001095.html",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "ACS Group — hyperscale Dallas–Fort Worth campus and the Coravel brand",
+   "url": "https://pressroom.grupoacs.com/en/news/hyperscale-dallas-fort-worth-campus-coravel-new-brand",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "The AES Corporation — stockholders approve the merger (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126026562/ef20076870_ex99-1.htm",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "US Senate Committee on Banking (Ranking Member Warren) — letter to Laurence Fink on data-centre ownership and electricity costs",
+   "url": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_blackrock.pdf",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Infrastructure Investor 100 (2026) — ranking by five-year infrastructure equity fundraising",
+   "url": "https://www.infrastructureinvestor.com/infrastructure-investor-100/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Kirkland & Ellis — advises KKR- and GIP-owned CyrusOne on a USD 1.05 billion CMBS financing",
+   "url": "https://www.kirkland.com/news/press-release/2026/05/kirkland-advises-kkr--and-gip-owned-cyrusone-on-1-05b-cmbs-financing",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "The AES Corporation — definitive merger proxy (DEFM14A)",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126021662/ny20067536x2_defm14a.htm",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "Global Infrastructure Partners — to partner with L'IMAD, ADNOC and Temasek on a GCC and Central Asia infrastructure partnership",
+   "url": "https://www.global-infra.com/news/global-infrastructure-partners-a-part-of-blackrock-to-partner-with-limad-adnoc-and-temasek-to-launch-gulf-cooperation-council-gcc-and-central-asia-focused-infrastructure-partnership-targ/",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Clearway Energy — Schedule 13D/A No. 3 filed by BlackRock Portfolio Management LLC for the GIP entities (85,181,445 shares; 41.5% as-exchanged)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926054174/primary_doc.xml",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "US Department of the Interior — two agreements, including the Bluepoint Wind lease cancellation and LNG reinvestment",
+   "url": "https://www.doi.gov/pressreleases/interior-announces-two-historic-agreements-promote-affordable-reliable-energy",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "EdgeCore Digital Infrastructure — secures USD 1.5 billion of construction financing (Apterra, GIP, ING)",
+   "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "Canadian Solar — FY2025 Form 20-F (Recurrent Energy Series A preferred held by BlackRock's Climate Infrastructure fund)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "BlackRock, Inc. — 2026 proxy statement (DEF 14A)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000130817926000262/ny-20260410.htm",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "Clearway Energy — Schedule 13D/A filed by BlackRock Portfolio Management LLC for the GIP entities",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926039637/primary_doc.xml",
+   "date": "2026-04-03"
+  },
+  {
+   "label": "BlackRock — 2026 letter to shareholders (DEFA14A)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526119938/d76123ddefa14a.htm",
+   "date": "2026-03-23"
+  },
+  {
+   "label": "Global Infrastructure Partners — consortium led by GIP and EQT agrees to acquire AES",
+   "url": "https://www.global-infra.com/news/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes/",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "BlackRock, Inc. — Form 10-K for fiscal year 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "European Commission — Case M.12259 GIM / MGX / Aligned, Article 6(1)(b) decision",
+   "url": "https://ec.europa.eu/competition/mergers/cases1/202604/M_12259_10869557_118_3.pdf",
+   "date": "2026-01-19"
+  },
+  {
+   "label": "BlackRock — fourth-quarter and full-year 2025 earnings release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526013503/blk-ex99_1.htm",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "Energy-Storage.news — BlackRock-backed Akaysha Energy weighs funding options, including a minority stake sale",
+   "url": "https://www.energy-storage.news/blackrock-backed-akaysha-energy-weighs-funding-options-for-battery-storage-expansion/",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "ACS Group — ACS and Global Infrastructure Partners complete the creation of a global data-centre platform",
+   "url": "https://pressroom.grupoacs.com/en/news/acs-group-and-global-infrastructure-partners-complete-the-creation-of-global-data-center-platform",
+   "date": "2026-01-09"
+  },
+  {
+   "label": "Latham & Watkins — CPP Investments and GIP complete the USD 6.2 billion acquisition of ALLETE",
+   "url": "https://www.lw.com/en/news/2025/12/latham-partnership-led-cpp-investments-global-infrastructure-partners-completed-acquisition-allete",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "ALLETE — Form 8-K: completion of the acquisition by CPP Investments and GIP",
+   "url": "https://www.sec.gov/Archives/edgar/data/66756/000114036125045482/ef20060780_8k.htm",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "Talen Energy — completes the Freedom and Guernsey acquisitions (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000037/ex99120251125pressreleasec.htm",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "Global Infrastructure Partners — ACS joined by GIP to launch a global data-centre development platform with an initial 1.7 GW portfolio",
+   "url": "https://www.global-infra.com/news/acs-is-joined-by-global-infrastructure-partners-to-launch-a-global-data-center-development-platform-with-initial-1-7-gw-portfolio/",
+   "date": "2025-11-14"
+  },
+  {
+   "label": "Global Infrastructure Partners — AIP, MGX and BlackRock's GIP to acquire all equity in Aligned Data Centers",
+   "url": "https://www.global-infra.com/news/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+   "date": "2025-10-15"
+  },
+  {
+   "label": "ESG Dive — motion to dismiss denied in Texas's coal antitrust case against BlackRock, Vanguard and State Street",
+   "url": "https://www.esgdive.com/news/blackrock-vanguard-state-street-motion-to-dismiss-coal-antitrust-case-denied-texas-ag/757336/",
+   "date": "2025-08-11"
+  },
+  {
+   "label": "BlackRock — second-quarter 2025 earnings release (GIP V close; Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017025095711/blk-ex99_1.htm",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "BlackRock — completes the acquisition of HPS Investment Partners (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525153573/d78785dex991.htm",
+   "date": "2025-07-01"
+  },
+  {
+   "label": "Global Infrastructure Partners — MGX, BlackRock, GIP and Microsoft welcome Kuwait Investment Authority to the AI Infrastructure Partnership",
+   "url": "https://www.global-infra.com/news/mgx-blackrock-global-infrastructure-partners-and-microsoft-welcome-kuwait-investment-authority-kia-to-the-ai-infrastructure-partnership/",
+   "date": "2025-06-03"
+  },
+  {
+   "label": "BlackRock — AI Infrastructure Partnership: NVIDIA and xAI join; GE Vernova and NextEra Energy to collaborate",
+   "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/ai-infrastructure-partnership",
+   "date": "2025-03-19"
+  },
+  {
+   "label": "BlackRock — completes the acquisition of Preqin (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525044184/d919939dex991.htm",
+   "date": "2025-03-03"
+  },
+  {
+   "label": "BlackRock — fourth-quarter and full-year 2024 earnings release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017025005629/blk-ex99_1.htm",
+   "date": "2025-01-15"
+  },
+  {
+   "label": "Recurrent Energy — closing of the USD 500 million investment from BlackRock (20% on an as-converted basis)",
+   "url": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/",
+   "date": "2024-10-03"
+  },
+  {
+   "label": "BlackRock, Inc. — Form 8-K12B: holding-company reorganisation on the GIP closing date",
+   "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312524229601/d856271d8k12b.htm",
+   "date": "2024-10-01"
+  },
+  {
+   "label": "BlackRock — completes the acquisition of Global Infrastructure Partners",
+   "url": "https://www.blackrock.com/corporate/newsroom/press-releases/article/corporate-one/press-releases/blackrock-completes-acquisition-of-global-infrastructure-partners",
+   "date": "2024-10-01"
+  },
+  {
+   "label": "Global Infrastructure Partners — GIP, BlackRock, Microsoft and MGX launch the Global AI Infrastructure Investment Partnership",
+   "url": "https://www.global-infra.com/news/global-infrastructure-partners-blackrock-microsoft-and-mgx-launch-new-ai-partnership-to-invest-in-data-centers-and-supporting-power-infrastructure/",
+   "date": "2024-09-17"
+  },
+  {
+   "label": "Intersect Power — secures USD 837 million of project financing for 1 GWh of Texas battery storage (HPS term debt)",
+   "url": "https://www.intersect.com/historical-releases/intersect-power-secures-837-million-in-project-financing-to-build-1-gwh-of-battery-energy-storage-systems-bess-in-texas",
+   "date": "2024-07-17"
+  },
+  {
+   "label": "ALLETE — definitive merger proxy (DEFM14A; the CPP Investments and GIP ownership split)",
+   "url": "https://www.sec.gov/Archives/edgar/data/66756/000114036124032849/ny20029448x3_defm14a.htm",
+   "date": "2024-07-10"
+  },
+  {
+   "label": "Energy-Storage.news — Fluence to use Mosaic for 3.6 GWh of Akaysha battery storage in Australia",
+   "url": "https://www.energy-storage.news/fluence-to-use-mosaic-technology-for-3-6gwh-of-akaysha-bess-in-australia/",
+   "date": "2024-07"
+  },
+  {
+   "label": "Excelsior Energy Capital — sells a sub-portfolio of solar and solar-plus-storage assets to BlackRock",
+   "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-sells-sub-portfolio-of-solar-and-solar-plus-storage-assets-to-blackrock/",
+   "date": "2024-03-12"
+  },
+  {
+   "label": "Canadian Solar — Form 6-K: USD 500 million commitment from BlackRock's Climate Infrastructure fund to Recurrent Energy",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465924005738/tm243684d1_6k.htm",
+   "date": "2024-01-23"
+  },
+  {
+   "label": "Global Infrastructure Partners — BlackRock agrees to acquire GIP",
+   "url": "https://www.global-infra.com/news/blackrock-agrees-to-acquire-global-infrastructure-partners-gip-creating-a-world-leading-infrastructure-private-markets-investment-platform/",
+   "date": "2024-01-12"
+  },
+  {
+   "label": "Jupiter Power — EnCap Investments sells Jupiter Power to BlackRock",
+   "url": "https://jupiterpower.io/encap-investments-sells-jupiter-power-to-blackrock/",
+   "date": "2022-11-15"
+  },
+  {
+   "label": "Global Infrastructure Partners — KKR and GIP complete the acquisition of CyrusOne",
+   "url": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/",
+   "date": "2022-03-25"
+  },
+  {
+   "label": "BlackRock — leadership: Global Executive Committee",
+   "url": "https://www.blackrock.com/corporate/about-us/who-we-are/leadership"
+  },
+  {
+   "label": "Global Infrastructure Partners — portfolio page: CyrusOne (status Unrealized)",
+   "url": "https://www.global-infra.com/portfolio-page/cyrusone/"
+  },
+  {
+   "label": "Eolian — homepage ('a portfolio company of Global Infrastructure Partners (GIP), part of BlackRock')",
+   "url": "https://www.eolianenergy.com/"
+  },
+  {
+   "label": "Clearway Energy Group — About ('owned by Global Infrastructure Partners and TotalEnergies')",
+   "url": "https://www.clearwayenergygroup.com/about/"
+  },
+  {
+   "label": "Global Infrastructure Partners — team page: Will Brilliant, Global Head of Digital Infrastructure",
+   "url": "https://www.global-infra.com/team-page/will-brilliant/"
+  },
+  {
+   "label": "Global Infrastructure Partners — team page: Jonathan Bram",
+   "url": "https://www.global-infra.com/team-page/jonathan-bram/"
+  },
+  {
+   "label": "Global Infrastructure Partners — team page: Matt Harris",
+   "url": "https://www.global-infra.com/team-page/matt-harris/"
+  },
+  {
+   "label": "Global Infrastructure Partners — team page: Mark Florian, Head of GIP Mid-Market Fund ('US$19 billion of capital commitments')",
+   "url": "https://www.global-infra.com/team-page/mark-florian/"
+  },
+  {
+   "label": "Global Infrastructure Partners — portfolio page: Vena Energy (status Unrealized)",
+   "url": "https://www.global-infra.com/portfolio-page/vena-energy/"
+  },
+  {
+   "label": "Global Infrastructure Partners — portfolio page: Atlas Renewable Energy (status Unrealized)",
+   "url": "https://www.global-infra.com/portfolio-page/atlas-renewable-energy/"
+  },
+  {
+   "label": "EDGAR full-text search — BlackRock, Inc. (CIK 0002012383) and BlackRock Finance, Inc. (CIK 0001364742) filing metadata",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22BlackRock%20Funding%22"
+  },
+  {
+   "label": "New York Department of Public Service — Case 26-E-0348: petition of Horizon Merger Sub and AES seeking authorization of the merger (comments due 29 September 2026)",
+   "url": "https://dps.ny.gov/event/comments-due-petition-horizon-merger-sub-inc-and-aes-corporation-seeking-authorization-merger"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

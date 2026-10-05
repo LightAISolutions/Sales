@@ -256,6 +256,15 @@
    "note": "Fifty-fifty joint-venture partner on the Lighthouse campus at Port Washington, and a building-GC rival everywhere else.",
    "context": "ENR named the first-phase construction team in November 2025 as Whiting-Turner, The Weitz Co., a joint venture of Turner Construction and McCarthy Building Cos., and Michels. The Daily Reporter later gave the scope precisely: the joint venture builds Buildings 13 and 14, hosting a combined 468 MW to support Oracle and OpenAI's Stargate venture.\n\nMcCarthy is the smaller partner by ENR rank — 22 against 1 in the 2026 Top 400 — and the pairing is the mechanism by which it reached a giga-campus at all.",
    "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "customer",
+   "status": "active",
+   "via": "Data-centre EPC",
+   "note": "SB Energy's S-1 names Turner among the EPC providers it assigns across phases of its data-centre sites; no specific project is named.",
+   "context": "The S-1 says SB Energy partners with multiple EPC providers, 'including Turner, DPR, Kiewit and SOLV Energy', and assigns them across phases of the same site.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
   }
  ],
  "technicalSpecs": [
@@ -449,6 +458,11 @@
  },
  "sources": [
   {
+   "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+   "date": "2026-09-21"
+  },
+  {
    "label": "Investing.com — Hochtief H1 2026 slides (Turner sales/PBT/guidance/backlog mix)",
    "url": "https://www.investing.com/news/company-news/hochtief-h1-2026-slides-profit-surges-35-guidance-raised-on-record-backlog-93CH-4814737",
    "date": "2026-07-27"
@@ -570,6 +584,6 @@
    "url": "https://www.turnerconstruction.com/services"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 8
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 9
 }

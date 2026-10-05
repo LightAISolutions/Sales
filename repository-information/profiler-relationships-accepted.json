@@ -127,6 +127,30 @@
       "pair": "nisource x ppl",
       "why": "Both sides type the link 'other' by design: the two companies have no dealing with each other; the edge records that they are the corpus's two utility-affiliated data-center generation vehicles sharing Blackstone Infrastructure as minority partner (GenCo 19.9 percent; Invitium 49 percent). No inverse type applies. F-U3 accept 1 of 1.",
       "when": "2026-09-29"
+    },
+    {
+      "id": "061d986fba45",
+      "pair": "abb x softbank",
+      "why": "Both sides type the link 'other' by design: it is an agreed but uncompleted divestiture — SoftBank agreed on 8 October 2025 to buy ABB Robotics for USD 5.375bn, and neither party had announced completion by 1 October 2026. Not a supply or ownership relationship yet; no inverse type applies. F-I2 accept 1 of 4.",
+      "when": "2026-10-04"
+    },
+    {
+      "id": "9f0329fc5f8e",
+      "pair": "blackrock x blue-owl",
+      "why": "Reported only: Bloomberg (24 September 2026, carried by Reuters) said the BlackRock-backed AI Infrastructure Partnership and IFM Investors were in exclusive talks with Blue Owl for STACK's Asia-Pacific portfolio; no transaction exists, so both sides type it 'other' with status announced. Same treatment as kkr x stack-infrastructure (F-I1). F-I2 accept 2 of 4.",
+      "when": "2026-10-04"
+    },
+    {
+      "id": "591fa25cff12",
+      "pair": "blue-owl x iren",
+      "why": "Lender relationship, typed 'other' on both sides per the F-I1 lender precedent: Blue Owl Capital Corporation is lead lender and agent on IREN's USD 2.4bn GPU equipment financing (IREN FY2026 10-K). Debt is neither supply nor ownership; no inverse type applies. F-I2 accept 3 of 4.",
+      "when": "2026-10-04"
+    },
+    {
+      "id": "4c37884f0849",
+      "pair": "blue-owl x oracle",
+      "why": "Indirect by construction: Blue Owl-managed funds own STACK, which develops Project Jupiter for Oracle; Oracle's contract is with STACK, not Blue Owl, so both sides type it 'other' (project pin jupiter-nm). No inverse type applies. F-I2 accept 4 of 4.",
+      "when": "2026-10-04"
     }
   ]
 }

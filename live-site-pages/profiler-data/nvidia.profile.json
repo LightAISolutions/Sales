@@ -365,6 +365,27 @@
    "note": "NVIDIA advised the BlackRock-chaired AI Infrastructure Partnership from its 2024 launch and joined it in March 2025; BlackRock is one of six financiers in NVIDIA's August 2026 compute-financing memoranda.",
    "context": "BlackRock, GIP, Microsoft and MGX launched the partnership in September 2024 with NVIDIA supporting and advising; NVIDIA and xAI joined the renamed AI Infrastructure Partnership on 19 March 2025, and BlackRock's October 2025 Aligned announcement lists NVIDIA among its founders. AIP's first investment is Aligned Data Centers. In the August 2026 memoranda, Larry Fink said the deal 'deepens our relationship with NVIDIA, including through the AI Infrastructure Partnership'.",
    "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+  },
+  {
+   "slug": "softbank",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-01",
+   "via": "Stargate technology partner; PORTS-Pike campus of SoftBank's subsidiary SB Energy",
+   "note": "SoftBank named NVIDIA a Stargate technology partner in January 2025; since August 2026 NVIDIA's largest commitment to the group runs through SoftBank's subsidiary SB Energy at PORTS-Pike.",
+   "context": "The 22 January 2025 Stargate announcement lists NVIDIA among the initial technology partners. On 17 August 2026 NVIDIA agreed to make SB Energy's PORTS-Pike campus the exclusive host of its AI compute there, to provide residual value guaranties on the first 4.25 GW-IT and to invest in SB Energy, which SoftBank controls.",
+   "source": "https://group.softbank/en/news/press/20250122"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2026-08",
+   "scale": "USD 3.0bn (USD 1.5bn prepaid forward funded; USD 1.5bn of Class N stock committed at the IPO)",
+   "via": "Prepaid forward and Class N common stock; residual value guaranties at PORTS-Pike",
+   "note": "Investor and credit support: NVIDIA prepaid USD 1.5bn in August 2026, committed USD 1.5bn more at the IPO, guarantees the OpenAI tenant's obligations on the first ~4.25 GW-IT at PORTS-Pike and is to be its exclusive AI compute provider.",
+   "context": "SB Energy's 17 August 2026 release names NVIDIA 'the exclusive AI compute infrastructure provider at PORTS-Pike', with credit support on the initial 4.25 GW-IT and an option on the rest. The S-1 adds that NVIDIA funded USD 1.5bn under a prepaid forward on 17 August 2026, at 90% of the IPO price, and committed to buy USD 1.5bn of non-voting Class N stock alongside the offering, which has not priced.",
+   "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
   }
  ],
  "policyExposure": [
@@ -604,6 +625,16 @@
  },
  "sources": [
   {
+   "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+   "date": "2026-09-21"
+  },
+  {
+   "label": "SB Energy — NVIDIA guarantees PORTS-Pike Technology Campus to exclusively host NVIDIA AI compute",
+   "url": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+   "date": "2026-08-17"
+  },
+  {
    "label": "NVIDIA blog — NVIDIA unlocks AI compute at scale with capital partners (Sharon AI and Firmus first partners; Batam)",
    "url": "https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/",
    "date": "2026-07-02"
@@ -709,6 +740,11 @@
    "date": "2025-03-18"
   },
   {
+   "label": "SoftBank Group — Announcing The Stargate Project (initial equity funders SoftBank, OpenAI, Oracle, MGX)",
+   "url": "https://group.softbank/en/news/press/20250122",
+   "date": "2025-01-22"
+  },
+  {
    "label": "TrendForce — AI data-center energy storage demand",
    "url": "https://insights.trendforce.com/p/ai-data-center-energy-storage-demand"
   },
@@ -738,6 +774,6 @@
    "date": "2026-08-26"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 12
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 13
 }

@@ -707,6 +707,16 @@
       "note": "WhiteFiber (through Enovum NC-1 Bidco, LLC) is Nscale's landlord at the Madison, North Carolina site: a 10-year, 40 MW IT colocation agreement worth about US$865M, signed 18 Dec 2025, 'backed by an investment-grade hyperscaler offtake'.",
       "context": "The site this dossier records as 'partner-run' Madison with '99MW secured Duke Energy' is WhiteFiber's NC-1 campus at 805 Island Drive. The Duke Energy Carolinas capacity letter (24, 40 and 99 MW phases) and the assigned electric service agreement are held by WhiteFiber's subsidiary, not by Nscale; Duke had delivered 54 gross MW by May 2026. The two 20 MW phases were due 30 Apr and 30 May 2026; WhiteFiber disclosed on 14 May 2026 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components', and initial billing began in Q3 2026 with the full 40 MW run rate expected in August 2026.\n\nNscale's own S-1 (18 Sep 2026) does not name WhiteFiber or NC-1; the US$1.2B North Carolina GPU delayed-draw facility recorded above is the tenant-side financing for this site. Recorded from WhiteFiber's filings (Profiler F-N2, 29 Sep 2026).",
       "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm"
+    },
+    {
+      "slug": "blue-owl",
+      "type": "investor",
+      "status": "active",
+      "since": "2025-09",
+      "via": "Blue Owl-managed funds (equity) and credit funds (GPU-backed loan)",
+      "note": "Minority investor and lender: Blue Owl-managed funds joined the Series B and pre-Series C SAFE in 2025 and co-led, with PIMCO and LuminArx, a USD 1.4bn GPU-backed loan in February 2026.",
+      "context": "Nscale's pre-Series C SAFE release names 'Blue Owl Managed Funds, Dell, NVIDIA, Nokia' among investors in USD 433m. These are minority and lending positions, not control.",
+      "source": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe"
     }
   ],
   "policyExposure": [
@@ -1903,6 +1913,6 @@
       "url": "https://en.wikipedia.org/wiki/Nscale"
     }
   ],
-  "lastUpdated": "2026-10-02",
-  "profileVersion": 3
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 4
 }

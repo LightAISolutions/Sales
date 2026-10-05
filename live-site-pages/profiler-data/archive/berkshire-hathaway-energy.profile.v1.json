@@ -1,0 +1,1428 @@
+{
+ "schemaVersion": 7,
+ "slug": "berkshire-hathaway-energy",
+ "name": "Berkshire Hathaway Energy Company",
+ "shortName": "Berkshire Hathaway Energy",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.brkenergy.com",
+ "headquarters": "Des Moines, IA, USA",
+ "founded": 2000,
+ "employees": "23,900 at December 31, 2025 (2026 investor presentation and Corporate Overview); 'approximately 24,000' in Berkshire Hathaway's FY2025 10-K",
+ "ownership": {
+  "type": "subsidiary",
+  "notes": "Wholly owned by Berkshire Hathaway Inc. (NYSE: BRK.A / BRK.B) since 2024; no public equity, no dividend, no earnings call; an SEC registrant through its registered debt (combined Form 10-K/10-Q with PacifiCorp, MidAmerican, Nevada Power, Sierra Pacific and Eastern Energy Gas)"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Berkshire Hathaway Energy is the largest privately held utility group in the corpus and the one that publishes its data-center book as a single contracted number — approximately 11,000 MW of data-center load 'in-service or in varying stages of construction' across its utilities, 91 percent of it with Aaa–Aa3 counterparties, against a 2025 data-center peak of just over 2,200 MW (about 8 percent of system peak) and a 4,500–5,700 MW peak projected for 2030 — while its lead AI-load utility, NV Energy, has become the corpus's clearest case of a franchise being asked for more than it has: about 22 GW of inquiries and about 6 GW of signed Rule 9 infrastructure agreements against a 2025 system peak of roughly 8,200 MW, answered on May 7, 2026 with a 2026 integrated resource plan (PUCN Docket 26-05007) that asks for 5,405 MW of battery storage and 4,370 MW of solar entirely through power purchase agreements, 1,223 MW of gas turbines at Fort Churchill, and a form Large Load Electric Service Agreement for any load of 25 MW or more — and, on July 24, a lawsuit to keep its largest prospective customer, Tract, in front of the commission rather than an arbitrator. The parent's rule is Abel's: serve the hyperscalers 'if there was no impact to the rates'. BACKGROUND. Des Moines, Iowa; wholly owned by Berkshire Hathaway Inc. since the 2024 buy-out of the Scott family's remaining stake, and an SEC registrant only because of its registered debt (one share of common stock outstanding, no dividend, no earnings call, no consensus). 2025: assets $148.3B, revenue $26.2B, earnings on common shares $4,066M ($4,054M adjusted), 38,800 MW of owned generation (49 percent non-carbon), 216,300 miles of electric and 49,900 miles of gas transmission and distribution, 9.4 million customers, 23,900 employees, $33.6B of 2026–2028 capital ($33.3B in the 10-K table). The operating companies: PacifiCorp (Rocky Mountain Power and Pacific Power; 2.1 million customers in six western states; selling its Washington service area to Portland General Electric for $1.9B), MidAmerican Energy (Iowa; 838,000 electric customers; industrial load 61 percent of retail sales), NV Energy (Nevada Power and Sierra Pacific Power; 1.5 million electric customers), BHE Pipeline Group (Northern Natural Gas, BHE GT&S, Kern River — about 15 percent of U.S. gas consumed), Northern Powergrid (UK), BHE Transmission (AltaLink; BHE U.S. Transmission) and BHE Renewables (5,488 MW). Credit: A3/A- at the parent; Nevada Power A2/A; MidAmerican Aa2/A; PacifiCorp A3/BBB+ after $2.85B of accrued wildfire losses. Collection gap: brkenergy.com's HTML pages are blocked to automated readers and SEC hosts refused the sandbox, so BHE's own FY2025 10-K and Q1/Q2 2026 10-Qs were not read — the 10-K's 'contracted load' wording, its capex table and BHE-basis quarterly segment earnings are taken from Berkshire's 10-Qs, the 2026 investor presentation and Industrial Info; nvenergy.com renders no server-side content, so the LLESA's commercial percentages (minimum demand, minimum energy, the customer-specific generation charge) are the customers' reserved Exhibit G items and were not read; PacifiCorp's Utah large-load contract counterparty and docket, the Fort Churchill turbine OEM, the Sierra Solar battery supplier and Fleet's engine supplier were not found; executive photographs and most bios were not retrievable.",
+ "ecosystemRole": "We assess Berkshire Hathaway Energy as the corpus's PPA-side utility buyer: NV Energy's 2026 plan puts every one of its 5,405 MW of new batteries and 4,370 MW of solar under power purchase agreements with developers (23 PPAs, counterparties confidential), so the storage sellers in this file reach NV Energy through the developers who won its 2024 all-source RFP (198 bids, 21,019 MW, 12,634 MW of it storage) and the named 2024 IRP counterparties — Arevia's Libra (700 MW / 2,800 MWh), NextEra's Dry Lake East, 174 Power Global's Boulder Solar III — not through a utility purchase order; the exceptions are the utility-owned Reid Gardner (220 MW / 440 MWh, Energy Vault EPC, BYD cells) and Sierra Solar (400 MW / 1,600 MWh, supplier undisclosed, 2026) batteries and PacifiCorp's IRP proxies of 4,154 MW of four-hour lithium and 523 MW of 100-hour iron-air by 2045. Basis: the 2026 IRP application (Docket 26-05007), the NV Energy IRP fact sheet ('more than 5,400 MW of battery storage through power purchase agreements'), the investor presentation's $0.2B of storage capex inside $33.6B, and the 2025 IRP Update. For the gas vendors the doors are the 1,223 MW of Fort Churchill aeroderivative and frame turbines (2030–2032), NV Energy's 400 MW Valmy peakers under evaluation (2028), MidAmerican's 520 MW two-turbine peaker (siting certificate November 2025; 'about 700 MW' in the Corporate Overview) and PacifiCorp's 1,370 MW of combined-cycle and 853 MW of frame-turbine proxies — none with an OEM named. For the developers and hyperscalers in the corpus BHE is Amazon's, Google's, Vantage's and Tract's Nevada utility (five LLESA dockets, 26-05026 through 26-05030), Amazon's Oregon adversary at the OPUC, Microsoft's, Google's and Meta's Iowa utility under ten-year load commitment agreements, and — through Tract — the first utility in this file to sue a data-center developer over who decides how the grid gets built.",
+ "productsAndServices": [
+  {
+   "name": "NV Energy regulated service and the large-load framework — Rule 9 agreements, the form LLESA (Docket 26-05007) and the Clean Transition Tariff",
+   "category": "Regulated utility service",
+   "description": "Nevada Power Company (southern Nevada, 1.1 million electric customers, 2025 peak 6,168 MW, 5,391 MW owned) and Sierra Pacific Power Company (northern Nevada, 0.4 million electric and 0.2 million gas customers, 2025 peak 2,073 MW, 1,617 MW owned) are vertically integrated, PUCN-regulated utilities outside any RTO capacity market (WEIM participants; PacifiCorp's EDAM membership from May 2026 is the group's first day-ahead market). 2025 retail sales were 32,913 GWh plus 5,790 GWh of distribution-only service to Nevada's 704B exit customers. Data-center peak demand was about 400 MW in 2025; the 2026 IRP forecasts 3,600 MW of peak data-center load by 2030 (contracted fully-bundled and distribution-only customers plus about 14 percent of study-phase requests), about 22,000 MW of interest inquiries and about 6 GW of signed Rule 9 agreements — the existing mechanism, under which a large customer advances the cost of its distribution and transmission infrastructure and commits to minimum usage, but which 'does not address generation'. The 2026 IRP (application dated May 6, docketed May 7, 2026; statutory decision deadline December 2, 2026) therefore files a form Large Load Electric Service Agreement for 'new and existing accelerated large customer loads of 25 MW or greater' (Wells direct, Q23): a Maximum Demand and ramp schedule, minimum billing for demand and energy, a customer-specific generation charge recovered before any plant enters rate base, a termination payment (mitigated if a commensurate customer assumes the load) and ESA Customer Security under objective credit standards; NV Energy asked for the form to be deemed approved by September 18, 2026 on the energy-supply-plan timeline. Five customers filed eight LLESAs totalling more than 3.3 GW by 2032 — Amazon Data Services at Sparks (26-05026), Fleet Data Centers / Tract's PR RNO and SV RNO at McCarran (26-05027; 25 years post-COD, minimum bill 90 percent of contracted per New Project Media), Vantage Data Centers NV11 (26-05028), Novva Las Vegas / Proton NLV (26-05029; 300-month term, ramp up to 48 months) and VIP Landco / Prologis (26-05030) — each reserving the minimum-demand and minimum-energy percentages, the generation charge, the rates, the termination payment and the security calculation for PUCN determination (Exhibit G). The Clean Transition Tariff (Docket 24-05023, filed June 7, 2024 with Google's Sierra Pacific agreement, approved March 2025) lets an eligible customer buy bundled service from a named new clean resource at a customer-specific charge — Google's is Fervo's 115 MW Corsac Station 2 (January 2030); a second CTT deal with Ormat and an Amazon geothermal agreement (May 2026) followed. Governor Lombardo's Executive Order 2026-005 (September 17, 2026) directs the PUCN to 'determine instrument and terms ensuring data centers bear full service costs with no burden on other ratepayers' and to set load-reduction requirements for grid emergencies.",
+   "highlights": [
+    "About 22,000 MW of inquiries and about 6 GW of signed Rule 9 infrastructure agreements (about 84 percent in northern Nevada) against a combined 2025 peak of about 8,200 MW; 3,600 MW of data-center peak forecast for 2030",
+    "Form LLESA: ≥25 MW; minimum billing for demand and energy; customer-specific generation charge ahead of rate base; termination payment; ESA Customer Security — percentages reserved for the commission (Exhibit G)",
+    "Five LLESA dockets (Amazon, Fleet/Tract, Vantage NV11, Novva, Prologis) filed May 29–June 3, 2026; none had a final order by mid-July",
+    "Clean Transition Tariff (24-05023): Google/Fervo 115 MW approved 2025; Ormat and Amazon geothermal deals in 2026",
+    "Nevada Power GRC order September 16, 2025: +$118M, ROE 9.5 percent, 50 percent of Greenlink West CWIP into rates; residential demand charge deferred to January 2027; a southern-Nevada rate cut filed August 2026"
+   ],
+   "positioning": "The corpus's third large-load design after the minimum-demand tariff (Dominion GS-5, AEP Ohio) and the resource subscription (We Energies' bespoke tariff): a bilateral contract at a 25 MW threshold — the lowest in this file — with the generation cost charged to the customer before the plant is built and every commercial percentage left to the regulator. What Nevada lacks is a statute: the LLESA is a PUCN contract framework, and the September 2026 executive order is the first state-level instruction.",
+   "soldThrough": "Rule 9 line-extension agreements (infrastructure); LLESAs filed per customer for PUCN approval; the Clean Transition Tariff for bundled clean service; distribution-only service for 704B exit customers",
+   "targetSegments": [
+    "Hyperscalers and colocation developers at the Tahoe-Reno Industrial Center, Sparks, Las Vegas and North Las Vegas",
+    "Nevada retail customers; 704B distribution-only customers"
+   ],
+   "roadmap": "PUCN order on the 2026 IRP and the form LLESA by December 2, 2026; orders in the five customer dockets; Rule 9 tariff modifications filed September 4, 2026 (26-09005/06); the PUCN's EO 2026-005 instrument and the Office of Energy's 'Responsible Speed to Power Plan' due December 31, 2026"
+  },
+  {
+   "name": "NV Energy 2026 IRP supply plan — 5,405 MW of battery PPAs, 4,370 MW of solar, 1,223 MW of Fort Churchill gas and the $4.2B Greenlink lines",
+   "category": "Energy storage",
+   "description": "The 2027–2046 Triennial IRP and 2027–2029 Energy Supply Plan (Docket 26-05007) asks the PUCN to approve 23 power purchase agreements adding about 4,550 MW of renewables (4,370 MW of paired solar and 180 MW of geothermal) and 5,405 MW of battery output capacity — 'new paired and standalone BESS PPA projects by 2031' — plus 1,223 MW of NV Energy-owned gas at Fort Churchill (Additions 1 and 2, 401 MW of aeroderivative turbines each, June 2030 and June 2031; Addition 3, 421 MW of frame turbines, June 2032), $13.0M of early-development funding for a 2034 combustion turbine, 171 MW of demand-side management, and a third amendment to the Libra PPA adding 200 MW of storage in contract years 21–25. Project names in the technical appendices include Amargosa Energy Center Phases 1 and 2, Castor Storage, Commerce Station Energy Storage, Coyote Energy 1, Dry Lake East Energy Storage II, Fish Springs Ranch Energy Storage, Hot Pot Energy Center and Winston Solar; counterparties are confidential. The plan rests on the 2024 all-source RFP (198 bids, 73 unique projects, 21,019 MW including 12,634 MW of storage; a 15-project, 8,000 MW-plus shortlist for 2027–2030) and a load forecast 47 percent higher in annual GWh than the 2024 IRP's over twenty years; the January 2026 stakeholder briefing said 'total new thermal may exceed 3 GW in next decade' with the earliest new turbine in 2029–2030, and the IRP warns that RPS compliance 'will be challenging for several years due to load growth' (2025 renewables 47.5 percent against a 34 percent standard). Already approved from the 2024 IRP and its amendments: Sierra Solar, 400 MW of solar and a 400 MW / 1,600 MWh four-hour battery, utility-owned (Sierra Pacific 90 percent, Nevada Power 10 percent; storage 2026, solar 2027; about $1.5B); Libra Solar and Storage (Arevia Power, 700 MW + 700 MW / 2,800 MWh, 25 years, $34.97/MWh and $13,350/MW-month, December 2027); Dry Lake East (NextEra Energy Resources, 200 + 200 MW / 800 MWh, December 2026); Boulder Solar III (174 Power Global, 128 + 128 MW, June 2027); the Dodge Flat 150 MW four-hour battery addition (20-year PPA signed September 27, 2025; July 2027); the North Valmy coal-to-gas conversion (522 MW total, 261 MW NV Energy share; coal ended at end-2025) and 400 MW of Valmy peaking generation 'under evaluation' for May 2028 (about $573M approved December 20, 2024, Docket 24-05041). Greenlink Nevada — Greenlink West (350 miles of 525 kV, 725 MW of import capacity, Fort Churchill to Northwest in 2027 and to Harry Allen in 2028) and Greenlink North (235 miles, 800 MW, 2028) with two 345 kV common ties — carries a combined expected cost of $4.2B, of which 50 percent of the West line's costs to date entered rates in the September 2025 order; NV Energy's capital plan is $3.0B in 2026, $2.8B in 2027 and $1.9B in 2028.",
+   "highlights": [
+    "5,405 MW of battery output capacity and 4,370 MW of solar — all 23 PPAs; 1,223 MW of owned gas at Fort Churchill (2030–2032); PUCN decision due December 2, 2026",
+    "Utility-owned storage: Reid Gardner 220 MW / 440 MWh (in service December 2023; Energy Vault EPC; BYD LFP cells; $257M; about $100M of IRA credits) and Sierra Solar 400 MW / 1,600 MWh (2026; supplier undisclosed)",
+    "Named PPAs: Libra 700/700 (Arevia), Dry Lake East 200/200 + 400 MW standalone (NextEra), Boulder Solar III (174 Power Global), Dodge Flat 150 MW addition; 2026 IRP project names listed, counterparties confidential",
+    "Greenlink West and North: $4.2B, 525 kV, 2027–2028; MasTec's T&D Power is the Greenlink West contractor per the MasTec dossier",
+    "2024 all-source RFP: 21,019 MW bid, 12,634 MW of it storage"
+   ],
+   "positioning": "The largest storage procurement in the corpus that buys none of it into rate base: where Duke, DTE and WEC own their batteries, NV Energy contracts them, so the FEOC, tariff and warranty risk sits with Arevia, NextEra and the confidential 2026 counterparties — and the storage capex line in BHE's $33.6B plan is $0.2B.",
+   "soldThrough": "PUCN-approved PPAs from the 2024 all-source RFP; utility ownership for Sierra Solar, Reid Gardner, Valmy and Fort Churchill under IRP approvals; Greenlink under UEPA permits",
+   "targetSegments": [
+    "Nevada retail and LLESA load; the 2030 open-capacity position (goal ≤500 MW short by 2031)",
+    "Developers with shortlisted 2024 RFP projects"
+   ],
+   "roadmap": "IRP order December 2026; Sierra Solar battery 2026 and solar 2027; Dry Lake East December 2026; Greenlink West 2027; Libra and Dodge Flat 2027; Greenlink North 2028; Fort Churchill 2030–2032"
+  },
+  {
+   "name": "PacifiCorp (Rocky Mountain Power and Pacific Power) — large-load rules in Utah, Oregon and Wyoming, the 2025 IRP Update and the Washington sale",
+   "category": "Regulated utility service",
+   "description": "PacifiCorp serves 2.1 million retail electric customers across 141,500 square miles in Utah, Wyoming, Idaho (Rocky Mountain Power) and Oregon, Washington and California (Pacific Power), with 11,873 MW of owned generation, 17,500 miles of transmission and 5,200 employees; retail sales were 59,212 GWh in 2025 (+1.3 percent) and are forecast +2.2 percent in 2026 and +2.0 percent in 2027 'primarily due to increased data center growth'. Its large-load position is a set of state rules rather than one tariff: Utah's 2025 SB 132 (loads of 100 MW or more within five years; a 90-day utility evaluation; three service pathways including closed private generation) 'requires large load customers to fully support marginal costs while enabling faster regulatory reviews', and PacifiCorp filed its first contract under it — 'hundreds of MWs', 'nearly $1 billion in estimated net benefits', approval anticipated April 2026, counterparty and docket not found; Oregon's 2025 HB 3546 (the POWER Act) requires new data centers over 20 MW to fully support all costs, and PacifiCorp has proposed Schedule 401 as a large-energy-use-facility class (ADV 1790 / UE 463) after UE 433 added two charges for very large customers — but 'negotiations on additional sites have stalled', and Amazon Web Services filed an OPUC complaint in November 2025 alleging PacifiCorp failed its service obligation, which the company disputes ('six to eight months' absent settlement); Wyoming and Utah tariffs added charges for unused demand. The book: Oregon 'over 7,000 MWs of data center load' pursued with 784 MW under contract; Utah and Wyoming 'approximately 2,000 MWs of additional opportunities' by 2030; the 2025 IRP Update's Table 6.1 shows 839 MW (east) and 592 MW (west) of large load energized at end-2025 and 839 / 1,054 MW contracted at maximum ramp. The 2025 IRP Update (March 31, 2026) added 'substantial new gas resources' — 1,370 MW of proxy combined-cycle and 853 MW of proxy frame turbines by 2045 — with 4,154 MW of four-hour lithium and 523 MW of 100-hour iron-air storage, 3,705 MW of wind, 2,477 MW of utility solar and TerraPower's Kemmerer Unit 1 (Natrium, 345 MWe boostable to 500 MWe, end-2031), and dropped new wind and solar after 2027 'largely driven by the July 4, 2025 repeal of major portions of the IRA'. On February 17, 2026 PacifiCorp agreed to sell its Washington service area — the 477 MW Chehalis gas plant, 234 MW Marengo and 94 MW Goodnoe Hills wind, and distribution serving about 140,000 customers around Yakima and Walla Walla — to Portland General Electric (51 percent) and Manulife Infrastructure Fund III for a $1.9B base price, closing 'first half of 2027' after WUTC, OPUC and FERC approval; it also signed term sheets to sell 8,904 Oregon customers to three cooperatives and will sell-leaseback the Boardman-to-Hemingway line to a BHE affiliate (about $1.1B, November 2027). Wildfire is the constraint on all of it: $2.85B of probable losses accrued through June 30, 2026 ($2.3B paid), the James class verdict reversed and remanded April 8, 2026, the Oregon Supreme Court's argument on November 3, 2026, a $575M federal settlement, a $2.55B letter-of-credit facility, S&P at BBB+ and a March 2026 CreditWatch for junk.",
+   "highlights": [
+    "Oregon: >7,000 MW pursued, 784 MW under contract, negotiations stalled; AWS complaint at the OPUC (November 2025); Schedule 401 proposed",
+    "Utah: first SB 132 contract filed — hundreds of MW, ~$1B net benefits; ~2,000 MW more by 2030 in Utah/Wyoming",
+    "2025 IRP Update: +1,370 MW CCGT and +853 MW frame CT proxies; 4,154 MW Li-ion and 523 MW iron-air by 2045; Natrium Kemmerer 1 by end-2031; no new wind/solar after 2027",
+    "Washington sale to PGE/Manulife: $1.9B, agreement February 15, 2026, close H1 2027; Oregon co-op sales; B2H sale-leaseback ~$1.1B",
+    "Wildfire: $2.85B accrued; James reversed April 2026; Oregon Supreme Court November 3, 2026; capex 2026–28 $7.8B of which wildfire $1.5B"
+   ],
+   "positioning": "The one BHE utility where the data-center book is contested rather than contracted — a hyperscaler complaint at the state commission, a statute the utility says has stalled negotiations, and a balance sheet spending more on wildfire ($1.5B) than on generation ($0.1B of wind) over 2026–2028.",
+   "soldThrough": "State-by-state tariffs and contracts (Utah SB 132 contracts; Oregon Schedule 401 and UE 433 charges; Wyoming unused-demand charges); the IRP for resources; interruptible contracts historically",
+   "targetSegments": [
+    "Data centers in Utah (Eagle Mountain — Meta, Google, QTS, Tract), Wyoming and Oregon (AWS)",
+    "Six-state retail load"
+   ],
+   "roadmap": "OPUC decision on the AWS complaint and Schedule 401; Utah PSC approval of the first SB 132 contract; Washington sale approvals through H1 2027; Oregon Supreme Court on James November 3, 2026; B2H in service November 2027; Kemmerer 1 end-2031"
+  },
+  {
+   "name": "MidAmerican Energy (Iowa) — the load commitment agreement, 800 MW of solar, a 520–700 MW peaker and the hyperscaler campuses",
+   "category": "Regulated utility service",
+   "description": "MidAmerican serves 838,000 electric and 811,000 gas customers in Iowa, Illinois, South Dakota and Nebraska from 12,243 MW of net owned capacity (8,231 MW non-carbon; 45 percent below the U.S. average rate at 7.83 cents/kWh) inside MISO. It is the group's data-center utility of record: 2025 retail sales rose 9.6 percent (industrial +12–13 percent) 'primarily due to continued load growth from data centers', industrial load is 61 percent of retail GWh, data centers were about 8 percent of Iowa peak load at the May 2026 annual meeting with 'visibility to grow that by 50% or more over the next five years', and the 2026–2027 forecast (+5.2 and +3.4 percent) 'includes only signed contracts with large-load customers that fund all incremental transmission and substation investments'. Its instrument is the Load Commitment Agreement — 'binding load ramp schedules and a minimum monthly charge over 10 years, regardless of actual usage', with exit penalties, and customer funding of every incremental substation and transmission line; no IUC large-load tariff docket exists (EEI's Iowa entries are Alliant's). Named campuses are third-party: Microsoft in West Des Moines ('Project Alluvion', about 200 MW), Google at Council Bluffs ($5.5B) and, from August 3, 2026, an agreement to explore a 900-acre Salix site, Meta at Altoona, Apple at Waukee. Supply: the Solar Reliability Project, up to 800 MW at six Iowa sites under advance ratemaking approved September 2025 (ROE 9.95 percent; 2026–2028); a two-turbine gas peaker with an IUC siting certificate (November 2025) of 520 MW — the Corporate Overview calls the Adair County plant 'approximately 700 megawatts' for 2028–2029 and a third-party report 518 MW at Orient, so three figures are on the record; Wind PRIME (603 MW total by 2027) and $1.5B of repowering expected to keep 100 percent of production tax credits for ten years; MISO Tranche 1 projects of $1.6B (2028–2034). 2026–2028 capex is $8.9B — new generation $4.6B including $1.1B of turbines and $1.9B of renewables. Iowa's profit cap is 10.3 percent with 90 percent of excess returned; MidAmerican filed a natural gas rate case (about 5 percent) on July 7, 2026.",
+   "highlights": [
+    "Load Commitment Agreement: 10-year minimum monthly charge regardless of usage; binding ramp; customer funds all incremental T&D; forecast counts signed contracts only",
+    "Data centers ~8 percent of Iowa peak load (May 2026); 2025 retail sales +9.6 percent; Microsoft, Google, Meta, Apple campuses",
+    "800 MW Solar Reliability Project (advance ratemaking, ROE 9.95 percent); gas peaker 520 MW (siting certificate) / ~700 MW (Corporate Overview); $1.1B of turbines in the plan",
+    "Capex 2026–28 $8.9B (+65 percent) — the largest of the three U.S. utilities"
+   ],
+   "positioning": "The quietest large-load franchise in the corpus — no tariff docket, no litigation, no public ladder — because its ten-year take-or-pay contract predates the industry's tariff wave; the model Abel cites when he says the hyperscalers 'must bear their full structural infrastructure costs'.",
+   "soldThrough": "Load Commitment Agreements per customer; Iowa advance ratemaking for generation; MISO for capacity",
+   "targetSegments": [
+    "Hyperscale campuses in the Des Moines and Council Bluffs corridors",
+    "Iowa industrial and retail load"
+   ],
+   "roadmap": "Solar Reliability Project phases 2026–2028; peaker in service 2028–2029; Google Salix decision; gas rate case order"
+  },
+  {
+   "name": "BHE Transmission and BHE Pipeline Group — Greenlink, the MISO 765 kV award with AEP, TransCanyon, and 15 percent of U.S. gas",
+   "category": "Grid",
+   "description": "BHE Transmission owns AltaLink (about 85 percent of Alberta's population) and BHE U.S. Transmission — 50 percent of Electric Transmission Texas with AEP, Prairie Wind (25 percent), the Transource / Midcontinent Grid Solutions joint venture with AEP and Evergy that won MISO Tranche 2.1's roughly 200-mile, $1.2B 765 kV Wisconsin segment (2034), four more Tranche 2.1 bids pending in 2026 at $0.9–1.5B each, and TransCanyon's 214-mile, $1.2B Cross-Tie 500 kV line between Utah and Nevada (2030); it also signed a non-binding MOU for 10 percent (300 MW) of Grid United's North Plains Connector HVDC. NV Energy's Greenlink and PacifiCorp's Boardman-to-Hemingway (operational November 2027, to be sale-leased to a BHE affiliate) sit inside the utilities. Electric transmission is the largest line of the 2026–2028 plan at $8.3B, with distribution $7.5B. BHE Pipeline Group — Northern Natural Gas (Section 4 rate case settled in principle February 2026: +30 percent market area, +37 percent field area; Permian expansion application June 2026), BHE GT&S (Eastern Gas Transmission and Storage, Carolina Gas Transmission, 75 percent of Cove Point LNG), Kern River — runs 20,900 miles and 21.6 Bcf/d of design capacity, 'approximately 15 percent of all natural gas consumed across the entire United States', earned $1,151M in 2025 and argues that gas is 'essential' to serve data centers 'on the grid and behind the meter'.",
+   "highlights": [
+    "MISO Tranche 2.1: Midcontinent Grid Solutions (Transource/BHE) 765 kV Wisconsin award ~$1.2B; four more bids pending 2026",
+    "TransCanyon Cross-Tie 500 kV UT–NV, $1.2B, 2030; North Plains Connector MOU 300 MW; ETT 50/50 with AEP",
+    "Pipelines: 15 percent of U.S. gas; $4.3B capex 2026–28; Northern Natural Section 4 settlement; Q2 2026 pipeline earnings +32 percent",
+    "Transmission $8.3B and distribution $7.5B of the $33.6B plan"
+   ],
+   "positioning": "The corpus's only utility group that is simultaneously a state-regulated wires owner, a competitive interregional transmission bidder and an interstate pipeline system — which is why it appears in the AEP, Grid United and MasTec dossiers as a partner rather than a customer.",
+   "soldThrough": "FERC formula rates and competitive RTO awards (transmission); FERC Section 4 rates and negotiated contracts (pipelines)",
+   "targetSegments": [
+    "MISO, SPP and Western interconnection projects",
+    "Gas-fired generation and LNG, including data-center behind-the-meter demand"
+   ],
+   "roadmap": "Tranche 2.1 bid results 2026; B2H November 2027; Cross-Tie 2030; Wisconsin 765 kV 2034"
+  },
+  {
+   "name": "BHE Renewables and BHE Montana — the nonregulated fleet, behind-the-meter data-center generation and small owned storage",
+   "category": "Generation",
+   "description": "BHE Renewables owns or is building 5,488 MW across 26 facilities in 11 states — 13 wind farms (2,545 MW), 1,690 MW of solar (Solar Star, Topaz, Agua Caliente), four gas plants (898 MW), CalEnergy's 345 MW of Imperial Valley geothermal and 10 MW of hydro — plus the Occidental direct-lithium-extraction demonstration plant (complete mid-2026; commercial decision by year-end). Its data-center position is stated, not contracted: the unit is 'actively exploring ... generation projects in support of prospective data center customers', with 'site diligence and preliminary development activities ... ongoing at several prospective sites, which may be capable of serving projected demands scaling to 1 GW or more', noting that prospects are 'increasingly considering behind-the-meter or co-located on-site generation'; BHE Canada is working with potential data-center customers in Alberta and Montana. Owned storage is small: the Ravenswood, West Virginia microgrid for TIMET (106 MW of solar and a 20 MW battery; complete by end-2027), Solar Star 3 and 4 in Kern County (48 MW of solar, 46 MW of storage, Clean Power Alliance PPA, 2026) and BHE Montana's energized 75 MW two-hour battery on the MATL line beside the 130 MW Glacial Solar Park under construction. The December 2025 Grande Prairie blade failure idled 141 of 200 turbines there and 31 of 36 at Marshall until March 2026; Rio Bravo (238 MW of wind) was bought in March 2025. BHE Renewables earned $585M in 2025 and carries $1.0B of the 2026–2028 plan.",
+   "highlights": [
+    "5,488 MW nonregulated: wind 2,545 MW, solar 1,690 MW, gas 898 MW, geothermal 345 MW",
+    "Data-center BTM generation: sites 'capable of ... 1 GW or more' under diligence — no customer, site or MW named",
+    "Owned storage: Ravenswood 20 MW (TIMET microgrid), Solar Star 3/4 46 MW, BHE Montana 75 MW / 2 hours",
+    "Occidental DLE lithium demonstration complete mid-2026; decision by year-end"
+   ],
+   "positioning": "The group's optionality on the off-grid data-center model that its regulated utilities cannot offer — and, if it proceeds, the one BHE unit that would buy turbines and batteries as a developer rather than a rate-based utility.",
+   "soldThrough": "Long-term PPAs (Clean Power Alliance, TIMET); merchant sales; tax-credit monetisation through Berkshire's tax appetite",
+   "targetSegments": [
+    "Prospective behind-the-meter data-center campuses (Alberta, Montana, unnamed U.S. sites)",
+    "Corporate and utility PPA offtakers"
+   ],
+   "roadmap": "Any first named data-center site; Ravenswood completion end-2027; Glacial Solar Park; the lithium commercial decision"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "NV Energy form Large Load Electric Service Agreement — 2026 IRP, PUCN Docket 26-05007 (Exhibit Wells-Direct-2)",
+   "specs": [
+    {
+     "band": "Applicability",
+     "label": "Threshold",
+     "value": "new and existing accelerated large customer loads of 25 MW or greater (Wells direct, Q23)"
+    },
+    {
+     "band": "Demand",
+     "label": "Maximum Demand and ramp",
+     "value": "a contracted Maximum Demand with a ramp schedule; Novva's filed LLESA runs 300 months with a ramp of up to 48 months; Fleet's 25 years post-COD"
+    },
+    {
+     "band": "Minimum bill",
+     "label": "Demand and energy",
+     "value": "minimum billing for demand and energy — percentages reserved for PUCN determination in the customers' Exhibit G; Fleet's reported at 90 percent of contracted (New Project Media)"
+    },
+    {
+     "band": "Generation",
+     "label": "Customer-specific generation charge",
+     "value": "charges for incremental generation costs recovered from the new customer prior to inclusion in rate base (CIAC-like)"
+    },
+    {
+     "band": "Exit",
+     "label": "Termination payment",
+     "value": "payable on early termination, mitigated if a commensurate customer assumes the load"
+    },
+    {
+     "band": "Credit",
+     "label": "ESA Customer Security",
+     "value": "security under objective credit standards; calculation reserved for the commission"
+    },
+    {
+     "band": "Infrastructure",
+     "label": "Rule 9",
+     "value": "the LLESA sits on top of Rule 9 line-extension agreements (MPC / SHVD / HVD) under which the customer advances distribution and transmission investment; about 6 GW signed"
+    },
+    {
+     "band": "Process",
+     "label": "Approval",
+     "value": "form LLESA requested deemed-approved by September 18, 2026 on the ESP timeline; IRP statutory deadline December 2, 2026; each customer LLESA filed as its own docket (26-05026 to 26-05030)"
+    }
+   ],
+   "notes": "Reserved provisions filed by PR Reno / SV Reno (Fleet), Vantage NV11, Proton NLV (Novva) and Prologis / VIP Landco: Minimum Demand and Minimum Energy percentages, Customer-Specific Generation Charge, ESA Overall Rate, Long-Term Energy Rate, Termination Payment and ESA Customer Security. Governor Lombardo's EO 2026-005 (September 17, 2026) directs the PUCN to set an instrument ensuring data centers bear full service costs."
+  },
+  {
+   "product": "NV Energy 2026 IRP — resource additions requested (Docket 26-05007) and approved supply (investor presentation p. 82)",
+   "specs": [
+    {
+     "band": "Requested",
+     "label": "Battery storage",
+     "value": "5,405 MW of BESS output capacity, new paired and standalone PPA projects by 2031 (fact sheet: 'more than 5,400 MW ... through power purchase agreements')"
+    },
+    {
+     "band": "Requested",
+     "label": "Renewables",
+     "value": "~4,550 MW — 4,370 MW paired solar PV + 180 MW geothermal; 23 PPAs in total"
+    },
+    {
+     "band": "Requested",
+     "label": "Gas",
+     "value": "1,223 MW owned at Fort Churchill: Additions 1 and 2 401 MW aeroderivative each (June 2030, June 2031); Addition 3 421 MW frame (June 2032); $13.041M early development for a 2034 CT"
+    },
+    {
+     "band": "Requested",
+     "label": "Other",
+     "value": "171 MW DSM; Libra third amendment +200 MW BESS in contract years 21–25 from 2048; CTT exemplar pricing models (Wells-Direct-4/5)"
+    },
+    {
+     "band": "Approved",
+     "label": "Utility-owned",
+     "value": "Sierra Solar 400 MW solar + 400 MW / 1,600 MWh 4-hr BESS (storage 2026, solar 2027; ~$1.5B); Valmy coal-to-gas 522 MW total / 261 MW share (2026); Valmy Peaking 400 MW under evaluation (May 2028); Reid Gardner BESS 220 MW / 440 MWh (December 2023)"
+    },
+    {
+     "band": "Approved",
+     "label": "Contracted",
+     "value": "Geothermal portfolio 120 MW (2025–2028); Dry Lake East 200 + 200 MW 4-hr (December 2026); Boulder Solar III 128 + 128 MW (June 2027); Dodge Flat BESS +150 MW 4-hr (July 2027); Libra 700 + 700 MW 4-hr (December 2027); Corsac Generating Station 2 115 MW geothermal (January 2030)"
+    },
+    {
+     "band": "Transmission",
+     "label": "Greenlink Nevada",
+     "value": "West 350 mi 525 kV, 725 MW import (2027–2028); North 235 mi 525 kV, 800 MW (2028); two 345 kV common ties (46 and 38 mi); combined $4.2B"
+    },
+    {
+     "band": "Load",
+     "label": "Inquiries and contracts",
+     "value": "~22,000 MW of interest inquiries; ~6 GW signed Rule 9 agreements; 3,600 MW data-center peak forecast 2030; 2025 data-center peak ~400 MW"
+    }
+   ],
+   "notes": "2024 all-source RFP: 198 bids, 73 unique projects, 21,019 MW including 12,634 MW of storage; shortlist 15 projects >8,000 MW. Storage capex in BHE's 2026–2028 plan is $0.2B group-wide — the PPAs carry the equipment."
+  },
+  {
+   "product": "Berkshire Hathaway Energy 2026–2028 capital plan and 2025 metrics (2026 investor presentation)",
+   "specs": [
+    {
+     "band": "Total",
+     "label": "2026–2028",
+     "value": "$33.6B current plan (prior $32.8B; FY2025 10-K table $33.3B); 2026 $11.5B, 2027 $12.1B, 2028 $10.0B; '$15.0 Billion Free Cash Flow Above Operating Capex'"
+    },
+    {
+     "band": "By business",
+     "label": "Subsidiaries",
+     "value": "MidAmerican $8.9B; PacifiCorp $7.8B; NV Energy $7.7B; BHE Pipeline Group $4.3B; Northern Powergrid $2.8B; BHE Renewables $1.0B; BHE Transmission $0.9B; HomeServices and other $0.2B"
+    },
+    {
+     "band": "By type",
+     "label": "Category",
+     "value": "electric transmission $8.3B; electric distribution $7.5B; gas T&S $3.7B; solar $2.7B; wind $2.0B; wildfire prevention $1.9B; battery storage $0.2B; other $7.3B"
+    },
+    {
+     "band": "Data centers",
+     "label": "Group figures",
+     "value": "~11,000 MW contracted data-center load (in service or in construction); 2025 data-center peak >2,200 MW (~8 percent of system peak); 4,500–5,700 MW by 2030; credit mix 91 percent Aaa–Aa3, 1 percent A, 1 percent Baa, 7 percent not rated"
+    },
+    {
+     "band": "2025",
+     "label": "Scale",
+     "value": "assets $148.3B; revenue $26.2B; earnings on common shares $4,066M (adjusted $4,054M); equity $54.1B; 38,815 MW owned (49 percent non-carbon); rate base $72.3B → $78.2B 2026F"
+    },
+    {
+     "band": "Credit",
+     "label": "Ratings (Moody's/S&P)",
+     "value": "BHE A3/A-, FFO/debt 15.1 percent; PacifiCorp A3/BBB+ (13.1 percent); MidAmerican Aa2/A (23.0 percent); Nevada Power A2/A (18.7 percent); Sierra Pacific A3/A (15.6 percent); long-term debt $57.3B at 4.73 percent"
+    }
+   ],
+   "notes": "BHE pays no dividend ('We retain more dollars of earnings than any other U.S. electric utility') and received $1.4B of cash tax benefits from Berkshire in 2025; the 2025 effective tax rate was −76.2 percent on wind PTCs."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Earnings on common shares (BHE basis)",
+      "actual": "$4,300M reported; $4,350M adjusted",
+      "expected": "— (no consensus; wholly owned)",
+      "verdict": "inline",
+      "result": "Wildfire losses −$261M; HomeServices settlement −$140M; gain on BYD +$351M; Berkshire-basis net earnings attributable to BHE $4,026M"
+     },
+     {
+      "name": "Adjusted earnings by unit",
+      "actual": "PacifiCorp $787M; MidAmerican $991M; NV Energy $444M; Northern Powergrid $547M; Pipeline Group $1,232M; Transmission $263M; Renewables $447M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "The last year with a BYD gain; BHE became 100 percent Berkshire-owned in the second half"
+     },
+     {
+      "name": "Data-center peak load",
+      "actual": "1,800 MW (7 percent of system peak); 'over 9,000 MW' of data-center load contracted per the FY2024 10-K language quoted by Industrial Info",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "4,000–5,000 MW projected by 2030 at the time",
+      "kpi": "mw-contracted",
+      "qty": 9000
+     }
+    ],
+    "commentary": "BHE has no public equity, no EPS, no guidance and no analyst consensus; figures are BHE's own 'earnings on common shares' (investor presentation) and Berkshire's segment reporting. The 9 GW figure is the prior-year contracted load — superseded by the 11 GW below."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$26.2B (energy revenue about $22B; balance HomeServices)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Retail volumes +2.2 percent (MidAmerican +9.6, PacifiCorp +1.3, NV Energy −2.2 actual / positive weather-normalized)",
+      "kpi": "revenue",
+      "usdMillions": 26200,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Earnings on common shares (BHE basis)",
+      "actual": "$4,066M reported; $4,054M adjusted (−6.8 percent adjusted); Berkshire basis $3,982M (−1.1 percent)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "PacifiCorp $717M; MidAmerican $1,048M; NV Energy $407M; Northern Powergrid $343M; Pipeline Group $1,151M; Transmission $247M; Renewables $585M; wildfire losses net −$75M; BYD gain +$87M (stake fully sold by September 30, 2025)"
+     },
+     {
+      "name": "Contracted data-center load",
+      "actual": "approximately 11,000 MW in service or in construction (investor presentation, March 2026); 2025 data-center peak over 2,200 MW, about 8 percent of system peak",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "4,500–5,700 MW of data-center peak by 2030 on contracted ramp schedules (15–21 percent CAGR); 91 percent of demand with Aaa–Aa3 counterparties",
+      "kpi": "mw-contracted",
+      "qty": 11000
+     },
+     {
+      "name": "Capital plan",
+      "actual": "$33.6B for 2026–2028 (10-K table $33.3B); 2025 capex about $10B of investing outflow",
+      "expected": "$32.8B prior plan",
+      "verdict": "beat",
+      "result": "MidAmerican $8.9B (+65 percent), PacifiCorp $7.8B, NV Energy $7.7B; transmission $8.3B the largest line; battery storage $0.2B",
+      "kpi": "capex",
+      "usdMillions": 33600,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Rate base",
+      "actual": "$72.3B (2025A) → $78.2B (2026F); NV Energy $10.8B → $11.2B",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Implied growth about 7 percent a year from $63.7B in 2023; cash tax benefits from Berkshire $1.4B"
+     }
+    ],
+    "commentary": "Operating income $4.8B, operating cash flow $8.4B, assets $148.3B, equity $54.1B; the effective tax rate was −76.2 percent on wind production tax credits. The FY2025 10-K itself was not readable (SEC hosts blocked; brkenergy.com asset not discoverable)."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Energy operating revenue (Berkshire basis)",
+      "actual": "$5,810M (vs $5,506M); total including real estate $6,661M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Utility margin $2.0B (+2.4 percent); retail volumes +1.7 percent (MidAmerican +4.4, NV Energy +4.3, PacifiCorp −1.2)",
+      "kpi": "revenue",
+      "usdMillions": 5810,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net earnings attributable to BHE (Berkshire basis)",
+      "actual": "$1,114M (+1.3 percent)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "U.S. utilities $359M (−16.1 percent) on wildfire-prevention, vegetation, insurance and technology costs and lower PTCs; pipelines $606M (+24.2 percent); other energy $255M (−26.5 percent)"
+     }
+    ],
+    "commentary": "The quarter Abel used at the annual meeting to say hyperscalers 'must bear their full structural infrastructure costs'."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Energy operating revenue (Berkshire basis)",
+      "actual": "$5,413M (vs $5,130M); six months $11,223M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Utility margin $2.3B (+8.1 percent); six-month retail volumes +3.1 percent (MidAmerican +6.0, NV Energy +4.3, PacifiCorp +0.8)",
+      "kpi": "revenue",
+      "usdMillions": 5413,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net earnings attributable to BHE (Berkshire basis)",
+      "actual": "$891M (+26.9 percent); six months $2,005M (+11.3 percent)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "U.S. utilities $597M (+37.6 percent); pipelines $242M (+32.2 percent); other energy $291M (−4.0 percent); real estate $20M after settlement charges; interest expense $745M (vs $664M)"
+     },
+     {
+      "name": "Wildfire accrual (PacifiCorp)",
+      "actual": "$2.85B cumulative probable losses through June 30, 2026; $2.3B paid ($589M in H1 2026); $719M of bonds posted",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "'Reasonably possible' material additional losses; Washington sale close expected H1 2027"
+     }
+    ],
+    "commentary": "BHE's Q3 2026 10-Q is expected in the first week of November (the Q3 2025 10-Q was filed October 31, 2025, Berkshire's release November 1); no company-confirmed date exists because BHE holds no earnings calls."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-24",
+   "category": "market",
+   "headline": "Abel calls AI data-center demand a 'significant opportunity' for BHE while repeating that energy and site preparation are the constraint and that hyperscalers will be served 'if there was no impact to the rates'",
+   "read": "The parent's rule for the whole group, stated twice in September.",
+   "source": "https://finance.yahoo.com/energy/articles/berkshire-hathaway-ceo-warns-energy-125808048.html"
+  },
+  {
+   "date": "2026-09-18",
+   "category": "leadership",
+   "headline": "Warren Buffett becomes chairman emeritus of Berkshire Hathaway; Howard G. Buffett elected chairman; Greg Abel remains CEO with BHE under his direct oversight",
+   "read": "No change at BHE, but its chair now runs the parent.",
+   "source": "https://www.berkshirehathaway.com/news/sep1826.pdf"
+  },
+  {
+   "date": "2026-09-17",
+   "category": "regulatory",
+   "headline": "PUCN conditionally approves Fleet Data Centers / Tract's temporary gas plants — Peru Ridge 218 MW (26-04027) and South Valley 144 MW (26-04026) — to run two to three years while NV Energy service is built; construction early 2027",
+   "read": "Nevada's first gas approved for data-center self-supply, filed by the developer NV Energy is suing.",
+   "source": "https://www.govtech.com/artificial-intelligence/amid-data-center-growth-nevada-approves-temporary-gas-plants"
+  },
+  {
+   "date": "2026-09-17",
+   "category": "policy",
+   "headline": "Governor Lombardo signs EO 2026-005, the 'Nevada Standard for Responsible Data Center Development': the PUCN is to set an instrument ensuring data centers bear full service costs and load-reduction duties in grid emergencies; a 'Responsible Speed to Power Plan' is due December 31, 2026",
+   "read": "The state's first data-center instruction lands while the LLESA framework is pending.",
+   "source": "https://gov.nv.gov/executive-actions/executive-orders/2026-executive-orders/eo-2026-005/"
+  },
+  {
+   "date": "2026-09-11",
+   "category": "policy",
+   "headline": "EEI's large-load list records NV Energy's Vantage Storey County campus ($3B, 224 MW), Google's Clean Transition Tariff geothermal purchase, PacifiCorp's Oregon UE 433 charges and proposed Schedule 401 (ADV 1790 / UE 463)",
+   "read": "No MidAmerican, Rocky Mountain Power or Utah entry — the Iowa model has no tariff to list.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  },
+  {
+   "date": "2026-09-04",
+   "category": "regulatory",
+   "headline": "NV Energy files Rule 9 line-extension tariff modifications (Dockets 26-09005 / 26-09006), the second set this year after March's 26-03009 / 26-03010",
+   "read": "The infrastructure-advance mechanism the LLESA sits on is being rewritten in parallel.",
+   "source": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric"
+  },
+  {
+   "date": "2026-08-19",
+   "category": "regulatory",
+   "headline": "NV Energy files to lower southern Nevada electric rates and to raise gas rates; Tract seeks to disqualify NV Energy's counsel in the Washoe County case",
+   "read": "A rate cut filed in the middle of a 22 GW load debate.",
+   "source": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric"
+  },
+  {
+   "date": "2026-08-08",
+   "category": "financial",
+   "headline": "Berkshire's Q2 2026: BHE after-tax operating earnings $891M (+26.9 percent), U.S. utilities $597M (+37.6 percent), pipelines $242M (+32.2 percent); six-month $2,005M (+11.3 percent); PacifiCorp's cumulative wildfire accrual $2.85B; Washington sale expected to close in H1 2027",
+   "read": "The best quarter since the wildfire losses began — utility margin +8.1 percent on 3.1 percent volume growth.",
+   "source": "https://www.berkshirehathaway.com/news/aug0826.pdf"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "customer",
+   "headline": "Google finalizes an agreement with MidAmerican to explore a data center on a 900-acre site at Salix, Iowa — 'not a project announcement'",
+   "read": "Iowa's fourth hyperscaler site, still without a megawatt.",
+   "source": "https://www.ktiv.com/2026/08/03/google-considering-data-center-salix-iowa-according-midamerican-energy/"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "market",
+   "headline": "PacifiCorp reports $5.42M of gross benefits from CAISO's Extended Day-Ahead Market since its May 1 launch, on top of $1.2B-plus from the Western EIM since 2014",
+   "read": "The first western utility in EDAM; PGE joins in October.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/edam-quarterly-report.html"
+  },
+  {
+   "date": "2026-07-24",
+   "category": "legal",
+   "headline": "NV Energy sues Tract Capital Management in Washoe County (Second Judicial District Court) to stop the arbitration Tract demanded in June under 2024 agreements, saying Tract wants the utility 'to reserve and provide enormous amounts of power for Tract's private development while shifting the infrastructure and energy costs to Nevada families'; Tract cites more than $127M spent and about $1B of committed upgrades",
+   "read": "The first utility-versus-developer suit in this corpus over who decides how a franchise is built out.",
+   "source": "https://thenevadaindependent.com/article/nevadas-electric-utility-is-suing-a-major-data-center-company-heres-why"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "regulatory",
+   "headline": "Storey County approves special-use permits 2026-017 and 2026-018 for Fleet's temporary plants (about 90 LNG containerized engines and 136 CNG units with SCR), expiring July 2031 and July 2032",
+   "read": "The county moved before the commission did.",
+   "source": "https://citizenportal.ai/articles/8567428/Nevada/Storey-County/Story-County-approves-two-temporary-naturalgas-power-plants-for-datacenter-campuses-sets-multiyear-expirations"
+  },
+  {
+   "date": "2026-07-07",
+   "category": "regulatory",
+   "headline": "MidAmerican files an Iowa natural gas rate case (about 5 percent; +$2.89 a month residential)",
+   "read": "Its first gas case in years, on a system whose electric rates are 45 percent below the U.S. average.",
+   "source": "https://www.midamericanenergy.com/newsroom/2026-natural-gas-rate-adjustment"
+  },
+  {
+   "date": "2026-06-25",
+   "category": "legal",
+   "headline": "The Oregon Supreme Court agrees to review the James wildfire class action; oral argument set for November 3, 2026",
+   "read": "The $2.85B question goes to the state's highest court.",
+   "source": "https://www.pacificorp.com/about/information-wildfire/information-wildfire-litigation.html"
+  },
+  {
+   "date": "2026-06-03",
+   "category": "customer",
+   "headline": "Sierra Pacific files its LLESA with Vantage Data Centers NV11 (Docket 26-05028), the fifth customer docket after Amazon, Fleet/Tract, Novva and Prologis on May 29",
+   "read": "The named Nevada book: five customers, eight agreements, more than 3.3 GW by 2032.",
+   "source": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric"
+  },
+  {
+   "date": "2026-06-01",
+   "category": "leadership",
+   "headline": "Charles C. Chang, BHE's CFO since 2024, becomes Berkshire Hathaway's senior vice president and CFO; Kirk Crews is BHE's CFO by the March 2026 investor presentation",
+   "read": "Berkshire's new CFO is BHE's old one.",
+   "source": "https://www.berkshirehathaway.com/news/dec0825.pdf"
+  },
+  {
+   "date": "2026-05-29",
+   "category": "customer",
+   "headline": "NV Energy files four Large Load Electric Service Agreements at the PUCN: Amazon Data Services, Sparks (26-05026); PR RNO / SV RNO Property Owner — Fleet Data Centers / Tract, McCarran (26-05027); Novva Las Vegas / Proton NLV (26-05029); VIP Landco / Prologis (26-05030)",
+   "read": "The LLESA goes from a form in the IRP to named counterparties in three weeks.",
+   "source": "https://newprojectmedia.com/origination-nv-energy-seeks-large-load-approvals-for-aws-prologis-novva-and-fleet-data-centers/"
+  },
+  {
+   "date": "2026-05-12",
+   "category": "customer",
+   "headline": "Amazon signs its first geothermal deal with NV Energy for its Reno data centers (Data Center Dynamics headline; terms not read)",
+   "read": "A second hyperscaler on the Clean Transition Tariff model after Google.",
+   "source": "Data Center Dynamics headline (2026-05-12); article inaccessible to the sandbox"
+  },
+  {
+   "date": "2026-05-07",
+   "category": "regulatory",
+   "headline": "NV Energy files its 2026 Joint IRP (Docket 26-05007; application dated May 6): 23 PPAs for 5,405 MW of storage and 4,370 MW of solar, 1,223 MW of gas at Fort Churchill, the form LLESA at 25 MW, about 22 GW of inquiries and about 6 GW of signed Rule 9 agreements",
+   "read": "The largest storage request in the corpus, and none of it owned.",
+   "source": "https://www.nvenergy.com/publish/content/dam/nvenergy/brochures_arch/about-nvenergy/rates-regulatory/recent-regulatory-filings/2026-irp/NPC-SPPC-Volume-2.pdf"
+  },
+  {
+   "date": "2026-05-02",
+   "category": "financial",
+   "headline": "Berkshire's Q1 2026: BHE $1,114M (+1.3 percent); U.S. utilities $359M (−16.1 percent) on higher wildfire-prevention, insurance and technology costs and lower PTCs; at the annual meeting Abel says hyperscalers 'must bear their full structural infrastructure costs' and data centers are about 8 percent of Iowa peak load",
+   "read": "The cost side of the wildfire and load story showed before the margin did.",
+   "source": "https://www.berkshirehathaway.com/news/may0226.pdf"
+  },
+  {
+   "date": "2026-05-01",
+   "category": "market",
+   "headline": "PacifiCorp becomes the first western utility to trade in CAISO's Extended Day-Ahead Market",
+   "read": "A day-ahead market without a capacity market — the West's answer to PJM.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/extended-day-ahead-market-live.html"
+  },
+  {
+   "date": "2026-04-20",
+   "category": "project",
+   "headline": "Fleet Data Centers' project companies file PUCN applications for temporary gas plants at South Valley (144 MW, 26-04026) and Peru Ridge (218 MW, 26-04027) to bridge until NV Energy service arrives",
+   "read": "The customer stops waiting for the utility's plan.",
+   "source": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric"
+  },
+  {
+   "date": "2026-04-08",
+   "category": "legal",
+   "headline": "The Oregon Court of Appeals reverses and remands the James class-action verdict against PacifiCorp on a prejudicial jury instruction; the circuit court later stays the remaining damages trials",
+   "read": "The turn in the wildfire litigation that lifted S&P's junk watch.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/oregon-court-of-appeals-reverses-james-class-action.html"
+  },
+  {
+   "date": "2026-03-31",
+   "category": "regulatory",
+   "headline": "PacifiCorp files its 2025 IRP Update: 1,370 MW of combined-cycle and 853 MW of frame-turbine proxies, 4,154 MW of four-hour lithium and 523 MW of iron-air storage by 2045; new wind and solar dropped after 2027 on the IRA repeal; committed data-center load added to the preferred portfolio",
+   "read": "Gas returns to a plan that a year earlier was wind, solar and Natrium.",
+   "source": "https://www.pacificorp.com/content/dam/pcorp/documents/en/pacificorp/energy/integrated-resource-plan/2025-irp/2025_IRP_Update.pdf"
+  },
+  {
+   "date": "2026-03-23",
+   "category": "financial",
+   "headline": "Industrial Info reads BHE's FY2025 10-K: $33.3B of 2026–2028 capex (+16 percent) — MidAmerican $8.9B (+65 percent), PacifiCorp $7.9B (−15 percent), NV Energy $7.5B (+17 percent); battery storage $197M against $907M in the prior plan",
+   "read": "The storage line fell by three-quarters as NV Energy moved its batteries to PPAs.",
+   "source": "https://www.industrialinfo.com/news/article/berkshire-hathaway-energy-utilities-see-modest-gain-in-capex-spending--355213"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "ma",
+   "headline": "PacifiCorp signs nonbinding term sheets to sell distribution serving 8,904 Oregon customers (Wallowa County, Monroe, Lakeview) to three electric cooperatives",
+   "read": "Shrinking the Oregon footprint a month after agreeing to exit Washington.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/pacificorp-to-sell-oregon-assets-to-cooperatives.html"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "market",
+   "headline": "S&P places PacifiCorp on CreditWatch for a cut to junk after $305M and $34M wildfire verdicts in late February and early March",
+   "read": "The rating floor the April appellate reversal then held.",
+   "source": "https://www.eenews.net/articles/pacificorp-facing-junk-credit-rating-after-large-jury-awards/"
+  },
+  {
+   "date": "2026-02-20",
+   "category": "legal",
+   "headline": "PacifiCorp settles all federal government claims from the 2020 Labor Day fires and the 2022 McKinney fire for $575M",
+   "read": "The federal half of the wildfire bill is now a number.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/settlement-federal-claims-wildfires.html"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "ma",
+   "headline": "PacifiCorp agrees to sell its Washington service area — Chehalis (477 MW), Marengo and Goodnoe Hills wind, distribution for about 140,000 customers — to Portland General Electric and Manulife Infrastructure Fund III for a $1.9B base price; close in about a year after WUTC, OPUC and FERC approval",
+   "read": "The first divestiture of a BHE utility territory; the proceeds are modeled into the wildfire liquidity plan for April 2027.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/pacificorp-to-sell-washington-service-area-to-pge.html"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "regulatory",
+   "headline": "NV Energy's 2026 IRP stakeholder briefing: the load forecast is 47 percent higher in annual GWh than the 2024 IRP's over twenty years, 'driven primarily by large customer projects'; 'total new thermal may exceed 3 GW in next decade'; earliest new turbine 2029–2030",
+   "read": "The forecast that turned a renewables-and-storage plan into one with gas in it.",
+   "source": "https://www.nvenergy.com/publish/content/dam/nvenergy/brochures_arch/cleanenergy/2026-IRP-Stakeholder-Briefing.pdf"
+  },
+  {
+   "date": "2026-01-01",
+   "category": "leadership",
+   "headline": "Greg Abel becomes president and CEO of Berkshire Hathaway; BHE stays under his direct oversight; Mark Hewett is BHE's president and CEO in the March 2026 materials",
+   "read": "The utility executive now runs the conglomerate.",
+   "source": "https://www.berkshirehathaway.com/news/dec0825.pdf"
+  },
+  {
+   "date": "2025-11-19",
+   "category": "legal",
+   "headline": "PacifiCorp settles with 1,434 Labor Day 2020 fire plaintiffs for $150M",
+   "read": "Settling by the hundreds while the class verdict was on appeal.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/warren-allen-settlement.html"
+  },
+  {
+   "date": "2025-11-04",
+   "category": "legal",
+   "headline": "Amazon Web Services files a complaint at the Oregon PUC alleging PacifiCorp failed to serve its data centers; PacifiCorp disputes it and names Darin Carroll CEO the same day",
+   "read": "The hyperscaler as complainant — the inverse of Nevada, where the utility sued the developer.",
+   "source": "https://www.berkshirehathaway.com/bhenergy/BHE2026InvestPresent.pdf"
+  },
+  {
+   "date": "2025-11-01",
+   "category": "financial",
+   "headline": "Berkshire's Q3 2025: BHE $1,489M (−8.6 percent); U.S. utilities $850M (−8.2 percent); a $100M wildfire accrual; BHE's BYD stake fully sold (balance sheet $— at September 30 against $415M at year-end 2024)",
+   "read": "The exit from BYD — the supplier of Reid Gardner's cells.",
+   "source": "https://www.berkshirehathaway.com/news/nov0125.pdf"
+  },
+  {
+   "date": "2025-10-28",
+   "category": "procurement",
+   "headline": "NV Energy files the first amendment to its 2024 IRP: a 20-year PPA for the 150 MW Dodge Flat battery addition (summer 2027)",
+   "read": "Another battery by contract, not ownership.",
+   "source": "https://www.brkenergy.com/assets/upload/financial-filing/BHE_09302025_Form10-Q_FINAL.pdf"
+  },
+  {
+   "date": "2025-09-16",
+   "category": "regulatory",
+   "headline": "PUCN's Nevada Power rate order (25-02016): +$118M (5.1 percent), ROE 9.5 percent, 52.7 percent equity, 50 percent of Greenlink West's costs to date into rate base, a residential daily demand charge (later deferred to January 2027)",
+   "read": "Greenlink began earning before it was finished.",
+   "source": "https://thenevadaindependent.com/article/nv-energys-bill-pricing-switch-greenlink-construction-costs-okd-by-regulators"
+  },
+  {
+   "date": "2025-09-02",
+   "category": "regulatory",
+   "headline": "FERC approves PacifiCorp's EDAM tariff revisions; the IUC approves MidAmerican's 800 MW Solar Reliability Project under advance ratemaking the same month",
+   "read": "Two states, two mechanisms — a market in the West, a pre-approved return in Iowa.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/FERC-approves-pacificorp-tariff-revisions.html"
+  },
+  {
+   "date": "2025-03-31",
+   "category": "regulatory",
+   "headline": "PacifiCorp files its 2025 IRP in six states: 2,092 MW of utility solar and 2,267 MW of wind by 2030; 1,634 MW of four-hour batteries and 605 MW of iron-air by 2032; Natrium's Kemmerer Unit 1 by end-2031",
+   "read": "The plan the March 2026 update would turn toward gas.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/2025-integrated-resource-plan-submitted.html"
+  },
+  {
+   "date": "2025-03-12",
+   "category": "regulatory",
+   "headline": "PUCN approves NV Energy's Clean Transition Tariff (Docket 24-05023) — Google's bundled purchase of Fervo's 115 MW Corsac Station geothermal",
+   "read": "The model Google later exported to Xcel Minnesota as the Clean Energy Accelerator Charge.",
+   "source": "https://www.rtoinsider.com/100330-nevada-regulators-approve-nv-energy-clean-transition-tariff/"
+  },
+  {
+   "date": "2024-12-20",
+   "category": "regulatory",
+   "headline": "PUCN approves NV Energy's 2025–2044 IRP (Docket 24-05041): two Valmy gas turbines (about $573M) and three solar-plus-storage PPAs",
+   "read": "The last plan before the data-center forecast doubled.",
+   "source": "https://www.swenergy.org/nevada-public-utilities-commission-authorizes-more-gas/"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that NV Energy has moved the equipment decision for its entire storage build to developers, and that a storage seller reaches it only through the 2024 RFP shortlist and the 2026 IRP's confidential PPA counterparties. Basis: the 2026 IRP application (5,405 MW of BESS output, 'new paired and standalone BESS PPA projects by 2031', 23 PPAs), the fact sheet's 'through power purchase agreements', the $0.2B storage line in BHE's $33.6B plan (down from $907M in the prior plan per Industrial Info), and the two owned exceptions (Reid Gardner, Sierra Solar) already contracted. We expect the PUCN's December 2, 2026 order to approve the PPAs largely as filed, because the plan's open-capacity target (≤500 MW short by 2031) leaves no slack to reject them.",
+  "(High confidence) We assess that the LLESA framework, not the IRP's resource list, is the document that decides how much of the 22 GW of Nevada inquiries becomes load — and that its commercial terms will be set by the PUCN under a governor's order rather than negotiated. Basis: the form LLESA's reserved provisions (minimum demand and energy percentages, generation charge, termination payment, security) left blank by all four filing customers; the September 18 deemed-approval request; EO 2026-005's instruction to the PUCN to ensure 'no burden on other ratepayers'; and NV Energy's own statement that timing, upfront investment and customer-protection measures 'may cause some customers to seek options outside of NV Energy's service territory'. The Tract temporary gas plants (362 MW approved September 17) are the first evidence of that exit already happening.",
+  "(High confidence) We assess that the NV Energy–Tract litigation is a jurisdictional contest, not a commercial one, and that the utility will win the forum question: the suit asks a court to keep supply adequacy, cost allocation and resource-plan treatment in front of the PUCN instead of a private arbitrator, and the PUCN itself approved Tract's bridging plants a week before the executive order gave it the mandate the suit presupposes. Basis: the July 24, 2026 complaint (Washoe County CV26-02142), Tract's June 2026 arbitration demand under the 2024 Reno Power agreements, the 26-05027 LLESA docket, and the September 17 conditional approval of 26-04026/27. The corpus's Tract dossier carries the developer's side; the Nevada Independent's account is used here for the utility's.",
+  "(Moderate confidence) We assess that PacifiCorp's data-center book will grow in Utah and Wyoming and stall in Oregon through 2027, and that the Washington sale, the co-op sales and the B2H sale-leaseback are wildfire-liquidity transactions first. Basis: the presentation's 'negotiations on additional sites have stalled' under Oregon's HB 3546 against a first Utah SB 132 contract with 'nearly $1 billion' of net benefits and about 2,000 MW of Utah/Wyoming opportunity; AWS's OPUC complaint; the liquidity plan's modeling of $1.9B (April 2027) and about $1.1B (B2H) of proceeds against 'CMO No. 11 @ 50%' damages; and S&P's March 2026 CreditWatch. The 2025 IRP Update's gas proxies (2,223 MW) and 4,677 MW of storage proxies are a decade-long book with no procurement door open in 2026.",
+  "(Moderate confidence) We assess that MidAmerican's ten-year Load Commitment Agreement is the most durable large-load instrument in the group because it is a contract rather than a tariff or a form, and that Iowa will see the next named hyperscaler expansion (Google Salix) before Nevada sees its next LLESA approved. Basis: 'includes only signed contracts', the 10-year minimum monthly charge regardless of usage, the +65 percent capex plan concentrated on 800 MW of solar and a 520–700 MW peaker with pre-approved returns, and no tariff docket or litigation in the record. The three peaker figures (520 MW siting certificate; 'approximately 700 megawatts'; 518 MW Orient) are recorded as a conflict, not resolved.",
+  "(Low confidence) We assess that BHE Renewables will announce a behind-the-meter data-center generation project of 1 GW or more before the end of 2027, and that it would buy gas turbines rather than batteries for it. Basis: the presentation's 'site diligence and preliminary development activities are ongoing at several prospective sites, which may be capable of serving projected demands scaling to 1 GW or more', the Pipeline Group's 'behind the meter' framing, the Alberta and Montana customer discussions, and the parent's rule that hyperscaler service must have 'no impact to the rates' — which a nonregulated affiliate satisfies by construction. No site, customer, technology or filing has been found."
+ ],
+ "relationships": [
+  {
+   "slug": "tract",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-06",
+   "scale": "~5.5 GW stated across five Nevada sites; >3.3 GW of LLESAs across five customers",
+   "via": "Rule 9 agreements with Reno Power; LLESA Docket 26-05027",
+   "note": "Tract's Fleet Data Centers project companies (PR RNO and SV RNO Property Owner) are NV Energy's largest prospective load and, since July 24, 2026, its litigation counterparty: the utility sued Tract Capital Management in Washoe County to stop an arbitration Tract demanded in June under 2024 agreements, and the PUCN conditionally approved Tract's 218 MW Peru Ridge and 144 MW South Valley temporary gas plants on September 17, 2026.",
+   "context": "NV Energy's account (Nevada Independent, July 28, 2026) is that Tract 'plans to build at least five data centers with a combined load of nearly 5.5 GW' and wants the utility 'to reserve and provide enormous amounts of power for Tract's private development while shifting the infrastructure and energy costs to Nevada families'; Tract says it has spent more than $127M and committed about $1B to network upgrades and calls the complaint 'a public relations blitz'. The corpus's Tract dossier (v3) recorded the PUCN decision as scheduled for September 8, 2026; the commission decided at a special meeting on September 17 — the dossier is revised to v4 with this push. Tract's Morris, Illinois park separately holds a ComEd transmission security agreement (see the Exelon dossier).",
+   "source": "https://thenevadaindependent.com/article/nevadas-electric-utility-is-suing-a-major-data-center-company-heres-why"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-11",
+   "via": "Sierra Pacific LLESA (26-05026); Oregon service under existing agreements; geothermal agreement (May 2026)",
+   "note": "Amazon is a customer on both sides of the group's large-load argument: Sierra Pacific filed its LLESA with Amazon Data Services for Sparks, Nevada on May 29, 2026 and Amazon signed a geothermal deal with NV Energy in May, while Amazon Web Services filed a complaint at the Oregon PUC in November 2025 alleging PacifiCorp failed its obligation to serve its data centers.",
+   "context": "PacifiCorp 'disputes the allegations and continues to serve AWS under its existing agreements'; absent settlement the proceeding 'could take six to eight months' (investor presentation p. 47). Oregon carries 784 MW of data-center load under contract against more than 7,000 MW pursued. The Amazon geothermal terms were not readable (Data Center Dynamics, 2026-05-12).",
+   "source": "https://newprojectmedia.com/origination-nv-energy-seeks-large-load-approvals-for-aws-prologis-novva-and-fleet-data-centers/"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-06",
+   "scale": "115 MW Corsac Station 2 geothermal (2030)",
+   "via": "Clean Transition Tariff (Docket 24-05023); MidAmerican service at Council Bluffs; Salix exploration agreement",
+   "note": "Google is the customer the Clean Transition Tariff was written for — a bundled purchase of Fervo's 115 MW Corsac Station 2 geothermal from Sierra Pacific for its Storey County data center, filed June 7, 2024 and approved March 2025 — and a MidAmerican customer at Council Bluffs ($5.5B) with an August 3, 2026 agreement to explore a 900-acre Salix, Iowa site.",
+   "context": "EEI's September 2026 list carries the CTT row; the corpus's Google and Form Energy dossiers record that Google exported the CTT model to Xcel Minnesota as the Clean Energy Accelerator Charge. Berkshire's roughly $16.5B Alphabet equity position (Q2 2026) is the parent's investment, not BHE's.",
+   "source": "https://www.utilitydive.com/news/google-fervo-nv-energy-nevada-puc-clean-energy-tariff/719472/"
+  },
+  {
+   "slug": "vantage",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "224 MW, $3B Storey County campus (EEI)",
+   "via": "Sierra Pacific LLESA (26-05028)",
+   "note": "Sierra Pacific filed its Large Load Electric Service Agreement with Vantage Data Centers NV11 on June 3, 2026 for the Tahoe-Reno Industrial Center campus that EEI lists at $3B and 224 MW.",
+   "context": "The corpus's Vantage dossier carries the NV1 campus; Vantage is also We Energies' Port Washington customer under a different instrument, the bespoke-resource tariff.",
+   "source": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "via": "MidAmerican Load Commitment Agreements (West Des Moines); Nevada tariff proposal at the PUCN",
+   "note": "Microsoft is a MidAmerican customer at its West Des Moines campuses (about 200 MW 'Project Alluvion' per third-party reporting) and proposed a 'ratepayer protection tariff' framework to the PUCN on May 21, 2026 in the Nevada large-load proceedings.",
+   "context": "First-party megawatts by customer are not published by MidAmerican; the campus figures are third-party. Recorded from servercountry.org's Nevada policy tracker and gridlas coverage.",
+   "source": "https://servercountry.org/policy/nevada/"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "via": "MidAmerican service at Altoona; Rocky Mountain Power at Eagle Mountain, Utah",
+   "note": "Meta's Altoona, Iowa campus is MidAmerican load, and its Eagle Mountain, Utah campus — 'Deepening Our Investment in Eagle Mountain' (September 2026) — sits in Rocky Mountain Power's territory alongside the Google, QTS and Tract sites recorded in the Tract dossier.",
+   "context": "Meta also buys Faraday Solar's energy and attributes under PacifiCorp's 20-year Schedule 34 green tariff (Excelsior Energy Capital dossier). No first-party BHE megawatt by customer exists.",
+   "source": "https://en.wikipedia.org/wiki/MidAmerican_Energy_Company"
+  },
+  {
+   "slug": "switch",
+   "type": "customer",
+   "status": "active",
+   "via": "Network integration transmission service agreement (NITSA 17-00004) with Nevada Power",
+   "note": "Switch South holds a network integration transmission service agreement with Nevada Power (IRP technical appendix TRAN-13) and bought $196M more southern Nevada land in September 2026; it is Tract's litigant at TRIC.",
+   "context": "Recorded from the 2026 IRP technical appendices and Review-Journal headline coverage; Switch is not among the five LLESA filers.",
+   "source": "https://www.nvenergy.com/publish/content/dam/nvenergy/brochures_arch/about-nvenergy/rates-regulatory/recent-regulatory-filings/2026-irp/NPC-SPPC-Volume-2.pdf"
+  },
+  {
+   "slug": "edgecore",
+   "type": "customer",
+   "status": "active",
+   "via": "NV Energy service at the Tahoe-Reno Industrial Center",
+   "note": "EdgeCore's 216 MW Reno / TRIC campus is NV Energy load; the EdgeCore dossier records its RN01 energization 'a year past its late-2025 target' awaiting NV Energy power delivery.",
+   "context": "Recorded from the corpus's EdgeCore dossier; EdgeCore does not appear among the 2026 LLESA dockets.",
+   "source": "EdgeCore dossier (v1) — Reno / TRIC campus, 216 MW, NV Energy"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "supplier",
+   "status": "active",
+   "since": "2024",
+   "scale": "Dry Lake East 200 MW solar + 200 MW / 800 MWh, plus 400 MW standalone BESS",
+   "via": "2024 IRP PPAs",
+   "note": "NextEra Energy Resources is the counterparty on NV Energy's Dry Lake East solar-plus-storage PPA (200 + 200 MW / 800 MWh, $13,440/MW-month, December 2026) and a separate 400 MW standalone battery from the 2024 IRP; Dry Lake East Energy Storage II appears among the 2026 IRP project names.",
+   "context": "Recorded from Energy-Storage.News's June 2024 account of the 2024 IRP filings and the investor presentation's supply table; the 2026 counterparties are confidential.",
+   "source": "https://www.energy-storage.news/nevada-utility-nv-energy-seeks-approval-for-1gw-of-battery-storage-ppas-in-2024-resource-plan/"
+  },
+  {
+   "slug": "byd",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2023",
+   "scale": "220 MW / 440 MWh Reid Gardner cells",
+   "via": "Reid Gardner BESS (Energy Vault EPC)",
+   "note": "BYD's lithium-iron-phosphate cells sit inside NV Energy's utility-owned Reid Gardner battery (220 MW / 440 MWh, in service December 2023), and BHE held BYD equity until selling the last of it by September 30, 2025 (FY2025 after-tax gain $87M).",
+   "context": "The only battery OEM named anywhere in BHE's record; the Sierra Solar supplier is undisclosed. Recorded from the Reid Gardner Wikipedia summary of NV Energy releases and BHE's Q3 2025 10-Q.",
+   "source": "https://en.wikipedia.org/wiki/Reid_Gardner_Battery_Energy_Storage_System"
+  },
+  {
+   "slug": "clearway-energy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025",
+   "scale": "Honeycomb 320 MW / 1,280 MWh; Utah Solar Portfolio 530 MW",
+   "via": "20-year PacifiCorp tolling agreements to 2046",
+   "note": "Clearway's four-project Honeycomb battery portfolio in Beaver and Iron Counties, Utah (320 MW / 1,280 MWh, four-hour Tesla batteries, substantial completion May 1, 2026) sells to PacifiCorp under 20-year tolls, and its 530 MW Utah Solar Portfolio is contracted to PacifiCorp to 2036.",
+   "context": "Recorded from the corpus's Clearway Energy dossier; PacifiCorp's IRP documents do not name the counterparty.",
+   "source": "Clearway Energy dossier (v1) — Honeycomb Portfolio PacifiCorp tolling agreements"
+  },
+  {
+   "slug": "excelsior-energy-capital",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "Faraday Solar 525 MWac; Faraday BESS Phase 1 150 MW / 733 MWh",
+   "via": "PacifiCorp 20-year Schedule 34 PPA (Meta); Faraday BESS PPA",
+   "note": "Excelsior's Faraday Solar (685 MWdc / 525 MWac, Utah County, commercial operation September 30, 2025) sells to Meta through PacifiCorp's 20-year Schedule 34 green tariff, and its Lydian platform financed a 150 MW / 733 MWh Faraday battery under a PacifiCorp PPA in February 2026.",
+   "context": "Recorded from the corpus's Excelsior Energy Capital dossier — the pattern for how a hyperscaler buys renewables through a BHE utility's green tariff.",
+   "source": "Excelsior Energy Capital dossier (v1) — Faraday Solar and Faraday BESS PacifiCorp contracts"
+  },
+  {
+   "slug": "pattern-energy",
+   "type": "supplier",
+   "status": "active",
+   "scale": "Spring Valley 152 MW wind",
+   "via": "NV Energy PPA",
+   "note": "Pattern Energy's Spring Valley wind farm (152 MW, Nevada) sells to NV Energy under a long-dated PPA.",
+   "context": "Recorded from the corpus's Pattern Energy dossier.",
+   "source": "Pattern Energy dossier (v1) — Spring Valley, NV Energy offtake"
+  },
+  {
+   "slug": "mastec",
+   "type": "supplier",
+   "status": "active",
+   "scale": "Greenlink West (525 kV, ~350 miles)",
+   "via": "MasTec's T&D Power",
+   "note": "MasTec's T&D Power is building NV Energy's Greenlink West line, which the MasTec dossier records as a '$4.2B program' — the figure BHE gives for the combined Greenlink West and North; the two dossiers state it differently and both are kept.",
+   "context": "Recorded from the corpus's MasTec dossier; NV Energy names no Greenlink contractor in the documents read.",
+   "source": "MasTec dossier (v3) — Power Delivery backlog, Greenlink West"
+  },
+  {
+   "slug": "aep",
+   "type": "partner",
+   "status": "active",
+   "scale": "ETT 50/50; MISO Tranche 2.1 765 kV Wisconsin ~$1.2B",
+   "via": "Electric Transmission Texas; Midcontinent Grid Solutions (Transource)",
+   "note": "BHE U.S. Transmission owns half of Electric Transmission Texas with AEP and, through the Transource / Midcontinent Grid Solutions venture with AEP and Evergy, won MISO Tranche 2.1's roughly 200-mile 765 kV Wisconsin segment (about $1.2B, 2034), with four more bids pending in 2026.",
+   "context": "The AEP dossier records the same venture; ATC — 60 percent WEC — lost that segment (WEC dossier).",
+   "source": "https://www.berkshirehathaway.com/bhenergy/BHE2026InvestPresent.pdf"
+  },
+  {
+   "slug": "grid-united",
+   "type": "partner",
+   "status": "announced",
+   "scale": "10 percent / 300 MW of North Plains Connector",
+   "via": "Non-binding MOU",
+   "note": "BHE U.S. Transmission signed a non-binding MOU for 10 percent (300 MW) of Grid United's North Plains Connector HVDC line, one of seven utility MOUs covering 2,550 MW of its 3,000 MW.",
+   "context": "Recorded from the corpus's Grid United dossier; not mentioned in BHE's 2026 presentation.",
+   "source": "Grid United dossier (v1) — North Plains Connector utility MOUs"
+  },
+  {
+   "slug": "bechtel",
+   "type": "partner",
+   "status": "announced",
+   "scale": "Natrium Kemmerer Unit 1 (345 MWe, 500 MWe with storage)",
+   "via": "TerraPower's Natrium program with PacifiCorp offtake",
+   "note": "Bechtel is the construction partner on TerraPower's Natrium demonstration at Kemmerer, Wyoming, the 345 MWe (500 MWe boosted) sodium reactor PacifiCorp's IRPs carry as Kemmerer Unit 1 by end-2031; construction began in 2026.",
+   "context": "Recorded from the corpus's Bechtel dossier and PacifiCorp's 2025 IRP; the 2023 IRP's two further Natrium units are no longer in the plan.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/2025-integrated-resource-plan-submitted.html"
+  },
+  {
+   "slug": "kiewit",
+   "type": "supplier",
+   "status": "active",
+   "via": "PacifiCorp distribution program (≥350 miles a year over five years)",
+   "note": "Kiewit runs a multi-year PacifiCorp distribution program of at least 350 miles a year over five years; historically Peter Kiewit Sons' part-owned CalEnergy, and the Walter Scott Jr. family's Kiewit-derived stake was the last outside interest in BHE, bought out by Berkshire in 2024.",
+   "context": "Recorded from the corpus's Kiewit dossier and Berkshire's 2025 annual report.",
+   "source": "Kiewit dossier (v7) — Power market page, PacifiCorp program"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Wildfire liability — PacifiCorp (Oregon James class action; state statutes)",
+   "status": "in-effect",
+   "effectiveDate": "2020-09",
+   "exposure": "PacifiCorp has accrued $2.85B of probable wildfire losses through June 30, 2026 ($2.3B paid; $719M of bonds posted), with 'reasonably possible' material additional losses; cumulative James verdicts of about $1.23–1.25B for roughly 200 plaintiffs were reversed and remanded by the Oregon Court of Appeals on April 8, 2026, the circuit court stayed the remaining damages trials, and the Oregon Supreme Court hears argument on November 3, 2026. S&P placed PacifiCorp on CreditWatch for junk in March 2026 after $305M and $34M verdicts; Moody's cut it to Baa2 unsecured in July 2025. State responses: Utah SB 224 (2024) noneconomic caps and a wildfire fund; Wyoming HB 192 (zero noneconomic liability); Idaho SB 1183; Oregon's punitive bills SB 926 and SB 1553 defeated; Washington's HB 2275 fund failed in 2026; California's SB 254 fund does not include PacifiCorp.",
+   "mitigation": "$575M federal settlement (February 2026); $150M Warren Allen settlement; a $2.55B letter-of-credit and matching surety facility; the Washington sale ($1.9B), Oregon co-op sales and B2H sale-leaseback (~$1.1B) in the liquidity plan; $3.4B of wildfire prevention since 2019 plus $2.8B through 2028; Abel: 'PacifiCorp is not an insurer of last resort'.",
+   "source": "https://www.pacificorp.com/about/information-wildfire/information-wildfire-litigation.html"
+  },
+  {
+   "regime": "Nevada large-load framework — form LLESA (Docket 26-05007), Rule 9, EO 2026-005 and the RPS",
+   "status": "proposed",
+   "effectiveDate": "2026-05-07",
+   "exposure": "Nevada has no large-load statute (the 2025 session passed AB452 on fuel-cost sharing and SB442 on disconnection data, nothing on data centers); the LLESA is a PUCN contract framework filed with the 2026 IRP, its commercial percentages reserved for the commission, with a deemed-approval request for September 18 and a statutory IRP deadline of December 2, 2026. Governor Lombardo's EO 2026-005 (September 17, 2026) directs the PUCN to ensure data centers 'bear full service costs with no burden on other ratepayers', to set grid-emergency load-reduction requirements and to consider an investigatory docket; GOED abatement conditions and a 'Responsible Speed to Power Plan' (December 31, 2026) follow. The IRP itself warns that RPS compliance (34 percent in 2025 against 47.5 percent delivered) 'will be challenging for several years due to load growth', and the PUCN denied a public session on the IRP in August 2026 over advocates' objections.",
+   "mitigation": "Advances under Rule 9 for distribution and transmission; the customer-specific generation charge ahead of rate base; termination payments and security in the LLESA; the Clean Transition Tariff for customers buying new clean resources; the utility's suit to keep Tract's cost allocation before the commission.",
+   "source": "https://gov.nv.gov/executive-actions/executive-orders/2026-executive-orders/eo-2026-005/"
+  },
+  {
+   "regime": "Utah SB 132 (2025) and Oregon HB 3546 (POWER Act, 2025) — PacifiCorp large-load statutes",
+   "status": "in-effect",
+   "effectiveDate": "2025-07",
+   "exposure": "Utah's SB 132 applies to loads of 100 MW or more within five years, gives the utility 90 days to evaluate whether it can serve without significant investment, and allows contracts with large-scale generation providers over utility transmission or closed private generation systems — PacifiCorp calls it enabling 'faster regulatory reviews and isolation of costs and benefits while allowing limited direct access'. Oregon's HB 3546 (Chapter 323, effective on passage, sunset January 2, 2035) requires the OPUC to create a 'large energy use facilities' class, allocate costs to it and require contracts; PacifiCorp says negotiations 'have stalled over disputes on the implementation' and faces AWS's service-obligation complaint. Schedule 401 (ADV 1790 / UE 463) is proposed; UE 433 added two charges for very large customers.",
+   "mitigation": "The first Utah SB 132 contract ('hundreds of MWs', ~$1B net benefits); unused-demand charges in Oregon, Utah and Wyoming; reduced line-extension credits, accelerated customer funding, enhanced security and tax gross-ups.",
+   "source": "https://www.latitudemedia.com/news/utah-is-taking-a-different-approach-to-new-data-center-load/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Berkshire's 10-K: the OBBBA 'accelerates the phase-out of clean electricity production and investment tax credits and establishes new sourcing requirements applicable to facilities commencing construction after December 31, 2025'; BHE 'currently does not believe these items will significantly impact its business in the near term', but PacifiCorp's 2025 IRP Update dropped new wind and solar after 2027 'largely driven by the July 4, 2025 repeal of major portions of the IRA', NV Energy's 2024 RFP shortlist prioritized 'viability of project securing tax credits' and projects 'with no federal nexus', and MidAmerican expects repowered wind to keep '100% of production tax credits for 10 years' based on current law. BHE's effective tax rate was −76.2 percent in 2025 on wind PTCs, with $1.4B of cash tax benefits from the parent; Reid Gardner received about $100M of IRA credits including an energy-community adder. No FEOC statement was found; Reid Gardner's cells are BYD's, and NV Energy's 5,405 MW of new storage sits with PPA developers.",
+   "mitigation": "Berkshire's consolidated tax appetite; PPA structures that leave sourcing and credit-qualification risk with developers; safe-harbor positioning in the RFP selection criteria.",
+   "source": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf"
+  },
+  {
+   "regime": "Western markets — no capacity market; CAISO EDAM (PacifiCorp from May 1, 2026), WEIM (NV Energy), MISO (MidAmerican)",
+   "status": "in-effect",
+   "effectiveDate": "2026-05-01",
+   "exposure": "BHE's western utilities face no capacity auction; resource adequacy is an IRP obligation (NV Energy's open-capacity goal ≤500 MW short by 2031; the Western Resource Adequacy Program referenced in PacifiCorp's IRP Update). PacifiCorp launched CAISO's Extended Day-Ahead Market on May 1, 2026 (FERC tariff approval August 29, 2025; $5.42M of gross benefits by July 30; PGE joins October 2026) and has drawn more than $1.2B from the Western EIM since 2014. MidAmerican sits in MISO, where the Tranche 2.1 award to the BHE/AEP venture and $1.6B of Tranche 1 Iowa projects drive transmission capex; no BHE commentary on MISO's 2026/27 auction price was found. FERC's June 18, 2026 large-load show-cause orders name the RTOs, not BHE's western utilities.",
+   "mitigation": "EDAM and WEIM dispatch savings; MISO capacity accreditation for the 800 MW solar and 520 MW peaker; interruptible large-load contracts historically at PacifiCorp.",
+   "source": "https://www.pacificorp.com/about/newsroom/news-releases/extended-day-ahead-market-live.html"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Mark A. Hewett",
+   "title": "President and Chief Executive Officer, Berkshire Hathaway Energy",
+   "background": [
+    "Named on the 2026 investor presentation (pages 4 and 130) and signs the March 2026 Corporate Overview's stakeholder letter as president and CEO — the first-party record for 2026; his appointment date and prior roles were not retrievable (brkenergy.com's leadership pages are blocked to automated readers)",
+    "Wikipedia's July 2026 revision still lists Scott W. Thon as president and CEO — contradicted by both first-party March 2026 documents and treated here as stale",
+    "Reports into Greg Abel, Berkshire Hathaway's CEO from January 1, 2026, under whose 'direct oversight' BHE remains per Berkshire's December 8, 2025 release"
+   ]
+  },
+  {
+   "name": "Kirk Crews",
+   "title": "Senior Vice President and Chief Financial Officer, Berkshire Hathaway Energy",
+   "background": [
+    "CFO by March 2026 (investor presentation page 4; Corporate Overview page 4); succeeded Charles C. Chang, BHE's CFO from 2024, who became Berkshire Hathaway's senior vice president and CFO on June 1, 2026",
+    "Bio not retrievable this session"
+   ]
+  },
+  {
+   "name": "Brandon M. Barkhuff",
+   "title": "President and Chief Executive Officer, NV Energy",
+   "background": [
+    "Named on the investor presentation (page 75) and the Corporate Overview as NV Energy's president and CEO — the executive whose company filed the 2026 IRP, the form LLESA and the five customer LLESA dockets, and sued Tract",
+    "Predecessor Doug Cannon was president and CEO through at least April 2024; the transition date was not found (nvenergy.com renders no server-side content)"
+   ]
+  },
+  {
+   "name": "Darin M. Carroll",
+   "title": "Chief Executive Officer, PacifiCorp",
+   "background": [
+    "CEO by the February 17, 2026 Washington-sale release; Business Journals reported his appointment on November 4, 2025 'amid financial strain', succeeding Cindy Crane (CEO and board chair from September 2023)",
+    "Most recently led CenterPoint Energy's electric business (2.9 million customers in Texas and Indiana); earlier senior vice president over CenterPoint's entire gas business and safety after leading the Vectren integration; joined utilities in 2008 as an operations supervisor at Vectren after starting at Toyota (PacifiCorp leadership page)",
+    "BBA, University of Southern Indiana; executive programs at the University of Chicago and University of Idaho"
+   ]
+  },
+  {
+   "name": "Kelcey A. Brown",
+   "title": "President and Chief Executive Officer, MidAmerican Energy",
+   "background": [
+    "Named on the investor presentation (page 66) and Corporate Overview — MidAmerican is the group's largest earner ($1,048M of 2025 adjusted earnings) and its Iowa data-center utility (Microsoft, Google, Meta)",
+    "Bio not retrievable (midamericanenergy.com's leadership page returns 404)"
+   ]
+  },
+  {
+   "name": "Edward W. (Ed) Rihn",
+   "title": "President and Chief Executive Officer, BHE Transmission",
+   "background": [
+    "Runs AltaLink, BHE U.S. Transmission (Electric Transmission Texas with AEP, the Transource/Midcontinent Grid Solutions MISO Tranche 2 award, TransCanyon Cross-Tie) and the North Plains Connector MOU — the group's competitive-transmission arm (investor presentation page 114)"
+   ]
+  },
+  {
+   "name": "Matthew L. (Matt) Finnegan",
+   "title": "President and Chief Executive Officer, BHE Renewables",
+   "background": [
+    "Leads the 5,488 MW nonregulated fleet and the unit that is 'actively exploring' generation for prospective data-center customers, with 'site diligence and preliminary development activities' at sites that could scale to 1 GW or more (investor presentation pages 124 and 129); the Corporate Overview lists him, not the previously reported Alicia Knapp"
+   ]
+  },
+  {
+   "name": "Janet Wells",
+   "title": "Vice President, Integrated Resource Planning, NV Energy",
+   "background": [
+    "Sponsor of the 2026 IRP's form Large Load Electric Service Agreement and the Clean Transition Tariff exemplar pricing models (Docket 26-05007, direct testimony) — the witness whose exhibits define what a data center signs in Nevada"
+   ]
+  },
+  {
+   "name": "Gregory E. (Greg) Abel",
+   "title": "President and Chief Executive Officer, Berkshire Hathaway Inc.; Chair, Berkshire Hathaway Energy",
+   "background": [
+    "Berkshire's CEO from January 1, 2026 with BHE under his direct oversight; BHE's CEO 2008–2018 and chair since 2011 per third-party accounts",
+    "On CNBC (September 2, 2026): energy and site preparation are the constraint on AI data centers, and BHE will serve hyperscalers 'if there was no impact to the rates'; at the May 2026 annual meeting: hyperscalers 'must bear their full structural infrastructure costs'"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "Yahoo Finance / CNBC — Berkshire's Abel: data-center demand a 'significant opportunity'; energy the constraint; 'no impact to the rates'",
+   "url": "https://finance.yahoo.com/energy/articles/berkshire-abel-says-data-centers-120817010.html",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "GovTech — Amid data-center growth, Nevada approves temporary gas plants (Fleet/Tract, 362 MW)",
+   "url": "https://www.govtech.com/artificial-intelligence/amid-data-center-growth-nevada-approves-temporary-gas-plants",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "ConstructConnect — Nevada regulators approve 362 MW of temporary power projects for data centers",
+   "url": "https://news.constructconnect.com/nevada-regulators-approve-362-mw-of-temporary-power-projects-for-data-centers",
+   "date": "2026-09-21"
+  },
+  {
+   "label": "Hoodline — Nevada regulators approve Storey County gas plants despite two hours of public pushback",
+   "url": "https://hoodline.com/2026/09/nevada-regulators-approve-storey-county-gas-plants-despite-two-hours-of-public-pushback/",
+   "date": "2026-09-19"
+  },
+  {
+   "label": "Berkshire Hathaway — Warren Buffett chairman emeritus; Howard G. Buffett chairman",
+   "url": "https://www.berkshirehathaway.com/news/sep1826.pdf",
+   "date": "2026-09-18"
+  },
+  {
+   "label": "Nevada Governor — Executive Order 2026-005, the Nevada Standard for Responsible Data Center Development",
+   "url": "https://gov.nv.gov/executive-actions/executive-orders/2026-executive-orders/eo-2026-005/",
+   "date": "2026-09-17"
+  },
+  {
+   "label": "EEI — List of Large Customer Projects and Tariffs (updated September 11, 2026)",
+   "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+   "date": "2026-09-11"
+  },
+  {
+   "label": "Yahoo Finance / CNBC — Berkshire's new CEO warns energy will be the biggest constraint on AI data centers",
+   "url": "https://finance.yahoo.com/energy/articles/berkshire-hathaway-ceo-warns-energy-125808048.html",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Berkshire Hathaway Inc. — Q2 2026 news release (BHE segment)",
+   "url": "https://www.berkshirehathaway.com/news/aug0826.pdf",
+   "date": "2026-08-08"
+  },
+  {
+   "label": "Berkshire Hathaway Inc. — Form 10-Q, Q2 2026",
+   "url": "https://berkshirehathaway.com/qtrly/2ndqtr26.pdf",
+   "date": "2026-08-08"
+  },
+  {
+   "label": "CBS News — Nevada's electric utility sues a major data-center company (NV Energy v. Tract)",
+   "url": "https://www.cbsnews.com/news/nevada-data-center-lawsuit-ai-energy-costs/",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "KTIV — Google considering a data center in Salix, Iowa, according to MidAmerican Energy",
+   "url": "https://www.ktiv.com/2026/08/03/google-considering-data-center-salix-iowa-according-midamerican-energy/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "PacifiCorp — Customers see early savings from the new regional energy market (EDAM quarterly report)",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/edam-quarterly-report.html",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Straight Arrow News — Data centers want a closed-door deal; Nevada's electric utility is suing to stop it",
+   "url": "https://san.com/cc/data-centers-want-a-closed-door-deal-nevadas-electric-utility-is-suing-to-stop-it/",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Nevada Independent — Nevada's electric utility is suing a major data-center company; here's why",
+   "url": "https://thenevadaindependent.com/article/nevadas-electric-utility-is-suing-a-major-data-center-company-heres-why",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Carson Now — NV Energy sues Tract (syndicated)",
+   "url": "https://www.carsonnow.org/07/28/2026/nevadas-electric-utility-is-suing-a-major-data-center-company-heres-why",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Citizen Portal — Storey County approves two temporary natural-gas power plants for data-center campuses",
+   "url": "https://citizenportal.ai/articles/8567428/Nevada/Storey-County/Story-County-approves-two-temporary-naturalgas-power-plants-for-datacenter-campuses-sets-multiyear-expirations",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "MidAmerican Energy — Proposes Iowa natural gas rate adjustment",
+   "url": "https://www.midamericanenergy.com/newsroom/2026-natural-gas-rate-adjustment",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "KTIV — MidAmerican provides update on data-center hopes for Salix",
+   "url": "https://www.ktiv.com/2026/06/30/midamerican-energy-provides-update-data-center-hopes-salix-ia/",
+   "date": "2026-06-30"
+  },
+  {
+   "label": "brk-b.com — Both Sides of the Server: the BHE data-center re-rating",
+   "url": "https://brk-b.com/both-sides-of-the-server-bhe-data-center-re-rating_260614.html",
+   "date": "2026-06-14"
+  },
+  {
+   "label": "NV Energy — 2026 Integrated Resource Plan overview (fact sheet)",
+   "url": "https://www.nvenergy.com/publish/content/dam/nvenergy/brochures_arch/help/brochures/Integrated-Resource-Plan-IRP-Fact-Sheet.pdf",
+   "date": "2026-06"
+  },
+  {
+   "label": "MidAmerican Energy — Clarifies recent regulatory action (IUC notice)",
+   "url": "https://www.midamericanenergy.com/newsroom/2026-iuc-notice-clarification",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "RTO Insider — NV Energy seeks greater clarity on data-center energy demand",
+   "url": "https://www.rtoinsider.com/132869-nv-energy-seeks-greater-clarity-data-center-energy-demand/",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "New Project Media — NV Energy seeks large-load approvals for AWS, Prologis, Novva and Fleet Data Centers",
+   "url": "https://newprojectmedia.com/origination-nv-energy-seeks-large-load-approvals-for-aws-prologis-novva-and-fleet-data-centers/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Good Investing — Berkshire Hathaway 2026 annual meeting transcript (Abel on hyperscalers)",
+   "url": "https://www.good-investing.net/2026/05/26/berkshire-hathaway-annual-meeting-2026-transcript/",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "WyoFile — Rocky Mountain Power asks Wyoming PSC for a $70.5M (8.8 percent) increase",
+   "url": "https://wyofile.com/another-electric-rate-hike-in-wyoming-rocky-mountain-power-asks-for-71m-increase/",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Oilprice via Yahoo Finance — Berkshire Hathaway's power bet is starting to look riskier",
+   "url": "https://finance.yahoo.com/sectors/energy/articles/berkshire-hathaways-power-bet-starting-230000402.html",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "News3LV — NV Energy's new long-term plan highlights massive power demand tied to data centers",
+   "url": "https://news3lv.com/news/local/nv-energys-new-long-term-plan-highlights-massive-power-demand-tied-to-data-centers",
+   "date": "2026-05"
+  },
+  {
+   "label": "NV Energy — 2026 Joint IRP, Volume 2 (application, testimony, form LLESA), PUCN Docket 26-05007",
+   "url": "https://www.nvenergy.com/publish/content/dam/nvenergy/brochures_arch/about-nvenergy/rates-regulatory/recent-regulatory-filings/2026-irp/NPC-SPPC-Volume-2.pdf",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Berkshire Hathaway Inc. — Q1 2026 news release",
+   "url": "https://www.berkshirehathaway.com/news/may0226.pdf",
+   "date": "2026-05-02"
+  },
+  {
+   "label": "Berkshire Hathaway Inc. — Form 10-Q, Q1 2026",
+   "url": "https://www.berkshirehathaway.com/qtrly/1stqtr26.pdf",
+   "date": "2026-05-02"
+  },
+  {
+   "label": "PacifiCorp — First western utility to launch in CAISO's Extended Day-Ahead Market",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/extended-day-ahead-market-live.html",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "WyoFile — PacifiCorp's 2025 IRP Update drops new wind and solar from long-term planning",
+   "url": "https://wyofile.com/wyoming-electric-utility-dumps-wind-and-solar-in-long-term-planning/",
+   "date": "2026-04-13"
+  },
+  {
+   "label": "PacifiCorp — Oregon Court of Appeals reverses and remands the James class action",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/oregon-court-of-appeals-reverses-james-class-action.html",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "PacifiCorp — 2025 Integrated Resource Plan Update",
+   "url": "https://www.pacificorp.com/content/dam/pcorp/documents/en/pacificorp/energy/integrated-resource-plan/2025-irp/2025_IRP_Update.pdf",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Berkshire Hathaway Energy — 2026 investor presentation (ratios as of March 31, 2026)",
+   "url": "https://www.berkshirehathaway.com/bhenergy/BHE2026InvestPresent.pdf",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Industrial Info — Berkshire Hathaway Energy utilities see modest gain in capex spending (FY2025 10-K)",
+   "url": "https://www.industrialinfo.com/news/article/berkshire-hathaway-energy-utilities-see-modest-gain-in-capex-spending--355213",
+   "date": "2026-03-23"
+  },
+  {
+   "label": "PacifiCorp — To sell distribution assets to Oregon electric cooperatives",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/pacificorp-to-sell-oregon-assets-to-cooperatives.html",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "MidAmerican Energy — Pushes back on report's misleading claims (Iowa profit cap)",
+   "url": "https://www.midamericanenergy.com/newsroom/2026-misleading-claims",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "E&E News — PacifiCorp facing junk credit rating after large jury awards",
+   "url": "https://www.eenews.net/articles/pacificorp-facing-junk-credit-rating-after-large-jury-awards/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "Berkshire Hathaway Energy — 2026 Corporate Overview",
+   "url": "https://www.brkenergy.com/assets/pdf/2026-BHE-Corporate-Overview.pdf",
+   "date": "2026-03"
+  },
+  {
+   "label": "Berkshire Hathaway Inc. — 2025 Annual Report including Form 10-K",
+   "url": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf",
+   "date": "2026-02-21"
+  },
+  {
+   "label": "Berkshire Hathaway — 2025 shareholder letter (Abel)",
+   "url": "https://www.berkshirehathaway.com/letters/2025ltr.pdf",
+   "date": "2026-02-21"
+  },
+  {
+   "label": "Latitude Media — With the Form Energy deal, Google's Clean Transition Tariff is growing up",
+   "url": "https://www.latitudemedia.com/news/with-form-energy-deal-googles-clean-transition-tariff-is-growing-up/",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "PacifiCorp — Settlement of all federal claims from the 2020 and 2022 wildfires ($575M)",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/settlement-federal-claims-wildfires.html",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "Utility Dive — PGE to buy PacifiCorp's Washington utility operations for $1.9B",
+   "url": "https://www.utilitydive.com/news/pge-portland-general-pacificorp-washington-utility/812422/",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "PacifiCorp — To sell Washington service area to Portland General Electric",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/pacificorp-to-sell-washington-service-area-to-pge.html",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "Portland General Electric — Announces acquisition of Washington operations and select assets from PacifiCorp",
+   "url": "https://portlandgeneral.com/news/2026-02-portland-general-electric-announces-acquisition-of-washington-state-utility-operations-and-select-assets-from-pacificorp",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "APPA — PacifiCorp to sell Washington service area to Portland General Electric for $1.9 billion",
+   "url": "https://www.publicpower.org/periodical/article/pacificorp-sell-washington-service-area-portland-general-electric-19-billion",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "NV Energy — 2026 IRP stakeholder briefing",
+   "url": "https://www.nvenergy.com/publish/content/dam/nvenergy/brochures_arch/cleanenergy/2026-IRP-Stakeholder-Briefing.pdf",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "Fortune — Meet Greg Abel, new CEO of Berkshire Hathaway",
+   "url": "https://fortune.com/2026/01/05/meet-greg-abel-new-ceo-of-berkshire-hathaway-billionaire-boomer-start-in-business-selling-empty-soda-bottles/",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "Berkshire Hathaway — Leadership appointments (Abel CEO; Chang CFO)",
+   "url": "https://www.berkshirehathaway.com/news/dec0825.pdf",
+   "date": "2025-12-08"
+  },
+  {
+   "label": "Business Record — Energy and water use under close watch as data centers expand in Iowa",
+   "url": "https://www.businessrecord.com/energy-water-use-under-close-watch-as-data-centers-expand-in-iowa/",
+   "date": "2025-11-28"
+  },
+  {
+   "label": "PacifiCorp — Settlement with 1,434 plaintiffs (Warren Allen)",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/warren-allen-settlement.html",
+   "date": "2025-11-19"
+  },
+  {
+   "label": "Berkshire Hathaway Inc. — Q3 2025 news release",
+   "url": "https://www.berkshirehathaway.com/news/nov0125.pdf",
+   "date": "2025-11-01"
+  },
+  {
+   "label": "Berkshire Hathaway Inc. — Form 10-Q, Q3 2025",
+   "url": "https://www.berkshirehathaway.com/qtrly/3rdqtr25.pdf",
+   "date": "2025-11-01"
+  },
+  {
+   "label": "Berkshire Hathaway Energy — Combined Form 10-Q, quarter ended September 30, 2025",
+   "url": "https://www.brkenergy.com/assets/upload/financial-filing/BHE_09302025_Form10-Q_FINAL.pdf",
+   "date": "2025-10-31"
+  },
+  {
+   "label": "Berkshire Hathaway — Information regarding Q3 2025 earnings release",
+   "url": "https://www.berkshirehathaway.com/news/oct2925.pdf",
+   "date": "2025-10-29"
+  },
+  {
+   "label": "Nevada Independent — NV Energy's bill-pricing switch and Greenlink construction costs okayed by regulators",
+   "url": "https://thenevadaindependent.com/article/nv-energys-bill-pricing-switch-greenlink-construction-costs-okd-by-regulators",
+   "date": "2025-09-19"
+  },
+  {
+   "label": "PacifiCorp — FERC approves PacifiCorp tariff revisions (EDAM)",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/FERC-approves-pacificorp-tariff-revisions.html",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "Utah PSC — Docket 25-035-47, direct testimony of Cindy Crane (2026 Inter-Jurisdictional Allocation Protocol)",
+   "url": "https://pscdocs.utah.gov/electric/25docs/2503547/340937RMPAtt3DirTstmnyCindyCrane8-5-2025.pdf",
+   "date": "2025-08-05"
+  },
+  {
+   "label": "Inside Climate News — What the 'big beautiful bill' means for Iowa's data centers",
+   "url": "https://insideclimatenews.org/news/28072025/big-beautiful-bill-iowa-data-centers/",
+   "date": "2025-07-28"
+  },
+  {
+   "label": "Nevada Independent — As session ends, fate of environmental bills now in Lombardo's hands",
+   "url": "https://thenevadaindependent.com/article/as-session-ends-fate-of-environmental-bills-now-in-lombardos-hands",
+   "date": "2025-06-05"
+  },
+  {
+   "label": "Latitude Media — Utah is taking a different approach to new data-center load (SB 132)",
+   "url": "https://www.latitudemedia.com/news/utah-is-taking-a-different-approach-to-new-data-center-load/",
+   "date": "2025-04-15"
+  },
+  {
+   "label": "Utility Dive — PacifiCorp aims to add 4.7 GW of renewables, 1.7 GW of storage by 2031 (2025 IRP)",
+   "url": "https://www.utilitydive.com/news/pacificorp-2025-irp-resource-plan-wind-solar-coal/744195/",
+   "date": "2025-04-02"
+  },
+  {
+   "label": "PacifiCorp — 2025 Integrated Resource Plan submitted in six states",
+   "url": "https://www.pacificorp.com/about/newsroom/news-releases/2025-integrated-resource-plan-submitted.html",
+   "date": "2025-03-31"
+  },
+  {
+   "label": "RTO Insider — Nevada regulators approve NV Energy's Clean Transition Tariff",
+   "url": "https://www.rtoinsider.com/100330-nevada-regulators-approve-nv-energy-clean-transition-tariff/",
+   "date": "2025-03-12"
+  },
+  {
+   "label": "Berkshire Hathaway Inc. — 2024 Annual Report",
+   "url": "https://www.berkshirehathaway.com/2024ar/2024ar.pdf",
+   "date": "2025-02"
+  },
+  {
+   "label": "SWEEP — Nevada PUC authorizes two new gas generators in NV Energy's IRP (Docket 24-05041)",
+   "url": "https://www.swenergy.org/nevada-public-utilities-commission-authorizes-more-gas/",
+   "date": "2024-12-20"
+  },
+  {
+   "label": "Utility Dive — BLM approves Greenlink West and Arevia's Libra solar-plus-storage",
+   "url": "https://www.utilitydive.com/news/blm-nv-energy-greenlink-transmission-arevi-libra-solar/726538/",
+   "date": "2024-09-10"
+  },
+  {
+   "label": "Utility Dive — Google and Fervo's Clean Transition Tariff at the Nevada PUC",
+   "url": "https://www.utilitydive.com/news/google-fervo-nv-energy-nevada-puc-clean-energy-tariff/719472/",
+   "date": "2024-06-21"
+  },
+  {
+   "label": "Energy-Storage.News — NV Energy seeks approval for ~1 GW of battery PPAs in its 2024 resource plan",
+   "url": "https://www.energy-storage.news/nevada-utility-nv-energy-seeks-approval-for-1gw-of-battery-storage-ppas-in-2024-resource-plan/",
+   "date": "2024-06-20"
+  },
+  {
+   "label": "APPA — Google seeks approval of agreement to supply Nevada data centers (Docket 24-05023)",
+   "url": "https://www.publicpower.org/periodical/article/google-seeks-approval-agreement-supply-nevada-data-centers",
+   "date": "2024-06-16"
+  },
+  {
+   "label": "Google — A new clean-energy partnership with NV Energy (Clean Transition Tariff)",
+   "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/google-clean-energy-partnership/",
+   "date": "2024-06-11"
+  },
+  {
+   "label": "Utility Dive — Nevada regulators set to approve NV Energy's $2B IRP amendment including Valmy",
+   "url": "https://www.utilitydive.com/news/nevada-puc-nv-energy-irp-amendment-Valmy/709008/",
+   "date": "2024-03-01"
+  },
+  {
+   "label": "Rational Walk — Berkshire Hathaway Energy (ownership history)",
+   "url": "https://rationalwalk.com/berkshire-hathaway-energy/",
+   "date": "2023-12-08"
+  },
+  {
+   "label": "TerraPower — PacifiCorp forecasts need for two additional Natrium reactors",
+   "url": "https://www.terrapower.com/pacificorp-forecasts-need-for-two-additional-natrium-reactors-in-new-regulatory-filing/",
+   "date": "2023-03-31"
+  },
+  {
+   "label": "PUCN — Docket information, electric (fetched September 26, 2026)",
+   "url": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric"
+  },
+  {
+   "label": "PacifiCorp — Wildfire litigation information page",
+   "url": "https://www.pacificorp.com/about/information-wildfire/information-wildfire-litigation.html"
+  },
+  {
+   "label": "PacifiCorp — Leadership team (Darin Carroll biography)",
+   "url": "https://www.pacificorp.com/about/leadership-team.html"
+  },
+  {
+   "label": "PacifiCorp — Integrated Resource Plan page",
+   "url": "https://www.pacificorp.com/energy/integrated-resource-plan.html"
+  },
+  {
+   "label": "MidAmerican Energy — How MidAmerican protects customers from data-center costs",
+   "url": "https://www.midamericanenergy.com/articles/data-center-costs"
+  },
+  {
+   "label": "TMRPA — Energy and data centers (northern Nevada)",
+   "url": "https://www.tmrpa.org/energy-and-data-centers/"
+  },
+  {
+   "label": "servercountry.org — Nevada data-center policy tracker (through July 17, 2026)",
+   "url": "https://servercountry.org/policy/nevada/"
+  },
+  {
+   "label": "last10k — Berkshire Hathaway Energy FY2025 Form 10-K filing record (filed February 27, 2026)",
+   "url": "https://last10k.com/sec-filings/1081316/0001081316-26-000003.htm"
+  },
+  {
+   "label": "Wikipedia — Reid Gardner Battery Energy Storage System",
+   "url": "https://en.wikipedia.org/wiki/Reid_Gardner_Battery_Energy_Storage_System"
+  },
+  {
+   "label": "Wikipedia — MidAmerican Energy Company",
+   "url": "https://en.wikipedia.org/wiki/MidAmerican_Energy_Company"
+  },
+  {
+   "label": "Wikipedia — Berkshire Hathaway Energy (revision of July 14, 2026; leadership stale)",
+   "url": "https://en.wikipedia.org/wiki/Berkshire_Hathaway_Energy"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

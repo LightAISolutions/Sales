@@ -1240,6 +1240,17 @@
       "note": "KKR and PSP Investments, 50/50 partners, hold 19.9% of AEP's Ohio and Indiana Michigan transmission companies; AEP keeps control and operates them.",
       "context": "The transaction was announced on 9 January 2025 and completed on 5 June 2025. KKR funded its half from its core infrastructure strategy. AEP intended the sale to offset about USD 5.35bn of equity need through 2029. KKR's stake is in two subsidiaries, not in AEP itself, and it does not sign for AEP's equipment.",
       "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000069/a06-2025olympuspressreleas.htm"
+    },
+    {
+      "slug": "sb-energy",
+      "type": "partner",
+      "status": "active",
+      "since": "2026-03",
+      "scale": "USD 4.2bn of new transmission paid for by SB Energy (AEP); ~USD 5.1bn of AEP Ohio capital costs passed through (S-1)",
+      "via": "AEP Ohio service and 765 kV transmission for the PORTS-Pike campus",
+      "note": "Customer-funded transmission partner at PORTS-Pike: an Electric Service Agreement covers 0.8 GW, while the remaining 9.2 GW and the 765 kV build SB Energy pays for await definitive agreements and OPSB, FERC and PUCO approvals.",
+      "context": "AEP's 20 March 2026 release says SB Energy is committed to paying for USD 4.2bn of new transmission investment for the 10 GW campus. SB Energy's S-1 says AEP Ohio and its affiliates 'intend to incur approximately $5.1 billion in capital costs', to be passed on to SB Energy with a regulated return. The two figures may cover different scopes; no source reconciles them.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
     }
   ],
   "policyExposure": [
@@ -1461,6 +1472,11 @@
     }
   ],
   "sources": [
+    {
+      "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+      "date": "2026-09-21"
+    },
     {
       "label": "WBAP — Texas regulators approve 424 miles of power lines despite calls to wait",
       "url": "https://www.wbap.com/2026/08/30/texas-regulators-approve-424-miles-of-power-lines-despite-calls-to-wait/",
@@ -2161,6 +2177,6 @@
       "url": "https://www.nextearningsdate.com/aep.html"
     }
   ],
-  "lastUpdated": "2026-09-26",
-  "profileVersion": 2
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 3
 }

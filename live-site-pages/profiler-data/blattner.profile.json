@@ -230,6 +230,15 @@
    "note": "Blattner Energy is the EPC on Clearway's Spindle battery project in Weld County, Colorado.",
    "context": "Spindle is a 199 MW / 398 MWh two-hour Tesla installation contracted to Public Service Company of Colorado, financed at $261m in February 2026 and targeted for commercial operation in late 2026. It fits this dossier's recorded pattern precisely: on Blattner sites the owner furnishes the batteries, and Clearway procured its Tesla Megapack units directly under a portfolio order rather than through the contractor. Clearway joins Pattern, Orsted, RWE, Recurrent and NextEra among Blattner's repeat renewables owners.",
    "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "customer",
+   "status": "active",
+   "via": "EPC for the Orion Solar Belt (Milam County, Texas)",
+   "note": "SB Energy chose Blattner as EPC for Orion I–III (875 MWdc, commercial operation 2024) and lists it among its principal power EPCs.",
+   "context": "SB Energy's October 2024 release says it 'selected Blattner to provide the engineering, procurement and construction services' for Orion I–III. The S-1 lists Blattner Energy among its principal EPC counterparties for power infrastructure.",
+   "source": "https://sbenergy.com/american-made-solar-projects-power-google-data/"
   }
  ],
  "policyExposure": [
@@ -295,6 +304,11 @@
  },
  "sources": [
   {
+   "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+   "date": "2026-09-21"
+  },
+  {
    "label": "Quanta — Q2 2026 results (record $53.4B backlog)",
    "url": "https://www.prnewswire.com/news-releases/quanta-services-reports-second-quarter-2026-results-302838646.html",
    "date": "2026-07-30"
@@ -338,6 +352,11 @@
    "label": "Quanta — FY2024 results (Renewable segment $7.85B; backlog $8.72B)",
    "url": "https://www.prnewswire.com/news-releases/302381157.html",
    "date": "2025-02-13"
+  },
+  {
+   "label": "SB Energy — Commercial operation of American-made solar projects to help power Google data centres (Orion I–III)",
+   "url": "https://sbenergy.com/american-made-solar-projects-power-google-data/",
+   "date": "2024-10-18"
   },
   {
    "label": "Energy-Storage.News — Eleven Mile online (Arizona's biggest BESS; Meta Mesa)",
@@ -399,6 +418,6 @@
    "date": "2025-12-02"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 6
 }

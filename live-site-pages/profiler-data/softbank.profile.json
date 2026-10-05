@@ -1,0 +1,1163 @@
+{
+  "schemaVersion": 7,
+  "slug": "softbank",
+  "name": "SoftBank Group Corp.",
+  "shortName": "SoftBank",
+  "categories": [
+    "investor"
+  ],
+  "website": "https://group.softbank/en",
+  "headquarters": "1-7-1 Kaigan, Minato-ku, Tokyo 105-7537, Japan (Tokyo PortCity Takeshiba)",
+  "founded": 1981,
+  "employees": "276 non-consolidated; 73,677 consolidated (31 March 2026)",
+  "ownership": {
+    "type": "public",
+    "ticker": "TSE: 9984",
+    "notes": "Tokyo Stock Exchange Prime Market; fiscal year ends 31 March. Masayoshi Son holds 32.73% of issued shares (31 March 2026)."
+  },
+  "summary": "**BOTTOM LINE UP FRONT:** SoftBank Group signs for power and data-centre equipment through one subsidiary, SB Energy. SB Energy is building OpenAI's Milam County campus in Texas (about 753 MW-IT), has leased its planned 8.0 GW-IT PORTS-Pike campus in Ohio to OpenAI, and is in IPO registration; its S-1 says the roughly 9.2 GW of gas generation planned beside PORTS is being developed by a different SoftBank affiliate. Since 30 September 2026 SoftBank has also owned DigitalBridge, which manages, but does not own, the funds that control Vantage, Switch, DataBank and other platforms. Everything else is capital: about 13% of OpenAI (USD 64.6bn invested), 86.7% of Arm, and all of Ampere and Graphcore. For a vendor, SoftBank is a door at SB Energy and a directory at DigitalBridge.\n\n**BACKGROUND.** Per company filings, the registrant is SoftBank Group Corp. (TSE: 9984, Prime Market), a Tokyo pure holding company whose fiscal year ends 31 March; Masayoshi Son holds 32.73% of the shares. FY2025 (to 31 March 2026) net income attributable to owners was ¥5,002.3bn on net sales of ¥7,798.7bn, driven by a ¥6,730.4bn investment gain on OpenAI. Net asset value rose from ¥25.7tn to ¥40.1tn over the year and stood at ¥72.3tn on 30 June 2026, with loan-to-value at 13.0%. SoftBank reports four segments: the investment business of the holding companies, the SoftBank Vision Funds, SoftBank (the listed telco SoftBank Corp., 40.1% held and consolidated) and AI Computing (Arm, Ampere and Graphcore). DigitalBridge's 8-K records the merger completed on 30 September 2026 at USD 16.00 a share in cash, with the acquiring parent wholly owned by SoftBank Group Overseas GK. SoftBank states the price as about USD 3.1bn for all the common stock, against a total enterprise value of about USD 4.0bn at announcement, and DigitalBridge continues as a 'separately managed platform, led by Marc Ganzi'. The USD 5.375bn purchase of ABB's robotics business is signed, not closed.",
+  "ecosystemRole": "We assess SoftBank Group as three different counterparties under one name. Through SB Energy it is a buyer: SB Energy's S-1 says it buys solar modules, battery components, high-voltage transformers, switchgear and inverters itself, lets construction to EPC contractors (Turner, DPR, Kiewit, SOLV Energy and others), and has not yet chosen the backup-generation engines for PORTS. Through DigitalBridge it is a manager: it owns the general partner of funds whose capital is almost entirely third-party, so Vantage, Switch and DataBank sign their own orders under fund governance. Through Stargate, OpenAI and the Portsmouth Consortium it is a convenor and financier that buys nothing. A seller works SB Energy directly and uses DigitalBridge to find the platforms.",
+  "productsAndServices": [
+    {
+      "name": "SB Energy (Energy Global, LP) — AI data-centre campuses and power",
+      "category": "Controlled subsidiary — developer and owner",
+      "description": "SoftBank's US developer of solar, battery storage and AI data-centre campuses, founded with SoftBank backing in 2019. The legal entity SoftBank reports is Energy Global, LP, which its Securities Report shows 100% held at 31 March 2026. SoftBank and its affiliates have contributed about USD 3.2bn of cash. The listing vehicle, SB Energy, Inc. (a Texas corporation), filed an S-1 on 1 September 2026 and an amended S-1 on 21 September; no price range or ownership percentages have been filed. After the IPO SoftBank expects to hold more than 50% of the vote, making SB Energy a 'controlled company'. Its campuses are Cosmos (Austin, about 50 MW-IT, leased to a SoftBank affiliate), Milam County (about 753 MW-IT, leased to OpenAI) and PORTS-Pike in Ohio (about 8.0 GW-IT, leased to OpenAI on 17 August 2026). It had about 2.2 GW of solar and storage operating at 30 June 2026.",
+      "highlights": [
+        "The S-1 says SB Energy procures directly 'solar modules, battery energy storage system components, high-voltage transformers, switchgear, inverters', and procures long-lead equipment 'early, at portfolio scale and across multiple suppliers'",
+        "Construction is let to EPC contractors — 'Turner, DPR, Kiewit and SOLV Energy' for data centres; SOLV, Blattner, Dashiell, CSI Electrical and Rosendin for power",
+        "Backlog of about USD 439bn (about USD 430bn data centres, USD 10bn power) and about USD 178bn of capex tied to signed contracts, about USD 48bn of it within 24 months (S-1/A2)",
+        "PORTS gas: 'being developed by an affiliate of SoftBank that is not our subsidiary' (S-1/A2); SoftBank is secretariat of the 21-member Portsmouth Consortium",
+        "Investors besides SoftBank: OpenAI (USD 500m preferred equity, January 2026, plus warrants), NVIDIA (USD 3.0bn of Class N stock and prepaid forward at the IPO)"
+      ],
+      "positioning": "Within the group, the only operating business that signs for generation, batteries, high-voltage gear and data-centre construction. SB Energy names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and Clearway, NextEra and AES in power. Its distinguishing feature is that it is tenanted by its own investors: SoftBank at Cosmos and OpenAI at Milam and PORTS.",
+      "soldThrough": "Long-term triple-net data-centre leases (15–20 years) and fixed-price power purchase agreements (10–25 years); project finance, tax equity and, from the IPO, public equity",
+      "targetSegments": [
+        "AI labs and hyperscalers (OpenAI, SoftBank affiliates)",
+        "Utilities and load-serving entities buying solar and storage",
+        "Corporate offtakers (Google at Orion)"
+      ],
+      "roadmap": "Initial public offering on Nasdaq and Nasdaq Texas (ticker SBE) — unpriced at 4 October 2026, with the delay reported as a valuation gap; PORTS first phase targeted for 2028, buildings 1–9 by 2031 and 10–17 by 2032; Milam buildings in 2027–2028"
+    },
+    {
+      "name": "DigitalBridge — digital-infrastructure investment manager",
+      "category": "Controlled subsidiary — asset manager",
+      "description": "Acquired on 30 September 2026. DigitalBridge describes itself as 'a leading global investment manager in digital infrastructure' with USD 40.2bn of fee-earning equity under management at 30 June 2026. That total splits into USD 17.3bn in the DigitalBridge Partners fund series, USD 15.3bn in co-investment vehicles, USD 3.3bn at InfraBridge, USD 3.3bn in core, credit and liquid strategies, and USD 1.0bn in separately capitalised portfolio companies. SoftBank's announcement put total assets managed at USD 108bn. DigitalBridge does not consolidate its funds, and its general-partner commitment is small. In the 10-Q's words: 'minimum capital commitments to our sponsored funds ranging from 0.03% to 0.72%', plus 1.43%–4.29% as a general-partner affiliate in the flagship funds. Its own balance sheet holds 'minority equity stakes in DataBank and Vantage NA SDC'.",
+      "highlights": [
+        "Portfolio companies SoftBank listed as examples: Vantage, Switch and DataBank (data centres); GD Towers, Vertical Bridge, JTOWER (towers); Zayo, Netomnia, WOW! (fibre); AtlasEdge, Boingo, FreshWave (edge)",
+        "Yondr: 'La Caisse … has assumed joint control' alongside DigitalBridge-managed vehicles (closed 1 July 2025)",
+        "Signed, not closed: ArcLight Capital Partners for up to USD 1.05bn (USD 650m base plus up to USD 400m contingent), conditional on the SoftBank merger",
+        "InfraBridge, DigitalBridge's infrastructure-fund arm, is Invenergy's equity partner in its North American natural gas portfolio, per Invenergy: 'we entered into equity partnership with InfraBridge in 2018'",
+        "Takanock, backed by DigitalBridge and ArcLight with USD 500m, plans on-site gas generation for data centres (reported)"
+      ],
+      "positioning": "SoftBank calls DigitalBridge a 'separately managed platform, led by Marc Ganzi'. The purchase was a manager with fee contracts, carried interest and small general-partner stakes. The platforms' equity belongs to third-party investors such as Silver Lake, PSP, GIC, ADIA, AustralianSuper and MEAG at Vantage, and IFM and Aware Super at Switch.",
+      "soldThrough": "Closed-end flagship funds (DBP I–III; DBP III closed at USD 7.2bn in October 2025), co-investment vehicles, InfraBridge and core funds sold to institutional limited partners",
+      "targetSegments": [
+        "Institutional limited partners",
+        "Data-centre, tower, fibre and edge platforms"
+      ],
+      "roadmap": "ArcLight closing: conditional on the SoftBank merger, which closed 30 September 2026; the outside date is the later of 31 March 2027 and six months after the SoftBank closing"
+    },
+    {
+      "name": "OpenAI stake and the Stargate programme",
+      "category": "Minority investment and programme partner",
+      "description": "SoftBank's largest single asset. SoftBank Vision Fund 2 has invested USD 64.6bn in OpenAI since September 2024; SoftBank puts its ownership at about 13% after the third USD 10bn tranche of the 2026 round, executed 1 October 2026. Its cumulative investment stood at USD 34.6bn on 31 March 2026, before the 2026 round began; the 2025 round had taken the stake to about 11% on 26 December 2025. SoftBank calls itself 'a minority shareholder of OpenAI' with 'only a limited ability to influence' it. Stargate was announced on 22 January 2025 as 'a new company which intends to invest $500 billion over the next four years'. Its 'initial equity funders' were SoftBank, OpenAI, Oracle and MGX, 'with SoftBank having financial responsibility and OpenAI having operational responsibility', and Masayoshi Son as chairman. No SoftBank document states its own dollar commitment or percentage in the Stargate entity.",
+      "highlights": [
+        "The September 2025 expansion named two SoftBank-partnered sites: Lordstown, Ohio, where 'SoftBank has broken ground', and Milam County, Texas, 'in partnership with SB Energy'",
+        "In practice SoftBank's Stargate sites are delivered by SB Energy as developer, owner and operator. Lordstown is absent from the 'three core locations' SoftBank listed in August 2026",
+        "The Information reported in February 2026 that the Stargate joint venture 'hasn't hired any staff' and had become bilateral (reported; all three companies declined to comment)",
+        "SB OAI Japan: a 50:50 venture between OpenAI and C Holdings (SoftBank Corp. 51%, SoftBank Group 49%) selling 'Crystal intelligence' in Japan",
+        "Stargate UAE (May 2025): a 1 GW cluster 'built by G42 and operated by OpenAI and Oracle', with SoftBank among the partners"
+      ],
+      "positioning": "SoftBank is the largest outside financier in OpenAI's 2025 and 2026 rounds. S&P moved SoftBank's outlook to negative on 3 March 2026, saying the follow-on investment means 'it will take longer than we had assumed for the company to restore the liquidity and quality of its investment assets'.",
+      "soldThrough": "Preferred shares held in SoftBank Vision Fund 2 that convert on an OpenAI listing; financed with a USD 40bn bridge (repaid and cancelled by 30 September 2026), a USD 10bn loan secured on the OpenAI shares and about USD 11.1bn of senior notes",
+      "targetSegments": [
+        "OpenAI (model developer)",
+        "OpenAI-leased AI campuses through SB Energy"
+      ],
+      "roadmap": "OpenAI's 2026 round fully funded on 1 October 2026; fair value is marked quarterly through profit and loss"
+    },
+    {
+      "name": "AI Computing — Arm, Ampere and Graphcore",
+      "category": "Controlled subsidiaries — chip design",
+      "description": "A segment created in the October–December 2025 quarter by combining Arm, Ampere and Graphcore. SoftBank's Securities Report shows Arm Holdings plc at 86.7% (voting), and Arm's own 20-F gives 86.4% at 21 May 2026, with 72.0% of Arm's shares pledged under a SoftBank margin loan. SoftBank completed its USD 6.5bn purchase of Ampere Computing on 25 November 2025, buying from Carlyle, Oracle and Arm. Graphcore is wholly owned and is the first tenant at SB Energy's Cosmos campus in Austin. In Q1 FY2026 the segment's net sales were ¥175.3bn and its segment loss ¥200.8bn, driven by R&D.",
+      "highlights": [
+        "Arm launched its first own silicon, the 'Arm AGI CPU', in March 2026 (SoftBank Group Report 2026)",
+        "Rene Haas, Arm's CEO, also became CEO of SoftBank Group International on 21 April 2026",
+        "Arm's 20-F says Arm is engaged to advise on or design chips for affiliates of SoftBank Group"
+      ],
+      "positioning": "Chip designers that supply processors to the AI build-out rather than buyers of power equipment. Arm sits in NVIDIA's Grace CPUs, and Ampere sells Arm-based server CPUs.",
+      "soldThrough": "Licensing and royalties (Arm); server processors (Ampere); AI accelerators (Graphcore)",
+      "targetSegments": [
+        "Chipmakers and hyperscalers"
+      ],
+      "roadmap": ""
+    },
+    {
+      "name": "SoftBank Vision Funds (SVF1, SVF2, Latin America)",
+      "category": "Growth-equity funds",
+      "description": "SoftBank Investment Advisers manages SVF1, and SB Global Advisers manages SVF2 and the Latin America fund; both managers are wholly owned. Third-party investors committed most of SVF1's capital, and SoftBank holds a 33.6% share. SVF2 is effectively SoftBank's own money: SoftBank committed USD 140.6bn of its USD 143.2bn, with management co-investment making up the rest, and SVF2 holds the OpenAI stake. Vision Fund gains were ¥6,638.6bn in FY2025, ¥6,465.5bn of which came from OpenAI, against ¥387.6bn in FY2024.",
+      "highlights": [
+        "SoftBank sold all its NVIDIA shares in October 2025 (32.1m shares, USD 5.83bn) and most of its T-Mobile stake (75.4m shares, USD 16.25bn) to fund OpenAI",
+        "Equity value of holdings at 30 June 2026: SVF2 ¥19.29tn, SVF1 ¥3.60tn, Latin America ¥1.00tn (data sheet)"
+      ],
+      "positioning": "A late-stage growth investor. Its AI-infrastructure relevance now runs almost entirely through SVF2's OpenAI position.",
+      "soldThrough": "Limited-partnership funds",
+      "targetSegments": [
+        "Late-stage private technology companies"
+      ],
+      "roadmap": ""
+    },
+    {
+      "name": "SoftBank segment — SoftBank Corp., LY Corporation, PayPay; SB Neo",
+      "category": "Consolidated listed subsidiaries",
+      "description": "SoftBank Corp. (TSE: 9434) is the Japanese telco. SoftBank Group holds 40.1% and consolidates it because it controls the company in practice. LY Corporation (62.4%, indirect) and PayPay (90.6%, listed on Nasdaq as PAYP since March 2026) sit in the same segment. The segment's Q1 FY2026 net sales were ¥1,813.9bn and its segment income ¥292.5bn. SB Neo, Inc., announced on 2 July 2026, is a US neocloud owned 51% by SoftBank Corp. and 49% by SoftBank Group. It plans to start services in FY2027 'leveraging the SoftBank Group's 10-gigawatt-scale energy and AI infrastructure currently under development'.",
+      "highlights": [
+        "SB Neo plans to finance compute through project companies with non-recourse loans and sell to hyperscalers",
+        "SoftBank Corp. plans 'gigawatt-scale AI data centers in Japan' (SB Neo release)"
+      ],
+      "positioning": "The group's operating cash engine. SoftBank Corp. is a separate listed actor with its own Japanese data-centre plans, recorded in this dossier as a consolidated subsidiary rather than given its own slug.",
+      "soldThrough": "Telecom, internet and payments services in Japan",
+      "targetSegments": [
+        "Japanese consumers and enterprises"
+      ],
+      "roadmap": "SB Neo services from the fiscal year ending March 2028"
+    },
+    {
+      "name": "France AI data-centre programme",
+      "category": "Developer commitment (announced)",
+      "description": "On 30 May 2026 SoftBank committed 'to develop and operate 5 GW of AI data center capacity in France, representing an investment of up to €75 billion'. The first phase is €45bn for 3.1 GW in Hauts-de-France by 2031, at Dunkirk (Loon-Plage), Bosquel and Bouchain. SoftBank 'will work with SB Energy and other strategic partners'. At Bosquel, a joint venture majority-owned by SoftBank and formed with Sesterce was selected to develop and operate a 1 GW campus. At the Port of Dunkirk there will be two facilities: one operated by SoftBank to manufacture enclosures, and one operated by Schneider Electric to integrate data-centre power modules.",
+      "highlights": [
+        "EDF is named on the Bouchain site",
+        "A commitment and a plan, not a completed project"
+      ],
+      "positioning": "The only place SoftBank itself, rather than SB Energy, is the stated developer and operator of data-centre capacity.",
+      "soldThrough": "Not stated",
+      "targetSegments": [
+        "AI compute tenants in Europe"
+      ],
+      "roadmap": "3.1 GW first phase by 2031"
+    },
+    {
+      "name": "Holding-company investments and pending acquisitions",
+      "category": "Direct stakes",
+      "description": "Direct stakes held by the holding company, notably Intel common stock (USD 2bn at USD 23 a share, executed September 2025; ¥1,332.9bn gain in Q1 FY2026), the remaining T-Mobile shares and SB Northstar. SoftBank agreed on 8 October 2025 to buy ABB's robotics business for USD 5.375bn. SoftBank lists it as 'Planned in 2026', has arranged USD 1.75bn of non-recourse acquisition finance, and has announced no completion. SoftBank names four areas of focus: 'AI chips, AI robots, AI data centers, and energy'.",
+      "highlights": [
+        "ABB Robotics: about 7,000 employees, headquartered in Zürich; approvals needed in the EU, China and the US"
+      ],
+      "positioning": "",
+      "soldThrough": "",
+      "targetSegments": [],
+      "roadmap": "ABB Robotics closing expected in the second half of 2026 (SoftBank and ABB)"
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-10-01",
+      "category": "financial",
+      "headline": "Third and final USD 10bn tranche of the 2026 OpenAI round executed; cumulative investment USD 64.6bn, about 13%; the bridge facility fully repaid and its last USD 10bn of capacity cancelled",
+      "read": "The OpenAI funding cycle that drove SoftBank's 2026 borrowing is complete. The tranche was paid from the September senior notes rather than the bridge.",
+      "source": "https://group.softbank/en/news/press/20261001"
+    },
+    {
+      "date": "2026-09-30",
+      "category": "ma",
+      "headline": "DigitalBridge acquisition completed: USD 16.00 a share in cash, about USD 3.1bn for all common stock; DigitalBridge delisted from the NYSE and becomes a controlled subsidiary",
+      "read": "Per DigitalBridge's 8-K, the parent is wholly owned by SoftBank Group Overseas GK. Ganzi stays as chief executive and the only pre-closing director, alongside three SoftBank designees. SoftBank now owns a USD 40.2bn fee-earning manager, not the platforms its funds hold.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1679688/000110465926112148/tm2626145d9_8k.htm"
+    },
+    {
+      "date": "2026-09-24",
+      "category": "financial",
+      "headline": "About USD 11.1bn of foreign-currency senior notes issued, USD coupons 8.625%–9.750%",
+      "read": "High-yield coupons on the largest high-yield sale of the year (Reuters) are the market's price for SoftBank's OpenAI concentration.",
+      "source": "https://group.softbank/en/news/press/20260924"
+    },
+    {
+      "date": "2026-09-22",
+      "category": "regulatory",
+      "headline": "DigitalBridge announces all regulatory approvals received for the SoftBank acquisition, including FERC and CFIUS; closing expected 'within five business days'",
+      "read": "The last gate on the deal; it closed eight days later, on 30 September.",
+      "source": "https://www.digitalbridge.com/news/2026-09-22-digitalbridge-receives-all-regulatory-approvals-required-to-complete-acquisition-by-softbank-group-corp"
+    },
+    {
+      "date": "2026-09-21",
+      "category": "financial",
+      "headline": "SB Energy files S-1 Amendment No. 2: backlog about USD 439bn, about USD 178bn of capex tied to signed contracts; price range and ownership percentages still blank",
+      "read": "The first public account of what SoftBank's power subsidiary buys and builds. The roadshow is reported on hold over a valuation gap below USD 50bn (IFR, reported).",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "date": "2026-09-09",
+      "category": "financial",
+      "headline": "Early repayment of the outstanding USD 25.9bn under the USD 40bn bridge loan, effective 15 September",
+      "read": "The bridge taken for OpenAI is refinanced in the bond and secured-loan markets.",
+      "source": "https://group.softbank/en/news/press/20260909"
+    },
+    {
+      "date": "2026-08-17",
+      "category": "project",
+      "headline": "NVIDIA guarantees SB Energy's PORTS-Pike campus to host NVIDIA compute exclusively; OpenAI signs a 20-year lease for about 8 GW-IT; NVIDIA invests USD 1.5bn in SB Energy",
+      "read": "The largest contracted data-centre commitment in the corpus sits in SoftBank's subsidiary, with NVIDIA's credit support behind the first 4.25 GW-IT.",
+      "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
+    },
+    {
+      "date": "2026-08-06",
+      "category": "financial",
+      "headline": "Q1 FY2026: net income ¥347.3bn (−17.7%) against an LSEG consensus of ¥120.23bn; NAV a record ¥72.3tn; LTV 13.0%; next results 10 November 2026",
+      "read": "An Intel share gain of ¥1,332.9bn drove the beat; OpenAI was unchanged in the quarter.",
+      "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf"
+    },
+    {
+      "date": "2026-08-05",
+      "category": "financial",
+      "headline": "USD 10bn two-year loan to SoftBank Vision Fund 2 secured on its OpenAI preferred shares",
+      "read": "OpenAI shares are now collateral as well as SoftBank's largest asset; a fall in their value can force a top-up.",
+      "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf"
+    },
+    {
+      "date": "2026-07-02",
+      "category": "corporate",
+      "headline": "SoftBank Corp. (51%) and SoftBank Group (49%) form SB Neo, a US neocloud, to start services in FY2027",
+      "read": "The group plans to sell compute on the energy and data-centre capacity SB Energy is building.",
+      "source": "https://group.softbank/en/news/press/20260702"
+    },
+    {
+      "date": "2026-05-31",
+      "category": "project",
+      "headline": "SoftBank commits to 5 GW of AI data-centre capacity in France (up to €75bn); a SoftBank-majority joint venture with Sesterce to build 1 GW at Bosquel; Schneider Electric to run a power-module facility at Dunkirk",
+      "read": "A commitment, not a build. It is the one market where SoftBank names itself developer and operator.",
+      "source": "https://group.softbank/en/news/press/20260531_0"
+    },
+    {
+      "date": "2026-05-27",
+      "category": "ma",
+      "headline": "DigitalBridge agrees to buy ArcLight Capital Partners for up to USD 1.05bn, conditional on the SoftBank merger",
+      "read": "If it closes, SoftBank's manager adds a power-generation investor with a development pipeline above 15 GW. Signed, not closed.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1679688/000110465926066617/tm2615653d1_ex99-1.htm"
+    },
+    {
+      "date": "2026-05-13",
+      "category": "financial",
+      "headline": "FY2025 results: net income ¥5,002.3bn on net sales ¥7,798.7bn; Vision Fund gains ¥6,638.6bn; NAV ¥40.1tn; LTV 17.0%",
+      "read": "A record year made almost entirely of OpenAI's revaluation.",
+      "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q4fy2025_01_en.pdf"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "leadership",
+      "headline": "Rene Haas, Arm's chief executive, also becomes CEO of SoftBank Group International",
+      "read": "SoftBank's international operating subsidiaries, focused on semiconductors and AI, now report to Arm's chief.",
+      "source": "https://group.softbank/en/news/press/20260421"
+    },
+    {
+      "date": "2026-03-27",
+      "category": "financial",
+      "headline": "USD 40bn unsecured bridge facility signed with JPMorgan, Goldman Sachs, Mizuho, SMBC and MUFG, mainly for the OpenAI follow-on",
+      "read": "The facility that funded two OpenAI tranches; repaid and cancelled by 30 September.",
+      "source": "https://group.softbank/en/news/press/20260327"
+    },
+    {
+      "date": "2026-03-21",
+      "category": "partnership",
+      "headline": "Portsmouth Consortium launched with SoftBank Group as secretariat: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project",
+      "read": "The supplier roster for the gas plant beside PORTS. It records intentions, not contracts.",
+      "source": "https://group.softbank/en/news/press/20260321"
+    },
+    {
+      "date": "2026-03-20",
+      "category": "project",
+      "headline": "DOE, Commerce, SoftBank, SB Energy and AEP Ohio announce the Piketon partnership: 10 GW of data centres, 'at least 9.2 GW of natural gas generation' backed by USD 33.3bn of Japanese funding, and USD 4.2bn of SB Energy-funded transmission",
+      "read": "The government frames the gas as SB Energy's to build; SB Energy's S-1 says a different SoftBank affiliate is developing it. Both accounts are stated here.",
+      "source": "https://www.energy.gov/sites/default/files/2026-03/FACT_SHEET_Portsmouth_AI.pdf"
+    },
+    {
+      "date": "2026-03-03",
+      "category": "financial",
+      "headline": "S&P revises SoftBank's BB+ outlook to negative over the OpenAI follow-on",
+      "read": "The rating agencies treat OpenAI as SoftBank's weakest-credit major holding.",
+      "source": "https://www.siliconrepublic.com/business/openai-softbank-sp-financial-analysis"
+    },
+    {
+      "date": "2026-02-27",
+      "category": "financial",
+      "headline": "USD 30bn follow-on investment in OpenAI agreed at a USD 730bn pre-money valuation, in three USD 10bn tranches",
+      "read": "Takes SoftBank's cumulative OpenAI investment to USD 64.6bn and about 13%.",
+      "source": "https://group.softbank/en/news/press/20260227"
+    },
+    {
+      "date": "2026-02-23",
+      "category": "market",
+      "headline": "The Information reports the Stargate joint venture 'hasn't hired any staff' and that the partners' work has become bilateral",
+      "read": "A report, not a statement: all three companies declined to comment. It fits SoftBank's own sites being delivered through SB Energy rather than through Stargate.",
+      "source": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/"
+    },
+    {
+      "date": "2026-01-09",
+      "category": "partnership",
+      "headline": "OpenAI and SoftBank Group each invest USD 500m in SB Energy; OpenAI selects SB Energy to build and operate its 1.2 GW Milam County site",
+      "read": "SoftBank's Stargate role becomes a property relationship: its subsidiary owns the campus and OpenAI is the tenant.",
+      "source": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/"
+    },
+    {
+      "date": "2025-12-31",
+      "category": "financial",
+      "headline": "Second closing of the 2025 OpenAI round: USD 22.5bn invested on 26 December 2025, taking SoftBank to about 11%",
+      "read": "The USD 41bn round SoftBank led is fully funded.",
+      "source": "https://group.softbank/en/news/press/20251231"
+    },
+    {
+      "date": "2025-12-29",
+      "category": "ma",
+      "headline": "Definitive agreement to acquire DigitalBridge at USD 16.00 a share, 'a total enterprise value of approximately $4.0B'",
+      "read": "SoftBank's stated aim: to 'originate, finance, operate, and scale' digital infrastructure. The proxy records Son and Ganzi discussing Stargate and data-centre leasing before the deal.",
+      "source": "https://group.softbank/en/news/press/20251229"
+    },
+    {
+      "date": "2025-11-26",
+      "category": "ma",
+      "headline": "USD 6.5bn acquisition of Ampere Computing completed on 25 November 2025",
+      "read": "Moves into AI Computing alongside Arm and Graphcore.",
+      "source": "https://group.softbank/en/news/press/20251126"
+    },
+    {
+      "date": "2025-11-05",
+      "category": "partnership",
+      "headline": "SB OAI Japan launched to sell OpenAI's 'Crystal intelligence' in Japan",
+      "read": "OpenAI distribution for Japanese enterprises sits in a 50:50 venture.",
+      "source": "https://group.softbank/en/news/press/20251105"
+    },
+    {
+      "date": "2025-10-08",
+      "category": "ma",
+      "headline": "Agreement to buy ABB's robotics business for USD 5.375bn",
+      "read": "Signed, not closed at 1 October 2026; SoftBank lists it as 'Planned in 2026'.",
+      "source": "https://group.softbank/en/news/press/20251008"
+    },
+    {
+      "date": "2025-09-24",
+      "category": "project",
+      "headline": "OpenAI, Oracle and SoftBank add five Stargate sites; the two SoftBank-partnered sites are Lordstown, Ohio and Milam County, Texas (with SB Energy)",
+      "read": "The only Stargate release naming sites SoftBank delivers. Lordstown has not reappeared in SoftBank's later materials.",
+      "source": "https://group.softbank/en/news/press/20250924"
+    }
+  ],
+  "strategyRead": [
+    "**(High confidence)** We assess that **SoftBank is a door at SB Energy and a directory everywhere else**. SB Energy's S-1 says it procures 'solar modules, battery energy storage system components, high-voltage transformers, switchgear, inverters' itself and lets turnkey construction to named EPC contractors. No other SoftBank business states any such purchasing. DigitalBridge, the Vision Funds and the OpenAI stake hold equity; Arm, Ampere and Graphcore design chips. Basis: the S-1/A2 procurement and execution-model sections, SoftBank's segment table and DigitalBridge's 10-Q. A power-equipment seller qualifies at SB Energy's supply-chain team and its EPCs, not at SoftBank Group.",
+    "**(High confidence)** We assess that **SoftBank bought DigitalBridge's management rights, not its platforms**. DigitalBridge consolidates none of its funds and calls itself 'an agent of the fund'. Its general-partner commitment runs from 0.03% to 0.72%, plus 1.43%–4.29% as a general-partner affiliate. Its own balance sheet holds only 'minority equity stakes in DataBank and Vantage NA SDC'. The fund investors' consent was a closing condition. Basis: DigitalBridge's Q2 2026 10-Q, its merger proxy and the closing 8-K. SoftBank therefore reaches Vantage and Switch the way BlackRock reaches Aligned through GIP: by appointing the manager, under duties owed to outside investors (the duties are our inference from the managers' SEC registration, not a filed statement).",
+    "**(Moderate confidence)** We assess that **SoftBank's Stargate role has turned into a landlord relationship run through SB Energy**. SoftBank was named an initial equity funder with 'financial responsibility' in January 2025, but no SoftBank document states its commitment to the Stargate entity. Its delivered sites — Milam County and PORTS-Pike — are owned by SB Energy and leased to OpenAI. The Information reported in February 2026 that the joint venture had hired no staff. SB Energy's S-1 never uses the word 'Stargate'. Basis: SoftBank's releases of January and September 2025, its August 2026 deck and the S-1. The judgment is moderate because the Stargate entity's current form is undisclosed.",
+    "**(Moderate confidence)** We assess that **the ~9.2 GW of gas generation at PORTS is the largest unassigned procurement in the SoftBank orbit, and its owner of record is not yet settled**. The S-1 says the plants are 'being developed by an affiliate of SoftBank that is not our subsidiary', funded through 'an investment vehicle jointly owned by the U.S. Department of Commerce and an entity established by the Japan Bank for International Cooperation'. The DOE fact sheet says 'SB Energy will build new gas-fired generation', and SB Energy's PORTS microsite says the plants 'will be owned by the U.S. Government'. An SB Energy spokesperson told Inside Climate News that SoftBank 'has reserved sufficient gas turbines from multiple sources including GE Vernova' (reported). The Portsmouth Consortium names the suppliers who intend to take part, not the ones under contract.",
+    "**(Moderate confidence)** We assess that **OpenAI concentration, not appetite, limits how much SoftBank itself can commit to equipment**. OpenAI is SoftBank's largest asset (USD 64.6bn invested), is pledged against a USD 10bn loan, and pushed S&P's outlook to negative. The CFO says new AI infrastructure will use project finance 'that does not impact our LTV', with SoftBank's risk 'capped at its equity contribution', and that DigitalBridge's investee debt will not 'directly impact SBG's credit profile'. Basis: SoftBank Group Report 2026 and the rating actions. Expect project-level, non-recourse buyers (SB Energy's project companies, SB Neo's special-purpose companies), not SoftBank Group, on the purchase orders.",
+    "**(Low confidence)** We assess that **DigitalBridge may become SoftBank's channel into on-site power**. The ArcLight acquisition (signed, conditional on the SoftBank merger) would add a generation investor with a development pipeline above 15 GW. Takanock, backed by DigitalBridge and ArcLight, plans 400 MW of on-site gas at a Virginia campus (reported). The merger proxy records Son and Ganzi discussing 'power bank energy capacity for data centers'. Weak because ArcLight has not closed and no SoftBank document assigns DigitalBridge a power role.",
+    "**Collection gaps:** SoftBank's dollar commitment to, and share of, the Stargate entity; the name and ownership of the SoftBank affiliate developing PORTS gas and who holds the turbine reservations; SoftBank's economic share of SB Energy after the OpenAI, Ares and NVIDIA instruments (the S-1's percentages are blank); the current SoftBank titles of Ippei Mimura and Varun Aravapally, two of DigitalBridge's new directors; whether Lordstown remains a data-centre site; the USD amount of the Arm margin loan (reports conflict); a full-year consensus for FY2025 (none located in a loadable source).",
+    "**INDICATORS TO WATCH** — *SB Energy IPO pricing (reported delayed to mid-to-late October):* a 424B4 would give the first public value for the platform and SoftBank's stake. *AEP Ohio definitive agreements (AEP expected them in Q3 2026; its Q3 call is due in late October):* execution and the OPSB hearing on the Baku–Gavin 765 kV line (27 October) gate PORTS beyond its first 0.8 GW. *Q2 FY2026 results, 10 November 2026:* the first quarter consolidating DigitalBridge and the first with a full OpenAI position at about 13%. *ArcLight closing:* confirms Judgment 6. *Any turbine order or engineering award naming the PORTS gas developer:* settles Judgment 4. *ABB Robotics closing:* expected in the second half of 2026."
+  ],
+  "relationships": [
+    {
+      "slug": "sb-energy",
+      "type": "portfolio",
+      "status": "active",
+      "since": "2019",
+      "scale": "Energy Global, LP 100% (31 Mar 2026); ~USD 3.2bn of cash contributed",
+      "via": "SoftBank Group Capital Limited and SB Energy HoldCo, LLC",
+      "note": "SoftBank's controlled subsidiary and the group's only equipment buyer — the developer, owner and operator of OpenAI's Milam County and PORTS-Pike campuses.",
+      "context": "SB Energy's S-1 calls SoftBank its 'founding sponsor and ultimate parent company'. It says SoftBank's affiliates have contributed about USD 3.2bn and that SoftBank expects to control more than 50% of the vote after the IPO, making SB Energy a controlled company. SoftBank's Securities Report lists Energy Global, LP at 100% at 31 March 2026. Outside instruments have since been added: OpenAI's USD 500m preferred equity and warrants, Ares's preferred equity (to be redeemed at the IPO) and NVIDIA's USD 3.0bn of Class N stock and prepaid forward. SoftBank's economic share after the IPO is therefore unstated. SoftBank designates six of SB Energy's nine directors, among them Alex Clavel as chairman.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "slug": "openai",
+      "type": "portfolio",
+      "status": "active",
+      "since": "2024-09",
+      "scale": "USD 64.6bn invested; ~13% (1 Oct 2026)",
+      "via": "SoftBank Vision Fund 2",
+      "note": "SoftBank's largest asset: about 13% of OpenAI after USD 64.6bn of investment, and the lead partner in Stargate.",
+      "context": "SoftBank invested USD 2.2bn from September 2024 and USD 30.0bn in the 2025 round (about 11% at 26 December 2025). It then committed USD 30.0bn in 2026 at a USD 730bn pre-money valuation, paid in three USD 10bn tranches, the last on 1 October 2026. SoftBank describes itself as 'a minority shareholder of OpenAI' with 'only a limited ability to influence' it. Separately, OpenAI is SB Energy's tenant at Milam County and PORTS-Pike, OpenAI and SoftBank each put USD 500m into SB Energy in January 2026, and the two run SB OAI Japan as a 50:50 venture.",
+      "source": "https://group.softbank/en/news/press/20261001"
+    },
+    {
+      "slug": "vantage",
+      "type": "portfolio",
+      "status": "active",
+      "since": "2026-09",
+      "via": "DigitalBridge (manager of the funds that lead Vantage's ownership)",
+      "note": "A DigitalBridge portfolio company: since 30 September 2026 SoftBank owns the manager whose funds lead Vantage's ownership.",
+      "context": "SoftBank's Q3 FY2025 deck lists Vantage first among DigitalBridge's 'Key Portfolio Companies', describing it as 'building and operating hyperscale campus data centers globally'. The equity belongs to DigitalBridge-managed funds and co-investors, including Silver Lake, PSP, GIC, ADIA, AustralianSuper and MEAG. DigitalBridge's own balance sheet holds only a minority equity-method stake in Vantage NA SDC, the stabilised North American portfolio. SoftBank's reach into Vantage's equipment decisions runs through DigitalBridge's board and fund governance, not through ownership. DigitalBridge's merger proxy records that Vantage's October 2025 Stargate site partnership with OpenAI and Oracle came before the deal.",
+      "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf"
+    },
+    {
+      "slug": "switch",
+      "type": "portfolio",
+      "status": "active",
+      "since": "2026-09",
+      "via": "DigitalBridge (manager of the funds that co-own Switch with IFM)",
+      "note": "A DigitalBridge portfolio company: SoftBank now owns the manager of the funds that took Switch private with IFM Investors in 2022.",
+      "context": "SoftBank's Q3 FY2025 deck lists Switch among DigitalBridge's 'Key Portfolio Companies', as 'focused on developing AI-ready, large-scale campus data centers across the U.S.'. DigitalBridge's 10-K and 10-Q do not name Switch; it is held in DigitalBridge-managed funds alongside IFM Investors and Aware Super, and DigitalBridge does not consolidate it. SoftBank's link is the manager, not the equity.",
+      "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf"
+    },
+    {
+      "slug": "oracle",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-01",
+      "via": "Stargate (initial equity funder)",
+      "project": "stargate",
+      "note": "Fellow initial equity funder of Stargate and partner in its September 2025 site expansion; also the seller of its Ampere stake to SoftBank.",
+      "context": "The 22 January 2025 announcement names 'SoftBank, OpenAI, Oracle, and MGX' as Stargate's initial equity funders. The September 2025 release added five sites, three led with Oracle and two partnered by SoftBank (Lordstown, Ohio and Milam County, Texas). Separately, Oracle's Project Denver Holdings held 32.27% of Ampere Computing and sold it to SoftBank in the USD 6.5bn acquisition completed on 25 November 2025.",
+      "source": "https://group.softbank/en/news/press/20250122"
+    },
+    {
+      "slug": "mgx",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-01",
+      "via": "Stargate (initial equity funder)",
+      "project": "stargate",
+      "note": "Fellow initial equity funder of Stargate, named with SoftBank, OpenAI and Oracle in the January 2025 announcement.",
+      "context": "SoftBank's 22 January 2025 release names MGX among the four initial equity funders, with SoftBank holding 'financial responsibility'. Neither SoftBank nor MGX discloses its commitment. SoftBank's September 2025 expansion release does not name MGX.",
+      "source": "https://group.softbank/en/news/press/20250122"
+    },
+    {
+      "slug": "nvidia",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-01",
+      "via": "Stargate technology partner; exclusive compute provider at SB Energy's PORTS-Pike campus",
+      "note": "A Stargate technology partner, and since August 2026 the exclusive compute provider and lead credit support at SoftBank's PORTS-Pike campus; SoftBank sold its NVIDIA shares in October 2025.",
+      "context": "The January 2025 Stargate announcement names NVIDIA among the technology partners. On 17 August 2026 NVIDIA agreed to host its compute exclusively at SB Energy's PORTS-Pike campus, to give residual value guaranties on the first 4.25 GW-IT, and to invest USD 1.5bn in SB Energy (USD 3.0bn in total with a prepaid forward). SoftBank had sold its whole NVIDIA holding, 32.1m shares for USD 5.83bn, in October 2025 to fund OpenAI.",
+      "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
+    },
+    {
+      "slug": "g42",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-05",
+      "via": "Stargate UAE",
+      "note": "Partner in Stargate UAE, the 1 GW Abu Dhabi cluster G42 builds and OpenAI and Oracle operate.",
+      "context": "SoftBank's 22 May 2025 release says Stargate UAE 'will be built by G42 and operated by OpenAI and Oracle', and that the collaboration 'will also include Cisco … and SoftBank Group'. SoftBank's specific role is not stated.",
+      "source": "https://group.softbank/en/news/press/20250522"
+    },
+    {
+      "slug": "abb",
+      "type": "other",
+      "status": "announced",
+      "since": "2025-10",
+      "scale": "USD 5.375bn",
+      "via": "ABB Robotics",
+      "note": "Agreed buyer of ABB's robotics business for USD 5.375bn; signed on 8 October 2025 and not completed as of 1 October 2026.",
+      "context": "SoftBank's 8 October 2025 release states a total purchase price of USD 5.375bn and expected closing in mid-to-late 2026, subject to EU, Chinese and US approvals. Its August 2026 investor deck lists the deal as 'Planned in 2026' and notes USD 1.75bn of non-recourse acquisition financing. No completion has been announced.",
+      "source": "https://group.softbank/en/news/press/20251008"
+    },
+    {
+      "slug": "schneider-electric",
+      "type": "partner",
+      "status": "announced",
+      "since": "2026-05",
+      "via": "Dunkirk power-module integration facility (France programme)",
+      "note": "Partner in SoftBank's French data-centre programme: Schneider Electric is to operate a facility at the Port of Dunkirk integrating data-centre power modules.",
+      "context": "SoftBank's 30 May 2026 announcement of up to 5 GW in France describes two facilities at Dunkirk: one operated by SoftBank to manufacture enclosures, and one operated by Schneider Electric to integrate data-centre power modules. It is an announced plan, with no order or volume stated.",
+      "source": "https://group.softbank/en/news/press/20260531_0"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "CFIUS National Security Agreement",
+      "status": "in-effect",
+      "effectiveDate": "2019-12",
+      "exposure": "On 23 December 2019 SoftBank and certain of its subsidiaries entered into a National Security Agreement with CFIUS over SoftBank's ownership of SB Energy's US operations, supplemented on 20 September 2021. SB Energy's S-1 says the agreement imposes 'restrictions on vendors, cybersecurity requirements and project sale notification procedures', including approval or non-objection for certain vendor relationships, and that these restrictions 'have delayed, and may continue to delay, our ability to onboard vendors'.",
+      "mitigation": "SB Energy says it maintains 'approved vendor lists for SCADA, networking and other critical operational technology systems'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "regime": "U.S.–Japan Strategic Trade and Investment Agreement",
+      "status": "announced",
+      "effectiveDate": "2026-02",
+      "exposure": "The roughly 9.2 GW Portsmouth Powered Land Project beside SB Energy's PORTS-Pike campus was named in the first tranche of projects under the USD 550bn US–Japan investment framework. The DOE puts Japanese funding at USD 33.3bn. SB Energy's S-1 expects the plants to be funded 'through an investment vehicle jointly owned by the U.S. Department of Commerce and an entity established by the Japan Bank for International Cooperation' and developed by a SoftBank affiliate that is not SB Energy's subsidiary. It warns that the funding 'may be delayed, reduced or withdrawn'. SoftBank Group is secretariat of the 21-member Portsmouth Consortium formed around the project.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Group balance-sheet indicators",
+      "specs": [
+        {
+          "band": "Net asset value",
+          "label": "31 March 2025",
+          "value": "¥25.7T"
+        },
+        {
+          "band": "Net asset value",
+          "label": "31 March 2026",
+          "value": "¥40.1T"
+        },
+        {
+          "band": "Net asset value",
+          "label": "30 June 2026",
+          "value": "¥72.3T, highest-ever"
+        },
+        {
+          "band": "Leverage",
+          "label": "Loan-to-value",
+          "value": "18.0% (31 Mar 2025); 17.0% (31 Mar 2026); 13.0% (30 Jun 2026)"
+        },
+        {
+          "band": "Leverage",
+          "label": "Policy",
+          "value": "below 25% in normal times; upper threshold of 35% even in times of emergency"
+        },
+        {
+          "band": "Holdings (equity value, 30 Jun 2026)",
+          "label": "Arm",
+          "value": "¥49.91T"
+        },
+        {
+          "band": "Holdings (equity value, 30 Jun 2026)",
+          "label": "SVF2 / SVF1 / LatAm",
+          "value": "¥19.29T / ¥3.60T / ¥1.00T"
+        },
+        {
+          "band": "Holdings (equity value, 30 Jun 2026)",
+          "label": "SoftBank Corp.",
+          "value": "¥2.79T"
+        }
+      ],
+      "notes": "SoftBank's own key indicators from the FY2025 and Q1 FY2026 earnings materials and data sheet. NAV is SoftBank's own calculation: the value of its holdings less net debt."
+    },
+    {
+      "product": "SB Energy data-centre campuses (S-1/A2, 21 September 2026)",
+      "specs": [
+        {
+          "band": "Under construction",
+          "label": "Cosmos Technology Campus, Travis County TX",
+          "value": "~50 MW-IT; tenant a SoftBank affiliate; NTP March 2026; full RFS by May 2027"
+        },
+        {
+          "band": "Under construction",
+          "label": "Milam County Building 1 / Building 2",
+          "value": "~308 MW-IT / ~445 MW-IT; OpenAI affiliate; NTP April 2026; RFS 2027–2028"
+        },
+        {
+          "band": "Contracted, not started",
+          "label": "PORTS-Pike Technology Campus, Pike County OH",
+          "value": "17 buildings, each ~472 MW-IT; ~8.0 GW-IT; ~10 GW gross load; RFS 2028–2032"
+        },
+        {
+          "band": "Power",
+          "label": "PORTS utility service",
+          "value": "0.8 GW under an Electric Service Agreement with AEP Ohio; 9.2 GW subject to OPSB, FERC and PUCO approvals"
+        },
+        {
+          "band": "Power",
+          "label": "PORTS generation",
+          "value": "approximately 9.2 GW of gas-fired generation 'being developed by an affiliate of SoftBank that is not our subsidiary'"
+        },
+        {
+          "band": "Commercial",
+          "label": "Backlog",
+          "value": "approximately $439 billion (DC ~$430 billion; SP ~$10 billion)"
+        },
+        {
+          "band": "Commercial",
+          "label": "Backlog-associated capex",
+          "value": "approximately $178 billion, ~$48 billion within 24 months"
+        }
+      ],
+      "notes": "Figures are SB Energy's, from its registration statement; MW-IT is critical IT capacity, not gross power."
+    },
+    {
+      "product": "DigitalBridge at 30 June 2026 (10-Q)",
+      "specs": [
+        {
+          "band": "Fee-earning equity under management",
+          "label": "Total",
+          "value": "$40.2 billion"
+        },
+        {
+          "band": "Fee-earning equity under management",
+          "label": "DBP fund series / co-investment",
+          "value": "$17.3bn / $15.3bn"
+        },
+        {
+          "band": "Fee-earning equity under management",
+          "label": "InfraBridge / core, credit and liquid / separately capitalised",
+          "value": "$3.3bn / $3.3bn / $1.0bn"
+        },
+        {
+          "band": "Capital at risk",
+          "label": "General-partner commitment",
+          "value": "0.03% to 0.72% of each fund, plus 1.43% to 4.29% as GP affiliate in flagship funds"
+        },
+        {
+          "band": "Organisation",
+          "label": "Employees",
+          "value": "303"
+        }
+      ],
+      "notes": "DigitalBridge does not consolidate its funds; it is 'acting in the capacity of an agent of the fund'."
+    },
+    {
+      "product": "OpenAI investment schedule",
+      "specs": [
+        {
+          "band": "2024–2025",
+          "label": "Initial and 2025 round",
+          "value": "USD 2.2bn from September 2024; USD 7.5bn (April 2025) and USD 22.5bn (26 December 2025) — about 11%"
+        },
+        {
+          "band": "2026",
+          "label": "Follow-on at USD 730bn pre-money",
+          "value": "USD 10.0bn each on 1 April, 1 July and 1 October 2026"
+        },
+        {
+          "band": "Cumulative",
+          "label": "Investment and stake",
+          "value": "USD 64.6bn; approximately 13%"
+        }
+      ],
+      "notes": "All held through SoftBank Vision Fund 2 as preferred shares that convert on an OpenAI listing."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Masayoshi Son",
+      "title": "Representative Director, Corporate Officer, Chairman & CEO; chairman of Stargate (January 2025 announcement)",
+      "photo": "images/execs/softbank-son.jpg",
+      "background": [
+        "Founded Nihon SoftBank (now SoftBank Group) in September 1981 and has led it since",
+        "Representative Director, Corporate Officer, Chairman & CEO, SoftBank Group (from November 2020)",
+        "Chairman and Director, Arm Holdings plc (from August 2023); Chairman & Executive Director, ARM Holdings (from September 2016)",
+        "Board Director and Founder, SoftBank Corp. (from April 2021); earlier Chairman, President & CEO of Vodafone K.K. (now SoftBank Corp.) from 2006",
+        "Holds 32.73% of SoftBank Group's shares (31 March 2026)"
+      ]
+    },
+    {
+      "name": "Yoshimitsu Goto",
+      "title": "Board Director, Corporate Officer, Senior Vice President, CFO & CISO; Head of Finance Unit and Administration Unit",
+      "photo": "images/execs/softbank-goto.jpg",
+      "background": [
+        "Joined SoftBank in June 2000 from Yasuda Trust & Banking (from April 1987)",
+        "Corporate Officer, Senior Vice President, Head of Finance Department (from July 2012); CFO & CISO (from April 2018)",
+        "President & CEO and acting owner, Fukuoka SoftBank HAWKS (from October 2013)",
+        "Board Director (from April 2026); delegated to settle the final terms of the 2026 OpenAI follow-on and the ABB Robotics purchase"
+      ]
+    },
+    {
+      "name": "Rene Haas",
+      "title": "Board Director; CEO, Arm Holdings; CEO, SoftBank Group International (from 21 April 2026)",
+      "photo": "images/execs/softbank-haas.jpg",
+      "background": [
+        "CEO, SoftBank Group International, the operating platform for certain international subsidiaries focused on semiconductors and AI (from April 2026)",
+        "CEO and Director, Arm Holdings plc (from September 2023); CEO, Arm Ltd (from February 2022)",
+        "Board Director, SoftBank Group (from June 2023)",
+        "Vice President and General Manager, Computing Products, NVIDIA (from October 2006)"
+      ]
+    },
+    {
+      "name": "Ken Miyauchi",
+      "title": "Board Director",
+      "photo": "images/execs/softbank-miyauchi.jpg",
+      "background": [
+        "Joined Nihon SoftBank in October 1984",
+        "President & CEO, SoftBank Mobile (from April 2015); President & CEO, SoftBank Corp. (from June 2018); Representative Director & Chairman (from April 2021)",
+        "Board Director, SoftBank Group (from April 2018); Special Advisor, SoftBank Corp. (from June 2024)"
+      ]
+    },
+    {
+      "name": "Alex Clavel",
+      "title": "CEO, SoftBank Investment Advisers; chairman-designate of SB Energy",
+      "photo": "images/execs/softbank-clavel.jpg",
+      "background": [
+        "Chief Executive Officer, SoftBank Investment Advisers, overseeing the SoftBank Vision Funds (since 2023)",
+        "SoftBank Group International, 2015–2023 (CEO, Managing Partner, Head of Corporate Development and Investments)",
+        "Nearly 20 years in investment banking at Morgan Stanley",
+        "SoftBank designee to SB Energy's board, to become its chairman at the IPO (S-1/A2)"
+      ]
+    },
+    {
+      "name": "Vikas J. Parekh",
+      "title": "Managing Partner, Americas, SoftBank Investment Advisers; director of DigitalBridge (from 30 September 2026)",
+      "photo": "images/execs/softbank-parekh.jpg",
+      "background": [
+        "Director of DigitalBridge Group, one of three SoftBank designees seated at the 30 September 2026 closing (8-K)",
+        "Managing Partner, SoftBank Investment Advisers, investing in automation, enterprise software and emerging technologies",
+        "Previously private equity at KKR and consulting at Boston Consulting Group",
+        "MBA, Harvard Business School; BS Electrical Engineering and MS Electrical & Computer Engineering, Georgia Institute of Technology"
+      ]
+    },
+    {
+      "name": "Seiichi Morooka",
+      "title": "Corporate Officer; Head of the CFO Office, Finance Unit; SoftBank designee to SB Energy's board",
+      "background": [
+        "Corporate Officer and Head of the CFO Office within the Finance Unit, SoftBank Group; member of SoftBank Group's Investment Committee (SB Energy S-1/A2)",
+        "SoftBank designee to SB Energy's board of directors",
+        "MA, Rikkyo University; BA, Waseda University"
+      ]
+    },
+    {
+      "name": "Marc C. Ganzi",
+      "title": "Chief Executive Officer and Director, DigitalBridge Group (a SoftBank controlled subsidiary)",
+      "background": [
+        "Chief Executive Officer of DigitalBridge, retained at the 30 September 2026 closing; the only pre-closing director who remains on its board (8-K)",
+        "SoftBank's completion notice: DigitalBridge 'will continue to operate as a separately managed platform, led by Marc Ganzi'",
+        "Met Masayoshi Son in October and November 2025 to discuss Stargate, data-centre leasing and 'power bank energy capacity for data centers' (merger proxy)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "JPY",
+    "type": "public",
+    "periods": [
+      {
+        "period": "Q1 FY2026 (April–June 2026)",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Net income attributable to owners of the parent",
+            "actual": "¥347,330m (−17.7% year on year)",
+            "expected": "¥120.23bn (LSEG consensus, per CNBC via Quartz)",
+            "verdict": "beat",
+            "result": "Driven by a ¥1,332.9bn gain on Intel shares; Vision Fund segment gains fell to ¥460.1bn."
+          },
+          {
+            "name": "Net sales",
+            "actual": "¥2,019,591m (+10.9%)",
+            "expected": "",
+            "verdict": "",
+            "result": "No consensus located for net sales."
+          },
+          {
+            "name": "Net asset value and loan-to-value",
+            "actual": "NAV ¥72.3T (record); LTV 13.0%",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-reported key indicators."
+          }
+        ],
+        "commentary": "The first quarter after the 2026 OpenAI tranches began. OpenAI's fair value was unchanged in the quarter at USD 89.6bn on USD 44.6bn invested."
+      },
+      {
+        "period": "FY2025 (year ended 31 March 2026)",
+        "periodType": "annual",
+        "periodEnd": "2026-03-31",
+        "metrics": [
+          {
+            "name": "Net sales",
+            "actual": "¥7,798,650m (+7.7%)",
+            "expected": "",
+            "verdict": "",
+            "result": "No full-year consensus was read from a loadable primary account; left empty rather than reconstructed."
+          },
+          {
+            "name": "Net income attributable to owners of the parent",
+            "actual": "¥5,002,271m (+333.7%)",
+            "expected": "",
+            "verdict": "",
+            "result": "A record, made mostly of a ¥6,730.4bn investment gain on OpenAI."
+          },
+          {
+            "name": "Gain on investments — SoftBank Vision Funds",
+            "actual": "¥6,638,611m",
+            "expected": "",
+            "verdict": "",
+            "result": "Including ¥6,465.5bn related to OpenAI."
+          },
+          {
+            "name": "Net asset value and loan-to-value",
+            "actual": "NAV ¥40.1T; LTV 17.0%",
+            "expected": "",
+            "verdict": "",
+            "result": "From ¥25.7T and 18.0% a year earlier."
+          }
+        ],
+        "commentary": "Asset sales funded OpenAI: the whole NVIDIA stake (USD 5.83bn), 75.4m T-Mobile shares (USD 16.25bn) and the Deutsche Telekom exit, alongside margin loans on Arm (+USD 11.5bn) and SoftBank Corp. shares."
+      },
+      {
+        "period": "FY2024 (year ended 31 March 2025)",
+        "periodType": "annual",
+        "periodEnd": "2025-03-31",
+        "metrics": [
+          {
+            "name": "Net sales",
+            "actual": "¥7,243,752m (+7.2%)",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-reported."
+          },
+          {
+            "name": "Net income attributable to owners of the parent",
+            "actual": "¥1,153,332m",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-reported."
+          },
+          {
+            "name": "Gain on investments — SoftBank Vision Funds",
+            "actual": "¥387,584m",
+            "expected": "",
+            "verdict": "",
+            "result": "The holding-company segment carried the year with ¥3,413.8bn of gains."
+          }
+        ],
+        "commentary": "The comparative year, before the 2025 OpenAI round was funded."
+      }
+    ],
+    "commentary": "Company figures are SoftBank's IFRS consolidated financial reports and earnings materials. SoftBank is valued and covered on NAV rather than earnings, and full-year net income consensus is thin; the only consensus used is LSEG's for Q1 FY2026 as reported by CNBC. Credit: S&P BB+ (outlook negative since 3 March 2026), Moody's Ba2 stable (upgraded 17 September 2025), Fitch BB+, JCR A with a negative outlook (affirmed 30 April 2026). The share price closed at ¥6,310 on 2 October 2026, up 38.4% over 52 weeks after a 4-for-1 split effective 1 January 2026 (stockanalysis.com)."
+  },
+  "sources": [
+    {
+      "label": "Reuters via The Star — SoftBank completes final phase of USD 30bn OpenAI investment; USD 11.1bn high-yield bond; bridge capacity cancelled",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/10/02/softbank-completes-final-phase-of-30-billion-investment-in-openai",
+      "date": "2026-10-02"
+    },
+    {
+      "label": "SoftBank Group — Execution of follow-on investment (third tranche) in OpenAI; cumulative USD 64.6bn, ~13%",
+      "url": "https://group.softbank/en/news/press/20261001",
+      "date": "2026-10-01"
+    },
+    {
+      "label": "Total Telecom — SoftBank completes USD 3.1bn purchase of DigitalBridge",
+      "url": "https://totaltele.com/softbank-completes-3-1bn-purchase-of-digitalbridge/",
+      "date": "2026-10-01"
+    },
+    {
+      "label": "Mobile Europe — SoftBank completes USD 3.1bn acquisition of DigitalBridge",
+      "url": "https://www.mobileeurope.co.uk/softbank-digitalbridge-deal/",
+      "date": "2026-10-01"
+    },
+    {
+      "label": "DigitalBridge Group — Form 8-K: completion of the mergers, delisting, change in control (accession 0001104659-26-112148)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679688/000110465926112148/tm2626145d9_8k.htm",
+      "date": "2026-09-30"
+    },
+    {
+      "label": "SoftBank Group — Completion of acquisition of DigitalBridge (approximately USD 3.1bn; separately managed platform led by Marc Ganzi)",
+      "url": "https://group.softbank/en/news/press/20260930",
+      "date": "2026-09-30"
+    },
+    {
+      "label": "IFR — SB Energy delays IPO launch amid data-centre backlash (reported)",
+      "url": "https://www.ifre.com/equities/2490131/sb-energy-delays-ipo-launch-amid-data-centre-backlash",
+      "date": "2026-09-26"
+    },
+    {
+      "label": "SoftBank Group — Issuance of foreign currency-denominated senior notes",
+      "url": "https://group.softbank/en/news/press/20260924",
+      "date": "2026-09-24"
+    },
+    {
+      "label": "DigitalBridge — All regulatory approvals received for the acquisition by SoftBank Group; closing within five business days",
+      "url": "https://www.digitalbridge.com/news/2026-09-22-digitalbridge-receives-all-regulatory-approvals-required-to-complete-acquisition-by-softbank-group-corp",
+      "date": "2026-09-22"
+    },
+    {
+      "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+      "date": "2026-09-21"
+    },
+    {
+      "label": "SoftBank Group — Early repayment of bridge loans (USD 25.9bn)",
+      "url": "https://group.softbank/en/news/press/20260909",
+      "date": "2026-09-09"
+    },
+    {
+      "label": "SoftBank Group — SB Energy announces public filing of registration statement for proposed IPO",
+      "url": "https://group.softbank/en/news/press/20260902",
+      "date": "2026-09-02"
+    },
+    {
+      "label": "SB Energy — NVIDIA guarantees PORTS-Pike Technology Campus to exclusively host NVIDIA AI compute",
+      "url": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "Quartz via Yahoo Finance — SoftBank Q1 FY2026 earnings beat (LSEG consensus ¥120.23bn)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/softbank-q1-2026-earnings-beat-140213193.html",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "SoftBank Group — Consolidated financial report, three months ended 30 June 2026 (IFRS)",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "SoftBank Group — Q1 FY2026 earnings presentation",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/earnings-presentation_q1fy2026_01_en.pdf",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "SoftBank Group — Q1 FY2026 data sheet (equity value of holdings, NAV, LTV)",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/earnings-datasheet_q1fy2026_02.pdf",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "SoftBank Group — Q1 FY2026 investor presentation (key upcoming investments: ABB Robotics 'Planned in 2026', DigitalBridge 'Second half of 2026')",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/investor-presentation_q1fy2026_01_en.pdf",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "DigitalBridge Group — Form 10-Q, quarter ended 30 June 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679688/000167968826000115/dbrg-20260630.htm",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "SoftBank Group Report 2026 (annual report)",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/annual-report_fy2026_en.pdf",
+      "date": "2026-07-27"
+    },
+    {
+      "label": "SoftBank Group — SoftBank Corp. and SoftBank Group establish SB Neo",
+      "url": "https://group.softbank/en/news/press/20260702",
+      "date": "2026-07-02"
+    },
+    {
+      "label": "SoftBank Group — Securities Report (有価証券報告書) for FY2025, ownership of subsidiaries",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/security_reports/securities_report_q4fy2025_01_ja.pdf",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "SoftBank Group — SoftBank Group to build 5 GW of AI data-centre capacity in France",
+      "url": "https://group.softbank/en/news/press/20260531_0",
+      "date": "2026-05-31"
+    },
+    {
+      "label": "SoftBank Group — SoftBank Group and Sesterce to develop 1 GW AI data centre in Bosquel",
+      "url": "https://group.softbank/en/news/press/20260531",
+      "date": "2026-05-31"
+    },
+    {
+      "label": "DigitalBridge — Form 8-K Exhibit 99.1: agreement to acquire ArcLight Capital Partners",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679688/000110465926066617/tm2615653d1_ex99-1.htm",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "Arm Holdings plc — Form 20-F for the year ended 31 March 2026 (SoftBank 86.4%; margin-loan pledge 72.0%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "SoftBank Group — Consolidated financial report for the fiscal year ended 31 March 2026 (IFRS)",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q4fy2025_01_en.pdf",
+      "date": "2026-05-13"
+    },
+    {
+      "label": "SoftBank Group — FY2025 earnings presentation (NAV and LTV)",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q4fy2025_01_en.pdf",
+      "date": "2026-05-13"
+    },
+    {
+      "label": "Inside Climate News — Massive Ohio gas power plant: energy risks (SB Energy spokesperson on turbine reservations)",
+      "url": "https://insideclimatenews.org/news/02052026/massive-ohio-gas-power-plant-energy-risks/",
+      "date": "2026-05-02"
+    },
+    {
+      "label": "SoftBank Group — Expanded role for Rene Haas (CEO, SoftBank Group International)",
+      "url": "https://group.softbank/en/news/press/20260421",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "SoftBank Group — Execution of bridge facility agreement (USD 40.0bn)",
+      "url": "https://group.softbank/en/news/press/20260327",
+      "date": "2026-03-27"
+    },
+    {
+      "label": "DigitalBridge Group — Definitive merger proxy statement (DEFM14A)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679688/000110465926033634/tm267669-2_defm14a.htm",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "SoftBank Group — Launch of the Portsmouth Consortium under the U.S.–Japan Strategic Trade and Investment Agreement",
+      "url": "https://group.softbank/en/news/press/20260321",
+      "date": "2026-03-21"
+    },
+    {
+      "label": "U.S. Department of Energy — Fact sheet: Portsmouth AI data centre and power partnership",
+      "url": "https://www.energy.gov/sites/default/files/2026-03/FACT_SHEET_Portsmouth_AI.pdf",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "Silicon Republic — S&P revises SoftBank outlook to negative over the OpenAI investment",
+      "url": "https://www.siliconrepublic.com/business/openai-softbank-sp-financial-analysis",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "SoftBank Group — Follow-on investments in OpenAI (USD 30.0bn; USD 730bn pre-money)",
+      "url": "https://group.softbank/en/news/press/20260227",
+      "date": "2026-02-27"
+    },
+    {
+      "label": "The Decoder (citing The Information) — Stargate's USD 500bn project reportedly stalls (reported)",
+      "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "POWER — SB Energy tapped for proposed 9.2 GW Ohio gas plant in first tranche of the USD 550bn U.S.–Japan deal",
+      "url": "https://www.powermag.com/sb-energy-tapped-for-proposed-9-2%E2%80%91gw-ohio-gas-power-plant-in-first-tranche-of-550b-u-s-japan-deal-what-we-know/",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "SoftBank Group — Consolidated financial report, nine months ended 31 December 2025 (DigitalBridge agreement at USD 3.1bn)",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q3fy2025_01_en.pdf",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "SoftBank Group — Q3 FY2025 earnings presentation (DigitalBridge key portfolio companies)",
+      "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "SB Energy — OpenAI and SoftBank Group partner with SB Energy to build and operate AI data centres",
+      "url": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/",
+      "date": "2026-01-09"
+    },
+    {
+      "label": "SoftBank Group — Completion of additional USD 22.5bn investment in OpenAI (~11%)",
+      "url": "https://group.softbank/en/news/press/20251231",
+      "date": "2025-12-31"
+    },
+    {
+      "label": "SoftBank Group — SoftBank Group to acquire DigitalBridge (total enterprise value approximately USD 4.0bn)",
+      "url": "https://group.softbank/en/news/press/20251229",
+      "date": "2025-12-29"
+    },
+    {
+      "label": "DigitalBridge — Form 8-K Exhibit 99.1: joint release, SoftBank Group to acquire DigitalBridge",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679688/000110465925124541/tm2534410d1_ex99-1.htm",
+      "date": "2025-12-29"
+    },
+    {
+      "label": "SoftBank Group — Completion of acquisition of Ampere Computing Holdings LLC",
+      "url": "https://group.softbank/en/news/press/20251126",
+      "date": "2025-11-26"
+    },
+    {
+      "label": "SoftBank Group — SoftBank Group and OpenAI launch SB OAI Japan",
+      "url": "https://group.softbank/en/news/press/20251105",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "SoftBank Group — Acquisition of ABB Ltd's robotics business (USD 5.375bn)",
+      "url": "https://group.softbank/en/news/press/20251008",
+      "date": "2025-10-08"
+    },
+    {
+      "label": "ABB — ABB to divest Robotics division to SoftBank Group",
+      "url": "https://new.abb.com/news/detail/129685/abb-to-divest-robotics-division-to-softbank-group",
+      "date": "2025-10-08"
+    },
+    {
+      "label": "SoftBank Group — OpenAI, Oracle and SoftBank expand Stargate with five new AI data-centre sites",
+      "url": "https://group.softbank/en/news/press/20250924",
+      "date": "2025-09-24"
+    },
+    {
+      "label": "Investing.com — Moody's upgrades SoftBank Group to Ba2, outlook stable",
+      "url": "https://www.investing.com/news/stock-market-news/softbank-group-upgraded-to-ba2-by-moodys-outlook-stable-93CH-4242809",
+      "date": "2025-09-17"
+    },
+    {
+      "label": "SoftBank Group — SoftBank Group and Intel sign USD 2bn investment agreement",
+      "url": "https://group.softbank/en/news/press/20250819",
+      "date": "2025-08-19"
+    },
+    {
+      "label": "DigitalBridge — DigitalBridge and La Caisse complete acquisition of Yondr Group",
+      "url": "https://www.digitalbridge.com/news/2025-07-01-digitalbridge-and-la-caisse-complete-acquisition-of-yondr-group",
+      "date": "2025-07-01"
+    },
+    {
+      "label": "Converge Digest — Takanock lands USD 500m (DigitalBridge and ArcLight) for on-site data-centre power",
+      "url": "https://convergedigest.com/takanock-lands-500m-for-on-site-data-center-power/",
+      "date": "2025-06-27"
+    },
+    {
+      "label": "SoftBank Group — Global tech alliance launches Stargate UAE",
+      "url": "https://group.softbank/en/news/press/20250522",
+      "date": "2025-05-22"
+    },
+    {
+      "label": "SoftBank Group — Announcement regarding follow-on investments in OpenAI (up to USD 40.0bn)",
+      "url": "https://group.softbank/en/news/press/20250401",
+      "date": "2025-04-01"
+    },
+    {
+      "label": "SoftBank Group — Acquisition of Ampere Computing Holdings LLC (USD 6.5bn; sellers Carlyle, Oracle, Arm)",
+      "url": "https://group.softbank/en/news/press/20250320_0",
+      "date": "2025-03-20"
+    },
+    {
+      "label": "SoftBank Group — Announcing The Stargate Project (initial equity funders SoftBank, OpenAI, Oracle, MGX)",
+      "url": "https://group.softbank/en/news/press/20250122",
+      "date": "2025-01-22"
+    },
+    {
+      "label": "SoftBank Group — Corporate data",
+      "url": "https://group.softbank/en/about/profile"
+    },
+    {
+      "label": "SoftBank Group — General stock information (code 9984, TSE Prime, fiscal year April–March)",
+      "url": "https://group.softbank/en/ir/stock/info"
+    },
+    {
+      "label": "SoftBank Group — Shareholder composition",
+      "url": "https://group.softbank/en/ir/stock/ownership"
+    },
+    {
+      "label": "SoftBank Group — Investor relations calendar (Q2 FY2026 results on 10 November 2026)",
+      "url": "https://group.softbank/en/ir"
+    },
+    {
+      "label": "SoftBank Group — Credit ratings",
+      "url": "https://group.softbank/en/ir/stock/rating"
+    },
+    {
+      "label": "SoftBank Group — Officer profile: Masayoshi Son",
+      "url": "https://group.softbank/en/about/officer/son"
+    },
+    {
+      "label": "SoftBank Group — Officer profile: Yoshimitsu Goto",
+      "url": "https://group.softbank/en/about/officer/goto"
+    },
+    {
+      "label": "SoftBank Group — Officer profile: Rene Haas",
+      "url": "https://group.softbank/en/about/officer/haas"
+    },
+    {
+      "label": "SoftBank Group — Officer profile: Ken Miyauchi",
+      "url": "https://group.softbank/en/about/officer/miyauchi"
+    },
+    {
+      "label": "SoftBank Vision Fund — Team: Vikas J. Parekh",
+      "url": "https://visionfund.com/team/vikas-j-parekh"
+    },
+    {
+      "label": "SoftBank Vision Fund — Team",
+      "url": "https://visionfund.com/team"
+    },
+    {
+      "label": "DigitalBridge — Portfolio",
+      "url": "https://www.digitalbridge.com/portfolio"
+    },
+    {
+      "label": "DigitalBridge — About: leaders and advisors",
+      "url": "https://www.digitalbridge.com/about"
+    },
+    {
+      "label": "Japan Credit Rating Agency — SoftBank Group rating list",
+      "url": "https://www.jcr.co.jp/en/ratinglist/corp/9984"
+    },
+    {
+      "label": "stockanalysis.com — SoftBank Group (TYO: 9984) quote and statistics (aggregator)",
+      "url": "https://stockanalysis.com/quote/tyo/9984/"
+    },
+    {
+      "label": "SB Energy — PORTS-Pike Technology Campus microsite",
+      "url": "https://portscampus.com/"
+    },
+    {
+      "label": "Invenergy — our capabilities (equity partnership with InfraBridge in its North American natural gas portfolio since 2018)",
+      "url": "https://wwww.invenergy.com/expertise/our-capabilities"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}
