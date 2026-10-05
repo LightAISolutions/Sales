@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-10-04 ~09:33 PM → ~10:00 PM EST (§3 row 12's prompt — F-I3: Apollo, Ares, Stonepeak — written as §15, then this save; two attended turns, no compaction)
+**Repo version:** v07.93r → v07.94r (one push; this save is a housekeeping commit, no bump)
+**Branch:** `claude/happy-hawking-u7vin4`
+
+### What was done
+
+- **`phase-f-action-plan.md` §15** — the F-I3 paste-in prompt (Opus 5.5 xhigh), section for section on §14, also given in chat. §3 row 12 points at it (its Why cell names the two 10-K filers, Stonepeak's private record, the covered ties `apex-clean-energy` / `prime-data-centers` / `dominion-energy`, and the re-measured counts); the "Prompts for these sessions" paragraph lists §15. Landed as v07.94r (d9deeaca), merged.
+- **What §15 adds over §14:** F-I2's alias rule (only uncovered controlled platforms go in `aka[]` — softbank's DataBank/Zayo in, Vantage/Switch out; covered platforms take reciprocal edges); F-I2's two process slips as rules (`$` content only via files or `<<'EOF'`; every `*.sec.gov` request through curl with `SEC_USER_AGENT`, never WebFetch — Form ADV on adviserinfo.sec.gov included); per-company identity questions tied to the dossier carrying each claim; two known corrections; today's baselines (Classroom v02.00g → v02.01g, Classroomgs 41/50, 71 lessons / 8 tracks / 220 gate cases, registry 211 → 214, `capital` 15 → up to 18); the Megmeet paragraph testing F-I2's "capital is a door only at SB Energy" against these three firms' platforms.
+
+### Where we left off
+
+- All work committed and merged (v07.94r). **F-I3 itself has not run** — the prompt waits in §15 for a fresh Opus 5.5 xhigh session.
+- Inbound counts measured 10/4 for that session: `\bApollo\b` 14 (coolit and cipher-mining are collisions, mgx career-only), `\bAres\b` 11 (delta-electronics' "Ares Chen"), `\bStonepeak\b` 2; platform names Cologix 6, Montera 3, Stream Data Centers 2, AMPYR 1 (fluence — possibly a different AMPYR).
+
+### Key decisions made
+
+- **Dominion's "all-stock" line is corrected inside F-I3's step 7**, minimally from the May 2026 merger 8-K (0.8138 NextEra shares plus a pro rata share of USD 360M cash), because F-I3 revises `dominion-energy` for the Stonepeak edge anyway; its pins stay loud and the full refresh stays `profiler Dominion Energy`'s. Offered to the developer as removable (delete item (2) under TWO KNOWN CORRECTIONS before pasting); no answer yet, so it stands as written.
+- **Segment hypothesis in §15:** all three `capital` · challenger, Apollo the incumbent candidate through Stream; adjacent seats only on the Quinbrook precedent (the firm itself develops or operates).
+
+### Known issues (left to the F-I3 identity check)
+
+- `softbank` v1 records Ares preferred equity in SB Energy; `sb-energy` v1 does not name Ares.
+- `xai` v6 names neither Apollo nor Valor; `vantage` v10 does not name Ares (the row's USD 2.4B facility).
+- Unverified: Montera Infrastructure's ownership, the Japan BESS platform's legal name ("Kingdom" in the row), whether fluence's AMPYR is Stonepeak's.
+- Process slip this session: reminders and session context were surfaced at the end of the first response instead of its start.
+
+### Active context
+
+- Branch `claude/happy-hawking-u7vin4`; repo v07.94r; Classroom GAS v02.00g; Profiler page v01.93w (unchanged). Coverage 211 dossiers; `capital` 15 (9 · 3 · 3). CHANGELOG 89/100; Classroomgs 41/50, Profilergs 40/50.
+- `build-classroom-segments.py --check` on 10/4: assurance, software-and-optimization and insurance-and-risk-transfer due, all pin-only.
+- Weekly limit at `allowed_warning` since F-I2 (resets Sat 10/10 7:00 AM ET). Toggles unchanged (START On, BOOKENDS Off, TIMING On, END On). Reminders untouched — the Dominion reframe reminder is the developer's to dismiss (row 10 landed it at v07.91r).
+
+### Recommendation for next session
+
+- **Paste `phase-f-action-plan.md` §15 into a fresh Opus 5.5 xhigh session** — F-I3 (Apollo, Ares, Stonepeak): identity first (two 10-K filers, Stonepeak through Form ADV), `aka[]` on F-I2's rule before the step-7 grep, the two known corrections, segment lessons regenerated (Classroom → v02.01g), §3 row 12 flipped — so wave B (row 15, by Wed 10/14) seats the full capital roster.
+
+**To continue:** type `run the F-I3 prompt in phase-f-action-plan.md §15` (or paste §15 directly).
+
+## Previous Sessions
+
 **Date:** 2026-10-04 ~07:34 PM → ~09:05 PM EST (§3 row 11: F-I2 — SoftBank, SB Energy, Blue Owl; one attended turn with one context compaction mid-reconciliation)
 **Repo version:** v07.92r → v07.93r (one push)
 **Branch:** `claude/awesome-ride-130y7a`
@@ -51,54 +91,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run §3 row 12, **F-I3 — Apollo, Ares, Stonepeak** (Opus 5.5 xhigh), with the §14 prompt as its pattern: verify identity first (two 10-K filers), populate `aka[]` before the step-7 grep, and expect the `capital` roster to reach 18 before wave B (row 15, by Wed 10/14), which now teaches the DigitalBridge close as fact.
 
 **To continue:** type `write the F-I3 prompt` (then paste it into a fresh Opus 5.5 xhigh session).
-
-## Previous Sessions
-
-**Date:** 2026-10-04 04:55 PM → ~05:35 PM EST (§3 row 10: the Dominion reframe — `scenario-utilities-objection` re-dated after its 1 October premise passed — then the row 11 prompt and this save; two attended turns, no compaction)
-**Repo version:** v07.90r → v07.92r (two pushes: v07.91r the reframe, v07.92r §14 prompt + this save)
-**Branch:** `claude/vigilant-keller-j7d4d2`
-**Model:** Fable 5.1 (`claude-fable-5-1`), no substitution; `get_session` reports the session launched at effort **xhigh** (the row asked for high) and exposed NO `usage.cost_usd`; rate limit `allowed_warning` on the seven-day window, no overage, resets Sat 10/10 7:00 AM ET
-
-### What was done
-
-- **Outcome (c) — the solicitation had not issued on the public record.** On 4 October Dominion Energy Virginia's own "Solar, Onshore Wind & Energy Storage Proposals" page (curled, not summarised) still reads that the purchase solicitation "is expected to be issued on October 1, 2026", directs bidders to the CE-8 registration portal, posts the 2026 Development Asset Acquisition RFP and no purchase-solicitation document; the newsroom's releases since 1 September (14 Sep, the merger's Virginia benefits package; 1 Oct, a South Carolina efficiency programme) carry no issue notice; no new date is published. The room was re-dated to the slip rather than rewritten: the 2025 purchase solicitation (dated 8 Oct 2025 — intent to bid 20 Jan, proposals 9 Feb 2026, up to 500 MWac of storage on 15-year terms, delivery by end-2029) read first-hand as the model, and the dispatchable-generation solicitation (bid form open since 1 July, final submissions 5 pm 18 December) carried as the one published procurement gate.
-- **"All-stock" is wrong as worded.** The NextEra Form 8-K of May 2026 and the Dominion joint proxy of 28 July 2026 describe 0.8138 NextEra shares plus a pro rata share of an aggregate USD 360 million cash payment, no election, no CVR, and neither uses the phrase. Corrected in the scenario with the documents named; `dominion-energy` v1 flagged (it carries the cash in `relationships[8].scale` and still says all-stock). Both votes passed 3 Sep (Dominion 8-K Item 5.07: 671,317,253 for / 8,566,156 against; NextEra share issuance 1,612,635,616 for). SCC release of 22 Sep (PUR-2026-00112): local hearings 7 Oct Newport News and 9 Oct Fairfax, public witnesses 5, 9, 10 Nov, evidentiary from 17 Nov; SC docket 2026-186-EG hearing 8 Dec (the 11 Aug utility-consumer notice).
-- **Seven sections changed** (`the-room`, `what-the-record-says`, `the-position`, `beat-1`, `beat-3`, `claims-ledger`, `what-the-record-does-not-say`; `beat-2`, `the-mechanism-behind-it`, `debrief` byte-identical); all three beats hold; `updated` 2026-10-04; pins unchanged (dossier v1 @2026-09-03, landscape @2026-09-26); third `revisions[]` entry; **reviewBy 2026-10-01 → 2026-12-02** — the landscape's own review date binds before the scenario's 18 December gate (C5 §6; the AEP and Hut 8 precedents), with 18 December carried in the ledger.
-- **Classroom GAS v01.98g → v01.99g;** `Classroomgs.changelog.md` rotated first (the whole 2026-09-16 group, 11 sections v01.49g–v01.59g, SHA-enriched 11 of 11; archive 59) → **40/50**. CHANGELOG 86/100 → 87/100 after this save.
-- **Verification:** `--strict` 0 moved, no structural findings, the scenario no longer listed under review dates; `--check` 19 due, all pin-only (left alone, G3); content checker 71 / 8 / 220, 0 / 0; pipeline P1 (plan docs) + P13 only — no P3/P7/P8; selftest 15 / 0; Playwright render at contributor via a Node-built fake backend (payloads from `Classroom.gs` run in a vm sandbox) — 12 headings, 0 page errors.
-- **v07.92r:** §14 = the row 11 paste-in prompt (F-I2 — SoftBank, SB Energy, Blue Owl; Opus 5.5 xhigh) appended to `phase-f-action-plan.md`; row 11 points at it; the DigitalBridge close is reported completed 30 Sep (trade press — the session verifies first-hand).
-
-### Where we left off
-
-- All changes committed; `main` carries v07.91r (merged, `8c094633` is the workflow's post-merge commit) and v07.92r is on its way via the auto-merge workflow.
-- **Phase F position:** rows 1–10 landed. Open: **row 11 (F-I2, Opus 5.5 xhigh, prompt in §14, by Wed 10/7)**, row 12 F-I3, row 13 ERCOT, row 14 PJM, waves B–D (rows 15–17, week 3), row 18 Megmeet after the Q3 filing.
-- **Next: paste `phase-f-action-plan.md` §14 into a fresh Opus 5.5 xhigh session** — F-I2. It verifies the DigitalBridge close from the 8-K, writes SoftBank once with DigitalBridge's platforms under it, reads SB Energy's S-1 (and whether the IPO has priced), decides Blue Owl's capital role on the record, regenerates the stale segment lessons under the step-5 sub-rule (Classroom v01.99g → **v02.00g**), and leaves `landscape-capital-2026-09` / `scenario-capital-objection` for wave B.
-
-### Key decisions made
-
-- A scenario's `reviewBy` is bound by its landscape's review date even when the prompt names a later gate; the later gate is carried in the ledger and the reason is written in the ledger intro and the CHANGELOG.
-- "Not issued" is stated as "not issued on the public record", with the portal caveat: the solicitation's materials sit behind bidder registration, so a bidder may hold what the page does not show.
-- Primary documents a dossier predates are cited in the ledger by title and date (the 24 September neoclouds precedent); the dossier's own inconsistency (cash in `scale`, all-stock in `note`) is flagged in the row's source, never edited from Classroom.
-- A row's launch effort is recorded as `get_session` reports it, not as the plan asked for it.
-- Prompts for plan rows live in the plan (§§4–14), each row pointing at its section; the prompt is given in chat as well.
-
-### Known issues
-
-- `dominion-energy` v1 (2026-09-03) is a `profiler Dominion Energy` refresh candidate: the "all-stock" label, the 3 September vote result, the SCC hearing calendar, and its "final order expected January 29, 2027 per the Q2 2026 deck" line (the deck's approval-timeline slide shows quarters only; the SC procedural schedule — proposed order 29 Dec, final order by 29 Jan per press — is the likelier source and was not re-sourced).
-- Dominion's purchase solicitation can still issue any day; when it does, branch (a) of §13 applies and `scenario-utilities-objection` re-dates to the day after issue.
-- `landscape-utilities-2026-09`'s `the-indicators` row dated "1 October 2026" (Florida's compliant-tariff deadline) has passed — wave C (row 16) carries it, along with Dominion's slip.
-- `landscape-neoclouds-2026-09` `reviewBy` 2026-10-08 shows as due by 10/9 either way; `scenario-capital-objection` reviewBy 10/14 (wave B's gate).
-- The newsroom index at news.dominionenergy.com answers 403 to a plain fetch; the overview page reads through the fetch tool.
-- Pre-existing report-pin warnings (fluence v10, jupiter-power v7, jinko v6, oracle v6) unchanged; `verify-profiler-roles.py` still fails two progress-isolation fixtures (pre-existing).
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 208 dossiers, page v01.93w, GAS v01.40g (changelog 40/50). **Classroom:** GAS v01.99g, page v01.16w, content checker 0 errors; `Classroomgs.changelog.md` 40/50. **CHANGELOG** `Sections: 87/100`.
-- **Active reminders (2):** the Dominion reframe (run this session — the developer's to dismiss), the AIDC power-conversion re-run after Megmeet's Q3 (by 10/31).
-
-### Recommendation for next session
-
-- **Paste `phase-f-action-plan.md` §14 into a fresh Opus 5.5 xhigh session** — F-I2 (SoftBank, SB Energy, Blue Owl): verify the DigitalBridge close from the 8-K first, write the three dossiers and guides, reconcile the ~40 inbound mentions, regenerate the stale segment lessons (Classroom → v02.00g), flip §3 row 11, and hand off to wave B. Run it by Wed 10/7; F-I3 (row 12) follows.
-
-**To continue:** type `run F-I2` (or paste §14 directly).
