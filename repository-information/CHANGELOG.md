@@ -3,11 +3,50 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.94r] — 2026-10-04 09:40:01 PM EST
+
+> **Prompt:** "Write the §3 row 12 prompt for F-I3 (Apollo, Ares, Stonepeak; Opus 5.5 xhigh), using §14 as its pattern"
+
+The paste-in prompt for §3 row 12, F-I3 (Apollo, Ares, Stonepeak), appended to `phase-f-action-plan.md` as §15. Row 12 now points at it.
+
+### Added
+
+- **`repository-information/phase-f-action-plan.md` §15** — the F-I3 prompt. Model line: Opus 5.5 xhigh, the plan's own, because Apollo's and Ares's 10-Ks are long first-party filings. It follows §14's structure section for section. It adds what F-I2 taught:
+  - **The alias rule.** Only uncovered controlled platforms go in `aka[]`, as in `softbank`'s list (DataBank and Zayo in, Vantage and Switch out). Covered platforms (`apex-clean-energy`, `prime-data-centers`) take reciprocal edges, and the dossiers that name them stay their own inbound sets.
+  - **F-I2's two process slips.** An unquoted heredoc expanded `$` amounts, so `$` content goes only through files or `<<'EOF'`. A subagent fetched sec.gov through WebFetch, which cannot send `SEC_USER_AGENT`, so every `*.sec.gov` request goes through curl, Form ADV on adviserinfo.sec.gov included.
+  - **Inbound counts, re-measured today** by word-bounded grep against the §11.3 rows' 10 / 8 / 2:
+    - `\bApollo\b` 14 dossiers: coolit and cipher-mining are collisions (HPE's Apollo servers, Cipher's Apollo site) and mgx's hit is career-only.
+    - `\bAres\b` 11: delta-electronics' hit is a person.
+    - `\bStonepeak\b` 2.
+    - Platform names: `\bCologix\b` 6 and `\bMontera\b` 3 widen Stonepeak's set, and "Stream Data Centers" 2 adds to Apollo's.
+  - **Identity questions per company**, each tied to the dossier that carries the claim:
+    - Apollo: Stream's share and date; the Anthropic–Stream lease as reported; the Broadcom–Apollo–Blackstone vehicle's figure type; the xAI / Valor financing, which `xai` v6 does not record; the STACK European carve-out.
+    - Ares: the Apex minority-stake sale; who controls Prime after Macquarie's exit; the Vantage facility, which `vantage` v10 does not record; SB Energy's preferred equity; X-energy's voting stake.
+    - Stonepeak: private, so Form ADV and counterparties' filings; Cologix, Digital Edge, Montera (ownership unverified), AMPYR, the Japan BESS platform, and CVOW, which is noncontrolling and fails §11.1 test 2.
+  - **Two corrections the step-7 pass is to make:**
+    - Ares's SB Energy preferred equity: `softbank` v1 records it and `sb-energy` v1 does not.
+    - `dominion-energy` v1's "all-stock" description of the NextEra merger, which row 10 found wrong: a minimal fix from the May 2026 merger 8-K, pins left loud, the full refresh left to `profiler Dominion Energy`.
+  - **The step-5 sub-rule at today's baselines:** Classroom GAS v02.00g → v02.01g; Classroomgs changelog 41/50; 71 lessons / 8 tracks / 220 gate cases; registry 211 → 214; `capital` 15 → up to 18.
+  - **The Megmeet hand-off paragraph**, testing F-I2's "capital is a door only at SB Energy" against these three firms' platforms.
+
+  It forbids ERCOT, PJM, the Dominion refresh and any Classroom wave.
+
+### Changed
+
+- **`phase-f-action-plan.md`** — §3 row 12's Session cell points at §15. Its Why cell now names both 10-K filers and Stonepeak's private record, the covered ties (`apex-clean-energy`, `prime-data-centers`, `dominion-energy`) and the re-measured counts. The "Prompts for these sessions" paragraph adds §15.
+- **README.md** — timestamp and repo version.
+
+### Notes
+
+- No dossier, page, GAS or diagram changed, and no inbound count was written into a dossier or the ledger: the §11.3 rows stay the F-I3 session's to rewrite.
+- Not verified here: Montera Infrastructure's ownership, the Japan BESS platform's legal name, and whether fluence's AMPYR is Stonepeak's AMPYR. The prompt leaves each to the session's identity check.
+- CHANGELOG `Sections: 88/100` → 89/100 (no rotation). The developer's reminders are untouched.
 
 ## [v07.93r] — 2026-10-04 08:54:32 PM EST
 

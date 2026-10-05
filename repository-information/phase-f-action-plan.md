@@ -127,7 +127,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | 9 | ~~Sat 10/3 – Tue 10/6~~ **Landed Sun 10/4 (v07.89r)** — prompt in §12 | **Classroom wave A** — re-author `landscape-neoclouds-2026-09`, `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1, F-N1, F-N2 and row 5, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their five rehearsals — prompt in §12 | Fable 5.1 · xhigh (no substitution) | Done, in one session and one commit. G3 counts — neoclouds 9 of 9 sections changed (12 members, 2 · 9 · 1; the 30 September gate failed, Fluidstack's accounts overdue; ClusterMAX explained through `semianalysis` v1; reviewBy → 2026-10-08, the Firmus prospectus); hyperscalers 8 of 9 (10 members, 5 · 5 · 0; closure holds at ten, (bb1) instruments stay disabled; a fourth direction for the two leaders from another market; reviewBy stays 2026-12-31); aidc landlords 7 of 9 (38 members, 9 · 18 · 11; four routes, 27 bet rows, 25 of 38 publish no revenue; reviewBy → 2026-11-02, the Upper Burrell moratorium). Five rehearsals re-judged, all fifteen beats hold; changed sections 9 / 1 / 2 / 1 / 0. Segments: 19 due, all pin-only, none regenerated (G3). `CL_DRILL_INV_CAP` 2400 → 3200 (2,491 items). Classroom v01.98g |
 | 10 | ~~Sat 10/3 – Tue 10/6~~ **Landed Sun 10/4 (v07.91r)** — prompt in §13 | Reframe the Dominion rehearsal (Classroom, its own session) | Fable 5.1 · launched at xhigh (the row asked for high; no model substitution) | Done, in one session and one commit. **Outcome (c) — not issued on the public record:** on 4 October Dominion's own solicitation page still reads that the purchase solicitation "is expected to be issued on October 1, 2026", its materials sit behind the CE-8 registration portal, no document is posted, the newsroom carries no issue notice and no new date is published — so the room is re-dated to the slip rather than rewritten, the 2025 purchase solicitation (8 Oct 2025; proposals 9 Feb 2026; up to 500 MW of storage on 15-year terms) read first-hand as the model, and the dispatchable-generation solicitation's 18 December deadline carried as the one published procurement gate. **"All-stock" is wrong**: the May 2026 merger 8-K and the July 2026 joint proxy describe 0.8138 NextEra shares plus a pro rata share of USD 360 M in cash, no election, no CVR, and neither uses the phrase — corrected in the scenario; `dominion-energy` v1 flagged for a `profiler Dominion Energy` refresh (it carries the cash in `relationships[8]` and still says all-stock). Both shareholder votes passed 3 Sep (Dominion 671.3 M for / 8.6 M against); SCC PUR-2026-00112 local hearings 7 and 9 Oct, evidentiary 17 Nov; SC docket 2026-186-EG hearing 8 Dec. Seven sections changed, all three beats hold; reviewBy 10/1 → **12/2** (the landscape's bound binds before the scenario's 12/18 gate, C5 §6). Classroom v01.99g; the GAS changelog rotated (11 sections, 2026-09-16 group, SHA-enriched) → 40/50. The reminder is left for the developer to dismiss |
 | 11 | ~~Once the DigitalBridge close is confirmed (reported completed 30 Sep), and by Wed 10/7 either way~~ **Landed Sun 10/4 (v07.93r)** — prompt in §14 | **F-I2** — SoftBank, SB Energy, Blue Owl | Opus 5.5 · xhigh | Done, in one session with six research subagents (two per company). **The DigitalBridge close was verified first**, from DigitalBridge's completion Form 8-K (CIK 1679688, accession 0001104659-26-112148): merger completed 30 September 2026 at USD 16.00 a share in cash, so SoftBank's dossier was written once, with the close as fact and the DigitalBridge platforms as controlled by its manager. Identity check corrected all three plan rows: SoftBank bought the DigitalBridge manager, not its funds (USD 3.1bn equity value against ~USD 4.0bn enterprise value, each stated as itself); SB Energy's Milam County is ~753 MW-IT in the S-1 (1.2 GW is OpenAI's figure, unreconciled), the PORTS gas belongs to a different SoftBank affiliate and the IPO is unpriced; Blue Owl's Hyperion USD 27bn is total development cost against USD 7.0bn of its funds' cash, and its fall was 43.4%, not 'more than 45%'. Roles — `capital`: SoftBank and Blue Owl incumbents (15 members, 9 · 3 · 3); SB Energy challenger in `aidc-developers-and-landlords` and, not adjacent as hypothesised, challenger in `storage-developers-and-ipps`. Step 7: 66 raw aka hits (35 · 14 · 17), 29 dossiers revised with reciprocal edges, three of them corrected (`abb`, `iren`, `meta`); `vantage.study.json` corrected minimally; 11 report pins re-verified edge-only, `abb` and `meta` left loud. Step-5 sub-rule: the 11 segments with section changes regenerated, 8 pin-only left, Classroom.gs v02.00g. Row 15's DigitalBridge fallback is retired |
-| 12 | After row 11 | **F-I3** — Apollo, Ares, Stonepeak | Opus 5.5 · xhigh | Was November. Two 10-K filers. Ares ties to `apex-clean-energy`, Apollo to Stream |
+| 12 | After row 11 | **F-I3** — Apollo, Ares, Stonepeak — prompt in §15 | Opus 5.5 · xhigh | Was November. Two 10-K filers (Apollo, Ares); Stonepeak is private, so its record is Form ADV, its own releases and its counterparties' filings. Ares ties to `apex-clean-energy` and `prime-data-centers`, Apollo to Stream, Stonepeak to `dominion-energy` (CVOW, 50% noncontrolling). Inbound, measured 10/4: 14 · 11 · 2 raw word-bounded hits (three collisions named in §15). Stonepeak's step 7 is wider through its platforms: Cologix 6, Montera 3 |
 | 13 | Week 2 | **ERCOT**, with the grid-operator schema note, category and Profiler page change | Fable 5.1 · xhigh | Was the last row. 73 inbound dossiers, the corpus's largest step 7. See the note below |
 | 14 | After ERCOT | **PJM** | Fable 5.1 · high | 37 inbound dossiers; ERCOT has settled the schema |
 
@@ -145,7 +145,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 |---|---|---|---|---|
 | 18 | After the filing | `profiler Megmeet`, then `profiler report competitive: AIDC power conversion` | Opus 5.5 · xhigh | The standing reminder. Raise Mitsubishi Electric's scope question here |
 
-**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High); §8–§11 are rows 5–8 as run; **§12 is row 9's (Classroom wave A, Fable 5.1 xhigh)** — the first Classroom-wave prompt, and the pattern for waves B–D (rows 15–17); **§13 is row 10's (the Dominion reframe, Fable 5.1 High)** — the first single-scenario reframe prompt, and the pattern for any later one; **§14 is row 11's (F-I2, Opus 5.5 xhigh)** — the first Profiler prompt written after the step-5 sub-rule, and the pattern for F-I3 (row 12). §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
+**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High); §8–§11 are rows 5–8 as run; **§12 is row 9's (Classroom wave A, Fable 5.1 xhigh)** — the first Classroom-wave prompt, and the pattern for waves B–D (rows 15–17); **§13 is row 10's (the Dominion reframe, Fable 5.1 High)** — the first single-scenario reframe prompt, and the pattern for any later one; **§14 is row 11's (F-I2, Opus 5.5 xhigh)** — the first Profiler prompt written after the step-5 sub-rule, and the pattern for F-I3 (row 12); **§15 is row 12's (F-I3, Opus 5.5 xhigh)**, adapted from §14 with F-I2's alias rule (only uncovered controlled platforms go in aka[]), its two process slips and the counts re-measured on 10/4. §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
 
 **ERCOT and PJM — decided 2026-09-26: cover both, as grid operators.** The developer knows both well and wants them in. The category is a new **`grid-operator`** (label 'Grid operator'), not the generic `other` the earlier recommendation named, so the tag says what they are. That adds one entry to the Profiler page's category list, a page change made in the ERCOT session. The work is **two sessions, ERCOT first**: 73 inbound dossiers alone is a larger step 7 than BlackRock's 42 raw hits, which filled most of F-I1. The earlier reasoning stands:
 - **Why:** they are the two most-cited uncovered entities in the corpus (73 and 37 dossiers). Curating them converts roughly 110 derived mentions into real edges, and their rules (Batch Zero and SB 6; the capacity auction) are what half the utilities and developers in the corpus are exposed to.
@@ -1457,4 +1457,229 @@ At the end: one line per company (identity verdicts, segments and roles, inbound
 calendar row); the DigitalBridge close as verified, with the document; the segments regenerated and the
 Classroom version written; the --check and content-checker final lines; and the session's cost from
 get_session's usage.cost_usd if it exposes one, with the rate-limit status.
+```
+
+## 15 · Paste-in prompt — §3 row 12, F-I3: Apollo · Ares · Stonepeak (Opus 5.5 · xhigh)
+
+Written 2026-10-04 (v07.94r), after row 11 landed (v07.93r). Row 12 has no date gate of its own; it is the last capital session before Classroom wave B (row 15, by Wed 10/14). It follows §14's pattern, with what F-I2 added:
+- **aka[] carries only uncovered controlled platforms.** `softbank` lists DataBank and Zayo but not Vantage or Switch, which have dossiers of their own. Covered platforms (here `apex-clean-energy` and `prime-data-centers`) take a reciprocal edge instead.
+- **F-I2's two process slips:** an unquoted heredoc expanded `$` amounts, and a subagent fetched sec.gov through WebFetch without `SEC_USER_AGENT`.
+- **Inbound counts, measured today:** 14 · 11 · 2 raw word-bounded hits, against the rows' 10 · 8 · 2, with the collisions named. The platform-name sets widen Stonepeak's step 7 well past its two direct hits: Cologix 6, Montera 3.
+- **Today's baselines:** Classroom GAS v02.00g → v02.01g; the `capital` roster at 15, reaching 18 if all three seat.
+
+The model line is the plan's own: Apollo's and Ares's 10-Ks are long first-party filings, so Opus 5.5 at xhigh (§2).
+
+```text
+Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 12 as a fresh
+session: F-I3 — Apollo, Ares and Stonepeak — the last three capital names Phase F adds before Classroom
+wave B. This session runs on Opus 5.5 at xhigh (§2: Apollo's and Ares's 10-Ks are long first-party
+filings to mine, and the §11.3 Model cells already read "Opus 5.5 xhigh" — keep them). Opus draws on the
+shared weekly limit, not the Fable half, and that limit was already at allowed_warning when F-I2 closed
+(seven-day window, resets Sat 10/10 7:00 AM ET) — check Settings → Usage first. If the cap binds
+mid-session, land what is written, record every deferred slug by name in the ledger and the hand-off, and
+stop — never skim a reconciliation to finish.
+
+WHY NOW: no date gate of its own — row 12 follows row 11, which landed at v07.93r. Classroom wave B (§3
+row 15, by Wed 10/14) re-authors landscape-capital-2026-09 and scenario-capital-objection (reviewBy
+10/14) once, and needs every capital dossier on the record first: the roster is 15 today (9 · 3 · 3) and
+reaches 18 if all three seat. Do NOT run ERCOT or PJM (rows 13–14 follow this one), the
+`profiler Dominion Energy` refresh, or any Classroom wave.
+
+STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+HEAD || git rebase origin/main; git fetch --unshallow origin main before any pin read. If the Wednesday
+10/7 Classroom pipeline run committed before you start, the rebase picks it up. Read the counters after
+the rebase: repository-information/CHANGELOG.md is 89/100 at v07.94r (no rotation expected);
+live-site-pages/gs-changelogs/Classroomgs.changelog.md is 41/50 and Profilergs.changelog.md 40/50.
+
+READ FIRST, in this order: repository-information/SESSION-CONTEXT.md (the F-I2 hand-off);
+phase-f-action-plan.md §2, §3 rows 11–17 and this §15 (§14 is the F-I2 prompt this one adapts, and the
+v07.93r CHANGELOG section is F-I2 as it landed — the latest capital-session pattern);
+PROFILER-COVERAGE-PLAN.md §2, §7, §11.1 (the buying-authority test — an investor passes it through a
+platform it controls and fails it through one it merely funds, lends to or holds a minority of) and
+§11.3 (the three F-I3 rows are yours); .claude/rules/profiler-app.md (Profiler Command — step 1a
+identity, step 5 and its segment sub-rule, step 7 reconciliation; Profiler Prep Command; Scheduled
+Refreshes); repository-information/PROFILER-SCHEMA.md (Naming and renames, Segments registry, Refresh
+calendar); repository-information/PROFILER-STYLES.md (active style). Read softbank, blue-owl,
+blackrock (v2), kkr, cpp-investments (v2), energy-capital-partners and quinbrook as the house pattern for
+an investor that signs for nothing itself, and their registry aka[] lists as the alias pattern. Then the
+dossiers that carry the claims you will test: apex-clean-energy (v1), prime-data-centers (v3) and
+macquarie (v2) for Ares's two covered platforms; x-energy (v1), engie-north-america (v2), sb-energy (v1)
+and softbank (v1) for Ares's other positions; fluidstack (v4), anthropic (v4), exelon (v1),
+stack-infrastructure (v9), blue-owl (v1), flexgen (v7), nscale (v4), nvidia (v13) and xai (v6) for
+Apollo's; dominion-energy (v1) and the Cologix and Montera mentions listed under RECONCILIATION for
+Stonepeak's.
+
+THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+profileVersion 1, active style) and study guide (schema v2) with its lesson plan under
+repository-information/study-prep/<slug>/, written skeleton-first and filled by Edit. Proposed slugs:
+apollo, ares, stonepeak; category hypothesis ["investor"] for all three. Populate aka[] BEFORE the
+step-7 grep, on F-I2's rule: an UNCOVERED platform the record puts under the firm's control is an alias
+(softbank lists DataBank and Zayo, kkr ContourGlobal and Zenobē); a COVERED platform is not (Vantage and
+Switch are not in softbank's list) — it takes a reciprocal edge, and the dossiers that name it are its
+own inbound set, not the investor's. Candidates, each to be kept only on the record:
+- Apollo — Apollo Global Management, Inc.; Apollo Asset Management; Athene / Athene Holding; Apollo
+  Infrastructure; Apollo Capital Solutions; Stream Data Centers (if majority-controlled); the European
+  colocation business carved out of STACK in April 2025 (blue-owl and stack-infrastructure record it,
+  "per Apollo") under whatever name it trades as now; and the Broadcom–Apollo–Blackstone chip vehicle or
+  Valor Compute Infrastructure only if the record names either as an Apollo-controlled vehicle. Bare
+  "Apollo" collides: HPE's Apollo servers in coolit, Cipher Mining's Apollo site in cipher-mining.
+- Ares — Ares Management Corporation; Ares Management; Ares Infrastructure and Power; Ares EIF (the
+  former Energy Investors Funds — kwh-analytics uses it); Ares Infrastructure Secondaries; Ares
+  Acquisition Corporation (the terminated X-energy SPAC's sponsor); Ares Japan DC Partners (with CPP);
+  and any data-centre platform that came with the GCP International acquisition, if the 10-K shows one.
+  Apex Clean Energy and Prime Data Centers are covered — reciprocal edges, not aliases. Bare "Ares"
+  collides: delta-electronics names a person, "Ares Chen".
+- Stonepeak — Stonepeak Partners LP; Stonepeak Infrastructure Partners; Cologix; Digital Edge; Montera
+  Infrastructure (only once its ownership is verified as Stonepeak's); AMPYR Distributed Energy; and the
+  Japan BESS platform the row calls "Kingdom", under its legal name — never grep "Kingdom" bare, it
+  returns every "United Kingdom". "AMPYR" may collide too: fluence names AMPYR's Wellington project in
+  Australia; decide whether that is the same group before counting it.
+Assign segments in live-site-pages/profiler-data/profiler-segments.json with a basis line, verified
+against the dossier you wrote and never against the category — hypothesis: all three capital ·
+challenger (§11.2: "second-tier capital, each controlling one real buyer"), unless the dossier records
+control of a buyer at incumbent scale — Apollo through Stream is the candidate; decide on the record. An
+adjacent seat elsewhere only where the dossier records the firm itself developing or operating (the
+Quinbrook precedent, row 6), never through a platform that holds a seat of its own. Then the registry
+sync, the graph build, a calendar row per company (Apollo, NYSE APO, and Ares, NYSE ARES, are listed —
+take each Q3 2026 results date from its own IR site and mark it unconfirmed until announced; Stonepeak
+is private and gets a cadence row), README tree entries, and rewrite and flip your §11.3 rows with a
+premise verdict per clause.
+
+IDENTITY (step 1a) — establish each of these, do not assume it; rows 6, 7, 8 and 11 each found all three
+of their plan rows wrong somewhere:
+- Apollo: the registrant (Apollo Global Management, Inc., NYSE APO — the FY2025 10-K and the Q2 2026
+  10-Q) and how Athene sits inside it since the January 2022 merger: the segment split says which
+  balance sheet funds what. Stream Data Centers — the date, the share (majority or minority) and the
+  powered-land figure ("Nov 2025; 4 GW+", per the row) from Apollo's and Stream's own releases; exelon v1
+  carries Stream's Elk Grove Village campus (260 MW, ComEd substation). The Anthropic–Stream ~1 GW lease
+  is The Information's report of 23 September (fluidstack v4): carry it as reported and unconfirmed
+  unless a party has announced it. The Broadcom–Apollo–Blackstone chip vehicle for Anthropic (June
+  2026, reported at about USD 35bn in fluidstack and anthropic): who announced it, Apollo's role
+  (equity, debt or arranger), and whether the figure is a commitment, a facility size or an asset value.
+  The xAI / Valor GPU financing: Apollo's role and amount from its own release — xai v6 names neither
+  Apollo nor Valor, so either an edge is missing or the row is wrong. The NVIDIA memoranda of 10 August
+  2026 are memoranda, not transactions. The STACK European carve-out (April 2025): closed or signed,
+  and its current name. FlexGen's USD 150m (2021) and Nscale's convertible: investor and lender
+  positions, not control; state each one's current status.
+- Ares: the registrant (Ares Management Corporation, NYSE ARES — FY2025 10-K, Q2 2026 10-Q). Apex Clean
+  Energy — majority-owned since November 2021 by Ares Infrastructure and Power funds (apex-clean-energy
+  v1) — and the minority stake Infralogic reported on 4 December 2025 as marketed through Lazard: sold,
+  signed or still marketed? Prime Data Centers — EC case M.11843 records Ares joining the Macquarie /
+  Data Realty Group joint control, and macquarie v2 records Macquarie's FY26 exit: who controls Prime
+  now, on what record. Vantage's "USD 2.4B facility (Feb 2026)" — arranger, lender or neither; vantage
+  v10 does not name Ares at all. SB Energy — softbank v1 says Ares holds preferred equity redeemed at the
+  IPO and sb-energy v1 does not name Ares: read the S-1 and correct whichever dossier is wrong or
+  incomplete, minimally. X-energy — x-energy v1 records Ares affiliates at 4.9% of Class A and 20.5% of
+  Class B: what that is in votes, and whether a board right goes with it. ENGIE North America's 49%
+  interests (905 MW, March 2025; 730 MW, January 2026) are non-controlling on ENGIE's own account —
+  state them so.
+- Stonepeak: private — there is no 10-K. The record is its own site and releases, its Form ADV (Parts 1
+  and 2A on adviserinfo.sec.gov — an SEC host, so SEC_USER_AGENT applies), its funds' Form D filings and
+  its counterparties' filings. Establish the adviser entity, headquarters and AUM as of a date; then the
+  share and a source for each platform: Cologix, Digital Edge, Montera Infrastructure (is it Stonepeak's
+  at all?), AMPYR Distributed Energy (22 September 2026 — signed or closed, and what it buys), the Japan
+  BESS platform under its real name, and CVOW — dominion-energy v1 records a 50% noncontrolling interest
+  bought in October 2024, with Stonepeak funding 48% of the remaining capital. Dominion builds and
+  operates CVOW, so on that asset Stonepeak fails §11.1 test 2 however large the cheque.
+- For all three: list the platforms each controls or co-controls that sign for batteries, MV gear,
+  generation or SSTs (§11.1 test 2), with the ownership share and a source for each, and keep them apart
+  from lending, preferred equity, minority stakes and fund commitments. None of the three is expected to
+  buy equipment itself; if one does, its productsAndServices and decision makers say so.
+
+THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. Verify every clause against first-party sources
+(filings and results releases from each company's own IR site, counterparties' filings and releases,
+regulator records), record a premise verdict per clause, and rewrite the cells. sec.gov answers 200 to
+the SEC_USER_AGENT string the probe sends since v07.68r — run check-source-reachability.py before
+planning Stage 2 and say what it read. Every request to any *.sec.gov host, a subagent's included, goes
+through curl with that exact string read from scripts/check-source-reachability.py. WebFetch cannot
+send it — in F-I2 one subagent fetched sec.gov through WebFetch with the default User-Agent — so say
+this in every subagent brief.
+
+RECONCILIATION (step 7) — measured 2026-10-04 by word-bounded grep of the current corpus (the plan rows
+say 10 / 8 / 2). \bApollo\b matches 14 dossiers: anthropic, blackrock, blackstone, blue-owl, brookfield,
+cipher-mining, coolit, flexgen, fluidstack, kkr, mgx, nscale, nvidia and stack-infrastructure. On a
+first read, coolit's hit is HPE's Apollo servers and cipher-mining's is Cipher's Apollo site
+(collisions), and mgx's is a hire from Apollo (career-only). \bAres\b matches 11: apex-clean-energy,
+blackstone, cpp-investments, delta-electronics, engie-north-america, kwh-analytics, macquarie,
+prime-data-centers, quinbrook, softbank and x-energy; delta-electronics' hit is "Ares Chen", a person.
+\bStonepeak\b matches 2: blackstone (a fundraising ranking) and dominion-energy (CVOW).
+The platform names widen the sets. Stonepeak: \bCologix\b 6 (aep, cyrusone, lambda, mitsubishi-electric,
+stack-infrastructure, tract); \bMontera\b 3 (cipher-mining, compass-datacenters, galaxy-digital — all
+three from one Texas governor's list); AMPYR 1 (fluence, possibly a different AMPYR). Apollo: "Stream
+Data Centers" 2 (exelon, fluidstack). The dossiers that name Apex Clean Energy (11) or Prime Data Centers
+are those companies' inbound sets, not Ares's. Grep again with the full aka[] and read every hit against
+the pre-revision copies; classify career-only mentions and collisions. Add the reciprocal edge wherever
+a new dossier curates a counterparty, revising that dossier under the Archival Procedure. Re-verify a
+report pin on it only when your change is edge-only — every pre-existing field identical to the archived
+copy and every cited source unchanged, checked mechanically as F-I2 did; when the change is substantive,
+leave the pin loud and write down why. Expect about thirty substantive reads across the three. If the
+sets outgrow the session: land all three dossiers and guides; reconcile the controlled and co-controlled
+platforms first (apex-clean-energy, prime-data-centers, dominion-energy, and Stream's and Cologix's
+mentions); record every remaining slug by name as deferred.
+
+TWO KNOWN CORRECTIONS RIDE THE STEP 7: (1) sb-energy or softbank on Ares's preferred equity, as above.
+(2) dominion-energy v1 takes the reciprocal Stonepeak edge, and row 10 (v07.91r) verified that it still
+calls the NextEra merger "all-stock". The May 2026 merger 8-K says 0.8138 NextEra shares plus a pro rata
+share of USD 360 million in cash, and the dossier's relationships[8] already carries the cash. Since you
+revise it anyway, correct that line minimally from the 8-K and record it. That makes the revision
+substantive, so leave its pins loud. The full refresh stays with `profiler Dominion Energy`.
+
+LESSONS FROM ROWS 5–11 — apply them:
+- Every counterparty named in prose rests on a source in sources[].
+- A tender, an MOU, "in talks", a marketed stake or a signed-but-not-closed deal is not a completed
+  transaction: type each on the record's own word and state the gap.
+- A press identification of an unnamed party is carried as reported and unconfirmed; an unattributed
+  figure is stated as unverified.
+- An equity cheque, an enterprise value, a fund commitment and a facility size are four different
+  numbers: state each as itself.
+- Lender and indirect links are typed `other` on both sides (the F-I1 and F-I2 precedent).
+- Count inbound hits against the archive copies, so the ledger's counts are exact.
+- Do not edit an existing concept in profiler-concepts.json; check new terms and aliases for collisions
+  before adding them.
+- If an existing study guide contradicts a verified finding, correct it minimally and record it.
+- Write any JSON or shell text containing `$` only through files or quoted heredocs (<<'EOF'). In F-I2 an
+  unquoted heredoc turned `$4` and `$1` into empty strings in a draft dossier.
+
+THE STEP-5 SUB-RULE (developer-approved 2026-09-30): the three memberships make the generated segment
+lessons stale, and the weekly Classroom pipeline may not regenerate them. After the registry writes,
+run python3 scripts/build-classroom-segments.py --check and regenerate exactly the segments it lists
+with sections differing (`--segment <id>` each, or `--all` when every one differs). Expect capital at
+least, plus any segment an adjacent seat lands in. Leave pin-only segments alone (G3): on 10/4 the
+--check listed assurance, software-and-optimization and insurance-and-risk-transfer as due, all three
+pin-only. Never edit a segment-* lesson, a landscape, a scenario or anything else in Classroom.gs by
+hand. Then bump Classroom.gs VERSION v02.00g → v02.01g and
+live-site-pages/gs-versions/Classroomgs.version.txt → |v02.01g| together, add one generic line to
+Classroomgs.changelog.md ("Market-structure lessons updated with the latest company coverage"; 41/50,
+no rotation), and set the README tree's Classroom display to v02.01g (scripts/check-readme-tree.py, 0
+findings). The Classroom page and Profiler.gs are not touched. landscape-capital-2026-09 and
+scenario-capital-objection stay stale by design — they are wave B's. Say so in the CHANGELOG entry and
+the hand-off (§11.2, the landscape coupling), and set §3 row 15's roster count to what you seat.
+
+FOR THE MEGMEET JOB: in the hand-off, one short paragraph on which platforms these three control or
+co-control that buy medium-voltage or DC power equipment (SSTs, 800 VDC, HVDC, batteries, gas turbines)
+— Stream Data Centers (Apollo); Prime Data Centers and Apex Clean Energy (Ares); Cologix, Digital Edge,
+Montera, AMPYR and the Japan BESS platform (Stonepeak) — and who signs at each. Test F-I2's finding
+against them: capital was a door only at SB Energy, which owner-furnishes its own transformers,
+switchgear and inverters; everywhere else it was a directory to the buyers.
+
+VERIFY: check-source-reachability.py before Stage 2; sync-profiler-registry.py --check clean (211 → 214
+in bijection, calendar included); build-profiler-graph.py; check-profiler-study.py,
+check-profiler-relationships.py and check-profiler-crossrefs.py clean (accept reviewed candidates with a
+reason); check-profiler-reports.py warnings read; check-classroom-content.py 0 errors after the
+regeneration (71 lessons / 8 tracks / 220 gate cases on 10/4); node --check on a .js copy of
+Classroom.gs; check-readme-tree.py 0 findings; every new and revised dossier and guide renders under
+Playwright with zero page errors other than the sandbox's gis_load_failed (the guide overlay closes with
+its ✕ button, not Escape). Normal Pre-Commit and Pre-Push checklists; ONE commit; push on your claude/*
+branch once git ls-remote shows it absent. Flip §3 row 12 to landed in the pattern of rows 1–11, write
+the CHANGELOG section with this prompt verbatim as the blockquote, and remember session.
+
+NEVER: edit a Classroom lesson, landscape or scenario by hand; state an equity cheque as an enterprise
+value, or a facility size as money lent, or the reverse; name a deal closed on a press report alone; take
+a fund commitment, a loan or a minority stake as control; run the Dominion refresh beyond the one-line
+correction; close or edit the developer's reminders.
+
+At the end: one line per company (identity verdicts, segments and roles, inbound read/revised counts,
+calendar row); the two known corrections as made; the segments regenerated and the Classroom version
+written; the --check and content-checker final lines; and the session's cost from get_session's
+usage.cost_usd if it exposes one, with the rate-limit status.
 ```
