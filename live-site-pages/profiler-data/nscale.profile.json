@@ -717,6 +717,16 @@
       "note": "Minority investor and lender: Blue Owl-managed funds joined the Series B and pre-Series C SAFE in 2025 and co-led, with PIMCO and LuminArx, a USD 1.4bn GPU-backed loan in February 2026.",
       "context": "Nscale's pre-Series C SAFE release names 'Blue Owl Managed Funds, Dell, NVIDIA, Nokia' among investors in USD 433m. These are minority and lending positions, not control.",
       "source": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe"
+    },
+    {
+      "slug": "apollo",
+      "type": "other",
+      "status": "active",
+      "since": "2026-09",
+      "via": "Pre-IPO convertible loan notes",
+      "note": "Funds managed by Apollo are among the investors in Nscale's pre-IPO convertible financing led by Third Point; Apollo's amount is undisclosed.",
+      "context": "Nscale's release of 25 September 2026 lists funds managed by Apollo among the supporters of the round, which Third Point led. The notes convert at the IPO, so Apollo holds a lender's claim today and an equity stake only if they convert. Typed `other`, as a lender link, on both sides.",
+      "source": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing"
     }
   ],
   "policyExposure": [
@@ -1233,6 +1243,11 @@
     {
       "label": "SiliconANGLE — AI data center builder Nscale raises $3.36B ahead of IPO",
       "url": "https://siliconangle.com/2026/09/25/ai-data-center-builder-nscale-raises-3-36b-ahead-of-ipo/",
+      "date": "2026-09-25"
+    },
+    {
+      "label": "Nscale — pre-IPO convertible financing led by Third Point",
+      "url": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
       "date": "2026-09-25"
     },
     {
@@ -1913,6 +1928,6 @@
       "url": "https://en.wikipedia.org/wiki/Nscale"
     }
   ],
-  "lastUpdated": "2026-10-04",
-  "profileVersion": 4
+  "lastUpdated": "2026-10-05",
+  "profileVersion": 5
 }

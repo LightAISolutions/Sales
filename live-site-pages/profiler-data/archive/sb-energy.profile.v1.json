@@ -1,0 +1,870 @@
+{
+  "schemaVersion": 7,
+  "slug": "sb-energy",
+  "name": "SB Energy, Inc.",
+  "shortName": "SB Energy",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://sbenergy.com/",
+  "headquarters": "3 Lagoon Dr., Suite 280, Redwood City, CA 94065, United States",
+  "founded": 2019,
+  "employees": "~350 (S-1/A2, September 2026)",
+  "ownership": {
+    "type": "subsidiary (SoftBank Group; IPO registration filed, unpriced)",
+    "notes": "A Texas corporation since 28 August 2026, renamed SB Energy, Inc. on 31 August 2026. It has applied to list on the Nasdaq Global Select Market and Nasdaq Texas under the symbol 'SBE'. The S-1 was filed on 1 September 2026 and amended on 4 and 21 September; as of 4 October 2026 no price range, share count or ownership percentage has been filed, and no 424B4 or Form 8-A. SoftBank expects to control more than 50% of the vote after the offering."
+  },
+  "summary": "**BOTTOM LINE UP FRONT:** SB Energy is the SoftBank-controlled developer that will own the land, shells and power systems of OpenAI's largest leased campuses: Milam County, Texas (about 753 MW-IT, under construction) and PORTS-Pike, Ohio (about 8.0 GW-IT, leased to OpenAI on 17 August 2026, construction not started). It is a direct equipment buyer. Its S-1 says it procures solar modules, battery components, high-voltage transformers, switchgear and inverters itself, lets turnkey construction to EPC contractors, and has not yet selected the backup-generation engines for PORTS. The roughly 9.2 GW of gas generation planned beside PORTS is being developed by another SoftBank affiliate, not SB Energy. The IPO (Nasdaq and Nasdaq Texas: SBE) was filed on 1 September 2026 and is unpriced, with a delay over valuation reported in trade press.\n\n**BACKGROUND.** Per its registration statement, SB Energy began in 2019 with SoftBank backing as a solar and storage developer. The registrant was formed as SE Global Holdings, LLC in Delaware in January 2024, became a Delaware corporation on 10 July 2026 and a Texas corporation on 28 August 2026, and took the name SB Energy, Inc. on 31 August 2026. It reports three segments: Data Centers, Standalone Power and Solutions. At 30 June 2026 it had about 2.2 GW of solar and battery storage operating (in CAISO and ERCOT), 2.5 GW under construction and 0.8 GW contracted. It states 8.8 GW-IT of data-centre capacity under lease, none yet in operation, and about USD 439bn of backlog, most of it PORTS. FY2025 revenue was USD 213.5m with a net loss attributable of USD 738.0m. H1 2026 revenue was USD 138.7m with a net loss of USD 3,208.9m, including a USD 2,573.1m non-cash charge on OpenAI's warrants. SoftBank has contributed about USD 3.2bn. OpenAI invested USD 500m of preferred equity in January 2026 and holds warrants. NVIDIA is putting in USD 3.0bn around the IPO and guarantees the first 4.25 GW-IT of the PORTS leases.",
+  "ecosystemRole": "We assess SB Energy as the AIDC landlord in the corpus that is also its own power developer, and the only part of the SoftBank group that signs purchase orders for power equipment. Its scope runs 'to the rack': land, interconnection, the substation and switchyard packages, building shells, electrical and mechanical systems, and on-site or co-located generation. The tenant brings servers and GPUs. It buys owner-furnished equipment itself. It names Turner, DPR, Kiewit and SOLV Energy as its data-centre EPC providers, and SOLV, Blattner, Dashiell, CSI Electrical and Rosendin as its principal power EPCs, each on turnkey, fixed-scope contracts. Its storage fleet (Athos Storage with Fluence, Pelicans Jaw and Libra) makes it a battery buyer as well. Two constraints shape every sale: a CFIUS National Security Agreement that requires approval of certain vendors, and OpenAI's consent rights over 'materially important design contracts' on OpenAI-tenanted projects.",
+  "productsAndServices": [
+    {
+      "name": "Data Centers (DC) — powered AI campuses, delivered 'to the rack'",
+      "category": "Data-centre development and leasing",
+      "description": "SB Energy develops, builds and plans to operate gigawatt-scale data-centre campuses and leases them on triple-net terms. Its turnkey scope covers 'land, power, fiber, water, building shells and the critical internal systems … including mechanical, electrical and plumbing (“MEP”) systems, power distribution and cooling'. Customers 'bring their own racks and semiconductors'. Three campuses are leased: Cosmos in Austin (about 50 MW-IT, a SoftBank affiliate), Milam County, Texas (about 753 MW-IT across two buildings, OpenAI) and PORTS-Pike in Ohio (17 buildings of about 472 MW-IT each, about 8.0 GW-IT, OpenAI). 'No data center capacity is currently in operation.' Beyond the leased campuses it holds Borden and Scurry counties in ERCOT (about 1.7 GW-IT, with interconnection secured under Batch Zero) and a stated pipeline of about 30.6 GW-IT.",
+      "highlights": [
+        "Leases are 15–20 years, with rent set on a yield-on-cost formula and escalating 2%–3% a year; cost overruns above an agreed cap are 'generally borne by us', though at PORTS they can be rentalized at a lower yield",
+        "PORTS: NVIDIA guarantees the OpenAI tenant's obligations on the first nine buildings (~4.25 GW-IT) up to USD 105bn",
+        "SB Energy claims designs with 'approximately 80% greater density than certain competing designs'",
+        "OpenAI holds consent and participation rights over 'specified materially important design contracts' on projects it leases (Foundation Agreement)",
+        "Studio 151, a data-centre construction-management firm, was bought in November 2025 for USD 12.0m"
+      ],
+      "positioning": "The S-1 names Digital Realty, Equinix, QTS, Vantage, Switch, CyrusOne and Aligned as data-centre competitors, and says SB Energy is 'developing four of the seven largest data center sites by IT capacity in the United States'. Its distinguishing claim is owning the power development alongside the shell. Its concentration is the reverse: OpenAI and SoftBank are its tenants and investors.",
+      "soldThrough": "Triple-net leases and service-level agreements signed directly with AI labs and hyperscalers; construction managed in-house and delivered by EPC contractors",
+      "targetSegments": [
+        "AI labs (OpenAI)",
+        "Hyperscalers",
+        "SoftBank affiliates"
+      ],
+      "roadmap": "Cosmos full RFS by May 2027; Milam buildings 2027–2028; PORTS first phase targeted for 2028, buildings 1–9 by 2031 and 10–17 by 2032, subject to approvals, financing and long-lead equipment"
+    },
+    {
+      "name": "Standalone Power (SP) — utility-scale solar and battery storage",
+      "category": "Independent power producer",
+      "description": "SB Energy develops, builds, owns and operates grid-connected solar and battery projects and sells their output under fixed-price power purchase agreements of 10–25 years. This segment 'currently generates substantially all of our revenue'. Operating capacity at 30 June 2026 was about 2.2 GW, mainly in ERCOT (~1,692 MWac of solar) and CAISO (~450 MWac). A further 2.5 GW was under construction and 0.8 GW contracted. Named projects include the Orion Solar Belt in Milam County (900 MWdc on SB Energy's site; 875 MWdc in its 2024 release; Google the anchor customer), Pelicans Jaw in Kern County, California (440 MWac solar plus 239 MW / 954 MWh of storage for San Diego Community Power), Libra in Nevada (700 MWac solar plus 700 MW / 2,800 MWh of storage for NV Energy) and Athos Storage in Riverside County, California (1.6 GWh, Fluence technology).",
+      "highlights": [
+        "Battery storage under construction: Athos Storage 1.6 GWh (Fluence), Pelicans Jaw 954 MWh, Libra 2,800 MWh — no SB Energy battery is yet operating in California",
+        "First Solar thin-film modules: an original 1.7 GW plus a 1.5 GW multi-year order (2022), 3.2 GW cumulative",
+        "Orion I–III: First Solar modules, Nextracker trackers, Gerdau steel, Blattner as EPC (October 2024)",
+        "Stem named SB Energy's preferred energy-management partner for 10 GWh 'in principle' in November 2023; no deployment is on the record since"
+      ],
+      "positioning": "S-1 competitors in power are Clearway, NextEra and AES. In 2022 SB Energy targeted 10 GW in operation or under construction by the end of 2025; the S-1 now reports 4.7 GWac developed, financed or begun since founding. Comparing those two company figures is our inference.",
+      "soldThrough": "Fixed-price PPAs (largely 'as produced') with utilities, community choice aggregators and corporations; project debt, tax equity and construction-to-term loans",
+      "targetSegments": [
+        "Load-serving entities (San Diego Community Power, NV Energy)",
+        "Corporate offtakers (Google)",
+        "Merchant and capacity markets (CAISO resource adequacy, ERCOT)"
+      ],
+      "roadmap": "Pelicans Jaw, Libra and Athos Storage under construction (financings closed March 2026); 6.9 GWac of standalone-power pipeline"
+    },
+    {
+      "name": "Co-located power for data centres",
+      "category": "Behind-the-fence and adjacent generation",
+      "description": "SB Energy pairs its campuses with generation it develops. At Milam County it expects to deliver power from 'co-located power generation assets pursuant to on-site power supply agreements' and has 'developed more than 1.3 GW of incremental power generation capacity in Milam County'. Phased interconnection runs from Orion 1 at 34.5 kV and from Orion 2 and 3 at 345 kV, for an initial campus load of about 660 MW. It lists about 4.2 GWac of data-centre-dedicated power in its pipeline. At PORTS the gas generation is not SB Energy's: the S-1 says the roughly 9.2 GW of gas-fired plants are 'being developed by an affiliate of SoftBank that is not our subsidiary' and that SB Energy 'may provide development, construction management or operational services'.",
+      "highlights": [
+        "The S-1 describes power configuration as 'grid-only, hybrid, behind-the-meter and bridge', chosen site by site",
+        "PORTS gas: no binding or non-binding agreement exists between SB Energy and any government entity; SB Energy says it has 'access to turbine reservations' (S-1 risk factor)",
+        "PORTS backup generation: 'the number and make/model of the backup generation engines' has not yet been selected"
+      ],
+      "positioning": "Power-first development is what SB Energy sells to tenants against landlords that wait on the grid.",
+      "soldThrough": "On-site power supply agreements bundled into data-centre leases",
+      "targetSegments": [
+        "SB Energy's own campus tenants"
+      ],
+      "roadmap": "Milam campus interconnection phases from August 2026 to March 2027"
+    },
+    {
+      "name": "Solutions (SLN) — design, engineering, construction management and operations",
+      "category": "Internal services segment",
+      "description": "The third reportable segment provides 'integrated design, engineering, construction management and operations management solutions to our SP and DC segments'. Its revenue is intersegment: USD 62.4m in FY2025 and USD 52.8m in H1 2026. It houses the construction organisation that 'leads construction management, vendor selection, contract administration and on-site oversight', and Studio 151's data-centre delivery team of more than 50 people.",
+      "highlights": [
+        "Power EPC packages are split three ways: PV and battery installation; the 'high-voltage switchyard and interconnection facilities'; and BESS balance of plant",
+        "EPC protections: delay and capacity liquidated damages, two-to-three-year warranties, serial-defect replacement, parent guarantees"
+      ],
+      "positioning": "",
+      "soldThrough": "Intersegment",
+      "targetSegments": [
+        "SB Energy's own DC and SP projects"
+      ],
+      "roadmap": ""
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-26",
+      "category": "financial",
+      "headline": "IFR reports the IPO roadshow on hold after investors indicated interest below a USD 50bn valuation",
+      "read": "Reported, not announced: SB Energy has issued no delay notice. EDGAR shows no 424B4, Form 8-A or third amendment as of 4 October.",
+      "source": "https://www.ifre.com/equities/2490131/sb-energy-delays-ipo-launch-amid-data-centre-backlash"
+    },
+    {
+      "date": "2026-09-22",
+      "category": "regulatory",
+      "headline": "AEP Ohio announces the Hanging Rock–Baku 765 kV line (about 33 new miles), needed to serve the PORTS campus; 'the customer is committed to paying' for the transmission",
+      "read": "The second 765 kV line for PORTS, after Baku–Gavin (OPSB case 26-0426-EL-BTX, local public hearing on 27 October 2026).",
+      "source": "https://www.aepohio.com/company/news/view?releaseID=12272"
+    },
+    {
+      "date": "2026-09-21",
+      "category": "financial",
+      "headline": "S-1 Amendment No. 2: backlog about USD 439bn, backlog-associated capex about USD 178bn, a USD 3.0bn Citibank-led credit facility at the IPO; price range still blank",
+      "read": "The fullest statement yet of what SB Energy will spend: about USD 48bn within 24 months.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "date": "2026-09-01",
+      "category": "financial",
+      "headline": "Public S-1 filed to list on the Nasdaq Global Select Market and Nasdaq Texas under 'SBE'; joint bookrunners J.P. Morgan, Goldman Sachs, Morgan Stanley, Citigroup and Mizuho",
+      "read": "The first SoftBank power business to seek a listing.",
+      "source": "https://group.softbank/en/news/press/20260902"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "corporate",
+      "headline": "SE Global Holdings, Inc. renamed SB Energy, Inc., three days after converting from a Delaware to a Texas corporation (28 August)",
+      "read": "The registrant is a Texas corporation; EDGAR's company header still reads 'DE'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "date": "2026-08-17",
+      "category": "customer",
+      "headline": "17 PORTS-Pike leases signed with an OpenAI affiliate (about 8.0 GW-IT, 20 years); NVIDIA becomes exclusive compute provider, guarantees the first 4.25 GW-IT and invests USD 1.5bn (USD 3.0bn with a prepaid forward)",
+      "read": "Turns PORTS from a plan into the bulk of the backlog. NVIDIA's guarantee, not SB Energy's balance sheet, anchors the financing.",
+      "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
+    },
+    {
+      "date": "2026-08-07",
+      "category": "policy",
+      "headline": "SB Energy writes to Governor Abbott supporting large-load transparency and accountability for data centres",
+      "read": "Positions the Milam and ERCOT pipeline on the side of Texas's new large-load rules, days after ERCOT paused its Batch Zero study.",
+      "source": "https://sbenergy.com/sb-energy-supports-texas/"
+    },
+    {
+      "date": "2026-07-30",
+      "category": "customer",
+      "headline": "AEP calls SB Energy the 'prospective offtaker' for the Piketon transmission and expects executed documents in the third quarter",
+      "read": "As of late July the 9.2 GW utility service was not under signed definitive agreements; the S-1 says they are 'at various stages of execution'.",
+      "source": "https://docs.aep.com/docs/newsroom/resources/earnings/2026-07/2Q26EarningsReleasePresentation.pdf"
+    },
+    {
+      "date": "2026-05-07",
+      "category": "financial",
+      "headline": "USD 999.0m of 8.875% senior secured notes due 2031 issued to finance the Cosmos campus in Austin",
+      "read": "High-yield project debt for a 50 MW-IT campus leased to a SoftBank affiliate under a SoftBank Group Capital guarantee of about USD 2.9bn.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "date": "2026-03-21",
+      "category": "partnership",
+      "headline": "Portsmouth Consortium launched: 21 Japanese and US companies, including GE Vernova, Hitachi, Mitsubishi Electric, Toshiba, Bechtel and Kiewit, 'expressed their intention to participate' in the 9.2 GW Portsmouth Powered Land Project",
+      "read": "The gas-plant supplier roster belongs to the SoftBank affiliate developing the plants, not to SB Energy.",
+      "source": "https://group.softbank/en/news/press/20260321"
+    },
+    {
+      "date": "2026-03-20",
+      "category": "project",
+      "headline": "DOE, Commerce, SoftBank, SB Energy and AEP Ohio announce the Piketon campus: 10 GW of data centres, 'at least 9.2 GW of natural gas generation', USD 4.2bn of transmission paid for by SB Energy, power from 2029; DOE leases about 189 acres for the first phase",
+      "read": "The government says 'SB Energy will build new gas-fired generation'; the S-1 says SB Energy will not own or operate it. Both accounts are recorded.",
+      "source": "https://www.energy.gov/sites/default/files/2026-03/FACT_SHEET_Portsmouth_AI.pdf"
+    },
+    {
+      "date": "2026-03-19",
+      "category": "financial",
+      "headline": "Construction and bridge financings close for Athos Storage (USD 679.4m) and, on 13 March, Libra (USD 2.4bn)",
+      "read": "Two of the largest battery builds in the corpus move to construction: 1.6 GWh in California and 2,800 MWh in Nevada.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "date": "2026-01-09",
+      "category": "partnership",
+      "headline": "OpenAI and SoftBank each invest USD 500m; OpenAI leases Milam County Buildings 1 and 2 (about 753 MW-IT) for 15 years and receives warrants",
+      "read": "Makes OpenAI both tenant and investor, with consent rights over key design contracts on its projects.",
+      "source": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/"
+    },
+    {
+      "date": "2025-11-24",
+      "category": "ma",
+      "headline": "Studio 151, a data-centre construction-management and operations firm, acquired",
+      "read": "Buys in the data-centre delivery team its power business lacked.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "date": "2025-11-07",
+      "category": "customer",
+      "headline": "Cosmos Technology Campus (HighPoint 2222, Austin) leased to a SoftBank affiliate for 15 years; Graphcore to be the first tenant",
+      "read": "SB Energy's first data-centre lease is to its own parent's group.",
+      "source": "https://sbenergy.com/app/uploads/2026/09/HP-OS-2026-0909.pdf"
+    },
+    {
+      "date": "2025-10-08",
+      "category": "regulatory",
+      "headline": "California Energy Commission approves a USD 25m grant for a 75 MW portion of the 402.3 MW / four-hour Athos battery",
+      "read": "Public funding for a Fluence-supplied battery that SB Energy procures itself.",
+      "source": "https://efiling.energy.ca.gov/GetDocument.aspx?tn=266466&DocumentContentId=103516"
+    },
+    {
+      "date": "2025-04-21",
+      "category": "procurement",
+      "headline": "SOLV Energy names SB Energy among the longstanding customers that selected it for operations and maintenance",
+      "read": "SOLV built SB Energy's Eiffel project and maintains its fleet.",
+      "source": "https://www.solvenergy.com/news/solv-energy-continues-expansion-of-solar-and-storage-operations-maintenance-business-including-major-repowering-projects"
+    }
+  ],
+  "strategyRead": [
+    "**(High confidence)** We assess that **SB Energy is a direct, portfolio-scale buyer of long-lead electrical equipment**. The S-1 says it procures 'solar modules, battery energy storage system components, high-voltage transformers, switchgear, inverters' as owner-furnished equipment. It procures 'early, at portfolio scale and across multiple suppliers', in arrangements meant to let equipment be 'reallocated across sites'. Its capex estimates rest on 'executed purchase orders, vendor bids, framework arrangements'. Basis: S-1/A2, procurement and execution-model sections. A seller qualifies with the supply-chain team as a framework supplier, not project by project.",
+    "**(High confidence)** We assess that **the PORTS gas plant is not SB Energy's purchase, but the campus's own electrical and backup systems are**. The S-1 says the roughly 9.2 GW of gas-fired generation is being developed by a SoftBank affiliate that is not its subsidiary, which SB Energy does 'not expect to own or operate'. Separately, the campus needs 'gas turbines, transformers, power electronics, heating-ventilation-and air conditioning systems and modular data center elements', and the backup-generation engines have not been chosen. The DOE fact sheet and SB Energy's own PORTS microsite describe the gas ownership differently; the S-1 is the document under securities liability.",
+    "**(Moderate confidence)** We assess that **OpenAI is SB Energy's customer, investor and design gatekeeper at once**, which narrows the specification for any equipment sold into Milam and PORTS. OpenAI leases about 8.8 GW-IT, holds USD 500m of preferred equity and warrants, designates a director, and under the Foundation Agreement holds consent and participation rights over 'materially important design contracts' on its projects. Basis: S-1/A2, related-party section. Inference: on OpenAI-tenanted campuses, a power-architecture choice such as an SST or 800 VDC distribution would need OpenAI's agreement as well as SB Energy's.",
+    "**(Moderate confidence)** We assess that **SB Energy's battery buying is real and current, while its data-centre buying is still mostly ahead of it**. Athos Storage (1.6 GWh, Fluence), Pelicans Jaw (954 MWh) and Libra (2,800 MWh) are financed and under construction. On the data-centre side only about 0.8 GW-IT of the 8.8 GW-IT portfolio is under construction, and PORTS has not started. Basis: S-1/A2 project status tables and the March 2026 financings.",
+    "**(Moderate confidence)** We assess that **the IPO's timing is the main near-term swing factor for SB Energy's ability to fund PORTS**. It targets about 90% debt and 10% equity at PORTS and says the transmission build alone could need more than USD 6bn of credit support. IFR reports the roadshow on hold over a valuation gap below USD 50bn (reported). Basis: S-1/A2 financing sections; IFR. An IPO that prices proceeds as planned; a long delay leaves NVIDIA's guarantee and SoftBank's support carrying the equity.",
+    "**(Low confidence)** We assess that **the CFIUS vendor-approval regime will favour suppliers already on SB Energy's approved lists**. The National Security Agreement requires approval or non-objection for certain vendor relationships, and SB Energy keeps 'approved vendor lists for SCADA, networking and other critical operational technology systems'. It says the rules have delayed onboarding. Weak because the S-1 does not say which equipment classes are covered beyond operational technology.",
+    "**Collection gaps:** no equipment supplier is named anywhere in the S-1 (First Solar, Nextracker and Fluence appear only on SB Energy's website); the OEMs for Pelicans Jaw and Libra storage; the name and ownership of the SoftBank affiliate developing the PORTS gas and who holds the turbine reservations; ownership percentages after the IPO; whether AEP Ohio's definitive agreements for the 9.2 GW were signed in Q3 2026; how 'Customer D' (29% of FY2025 revenue) is named; the gap between AEP's USD 4.2bn and the S-1's USD 5.1bn of PORTS grid investment, which may count different scopes.",
+    "**INDICATORS TO WATCH** — *424B4 / Form 8-A:* pricing sets SoftBank's and OpenAI's stakes and funds the equity for PORTS. *AEP Ohio's Q3 2026 results (late October):* executed agreements would move 9.2 GW of service toward OPSB, FERC and PUCO review. *OPSB local public hearing on the Baku–Gavin 765 kV line, 27 October 2026:* the first public test of the transmission route. *Milam County Building 1 delivery (2027):* SB Energy's first data hall in operation. *Any award for PORTS backup generation or switchgear:* the first named data-centre equipment order. *Athos Storage in service (TB4 contracts effective 1 December 2026):* SB Energy's first operating California battery."
+  ],
+  "relationships": [
+    {
+      "slug": "softbank",
+      "type": "investor",
+      "status": "active",
+      "since": "2019",
+      "scale": "~USD 3.2bn of cash contributions; >50% of the vote expected after the IPO",
+      "via": "SB Energy HoldCo, LLC and SVF II Energy (DE) LLC",
+      "note": "Founding sponsor and ultimate parent; SoftBank designates six of nine directors, and a SoftBank affiliate is the tenant at the Cosmos campus.",
+      "context": "The S-1 names SoftBank its 'founding sponsor and ultimate parent company' and says its affiliates have contributed about USD 3.2bn. After the offering SoftBank expects to control more than 50% of the vote, making SB Energy a controlled company. It designates William Bice, Alex Clavel (chairman), Ron Fisher, Kimberly Johnson, Seiichi Morooka and Alexi Wellman. SB Energy pays SoftBank a royalty of 1% of gross profit for the 'SB Energy' name. A SoftBank affiliate leases the Cosmos campus for 15 years under a SoftBank Group Capital guarantee of about USD 2.9bn. The roughly 9.2 GW of PORTS gas generation is being developed by another SoftBank affiliate.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "slug": "openai",
+      "type": "customer",
+      "status": "active",
+      "since": "2026-01",
+      "scale": "~8.8 GW-IT leased (Milam ~753 MW-IT; PORTS ~8.0 GW-IT)",
+      "via": "Triple-net data-centre leases (Milam County, PORTS-Pike)",
+      "project": "stargate",
+      "note": "Tenant of the Milam County campus (15-year leases, January 2026) and the PORTS-Pike campus (17 leases of 20 years, August 2026); also a USD 500m preferred investor with warrants and a board seat.",
+      "context": "On 9 January 2026 an OpenAI affiliate (Orion DC I, LLC) signed two leases for Milam County Buildings 1 and 2 (about 308 and 445 MW-IT), and OpenAI invested USD 500m of preferred equity in Energy Global. SB Energy's release said OpenAI and SoftBank were each investing USD 500m 'to Advance Stargate'. On 17 August 2026 an OpenAI affiliate signed 17 leases covering about 8.0 GW-IT at PORTS-Pike. OpenAI holds 3,991,809 warrants (pre-split) vesting on milestones and valuation thresholds; their fair value was about USD 5.5bn at 30 June 2026. It designates director Sachin Katti and holds consent rights over materially important design contracts on its projects. The S-1 itself never uses the word 'Stargate'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "slug": "nvidia",
+      "type": "investor",
+      "status": "active",
+      "since": "2026-08",
+      "scale": "USD 3.0bn (USD 1.5bn prepaid forward funded; USD 1.5bn Class N at the IPO); guaranties up to USD 105bn",
+      "via": "Class N common stock; residual value guaranties at PORTS-Pike",
+      "note": "Investor and credit support at PORTS-Pike: NVIDIA prepaid USD 1.5bn, commits USD 1.5bn more at the IPO, guarantees the OpenAI tenant's obligations on the first ~4.25 GW-IT, and is the campus's exclusive compute provider.",
+      "context": "SB Energy's 17 August 2026 release says NVIDIA will be 'the exclusive AI compute infrastructure provider at PORTS-Pike' and will provide credit support on the initial 4.25 GW-IT, with an option on the rest. The S-1 adds that NVIDIA funded USD 1.5bn under a prepaid forward on 17 August 2026, at 90% of the IPO price. It is committed to buy USD 1.5bn of non-voting Class N stock in a concurrent private placement. Its residual value guaranties carry an aggregate cap of USD 105bn. SB Energy pays NVIDIA nothing for them; OpenAI compensates NVIDIA separately.",
+      "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
+    },
+    {
+      "slug": "aep",
+      "type": "partner",
+      "status": "active",
+      "since": "2026-03",
+      "scale": "USD 4.2bn of transmission paid for by SB Energy (AEP); ~USD 5.1bn of AEP capital costs passed through (S-1)",
+      "via": "AEP Ohio Electric Service Agreement (0.8 GW) and 765 kV transmission for PORTS-Pike",
+      "note": "AEP Ohio serves PORTS-Pike: an Electric Service Agreement covers 0.8 GW, and service for a further 9.2 GW, with the 765 kV build SB Energy pays for, awaits definitive agreements and OPSB, FERC and PUCO approvals.",
+      "context": "AEP's 20 March 2026 release says 'SB Energy is committed to paying for the $4.2 billion in new transmission investments' for a 10 GW campus, with power expected from 2029. The S-1 records an Electric Service Agreement and Letter of Agreement with AEP Ohio for 0.8 GW. It says agreements for the 9.2 GW of transmission capacity are 'at various stages of execution and are subject to final regulatory approvals'. It puts AEP's capital costs at about USD 5.1bn, passed through to SB Energy with a regulated return, and the credit support needed at more than USD 6bn. On 30 July 2026 AEP still called SB Energy the 'prospective offtaker'. The USD 4.2bn and USD 5.1bn figures may cover different scopes; no source reconciles them.",
+      "source": "https://www.aep.com/news/stories/view/10823/"
+    },
+    {
+      "slug": "berkshire-hathaway-energy",
+      "type": "customer",
+      "status": "active",
+      "via": "NV Energy — Libra solar-plus-storage PPA",
+      "scale": "700 MWac solar + 700 MW / 2,800 MWh storage; 25-year PPA",
+      "note": "NV Energy, a Berkshire Hathaway Energy utility, buys the output of SB Energy's Libra solar-plus-storage project in Nevada under a fixed-price 25-year PPA.",
+      "context": "The S-1 describes Libra, in Mineral and Lyon counties, Nevada, as '700 MWac (910 MWdc) of PV and 700 MW / 2,800 MWh of BESS' with 'a fixed-price 25-year PPA with NV Energy'. It is SB Energy's largest solar-plus-storage hybrid, financed with a USD 2.4bn construction and bridge commitment on 13 March 2026 and under construction.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "slug": "google",
+      "type": "customer",
+      "status": "active",
+      "since": "2022",
+      "via": "Orion Solar Belt PPA (Milam County, Texas)",
+      "note": "Anchor customer of the Orion Solar Belt in Milam County, whose output helps power Google's Texas data centres.",
+      "context": "SB Energy's October 2024 release announced commercial operation of Orion I–III, 875 MWdc 'to help power Google data centers'. It named First Solar modules, Nextracker trackers, Gerdau steel and Blattner as EPC. SB Energy's projects page lists Google as Orion's anchor customer at 900 MWdc. The Orion projects also feed the Milam County data-centre campus through phased interconnections.",
+      "source": "https://sbenergy.com/american-made-solar-projects-power-google-data/"
+    },
+    {
+      "slug": "fluence",
+      "type": "supplier",
+      "status": "active",
+      "via": "Athos Storage (Riverside County, California)",
+      "scale": "1.6 GWh",
+      "note": "Battery technology provider for Athos Storage, SB Energy's 1.6 GWh project in California, which SB Energy procures itself.",
+      "context": "SB Energy's Athos Storage page lists 'Fluence Storage' as the technology and says SB Energy is 'overseeing development, construction, procurement of battery energy storage solution and other major components'. The project is under construction. The California Energy Commission approved a USD 25m grant on 8 October 2025 for a 75 MW portion of the 402.3 MW / four-hour system, and the construction and bridge financing (USD 679.4m) closed in March 2026.",
+      "source": "https://sbenergy.com/project/athos-storage/"
+    },
+    {
+      "slug": "solv-energy",
+      "type": "supplier",
+      "status": "active",
+      "via": "EPC (Eiffel) and operations and maintenance",
+      "note": "Builder of SB Energy's Eiffel solar project and a long-standing O&M provider; named in the S-1 among SB Energy's data-centre and power EPCs.",
+      "context": "The S-1 names SOLV Energy among the EPC providers SB Energy assigns across data-centre phases, and among its principal power EPCs. SOLV's April 2025 release lists SB Energy among the long-standing customers that selected it for O&M. Its project page records the EPC on Eiffel (314 MWdc, Paris, Texas), owned by SB Energy Global, LLC.",
+      "source": "https://www.solvenergy.com/news/solv-energy-continues-expansion-of-solar-and-storage-operations-maintenance-business-including-major-repowering-projects"
+    },
+    {
+      "slug": "blattner",
+      "type": "supplier",
+      "status": "active",
+      "via": "Power EPC (Orion Solar Belt)",
+      "note": "EPC for the Orion Solar Belt and one of SB Energy's principal power EPCs.",
+      "context": "SB Energy's October 2024 release says it 'selected Blattner to provide the engineering, procurement and construction services' for Orion I–III. The S-1 lists Blattner Energy among its 'principal EPC counterparties for power infrastructure'.",
+      "source": "https://sbenergy.com/american-made-solar-projects-power-google-data/"
+    },
+    {
+      "slug": "rosendin",
+      "type": "supplier",
+      "status": "active",
+      "via": "Power EPC",
+      "note": "Named in the S-1 among SB Energy's principal EPC counterparties for power infrastructure.",
+      "context": "The S-1 lists 'SOLV Energy, Blattner Energy, Dashiell Corporation, CSI Electrical Contractors and Rosendin Electric', each engaged project by project on a turnkey, fixed-scope basis. No specific Rosendin project for SB Energy is named.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "slug": "dpr",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026",
+      "via": "Milam County Data Center (with Sundt)",
+      "note": "General contractor, in partnership with Sundt, for the Milam County data-centre campus leased to OpenAI.",
+      "context": "SB Energy's Milam campus site says it 'has partnered with DPR and SUNDT for the construction of the Milam Data Center', which is under construction. The S-1 names DPR among the EPC providers SB Energy assigns across phases of the same site.",
+      "source": "https://milamdc.com/"
+    },
+    {
+      "slug": "turner-construction",
+      "type": "supplier",
+      "status": "active",
+      "via": "Data-centre EPC",
+      "note": "Named in the S-1 among the EPC providers SB Energy assigns across phases of its data-centre sites.",
+      "context": "The S-1 says SB Energy partners 'with multiple qualified engineering, procurement and construction (“EPC”) providers, including Turner, DPR, Kiewit and SOLV Energy, and assign[s] them across phases of the same site'. No specific Turner project for SB Energy is named.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "slug": "kiewit",
+      "type": "supplier",
+      "status": "active",
+      "via": "Data-centre EPC",
+      "note": "Named in the S-1 among SB Energy's data-centre EPC providers; separately a Portsmouth Consortium member and reported contractor for the PORTS gas plants, which belong to another SoftBank affiliate.",
+      "context": "The S-1 names Kiewit with Turner, DPR and SOLV Energy as data-centre EPC providers. Kiewit is also one of 21 companies that 'expressed their intention to participate' in the Portsmouth Consortium. The Boilermakers union reported in July 2026 that 'Kiewit is the contractor for construction of the power generation facilities' at PORTS (reported, not confirmed by Kiewit or SoftBank). That plant is not SB Energy's.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "slug": "stem",
+      "type": "partner",
+      "status": "announced",
+      "since": "2023-11",
+      "scale": "10 GWh over five years (in principle)",
+      "via": "Energy-management software (Athena) for storage",
+      "note": "Announced in November 2023 as SB Energy's preferred energy-management partner for 10 GWh of storage 'in principle'; no deployment is on the record since.",
+      "context": "Stem's 2 November 2023 release describes a multi-year technology and commercial alliance 'entered in principle', making Stem the preferred energy-management partner for 10 GWh of SB Energy's North American storage pipeline in CAISO and ERCOT over five years. No project has been named since. SB Energy's Athos Storage uses Fluence hardware, and which software runs it is not stated.",
+      "source": "https://investors.stem.com/news-events/press-releases/detail/133/stem-and-sb-energy-announce-technology-and-commercial-alliance-to-advance-ai-enabled-energy-management-of-utility-scale-renewables"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "CFIUS National Security Agreement",
+      "status": "in-effect",
+      "effectiveDate": "2019-12",
+      "exposure": "SoftBank and certain subsidiaries entered into a National Security Agreement with CFIUS on 23 December 2019 over SoftBank's ownership of SB Energy's US operations, supplemented on 20 September 2021. It imposes 'restrictions on vendors, cybersecurity requirements and project sale notification procedures', including approval or non-objection for certain vendor relationships. SB Energy says these restrictions 'have delayed, and may continue to delay, our ability to onboard vendors'.",
+      "mitigation": "SB Energy maintains 'approved vendor lists for SCADA, networking and other critical operational technology systems deployed at our project sites'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "exposure": "Under the 2025 tax law, solar projects must have begun construction on or before 4 July 2026 or be placed in service by 31 December 2027 to qualify for the 45Y/48E credits. Projects beginning construction after 31 December 2025 must meet the new foreign-entity-of-concern rules. SB Energy says it is not an FEOC and does not expect to become one, but that 'these regulations may nonetheless be applicable to us'. It notes that a significant portion of its panels, inverters, transformers, turbines and batteries is made outside the United States.",
+      "mitigation": "SB Energy says 'the large majority of our current solar and battery energy storage pipeline has satisfied applicable safe harbor requirements', and it structures projects for the energy-community and domestic-content ITC adders.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "regime": "DOE emergency order on foreign bulk-power equipment",
+      "status": "in-effect",
+      "effectiveDate": "2026-08-26",
+      "exposure": "The S-1 records that on 26 August 2026 an emergency order allowed the DOE to prohibit 'the acquisition, importation, transfer or installation of foreign-produced bulk-power equipment' involving a covered foreign entity. SB Energy says it does 'not yet know the impact', and that if required to change suppliers 'we may be unable to do so'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "regime": "Texas large-load rules (SB 6) and ERCOT Batch Zero",
+      "status": "in-effect",
+      "exposure": "SB Energy's Borden and Scurry county sites (about 1.7 GW-IT) hold interconnection under ERCOT's Batch Zero Base Load designation, 'subject to confirmation under the ERCOT large-load verification process', and Texas energization remains subject to ERCOT and PUCT audit. Its Milam campus site says that 'in accordance with SB6, the project will pay for interconnection costs and shed load first during times of emergency'.",
+      "mitigation": "SB Energy wrote to Governor Abbott on 7 August 2026 supporting large-load transparency and accountability.",
+      "source": "https://sbenergy.com/sb-energy-supports-texas/"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Data-centre contracted portfolio (S-1/A2)",
+      "specs": [
+        {
+          "band": "Cosmos Technology Campus",
+          "label": "Location / tenant",
+          "value": "Travis County, TX (ERCOT) / SoftBank Group entity"
+        },
+        {
+          "band": "Cosmos Technology Campus",
+          "label": "Capacity / status",
+          "value": "~50 MW-IT / Vertical construction; NTP issued March 2026; Full RFS by May 2027"
+        },
+        {
+          "band": "Milam County",
+          "label": "Building 1 / Building 2",
+          "value": "~308 MW-IT / ~445 MW-IT; OpenAI affiliate; NTP issued April 2026"
+        },
+        {
+          "band": "Milam County",
+          "label": "Initial campus load",
+          "value": "approximately 660 MW via Orion 1 (34.5kV) and Orion 2 and 3 (345kV), August 2026 to March 2027"
+        },
+        {
+          "band": "PORTS-Pike Technology Campus",
+          "label": "Buildings",
+          "value": "17 data center buildings, each with approximately 472 MW of critical IT capacity"
+        },
+        {
+          "band": "PORTS-Pike Technology Campus",
+          "label": "Capacity / status",
+          "value": "~8,024 MW-IT; approximately 10 GW of gross power load; Pre-construction; RFS 2028–2032"
+        },
+        {
+          "band": "PORTS-Pike Technology Campus",
+          "label": "Load interconnection",
+          "value": "Utility and ISO secured (0.8 GW) / Utility secured (9.2 GW)"
+        },
+        {
+          "band": "Pipeline",
+          "label": "Borden County / Scurry County (ERCOT)",
+          "value": "~836 MW-IT / ~900 MW-IT"
+        }
+      ],
+      "notes": "MW-IT is critical IT capacity at the building level, not gross power. 'No data center capacity is currently in operation.'"
+    },
+    {
+      "product": "Battery storage projects",
+      "specs": [
+        {
+          "band": "Athos Storage (Riverside County, CA)",
+          "label": "Capacity / technology",
+          "value": "1.6 GWh / Fluence Storage (402.3 MW four-hour system per the CEC)"
+        },
+        {
+          "band": "Athos Storage (Riverside County, CA)",
+          "label": "Status / financing",
+          "value": "Under construction / USD 679.4m construction and bridge loan (March 2026)"
+        },
+        {
+          "band": "Pelicans Jaw (Kern County, CA)",
+          "label": "Configuration",
+          "value": "440 MWac (573 MWdc) of PV and 239 MW / 954 MWh of BESS"
+        },
+        {
+          "band": "Pelicans Jaw (Kern County, CA)",
+          "label": "Offtake",
+          "value": "fixed-price 15-year PPA with San Diego Community Power"
+        },
+        {
+          "band": "Libra (Mineral and Lyon Counties, NV)",
+          "label": "Configuration",
+          "value": "700 MWac (910 MWdc) of PV and 700 MW / 2,800 MWh of BESS"
+        },
+        {
+          "band": "Libra (Mineral and Lyon Counties, NV)",
+          "label": "Offtake",
+          "value": "fixed-price 25-year PPA with NV Energy"
+        }
+      ],
+      "notes": "Battery chemistry and OEMs are not stated in the S-1; Fluence is named on SB Energy's project page for Athos only."
+    },
+    {
+      "product": "Procurement and construction model",
+      "specs": [
+        {
+          "band": "Owner-furnished equipment",
+          "label": "Procured directly",
+          "value": "solar modules, battery energy storage system components, high-voltage transformers, switchgear, inverters"
+        },
+        {
+          "band": "Long-lead list",
+          "label": "PORTS-Pike",
+          "value": "gas turbines, transformers, power electronics, heating-ventilation-and air conditioning systems and modular data center elements"
+        },
+        {
+          "band": "EPC",
+          "label": "Data centres",
+          "value": "Turner, DPR, Kiewit and SOLV Energy"
+        },
+        {
+          "band": "EPC",
+          "label": "Power",
+          "value": "SOLV Energy, Blattner Energy, Dashiell Corporation, CSI Electrical Contractors and Rosendin Electric"
+        },
+        {
+          "band": "EPC",
+          "label": "Power packages",
+          "value": "(i) photovoltaic solar and battery energy storage system installation, (ii) high-voltage switchyard and interconnection facilities, and (iii) where applicable, dedicated BESS balance-of-plant work"
+        },
+        {
+          "band": "Spend",
+          "label": "Backlog-associated capex",
+          "value": "approximately $178 billion; ~$48 billion within 24 months, ~$69 billion in 25–48 months, ~$61 billion in 49–72 months"
+        },
+        {
+          "band": "Open item",
+          "label": "PORTS backup generation",
+          "value": "the permitting timeline will be determined once the number and make/model of the backup generation engines has been selected"
+        }
+      ],
+      "notes": "Values quoted from the S-1/A2. The largest advance to a single supplier was about USD 43.9m at 30 June 2026; the supplier is not named."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Rich Hossfeld",
+      "title": "Co-Chief Executive Officer and Director",
+      "photo": "images/execs/sb-energy-hossfeld.jpg",
+      "background": [
+        "Co-CEO and director since inception; involved in building the business since 2019, including through roles at its parent entities",
+        "Partner, True North Venture Partners",
+        "Commercial leadership roles at global energy providers including First Solar",
+        "Director and audit committee member, ESS Tech, Inc. (2019 to June 2026)",
+        "Began as a corporate associate at Cravath, Swaine & Moore; BA Claremont McKenna, JD Duke"
+      ]
+    },
+    {
+      "name": "Abhijeet Sathe",
+      "title": "Co-Chief Executive Officer and Director",
+      "photo": "images/execs/sb-energy-sathe.jpg",
+      "background": [
+        "Co-CEO and director since inception; with the business since 2019",
+        "Chief Operating Officer of SoftBank's India renewable-energy business",
+        "Vice President of Global Design and Engineering, SunEdison (March 2011 to January 2016)",
+        "Research and development and business roles at General Electric; early MEMS roles at Endevco, Nayna Networks and Silicon Microstructures",
+        "MS Electrical Engineering, University of Hawaii at Manoa; BS, COEP Technological University"
+      ]
+    },
+    {
+      "name": "Gaetan Frotte",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/sb-energy-frotte.jpg",
+      "background": [
+        "CFO; involved with the business since February 2023",
+        "NRG Energy, August 2006 to February 2023, latterly Senior Vice President and Treasurer; interim CFO in 2021",
+        "Led the initial public offering of NRG Yield (now Clearway Energy)",
+        "Company-appointed director, Balanced Rock Power, LLC (since April 2026)",
+        "MBA Darden; Master's, ISC Paris"
+      ]
+    },
+    {
+      "name": "Ryan Bates",
+      "title": "General Counsel",
+      "photo": "images/execs/sb-energy-bates.jpg",
+      "background": [
+        "General Counsel; involved with the business since 2020",
+        "Assistant General Counsel, Clearway Energy Group (2018–2020) and NRG Energy (2014–2018); Senior Counsel, NRG's solar group (2011–2014)",
+        "Earlier at Morrison & Foerster and Latham & Watkins (corporate and project finance)",
+        "JD Northwestern Pritzker; BS Finance, University of Arizona"
+      ]
+    },
+    {
+      "name": "Alex Clavel",
+      "title": "Director nominee; to become Chairman (SoftBank designee)",
+      "photo": "images/execs/softbank-clavel.jpg",
+      "background": [
+        "Chief Executive Officer, SoftBank Investment Advisers, overseeing the SoftBank Vision Funds (since 2023)",
+        "SoftBank Group International, 2015–2023",
+        "Nearly 20 years in investment banking at Morgan Stanley",
+        "AB East Asian Studies, Princeton"
+      ]
+    },
+    {
+      "name": "Sachin Katti, Ph.D.",
+      "title": "Director nominee (OpenAI designee)",
+      "background": [
+        "Vice President of Compute Strategy & GPT Infrastructure at OpenAI, responsible for its compute and AI infrastructure (joined November 2025)",
+        "Intel, November 2021 to November 2025, most recently Chief Technology & AI Officer",
+        "VMware, Vice President Telco & Edge (2019–2021); co-founder of Uhana and Kumu Networks",
+        "Adjunct professor, Stanford (since 2010); PhD MIT; BTech IIT Bombay"
+      ]
+    },
+    {
+      "name": "Ron Fisher",
+      "title": "Director nominee (SoftBank designee)",
+      "background": [
+        "Senior Advisor to SoftBank Investment Advisers; director of Arm Holdings since 2017",
+        "Vice Chairman and director, SoftBank Group Corp. (1997–2022); Executive Chairman, SoftBank Investment Advisers (2018–2022)",
+        "Founded SoftBank Capital (1995); Vice Chairman, Sprint (2013–2021)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private (pre-IPO; audited figures from the S-1; no consensus)",
+    "periods": [
+      {
+        "period": "H1 2026 (six months to 30 June 2026)",
+        "periodType": "half",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Total revenue",
+            "actual": "USD 138.7m (H1 2025: USD 83.3m)",
+            "expected": "",
+            "verdict": "",
+            "result": "Includes USD 58.7m from contracts with customers and USD 80.0m of realized and unrealized change in the fair value of power-price swaps. The DC segment's first revenue was USD 0.7m.",
+            "kpi": "revenue",
+            "usdMillions": 138.7,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income (loss) attributable to SB Energy, Inc.",
+            "actual": "USD (3,208.9)m",
+            "expected": "",
+            "verdict": "",
+            "result": "Includes a USD 2,573.1m non-cash charge on the fair value of OpenAI's warrants and USD 589.5m of stock-based compensation.",
+            "kpi": "net-income",
+            "usdMillions": -3208.9,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Total Segment Adjusted EBITDA (non-GAAP)",
+            "actual": "USD 62.4m",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-defined measure."
+          }
+        ],
+        "commentary": "Construction in progress rose to USD 3.7bn and total assets to USD 13.5bn at 30 June 2026. Debt was about USD 4.0bn."
+      },
+      {
+        "period": "FY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Total revenue",
+            "actual": "USD 213.5m",
+            "expected": "",
+            "verdict": "",
+            "result": "All from the Standalone Power and Solutions segments; the DC segment was pre-revenue.",
+            "kpi": "revenue",
+            "usdMillions": 213.5,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income (loss) attributable to SB Energy, Inc.",
+            "actual": "USD (738.0)m",
+            "expected": "",
+            "verdict": "",
+            "result": "Includes USD 674.1m of non-cash stock-based compensation.",
+            "kpi": "net-income",
+            "usdMillions": -738.0,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Total Segment Adjusted EBITDA (non-GAAP)",
+            "actual": "USD 119.9m",
+            "expected": "",
+            "verdict": "",
+            "result": "SP USD 97.7m; SLN USD 22.3m."
+          }
+        ],
+        "commentary": "Four unnamed customers made up 68% of revenue; 'Customer D' alone was 29%."
+      },
+      {
+        "period": "FY2024",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Total revenue",
+            "actual": "USD 232.2m",
+            "expected": "",
+            "verdict": "",
+            "result": "Includes USD 119.3m of unrealized change in the fair value of power-price swaps.",
+            "kpi": "revenue",
+            "usdMillions": 232.2,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income (loss) attributable to SB Energy, Inc.",
+            "actual": "USD 106.1m",
+            "expected": "",
+            "verdict": "",
+            "result": "After USD 140.3m of non-cash stock-based compensation.",
+            "kpi": "net-income",
+            "usdMillions": 106.1,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Total Segment Adjusted EBITDA (non-GAAP)",
+            "actual": "USD 68.6m",
+            "expected": "",
+            "verdict": "",
+            "result": "Company-defined measure."
+          }
+        ],
+        "commentary": "The comparative year, before the data-centre leases."
+      }
+    ],
+    "commentary": "All figures are from the S-1/A2 (21 September 2026). SB Energy is pre-IPO: no analyst consensus exists and every 'expected' field is left empty. Revenue swings with the fair value of power-price swaps, so revenue alone understates the operating scale. Dividends are not expected to be permitted before 1 January 2029."
+  },
+  "sources": [
+    {
+      "label": "IFR — SB Energy delays IPO launch amid data-centre backlash (reported)",
+      "url": "https://www.ifre.com/equities/2490131/sb-energy-delays-ipo-launch-amid-data-centre-backlash",
+      "date": "2026-09-26"
+    },
+    {
+      "label": "Nikkei Asia — SoftBank-backed SB Energy seen delaying IPO on valuation concerns (reported)",
+      "url": "https://asia.nikkei.com/business/markets/ipo/softbank-backed-sb-energy-seen-delaying-ipo-on-valuation-concerns",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "AEP Ohio — Additional southern Ohio transmission upgrades (Hanging Rock–Baku 765 kV)",
+      "url": "https://www.aepohio.com/company/news/view?releaseID=12272",
+      "date": "2026-09-22"
+    },
+    {
+      "label": "SB Energy, Inc. — Form S-1/A Amendment No. 2 (Registration No. 333-298675)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+      "date": "2026-09-21"
+    },
+    {
+      "label": "SB Energy — HighPoint 2222 (Cosmos Technology Campus) community fact sheet",
+      "url": "https://sbenergy.com/app/uploads/2026/09/HP-OS-2026-0909.pdf",
+      "date": "2026-09-09"
+    },
+    {
+      "label": "Ohio Farm Bureau — Piketon area improvements transmission project update (OPSB case 26-0426-EL-BTX)",
+      "url": "https://ofbf.org/2026/09/08/piketon-area-improvements-transmission-project-update/",
+      "date": "2026-09-08"
+    },
+    {
+      "label": "SoftBank Group — SB Energy announces public filing of registration statement for proposed IPO",
+      "url": "https://group.softbank/en/news/press/20260902",
+      "date": "2026-09-02"
+    },
+    {
+      "label": "SB Energy, Inc. — Form S-1 (original registration statement)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026059639/sbenergy-sx1.htm",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Sullivan & Cromwell — advises OpenAI on 20-year lease at PORTS-Pike",
+      "url": "https://www.sullcrom.com/About/News-and-Events/Highlights/2026/August/SC-Advises-OpenAI-20Year-Lease-PORTSPike-Project",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "SB Energy — NVIDIA guarantees PORTS-Pike Technology Campus to exclusively host NVIDIA AI compute",
+      "url": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "SB Energy — Supporting Texas data-centre accountability (letter to Governor Abbott)",
+      "url": "https://sbenergy.com/sb-energy-supports-texas/",
+      "date": "2026-08-07"
+    },
+    {
+      "label": "Utility Dive — Texas hits pause on data-centre interconnections (ERCOT Batch Zero)",
+      "url": "https://www.utilitydive.com/news/texas-hits-pause-data-center-interconnections/827046/",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "AEP — Q2 2026 earnings presentation (Piketon transmission opportunity; SB Energy)",
+      "url": "https://docs.aep.com/docs/newsroom/resources/earnings/2026-07/2Q26EarningsReleasePresentation.pdf",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Motley Fool — AEP Q2 2026 earnings call transcript ('prospective offtaker')",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/aep-aep-q2-2026-earnings-call-transcript/",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Inside Climate News — Massive Ohio gas power plant: energy risks",
+      "url": "https://insideclimatenews.org/news/02052026/massive-ohio-gas-power-plant-energy-risks/",
+      "date": "2026-05-02"
+    },
+    {
+      "label": "SoftBank Group — Launch of the Portsmouth Consortium",
+      "url": "https://group.softbank/en/news/press/20260321",
+      "date": "2026-03-21"
+    },
+    {
+      "label": "U.S. Department of Energy — Fact sheet: Portsmouth AI data centre and power partnership",
+      "url": "https://www.energy.gov/sites/default/files/2026-03/FACT_SHEET_Portsmouth_AI.pdf",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "AEP — AEP Ohio partners to bring USD 4.2bn in new electric infrastructure to Appalachian Ohio",
+      "url": "https://www.aep.com/news/stories/view/10823/",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "POWER — SB Energy tapped for proposed 9.2 GW Ohio gas plant in first tranche of the U.S.–Japan deal",
+      "url": "https://www.powermag.com/sb-energy-tapped-for-proposed-9-2%E2%80%91gw-ohio-gas-power-plant-in-first-tranche-of-550b-u-s-japan-deal-what-we-know/",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "SB Energy — OpenAI and SoftBank Group partner with SB Energy to build and operate AI data centres",
+      "url": "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/",
+      "date": "2026-01-09"
+    },
+    {
+      "label": "California Energy Commission — Notice of determination, DEBA award to SE U.S. Development LLC for Athos battery (TN 266466)",
+      "url": "https://efiling.energy.ca.gov/GetDocument.aspx?tn=266466&DocumentContentId=103516",
+      "date": "2025-10-10"
+    },
+    {
+      "label": "SOLV Energy — Continues expansion of solar and storage O&M business (SB Energy among long-standing customers)",
+      "url": "https://www.solvenergy.com/news/solv-energy-continues-expansion-of-solar-and-storage-operations-maintenance-business-including-major-repowering-projects",
+      "date": "2025-04-21"
+    },
+    {
+      "label": "SB Energy — Commercial operation of American-made solar projects to help power Google data centres (Orion I–III)",
+      "url": "https://sbenergy.com/american-made-solar-projects-power-google-data/",
+      "date": "2024-10-18"
+    },
+    {
+      "label": "Stem — Stem and SB Energy announce technology and commercial alliance (in principle)",
+      "url": "https://investors.stem.com/news-events/press-releases/detail/133/stem-and-sb-energy-announce-technology-and-commercial-alliance-to-advance-ai-enabled-energy-management-of-utility-scale-renewables",
+      "date": "2023-11-02"
+    },
+    {
+      "label": "SB Energy — Multi-year order for 1.5 GW of First Solar modules",
+      "url": "https://sbenergy.com/first-solar-pv-modules/",
+      "date": "2022-03-01"
+    },
+    {
+      "label": "SB Energy — Energy projects (Athos Storage, Orion Solar Belt, Pelican's Jaw)",
+      "url": "https://sbenergy.com/energy-projects/"
+    },
+    {
+      "label": "SB Energy — Athos Storage project page (Fluence Storage, 1.6 GWh)",
+      "url": "https://sbenergy.com/project/athos-storage/"
+    },
+    {
+      "label": "SB Energy — Who we are (leadership and team)",
+      "url": "https://sbenergy.com/who-we-are/"
+    },
+    {
+      "label": "SB Energy — PORTS-Pike Technology Campus microsite",
+      "url": "https://portscampus.com/"
+    },
+    {
+      "label": "SB Energy — Milam Data Center microsite (DPR and Sundt)",
+      "url": "https://milamdc.com/"
+    },
+    {
+      "label": "SOLV Energy — Eiffel Solar project page",
+      "url": "https://www.solvenergy.com/projects/eiffel-solar"
+    },
+    {
+      "label": "SEC EDGAR — SB Energy, Inc. filing index (CIK 0002133037)",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133037"
+    }
+  ],
+  "lastUpdated": "2026-10-04",
+  "profileVersion": 1
+}

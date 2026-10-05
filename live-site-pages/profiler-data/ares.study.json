@@ -1,0 +1,361 @@
+{
+ "schemaVersion": 2,
+ "slug": "ares",
+ "title": "Ares — Technology Study Guide",
+ "lastUpdated": "2026-10-05",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a credit-first manager with one platform of its own",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Ares Management places no power-equipment orders, but Ada Infrastructure — its own data-centre platform — does.",
+   "ps": [
+    "**The firm.** Ares Management is a listed {{asset manager}} whose largest business is credit. It earns fees on the money it manages and a share of profits when its funds sell investments.",
+    "**The platform it owns.** Ada Infrastructure, which came with the GCP International acquisition in March 2025, is Ares's own data-centre development and operating business, with over 1 GW of campuses under way in Northern Virginia, Tokyo, Osaka, London and Brazil.",
+    "**What its funds control.** Ares funds hold a majority of Apex Clean Energy, a US wind, solar and storage developer, and 80% of a California solar-and-battery portfolio; Ares jointly controls Eni's Plenitude. Elsewhere it is a minority holder, preferred investor or lender.",
+    "This guide teaches the mechanics behind that: a manager's own platform versus a fund's portfolio company, how a manager's earnings split, how a development fund works, controlled versus minority power positions, what joint control means, how to read an unsettled control record, and the instruments that give money without control."
+   ]
+  },
+  {
+   "id": "owned-or-fund-owned",
+   "title": "A platform the manager owns versus one its funds own",
+   "kind": "prose",
+   "read": "Ada belongs to Ares itself; Apex belongs to Ares's funds. Both buy, but the chain of authority differs.",
+   "ps": [
+    "Most managers reach operating companies only through their funds: the fund owns the company for a few years, then sells it. Ares's 10-K describes Ada differently — as 'our dedicated data center operating platform', combining 'in-house data center development and operational expertise' inside a vertically integrated digital-infrastructure business.",
+    "That makes Ada part of the manager. Its development, design and energy-procurement teams specify and buy for the campuses that Ares's data-centre funds own, much as an in-house engineering department would. Ares paid consideration valued at USD 3.9bn for GCP International, plus earnouts that pay only if the digital-infrastructure business hits revenue targets.",
+    "Apex Clean Energy is the other model: a {{platform investment}} held by Ares funds since 2021, with two Ares partners on its board. Apex's own management develops, builds and operates its projects and signs for turbines, batteries and construction.",
+    "For a seller both are real buyers. The difference is who sets the strategy above the purchasing team: the manager itself at Ada, a fund's board at Apex."
+   ]
+  },
+  {
+   "id": "where-the-money-sits",
+   "title": "Where Ares's assets sit",
+   "kind": "bars",
+   "read": "Credit is most of Ares; infrastructure is a small slice of Real Assets.",
+   "unit": "USD billions of AUM, 30 June 2026",
+   "intro": "Ares's four groups; infrastructure was USD 29.9bn of the Real Assets figure, about 4% of the firm.",
+   "items": [
+    {
+     "label": "Credit",
+     "sub": "Direct lending, alternative credit, infrastructure debt, the listed BDC",
+     "v": 440.5
+    },
+    {
+     "label": "Real Assets",
+     "sub": "Real estate (USD 121.3bn) and infrastructure (USD 29.9bn)",
+     "v": 151.2
+    },
+    {
+     "label": "Secondaries",
+     "sub": "Buying existing fund stakes, including infrastructure secondaries",
+     "v": 44.2
+    },
+    {
+     "label": "Private Equity",
+     "sub": "Corporate buyouts and growth",
+     "v": 24.5
+    }
+   ]
+  },
+  {
+   "id": "three-kinds-of-earnings",
+   "title": "Fees, realized income and performance income",
+   "kind": "prose",
+   "read": "Fees are steady; performance income arrives only when funds sell at a profit.",
+   "ps": [
+    "Ares reports {{fee-related earnings}} — management and transaction fees minus the costs of earning them — of USD 1,775.3m in 2025. Its headline per-share measure is {{realized income}}, which adds the profits Ares actually received from fund sales and its own investments.",
+    "The volatile part is realized performance income: Ares's share of fund profits, its {{carried interest}}, paid when an investment is sold. A {{realisation}} cannot be scheduled, so a manager can guide to a figure and miss it. Ares expected over USD 350m of realized net performance income in 2026 and had about USD 136m after three quarters on its own preliminary figures.",
+    "Paper gains are booked earlier than cash: Ares's Japan data-centre fund booked USD 54.3m of carried interest in the first half of 2026 on a revaluation of its campuses, before any sale.",
+    "For a seller, none of these lines buys anything. They explain why a manager may push its platforms to grow — and why it may sell them."
+   ]
+  },
+  {
+   "id": "development-fund",
+   "title": "How a data-centre development fund works",
+   "kind": "prose",
+   "read": "Investors commit money to a fund; the manager's platform builds the campuses; the fund owns them.",
+   "ps": [
+    "Japan DC Partners I closed at about USD 2.4bn of equity commitments in June 2025 to develop three Greater Tokyo campuses of nearly 240 MW of IT load. CPP Investments, Canada's pension manager, was the largest investor, with about USD 1.3bn.",
+    "A {{fund commitment}} is a promise to provide money as the manager calls for it. It buys a share of the fund's returns, not a say in what the fund buys. The {{limited partner}}s commit; the {{general partner}} — Ares — decides.",
+    "Ada develops and operates the fund's campuses. So the order for a Tokyo campus's switchgear comes from Ada's teams, paid for with fund money, and the pension investor never sees the purchase order.",
+    "The same chain repeats at Ares's 314-acre Spotsylvania, Virginia site, where phase one is two buildings and 200 MW."
+   ]
+  },
+  {
+   "id": "controlled-or-minority-power",
+   "title": "Controlled and minority power positions",
+   "kind": "prose",
+   "read": "Ares's funds control two power buyers; most of the rest is passive capital beside an operator.",
+   "ps": [
+    "**Controlled.** Ares funds hold a majority of Apex Clean Energy, whose management buys turbines, batteries and construction for its projects. In September 2026 they bought 80% of an EDPR California portfolio of 200 MW of solar and 184 MW of batteries; the release does not say who operates it.",
+    "**Minority beside an operator.** Ares holds 49% of a 1,632 MW EDPR portfolio, and EDPR keeps 51%. In ENGIE North America's portfolios Ares paid US$430m for a minority stake in 905 MW and is paying about US$433m across 2025 and 2026 for 730 MW, while 'ENGIE will retain a controlling share in the portfolio and will continue to operate and manage the assets'.",
+    "A {{minority interest}} gives the buyer a share of the cash and some protective rights. The operator keeps the budget and the supplier relationships.",
+    "This pattern is common: a utility or developer sells part of its operating assets to a fund to recycle capital, keeps control, and goes on buying the next project's equipment itself."
+   ]
+  },
+  {
+   "id": "joint-control",
+   "title": "What joint control means",
+   "kind": "prose",
+   "read": "Joint control is about vetoes and board seats, not the percentage owned.",
+   "ps": [
+    "{{joint control}} exists when two or more owners must agree on strategic decisions — the budget, the business plan, senior appointments. It can sit with a small stake if the shareholder agreement gives it.",
+    "Ares owned 20% of Eni's renewables and retail business Plenitude after November 2025. After a further contribution of more than EUR 1bn completed on 1 October 2026 it holds 26.24%, and 'Ares and Eni will jointly control Plenitude': Ares appoints three of nine directors including the chairman, Eni five including the chief executive.",
+    "Competition authorities record such changes. Under {{merger control}}, the European Commission must clear an acquisition of control, including joint control, before it closes; its decisions name who acquires control of what.",
+    "Joint control is not management. With the chief executive appointed by Eni, Plenitude's managers run procurement; Ares shares the strategic vetoes."
+   ]
+  },
+  {
+   "id": "unsettled-control",
+   "title": "Reading an unsettled control record",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "When the record does not say who controls a company, say so rather than guess.",
+   "ps": [
+    "**What the record shows.** In March 2025 the European Commission cleared Ares acquiring joint control of Prime Data Centers alongside a Macquarie holding company and Data Realty Group, which already controlled it jointly.",
+    "**What changed.** Macquarie's FY26 annual report records the sale of its remaining stake, naming no buyer. An April 2026 release by Grain Management calls Data Realty Holding Corp. Prime's 'founding and controlling shareholder'. An Ares partner lists a Prime board seat.",
+    "**What is missing.** No filing states Ares's share or whether its joint-control rights survived Macquarie's exit.",
+    "**What to record.** Ares had joint control as of March 2025; current control is unsettled on the record. A clearance is a snapshot of the day it was granted, not a permanent fact."
+   ]
+  },
+  {
+   "id": "money-without-control",
+   "title": "Money without control",
+   "kind": "table",
+   "read": "Preferred equity, minority shares and loans earn returns; none of them signs a purchase order.",
+   "intro": "Three Ares positions in this corpus, and what each instrument does. See {{preferred equity}}, {{dual-class shares}} and {{private credit}}.",
+   "cols": [
+    "Position",
+    "Instrument",
+    "What it gives Ares",
+    "What it does not give"
+   ],
+   "rows": [
+    [
+     "SB Energy",
+     "USD 800m of preferred equity and warrants in its parent, about USD 996m of liquidation preference at end-2025",
+     "A senior claim, paid before common shareholders; redeemed in full at the IPO",
+     "Any vote on procurement"
+    ],
+    [
+     "X-energy",
+     "4.9% of the Class A and 20.5% of the Class B shares after the IPO",
+     "About 10% of the combined vote by our calculation, and two directors without a contractual right to appoint them",
+     "Control"
+    ],
+    [
+     "Vantage Data Centers",
+     "Lender: arranged a USD 2.4bn facility, holds about USD 1.6bn, funded about USD 330m at closing",
+     "Interest and security over assets",
+     "Any say in what Vantage builds or buys"
+    ]
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test across Ares's positions",
+   "kind": "table",
+   "read": "An investor passes only through a platform it controls that buys power equipment.",
+   "intro": "Each position, its kind, and who signs for equipment. The {{buying-authority test}} is defined in this guide's glossary.",
+   "cols": [
+    "Position",
+    "Kind",
+    "Who signs for power equipment",
+    "Passes?"
+   ],
+   "rows": [
+    [
+     "Ada Infrastructure",
+     "Owned outright by Ares",
+     "Ada's design and energy-procurement teams",
+     "Yes — directly"
+    ],
+    [
+     "Apex Clean Energy",
+     "Majority owned by Ares funds",
+     "Apex's management",
+     "Through the platform"
+    ],
+    [
+     "EDPR California solar and batteries",
+     "80% owned by Ares funds",
+     "The operator, not stated in the release",
+     "Through the platform"
+    ],
+    [
+     "Plenitude",
+     "Jointly controlled with Eni",
+     "Plenitude's management, with the CEO appointed by Eni",
+     "Shared"
+    ],
+    [
+     "Prime Data Centers",
+     "Joint control cleared 2025; now unsettled",
+     "Prime's management",
+     "Unclear"
+    ],
+    [
+     "ENGIE and EDPR minority portfolios",
+     "Minority stakes",
+     "ENGIE and EDPR, which operate",
+     "No"
+    ],
+    [
+     "SB Energy; X-energy; Vantage",
+     "Preferred; minority; lender",
+     "The companies themselves",
+     "No"
+    ]
+   ]
+  },
+  {
+   "id": "directory",
+   "title": "A directory with one door",
+   "kind": "proscons",
+   "read": "Ares points a seller to its funds' buyers and owns one buyer of its own.",
+   "intro": "Weigh Ada and Apex against a portfolio that is otherwise mostly minority and credit.",
+   "cards": [
+    {
+     "t": "Why Ares is worth knowing",
+     "meta": "Ada plus a map of funded power",
+     "adv": [
+      "**A buyer it owns.** Ada designs and procures for over 1 GW of data-centre campuses on three continents.",
+      "**A controlled developer.** Apex buys wind, solar and storage equipment for its own projects.",
+      "**Early signals.** A new development fund or infrastructure loan often precedes a builder's equipment plan."
+     ],
+     "dis": [
+      "**Mostly passive.** Most of its power exposure is minority stakes, preferred equity and loans.",
+      "**Operators decide.** At ENGIE, EDPR and Plenitude the operator keeps procurement.",
+      "**Ownership can move.** Apex has a reported stake sale process and Prime's control is unsettled."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date, a name or a deal size.",
+   "cards": [
+    {
+     "q": "How does a manager's own operating platform differ from a fund's portfolio company?",
+     "a": "The platform belongs to the manager and works for its funds indefinitely; a portfolio company is owned by a fund for a few years and then sold."
+    },
+    {
+     "q": "Why is {{realized income}} lumpier than {{fee-related earnings}}?",
+     "a": "It includes performance income and investment gains, which arrive only when investments are sold."
+    },
+    {
+     "q": "What does a {{fund commitment}} buy the investor?",
+     "a": "A share of the fund's returns — not a say in what the fund or its platforms buy."
+    },
+    {
+     "q": "Can a 26% shareholder have {{joint control}}?",
+     "a": "Yes, if the shareholder agreement requires its consent for strategic decisions or gives it board rights; control follows the rights, not the percentage."
+    },
+    {
+     "q": "What does a {{merger control}} clearance record, and what does it not?",
+     "a": "Who acquired control of what on the date of the decision; it says nothing about later sales or changes."
+    },
+    {
+     "q": "Why does a holder of {{preferred equity}} usually have no say in procurement?",
+     "a": "It buys a senior claim on cash and a {{liquidation preference}}, not voting control of the business."
+    },
+    {
+     "q": "An investor holds a {{minority interest}} in a portfolio its partner operates. Who buys the next turbine?",
+     "a": "The operator — it keeps the budget, the contracts and the supplier relationships."
+    },
+    {
+     "q": "A lender arranges a facility, holds part of it and funds part at closing. Why are those three numbers different?",
+     "a": "The facility is the total size, the holding is the lender's share of the commitment, and the funded amount is what was actually drawn."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "Who signs the switchgear orders for a campus Ada Infrastructure develops for an Ares data-centre fund?",
+     "c": [
+      "The fund's pension investors",
+      "Ada's design and procurement teams",
+      "The European Commission",
+      "The local utility"
+     ],
+     "a": 1,
+     "why": "Ada is Ares's own platform; it develops and operates the fund's campuses and buys for them."
+    },
+    {
+     "q": "ENGIE sells a minority stake in an operating portfolio to Ares funds and keeps operating it. For an inverter seller, who is the buyer of the next project?",
+     "c": [
+      "Ares",
+      "ENGIE",
+      "The tax-equity bank",
+      "The grid operator"
+     ],
+     "a": 1,
+     "why": "A {{minority interest}} leaves the operator in charge of procurement."
+    },
+    {
+     "q": "Ares holds 26.24% of Plenitude with joint control, and Eni appoints the chief executive. What does Ares have?",
+     "c": [
+      "Day-to-day management",
+      "Shared strategic vetoes and board seats",
+      "Nothing beyond dividends",
+      "Sole control"
+     ],
+     "a": 1,
+     "why": "{{joint control}} means owners must agree on strategic decisions; management stays with the CEO."
+    },
+    {
+     "q": "A competition clearance granted joint control in 2025; a co-owner has since sold out and another party calls itself the controlling shareholder. What do you record?",
+     "c": [
+      "The investor controls the company",
+      "Control as of the clearance; current control unsettled on the record",
+      "The company has no owner",
+      "The clearance was cancelled"
+     ],
+     "a": 1,
+     "why": "A clearance is a snapshot; without a later record, state the gap rather than guess."
+    },
+    {
+     "q": "Which measure rises and falls with fund sales rather than with fees?",
+     "c": [
+      "Fee-related earnings",
+      "Management fees",
+      "Realized performance income",
+      "Fee-paying AUM"
+     ],
+     "a": 2,
+     "why": "Performance income is the manager's share of fund profits, paid on a {{realisation}}."
+    },
+    {
+     "q": "An investor holds preferred equity that is redeemed at the company's IPO. After the IPO, what is its position?",
+     "c": [
+      "Controlling shareholder",
+      "Lender",
+      "Repaid, with no remaining stake from that instrument",
+      "Joint controller"
+     ],
+     "a": 2,
+     "why": "Redemption pays the holder out; the preferred stops existing."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "buying-authority test",
+   "d": "The Phase F screen for this corpus: does a company, or a platform it controls alone or jointly, sign for batteries, medium-voltage switchgear, generation or solid-state transformers? An investor passes only through a platform it controls."
+  },
+  {
+   "t": "realized income",
+   "d": "Ares's headline earnings measure: fee-related earnings plus realized performance income and realized investment income, after tax. It counts cash received from fund sales, not paper gains."
+  }
+ ]
+}

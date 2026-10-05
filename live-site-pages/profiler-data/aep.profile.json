@@ -1251,6 +1251,17 @@
       "note": "Customer-funded transmission partner at PORTS-Pike: an Electric Service Agreement covers 0.8 GW, while the remaining 9.2 GW and the 765 kV build SB Energy pays for await definitive agreements and OPSB, FERC and PUCO approvals.",
       "context": "AEP's 20 March 2026 release says SB Energy is committed to paying for USD 4.2bn of new transmission investment for the 10 GW campus. SB Energy's S-1 says AEP Ohio and its affiliates 'intend to incur approximately $5.1 billion in capital costs', to be passed on to SB Energy with a regulated return. The two figures may cover different scopes; no source reconciles them.",
       "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+      "slug": "stonepeak",
+      "type": "other",
+      "status": "active",
+      "since": "2025-05",
+      "scale": "Cologix's 15-year contract, one of two totalling about 98 MW",
+      "via": "AEP Ohio onsite fuel-cell electricity service to Cologix",
+      "note": "AEP Ohio supplies onsite fuel-cell electricity to Cologix, the data-centre platform Stonepeak controls, under a 15-year PUCO-approved contract.",
+      "context": "AEP's release of 5 June 2025 says the PUCO approved AEP Ohio's onsite fuel-cell projects for Amazon Web Services and Cologix and that both customers cover the full project costs. AEP Ohio owns the Bloom Energy fuel cells and Cologix buys the electricity. Stonepeak has held a majority of Cologix since 2017 and completed a USD 3.0bn equity recapitalisation of it in 2022. Stonepeak reaches AEP only through its platform.",
+      "source": "https://www.aep.com/news/stories/view/10262/"
     }
   ],
   "policyExposure": [
@@ -2113,6 +2124,11 @@
       "date": "2024-07-01"
     },
     {
+      "label": "Cologix — Stonepeak completes USD 3.0bn equity recapitalisation of portfolio company Cologix",
+      "url": "https://cologix.com/news/stonepeak-successfully-completes-3-0-billion-equity-recapitalization-portfolio-company-cologix/",
+      "date": "2022-04-06"
+    },
+    {
       "label": "AEP Ohio — Data Center Tariff page",
       "url": "https://www.aepohio.com/company/about/rates/data-center-tariff/"
     },
@@ -2177,6 +2193,6 @@
       "url": "https://www.nextearningsdate.com/aep.html"
     }
   ],
-  "lastUpdated": "2026-10-04",
-  "profileVersion": 3
+  "lastUpdated": "2026-10-05",
+  "profileVersion": 4
 }

@@ -1,0 +1,922 @@
+{
+ "schemaVersion": 7,
+ "slug": "stonepeak",
+ "name": "Stonepeak Partners LP",
+ "shortName": "Stonepeak",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://stonepeak.com",
+ "headquarters": "New York, NY, United States",
+ "founded": "2011",
+ "employees": "359 (Form ADV, 7 April 2026)",
+ "ownership": {
+  "type": "private",
+  "notes": "Delaware limited partnership; SEC-registered investment adviser (CRD 159699, SEC 801-73350) since 6 March 2012. Michael Dorrell controls the adviser through its general partner, Stonepeak Partners LLC. Blue Owl's GP Strategic Capital funds have held a minority interest in Stonepeak Partners Holdings LP since June 2023; third-party owners receive less than 17% of fee income and carried interest and have no control (Form ADV)."
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Stonepeak signs for no equipment itself. It reaches this corpus through data-centre and storage platforms it controls or created. Cologix, recapitalised at a USD 3.0bn equity value in 2022, runs 45-plus interconnection data centres and is AEP Ohio's customer for onsite fuel-cell power. Digital Edge reports 1.8 GW of secured IT power across Asia. Montera, launched in April 2025 on a USD 1.5bn Stonepeak commitment, is building a 500 MW campus in Arizona. Kingdom owns nine Japanese battery projects (479 MW), and its first project financing names CATL batteries. Its biggest power positions are non-controlling. It holds 50% of Dominion's 2.6 GW Coastal Virginia Offshore Wind project, where Dominion keeps full operational control, and 40% of Woodside's Louisiana LNG. Two signed deals would add controlled buyers on closing: a majority of the Louisiana utility Cleco (2,676 MW of generation, with Bernhard Capital) and a majority of Castrol (about USD 10.1bn enterprise value).\n\n**BACKGROUND.** Per its Form ADV (filed 7 April 2026), the adviser is Stonepeak Partners LP, a Delaware limited partnership controlled by co-founder and chief executive Michael Dorrell through its general partner. It reports USD 81.9bn of regulatory assets under management across 125 accounts and 359 employees. Stonepeak's own published AUM is about USD 93bn as of March 2026, including subsequently committed capital. Blue Owl's GP Strategic Capital funds have held a minority interest since June 2023, with no control. The manager files no financial statements; its wealth fund, Stonepeak-Plus Infrastructure Fund, files 10-Ks. Infrastructure Investor's 2026 ranking places Stonepeak sixth in five-year infrastructure fundraising, at USD 52.9bn.",
+ "ecosystemRole": "We assess Stonepeak as the capital segment's platform builder. Rather than buying established operators, it launches companies around management teams and funds their growth: Digital Edge (2020), the Japanese battery platform now called Kingdom (2024), Montera (2025) and WahajPeak (2025). It also controls Cologix through a dedicated continuation vehicle. Each of those platforms buys its own power and electrical equipment, and its own management signs. Cologix's president's remit includes data-centre design, engineering, construction and supply chain. Kingdom's first financing names CATL batteries, and Montera's delivery team comes from Oracle and Equinix. Its largest power cheques sit beside an operator — Dominion at CVOW, Woodside at Louisiana LNG, Repsol and Ørsted in US renewables — so there a seller's counterparty is the operator, not Stonepeak.",
+ "productsAndServices": [
+  {
+   "name": "Infrastructure funds — the flagship closed-end series",
+   "category": "Private markets — infrastructure equity",
+   "description": "Stonepeak's core product is a series of closed-end infrastructure funds that buy controlling or significant positions in digital, energy, transport and logistics, and real-estate businesses. Per the funds' Form D filings, Stonepeak Infrastructure Fund IV sold its full USD 14.0bn offering to 373 investors (final amendment, February 2022), and Fund V had sold USD 7.29bn with the offering marked 'Indefinite' at its latest amendment (January 2025); no final close for Fund V is on the record. The adviser reported USD 81.9bn of regulatory assets under management across 125 accounts, 121 of them pooled vehicles, in its Form ADV filed 7 April 2026.",
+   "highlights": [
+    "Fund III's gross asset value was about USD 9.0bn and Fund IV's about USD 12.7bn across its main and Luxembourg vehicles, per the ADV's private-fund schedule, which excludes uncalled commitments",
+    "Single-asset vehicles sit beside the funds: Stonepeak Cologix Holdings LP carried about USD 5.0bn of gross asset value, the result of the 2022 recapitalisation that moved Cologix from Fund II into Stonepeak-managed vehicles",
+    "Infrastructure Investor's 2026 five-year fundraising table (published 1 June 2026, as carried in this corpus) lists Stonepeak ahead of Blackstone, behind BlackRock, KKR, Brookfield, Macquarie and EQT"
+   ],
+   "positioning": "A specialist infrastructure manager, not a diversified alternative-asset firm: it has no buyout, hedge-fund or insurance arm, and its regulatory AUM is about a twelfth of Apollo's total AUM.",
+   "soldThrough": "Closed-end limited partnerships with Luxembourg parallels, single-asset continuation vehicles and co-investment vehicles; 38% of clients are non-US persons (Form ADV).",
+   "targetSegments": [
+    "Pension funds",
+    "Sovereign wealth funds",
+    "Insurers",
+    "Endowments",
+    "Wealth-channel investors (Stonepeak+)"
+   ],
+   "roadmap": "Fund V's final close is not on the record; Stonepeak Asia Infrastructure Fund II and Global Renewables Fund II were still selling interests at their latest Form D amendments (July and April 2026)."
+  },
+  {
+   "name": "Digital infrastructure platforms — Cologix, Digital Edge and Montera",
+   "category": "Data centres — controlled platforms",
+   "description": "Stonepeak controls three data-centre operators that buy their own power and electrical equipment. Cologix, bought in 2017 and recapitalised in 2022 at a USD 3.0bn equity value, runs '45+ hyperscale edge data centers across 13 North American markets' (Cologix, March 2026); Stonepeak is its controlling shareholder through Stonepeak Cologix Holdings, a single-asset vehicle with about USD 5.0bn of gross asset value in the Form ADV. Digital Edge was formed with Stonepeak in August 2020 on a USD 1bn capital commitment and reported 31 data centres and 1.8 GW of secured IT power across Asia in its April 2026 sustainability report. Montera Infrastructure, launched in April 2025 on a USD 1.5bn Stonepeak equity commitment, develops hyperscale campuses in North America; its one published project is PHX1 in Glendale, Arizona (500 MW, in service in the second quarter of 2028).",
+   "highlights": [
+    "Cologix: a USD 1.5bn raise in October 2024 (a USD 1.0bn development debt facility plus USD 500m of equity) for over 650 critical MW of sellable capacity in Columbus, Des Moines and Vancouver; a 154-acre Licking County, Ohio campus planned for eight AI-ready data centres and up to 800 MW",
+    "Cologix is AEP Ohio's customer for onsite fuel-cell power under a 15-year agreement approved by the PUCO in May 2025; AEP Ohio buys, owns and operates the Bloom Energy fuel cells and Cologix pays for the service",
+    "Digital Edge: about USD 640m of new equity and USD 1bn of debt in January 2025; a USD 880m green loan for a 100 MW Chonburi campus in a joint venture with B.Grimm Power (May 2026); Stonepeak's credit arm was a mandated lead arranger of its USD 575m holding-company loan (May 2026); John Freeman succeeded founder Samuel Lee as chief executive from Q2 2025",
+    "Montera's leadership — a founder-CEO from Yondr and Google, a CTO and a Chief Delivery Officer — is the team that signs for its equipment; it pledged in August 2026 to comply with the Texas governor's data-centre standards without naming a Texas site"
+   ],
+   "positioning": "Three distinct models under one owner: interconnection-dense metro data centres (Cologix), a pan-Asian developer (Digital Edge) and a greenfield hyperscale builder (Montera).",
+   "soldThrough": "Controlling equity through flagship funds, a Cologix continuation vehicle and platform-level capital raises with co-investors.",
+   "targetSegments": [
+    "Hyperscalers",
+    "AI and cloud tenants",
+    "Enterprises and network carriers"
+   ],
+   "roadmap": "Montera PHX1 in service Q2 2028; Cologix COL5 in Columbus ready for service in Q3 2026; Digital Edge's Mumbai BOM3 under construction."
+  },
+  {
+   "name": "Minority and preferred positions in data centres — CoreSite, Princeton Digital Group, Carrier Colo",
+   "category": "Data centres — non-controlling stakes",
+   "description": "Stonepeak also holds data-centre positions it does not control. American Tower's FY2025 10-K says Stonepeak holds about 29% of the common equity of American Tower's US data-centre business (CoreSite) and all of its mandatorily convertible preferred equity, about 36% on a fully converted basis, with American Tower keeping control. Princeton Digital Group, an Asian operator, took a USD 1.3bn preferred-equity commitment from Stonepeak in July 2025, with Warburg Pincus remaining its largest shareholder. In November 2025 Stonepeak and Columbia Capital agreed to buy IPB Internet Provider in Berlin, operator of the Carrier Colo data centres.",
+   "highlights": [
+    "A development partnership with American Tower to build a Denver data centre gives Stonepeak the controlling interest and American Tower a minority (AMT 10-K)",
+    "None of these positions gives Stonepeak control of equipment buying; the operator's management signs"
+   ],
+   "soldThrough": "Minority common equity, mandatorily convertible preferred and preferred-equity commitments.",
+   "targetSegments": [
+    "Colocation operators",
+    "Hyperscale tenants"
+   ]
+  },
+  {
+   "name": "Energy and energy transition — Kingdom, CVOW, Louisiana LNG, solar and distributed energy",
+   "category": "Private markets — power, storage and LNG",
+   "description": "Stonepeak's energy book mixes one controlled storage platform with large non-controlling stakes. Kingdom, a battery-storage platform 'established by Stonepeak' and headquartered in Singapore, owns nine Japanese projects totalling 479 MW that each hold a 20-year capacity-market contract; it closed its first project financing, for the 29 MW Mimasaka project with CATL batteries, with MUFG in April 2026. Stonepeak bought a 50% noncontrolling interest in Dominion Energy's 2.6 GW Coastal Virginia Offshore Wind project in October 2024, paying USD 2.6bn at closing, and a 40% interest in Woodside's Louisiana LNG infrastructure company in June 2025. It holds minority stakes in two Repsol US solar portfolios and announced an equity investment in AMPYR Distributed Energy, a UK and European onsite-solar platform, on 22 September 2026.",
+   "highlights": [
+    "Kingdom descends from the platform Stonepeak formed with Singapore's CHC in May 2024: the four projects it won in Japan's first long-term decarbonisation auction (131 MW) and the five awarded in April 2025 (348 MW) sum to its 479 MW; the same chief executive leads it",
+    "Other controlled or Stonepeak-created power platforms: TerraWind Renewables (80%, with Shizen Energy 20%; Asian onshore wind, March 2024) and WahajPeak (Middle East solar, wind and storage, launched August 2025); Stonepeak's renewables and energy-transition platforms totalled '10.4 GW of renewable energy in operations, under construction, or in development' in August 2025",
+    "CVOW: Virginia Power 'will retain full operational control of the construction and operations', and Stonepeak holds 'customary minority interest rights'; Stonepeak funds 50% of costs up to USD 11.3bn and has an option to share costs above that (Dominion 8-K, February 2024)",
+    "Louisiana LNG: Stonepeak committed USD 5.7bn toward the foundation development's capital expenditure and paid about USD 1.9bn at completion; Woodside operates and Bechtel is the lump-sum EPC contractor (Woodside, June 2025)",
+    "Repsol: 46.3% of a 777 MW operating solar-and-storage portfolio for USD 340m (closed July 2025) and 43.8% of the 629 MW Outpost solar project for USD 252.5m (December 2025)",
+    "AMPYR Distributed Energy: the transaction was 'expected to close in the coming days'; stake and price undisclosed; its parent AGP Sustainable Real Assets took a strategic preferred investment from Stonepeak in 2023",
+    "Ørsted: a stake in four US onshore wind farms (957 MW) for about USD 300m in March 2024, with Stonepeak receiving 80% of cash distributions and Ørsted remaining managing member"
+   ],
+   "positioning": "Stonepeak controls the storage developer it created (Kingdom) and finances the rest as a co-owner beside an operator — Dominion, Woodside, Repsol, AGP.",
+   "soldThrough": "Platform equity (Kingdom), joint-venture and noncontrolling interests (CVOW, Louisiana LNG, Repsol) and growth equity (AMPYR Distributed Energy).",
+   "targetSegments": [
+    "Utilities",
+    "LNG offtakers",
+    "Capacity markets (Japan)",
+    "Commercial and industrial power users"
+   ],
+   "roadmap": "CVOW's final turbines are expected by the end of 2027 (Dominion Q2 2026 10-Q); Kingdom targets further project financings; the AMPYR Distributed Energy closing was pending at 5 October 2026."
+  },
+  {
+   "name": "Signed acquisitions — Cleco, Castrol and Allgas",
+   "category": "Private markets — utilities and industrial platforms",
+   "description": "Three signed deals would add controlled businesses on closing. With Bernhard Capital Partners, Stonepeak agreed on 27 April 2026 to buy Cleco Group, a Louisiana regulated electric utility serving about 298,000 customers, from a consortium of Macquarie Asset Management, BCI and Manulife; 'upon close, Stonepeak will hold the majority interest', subject to customary regulatory approvals; Cleco would remain regulated by the Louisiana Public Service Commission. On 24 December 2025 Stonepeak agreed to acquire a majority controlling interest in Castrol from bp at an enterprise value of about USD 10.1bn, with bp keeping 35% and CPP Investments investing up to USD 1.05bn for an indirect stake. In December 2025 it agreed to buy Allgas, a Queensland gas distributor.",
+   "highlights": [
+    "Cleco Power owns generating units with a rated capacity of 2,676 MW; Cleco would remain locally managed and regulated in Louisiana (Stonepeak release)",
+    "Castrol's USD 10.1bn is an enterprise value for the whole business, not Stonepeak's equity cheque",
+    "Closing of none of the three is on the record as of 5 October 2026"
+   ],
+   "soldThrough": "Majority equity alongside co-investors (Bernhard Capital at Cleco; bp and CPP Investments at Castrol).",
+   "targetSegments": [
+    "Regulated utility customers (Louisiana)",
+    "Industrial and automotive lubricant markets",
+    "Gas distribution customers (Queensland)"
+   ],
+   "roadmap": "Cleco awaits regulatory approvals; Castrol and Allgas closings not announced."
+  },
+  {
+   "name": "Asia, Opportunities, Core, Renewables and Catalyst funds",
+   "category": "Private markets — strategy funds",
+   "description": "Beside the flagship series Stonepeak runs strategy funds, each sized by its Form D: Stonepeak Asia Infrastructure Fund closed at USD 3.3bn in March 2024 and a second Asia fund had sold USD 1.56bn by July 2026; the Opportunities Fund, for mid-market deals, closed at a revised hard cap of USD 3.15bn in August 2024; the Core Fund vehicles had sold USD 4.82bn by March 2026; Global Renewables Fund I sold USD 2.75bn and Fund II USD 1.25bn; the Catalyst Fund sold USD 600m to one investor in 2025–2026.",
+   "highlights": [
+    "Fund sizes here are Form D sales figures — commitments, not gross asset value and not money invested",
+    "The plan's 'Keystone' core product does not appear in the ADV's 121 private funds or 27 relying advisers; the core product is the Stonepeak Core Fund"
+   ],
+   "soldThrough": "Closed-end and open-ended limited partnerships with parallel vehicles.",
+   "targetSegments": [
+    "Institutional investors"
+   ]
+  },
+  {
+   "name": "Credit and wealth — Stonepeak Credit, Stonepeak+ and the ASX note",
+   "category": "Private markets — infrastructure credit and wealth",
+   "description": "Stonepeak Credit has invested in infrastructure debt since 2018 and grew with the acquisition of Boundary Street Capital, an Australian private-credit manager with more than USD 700m of commitments, completed in January 2025. For individual investors Stonepeak runs Stonepeak-Plus Infrastructure Fund, an evergreen vehicle that had sold USD 819m to 213 investors by September 2026, and listed an infrastructure-debt note on the ASX in December 2025.",
+   "highlights": [
+    "The credit arm lends inside its own sponsor's portfolio as well as outside it: Stonepeak Credit was a mandated lead arranger on Digital Edge's USD 575m holding-company loan (May 2026)",
+    "A wealth website and a broker-dealer, Stonepeak Securities LLC, support the individual-investor channel (Form ADV)"
+   ],
+   "soldThrough": "Credit funds, separately managed accounts, an evergreen wealth fund and an ASX-listed note.",
+   "targetSegments": [
+    "Infrastructure borrowers",
+    "Wealth-channel investors"
+   ]
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-22",
+   "category": "ma",
+   "headline": "Stonepeak announces an equity investment in AMPYR Distributed Energy, a UK and European onsite-solar platform with 250 MW contracted across 200 sites; AGP keeps an interest; closing 'expected in the coming days'",
+   "read": "Adds a commercial and industrial distributed-energy line in Europe; stake, price and closing are not on the record.",
+   "source": "https://stonepeak.com/news/stonepeak-announces-investment-in-ampyr-distributed-energy"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "regulatory",
+   "headline": "Texas Governor names Montera Infrastructure, with Galaxy and Compass, as committing to comply with his data-centre standards",
+   "read": "A policy pledge; Montera has published no Texas site.",
+   "source": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards"
+  },
+  {
+   "date": "2026-05-22",
+   "category": "financial",
+   "headline": "Digital Edge closes an inaugural USD 575m holding-company loan, with Stonepeak Credit among the mandated lead arrangers",
+   "read": "Stonepeak's credit arm lends inside its own sponsor's portfolio.",
+   "source": "https://www.digitaledgedc.com/resources/newsroom/digital-edge-575m-holdco-financing/"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "financial",
+   "headline": "Digital Edge raises an USD 880m green loan for a 100 MW Chonburi campus in its joint venture with B.Grimm Power",
+   "read": "Digital Edge's first large Thai build, financed at project level.",
+   "source": "https://www.digitaledgedc.com/resources/newsroom/digital-edge-bgrimm-880m-thailand-data-center-loan/"
+  },
+  {
+   "date": "2026-04-29",
+   "category": "corporate",
+   "headline": "Digital Edge reports 31 data centres and 1.8 GW of secured IT power across nine countries",
+   "read": "The platform Stonepeak founded in 2020 now holds more secured power than many listed operators.",
+   "source": "https://www.digitaledgedc.com/resources/newsroom/digital-edge-publishes-fifth-annual-esg-report/"
+  },
+  {
+   "date": "2026-04-27",
+   "category": "ma",
+   "headline": "Stonepeak and Bernhard Capital Partners agree to buy Cleco, a Louisiana regulated utility, from Macquarie Asset Management, BCI and Manulife; Stonepeak to hold the majority on closing",
+   "read": "On closing, a Stonepeak-controlled utility with 2,676 MW of generation; approvals pending.",
+   "source": "https://stonepeak.com/news/stonepeak-and-bernhard-capital-partners-to-acquire-cleco"
+  },
+  {
+   "date": "2026-04-07",
+   "category": "financial",
+   "headline": "Kingdom, the Japanese battery-storage platform established by Stonepeak, signs its first project-finance facility with MUFG for the 29 MW Mimasaka project, with CATL batteries",
+   "read": "The first named battery supplier at a Stonepeak-controlled platform; the facility amount is undisclosed.",
+   "source": "https://www.globenewswire.com/news-release/2026/04/07/3268779/0/en/Kingdom-Energy-Storage-Platform-Backed-by-Stonepeak-Executes-First-Project-Financing-Facility.html"
+  },
+  {
+   "date": "2026-03-05",
+   "category": "financial",
+   "headline": "Cologix's MTL8 data centre in Montreal (21 MW) is debt-financed by a CAD 240m senior loan from La Caisse",
+   "read": "Cologix finances its AI-ready builds with debt from new lenders beside its sponsor's equity.",
+   "source": "https://cologix.com/news/la-caisse-invests-cad-240-million-to-advance-cologixs-ai-ready-mtl8-data-centre-in-montreal/"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "corporate",
+   "headline": "Dorrell halves his unrealised carried interest on Stonepeak's first fund to lift its investors' returns (Infrastructure Investor, citing an LP memo)",
+   "read": "A founder concession on the oldest fund; reported, not announced.",
+   "source": "https://www.infrastructureinvestor.com/stonepeak-founder-dorrell-halves-his-unrealised-carry-to-boost-fund-i-returns-exclusive/"
+  },
+  {
+   "date": "2025-12-24",
+   "category": "ma",
+   "headline": "Stonepeak agrees to acquire a majority controlling interest in Castrol from bp at about USD 10.1bn enterprise value; bp keeps 35%; CPP Investments invests up to USD 1.05bn",
+   "read": "The firm's largest announced acquisition; closing not on the record.",
+   "source": "https://stonepeak.com/news/stonepeak-to-acquire-majority-controlling-interest-in-castrol-from-bp"
+  },
+  {
+   "date": "2025-12-11",
+   "category": "ma",
+   "headline": "Stonepeak agrees to buy 43.8% of Repsol's 629 MW Outpost solar project in Texas for USD 252.5m",
+   "read": "A second minority partnership with Repsol, which keeps control.",
+   "source": "https://stonepeak.com/news/repsol-advances-its-renewable-energy-strategy-in-the-us-with-a-new-deal-with-stonepeak"
+  },
+  {
+   "date": "2025-11-10",
+   "category": "ma",
+   "headline": "Stonepeak and Columbia Capital agree to acquire IPB, the Berlin operator of the Carrier Colo data centres",
+   "read": "A first European colocation platform; terms undisclosed.",
+   "source": "https://stonepeak.com/news/stonepeak-and-columbia-capital-to-acquire-berlin-data-center-operator-ipb"
+  },
+  {
+   "date": "2025-08-18",
+   "category": "ma",
+   "headline": "Stonepeak launches WahajPeak, a Middle East solar, wind and storage platform",
+   "read": "A platform built around a management team, the Stonepeak pattern.",
+   "source": "https://stonepeak.com/news/stonepeak-launches-middle-east-renewables-platform-wahajpeak"
+  },
+  {
+   "date": "2025-08-08",
+   "category": "financial",
+   "headline": "Stonepeak completes a USD 1.3bn preferred-equity investment in Princeton Digital Group, an Asian data-centre operator",
+   "read": "Preferred equity; Warburg Pincus remains the largest shareholder.",
+   "source": "https://stonepeak.com/news/stonepeak-completes-usd-1-3-billion-investment-in-princeton-digital-group"
+  },
+  {
+   "date": "2025-06-25",
+   "category": "ma",
+   "headline": "Woodside completes the sale of 40% of Louisiana LNG Infrastructure to Stonepeak, which commits USD 5.7bn toward capital expenditure and pays about USD 1.9bn at closing",
+   "read": "A non-controlling LNG stake; Woodside operates and Bechtel builds.",
+   "source": "https://www.sec.gov/Archives/edgar/data/844551/000119312525146092/d48785dex991.htm"
+  },
+  {
+   "date": "2025-04-29",
+   "category": "ma",
+   "headline": "Stonepeak agrees to buy 46.3% of Repsol's 777 MW US solar-and-storage portfolio for USD 340m",
+   "read": "Minority partnership; closed July 2025 per Repsol's December release.",
+   "source": "https://stonepeak.com/news/repsol-allies-with-stonepeak-on-solar-and-storage-portfolio-for-its-first-us-renewables-partnership"
+  },
+  {
+   "date": "2025-04-29",
+   "category": "order-win",
+   "headline": "The Stonepeak–CHC battery platform wins five projects (348 MW) in Japan's second long-term decarbonisation auction",
+   "read": "Takes the platform, now Kingdom, to 479 MW with 20-year capacity revenue.",
+   "source": "https://stonepeak.com/news/energy-storage-platform-backed-by-stonepeak-and-chc-awarded-five-projects-in-japan-long-term-decarbonization-auction"
+  },
+  {
+   "date": "2025-04-23",
+   "category": "ma",
+   "headline": "Stonepeak launches Montera Infrastructure, a North American hyperscale data-centre developer, with a USD 1.5bn equity commitment",
+   "read": "Stonepeak's fourth North American data-centre investment and its eighth globally.",
+   "source": "https://stonepeak.com/news/stonepeak-launches-montera-infrastructure"
+  },
+  {
+   "date": "2025-01-06",
+   "category": "financial",
+   "headline": "Digital Edge raises over USD 1.6bn — about USD 640m of equity and USD 1bn of debt",
+   "read": "Sovereign and institutional co-investors join Stonepeak in the platform.",
+   "source": "https://stonepeak.com/news/digital-edge-dc-raises-over-us1-6-billion-in-new-equity-and-debt-capital-to-fund-continued-platform-expansion"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **Stonepeak is a directory of buyers, not a door**: Stonepeak Partners LP places no equipment orders, and the purchase orders come from Cologix, Digital Edge, Montera and Kingdom, each through its own management. Basis: the platforms' own releases and Stonepeak's release language on each; Kingdom's April 2026 financing release is the only one naming a supplier (CATL). A seller reaches these buyers through Stonepeak's portfolio and sells to the platform.",
+  "**(High confidence)** We assess that **on its largest power positions Stonepeak is a financier beside an operator**. Basis: Dominion's 8-K says Virginia Power 'will retain full operational control of the construction and operations' of CVOW; Woodside operates Louisiana LNG with Bechtel as contractor; Repsol and Ørsted keep control of the US renewables Stonepeak co-owns. CVOW's estimated cost has risen to about USD 11.7bn (Dominion's Q2 2026 10-Q), above the USD 11.3bn ceiling on Stonepeak's mandatory contributions; above that ceiling Stonepeak's further contributions are optional, and Virginia Power funds 67–83% of any it chooses to share (Dominion 8-K, February 2024).",
+  "**(Moderate confidence)** We assess that **Stonepeak's distinctive method is platform creation, which makes its buyers young and management-led**. Basis: Digital Edge, Kingdom, Montera, TerraWind and WahajPeak were each formed around a team with a Stonepeak capital commitment. For a seller that means the procurement relationship is with founders and delivery chiefs recruited from hyperscalers and integrators, and the first purchase orders arrive as each platform's first project is financed — as Kingdom's did in April 2026.",
+  "**(Moderate confidence)** We assess that **Cleco would turn Stonepeak from a utility co-owner into a utility owner**. Basis: the April 2026 agreement gives Stonepeak the majority of a Louisiana utility with 2,676 MW of generation on closing. Until approvals arrive Cleco is a pending buyer, and its procurement would remain with its local management under the Louisiana Public Service Commission.",
+  "**(Low confidence)** We assess that **Stonepeak's fundraising is slower at the flagship than its growth suggests**. Basis: Fund V had sold USD 7.29bn by January 2025 (Form D) against a USD 15bn target reported by Infrastructure Investor and has no close on the record; Dorrell cut his own Fund I carry in February 2026. Against that, the firm's published AUM rose from USD 61.1bn (March 2024) to about USD 93bn (March 2026), carried by strategy funds, Cologix's continuation vehicle and the wealth channel.",
+  "**INDICATORS TO WATCH** — *Cleco approvals:* a closing would make Stonepeak the majority owner of a regulated utility. *AMPYR Distributed Energy closing notice:* the stake size would show whether Stonepeak controls it. *Kingdom's next project financings:* each names its battery supplier. *Montera PHX1 (in service Q2 2028):* the first Montera campus and its equipment choices. *Fund V final close:* the size the flagship reached. *CVOW completion, expected by end-2027:* whether costs stay near USD 11.7bn."
+ ],
+ "relationships": [
+  {
+   "slug": "dominion-energy",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-10",
+   "scale": "50% noncontrolling interest; USD 2.6bn paid to Dominion at closing",
+   "via": "Coastal Virginia Offshore Wind Commercial Project (2.6 GW)",
+   "note": "Stonepeak owns a 50% noncontrolling interest in CVOW through OSW Project LLC; Dominion's Virginia Power keeps full operational control of construction and operations.",
+   "context": "Dominion's 8-K of 26 February 2024 records the equity capital contribution agreement with Dunedin Member LLC, a Stonepeak vehicle: Stonepeak paid 50% of construction costs incurred to closing (less a USD 145m withholding), funds 50% of remaining costs up to a total of USD 11.3bn, and may share costs between USD 11.3bn and USD 13.7bn, with Virginia Power then contributing 67–83%; Virginia Power 'will retain full operational control', and Stonepeak has 'customary minority interest rights'. The sale closed in October 2024, with Virginia Power receiving USD 2.6bn.\n\nDominion's Q2 2026 10-Q puts the estimated cost at about USD 11.7bn, with the final turbines expected by the end of 2027, and lists Stonepeak's optional contributions among its risks. Dominion builds and operates the project and signs its equipment contracts.",
+   "source": "https://www.sec.gov/Archives/edgar/data/715957/000119312524045358/d766880d8k.htm"
+  },
+  {
+   "slug": "blue-owl",
+   "type": "investor",
+   "status": "active",
+   "since": "2023-06",
+   "scale": "Third-party owners receive less than 17% of fee income and carried interest",
+   "via": "Blue Owl GP Strategic Capital (formerly Dyal)",
+   "note": "Blue Owl's GP Strategic Capital funds have held a passive minority interest in Stonepeak's holding company since June 2023, with no control.",
+   "context": "Stonepeak's July 2023 release announced a minority investment from Blue Owl's GP Strategic Capital platform. Its Form ADV (April 2026) records that Blue Owl-managed vehicles acquired a minority interest in Stonepeak Partners Holdings LP in June 2023 and made follow-on investments; Blue Owl and other third-party strategic investors together receive less than 17% of the adviser's fee income and of its carried interest, and none has 'control over the day-to-day operations or investment decisions'. Michael Dorrell controls the adviser through its general partner.",
+   "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159699/PDF/159699.pdf"
+  },
+  {
+   "slug": "aep",
+   "type": "other",
+   "status": "active",
+   "since": "2025-05",
+   "scale": "About 98 MW across the AWS and Cologix contracts; Cologix's runs 15 years",
+   "via": "AEP Ohio onsite fuel-cell electricity service",
+   "note": "AEP Ohio provides onsite fuel-cell electricity to Cologix, Stonepeak's controlled data-centre platform, under a 15-year PUCO-approved contract; AEP Ohio owns the Bloom Energy fuel cells.",
+   "context": "AEP's release of 5 June 2025 says the PUCO approved AEP Ohio's onsite fuel-cell projects for Amazon Web Services and Cologix and that 'AWS and Cologix will cover the full project costs'; AEP's Q2 2025 10-Q records two contracts totalling about 98 MW under its Bloom Energy fuel-cell purchase agreement. AEP Ohio buys, owns and operates the fuel cells; Cologix is the customer for the electricity.\n\nStonepeak has controlled Cologix since 2017 and recapitalised it at a USD 3.0bn equity value in 2022.",
+   "source": "https://www.aep.com/news/stories/view/10262/"
+  },
+  {
+   "slug": "catl",
+   "type": "other",
+   "status": "active",
+   "since": "2026-04",
+   "scale": "29 MW Mimasaka project",
+   "via": "BESS for the Mimasaka project, Okayama",
+   "note": "CATL supplies the batteries for Kingdom's 29 MW Mimasaka project, the first project-financed asset of Stonepeak's Japanese battery-storage platform.",
+   "context": "Kingdom's release of April 2026 describes 'a battery energy storage system (\"BESS\") platform established by Stonepeak' that signed its first long-term project-finance loan with MUFG Bank for the Mimasaka project, a 29 MW battery in Okayama Prefecture, which 'incorporates batteries from CATL'. Kingdom owns nine Japanese projects totalling 479 MW, each with a 20-year capacity-market contract. Kingdom's management signs the supply contract; Stonepeak is the sponsor.",
+   "source": "https://www.globenewswire.com/news-release/2026/04/07/3268779/0/en/Kingdom-Energy-Storage-Platform-Backed-by-Stonepeak-Executes-First-Project-Financing-Facility.html"
+  },
+  {
+   "slug": "cpp-investments",
+   "type": "partner",
+   "status": "announced",
+   "since": "2025-12",
+   "scale": "CPP up to USD 1.05bn, for an indirect stake",
+   "via": "Castrol acquisition",
+   "note": "CPP Investments agreed to invest up to USD 1.05bn alongside Stonepeak's acquisition of a majority controlling interest in Castrol, taking an indirect stake.",
+   "context": "Stonepeak's release of 24 December 2025: Stonepeak agreed to acquire a majority controlling interest in Castrol from bp at an enterprise value of about USD 10.1bn, bp keeping 35%; 'in connection with the transaction, Canada Pension Plan Investment Board (\"CPP Investments\") will invest up to USD$1.05 billion in support of the transaction, resulting in an indirect stake in Castrol'. No closing is on the record as of 5 October 2026.",
+   "source": "https://stonepeak.com/news/stonepeak-to-acquire-majority-controlling-interest-in-castrol-from-bp"
+  },
+  {
+   "slug": "macquarie",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-04",
+   "via": "Cleco acquisition",
+   "note": "Macquarie Asset Management is part of the consortium selling Cleco, the Louisiana utility, to Stonepeak and Bernhard Capital Partners.",
+   "context": "Stonepeak's release of 27 April 2026 announces an agreement with Bernhard Capital Partners to acquire Cleco Group from a consortium of Macquarie Asset Management, BCI and Manulife Investment Management, which owned it for about a decade; Stonepeak is to hold the majority interest on closing, subject to customary regulatory approvals.",
+   "source": "https://stonepeak.com/news/stonepeak-and-bernhard-capital-partners-to-acquire-cleco"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Investment Advisers Act — SEC registration and Form ADV",
+   "status": "in-effect",
+   "effectiveDate": "2012-03",
+   "exposure": "Stonepeak Partners LP has been an SEC-registered investment adviser since 6 March 2012 (CRD 159699), with 27 relying advisers under an umbrella registration and a broker-dealer affiliate, Stonepeak Securities LLC. Its Form ADV is the primary public record of its ownership, regulatory AUM (USD 81.9bn) and private funds (121).",
+   "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159699/PDF/159699.pdf"
+  },
+  {
+   "regime": "Japan Long-Term Decarbonization Auction",
+   "status": "in-effect",
+   "exposure": "Kingdom's nine Japanese battery projects (479 MW) each hold a 20-year revenue contract from Japan's capacity market: four (131 MW) were awarded in the first long-term decarbonisation auction and five (348 MW) in the second, in April 2025. The auction's fixed revenue is what lets Kingdom project-finance the batteries, as with the Mimasaka loan from MUFG.",
+   "source": "https://stonepeak.com/news/energy-storage-platform-backed-by-stonepeak-and-chc-awarded-five-projects-in-japan-long-term-decarbonization-auction"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "The adviser on its Form ADV (filed 7 April 2026)",
+   "specs": [
+    {
+     "band": "Identity",
+     "label": "Legal name / primary business name",
+     "value": "Stonepeak Partners LP / Stonepeak; Delaware limited partnership; general partner Stonepeak Partners LLC"
+    },
+    {
+     "band": "Identity",
+     "label": "Registration",
+     "value": "SEC-registered since 6 March 2012; CRD 159699; SEC file 801-73350; 27 relying advisers"
+    },
+    {
+     "band": "Scale",
+     "label": "Regulatory AUM",
+     "value": "USD 81,908,879,915 discretionary across 125 accounts (121 pooled vehicles USD 80.9bn; 4 separately managed vehicles USD 1.0bn)"
+    },
+    {
+     "band": "Scale",
+     "label": "Published AUM",
+     "value": "About USD 93bn as of March 2026, 'inclusive of subsequent committed capital' (stonepeak.com); about USD 84.4bn at 31 December 2025 (Stonepeak-Plus 10-K)"
+    },
+    {
+     "band": "Scale",
+     "label": "People",
+     "value": "359 employees, 186 in investment-advisory roles; 11 offices including New York (head office), London, Singapore, Sydney, Houston, Hong Kong, Seoul, Tokyo, Abu Dhabi and Riyadh"
+    },
+    {
+     "band": "Ownership",
+     "label": "Control",
+     "value": "Michael Dorrell through the general partner Stonepeak Partners LLC; Stonepeak Partners Holdings LP is the 75%-plus limited partner"
+    },
+    {
+     "band": "Ownership",
+     "label": "Outside interests",
+     "value": "Blue Owl GP Strategic Capital minority (June 2023) with other third parties under 17% of fees and carry, no control; Landmark preferred equity (2018); TIAA seed interest in Stonepeak Advisors Holdings LLC"
+    }
+   ],
+   "notes": "The form prints no as-of date for regulatory AUM; it is normally computed at fiscal year-end, here December 2025. Regulatory AUM, published AUM and the wealth fund's AUM figure are three different bases."
+  },
+  {
+   "product": "The platform map — who signs for equipment (§11.1 test)",
+   "specs": [
+    {
+     "band": "Controlled",
+     "label": "Cologix",
+     "value": "Controlling shareholder via Stonepeak Cologix Holdings; 45+ data centres in 13 North American markets; Cologix management signs"
+    },
+    {
+     "band": "Controlled",
+     "label": "Digital Edge",
+     "value": "Founding sponsor since 2020; a Stonepeak senior managing director chairs it; 31 data centres, 1.8 GW secured IT power; share undisclosed"
+    },
+    {
+     "band": "Controlled",
+     "label": "Montera Infrastructure",
+     "value": "Launched by Stonepeak, USD 1.5bn equity commitment; PHX1 Glendale, Arizona, 500 MW, in service Q2 2028"
+    },
+    {
+     "band": "Controlled",
+     "label": "Kingdom",
+     "value": "Established by Stonepeak (with CHC, 2024); nine Japanese BESS projects, 479 MW; CATL batteries at Mimasaka"
+    },
+    {
+     "band": "Controlled",
+     "label": "TerraWind / WahajPeak",
+     "value": "TerraWind 80% (Shizen Energy 20%), Asian onshore wind; WahajPeak, Middle East renewables, launched August 2025"
+    },
+    {
+     "band": "Pending",
+     "label": "Cleco",
+     "value": "Majority on closing with Bernhard Capital; Louisiana utility, 2,676 MW of generation; regulatory approvals pending"
+    },
+    {
+     "band": "Pending",
+     "label": "Castrol",
+     "value": "Majority controlling interest at about USD 10.1bn enterprise value; bp 35%"
+    },
+    {
+     "band": "Undetermined",
+     "label": "AMPYR Distributed Energy",
+     "value": "Equity investment announced 22 September 2026; stake undisclosed; AGP keeps an interest"
+    },
+    {
+     "band": "Funds only",
+     "label": "Minority, preferred or lender",
+     "value": "CVOW 50% noncontrolling (Dominion operates); Louisiana LNG 40% (Woodside operates); CoreSite about 29% common plus mandatorily convertible preferred (American Tower controls); Repsol portfolios 46.3% and 43.8%; Ørsted onshore wind (Ørsted managing member); Princeton Digital Group USD 1.3bn preferred; AGP Sustainable Real Assets preferred"
+    }
+   ],
+   "notes": "An investor passes the buying-authority test only through a platform it controls. Stonepeak passes through Cologix, Digital Edge, Montera, Kingdom, TerraWind and WahajPeak, and would pass through Cleco and Castrol on closing. It fails at CVOW, where Dominion builds and operates, and through every minority and preferred position."
+  },
+  {
+   "product": "Fund ladder — commitments sold per Form D",
+   "specs": [
+    {
+     "band": "Flagship",
+     "label": "Infrastructure Fund IV",
+     "value": "USD 14.0bn, final (February 2022), 373 investors"
+    },
+    {
+     "band": "Flagship",
+     "label": "Infrastructure Fund V",
+     "value": "USD 7.29bn sold at January 2025; no final close on the record"
+    },
+    {
+     "band": "Strategy",
+     "label": "Asia Infrastructure Fund / Fund II",
+     "value": "USD 3.3bn final (March 2024) / USD 1.56bn sold at July 2026"
+    },
+    {
+     "band": "Strategy",
+     "label": "Opportunities Fund",
+     "value": "USD 3.15bn final at a revised hard cap (August 2024)"
+    },
+    {
+     "band": "Strategy",
+     "label": "Core Fund",
+     "value": "USD 4.82bn sold at March 2026, including contingent commitments and co-investment vehicles"
+    },
+    {
+     "band": "Strategy",
+     "label": "Global Renewables Fund / Fund II",
+     "value": "USD 2.75bn final (2021) / USD 1.25bn sold at April 2026"
+    },
+    {
+     "band": "Strategy",
+     "label": "Catalyst Fund",
+     "value": "USD 600m sold to one investor (August 2026)"
+    },
+    {
+     "band": "Wealth",
+     "label": "Stonepeak-Plus Infrastructure Fund",
+     "value": "USD 819m sold to 213 investors (September 2026)"
+    }
+   ],
+   "notes": "Form D figures are capital commitments sold, not assets under management, gross asset value or money invested."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Michael Dorrell",
+   "title": "Chairman, Chief Executive Officer and Co-Founder",
+   "photo": "images/execs/stonepeak-dorrell.png",
+   "background": [
+    "Co-founded Stonepeak in 2011; directs its strategy and investment decisions; sole member of the adviser's general partner, Stonepeak Partners LLC, and its control person (Form ADV, April 2026)",
+    "Senior Managing Director in Private Equity and Co-Head of the Infrastructure Investment group, Blackstone",
+    "More than a decade at Macquarie, in Australia and then New York",
+    "LLB and BCom, University of New South Wales"
+   ]
+  },
+  {
+   "name": "Jack Howell",
+   "title": "Co-President",
+   "photo": "images/execs/stonepeak-howell.jpg",
+   "background": [
+    "Co-President since January 2024 (Form ADV: John Patrick Howell); Executive Committee; member of all of the firm's investment committees",
+    "Previously Davidson Kempner, Denham Capital and Credit Suisse",
+    "Boards of King Ranch, Inc. and Texas Children's Hospital",
+    "University of Texas at Austin"
+   ]
+  },
+  {
+   "name": "Luke Taylor",
+   "title": "Co-President",
+   "photo": "images/execs/stonepeak-taylor.jpg",
+   "background": [
+    "Co-President since January 2024; Executive Committee; member of all investment committees",
+    "Investing in infrastructure for more than 20 years, including ten years at Macquarie Capital in New York",
+    "BCom and MBus, University of Otago"
+   ]
+  },
+  {
+   "name": "Hajir Naghdy",
+   "title": "Senior Managing Director, Head of Asia and Middle East",
+   "photo": "images/execs/stonepeak-naghdy.jpg",
+   "background": [
+    "Executive Committee member; leads Stonepeak's Asia and Middle East business",
+    "19 years at Macquarie Capital, latterly Head of Macquarie Capital in Asia and the Middle East, where he established its renewable-energy investing business in the region",
+    "University of Wollongong"
+   ]
+  },
+  {
+   "name": "Andrew Thomas",
+   "title": "Senior Managing Director, Head of Digital Infrastructure, Global ex-Europe",
+   "background": [
+    "Leads digital infrastructure outside Europe — the line that holds Cologix and Digital Edge; Senior Managing Director since January 2023 (Form ADV)",
+    "Previously Pacific Equity Partners and McKinsey & Company",
+    "MBA, Harvard Business School; University of Sydney"
+   ]
+  },
+  {
+   "name": "Anthony Borreca",
+   "title": "Senior Managing Director, Co-Head of Energy",
+   "background": [
+    "Co-Head of Energy and Chief Investment Officer of SP+ INFRA, based in Europe; Senior Managing Director since January 2022 (Form ADV)",
+    "More than 11 years in Blackstone Credit's energy business; earlier Blue Source and Credit Suisse"
+   ]
+  },
+  {
+   "name": "Michael Bricker",
+   "title": "Senior Managing Director, Co-Head of Energy",
+   "background": [
+    "Co-Head of Energy; Senior Managing Director since January 2023 (Form ADV)",
+    "Previously First Reserve (Energy Infrastructure Fund, midstream) and Citi Global Energy",
+    "University of Texas at Austin"
+   ]
+  },
+  {
+   "name": "Steve Mlynar",
+   "title": "Senior Managing Director, Chief Financial Officer",
+   "background": [
+    "Chief Financial Officer of Stonepeak Partners LP since January 2024 and a control person on the Form ADV",
+    "Previously Staple Street Capital, Apollo and Deloitte",
+    "CPA, CGMA, CFA"
+   ]
+  },
+  {
+   "name": "Michael Leitner",
+   "title": "Senior Managing Director, Credit",
+   "background": [
+    "Credit Partner; Senior Managing Director since April 2023 (Form ADV)",
+    "Formerly co-head of BlackRock's Direct Lending and Special Situations business and a Managing Partner of Tennenbaum Capital Partners"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private (SEC-registered adviser; no financial statements published; Form ADV and fund Form D filings)",
+  "periods": [
+   {
+    "period": "2025 (Form ADV, filed 7 April 2026)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Regulatory assets under management",
+      "actual": "USD 81.9bn across 125 accounts",
+      "expected": "",
+      "verdict": "",
+      "result": "Regulatory basis; no consensus exists for a private manager."
+     },
+     {
+      "name": "Published assets under management",
+      "actual": "About USD 84.4bn at 31 December 2025 (Stonepeak-Plus 10-K); about USD 93bn as of March 2026 including subsequently committed capital (stonepeak.com)",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-published; up from USD 61.1bn in March 2024."
+     },
+     {
+      "name": "Five-year infrastructure capital raised",
+      "actual": "USD 52,881m (2021–2025), sixth in the Infrastructure Investor 100",
+      "expected": "",
+      "verdict": "",
+      "result": "Third-party ranking."
+     }
+    ],
+    "commentary": "The adviser publishes no revenue, fees or profit. Its funds' Form D filings give the commitments each fund has sold (see the fund ladder)."
+   },
+   {
+    "period": "2024 fundraising",
+    "periodType": "other",
+    "metrics": [
+     {
+      "name": "Fund final closes",
+      "actual": "Asia Infrastructure Fund USD 3.3bn (March 2024, above a USD 3.0bn target); Opportunities Fund USD 3.15bn (August 2024, above a USD 2.5bn target)",
+      "expected": "Targets USD 3.0bn and USD 2.5bn (company-stated)",
+      "verdict": "beat",
+      "result": "Both closed above their stated targets, per Stonepeak's releases."
+     }
+    ],
+    "commentary": "Published AUM was USD 61.1bn in March 2024."
+   }
+  ],
+  "commentary": "Stonepeak is private and files no financial statements; the expectations comparison is limited to fund targets Stonepeak itself announced. The wealth vehicle Stonepeak-Plus Infrastructure Fund LP is an Exchange Act reporter (10-K for 2025 filed 31 March 2026). Infrastructure Investor reported a USD 15bn target for Fund V, whose Form D showed USD 7.29bn sold in January 2025."
+ },
+ "sources": [
+  {
+   "label": "Stonepeak — announces investment in AMPYR Distributed Energy",
+   "url": "https://stonepeak.com/news/stonepeak-announces-investment-in-ampyr-distributed-energy",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "Stonepeak-Plus Infrastructure Fund — Form D/A",
+   "url": "https://www.sec.gov/Archives/edgar/data/2045458/000204545826000050/primary_doc.xml",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "Stonepeak Catalyst Fund — Form D/A",
+   "url": "https://www.sec.gov/Archives/edgar/data/2075791/000207579126000001/primary_doc.xml",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "Office of the Texas Governor — Galaxy, Compass Datacenters and Montera Infrastructure commit to comply with data-centre standards",
+   "url": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Dominion Energy — Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Stonepeak Asia Infrastructure Fund II — Form D/A",
+   "url": "https://www.sec.gov/Archives/edgar/data/2067858/000206785826000001/primary_doc.xml",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "Infrastructure Investor — Infrastructure Investor 100 (2026 ranking)",
+   "url": "https://www.infrastructureinvestor.com/infrastructure-investor-100/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Digital Edge — USD 575m holding-company financing",
+   "url": "https://www.digitaledgedc.com/resources/newsroom/digital-edge-575m-holdco-financing/",
+   "date": "2026-05-22"
+  },
+  {
+   "label": "Digital Edge — USD 880m green loan for B.Grimm joint-venture data centre in Thailand",
+   "url": "https://www.digitaledgedc.com/resources/newsroom/digital-edge-bgrimm-880m-thailand-data-center-loan/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Digital Edge — publishes fifth annual ESG report",
+   "url": "https://www.digitaledgedc.com/resources/newsroom/digital-edge-publishes-fifth-annual-esg-report/",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Stonepeak — Stonepeak and Bernhard Capital Partners to acquire Cleco",
+   "url": "https://stonepeak.com/news/stonepeak-and-bernhard-capital-partners-to-acquire-cleco",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "Stonepeak Global Renewables Fund II — Form D/A",
+   "url": "https://www.sec.gov/Archives/edgar/data/2030457/000203045726000001/primary_doc.xml",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "Stonepeak Partners LP — Form ADV Part 1A (CRD 159699), other-than-annual amendment",
+   "url": "https://reports.adviserinfo.sec.gov/reports/ADV/159699/PDF/159699.pdf",
+   "date": "2026-04-07"
+  },
+  {
+   "label": "GlobeNewswire — Kingdom energy-storage platform backed by Stonepeak executes first project financing facility",
+   "url": "https://www.globenewswire.com/news-release/2026/04/07/3268779/0/en/Kingdom-Energy-Storage-Platform-Backed-by-Stonepeak-Executes-First-Project-Financing-Facility.html",
+   "date": "2026-04-07"
+  },
+  {
+   "label": "Stonepeak-Plus Infrastructure Fund LP — Form 10-K for 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/2045458/000204545826000012/sp-20251231.htm",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Stonepeak Core Fund — Form D/A",
+   "url": "https://www.sec.gov/Archives/edgar/data/1932975/000193297526000003/primary_doc.xml",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Cologix — La Caisse invests CAD 240m in the MTL8 data centre",
+   "url": "https://cologix.com/news/la-caisse-invests-cad-240-million-to-advance-cologixs-ai-ready-mtl8-data-centre-in-montreal/",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "American Tower — Form 10-K for 2025 (CoreSite ownership)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Infrastructure Investor — Stonepeak founder Dorrell halves his unrealised carry to boost Fund I returns",
+   "url": "https://www.infrastructureinvestor.com/stonepeak-founder-dorrell-halves-his-unrealised-carry-to-boost-fund-i-returns-exclusive/",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Stonepeak — to acquire majority controlling interest in Castrol from bp",
+   "url": "https://stonepeak.com/news/stonepeak-to-acquire-majority-controlling-interest-in-castrol-from-bp",
+   "date": "2025-12-24"
+  },
+  {
+   "label": "Stonepeak — to acquire Allgas",
+   "url": "https://stonepeak.com/news/stonepeak-to-acquire-allgas",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Stonepeak — Repsol advances its US renewable energy strategy with a new deal with Stonepeak",
+   "url": "https://stonepeak.com/news/repsol-advances-its-renewable-energy-strategy-in-the-us-with-a-new-deal-with-stonepeak",
+   "date": "2025-12-11"
+  },
+  {
+   "label": "Stonepeak — Stonepeak and Columbia Capital to acquire Berlin data-centre operator IPB",
+   "url": "https://stonepeak.com/news/stonepeak-and-columbia-capital-to-acquire-berlin-data-center-operator-ipb",
+   "date": "2025-11-10"
+  },
+  {
+   "label": "Stonepeak — to launch ASX-listed infrastructure debt note",
+   "url": "https://stonepeak.com/news/stonepeak-to-launch-asx-listed-infrastructure-debt-note",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "Stonepeak — launches Middle East renewables platform WahajPeak",
+   "url": "https://stonepeak.com/news/stonepeak-launches-middle-east-renewables-platform-wahajpeak",
+   "date": "2025-08-18"
+  },
+  {
+   "label": "Stonepeak — completes USD 1.3bn investment in Princeton Digital Group",
+   "url": "https://stonepeak.com/news/stonepeak-completes-usd-1-3-billion-investment-in-princeton-digital-group",
+   "date": "2025-08-08"
+  },
+  {
+   "label": "Woodside — completes Louisiana LNG sell-down to Stonepeak (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/844551/000119312525146092/d48785dex991.htm",
+   "date": "2025-06-25"
+  },
+  {
+   "label": "AEP — PUCO approves onsite power project for data centres",
+   "url": "https://www.aep.com/news/stories/view/10262/",
+   "date": "2025-06-05"
+  },
+  {
+   "label": "Stonepeak — Repsol allies with Stonepeak on solar and storage portfolio",
+   "url": "https://stonepeak.com/news/repsol-allies-with-stonepeak-on-solar-and-storage-portfolio-for-its-first-us-renewables-partnership",
+   "date": "2025-04-29"
+  },
+  {
+   "label": "Stonepeak — energy-storage platform backed by Stonepeak and CHC awarded five projects in Japan's long-term decarbonisation auction",
+   "url": "https://stonepeak.com/news/energy-storage-platform-backed-by-stonepeak-and-chc-awarded-five-projects-in-japan-long-term-decarbonization-auction",
+   "date": "2025-04-29"
+  },
+  {
+   "label": "Stonepeak — launches Montera Infrastructure",
+   "url": "https://stonepeak.com/news/stonepeak-launches-montera-infrastructure",
+   "date": "2025-04-23"
+  },
+  {
+   "label": "Dominion Energy — Form 10-K for 2024 (CVOW noncontrolling-interest sale)",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000095017025028387/d-20241231.htm",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "Infrastructure Investor — Stonepeak nears USD 10bn for Fund V",
+   "url": "https://www.infrastructureinvestor.com/stonepeak-nears-10bn-for-fund-v-exclusive/",
+   "date": "2025-02-10"
+  },
+  {
+   "label": "Stonepeak Infrastructure Fund V — Form D/A",
+   "url": "https://www.sec.gov/Archives/edgar/data/2003495/000200349525000001/primary_doc.xml",
+   "date": "2025-01-23"
+  },
+  {
+   "label": "Stonepeak — Digital Edge raises over USD 1.6bn in new equity and debt",
+   "url": "https://stonepeak.com/news/digital-edge-dc-raises-over-us1-6-billion-in-new-equity-and-debt-capital-to-fund-continued-platform-expansion",
+   "date": "2025-01-06"
+  },
+  {
+   "label": "Cologix — secures USD 1.5bn of capital to fund new data-centre development",
+   "url": "https://cologix.com/news/cologix-secures-1-5-billion-usd-in-capital-to-fund-new-data-center-development/",
+   "date": "2024-10-24"
+  },
+  {
+   "label": "Stonepeak — Dominion Energy and Stonepeak announce closing of sale of noncontrolling interest in CVOW",
+   "url": "https://stonepeak.com/news/dominion-energy-stonepeak-announce-closing-of-sale-of-noncontrolling-equity-interest-in-coastal-virginia-offshore-wind-commercial-project",
+   "date": "2024-10-22"
+  },
+  {
+   "label": "Stonepeak — closes Opportunities Fund with USD 3.15bn of commitments",
+   "url": "https://stonepeak.com/news/stonepeak-closes-opportunities-fund-with-3-15-billion-of-commitments",
+   "date": "2024-08-06"
+  },
+  {
+   "label": "Stonepeak — Stonepeak and CHC form Japanese battery energy storage platform",
+   "url": "https://stonepeak.com/news/stonepeak-and-chc-form-japanese-battery-energy-storage-platform",
+   "date": "2024-05-14"
+  },
+  {
+   "label": "Stonepeak — Stonepeak and Shizen Energy to form Asian onshore wind platform",
+   "url": "https://stonepeak.com/news/stonepeak-and-shizen-energy-to-form-asian-onshore-wind-platform",
+   "date": "2024-03-25"
+  },
+  {
+   "label": "Stonepeak — Ørsted divests share of four US onshore wind farms to Stonepeak",
+   "url": "https://stonepeak.com/news/orsted-divests-share-of-four-us-onshore-wind-farms-to-stonepeak",
+   "date": "2024-03-13"
+  },
+  {
+   "label": "Stonepeak — closes Asia Infrastructure Fund with USD 3.3bn of commitments",
+   "url": "https://stonepeak.com/news/stonepeak-closes-asia-infrastructure-fund-with-3-3-billion-of-commitments",
+   "date": "2024-03-07"
+  },
+  {
+   "label": "Dominion Energy — Form 8-K, equity capital contribution agreement with Stonepeak for CVOW",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312524045358/d766880d8k.htm",
+   "date": "2024-02-26"
+  },
+  {
+   "label": "Stonepeak — Jack Howell and Luke Taylor named Co-Presidents",
+   "url": "https://stonepeak.com/news/jack-howell-and-luke-taylor-named-co-presidents-of-stonepeak",
+   "date": "2024-01-02"
+  },
+  {
+   "label": "Stonepeak — AGP Sustainable Real Assets announces strategic investment from Stonepeak",
+   "url": "https://stonepeak.com/news/agp-sustainable-real-assets-announces-strategic-investment-from-stonepeak",
+   "date": "2023-11-03"
+  },
+  {
+   "label": "Stonepeak — announces minority investment from Blue Owl's GP Strategic Capital platform",
+   "url": "https://stonepeak.com/press-releases/stonepeak-announces-minority-investment-from-blue-owls-gp-strategic-capital-platform",
+   "date": "2023-07-11"
+  },
+  {
+   "label": "Cologix — Stonepeak completes USD 3.0bn equity recapitalisation of portfolio company Cologix",
+   "url": "https://cologix.com/news/stonepeak-successfully-completes-3-0-billion-equity-recapitalization-portfolio-company-cologix/",
+   "date": "2022-04-06"
+  },
+  {
+   "label": "Stonepeak Infrastructure Fund IV — Form D/A (final)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1810258/000181025822000001/primary_doc.xml",
+   "date": "2022-02-25"
+  },
+  {
+   "label": "Stonepeak (Bloomberg) — closes fourth North American infrastructure fund with USD 14bn of commitments",
+   "url": "https://stonepeak.com/in-the-news/bloomberg-stonepeak-closes-fourth-north-american-infrastructure-fund-with-14-billion-of-commitments",
+   "date": "2022-02-02"
+  },
+  {
+   "label": "Stonepeak Global Renewables Fund — Form D/A (final)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1794743/000179474321000001/primary_doc.xml",
+   "date": "2021-08-06"
+  },
+  {
+   "label": "PR Newswire — Stonepeak Infrastructure Partners signs agreement to acquire majority interest in Cologix",
+   "url": "https://www.prnewswire.com/news-releases/stonepeak-infrastructure-partners-signs-agreement-to-acquire-majority-interest-in-cologix-300401680.html",
+   "date": "2017-02-02"
+  },
+  {
+   "label": "SEC Investment Adviser Public Disclosure — Stonepeak (CRD 159699)",
+   "url": "https://adviserinfo.sec.gov/firm/summary/159699"
+  },
+  {
+   "label": "Stonepeak — about (AUM and firm figures)",
+   "url": "https://stonepeak.com/about"
+  },
+  {
+   "label": "Stonepeak — team",
+   "url": "https://stonepeak.com/team"
+  },
+  {
+   "label": "Montera Infrastructure — projects",
+   "url": "https://montera.com/projects/"
+  },
+  {
+   "label": "Cologix — leadership and board",
+   "url": "https://cologix.com/board-of-directors/"
+  }
+ ],
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 1
+}

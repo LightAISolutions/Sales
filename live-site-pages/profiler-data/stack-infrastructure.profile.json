@@ -53,7 +53,7 @@
   {
    "name": "EMEA hyperscale platform (post-carve-out)",
    "category": "Data centers",
-   "description": "743MW across 21 campuses on 322 acres (company site, August 2026): Milan is the largest market (11 sites, 399MW — the Supernap Italia legacy plus >100,000 sqm of expansion land in Siziano), followed by Frankfurt (96MW — market entry via an 80MW hyperscale campus in Liederbach), Zurich (3 sites, 76MW), Copenhagen (72MW), Geneva (3 sites, 42MW), Oslo (2 sites, 40MW) and Stockholm (18MW). The platform was assembled by acquisition — Supernap Italia (February 2021) and Nordic operator DigiPlex (August 2021) — and launched as STACK EMEA in February 2022 with 16 markets and 400MW+ under development. In April 2025 Apollo-managed funds agreed to acquire the pan-European colocation business (seven data centers across Stockholm, Oslo, Copenhagen, Milan and Geneva, serving carriers, IT firms and financial institutions), which is being rebranded away from the STACK name under CEO Sherif Rizkalla — leaving STACK EMEA focused on hyperscale wholesale under interim CEO Brian Cox (since August 2025).",
+   "description": "743MW across 21 campuses on 322 acres (company site, August 2026): Milan is the largest market (11 sites, 399MW — the Supernap Italia legacy plus >100,000 sqm of expansion land in Siziano), followed by Frankfurt (96MW — market entry via an 80MW hyperscale campus in Liederbach), Zurich (3 sites, 76MW), Copenhagen (72MW), Geneva (3 sites, 42MW), Oslo (2 sites, 40MW) and Stockholm (18MW). The platform was assembled by acquisition — Supernap Italia (February 2021) and Nordic operator DigiPlex (August 2021) — and launched as STACK EMEA in February 2022 with 16 markets and 400MW+ under development. In April 2025 Apollo-managed funds agreed to acquire the pan-European colocation business (seven data centers across Stockholm, Oslo, Copenhagen, Milan and Geneva, serving carriers, IT firms and financial institutions), which relaunched as Vaultica Data Centers under CEO Sherif Rizkalla in December 2025 — leaving STACK EMEA focused on hyperscale wholesale under interim CEO Brian Cox (since August 2025).",
    "highlights": [
     "Colo carve-out to Apollo (April 2025) is a deliberate pruning to hyperscale-only in Europe",
     "Milan's 399MW across 11 sites makes Italy the platform's European center of gravity",
@@ -331,6 +331,17 @@
    "note": "Owner: STACK is 'a portfolio company owned by certain Other Blue Owl Accounts', the funds Blue Owl has managed since buying IPI Partners' business on 3 January 2025.",
    "context": "Blue Owl bought IPI Partners' management business, not STACK's equity, which stays with the funds; no fund-by-fund percentage is disclosed. Bloomberg reported on 24 September 2026 that the BlackRock-backed AI Infrastructure Partnership and IFM Investors were in exclusive talks for STACK's Asia-Pacific portfolio at USD 20–25bn. That is a report, not a transaction.",
    "source": "https://www.sec.gov/Archives/edgar/data/2069692/000206969226000016/osnl-20251231.htm"
+  },
+  {
+   "slug": "apollo",
+   "type": "other",
+   "status": "historical",
+   "since": "2025-04",
+   "scale": "Seven colocation data centres in five European markets",
+   "via": "European colocation carve-out (now Vaultica)",
+   "note": "Apollo infrastructure funds bought STACK's pan-European colocation business in a carve-out agreed in April 2025; it now trades as Vaultica Data Centers.",
+   "context": "Apollo's release of 29 April 2025 describes seven data centres in Stockholm, Oslo, Copenhagen, Milan and Geneva bought from STACK Infrastructure, serving carriers, IT firms and financial institutions. ICTjournal reported the relaunch as Vaultica Data Centers in December 2025. No price was disclosed. The carve-out left STACK EMEA as a hyperscale wholesale business.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871"
   }
  ],
  "technicalSpecs": [
@@ -669,6 +680,11 @@
    "date": "2025-12-12"
   },
   {
+   "label": "ICTjournal — Vaultica launches as a European data-centre brand after Apollo funds take over STACK's colocation business",
+   "url": "https://www.ictjournal.ch/news/2025-12-11/vaultica-devient-une-nouvelle-marque-europeenne-de-centres-de-donnees",
+   "date": "2025-12-11"
+  },
+  {
    "label": "AltsWire — Blue Owl launches digital infrastructure REIT (ODIT) with $1.7B in capital",
    "url": "https://altswire.com/blue-owl-launches-digital-infrastructure-reit-with-1-7-billion-in-capital/",
    "date": "2025-12"
@@ -814,6 +830,6 @@
    "date": "2026-02-13"
   }
  ],
- "lastUpdated": "2026-10-04",
- "profileVersion": 9
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 10
 }

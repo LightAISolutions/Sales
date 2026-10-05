@@ -1,0 +1,1685 @@
+{
+ "schemaVersion": 7,
+ "slug": "dominion-energy",
+ "name": "Dominion Energy, Inc.",
+ "shortName": "Dominion Energy",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.dominionenergy.com",
+ "headquarters": "Richmond, VA, USA",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: D"
+ },
+ "employees": "~15,200 full-time at December 31, 2025, of which ~6,700 at Virginia Electric and Power Company (FY2025 Form 10-K)",
+ "summary": "BOTTOM LINE UP FRONT: Dominion Energy Virginia is the regulated gatekeeper for the largest data-center cluster in the world, and it is being acquired: contracted data-center capacity stood at about 53.8 GW in July 2026 (12.0 GW under firm electric service agreements, 9.4 GW under construction authorizations, 32.4 GW at the substation-engineering stage) against an all-time system peak of 24,678 MW; a new GS-5 rate class with 14-year contracts and 85 percent transmission-and-distribution minimums takes effect on January 1, 2027; a $64.7B five-year capital plan is 25 percent transmission and 18 percent new gas; and on May 15, 2026 the company agreed to an all-stock combination with NextEra Energy that its shareholders vote on today, September 3, 2026, with closing expected in the second half of 2027. BACKGROUND. Richmond, Virginia; NYSE: D. Per the FY2025 Form 10-K the company serves approximately 4.1 million primarily electric utility customers in Virginia, North Carolina and South Carolina with approximately 30.7 GW of generating capacity, 10,800 miles of transmission and 80,400 miles of distribution; Virginia Electric and Power Company (Dominion Energy Virginia) serves approximately 2.8 million customers in Virginia and North Carolina, and data centers were 28 percent of its electricity sales in 2025 (26 percent in 2024). FY2025 operating earnings were $3.42 per share on operating revenue of $16,506M; 2026 guidance is $3.45–$3.69. The Virginia State Corporation Commission set Dominion Energy Virginia's rates in a biennial review whose final order of November 25, 2025 authorized a 9.8 percent return on equity, approved $565.7M and $209.9M of base-rate increases for 2026 and 2027, created the GS-5 class and certified the 944 MW Chesterfield Energy Reliability Center for 2029. The 2025 Integrated Resource Plan Update forecasts demand in the PJM DOM Zone rising 6.3 percent a year over the next decade and more than doubling by 2045; its preferred plan adds 17,534 MW of solar, 3,460 MW of wind, 2,000 MW of storage, 1,944 MW of small modular reactors and 8,510 MW of gas by 2045. Collection gap: the standalone GS-5 rate sheet, the collateral quantum in dollars per megawatt and the SCC's final-order text were not reachable; the ramp, exit-fee and notice terms below rest on the SCC's own fact sheet and the company's investor deck, with secondary summaries flagged where used.",
+ "ecosystemRole": "We assess Dominion Energy Virginia as the entity whose calendar, not any customer's, decides when Loudoun County's campuses get power — the substation-engineering, construction-authorization and electric-service-agreement ladder it publishes is the sequence every hyperscaler and colocation operator in this file that builds in Northern Virginia is standing in. Basis: the company's own Data Center Requests page and investor decks, the 2022 eastern-Loudoun transmission pause and the 500/230 kV Reliability Loop now being built to end it, and the SCC's February 2026 record of roughly 70,000 MW of pending requests. For the storage and power-equipment sellers in this corpus it is three different counterparties at once: a statutory buyer of storage and solar through an annual solicitation cycle (a Virginia law of April 2026 mandates 4.0 GW of short-duration storage by 2030 and 16.0 GW by 2045); a self-builder of gas, transmission and offshore wind recovered through riders; and the utility whose tariff terms — the GS-5 minimums, the direct-assignment of transmission costs ordered in July 2026 — set the economics of every behind-the-meter bridge-power and buffering project on its system. Per the merger releases, after the NextEra combination closes Dominion Energy Virginia keeps its president and its dockets, but supplier qualification is likely to be read against NextEra's platform.",
+ "productsAndServices": [
+  {
+   "name": "Regulated retail electric service — Dominion Energy Virginia, and the GS-5 large-load rate class",
+   "category": "Regulated utility service",
+   "description": "Virginia Electric and Power Company serves approximately 2.8 million residential, commercial, high-load, industrial and governmental customers across about 30,000 square miles of Virginia and northeastern North Carolina, per the FY2025 Form 10-K and the 2025 IRP Update, which also states that customers have uninterrupted power 99.98 percent of the time excluding major storms and that residential rates are approximately 9 percent below the national average. The 'high load' revenue class is defined in the 10-K and 10-Q as customers with actual or anticipated demand of 25 MW or higher and an annual load factor of 75 percent or higher; data centers were 28 percent of Virginia Power's electricity sales in 2025. Rates are reset in a biennial review before the SCC: the November 25, 2025 final order in Case PUR-2025-00058 approved base-rate increases of $565.7M for 2026 and $209.9M for 2027 against $822M and $345M requested, authorized a 9.8 percent return on equity against 10.4 percent requested, and created the GS-5 class. Per the company's Q4 2025 investor deck, GS-5 applies to all existing and new customers with measured or contracted demand of 25 MW or greater on contiguous sites and a load factor of at least 75 percent; minimum demand charges are the higher of usage or 85 percent of contracted capacity for transmission and distribution and 60 percent for generation, in place as long as service is provided, with customers who began service before 2016 exempt; new electric service agreements from January 1, 2027 carry a 14-year term (a four-year ramp plus ten years, then automatic one-year renewals), exit fees equal to the remaining minimum obligations, cash deposits for equipment orders and enhanced collateral. The SCC's February 2026 fact sheet adds that customers without sufficient credit may be required to guarantee funds covering up to 60 percent of their minimum charges over the contract term.",
+   "highlights": [
+    "The SCC's own words on the order: certain large-scale customers 'will be required to pay a minimum of 85% of contracted distribution and transmission demand, and 60% of generation demand, among other requirements', effective January 1, 2027",
+    "The 10-K states the purpose plainly: the 14-year contract, collateral and demand minimums 'are designed to minimize both cross-rate class subsidies and stranded costs'",
+    "The same order directed Dominion to file alternative cost-allocation proposals for generation and transmission and to submit its large-load interconnection process for SCC review by February 2, 2026 — the filing that disclosed roughly 70,000 MW of pending requests (Virginia Business)",
+    "A follow-on order of July 31, 2026 in the Rider T-1 case (PUR-2026-00056) requires direct assignment of defined transmission facilities to data centers through mandatory contributions in aid of construction, with an amended line-extension policy due within 90 days (Utility Dive)",
+    "Secondary summaries of the order (Compute Law Blog, Arcadia) add a ramp of up to four years at a minimum of 20 percent of contracted demand per year and a three-year notice to reduce load — not verified against the order text"
+   ],
+   "positioning": "The GS-5 class sits with AEP Ohio's 2025 data-center tariff (85 percent minimum after a ramp, 12-year terms) and Georgia Power's 100 MW rules as the templates the guidance literature calls the national norm; Dominion's version is distinctive for its separate, lower generation minimum, its 14-year term and its application to existing as well as new customers above 25 MW.",
+   "soldThrough": "Tariff service under SCC-approved rate schedules; large loads contract through an electric service agreement negotiated with the company's Data Center Team.",
+   "targetSegments": [
+    "Hyperscale and colocation data centers in Loudoun, Prince William, Henrico, Chesterfield and Stafford counties",
+    "Residential, commercial and industrial customers in Virginia and northeastern North Carolina"
+   ],
+   "roadmap": "GS-5 effective for new agreements January 1, 2027; alternative cost-allocation proposals and the amended line-extension policy in 2026 proceedings; the third biennial review is due to be filed in March 2027 with a final order late 2027 (company deck)."
+  },
+  {
+   "name": "Large-load interconnection — the data-center connection process",
+   "category": "Interconnection",
+   "description": "Per the company's Data Center Requests page, a request begins with a site plan, a load letter and a load-ramp schedule, followed by short- and long-term power plans, infrastructure design, right-of-way acquisition, permitting and material procurement, a regulatory filing where required, and construction; loads under 50 MW 'can typically utilize existing distribution infrastructure and require 1-2 years to complete', while loads over 50 MW 'will most likely require the extension of transmission lines and the construction of a new substation', with bridging solutions to allow commissioning and initial load while the final plan is built. The investor deck formalizes the contract ladder: a Substation Engineering Letter of Authorization (a detailed engineering plan with costs reimbursed to Dominion), a Construction Letter of Authorization (which authorizes construction, with the customer obliged to reimburse all spent costs should it walk away) and an Electric Service Agreement (which 'includes revenue requirement whether customer takes service or not'). Contracted capacity across the three stages was about 53.8 GW in July 2026 — 12.0 GW under ESAs, 9.4 GW under CLOAs and 32.4 GW under SELOAs — up from 48.5 GW in December 2025, 40.2 GW in December 2024 and 16.5 GW in July 2023. The company connected 15 data centers (977 MW) in 2024 and 11 (744 MW) in 2025 and expects 13 in 2026; it received 118 delivery-point requests for 26.0 GW in 2025 alone, 409 requests for about 67 GW since 2020, and serves over 450 data centers from more than 50 customers.",
+   "highlights": [
+    "Firm demand is the smaller tranche: ESAs and CLOAs together were about 21 GW at year-end 2025 with another 27 GW in engineering, and the deck states that existing ESAs alone cover projected demand growth through 2036",
+    "The 2025 IRP Update counted 16,913 MW under executed ESAs or CLOAs as of July 31, 2025 and 30,132 MW under study at the engineering stage",
+    "Requests have outrun connections by an order of magnitude — 26.0 GW requested in 2025 against 744 MW connected — which is the arithmetic behind the GS-5 minimums and the deposit and reimbursement clauses",
+    "Eastern Loudoun County has been transmission-constrained since 2022; Dominion said then that most planned development would receive a reduced allocation of anticipated power through January 2026, and Equinix's 2026 Ashburn expansion still cited Dominion's upgrades as a gating factor (Hoodline)",
+    "Customer quality is a stated selling point: 82 percent of data-center customers investment-grade and 76 percent with relationships of ten years or more (Q4 2025 deck)"
+   ],
+   "positioning": "No other utility in this corpus publishes a three-stage contracted-capacity ladder each quarter; the closest comparators are AEP's and ERCOT's request queues, which the guidance literature treats as conversation openers rather than demand. Dominion's ESA tranche is the nearest thing to certified demand a seller can read.",
+   "soldThrough": "Direct engagement through the Data Center Team and the company's work-request portal; costs of engineering and construction are borne by the customer under the SELOA and CLOA.",
+   "targetSegments": [
+    "Hyperscalers building in Northern and Central Virginia",
+    "Colocation developers (Equinix, STACK, Vantage and others named in the sources)",
+    "Any load of 25 MW or more on a contiguous site"
+   ],
+   "roadmap": "13 connections expected in 2026; the interconnection process filed for SCC review on February 2, 2026; Loudoun Reliability Loop lines energizing summer 2026 through 2028 (company pages)."
+  },
+  {
+   "name": "Dispatchable generation build — Chesterfield Energy Reliability Center and the gas program",
+   "category": "Generation (regulated self-build)",
+   "description": "The Chesterfield Energy Reliability Center is described on the company's project page as up to 1,000 MW from four natural-gas simple-cycle turbines of up to 250 MW each on the Chesterfield Power Station property, with construction beginning in 2026 and operations in 2029; the FY2025 10-K carries it as a 944 MW simple-cycle station expected to cost approximately $1.5 billion and enter service in 2029. The SCC granted the certificate and a rate adjustment clause in its November 25, 2025 order (POWER reported the CPCN application of March 3, 2025 at $1.47 billion construction cost, fuels including gas blended with up to 10 percent hydrogen and distillate, and six 3,500 kW black-start generators), suspended the order in December 2025 on a reconsideration petition, reinstated it in February 2026, and the approval was appealed to the Supreme Court of Virginia on May 27, 2026 (SELC). The Q4 2025 investor deck lists the wider program as 'CT: 2029; 2 CCGTs: 2032—2034 — ~6.5 GW of capacity ✓Turbines secured' in Virginia and a CT in 2028 plus a CCGT in 2032–2033 (~1.3 GW) in South Carolina, with new gas generation 18 percent of the $65B five-year plan. A 2026 Dispatchable Generation RFP was issued July 1, 2026 with bids due December 18, 2026.",
+   "highlights": [
+    "The 2025 IRP Update's preferred plan adds 8,510 MW of gas by 2045 — four 1,466 MW combined-cycle blocks and three 882 MW combustion turbines in the model, the first CT in 2032 and the first CC in 2033 — and states that combined-cycle units 'were selected the first year they were made available in all primary Portfolios'",
+    "The SCC's certificate order, as summarized by ReisingerGooch, cited 'actual and projected demand growth in PJM and increases in PJM capacity prices'; the plan itself notes the DOM Zone cleared just over $329/MW-day for 2026/2027",
+    "The preferred plan would require a VCEA reliability exception to keep existing and planned fossil generation from retiring in 2045 (2025 IRP Update)",
+    "Turbine supply is secured for the committed 6.5 GW per the deck; the turbine OEM for CERC is not named on any first-party page and the GE 7FA.05 attribution seen in a search snippet was not verified"
+   ],
+   "positioning": "Alongside Entergy's Meta-funded plants and Georgia Power's certified combined cycles, Dominion's gas build is the mid-Atlantic instance of the guidance literature's 'massive gas procurement' move; its distinctive feature is that it is being litigated under a clean-energy statute rather than simply certified.",
+   "soldThrough": "Utility-owned and rider-recovered (Rider CERC); equipment procured through the company's EPC and turbine supply agreements; the 2026 RFP solicits third-party dispatchable proposals.",
+   "targetSegments": [
+    "System capacity and reliability for the DOM Zone",
+    "PJM capacity accreditation"
+   ],
+   "roadmap": "CERC in service 2029 (court challenge pending); CCGTs 2032–2034; 2026 Dispatchable Generation RFP bids December 18, 2026; the next comprehensive IRP is due in an even-numbered year per the company's own filing cadence."
+  },
+  {
+   "name": "Solar, storage and renewable procurement — the VCEA program and the annual RFPs",
+   "category": "Procurement (storage and solar)",
+   "description": "Per the 2025 IRP Update, 'to support the development of renewable and energy storage resources, the Company annually issues requests for proposal ('RFPs') for new solar (utility-scale and distributed), energy storage' and related resources, and it 'continues to self-develop energy storage resources and solicits energy storage PPAs in annual RFPs'. The company's RFP page lists a 2026 Acquisition RFP (Virginia; utility-scale and distributed solar, onshore wind, solar-plus-storage, wind-plus-storage and stand-alone energy storage; webinar June 18, 2026) and a 2026 PPA RFP issuing October 1, 2026 for Virginia and North Carolina; the 2025 PPA RFP closed February 9, 2026. The October 2025 clean-energy petition (Case PUR-2025-00148) sought six utility-scale solar projects totaling about 845 MW, two energy storage projects totaling about 155 MW and purchase agreements for ten solar facilities totaling 439 MW, described in the Q3 2025 deck as $2.9B of new investment; per the Q2 2026 10-Q the SCC approved four solar projects (about 532 MW) and one storage project (about 80 MW) for approximately $1.5 billion, in service between 2028 and 2030. The 10-K states that Virginia Power 'plans to invest approximately $2.0 billion from 2026 to 2030 to develop battery-storage facilities'. The statutory frame moved in April 2026: the 10-Q records a Virginia law requiring 16.0 GW of short-duration storage by the end of 2045 including 4.0 GW by the end of 2030, and 4.0 GW of long-duration storage by 2045 including 2.0 GW by 2035 — replacing the VCEA's 2.7 GW-by-2035 storage finding.",
+   "highlights": [
+    "Utility-owned storage in service or approved is still small: pilots of 12 MW (Scott Solar), 2 MW (New Kent) and 2 MW (Hanover) totaling 56 MWh, Dry Bridge 20 MW, a 50 MW Dulles airport project, 28.34 MW of the 30 MW pilot allowance approved, and about 700 MW petitioned in the 2025 plan (company pages; IRP)",
+    "The 2025 IRP Update's preferred plan carries 2,000 MW of storage through 2045 (1,300 MW company-owned, 700 MW under PPAs) — down from about 4,500 MW in the 2024 IRP — while the April 2026 statute requires 4,000 MW by 2030; the next comprehensive plan has to reconcile the two",
+    "Solar is the volume line: 17,534 MW in the preferred plan, a VCEA target of 6.5 GW of utility-owned solar by 2030 described as on track, and named projects including Randolph (800 MW, phased 2030–2032) and Honeybee (300 MW, 2029)",
+    "The 2025 IRP Update reports a long-duration pilot testing a four-hour zinc-halide battery and an iron-air battery capable of discharging for up to 100 hours",
+    "The SCC's 2025 order on the 2024 IRP directed the company to analyze raising its battery-storage build limits in future plans (WHRO)"
+   ],
+   "positioning": "Among the regulated storage buyers the guidance literature compares — Georgia Power's certified 3,022.5 MW, Entergy's first standalone RFP, PSO/SWEPCO's all-source solicitations — Dominion is the one with a standing annual cycle and a statutory floor; the self-build slice is EPC-mediated, and no battery integrator or cell supplier for any Dominion project is named on a first-party page.",
+   "soldThrough": "Two lanes: PPAs awarded to developers bidding the annual PPA RFP (the developer chooses the equipment), and utility-owned projects bid into the Acquisition RFP and built through EPC and supply agreements the company signs.",
+   "targetSegments": [
+    "Independent developers bidding Virginia and North Carolina PPAs",
+    "Project sellers offering mechanically complete solar and storage assets",
+    "The company's own rider-recovered storage fleet"
+   ],
+   "roadmap": "2026 PPA RFP issues October 1, 2026; 4.0 GW short-duration storage mandate by end-2030; approved 80 MW storage in service 2028–2030; $2.0B of storage capital 2026–2030."
+  },
+  {
+   "name": "Electric transmission — the Loudoun Reliability Loop, the 765 kV backbone and the Heritage–Mosby HVDC link",
+   "category": "Transmission",
+   "description": "Electric transmission is the largest line in the 2026–2030 capital plan: $13.9B for Dominion Energy Virginia plus $1.0B for the Valley Link joint venture, 25 percent of the $65B total per the Q4 2025 deck, largely rider-recovered. The company's Northern Virginia program page describes a new 500/230 kV loop near Ashburn in three projects: Mars–Wishing Star (SCC-approved April 2023, to be energized by summer 2026), Aspen–Golden (approved February 5, 2025, affirmed by the Supreme Court of Virginia February 19, 2026, in service June 2028) and Golden–Mars (Route 3A approved 2026, construction summer 2026 to summer 2028), with the Golden–Mars FAQ stating the loop 'is required by the regional grid organization (PJM)' because of high-tech-sector demand. Further west, Morrisville–Wishing Star adds a 36.5-mile 500 kV line through Fauquier, Prince William and Loudoun (SCC application February 27, 2026; in service summer 2030) and Line 514 rebuilds a 3.5-mile 500/230 kV corridor into Leesburg (application May 21, 2026; 2031). PJM's February 2025 selections gave Dominion, AEP and FirstEnergy a jointly developed 765 kV backbone — 260 miles from Putnam County, West Virginia to Frederick County, Maryland and 155 miles from Campbell County to Fauquier County, Virginia — and PJM's board approved on February 12, 2026 an $11.84B window including Dominion's Heritage–Mosby project: a bipolar ±525 kV HVDC link of about 185 miles, fully underground, with a capability of 3,000 MW and a required in-service date of June 1, 2032, at $2,271.7M for the line plus $773.7M and $745.4M for the two converter stations (PJM board whitepaper); the company summarized the window as a portfolio 'totaling over ~$5.0B'.",
+   "highlights": [
+    "Eastern Loudoun's constraint dates to 2022, when Dominion said the growth was 'resulting in transmission constraints in a pocket of eastern Loudoun County that primarily serves large customers' and Data Center Frontier reported reduced power allocations through January 2026",
+    "The 2026–2030 plan puts 20 percent of capital into transmission at the consolidated level; Dominion Energy Virginia's system counts over 6,700 miles of transmission lines and more than 800 substation assets (SVP bio)",
+    "PJM's own report on the 2027/2028 capacity auction noted that a delayed 500 kV backbone line 'significantly impacted MAAC, SWMAAC and DOM CETLs' — transmission timing already moves the capacity price the utility's customers pay",
+    "The SCC rejected an underground alternative for Golden–Mars that Loudoun Now reported at $1.5 billion, three times the overhead cost; PJM received numerous public comments asking it to defer the HVDC decision"
+   ],
+   "positioning": "The corpus's other transmission owners (AEP, FirstEnergy, Exelon's utilities) appear only as PJM co-awardees; Dominion is the transmission owner for the corridor where the load is, which is why its lines carry the corridor's connection dates.",
+   "soldThrough": "Utility-owned and recovered through the electric transmission rider (Rider T-1) — the rider the SCC ordered in July 2026 to be re-cut so that defined facilities are directly assigned to large loads.",
+   "targetSegments": [
+    "Data Center Alley load pockets in Loudoun and Prince William",
+    "PJM regional reliability needs"
+   ],
+   "roadmap": "Mars–Wishing Star summer 2026; Aspen–Golden and Golden–Mars 2028; Morrisville–Wishing Star 2030; Line 514 2031; Heritage–Mosby HVDC June 2032; 765 kV projects without a firm timeframe per the company."
+  },
+  {
+   "name": "Coastal Virginia Offshore Wind (CVOW)",
+   "category": "Generation (offshore wind)",
+   "description": "A 2.6 GW, 176-turbine wind farm 27 to 44 miles off Virginia Beach, per the company's February 2025 cost release, using Siemens Gamesa turbines of the same model as the Moray West project; a 50 percent noncontrolling interest was sold to Stonepeak in October 2024 (Q2 2026 10-Q). Per the Q2 2026 investor deck the project was about 81 percent complete at July 31, 2026, with all 176 monopiles and transition pieces installed, 31 turbines completed, two of three offshore substations commissioned and the third expected by year-end 2026; the budget stood at $11.65B including contingency (from $9.8B originally, $10.7B in February 2025 and $11.4B in Q1 2026), project-to-date investment was about $9.8B, and the final turbine is now expected at year-end 2027 after earlier guidance of end-2026 and then early 2027. The first electrons — about 14.7 MW — reached the grid on March 23, 2026 (coastalvawind.com). The FY2025 10-K describes the customer cost-sharing bands: Virginia Power recovers 50 percent of incremental cost between $10.3 billion and $11.3 billion and none between $11.3 billion and $13.7 billion.",
+   "highlights": [
+    "The deck's updated levelized cost is $83/MWh in 2027 dollars against a legislative prudency cap of $149/MWh; the SCC's July 2025 rider order approved $670M of annual revenue and the July 2026 Rider OSW order set a residential impact of $0.90 a month (ReisingerGooch)",
+    "The U.S. Department of the Interior issued a 90-day stop-work order on December 22, 2025; Dominion called it a threat to grid reliability and won a preliminary injunction in the Eastern District of Virginia on January 16, 2026 (offshorewind.biz)",
+    "Tariffs that became effective in April 2026, revised PJM network-upgrade costs and updated installation projections drove the Q2 2026 budget, per the 10-Q, which carries the project at approximately $11.7 billion excluding financing",
+    "Offshore wind is under 2 percent of the five-year capital plan; Dominion's remaining funding obligation was about $1.0B at mid-2026 with Stonepeak funding 48 percent of the remaining capital (deck)"
+   ],
+   "positioning": "The only utility-owned, rate-based offshore wind farm of its size in the United States; its cost history is the reference case for what the regulated model can carry against federal and tariff headwinds.",
+   "soldThrough": "Utility-owned with a 50 percent financial partner; recovered through Rider OSW under the VCEA's public-interest finding.",
+   "targetSegments": [
+    "VCEA offshore-wind compliance (5,200 MW state target by 2034)",
+    "DOM Zone energy and capacity"
+   ],
+   "roadmap": "Third offshore substation year-end 2026; 144 turbines remaining at July 31, 2026; final turbine year-end 2027."
+  },
+  {
+   "name": "Nuclear fleet and small modular reactor development at North Anna",
+   "category": "Generation (nuclear)",
+   "description": "Dominion operates seven nuclear units in three states under its Chief Nuclear Officer (company bio): Surry Units 1 and 2 (licensed through May 2052 and January 2053), North Anna Units 1 and 2 (each about 945 MW, per the company's station page), Millstone in Connecticut and V.C. Summer in South Carolina. Nuclear relicensing is 7 percent of the five-year plan ($4.4B for Dominion Energy Virginia). On SMRs, the 2025 IRP Update states that units are 'typically around 300 MW per unit', that the company filed its first Rider SMR in November 2024 to recover early-stage development costs at North Anna and that the SCC approved it in July 2025, and that following a July 2024 RFP the company 'continues to analyze the feasibility of siting one or more SMRs at the North Anna Power Station' and to 'explore opportunities for innovative financial partnerships with third parties and high load customers'. The preferred plan includes six SMRs (1,944 MW) in its outer years; the station page says the first could be operational 'by the early-to-mid 2030s'. On July 14, 2026 the company filed to renew North Anna's Early Site Permit for 20 years beyond its November 2027 expiry and placed the North Anna 3 construction-and-operating license in deferred status, stating it has 'not made any commitments' to build (World Nuclear News).",
+   "highlights": [
+    "Amazon and Dominion Energy Virginia signed a memorandum of understanding on October 16, 2024 'to explore innovative new development structures' for SMR development at North Anna; Utility Dive reported the aim as at least 300 MW of new capacity",
+    "The IRP records that SMRs 'are essential for ensuring reliability' in every primary portfolio and that large-scale nuclear was selected only in the forced-retirement portfolio",
+    "The NextEra combination requires Nuclear Regulatory Commission approval of the license transfers for the fleet, per the merger release and the Q2 2026 10-Q"
+   ],
+   "positioning": "Among the nuclear owners in this corpus Constellation sells clean-firm attributes to hyperscalers from a merchant fleet; Dominion's fleet is rate-based and its SMR work is the regulated-utility version of the same bet, financed through a rider and a hyperscaler partnership rather than a PPA.",
+   "soldThrough": "Rate-based generation; SMR development costs through Rider SMR; partnership structures with high-load customers under exploration.",
+   "targetSegments": [
+    "DOM Zone baseload and capacity",
+    "Hyperscalers seeking clean firm supply in Virginia"
+   ],
+   "roadmap": "ESP renewal decision pending at the NRC; first SMR early-to-mid 2030s per the company; six SMRs in the plan through 2045."
+  },
+  {
+   "name": "Dominion Energy South Carolina and Contracted Energy",
+   "category": "Other regulated and contracted operations",
+   "description": "Dominion Energy South Carolina serves approximately 0.8 million electric and 0.5 million natural-gas customers (FY2025 10-K), with its own biennial-style rate proceedings, a 2028 combustion turbine and a 2032–2033 combined cycle (~1.3 GW, turbines secured) in the capital plan, and $7.6B of 2026–2030 capital. Contracted Energy holds Millstone Power Station, long-term contracted solar assets and a renewable natural gas portfolio, per the Chief Nuclear Officer's bio; the 2026 guidance midpoint of $3.57 includes $0.07 per share of RNG 45Z income.",
+   "highlights": [
+    "South Carolina customer growth ran at 2.0 percent year to date in 2026 against 0.9 percent in Virginia (Q2 2026 deck)",
+    "The combined company after the NextEra transaction keeps an operational headquarters for Dominion Energy South Carolina in Cayce (merger release)"
+   ],
+   "positioning": "Context for the consolidated financials rather than a data-center franchise; the AI-load story is Virginia's.",
+   "soldThrough": "Regulated tariff service (electric and gas) and contracted output.",
+   "targetSegments": [
+    "South Carolina retail customers",
+    "Contracted nuclear and renewable offtakers"
+   ],
+   "roadmap": "South Carolina CT 2028 and CCGT 2032–2033; merger hearings before the South Carolina PSC December 8, 2026."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "GS-5 large-load rate class (effective January 1, 2027)",
+   "specs": [
+    {
+     "band": "Applicability",
+     "label": "Customers",
+     "value": "All existing and new customers with: Measured or contracted demand of 25 MW or greater on contiguous sites, and A measured or expected load factor of at least 75%"
+    },
+    {
+     "band": "Minimum demand charges",
+     "label": "Transmission and distribution",
+     "value": "85% minimum for transmission and distribution"
+    },
+    {
+     "band": "Minimum demand charges",
+     "label": "Generation",
+     "value": "60% minimum for generation"
+    },
+    {
+     "band": "Minimum demand charges",
+     "label": "Duration and scope",
+     "value": "Minimums in place as long as service is provided; Applies to existing and new customers with measured or contracted demand of 25 MW or greater on contiguous sites; Existing customers prior to 2016 are exempt from these minimum demand charges"
+    },
+    {
+     "band": "Contract term",
+     "label": "New customers post Jan. 1, 2027 (new ESAs)",
+     "value": "14 years (4-year ramp plus 10 years); Exit fees equal to remaining minimum obligations within initial contract term"
+    },
+    {
+     "band": "Contract term",
+     "label": "Renewal",
+     "value": "the contract will automatically renew for additional one-year terms; to terminate service, written notice of termination is required at least 60 days prior to the end of the then current term"
+    },
+    {
+     "band": "Deposit and credit",
+     "label": "New customers",
+     "value": "Cash deposits for equipment orders; Enhanced collateral required"
+    },
+    {
+     "band": "Deposit and credit",
+     "label": "SCC fact sheet",
+     "value": "Large load customers without sufficient credit may be obligated to guarantee funds intended to cover up to 60% of the customer's minimum charges over their contract term"
+    },
+    {
+     "band": "Order",
+     "label": "Case and outcome",
+     "value": "Case No. PUR-2025-00058; Final Order November 25, 2025; authorized ROE 9.80%; base-rate increases of $565.7 million in 2026 and $209.9 million in 2027"
+    }
+   ],
+   "notes": "Values quoted from the Q4 2025 investor deck's 'Large load provisions' slide and the SCC's February 2026 fact sheet. The standalone Schedule GS-5 rate sheet (dollars per kW, collateral per MW, the ramp and notice mechanics) was not found among the company's published tariff PDFs; secondary summaries add a ramp of up to four years at a minimum of 20 percent per year and a three-year notice to reduce load."
+  },
+  {
+   "product": "Data-center contracted capacity ladder (July 2026)",
+   "specs": [
+    {
+     "band": "Stages",
+     "label": "Substation Engineering Letter of Authorization (SELOA)",
+     "value": "Detailed engineering plan; Costs reimbursed to Dominion Energy"
+    },
+    {
+     "band": "Stages",
+     "label": "Construction Letter of Authorization (CLOA)",
+     "value": "Authorizes construction; Customer must reimburse Dominion Energy for all spent costs should they walk away"
+    },
+    {
+     "band": "Stages",
+     "label": "Electric Service Agreement (ESA)",
+     "value": "Defines how the customer will take service and structure to recover costs; Includes revenue requirement whether customer takes service or not"
+    },
+    {
+     "band": "Capacity",
+     "label": "July 2026 total",
+     "value": "~53.8 GW — ESA 12.0 GW; CLOA 9.4 GW; SELOA 32.4 GW"
+    },
+    {
+     "band": "Capacity",
+     "label": "Prior readings",
+     "value": "March 2026 ~51.0 GW; December 2025 ~48.5 GW; September 2025 ~47.1 GW; December 2024 ~40.2 GW; July 2024 ~21.4 GW; July 2023 ~16.5 GW"
+    },
+    {
+     "band": "Throughput",
+     "label": "Connections",
+     "value": "Connected 11 new data centers in 2025 and expect to connect another 13 data centers in 2026; 2024: 15 (977 MW); 2025: 11 (744 MW); Since 2013, averaged ~15 data center connections per year"
+    },
+    {
+     "band": "Throughput",
+     "label": "Requests",
+     "value": "2025: 118 requests, 26.0 GW; Total: 409 requests, ~67 GW since 2020"
+    },
+    {
+     "band": "System",
+     "label": "All-time peak",
+     "value": "On January 23, 2025, the DOM Zone set a new all-time record peak of 24,678 MW"
+    }
+   ],
+   "notes": "Investor decks Q4 2024 through Q2 2026 and the 2025 IRP Update. The connection process page adds: loads under 50 MW 'require 1-2 years to complete'; over 50 MW 'will most likely require the extension of transmission lines and the construction of a new substation'."
+  },
+  {
+   "product": "Coastal Virginia Offshore Wind",
+   "specs": [
+    {
+     "band": "Project",
+     "label": "Capacity and turbines",
+     "value": "2.6 GW; 176 wind turbines; SiemensGamesa (manufacturing same model as Moray West project); 27 to 44 miles offshore"
+    },
+    {
+     "band": "Budget",
+     "label": "History",
+     "value": "$9.8B original; $10.7 billion (February 2025); $11.4B including contingency (Q1 2026); $11.65B including contingency (Q2 2026); 10-Q: approximately $11.7 billion (excluding financing costs and including $0.1 billion of contingency)"
+    },
+    {
+     "band": "Budget",
+     "label": "Customer cost-sharing",
+     "value": "Virginia Power will be eligible to recover 50% of such incremental costs which fall between $10.3 billion and $11.3 billion with no recovery of such incremental costs which fall between $11.3 billion and $13.7 billion"
+    },
+    {
+     "band": "Progress",
+     "label": "As of July 31, 2026",
+     "value": "~81% complete; All 176 monopiles installed; All 176 transition pieces installed; 31 WTG completed; Commissioning of the first and second OSS is complete. Third and final OSS expected by year end 2026"
+    },
+    {
+     "band": "Schedule",
+     "label": "Milestones",
+     "value": "January 2026: First Commercial Wind Turbine Installed; March 23, 2026: First Electrons Delivered to the Grid — approximately 14.7 megawatts; Final turbine (176): Year end 2027"
+    },
+    {
+     "band": "Economics",
+     "label": "LCOE and cap",
+     "value": "LCOE (updated): $83/MWh compared to initial filing submission of $80 to $90/MWh; Legislative prudency cap: $125/MWh (in 2018 dollars); $149/MWh (in 2027 dollars); 2025 rider filing approving annual revenue of $670M"
+    },
+    {
+     "band": "Ownership",
+     "label": "Partner",
+     "value": "50% noncontrolling interest in the CVOW Commercial Project to Stonepeak (October 2024); Remaining amount to be funded by Dominion Energy: ~$1.0B"
+    }
+   ],
+   "notes": "Company releases, Q1 and Q2 2026 investor decks, the FY2025 10-K and Q2 2026 10-Q, and coastalvawind.com."
+  },
+  {
+   "product": "Chesterfield Energy Reliability Center",
+   "specs": [
+    {
+     "band": "Plant",
+     "label": "Capacity",
+     "value": "up to a total of 1,000 MW; four natural gas-powered simple cycle turbines each up to 250 MW (company page); approximately 944 MW simple-cycle, natural gas-fired power station (10-K)"
+    },
+    {
+     "band": "Plant",
+     "label": "Fuels and black start (CPCN application, per POWER)",
+     "value": "Natural gas; natural gas blended with up to 10% hydrogen; low-sulfur #2 distillate fuel oil; Six 3,500-kW black start generators firing ultra-low-sulfur diesel"
+    },
+    {
+     "band": "Cost and schedule",
+     "label": "Cost",
+     "value": "approximately $1.5 billion (10-K); $1.47 billion (construction only) per the CPCN filing"
+    },
+    {
+     "band": "Cost and schedule",
+     "label": "Schedule",
+     "value": "construction to begin in 2026; begin operations in 2029; expected operational June 1, 2029 per the SCC order as summarized"
+    },
+    {
+     "band": "Regulatory",
+     "label": "Docket",
+     "value": "Case No. PUR-2025-00037; CPCN filed March 3, 2025; Final Order November 25, 2025; reconsideration accepted December 15, 2025; order reinstated February 2026; appealed to the Supreme Court of Virginia May 27, 2026"
+    }
+   ],
+   "notes": "Turbine manufacturer not named on first-party pages."
+  },
+  {
+   "product": "Loudoun and Northern Virginia transmission program",
+   "specs": [
+    {
+     "band": "Loudoun Reliability Loop",
+     "label": "Mars–Wishing Star 500/230 kV",
+     "value": "SCC approved April 2023; expected to be completed and energized by summer 2026"
+    },
+    {
+     "band": "Loudoun Reliability Loop",
+     "label": "Aspen–Golden 500/230 kV",
+     "value": "application filed March 7, 2024; SCC approved February 5, 2025; Virginia Supreme Court affirmed February 19, 2026; in service June 2028"
+    },
+    {
+     "band": "Loudoun Reliability Loop",
+     "label": "Golden–Mars 500/230 kV",
+     "value": "application filed March 28, 2025; SCC approved Route 3A; 8.3 miles; construction from the summer of 2026 until the summer of 2028"
+    },
+    {
+     "band": "Further lines",
+     "label": "Morrisville–Wishing Star 500 kV",
+     "value": "a new 500 kV transmission line along or near 36.5 miles of existing right of way; SCC application February 27, 2026 (Case No. PUR-2026-00021); in-service summer 2030"
+    },
+    {
+     "band": "Further lines",
+     "label": "Line 514 Corridor Upgrade",
+     "value": "~3.5 miles 500/230 kV; SCC application May 21, 2026; in-service 2031"
+    },
+    {
+     "band": "PJM awards",
+     "label": "765 kV backbone (with AEP and FirstEnergy)",
+     "value": "260 miles of 765-kV transmission line, Putnam County WV to Frederick County MD; 155 miles of 765-kV transmission line, Campbell County VA to Fauquier County VA; one new substation in Caroline County VA"
+    },
+    {
+     "band": "PJM awards",
+     "label": "Heritage–Mosby HVDC (b4053.3–.5)",
+     "value": "a new bipolar +/- 525 kV HVDC link connecting Heritage and Mosby substations, where the link has a capability of transmitting 3,000 MW. The HVDC link, approximately 185 miles in length, will be fully routed underground; $2,271.70M line; $773.73M and $745.42M converter stations; required in-service June 1, 2032"
+    },
+    {
+     "band": "Capital",
+     "label": "2026–2030",
+     "value": "Electric transmission $13.9B; Electric transmission JV $1.0B (Incl. Valley Link joint venture); Electric transmission: 25% of the ~$65 billion plan"
+    }
+   ],
+   "notes": "Company project pages, the PJM February 2025 selection release and PJM's February 2026 board whitepaper."
+  },
+  {
+   "product": "2025 IRP Update — Company Preferred Plan (Table 5.1.1.1, through 2045)",
+   "specs": [
+    {
+     "band": "Additions",
+     "label": "Solar",
+     "value": "17,534 MW"
+    },
+    {
+     "band": "Additions",
+     "label": "Wind",
+     "value": "3,460 MW"
+    },
+    {
+     "band": "Additions",
+     "label": "Storage",
+     "value": "2,000 MW (COS storage 1,300; PPA storage 700)"
+    },
+    {
+     "band": "Additions",
+     "label": "Nuclear",
+     "value": "1,944 MW (six SMRs)"
+    },
+    {
+     "band": "Additions",
+     "label": "Natural gas fired",
+     "value": "8,510 MW (NG CC 5,864 = 4 × 1,466; NG CT 2,646 = 3 × 882)"
+    },
+    {
+     "band": "Cost",
+     "label": "NPV and capex",
+     "value": "NPV Total ($B) $148.7; Construction CAPEX ($B) $91.8; Transmission $28.3B (all portfolios)"
+    },
+    {
+     "band": "Forecast",
+     "label": "Load",
+     "value": "Demand is forecasted to increase 6.3% annually over the next decade and more than double by 2045 in the DOM Zone; coincident-peak 20-year CAGR 4.1%"
+    },
+    {
+     "band": "Forecast",
+     "label": "Peak",
+     "value": "current peak demand 24,678 megawatts; projected 2035 peak 41,500 megawatts (Powering Virginia page)"
+    }
+   ],
+   "notes": "Filed October 15, 2025 (SCC Case PUR-2025-00184). The 2024 comprehensive IRP planned about 4,500 MW of storage and about 12,000 MW of solar over 15 years; the Update's first generic CT appears in 2032 and first CC in 2033 in the model. The SCC's order on the 2024 IRP (July 15, 2025) found the plan legally sufficient and directed a 20-year horizon and the PJM-derived forecast."
+  },
+  {
+   "product": "System and plan snapshot (Dominion Energy Virginia, Q4 2025 deck)",
+   "specs": [
+    {
+     "band": "System",
+     "label": "Key stats",
+     "value": "Electric utility customers 2.8M; Owned generation (MW) 19,100 (Excludes 1,560 MW of PPAs); Distribution miles 61,000; Transmission miles 7,000"
+    },
+    {
+     "band": "Plan",
+     "label": "Capital and rate base",
+     "value": "2026-2030 capital plan ($B) $54.8; 2025 utility rate base ($B) $48.2; 2026-2030 utility rate base CAGR 11.9%; Weighted average allowed ROE 10.3%; Weighted average allowed equity 52.8%"
+    },
+    {
+     "band": "Plan",
+     "label": "Consolidated 2026–2030",
+     "value": "Total $64.7 (previous 5-year plan: $50.1); Electric transmission: 25%; Electric distribution: 20%; New gas generation: 18%; Solar + storage: 13%; Nuclear SLR/other: 7%; Offshore wind: <2%; 100% turbines secured"
+    },
+    {
+     "band": "Storage pilots",
+     "label": "In service",
+     "value": "Scott Solar 12 MW; New Kent 2 MW; Hanover 2 MW — 56 MWh across all three; Dry Bridge 20 MW (online late November 2023); Dulles International Airport 50 MW; SCC has approved 28.34 MW of the 30-megawatt pilot allowance"
+    },
+    {
+     "band": "Storage mandate",
+     "label": "Virginia law, April 2026 (per Q2 2026 10-Q)",
+     "value": "16.0 GW of short-duration energy storage by the end of 2045, including 4.0 GW by the end of 2030, and 4.0 GW of long-duration energy storage by the end of 2045, including 2.0 GW by the end of 2035"
+    }
+   ],
+   "notes": "Deck and company pages; the battery-storage web page carries 2022-era pilot content and no installed-fleet total."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$14,459M",
+      "expected": "Q4: $3.86B (Investing.com)",
+      "verdict": "miss",
+      "result": "Q4 2024 revenue $3.4B against $3.86B expected per Investing.com; full-year figure per the FY2025 results release's comparative column",
+      "kpi": "revenue",
+      "usdMillions": 14459,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating earnings per share (non-GAAP)",
+      "actual": "$2.77 (vs $1.95 in 2023)",
+      "expected": "Q4: $0.62 (Investing.com)",
+      "verdict": "miss",
+      "result": "Q4 2024 operating EPS $0.58 against $0.62; shares edged down 1.26% on the release (Investing.com, February 12, 2025); a Zacks-basis figure of $0.54 would make it a beat — consensus varies by tracker"
+     },
+     {
+      "name": "GAAP net income per share",
+      "actual": "$2.44 as first reported; restated to $2.33 in the FY2025 release",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "GAAP net income $2.124B; Q4 2024 GAAP $0.15 per share"
+     },
+     {
+      "name": "Data-center contracted capacity",
+      "actual": "~40.2 GW at December 2024 (ESA 8.8 / CLOA 5.2 / SELOA 26.2), up ~19 GW (88%) from July 2024",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "15 data centers connected in 2024 with 977 MW; five-year capital plan raised to $50B (2025–2029), up ~$7B"
+     }
+    ],
+    "commentary": "The year the ladder doubled: contracted capacity went from 21.4 GW to 40.2 GW between July and December 2024, almost all of it at the engineering stage. 2025 guidance was set at $3.28–$3.52 with long-term growth of 5–7% through 2029. No full-year revenue consensus was located; the Q4 figures are the comparison."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$16,506M (+14%)",
+      "expected": "Q4: $3.77B (Investing.com)",
+      "verdict": "beat",
+      "result": "Q4 2025 revenue $4,093M against $3.77B expected",
+      "kpi": "revenue",
+      "usdMillions": 16506,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating earnings per share (non-GAAP)",
+      "actual": "$3.42 (vs $2.77)",
+      "expected": "Q4: $0.69 (Investing.com)",
+      "verdict": "miss",
+      "result": "Q4 2025 operating EPS $0.68, a one-cent miss on the Investing.com basis (another tracker showed a one-cent beat); 2026 guidance of $3.45–$3.69 (midpoint $3.57) fell below a $3.60 consensus and shares slipped 1.46% pre-market (Investing.com, February 23, 2026)"
+     },
+     {
+      "name": "GAAP net income per share",
+      "actual": "$3.45 (net income $3.0B) vs $2.33",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Q4 2025 GAAP $0.65 per share"
+     },
+     {
+      "name": "Data-center contracted capacity",
+      "actual": "~48.5 GW at December 2025 (ESA 10.2 / CLOA 11.0 / SELOA 27.4)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "11 data centers connected in 2025 with 744 MW; 13 expected in 2026; 118 requests for 26.0 GW received in 2025"
+     },
+     {
+      "name": "Five-year capital plan",
+      "actual": "$64.7B for 2026–2030 (previous plan $50.1B); DEV rate base CAGR 11.9%",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "64% rider-eligible; 25% transmission, 20% distribution, 18% new gas generation, 13% solar and storage"
+     }
+    ],
+    "commentary": "Operating EPS grew 23% and the capital plan grew 29% in the same print. The 2025 biennial review (ROE 9.8%, GS-5) and the CERC certificate landed in November; data centers were 28% of Virginia Power's sales. The one-cent Q4 miss and the below-consensus 2026 midpoint were the market's focus, not the pipeline."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$5.02B",
+      "expected": "$4.28B (Zacks)",
+      "verdict": "beat",
+      "result": "+17.3% surprise per Zacks; Investing.com's estimate was $4.47B"
+     },
+     {
+      "name": "Operating earnings per share (non-GAAP)",
+      "actual": "$0.95 (vs $0.93)",
+      "expected": "$0.89 (Zacks); $0.86 (Investing.com)",
+      "verdict": "beat",
+      "result": "GAAP EPS $0.69 after a $154M net market loss on nuclear decommissioning trusts and $78M of nonregulated solar impairments; 2026 guidance affirmed"
+     },
+     {
+      "name": "Data-center contracted capacity",
+      "actual": "~51.0 GW at March 2026 (ESA 10.4 / CLOA 11.1 / SELOA 29.5)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "CVOW ~75% complete with nine turbines installed and a budget of $11.4B"
+     }
+    ],
+    "commentary": "A clean beat on both lines. The non-GAAP adjustments included a $58M benefit for CVOW costs not expected to be recovered from customers — the cost-sharing bands beginning to bite. Rider T-1 (+$124.7M) was filed May 1."
+   },
+   {
+    "period": "Q2 2026 (latest interim)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$4,480M (vs $3,810M)",
+      "expected": "$4.04B (LSEG via Reuters); ~$4.06B (Zacks)",
+      "verdict": "beat",
+      "result": "H1 2026 operating revenue $9,499M vs $7,886M"
+     },
+     {
+      "name": "Operating earnings per share (non-GAAP)",
+      "actual": "$0.79 (vs $0.75)",
+      "expected": "$0.68 (LSEG via Reuters); $0.73 (Zacks); $0.75 (Investing.com)",
+      "verdict": "beat",
+      "result": "GAAP EPS $0.37 (vs $0.88); H1 operating EPS $1.75 vs $1.68; full-year guidance of $3.45–$3.69 reaffirmed; shares closed down about 0.5% (Reuters)"
+     },
+     {
+      "name": "Data-center contracted capacity",
+      "actual": "~53.8 GW at July 2026 (ESA 12.0 / CLOA 9.4 / SELOA 32.4), up ~5.3 GW (11%) from December 2025",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Commercial weather-normal load growth 8.5% over the trailing twelve months; nine of the ten highest peak-demand days in DOM Zone history occurred in 2026 (deck)"
+     },
+     {
+      "name": "CVOW",
+      "actual": "~81% complete; 31 turbines installed; budget $11.65B; final turbine year-end 2027",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Budget up from $11.4B on tariffs, PJM network-upgrade revisions and installation projections; ~$1.0B of Dominion funding remaining"
+     }
+    ],
+    "commentary": "The last stand-alone print before the merger vote: an eleven-cent beat on the LSEG basis, revenue up 18%, and the contracted-capacity ladder still climbing at the engineering stage while the firm ESA tranche grew from 10.4 GW to 12.0 GW in a quarter. Next report is expected October 30, 2026 but is not company-confirmed."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-03",
+   "category": "corporate",
+   "headline": "Special meeting of shareholders to vote on the NextEra Energy combination — 9:30 a.m. ET, virtual; joint proxy statement mailed July 28 after the S-4 went effective July 23",
+   "read": "The last stand-alone governance act; from here the regulatory calendar (SCC hearing November 17, final order expected January 29, 2027) decides the close.",
+   "source": "https://investors.dominionenergy.com/events-and-presentations/special-meeting-of-shareholders/default.aspx"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "regulatory",
+   "headline": "SCC's July 31 Rider T-1 order requires Dominion to directly assign some transmission costs to data centers through mandatory contributions in aid of construction, with an amended line-extension policy due within 90 days; the ~$1.5B rider's residential impact was cut to $0.94 a month from $2.90",
+   "read": "The cost-allocation fight moved from tariff minimums to who pays for the wires themselves; SCC staff had called the status quo 'a glaring cross-class subsidization occurring to the benefit of new GS-5 customers'.",
+   "source": "https://www.utilitydive.com/news/dominion-energy-scc-transmission-costs-data-center/827693/"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "financial",
+   "headline": "Virginia Electric and Power prices $1.25B of notes due 2036 and $700M of 6.30% notes due 2056; ratings shown as Moody's A3 stable, S&P BBB+ positive, Fitch A stable",
+   "read": "S&P's positive outlook is the first ratings tailwind since the May 2025 Moody's downgrade — the merger and the rider-heavy capital plan are being read as credit-supportive.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000103682/000119312526342728/d356520dfwp.htm"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "regulatory",
+   "headline": "Dominion files (July 14) to renew North Anna's Early Site Permit for 20 years beyond November 2027 and places the North Anna 3 license in deferred status, stating it 'has not made any commitments' to build",
+   "read": "Optionality preserved at the one nuclear site where the Amazon SMR memorandum and six planned SMRs would land; no commitment, no counterparty named.",
+   "source": "https://www.world-nuclear-news.org/articles/dominion-keeps-options-open-for-north-anna"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "financial",
+   "headline": "Q2 2026 results: operating EPS $0.79 vs $0.68 LSEG consensus; revenue $4.48B (+18%); guidance reaffirmed; data-center contracted capacity ~53.8 GW at July 2026 (ESA 12.0 GW), up 5.3 GW from December",
+   "read": "The firm ESA tranche grew 1.6 GW in one quarter — the number that tracks real demand better than the 53.8 GW headline.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/Dominion-Energy-Announces-Second-Quarter-2026-Results/default.aspx"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "project",
+   "headline": "CVOW at ~81% complete with all 176 monopiles set and 31 turbines installed; budget raised to $11.65B on April 2026 tariffs, PJM network-upgrade revisions and installation projections; final turbine now year-end 2027",
+   "read": "A second schedule slip in two quarters, into the band where the 10-K says incremental cost is unrecoverable from customers — the rest of the overrun is shareholders' and Stonepeak's.",
+   "source": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q2/2026-07-31-DE-IR-2Q-2026-earnings-call-slides-vTCII.pdf"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "ma",
+   "headline": "NextEra Energy and Dominion file for approval with the SCC (Case PUR-2026-00112), the North Carolina and South Carolina commissions, FERC and the NRC; $2.25B of shareholder-funded bill credits over the first two years post-close, 18 months of job protection, close targeted second half of 2027",
+   "read": "The bill credits are the price of the Virginia docket; the SCC's November 17 evidentiary hearing is where data-center cost allocation and the GS-5 regime get argued as merger conditions.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-file-to-combine-building-a-stronger-company-to-meet-growing-power-demand-across-four-of-Americas-fastest-growing-states-while-keeping-energy-affordable-and-reliable/default.aspx"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "procurement",
+   "headline": "2026 Dispatchable Generation RFP issued for Virginia, with proposals due December 18, 2026",
+   "read": "A third-party lane for firm capacity alongside the self-built CTs and CCGTs — the solicitation a gas, storage or fuel-cell developer answers if it wants into the DOM Zone plan.",
+   "source": "https://www.dominionenergy.com/about/making-energy/dispatchable-generation-proposals"
+  },
+  {
+   "date": "2026-06-30",
+   "category": "policy",
+   "headline": "Virginia's 2026 budget enacts a data-center electricity consumption tax of $0.011 per kWh from July 1, 2026, capped at $600M a year with pro-rata refunds and sunsetting June 30, 2028, while preserving the sales-and-use tax exemption",
+   "read": "The legislature chose a consumption levy over repealing the exemption JLARC valued at $928M — a tax on load rather than on equipment, which leaves the buildout's economics intact and adds a line to every large customer's bill.",
+   "source": "https://www.williamsmullen.com/insights/news/legal-news/virginia-budget-creates-new-electricity-consumption-tax-data-centers"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "legal",
+   "headline": "SELC, for the Chesterfield NAACP, Appalachian Voices and Mothers Out Front, appeals the SCC's Chesterfield Energy Reliability Center approval to the Supreme Court of Virginia",
+   "read": "The 944 MW plant is approved and under construction risk at the same time; the appeal tests whether a VCEA-era certificate can survive the environmental-justice and efficiency arguments.",
+   "source": "https://www.selc.org/press-release/community-and-nonprofit-groups-take-chesterfield-fight-to-supreme-court-of-virginia/"
+  },
+  {
+   "date": "2026-05-18",
+   "category": "ma",
+   "headline": "NextEra Energy and Dominion Energy agree to combine in an all-stock transaction: 0.8138 NextEra shares plus a pro rata share of $360M in cash per Dominion share; NextEra 74.5% / Dominion 25.5%; combined ~10 million customer accounts, 110 GW, $138B rate base; Ketchum as CEO, Blue as president and CEO of regulated utilities, Baine keeps Dominion Energy Virginia",
+   "read": "The largest regulated utility business in the world is being assembled around the largest data-center cluster in the world; Dominion's dockets survive, its capital allocation does not stay its own.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-to-Combine-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers/default.aspx"
+  },
+  {
+   "date": "2026-05-01",
+   "category": "financial",
+   "headline": "Q1 2026 results: operating EPS $0.95 vs $0.89 Zacks consensus; revenue $5.02B; data-center contracted capacity ~51.0 GW at March 2026; CVOW ~75% complete at an $11.4B budget",
+   "read": "A beat carried by weather-normal load growth; the pipeline's engineering tranche kept climbing while connections stayed on the ~15-a-year cadence.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/Dominion-Energy-Announces-First-Quarter-2026-Results/default.aspx"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "policy",
+   "headline": "April 2026: Virginia enacts storage targets of 16.0 GW short-duration by 2045 (4.0 GW by 2030) and 4.0 GW long-duration by 2045 (2.0 GW by 2035); the SCC approves four solar projects (~532 MW) and one storage project (~80 MW) from the 2025 clean-energy petition for ~$1.5B, in service 2028–2030 (per the Q2 2026 10-Q)",
+   "read": "A 4 GW-by-2030 statutory floor against a preferred plan carrying 2,000 MW through 2045 — the next comprehensive IRP has to close that gap, and it is the largest single storage signal in the mid-Atlantic.",
+   "source": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm"
+  },
+  {
+   "date": "2026-04-09",
+   "category": "regulatory",
+   "headline": "SCC approves the Golden–Mars 500/230 kV lines completing the Loudoun Reliability Loop, rejecting an underground alternative reported at $1.5B, three times the overhead cost; construction summer 2026 to summer 2028",
+   "read": "The last piece of the loop that ends the 2022 eastern-Loudoun pause; every campus in the pocket is now dated by these two summers.",
+   "source": "https://www.scc.virginia.gov/media/sccvirginiagov-home/about-the-scc/fact-sheets/fact-sheet-golden-mars-project.pdf"
+  },
+  {
+   "date": "2026-03-25",
+   "category": "customer",
+   "headline": "Equinix seeks approval for its DC-23 building at Beaumeade Circle, Ashburn, with Dominion's transmission upgrades 'a gating factor for delivering new megawatts in eastern Loudoun' expected to ease around 2026",
+   "read": "Four years after the pause, the largest colocation operator in the corridor still schedules against Dominion's lines.",
+   "source": "https://hoodline.com/2026/03/equinix-muscles-in-on-ashburn-data-center-alley/"
+  },
+  {
+   "date": "2026-03-23",
+   "category": "project",
+   "headline": "CVOW delivers its first electrons to the grid — about 14.7 MW — two months after the first commercial turbine was installed",
+   "read": "Proof of the interconnection and the first offshore substation; the remaining 145 turbines are an installation-rate problem, not an engineering one.",
+   "source": "https://coastalvawind.com/about/the-project/timeline"
+  },
+  {
+   "date": "2026-02-27",
+   "category": "project",
+   "headline": "Morrisville–Wishing Star 500 kV application filed with the SCC (Case PUR-2026-00021): 36.5 miles through Fauquier, Prince William and Loudoun, hearings September–November 2026, in service summer 2030",
+   "read": "The next corridor west of the loop; the four-year permit-to-energization span is the transmission clock in one line.",
+   "source": "https://www.dominionenergy.com/about/delivering-energy/electric-projects/power-line-projects/morrisville-to-wishingstar"
+  },
+  {
+   "date": "2026-02-23",
+   "category": "financial",
+   "headline": "FY2025 results: operating EPS $3.42; 2026 guidance $3.45–$3.69; five-year capital plan raised to $64.7B from $50.1B with a Dominion Energy Virginia rate-base CAGR of 11.9%; contracted capacity ~48.5 GW at December 2025; 11 data centers connected in 2025 and 13 expected in 2026",
+   "read": "A 29% larger capital plan in one year, 64% rider-eligible — the rate-base machine is the earnings story and data-center load is its justification.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/Dominion-Energy-announces-2025-financial-results/default.aspx"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "regulatory",
+   "headline": "Dominion's February 2 SCC filing on its large-load interconnection process shows about 70,000 MW of pending data-center requests — 25,000 MW with connection dates through 2031 and 45,000 MW without — against an all-time peak of 24,678 MW; about ten new requests a month",
+   "read": "Three times the system peak in requests, most of it undated; the SCC now supervises the process that decides which of it is real.",
+   "source": "https://virginiabusiness.com/dominion-data-center-power-demand-virginia-scc/"
+  },
+  {
+   "date": "2026-02-12",
+   "category": "project",
+   "headline": "PJM's board approves $11.84B of new transmission including Dominion's Heritage–Mosby ±525 kV HVDC link — 185 miles underground, 3,000 MW, $2.27B for the line and $1.52B for two converter stations, in service June 2032 — with Dominion's share of the window reported at ~$4.8B",
+   "read": "A decade of rate-base growth decided in a planning window rather than a customer request, and the first HVDC into Data Center Alley.",
+   "source": "https://www.utilitydive.com/news/pjm-rtep-transmission-expansion-plan-dominion-nextera-exelon/812311/"
+  },
+  {
+   "date": "2026-01-16",
+   "category": "legal",
+   "headline": "The Eastern District of Virginia grants Dominion a preliminary injunction against the Interior Department's December stop-work order on CVOW; the company says it will 'focus on safely restarting work'",
+   "read": "Twenty-five days lost and a federal-policy risk made explicit for the single largest project in the plan.",
+   "source": "https://www.offshorewind.biz/2026/01/17/court-allows-construction-of-biggest-us-offshore-wind-farm-to-continue/"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "market",
+   "headline": "PJM's 2026 long-term load forecast cuts the Dominion zone's ten-year average annual growth to 5.4% from 6.3%, applying stricter firm/non-firm vetting of large loads",
+   "read": "The first forecast vintage to move down since the wave began; the 10-K adopted the 5.4% figure the same quarter.",
+   "source": "https://www.utilitydive.com/news/pjm-interconnection-load-forecast-data-centers/809717/"
+  },
+  {
+   "date": "2025-12-22",
+   "category": "policy",
+   "headline": "The U.S. Department of the Interior issues a 90-day suspension of work on CVOW; Dominion says halting a project 'within months of generating' 2,600 MW 'will threaten grid reliability'",
+   "read": "The regulated offshore-wind model met federal opposition at 75% completion; litigation, not the docket, decided the outcome.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-releases-statement-in-response-to-U-S--Department-of-Interior-action-on-Coastal-Virginia-Offshore-Wind/default.aspx"
+  },
+  {
+   "date": "2025-12-17",
+   "category": "market",
+   "headline": "PJM's 2027/2028 capacity auction clears every zone at the $333.44/MW-day cap; reserve margin 14.4% against a 20% target; forecast load up 5,249.9 MW 'largely due to additional Large Loads'; total cost $16.4B",
+   "read": "Scarcity priced at the ceiling for a second consecutive year, with a delayed 500 kV backbone named as a driver — the capacity bill Virginia's GS-5 minimums are meant to keep off residential customers.",
+   "source": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2027-2028/2027-2028-bra-report.pdf"
+  },
+  {
+   "date": "2025-11-25",
+   "category": "regulatory",
+   "headline": "SCC final orders: the 2025 biennial review (Case PUR-2025-00058) creates the GS-5 class from January 1, 2027 with 85% transmission-and-distribution and 60% generation minimums, approves $565.7M and $209.9M base-rate increases against $822M and $345M requested and a 9.8% ROE; the Chesterfield Energy Reliability Center certificate and rider are approved the same day",
+   "read": "The two instruments of the utility playbook — a large-load tariff and an expedited gas certificate — issued in one sitting; the terms Dominion filed largely survived.",
+   "source": "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/scc-issues-order-on-dev-biennial-review-2025/scc-rules-in-dev-biennial-review-case.html"
+  },
+  {
+   "date": "2025-10-31",
+   "category": "financial",
+   "headline": "Q3 2025 results: operating EPS $1.06 vs $0.93 Zacks consensus; contracted capacity ~47.1 GW at September 2025; CVOW ~66% complete; PJM open-window proposals submitted in August",
+   "read": "The largest beat of the trailing two years, on a quarter in which the ESA tranche reached 9.8 GW.",
+   "source": "https://s2.q4cdn.com/510812146/files/doc_financials/2025/q3/2025-10-31-DE-IR-3Q-2025-earnings-call-slides-vTCI.pdf"
+  },
+  {
+   "date": "2025-10-15",
+   "category": "regulatory",
+   "headline": "2025 IRP Update filed (SCC Case PUR-2025-00184): demand +6.3% a year over the next decade; preferred plan adds 17,534 MW solar, 3,460 MW wind, 2,000 MW storage, six SMRs and 8,510 MW gas by 2045; the same day's clean-energy petition seeks ~845 MW of solar, ~155 MW of storage and 439 MW of PPAs (~$2.9B)",
+   "read": "Gas rose and storage fell against the 2024 plan; the annual solicitation kept its cadence regardless — two different signals from one filing date.",
+   "source": "https://www.dominionenergy.com/-/media/content/about/our-company/irp/pdfs/2025-integrated-resource-plan-update.pdf"
+  },
+  {
+   "date": "2025-07-22",
+   "category": "market",
+   "headline": "PJM's 2026/2027 capacity auction clears at the $329.17/MW-day cap across the RTO, the second-highest price ever for the DOM Zone per Dominion's IRP",
+   "read": "The price signal that Dominion's certificate filings cite and that the guidance literature treats as the reason regulated gas got expedited.",
+   "source": "https://www.enelnorthamerica.com/insights/blogs/pjm-2026-2027-capacity-auction-results"
+  },
+  {
+   "date": "2025-07-15",
+   "category": "regulatory",
+   "headline": "SCC finds the 2024 IRP 'legally sufficient' while warning the spending plans will 'significantly impact millions of residential and business customers', and directs a 20-year horizon, the PJM-derived forecast, efficiency targets and analysis of higher battery-storage build limits in future plans",
+   "read": "Acceptance is not approval: the order set the terms for the 2025 Update and put storage build limits on the table.",
+   "source": "https://www.whro.org/environment/2025-07-17/scc-says-dominions-future-spending-plan-legally-sufficient-warns-against-impact-on-consumers"
+  },
+  {
+   "date": "2025-07-01",
+   "category": "leadership",
+   "headline": "Ed Baine promoted to Executive Vice President–Utility Operations and President–Dominion Energy Virginia; Chief Accounting Officer Michele Cardiff to retire October 1 with Gary Ratliff succeeding",
+   "read": "The data-center franchise's operating executive gains the consolidated utility remit he will keep under NextEra.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-Promotes-Baine-to-Executive-Vice-President-Announces-Retirement-of-Cardiff/default.aspx"
+  },
+  {
+   "date": "2025-05-05",
+   "category": "financial",
+   "headline": "Moody's downgrades Virginia Electric and Power's senior unsecured rating to A3 from A2 and moves Dominion Energy's Baa2 outlook to negative, citing 'increasingly uncertain political and economic environments' and cash-flow-to-debt near its thresholds",
+   "read": "The cost of a $50B plan funded ahead of recovery; the outlook reversed only after the merger and the 2026 rider orders.",
+   "source": "https://www.investing.com/news/stock-market-news/moodys-downgrades-vepco-changes-dominions-outlook-to-negative-93CH-4022278"
+  },
+  {
+   "date": "2025-05-01",
+   "category": "financial",
+   "headline": "Q1 2025 call: about 40 GW 'in various stages of contracting'; CFO Ridge: 'We have not observed any evidence of slowing demand from data center customers across our service area'; CEO Blue: 'They want to go fast, they always want to go fast'",
+   "read": "The company's own framing of the queue, one quarter before the biennial-review terms that would test it.",
+   "source": "https://www.nbcnews.com/business/business-news/data-center-boom-worlds-largest-market-not-slowing-dominion-energy-say-rcna204206"
+  },
+  {
+   "date": "2025-04-23",
+   "category": "leadership",
+   "headline": "COO Diane Leopold to retire June 1, 2025; responsibilities split among Baine (utility operations), Carr (nuclear and Contracted Energy) and Brown (project construction); no successor COO named",
+   "read": "The operating structure that entered the merger: utility, nuclear and construction reporting separately to the CEO.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-Announces-Changes-in-Senior-Executive-Responsibilities-Related-To-Retirement-of-Diane-Leopold/default.aspx"
+  },
+  {
+   "date": "2025-04-01",
+   "category": "regulatory",
+   "headline": "Dominion Energy Virginia files its 2025 biennial review: base-rate increases of $8.51 a month in 2026 and $2.00 in 2027 for a typical residential customer ('first base rate increase since 1992'), a $10.92 fuel increase from July 1, 2025, and a new rate class for high energy users including data centers with a 14-year commitment",
+   "read": "The proposal that became GS-5; the residential figures were cut by the SCC, the data-center terms were not.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-Virginia-proposes-new-rates-to-continue-delivering-reliable-service-and-increasingly-clean-energy/default.aspx"
+  },
+  {
+   "date": "2025-03-03",
+   "category": "regulatory",
+   "headline": "Certificate application filed for the Chesterfield Energy Reliability Center: four simple-cycle turbines of up to 250 MW, $1.47B construction cost, operations in 2029",
+   "read": "Nine months from filing to certificate — the fastest link in the chain, and the one now before the state supreme court.",
+   "source": "https://www.powermag.com/dominion-seeks-virginia-approval-for-1-gw-gas-fired-power-plant/"
+  },
+  {
+   "date": "2025-02-27",
+   "category": "project",
+   "headline": "PJM selects a 765 kV backbone to be jointly developed by Dominion, AEP and FirstEnergy: 260 miles from Putnam County, West Virginia to Frederick County, Maryland and 155 miles from Campbell County to Fauquier County, Virginia, plus a Caroline County substation",
+   "read": "The first extra-high-voltage class in Virginia, chosen by the planner; the company itself gave no firm timeframe.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/PJM-selects-regional-transmission-projects-to-be-jointly-developed-by-Dominion-Energy-American-Electric-Power-FirstEnergy/default.aspx"
+  },
+  {
+   "date": "2025-02-12",
+   "category": "financial",
+   "headline": "FY2024 results: operating EPS $2.77; 2025 guidance $3.28–$3.52; five-year plan raised to $50B (+$7B); contracted capacity ~40.2 GW at December 2024, up 88% from July; 15 data centers connected in 2024",
+   "read": "The print that doubled the ladder; the market read the Q4 miss and sold the stock down about 1%.",
+   "source": "https://www.sec.gov/Archives/edgar/data/715957/000095017025018408/d-ex99.htm"
+  },
+  {
+   "date": "2025-02-03",
+   "category": "project",
+   "headline": "CVOW budget raised from $9.8B to $10.7B on higher PJM network-upgrade and onshore interconnection costs; ~50% complete; completion 'on schedule' for end-2026; Stonepeak funds 50% of costs up to $11.3B",
+   "read": "The first of four budget revisions in eighteen months, and the one attributed to the grid rather than the sea.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/Coastal-Virginia-Offshore-Wind-CVOW-Project-Part-of-Comprehensive-All-of-the-Above-Energy-Strategy-to-Affordably-Meet-Growing-Energy-Needs-Continues-on-Schedule-Cost-Updated/default.aspx"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Dominion's data-center pipeline is firm in its smallest tranche and speculative in its largest, and that the company's own instruments are built to keep it that way. Basis: per the Q2 2026 investor deck, 12.0 GW of the 53.8 GW is under electric service agreements that 'include revenue requirement whether customer takes service or not', 9.4 GW under construction authorizations with full cost reimbursement on walk-away, and 32.4 GW at the engineering stage; the February 2026 SCC filing counted about 70,000 MW of requests against a 24,678 MW peak, with 45,000 MW carrying no connection date; connections have run at 11 to 15 a year for a decade against 118 requests in 2025 alone. The GS-5 minimums from January 2027 and the deposit and reimbursement clauses are the filter. We expect the engineering tranche to convert slowly and the annual connection count — not the gigawatt headline — to remain the measure of throughput.",
+  "(High confidence) We assess that wires, not generation, are the binding constraint on Northern Virginia load through at least 2028 and in places through 2032, and that this sustains the behind-the-meter bridge-power market on Dominion's system for the rest of the decade. Basis: the 2022 eastern-Loudoun pause with reduced allocations through January 2026 (Data Center Frontier); the Reliability Loop's dates — Mars–Wishing Star summer 2026, Aspen–Golden and Golden–Mars 2028 — with Morrisville–Wishing Star in 2030, Line 514 in 2031 and the Heritage–Mosby HVDC link in June 2032; transmission at 25 percent of the $65B plan; Equinix's 2026 filing still citing Dominion's upgrades as a gating factor; and PJM's own note that a delayed 500 kV backbone moved the DOM Zone's import limits in the 2027/2028 auction.",
+  "(High confidence) We assess that Dominion's storage procurement is a statutory machine with two lanes, and that the utility-owned lane is the smaller and more EPC-mediated of the two. Basis: the annual PPA and Acquisition RFPs the IRP describes; the October 2025 petition's 155 MW of owned storage against 439 MW of solar PPAs; the 10-K's $2.0B of storage capital over 2026–2030 (3 percent of the plan); pilots and approvals in the tens of megawatts; and the fact that no battery integrator or cell maker appears on any first-party page. For a storage seller the addressable Virginia market is the developer bidding the October 1, 2026 PPA RFP and the utility's approved-vendor list — in that order.",
+  "(Moderate confidence) We assess that the 2025 IRP Update and the April 2026 storage statute are in open conflict and that the next comprehensive plan will raise the storage build. Basis: the Update's preferred plan carries 2,000 MW of storage through 2045 and no generic storage build before 2030, down from about 4,500 MW in the 2024 plan; the SCC's July 2025 order had already directed analysis of higher battery-storage build limits; the 10-Q records a law requiring 4.0 GW of short-duration storage by the end of 2030 and 16.0 GW by 2045. The reconciliation could also come through PPAs rather than rate-based plant, which would move the volume to the developer lane rather than the utility's own. Collection gap: no SCC action on the 2025 Update and no final order on the 2025 clean-energy petition were found.",
+  "(Moderate confidence) We assess that gas is the company's firm-capacity answer and that it is legally exposed in a way its solar and storage programs are not. Basis: the Chesterfield certificate was granted, suspended, reinstated and then appealed to the Supreme Court of Virginia within six months; the preferred plan adds 8,510 MW of gas and would require a VCEA reliability exception to keep fossil units past 2045; the company reports its committed 6.5 GW of Virginia gas as turbines secured. An adverse ruling on Chesterfield would not remove the need the SCC found — 'an imminent reliability threat', per the order as reported — but it would push the answer toward purchased capacity, storage and the third-party dispatchable RFP.",
+  "(Moderate confidence) We assess that the NextEra combination changes the buyer more than the docket. Basis: the merger release keeps Dominion Energy Virginia's president in place and Blue as president and CEO of regulated utilities, and the SCC, NCUC, South Carolina, FERC and NRC approvals leave Virginia's rate proceedings, IRP cycle and RFP calendar intact; but the combined company's capital allocation, supplier qualification and framework agreements would sit with NextEra, whose merchant subsidiary is the largest developer of storage in this corpus. We expect procurement platforms to migrate after the second-half-2027 close and Virginia's regulatory calendar not to. This is inference from the release and the Utility Dive coverage, not a stated plan.",
+  "(Low confidence) We assess that CVOW's remaining risk is now shareholders' rather than customers' and that this disciplines the schedule more than any regulatory deadline. Basis: the 10-K's cost-sharing bands (50 percent recovery between $10.3B and $11.3B, none between $11.3B and $13.7B), a budget at $11.65B, a $58M non-GAAP benefit in Q1 2026 for costs 'not expected to be recovered from customers', and a final-turbine date that moved from end-2026 to year-end 2027 in two quarters. Whether tariffs effective in April 2026 and the litigation with Interior produce a further revision is not knowable from the record.",
+  "INDICATORS TO WATCH. October 30, 2026 (expected, not company-confirmed) — Q3 2026 results: the ESA tranche above 12.0 GW and connections on pace for 13 would confirm Judgment 1's conversion rate; a flat ESA figure with a rising headline would not. November 17, 2026 — SCC evidentiary hearing on the merger (Case PUR-2026-00112), with a final order expected January 29, 2027: conditions on data-center cost allocation would show the docket outlasting the buyer (Judgment 6). December 18, 2026 — Dispatchable Generation RFP bids due: storage or hybrid winners would open the third lane Judgment 5 anticipates. January 1, 2027 — GS-5 effective: a surge of ESAs signed in Q4 2026 under existing terms would show the tariff's filter working before it applies. About October 29, 2026 — the amended line-extension policy with mandatory contributions in aid of construction, due 90 days after the July 31 order. The next comprehensive IRP (an even-numbered-year filing per the company's cadence) — the storage total against the 4 GW-by-2030 statute (Judgment 4). The Supreme Court of Virginia's decision on Chesterfield (Judgment 5). Year-end 2026 — the third CVOW offshore substation; year-end 2027 — the final turbine (Judgment 7). March 2027 — the third biennial review filing."
+ ],
+ "relationships": [
+  {
+   "slug": "amazon",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-10",
+   "via": "North Anna small modular reactor development",
+   "scale": "at least 300 MW (Utility Dive)",
+   "note": "Amazon and Dominion Energy Virginia signed a memorandum of understanding in October 2024 to explore development and financing structures for one or more SMRs at North Anna.",
+   "context": "The company's October 16, 2024 release says the MOU 'documents … efforts to jointly explore innovative ways to advance SMR development and financing while also mitigating potential cost and development risks for customers and capital providers', with Robert Blue calling it 'a potential path to advance SMRs with minimal rate impacts for our residential customers' and Amazon's Kevin Miller stating that nuclear 'can help meet the energy needs of our customers for decades to come'. Utility Dive reported the aim as at least 300 MW of new capacity near North Anna.\n\nThe 2025 IRP Update records that the company 'continues to explore opportunities for innovative financial partnerships with third parties and high load customers, which may provide avenues for earlier deployment of SMRs', and the July 2026 Early Site Permit renewal keeps the site available; no binding agreement, unit count or supplier had been announced by September 2026. Amazon also intervened in the 2026 Rider T-1 case, where Google, Amazon, Microsoft and Meta argued for voluntary contributions in aid of construction (Utility Dive).",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2024/Dominion-Energy-and-Amazon-to-explore-advancement-of-Small-Modular-Reactor-SMR-nuclear-development-in-Virginia-10-16-2024/default.aspx"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "via": "Remington solar PPA; Rider T-1 intervenor",
+   "note": "Microsoft has been a Dominion Energy Virginia renewable-energy customer since a 20 MW Remington solar project supplied under a 25-year Commonwealth PPA, and intervened in Dominion's 2026 transmission cost-allocation case.",
+   "context": "C2ES's account of the Remington project describes 20 MW of solar power in Fauquier County under a 25-year PPA with the Commonwealth of Virginia, with the renewable energy certificates 'helping offset the carbon footprint of its data center in Boydton, Virginia' — Microsoft's largest Virginia campus, in Dominion's Mecklenburg County territory.\n\nIn July 2026 Utility Dive reported that 'Google, Amazon, Microsoft, and Meta advocated for voluntary contributions in aid of construction (CIAC) payments' at the SCC's Rider T-1 hearing, the proceeding that ended with mandatory direct assignment of transmission costs to data centers. No 2025–2026 Microsoft-specific supply agreement with Dominion was found; Microsoft's Virginia load is served under the general large-load process.",
+   "source": "https://www.c2es.org/content/dominion-microsoft-team-up-to-build-solar-project/"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-07",
+   "via": "Rider T-1 intervenor",
+   "note": "Google appeared with Amazon, Microsoft and Meta as a large-load intervenor in Dominion's 2026 transmission cost-allocation proceeding, arguing for voluntary rather than mandatory contributions in aid of construction.",
+   "context": "Utility Dive's report on the July 14–15, 2026 SCC hearing states that 'Google, Amazon, Microsoft, and Meta advocated for voluntary contributions in aid of construction (CIAC) payments', while SCC staff described 'a glaring cross-class subsidization occurring to the benefit of new GS-5 customers'. The SCC's July 31 order chose mandatory direct assignment. No Dominion–Google supply, tariff or demand-response agreement was found in the public record; the link is the intervention itself, which places Google among the GS-5-class customers whose connection terms the order sets.",
+   "source": "https://www.utilitydive.com/news/virginia-scc-dominion-data-center-transmission-cost-allocation/825300/"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "via": "Henrico data-center park; Schedule RF renewable tariff",
+   "note": "Meta's Henrico County data-center park is served by Dominion Energy over two 230 kV transmission lines, and Meta and Dominion created the Schedule RF renewable-energy tariff that lets large customers add renewable supply.",
+   "context": "The Virginia Economic Development Partnership's case study states that 'the park is served by Dominion Energy via two 230 KVA transmission lines', that 'Dominion Energy and Meta worked together to create a renewable energy tariff called Schedule RF' allowing 'Meta and other large energy users to meet their needs through the addition of renewable energy sources', and that Meta 'has worked closely with Dominion Energy and other partners to bring over 500MW of new renewable energy to the Virginia grid'. Meta also intervened in the 2026 Rider T-1 case (Utility Dive). The case study is undated; the investments it records were announced in 2017 and 2018.",
+   "source": "https://www.vedp.org/case-study/meta-friends-virginia"
+  },
+  {
+   "slug": "equinix",
+   "type": "customer",
+   "status": "active",
+   "via": "Ashburn campus power",
+   "note": "Equinix's Ashburn expansion in 2026 is scheduled against Dominion's eastern-Loudoun transmission upgrades, which its filing described as the gating factor for new megawatts.",
+   "context": "Hoodline's March 25, 2026 report on Equinix's application for the DC-23 building at Beaumeade Circle states that 'Dominion Energy's transmission upgrades remain a gating factor for delivering new megawatts in eastern Loudoun, with those upgrades expected to ease constraints around 2026'. Equinix's Ashburn campus sits in the pocket Dominion identified in 2022 as transmission-constrained; the Loudoun Reliability Loop's first segment energizes in summer 2026 and the remaining two in 2028.",
+   "source": "https://hoodline.com/2026/03/equinix-muscles-in-on-ashburn-data-center-alley/"
+  },
+  {
+   "slug": "stack-infrastructure",
+   "type": "customer",
+   "status": "announced",
+   "since": "2025-01",
+   "scale": "six 300 MW substations",
+   "via": "Stafford Technology Campus",
+   "note": "STACK's 1 GW-plus Stafford Technology Campus draws committed power from six 300 MW substations supplied by Dominion Energy.",
+   "context": "STACK Infrastructure's January 16, 2025 release describes a 500-acre campus with four sub-campuses and 19 data centers 'drawing committed power from six 300MW substations supplied by Dominion Energy'. Stafford County is south of the Loudoun pocket, in the part of Dominion's territory where the 2025 IRP Update counts Southern Virginia's 2,000 MW market; the campus is the largest single Dominion-supplied colocation commitment named in the sources.",
+   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-announces-landmark-1gw-stafford-technology-campus-in-northern-virginia/"
+  },
+  {
+   "slug": "vantage",
+   "type": "customer",
+   "status": "active",
+   "via": "Ashburn campuses",
+   "note": "Vantage was among the Ashburn operators whose 2022–2023 deliveries were constrained by Dominion's eastern-Loudoun transmission limits.",
+   "context": "Data Center Frontier's September 26, 2022 report on the Loudoun constraint quoted Vantage — 'We have gone all the way out into 2023 to see what workloads will be compromised or delayed' — alongside Digital Realty, and reported Dominion's statement that most planned development would 'receive a significantly reduced allocation of the anticipated power through January of 2026', with reconductoring, a Goose Creek 500/230 kV transformer, series reactors and a southern-Loudoun 500 kV line as the fixes. Vantage's Ashburn campuses remain on Dominion's system; no later Vantage-specific statement was found.",
+   "source": "https://www.datacenterfrontier.com/energy/article/11436951/dominion-resumes-new-connections-but-loudoun-faces-lengthy-power-constraints"
+  },
+  {
+   "slug": "siemens-energy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2021",
+   "scale": "176 turbines, 2.6 GW",
+   "via": "Siemens Gamesa offshore wind turbines (CVOW)",
+   "note": "Siemens Gamesa, Siemens Energy's wind subsidiary, supplies the 176 turbines for Coastal Virginia Offshore Wind.",
+   "context": "Dominion's February 2025 cost release names the turbine supplier as 'SiemensGamesa (manufacturing same model as Moray West project)'; offshorewind.biz describes the fleet as 176 Siemens Gamesa 14 MW turbines. The Q2 2026 deck reports 100 percent of nacelles, about 99 percent of towers and 85 percent of blades fabricated, 31 turbines installed and the final turbine expected at year-end 2027. Siemens Energy has owned Siemens Gamesa outright since 2023; the relationship is recorded here at the parent.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/Coastal-Virginia-Offshore-Wind-CVOW-Project-Part-of-Comprehensive-All-of-the-Above-Energy-Strategy-to-Affordably-Meet-Growing-Energy-Needs-Continues-on-Schedule-Cost-Updated/default.aspx"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-05",
+   "scale": "0.8138 NextEra shares plus a pro rata share of $360M cash per Dominion share; NextEra 74.5% / Dominion 25.5%",
+   "via": "NextEra Energy–Dominion Energy combination",
+   "note": "NextEra Energy, the parent of NextEra Energy Resources, agreed on May 15, 2026 to acquire Dominion Energy in an all-stock combination expected to close in the second half of 2027.",
+   "context": "The May 18, 2026 joint release sets the exchange ratio at 0.8138 NextEra shares per Dominion share plus a one-time aggregate cash payment of $360 million, pro forma ownership of approximately 74.5 percent and 25.5 percent, a combined company of approximately 10 million customer accounts, 110 GW of generation and $138 billion of rate base, John Ketchum as chairman and CEO, Robert Blue as president and CEO of regulated utilities, Edward Baine as president and CEO of Dominion Energy Virginia, dual headquarters in Juno Beach and Richmond and a board of ten NextEra and four Dominion directors. Applications were filed July 15, 2026 with the SCC (Case PUR-2026-00112, hearing November 17, 2026), the NCUC, the South Carolina PSC, FERC and the NRC, with $2.25 billion of shareholder-funded bill credits over two years post-close.\n\nThe covered dossier is NextEra Energy Resources, the merchant development subsidiary; the acquirer is its parent. For this corpus the consequence is that the largest regulated data-center utility and the largest storage developer would share an owner from late 2027.",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-to-Combine-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers/default.aspx"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "PJM capacity market",
+   "status": "in-effect",
+   "effectiveDate": "2025-06",
+   "exposure": "The DOM Zone cleared at the RTO price cap in consecutive auctions — $329.17/MW-day for 2026/2027 and $333.44/MW-day for 2027/2028, the latter with a 14.4 percent reserve margin against a 20 percent target and forecast load up 5,249.9 MW 'largely due to additional Large Loads' (PJM report). The 2025 IRP Update calls the 2026/2027 result 'the second-highest capacity price ever for the DOM Zone'; the cost passes to customers through fuel and purchased-power riders and was cited by the SCC in certifying the Chesterfield plant.",
+   "mitigation": "The GS-5 class's 60 percent generation minimum and the company's self-build gas program (CERC 2029; CCGTs 2032–2034) are the company's stated responses; PJM's cap-and-floor collar applies for the 2026/2027 and 2027/2028 delivery years only.",
+   "source": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2027-2028/2027-2028-bra-report.pdf"
+  },
+  {
+   "regime": "Virginia large-load cost allocation (GS-5; Rider T-1 direct assignment; HB 1393; 2026 budget consumption tax)",
+   "status": "in-effect",
+   "effectiveDate": "2027-01-01",
+   "exposure": "The SCC's November 2025 order created the GS-5 class effective January 1, 2027 and ordered alternative cost-allocation proposals for generation and transmission; its July 31, 2026 Rider T-1 order requires direct assignment of defined transmission facilities to data centers through mandatory contributions in aid of construction. The 2026 General Assembly considered 61 data-center bills and sent 15 to the Governor, including HB 1393 on allocating generation-expansion costs to customers of 25 MW or more; the budget signed June 30, 2026 imposes a $0.011/kWh electricity consumption tax on data centers from July 1, 2026 (capped at $600M a year, sunsetting June 30, 2028) while keeping the sales-tax exemption.",
+   "mitigation": "The company's own tariff proposal — 14-year contracts, 85/60 percent minimums, enhanced collateral — was designed, per the 10-K, 'to minimize both cross-rate class subsidies and stranded costs'; the amended line-extension policy is due about October 29, 2026.",
+   "source": "https://www.utilitydive.com/news/dominion-energy-scc-transmission-costs-data-center/827693/"
+  },
+  {
+   "regime": "Federal offshore-wind policy and import tariffs (CVOW)",
+   "status": "in-effect",
+   "effectiveDate": "2025-12-22",
+   "exposure": "The Department of the Interior suspended work on CVOW for 90 days on December 22, 2025; a preliminary injunction on January 16, 2026 allowed construction to resume. Tariffs effective in April 2026, revised PJM network-upgrade costs and updated installation projections took the budget to approximately $11.7 billion per the Q2 2026 10-Q, inside the band where the 10-K says incremental cost is unrecoverable from customers; the final turbine moved to year-end 2027.",
+   "mitigation": "Litigation against the stop-work order; a $123M unused contingency; Stonepeak funds 48 percent of the remaining capital (Q2 2026 deck).",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-releases-statement-in-response-to-U-S--Department-of-Interior-action-on-Coastal-Virginia-Offshore-Wind/default.aspx"
+  },
+  {
+   "regime": "Virginia Clean Economy Act and the April 2026 storage statute",
+   "status": "in-effect",
+   "effectiveDate": "2026-04",
+   "exposure": "The VCEA deems 2.7 GW of storage by 2035, 16.1 GW of solar and onshore wind by 2035 and 5.2 GW of offshore wind before 2035 to be in the public interest and sets a carbon-free path to 2045 (10-K); the April 2026 law raises storage to 16.0 GW of short-duration by 2045 (4.0 GW by 2030) and 4.0 GW of long-duration by 2045 (10-Q). The 2025 IRP Update's preferred plan carries 2,000 MW of storage and states it 'would require the Company to petition the Commission for a reliability exception outlined in the VCEA in order to preserve existing and planned fossil generation from retirement in 2045'; the Chesterfield certificate is under appeal on VCEA and environmental-justice grounds.",
+   "mitigation": "Annual clean-energy petitions and RFPs execute the mandates; the reliability-exception petition is the company's stated route for keeping gas.",
+   "source": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm"
+  },
+  {
+   "regime": "FERC large-load and co-location rules (PJM, Docket EL25-49)",
+   "status": "announced",
+   "effectiveDate": "2025-12-18",
+   "exposure": "FERC ordered PJM on December 18, 2025 to create interim non-firm, firm contract-demand and non-firm contract-demand transmission services for large and co-located loads, with compliance filings in January and February 2026; PJM's 2026 forecast applies firm/non-firm vetting to large-load additions. No Dominion-specific provision was found; the rules govern how a data center could sit behind an existing plant on Dominion's system and what it would owe the grid.",
+   "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+  },
+  {
+   "regime": "Merger approvals (NextEra Energy combination)",
+   "status": "announced",
+   "effectiveDate": "2026-07-15",
+   "exposure": "Applications filed with the SCC (Case PUR-2026-00112; evidentiary hearing November 17, 2026; final order expected January 29, 2027 per the Q2 2026 deck), the North Carolina Utilities Commission, the South Carolina PSC (hearings December 8, 2026), FERC under Section 203 and the NRC (license transfers for the nuclear fleet); the release commits $2.25 billion of shareholder-funded bill credits over two years post-close, dual headquarters and employment commitments.",
+   "mitigation": "Close targeted for the second half of 2027; Series C preferred to be redeemed if closing falls after January 2027 (10-Q).",
+   "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-file-to-combine-building-a-stronger-company-to-meet-growing-power-demand-across-four-of-Americas-fastest-growing-states-while-keeping-energy-affordable-and-reliable/default.aspx"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Robert M. (Bob) Blue",
+   "title": "Chair, President and Chief Executive Officer",
+   "photo": "images/execs/dominion-energy-blue.jpg",
+   "background": [
+    "Chair of the board since April 2021; president and CEO since October 2020; to become president and CEO of regulated utilities and a director of the combined company after the NextEra combination (May 2026 release)",
+    "Executive vice president and co-chief operating officer, and president–Dominion Energy Virginia, before becoming CEO; earlier senior vice president–Regulation, Law, Energy Solutions & Policy and vice president–State and Federal Affairs; joined Dominion in 2005",
+    "Counselor to the Governor and director of policy for Virginia Governor Mark Warner; attorney at Hogan & Hartson; chair of the Institute of Nuclear Power Operations",
+    "University of Virginia; Yale Law School; MBA, Darden (company bio, April 2026)"
+   ]
+  },
+  {
+   "name": "Steven D. Ridge",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "photo": "images/execs/dominion-energy-ridge.jpg",
+   "background": [
+    "Executive vice president and CFO since January 2024; senior vice president and CFO from November 2022; responsible for financial planning, investor relations, accounting, tax, treasury, strategy and M&A",
+    "President of Questar Gas (October–November 2022), leading the company's former western gas distribution operations from Salt Lake City; vice president–Investor Relations 2019–2021; joined Dominion in 2014",
+    "Energy Investment Banking Group, J.P. Morgan, before Dominion",
+    "B.A. economics, Brigham Young University; M.A. international economics and finance, Brandeis University (company bio, July 2025)"
+   ]
+  },
+  {
+   "name": "Edward H. (Ed) Baine",
+   "title": "Executive Vice President–Utility Operations and President–Dominion Energy Virginia",
+   "photo": "images/execs/dominion-energy-baine.jpg",
+   "background": [
+    "Current role since July 2025; president–Utility Operations and Dominion Energy Virginia from January 2025; president–Dominion Energy Virginia from October 2020; to remain president and CEO of Dominion Energy Virginia in the combined company (May 2026 release)",
+    "Responsible for all utility operations — Dominion Energy Virginia's 2.8 million accounts and Dominion Energy South Carolina — including the data-center connection process, transmission and generation development",
+    "Senior vice president–Power Delivery, Dominion Energy Virginia (2019); senior vice president–Distribution (2016); senior vice president–Transmission & Customer Service (2015); vice president–Power Generation System Operations (2013); joined in 1995 as an associate engineer",
+    "Boards of EPRI and Hubbell Incorporated (company bio)"
+   ]
+  },
+  {
+   "name": "Corynne S. Arnett",
+   "title": "Executive Vice President and Chief Regulatory and Customer Officer",
+   "photo": "images/execs/dominion-energy-arnett.jpg",
+   "background": [
+    "Current role since October 2025; oversees regulatory affairs and strategy for the operating companies, regulatory compliance, electric-market and FERC policy, strategic risk, and customer experience, service and revenue management for more than 4 million customers — the executive behind the biennial review and the GS-5 class",
+    "Executive vice president–Regulatory Affairs and Customer Experience (2024); senior vice president–Regulatory Affairs and Customer Experience (December 2019); vice president–Customer Service, Dominion Energy Virginia (2018)",
+    "Joined the company in 1997 as a tax professional (company bio)"
+   ]
+  },
+  {
+   "name": "Eric S. Carr",
+   "title": "Chief Nuclear Officer and President–Nuclear Operations and Contracted Energy",
+   "photo": "images/execs/dominion-energy-carr.jpg",
+   "background": [
+    "Current role since January 2025; oversees the seven nuclear units in three states and Contracted Energy (Millstone, contracted solar, renewable natural gas) — the executive over North Anna and the SMR program",
+    "Joined Dominion in 2023 as chief nuclear officer; previously president and chief nuclear officer of PSEG Nuclear (Hope Creek and Salem, nearly 3,500 MW), July 2019 to May 2023 (company bio, September 2025; 10-K)"
+   ]
+  },
+  {
+   "name": "Joseph A. (Joe) Woomer",
+   "title": "Senior Vice President–Electric Transmission, Dominion Energy Virginia",
+   "photo": "images/execs/dominion-energy-woomer.jpg",
+   "background": [
+    "Current role since June 2023; responsible for over 6,700 miles of transmission lines and more than 800 substation assets — the Loudoun Reliability Loop, the 765 kV joint projects and the Heritage–Mosby HVDC award sit in this organization",
+    "Vice president–New Business and Customer Solutions from April 2022, the group that fronts large-load requests; joined Dominion in 1986 (company bio)"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "Dominion Energy IR — Special Meeting of Shareholders (merger vote)",
+   "url": "https://investors.dominionenergy.com/events-and-presentations/special-meeting-of-shareholders/default.aspx",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Utility Dive — SCC orders Dominion to directly assign transmission costs to data centers (Rider T-1)",
+   "url": "https://www.utilitydive.com/news/dominion-energy-scc-transmission-costs-data-center/827693/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "SEC — Virginia Electric and Power free-writing prospectus, 2026 Series C/D notes (ratings)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000103682/000119312526342728/d356520dfwp.htm",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "MarketScale (citing Reuters) — 53.8 GW data-center backlog and the $66.8B merger",
+   "url": "https://www.marketscale.com/industries/energy/dominions-538-gw-data-center-backlog-and-a-668b-merger-make-it-the-utility-to-watch-in-2026",
+   "date": "2026-08-09"
+  },
+  {
+   "label": "offshoreWIND.biz — CVOW 81% complete, final turbine by end of 2027",
+   "url": "https://www.offshorewind.biz/2026/08/03/largest-us-offshore-wind-farm-81-pct-complete-final-turbine-expected-by-end-of-2027/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Compute Law Blog — Dominion, PJM and power for AI data centers in Virginia (GS-5 terms table)",
+   "url": "https://computelaw.blog/power/dominion-pjm-power-ai-data-centers-virginia/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "World Nuclear News — Dominion keeps options open for North Anna (ESP renewal)",
+   "url": "https://www.world-nuclear-news.org/articles/dominion-keeps-options-open-for-north-anna",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "ReisingerGooch — Virginia energy regulatory updates, July 2026",
+   "url": "https://reisingergooch.com/virginia-energy-regulatory-updates-july-2026/",
+   "date": "2026-07"
+  },
+  {
+   "label": "Dominion Energy — Second-quarter 2026 results",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2026/Dominion-Energy-Announces-Second-Quarter-2026-Results/default.aspx",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Dominion Energy — Q2 2026 earnings call slides",
+   "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q2/2026-07-31-DE-IR-2Q-2026-earnings-call-slides-vTCII.pdf",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "SEC — Dominion Energy Form 10-Q for the quarter ended June 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Reuters via Investing.com — Top US data center-serving utility Dominion tops profit estimates",
+   "url": "https://ca.investing.com/news/economy-news/top-us-data-centerserving-utility-dominion-tops-profit-estimates-4769071",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Investing.com — Dominion Q2 2026 slides: data centers surge, offshore wind 81% done",
+   "url": "https://www.investing.com/news/company-news/dominion-q2-2026-slides-data-centers-surge-offshore-wind-81-done-93CH-4828982",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Investing.com — Dominion Energy earnings beat by $0.04, revenue topped estimates",
+   "url": "https://www.investing.com/news/earnings/dominion-energy-earnings-beat-by-004-revenue-topped-estimates-4827829",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Dominion Energy (D) Q2 earnings and revenues top estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dominion-energy-d-q2-earnings-124502657.html",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Dominion Energy — Definitive joint proxy statement/prospectus (DEFM14A)",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000110465926087585/tm2621467-2_defm14a.htm",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Utility Dive — NextEra on track to close Dominion merger by late 2027, executives say",
+   "url": "https://www.utilitydive.com/news/nextera-on-track-to-close-dominion-merger-by-late-2027-executives-say/826205/",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Dominion Energy — NextEra Energy and Dominion Energy file to combine (regulatory applications)",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-file-to-combine-building-a-stronger-company-to-meet-growing-power-demand-across-four-of-Americas-fastest-growing-states-while-keeping-energy-affordable-and-reliable/default.aspx",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Utility Dive — Virginia SCC hearing on Dominion data-center transmission cost allocation",
+   "url": "https://www.utilitydive.com/news/virginia-scc-dominion-data-center-transmission-cost-allocation/825300/",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Williams Mullen — Virginia budget creates new electricity consumption tax on data centers",
+   "url": "https://www.williamsmullen.com/insights/news/legal-news/virginia-budget-creates-new-electricity-consumption-tax-data-centers",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "ReisingerGooch — Virginia energy regulatory updates, June 2026",
+   "url": "https://reisingergooch.com/virginia-energy-regulatory-updates-june-2026/",
+   "date": "2026-06"
+  },
+  {
+   "label": "SELC — Community and nonprofit groups take Chesterfield fight to Supreme Court of Virginia",
+   "url": "https://www.selc.org/press-release/community-and-nonprofit-groups-take-chesterfield-fight-to-supreme-court-of-virginia/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Williams Mullen — NextEra Energy's proposed acquisition of Dominion Energy: the Virginia SCC process",
+   "url": "https://www.williamsmullen.com/insights/news/legal-news/nextera-energys-proposed-acquisition-dominion-energy-virginia-state",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "Dominion Energy — NextEra Energy and Dominion Energy to combine",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-to-Combine-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers/default.aspx",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "NextEra Energy newsroom — NextEra Energy and Dominion Energy to combine",
+   "url": "https://newsroom.nexteraenergy.com/2026-05-18-NextEra-Energy-and-Dominion-Energy-to-Combine,-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers?l=12",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Dominion Energy — First-quarter 2026 results",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2026/Dominion-Energy-Announces-First-Quarter-2026-Results/default.aspx",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Dominion Energy — Q1 2026 earnings call slides",
+   "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q1/2026-05-01-DE-IR-1Q-2026-earnings-call-slides-vTC.pdf",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Dominion Energy Q1 earnings top estimates",
+   "url": "https://finance.yahoo.com/sectors/energy/articles/dominion-energy-q1-earnings-top-164000399.html",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Virginia SCC — Fact sheet: Golden to Mars project decision",
+   "url": "https://www.scc.virginia.gov/media/sccvirginiagov-home/about-the-scc/fact-sheets/fact-sheet-golden-mars-project.pdf",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "Loudoun Now — SCC approves Golden to Mars power line, rejects underground proposal",
+   "url": "https://www.loudounnow.com/news/scc-approves-golden-to-mars-power-line-rejects-underground-proposal/article_a2e3793a-e0b2-4a7b-a5a3-40bff65163b6.html",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "Arcadia — GS-4 vs GS-5: analysis for data centers",
+   "url": "https://www.arcadia.com/blog/gs-4-vs-gs-5-analysis-for-data-centers",
+   "date": "2026-03-30"
+  },
+  {
+   "label": "MultiState — Virginia lawmakers pass 15 data center bills as tax exemption fight looms",
+   "url": "https://www.multistate.us/insider/2026/3/30/virginia-lawmakers-pass-15-data-center-bills-as-tax-exemption-fight-looms",
+   "date": "2026-03-30"
+  },
+  {
+   "label": "Hoodline — Equinix muscles in on Ashburn's Data Center Alley",
+   "url": "https://hoodline.com/2026/03/equinix-muscles-in-on-ashburn-data-center-alley/",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "SEC — Dominion Energy 2026 proxy statement (DEF 14A)",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526115180/d-d-def_14a-2026.pdf",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Virginia SCC — Fact sheet: SCC data center initiatives — ensuring data centers pay their own costs",
+   "url": "https://www.scc.virginia.gov/media/sccvirginiagov-home/about-the-scc/fact-sheets/scc-data-center-initiatives-02-2026.pdf",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Dominion Energy — 2025 financial results",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2026/Dominion-Energy-announces-2025-financial-results/default.aspx",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "Dominion Energy — Q4 2025 earnings call slides",
+   "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2025/q4/2026-02-23-DE-IR-4Q-2025-earnings-call-slides-vTCI.pdf",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "Dominion Energy — Q4 2025 earnings release kit",
+   "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2025/q4/2026-02-23-DE-IR-4Q25-Earnings-Release-Kit-vTC1.pdf",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "SEC — Dominion Energy Form 10-K for fiscal year 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526063120/d-20251231.htm",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "Investing.com — Dominion Energy misses Q4 earnings expectations, stock edges down",
+   "url": "https://www.investing.com/news/earnings/dominion-energy-misses-q4-earnings-expectations-stock-edges-down-93CH-4518509",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "Virginia Business — Dominion's data center power demand: ~70,000 MW of requests before the SCC",
+   "url": "https://virginiabusiness.com/dominion-data-center-power-demand-virginia-scc/",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "Utility Dive — PJM board approves $11.8B transmission plan (Dominion HVDC, NextEra/Exelon)",
+   "url": "https://www.utilitydive.com/news/pjm-rtep-transmission-expansion-plan-dominion-nextera-exelon/812311/",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "PJM — Board whitepaper, 2025 RTEP Window 1 recommendations (Heritage–Mosby HVDC)",
+   "url": "https://www.pjm.com/-/media/DotCom/committees-groups/committees/teac/2026/20260203/20260203-pjm-board-whitepaper-february-2026.pdf",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "offshoreWIND.biz — Court allows construction of biggest US offshore wind farm to continue",
+   "url": "https://www.offshorewind.biz/2026/01/17/court-allows-construction-of-biggest-us-offshore-wind-farm-to-continue/",
+   "date": "2026-01-17"
+  },
+  {
+   "label": "Utility Dive — PJM load forecast trims data-center growth (Dominion zone 5.4%)",
+   "url": "https://www.utilitydive.com/news/pjm-interconnection-load-forecast-data-centers/809717/",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "PJM — 2026 Long-Term Load Forecast Report",
+   "url": "https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2026-load-report.pdf",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "APPA — PJM's updated 20-year forecast continues to see significant long-term load growth",
+   "url": "https://www.publicpower.org/periodical/article/pjms-updated-20-year-forecast-continues-see-significant-long-term-load-growth-slightly-decreases",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "American Action Forum — Virginia's new data center electricity rate class",
+   "url": "https://www.americanactionforum.org/insight/virginias-new-data-center-electricity-rate-class/",
+   "date": "2026-01-08"
+  },
+  {
+   "label": "Dominion Energy — Statement on U.S. Department of the Interior action on Coastal Virginia Offshore Wind",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-releases-statement-in-response-to-U-S--Department-of-Interior-action-on-Coastal-Virginia-Offshore-Wind/default.aspx",
+   "date": "2025-12-22"
+  },
+  {
+   "label": "Enel North America — PJM 2027/2028 capacity auction results",
+   "url": "https://www.enelnorthamerica.com/insights/blogs/pjm-2027-2028-capacity-auction-results",
+   "date": "2025-12-22"
+  },
+  {
+   "label": "Utility Dive — FERC directs PJM to create co-location and large-load services",
+   "url": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "PJM — 2027/2028 Base Residual Auction report",
+   "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2027-2028/2027-2028-bra-report.pdf",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Dominion Energy Virginia — Entire filed tariff (Electric-Virginia), filed December 9, 2025",
+   "url": "https://www.dominionenergy.com/-/media/content/rates-and-tariffs/pdfs/virginia/shared/entire-filed-tariff.pdf",
+   "date": "2025-12-09"
+  },
+  {
+   "label": "ReisingerGooch — Virginia energy regulatory updates, November 2025",
+   "url": "https://reisingergooch.com/virginia-energy-regulatory-updates-november-2025/",
+   "date": "2025-11"
+  },
+  {
+   "label": "Virginia SCC — SCC issues order in Dominion Energy Virginia 2025 biennial review",
+   "url": "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/scc-issues-order-on-dev-biennial-review-2025/scc-rules-in-dev-biennial-review-case.html",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "Loudoun Now — SCC approves new data center rate class for Dominion",
+   "url": "https://www.loudounnow.com/news/scc-approves-new-data-center-rate-class-for-dominion/article_02d5fa0c-1ed8-4771-b57d-c24765739854.html",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "Dominion Energy — Q3 2025 earnings call slides",
+   "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2025/q3/2025-10-31-DE-IR-3Q-2025-earnings-call-slides-vTCI.pdf",
+   "date": "2025-10-31"
+  },
+  {
+   "label": "Dominion Energy Virginia — 2025 Integrated Resource Plan Update",
+   "url": "https://www.dominionenergy.com/-/media/content/about/our-company/irp/pdfs/2025-integrated-resource-plan-update.pdf",
+   "date": "2025-10-15"
+  },
+  {
+   "label": "Dominion Energy — Schedules third-quarter 2025 earnings call",
+   "url": "https://s205.q4cdn.com/611413639/files/doc_news/Dominion-Energy-Schedules-Third-Quarter-2025-Earnings-Call-2025.pdf",
+   "date": "2025-10-02"
+  },
+  {
+   "label": "SEC — Virginia Electric and Power free-writing prospectus, September 2025 notes (ratings)",
+   "url": "https://www.sec.gov/Archives/edgar/data/103682/000119312525198467/d946755dfwp.htm",
+   "date": "2025-09-08"
+  },
+  {
+   "label": "Enel North America — PJM 2026/2027 capacity auction results",
+   "url": "https://www.enelnorthamerica.com/insights/blogs/pjm-2026-2027-capacity-auction-results",
+   "date": "2025-07-24"
+  },
+  {
+   "label": "WHRO / Virginia Mercury — SCC says Dominion's future spending plan legally sufficient, warns on consumer impact",
+   "url": "https://www.whro.org/environment/2025-07-17/scc-says-dominions-future-spending-plan-legally-sufficient-warns-against-impact-on-consumers",
+   "date": "2025-07-17"
+  },
+  {
+   "label": "Dominion Energy — Promotes Baine to executive vice president, announces retirement of Cardiff",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-Promotes-Baine-to-Executive-Vice-President-Announces-Retirement-of-Cardiff/default.aspx",
+   "date": "2025-07-01"
+  },
+  {
+   "label": "ReisingerGooch — Virginia energy regulatory updates, May 2025",
+   "url": "https://reisingergooch.com/virginia-energy-regulatory-updates-may-2025/",
+   "date": "2025-05"
+  },
+  {
+   "label": "Investing.com — Moody's downgrades VEPCO, changes Dominion's outlook to negative",
+   "url": "https://www.investing.com/news/stock-market-news/moodys-downgrades-vepco-changes-dominions-outlook-to-negative-93CH-4022278",
+   "date": "2025-05-05"
+  },
+  {
+   "label": "NBC News / CNBC — Data center boom in world's largest market not slowing, Dominion Energy says",
+   "url": "https://www.nbcnews.com/business/business-news/data-center-boom-worlds-largest-market-not-slowing-dominion-energy-say-rcna204206",
+   "date": "2025-05-01"
+  },
+  {
+   "label": "ReisingerGooch — Virginia energy regulatory updates, April 2025",
+   "url": "https://reisingergooch.com/virginia-energy-regulatory-updates-april-2025/",
+   "date": "2025-04"
+  },
+  {
+   "label": "Dominion Energy — Changes in senior executive responsibilities related to retirement of Diane Leopold",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-Announces-Changes-in-Senior-Executive-Responsibilities-Related-To-Retirement-of-Diane-Leopold/default.aspx",
+   "date": "2025-04-23"
+  },
+  {
+   "label": "Dominion Energy Virginia — Proposes new rates to continue delivering reliable service and increasingly clean energy (2025 biennial review filing)",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2025/Dominion-Energy-Virginia-proposes-new-rates-to-continue-delivering-reliable-service-and-increasingly-clean-energy/default.aspx",
+   "date": "2025-04-01"
+  },
+  {
+   "label": "POWER — Dominion seeks Virginia approval for 1-GW gas-fired power plant",
+   "url": "https://www.powermag.com/dominion-seeks-virginia-approval-for-1-gw-gas-fired-power-plant/",
+   "date": "2025-03-07"
+  },
+  {
+   "label": "SEC — Virginia Electric and Power free-writing prospectus, March 2025 notes (ratings)",
+   "url": "https://www.sec.gov/Archives/edgar/data/103682/000119312525044308/d756162dfwp.htm",
+   "date": "2025-03-03"
+  },
+  {
+   "label": "Loudoun Now — PJM approves Loudoun's first 765 kV transmission line",
+   "url": "https://www.loudounnow.com/news/pjm-approves-loudoun-s-first-765kv-transmission-line/article_936f7530-f610-11ef-9eaa-0354bf256aff.html",
+   "date": "2025-02-28"
+  },
+  {
+   "label": "Dominion Energy — PJM selects regional transmission projects to be jointly developed by Dominion Energy, AEP and FirstEnergy",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2025/PJM-selects-regional-transmission-projects-to-be-jointly-developed-by-Dominion-Energy-American-Electric-Power-FirstEnergy/default.aspx",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "Utility Dive — PJM board approves $6.7B transmission plan (AEP, Dominion, FirstEnergy 765 kV)",
+   "url": "https://www.utilitydive.com/news/pjm-rtep-transmission-expansion-plan-aep-dominion-firstenergy/741097/",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "SEC — Dominion Energy Form 8-K, Exhibit 99: fourth-quarter and full-year 2024 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000095017025018408/d-ex99.htm",
+   "date": "2025-02-12"
+  },
+  {
+   "label": "Dominion Energy — Q4 2024 earnings call slides",
+   "url": "https://s2.q4cdn.com/510812146/files/doc_financials/2024/q4/2025-02-12-DE-IR-4Q-2024-earnings-call-slides-vTCII.pdf",
+   "date": "2025-02-12"
+  },
+  {
+   "label": "Investing.com — Dominion Energy Q4 earnings miss estimates, narrows 2025 guidance",
+   "url": "https://www.investing.com/news/earnings/dominion-energy-q4-earnings-miss-estimates-narrows-2025-guidance-93CH-3864363",
+   "date": "2025-02-12"
+  },
+  {
+   "label": "offshoreWIND.biz — Cost of CVOW project rises to USD 10.7 billion, completion on track for 2026",
+   "url": "https://www.offshorewind.biz/2025/02/04/cost-of-cvow-project-rises-to-usd-10-7-billion-completion-on-track-for-2026/",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "Dominion Energy — CVOW continues on schedule, cost updated",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2025/Coastal-Virginia-Offshore-Wind-CVOW-Project-Part-of-Comprehensive-All-of-the-Above-Energy-Strategy-to-Affordably-Meet-Growing-Energy-Needs-Continues-on-Schedule-Cost-Updated/default.aspx",
+   "date": "2025-02-03"
+  },
+  {
+   "label": "STACK Infrastructure — Announces landmark 1 GW Stafford Technology Campus in Northern Virginia",
+   "url": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-announces-landmark-1gw-stafford-technology-campus-in-northern-virginia/",
+   "date": "2025-01-16"
+  },
+  {
+   "label": "Cardinal News — Data centers driving immense increase in Virginia energy demand, JLARC report says",
+   "url": "https://cardinalnews.org/2024/12/10/data-centers-driving-immense-increase-in-virginia-energy-demand-report-says/",
+   "date": "2024-12-10"
+  },
+  {
+   "label": "JLARC — Data Centers in Virginia (2024 study landing page)",
+   "url": "https://jlarc.virginia.gov/landing-2024-data-centers-in-virginia.asp",
+   "date": "2024-12-09"
+  },
+  {
+   "label": "JLARC — Data Centers in Virginia, briefing presentation",
+   "url": "https://jlarc.virginia.gov/pdfs/presentations/Rpt598Pres-1.pdf",
+   "date": "2024-12-09"
+  },
+  {
+   "label": "Virginia SCC — Comments sought on Dominion Energy Virginia integrated resource plan (2024 IRP)",
+   "url": "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/comments-sought-on-dev-integrated-resource-plan/comments-sought-on-dev-integrated-resource-plan.html",
+   "date": "2024-11-20"
+  },
+  {
+   "label": "Dominion Energy — Dominion Energy and Amazon to explore advancement of small modular reactor development in Virginia",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2024/Dominion-Energy-and-Amazon-to-explore-advancement-of-Small-Modular-Reactor-SMR-nuclear-development-in-Virginia-10-16-2024/default.aspx",
+   "date": "2024-10-16"
+  },
+  {
+   "label": "Utility Dive — Amazon's small modular reactor deals with Dominion, X-energy and Energy Northwest",
+   "url": "https://www.utilitydive.com/news/amazon-small-modular-reactor-deals-nuclear-dominion-x-energy-energy-northwest/730022/",
+   "date": "2024-10-16"
+  },
+  {
+   "label": "Dominion Energy Virginia — Releases comprehensive long-term plan (2024 IRP)",
+   "url": "https://news.dominionenergy.com/press-releases/press-releases/2024/Dominion-Energy-Virginia-releases-comprehensive-long-term-plan-to-meet-growing-power-demand-with-reliable-affordable-and-increasingly-clean-electricity-10-15-2024/default.aspx",
+   "date": "2024-10-15"
+  },
+  {
+   "label": "Dominion Energy — Golden to Mars project FAQ",
+   "url": "https://www.dominionenergy.com/-/media/content/about/power-line-projects/nova/pdfs/nova-golden-to-mars-faq-aug-2024.pdf",
+   "date": "2024-08"
+  },
+  {
+   "label": "Data Center Frontier — Dominion's Virginia data center cluster could double in size",
+   "url": "https://www.datacenterfrontier.com/energy/article/33013010/dominion-virginias-data-center-cluster-could-double-in-size",
+   "date": "2023-10-11"
+  },
+  {
+   "label": "Data Center Frontier — Dominion resumes new connections, but Loudoun faces lengthy power constraints",
+   "url": "https://www.datacenterfrontier.com/energy/article/11436951/dominion-resumes-new-connections-but-loudoun-faces-lengthy-power-constraints",
+   "date": "2022-09-26"
+  },
+  {
+   "label": "Route Fifty — Power struggles in Data Center Alley",
+   "url": "https://www.route-fifty.com/infrastructure/2022/07/power-struggles-data-center-alley/375143/",
+   "date": "2022-07-29"
+  },
+  {
+   "label": "Dominion Energy IR — Home",
+   "url": "https://investors.dominionenergy.com/"
+  },
+  {
+   "label": "Dominion Energy IR — Events and presentations",
+   "url": "https://investors.dominionenergy.com/events-and-presentations/default.aspx"
+  },
+  {
+   "label": "Dominion Energy — Data center requests (large business services)",
+   "url": "http://www.dominionenergy.com/virginia/large-business-services/data-center-requests"
+  },
+  {
+   "label": "Dominion Energy — Business rates (Virginia)",
+   "url": "https://www.dominionenergy.com/virginia/rates-and-tariffs/business-rates"
+  },
+  {
+   "label": "Dominion Energy — Integrated resource plan page",
+   "url": "http://www.dominionenergy.com/about/our-company/irp"
+  },
+  {
+   "label": "Dominion Energy — Chesterfield Energy Reliability Center",
+   "url": "http://www.dominionenergy.com/about/making-energy/power-stations/chesterfield-energy-reliability-center"
+  },
+  {
+   "label": "Dominion Energy — Power stations",
+   "url": "https://www.dominionenergy.com/about/making-energy/power-stations"
+  },
+  {
+   "label": "Dominion Energy — Nuclear energy",
+   "url": "http://www.dominionenergy.com/about/making-energy/nuclear-facilities/nuclear-energy"
+  },
+  {
+   "label": "Dominion Energy — North Anna Power Station",
+   "url": "http://www.dominionenergy.com/about/making-energy/nuclear-facilities/north-anna-power-station"
+  },
+  {
+   "label": "Dominion Energy — Surry Power Station",
+   "url": "http://www.dominionenergy.com/about/making-energy/nuclear-facilities/surry-power-station"
+  },
+  {
+   "label": "Dominion Energy — Battery storage (grid transformation)",
+   "url": "http://www.dominionenergy.com/about/delivering-energy/electric-projects/energy-grid-transformation/battery-storage"
+  },
+  {
+   "label": "Dominion Energy — Virginia solar projects",
+   "url": "http://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects"
+  },
+  {
+   "label": "Dominion Energy — Solar, onshore wind and energy storage proposals (RFPs)",
+   "url": "http://www.dominionenergy.com/about/delivering-energy/renewable-projects/solar-onshore-wind-and-energy-storage-proposals"
+  },
+  {
+   "label": "Dominion Energy Virginia — 2025 renewable PPA RFP",
+   "url": "https://www.dominionenergy.com/-/media/content/about/delivering-energy/renewable-projects/solar-onshore-wind-and-energy-storage-proposals/pdfs/2025-renewable-ppa-rfp.pdf"
+  },
+  {
+   "label": "Dominion Energy — Dispatchable generation proposals (2026 RFP)",
+   "url": "https://www.dominionenergy.com/about/making-energy/dispatchable-generation-proposals"
+  },
+  {
+   "label": "Dominion Energy — Northern Virginia transmission projects",
+   "url": "http://www.dominionenergy.com/about/delivering-energy/electric-projects/power-line-projects/nova"
+  },
+  {
+   "label": "Dominion Energy — Aspen to Golden 500/230 kV project",
+   "url": "https://www.dominionenergy.com/es/about/delivering-energy/electric-projects/power-line-projects/aspen-golden"
+  },
+  {
+   "label": "Dominion Energy — Morrisville to Wishing Star 500 kV project",
+   "url": "https://www.dominionenergy.com/about/delivering-energy/electric-projects/power-line-projects/morrisville-to-wishingstar"
+  },
+  {
+   "label": "Dominion Energy — Line 514 corridor upgrade",
+   "url": "https://www.dominionenergy.com/about/delivering-energy/electric-projects/power-line-projects/line-514"
+  },
+  {
+   "label": "Dominion Energy — Powering Virginia",
+   "url": "http://www.dominionenergy.com/virginia/updates/powering-virginia"
+  },
+  {
+   "label": "Dominion Energy — Executive leadership",
+   "url": "https://www.dominionenergy.com/about/our-company/leadership-and-governance/executive-leadership"
+  },
+  {
+   "label": "Dominion Energy — Robert M. Blue biography",
+   "url": "https://cdn-dominionenergy-prd-001.azureedge.net/-/media/content/about/board-and-executives/pdf/bob-blue-bio.pdf"
+  },
+  {
+   "label": "Dominion Energy — Steven D. Ridge biography",
+   "url": "https://cdn-dominionenergy-prd-001.azureedge.net/-/media/content/about/board-and-executives/pdf/steven-ridge-bio.pdf"
+  },
+  {
+   "label": "Dominion Energy — Edward H. Baine biography",
+   "url": "https://cdn-dominionenergy-prd-001.azureedge.net/-/media/content/about/board-and-executives/pdf/ed-baine-bio.pdf"
+  },
+  {
+   "label": "Dominion Energy — Corynne S. Arnett biography",
+   "url": "https://cdn-dominionenergy-prd-001.azureedge.net/-/media/content/about/board-and-executives/pdf/corynne-arnett-bio.pdf"
+  },
+  {
+   "label": "Dominion Energy — Eric Carr biography",
+   "url": "https://cdn-dominionenergy-prd-001.azureedge.net/-/media/content/about/board-and-executives/pdf/eric-carr-bio.pdf"
+  },
+  {
+   "label": "Coastal Virginia Offshore Wind — Project timeline",
+   "url": "https://coastalvawind.com/about/the-project/timeline"
+  },
+  {
+   "label": "Stop MARL Virginia — Valley Link 765 kV",
+   "url": "https://stopmarlvirginia.com/valley-link-765kv-1"
+  },
+  {
+   "label": "Investing.com — Dominion Energy earnings page",
+   "url": "https://www.investing.com/equities/dominion-res-earnings"
+  },
+  {
+   "label": "TipRanks — Dominion Energy (D) earnings dates",
+   "url": "https://www.tipranks.com/stocks/d/earnings"
+  },
+  {
+   "label": "C2ES — Dominion, Microsoft team up to build solar project",
+   "url": "https://www.c2es.org/content/dominion-microsoft-team-up-to-build-solar-project/"
+  },
+  {
+   "label": "VEDP — Meta & friends: Virginia (case study)",
+   "url": "https://www.vedp.org/case-study/meta-friends-virginia"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1
+}

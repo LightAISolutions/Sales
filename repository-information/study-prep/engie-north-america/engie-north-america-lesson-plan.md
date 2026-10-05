@@ -28,7 +28,7 @@
 
 **The single idea:** a developer whose assets earn less each year can still grow if it sells part of what it owns to build what it does not.
 
-**The mechanics.** CBRE Investment Management took **49.5%** of a 2.4 GW, 31-project operating BESS portfolio in ERCOT and CAISO (May 2025), in tranches of USD 291m, USD 221m and about USD 70m. Ares took 49% of 905 MW for USD 430m (March 2025) and a further 730 MW (January 2026), reaching 4.3 GW cumulatively.
+**The mechanics.** CBRE Investment Management took **49.5%** of a 2.4 GW, 31-project operating BESS portfolio in ERCOT and CAISO (May 2025), in tranches of USD 291m, USD 221m and about USD 70m. Ares took a minority stake in 905 MW for USD 430m (March 2025; ENGIE SA's 2025 annual report states no percentage) and a further 730 MW (January 2026), reaching 4.3 GW cumulatively.
 
 **What the seller keeps, in three parts.** *Control* — consolidation, dispatch, augmentation and refinancing decisions. *Operations* — a continuing O&M contract, which is fee income surviving the sale. *Governance* — staying just under 50% is deliberate, not incidental.
 

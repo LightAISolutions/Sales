@@ -360,7 +360,7 @@
       "scale": "Energy Global, LP 100% (31 Mar 2026); ~USD 3.2bn of cash contributed",
       "via": "SoftBank Group Capital Limited and SB Energy HoldCo, LLC",
       "note": "SoftBank's controlled subsidiary and the group's only equipment buyer — the developer, owner and operator of OpenAI's Milam County and PORTS-Pike campuses.",
-      "context": "SB Energy's S-1 calls SoftBank its 'founding sponsor and ultimate parent company'. It says SoftBank's affiliates have contributed about USD 3.2bn and that SoftBank expects to control more than 50% of the vote after the IPO, making SB Energy a controlled company. SoftBank's Securities Report lists Energy Global, LP at 100% at 31 March 2026. Outside instruments have since been added: OpenAI's USD 500m preferred equity and warrants, Ares's preferred equity (to be redeemed at the IPO) and NVIDIA's USD 3.0bn of Class N stock and prepaid forward. SoftBank's economic share after the IPO is therefore unstated. SoftBank designates six of SB Energy's nine directors, among them Alex Clavel as chairman.",
+      "context": "SB Energy's S-1 calls SoftBank its 'founding sponsor and ultimate parent company'. It says SoftBank's affiliates have contributed about USD 3.2bn and that SoftBank expects to control more than 50% of the vote after the IPO, making SB Energy a controlled company. SoftBank's Securities Report lists Energy Global, LP at 100% at 31 March 2026. Outside instruments have since been added: OpenAI's USD 500m preferred equity and warrants and NVIDIA's USD 3.0bn of Class N stock and prepaid forward. Separately, affiliates of Ares have held preferred equity in SBE Global, SB Energy's direct parent, since 2022 (USD 800m issued across 2022, 2024 and 2025) and warrants since 2025; the S-1 says they are to be redeemed in full and the warrants net-settled for about USD 40m at the IPO. SoftBank's economic share after the IPO is therefore unstated. SoftBank designates six of SB Energy's nine directors, among them Alex Clavel as chairman.",
       "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
     },
     {
@@ -1158,6 +1158,6 @@
       "url": "https://wwww.invenergy.com/expertise/our-capabilities"
     }
   ],
-  "lastUpdated": "2026-10-04",
-  "profileVersion": 1
+  "lastUpdated": "2026-10-05",
+  "profileVersion": 2
 }

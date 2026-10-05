@@ -1,0 +1,1016 @@
+{
+ "schemaVersion": 7,
+ "slug": "apollo",
+ "name": "Apollo Global Management, Inc.",
+ "shortName": "Apollo",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.apollo.com",
+ "headquarters": "New York, NY, United States",
+ "founded": "1990",
+ "employees": "~6,140 (31 December 2025, including 2,010 supporting Retirement Services and 600 at Bridge)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: APO",
+  "notes": "Delaware corporation (CIK 1858681; formerly Tango Holdings, Inc.), the holding company since the 1 January 2022 merger with Athene Holding Ltd., now its subsidiary; fiscal year ends 31 December. APOS on the NYSE is the company's 7.625% junior subordinated notes due 2053, not common equity; its 6.75% Series A mandatory convertible preferred converted to common on 31 July 2026. Marc Rowan is Chair and Chief Executive Officer."
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Apollo signs for no power equipment itself. It reaches AI infrastructure through three channels. The first is **Stream Data Centers**, a hyperscale developer its funds have controlled since 3 November 2025, with more than 4 GW of long-term powered land. The second is a **compute-financing book**: Apollo leads the USD 35bn initial tranche of Broadcom's AI XPV Platform, which buys compute racks for Anthropic, and led a USD 3.5bn financing for Valor's lease of NVIDIA GB200 systems to xAI. The third is **Athene's balance sheet**, which guarantees 15% of the XPV purchase obligation. Its other controlled platforms are smaller buyers: Vaultica, STACK's former European colocation business; Eagle Creek's ~700 MW of hydro (agreed October 2025); and PowerGrid Services. Hornsea 3 and the TotalEnergies Texas portfolio are 50% stakes that their partners operate.\n\n**BACKGROUND.** Per company filings, the registrant is Apollo Global Management, Inc. (NYSE: APO; CIK 1858681), a Delaware corporation with three segments: Asset Management, Retirement Services (Athene, a subsidiary since the 1 January 2022 merger) and Principal Investing. AUM was about USD 1.05tn at 30 June 2026, of which USD 858bn was fee-generating and USD 416bn was Athene's perpetual capital. Infrastructure and Clean Transition Equity was USD 21.6bn of AUM at 31 December 2025, about 2% of the firm. FY2025 adjusted net income was USD 5.2bn, or USD 8.38 a share against Zacks' USD 7.94. Q2 2026's USD 2.11 missed Zacks' USD 2.18 despite record fee-related earnings of USD 785m. The shares closed at USD 114.02 on 2 October 2026, down 21% for the year, after the Epstein disclosures and a securities class action. Q3 2026 results are due on 3 November.",
+ "ecosystemRole": "We assess Apollo as the capital segment's largest AI-compute financier and the controlling owner of one scaled data-centre developer. Its funds bought a majority of Stream Data Centers (closed 3 November 2025). Stream's management builds hyperscale campuses in Chicago, Dallas, Atlanta, Phoenix and San Antonio through joint ventures, and at Elk Grove Village, Illinois, ComEd is building a 260 MW substation for its campus. Apollo leads the initial USD 35bn of Broadcom's AI XPV Platform. Under it an Apollo-managed fund, WarehouseCo Intermediate Holdings LP, holds the obligation to buy the Broadcom-designed compute racks that Anthropic leases at Fluidstack sites. That is an obligation to buy chips, not power gear. Athene is why Apollo can lead deals of that size: per company filings it guarantees 15% of the XPV purchase obligation, and per trade press it took a sizable portion of the debt. For power-equipment sellers, Apollo is a directory to the buyers — Stream, Vaultica, Eagle Creek and PowerGrid Services — not a buyer itself.",
+ "productsAndServices": [
+  {
+   "name": "Data-centre platforms — Stream Data Centers and Vaultica",
+   "category": "Data centres — controlled platforms",
+   "description": "Apollo-managed funds agreed on 6 August 2025 to buy a majority interest in Stream Data Centers from Stream Realty Partners and completed the purchase on 3 November 2025; Stream's management and a Principal Asset Management fund keep minority stakes, and no percentage or price is disclosed. Stream 'controls over 4 gigawatts of long-term powered land', has delivered more than 20 campuses, and delivers all projects as joint ventures; a new Apollo subsidiary took over as manager of Stream's land fund, which Apollo and Stream Realty Partners committed new capital to for 650 MW of near-term capacity in metro Chicago, Atlanta and Dallas. Separately, Apollo infrastructure funds agreed on 29 April 2025 to buy STACK Infrastructure's pan-European colocation business — seven data centres in Stockholm, Oslo, Copenhagen, Milan and Geneva — which relaunched as Vaultica Data Centers in December 2025.",
+   "highlights": [
+    "Elk Grove Village, Illinois: ComEd broke ground in September 2025 on the substation for Stream's campus of more than 1.2m sq ft across three buildings, due in service in 2027; T&D World gives the substation as 260 MW",
+    "Stream's chief executive since January 2026 is Michael Lahoud; it names no procurement head and no equipment supplier on the record",
+    "Reported only: The Information said on 22–23 September 2026 that Anthropic is in early talks to lease up to 1 GW directly from Stream, with Google discussed as a possible credit guarantor; no party has announced it",
+    "Vaultica: Apollo never announced the closing; an Apollo partner sits on its board, and its chief executive is Sherif Rizkalla, formerly head of STACK's European colocation business"
+   ],
+   "positioning": "Stream is a build-to-suit and powered-land developer for hyperscale tenants; Vaultica is an interconnected enterprise colocation operator — the opposite end of the data-centre market.",
+   "soldThrough": "Majority equity held by Apollo-managed funds; Stream's projects are delivered through joint ventures and a land fund an Apollo subsidiary manages.",
+   "targetSegments": [
+    "Hyperscalers",
+    "AI labs",
+    "Enterprises and network carriers (Vaultica)"
+   ],
+   "roadmap": "650 MW of near-term capacity across metro Chicago, Atlanta and Dallas (August 2025 release); Elk Grove Village in service in 2027."
+  },
+  {
+   "name": "AI compute financing — Broadcom AI XPV Platform, Valor Compute Infrastructure, Nscale",
+   "category": "Credit — asset-backed and investment-grade capital solutions",
+   "description": "Apollo leads 'an initial $35 billion capital solution' for Broadcom's AI XPV Platform, announced on 9 June 2026 with Blackstone's Credit & Insurance business as the other initial anchor investor and with banks. It funds the racks of Broadcom-designed accelerators that Anthropic is to deploy at Fluidstack-based sites from mid-2026, across 'a multi-year draw schedule'. Per Apollo's Q2 2026 10-Q, an Apollo-managed fund, WarehouseCo Intermediate Holdings LP, holds the purchase obligation for the compute. Athene guarantees 15% of that obligation, and a third party reimburses Athene for 35% of anything it pays. Per Broadcom's 10-Q, Broadcom backstops the customer's five-year lease obligations up to about USD 29bn undiscounted. On 7 January 2026 Apollo funds led a USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn acquisition and triple-net lease of NVIDIA GB200 compute to an xAI subsidiary.",
+   "highlights": [
+    "The USD 35bn is the size of the initial tranche's capital commitment — not an asset value and not Apollo's own equity; Apollo's share is undisclosed, and the platform's 'over 20GW' through 2028 is a design target",
+    "Valor Compute Infrastructure, a Valor-managed fund with NVIDIA as anchor limited partner, owns the GB200 systems; Apollo is the lead financier, not an owner",
+    "Reported only: Reuters, citing The Information, said on 9 February 2026 that Apollo was close to a roughly USD 3.4bn loan to a second vehicle buying NVIDIA chips to lease to xAI; no completion is on the record",
+    "Nscale's USD 3.36bn convertible (25 September 2026) was 'led by Third Point' and 'supported by' investors including 'funds managed by Apollo'; Nscale's S-1 does not name Apollo and no amount is disclosed",
+    "On 10 August 2026 NVIDIA signed memoranda of understanding with Apollo and five other firms to mobilise over USD 500bn of third-party capital 'over time'; they 'remain subject to execution of the final agreements'"
+   ],
+   "positioning": "The capital comes from the liability side: Athene's demand for investment-grade assets lets Apollo commit as a principal and syndicate the rest through Apollo Capital Solutions and Atlas SP Partners, as Apollo's partner on the deal describes it.",
+   "soldThrough": "Senior and structured debt to special-purpose lessor vehicles; a fund-held purchase obligation backed by committed financing; convertible notes.",
+   "targetSegments": [
+    "AI labs (Anthropic, xAI) as lessees",
+    "Chip designers (Broadcom)",
+    "Neoclouds"
+   ],
+   "roadmap": "XPV fundings 'no later than 2028' per the 10-Q; final agreements under the NVIDIA memoranda are pending."
+  },
+  {
+   "name": "Infrastructure and Clean Transition Equity — power, grids and energy services",
+   "category": "Private markets — infrastructure equity",
+   "description": "The Apollo Infrastructure Group had USD 21.6bn of AUM at 31 December 2025 across digital infrastructure, energy transition, transport and logistics, and the clean-transition private-equity strategy. Its controlling positions are Eagle Creek Renewable Energy (about 700 MW across 85 hydro plants; acquisition agreed on 6 October 2025, closing not announced), PowerGrid Services (utility maintenance and construction, majority agreed in May 2025) and, until its sale to SLB closes, Kelvion, the heat-exchanger maker. Its largest energy cheques are non-controlling: 50% of Ørsted's 2.9 GW Hornsea 3 offshore wind farm (USD 6.5bn including half of capex; Ørsted builds and operates), a EUR 3.2bn equity commitment to a joint venture with RWE holding 25.1% of the German grid operator Amprion (RWE has operational control) and 50% of TotalEnergies' ~2 GW Texas solar-and-storage portfolio (TotalEnergies operates).",
+   "highlights": [
+    "Argo Infrastructure Partners, an infrastructure manager with about USD 6bn of assets, was agreed in January 2025; Bridge Investment Group, completed on 2 September 2025, is a real-estate manager",
+    "FlexGen: Apollo affiliates' funds announced a USD 150m equity commitment in August 2021; Apollo partners Olivia Wassenaar and Trevor Mills list FlexGen board seats on Apollo's own pages; the stake is undisclosed",
+    "Kelvion: SLB agreed on 31 August 2026 to buy it from Apollo-managed funds, the majority owner, and Triton for about USD 3.4bn in cash plus about USD 0.7bn of assumed debt; closing expected in the first half of 2027",
+    "Intel Fab 34 (June 2024): 49% for USD 11bn, with Intel keeping 51% and control"
+   ],
+   "positioning": "Weighted to co-ownership beside an operator — Ørsted, RWE, TotalEnergies, Intel — rather than to platforms Apollo runs.",
+   "soldThrough": "Infrastructure funds, hybrid-value funds and Athene-funded structured equity.",
+   "targetSegments": [
+    "Utilities and grid operators",
+    "Offshore-wind developers",
+    "Industrial owners"
+   ],
+   "roadmap": "Eagle Creek and Kelvion closings pending; Hornsea 3 under construction by Ørsted."
+  },
+  {
+   "name": "Retirement Services — Athene",
+   "category": "Insurance — annuities and pension risk transfer",
+   "description": "Athene Holding Ltd. issues retirement savings products, chiefly annuities, and reinsures and takes on pension liabilities; Apollo has owned it outright since the 1 January 2022 merger. Its investment portfolio — 'primarily high-grade fixed income assets' — is managed by Apollo's asset-management arm, which advised USD 392.2bn of AUM in Athene-related accounts at 31 December 2025, and Athene supplements its capital with third-party money through the ACRA sidecars and the ADIP funds. The segment's measure is spread-related earnings, USD 3,361m in 2025 and a record USD 877m in Q2 2026.",
+   "highlights": [
+    "Athene is the buyer of much of what Apollo originates: Apollo's 16 origination platforms produced USD 309bn of assets in 2025",
+    "Athora, a European insurance platform Apollo advises, reached USD 121bn of perpetual capital after buying Pension Insurance Corporation in Q1 2026",
+    "A one-time USD 1.7bn tax expense in Q1 2026 followed ACRA's revocation of its election under Bermuda's Corporate Income Tax Act 2023, and produced a first-half GAAP loss"
+   ],
+   "positioning": "The long-dated, investment-grade liability base that funds Apollo's credit franchise and its compute financings.",
+   "soldThrough": "Annuities sold through banks, broker-dealers and independent marketing organisations; pension-group annuities; flow and block reinsurance.",
+   "targetSegments": [
+    "Retirees and savers",
+    "Corporate pension plans"
+   ]
+  },
+  {
+   "name": "Credit, Capital Solutions and Atlas SP",
+   "category": "Credit — origination, asset-backed finance and syndication",
+   "description": "Credit is most of Apollo: USD 749.2bn of AUM at 31 December 2025 across direct origination (USD 302.1bn), asset-backed finance (USD 282.7bn), opportunistic credit and multi-credit. Apollo Capital Solutions originates, arranges, structures and syndicates loans and earned a record USD 808m of fees in 2025 and USD 277m in Q2 2026. Atlas SP Partners, the former Credit Suisse securitised-products business, is held by Apollo's AAA vehicle and runs warehouse financing.",
+   "highlights": [
+    "Origination of USD 74bn in Q2 2026 and USD 317bn over the trailing twelve months",
+    "Apollo Debt Solutions, a non-traded BDC, has met 5% quarterly repurchase caps for three quarters; Q3 2026 requests were about 14.7% of shares"
+   ],
+   "soldThrough": "Institutional funds and accounts, Athene, non-traded BDCs and syndication to banks and insurers.",
+   "targetSegments": [
+    "Corporate borrowers",
+    "Asset-backed borrowers",
+    "Institutional and wealth investors"
+   ]
+  },
+  {
+   "name": "Equity — private equity, hybrid value, real estate and wealth",
+   "category": "Private markets — equity",
+   "description": "Equity strategies held USD 189.2bn of AUM at 31 December 2025: corporate private equity including secondaries (USD 78.8bn), hybrid value (USD 17.7bn), AAA (Apollo's perpetual private-markets vehicle, USD 25.6bn), real-estate equity (USD 47.9bn, including Bridge) and infrastructure. Global Wealth raised a record USD 18bn in 2025.",
+   "highlights": [
+    "The 10-K reports strategies as Credit and Equity; the older 'yield, hybrid, equity' framing is retired",
+    "Traditional private equity has returned a 39% gross and 24% net IRR since inception (10-K)"
+   ],
+   "soldThrough": "Closed-end and perpetual funds for institutions and individuals.",
+   "targetSegments": [
+    "Institutional investors",
+    "Wealth clients"
+   ]
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-29",
+   "category": "financial",
+   "headline": "Q3 2026 results set for Tuesday 3 November, before the NYSE opens",
+   "read": "The next read on fee-related earnings and on Q3 inflows after a record USD 60bn in Q2.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/09/apollo-to-announce-third-quarter-2026-financial-results-on-november-3-2026-3370753"
+  },
+  {
+   "date": "2026-09-25",
+   "category": "financial",
+   "headline": "Nscale's USD 3.36bn pre-IPO convertible, led by Third Point, is 'supported by' investors including funds managed by Apollo",
+   "read": "A participation, not a lead; Apollo has said nothing and Nscale's S-1 does not name it.",
+   "source": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing"
+  },
+  {
+   "date": "2026-09-22",
+   "category": "financial",
+   "headline": "Apollo Debt Solutions BDC receives repurchase requests of about 14.7% of shares for Q3 and pays the 5% cap pro rata — the third capped quarter",
+   "read": "Retail private-credit outflows persist even as institutional and insurance inflows set records.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1837532/000119312526398001/d142892d8k.htm"
+  },
+  {
+   "date": "2026-09-22",
+   "category": "market",
+   "headline": "Reported: Anthropic is in early talks to lease up to 1 GW directly from Stream Data Centers, with Google discussed as a possible credit guarantor (The Information)",
+   "read": "If signed it would make Apollo's data-centre platform a lab-direct landlord; no party has announced it.",
+   "source": "https://ca.investing.com/news/stock-market-news/anthropic-in-talks-to-lease-1-gigawatt-from-stream-data-centers-the-information-93CH-4848940"
+  },
+  {
+   "date": "2026-08-31",
+   "category": "ma",
+   "headline": "SLB agrees to buy Kelvion from Apollo-managed funds (majority owner) and Triton for about USD 3.4bn in cash plus about USD 0.7bn of assumed debt; closing expected in H1 2027",
+   "read": "A large pending realisation — Apollo sells an equipment maker rather than buying equipment.",
+   "source": "https://www.sec.gov/Archives/edgar/data/87347/000119312526375358/d106278dex99.htm"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "partnership",
+   "headline": "NVIDIA signs memoranda of understanding with Apollo and five other firms to build compute-financing platforms targeting over USD 500bn of third-party capital 'over time', subject to final agreements",
+   "read": "A memorandum, not a commitment; no per-firm allocation is published.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026: adjusted net income USD 2.11 a share against Zacks' USD 2.18; record fee-related earnings of USD 785m (+25%) and spread-related earnings of USD 877m; AUM about USD 1.05tn; record organic inflows of USD 60bn",
+   "read": "Fee growth is on its 20%-plus track; the per-share miss came from lower principal investing income as asset sales were delayed.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000036/agmearningsrelease2q2026.htm"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "corporate",
+   "headline": "The 6.75% Series A mandatory convertible preferred stock converts into common stock and is delisted (10-Q)",
+   "read": "Removes a listed preferred line; APOS, the 2053 subordinated notes, remains.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "financial",
+   "headline": "Apollo leads an initial USD 35bn capital solution for Broadcom's AI XPV Platform, with Blackstone and banks, funding Anthropic's capacity expansion of more than 1 GW at Fluidstack-based sites from mid-2026",
+   "read": "Apollo's 10-Q puts the purchase obligation in an Apollo-managed fund and a 15% limited guarantee on Athene.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/apollo-leads-35-billion-capital-solution-for-broadcom-ai-xpv-platform-in-partnership-with-blackstone-and-leading-global-banks-3308896"
+  },
+  {
+   "date": "2026-03-03",
+   "category": "legal",
+   "headline": "Shareholders sue Apollo, Marc Rowan and Leon Black in the Southern District of New York over 2021–22 statements that Apollo did no business with Jeffrey Epstein",
+   "read": "A securities class action (consolidated with a second suit filed 29 April); allegations only.",
+   "source": "https://finance.yahoo.com/news/shareholders-sue-apollo-global-management-180449766.html"
+  },
+  {
+   "date": "2026-02-09",
+   "category": "financial",
+   "headline": "FY2025: adjusted net income USD 8.38 a share against Zacks' USD 7.94; record fee-related earnings of USD 2.5bn; dividend raised 10% to USD 2.25 a year",
+   "read": "The beat came from fees; the dividend rise signals confidence in the fee stream.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000007/agmearningsrelease4q2025.htm"
+  },
+  {
+   "date": "2026-02-09",
+   "category": "financial",
+   "headline": "Reported: Apollo near a roughly USD 3.4bn loan to a second vehicle buying NVIDIA chips to lease to xAI (Reuters, citing The Information)",
+   "read": "Would repeat the January structure; no completion is on the record.",
+   "source": "https://finance.yahoo.com/news/apollo-xai-near-3-4-141209518.html"
+  },
+  {
+   "date": "2026-01-07",
+   "category": "financial",
+   "headline": "Apollo funds lead a USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn acquisition and triple-net lease of NVIDIA GB200 compute to an xAI subsidiary",
+   "read": "Lender to a chip lessor, with NVIDIA as anchor limited partner in the lessor.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463"
+  },
+  {
+   "date": "2025-12-11",
+   "category": "corporate",
+   "headline": "STACK's former European colocation business relaunches as Vaultica Data Centers under Apollo infrastructure funds",
+   "read": "Confirms the carve-out completed; Apollo never announced a closing date.",
+   "source": "https://www.ictjournal.ch/news/2025-12-11/vaultica-devient-une-nouvelle-marque-europeenne-de-centres-de-donnees"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "ma",
+   "headline": "Apollo funds complete the majority acquisition of Stream Data Centers, with a Principal-managed fund taking a minority stake",
+   "read": "Apollo now controls a hyperscale developer with a 4 GW-plus pipeline.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/11/apollo-funds-complete-acquisition-of-stream-data-centers-3179224"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "ma",
+   "headline": "Apollo funds commit USD 6.5bn for 50% of Ørsted's 2.9 GW Hornsea 3, including half of capex",
+   "read": "A non-controlling offshore-wind stake; Ørsted builds and operates.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/11/apollo-funds-commit-6-5-billion-to-rsted-s-hornsea-3-in-the-uk-3179693"
+  },
+  {
+   "date": "2025-10-06",
+   "category": "ma",
+   "headline": "Apollo funds agree to acquire Eagle Creek Renewable Energy, about 700 MW across 85 hydro plants",
+   "read": "A controlled generation platform; the closing is not announced.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/10/apollo-funds-to-acquire-eagle-creek-renewable-energy-one-of-the-largest-u-s-hydroelectric-power-platforms-3162104"
+  },
+  {
+   "date": "2025-09-08",
+   "category": "ma",
+   "headline": "Apollo commits EUR 3.2bn of equity to a joint venture with RWE holding 25.1% of Amprion",
+   "read": "Infrastructure capital beside an operator — the joint venture is operationally controlled by RWE.",
+   "source": "https://ir.apollo.com/news-events/press-releases/detail/577"
+  },
+  {
+   "date": "2025-09-02",
+   "category": "ma",
+   "headline": "Apollo completes the acquisition of Bridge Investment Group, a US real-estate manager",
+   "read": "Adds 600 employees and real-estate fee streams.",
+   "source": "https://ir.apollo.com/news-events/press-releases/detail/575"
+  },
+  {
+   "date": "2025-08-06",
+   "category": "ma",
+   "headline": "Apollo funds agree to acquire a majority interest in Stream Data Centers and commit new capital for 650 MW of near-term capacity",
+   "read": "Signed in August; closed in November.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/08/apollo-funds-to-acquire-majority-stake-in-stream-data-centers-forming-a-scaled-digital-infrastructure-leader-3128284"
+  },
+  {
+   "date": "2025-05-13",
+   "category": "ma",
+   "headline": "Apollo hybrid funds agree to acquire PowerGrid Services, a utility maintenance and construction firm",
+   "read": "A services contractor that works on utilities' grids.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/05/apollo-hybrid-funds-to-acquire-powergrid-services-from-the-sterling-group-3080081"
+  },
+  {
+   "date": "2025-04-29",
+   "category": "ma",
+   "headline": "Apollo infrastructure funds agree to acquire STACK Infrastructure's pan-European colocation business (seven data centres) in a carve-out",
+   "read": "STACK keeps its hyperscale business; Apollo takes the enterprise colocation.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **Apollo is a directory of power-equipment buyers, not a door**. No Apollo entity orders batteries, medium-voltage gear or generation. The buyers are the platforms its funds control — Stream Data Centers, Vaultica, Eagle Creek and PowerGrid Services — and, on its largest energy cheques (Hornsea 3, the RWE–Amprion joint venture, the TotalEnergies Texas portfolio), the operating partner. Basis: Apollo's own releases on each deal and the partners' operating roles they describe. A seller reaches Stream's development team through Apollo's portfolio and sells to Stream.",
+  "**(High confidence)** We assess that **Apollo's distinctive AI position is on the financing side, and it rests on Athene**. It leads the USD 35bn initial tranche of Broadcom's AI XPV Platform and led the USD 3.5bn Valor–xAI financing. In both, special-purpose vehicles buy the compute, the AI lab leases it, and Apollo is lender, arranger and principal investor. The 10-Q places the XPV purchase obligation in an Apollo-managed fund and a 15% guarantee on Athene. Apollo's exposure is therefore to Anthropic's and xAI's lease payments — on XPV backstopped by Broadcom up to about USD 29bn — rather than to construction.",
+  "**(Moderate confidence)** We assess that **Stream is Apollo's one scaled buyer of data-centre power equipment, and the reported Anthropic talks would deepen it**. Stream controls more than 4 GW of powered land and is building at Elk Grove Village behind a new ComEd substation. A direct 1 GW lease to Anthropic, reported on 22–23 September but announced by no party, would make an Apollo platform a lab-direct landlord beside the Broadcom racks Apollo already finances. The judgment weakens if no lease is announced by the end of 2026.",
+  "**(Moderate confidence)** We assess that **in energy Apollo is a co-owner and recycler more than an operator**. Its largest energy commitments — Hornsea 3, Amprion through RWE, TotalEnergies' Texas portfolio, Pembina Gas Infrastructure — sit beside operators. The Kelvion sale to SLB is a sizable exit. The controlled exceptions are Eagle Creek's hydro, not yet closed on the record, and PowerGrid Services.",
+  "**(Low confidence)** We assess that **the Epstein disclosures and the redemption caps are a retail-channel risk rather than an institutional one, so far**. Q2 2026 brought record organic inflows of USD 60bn even as the shares fell 21% for the year and Apollo Debt Solutions capped repurchases for a third quarter. The judgment would fail if Q3 inflows, due on 3 November, show institutional or Athene flows slowing.",
+  "**INDICATORS TO WATCH** — *Q3 2026 results, 3 November:* inflows, Athene's spread and any update on XPV drawings. *A Stream–Anthropic lease announcement:* would confirm Judgment 3 and make Stream a lab-direct landlord. *Final agreements under the NVIDIA memoranda:* the first per-firm allocation. *Eagle Creek and Kelvion closings:* one adds a controlled generation buyer, the other completes an exit. *The Southern District of New York class action:* a motion-to-dismiss ruling."
+ ],
+ "relationships": [
+  {
+   "slug": "anthropic",
+   "type": "other",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "USD 35bn initial tranche; more than 1 GW of compute",
+   "via": "Broadcom AI XPV Platform",
+   "note": "Apollo leads the initial USD 35bn capital solution of Broadcom's AI XPV Platform, which funds the compute racks Anthropic leases at Fluidstack-based sites.",
+   "context": "Broadcom announced the platform on 9 June 2026 with Apollo and Blackstone's Credit & Insurance business as initial anchor investors. Its initial tranche, led by Apollo with banks, facilitates 'Anthropic's previously-announced capacity expansion of more than 1 gigawatt of compute infrastructure' at Fluidstack-based sites from mid-2026.\n\nPer Apollo's Q2 2026 10-Q, an Apollo-managed fund, WarehouseCo Intermediate Holdings LP, holds the purchase obligation for the compute, and Athene guarantees 15% of it. Per Broadcom's 10-Q, Broadcom backstops the customer's five-year lease payments up to about USD 29bn. Anthropic is the lessee; Apollo is the financier.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl"
+  },
+  {
+   "slug": "fluidstack",
+   "type": "other",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "More than 1 GW at Fluidstack-based sites",
+   "via": "Broadcom AI XPV Platform",
+   "note": "The compute racks financed by the Apollo-led XPV tranche are deployed at Fluidstack-based sites; Fluidstack is also the counterparty the reported Anthropic–Stream lease would bypass.",
+   "context": "The joint release of 9 June 2026 says the initial USD 35bn tranche will facilitate Anthropic's more-than-1 GW expansion 'expected to deploy in Fluidstack-based sites starting in mid-2026'. The racks are bought by the Apollo-managed purchaser fund and leased to Anthropic, not to Fluidstack.\n\nOn 22–23 September 2026 The Information reported Anthropic in early talks to lease up to 1 GW directly from Apollo-controlled Stream Data Centers; no party has announced it.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl"
+  },
+  {
+   "slug": "blackstone",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "USD 35bn initial tranche (shared)",
+   "via": "Broadcom AI XPV Platform",
+   "note": "Fellow initial anchor investor, through Blackstone's Credit & Insurance business, in Broadcom's AI XPV Platform, whose initial tranche Apollo leads.",
+   "context": "Broadcom's release names Apollo and Blackstone's Credit & Insurance business as the platform's 'initial anchor investors'; Apollo's own release says Apollo funds are leading the initial USD 35bn capital solution 'in partnership with Blackstone and leading global banks'. No split between the two is disclosed. Blackstone was also one of the six firms in NVIDIA's August 2026 compute-financing memoranda.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl"
+  },
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-08",
+   "scale": "Over USD 500bn of third-party capital across six firms, 'over time'",
+   "via": "AI compute infrastructure financing platform",
+   "note": "One of six financiers in NVIDIA's August 2026 memoranda of understanding to build compute-financing platforms; NVIDIA is also the anchor limited partner in the Valor vehicle Apollo financed.",
+   "context": "NVIDIA's release of 10 August 2026 announced memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over USD 500bn of third-party capital; they 'remain subject to execution of the final agreements', and no per-firm allocation is published.\n\nSeparately, Apollo's 7 January 2026 release says NVIDIA invested in Valor Compute Infrastructure as an anchor limited partner; that vehicle bought the GB200 systems Apollo financed for lease to xAI.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+  },
+  {
+   "slug": "xai",
+   "type": "other",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "USD 3.5bn financing of a USD 5.4bn transaction",
+   "via": "Valor Compute Infrastructure triple-net lease",
+   "note": "Apollo funds led a USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn acquisition and lease of NVIDIA GB200 compute to an xAI subsidiary.",
+   "context": "Apollo's 7 January 2026 release: Apollo-managed funds 'led a $3.5 billion capital solution for Valor Compute Infrastructure L.P. (VCI), a fund managed by Valor Equity Partners', to support its USD 5.4bn acquisition and triple-net lease of data-centre compute infrastructure, including NVIDIA GB200 GPUs, to a subsidiary of xAI Corp. Valor's fund owns the systems; Apollo is the lead financier.\n\nReported only: Reuters, citing The Information, said on 9 February 2026 that Apollo was close to a roughly USD 3.4bn loan to a second chip-lease vehicle for xAI; no completion is on the record.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463"
+  },
+  {
+   "slug": "stack-infrastructure",
+   "type": "other",
+   "status": "historical",
+   "since": "2025-04",
+   "scale": "Seven colocation data centres in five European markets",
+   "via": "European colocation carve-out (now Vaultica)",
+   "note": "Apollo infrastructure funds bought STACK Infrastructure's pan-European colocation business in a carve-out agreed on 29 April 2025; it now trades as Vaultica Data Centers.",
+   "context": "Apollo's release describes seven data centres in Stockholm, Oslo, Copenhagen, Milan and Geneva bought from STACK Infrastructure, 'a portfolio company of Blue Owl Digital Infrastructure Advisors LLC', and says the business would drop the STACK name. Apollo did not announce the closing; the business relaunched as Vaultica Data Centers in December 2025, and an Apollo partner lists a Vaultica board seat. STACK kept its hyperscale business.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871"
+  },
+  {
+   "slug": "blue-owl",
+   "type": "other",
+   "status": "historical",
+   "since": "2025-04",
+   "via": "European colocation carve-out (now Vaultica)",
+   "note": "Blue Owl Digital Infrastructure's portfolio company STACK was the seller in the April 2025 carve-out of its European colocation business to Apollo infrastructure funds.",
+   "context": "Apollo's 29 April 2025 release names STACK Infrastructure as 'a portfolio company of Blue Owl Digital Infrastructure Advisors LLC'. The seven-site business relaunched under Apollo funds as Vaultica Data Centers in December 2025. No price was disclosed.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871"
+  },
+  {
+   "slug": "flexgen",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2021-08",
+   "scale": "USD 150m equity commitment (2021)",
+   "note": "Funds managed by Apollo affiliates committed USD 150m of equity to FlexGen in 2021; two Apollo infrastructure partners list FlexGen board seats; the current stake is undisclosed.",
+   "context": "The 25 August 2021 release announced a USD 150m equity commitment from funds managed by affiliates of Apollo, alongside FlexGen's existing investors. Apollo has published nothing on FlexGen since, including on FlexGen's 2025 purchase of Powin's assets, but Apollo's own leadership pages list FlexGen among the boards of Olivia Wassenaar, head of the Apollo Infrastructure Group, and Trevor Mills. No ownership percentage or control right is disclosed; it is a minority growth investment, not a controlled platform.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2021/08/funds-managed-by-affiliates-of-apollo-global-management-announce-150-million-equity-commitment-to-flexgen-power-systems-inc-130337477"
+  },
+  {
+   "slug": "nscale",
+   "type": "other",
+   "status": "active",
+   "since": "2026-09",
+   "via": "Pre-IPO convertible loan notes",
+   "note": "Funds managed by Apollo are among the investors 'supporting' Nscale's USD 3.36bn pre-IPO convertible, which Third Point led; the amount is undisclosed.",
+   "context": "Nscale's 25 September 2026 release lists 'funds managed by Apollo' with NVIDIA, Citadel, Hudson Bay Capital, Abu Dhabi Investment Council and 8090 Industries among the supporters of a round led by Third Point. Nscale's S-1, filed 18 September, records a subscription agreement for at least USD 3.1bn (USD 2.1bn of unsecured convertible loan notes plus USD 1.0bn to NVIDIA) and does not name Apollo. Convertible notes are debt until an IPO; typed as a lender-style link.",
+   "source": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing"
+  },
+  {
+   "slug": "exelon",
+   "type": "other",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "260 MW substation (T&D World)",
+   "via": "ComEd substation for Stream Data Centers' Elk Grove Village campus",
+   "note": "ComEd, Exelon's Illinois utility, is building the substation for the Elk Grove Village campus of Apollo-controlled Stream Data Centers.",
+   "context": "Stream's release of 10 September 2025 records ComEd breaking ground on the substation for its Elk Grove Village campus — more than 1.2m sq ft across three buildings, in service in 2027 — with a ComEd vice-president quoted; T&D World gives the substation as 260 MW of load. Stream has been majority-owned by Apollo-managed funds since 3 November 2025. ComEd is the only utility Stream names on the record.",
+   "source": "https://www.streamdatacenters.com/news/comed-groundbreaking-egv/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Bermuda Corporate Income Tax Act 2023",
+   "status": "in-effect",
+   "effectiveDate": "2026-01",
+   "exposure": "Apollo recorded a one-time USD 1.7bn tax expense in Q1 2026 after the revocation of ACRA's election to be subject to Bermuda's Corporate Income Tax Act 2023, which led to a full valuation allowance against its Bermuda deferred tax assets; it is the main reason for Apollo's first-half 2026 GAAP net loss attributable to common stockholders of USD 594m.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000036/agmearningsrelease2q2026.htm"
+  },
+  {
+   "regime": "Securities Exchange Act §10(b) — securities class action",
+   "status": "in-effect",
+   "effectiveDate": "2026-03",
+   "exposure": "Feldman v. Apollo Global Management, Inc. (S.D.N.Y., filed 2 March 2026) and a second suit filed on 29 April, now consolidated, name Apollo, Marc Rowan and Leon Black and challenge public statements in 2021 and 2022 that Apollo never did business with Jeffrey Epstein; the class period runs from 10 May 2021 to 21 February 2026. Apollo's 10-Q discloses the suits; the claims are allegations.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "AUM and earnings by segment",
+   "specs": [
+    {
+     "band": "Assets under management",
+     "label": "Total AUM",
+     "value": "USD 938.4bn at 31 December 2025; about USD 1.05tn (USD 1,047bn) at 30 June 2026"
+    },
+    {
+     "band": "Assets under management",
+     "label": "Fee-generating AUM",
+     "value": "USD 709bn at 31 December 2025; USD 858bn at 30 June 2026"
+    },
+    {
+     "band": "Assets under management",
+     "label": "Perpetual capital",
+     "value": "USD 621bn at 30 June 2026 — Athene USD 416bn, Athora USD 121bn, other USD 84bn"
+    },
+    {
+     "band": "Assets under management",
+     "label": "Credit / Equity",
+     "value": "USD 749.2bn / USD 189.2bn at 31 December 2025"
+    },
+    {
+     "band": "Assets under management",
+     "label": "Infrastructure and Clean Transition Equity",
+     "value": "USD 21.6bn at 31 December 2025"
+    },
+    {
+     "band": "Segment earnings",
+     "label": "Fee-related earnings",
+     "value": "USD 2,528m in 2025; USD 785m in Q2 2026 (FRE margin 58.5%)"
+    },
+    {
+     "band": "Segment earnings",
+     "label": "Spread-related earnings (Athene)",
+     "value": "USD 3,361m in 2025; USD 877m in Q2 2026"
+    },
+    {
+     "band": "Segment earnings",
+     "label": "Principal investing income",
+     "value": "USD 338m in 2025; USD 16m in Q2 2026"
+    },
+    {
+     "band": "Activity",
+     "label": "Origination",
+     "value": "USD 309bn in 2025; USD 317bn over the twelve months to 30 June 2026"
+    },
+    {
+     "band": "Activity",
+     "label": "Organic inflows",
+     "value": "A record USD 228bn in 2025; a record USD 60bn in Q2 2026"
+    }
+   ],
+   "notes": "Company-reported (FY2025 10-K and earnings releases). Fee-related earnings come from managing other people's money; spread-related earnings are the margin between what Athene earns on its investments and what it pays policyholders."
+  },
+  {
+   "product": "The platform map — who signs for equipment (§11.1 test)",
+   "specs": [
+    {
+     "band": "Controlled",
+     "label": "Stream Data Centers",
+     "value": "Majority interest held by Apollo-managed funds since 3 November 2025 (Principal and management minorities; percentage undisclosed); more than 4 GW of long-term powered land; Stream's own management and joint ventures build"
+    },
+    {
+     "band": "Controlled",
+     "label": "Vaultica Data Centers",
+     "value": "Former STACK European colocation business, seven data centres; carve-out agreed 29 April 2025, relaunched December 2025"
+    },
+    {
+     "band": "Controlled",
+     "label": "PowerGrid Services",
+     "value": "Majority agreed by Apollo hybrid funds, May 2025; utility maintenance and construction contractor"
+    },
+    {
+     "band": "Pending",
+     "label": "Eagle Creek Renewable Energy",
+     "value": "Full acquisition agreed 6 October 2025; about 700 MW of hydro across 85 plants; closing not announced"
+    },
+    {
+     "band": "Exiting",
+     "label": "Kelvion",
+     "value": "Majority owner; sale to SLB agreed 31 August 2026, about USD 3.4bn cash plus USD 0.7bn assumed debt; an equipment maker, not a buyer"
+    },
+    {
+     "band": "Financed, not owned",
+     "label": "Broadcom AI XPV Platform",
+     "value": "Leads the initial USD 35bn capital solution; an Apollo-managed fund holds the purchase obligation for the Broadcom-designed racks Anthropic leases; Athene guarantees 15%"
+    },
+    {
+     "band": "Financed, not owned",
+     "label": "Valor Compute Infrastructure",
+     "value": "Led a USD 3.5bn financing of a USD 5.4bn GB200 acquisition-and-lease to an xAI subsidiary; Valor's fund owns the systems"
+    },
+    {
+     "band": "Funds only",
+     "label": "Minority, joint or lender",
+     "value": "Hornsea 3 (50%, Ørsted builds and operates); RWE–Amprion joint venture (RWE has operational control); TotalEnergies Texas solar and storage (50%, TotalEnergies operates); Pembina Gas Infrastructure (40%); Intel Fab 34 (49%, Intel controls); FlexGen (2021 equity commitment, board seats); Nscale (convertible notes)"
+    }
+   ],
+   "notes": "An investor passes the buying-authority test only through a platform it controls. Apollo passes through Stream, Vaultica and PowerGrid Services, and would pass through Eagle Creek on closing. It fails on every 50% energy stake, where the partner builds and operates, and on the compute vehicles, where it is the lender. No Apollo platform has a named power-equipment supplier on the record."
+  },
+  {
+   "product": "Broadcom AI XPV Platform — the numbers stated as themselves",
+   "specs": [
+    {
+     "band": "Commitment",
+     "label": "Initial capital solution",
+     "value": "USD 35bn, 'committed, certain capital across a multi-year draw schedule' (Apollo release); fundings expected 'no later than 2028' (10-Q)"
+    },
+    {
+     "band": "Commitment",
+     "label": "Platform target",
+     "value": "'Over 20GW' of compute capacity for frontier AI labs through 2028 — a design target, not a commitment"
+    },
+    {
+     "band": "Structure",
+     "label": "Purchaser",
+     "value": "WarehouseCo Intermediate Holdings LP, an Apollo-managed fund with the purchase obligation for the compute (10-Q)"
+    },
+    {
+     "band": "Structure",
+     "label": "Athene guarantee",
+     "value": "15% of the outstanding purchase obligation; a third party reimburses Athene for 35% of any amount paid (10-Q)"
+    },
+    {
+     "band": "Structure",
+     "label": "Broadcom backstop",
+     "value": "Maximum potential liability about USD 29bn undiscounted on the customer's five-year lease obligations (Broadcom 10-Q)"
+    },
+    {
+     "band": "Deployment",
+     "label": "First use",
+     "value": "Anthropic's expansion of more than 1 GW at Fluidstack-based sites from mid-2026"
+    }
+   ],
+   "notes": "Apollo's own share of the USD 35bn is undisclosed. PitchBook reported that the senior tranches were rated investment grade and that Athene took a sizable portion."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Marc Rowan",
+   "title": "Co-Founder, Chair and Chief Executive Officer",
+   "photo": "images/execs/apollo-rowan.png",
+   "background": [
+    "Co-founded Apollo in 1990; Chief Executive Officer of Apollo Global Management and Chair of its board",
+    "Director of Athene Holding Ltd. (2009 – August 2025)",
+    "Named, with Apollo and Leon Black, in the 2026 securities class action over Apollo's Epstein statements (10-Q)",
+    "BS and MBA in Finance, The Wharton School"
+   ]
+  },
+  {
+   "name": "James Zelter",
+   "title": "President and Director",
+   "photo": "images/execs/apollo-zelter.png",
+   "background": [
+    "President of Apollo Global Management since January 2025, overseeing the asset-management and retirement-services businesses; quoted on the Broadcom AI XPV and NVIDIA releases",
+    "Co-President of Apollo Asset Management (2018–2025) and chief investment officer of the credit business (2006–2025)",
+    "Chief investment officer, Citigroup Alternative Investments; earlier Goldman Sachs",
+    "BA in Economics, Duke University"
+   ]
+  },
+  {
+   "name": "Scott Kleinman",
+   "title": "Co-President, Apollo Asset Management; Director",
+   "photo": "images/execs/apollo-kleinman.png",
+   "background": [
+    "Co-President of Apollo Asset Management since 2018; joined Apollo in 1996 and became lead partner for private equity in 2009",
+    "Director of Athora Holding Ltd.",
+    "BA and BS, University of Pennsylvania and The Wharton School"
+   ]
+  },
+  {
+   "name": "John Zito",
+   "title": "Co-President, Apollo Asset Management; Head of Credit",
+   "photo": "images/execs/apollo-zito.jpg",
+   "background": [
+    "Co-President since January 2025 and Chairman of Atlas SP Partners; joined Apollo in 2012",
+    "Earlier Brencourt Advisors and Veritas Fund Group; CFA",
+    "AB in Economics, Amherst College"
+   ]
+  },
+  {
+   "name": "Martin Kelly",
+   "title": "Chief Financial Officer",
+   "photo": "images/execs/apollo-kelly.jpg",
+   "background": [
+    "Chief Financial Officer of Apollo Global Management; CFO of Apollo Asset Management 2012–2022",
+    "CFO of the Americas at Barclays Capital; Lehman Brothers; partner at PwC",
+    "Commerce degree, University of New South Wales"
+   ]
+  },
+  {
+   "name": "Grant Kvalheim",
+   "title": "Chief Executive Officer, Athene",
+   "photo": "images/execs/apollo-kvalheim.jpg",
+   "background": [
+    "Chief Executive Officer of Athene since July 2025, after serving as its President and, from 2011, CFO",
+    "Co-President of Barclays Capital; senior roles at Deutsche Bank and Merrill Lynch",
+    "BS in Economics, Claremont McKenna College; MBA, University of Chicago"
+   ]
+  },
+  {
+   "name": "James Belardi",
+   "title": "Co-Founder, Executive Chairman and Chief Investment Officer, Athene; Director",
+   "photo": "images/execs/apollo-belardi.png",
+   "background": [
+    "Chairman and CEO of Apollo Insurance Solutions Group, which manages Athene's investments; Athene CEO 2009–2025",
+    "President of SunAmerica Life Insurance; chief investment officer of AIG Retirement Services",
+    "BA in Economics, Stanford University; MBA, UCLA"
+   ]
+  },
+  {
+   "name": "Olivia Wassenaar",
+   "title": "Partner, Head of Apollo Infrastructure Group",
+   "photo": "images/execs/apollo-wassenaar.png",
+   "background": [
+    "Leads Apollo's infrastructure and energy-transition strategy and funds; board seats include FlexGen (Apollo profile)",
+    "Managing director at Riverstone Holdings for ten years; Goldman Sachs renewables banking; World Bank",
+    "AB, Harvard; Yale School of the Environment; MBA, Wharton"
+   ]
+  },
+  {
+   "name": "Harry Seekings",
+   "title": "Partner, Chair of Apollo Infrastructure Group and Head of Infrastructure Equity",
+   "photo": "images/execs/apollo-seekings.png",
+   "background": [
+    "Joined Apollo in 2024 as Co-Head of Infrastructure, based in London",
+    "Managing Partner and Head of Infrastructure at InfraRed Capital Partners"
+   ]
+  },
+  {
+   "name": "Jamshid Ehsani",
+   "title": "Partner, Head of Global Principal Structured Finance",
+   "photo": "images/execs/apollo-ehsani.png",
+   "background": [
+    "Leads High Grade Capital Solutions and chairs the ACRA group; Apollo's quoted lead on the Broadcom AI XPV, Intel Fab 34 and RWE transactions",
+    "Joined Apollo in 2010; earlier Swiss Re, UBS, the World Bank and Citicorp",
+    "Doctorate in energy economics"
+   ]
+  },
+  {
+   "name": "Trevor Mills",
+   "title": "Partner, Apollo Infrastructure Group",
+   "photo": "images/execs/apollo-mills.png",
+   "background": [
+    "Co-led the Stream Data Centers acquisition; board seats include Stream and FlexGen (Apollo profile)"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Adjusted net income per share",
+      "actual": "USD 2.11 (ANI USD 1,314m)",
+      "expected": "USD 2.18 (Zacks consensus)",
+      "verdict": "miss",
+      "result": "About 3% below consensus; principal investing income fell to USD 16m as asset sales were delayed."
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 785m (USD 1.26 a share), a record, +25% year on year",
+      "expected": "",
+      "verdict": "",
+      "result": "No published FRE consensus was read from a primary account."
+     },
+     {
+      "name": "Spread-related earnings",
+      "actual": "USD 877m (USD 1.41 a share), a record",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "GAAP total revenues",
+      "actual": "USD 11,153m",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes Athene's insurance revenues; segment revenue is a different measure.",
+      "kpi": "revenue",
+      "usdMillions": 11153,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP net income attributable to common stockholders",
+      "actual": "USD 1,336m (USD 2.18 a share); first half a loss of USD 594m",
+      "expected": "",
+      "verdict": "",
+      "result": "The first-half loss reflects a one-time USD 1.7bn Bermuda tax charge in Q1.",
+      "kpi": "net-income",
+      "usdMillions": 1336,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "AUM about USD 1.05tn; record organic inflows of USD 60bn; quarterly dividend USD 0.5625. Zacks' consensus for Q3 2026 was USD 2.30 a share as of 4 August."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Adjusted net income per share",
+      "actual": "USD 8.38 (ANI USD 5,195m)",
+      "expected": "USD 7.94 (Zacks consensus)",
+      "verdict": "beat",
+      "result": "Q4 2025 came in at USD 2.47 against USD 2.03."
+     },
+     {
+      "name": "Fee-related earnings / spread-related earnings",
+      "actual": "USD 2,528m / USD 3,361m",
+      "expected": "",
+      "verdict": "",
+      "result": "FRE grew 23%."
+     },
+     {
+      "name": "GAAP total revenues",
+      "actual": "USD 32,049m",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "revenue",
+      "usdMillions": 32049,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP net income attributable to common stockholders",
+      "actual": "USD 3,395m (USD 5.58 basic a share)",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "net-income",
+      "usdMillions": 3395,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "AUM USD 938bn; record inflows of USD 228bn and origination of USD 309bn; dividend raised 10% to USD 2.25 a year from Q1 2026."
+   },
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Adjusted net income per share",
+      "actual": "USD 7.43 (ANI USD 4,565m)",
+      "expected": "USD 7.09 (Zacks consensus)",
+      "verdict": "beat",
+      "result": "Zacks scored the year on its own adjusted basis at USD 7.39."
+     },
+     {
+      "name": "Fee-related earnings / spread-related earnings",
+      "actual": "USD 2,063m / USD 3,224m",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "GAAP total revenues",
+      "actual": "USD 26,114m",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "revenue",
+      "usdMillions": 26114,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP net income attributable to common stockholders",
+      "actual": "USD 4,480m (USD 7.39 basic a share)",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "net-income",
+      "usdMillions": 4480,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "The year before the Bridge and Argo acquisitions."
+   }
+  ],
+  "commentary": "Company figures are from Apollo's 10-K and earnings releases; consensus is Zacks as carried by Yahoo Finance and TradingView. Apollo's February 2026 investor presentation restates the October 2024 investor-day targets: fee-related earnings growth of 20% or more and spread-related earnings growth of 10% in 2026, and about USD 5.0bn each of FRE and SRE and about USD 15.00 of adjusted net income per share by 2029 — targets, not guidance it guarantees. Q3 2026 results are due on 3 November 2026."
+ },
+ "sources": [
+  {
+   "label": "Apollo — to announce third-quarter 2026 results on 3 November 2026",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2026/09/apollo-to-announce-third-quarter-2026-financial-results-on-november-3-2026-3370753",
+   "date": "2026-09-29"
+  },
+  {
+   "label": "Nscale — pre-IPO convertible financing led by Third Point",
+   "url": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Apollo Debt Solutions BDC — Form 8-K on third-quarter repurchase requests",
+   "url": "https://www.sec.gov/Archives/edgar/data/1837532/000119312526398001/d142892d8k.htm",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "Investing.com (The Information) — Anthropic in talks to lease 1 gigawatt from Stream Data Centers",
+   "url": "https://ca.investing.com/news/stock-market-news/anthropic-in-talks-to-lease-1-gigawatt-from-stream-data-centers-the-information-93CH-4848940",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "Broadcom — Form 10-Q, quarter ended 2 August 2026 (AI XPV platform and backstop)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+   "date": "2026-09-10"
+  },
+  {
+   "label": "SLB — Form 8-K Exhibit 99, agreement to acquire Kelvion",
+   "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526375358/d106278dex99.htm",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Apollo Global Management — Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "NVIDIA — partners with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR on AI compute financing platforms",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Apollo — NVIDIA partners with Apollo (repost of the NVIDIA release)",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2026/08/nvidia-partners-with-apollo",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Apollo — Q2 2026 earnings release (8-K Exhibit 99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000036/agmearningsrelease2q2026.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Yahoo Finance (Zacks) — Apollo Q2 2026 earnings versus estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/apollo-global-management-inc-apo-115002444.html",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Apollo — leads USD 35 billion capital solution for Broadcom AI XPV Platform with Blackstone and global banks",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2026/06/apollo-leads-35-billion-capital-solution-for-broadcom-ai-xpv-platform-in-partnership-with-blackstone-and-leading-global-banks-3308896",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Broadcom, Apollo and Blackstone establish the AI XPV Platform (joint release, Apollo newsroom)",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Yahoo Finance (PitchBook) — Apollo and Blackstone lend USD 35bn against chips for Anthropic",
+   "url": "https://finance.yahoo.com/sectors/technology/articles/apollo-blackstone-lend-35b-against-220610560.html",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Apollo — 2026 proxy statement (DEF 14A)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1858681/000119312526177321/d948913ddef14a.htm",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "Apollo — funds to acquire 40% interest in Pembina Gas Infrastructure",
+   "url": "https://ir.apollo.com/news-events/press-releases/detail/618",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "Yahoo Finance — shareholders sue Apollo Global Management",
+   "url": "https://finance.yahoo.com/news/shareholders-sue-apollo-global-management-180449766.html",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "Apollo Global Management — Form 10-K for 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000013/apo-20251231.htm",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Apollo — Q4 and full-year 2025 earnings release (8-K Exhibit 99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000007/agmearningsrelease4q2025.htm",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "TradingView (Zacks) — Apollo Q4 2025 earnings top estimates",
+   "url": "https://www.tradingview.com/news/zacks:c44d24f49094b:0-apollo-global-stock-up-as-q4-earnings-top-estimates-aum-increases-y-y/",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "Yahoo Finance (Reuters) — Apollo near USD 3.4bn loan for xAI chip vehicle",
+   "url": "https://finance.yahoo.com/news/apollo-xai-near-3-4-141209518.html",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "Apollo — Investor Presentation, February 2026",
+   "url": "https://ir.apollo.com/_assets/_b8522a2eb60d0cffb5114e622d37dc8e/apollo/db/2224/22861/pdf/Apollo+Investor+Presentation+%E2%80%93+February+2026.pdf",
+   "date": "2026-02"
+  },
+  {
+   "label": "Apollo — backs USD 5.4bn Valor and xAI compute transaction with USD 3.5bn capital solution",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "ICTjournal — Vaultica launches as a European data-centre brand after Apollo funds take over STACK's colocation business",
+   "url": "https://www.ictjournal.ch/news/2025-12-11/vaultica-devient-une-nouvelle-marque-europeenne-de-centres-de-donnees",
+   "date": "2025-12-11"
+  },
+  {
+   "label": "Apollo — funds complete acquisition of Stream Data Centers",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2025/11/apollo-funds-complete-acquisition-of-stream-data-centers-3179224",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Apollo — funds commit USD 6.5bn to Ørsted's Hornsea 3",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2025/11/apollo-funds-commit-6-5-billion-to-rsted-s-hornsea-3-in-the-uk-3179693",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Apollo — funds to acquire Eagle Creek Renewable Energy",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2025/10/apollo-funds-to-acquire-eagle-creek-renewable-energy-one-of-the-largest-u-s-hydroelectric-power-platforms-3162104",
+   "date": "2025-10-06"
+  },
+  {
+   "label": "T&D World — Stream Data Centers and ComEd break ground on new substation for Elk Grove Village campus",
+   "url": "https://www.tdworld.com/electric-utility-operations/news/55316514/stream-data-centers-comed-break-ground-on-new-substation-for-data-center-campus-in-elk-grove-villag",
+   "date": "2025-09-15"
+  },
+  {
+   "label": "Stream Data Centers — ComEd breaks ground on the Elk Grove Village substation",
+   "url": "https://www.streamdatacenters.com/news/comed-groundbreaking-egv/",
+   "date": "2025-09-10"
+  },
+  {
+   "label": "Apollo — EUR 3.2bn equity partnership with RWE (Amprion stake)",
+   "url": "https://ir.apollo.com/news-events/press-releases/detail/577",
+   "date": "2025-09-08"
+  },
+  {
+   "label": "Apollo — completes acquisition of Bridge Investment Group",
+   "url": "https://ir.apollo.com/news-events/press-releases/detail/575",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "Apollo — funds to acquire majority stake in Stream Data Centers",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2025/08/apollo-funds-to-acquire-majority-stake-in-stream-data-centers-forming-a-scaled-digital-infrastructure-leader-3128284",
+   "date": "2025-08-06"
+  },
+  {
+   "label": "Apollo — hybrid funds to acquire PowerGrid Services",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2025/05/apollo-hybrid-funds-to-acquire-powergrid-services-from-the-sterling-group-3080081",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "Apollo — funds to acquire pan-European colocation business from STACK Infrastructure, a Blue Owl Digital Infrastructure portfolio company",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871",
+   "date": "2025-04-29"
+  },
+  {
+   "label": "Apollo — Q4 and full-year 2024 earnings release (8-K Exhibit 99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868125000010/agmearningsrelease4q2024.htm",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "Apollo — to acquire Argo Infrastructure Partners",
+   "url": "https://ir.apollo.com/news-events/press-releases/detail/533",
+   "date": "2025-01-13"
+  },
+  {
+   "label": "Apollo — 50% of TotalEnergies' Texas solar and storage portfolio",
+   "url": "https://ir.apollo.com/news-events/press-releases/detail/528",
+   "date": "2024-12-04"
+  },
+  {
+   "label": "Intel and Apollo agree to a joint venture related to Intel's Fab 34 (49% for USD 11bn)",
+   "url": "https://ir.apollo.com/news-events/press-releases/detail/500",
+   "date": "2024-06-04"
+  },
+  {
+   "label": "Apollo — affiliates' funds announce USD 150m equity commitment to FlexGen",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2021/08/funds-managed-by-affiliates-of-apollo-global-management-announce-150-million-equity-commitment-to-flexgen-power-systems-inc-130337477",
+   "date": "2021-08-25"
+  },
+  {
+   "label": "Apollo — our people (leadership pages)",
+   "url": "https://www.apollo.com/about-apollo/our-people"
+  },
+  {
+   "label": "Stream Data Centers — company",
+   "url": "https://www.streamdatacenters.com/company/"
+  },
+  {
+   "label": "Yahoo Finance — APO quote and year-to-date performance",
+   "url": "https://finance.yahoo.com/quote/APO/"
+  }
+ ],
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 1
+}

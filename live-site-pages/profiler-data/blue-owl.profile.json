@@ -239,7 +239,7 @@
     "**(High confidence)** We assess that **Blue Owl's control runs through fund ownership and, at the hyperscale joint ventures, stops at the equity**. The IPI deal bought management contracts, not STACK, and Blue Owl's 10-K never names STACK. At Hyperion the funds hold 80% but Meta says Meta 'do[es] not direct the activities that most significantly impact the Venture's economic performance', and the venture is unconsolidated by Meta. The judgment is high because both counterparties say so in filings. Inference: Blue Owl's funds are price-and-structure capital at Hyperion, with design and procurement left to Meta.",
     "**(Moderate confidence)** We assess that **Blue Owl's AI-campus exposure is concentrated on two tenants, Oracle and Meta, and the market is pricing that risk**. Oracle is the capacity counterparty at Jupiter (STACK) and Abilene (Crusoe), and Meta at Hyperion. Oracle's force-majeure notice on Jupiter (acknowledged; terms reported) and the reported Michigan withdrawal both turned on Oracle-linked campuses. The shares fell 43% over the year to 2 October 2026. Basis: counterparty statements and market data. Inference: Blue Owl's next AI-campus commitments are likelier to come with residual-value guarantees like Meta's, or with tenants other than Oracle.",
     "**(Moderate confidence)** We assess that **private-credit redemptions, not data-centre returns, are the binding constraint on Blue Owl's growth in 2026**. OCIC's redemption requests ran at 21.9%, 18.8% and 16.8% of shares in the first three quarters against a 5% tender. OTIC's ran near 40%. Moody's put OCIC on a negative outlook, and the OBDC II merger was abandoned. Fee-related earnings still rose to USD 392.2m in Q2. Basis: the funds' own filings and Blue Owl's 10-Q.",
-    "**(Low confidence)** We assess that **Blue Owl is recycling STACK rather than adding to it**. It sold eleven stabilised data centres to ODIT, its own wealth vehicle, and STACK's European colocation business to Apollo (signed April 2025, per Apollo). Bloomberg reports exclusive talks to sell the Asia-Pacific portfolio, and The Real Deal reports a planned data-centre REIT listing. Weak because the Asia-Pacific sale and the REIT are reported, not announced.",
+    "**(Low confidence)** We assess that **Blue Owl is recycling STACK rather than adding to it**. It sold eleven stabilised data centres to ODIT, its own wealth vehicle, and STACK's European colocation business to Apollo (agreed April 2025, per Apollo, and relaunched under Apollo funds as Vaultica Data Centers in December 2025, per ICTjournal). Bloomberg reports exclusive talks to sell the Asia-Pacific portfolio, and The Real Deal reports a planned data-centre REIT listing. Weak because the Asia-Pacific sale and the REIT are reported, not announced.",
     "**Collection gaps:** Blue Owl funds' percentage ownership of STACK and which funds hold it; Blue Owl's share of the Abilene joint venture and of Project Jupiter's equity (about USD 3bn is reported only); the Oracle force-majeure notice itself; the current status of the Goldman v. Blue Owl securities class action (the Q2 10-Q discloses only Section 36(b) suits); a published consensus for fee-related earnings per share; any Moody's rating on the parent.",
     "**INDICATORS TO WATCH** — *Q3 2026 results, 29 October:* Digital Infrastructure fee-paying AUM and any comment on Jupiter. *Oracle–STACK resolution of the Jupiter notice and the NMED air-permit decision on the Bloom fuel cells (due 23 November 2026):* power on time would close the notice. *STACK Asia-Pacific signing:* a sale at USD 20–25bn would confirm Judgment 5 and fund the next build cycle. *OCIC and OTIC Q4 tender results:* requests below 10% would ease Judgment 4. *Hyperion leases commencing in 2029:* the first rent from the largest single Blue Owl AI exposure."
   ],
@@ -350,6 +350,27 @@
       "note": "Reported only: Bloomberg says the BlackRock-backed AIP and IFM Investors are in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn.",
       "context": "Bloomberg's 24 September 2026 report, carried by Reuters, described Blue Owl as STACK's owner and the AIP–IFM group as in exclusive talks; Reuters could not verify it, and no party commented. Earlier reporting had Blue Owl seeking more than USD 30bn, with Brookfield, KKR and DigitalBridge among possible bidders. A report, not a transaction.",
       "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports"
+    },
+    {
+      "slug": "apollo",
+      "type": "other",
+      "status": "historical",
+      "since": "2025-04",
+      "via": "European colocation carve-out (now Vaultica)",
+      "note": "Apollo infrastructure funds bought STACK's pan-European colocation business from the Blue Owl Digital Infrastructure portfolio company in April 2025; it now trades as Vaultica Data Centers.",
+      "context": "Apollo's release of 29 April 2025 names STACK Infrastructure as 'a portfolio company of Blue Owl Digital Infrastructure Advisors LLC' and describes seven data centres in Stockholm, Oslo, Copenhagen, Milan and Geneva. ICTjournal reported the business's relaunch as Vaultica Data Centers in December 2025. No price was disclosed. Typed `other` because the seller was STACK, Blue Owl's portfolio company, not Blue Owl itself.",
+      "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871"
+    },
+    {
+      "slug": "stonepeak",
+      "type": "portfolio",
+      "status": "active",
+      "since": "2023-06",
+      "scale": "Passive minority stake; third-party owners receive less than 17% of fee income and carried interest",
+      "via": "Blue Owl GP Strategic Capital (formerly Dyal)",
+      "note": "Blue Owl's GP Strategic Capital funds have held a passive minority interest in Stonepeak's holding company since June 2023, with no control.",
+      "context": "Stonepeak's Form ADV (April 2026) records that Blue Owl-managed vehicles bought a minority interest in Stonepeak Partners Holdings LP in June 2023 and made follow-on investments. Blue Owl and the other third-party strategic investors together receive less than 17% of the adviser's fee income and carried interest, and none has 'control over the day-to-day operations or investment decisions'. A GP stake buys a share of a manager's economics, not a say in what its funds buy.",
+      "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159699/PDF/159699.pdf"
     }
   ],
   "policyExposure": [
@@ -765,6 +786,11 @@
       "date": "2026-04-08"
     },
     {
+      "label": "Stonepeak Partners LP — Form ADV Part 1A (CRD 159699), other-than-annual amendment",
+      "url": "https://reports.adviserinfo.sec.gov/reports/ADV/159699/PDF/159699.pdf",
+      "date": "2026-04-07"
+    },
+    {
       "label": "Blue Owl Technology Income Corp. — Schedule TO-I/A: Q1 2026 tender results (40.4% requested; 14.380% accepted)",
       "url": "https://www.sec.gov/Archives/edgar/data/1869453/000162828026027573/otic-scheduletoa.htm",
       "date": "2026-04-01"
@@ -788,6 +814,11 @@
       "label": "Michigan Public — Developers dispute report that financing for the Michigan data-centre project is in limbo (Blue Owl)",
       "url": "https://www.michiganpublic.org/transportation-infrastructure/2025-12-18/developers-dispute-published-report-that-financing-for-controversial-michigan-data-center-project-is-in-limbo",
       "date": "2025-12-18"
+    },
+    {
+      "label": "ICTjournal — Vaultica launches as a European data-centre brand after Apollo funds take over STACK's colocation business",
+      "url": "https://www.ictjournal.ch/news/2025-12-11/vaultica-devient-une-nouvelle-marque-europeenne-de-centres-de-donnees",
+      "date": "2025-12-11"
     },
     {
       "label": "Blue Owl Digital Infrastructure Trust — Form 8-K: first close and acquisition of 11 data centres",
@@ -877,6 +908,6 @@
       "url": "https://finance.yahoo.com/quote/OWL/history/"
     }
   ],
-  "lastUpdated": "2026-10-04",
-  "profileVersion": 1
+  "lastUpdated": "2026-10-05",
+  "profileVersion": 2
 }

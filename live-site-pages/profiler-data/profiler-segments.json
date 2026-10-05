@@ -1628,6 +1628,11 @@
           "slug": "sb-energy",
           "role": "challenger",
           "basis": "ecosystemRole: a power developer converting its base into AIDC landlord — ~8.8 GW-IT leased to OpenAI at Milam County (~753 MW-IT) and PORTS-Pike (~8.0 GW-IT) under triple-net leases, none yet in operation; scope runs 'to the rack', buying substation, switchyard and electrical packages itself"
+        },
+        {
+          "slug": "ares",
+          "role": "adjacent",
+          "basis": "productsAndServices › Ares Digital Infrastructure and Ada Infrastructure: Ares's own data-centre development and operating platform — the 10-K's 'dedicated data center operating platform' — with over 1 GW of campuses in flight (Northern Virginia, Tokyo, Osaka, London, Brazil)"
         }
       ]
     },
@@ -2006,6 +2011,21 @@
           "slug": "blue-owl",
           "role": "incumbent",
           "basis": "ecosystemRole: the capital segment's most AI-campus-concentrated investor — ~9 GW of data-centre capacity through fund-owned STACK, 80% of Meta's ~USD 27bn Hyperion campus, co-sponsor of the USD 15bn Abilene joint venture, and lead lender on GPU financings (IREN USD 2.4bn)"
+        },
+        {
+          "slug": "apollo",
+          "role": "incumbent",
+          "basis": "ecosystemRole: the capital segment's largest AI-compute financier and the controlling owner of one scaled data-centre developer — Apollo-managed funds hold a majority of Stream Data Centers (more than 4 GW of long-term powered land) and Apollo leads the USD 35bn initial tranche of Broadcom's AI XPV Platform; USD 1.05tn of AUM"
+        },
+        {
+          "slug": "ares",
+          "role": "challenger",
+          "basis": "ecosystemRole: a second-tier capital name that owns one data-centre buyer outright (Ada Infrastructure) and controls one power buyer through its funds (Apex Clean Energy); infrastructure is about 4% of USD 671bn of AUM"
+        },
+        {
+          "slug": "stonepeak",
+          "role": "incumbent",
+          "basis": "ecosystemRole: the capital segment's platform builder — controls Cologix, Digital Edge, Montera and Kingdom; sixth in Infrastructure Investor's 2026 five-year infrastructure fundraising ranking (USD 52.9bn), ahead of Blackstone"
         }
       ]
     },

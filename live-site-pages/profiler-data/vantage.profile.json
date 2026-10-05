@@ -343,6 +343,17 @@
    "note": "Indirect: since 30 September 2026 SoftBank Group has owned DigitalBridge, the manager of the funds that lead Vantage's ownership. The equity stays with those funds and their co-investors.",
    "context": "DigitalBridge's Form 8-K of 30 September 2026 records the completion of its merger into a SoftBank Group subsidiary at USD 16.00 a share in cash. SoftBank's Q3 FY2025 earnings presentation lists Vantage first among DigitalBridge's 'Key Portfolio Companies'. SoftBank bought the manager, not Vantage: the equity remains with DigitalBridge-managed funds and the co-investors named in this dossier, and SoftBank's reach runs through DigitalBridge's fund governance.",
    "source": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/earnings-presentation_q3fy2025_01_en.pdf"
+  },
+  {
+   "slug": "ares",
+   "type": "other",
+   "status": "active",
+   "since": "2026-02",
+   "scale": "USD 2.4bn facility; Ares holds about USD 1.6bn of the commitment",
+   "via": "Ares Infrastructure Debt",
+   "note": "Ares funds arranged a USD 2.4bn debt facility for Vantage in North America in February 2026 and hold about USD 1.6bn of the commitment.",
+   "context": "Ares's release of 10 February 2026: certain Ares funds 'have arranged a $2.4 billion debt facility' for Vantage Data Centers, with 'Ares holds approximately $1.6 billion of the commitment and funded approximately $330 million at closing'. The facility size, Ares's commitment and the amount drawn are three different numbers. A lender link, typed `other` on both sides.",
+   "source": "https://www.eqs-news.com/news/category/ares-arranges-2-4-billion-debt-facility-to-vantage-data-centers/c5a34084-ddb2-48c4-af66-db5c60c5c961_en"
   }
  ],
  "policyExposure": [
@@ -706,6 +717,12 @@
    "date": "2026-02-12"
   },
   {
+   "label": "Ares — arranges USD 2.4bn debt facility to Vantage Data Centers (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-arranges-2-4-billion-debt-facility-to-vantage-data-centers/c5a34084-ddb2-48c4-af66-db5c60c5c961_en",
+   "date": "2026-02-10",
+   "party": "disclosure"
+  },
+  {
    "label": "Vantage — joins Open Compute Project Foundation Advisory Board",
    "url": "https://vantage-dc.com/news/vantage-data-centers-joins-open-compute-project-foundation-advisory-board/",
    "date": "2026-01-20"
@@ -875,6 +892,6 @@
    "date": "2026-09-02"
   }
  ],
- "lastUpdated": "2026-10-04",
- "profileVersion": 10
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 11
 }

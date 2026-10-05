@@ -373,6 +373,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-09-07",
       "supersededBy": 7
+    },
+    {
+      "file": "catl.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 8
     }
   ],
   "constellation-energy": [
@@ -737,6 +743,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-09-05",
       "supersededBy": 7
+    },
+    {
+      "file": "flexgen.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 8
     }
   ],
   "fluence": [
@@ -1647,6 +1659,12 @@
       "profileVersion": 12,
       "archivedAt": "2026-10-04",
       "supersededBy": 13
+    },
+    {
+      "file": "nvidia.profile.v13.json",
+      "profileVersion": 13,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 14
     }
   ],
   "on-energy": [
@@ -2127,6 +2145,12 @@
       "profileVersion": 8,
       "archivedAt": "2026-10-04",
       "supersededBy": 9
+    },
+    {
+      "file": "stack-infrastructure.profile.v9.json",
+      "profileVersion": 9,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 10
     }
   ],
   "sungrow": [
@@ -2421,6 +2445,12 @@
       "profileVersion": 9,
       "archivedAt": "2026-10-04",
       "supersededBy": 10
+    },
+    {
+      "file": "vantage.profile.v10.json",
+      "profileVersion": 10,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 11
     }
   ],
   "vertiv": [
@@ -2555,6 +2585,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-26",
       "supersededBy": 6
+    },
+    {
+      "file": "xai.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 7
     }
   ],
   "zhonhen": [
@@ -2745,6 +2781,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-10-02",
       "supersededBy": 4
+    },
+    {
+      "file": "anthropic.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 5
     }
   ],
   "talen-energy": [
@@ -2817,6 +2859,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-09-26",
       "supersededBy": 4
+    },
+    {
+      "file": "tract.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 5
     }
   ],
   "powerhouse-data-centers": [
@@ -2889,6 +2937,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-10-04",
       "supersededBy": 4
+    },
+    {
+      "file": "fluidstack.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 5
     }
   ],
   "entergy": [
@@ -2905,6 +2959,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-06",
       "supersededBy": 2
+    },
+    {
+      "file": "engie-north-america.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 3
     }
   ],
   "mgx": [
@@ -2959,6 +3019,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-09-07",
       "supersededBy": 3
+    },
+    {
+      "file": "prime-data-centers.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 4
     }
   ],
   "aypa-power": [
@@ -3099,6 +3165,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-10-04",
       "supersededBy": 3
+    },
+    {
+      "file": "aep.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 4
     }
   ],
   "coolit": [
@@ -3129,6 +3201,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-26",
       "supersededBy": 2
+    },
+    {
+      "file": "blackstone.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 3
     }
   ],
   "brookfield": [
@@ -3145,6 +3223,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-26",
       "supersededBy": 2
+    },
+    {
+      "file": "macquarie.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 3
     }
   ],
   "clearway-energy": [
@@ -3205,6 +3289,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-10-04",
       "supersededBy": 4
+    },
+    {
+      "file": "nscale.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 5
     }
   ],
   "duke-energy": [
@@ -3253,6 +3343,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-10-04",
       "supersededBy": 2
+    },
+    {
+      "file": "cpp-investments.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 3
     }
   ],
   "blackrock": [
@@ -3260,6 +3356,62 @@
       "file": "blackrock.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-10-04",
+      "supersededBy": 2
+    }
+  ],
+  "dominion-energy": [
+    {
+      "file": "dominion-energy.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 2
+    }
+  ],
+  "softbank": [
+    {
+      "file": "softbank.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 2
+    }
+  ],
+  "sb-energy": [
+    {
+      "file": "sb-energy.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 2
+    }
+  ],
+  "blue-owl": [
+    {
+      "file": "blue-owl.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 2
+    }
+  ],
+  "exelon": [
+    {
+      "file": "exelon.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 2
+    }
+  ],
+  "apex-clean-energy": [
+    {
+      "file": "apex-clean-energy.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-10-05",
+      "supersededBy": 2
+    }
+  ],
+  "x-energy": [
+    {
+      "file": "x-energy.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-10-05",
       "supersededBy": 2
     }
   ]

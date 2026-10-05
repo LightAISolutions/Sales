@@ -14,7 +14,7 @@
     "type": "private"
   },
   "summary": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, a contract Nscale's Form S-1 of 18 September 2026 states at 'up to approximately $44.6 billion' with Anthropic PBC for four tranches of Vera Rubin capacity at Monarch (press: six years, 460 MW), and a reported USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.\n\nBACKGROUND. A Delaware public benefit corporation founded in 2021 by Dario and Daniela Amodei and five other former OpenAI researchers, governed by a Long-Term Benefit Trust whose appointees have held a board majority since April 2026. Amazon is 'primary cloud provider and training partner' with USD 8 billion of convertible notes (2023–2025) converted in part to preferred stock plus USD 10 billion of Series G and H preferred bought in Q2 2026 and a USD 20 billion milestone facility; Google holds about 14% (court records, per Fortune) after commitments Google has not itself itemised; Microsoft committed up to USD 5 billion and NVIDIA up to USD 10 billion in November 2025. The company sells the Claude model family (Fable 5.1 and Mythos 5.1 from 1 September 2026, Opus 5, Sonnet 5, Haiku 4.5) through its API, Amazon Bedrock, Google Vertex AI and Microsoft Foundry, Claude Code (USD 2.5 billion run-rate by February 2026) and vertical offerings for finance, life sciences, healthcare and government. It endorsed California SB 53, welcomed New York's RAISE Act, signed the EU GPAI code of practice, argues publicly for chip export controls, pledged to pay '100% of the grid upgrades needed to interconnect our data centers', and won a First Amendment ruling on 28 August 2026 against the Department of War's supply-chain-risk designation. It has not published a consolidated gigawatt total, its headcount, or a fiscal-year revenue figure.",
-  "ecosystemRole": "The compute buyer this corpus's landlords, utilities and power vendors are building for: named in Amazon's, Google's, Microsoft's and NVIDIA's own releases as the counterparty for gigawatt-denominated silicon; the end user behind Fluidstack's Google-backstopped leases at TeraWulf, Cipher and Hut 8; the direct tenant at TeraWulf's Justified campus and, per Bloomberg, at Riot's Rockdale; ERock's largest-ever order (470 MW of gas gensets); the reported anchor at Nscale's Monarch campus and, through Lambda and NVIDIA, at Hut 8's Beacon Point; and the anchor tenant of Theseus, the Macquarie–GIC platform that will 'develop, own, operate, and lease' facilities to it. Its make-versus-lease answer is neither: it leases buildings, has chips bought by an Apollo–Blackstone vehicle with Broadcom residual-value support, and buys the generation.",
+  "ecosystemRole": "The compute buyer this corpus's landlords, utilities and power vendors are building for: named in Amazon's, Google's, Microsoft's and NVIDIA's own releases as the counterparty for gigawatt-denominated silicon; the end user behind Fluidstack's Google-backstopped leases at TeraWulf, Cipher and Hut 8; the direct tenant at TeraWulf's Justified campus and, per Bloomberg, at Riot's Rockdale; ERock's largest-ever order (470 MW of gas gensets); the reported anchor at Nscale's Monarch campus and, through Lambda and NVIDIA, at Hut 8's Beacon Point; and the anchor tenant of Theseus, the Macquarie–GIC platform that will 'develop, own, operate, and lease' facilities to it. Its make-versus-lease answer is neither: it leases buildings, has chips bought by an Apollo-managed fund financed through Broadcom's AI XPV Platform, with Apollo and Blackstone as anchor investors and Broadcom backstopping the lease, and buys the generation.",
   "productsAndServices": [
     {
       "name": "Compute procurement — the three-silicon supply book (Amazon Trainium, Google TPU, NVIDIA on Azure and neoclouds)",
@@ -29,7 +29,7 @@
         "Anthropic has never published a consolidated total; MeasuredAI's tracker headline is '15+ GW' and DCD cites 'more than 10GW of servers from cloud providers including a $200 billion agreement with Google' — the USD 200 billion figure has no primary source."
       ],
       "positioning": "OpenAI's compute book is larger and NVIDIA-centred (the corpus's openai dossier records ~30 GW committed); Anthropic's is the only frontier book split across three silicon platforms, which its own releases present as 'a disciplined approach to scaling infrastructure' and which The Register and Dealroom present as circular — Amazon, Google, Microsoft and NVIDIA are all shareholders and suppliers.",
-      "soldThrough": "Not sold; contracted. Cloud commitments (take-or-pay style, with Amazon's USD 20 billion facility released 'as we reach certain delivery milestones of compute capacity'), direct leases (TeraWulf, Riot per Bloomberg), tenant-operator programmes (Fluidstack), chip-leasing SPVs (Apollo–Blackstone, Broadcom residual-value support) and an anchor-tenant platform (Theseus).",
+      "soldThrough": "Not sold; contracted. Cloud commitments (take-or-pay style, with Amazon's USD 20 billion facility released 'as we reach certain delivery milestones of compute capacity'), direct leases (TeraWulf, Riot per Bloomberg), tenant-operator programmes (Fluidstack), chip-leasing vehicles (Broadcom's AI XPV Platform, led by Apollo with Blackstone; Broadcom lease backstop) and an anchor-tenant platform (Theseus).",
       "targetSegments": [
         "Claude training runs (Anthropic projects a single model needs '2GW capacity in 2027 and 5GW in 2028')",
         "Inference for API, Claude Code and enterprise customers"
@@ -46,7 +46,7 @@
         "ERock (11 August 2026): 'Executed a 470 MW equipment purchase order with Anthropic … extending production commitments into 2028'; backlog 'approximately $1.7 billion'; natural-gas RockBlock generators, no sites named — Anthropic has not announced it.",
         "Riot Platforms (10 August 2026): '191 MW critical IT build-to-suit Tier 3 data center at Riot's Rockdale campus', 20 years to June 2048, '$9.1 billion' (USD 16.1 billion with options), 'initial 96 IT MW expected in December 2027', a USD 573 million Morgan Stanley interim facility and an 'IG-Backstop in Finalization'; tenant 'one of the world's leading frontier AI labs' — Anthropic per Bloomberg.",
         "Theseus (Macquarie, 10 August 2026): MAM funds and GIC 'jointly own the platform and provide majority equity funding for each project', Anthropic as anchor tenant, US focus, no capital figure, capacity or sites disclosed; Anthropic commits to cover consumer electricity-price increases from these sites.",
-        "Chips at the Fluidstack sites: press accounts of the Broadcom–Apollo–Blackstone vehicle (June–September 2026, about USD 35–36 billion in tranches) describe an SPV that 'will purchase Google's chips and lease them to Anthropic for use at facilities in New York, Texas, Louisiana, and Indiana', with Broadcom 'providing a residual value support agreement'; Bloomberg reported Blackstone weighing a second package.",
+        "Chips at the Fluidstack sites: Broadcom announced the AI XPV Platform on 9 June 2026 with Apollo and Blackstone as initial anchor investors and an initial USD 35bn tranche led by Apollo; Apollo's Q2 2026 10-Q places the purchase obligation for the compute in an Apollo-managed fund, and Broadcom's 10-Q describes a backstop of the five-year lease payments of up to about USD 29bn. Press accounts (June–September 2026, about USD 35–36 billion in tranches) describe an SPV that 'will purchase Google's chips and lease them to Anthropic for use at facilities in New York, Texas, Louisiana, and Indiana', with Broadcom 'providing a residual value support agreement'; Bloomberg reported Blackstone weighing a second package.",
         "MLQ (2026): 'more than a dozen preliminary agreements to lease U.S. data centers with a combined capacity exceeding 1 gigawatt' — search-summary only."
       ],
       "positioning": "Among frontier labs Anthropic sits between OpenAI (Stargate's landlord-financed campuses through Oracle, Crusoe and SoftBank) and xAI (self-built Colossus): it contracts directly for buildings and generation but owns neither, and its chips at leased sites are owned by lessors. The corpus's terawulf dossier calls the Justified lease 'graduation day' from middleman tenancy.",
@@ -359,9 +359,9 @@
     {
       "date": "2026-06-10",
       "category": "financial",
-      "headline": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial tranche of about USD 35 billion to buy Google TPUs and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value",
+      "headline": "Broadcom announces the AI XPV Platform with Apollo and Blackstone as initial anchor investors: an initial USD 35 billion tranche, led by Apollo, to buy TPUs (Google-built, per press) and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value",
       "read": "The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
-      "source": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html"
+      "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl"
     },
     {
       "date": "2026-06-04",
@@ -580,7 +580,7 @@
       "scale": "up to 1 million TPUs, 'well over a gigawatt' 2026; 'multiple gigawatts' from 2027 (Anthropic recap: 5 GW); ~14% equity",
       "via": "Google Cloud TPUs (Ironwood and next-generation, supplied through Broadcom); Vertex AI",
       "note": "Google supplies TPUs — 'up to one million' with 'well over a gigawatt' in 2026 and 'multiple gigawatts' from 2027 through Broadcom — holds about 14% of Anthropic (court records per Fortune, capped at 15%), backstops Fluidstack's leases at the Anthropic sites, and is Vertex AI's Claude distributor; press reports an up-to-USD 40 billion 2026 commitment that Google has not itself itemised.",
-      "context": "Google Cloud (23 October 2025): 'Anthropic will have access to up to one million TPU chips', 'well over a gigawatt of capacity coming online in 2026', 'worth tens of billions of dollars'; (6 April 2026): 'multiple gigawatts of TPU capacity' 'expected to come online starting in 2027', 'Google-built TPUs supplied through Broadcom'. Anthropic's May 2026 recap: 'Google and Broadcom: 5 GW agreement beginning in 2027'. CNBC and Bloomberg (24 April 2026): USD 10 billion now at a USD 350 billion valuation plus USD 30 billion on milestones and five gigawatts over five years — no Google primary statement was located and Alphabet's Q1 2026 10-Q does not name Anthropic.\n\nThe CMA cleared Google's 2023–24 investment ('up to $2 billion') in November 2024. Fortune (June 2026): 'roughly 14% of Anthropic in straight equity, hard-capped contractually at 15%'. Google is also the guarantor of record on every Fluidstack lease serving Anthropic (TeraWulf, Cipher, Hut 8, Meridian Arc filings) and, per press accounts, the designer of the chips the Apollo–Blackstone vehicle leases to Anthropic. Google pays SpaceX/xAI for Colossus capacity in parallel — the same landlord serves both labs.",
+      "context": "Google Cloud (23 October 2025): 'Anthropic will have access to up to one million TPU chips', 'well over a gigawatt of capacity coming online in 2026', 'worth tens of billions of dollars'; (6 April 2026): 'multiple gigawatts of TPU capacity' 'expected to come online starting in 2027', 'Google-built TPUs supplied through Broadcom'. Anthropic's May 2026 recap: 'Google and Broadcom: 5 GW agreement beginning in 2027'. CNBC and Bloomberg (24 April 2026): USD 10 billion now at a USD 350 billion valuation plus USD 30 billion on milestones and five gigawatts over five years — no Google primary statement was located and Alphabet's Q1 2026 10-Q does not name Anthropic.\n\nThe CMA cleared Google's 2023–24 investment ('up to $2 billion') in November 2024. Fortune (June 2026): 'roughly 14% of Anthropic in straight equity, hard-capped contractually at 15%'. Google is also the guarantor of record on every Fluidstack lease serving Anthropic (TeraWulf, Cipher, Hut 8, Meridian Arc filings) and, per press accounts, the designer of the chips leased to Anthropic under Broadcom's AI XPV Platform. Google pays SpaceX/xAI for Colossus capacity in parallel — the same landlord serves both labs.",
       "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
     },
     {
@@ -634,7 +634,7 @@
       "since": "2025-11",
       "scale": "USD 50 billion programme; ~1.4 GW of Google-backstopped leases at TeraWulf, Cipher, Hut 8 and Meridian Arc",
       "via": "custom-built data centres in Texas, New York, Louisiana and Indiana",
-      "note": "Fluidstack is the tenant-operator of Anthropic's USD 50 billion US data-centre programme announced on 12 November 2025 — the leases sit in Fluidstack subsidiaries with Google backstops, the buildings belong to TeraWulf, Cipher, Hut 8 and Meridian Arc, and the chips are bought by an Apollo–Blackstone vehicle and leased to Anthropic.",
+      "note": "Fluidstack is the tenant-operator of Anthropic's USD 50 billion US data-centre programme announced on 12 November 2025 — the leases sit in Fluidstack subsidiaries with Google backstops, the buildings belong to TeraWulf, Cipher, Hut 8 and Meridian Arc, and the chips are bought by an Apollo-managed fund under Broadcom's AI XPV Platform and leased to Anthropic.",
       "context": "Anthropic's release: 'building data centers with Fluidstack in Texas and New York, with more sites to come', chosen 'for its ability to move with exceptional agility, enabling rapid delivery of gigawatts of power'; 'approximately 800 permanent jobs and 2,400 construction jobs'. Hut 8's 17 December 2025 release names Anthropic as end user of the Fluidstack-operated River Bend clusters ('at least 245 megawatts and up to 2,295 MW'). MeasuredAI's reading: 'Anthropic is not a party to the lease and guarantees nothing'. Anthropic's July 2026 Justified lease and its reported Nscale, Lambda and Riot contracts show it now also contracts around Fluidstack.",
       "source": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure"
     },
@@ -725,6 +725,17 @@
       "note": "Direct partnership counterparty for up to 2,295 MW of AI data-centre infrastructure, with River Bend as the launch site.",
       "context": "Hut 8 and Anthropic announced an AI infrastructure partnership on 17 December 2025, structured across tranches that establish a path from at least 245 MW to up to 2,295 MW: the River Bend launch of 245 MW of critical IT on 330 MW of Entergy Louisiana capacity; a right of first offer for up to 1,000 MW of additional IT capacity at River Bend; and up to 1,050 MW of optional capacity the two may jointly diligence and develop elsewhere in Hut 8's pipeline.\n\nThe partnership and the lease are separate instruments announced the same day, and the distinction matters for credit: the River Bend lease is between Hut 8 and a Fluidstack subsidiary, backstopped by Google, and Anthropic is not a party to it. Anthropic's own quoted framing is that the arrangement 'is an expansion of our existing work with Fluidstack and marks a new opportunity to collaborate with Hut 8 to bring additional capacity online by early 2027'.",
       "source": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack"
+    },
+    {
+      "slug": "apollo",
+      "type": "other",
+      "status": "active",
+      "since": "2026-06",
+      "scale": "USD 35bn initial tranche; more than 1 GW of compute",
+      "via": "Broadcom AI XPV Platform",
+      "note": "Apollo leads the initial USD 35bn capital solution of Broadcom's AI XPV Platform, which funds the compute racks Anthropic leases at Fluidstack-based sites; an Apollo-managed fund holds the purchase obligation.",
+      "context": "Broadcom's release of 9 June 2026, reposted by Apollo, establishes the AI XPV Platform with Apollo and Blackstone's Credit & Insurance business as initial anchor investors and an initial USD 35bn tranche led by Apollo 'to facilitate Anthropic's previously-announced capacity expansion of more than 1 gigawatt of compute infrastructure expected to deploy in Fluidstack-based sites starting in mid-2026'.\n\nApollo's Q2 2026 10-Q says an Apollo-managed fund, WarehouseCo Intermediate Holdings LP, holds the purchase obligation for the compute and that Athene guarantees 15% of it; Broadcom's 10-Q describes its backstop of the customer's five-year lease obligations (maximum about USD 29bn undiscounted). Anthropic is the lessee; Apollo is the financier.",
+      "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl"
     }
   ],
   "policyExposure": [
@@ -1066,7 +1077,7 @@
   },
   "strategyRead": [
     "1. **(High confidence)** We assess that Anthropic's compute strategy is a deliberate three-silicon hedge whose price is dependence on suppliers that are also its shareholders. Basis: Trainium (up to 5 GW, more than USD 100 billion over ten years, Amazon holding about USD 190 billion of Anthropic paper), TPUs (well over 1 GW in 2026, multiple GW from 2027, Google about 14%), and NVIDIA on Azure, Colossus, CoreWeave and Lambda (Microsoft up to USD 5 billion, NVIDIA up to USD 10 billion); the company's own phrase is 'a disciplined approach to scaling infrastructure'. Amazon's USD 20 billion facility released 'as we reach certain delivery milestones of compute capacity' makes the investor's cash contingent on the supplier's deliveries — the circularity is contractual, not rhetorical.",
-    "2. **(High confidence)** We assess that in 2026 Anthropic crossed from cloud customer to direct infrastructure counterparty without becoming an owner. Basis: the 401 MW Justified lease in its own name, Riot's 191 MW build-to-suit (tenant per Bloomberg), the 470 MW ERock equipment order, the Theseus anchor-tenant platform and the Apollo–Blackstone chip vehicle — leases, generation and lessor-owned chips, but no owned campus. This is the make-versus-lease answer the corpus's xai dossier poses: rent the building, buy the power, let a lessor hold the silicon and a hyperscaler hold the credit.",
+    "2. **(High confidence)** We assess that in 2026 Anthropic crossed from cloud customer to direct infrastructure counterparty without becoming an owner. Basis: the 401 MW Justified lease in its own name, Riot's 191 MW build-to-suit (tenant per Bloomberg), the 470 MW ERock equipment order, the Theseus anchor-tenant platform and the Apollo-led chip financing under Broadcom's AI XPV Platform — leases, generation and lessor-owned chips, but no owned campus. This is the make-versus-lease answer the corpus's xai dossier poses: rent the building, buy the power, let a lessor hold the silicon and a hyperscaler hold the credit.",
     "3. **(High confidence)** We assess that power, not chips, is the buyer's binding constraint and that Anthropic is paying to remove it. Basis: 'Build AI in America' (50 GW by 2028; 2 GW per training run in 2027, 5 GW in 2028); the February 2026 pledge to pay '100% of the grid upgrades'; the 470 MW on-site gas order; Monarch's islanded 2 GW; Data Center Frontier's flag that transformers, switchgear and chillers are the choke point on the Justified schedule. The buyer is absorbing costs — grid upgrades, generation, consumer price effects — that utilities' large-load tariffs are only beginning to require.",
     "4. **(Moderate confidence)** We assess that delivery-date risk is now larger than allocation risk, and that the 2H 2026 to early 2028 window will show whether the book is real. Basis: Trainium 'nearly 1GW' by end-2026, Fluidstack sites 'throughout 2026' (CB-5 already moved to early 2027), Barber Lake Q4 2026–Q1 2027 (slipped from September 2026 by Cipher's 24 September amendment), River Bend Q2 2027, Justified 2H 2027, Rockdale December 2027, Monarch late 2027, TPUs 'starting in 2027'. One filing now reports a missed milestone — Barber Lake's phased delivery and a USD 359.3 million overrun framework at Cipher; the mid-2026 rate limits the company attributed to a compute shortage show what a slip costs. Startup counterparties — Volta was seven months old, Nscale two years — carry the execution.",
     "5. **(Moderate confidence)** We assess that the run-rate the compute is priced on is real but the numbers after May 2026 are not the company's. Basis: USD 14 billion, USD 30 billion and USD 47 billion are Anthropic statements at funding events; USD 65 billion (Bloomberg, August) and the USD 100–120 billion year-end expectation (FT) are sourced to 'people familiar'. TechXplore's 'at least $135 billion' of 2026 commitments is likewise a press tally. The S-1 will replace all of it; until then the ratio of commitments to revenue is an estimate built on estimates.",
@@ -1086,6 +1097,11 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
       "date": "2026-09-18",
       "party": "disclosure"
+    },
+    {
+      "label": "Broadcom — Form 10-Q, quarter ended 2 August 2026 (AI XPV platform and backstop)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+      "date": "2026-09-10"
     },
     {
       "label": "TechXplore — Anthropic's $35B deal with NVIDIA-backed Lambda",
@@ -1223,6 +1239,11 @@
       "date": "2026-08-10"
     },
     {
+      "label": "Apollo Global Management — Form 10-Q, quarter ended 30 June 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm",
+      "date": "2026-08-10"
+    },
+    {
       "label": "Anthropic — Tino Cuéllar named Chief Global Affairs Officer",
       "url": "https://www.anthropic.com/news/tino-cuellar",
       "date": "2026-08-04"
@@ -1320,6 +1341,11 @@
     {
       "label": "Anthropic — Claude Fable 5 and Mythos 5",
       "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "date": "2026-06-09"
+    },
+    {
+      "label": "Broadcom, Apollo and Blackstone establish the AI XPV Platform (joint release, Apollo newsroom)",
+      "url": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
       "date": "2026-06-09"
     },
     {
@@ -1829,6 +1855,6 @@
       "url": "https://www.hut8.com/data-centers/river-bend"
     }
   ],
-  "lastUpdated": "2026-10-02",
-  "profileVersion": 4
+  "lastUpdated": "2026-10-05",
+  "profileVersion": 5
 }

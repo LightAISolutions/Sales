@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-04",
+  "updated": "2026-10-05",
   "description": "Research payload for repository-information/profiler-refresh-calendar.json, keyed by slug. `source` says where to verify the next report; `watch` is the research priority list a refresh works from. Split out of the calendar on 2026-09-21 (v07.02r) because these two fields were 98% of that file's 375 KB while the scheduling logic needs none of them: a Routine reading the queue now reads ~20 KB instead of ~375 KB, and pulls notes only for the handful of rows it actually works on. One entry per calendar row, enforced by scripts/sync-profiler-registry.py.",
   "notes": {
     "abb": {
@@ -91,6 +91,17 @@
         "Apex is queued for a `profiler prep` study-guide backfill among the IPPs in §5. IF ARES SELLS OR LISTS IT, convert this row."
       ]
     },
+    "apollo": {
+      "source": "PUBLIC COMPANY — NYSE: APO (Apollo Global Management, Inc., CIK 1858681; fiscal year ends 31 December). COMPANY-CONFIRMED: Apollo's release of 29 September 2026 says it will report third-quarter 2026 results on Tuesday 3 November 2026 before the NYSE opens, with an 8:30 a.m. ET webcast (apollo.com newsroom; ir.apollo.com detail/652). Pattern: a material-event 8-K with preliminary alternative and principal-investing income on the first business day after quarter-end, then full results about five weeks later. Consensus is adjusted net income per share (Zacks USD 2.30 for Q3 as of 4 August). Apollo files the 10-K/10-Q for the group including Athene; Athene Holding files separately; Apollo Debt Solutions BDC files its own 8-Ks on repurchase requests.",
+      "watch": [
+        "Q3 2026 results (3 Nov 2026): inflows, Athene's spread-related earnings and any update on drawings under the Broadcom AI XPV capital solution (USD 35bn initial tranche; Athene's 15% guarantee of the purchase obligation).",
+        "Stream Data Centers: any announced lease with Anthropic (reported in early talks for up to 1 GW on 22–23 Sep 2026; no party has announced it) and Stream's named equipment suppliers — record a lease only from a party's own release.",
+        "Final agreements under the NVIDIA compute-financing memoranda of 10 Aug 2026 — the first per-firm allocation.",
+        "Closings: Eagle Creek Renewable Energy (~700 MW hydro, agreed 6 Oct 2025) and the Kelvion sale to SLB (expected H1 2027).",
+        "The S.D.N.Y. securities class action over the Epstein statements (Feldman v. Apollo, 1:26-cv-01692): motion-to-dismiss ruling.",
+        "Apollo Debt Solutions BDC: Q4 repurchase requests against the 5% cap (Q3: about 14.7%)."
+      ]
+    },
     "applied-digital": {
       "source": "Investing.com earnings calendar (fiscal Q1 2027, quarter ended 2026-08-31); matches the early-to-mid-October Q1 cadence, not company-confirmed — verify at https://ir.applieddigital.com/news-events/press-releases",
       "watch": [
@@ -101,6 +112,17 @@
         "Delivery milestones at PF1/PF2",
         "Financing actions (project notes, Macquarie preferred draws)",
         "ChronoScale (CHRN) status"
+      ]
+    },
+    "ares": {
+      "source": "PUBLIC COMPANY — NYSE: ARES (Ares Management Corporation, CIK 1176948; fiscal year ends 31 December). COMPANY-CONFIRMED: Ares's release of 29 September 2026, with a time update on 2 October, sets third-quarter 2026 results for Thursday 29 October 2026 before the NYSE opens, with a 9:00 a.m. ET call. ir.ares.com renders only in a browser; Ares's releases are mirrored verbatim on eqs-news.com, and aresmgmt.com returns 403 to scripted requests (the site moved to ares.com). Consensus is after-tax realized income per share (Zacks). Ares has published no release on Apex Clean Energy, Prime Data Centers, SB Energy, X-energy or ENGIE — those records are the counterparties' and Ares staff bios.",
+      "watch": [
+        "Q3 2026 results (29 Oct 2026): whether the 'over USD 350 million' 2026 realized net performance income expectation (8-K, 31 Mar 2026) survives — the first three quarters total about USD 136m on preliminary figures.",
+        "Ada Infrastructure: a named power-equipment supplier or tenant at the Spotsylvania, Virginia campus (200 MW phase one) or the Tokyo/Osaka campuses of Japan DC Partners I.",
+        "Apex Clean Energy: the outcome of the minority-stake process ION Analytics reported on 4 Dec 2025 (Lazard) — record it only from a party's release.",
+        "SB Energy IPO pricing: triggers the full redemption of Ares's USD 800m SBE Global preferred and the ~USD 40m warrant settlement.",
+        "Prime Data Centers: any filing settling who controls Prime after Macquarie's exit (Grain's April 2026 release calls Data Realty Holding Corp. the controlling shareholder).",
+        "Ares Strategic Income Fund Q4 repurchase requests against the 5% cap (Q3: 13.1%); Ares Capital non-accruals (2.4% at cost at 30 Jun 2026)."
       ]
     },
     "arevon": {
@@ -1366,6 +1388,17 @@
         "Further stabilized-asset drop-downs into Blue Owl's perpetual REIT",
         "EMEA restructuring under founder Cox after the Apollo colo carve-out",
         "Americas master-trust ABS cadence"
+      ]
+    },
+    "stonepeak": {
+      "source": "PRIVATE MANAGER — no earnings clock; the row is a cadence row swept quarterly. First-party record: Form ADV for Stonepeak Partners LP (CRD 159699; reports.adviserinfo.sec.gov PDF and the IAPD JSON — SEC hosts, use SEC_USER_AGENT), its funds' Form D filings on EDGAR, the Stonepeak-Plus Infrastructure Fund LP 10-K/10-Q (CIK 2045458), and stonepeak.com news (the WordPress JSON API at stonepeak.com/wp-json/wp/v2/posts returns release bodies; some 2021–22 releases come back empty). Counterparty records: Dominion's 10-Q (CVOW), American Tower's 10-K (CoreSite), Woodside's 6-K (Louisiana LNG), the platforms' own newsrooms (Cologix, Digital Edge, Montera, Kingdom via GlobeNewswire). Tier core because Stonepeak controls data-centre and battery platforms that buy power equipment (Cologix, Digital Edge, Montera, Kingdom) and two signed control deals (Cleco, Castrol) are pending.",
+      "watch": [
+        "Cleco (Louisiana utility, 2,676 MW of generation): regulatory approvals and closing — Stonepeak holds the majority on close, with Bernhard Capital Partners.",
+        "AMPYR Distributed Energy: closing notice (expected 'in the coming days' on 22 Sep 2026) and the stake size, which decides whether it is a controlled platform.",
+        "Kingdom's next Japanese BESS project financings and their named battery suppliers (CATL at Mimasaka); Montera PHX1 (500 MW, in service Q2 2028) equipment choices.",
+        "Fund V final close (USD 7.29bn sold per the January 2025 Form D; USD 15bn target reported) and Asia Infrastructure Fund II.",
+        "CVOW cost and schedule in Dominion's 10-Q (about USD 11.7bn estimated; final turbines by end-2027) and any optional Stonepeak contributions above USD 11.3bn.",
+        "Castrol closing (majority controlling interest at about USD 10.1bn enterprise value; bp 35%; CPP Investments up to USD 1.05bn)."
       ]
     },
     "strata-clean-energy": {

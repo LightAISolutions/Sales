@@ -217,6 +217,16 @@
    "context": "Sungrow leads Wood Mackenzie's first global BESS integrator ranking (July 2026) as an AC-block vendor with its own bundled EMS and service organization; FlexGen competes for the controls/SCADA and lifecycle-services layers against exactly such OEM-bundled stacks (PowerStack/PowerTitan fleets included), selling vendor independence and orphaned-fleet support.",
    "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
+  },
+  {
+   "slug": "apollo",
+   "type": "investor",
+   "status": "active",
+   "since": "2021-08",
+   "scale": "USD 150m equity commitment (2021); current stake undisclosed",
+   "note": "Funds managed by Apollo affiliates committed USD 150m of equity to FlexGen in 2021; the current stake is undisclosed.",
+   "context": "FlexGen's release of 25 August 2021 announced a USD 150m equity commitment from funds managed by affiliates of Apollo alongside its existing investors. Neither party has published the size of the resulting stake, and no Apollo release since covers FlexGen. A minority equity commitment, not a controlling purchase.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2021/08/funds-managed-by-affiliates-of-apollo-global-management-announce-150-million-equity-commitment-to-flexgen-power-systems-inc-130337477"
   }
  ],
  "technicalSpecs": [
@@ -560,6 +570,11 @@
    "date": "2021-12"
   },
   {
+   "label": "Apollo — affiliates' funds announce USD 150m equity commitment to FlexGen",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2021/08/funds-managed-by-affiliates-of-apollo-global-management-announce-150-million-equity-commitment-to-flexgen-power-systems-inc-130337477",
+   "date": "2021-08-25"
+  },
+  {
    "label": "PR Newswire — Apollo $150M equity commitment (Aug 2021)",
    "url": "https://www.prnewswire.com/news-releases/funds-managed-by-affiliates-of-apollo-global-management-announce-150-million-equity-commitment-to-flexgen-power-systems-inc-301362572.html",
    "date": "2021-08"
@@ -605,6 +620,6 @@
    "url": "https://linxon.com/press-release-flexgen-and-linxon-announce-collaboration-to-advance-energy-storage-solutions/"
   }
  ],
- "lastUpdated": "2026-09-05",
- "profileVersion": 7
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 8
 }

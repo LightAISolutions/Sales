@@ -13,7 +13,7 @@
   "ticker": "NYSE: D"
  },
  "employees": "~15,200 full-time at December 31, 2025, of which ~6,700 at Virginia Electric and Power Company (FY2025 Form 10-K)",
- "summary": "BOTTOM LINE UP FRONT: Dominion Energy Virginia is the regulated gatekeeper for the largest data-center cluster in the world, and it is being acquired: contracted data-center capacity stood at about 53.8 GW in July 2026 (12.0 GW under firm electric service agreements, 9.4 GW under construction authorizations, 32.4 GW at the substation-engineering stage) against an all-time system peak of 24,678 MW; a new GS-5 rate class with 14-year contracts and 85 percent transmission-and-distribution minimums takes effect on January 1, 2027; a $64.7B five-year capital plan is 25 percent transmission and 18 percent new gas; and on May 15, 2026 the company agreed to an all-stock combination with NextEra Energy that its shareholders vote on today, September 3, 2026, with closing expected in the second half of 2027. BACKGROUND. Richmond, Virginia; NYSE: D. Per the FY2025 Form 10-K the company serves approximately 4.1 million primarily electric utility customers in Virginia, North Carolina and South Carolina with approximately 30.7 GW of generating capacity, 10,800 miles of transmission and 80,400 miles of distribution; Virginia Electric and Power Company (Dominion Energy Virginia) serves approximately 2.8 million customers in Virginia and North Carolina, and data centers were 28 percent of its electricity sales in 2025 (26 percent in 2024). FY2025 operating earnings were $3.42 per share on operating revenue of $16,506M; 2026 guidance is $3.45–$3.69. The Virginia State Corporation Commission set Dominion Energy Virginia's rates in a biennial review whose final order of November 25, 2025 authorized a 9.8 percent return on equity, approved $565.7M and $209.9M of base-rate increases for 2026 and 2027, created the GS-5 class and certified the 944 MW Chesterfield Energy Reliability Center for 2029. The 2025 Integrated Resource Plan Update forecasts demand in the PJM DOM Zone rising 6.3 percent a year over the next decade and more than doubling by 2045; its preferred plan adds 17,534 MW of solar, 3,460 MW of wind, 2,000 MW of storage, 1,944 MW of small modular reactors and 8,510 MW of gas by 2045. Collection gap: the standalone GS-5 rate sheet, the collateral quantum in dollars per megawatt and the SCC's final-order text were not reachable; the ramp, exit-fee and notice terms below rest on the SCC's own fact sheet and the company's investor deck, with secondary summaries flagged where used.",
+ "summary": "BOTTOM LINE UP FRONT: Dominion Energy Virginia is the regulated gatekeeper for the largest data-center cluster in the world, and it is being acquired: contracted data-center capacity stood at about 53.8 GW in July 2026 (12.0 GW under firm electric service agreements, 9.4 GW under construction authorizations, 32.4 GW at the substation-engineering stage) against an all-time system peak of 24,678 MW; a new GS-5 rate class with 14-year contracts and 85 percent transmission-and-distribution minimums takes effect on January 1, 2027; a $64.7B five-year capital plan is 25 percent transmission and 18 percent new gas; and on May 15, 2026 the company agreed to a combination with NextEra Energy — 0.8138 NextEra shares plus a pro rata share of $360 million in cash per Dominion share, per the merger 8-K — that its shareholders vote on today, September 3, 2026, with closing expected in the second half of 2027. BACKGROUND. Richmond, Virginia; NYSE: D. Per the FY2025 Form 10-K the company serves approximately 4.1 million primarily electric utility customers in Virginia, North Carolina and South Carolina with approximately 30.7 GW of generating capacity, 10,800 miles of transmission and 80,400 miles of distribution; Virginia Electric and Power Company (Dominion Energy Virginia) serves approximately 2.8 million customers in Virginia and North Carolina, and data centers were 28 percent of its electricity sales in 2025 (26 percent in 2024). FY2025 operating earnings were $3.42 per share on operating revenue of $16,506M; 2026 guidance is $3.45–$3.69. The Virginia State Corporation Commission set Dominion Energy Virginia's rates in a biennial review whose final order of November 25, 2025 authorized a 9.8 percent return on equity, approved $565.7M and $209.9M of base-rate increases for 2026 and 2027, created the GS-5 class and certified the 944 MW Chesterfield Energy Reliability Center for 2029. The 2025 Integrated Resource Plan Update forecasts demand in the PJM DOM Zone rising 6.3 percent a year over the next decade and more than doubling by 2045; its preferred plan adds 17,534 MW of solar, 3,460 MW of wind, 2,000 MW of storage, 1,944 MW of small modular reactors and 8,510 MW of gas by 2045. Collection gap: the standalone GS-5 rate sheet, the collateral quantum in dollars per megawatt and the SCC's final-order text were not reachable; the ramp, exit-fee and notice terms below rest on the SCC's own fact sheet and the company's investor deck, with secondary summaries flagged where used.",
  "ecosystemRole": "We assess Dominion Energy Virginia as the entity whose calendar, not any customer's, decides when Loudoun County's campuses get power — the substation-engineering, construction-authorization and electric-service-agreement ladder it publishes is the sequence every hyperscaler and colocation operator in this file that builds in Northern Virginia is standing in. Basis: the company's own Data Center Requests page and investor decks, the 2022 eastern-Loudoun transmission pause and the 500/230 kV Reliability Loop now being built to end it, and the SCC's February 2026 record of roughly 70,000 MW of pending requests. For the storage and power-equipment sellers in this corpus it is three different counterparties at once: a statutory buyer of storage and solar through an annual solicitation cycle (a Virginia law of April 2026 mandates 4.0 GW of short-duration storage by 2030 and 16.0 GW by 2045); a self-builder of gas, transmission and offshore wind recovered through riders; and the utility whose tariff terms — the GS-5 minimums, the direct-assignment of transmission costs ordered in July 2026 — set the economics of every behind-the-meter bridge-power and buffering project on its system. Per the merger releases, after the NextEra combination closes Dominion Energy Virginia keeps its president and its dockets, but supplier qualification is likely to be read against NextEra's platform.",
  "productsAndServices": [
   {
@@ -687,7 +687,7 @@
   {
    "date": "2026-05-18",
    "category": "ma",
-   "headline": "NextEra Energy and Dominion Energy agree to combine in an all-stock transaction: 0.8138 NextEra shares plus a pro rata share of $360M in cash per Dominion share; NextEra 74.5% / Dominion 25.5%; combined ~10 million customer accounts, 110 GW, $138B rate base; Ketchum as CEO, Blue as president and CEO of regulated utilities, Baine keeps Dominion Energy Virginia",
+   "headline": "NextEra Energy and Dominion Energy agree to combine in a stock-and-cash transaction: 0.8138 NextEra shares plus a pro rata share of $360M in cash per Dominion share; NextEra 74.5% / Dominion 25.5%; combined ~10 million customer accounts, 110 GW, $138B rate base; Ketchum as CEO, Blue as president and CEO of regulated utilities, Baine keeps Dominion Energy Virginia",
    "read": "The largest regulated utility business in the world is being assembled around the largest data-center cluster in the world; Dominion's dockets survive, its capital allocation does not stay its own.",
    "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-to-Combine-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers/default.aspx"
   },
@@ -978,9 +978,20 @@
    "since": "2026-05",
    "scale": "0.8138 NextEra shares plus a pro rata share of $360M cash per Dominion share; NextEra 74.5% / Dominion 25.5%",
    "via": "NextEra Energy–Dominion Energy combination",
-   "note": "NextEra Energy, the parent of NextEra Energy Resources, agreed on May 15, 2026 to acquire Dominion Energy in an all-stock combination expected to close in the second half of 2027.",
+   "note": "NextEra Energy, the parent of NextEra Energy Resources, agreed on May 15, 2026 to acquire Dominion Energy for 0.8138 NextEra shares plus a pro rata share of $360 million in cash per Dominion share, with closing expected in the second half of 2027.",
    "context": "The May 18, 2026 joint release sets the exchange ratio at 0.8138 NextEra shares per Dominion share plus a one-time aggregate cash payment of $360 million, pro forma ownership of approximately 74.5 percent and 25.5 percent, a combined company of approximately 10 million customer accounts, 110 GW of generation and $138 billion of rate base, John Ketchum as chairman and CEO, Robert Blue as president and CEO of regulated utilities, Edward Baine as president and CEO of Dominion Energy Virginia, dual headquarters in Juno Beach and Richmond and a board of ten NextEra and four Dominion directors. Applications were filed July 15, 2026 with the SCC (Case PUR-2026-00112, hearing November 17, 2026), the NCUC, the South Carolina PSC, FERC and the NRC, with $2.25 billion of shareholder-funded bill credits over two years post-close.\n\nThe covered dossier is NextEra Energy Resources, the merchant development subsidiary; the acquirer is its parent. For this corpus the consequence is that the largest regulated data-center utility and the largest storage developer would share an owner from late 2027.",
    "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-to-Combine-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers/default.aspx"
+  },
+  {
+   "slug": "stonepeak",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-10",
+   "scale": "50% noncontrolling interest; USD 2.6bn received at closing",
+   "via": "Coastal Virginia Offshore Wind Commercial Project (2.6 GW)",
+   "note": "Stonepeak owns a 50% noncontrolling interest in CVOW, bought in October 2024; Virginia Power keeps full operational control, and Stonepeak funds 48 percent of the remaining capital.",
+   "context": "The 8-K of 26 February 2024 records the equity capital contribution agreement with Dunedin Member LLC, a Stonepeak vehicle. Stonepeak paid 50% of construction costs incurred to closing and funds 50% of remaining costs up to a total of USD 11.3bn, with optional cost-sharing between USD 11.3bn and USD 13.7bn; Virginia Power 'will retain full operational control', and Stonepeak has 'customary minority interest rights'. The sale closed in October 2024, with Virginia Power receiving USD 2.6bn. Dominion builds and operates the project and signs its equipment contracts; Stonepeak is a co-owner and funder, not a buyer.",
+   "source": "https://www.sec.gov/Archives/edgar/data/715957/000119312524045358/d766880d8k.htm"
   }
  ],
  "policyExposure": [
@@ -1219,6 +1230,11 @@
   {
    "label": "NextEra Energy newsroom — NextEra Energy and Dominion Energy to combine",
    "url": "https://newsroom.nexteraenergy.com/2026-05-18-NextEra-Energy-and-Dominion-Energy-to-Combine,-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers?l=12",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Dominion Energy — Form 8-K, Agreement and Plan of Merger with NextEra Energy (Items 1.01, 7.01)",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526227930/d158175d8k.htm",
    "date": "2026-05-18"
   },
   {
@@ -1517,6 +1533,11 @@
    "date": "2024-11-20"
   },
   {
+   "label": "Stonepeak — Dominion Energy and Stonepeak announce closing of sale of noncontrolling interest in CVOW",
+   "url": "https://stonepeak.com/news/dominion-energy-stonepeak-announce-closing-of-sale-of-noncontrolling-equity-interest-in-coastal-virginia-offshore-wind-commercial-project",
+   "date": "2024-10-22"
+  },
+  {
    "label": "Dominion Energy — Dominion Energy and Amazon to explore advancement of small modular reactor development in Virginia",
    "url": "https://news.dominionenergy.com/press-releases/press-releases/2024/Dominion-Energy-and-Amazon-to-explore-advancement-of-Small-Modular-Reactor-SMR-nuclear-development-in-Virginia-10-16-2024/default.aspx",
    "date": "2024-10-16"
@@ -1535,6 +1556,11 @@
    "label": "Dominion Energy — Golden to Mars project FAQ",
    "url": "https://www.dominionenergy.com/-/media/content/about/power-line-projects/nova/pdfs/nova-golden-to-mars-faq-aug-2024.pdf",
    "date": "2024-08"
+  },
+  {
+   "label": "Dominion Energy — Form 8-K, equity capital contribution agreement with Stonepeak for CVOW",
+   "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312524045358/d766880d8k.htm",
+   "date": "2024-02-26"
   },
   {
    "label": "Data Center Frontier — Dominion's Virginia data center cluster could double in size",
@@ -1680,6 +1706,6 @@
    "url": "https://www.vedp.org/case-study/meta-friends-virginia"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 1
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 2
 }

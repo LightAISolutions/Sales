@@ -587,6 +587,17 @@
       "note": "Advanced-reactor peer: Oklo's Aurora (75 MWe sodium fast reactor) proceeds under DOE authorisation while X-energy pursues an NRC construction permit; the Oklo dossier names X-energy's application in its own positioning.",
       "context": "The Oklo dossier on this corpus contrasts the field's licensing paths — 'NuScale holds a standard design approval, TerraPower and Kairos hold NRC construction permits, and X-energy and Holtec have construction permit applications under review. Oklo holds no NRC reactor licence' — and both companies court the same hyperscaler-backed sponsors (Amazon's rights at X-energy; Kiewit builds Oklo's first unit and sits in X-energy's Cascade JV). No X-energy source names Oklo; the competitor typing rests on the peer set analysts and the Oklo dossier use.",
       "source": "Oklo dossier (this corpus) — product positioning naming X-energy's construction permit application; POWER Magazine 'Deadline vs. deployment' for the ARDP peer set"
+    },
+    {
+      "slug": "ares",
+      "type": "investor",
+      "status": "active",
+      "since": "2022",
+      "scale": "4.9% of Class A and 20.5% of Class B after the IPO; about 10% of the combined vote (our calculation)",
+      "via": "Ares X-Energy Holdings and co-investment vehicles",
+      "note": "Ares affiliates are significant minority holders, with two Ares partners on the board and no contractual nomination right in the prospectus.",
+      "context": "The final prospectus (27 April 2026) lists Ares-affiliated entities holding 13,844,585 Class A shares (4.9%) and 24,418,756 Class B shares (20.5%) after the offering; Class B shares carry votes but no economic rights, so by our calculation Ares holds about 10% of the combined vote. Ares's Schedule 13G (August 2026) reports 12.3% of Class A on an as-converted basis. The relationship began with Ares Acquisition Corporation's 2022 SPAC merger agreement, terminated in 2023, and an Ares bridge loan repaid in October 2024. A minority holder, not a controller.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm"
     }
   ],
   "policyExposure": [
@@ -962,6 +973,11 @@
       "date": "2026-08-13"
     },
     {
+      "label": "Ares Partners Holdco — Schedule 13G on X-Energy",
+      "url": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926095211/primary_doc.xml",
+      "date": "2026-08-12"
+    },
+    {
       "label": "X-energy — TRISO-X and Oak Ridge National Laboratory extend advanced nuclear fuel research partnership (CRADA)",
       "url": "https://x-energy.com/news/triso-x-and-oak-ridge-national-laboratory-extend-advanced-nuclear-fuel-research-partnership/",
       "date": "2026-08-11"
@@ -1091,6 +1107,11 @@
       "label": "X-energy — LG&E and KU collaborate with X-energy to explore nuclear energy",
       "url": "https://x-energy.com/news/lg-and-e-and-ku-collaborate-with-x-enrgy-to-explore-nuclear-energy/",
       "date": "2026-04-30"
+    },
+    {
+      "label": "X-Energy — final prospectus (424B4)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm",
+      "date": "2026-04-27"
     },
     {
       "label": "Renaissance Capital — small modular reactor developer X-Energy prices upsized IPO at $23, above the range",
@@ -1590,6 +1611,6 @@
       "url": "https://www.reveliolabs.com/companies/x-energy/employees/"
     }
   ],
-  "lastUpdated": "2026-09-05",
-  "profileVersion": 1
+  "lastUpdated": "2026-10-05",
+  "profileVersion": 2
 }

@@ -6,6 +6,43 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-10-04 ~09:58 PM → ~11:35 PM EST (§3 row 12: F-I3 — Apollo, Ares, Stonepeak; one attended turn with one context compaction during step 7)
+**Repo version:** v07.94r → v07.95r (one push)
+**Branch:** `claude/hopeful-knuth-g13gvz`
+**Model:** Opus 5.5 (`claude-opus-5-5`) at xhigh, as the row asked; `get_session` exposes no `usage.cost_usd` this time; rate limit `allowed_warning` on the seven-day window, no overage, resets Sat 10/10 7:00 AM ET
+
+### What was done
+
+- **Three dossiers at profileVersion 1** (schema v7, intel-briefing) with v2 study guides and lesson plans: `apollo` (42 sources), `ares` (43), `stonepeak` (56). Six research subagents (two per company); every `*.sec.gov` request, Form ADV included, went through curl with `SEC_USER_AGENT`.
+- **Roles:** `capital` — Apollo and Stonepeak **incumbents** on the record, Ares **challenger** as hypothesised (roster 18: 11 · 4 · 3); Ares also `aidc-developers-and-landlords` · **adjacent** for Ada Infrastructure, its own platform (the Quinbrook precedent). Calendar: Apollo 3 Nov and Ares 29 Oct (both confirmed by the companies' own releases); Stonepeak a quarterly cadence row, core tier.
+- **Step 7:** 38 dossier hits by the full `aka[]` grep (15 · 12 · 11; 34 distinct), read against the pre-revision copies; 23 dossiers revised, 10 substantively: the two known corrections (`softbank`/`sb-energy` on Ares's preferred; `dominion-energy`'s "all-stock" from the 8-K), `anthropic`/`fluidstack`/`blackstone` (the XPV vehicle now first-party), `blue-owl`/`stack-infrastructure` (the STACK colo carve-out completed, now Vaultica), `engie-north-america` ("49%" is on no ENGIE record; 905 MW and US$430m confirmed by ENGIE SA's 2025 annual report, Note 16.2.4) and `tract` (Cologix's 2022 recap was a USD 3.0bn equity value). Four study guides and two lesson plans corrected minimally. 6 report pins re-verified edge-only; `anthropic` and `stack-infrastructure` loud.
+- **Classroom:** 4 segments with section changes regenerated (`capital`, `aidc-developers-and-landlords`, `storage-developers-and-ipps`, `utilities`) with `--today 2026-10-05`; 15 pin-only left; Classroom.gs v02.01g.
+- §11.3 rows rewritten with a verdict per clause and flipped; `phase-f-action-plan.md` §3 row 12 landed, row 15's roster set to 18.
+
+### Where we left off
+
+- All work committed in one push (v07.95r). No slug deferred. `landscape-capital-2026-09` and `scenario-capital-objection` stay stale by design for wave B (row 15, by Wed 10/14); `landscape-aidc-developers-and-landlords-2026-09` (wave A) is now one member short too — Ares, adjacent.
+- **For the Megmeet job — who buys MV and DC power gear behind these three.** Apollo: Stream Data Centers' development teams and campus joint ventures sign (more than 4 GW of powered land); at Elk Grove Village ComEd builds the substation itself. Ares: Ada Infrastructure's design and energy-procurement leads sign for over 1 GW of campuses (the one platform a manager here owns outright); Apex's management buys its batteries and turbines; Prime's management signs, with control unsettled; the EDPR California batteries (80%) name no operator. Stonepeak: Cologix's president owns design, engineering, construction and supply chain (in Ohio AEP owns the onsite fuel cells); Digital Edge and Montera buy through their own teams (Montera's 500 MW PHX1 is undecided until 2028); Kingdom's management signs (CATL at Mimasaka); AMPYR is onsite solar with the stake undisclosed. **F-I2's finding holds:** no record shows any of the three, or these platforms, owner-furnishing MV/DC gear the way SB Energy's S-1 does — capital is a directory to the buyers; the nearest thing to a door is Ada, and even there Ada's own team signs.
+
+### Key decisions made
+
+- **Ares's ENGIE stakes stated as "minority"**, not "49%": ENGIE's releases and its 2025 annual report give no percentage; the prompt's own "49%" was carried from the dossier.
+- **Segment dates:** the generator dates lessons in EST, which still read 10/4, so the four segments were regenerated with `--today 2026-10-05` to match this session's data pins; `check-classroom-pipeline.py` (the unattended-committer contract) flags write-set and cap findings that don't bind a developer session.
+- **Pre-existing renderer bug found, not fixed** (Profiler.html is out of scope): the "Changed since vN" strip shows an "undefined" chip whenever a revision touches overview fields — `OV_DIFF_TABS` keys `overview`, the style label maps key `snapshot`. It reproduces on `iren` and `abb`. The task suggestion tool timed out.
+
+### Active context
+
+- Branch `claude/hopeful-knuth-g13gvz`; repo v07.95r; Classroom GAS v02.01g; Profiler page v01.93w (unchanged). Coverage 214 dossiers; `capital` 18 (11 · 4 · 3). CHANGELOG 90/100; Classroomgs 42/50, Profilergs 40/50.
+- `build-classroom-segments.py --check` after the regeneration: 0 with section changes, 15 pin-only. Toggles unchanged (START On, BOOKENDS Off, TIMING On, END On). Reminders untouched.
+
+### Recommendation for next session
+
+- **Run §3 row 13, ERCOT** (Fable 5.1 · xhigh) with the grid-operator schema note — the corpus's largest step 7 (73 inbound dossiers) — then PJM, so Classroom wave B (row 15, by Wed 10/14) and wave C follow on a settled roster.
+
+**To continue:** type `write the ERCOT prompt for phase-f-action-plan.md §3 row 13`
+
+## Previous Sessions
+
 **Date:** 2026-10-04 ~09:33 PM → ~10:00 PM EST (§3 row 12's prompt — F-I3: Apollo, Ares, Stonepeak — written as §15, then this save; two attended turns, no compaction)
 **Repo version:** v07.93r → v07.94r (one push; this save is a housekeeping commit, no bump)
 **Branch:** `claude/happy-hawking-u7vin4`
@@ -43,51 +80,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Paste `phase-f-action-plan.md` §15 into a fresh Opus 5.5 xhigh session** — F-I3 (Apollo, Ares, Stonepeak): identity first (two 10-K filers, Stonepeak through Form ADV), `aka[]` on F-I2's rule before the step-7 grep, the two known corrections, segment lessons regenerated (Classroom → v02.01g), §3 row 12 flipped — so wave B (row 15, by Wed 10/14) seats the full capital roster.
 
 **To continue:** type `run the F-I3 prompt in phase-f-action-plan.md §15` (or paste §15 directly).
-
-## Previous Sessions
-
-**Date:** 2026-10-04 ~07:34 PM → ~09:05 PM EST (§3 row 11: F-I2 — SoftBank, SB Energy, Blue Owl; one attended turn with one context compaction mid-reconciliation)
-**Repo version:** v07.92r → v07.93r (one push)
-**Branch:** `claude/awesome-ride-130y7a`
-**Model:** Opus 5.5 (`claude-opus-5-5`) at xhigh, as the row asked; `get_session` exposed `usage.cost_usd` **USD 65.50** shortly before the commit; rate limit `allowed_warning` on the seven-day window, no overage, resets Sat 10/10 7:00 AM ET
-
-### What was done
-
-- **The gate first:** the DigitalBridge close verified from DigitalBridge's completion Form 8-K (CIK 1679688, accession 0001104659-26-112148) — merger completed 30 September 2026 at USD 16.00 a share, the parent wholly owned by SoftBank Group Overseas GK — so SoftBank's dossier was written once, with the close as fact.
-- **Three dossiers** (profileVersion 1, intel-briefing), **three v2 guides** and **three lesson plans**: `softbank` (74 sources; capital incumbent), `sb-energy` (32; aidc-developers-and-landlords challenger and storage-developers-and-ipps challenger — changed from the hypothesis' adjacent), `blue-owl` (41; capital incumbent). Nine new concepts. Calendar: softbank 11/10 and blue-owl 10/29 confirmed; sb-energy a quarterly core cadence row.
-- **Step 7:** 66 raw aka hits read; 29 dossiers revised with reciprocal edges; three corrected (`abb` Robotics not closed, `iren` USD 2.4bn not 2.8bn, `meta` no '$26B PIMCO'); `vantage.study.json`'s STACK line corrected; 11 report pins re-verified edge-only, `abb` ×2 and `meta` left loud.
-- **Classroom:** 11 segments with section changes regenerated, 8 pin-only left; Classroom.gs v02.00g. **Plan:** §11.3 rows flipped with verdicts; §3 row 11 landed; row 15's DigitalBridge fallback retired.
-
-### Where we left off
-
-- All F-I2 work committed and pushed in one commit (v07.93r); the auto-merge workflow merges it.
-- Nothing deferred from F-I2: every slug in the step-7 read was reconciled in full, so no slug is carried to a later session.
-- **Megmeet hand-off (the row's question):** SoftBank's door is **SB Energy**, which owner-furnishes high-voltage transformers, switchgear and inverters and will equip ~8.8 GW-IT of OpenAI campuses (Milam County under construction, PORTS-Pike contracted) — a real MV/DC power-equipment buyer, gated by a CFIUS security agreement on vendors and OpenAI's consent rights over key design contracts; the PORTS gas generation and its turbines belong to another SoftBank affiliate. Through **DigitalBridge** SoftBank now owns the manager above Vantage, Switch and DataBank — each buys through its own management, so capital is a **way to find those buyers, not a door**. Blue Owl is the same: its funds own **STACK** (the door is STACK's procurement, including Jupiter for Oracle), while at Hyperion Meta specifies and at Abilene Crusoe does. Net: capital is a door only at SB Energy; everywhere else it is a directory.
-
-### Key decisions made
-
-- **SB Energy storage role → challenger, not adjacent.** Adjacent means 'not the company's primary business'; solar and storage produce 'substantially all' its revenue and 5.35 GWh of batteries are under construction. Recorded in §11.3 and the CHANGELOG.
-- **Blue Owl → capital incumbent** (the row said 'decide on the record'): ~9 GW of data-centre capacity through STACK, 80% of Hyperion, the Abilene JV and GPU lending.
-- **Lender and indirect links are typed `other`** on both sides (F-I1 precedent) — four accepts recorded (abb×softbank, blackrock×blue-owl, blue-owl×iren, blue-owl×oracle).
-- **Pins:** re-verified only edge-only revisions (each mechanically checked: every pre-existing field identical to the archived copy, every cited source unchanged); substantive revisions (`abb`, `meta`) left loud.
-- **README completeness:** five earlier archive files the tree had missed were listed along with this session's 29.
-
-### Known issues
-
-- `check-profiler-reports.py`: 7 warnings — `abb` (×2) and `meta` loud by design; `fluence`, `jinko`, `jupiter-power` and `oracle` were aged before this session and were not re-verified here.
-- `check-classroom-pipeline.py` reports its unattended-committer findings (an 11-lesson regeneration against a cap of 3, same-day `updated` dates); expected for a developer regeneration session, not a gate for it.
-- **Shell-expansion lesson:** two values in this session's own `sb-energy` draft were corrupted by an unquoted heredoc (`$4`, `$1` expanded) and fixed before commit. Write JSON containing `$` only through files or quoted heredocs (`<<'EOF'`).
-- Process slip: one research subagent made a single WebFetch to sec.gov with the default User-Agent.
-- SoftBank's OpenAI tranche figures (USD 2.2bn + 7.5bn + 22.5bn) sum to USD 32.2bn against its own USD 34.6bn cumulative at 31 March 2026; the gap is not explained in the sources read, and the dossier states SoftBank's cumulative figure.
-
-### Active context
-
-- Branch `claude/awesome-ride-130y7a`; repo v07.93r; Classroom GAS v02.00g; Profiler page v01.93w (unchanged).
-- Coverage 211 dossiers; capital segment 15 members (9 · 3 · 3). CHANGELOG 88/100; Classroomgs and Profilergs changelogs 41/50 and 40/50.
-- Toggles unchanged (START On, BOOKENDS Off, TIMING On, END On). Reminders untouched.
-
-### Recommendation for next session
-
-- Run §3 row 12, **F-I3 — Apollo, Ares, Stonepeak** (Opus 5.5 xhigh), with the §14 prompt as its pattern: verify identity first (two 10-K filers), populate `aka[]` before the step-7 grep, and expect the `capital` roster to reach 18 before wave B (row 15, by Wed 10/14), which now teaches the DigitalBridge close as fact.
-
-**To continue:** type `write the F-I3 prompt` (then paste it into a fresh Opus 5.5 xhigh session).

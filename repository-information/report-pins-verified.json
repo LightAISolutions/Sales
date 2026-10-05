@@ -62,9 +62,9 @@
       "report": "named-project-bess-attach--opportunity--2026-09-08",
       "slug": "aep",
       "pinnedVersion": 1,
-      "verifiedAt": 3,
-      "when": "2026-10-04",
-      "why": "Edge-only revision (v2 -> v3, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to sb-energy and 1 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v2. 1 of 1 cited aep source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved. Earlier verification (v2, 2026-09-26): Edge-only revision (F-I1 step 7, 2026-09-26): v2 adds one curated relationship to the new kkr dossier (the KKR and PSP 19.9% transmission stake), citing a source already in v1. Every other field is byte-identical to the archived v1; the one aep source the report cites is unchanged, and the report does not mention KKR."
+      "verifiedAt": 4,
+      "when": "2026-10-05",
+      "why": "Edge-only revision (v3 -> v4, F-I3 step 7, 2026-10-05), checked mechanically against archive/aep.profile.v3.json: every field other than relationships, sources, profileVersion and lastUpdated is identical; the pre-existing relationships[] prefix is identical and only a 'stonepeak' edge (AEP Ohio's Cologix fuel-cell contract) and one source (Cologix's 2022 recapitalisation release) was appended; every pre-existing source is unchanged (label, url, date, party), so the 1 source(s) this edition cites from aep are unchanged. Every cited figure holds."
     },
     {
       "report": "named-project-bess-attach--opportunity--2026-09-08",
@@ -86,9 +86,9 @@
       "report": "named-project-bess-attach--opportunity--2026-09-08",
       "slug": "xai",
       "pinnedVersion": 4,
-      "verifiedAt": 6,
-      "when": "2026-09-26",
-      "why": "Short-gap pin re-verified again (v5 -> v6): the v6 revision (F-I1 step 7, 2026-09-26) adds one curated partner relationship to the new blackrock dossier (xAI's March 2025 entry into the AI Infrastructure Partnership) and its source, BlackRock's 19 March 2025 release. Every other field is byte-identical to the archived v5; both cited xai sources are unchanged, and the report does not mention BlackRock or AIP."
+      "verifiedAt": 7,
+      "when": "2026-10-05",
+      "why": "Edge-only revision (v6 -> v7, F-I3 step 7, 2026-10-05), checked mechanically against archive/xai.profile.v6.json: every field other than relationships, sources, profileVersion and lastUpdated is identical; the pre-existing relationships[] prefix is identical and only an 'apollo' edge (the Valor Compute Infrastructure financing) and its source was appended; every pre-existing source is unchanged (label, url, date, party), so the 2 source(s) this edition cites from xai are unchanged. Every cited figure holds."
     },
     {
       "report": "sst-hall-edge-block-rev2--competitive--2026-09-23",
@@ -190,9 +190,33 @@
       "report": "named-project-bess-attach--opportunity--2026-09-08",
       "slug": "vantage",
       "pinnedVersion": 9,
-      "verifiedAt": 10,
-      "when": "2026-10-04",
-      "why": "Edge-only revision (v9 -> v10, F-I2 step-7 reconciliation, 2026-10-04): the change appends the reciprocal relationship edge(s) to softbank and 2 source(s) the edge cites; every pre-existing field, relationship and source is byte-identical to the archived v9. 5 of 5 cited vantage source(s) compared and unchanged (label, url and date identical). No figure or statement this edition cites moved."
+      "verifiedAt": 11,
+      "when": "2026-10-05",
+      "why": "Edge-only revision (v10 -> v11, F-I3 step 7, 2026-10-05), checked mechanically against archive/vantage.profile.v10.json: every field other than relationships, sources, profileVersion and lastUpdated is identical; the pre-existing relationships[] prefix is identical and only an 'ares' edge (the USD 2.4bn Ares-arranged facility) and its source was appended; every pre-existing source is unchanged (label, url, date, party), so the 6 source(s) this edition cites from vantage are unchanged. Every cited figure holds."
+    },
+    {
+      "report": "grid-scale-bess--competitive--2026-09-08",
+      "slug": "flexgen",
+      "pinnedVersion": 7,
+      "verifiedAt": 8,
+      "when": "2026-10-05",
+      "why": "Short-gap pin. Edge-only revision (v7 -> v8, F-I3 step 7, 2026-10-05), checked mechanically against archive/flexgen.profile.v7.json: every field other than relationships, sources, profileVersion and lastUpdated is identical; the pre-existing relationships[] prefix is identical and only an 'apollo' edge (the 2021 USD 150m equity commitment) and its source was appended; every pre-existing source is unchanged (label, url, date, party), so the 1 source(s) this edition cites from flexgen are unchanged. Every cited figure holds."
+    },
+    {
+      "report": "grid-scale-bess--competitive--2026-09-08",
+      "slug": "catl",
+      "pinnedVersion": 7,
+      "verifiedAt": 8,
+      "when": "2026-10-05",
+      "why": "Short-gap pin. Edge-only revision (v7 -> v8, F-I3 step 7, 2026-10-05), checked mechanically against archive/catl.profile.v7.json: every field other than relationships, sources, profileVersion and lastUpdated is identical; the pre-existing relationships[] prefix is identical and only a 'stonepeak' edge (CATL batteries in Kingdom's Mimasaka project) and its source was appended; every pre-existing source is unchanged (label, url, date, party), so the 2 source(s) this edition cites from catl are unchanged. Every cited figure holds."
+    },
+    {
+      "report": "s154-listed-bess-suppliers--risk--2026-09-08",
+      "slug": "catl",
+      "pinnedVersion": 7,
+      "verifiedAt": 8,
+      "when": "2026-10-05",
+      "why": "Short-gap pin. Edge-only revision (v7 -> v8, F-I3 step 7, 2026-10-05), checked mechanically against archive/catl.profile.v7.json: every field other than relationships, sources, profileVersion and lastUpdated is identical; the pre-existing relationships[] prefix is identical and only a 'stonepeak' edge (CATL batteries in Kingdom's Mimasaka project) and its source was appended; every pre-existing source is unchanged (label, url, date, party), so the 2 source(s) this edition cites from catl are unchanged. Every cited figure holds."
     }
   ]
 }

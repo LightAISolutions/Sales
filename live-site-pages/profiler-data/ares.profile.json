@@ -1,0 +1,943 @@
+{
+ "schemaVersion": 7,
+ "slug": "ares",
+ "name": "Ares Management Corporation",
+ "shortName": "Ares",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.ares.com",
+ "headquarters": "Los Angeles, CA, United States",
+ "founded": "1997",
+ "employees": "Over 4,250 (31 December 2025), in more than 55 offices",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: ARES",
+  "notes": "Delaware corporation (CIK 1176948; Ares Management, L.P. until November 2018); fiscal year ends 31 December. Its principal executive office is in Los Angeles, though its filings also refer to its New York headquarters. On a fully exchanged basis at 31 December 2025, Ares Owners Holdings L.P. held 32.54%, SMBC 5.02% and public holders 62.44% (10-K). Its 6.75% Series B mandatory convertible preferred trades as ARES.PRB."
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Ares is a credit-first manager whose infrastructure arm reaches this corpus in two ways. The first is **Ada Infrastructure**, its own wholly owned data-centre development and operating platform, acquired with GLP Capital Partners' international business in March 2025. Ada reports more than 1 GW of campuses under way in Northern Virginia, Tokyo, Osaka, London and Brazil and has its own energy-procurement lead. The second is a set of power positions held by its funds. They control **Apex Clean Energy** (a majority since late 2021; two Ares partners on its board) and 80% of an EDPR California portfolio with 184 MW of batteries, and since 1 October 2026 Ares jointly controls Eni's Plenitude. Elsewhere Ares is a minority holder or lender. It shares joint control of Prime Data Centers, holds minority stakes (49% at EDPR) in operating renewables that ENGIE and EDPR run, holds preferred equity in SB Energy's parent (redeemed at the IPO) and roughly 10% of X-energy's votes (our calculation from its prospectus), and arranged a USD 2.4bn loan for Vantage.\n\n**BACKGROUND.** Per company filings, the registrant is Ares Management Corporation (NYSE: ARES; CIK 1176948), a Delaware corporation reporting Credit, Real Assets (real estate and infrastructure), Secondaries and Private Equity. AUM was USD 671.3bn at 30 June 2026 (fee-paying USD 409.9bn), of which infrastructure was USD 29.9bn — about 4%. FY2025 after-tax realized income was USD 4.76 a share against a Zacks consensus of USD 5.07, a miss; Q2 2026's USD 1.29 met consensus. The company still expects over USD 350m of realized net performance income in 2026, but the first three quarters total about USD 136m on its own preliminary figures. The shares fell about 27% in 2026 to 2 October. Q3 results are due on 29 October 2026.",
+ "ecosystemRole": "We assess Ares as a second-tier capital name that owns one real data-centre buyer outright and controls one real power buyer through its funds. Ada Infrastructure is Ares's own business, not a fund portfolio company: the 10-K calls it 'our dedicated data center operating platform', combining 'in-house data center development and operational expertise'. Its team includes a head of energy procurement and infrastructure, and it develops and operates the campuses of Ares's Japan DC Partners fund (about 240 MW in Greater Tokyo) and a 314-acre Spotsylvania, Virginia site. Apex Clean Energy is the funds' controlled power buyer: Apex's own management develops, builds and operates its wind, solar and storage projects and buys their equipment. Most other Ares energy exposure is passive — minority stakes beside ENGIE and EDPR (49% at EDPR), which operate, preferred equity, pipeline interests and lending.",
+ "productsAndServices": [
+  {
+   "name": "Ares Digital Infrastructure and Ada Infrastructure",
+   "category": "Data centres — in-house developer and operator",
+   "description": "Ares bought the international business of GLP Capital Partners ('GCP International') on 1 March 2025, for consideration with a fair value of USD 3.9bn (cash, Ares shares and contingent consideration), plus earnouts tied to the data-centre business and the Japan business capped at USD 1.0bn and USD 0.5bn. The deal brought Ada Infrastructure, which the 10-K calls 'our dedicated data center operating platform' inside a 'fully vertically-integrated' digital-infrastructure business. Ada reports eight in-flight campuses totalling over 1 GW of IT capacity: about 400 MW in Northern Virginia, five campuses of about 600 MW in Tokyo and Osaka, 210 MW in London and about 350 MW in Brazil.",
+   "highlights": [
+    "Japan DC Partners I closed in June 2025 with about USD 2.4bn (JPY 350bn) of equity commitments — Ares's first dedicated data-centre fund — for three Greater Tokyo campuses of nearly 240 MW of IT load 'developed and operated by Ada Infrastructure'; CPP Investments committed about USD 1.3bn as a limited partner",
+    "December 2025: an Ares fund secured a 314-acre site in Spotsylvania County, Virginia (phase one two buildings, 200 MW of IT), to be 'designed, delivered and operated by Ada'; an Ares Real Estate fund bought two Leesburg data centres (165 MW) leased for 15 years on triple-net terms to an investment-grade hyperscaler",
+    "Ada's leadership includes a head of energy procurement and infrastructure and a head of design and innovation — the team that signs for its power equipment; no supplier is named on the record",
+    "Japan DC Partners I booked USD 54.3m of carried interest in H1 2026 on 'the appreciation of a data center investment' (10-Q)"
+   ],
+   "positioning": "A manager that develops data centres itself rather than buying an operator — closer to the developer-manager model than to a pure fund owner.",
+   "soldThrough": "Ada develops and operates; Ares-managed funds (Japan DC Partners, Real Estate funds) own the campuses.",
+   "targetSegments": [
+    "Hyperscalers",
+    "AI and cloud tenants"
+   ],
+   "roadmap": "Spotsylvania phase one and the Tokyo, Osaka, London and Brazil campuses under development; earnout measurement periods end no later than 30 June 2028."
+  },
+  {
+   "name": "Ares Infrastructure Equity — power, renewables and midstream",
+   "category": "Private markets — infrastructure equity",
+   "description": "The former Energy Investors Funds, bought in 2015 and since renamed Infrastructure and Power, then Infrastructure Opportunities and now Infrastructure Equity, has 'roughly $15 billion deployed across over 60 investments'. Its funds have controlled Apex Clean Energy since a majority purchase announced in October 2021 and closed by the end of that year. They acquired 80% of an EDPR California portfolio of 200 MW of solar and 184 MW of batteries in September 2026 (about USD 0.8bn for 100% at the start of operations). They hold 49% of a 1,632 MW EDPR portfolio (about USD 2.9bn for 100%, October 2025) and successive minority stakes in ENGIE North America portfolios, which ENGIE continues to control and operate.",
+   "highlights": [
+    "Apex: Ares has published no release on Apex since 2021; Keith Derman and Steven Porto list Apex board seats in their Ares bios; ION Analytics reported on 4 December 2025 that Ares was marketing a minority stake through Lazard, and no outcome is on the record — Apex's 2026 releases record only project-level selldowns, the latest to EGCO on 28 September",
+    "ENGIE North America: 'ENGIE will retain a controlling share in the portfolio and will continue to operate and manage the assets' (March 2025, the 905 MW Aspen portfolio, US$430m; January 2026, 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026, per ENGIE SA's 2025 annual report); no percentage is published",
+    "Midstream: 100% of Meade Pipeline (about USD 1.1bn, September 2025), which owns about 40% of Transco's Central Penn Line, and 32.4% of the Rover Pipeline, operated by an Energy Transfer affiliate (April 2026)",
+    "The infrastructure equity funds' power-generation interests reached about 5.7 GW across 11 states since September 2024 (Ares, October 2025)"
+   ],
+   "positioning": "Weighted to minority partnerships with utilities and IPPs (ENGIE, EDPR) plus one controlled developer (Apex) and one newly controlled battery portfolio.",
+   "soldThrough": "Closed-end infrastructure equity funds, climate infrastructure funds and the open-ended Ares Core Infrastructure Fund.",
+   "targetSegments": [
+    "Utilities and IPPs selling down operating assets",
+    "Developers needing growth equity"
+   ]
+  },
+  {
+   "name": "Ares Alternative Credit — Plenitude",
+   "category": "Credit — structured equity in energy",
+   "description": "Ares Alternative Credit bought 20% of Eni's Plenitude for about EUR 2bn (June 2025, completed November 2025). After a further capital contribution of more than EUR 1bn completed on 1 October 2026, Ares holds 26.24% and 'Ares and Eni will jointly control Plenitude', with Ares appointing three of nine board members including the chairman and Eni five including the chief executive.",
+   "highlights": [
+    "Joint control of an integrated European renewables-and-retail company is the largest controlling energy position on the Ares record",
+    "Plenitude's management, appointed through Eni, runs procurement"
+   ],
+   "soldThrough": "Credit funds investing in structured and minority equity.",
+   "targetSegments": [
+    "Energy majors carving out businesses"
+   ]
+  },
+  {
+   "name": "Ares Infrastructure Debt and direct lending",
+   "category": "Credit — infrastructure and corporate lending",
+   "description": "Ares Infrastructure Debt managed more than USD 13bn at 31 March 2026 across digital infrastructure, power, midstream, transport and utilities. Ares funds 'arranged' a USD 2.4bn debt facility for Vantage Data Centers in North America in February 2026, holding about USD 1.6bn of the commitment and funding about USD 330m at closing. Credit as a whole held USD 440.5bn of AUM at 30 June 2026, including the listed BDC Ares Capital Corporation (USD 36.6bn).",
+   "highlights": [
+    "Ares Capital's NAV fell to USD 19.35 a share at 30 June 2026 and non-accruals rose to 2.4% at cost; a Section 36(b) suit over its advisory fees was filed on 26 May 2026",
+    "Ares Strategic Income Fund capped repurchases at 5% against requests of 14.4% in Q2 and 13.1% in Q3 2026 (Reuters)"
+   ],
+   "soldThrough": "Closed-end and open-ended credit funds, BDCs and separately managed accounts.",
+   "targetSegments": [
+    "Infrastructure borrowers",
+    "Sponsor-backed companies"
+   ]
+  },
+  {
+   "name": "Minority and preferred positions — Prime Data Centers, SB Energy, X-energy",
+   "category": "Private markets — non-controlling stakes",
+   "description": "Three Ares positions in this corpus give it a seat or senior economics without control. The European Commission cleared Ares acquiring joint control of Prime Data Centers with Macquarie's holding company and Data Realty Group in March 2025; Macquarie's FY26 annual report records the sale of its remaining stake, naming no buyer, and an April 2026 release by Grain Management calls Data Realty Holding Corp. Prime's 'founding and controlling shareholder'. In SB Energy, affiliates of Ares hold USD 800m of preferred equity and warrants in its parent SBE Global, to be redeemed at the IPO. In X-energy, Ares affiliates held 4.9% of the Class A and 20.5% of the Class B shares after the April 2026 IPO.",
+   "highlights": [
+    "Ares's Steven Porto lists a Prime board seat; who controls Prime today is not settled on the record",
+    "X-energy's Class B shares carry one vote each and no economics, so Ares's two classes together come to roughly 10% of the vote by our calculation; two Ares partners sit on X-energy's board, and the prospectus shows no contractual nomination right",
+    "Ares Acquisition Corporation's 2022 SPAC merger with X-energy was terminated in 2023"
+   ],
+   "soldThrough": "Joint-control, preferred and minority equity held by Ares funds.",
+   "targetSegments": [
+    "Data-centre developers",
+    "AI-campus developers",
+    "Nuclear developers"
+   ]
+  },
+  {
+   "name": "Real estate, secondaries, private equity and SPACs",
+   "category": "Private markets — other",
+   "description": "Real Assets held USD 151.2bn at 30 June 2026, of which real estate was USD 121.3bn; Secondaries held USD 44.2bn, including USD 7.2bn of infrastructure secondaries, and Private Equity USD 24.5bn. Ares Acquisition Corporation III raised USD 395.0m in a July 2026 IPO.",
+   "highlights": [
+    "Ares Infrastructure Secondaries was the cornerstone investor in Quinbrook's USD 600m Valley of Fire continuation fund (April 2024), per Quinbrook's release",
+    "Fundraising set a record of USD 113.2bn in 2025 and USD 36.4bn in Q2 2026"
+   ],
+   "soldThrough": "Institutional funds, wealth vehicles and listed SPACs.",
+   "targetSegments": [
+    "Institutional and wealth investors"
+   ]
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-10-02",
+   "category": "financial",
+   "headline": "Q3 2026 results set for Thursday 29 October before the NYSE opens, with a 9:00 a.m. ET call",
+   "read": "The test of the full-year performance-income expectation.",
+   "source": "https://www.eqs-news.com/news/category/ares-management-corporation-updates-the-time-of-its-earnings-conference-call-for-the-third-quarter-ending-september-30-2026/7db91fb3-e0d5-464a-8d6a-14eddcb89da6_en"
+  },
+  {
+   "date": "2026-10-01",
+   "category": "ma",
+   "headline": "Ares contributes more than EUR 1bn to Plenitude, rising to 26.24% and taking joint control with Eni (three of nine board seats, including the chairman)",
+   "read": "Ares's largest controlling energy position, held in its credit business.",
+   "source": "https://www.eqs-news.com/news/category/ares-strengthens-commitment-to-plenitude-through-1-billion-capital-contribution/e913e7d0-a6bf-4500-a5ef-35726a766375_en"
+  },
+  {
+   "date": "2026-09-30",
+   "category": "financial",
+   "headline": "Preliminary Q3 2026 realized net performance income of about USD 10m (Q3 2025: USD 9m)",
+   "read": "With about USD 126m in H1, the year-to-date total trails the USD 350m-plus full-year expectation set in March.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026063870/ares-20260930.htm"
+  },
+  {
+   "date": "2026-09-28",
+   "category": "ma",
+   "headline": "Apex Clean Energy closes a second selldown to EGCO — 49% of 339 MW — keeping 51%; PV Tech describes Apex as majority-owned by Ares-managed funds",
+   "read": "Apex keeps recycling capital at project level; no corporate stake sale is on the record.",
+   "source": "https://www.apexcleanenergy.com/news/apex-closes-second-portfolio-selldown-with-egco-group/"
+  },
+  {
+   "date": "2026-09-24",
+   "category": "financial",
+   "headline": "Ares Strategic Income Fund repurchase requests fall to 13.1% of shares in Q3 (14.4% in Q2) against a 5% cap (Reuters)",
+   "read": "Retail credit redemptions are easing but still run at more than twice the cap.",
+   "source": "https://www.investing.com/news/stock-market-news/ares-fund-withdrawal-requests-decline-as-private-credit-redemptions-ease-4916327"
+  },
+  {
+   "date": "2026-09-22",
+   "category": "ma",
+   "headline": "An Ares Infrastructure Equity fund acquires 80% of an EDPR California portfolio of 200 MW of solar and 184 MW of batteries",
+   "read": "The only battery portfolio in which an Ares fund holds a majority on the record.",
+   "source": "https://www.eqs-news.com/news/category/ares-acquires-stake-in-u-s-solar-energy-and-battery-portfolio-from-edpr/9629916a-f9cd-499f-ac1d-635b5f90e412_en"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "financial",
+   "headline": "Q2 2026: after-tax realized income USD 1.29 a share, in line with Zacks; fee-related earnings USD 491.1m (margin 42.2%); record fundraising of USD 36.4bn; AUM USD 671.3bn",
+   "read": "Fees are growing about 20%; performance income is the lagging line.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026051191/a2026q2-ex991.htm"
+  },
+  {
+   "date": "2026-06-18",
+   "category": "leadership",
+   "headline": "Brent Canada named head of Ares Infrastructure Debt, succeeding Patrick Trears",
+   "read": "Continuity in the business that arranged Vantage's facility.",
+   "source": "https://www.eqs-news.com/news/category/ares-appoints-brent-canada-as-head-of-infrastructure-debt/80f1f162-9f91-40b3-a860-2e923e55c021_en"
+  },
+  {
+   "date": "2026-04-29",
+   "category": "ma",
+   "headline": "Ares acquires 32.4% of the Rover Pipeline from Blackstone Energy Transition Partners; an Energy Transfer affiliate operates it",
+   "read": "Midstream exposure tied to power demand, held without control.",
+   "source": "https://www.eqs-news.com/news/category/ares-acquires-stake-in-rover-pipeline-from-blackstone-energy-transition-partners-to-serve-growing-energy-demand-centers-across-north-america/4e5aacba-107b-4a5b-9ee3-93f5b43fba50_en"
+  },
+  {
+   "date": "2026-04-29",
+   "category": "leadership",
+   "headline": "Peter Ogilvie appointed chief operating officer and head of strategy",
+   "read": "Formalises the corporate-strategy role behind the GCP and SMBC transactions.",
+   "source": "https://www.eqs-news.com/news/category/ares-appoints-peter-ogilvie-as-chief-operating-officer-and-head-of-strategy/09b6c164-d00d-4a24-9219-7eb2b7fe073d_en"
+  },
+  {
+   "date": "2026-04-27",
+   "category": "financial",
+   "headline": "X-energy's IPO prices; Ares affiliates hold 4.9% of Class A and 20.5% of Class B shares afterwards",
+   "read": "A minority position with two Ares partners on the board.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm"
+  },
+  {
+   "date": "2026-04-07",
+   "category": "financial",
+   "headline": "Grain Management finances Data Realty Holding Corp., which its release calls 'the founding and controlling shareholder of Prime Data Centers'",
+   "read": "Leaves the current control of Prime, once jointly held with Ares, unsettled on the record.",
+   "source": "https://newswire.telecomramblings.com/2026/04/grain-management-announces-strategic-structured-financing-in-data-realty-holding-corp-the-founding-and-controlling-shareholder-of-prime-data-centers/"
+  },
+  {
+   "date": "2026-03-31",
+   "category": "financial",
+   "headline": "Ares expects over USD 350m of realized net performance income in 2026, against USD 169m in 2025; Q1 preliminary about USD 75m",
+   "read": "The company's only stated 2026 earnings expectation.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026022430/ares-20260331.htm"
+  },
+  {
+   "date": "2026-02-10",
+   "category": "financial",
+   "headline": "Ares funds arrange a USD 2.4bn debt facility for Vantage Data Centers, holding about USD 1.6bn and funding about USD 330m at closing",
+   "read": "Ares as lender to a hyperscale landlord, not owner.",
+   "source": "https://www.eqs-news.com/news/category/ares-arranges-2-4-billion-debt-facility-to-vantage-data-centers/c5a34084-ddb2-48c4-af66-db5c60c5c961_en"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "financial",
+   "headline": "FY2025: after-tax realized income USD 4.76 a share against Zacks' USD 5.07; Q4 USD 1.45 against USD 1.71; dividend raised 20% to USD 1.35 a quarter",
+   "read": "A miss on performance income and contingent-consideration charges; fees grew.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026005596/a2025q4-ex991.htm"
+  },
+  {
+   "date": "2026-01-13",
+   "category": "partnership",
+   "headline": "ENGIE North America adds 730 MW of operating wind and solar to its partnership with Ares; ENGIE keeps control and operations",
+   "read": "Minority capital beside an operator.",
+   "source": "https://www.prnewswire.com/news-releases/engie-and-ares-partnership-further-expands-with-addition-of-730-mw-portfolio-of-new-us-solar-and-wind-assets-302659666.html"
+  },
+  {
+   "date": "2025-12-18",
+   "category": "project",
+   "headline": "Ares secures a 314-acre Spotsylvania, Virginia data-centre site (phase one 200 MW, to be delivered by Ada) and an Ares Real Estate fund buys two leased Leesburg data centres (165 MW)",
+   "read": "Ada's first US campus.",
+   "source": "https://www.eqs-news.com/news/category/ares-makes-significant-u-s-data-center-investments-in-northern-virginia/0188d3b5-1546-42d6-a6f8-f9243c473553_en"
+  },
+  {
+   "date": "2025-10-06",
+   "category": "ma",
+   "headline": "Ares acquires 49% of a 1,632 MW EDPR US portfolio (solar, wind and 200 MW of storage)",
+   "read": "Minority capital recycling for EDPR.",
+   "source": "https://www.eqs-news.com/news/category/ares-management-acquires-stake-in-diversified-u-s-energy-portfolio-from-edpr/a72de0b0-28dc-472e-8a46-5eac079250b6_en"
+  },
+  {
+   "date": "2025-09-29",
+   "category": "ma",
+   "headline": "Ares acquires Meade Pipeline for about USD 1.1bn",
+   "read": "Gas transport exposure without operating it — Transco runs the line.",
+   "source": "https://www.eqs-news.com/news/category/ares-management-acquires-meade-pipeline-to-enhance-energy-infrastructure-portfolio/dcd45edc-42e0-48c5-bfc3-cb04de0bad4b_en"
+  },
+  {
+   "date": "2025-06-11",
+   "category": "financial",
+   "headline": "Japan DC Partners I closes at about USD 2.4bn for three Greater Tokyo campuses (~240 MW) developed and operated by Ada; CPP Investments commits about USD 1.3bn",
+   "read": "Ares's first data-centre fund, and Ada's anchor portfolio.",
+   "source": "https://www.eqs-news.com/news/category/ares-management-closes-inaugural-us-2-4-billion-data-center-development-fund-in-japan/85038cd3-7064-4168-8f1d-36aff20d1030_en"
+  },
+  {
+   "date": "2025-03-24",
+   "category": "partnership",
+   "headline": "ENGIE North America adds nearly 1 GW of solar and storage to its partnership with Ares",
+   "read": "Minority capital beside an operator.",
+   "source": "https://www.prnewswire.com/news-releases/engie-expands-partnership-with-ares-management-with-addition-of-nearly-1-gw-portfolio-of-solar-and-storage-assets-in-the-us-302408735.html"
+  },
+  {
+   "date": "2025-03-03",
+   "category": "ma",
+   "headline": "Ares completes the acquisition of GCP International, bringing Ada Infrastructure",
+   "read": "Turns Ares into a data-centre developer as well as an investor.",
+   "source": "https://www.eqs-news.com/news/category/ares-management-corporation-completes-acquisition-of-gcp-international/6d646884-3428-4704-b636-e5bedae59d9a_en"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **Ares is mostly a directory of buyers — with one door it owns**. Ares Management Corporation places no orders for power equipment, but Ada Infrastructure is its own platform, not a portfolio company, and Ada's energy-procurement and design leads specify and buy for the campuses Ares funds own. Basis: the 10-K's description of Ada as 'our dedicated data center operating platform' and Ada's published leadership. Apex Clean Energy is the funds' other controlled buyer, run by its own management.",
+  "**(High confidence)** We assess that **most of Ares's power exposure is passive capital recycled out of utilities and IPPs**. Basis: ENGIE's releases say it keeps control and operations of the portfolios Ares bought into; EDPR keeps 51% of the 1,632 MW portfolio; Rover and the Central Penn Line are operated by others; SB Energy's preferred and the Vantage loan are financing. The exceptions are Apex, the EDPR California batteries (80%) and Plenitude (joint control).",
+  "**(Moderate confidence)** We assess that **Ada is Ares's AI-infrastructure growth engine, and Japan is its proof point**. Basis: Japan DC Partners I raised about USD 2.4bn for ~240 MW and booked USD 54.3m of carried interest in H1 2026 on a data-centre revaluation; the GCP earnouts — up to USD 1.0bn on the data-centre business — pay out only if the digital-infrastructure funds hit revenue targets. Ada's US entry at Spotsylvania (200 MW phase one) is the next test.",
+  "**(Moderate confidence)** We assess that **Ares's 2026 earnings story turns on performance income, not fees**. Basis: fee-related earnings grew about 20% to Q2, but realized net performance income totalled about USD 136m through Q3 on Ares's preliminary figures against a USD 350m-plus expectation, and FY2025 missed consensus on the same line. The shares fell about 27% in 2026 amid private-credit concerns and redemption caps at Ares Strategic Income Fund.",
+  "**(Low confidence)** We assess that **Prime Data Centers is not an Ares-controlled buyer today**, despite the 2025 joint-control clearance. Basis: Macquarie has sold out without naming the buyer, and Grain's April 2026 release calls Data Realty Holding Corp. Prime's 'controlling shareholder'; Ares keeps a board seat. No filing settles who controls Prime.",
+  "**INDICATORS TO WATCH** — *Q3 2026 results, 29 October:* whether the USD 350m performance-income expectation is cut. *An Apex corporate-stake sale:* the outcome of the reported Lazard process. *Ada's first named power-equipment supplier or US tenant at Spotsylvania.* *The SB Energy IPO pricing:* triggers the redemption of Ares's preferred. *Ares Strategic Income Fund Q4 requests:* below 10% would ease the redemption pressure."
+ ],
+ "relationships": [
+  {
+   "slug": "apex-clean-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2021-10",
+   "scale": "Majority stake (percentage undisclosed)",
+   "via": "Ares Infrastructure Equity funds (formerly Infrastructure and Power)",
+   "note": "Funds managed by Ares's infrastructure strategy have held a majority of Apex Clean Energy since a purchase announced in October 2021; two Ares partners sit on Apex's board.",
+   "context": "Apex's release of 6 October 2021 said funds and other accounts managed by Ares' Infrastructure and Power strategy had agreed to acquire a majority stake, closing before the end of 2021, with Apex's management continuing to lead the company. Ares has published nothing on Apex since; Keith Derman and Steven Porto list Apex board seats in their Ares bios, and PV Tech on 29 September 2026 still described Apex as majority-owned by Ares-managed funds.\n\nION Analytics reported on 4 December 2025 that Ares was marketing a minority stake in Apex through Lazard; no outcome is on the record, and Apex's 2026 transactions are project-level selldowns. Apex's own management signs for its turbines and batteries.",
+   "source": "https://www.apexcleanenergy.com/news/funds-managed-by-ares-management-to-acquire-majority-stake-in-apex-clean-energy/"
+  },
+  {
+   "slug": "prime-data-centers",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2025-03",
+   "scale": "Joint control cleared by the European Commission (share undisclosed)",
+   "via": "Ares Infrastructure Equity",
+   "note": "Ares acquired joint control of Prime Data Centers with Macquarie's holding company and Data Realty Group, cleared by the European Commission in March 2025; an Ares partner sits on Prime's board, and current control is not settled on the record.",
+   "context": "The Commission's decision M.11843 of 18 March 2025 records Ares Management Corporation, Wholesale DC Asset Holdings (ultimately controlled by Macquarie) and Data Realty Group acquiring joint control of Prime Data Centers LLC, previously jointly controlled by the latter two. Prime's July 2025 release names Macquarie Capital, Ares Management and Siemens Financial Services as existing investors.\n\nMacquarie's FY26 annual report records that Macquarie Capital 'completed the sale of its remaining stake in Prime Data Centers', naming no buyer, and Grain Management's April 2026 release calls Data Realty Holding Corp. Prime's 'founding and controlling shareholder'. Ares's Steven Porto lists a Prime board seat. No filing read for this dossier states Ares's share or settles who controls Prime now.",
+   "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
+  },
+  {
+   "slug": "sb-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2022",
+   "scale": "USD 800m of preferred equity issued (≈USD 996m liquidation preference at 31 Dec 2025) plus warrants",
+   "via": "SBE Global preferred equity",
+   "note": "Ares affiliates hold preferred equity and warrants in SBE Global, SB Energy's direct parent, which the S-1 says are redeemed in full at the IPO; no board seat.",
+   "context": "SB Energy's S-1/A No. 2 (21 September 2026): SBE Global issued USD 800m of preferred equity to Ares across 2022, 2024 and 2025, with an aggregate liquidation preference of about USD 996m at 31 December 2025, and warrants with the 2025 issuance. The preferred is 'not an obligation of, or equity interest in, SB Energy, Inc.' At the IPO it is to be redeemed in full and the warrants net-settled for about USD 40m, after which Ares 'will no longer hold any equity interest, preferred claim, or warrant position in SBE Global or any of its subsidiaries'. Board designation rights go to SoftBank and OpenAI. Preferred equity with senior economics, not control.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+  },
+  {
+   "slug": "x-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2022",
+   "scale": "4.9% of Class A and 20.5% of Class B after the IPO",
+   "via": "Ares X-Energy Holdings and co-investment vehicles",
+   "note": "Ares affiliates are significant minority holders of X-energy, with two Ares partners on its board but no contractual nomination right in the prospectus.",
+   "context": "X-energy's final prospectus (27 April 2026) lists entities affiliated with Ares holding 13,844,585 Class A shares (4.9%) and 24,418,756 Class B shares (20.5%) after the offering. Class B shares carry one vote each and no economic rights and vote with Class A, so by our calculation Ares holds roughly 10% of the combined vote. Ares's 13G (August 2026) reports 38,263,341 shares with shared voting power, 12.3% of Class A on an as-converted basis. Ares partners David Kaplan and Allyson Satin sit on the board. Ares Acquisition Corporation's 2022 SPAC merger agreement with X-energy was terminated in 2023.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm"
+  },
+  {
+   "slug": "engie-north-america",
+   "type": "partner",
+   "status": "active",
+   "since": "2024",
+   "scale": "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+   "via": "Ares Infrastructure Opportunities funds",
+   "note": "Ares infrastructure funds hold non-controlling interests in successive ENGIE North America renewables portfolios; ENGIE keeps a controlling share and operates the assets.",
+   "context": "ENGIE North America's releases of 24 March 2025 (nearly 1 GW of solar and storage) and 13 January 2026 (730 MW of operating wind and solar in ERCOT) describe sales to Ares Management Infrastructure Opportunities funds and say 'ENGIE will retain a controlling share in the portfolio and will continue to operate and manage the assets'. ENGIE SA's 2025 annual report (Note 16.2.4) gives the prices: US$430m for a minority stake in the 905 MW Aspen portfolio, and US$153m paid in 2025 with about US$280m scheduled for 2026 for the 730 MW portfolios. No percentage is published. Ares's Steven Porto is quoted in the releases; Ares issued no release of its own.",
+   "source": "https://www.prnewswire.com/news-releases/engie-and-ares-partnership-further-expands-with-addition-of-730-mw-portfolio-of-new-us-solar-and-wind-assets-302659666.html"
+  },
+  {
+   "slug": "vantage",
+   "type": "other",
+   "status": "active",
+   "since": "2026-02",
+   "scale": "USD 2.4bn facility; Ares holds about USD 1.6bn",
+   "via": "Ares Infrastructure Debt",
+   "note": "Ares funds arranged a USD 2.4bn debt facility for Vantage Data Centers in North America in February 2026 and hold about USD 1.6bn of it.",
+   "context": "Ares's release of 10 February 2026: certain Ares funds 'have arranged a $2.4 billion debt facility' for Vantage Data Centers; 'Ares holds approximately $1.6 billion of the commitment and funded approximately $330 million at closing'. A Vantage executive is quoted in the release. Ares is arranger and lender, not an owner.",
+   "source": "https://www.eqs-news.com/news/category/ares-arranges-2-4-billion-debt-facility-to-vantage-data-centers/c5a34084-ddb2-48c4-af66-db5c60c5c961_en"
+  },
+  {
+   "slug": "cpp-investments",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-06",
+   "scale": "CPP commitment about USD 1.3bn (JPY 193bn) of about USD 2.4bn",
+   "via": "Japan DC Partners I",
+   "note": "CPP Investments is the largest limited partner in Ares's Japan DC Partners I, committing about USD 1.3bn to the fund that Ada Infrastructure builds and operates for.",
+   "context": "Ares's release of 11 June 2025 announced the final close of Japan DC Partners I at about USD 2.4bn (JPY 350bn) of equity commitments, for three Greater Tokyo data-centre campuses of nearly 240 MW of IT load developed and operated by Ada Infrastructure, with CPP Investments committing about USD 1.3bn (JPY 193bn). CPP is a fund investor; Ares manages the fund and Ada runs the campuses.",
+   "source": "https://www.eqs-news.com/news/category/ares-management-closes-inaugural-us-2-4-billion-data-center-development-fund-in-japan/85038cd3-7064-4168-8f1d-36aff20d1030_en"
+  },
+  {
+   "slug": "macquarie",
+   "type": "partner",
+   "status": "historical",
+   "since": "2025-03",
+   "via": "Prime Data Centers joint control",
+   "note": "Former co-controller of Prime Data Centers with Ares and Data Realty Group; Macquarie Capital has since sold its remaining stake.",
+   "context": "The European Commission's decision M.11843 (18 March 2025) cleared Ares acquiring joint control of Prime Data Centers alongside Wholesale DC Asset Holdings, a Macquarie holding company, and Data Realty Group. Macquarie's FY26 annual report records that Macquarie Capital completed the sale of its remaining stake in Prime; the buyer is not named.",
+   "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Investment Company Act §36(b) — adviser fee suits",
+   "status": "in-effect",
+   "effectiveDate": "2026-05",
+   "exposure": "A derivative action filed on 26 May 2026 in the Southern District of New York on behalf of Ares Capital Corporation alleges that its investment adviser, an Ares subsidiary, received excessive advisory fees in breach of Section 36(b); the adviser disputes the allegations and the case is at a preliminary stage (Ares Capital Q2 2026 filings).",
+   "source": "https://www.sec.gov/Archives/edgar/data/1287750/000162828026050303/arccq2-2026exhibit991.htm"
+  },
+  {
+   "regime": "EU Merger Regulation — joint-control clearance",
+   "status": "in-effect",
+   "effectiveDate": "2025-03",
+   "exposure": "Ares's acquisition of joint control of Prime Data Centers was notified to the European Commission and cleared under the simplified procedure on 18 March 2025 (M.11843); the decision is the only public record of the control structure Ares entered.",
+   "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "AUM and earnings",
+   "specs": [
+    {
+     "band": "Assets under management",
+     "label": "Total AUM",
+     "value": "USD 622.5bn at 31 December 2025; USD 671.3bn at 30 June 2026"
+    },
+    {
+     "band": "Assets under management",
+     "label": "Fee-paying AUM",
+     "value": "USD 384.9bn; USD 409.9bn"
+    },
+    {
+     "band": "Assets under management",
+     "label": "Perpetual capital",
+     "value": "USD 200.0bn; USD 223.3bn"
+    },
+    {
+     "band": "Assets under management",
+     "label": "By group, 30 June 2026",
+     "value": "Credit USD 440.5bn; Real Assets USD 151.2bn (real estate USD 121.3bn, infrastructure USD 29.9bn); Secondaries USD 44.2bn; Private Equity USD 24.5bn"
+    },
+    {
+     "band": "Earnings",
+     "label": "Fee-related earnings",
+     "value": "USD 1,775.3m in 2025 (margin 41.7%); USD 491.1m in Q2 2026"
+    },
+    {
+     "band": "Earnings",
+     "label": "After-tax realized income",
+     "value": "USD 1,704.2m (USD 4.76 a share) in 2025; USD 467.6m (USD 1.29) in Q2 2026"
+    },
+    {
+     "band": "Earnings",
+     "label": "Realized net performance income",
+     "value": "USD 169m in 2025; about USD 136m in the first three quarters of 2026 against an expectation of over USD 350m for the year"
+    }
+   ],
+   "notes": "Company-reported (10-K, 10-Q, earnings presentations and 8-Ks). After-tax realized income is Ares's per-share measure of distributable earnings."
+  },
+  {
+   "product": "The platform map — who signs for equipment (§11.1 test)",
+   "specs": [
+    {
+     "band": "Owned outright",
+     "label": "Ada Infrastructure",
+     "value": "Ares's own data-centre development and operating platform; over 1 GW of in-flight campuses (Northern Virginia, Tokyo, Osaka, London, Brazil); its energy-procurement and design leads sign"
+    },
+    {
+     "band": "Fund-controlled",
+     "label": "Apex Clean Energy",
+     "value": "Majority since 2021; two Ares partners on the board; Apex management develops, builds and operates"
+    },
+    {
+     "band": "Fund-controlled",
+     "label": "EDPR California portfolio",
+     "value": "80% (September 2026); 200 MW solar and 184 MW batteries; operator not stated"
+    },
+    {
+     "band": "Jointly controlled",
+     "label": "Plenitude",
+     "value": "26.24% with joint control alongside Eni from 1 October 2026; Eni appoints the chief executive"
+    },
+    {
+     "band": "Unsettled",
+     "label": "Prime Data Centers",
+     "value": "Joint control cleared March 2025; Macquarie since exited; Data Realty described as controlling shareholder (April 2026); Ares board seat"
+    },
+    {
+     "band": "Funds only",
+     "label": "Minority, preferred or lender",
+     "value": "ENGIE portfolios (ENGIE controls and operates); EDPR 1,632 MW (49%); Tango/Savion (80% economic, Savion managing member); Rover (32.4%); SB Energy (preferred, redeemed at IPO); X-energy (minority, two directors); Vantage (lender)"
+    }
+   ],
+   "notes": "An investor passes the buying-authority test only through a platform it controls. Ares passes through Ada, which it owns outright, and through Apex and the EDPR California batteries via its funds; Plenitude is jointly controlled. It fails at ENGIE, EDPR's 1,632 MW, Savion, Rover, SB Energy, X-energy and Vantage."
+  },
+  {
+   "product": "Ada Infrastructure — campuses on its own record",
+   "specs": [
+    {
+     "band": "North America",
+     "label": "Northern Virginia (I-95 South)",
+     "value": "About 400 MW of IT; Spotsylvania site of 314 acres, phase one two buildings and 200 MW"
+    },
+    {
+     "band": "Asia-Pacific",
+     "label": "Tokyo and Osaka",
+     "value": "Five campuses, about 600 MW of IT; Japan DC Partners I covers three Greater Tokyo campuses of nearly 240 MW"
+    },
+    {
+     "band": "Europe",
+     "label": "London",
+     "value": "210 MW of IT"
+    },
+    {
+     "band": "Latin America",
+     "label": "Greater São Paulo and Rio de Janeiro state",
+     "value": "Two campuses, about 350 MW of IT"
+    }
+   ],
+   "notes": "Ada's site states 'eight in-flight campuses ... totaling over 1GW of IT capacity'; the regional figures above sum to more than that and are as Ada publishes them, undated."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Michael Arougheti",
+   "title": "Co-Founder, Chief Executive Officer and Director",
+   "photo": "images/execs/ares-arougheti.jpg",
+   "background": [
+    "Chief Executive Officer of Ares Management Corporation; member of the Operating Committee and Enterprise Risk Committee; director and executive vice president of Ares Capital Corporation",
+    "Joined Ares in 2004 from RBC Capital Partners, where he was a managing partner of the Principal Finance Group; earlier Indosuez Capital and Kidder, Peabody",
+    "BA in Ethics, Politics and Economics, Yale University"
+   ]
+  },
+  {
+   "name": "Antony Ressler",
+   "title": "Co-Founder, Director and Executive Chairman",
+   "photo": "images/execs/ares-ressler.jpg",
+   "background": [
+    "With Ares since its founding in 1997; sits on the Private Equity and Credit investment committees",
+    "BSFS, Georgetown University; MBA, Columbia University"
+   ]
+  },
+  {
+   "name": "Kipp deVeer",
+   "title": "Director and Co-President",
+   "photo": "images/execs/ares-deveer.jpg",
+   "background": [
+    "Co-President and co-chair of the Operating Committee",
+    "Head of the Ares Credit Group (July 2014 – February 2025) and Chief Executive Officer of Ares Capital Corporation (July 2014 – April 2025)",
+    "Formerly a partner at RBC Capital Partners",
+    "BA, Yale University; MBA, Stanford University"
+   ]
+  },
+  {
+   "name": "Blair Jacobson",
+   "title": "Partner and Co-President",
+   "photo": "images/execs/ares-jacobson.jpg",
+   "background": [
+    "Co-President and co-chair of the Operating Committee, based in London",
+    "Co-Head of European Credit (June 2012 – February 2025); earlier a partner at StepStone, Citigroup Private Equity and Mezzanine, and Lehman Brothers",
+    "BA, Williams College; MBA, University of Chicago Booth School of Business"
+   ]
+  },
+  {
+   "name": "Jarrod Phillips",
+   "title": "Partner and Chief Financial Officer",
+   "photo": "images/execs/ares-phillips.jpg",
+   "background": [
+    "Chief Financial Officer and principal financial and accounting officer; Chief Accounting Officer January 2016 – July 2021",
+    "Formerly a partner at Deloitte",
+    "BS in Accounting, Virginia Tech"
+   ]
+  },
+  {
+   "name": "Peter Ogilvie",
+   "title": "Partner, Chief Operating Officer and Head of Strategy",
+   "photo": "images/execs/ares-ogilvie.jpg",
+   "background": [
+    "Appointed Chief Operating Officer and Head of Strategy in April 2026; co-founded the Corporate Strategy Group, which ran the Landmark, American Capital and SMBC transactions",
+    "Joined Ares in 2007 from Credit Suisse",
+    "BA in Economics, Yale University"
+   ]
+  },
+  {
+   "name": "Keith Derman",
+   "title": "Partner and Head of Ares Infrastructure Equity",
+   "photo": "images/execs/ares-derman.jpg",
+   "background": [
+    "Oversees strategy, origination, capital deployment and portfolio management for infrastructure equity; sits on the Infrastructure Equity, Digital Infrastructure and Climate Infrastructure Partners investment committees",
+    "Joined Ares in 2015 through its acquisition of Energy Investors Funds, where he had been a partner for ten years; earlier PSEG Power corporate development",
+    "Board member of portfolio companies including Apex Clean Energy (company bio)",
+    "BA, Duke University; MBA, The Wharton School"
+   ]
+  },
+  {
+   "name": "Michael Steele",
+   "title": "Partner and Head of Ares Digital Infrastructure",
+   "photo": "images/execs/ares-steele.jpg",
+   "background": [
+    "Leads the data-centre business that includes Ada Infrastructure; member of the Operating Committee",
+    "Joined Ares in 2025 as Global President of GLP Capital Partners, whose sale to Ares he led; earlier a partner at Kirkland & Ellis and Freshfields",
+    "LLB and BCom, Bond University"
+   ]
+  },
+  {
+   "name": "Steven Porto",
+   "title": "Partner, Ares Infrastructure Equity; Co-Chief Executive Officer, Ares Core Infrastructure Fund",
+   "photo": "images/execs/ares-porto.jpg",
+   "background": [
+    "Board member of Prime Data Centers and Apex Clean Energy, among other portfolio companies (company bio)",
+    "Formerly GE Energy Financial Services"
+   ]
+  },
+  {
+   "name": "Brent Canada",
+   "title": "Partner and Head of Ares Infrastructure Debt",
+   "photo": "images/execs/ares-canada.jpg",
+   "background": [
+    "Appointed head of infrastructure debt in June 2026, succeeding Patrick Trears; joined Ares in 2022",
+    "Previously a managing director in Deutsche Bank's Americas infrastructure financing (power, renewables, energy and telecom); earlier BlackRock",
+    "BA in Economics, University of California, Berkeley; CFA"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "After-tax realized income per share",
+      "actual": "USD 1.29 (USD 467.6m)",
+      "expected": "USD 1.29 (Zacks consensus)",
+      "verdict": "inline",
+      "result": "Met consensus; up from USD 1.03 a year earlier."
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 491.1m (margin 42.2%)",
+      "expected": "",
+      "verdict": "",
+      "result": "No published FRE consensus was read from a primary account."
+     },
+     {
+      "name": "GAAP total revenues",
+      "actual": "USD 1,428.6m",
+      "expected": "",
+      "verdict": "",
+      "result": "Consensus revenue definitions differ by provider; not compared.",
+      "kpi": "revenue",
+      "usdMillions": 1428.6,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP net income attributable to Ares Management Corporation",
+      "actual": "USD 150.6m (USD 0.49 a share)",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "net-income",
+      "usdMillions": 150.6,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "AUM USD 671.3bn; record quarterly fundraising of USD 36.4bn; realized net performance income USD 50.9m."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "After-tax realized income per share",
+      "actual": "USD 4.76 (USD 1,704.2m)",
+      "expected": "USD 5.07 (Zacks consensus)",
+      "verdict": "miss",
+      "result": "Q4 2025 came in at USD 1.45 against USD 1.71; the shares fell about 11% on the day."
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 1,775.3m (margin 41.7%)",
+      "expected": "",
+      "verdict": "",
+      "result": "Up 30% on 2024."
+     },
+     {
+      "name": "GAAP total revenues",
+      "actual": "USD 5,601.5m",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "revenue",
+      "usdMillions": 5601.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP net income attributable to Ares Management Corporation",
+      "actual": "USD 527.4m (USD 1.71 a share)",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes a USD 301.1m charge to revalue contingent consideration, mainly for the GCP acquisition.",
+      "kpi": "net-income",
+      "usdMillions": 527.4,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "AUM USD 622.5bn; record fundraising of USD 113.2bn; GCP International completed 1 March 2025."
+   },
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "After-tax realized income per share",
+      "actual": "USD 3.97 (USD 1,347.8m)",
+      "expected": "",
+      "verdict": "",
+      "result": "No full-year consensus was read from a primary account."
+     },
+     {
+      "name": "GAAP total revenues",
+      "actual": "USD 3,884.8m",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "revenue",
+      "usdMillions": 3884.8,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP net income attributable to Ares Management Corporation",
+      "actual": "USD 463.7m (USD 2.04 a share)",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "net-income",
+      "usdMillions": 463.7,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "AUM USD 484.4bn; the year before the GCP acquisition."
+   }
+  ],
+  "commentary": "Company figures from Ares's 10-K, 10-Q and earnings releases; consensus from Zacks via The Globe and Mail and Yahoo Finance. Ares's only stated 2026 expectation is over USD 350m of realized net performance income (8-K, 31 March 2026); its preliminary figures put the first three quarters at about USD 136m. Q3 2026 results are due on 29 October 2026."
+ },
+ "sources": [
+  {
+   "label": "Ares — updates the time of its third-quarter 2026 earnings call (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-management-corporation-updates-the-time-of-its-earnings-conference-call-for-the-third-quarter-ending-september-30-2026/7db91fb3-e0d5-464a-8d6a-14eddcb89da6_en",
+   "date": "2026-10-02",
+   "party": "disclosure"
+  },
+  {
+   "label": "Ares — strengthens commitment to Plenitude through a EUR 1bn-plus capital contribution (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-strengthens-commitment-to-plenitude-through-1-billion-capital-contribution/e913e7d0-a6bf-4500-a5ef-35726a766375_en",
+   "date": "2026-10-01",
+   "party": "disclosure"
+  },
+  {
+   "label": "Ares Management — Form 8-K, preliminary Q3 2026 realized net performance income",
+   "url": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026063870/ares-20260930.htm",
+   "date": "2026-09-30"
+  },
+  {
+   "label": "PV Tech — Apex Clean Energy sells minority stake in 339 MW US solar and wind portfolio",
+   "url": "https://www.pv-tech.org/apex-clean-energy-sells-minority-stake-in-339mw-us-solar-wind-portfolio/",
+   "date": "2026-09-29"
+  },
+  {
+   "label": "Apex Clean Energy — closes second portfolio selldown with EGCO Group",
+   "url": "https://www.apexcleanenergy.com/news/apex-closes-second-portfolio-selldown-with-egco-group/",
+   "date": "2026-09-28"
+  },
+  {
+   "label": "Investing.com (Reuters) — Ares fund withdrawal requests decline as private-credit redemptions ease",
+   "url": "https://www.investing.com/news/stock-market-news/ares-fund-withdrawal-requests-decline-as-private-credit-redemptions-ease-4916327",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "Ares — acquires stake in US solar and battery portfolio from EDPR (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-acquires-stake-in-u-s-solar-energy-and-battery-portfolio-from-edpr/9629916a-f9cd-499f-ac1d-635b5f90e412_en",
+   "date": "2026-09-22",
+   "party": "disclosure"
+  },
+  {
+   "label": "SB Energy — Form S-1/A Amendment No. 2",
+   "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+   "date": "2026-09-21"
+  },
+  {
+   "label": "Ares Partners Holdco — Schedule 13G on X-Energy",
+   "url": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926095211/primary_doc.xml",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Ares Management — Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026054538/ares-20260630.htm",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Ares Management — Q2 2026 earnings release (8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026051191/a2026q2-ex991.htm",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Ares Management — Q2 2026 earnings presentation (8-K Exhibit 99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026051191/a2026q2-ex992earningspre.htm",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "The Globe and Mail (Zacks) — Ares Management Q2 earnings meet estimates",
+   "url": "https://www.theglobeandmail.com/investing/markets/stocks/ARES/pressreleases/3579132/ares-management-q2-earnings-meet-estimates-aum-rises-yy/",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Ares Capital Corporation — Q2 2026 results (8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1287750/000162828026050303/arccq2-2026exhibit991.htm",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Ares — appoints Brent Canada as head of infrastructure debt (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-appoints-brent-canada-as-head-of-infrastructure-debt/80f1f162-9f91-40b3-a860-2e923e55c021_en",
+   "date": "2026-06-18",
+   "party": "disclosure"
+  },
+  {
+   "label": "Ares — appoints Peter Ogilvie as chief operating officer and head of strategy (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-appoints-peter-ogilvie-as-chief-operating-officer-and-head-of-strategy/09b6c164-d00d-4a24-9219-7eb2b7fe073d_en",
+   "date": "2026-04-29",
+   "party": "disclosure"
+  },
+  {
+   "label": "Ares — acquires stake in Rover Pipeline from Blackstone Energy Transition Partners (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-acquires-stake-in-rover-pipeline-from-blackstone-energy-transition-partners-to-serve-growing-energy-demand-centers-across-north-america/4e5aacba-107b-4a5b-9ee3-93f5b43fba50_en",
+   "date": "2026-04-29",
+   "party": "disclosure"
+  },
+  {
+   "label": "X-Energy — final prospectus (424B4)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "Telecom Ramblings newswire — Grain Management's structured financing in Data Realty Holding Corp., 'the founding and controlling shareholder of Prime Data Centers'",
+   "url": "https://newswire.telecomramblings.com/2026/04/grain-management-announces-strategic-structured-financing-in-data-realty-holding-corp-the-founding-and-controlling-shareholder-of-prime-data-centers/",
+   "date": "2026-04-07"
+  },
+  {
+   "label": "Ares Management — Form 8-K, preliminary Q1 2026 results and full-year performance-income expectation",
+   "url": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026022430/ares-20260331.htm",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "ENGIE SA — 2025 Management Report and Annual Consolidated Financial Statements (PDF; Note 16.2.4 North America transactions)",
+   "url": "https://www.engie.com/app/uploads/2026/03/2025-Management-report-and-annual-consolidated-financial-statements.pdf",
+   "date": "2026-03"
+  },
+  {
+   "label": "Ares Management — Form 10-K for 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026011413/ares-20251231.htm",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Ares — arranges USD 2.4bn debt facility to Vantage Data Centers (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-arranges-2-4-billion-debt-facility-to-vantage-data-centers/c5a34084-ddb2-48c4-af66-db5c60c5c961_en",
+   "date": "2026-02-10",
+   "party": "disclosure"
+  },
+  {
+   "label": "Ares Management — Q4 and full-year 2025 earnings release (8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026005596/a2025q4-ex991.htm",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Ares Management — Q4 2025 earnings presentation (8-K Exhibit 99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1176948/000162828026005596/a2025q4-ex992earningspre.htm",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Yahoo Finance (Zacks) — Ares Management stock falls after Q4 results",
+   "url": "https://finance.yahoo.com/news/ares-management-stock-falls-q4-182000680.html",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "ENGIE North America — partnership with Ares expands by 730 MW of US solar and wind",
+   "url": "https://www.prnewswire.com/news-releases/engie-and-ares-partnership-further-expands-with-addition-of-730-mw-portfolio-of-new-us-solar-and-wind-assets-302659666.html",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "Ares — makes significant US data-centre investments in Northern Virginia (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-makes-significant-u-s-data-center-investments-in-northern-virginia/0188d3b5-1546-42d6-a6f8-f9243c473553_en",
+   "date": "2025-12-18",
+   "party": "disclosure"
+  },
+  {
+   "label": "ION Analytics (Infralogic) — Ares markets Apex stake",
+   "url": "https://ionanalytics.com/insights/infralogic/ares-markets-apex-stake/",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "Ares — acquires stake in diversified US energy portfolio from EDPR (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-management-acquires-stake-in-diversified-u-s-energy-portfolio-from-edpr/a72de0b0-28dc-472e-8a46-5eac079250b6_en",
+   "date": "2025-10-06",
+   "party": "disclosure"
+  },
+  {
+   "label": "Ares — acquires Meade Pipeline (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-management-acquires-meade-pipeline-to-enhance-energy-infrastructure-portfolio/dcd45edc-42e0-48c5-bfc3-cb04de0bad4b_en",
+   "date": "2025-09-29",
+   "party": "disclosure"
+  },
+  {
+   "label": "Prime Data Centers — Snowhawk and Nuveen make strategic investment",
+   "url": "https://primedatacenters.com/news/snowhawk-and-nuveen-make-strategic-investment-in-prime-data-centers/",
+   "date": "2025-07-31"
+  },
+  {
+   "label": "Ares — acquires minority stake in Plenitude for EUR 2bn (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-management-acquires-minority-stake-in-plenitude-for-2-billion/91b3f970-7d59-4312-8b0e-9779f3ed0cf3_en",
+   "date": "2025-06-22",
+   "party": "disclosure"
+  },
+  {
+   "label": "Ares — closes inaugural USD 2.4bn data-centre development fund in Japan (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-management-closes-inaugural-us-2-4-billion-data-center-development-fund-in-japan/85038cd3-7064-4168-8f1d-36aff20d1030_en",
+   "date": "2025-06-11",
+   "party": "disclosure"
+  },
+  {
+   "label": "ENGIE North America — partnership with Ares expands with nearly 1 GW of US solar and storage",
+   "url": "https://www.prnewswire.com/news-releases/engie-expands-partnership-with-ares-management-with-addition-of-nearly-1-gw-portfolio-of-solar-and-storage-assets-in-the-us-302408735.html",
+   "date": "2025-03-24"
+  },
+  {
+   "label": "European Commission — merger decision M.11843 (Ares / Macquarie / Data Realty Group / Prime Data Centers)",
+   "url": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "Ares — completes acquisition of GCP International (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-management-corporation-completes-acquisition-of-gcp-international/6d646884-3428-4704-b636-e5bedae59d9a_en",
+   "date": "2025-03-03",
+   "party": "disclosure"
+  },
+  {
+   "label": "Quinbrook — closes USD 600m solar-and-storage continuation fund",
+   "url": "https://www.quinbrook.com/news-insights/quinbrook-closes-600m-solarstorage-continuation-fund/",
+   "date": "2024-04-04"
+  },
+  {
+   "label": "Apex Clean Energy — funds managed by Ares Management to acquire majority stake in Apex",
+   "url": "https://www.apexcleanenergy.com/news/funds-managed-by-ares-management-to-acquire-majority-stake-in-apex-clean-energy/",
+   "date": "2021-10-06"
+  },
+  {
+   "label": "Macquarie Group — FY26 annual report (Macquarie Capital: sale of remaining stake in Prime Data Centers)",
+   "url": "https://www.macquarie.com/assets/macq/investor/reports/2026/macquarie-group-fy26-annual-report.pdf"
+  },
+  {
+   "label": "Ada Infrastructure — about and locations",
+   "url": "https://adainfrastructure.com/en-US/about"
+  },
+  {
+   "label": "Ares — our people",
+   "url": "https://www.ares.com/us/who-we-are/our-people"
+  },
+  {
+   "label": "Yahoo Finance — ARES daily closes (chart data through 2 October 2026)",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARES"
+  }
+ ],
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 1
+}

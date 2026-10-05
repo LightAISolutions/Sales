@@ -1,0 +1,1595 @@
+{
+  "schemaVersion": 7,
+  "slug": "x-energy",
+  "name": "X-Energy, Inc. (X-Energy Reactor Company, LLC; TRISO-X, LLC)",
+  "shortName": "X-energy",
+  "categories": [
+    "supplier"
+  ],
+  "website": "https://x-energy.com/",
+  "headquarters": "Rockville, Maryland (530 Gaither Road, Suite 700); TRISO-X at Oak Ridge, Tennessee; testing and training facility in Frederick, Maryland; X-Energy Canada (Toronto) and X-Energy UK (Manchester)",
+  "founded": 2009,
+  "employees": "916 (as of 17 March 2026, per the IPO prospectus — 317 with master's degrees, 104 with PhDs); no later company figure",
+  "ownership": {
+    "type": "public",
+    "ticker": "NASDAQ: XE"
+  },
+  "summary": "BOTTOM LINE UP FRONT: X-energy is the pebble-bed high-temperature gas-cooled reactor developer that Amazon backs as its small-modular-reactor partner — Amazon led the USD 500 million Series C-1 in October 2024, holds 23.4% of the Class A shares after the April 2026 IPO, holds options and rights to 'more than 5 GWe of new Xe-100 projects online across the U.S. by 2039' beginning with Energy Northwest's 320 MW Cascade project — and it went public on Nasdaq as XE on 24 April 2026 at USD 23 a share (USD 1.02 billion gross), a stock that traded at USD 17.71 on 4 September 2026; no Xe-100 has a construction permit yet, the first (Dow's Long Mott, Seadrift, Texas) is guided to the first quarter of 2027 after the NRC's 18-month review, first power is guided to the early 2030s, and the business runs on DOE cost-share reimbursement (USD 547 million received through Q2 2026) plus USD 1.9 billion of liquidity.\n\nBACKGROUND. Founded 2009 by Dr. Kam Ghaffarian (Executive Chairman, 70.9% of the Class B voting stock); CEO J. Clay Sell (US Deputy Secretary of Energy 2005–2008) since January 2019. Up-C structure: X-Energy, Inc. holds units of X-Energy Reactor Company, LLC; TRISO-X, LLC is the fuel subsidiary. Product: the Xe-100 — 80 MWe / 200 MWt per unit, 750°C outlet, 565°C steam, online refuelling of TRISO fuel pebbles at 15.5% HALEU enrichment, sold as four-unit (320 MWe) or twelve-unit (960 MWe) plants for electricity and industrial steam — plus the TX-1 fuel fabrication facility in Oak Ridge (5 MTU a year, about 700,000 pebbles, fuel for up to 11 reactors), which received the first-ever NRC Category II HALEU fabrication licence (SNM-7007) on 13 February 2026 and is due to complete in the first half of 2028, and the XENITH 3–10 MWe microreactor. Order book: '144 reactors across the U.S. and U.K. for approximately 11.5 gigawatts electric' — Dow (4 units), Amazon (options for more than 5 GWe), Centrica (about 6 GWe, non-binding). Funding: Series C USD 235 million (2023), Series C-1 USD 700 million (2024–2025, Amazon-anchored), Series D USD 700 million led by Jane Street (November 2025), IPO USD 1.02 billion (April 2026); the 2022 SPAC with Ares Acquisition Corp (about USD 2.0 billion pre-money) was terminated in October 2023. DOE's Advanced Reactor Demonstration Program cost share began at USD 1.2 billion (50% of USD 2.4 billion) and, per the company's Q2 2026 call and ANS, DOE has notified up to USD 1 billion more, taking DOE's share to up to USD 2.115 billion — a figure the Q2 release and 10-Q do not carry. Q2 2026: revenues and grant income USD 54.6 million (+154%), operating expenses USD 164.6 million, net loss USD 105.3 million, liquidity USD 1,899.8 million.",
+  "ecosystemRole": "The corpus's G8 (nuclear supply) anchor on the SMR side: Amazon's chosen reactor vendor for the Energy Northwest Cascade programme (320 MW first, 960 MW site, 5 GW ambition by 2039), the technology behind the Dow/Long Mott plant that Sargent & Lundy licensed and Fluor is engineering, the reactor that Kiewit Nuclear Solutions, Black & Veatch and Aecon will build at Richland as Cascade Nuclear Partners, and the counterparty in Talen Energy's March 2026 letter of intent for three or more four-unit plants in PJM. It sells reactors, fuel and services — it does not own or operate plants — so every megawatt on its order book belongs to a utility, an industrial or a hyperscaler-backed sponsor.",
+  "productsAndServices": [
+    {
+      "name": "Xe-100 high-temperature gas-cooled small modular reactor",
+      "category": "Reactor technology (Generation IV HTGR, pebble-bed)",
+      "description": "An 80 MWe / 200 MWt helium-cooled, graphite-moderated pebble-bed reactor using TRISO fuel pebbles, designed for 750°C outlet and 565°C steam, deployed in four-unit (320 MWe) or twelve-unit (960 MWe) plants to supply electricity and high-temperature industrial steam. Continuous online refuelling ('more than 200,000 fuel Pebbles are gravity-fed and continuously rotated through the core'), load-following 'between 40% and full power in 12 minutes', a stated 60-year life and '10-25% Land Use vs. Large LWR'. Licensed through the NRC's Part 50 construction-permit path (Long Mott), with the Principal Design Criteria topical report approved 24 October 2024, the UK Generic Design Assessment entered 2 June 2026 (conclusion 'expected … by end of 2029') and CNSC Vendor Design Review phases 1 and 2 complete (January 2024).",
+      "highlights": [
+        "Company spec strings: '80Mwe Electric Output'; '200 Mwt Thermal Output'; 'total power output of 320 MW' for a four-pack; '750°C Outlet Temperature'; '565°C Steam Temperature'; 'Online Refueling'; '95% Target Reliability'; '60-year operational life'; fuel 'physically incapable of melting under any scenario'.",
+        "Order book (Q1 and Q2 2026): '144 reactors across the U.S. and U.K. for approximately 11.5 gigawatts electric capacity (assuming full customer exercise of contingent rights)' — Dow four reactors at Seadrift; Amazon options for 'more than 5 GWe of new Xe-100 projects'; Centrica 'approximately six GWe (representative of 76 reactors likely deployed as 19 four-reactor configurations)'.",
+        "Regulatory position: the NRC's Long Mott review is on an 18-month schedule (draft safety evaluation February 2026, advanced safety evaluation August 2026, final safety evaluation target November 2026, EA/FONSI issued 18 May 2026 — the first commercial advanced-reactor Part 50 application to get an environmental assessment rather than an EIS); construction permit receipt 'expected in the first quarter of 2027'. TerraPower, the other ARDP awardee, received its Kemmerer permit on 4 March 2026.",
+        "Supply chain locked in 2025–2026: Doosan Enerbility 16-unit reservation for reactor pressure and steam-generator vessels with a Changwon line for 'approximately 20 Xe-100 reactors annually'; SGL Carbon 10-year NBG-18 graphite agreement ('initial three-year award valued at over $100 million') and capacity doubling by 2030 for 'up to 8 new Xe-100 reactors annually'; Toyo Tanso IG-110 graphite (about USD 40 million) for the four Long Mott units; IHI Corporation MOU (March 2026).",
+        "Test infrastructure: Frederick, Maryland 90,000 sq ft non-nuclear facility with a Helium Test Facility, Experimental Test Facility and full-scale control-room simulator (July 2025)."
+      ],
+      "positioning": "The only HTGR among the US front-runners: TerraPower's Natrium (sodium fast, 345 MWe) holds a construction permit and started construction in April 2026; Kairos (fluoride salt) is building Hermes 2 with TVA offtake for Google; NuScale (light-water) holds a standard design approval; GE Vernova Hitachi's BWRX-300 is under construction at OPG Darlington; Oklo proceeds under DOE authorisation with no NRC reactor licence. The Xe-100's differentiators are 750°C process heat for industrials (the Dow use case), TRISO 'functional containment' (the basis for the EA-not-EIS and the dismissed containment contention) and vertical fuel integration; its exposure is HALEU, which light-water SMRs do not need.",
+      "soldThrough": "Reactor systems and engineering under project-development agreements with the plant owner — Dow's Master Project Development Agreement and Commercial Cooperation Agreement at Long Mott; joint development agreements with Energy Northwest and Centrica; X-energy 'will own the intellectual property related to the reactor systems' and does not own or operate plants. Revenue today is services and grant income (USD 50.1 million of services in Q2 2026, of which Dow was a related-party customer at 4% of Q1 services revenue).",
+      "targetSegments": [
+        "Industrial process-heat and power users (Dow's UCC Seadrift site — steam and electricity for 'more than 4 billion pounds of materials per year')",
+        "Public power and investor-owned utilities (Energy Northwest; LG&E and KU feasibility study; Talen Energy LOI; OPG exclusivity in Ontario)",
+        "Hyperscaler-backed programmes (Amazon's Cascade rights; 'hyperscale data centers' named in the Talen release)",
+        "UK new nuclear (Centrica, Hartlepool)"
+      ],
+      "roadmap": "Long Mott: NRC final safety evaluation November 2026 (target), construction permit Q1 2027, Dow FID not before 2028 (Dow, June 2025), operations 'likely 2031 to 2032' (Dow) / 'early 2030s' (company). Cascade: construction permit application 'by the end of 2026' (prospectus; company guided H1 2027 on the Q2 call), permit 2028, operations early 2030s. Centrica: GDA conclusion by end-2029, first power mid-2030s. A 'next 1-gigawatt project' with 'a major investor-owned utility' was described as in 'final throes' on the Q2 2026 call."
+    },
+    {
+      "name": "TRISO-X fuel and the Oak Ridge fuel campus (TX-1, TX-2, TX-L)",
+      "category": "Nuclear fuel fabrication",
+      "description": "TRISO-X, LLC fabricates X-energy's fuel: HALEU (15.5% U-235) kernels 'individually encapsulated in layers of silicon carbide and pyrolytic carbon' — '18,000 uranium kernels in each pebble', stable 'above 1450C'. The TX-1 facility at Horizon Center Industrial Park, Oak Ridge (214,812 sq ft; 170 Renovare Boulevard) has 'an estimated throughput of 5 metric tons of uranium (MTU) per year or approximately 700,000 TRISO-X pebbles per year, enough fuel for up to 11 Xe-100 reactors'. NRC Materials License SNM-7007 — the first Category II (HALEU) fuel-fabrication licence and 'first new fuel fabrication license in approximately 50 years' (DOE) — was issued 13 February 2026 for 40 years. Vertical construction began 17 November 2025; interior build-out began in Q3 2026; completion 'by the first half of 2028'.",
+      "highlights": [
+        "Construction contracts: Geiger Brothers USD 40.8 million site development (December 2024); Clark Construction Group USD 48.2 million core-and-shell (August 2025); DOE authorised 'an additional approximately $30.0 million for early procurement of critical long-lead equipment'; a USD 148 million IRA investment tax credit (DOE); POWER cites a USD 768 million construction budget.",
+        "Campus: 70 acres acquired in August 2026 taking the footprint to about 180 acres for TX-2 (second commercial facility, 'more than 1,000 permanent jobs' expected) and TX-L (R&D centre); Tennessee Nuclear Energy Fund grant USD 11 million (July 2026); ORNL CRADA extended 30 months (August 2026).",
+        "HALEU supply: DOE HALEU Availability Program allocation for the Dow first cores (April 2025; 7.6 t per the Q2 call); definitive enrichment-services agreement with Centrus (6 August 2026, phased, with X-energy prepayments) and a long-term agreement with General Matter; management: initial cores use LEU with HALEU 'for the second core and beyond'. Neutron Bytes warns of a HALEU 'traffic jam' across developers with first fuel loads due 2027–2030.",
+        "Fuel qualification: 13-month irradiation of commercial TRISO-X fuel in INL's Advanced Test Reactor began 6 November 2025, with post-irradiation examination at INL and ORNL 'fulfilling U.S. Nuclear Regulatory Commission requirements'.",
+        "TX-1 'will manufacture TRISO fuel to support deployment of the company's Xe-100 … as well as other advanced nuclear reactor companies' (DOE) — a merchant fuel line the company has not yet contracted publicly."
+      ],
+      "positioning": "The only licensed commercial HALEU TRISO line in the US; BWXT (Lynchburg) and the national labs make TRISO for defence and demonstration programmes. Fuel is the vertical integration the LWR SMR vendors lack — and the dependency on Centrus's American Centrifuge Plant and General Matter that they do not carry.",
+      "soldThrough": "Captive supply to Xe-100 plants under fuel-supply agreements with plant owners ('provide only fabrication supply services' without 'significant inventory risk', per the prospectus); prospective merchant sales to other advanced-reactor developers.",
+      "targetSegments": [
+        "Xe-100 plant owners (Dow, Energy Northwest, Centrica)",
+        "Other TRISO-fuelled reactor and microreactor developers (stated intent, no contract disclosed)"
+      ],
+      "roadmap": "TX-1 completion H1 2028; DOE: 'Fuel fabrication expected to begin in early 2028'; TX-2 and TX-L undated."
+    },
+    {
+      "name": "XENITH microreactor (formerly Xe-Mobile)",
+      "category": "Microreactor (defence and remote power)",
+      "description": "A transportable TRISO-fuelled microreactor of '3-10 MWe of reliable electrical output' with a '20-year core design life', 'Engineered for road transport', 'Compact footprint of < 2 acres' and a 750°C operating temperature, using TRISO compacts rather than pebbles. Origin in the Department of Defense's Project Pele ('approximately $60 million in various contracts'); a 2025 Defense Innovation Unit Advanced Nuclear Power for Installations agreement with the Department of the Air Force targets preliminary design maturity and NRC pre-licensing.",
+      "highlights": [
+        "Prospectus: 'XENITH is not yet operational but is currently exploring commercialization opportunities'; 'likely to be deployed in a 5 MWe format, or as dual reactors in a 10 MWe electric format'.",
+        "DoD Project Pele contract expansion USD 17.49 million (September 2023); DOE Office of Nuclear Energy cooperative agreement about USD 2.5 million (October 2023); the Q2 2026 10-Q carries receivables from the 'Department of War' of USD 2.19 million.",
+        "Applications named: 'Remote power for critical infrastructure and microgrids', 'Defense and mission-critical operations', 'Deep space exploration'."
+      ],
+      "positioning": "A defence-funded option rather than a product line with customers; competes with BWXT's Pele prototype and Oklo's Aurora-class units for installation power.",
+      "soldThrough": "Government contracts (DoD, DIU, DOE).",
+      "targetSegments": [
+        "US defence installations and mission-critical sites",
+        "Remote and off-grid industrial users"
+      ],
+      "roadmap": "No deployment date; DIU agreement scope is design maturity and NRC pre-licensing."
+    },
+    {
+      "name": "Project development, licensing and engineering services",
+      "category": "Services (the current revenue line)",
+      "description": "The services X-energy bills to plant sponsors and to DOE before any reactor is built: licensing (the Long Mott construction permit application with Dow, the UK GDA with Centrica, the CNSC VDR), engineering (Fluor's FEL-2 contract for Seadrift, April 2026), programme management and the ARDP cost-share work. Q2 2026 revenues and grant income USD 54.6 million — USD 50.1 million services, USD 4.5 million grants — up 154% year on year; H1 2026 USD 98.0 million. Sell on the Q2 call: ARDP is 'our largest source of revenue at our current stage of development'.",
+      "highlights": [
+        "ARDP: initial award USD 80 million (October 2020); cooperative agreement February 2021; '50/50 cost share of $2.4 billion of eligible costs ($1.2 billion reimbursement) through 2027'; reimbursed about USD 438 million to 31 December 2025 and USD 547 million through Q2 2026; budget period extended through March 2027; prospectus: 'estimated project costs have increased' since 2020; per the Q2 call and ANS, DOE notified up to USD 1 billion more taking DOE's share to up to USD 2.115 billion (not in the Q2 release or 10-Q; no DOE press release found).",
+        "Dow: 2023 JDA 'up to $50 million in engineering work, up to half of which is eligible to be funded through ARDP'; Dow is 'a subawardee under the DOE's Advanced Reactor Demonstration Program Cooperative Agreement' and a related-party customer (USD 1.9 million, 4% of Q1 2026 services revenue).",
+        "Amazon commercial terms (10-Q risk factor): from the fifth anniversary of the first Amazon-sponsored project's commercial operation, X-energy must make payments to Amazon 'reflecting the cost efficiencies we have achieved relative to the power purchase agreement prices applicable to the initial projects' — a most-favoured-pricing mechanism.",
+        "Project Prometheus (DOE Genesis Mission, USD 60 million, three years, with INL, NVIDIA and AWS): X-energy a 'Tier 1 partner' committing USD 10 million; in-house APEX agentic AI platform deployed across engineering, licensing and operations."
+      ],
+      "positioning": "A pre-revenue reactor company whose income is cost-share and sponsor-funded engineering; analysts (Morgan Stanley, JPMorgan) initiated at Overweight in May 2026 on a capital-light model of licensing, services and fuel, with Morgan Stanley modelling the first project online in 2033 (press-reported).",
+      "soldThrough": "Cost-reimbursable government cooperative agreements; engineering and licensing services under project-development agreements.",
+      "targetSegments": [
+        "DOE (ARDP, Genesis Mission)",
+        "Plant sponsors (Dow, Energy Northwest/Amazon, Centrica)"
+      ],
+      "roadmap": "ARDP outside date 'in or around 2030 (assuming the maximum three-year extension is granted)'; Dow 'would then be requested to fund the remaining costs' beyond the funding period."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Xe-100 (company product page and prospectus)",
+      "specs": [
+        {
+          "band": "Output",
+          "label": "Electric",
+          "value": "80Mwe Electric Output"
+        },
+        {
+          "band": "Output",
+          "label": "Thermal",
+          "value": "200 Mwt Thermal Output"
+        },
+        {
+          "band": "Output",
+          "label": "Plant configurations",
+          "value": "four-reactor configuration that outputs 320 MWe; optimized for multi-unit plants ranging from 320 MW to 960 MW"
+        },
+        {
+          "band": "Thermal-hydraulics",
+          "label": "Outlet temperature",
+          "value": "750°C Outlet Temperature"
+        },
+        {
+          "band": "Thermal-hydraulics",
+          "label": "Steam temperature",
+          "value": "565°C Steam Temperature"
+        },
+        {
+          "band": "Thermal-hydraulics",
+          "label": "Coolant",
+          "value": "Helium circulates within the core"
+        },
+        {
+          "band": "Fuel",
+          "label": "Form",
+          "value": "TRISO particle fuel; more than 200,000 fuel Pebbles are gravity-fed and continuously rotated through the core; 18,000 trisoparticles per pebble"
+        },
+        {
+          "band": "Fuel",
+          "label": "Enrichment",
+          "value": "HALEU enriched to 15.5%"
+        },
+        {
+          "band": "Operations",
+          "label": "Refuelling",
+          "value": "Online Refueling — Continuous operation to maximize uptime"
+        },
+        {
+          "band": "Operations",
+          "label": "Load following",
+          "value": "designed to ramp up or ramp down between 40% and full power in 12 minutes"
+        },
+        {
+          "band": "Operations",
+          "label": "Reliability / life",
+          "value": "95% Target Reliability; 60-year operational life"
+        },
+        {
+          "band": "Operations",
+          "label": "Controls",
+          "value": "Four operator-controlled variables (control rods, helium circulator, feedwater pump, turbine throttle valve)"
+        },
+        {
+          "band": "Siting",
+          "label": "Land",
+          "value": "10-25% Land Use vs. Large LWR"
+        },
+        {
+          "band": "Safety",
+          "label": "Basis",
+          "value": "intrinsically safe; negative temperature response; fuel physically incapable of melting under any scenario"
+        },
+        {
+          "band": "Licensing",
+          "label": "NRC",
+          "value": "Principal Design Criteria Topical Report Rev 3 approved 24 October 2024 (suitable for referencing in future licensing applications); Long Mott CP application docketed 12 May 2025; 18-month review; EA/FONSI 18 May 2026; final safety evaluation target November 2026"
+        },
+        {
+          "band": "Licensing",
+          "label": "UK / Canada",
+          "value": "UK Generic Design Assessment entered 2 June 2026, conclusion expected by end of 2029; CNSC Vendor Design Review Phases 1 and 2 completed (January 2024)"
+        }
+      ],
+      "notes": "Steam pressure, helium pressure and inlet temperature are not on the company's product pages and are not stated here."
+    },
+    {
+      "product": "TRISO-X TX-1 fuel fabrication facility (Oak Ridge, Tennessee)",
+      "specs": [
+        {
+          "band": "Capacity",
+          "label": "Throughput",
+          "value": "estimated throughput of 5 metric tons of uranium (MTU) per year or approximately 700,000 TRISO-X pebbles per year, enough fuel for up to 11 Xe-100 reactors"
+        },
+        {
+          "band": "Facility",
+          "label": "Building",
+          "value": "214,812 square feet; Horizon Center Industrial Park; 170 Renovare Boulevard, Oak Ridge, Tennessee 37830"
+        },
+        {
+          "band": "Facility",
+          "label": "Campus",
+          "value": "70 acres acquired; total campus footprint expanded to approximately 180 acres (from 125 acres); TX-2 planned second commercial fuel facility; TX-L dedicated research and development center"
+        },
+        {
+          "band": "Licence",
+          "label": "NRC",
+          "value": "Special Nuclear Materials License No. SNM-7007 issued February 13, 2026; less than 20 weight percent uranium 235; license period of 40 years; Expiration Date: February 13, 2066; Docket 70-7027"
+        },
+        {
+          "band": "Schedule",
+          "label": "Construction",
+          "value": "construction start October 2024; Vertical construction began Nov. 17, 2025; interior build-out commencing Q3 2026; completion by the first half of 2028; Fuel fabrication expected to begin in early 2028 (DOE)"
+        },
+        {
+          "band": "Cost",
+          "label": "Contracts and support",
+          "value": "Geiger Brothers $40.8 million site development; Clark Construction Group $48.2 million core-and-shell; ~$30.0 million early procurement authorised by DOE; $148 million investment tax credit from DOE (Inflation Reduction Act); $11 million Tennessee grant; POWER: $768m construction budget"
+        },
+        {
+          "band": "Fuel",
+          "label": "Pebble",
+          "value": "18,000 uranium kernels in each pebble; Remains stable above 1450C; layers (1) Carbon Buffer Layer, (2) Pyrolytic Carbon (PyC) Layer, (3) Silicon Carbide (SiC), and (4) Outer Pyrolytic Carbon"
+        }
+      ],
+      "notes": "Capacity and licence figures verbatim from X-energy releases, the prospectus and the NRC licence."
+    },
+    {
+      "product": "Order book and projects (as stated, Q2 2026)",
+      "specs": [
+        {
+          "band": "Order book",
+          "label": "Total",
+          "value": "144 reactors; approximately 11.5 gigawatts electric capacity (assuming full customer exercise of contingent rights); Three primary customers: Dow, Amazon, and Centrica"
+        },
+        {
+          "band": "Dow — Long Mott, Seadrift TX",
+          "label": "Scope",
+          "value": "four Xe-100 reactor modules … combined capacity of 320 MWe; 800 MWth; approximately 1,537 acres adjacent to Seadrift Operations; applicant Long Mott Energy, LLC, a wholly owned subsidiary of Dow"
+        },
+        {
+          "band": "Dow — Long Mott, Seadrift TX",
+          "label": "Schedule",
+          "value": "CPA March 31, 2025; docketed May 12, 2025; review schedule June 10, 2025 (18-month); EA/FONSI May 18, 2026; Final Safety Evaluation November 2026 (target); CP receipt expected first quarter of 2027; Dow: no final investment decision before 2028; operations likely 2031 to 2032"
+        },
+        {
+          "band": "Amazon / Energy Northwest — Cascade, Richland WA",
+          "label": "Scope",
+          "value": "Initial four-unit, 320-megawatt project … with the option to increase that project to 12 units and 960 MW; Public power utilities will have the opportunity to purchase up to 50% of the power from the full 960 MWe project; Amazon and X-energy aim to bring more than 5 gigawatts online across the United States by 2039"
+        },
+        {
+          "band": "Amazon / Energy Northwest — Cascade, Richland WA",
+          "label": "Delivery",
+          "value": "Cascade Nuclear Partners (Kiewit Nuclear Solutions Co., Black & Veatch and Aecon) selected October 2025 under a progressive design-build model; Owner's Engineer AtkinsRéalis; CPA targeted by the end of 2026 (prospectus) / first half of 2027 (Q2 call); permit anticipated 2028; operations early 2030s"
+        },
+        {
+          "band": "Centrica — Hartlepool, UK",
+          "label": "Scope",
+          "value": "12-unit Xe-100 deployment at Hartlepool; 960 megawatts (MW) of new capacity; 6 gigawatt (GW) national fleet target; joint development agreement September 15, 2025 — non-binding and may not result in definitive agreements or revenues (prospectus); First electricity generation expected mid-2030s"
+        },
+        {
+          "band": "Other",
+          "label": "Prospects",
+          "value": "Talen Energy LOI (19 March 2026): three or more four-unit Xe-100 plants in Pennsylvania and PJM, non-binding; LG&E and KU feasibility study (30 April 2026); OPG exclusive framework for industrial applications in Ontario (2022); Alberta feasibility with TransAlta (September 2025); 'final throes of an agreement with a major investor-owned utility for our next 1-gigawatt project' (Q2 2026 call)"
+        }
+      ],
+      "notes": "Amazon's dollar investment in Cascade and its Series C-1 cheque are undisclosed; Cascade PBS reported about USD 334 million offered for the feasibility phase with milestone conditions — reported, not seen in a counterparty document."
+    },
+    {
+      "product": "Capital structure and financials (SEC filings)",
+      "specs": [
+        {
+          "band": "IPO (Apr 2026)",
+          "label": "Terms",
+          "value": "44,254,659 shares at $23 per share (range $16.00 to $19.00); gross $1,017,857,157; net approximately $950.0 million (approximately $1,093.9 million if the over-allotment option is exercised); priced 23 April, traded from 24 April, closed 27 April 2026; J.P. Morgan, Morgan Stanley, Jefferies, Moelis"
+        },
+        {
+          "band": "Ownership (post-IPO, prospectus)",
+          "label": "Amazon.com NV Investment Holdings LLC",
+          "value": "65,836,947 Class A shares, 23.4% of Class A (29% pre-IPO per Renaissance Capital)"
+        },
+        {
+          "band": "Ownership (post-IPO, prospectus)",
+          "label": "Ghaffarian",
+          "value": "X-Energy Holdings, LLC 75,081,916 Class B (63.1%); Dr. Kamal Ghaffarian beneficially 84,292,133 Class B (70.9%) and 8,362,979 Class A (3.0%)"
+        },
+        {
+          "band": "Ownership (post-IPO, prospectus)",
+          "label": "Others",
+          "value": "Ares affiliates 13,844,585 Class A (4.9%) plus 24,418,756 Class B (20.5%); Segra 13,673,571 Class A (4.9%); Jane Street 10,196,485 Class B (8.6%); XERC Holdings LLC 16,219,322 Class A (5.8%)"
+        },
+        {
+          "band": "Shares",
+          "label": "Outstanding 30 June 2026",
+          "value": "287.4 million Class A and 118.9 million Class B; StockTitan: 406.4m shares, market cap about $5.1bn at $17.71 (4 September 2026)"
+        },
+        {
+          "band": "Rounds",
+          "label": "Private capital",
+          "value": "Series C $235 million (Dec 2023); Series C-1 approximately $500 million (Oct 2024, Amazon Climate Pledge Fund anchor) upsized to $700 million (Feb 2025); Series D approximately $700 million led by Jane Street (Nov 2025); mezzanine equity at 31 Dec 2025 (thousands): Series C 265,797; Series C-1 686,715; Series D 677,623"
+        },
+        {
+          "band": "Q2 2026",
+          "label": "Results",
+          "value": "Total revenues and grant income $54.6 million ($50.1 million services, $4.5 million grants), +154%; operating expenses $164.6M; net loss $(105.3)M ($(59.1)M attributable); H1 revenue and grant income $98.0M; H1 net cash used in operations $164.6m; cash & equivalents $1,145.4M; total liquidity $1,899.8 million; debt $0"
+        },
+        {
+          "band": "ARDP",
+          "label": "Cost share",
+          "value": "initially in the amount of $1.2 billion; 50/50 cost share of $2.4 billion of eligible costs; reimbursed approximately $438 million as of December 31, 2025; DOE cash received $547m through Q2 2026; budget period extended through March 2027; up to an additional $1bn notified (Q2 call / ANS) — DOE share up to $2.115 billion"
+        }
+      ],
+      "notes": "Amazon's Form 3 (24 April 2026) shows 65,836,948 shares; Ares disclosed 12.3% and Jane Street about 5% in 2026 13G filings per StockTitan."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-24",
+      "category": "capacity",
+      "headline": "TRISO-X moves TX-1 into interior build-out and auxiliary structures with vertical construction nearing completion; the plant is to make about 700,000 pebbles and 5 MTU a year for up to 11 Xe-100 units",
+      "read": "The fuel plant is now ahead of any reactor it will feed — fuel readiness in 2028 against a first construction permit in 2027.",
+      "source": "https://x-energy.com/news/triso-x-advances-to-next-phase-of-construction-for-tx-1-fuel-fabrication-facility/"
+    },
+    {
+      "date": "2026-08-13",
+      "category": "financial",
+      "headline": "Q2 2026: revenues and grant income USD 54.6 million (+154%), operating expenses USD 164.6 million, net loss USD 105.3 million, liquidity USD 1,899.8 million; ARDP budget period extended through March 2027; on the call, DOE is said to have notified up to USD 1 billion more of cost share (DOE share up to USD 2.115 billion) and a 'next 1-gigawatt project' with an investor-owned utility is in 'final throes'",
+      "read": "Public-company numbers for the first time: burn of about USD 165 million a half against USD 1.9 billion of liquidity, and a cost-share increase that no filing yet carries.",
+      "source": "https://www.sec.gov/Archives/edgar/data/0002088896/000119312526347740/xe-ex99_1.htm"
+    },
+    {
+      "date": "2026-08-06",
+      "category": "procurement",
+      "headline": "Definitive HALEU enrichment-services agreement with Centrus (phased, with X-energy prepayments, from the American Centrifuge Plant) to support 'a portion of the initial fuel needs of X-energy's 11.5 GW commercial pipeline'; a long-term agreement with General Matter also disclosed",
+      "read": "The supply chain's binding constraint — 15.5% HALEU — now has a contracted source, though the volumes are undisclosed and the plant is pre-commercial.",
+      "source": "https://x-energy.com/news/x-energy-centrus-sign-haleu-supplyagreement-for-xe-100-advanced-small-modular-reactor-development/"
+    },
+    {
+      "date": "2026-08-04",
+      "category": "capacity",
+      "headline": "TRISO-X buys 70 acres, expanding the Oak Ridge campus to about 180 acres for TX-2 and the TX-L research centre; SGL Carbon agrees to double nuclear-graphite capacity by 2030 (3 August)",
+      "read": "Capacity decisions being taken for a fleet that has no construction permit yet.",
+      "source": "https://x-energy.com/news/triso-x-announces-70-acre-expansion-of-oakridge-nuclear-fuel-campus/"
+    },
+    {
+      "date": "2026-07-22",
+      "category": "partnership",
+      "headline": "X-energy joins DOE's USD 60 million Project Prometheus (Genesis Mission) with INL, NVIDIA and AWS as a Tier 1 partner committing USD 10 million; discloses its in-house APEX agentic AI platform",
+      "read": "The AI-for-nuclear leg ties the reactor vendor to the GPU vendor and the cloud it hopes to power.",
+      "source": "https://x-energy.com/news/x-energy-joins-project-prometheus-for-ai-accelerated-advanced-nuclear-deployment/"
+    },
+    {
+      "date": "2026-06-04",
+      "category": "financial",
+      "headline": "First results as a public company: Q1 2026 revenues and grant income USD 43.4 million (+109%), operating expenses USD 109.5 million, liquidity USD 944.0 million before IPO proceeds of about USD 1.1 billion; order book 144 reactors / about 11.5 GWe",
+      "read": "The baseline quarter for every later comparison.",
+      "source": "https://www.sec.gov/Archives/edgar/data/0002088896/000119312526256369/xe-ex99_1.htm"
+    },
+    {
+      "date": "2026-06-02",
+      "category": "regulatory",
+      "headline": "Xe-100 submitted for the UK Generic Design Assessment (ONR, Environment Agency, Natural Resources Wales, DESNZ); assessment 'expected to conclude by end of 2029'",
+      "read": "A second regulator's clock starts; Centrica's Hartlepool schedule now depends on it.",
+      "source": "https://x-energy.com/news/x-energy-submits-xe-100-htgr-for-uk-generic-design-assessment/"
+    },
+    {
+      "date": "2026-05-18",
+      "category": "regulatory",
+      "headline": "NRC issues the environmental assessment and finding of no significant impact for Long Mott 'ahead of schedule' — the first commercial advanced-reactor Part 50 application to get an EA rather than an EIS — and expects to complete the safety review 'late this year'",
+      "read": "The environmental gate is passed; the construction permit is now a safety-review and hearing question.",
+      "source": "https://x-energy.com/news/nrc-issues-environmental-assessment-with-finding-of-no-significant-impact-for-dow-and-x-energys-propsed-advanced-nuclear-project-in-texas/"
+    },
+    {
+      "date": "2026-05-19",
+      "category": "market",
+      "headline": "Morgan Stanley (Overweight, USD 41) and JPMorgan (Overweight, USD 38) initiate coverage; UBS also initiates; Morgan Stanley models the first project online in 2033 (press-reported)",
+      "read": "Sell-side underwriting of a 2033 first-power case, six years past the original ARDP goal.",
+      "source": "https://www.investing.com/news/analyst-ratings/morgan-stanley-initiates-xenergy-stock-coverage-with-overweight-rating-93CH-4697658"
+    },
+    {
+      "date": "2026-04-30",
+      "category": "customer",
+      "headline": "LG&E and KU (PPL) launch an early-stage feasibility study with X-energy on Xe-100 deployment in Kentucky",
+      "read": "A regulated utility joins the prospect list; no MW or site.",
+      "source": "https://x-energy.com/news/lg-and-e-and-ku-collaborate-with-x-enrgy-to-explore-nuclear-energy/"
+    },
+    {
+      "date": "2026-04-24",
+      "category": "financial",
+      "headline": "X-Energy lists on Nasdaq as XE after an upsized IPO of 44,254,659 shares at USD 23 (range USD 16–19), gross USD 1.02 billion, about USD 9.1 billion market cap at pricing; Amazon 23.4% of Class A post-IPO, Ghaffarian 70.9% of the Class B votes",
+      "read": "Public at last, three years after the terminated USD 2 billion SPAC — the stock then fell below the IPO price (USD 17.71 on 4 September 2026).",
+      "source": "https://x-energy.com/news/x-energy-announces-pricing-of-upsized-initial-public-offering/"
+    },
+    {
+      "date": "2026-04-06",
+      "category": "partnership",
+      "headline": "Fluor signs a FEL-2 engineering contract with X-energy for the Seadrift (Long Mott) project",
+      "read": "Pre-FID engineering continues while Dow's investment decision stays beyond 2028.",
+      "source": "https://newsroom.fluor.com/news-releases/news-details/2026/Fluor-Signs-Contract-With-X-Energy-for-Advanced-Nuclear-Project-in-Texas/default.aspx"
+    },
+    {
+      "date": "2026-03-19",
+      "category": "partnership",
+      "headline": "Non-binding letter of intent with Talen Energy to assess three or more four-unit Xe-100 plants in Pennsylvania and PJM for 'onshoring of manufacturing, data centers, and electrification'",
+      "read": "A merchant nuclear IPP rather than a regulated utility — and Amazon, Talen's Susquehanna counterparty, is not a party.",
+      "source": "https://x-energy.com/news/x-energy-talen-energy-to-evaluate-gigawatt-scale-xe-100-smr-deployment/"
+    },
+    {
+      "date": "2026-03-16",
+      "category": "partnership",
+      "headline": "MOU with IHI Corporation on US–Japan SMR supply-chain development for HTGR components",
+      "read": "Third Asian heavy-industry partner after Doosan and KHNP.",
+      "source": "https://x-energy.com/news/x-energy-ihi-corporation-partner-to-advance-u-s-japan-smr-supply-chain-development/"
+    },
+    {
+      "date": "2026-02-13",
+      "category": "regulatory",
+      "headline": "NRC issues Materials License SNM-7007 to TRISO-X — the first-ever Category II HALEU fuel-fabrication licence, 40-year term, covering TX-1 and TX-2; approved three months ahead of schedule",
+      "read": "The fuel plant is licensed before any reactor is; the rarer permit came first.",
+      "source": "https://x-energy.com/news/triso-x-receives-first-ever-part-70-haleu-fuel-fabrication-license/"
+    },
+    {
+      "date": "2026-01-22",
+      "category": "legal",
+      "headline": "NRC Atomic Safety and Licensing Board grants San Antonio Bay Estuarine Waterkeeper standing on Long Mott and admits in part one contention — that Long Mott Energy 'has failed to demonstrate its financial qualifications' — citing Dow's 4,500 job cuts; two contentions dismissed, one withdrawn; the Board later granted Dow's motion to dismiss and terminated the proceeding in June 2026 (10-Q)",
+      "read": "The one legal challenge went to the sponsor's balance sheet, not the reactor — and was dismissed.",
+      "source": "https://www.ans.org/news/article-7771/nrc-board-to-hear-challenges-to-dows-long-mott-application/"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "procurement",
+      "headline": "10-year nuclear-grade graphite supply agreement with SGL Carbon (NBG-18), 'initial three-year award valued at over $100 million'; production begins",
+      "read": "Graphite is the second long-lead material after fuel; a decade-long contract signals fleet intent.",
+      "source": "https://x-energy.com/news/x-energy-and-sgl-carbon-execute-10-year-supply-agreement-begin-graphite-production/"
+    },
+    {
+      "date": "2025-12-18",
+      "category": "procurement",
+      "headline": "Doosan Enerbility signs a 16-unit reservation for reactor pressure and steam-generator vessels and expands Changwon capacity to about 20 Xe-100 reactors a year to support the 11 GW pipeline",
+      "read": "Korean heavy-forging capacity reserved for units that do not yet have permits.",
+      "source": "https://x-energy.com/news/x-energy-doosan-enerbility-announce-16-unit-reservation-agreement-and-capacity-expansion-to-support-11-gw-pipeline/"
+    },
+    {
+      "date": "2025-11-24",
+      "category": "financial",
+      "headline": "Oversubscribed USD 700 million Series D led by Jane Street with ARK Invest, Galvanize, Hood River, Point72, Reaves and XTX as new investors; valuation undisclosed",
+      "read": "The last private round — five months before the IPO filing.",
+      "source": "https://x-energy.com/news/x-energy-closes-oversubscribed-700-million-series-d-financing-round-to-continue-expansion-to-meet-global-energy-demand/"
+    },
+    {
+      "date": "2025-11-17",
+      "category": "capacity",
+      "headline": "Vertical construction begins on TX-1 in Oak Ridge (214,812 sq ft; core-and-shell by mid-2026; completion H1 2028); DOE cites 400+ regional jobs",
+      "read": "The first physical nuclear build on X-energy's own account.",
+      "source": "https://x-energy.com/news/x-energy-begins-vertical-construction-for-first-in-the-nation-advanced-nuclear-fuel-fabrication-facility/"
+    },
+    {
+      "date": "2025-11-06",
+      "category": "regulatory",
+      "headline": "13-month commercial fuel-qualification irradiation of TRISO-X fuel begins in INL's Advanced Test Reactor to meet NRC requirements",
+      "read": "Fuel qualification is on the licensing critical path for first power.",
+      "source": "https://x-energy.com/news/x-energy-begins-commercial-qualification-testing-for-triso-x-fuel-at-idaho-national-laboratory/"
+    },
+    {
+      "date": "2025-10-23",
+      "category": "project",
+      "headline": "Energy Northwest selects Cascade Nuclear Partners — an equal JV of Kiewit Nuclear Solutions, Black & Veatch and Aecon — as progressive design-builder for the first four of twelve Xe-100s (320 MW) at Richland; construction 'by the end of the decade', operations 'in the 2030s'",
+      "read": "The Amazon-backed plant gets its builders two years before its permit application.",
+      "source": "https://www.energy-northwest.com/news-releases/energy-northwest-selects-design-builder-for-cascade-advanced-energy-facility-in-washington-state/"
+    },
+    {
+      "date": "2025-10-15",
+      "category": "project",
+      "headline": "Amazon and Energy Northwest name the Richland project the Cascade Advanced Energy Facility — 12 Xe-100s, up to 960 MW, construction targeted by 2030",
+      "read": "Amazon's rights become a named, sited programme.",
+      "source": "https://www.powermag.com/amazon-unveils-cascade-energy-northwests-xe-100-smr-project-targeting-construction-by-2030/"
+    },
+    {
+      "date": "2025-09-15",
+      "category": "customer",
+      "headline": "Joint development agreement with Centrica for a 12-unit, 960 MW Xe-100 plant at Hartlepool and a 6 GW UK fleet target; 'Centrica providing initial project capital'; first power mid-2030s; the prospectus later calls the JDA 'non-binding'",
+      "read": "Half the 11.5 GW order book is a non-binding UK agreement.",
+      "source": "https://x-energy.com/news/centrica-and-x-energy-sign-joint-development-agreement-to-deploy-uks-first-advanced-modular-reactors/"
+    },
+    {
+      "date": "2025-08-25",
+      "category": "partnership",
+      "headline": "Joint compact with Amazon, Korea Hydro & Nuclear Power and Doosan Enerbility to collaborate on deploying the Amazon order book in the US",
+      "read": "Amazon appears as a partner in the supply chain, not only as shareholder and offtaker.",
+      "source": "https://x-energy.com/news/x-energy-amazon-korea-hydro-amp-nuclear-power-and-doosan-enerbility-announce-partnership-to-scale-advanced-nuclear-energy-for-ai-infrastructure/"
+    },
+    {
+      "date": "2025-06-16",
+      "category": "regulatory",
+      "headline": "NRC publishes an 18-month review schedule for the Long Mott construction permit application — half the generic 36 months and faster than X-energy's own 30-month estimate; Dow says it 'does not expect to make a final investment decision on the project before 2028'",
+      "read": "The regulator is now faster than the customer.",
+      "source": "https://x-energy.com/news/nrc-publishes-18-month-review-schedule-for-xe-100-construction-permit-application/"
+    },
+    {
+      "date": "2025-03-31",
+      "category": "regulatory",
+      "headline": "Dow and X-energy submit the construction permit application for four Xe-100s (320 MWe, 800 MWth) at Dow's UCC Seadrift site; Sargent & Lundy provided siting, licensing and environmental services; X-energy has 'secured approximately $1.1 billion in private capital'",
+      "read": "The first commercial HTGR construction permit application in the US.",
+      "source": "https://x-energy.com/news/dow-and-x-energy-submit-construction-permit-application-to-the-us-nuclear-regulatory-commission-for-proposed-advanced-nuclear-project-in-texas/"
+    },
+    {
+      "date": "2025-02-06",
+      "category": "financial",
+      "headline": "Series C-1 closes upsized at USD 700 million, adding Segra Capital, Jane Street and Emerson Collective to the Amazon-anchored round",
+      "read": "The round the brief misdated as a 2026 Series D.",
+      "source": "https://x-energy.com/news/x-energy-closes-upsized-700-million-series-c-1-financing-round-to-accelerate-the-development-of-advanced-small-modular-nuclear-technology/"
+    },
+    {
+      "date": "2024-10-16",
+      "category": "financial",
+      "headline": "Amazon leads the about USD 500 million Series C-1 through its Climate Pledge Fund (with Ken Griffin, Ares, NGP and the University of Michigan) and, with Energy Northwest, agrees to develop an initial 320 MW four-unit project expandable to 960 MW; 'Amazon and X-energy aim to bring more than 5 gigawatts online across the United States by 2039'",
+      "read": "The deal that made X-energy 'Amazon's SMR partner' — shareholder, project funder and rights-holder in one announcement.",
+      "source": "https://x-energy.com/news/amazon-invests-in-x-energy-to-support-advanced-small-modular-nuclear-reactors-and-expand-carbon-free-power/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "amazon",
+      "type": "investor",
+      "status": "active",
+      "since": "2024-10",
+      "scale": "23.4% of Class A post-IPO; options for more than 5 GWe by 2039; 320 MW first project (Cascade)",
+      "via": "Climate Pledge Fund Series C-1; Carbon Free Development and Funding Agreement with Energy Northwest",
+      "note": "Amazon led the about USD 500 million Series C-1 (October 2024), holds 65,836,947 Class A shares (23.4%) after the IPO, funds the feasibility phase of Energy Northwest's Cascade project and holds rights to its power, and holds options and rights to 'more than 5 GWe of new Xe-100 projects online across the U.S. by 2039' — investor, sponsor and anchor offtaker at once.",
+      "context": "X-energy's release (16 October 2024): Amazon anchored the round and 'Amazon and X-energy aim to bring more than 5 gigawatts online across the United States by 2039'; the first project is Energy Northwest's 'Initial four-unit, 320-megawatt project … with the option to increase that project to 12 units and 960 MW'. The prospectus: 'In 2024 Energy Northwest and Amazon entered into the Carbon Free Development and Funding Agreement'; Amazon 'also made a direct investment in the project'; Amazon holds 'priority queue slots, rights of first refusal, and most favored pricing'; and the 10-Q discloses that from the fifth anniversary of the first Amazon-sponsored project's operation X-energy must pay Amazon 'the cost efficiencies we have achieved relative to the power purchase agreement prices applicable to the initial projects'.\n\nAmazon's own page frames the deal as 'more than 5 gigawatts' of new capacity; Energy Northwest's and APPA's pages confirm Amazon 'will fund the initial feasibility phase' and 'secures the right to purchase electricity from the first project'. Post-IPO, Amazon filed a Form 3 (65,836,948 shares) and a Schedule 13G. The corpus's Amazon dossier records 'X-energy anchor investment + Energy Northwest Cascade SMRs (~320 MW phase one, up to 960 MW, ~2030) targeting 5+ GW by 2039' — consistent with this record. Daniel Gross, who 'spearheaded Amazon's equity investment in X-energy and held a Board position', is now X-energy's CFO.",
+      "source": "https://x-energy.com/news/amazon-invests-in-x-energy-to-support-advanced-small-modular-nuclear-reactors-and-expand-carbon-free-power/"
+    },
+    {
+      "slug": "kiewit",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-10",
+      "scale": "first 4 of 12 Xe-100s, up to 320 MW",
+      "via": "Cascade Nuclear Partners (Kiewit Nuclear Solutions Co., Black & Veatch, Aecon)",
+      "note": "Kiewit Nuclear Solutions is one of three equal partners in Cascade Nuclear Partners, the progressive design-builder Energy Northwest selected in October 2025 to plan, design and construct the first four Xe-100s at the Cascade Advanced Energy Facility.",
+      "context": "Energy Northwest's release: 'Cascade Nuclear Partners (CNP), an equal joint venture comprised of Kiewit Nuclear Solutions Co. (Kiewit), Black & Veatch and Aecon' will 'collaboratively complete the planning, design, and construction of the first four of 12 Xe-100 SMRs under a progressive design-build model'; Mike Rinehart, President of Kiewit Nuclear Solutions Co., quoted. The contract is with Energy Northwest, the owner — X-energy is the technology vendor to the same plant — so the link is typed `partner`: co-deliverers of one project rather than buyer and seller. World Nuclear News carried the same selection on 27 October 2025.\n\nThis corrects the corpus: the Kiewit dossier's negative finding of 'No confirmed Kiewit role on … X-energy programs' predated the October 2025 selection and is revised in the same session.",
+      "source": "https://www.energy-northwest.com/news-releases/energy-northwest-selects-design-builder-for-cascade-advanced-energy-facility-in-washington-state/"
+    },
+    {
+      "slug": "black-veatch",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-10",
+      "scale": "first 4 of 12 Xe-100s, up to 320 MW",
+      "via": "Cascade Nuclear Partners",
+      "note": "Black & Veatch is an equal partner in Cascade Nuclear Partners, the progressive design-builder for the first four Xe-100s at Energy Northwest's Cascade Advanced Energy Facility.",
+      "context": "Energy Northwest's October 2025 release names 'Kiewit Nuclear Solutions Co. (Kiewit), Black & Veatch and Aecon' as the equal joint venture; Todd Edsall, President of Black & Veatch Power Providers: 'We're excited to be part of this transformative joint venture enabling Energy Northwest to deliver the Xe-100 small modular nuclear reactors.' The Black & Veatch dossier on this corpus already records the seat from its side ('one of the first US SMR design-build contracts').",
+      "source": "https://www.energy-northwest.com/news-releases/energy-northwest-selects-design-builder-for-cascade-advanced-energy-facility-in-washington-state/"
+    },
+    {
+      "slug": "sargent-lundy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023",
+      "scale": "Long Mott construction permit application (four Xe-100s)",
+      "via": "Site selection, licensing and environmental services for Dow / Long Mott",
+      "note": "Sargent & Lundy provided 'site selection, licensing, and environmental services' for the Dow/X-energy Long Mott construction permit application, preparing the environmental report (with WSP) and preliminary safety analysis report that passed the NRC's environmental gate in May 2026.",
+      "context": "X-energy's 31 March 2025 release on the construction permit application names Sargent & Lundy's role; the Sargent & Lundy dossier on this corpus records the engagement in detail — the environmental report, the PSAR, the August 2026 expectation that the PSAR review is 'completed by year-end' — and earlier X-energy siting studies. Typed `supplier` because S&L is the engineering and licensing vendor to the Dow/X-energy application; the customer of record is Dow's Long Mott Energy, with X-energy as technology partner.",
+      "source": "https://x-energy.com/news/dow-and-x-energy-submit-construction-permit-application-to-the-us-nuclear-regulatory-commission-for-proposed-advanced-nuclear-project-in-texas/"
+    },
+    {
+      "slug": "talen-energy",
+      "type": "partner",
+      "status": "announced",
+      "since": "2026-03",
+      "scale": "three or more four-unit Xe-100 plants (non-binding LOI)",
+      "note": "Non-binding letter of intent (19 March 2026) to evaluate gigawatt-scale Xe-100 deployment — 'three or more four-unit Xe-100 plants' in Pennsylvania and PJM.",
+      "context": "X-energy's release: the parties 'will evaluate' plants serving 'onshoring of manufacturing, data centers, and electrification'; the prospectus describes the LOI as non-binding. The Talen dossier on this corpus records the same LOI and notes that Amazon — Talen's Susquehanna PPA counterparty and X-energy's largest shareholder — is not a party. Recorded as `announced` because no definitive agreement, site or schedule exists.",
+      "source": "https://x-energy.com/news/x-energy-talen-energy-to-evaluate-gigawatt-scale-xe-100-smr-deployment/"
+    },
+    {
+      "slug": "nvidia",
+      "type": "partner",
+      "status": "active",
+      "since": "2026-07",
+      "scale": "USD 60 million programme; X-energy committing USD 10 million",
+      "via": "Project Prometheus (DOE Genesis Mission) with INL, NVIDIA and AWS",
+      "note": "Co-participant with NVIDIA, AWS and Idaho National Laboratory in DOE's Project Prometheus, a USD 60 million three-year initiative on AI-accelerated advanced-reactor deployment, in which X-energy is a Tier 1 partner committing USD 10 million.",
+      "context": "X-energy's 22 July 2026 release names the partners and the company's APEX agentic platform; the Q2 2026 release calls X-energy a 'founding member'. A programme-level collaboration rather than a purchase or investment, so typed `partner`.",
+      "source": "https://x-energy.com/news/x-energy-joins-project-prometheus-for-ai-accelerated-advanced-nuclear-deployment/"
+    },
+    {
+      "slug": "oklo",
+      "type": "competitor",
+      "status": "active",
+      "note": "Advanced-reactor peer: Oklo's Aurora (75 MWe sodium fast reactor) proceeds under DOE authorisation while X-energy pursues an NRC construction permit; the Oklo dossier names X-energy's application in its own positioning.",
+      "context": "The Oklo dossier on this corpus contrasts the field's licensing paths — 'NuScale holds a standard design approval, TerraPower and Kairos hold NRC construction permits, and X-energy and Holtec have construction permit applications under review. Oklo holds no NRC reactor licence' — and both companies court the same hyperscaler-backed sponsors (Amazon's rights at X-energy; Kiewit builds Oklo's first unit and sits in X-energy's Cascade JV). No X-energy source names Oklo; the competitor typing rests on the peer set analysts and the Oklo dossier use.",
+      "source": "Oklo dossier (this corpus) — product positioning naming X-energy's construction permit application; POWER Magazine 'Deadline vs. deployment' for the ARDP peer set"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "DOE Advanced Reactor Demonstration Program (ARDP) cost share",
+      "status": "in-effect",
+      "effectiveDate": "2021-02",
+      "exposure": "X-energy is one of two ARDP demonstration awardees: initial award USD 80 million (October 2020), cooperative agreement February 2021, '50/50 cost share of $2.4 billion of eligible costs ($1.2 billion reimbursement) through 2027'; reimbursed about USD 438 million to 31 December 2025 and USD 547 million through Q2 2026; budget period extended through March 2027; the prospectus states 'estimated project costs have increased' since 2020 and that the Dow timeline 'extends beyond the ARDP funding period' (outside date 'in or around 2030' with the maximum extension), after which Dow 'would then be requested to fund the remaining costs'. GAO (2022) found ARDP milestones had not been updated for delays. Per the Q2 2026 call and ANS, DOE notified up to USD 1 billion of additional cost share (DOE share up to USD 2.115 billion) — not yet in a filing or DOE release.",
+      "mitigation": "Company statement: ARDP continuation approved through March 2027; Sell called ARDP 'our largest source of revenue at our current stage of development'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/0002088896/000119312526347740/xe-ex99_1.htm"
+    },
+    {
+      "regime": "NRC Part 50 construction permit — Executive Order 14300 18-month schedule",
+      "status": "in-effect",
+      "effectiveDate": "2025-06-10",
+      "exposure": "The Long Mott application is being reviewed on an 18-month schedule the NRC set on 10 June 2025 'consistent with the 18 month timeline required by Executive Order 14300' — half the generic 36 months; draft safety evaluation February 2026, advanced safety evaluation August 2026, final safety evaluation targeted November 2026, EA/FONSI issued 18 May 2026; construction permit decision 'TBD' on the NRC dashboard, guided by the company to Q1 2027. An intervenor contention on Long Mott Energy's financial qualifications was admitted in January 2026 and the proceeding terminated in June 2026.",
+      "mitigation": "Company statement: 'expected review completion by late 2026 and receipt of the CPA expected in the first quarter of 2027. Initial construction can commence after receipt of the CPA.'",
+      "source": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/applicant-projects/long-mott"
+    },
+    {
+      "regime": "DOE HALEU Availability Program and HALEU supply",
+      "status": "in-effect",
+      "effectiveDate": "2025-04",
+      "exposure": "Every Xe-100 core beyond the first needs uranium enriched to about 15.5% from a supply chain that is itself pre-commercial; the prospectus warns that failure of commercial HALEU supply 'could delay fuel fabrication (TX-1 and beyond) and reactor deployments'. X-energy 'was selected to receive one of the first allocations of HALEU from the DOE' for the Dow first cores (April 2025), and signed enrichment agreements with Centrus (August 2026) and General Matter.",
+      "mitigation": "Company statements: DOE allocation for the Dow initial core; Centrus and General Matter long-term agreements; initial cores on LEU with HALEU 'for the second core and beyond'.",
+      "source": "https://x-energy.com/news/x-energy-centrus-sign-haleu-supplyagreement-for-xe-100-advanced-small-modular-reactor-development/"
+    },
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "effectiveDate": "2024-12",
+      "exposure": "TRISO-X's TX-1 facility carries a '$148 million investment tax credit from DOE (Inflation Reduction Act)' per the December 2024 site-development release; the plant is otherwise funded by ARDP cost share and equity.",
+      "source": "https://x-energy.com/news/x-energy-selects-geiger-brothers-for-408-million-site-development-phase-of-triso-x-fuel-fabrication-plant-in-oak-ridge-tennessee/"
+    },
+    {
+      "regime": "UK Generic Design Assessment",
+      "status": "in-effect",
+      "effectiveDate": "2026-06-02",
+      "exposure": "The Xe-100 entered the UK GDA on 2 June 2026 with the ONR, Environment Agency, Natural Resources Wales and DESNZ; 'GDA assessment expected to conclude by end of 2029'. Centrica's Hartlepool plan (12 units, 960 MW) and the 6 GW fleet target depend on it, and the joint development agreement is 'non-binding'.",
+      "mitigation": "Company statement: 'Early Engagement process with UK regulators began in 2024'; Hartlepool 'Already designated for new nuclear under Government's National Policy Statement'.",
+      "source": "https://x-energy.com/news/x-energy-submits-xe-100-htgr-for-uk-generic-design-assessment/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Dr. Kam Ghaffarian",
+      "title": "Founder and Executive Chairman; 70.9% of the Class B voting stock (beneficial, post-IPO)",
+      "photo": "images/execs/x-energy-ghaffarian.jpg",
+      "background": [
+        "Founded X-energy in 2009 'to bring clean, safe, secure and affordable technology to market'; 'not considered independent under Nasdaq listing standards'",
+        "Founded Stinger Ghaffarian Technologies (1994; acquired by KBR); earlier Lockheed Martin, Ford Aerospace and Loral",
+        "Co-founder and chairman of Intuitive Machines (NASDAQ: LUNR, since 2012), Axiom Space (2016), Quantum Space (2021) and IBX (2018)"
+      ]
+    },
+    {
+      "name": "J. Clay Sell",
+      "title": "Chief Executive Officer (since January 2019); Board member (since July 2021)",
+      "photo": "images/execs/x-energy-sell.jpg",
+      "background": [
+        "Quoted on the IPO, the Series D, the Talen LOI, the Centrus HALEU agreement and the Q2 2026 call ('our largest source of revenue at our current stage of development' on ARDP)",
+        "US Deputy Secretary of Energy, March 2005 – February 2008 (DOE chief operating officer); Special Assistant to the President for Economic Policy and Legislative Affairs, 2003–2005; Senate Energy and Water Appropriations Subcommittee clerk (Senator Domenici), 1999–2003; staff to Rep. Mac Thornberry, 1995–1999",
+        "Led Hunt Energy Horizons, 2008–2018",
+        "JD University of Texas School of Law; BBA Accounting, Texas Tech University"
+      ]
+    },
+    {
+      "name": "Daniel Gross",
+      "title": "Chief Financial Officer (appointed 8 December 2025)",
+      "photo": "images/execs/x-energy-gross.jpg",
+      "background": [
+        "'spearheaded Amazon's equity investment in X-energy and held a Board position'; Director in Corporate Development at Amazon focusing on the Climate Pledge Fund",
+        "CIO, Climate Real Impact Solutions; founding Partner, Hudson Clean Energy; Goldman Sachs Special Situations Group; GE Capital Energy Financial Services; Yale lecturer",
+        "Fulbright Scholar; three Yale degrees; holds 778,518 Class A shares (prospectus)"
+      ]
+    },
+    {
+      "name": "Dragan Popovic",
+      "title": "Executive Vice President, Chief of Global Operations (appointed 27 October 2025; employed by X-Energy Canada)",
+      "photo": "images/execs/x-energy-popovic.jpg",
+      "background": [
+        "Senior Vice President of SMR Project Execution at Ontario Power Generation, directing the Darlington New Nuclear Project; earlier Director of Work Management at Pickering",
+        "Quoted on the Long Mott EA/FONSI; holds 544,962 Class A shares (prospectus)"
+      ]
+    },
+    {
+      "name": "Dinkar S. Bhatia",
+      "title": "Executive Vice President, Chief Commercial Officer (first CCO, joined 7 July 2025)",
+      "photo": "images/execs/x-energy-bhatia.jpg",
+      "background": [
+        "Former co-leader of the North American Power business at Hartree Partners; '20+ years developing commercial power assets'"
+      ]
+    },
+    {
+      "name": "Steve Miller",
+      "title": "Executive Vice President, Chief Legal and Administration Officer",
+      "photo": "images/execs/x-energy-miller.jpg",
+      "background": [
+        "Senior Vice President and General Counsel of Constellation Energy's power generation division (UniStar Nuclear Energy), 2002–2014; Hogan Lovells; Dickstein Shapiro; Miller, Balis and O'Neil",
+        "US Navy Judge Advocate General's Corps",
+        "JD American University; BA Penn State"
+      ]
+    },
+    {
+      "name": "Joel Duling",
+      "title": "President, TRISO-X (appointed 30 September 2024)",
+      "photo": "images/execs/x-energy-duling.jpg",
+      "background": [
+        "Leads the fuel subsidiary: TX-1 licence (SNM-7007), construction and the Oak Ridge campus expansion; quoted on the Category II licence"
+      ]
+    },
+    {
+      "name": "Sam Levenback",
+      "title": "Senior Vice President, Chief Growth and Strategy Officer (promoted 7 July 2025)",
+      "photo": "images/execs/x-energy-levenback.jpg",
+      "background": [
+        "Growth and strategy lead across the 11.5 GW pipeline"
+      ]
+    },
+    {
+      "name": "Dr. Eben Mulder",
+      "title": "Senior Vice President, Chief Scientist; co-founder",
+      "photo": "images/execs/x-energy-mulder.jpg",
+      "background": [
+        "CEO of Steenkampskraal Thorium Ltd and Chief Scientific Officer of South Africa's Pebble Bed Modular Reactor programme; AVR (Germany) experience",
+        "Adjunct Professor, NC State University; process-heat roadmap up to 900°C for steam reforming and hydrogen production"
+      ]
+    },
+    {
+      "name": "Dr. Benjamin Reinke",
+      "title": "Senior Vice President, Global Business Development; Deputy Chief Commercial Officer (promoted 7 July 2025)",
+      "photo": "images/execs/x-energy-reinke.jpg",
+      "background": [
+        "Spokesperson on the Alberta feasibility study (TransAlta, Hatch, PCL, Kinectrics)"
+      ]
+    },
+    {
+      "name": "Dr. Martin van Staden",
+      "title": "Senior Vice President, Chief Technology Officer",
+      "photo": "images/execs/x-energy-van-staden.jpg",
+      "background": [
+        "'more than 30 years' in reactor development; founded Aerotherm Computational Dynamics; Steenkampskraal Thorium Limited, PBMR and Eskom",
+        "DEng University of Johannesburg"
+      ]
+    },
+    {
+      "name": "David Bannister",
+      "title": "Chief Nuclear Officer; ARDP Project Deputy Director",
+      "photo": "images/execs/x-energy-bannister.jpg",
+      "background": [
+        "Nuclear officer for the Long Mott demonstration under the DOE cooperative agreement"
+      ]
+    },
+    {
+      "name": "Jesse B. Walker",
+      "title": "Chief Supply Chain Officer (appointed 21 May 2025)",
+      "photo": "images/execs/x-energy-walker.jpg",
+      "background": [
+        "Owns the Doosan, SGL Carbon, Toyo Tanso, IHI and Centrus supply agreements signed 2025–2026"
+      ]
+    },
+    {
+      "name": "Robert Taylor",
+      "title": "Vice President, Regulatory Affairs and Licensing",
+      "photo": "images/execs/x-energy-taylor.jpg",
+      "background": [
+        "Quoted on the Long Mott EA/FONSI (ANS); leads the NRC and UK GDA engagements"
+      ]
+    },
+    {
+      "name": "Alistair Black",
+      "title": "Vice President and UK Market Lead",
+      "background": [
+        "Quoted on the UK Generic Design Assessment submission (June 2026); leads the Centrica / Hartlepool programme"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "public",
+    "periods": [
+      {
+        "period": "FY2024 (private; per IPO prospectus)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Capital raised",
+            "actual": "Series C-1 first close approximately $500 million anchored by Amazon's Climate Pledge Fund (16 October 2024) with Ken Griffin, Ares affiliates, NGP and the University of Michigan; Amazon 2024 convertible note $20.0 million (converted with Series C-1); Ares bridge loan repaid $53.5 million (11 October 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases and prospectus"
+          },
+          {
+            "name": "ARDP reimbursement",
+            "actual": "Cumulative reimbursement reached approximately $438 million by 31 December 2025 (prospectus); FY2024 figure not separately stated",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Prospectus"
+          }
+        ],
+        "commentary": "No revenue figure for FY2024 is stated in any fetched document; the company was private and reported no results."
+      },
+      {
+        "period": "FY2025 (per IPO prospectus and press)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue and net loss",
+            "actual": "Net loss $398.9m on $109.1m revenue (IPOScoop, from the prospectus); pro forma net loss $(213,348) thousand (prospectus)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Press summary of prospectus figures; no consensus existed for a private company"
+          },
+          {
+            "name": "Capital raised",
+            "actual": "Series C-1 upsized close $700 million (6 February 2025); Series D approximately $700 million led by Jane Street (24 November 2025); mezzanine equity at 31 December 2025 (thousands): Series C 265,797; Series C-1 686,715; Series D 677,623",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; prospectus"
+          },
+          {
+            "name": "ARDP",
+            "actual": "Reimbursed approximately $438 million as of December 31, 2025 against a $1.2 billion DOE share",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Prospectus"
+          }
+        ],
+        "commentary": "The last private year: two USD 700 million rounds and the first NRC-review year for Long Mott."
+      },
+      {
+        "period": "Q1 2026 (quarter ended 31 March 2026)",
+        "periodType": "quarter",
+        "periodEnd": "2026-03-31",
+        "metrics": [
+          {
+            "name": "Total revenues and grant income",
+            "actual": "$43.4M (vs. $20.8M in 1Q 2025; +109%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; no consensus — the company was private for the quarter and listed on 24 April 2026"
+          },
+          {
+            "name": "Operating expenses",
+            "actual": "$109.5M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release"
+          },
+          {
+            "name": "Liquidity",
+            "actual": "Cash & equivalents $224.1M; short-term investments $449.5M; long-term $270.4M; Total Liquidity: $944.0M; Debt Outstanding: $0 (before IPO proceeds of ~$1.1 billion)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release"
+          },
+          {
+            "name": "Order book",
+            "actual": "144 reactors across the U.S. and U.K. for approximately 11.5 gigawatts electric",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release"
+          }
+        ],
+        "commentary": "Dow was a related-party customer at $1.9m (4%) of Q1 services revenue (10-Q)."
+      },
+      {
+        "period": "Q2 2026 (quarter ended 30 June 2026)",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Total revenues and grant income",
+            "actual": "$54.6 million, including $50.1 million of services revenue and $4.5 million of grant income (+154% year on year); H1 2026 $98.0M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release and 10-Q; no published consensus figure was found for the first post-IPO quarter — Morgan Stanley and JPMorgan initiated in May 2026 with price targets, not quarterly estimates in the fetched sources"
+          },
+          {
+            "name": "Operating expenses and net loss",
+            "actual": "Operating expenses $164.6M; net loss $(105.3)M total, $(59.1)M attributable to X-Energy, Inc.; H1 net loss $(271.6)M; H1 net cash used in operations $164.6m; H1 capex $(106.3)M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release and 10-Q"
+          },
+          {
+            "name": "Liquidity",
+            "actual": "Cash & equivalents $1,145.4M; short-term investments $489.8M; long-term $264.6M; total liquidity of $1,899.8 million; no debt",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release"
+          },
+          {
+            "name": "Government grant reimbursements",
+            "actual": "$52.3M in the quarter; DOE cash received $547m through Q2 2026; ARDP budget period extended through March 2027; up to an additional $1bn of DOE cost share notified (call)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; earnings call via Motley Fool; the additional $1bn is not in the release or 10-Q"
+          },
+          {
+            "name": "Shares outstanding",
+            "actual": "287.4 million Class A and 118.9 million Class B (30 June 2026); non-GAAP fully diluted 414m (call)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-Q; call"
+          }
+        ],
+        "commentary": "First full quarter as a public company. The stock closed at $17.71 on 4 September 2026 (about $5.1bn market cap) against the $23 IPO price; Simply Wall St flagged the valuation, Wolfe Research initiated at Peerperform (press-reported)."
+      }
+    ],
+    "commentary": "Expectations honesty: no analyst consensus for any period was found in the fetched record, so `expected` is empty throughout and no beat/miss verdict is asserted. The FY2025 revenue and loss figures come from press summaries of the prospectus rather than a fetched statement of operations."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Amazon is X-energy's SMR partner in every sense the coverage-plan row implies — shareholder, project funder and anchor offtaker — and that the arrangement gives Amazon most-favoured terms on the fleet. Basis: Amazon led the Series C-1 and holds 23.4% of the Class A after the IPO; the Carbon Free Development and Funding Agreement funds Cascade's feasibility phase with rights to the first project's power; the prospectus grants Amazon 'priority queue slots, rights of first refusal, and most favored pricing' on 'more than 5 GWe' by 2039; the 10-Q obliges X-energy to pay Amazon cost-efficiency savings from the fifth year of operation. Premise held.",
+    "2. **(High confidence)** We assess that the order book is an options book, and that the binding portion is four reactors. Basis: the company's own definition — 'approximately 11.5 gigawatts electric capacity (assuming full customer exercise of contingent rights)' — with Dow's four units the only project inside a construction permit application; Amazon's rights are options; Centrica's six GWe rests on a joint development agreement the prospectus calls 'non-binding'; the Talen LOI is non-binding. A definitive Cascade agreement or a Centrica final investment decision would move this.",
+    "3. **(High confidence)** We assess that first power has slipped roughly four to six years from the ARDP goal and now sits in 2031–2033, and that the sponsor rather than the regulator is the pacing item. Basis: ARDP's 2020 goal was operation 'within seven years'; Dow's 2023 release said construction from 2026; Dow now says no final investment decision before 2028 and operations 'likely 2031 to 2032'; the NRC review runs on an 18-month schedule 'consistent with … Executive Order 14300' with the permit guided to Q1 2027; Morgan Stanley models the first project online in 2033 (press-reported). The one admitted intervenor contention went to Dow's financial qualifications and was dismissed.",
+    "4. **(Moderate confidence)** We assess that public cost share, not private capital, is carrying the demonstration and that its size is still moving. Basis: DOE's share rose from USD 1.2 billion (50% of USD 2.4 billion) to 'up to $2.115 billion' per the Q2 2026 call and ANS — implying eligible costs of roughly USD 4.2 billion on a 50/50 basis, our arithmetic, since no party has published a revised total — while only USD 547 million has been reimbursed and the prospectus states costs 'have increased'; the additional USD 1 billion appears in no filing or DOE release we could fetch. Sell's own words: ARDP is 'our largest source of revenue at our current stage of development'.",
+    "5. **(Moderate confidence)** We assess that HALEU is the binding external constraint and that the fuel plant will be ready before the fuel. Basis: TX-1 is licensed (SNM-7007) and due in H1 2028 with capacity for 11 reactors, but every core beyond the first needs 15.5% HALEU from Centrus's American Centrifuge Plant and General Matter, both pre-commercial; the prospectus's own risk factor and Neutron Bytes's 'traffic jam' warning point the same way; management's answer — LEU first cores, HALEU 'for the second core and beyond' — defers rather than removes the dependency.",
+    "6. **(Low confidence)** We assess that the public market has re-rated the story since the IPO and that lock-up expiry and the Q1 2027 permit decision will set the next mark. Basis: USD 23 IPO price and about USD 9.1 billion market cap at pricing against USD 17.71 and about USD 5.1 billion on 4 September 2026; Overweight initiations from Morgan Stanley (USD 41) and JPMorgan (USD 38) against Simply Wall St's overvaluation flag and a Peerperform initiation; lock-up releases were reported for early September 2026 (search-snippet only).",
+    "Collection gap: no headcount after 17 March 2026 (916); no Series D valuation; no revised total project cost for Long Mott, TX-1 or Cascade; no DOE press release for the additional up to USD 1 billion; no first-party Amazon dollar figure for Cascade (Cascade PBS's about USD 334 million is reported); Centrica's own pages were unreadable (HTTP 403); the outcome text of the ASLB's dismissal is in the non-public docket (the 10-Q states the result); the NRC news-release PDFs were only partially recoverable. Premise check against the coverage-plan row: 'Amazon's SMR partner for G8' — premise held on all elements; corrections to the brief as issued: X-energy is public (Nasdaq: XE since 24 April 2026), the USD 700 million Series D closed in November 2025 (not February 2026), and Series D was led by Jane Street.",
+    "INDICATORS TO WATCH — *November 2026 — NRC final safety evaluation for Long Mott:* on time confirms Judgment 3's regulator-not-pacing read; a slip reopens it. *Q1 2027 — construction permit decision:* the first Xe-100 permit; a miss defers the whole book. *H1 2027 — Cascade construction permit application filed by Energy Northwest:* converts Amazon's option into a licensing action. *2028 — Dow final investment decision:* the true first-of-a-kind test; a further deferral confirms the sponsor as pacing item. *A filing or DOE release carrying the additional USD 1 billion:* would harden Judgment 4. *Any definitive agreement from the 'next 1-gigawatt project' with an investor-owned utility:* would add the first binding reactors since Dow. *Centrus HALEU delivery volumes and dates:* the test of Judgment 5."
+  ],
+  "sources": [
+    {
+      "label": "StockTitan — XE overview (price, market cap, filings feed as of 4 September 2026)",
+      "url": "https://www.stocktitan.net/overview/XE/",
+      "date": "2026-09-04"
+    },
+    {
+      "label": "X-energy — TRISO-X advances to next phase of construction for TX-1 fuel fabrication facility",
+      "url": "https://x-energy.com/news/triso-x-advances-to-next-phase-of-construction-for-tx-1-fuel-fabrication-facility/",
+      "date": "2026-08-24"
+    },
+    {
+      "label": "nuclear-news.net (relaying ANS) — US government handing out billions to X-energy and TerraPower",
+      "url": "https://nuclear-news.net/2026/08/22/1-a-usa-government-handing-out-billions-to-x-energy-and-terrapower-for-advanced-nuclear-reactors/",
+      "date": "2026-08-22"
+    },
+    {
+      "label": "Motley Fool — X-Energy (XE) Q2 2026 earnings call transcript",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/08/20/x-energy-xe-q2-2026-earnings-call-transcript/",
+      "date": "2026-08-20"
+    },
+    {
+      "label": "ANS Nuclear Newswire — X-energy, TerraPower share updates on advanced reactor projects (DOE up to $1bn more)",
+      "url": "https://www.ans.org/news/2026-08-17/article-8297/xenergy-terrapower-share-updates-on-advanced-reactor-projects/",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "Investing.com — earnings call transcript: X-energy posts Q2 2026 loss as DOE support grows",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-xenergy-posts-q2-2026-loss-as-doe-support-grows-93CH-4858034",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "SEC — X-Energy, Inc. Form 10-Q for the quarter ended 30 June 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002088896/000119312526347752/xe-20260630.htm",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "SEC — X-Energy 8-K Exhibit 99.1: second quarter 2026 results release",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002088896/000119312526347740/xe-ex99_1.htm",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "GlobeNewswire — X-energy reports second quarter 2026 results",
+      "url": "https://www.globenewswire.com/news-release/2026/08/13/3344306/0/en/x-energy-reports-second-quarter-2026-results.html",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "BIC Magazine — DOE awards up to $1 billion more to X-energy/Dow Texas nuclear project",
+      "url": "https://www.bicmagazine.com/industry/powergen/dow-x-energy-get-additional-billion-texas-nuclear-project/",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "X-energy — TRISO-X and Oak Ridge National Laboratory extend advanced nuclear fuel research partnership (CRADA)",
+      "url": "https://x-energy.com/news/triso-x-and-oak-ridge-national-laboratory-extend-advanced-nuclear-fuel-research-partnership/",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "NEI Magazine — X-energy secures HALEU for Xe-100",
+      "url": "https://www.neimagazine.com/news/x-energy-secures-haleu-for-xe-100/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Neutron Bytes — nuclear fuel deals frame the future of advanced reactors",
+      "url": "https://neutronbytes.com/2026/08/08/nuclear-fuel-deals-frame-the-future-of-advanced-reactors/",
+      "date": "2026-08-08"
+    },
+    {
+      "label": "X-energy — X-energy and Centrus sign HALEU supply agreement for Xe-100 development",
+      "url": "https://x-energy.com/news/x-energy-centrus-sign-haleu-supplyagreement-for-xe-100-advanced-small-modular-reactor-development/",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "GlobeNewswire — X-energy, Centrus sign HALEU supply agreement",
+      "url": "https://www.globenewswire.com/news-release/2026/08/06/3340195/0/en/X-energy-Centrus-Sign-HALEU-Supply-Agreement-for-Xe-100-Advanced-Small-Modular-Reactor-Development.html",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "SEC EDGAR full-text search — Amazon filings mentioning X-Energy (Form 3, Schedule 13G)",
+      "url": "https://efts.sec.gov/LATEST/search-index?q=%22X-energy%22&ciks=0001018724",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "X-energy — TRISO-X announces 70-acre expansion of Oak Ridge nuclear fuel campus",
+      "url": "https://x-energy.com/news/triso-x-announces-70-acre-expansion-of-oakridge-nuclear-fuel-campus/",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "X-energy — X-energy and SGL Carbon announce capacity expansion for nuclear-grade graphite",
+      "url": "https://x-energy.com/news/x-energy-sgl-carbon-announce-capacity-expansion-for-nuclear-grade-graphite/",
+      "date": "2026-08-03"
+    },
+    {
+      "label": "X-energy — X-energy joins Project Prometheus for AI-accelerated advanced nuclear deployment",
+      "url": "https://x-energy.com/news/x-energy-joins-project-prometheus-for-ai-accelerated-advanced-nuclear-deployment/",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "X-energy — TRISO-X awarded Tennessee grant to support expansion of nuclear fuel campus",
+      "url": "https://x-energy.com/news/triso-x-awarded-tennessee-grant-to-support-expansion-of-nuclear-fuel-campus/",
+      "date": "2026-07-15"
+    },
+    {
+      "label": "X-energy — X-energy reports first quarter 2026 results",
+      "url": "https://x-energy.com/news/x-energy-reports-first-quarter-2026-results/",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "GlobeNewswire — X-energy reports first quarter 2026 results",
+      "url": "https://www.globenewswire.com/news-release/2026/06/04/3306595/0/en/x-energy-reports-first-quarter-2026-results.html",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "SEC — X-Energy 8-K Exhibit 99.1: first quarter 2026 results release",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002088896/000119312526256369/xe-ex99_1.htm",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "SEC — X-Energy, Inc. Form 10-Q for the quarter ended 31 March 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002088896/000119312526256376/xe-20260331.htm",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "X-energy — X-energy submits Xe-100 HTGR for UK Generic Design Assessment",
+      "url": "https://x-energy.com/news/x-energy-submits-xe-100-htgr-for-uk-generic-design-assessment/",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "Yahoo Finance (Simply Wall St) — NRC ruling puts X-Energy's Dow plan in investor focus",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nrc-ruling-puts-x-energy-101011393.html",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "Yahoo Finance (Simply Wall St) — Dow's Texas nuclear approval reshapes risk profile",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/dow-texas-nuclear-approval-reshapes-002811982.html",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "ANS Nuclear Newswire — Dow gets EA/FONSI for Seadrift project",
+      "url": "https://www.ans.org/news/2026-05-20/article-8056/dow-gets-eafonsi-for-seadrift-project/",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "Investing.com — Morgan Stanley initiates X-energy at Overweight, $41 target",
+      "url": "https://www.investing.com/news/analyst-ratings/morgan-stanley-initiates-xenergy-stock-coverage-with-overweight-rating-93CH-4697658",
+      "date": "2026-05-19"
+    },
+    {
+      "label": "Investing.com — JPMorgan initiates X-energy at Overweight, $38 target",
+      "url": "https://www.investing.com/news/analyst-ratings/jpmorgan-initiates-xenergy-stock-coverage-with-overweight-rating-93CH-4697655",
+      "date": "2026-05-19"
+    },
+    {
+      "label": "Yahoo Finance (Investing.com) — X-Energy's advanced reactor push wins over Wall Street",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/x-energy-advanced-reactor-push-214808149.html",
+      "date": "2026-05-19"
+    },
+    {
+      "label": "X-energy — NRC issues environmental assessment with finding of no significant impact for Dow and X-energy's proposed advanced nuclear project in Texas",
+      "url": "https://x-energy.com/news/nrc-issues-environmental-assessment-with-finding-of-no-significant-impact-for-dow-and-x-energys-propsed-advanced-nuclear-project-in-texas/",
+      "date": "2026-05-18"
+    },
+    {
+      "label": "Dow IR — NRC issues environmental assessment with finding of no significant impact for Dow and X-energy's proposed advanced nuclear project in Texas",
+      "url": "https://investors.dow.com/en/news/news-details/2026/NRC-Issues-Environmental-Assessment-with-Finding-of-No-Significant-Impact-for-Dow-and-X-energys-Proposed-Advanced-Nuclear-Project-in-Texas/default.aspx",
+      "date": "2026-05-18"
+    },
+    {
+      "label": "NRC — news release 26-054: environmental assessment for Long Mott completed ahead of schedule",
+      "url": "https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-054.pdf",
+      "date": "2026-05-18",
+      "party": "disclosure"
+    },
+    {
+      "label": "POWER Magazine — NRC clears Long Mott's environmental review on a faster path",
+      "url": "https://www.powermag.com/nrc-clears-long-motts-environmental-review-on-a-faster-path-another-milestone-for-commercial-advanced-nuclear/",
+      "date": "2026-05-18"
+    },
+    {
+      "label": "X-energy — LG&E and KU collaborate with X-energy to explore nuclear energy",
+      "url": "https://x-energy.com/news/lg-and-e-and-ku-collaborate-with-x-enrgy-to-explore-nuclear-energy/",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "Renaissance Capital — small modular reactor developer X-Energy prices upsized IPO at $23, above the range",
+      "url": "https://www.renaissancecapital.com/IPO-Center/News/118531/Small-modular-reactor-developer-X-Energy-prices-upsized-IPO-at-$23-above-th",
+      "date": "2026-04-24"
+    },
+    {
+      "label": "TNW — X-Energy raises $1.02B in record nuclear IPO",
+      "url": "https://thenextweb.com/news/x-energy-ipo-billion-nuclear-ai-data-centres",
+      "date": "2026-04-24"
+    },
+    {
+      "label": "TNW — Amazon-backed X-Energy raises $1.02B (pre-IPO capital, Ghaffarian voting control)",
+      "url": "https://thenextweb.com/news/x-energy-ipo-1-billion-amazon",
+      "date": "2026-04-24"
+    },
+    {
+      "label": "IPOScoop — X-Energy (XE) upsizes IPO and prices it at $23, $4 above range",
+      "url": "https://www.iposcoop.com/the-ipo-buzz-x-energy-xe-upsizes-ipo-prices-it-at-23-4-above-range/",
+      "date": "2026-04-24"
+    },
+    {
+      "label": "X-energy — X-energy announces pricing of upsized initial public offering",
+      "url": "https://x-energy.com/news/x-energy-announces-pricing-of-upsized-initial-public-offering/",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "SEC — X-Energy, Inc. Form 424B4 IPO prospectus",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002088896/000110465926049515/tm2527015-22_424b4.htm",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "NRC ASLB — Memorandum and Order, Long Mott (Docket 50-614-CP), on Waterkeeper's answer to LME's dispositive motion",
+      "url": "https://www.nrc.gov/docs/ML2610/ML26107A249.pdf",
+      "date": "2026-04-17",
+      "party": "disclosure"
+    },
+    {
+      "label": "X-energy — X-energy announces launch of its initial public offering",
+      "url": "https://x-energy.com/news/x-energy-announces-launch-of-its-initial-public-offering/",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Fluor — Fluor signs contract with X-energy for advanced nuclear project in Texas (FEL-2)",
+      "url": "https://newsroom.fluor.com/news-releases/news-details/2026/Fluor-Signs-Contract-With-X-Energy-for-Advanced-Nuclear-Project-in-Texas/default.aspx",
+      "date": "2026-04-06"
+    },
+    {
+      "label": "X-energy — X-energy submits draft registration statement to SEC for IPO",
+      "url": "https://x-energy.com/news/x-energy-submits-draft-registration-statement-to-sec-for-ipo/",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "X-energy — X-energy and Talen Energy to evaluate gigawatt-scale Xe-100 SMR deployment (letter of intent)",
+      "url": "https://x-energy.com/news/x-energy-talen-energy-to-evaluate-gigawatt-scale-xe-100-smr-deployment/",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "X-energy — X-energy and IHI Corporation partner to advance US–Japan SMR supply chain development",
+      "url": "https://x-energy.com/news/x-energy-ihi-corporation-partner-to-advance-u-s-japan-smr-supply-chain-development/",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "NIA UK — Centrica, X-energy and Hartlepool partners sign MoU for next-generation nuclear skills and jobs",
+      "url": "https://www.niauk.org/centrica-x-energy-and-hartlepool-partners-sign-landmark-mou-to-deliver-next-generation-nuclear-skills-and-jobs/",
+      "date": "2026-03-06"
+    },
+    {
+      "label": "ANS Nuclear Newswire — NRC approves TerraPower construction permit",
+      "url": "https://www.ans.org/news/article-7818/nrc-approves-terrapower-construction-permit/",
+      "date": "2026-03-04"
+    },
+    {
+      "label": "DOE Office of Nuclear Energy — TRISO-X receives NRC special nuclear material license for advanced fuel fabrication",
+      "url": "https://www.energy.gov/ne/articles/triso-x-receives-nrc-special-nuclear-material-license-advanced-fuel-fabrication",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "ANS Nuclear Newswire — NRC board to hear challenges to Dow's Long Mott application",
+      "url": "https://www.ans.org/news/article-7771/nrc-board-to-hear-challenges-to-dows-long-mott-application/",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "ANS Nuclear Newswire — NRC grants license for TRISO-X fuel manufacturing using HALEU",
+      "url": "https://www.ans.org/news/2026-02-17/article-7762/nrc-grants-license-for-trisox-fuel-manufacturing-using-haleu/",
+      "date": "2026-02-17"
+    },
+    {
+      "label": "POWER Magazine — TRISO-X secures first-ever NRC Category II license for commercial advanced nuclear fuel fabrication",
+      "url": "https://www.powermag.com/triso-x-secures-first-ever-nrc-category-ii-license-for-commercial-advanced-nuclear-fuel-fabrication/",
+      "date": "2026-02-16"
+    },
+    {
+      "label": "X-energy — TRISO-X receives first-ever Part 70 HALEU fuel fabrication license",
+      "url": "https://x-energy.com/news/triso-x-receives-first-ever-part-70-haleu-fuel-fabrication-license/",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "NRC — news release 26-019: TRISO-X license issued",
+      "url": "https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-019.pdf",
+      "date": "2026-02-13",
+      "party": "disclosure"
+    },
+    {
+      "label": "NRC — Federal Register notice: issuance of Materials License SNM-7007 to TRISO-X (ADAMS ML26056A053)",
+      "url": "https://www.nrc.gov/docs/ML2605/ML26056A053.pdf",
+      "date": "2026-02-13",
+      "party": "disclosure"
+    },
+    {
+      "label": "Manufacturing Dive — Dow to cut 4,500 jobs in cost programme",
+      "url": "https://www.manufacturingdive.com/news/dow-q4-2025-job-layoffs-ai-transform-outperform-cost-savings-program/810878/",
+      "date": "2026-01-30"
+    },
+    {
+      "label": "X-energy — X-energy and SGL Carbon execute 10-year supply agreement, begin graphite production",
+      "url": "https://x-energy.com/news/x-energy-and-sgl-carbon-execute-10-year-supply-agreement-begin-graphite-production/",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "X-energy — X-energy and Doosan Enerbility announce 16-unit reservation agreement and capacity expansion to support 11 GW pipeline",
+      "url": "https://x-energy.com/news/x-energy-doosan-enerbility-announce-16-unit-reservation-agreement-and-capacity-expansion-to-support-11-gw-pipeline/",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "X-energy — X-energy appoints Daniel Gross as Chief Financial Officer",
+      "url": "https://x-energy.com/news/x-energy-appoints-daniel-gross-as-chief-financial-officer/",
+      "date": "2025-12-08"
+    },
+    {
+      "label": "ANS Nuclear Newswire — X-energy raises $700M in latest funding round",
+      "url": "https://www.ans.org/news/2025-11-25/article-7581/xenergy-raises-700m-in-latest-funding-round/",
+      "date": "2025-11-25"
+    },
+    {
+      "label": "X-energy — X-energy closes oversubscribed $700 million Series D financing round",
+      "url": "https://x-energy.com/news/x-energy-closes-oversubscribed-700-million-series-d-financing-round-to-continue-expansion-to-meet-global-energy-demand/",
+      "date": "2025-11-24"
+    },
+    {
+      "label": "Yahoo Finance (Business Wire) — X-energy closes oversubscribed $700 million Series D",
+      "url": "https://finance.yahoo.com/news/x-energy-closes-oversubscribed-700-120000975.html",
+      "date": "2025-11-24"
+    },
+    {
+      "label": "Latitude Media — SMR developer X-energy secures a $700 million Series D",
+      "url": "https://www.latitudemedia.com/news/smr-developer-x-energy-secures-a-700-million-series-d/",
+      "date": "2025-11-24"
+    },
+    {
+      "label": "X-energy — X-energy begins vertical construction for first-in-the-nation advanced nuclear fuel fabrication facility",
+      "url": "https://x-energy.com/news/x-energy-begins-vertical-construction-for-first-in-the-nation-advanced-nuclear-fuel-fabrication-facility/",
+      "date": "2025-11-17"
+    },
+    {
+      "label": "DOE Office of Nuclear Energy — X-energy starts building construction on advanced nuclear fuel facility",
+      "url": "https://www.energy.gov/ne/articles/x-energy-starts-building-construction-advanced-nuclear-fuel-facility",
+      "date": "2025-11-17"
+    },
+    {
+      "label": "X-energy — X-energy and Toyo Tanso announce graphite supply agreement for initial Xe-100 deployment",
+      "url": "https://x-energy.com/news/x-energy-toyo-tanso-announce-graphite-supply-agreement-for-initial-xe-100-deployment/",
+      "date": "2025-11-10"
+    },
+    {
+      "label": "X-energy — X-energy begins commercial qualification testing for TRISO-X fuel at Idaho National Laboratory",
+      "url": "https://x-energy.com/news/x-energy-begins-commercial-qualification-testing-for-triso-x-fuel-at-idaho-national-laboratory/",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "World Nuclear News — joint venture selected to deliver Cascade SMR facility",
+      "url": "https://www.world-nuclear-news.org/articles/joint-venture-selected-to-deliver-cascade-smr-facility",
+      "date": "2025-10-27"
+    },
+    {
+      "label": "X-energy — X-energy appoints Dragan Popovic as Chief of Global Operations",
+      "url": "https://x-energy.com/news/x-energy-appoints-dragan-popovic-as-chief-of-global-operations/",
+      "date": "2025-10-27"
+    },
+    {
+      "label": "Energy Northwest — Energy Northwest selects design builder for Cascade Advanced Energy Facility (Cascade Nuclear Partners: Kiewit Nuclear Solutions, Black & Veatch, Aecon)",
+      "url": "https://www.energy-northwest.com/news-releases/energy-northwest-selects-design-builder-for-cascade-advanced-energy-facility-in-washington-state/",
+      "date": "2025-10-23"
+    },
+    {
+      "label": "ANS Nuclear Newswire — Amazon provides update on its Washington project with X-energy (Cascade)",
+      "url": "https://www.ans.org/news/2025-10-20/article-7473/amazon-provides-update-on-its-washington-project-with-xenergy/",
+      "date": "2025-10-20"
+    },
+    {
+      "label": "Utility Dive — Washington nuclear facility will deploy 12 Amazon-funded SMRs (Cascade)",
+      "url": "https://www.utilitydive.com/news/washington-nuclear-facility-smrs-cascade-amazon-modular/802967/",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "POWER Magazine — Amazon unveils Cascade, Energy Northwest's Xe-100 SMR project targeting construction by 2030",
+      "url": "https://www.powermag.com/amazon-unveils-cascade-energy-northwests-xe-100-smr-project-targeting-construction-by-2030/",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "X-energy — X-energy confirms feasibility of Xe-100 deployment in Alberta",
+      "url": "https://x-energy.com/news/x-energy-confirms-feasibility-of-xe-100-advanced-small-modular-reactor-deployment-in-alberta/",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "Enerdata — Centrica and X-Energy plan 6 GW fleet of modular reactors in the UK",
+      "url": "https://www.enerdata.net/publications/daily-energy-news/centrica-and-x-energy-plan-6-gw-fleet-modular-reactors-uk.html",
+      "date": "2025-09-16"
+    },
+    {
+      "label": "X-energy — Centrica and X-energy sign joint development agreement to deploy UK's first advanced modular reactors (Hartlepool)",
+      "url": "https://x-energy.com/news/centrica-and-x-energy-sign-joint-development-agreement-to-deploy-uks-first-advanced-modular-reactors/",
+      "date": "2025-09-15"
+    },
+    {
+      "label": "X-energy — X-energy, Amazon, Korea Hydro & Nuclear Power and Doosan Enerbility announce partnership to scale advanced nuclear for AI infrastructure",
+      "url": "https://x-energy.com/news/x-energy-amazon-korea-hydro-amp-nuclear-power-and-doosan-enerbility-announce-partnership-to-scale-advanced-nuclear-energy-for-ai-infrastructure/",
+      "date": "2025-08-25"
+    },
+    {
+      "label": "X-energy (media) — X-energy and US Department of Defense to advance commercial microreactor for national security (DIU ANPI)",
+      "url": "https://x-energy.com/media/news-releases/x-energy-us-department-of-defense-to-advance-commercial-microreactor-for-national-security",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "X-energy — X-energy selects Clark Construction Group for $48 million building construction phase of TRISO-X fuel fabrication facility",
+      "url": "https://x-energy.com/news/x-energy-selects-clark-construction-group-for-48-million-building-construction-phase-of-triso-x-fuel-fabrication-facility/",
+      "date": "2025-08-05"
+    },
+    {
+      "label": "X-energy — X-energy strengthens presence in Maryland with new testing and training facility",
+      "url": "https://x-energy.com/news/x-energy-strengthens-presence-in-maryland-with-new-state-of-the-art-testing-and-training-facility-offices/",
+      "date": "2025-07-30"
+    },
+    {
+      "label": "X-energy — X-energy expands executive team with new commercial and human capital leadership",
+      "url": "https://x-energy.com/news/x-energy-expands-executive-team-with-addition-of-new-commercial-and-human-capital-leadership/",
+      "date": "2025-07-07"
+    },
+    {
+      "label": "POWER Magazine — Deadline vs. deployment: can US advanced reactors meet DOE's criticality goal?",
+      "url": "https://www.powermag.com/deadline-vs-deployment-can-u-s-advanced-reactors-meet-does-2026-criticality-goal/",
+      "date": "2025-06-26"
+    },
+    {
+      "label": "Utility Dive — NRC speeds timeline for Dow/X-energy reactor permit review (Dow: no FID before 2028)",
+      "url": "https://www.utilitydive.com/news/nrc-speeds-timeline-for-dowx-energy-reactor-permit-review/751050/",
+      "date": "2025-06-18"
+    },
+    {
+      "label": "X-energy — NRC publishes 18-month review schedule for Xe-100 construction permit application",
+      "url": "https://x-energy.com/news/nrc-publishes-18-month-review-schedule-for-xe-100-construction-permit-application/",
+      "date": "2025-06-16"
+    },
+    {
+      "label": "DOE Office of Nuclear Energy — NRC dockets construction permit application for Dow advanced reactor project",
+      "url": "https://www.energy.gov/ne/articles/nrc-dockets-construction-permit-application-dow-advanced-reactor-project",
+      "date": "2025-05-14"
+    },
+    {
+      "label": "NRC — news release 25-031: Long Mott construction permit application accepted for review",
+      "url": "https://www.nrc.gov/cdn/doc-collection-news/2025/25-031.pdf",
+      "date": "2025-05-13",
+      "party": "disclosure"
+    },
+    {
+      "label": "X-energy — TRISO-X allocated first tranche of HALEU for pioneering fuel fabrication",
+      "url": "https://x-energy.com/news/triso-x-allocated-first-tranche-of-haleu-for-pioneering-fuel-fabrication/",
+      "date": "2025-04-09"
+    },
+    {
+      "label": "POWER Magazine — Dow and X-energy advance landmark nuclear project in Texas with construction permit filing (Dow: operations likely 2031–2032)",
+      "url": "https://www.powermag.com/dow-and-x-energy-advance-landmark-nuclear-project-in-texas-with-construction-permit-filing/",
+      "date": "2025-04-03"
+    },
+    {
+      "label": "X-energy — Dow and X-energy submit construction permit application to the NRC for proposed advanced nuclear project in Texas",
+      "url": "https://x-energy.com/news/dow-and-x-energy-submit-construction-permit-application-to-the-us-nuclear-regulatory-commission-for-proposed-advanced-nuclear-project-in-texas/",
+      "date": "2025-03-31"
+    },
+    {
+      "label": "X-energy — X-energy closes upsized $700 million Series C-1 financing round",
+      "url": "https://x-energy.com/news/x-energy-closes-upsized-700-million-series-c-1-financing-round-to-accelerate-the-development-of-advanced-small-modular-nuclear-technology/",
+      "date": "2025-02-06"
+    },
+    {
+      "label": "X-energy — X-energy selects Geiger Brothers for $40.8 million site development phase of TRISO-X plant",
+      "url": "https://x-energy.com/news/x-energy-selects-geiger-brothers-for-408-million-site-development-phase-of-triso-x-fuel-fabrication-plant-in-oak-ridge-tennessee/",
+      "date": "2024-12-18"
+    },
+    {
+      "label": "Cascade PBS — Amazon offers $334M for reactors to be built at Hanford",
+      "url": "https://www.cascadepbs.org/news/2024/11/amazon-offers-334m-nuclear-reactors-be-built-hanford/",
+      "date": "2024-11-26"
+    },
+    {
+      "label": "NRC — Xe-100 Principal Design Criteria Topical Report 004799-A Rev 3 with final safety evaluation letter",
+      "url": "https://www.nrc.gov/docs/ML2431/ML24319A155.pdf",
+      "date": "2024-10-24",
+      "party": "disclosure"
+    },
+    {
+      "label": "ESG Today — Amazon leads $500 million capital raise for X-energy",
+      "url": "https://www.esgtoday.com/amazon-leads-500-million-capital-raise-for-small-modular-nuclear-technology-company-x-energy/",
+      "date": "2024-10-18"
+    },
+    {
+      "label": "X-energy — Amazon invests in X-energy to support advanced small modular nuclear reactors and expand carbon-free power (Series C-1 ~$500M)",
+      "url": "https://x-energy.com/news/amazon-invests-in-x-energy-to-support-advanced-small-modular-nuclear-reactors-and-expand-carbon-free-power/",
+      "date": "2024-10-16"
+    },
+    {
+      "label": "Amazon — Amazon signs agreements for innovative nuclear energy projects (Energy Northwest, X-energy, Dominion)",
+      "url": "https://www.aboutamazon.com/news/sustainability/amazon-nuclear-small-modular-reactor-net-carbon-zero",
+      "date": "2024-10-16"
+    },
+    {
+      "label": "American Public Power Association — Energy Northwest, Amazon unveil plans to develop advanced nuclear technology",
+      "url": "https://www.publicpower.org/periodical/article/energy-northwest-amazon-unveil-plans-develop-advanced-nuclear-technology",
+      "date": "2024-10-16"
+    },
+    {
+      "label": "X-energy (media) — Canadian pre-licensing: CNSC Vendor Design Review phases 1 and 2 complete",
+      "url": "https://x-energy.com/media/news-releases/canadian-pre-licensing-xe-100-advanced-small-modular-reactor",
+      "date": "2024-01-17"
+    },
+    {
+      "label": "X-energy — X-energy finalizes $235 million Series C financing",
+      "url": "https://x-energy.com/news/x-energy-finalizes-235-million-series-c-financing/",
+      "date": "2023-12-05"
+    },
+    {
+      "label": "SEC — Ares Acquisition Corp 8-K Exhibit 99.1: termination of business combination with X-energy",
+      "url": "https://www.sec.gov/Archives/edgar/data/1829432/000119312523266738/d397916dex991.htm",
+      "date": "2023-10-31"
+    },
+    {
+      "label": "X-energy (media) — X-energy and Ares Acquisition Corporation mutually agree to terminate business combination agreement",
+      "url": "https://x-energy.com/media/news-releases/x-energy-ares-mutually-terminate-business-agreement",
+      "date": "2023-10-31"
+    },
+    {
+      "label": "X-energy — microreactor for commercial applications (DOE cooperative agreement)",
+      "url": "https://x-energy.com/news/microreactor-for-commercial-applications/",
+      "date": "2023-10-25"
+    },
+    {
+      "label": "X-energy — Department of Defense expands X-energy contract for mobile microreactor prototype (Project Pele)",
+      "url": "https://x-energy.com/news/department-of-defense-expands-x-energy-contract-for-mobile-microreactor-prototype/",
+      "date": "2023-09-15"
+    },
+    {
+      "label": "X-energy — Energy Northwest and X-energy joint development agreement for up to 12 Xe-100 modules",
+      "url": "https://x-energy.com/news/energy-northwest-x-energy-joint-development-agreement-xe-100/",
+      "date": "2023-07-19"
+    },
+    {
+      "label": "Dow — Dow's Seadrift, Texas location selected for X-energy advanced SMR project",
+      "url": "https://corporate.dow.com/en-us/news/press-releases/dow-s-seadrift--texas-location-selected-for-x-energy-advanced-sm.html",
+      "date": "2023-05-11"
+    },
+    {
+      "label": "X-energy — Dow and X-energy advance efforts to deploy first advanced SMR at industrial site under DOE's ARDP",
+      "url": "https://x-energy.com/news/dow-and-x-energy-advance-efforts-to-deploy-first-advanced-small-modular-nuclear-reactor-at-industrial-site-under-does-advanced-reactor-demonstration-program/",
+      "date": "2023-03-01"
+    },
+    {
+      "label": "GAO — GAO-22-105394: DOE should institutionalize oversight of advanced reactor demonstrations",
+      "url": "https://www.gao.gov/products/gao-22-105394",
+      "date": "2022-09-08"
+    },
+    {
+      "label": "X-energy (media) — X-energy signs DOE Advanced Reactor Demonstration Program cooperative agreement",
+      "url": "https://x-energy.com/media/news-releases/x-energy-signs-department-of-energys-advanced-reactor-demonstration-program-ardp-cooperative-agreement",
+      "date": "2021-03-01"
+    },
+    {
+      "label": "DOE Office of Nuclear Energy — $160 million in first awards under the Advanced Reactor Demonstration Program",
+      "url": "https://www.energy.gov/ne/articles/us-department-energy-announces-160-million-first-awards-under-advanced-reactor",
+      "date": "2020-10-13"
+    },
+    {
+      "label": "X-energy — X-energy to work with Ontario Power Generation to advance clean energy technology in Canada",
+      "url": "https://x-energy.com/news/x-energy-to-work-with-ontario-power-generation-to-advance-clean-energy-technology-in-canada/",
+      "date": "2020-10-06"
+    },
+    {
+      "label": "X-energy — homepage",
+      "url": "https://x-energy.com/"
+    },
+    {
+      "label": "X-energy — Xe-100 reactor page (80 MWe, 200 MWt, 750°C outlet, 565°C steam)",
+      "url": "https://x-energy.com/reactors/xe-100"
+    },
+    {
+      "label": "X-energy — Xe-100 product page (root path)",
+      "url": "https://x-energy.com/xe-100/"
+    },
+    {
+      "label": "X-energy — TRISO-X fuel page",
+      "url": "https://x-energy.com/fuel/triso-x"
+    },
+    {
+      "label": "X-energy — TRISO-X fuel page (root path)",
+      "url": "https://x-energy.com/triso-x-fuel/"
+    },
+    {
+      "label": "X-energy — Xe-100 technology explainer",
+      "url": "https://x-energy.com/updates-all/technology-explainer"
+    },
+    {
+      "label": "X-energy — XENITH microreactor (3–10 MWe)",
+      "url": "https://x-energy.com/reactors/xenith"
+    },
+    {
+      "label": "X-energy — Our mission",
+      "url": "https://x-energy.com/our-mission/"
+    },
+    {
+      "label": "X-energy — Careers (office addresses)",
+      "url": "https://x-energy.com/careers/"
+    },
+    {
+      "label": "X-energy — Leadership",
+      "url": "https://x-energy.com/leadership/"
+    },
+    {
+      "label": "X-energy — Board of Directors",
+      "url": "https://x-energy.com/board-of-directors"
+    },
+    {
+      "label": "X-energy — News archive",
+      "url": "https://x-energy.com/news/"
+    },
+    {
+      "label": "X-energy — bio: J. Clay Sell",
+      "url": "https://x-energy.com/team/clay-sell"
+    },
+    {
+      "label": "X-energy — bio: Kam Ghaffarian",
+      "url": "https://x-energy.com/team/kam-ghaffarian"
+    },
+    {
+      "label": "X-energy — bio: Daniel Gross",
+      "url": "https://x-energy.com/team/daniel-gross"
+    },
+    {
+      "label": "X-energy — bio: Dragan Popovic",
+      "url": "https://x-energy.com/team/dragan-popovic"
+    },
+    {
+      "label": "X-energy — bio: Martin van Staden",
+      "url": "https://x-energy.com/team/martin-van-staden"
+    },
+    {
+      "label": "X-energy — bio: Steve Miller",
+      "url": "https://x-energy.com/team/steve-miller"
+    },
+    {
+      "label": "X-energy — bio: Eben Mulder",
+      "url": "https://x-energy.com/team/eben-mulder"
+    },
+    {
+      "label": "NRC — Long Mott construction permit application dashboard (milestones)",
+      "url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/applicant-projects/long-mott",
+      "party": "disclosure"
+    },
+    {
+      "label": "NRC — Long Mott application documents",
+      "url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/applicant-projects/long-mott/documents",
+      "party": "disclosure"
+    },
+    {
+      "label": "NRC — Xe-100 pre-application activities (topical reports)",
+      "url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/pre-application-activities/xe-100",
+      "party": "disclosure"
+    },
+    {
+      "label": "NRC — Materials License SNM-7007 (Form 374), TRISO-X LLC, expires 13 February 2066",
+      "url": "https://www.nrc.gov/docs/ML2528/ML25289A013.pdf",
+      "party": "disclosure"
+    },
+    {
+      "label": "DOE Office of Nuclear Energy — Advanced Reactor Demonstration Projects",
+      "url": "https://www.energy.gov/ne/advanced-reactor-demonstration-projects"
+    },
+    {
+      "label": "Energy Northwest — Cascade Advanced Energy Facility project page",
+      "url": "https://www.energy-northwest.com/energy-projects/cascade-advanced-energy-facility/"
+    },
+    {
+      "label": "Latitude Media — inside Amazon's nuclear investment strategy",
+      "url": "https://www.latitudemedia.com/news/inside-amazons-nuclear-investment-strategy/"
+    },
+    {
+      "label": "Revelio Labs — X-energy headcount (public-profile derived)",
+      "url": "https://www.reveliolabs.com/companies/x-energy/employees/"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

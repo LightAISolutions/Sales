@@ -1,0 +1,385 @@
+{
+ "schemaVersion": 2,
+ "slug": "stonepeak",
+ "title": "Stonepeak — Technology Study Guide",
+ "lastUpdated": "2026-10-05",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a private manager that builds platforms",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Stonepeak signs no equipment order; the data-centre and battery platforms it controls or created do.",
+   "ps": [
+    "**The firm.** Stonepeak Partners is a private infrastructure manager. It files no 10-K; its public record is its SEC adviser registration, its funds' offering notices and its counterparties' filings.",
+    "**The platforms.** Its funds control Cologix, which runs 45-plus interconnection data centres in North America; Digital Edge, an Asian data-centre operator; Montera, building a 500 MW campus in Arizona; and Kingdom, which owns nine Japanese battery projects.",
+    "**The big cheques.** Its largest power positions are non-controlling: 50% of Dominion's Coastal Virginia Offshore Wind project and 40% of Woodside's Louisiana LNG. Signed deals for a majority of the Louisiana utility Cleco and of Castrol would add controlled businesses once they close.",
+    "This guide teaches the mechanics behind that: reading a private manager's record, how closed-end and evergreen funds differ, building a company around a team, two kinds of data centre, why a long auction contract makes a battery bankable, why a large cheque beside an operator is not control, and the gap between signing and closing."
+   ]
+  },
+  {
+   "id": "private-record",
+   "title": "Reading a private manager's public record",
+   "kind": "prose",
+   "read": "With no annual report, the record is the adviser registration, the funds' offering notices and the counterparties' filings.",
+   "ps": [
+    "A US investment adviser registered with the SEC files a {{Form ADV}} each year. Stonepeak's, filed in April 2026, states USD 81.9bn of {{regulatory AUM}} across 125 accounts, 359 employees and who controls the adviser: its co-founder and chief executive, through the general partner.",
+    "Its own website quotes about USD 93bn as of March 2026, 'inclusive of subsequent committed capital'. The two numbers measure different things — regulatory AUM uses a set formula; the published figure counts money promised but not yet called. Record each as itself.",
+    "Each fund files a Form D when it sells interests, showing how much has been sold. That is how the size of a fund that has not announced a close can be read.",
+    "Outside owners appear in the ADV too. Blue Owl's funds hold a passive {{GP stake}}: together with other outside investors they receive under 17% of the adviser's fees and carried interest, with no control over investment decisions."
+   ]
+  },
+  {
+   "id": "fund-ladder",
+   "title": "Stonepeak's funds by commitments sold",
+   "kind": "bars",
+   "read": "The flagship series is the largest; the latest flagship has no final close on the record.",
+   "unit": "USD billions of commitments sold, per each fund's Form D",
+   "intro": "Fund V's figure is the amount sold at its latest amendment (January 2025), not a final size; the others are final or latest reported.",
+   "items": [
+    {
+     "label": "Infrastructure Fund IV",
+     "sub": "Flagship, final",
+     "v": 14.0
+    },
+    {
+     "label": "Infrastructure Fund V",
+     "sub": "Flagship, sold to January 2025; no close on record",
+     "v": 7.29
+    },
+    {
+     "label": "Core Fund",
+     "sub": "Lower-risk, long-hold assets",
+     "v": 4.82
+    },
+    {
+     "label": "Asia Infrastructure Fund",
+     "sub": "Final",
+     "v": 3.3
+    },
+    {
+     "label": "Opportunities Fund",
+     "sub": "Mid-market deals, final",
+     "v": 3.15
+    },
+    {
+     "label": "Global Renewables Fund I",
+     "sub": "Final",
+     "v": 2.75
+    }
+   ]
+  },
+  {
+   "id": "fund-types",
+   "title": "Closed-end, core and evergreen funds",
+   "kind": "prose",
+   "read": "How long a fund can hold an asset shapes what it buys and when it sells.",
+   "ps": [
+    "The flagship series are {{closed-end fund}}s: investors make a {{fund commitment}}, the manager calls it over a few years to buy businesses, and sells them to return the money within roughly a decade.",
+    "The Core Fund targets {{core infrastructure}}: steadier, contracted assets held longer for lower but more predictable returns.",
+    "Stonepeak-Plus Infrastructure Fund is an evergreen vehicle for individual investors: it keeps raising money and has no end date; evergreen vehicles of this kind let investors withdraw only on set terms.",
+    "When a closed-end fund wants to keep an asset beyond its life, the manager can move it into a {{continuation vehicle}} — a new single-asset fund whose investors buy out the old one. Stonepeak holds Cologix that way, through a vehicle the ADV values at about USD 5.0bn of gross assets."
+   ]
+  },
+  {
+   "id": "building-a-platform",
+   "title": "Building a company around a team",
+   "kind": "prose",
+   "read": "Stonepeak often starts the buyer itself, so the first orders arrive with the first financed project.",
+   "ps": [
+    "Many investors buy operating companies. Stonepeak more often launches them: a {{sponsor-created platform}} starts with a management team and a capital commitment, then grows by building or buying assets.",
+    "Digital Edge was formed with Stonepeak in 2020 on a USD 1bn commitment and now reports 31 data centres and 1.8 GW of secured IT power across Asia. Montera launched in April 2025 on a USD 1.5bn commitment; its first published campus is 500 MW in Glendale, Arizona, due in 2028. Kingdom, the Japanese battery platform, was established with a partner in 2024.",
+    "Each platform's own management signs for power and electrical equipment. At Cologix the president's remit covers data-centre design, engineering, construction and supply chain; Montera's delivery team comes from hyperscale and colocation operators.",
+    "For a seller, the relationship is with founders and delivery chiefs, and timing follows financing: a platform's first project loan is usually when its first large orders are placed."
+   ]
+  },
+  {
+   "id": "two-kinds-of-data-centre",
+   "title": "Two kinds of data centre",
+   "kind": "table",
+   "read": "An interconnection building in a city and a hyperscale campus buy different equipment at different scales.",
+   "intro": "Cologix runs {{carrier-neutral data centre}}s; Montera builds campuses for {{wholesale colocation}} to large tenants.",
+   "cols": [
+    "",
+    "Interconnection data centre (Cologix)",
+    "Hyperscale campus (Montera)"
+   ],
+   "rows": [
+    [
+     "What tenants buy",
+     "Space plus connections to many networks in one building",
+     "Whole halls or buildings, often for one tenant"
+    ],
+    [
+     "Size",
+     "Many smaller sites — Cologix runs 45-plus across 13 markets",
+     "Hundreds of MW per campus (Glendale: 500 MW)"
+    ],
+    [
+     "Where",
+     "City centres, where networks meet",
+     "Where land and grid power are available"
+    ],
+    [
+     "Power equipment",
+     "Utility feeds, UPS, generators; in Ohio, onsite fuel cells the utility owns",
+     "Substations, medium-voltage switchgear, large UPS and generator fleets"
+    ],
+    [
+     "Who signs",
+     "Cologix's management",
+     "Montera's delivery team"
+    ]
+   ]
+  },
+  {
+   "id": "onsite-utility-power",
+   "title": "When the utility owns the power plant on your site",
+   "kind": "prose",
+   "read": "At Cologix's Ohio site the utility owns the fuel cells and sells the data centre the electricity.",
+   "ps": [
+    "In 2025 Ohio regulators approved AEP Ohio building onsite fuel cells for Amazon Web Services and for Cologix, about 98 MW across the two contracts, with Cologix's running 15 years. AEP Ohio buys, owns and operates the fuel cells; Cologix buys the electricity and covers the full project cost through its contract.",
+    "This shows a pattern a seller must read carefully. The equipment sits on the customer's site, but the purchase order — for the fuel cells, their switchgear and controls — comes from the utility, not from the data-centre operator.",
+    "One reason operators accept such deals is speed: onsite generation can be in service before a large new grid connection is ready.",
+    "Stonepeak sits two steps away: it controls Cologix, and Cologix is AEP's customer."
+   ]
+  },
+  {
+   "id": "bankable-battery",
+   "title": "Why a long auction contract makes a battery bankable",
+   "kind": "prose",
+   "read": "A 20-year fixed payment turns a battery into something a bank will lend against.",
+   "ps": [
+    "A battery that earns only from trading power prices has uncertain revenue, so banks lend little against it. Japan's {{long-term decarbonization auction}} changes that: winners receive a fixed capacity payment for about 20 years to cover most of their fixed costs.",
+    "Kingdom's nine Japanese projects, 479 MW in total, each hold such a contract — four from the first auction and five from the second. That contracted income is what let Kingdom sign its first long-term project-finance loan, with MUFG Bank, for the 29 MW Mimasaka project.",
+    "The same release names the batteries: Mimasaka 'incorporates batteries from CATL'. Each new project financing is a public moment when a supplier is named — and the point by which the equipment choice was made.",
+    "Kingdom's management signs the supply contracts; Stonepeak is the sponsor that supplied the equity."
+   ]
+  },
+  {
+   "id": "cheque-beside-operator",
+   "title": "A large cheque beside an operator",
+   "kind": "prose",
+   "read": "Stonepeak's biggest power positions fund half or less of assets that an operator builds and runs.",
+   "ps": [
+    "At the Coastal Virginia Offshore Wind project Stonepeak owns a 50% {{minority interest}}. Dominion's 8-K says Virginia Power 'will retain full operational control of the construction and operations'. Stonepeak paid half the costs to closing and funds half of the rest up to a total of USD 11.3bn; Dominion's mid-2026 investor deck puts Stonepeak's share of the remaining capital at 48%.",
+    "At Louisiana LNG Stonepeak holds 40% of the infrastructure company; Woodside operates it. In two Repsol US solar portfolios and an Ørsted onshore wind portfolio, the developer keeps control.",
+    "In data centres, Stonepeak holds about 29% of the common equity of American Tower's CoreSite business plus all of its convertible preferred — about 36% on a fully converted basis — while American Tower keeps control.",
+    "Each of these is a seller's lead to the operator — Dominion, Woodside, Repsol, Ørsted, American Tower — not to Stonepeak."
+   ]
+  },
+  {
+   "id": "signed-not-closed",
+   "title": "Signed is not closed",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Two large signed deals would add controlled buyers only once they close.",
+   "ps": [
+    "**Cleco.** With Bernhard Capital Partners, Stonepeak agreed in April 2026 to buy Cleco, a Louisiana regulated utility with 2,676 MW of generation; Stonepeak would hold the majority on closing, subject to regulatory approvals. Until then Cleco's sellers own it.",
+    "**Castrol.** Stonepeak agreed in December 2025 to buy a majority controlling interest in Castrol from bp. About USD 10.1bn is the {{enterprise value}} — the whole business including debt — and CPP Investments' 'up to USD 1.05bn' is an equity commitment alongside. Different numbers, not two prices.",
+    "**AMPYR Distributed Energy.** An equity investment announced in September 2026, with the stake undisclosed. Control cannot be inferred from an announcement that gives no share.",
+    "**What to record.** Signed, not closed, in the parties' own words — and re-check on the closing date."
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test across Stonepeak's positions",
+   "kind": "table",
+   "read": "An investor passes only through a platform it controls that buys power equipment.",
+   "intro": "Each position, its kind, and who signs for equipment. The {{buying-authority test}} is defined in this guide's glossary.",
+   "cols": [
+    "Position",
+    "Kind",
+    "Who signs for power equipment",
+    "Passes?"
+   ],
+   "rows": [
+    [
+     "Cologix",
+     "Controlled through a continuation vehicle",
+     "Cologix's management",
+     "Through the platform"
+    ],
+    [
+     "Digital Edge",
+     "Founding sponsor; share undisclosed",
+     "Digital Edge's management",
+     "Through the platform"
+    ],
+    [
+     "Montera Infrastructure",
+     "Launched and funded by Stonepeak",
+     "Montera's delivery team",
+     "Through the platform"
+    ],
+    [
+     "Kingdom",
+     "Established by Stonepeak",
+     "Kingdom's management (CATL batteries at Mimasaka)",
+     "Through the platform"
+    ],
+    [
+     "Cleco; Castrol",
+     "Signed, not closed",
+     "The sellers until closing",
+     "Pending"
+    ],
+    [
+     "CVOW; Louisiana LNG; Repsol and Ørsted portfolios",
+     "50% or minority stakes",
+     "Dominion, Woodside, Repsol, Ørsted",
+     "No"
+    ],
+    [
+     "CoreSite; Princeton Digital Group",
+     "Minority common and preferred",
+     "American Tower; PDG's management",
+     "No"
+    ]
+   ]
+  },
+  {
+   "id": "directory",
+   "title": "A platform builder, not a buyer",
+   "kind": "proscons",
+   "read": "Stonepeak leads a seller to young, management-led buyers it created; it signs nothing itself.",
+   "intro": "Weigh four controlled platforms against large positions that sit beside operators.",
+   "cards": [
+    {
+     "t": "Why Stonepeak is worth knowing",
+     "meta": "A map of platforms it created",
+     "adv": [
+      "**Several real buyers.** Cologix, Digital Edge, Montera and Kingdom each buy their own power and electrical equipment.",
+      "**Visible timing.** A platform's first project financing, like Kingdom's, is when supplier choices surface.",
+      "**Growth in progress.** Montera's first campus and a possible Cleco closing would add large new buyers."
+     ],
+     "dis": [
+      "**No purchase order.** Stonepeak Partners signs none; the platforms do, through their own management.",
+      "**Operators decide.** At CVOW, Louisiana LNG and the co-owned renewables, the operator buys.",
+      "**Private record.** No annual report — sizes come from the adviser filing, fund notices and counterparties."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date, a name or a fund size.",
+   "cards": [
+    {
+     "q": "What does a private manager's {{Form ADV}} tell you that its website does not?",
+     "a": "A formula-based regulatory AUM, the number of accounts and staff, and who legally controls the adviser."
+    },
+    {
+     "q": "Why can a manager's published AUM exceed its {{regulatory AUM}}?",
+     "a": "Published figures may count capital committed but not yet called; regulatory AUM follows the SEC's formula."
+    },
+    {
+     "q": "What is a {{continuation vehicle}} for?",
+     "a": "Letting a manager keep an asset beyond a closed-end fund's life, with new investors buying out the old fund's."
+    },
+    {
+     "q": "In a {{sponsor-created platform}}, who places the equipment orders?",
+     "a": "The platform's own management team, using the sponsor's committed capital."
+    },
+    {
+     "q": "What makes a {{carrier-neutral data centre}} valuable?",
+     "a": "Many networks connecting inside one building, so tenants can reach them all in one place."
+    },
+    {
+     "q": "Why does a {{long-term decarbonization auction}} contract help a battery get a loan?",
+     "a": "It fixes a capacity payment for about 20 years, giving lenders a predictable revenue floor."
+    },
+    {
+     "q": "An investor funds half an offshore wind farm's costs, but the utility keeps full operational control. Who buys the cables?",
+     "a": "The utility — a {{minority interest}}, however large the cheque, leaves procurement with the operator."
+    },
+    {
+     "q": "Why are an {{enterprise value}} and a co-investor's equity commitment different numbers?",
+     "a": "Enterprise value prices the whole business including debt; the commitment is one investor's cash for its slice."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "Stonepeak controls Cologix. Who signs Cologix's UPS and generator orders?",
+     "c": [
+      "Stonepeak Partners",
+      "Cologix's management",
+      "Blue Owl",
+      "The SEC"
+     ],
+     "a": 1,
+     "why": "The controlled platform's management buys; the sponsor governs through the board."
+    },
+    {
+     "q": "At Cologix's Ohio site, who buys the onsite fuel cells?",
+     "c": [
+      "Cologix",
+      "Stonepeak",
+      "AEP Ohio, the utility",
+      "Amazon"
+     ],
+     "a": 2,
+     "why": "AEP Ohio owns and operates the fuel cells and sells the electricity to Cologix."
+    },
+    {
+     "q": "What lets Kingdom project-finance a Japanese battery?",
+     "c": [
+      "A merchant trading strategy",
+      "A 20-year capacity payment from Japan's auction",
+      "A government grant for the full cost",
+      "Stonepeak's guarantee"
+     ],
+     "a": 1,
+     "why": "The {{long-term decarbonization auction}} contract gives lenders a fixed revenue stream."
+    },
+    {
+     "q": "Stonepeak owns 50% of CVOW, and Virginia Power keeps full operational control. For a cable seller, who is the buyer?",
+     "c": [
+      "Stonepeak",
+      "Dominion's Virginia Power",
+      "Blue Owl",
+      "BOEM"
+     ],
+     "a": 1,
+     "why": "Operational control includes construction and procurement."
+    },
+    {
+     "q": "A signed agreement gives Stonepeak a utility's majority 'on closing', subject to approvals. Before closing, who controls the utility?",
+     "c": [
+      "Stonepeak",
+      "Its existing owners",
+      "The regulator",
+      "Nobody"
+     ],
+     "a": 1,
+     "why": "Signing creates an obligation to close; ownership changes only at closing."
+    },
+    {
+     "q": "Which figure measures the whole business including debt?",
+     "c": [
+      "A co-investor's equity commitment",
+      "The enterprise value",
+      "A fund's commitments sold",
+      "Regulatory AUM"
+     ],
+     "a": 1,
+     "why": "{{enterprise value}} prices equity plus net debt; the other figures measure money, not the business."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "buying-authority test",
+   "d": "The Phase F screen for this corpus: does a company, or a platform it controls alone or jointly, sign for batteries, medium-voltage switchgear, generation or solid-state transformers? An investor passes only through a platform it controls."
+  }
+ ]
+}

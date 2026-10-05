@@ -919,6 +919,16 @@
    "note": "Microsoft is not a ComEd counterparty in the 2026 FERC disputes — its August 21, 2026 protest concerns ATC and We Energies in Wisconsin — and no 2026 source names it as an Exelon-territory data-center customer; DeKalb-area attributions (near ComEd's KARE project) are unverified.",
    "context": "Recorded to correct a common conflation in coverage of the August 2026 FERC filings.",
    "source": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/"
+  },
+  {
+   "slug": "apollo",
+   "type": "other",
+   "status": "active",
+   "since": "2025-09",
+   "via": "ComEd substation for Stream Data Centers' Elk Grove Village campus",
+   "note": "ComEd is building the substation for the Elk Grove Village campus of Stream Data Centers, which Apollo funds have controlled since November 2025.",
+   "context": "Stream's release of 10 September 2025 records ComEd breaking ground on the substation for its Elk Grove Village campus. Apollo funds completed their acquisition of a majority stake in Stream in November 2025. ComEd's counterparty is Stream; Apollo reaches Exelon only through its platform.",
+   "source": "https://www.streamdatacenters.com/news/comed-groundbreaking-egv/"
   }
  ],
  "policyExposure": [
@@ -1490,9 +1500,19 @@
    "date": "2025-11-05"
   },
   {
+   "label": "Apollo — funds complete acquisition of Stream Data Centers",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2025/11/apollo-funds-complete-acquisition-of-stream-data-centers-3179224",
+   "date": "2025-11-03"
+  },
+  {
    "label": "Delaware News — Delaware PSC opens docket for large-load tariff, pauses interconnections",
    "url": "https://news.delaware.gov/2025/10/14/delaware-psc-opens-docket-for-large-load-tariff-pauses-interconnections/",
    "date": "2025-10-14"
+  },
+  {
+   "label": "Stream Data Centers — ComEd breaks ground on the Elk Grove Village substation",
+   "url": "https://www.streamdatacenters.com/news/comed-groundbreaking-egv/",
+   "date": "2025-09-10"
   },
   {
    "label": "Exelon — Announces executive leadership appointments in governmental, external and regulatory affairs",
@@ -1574,6 +1594,6 @@
    "url": "https://en.wikipedia.org/wiki/Exelon"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 1
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 2
 }

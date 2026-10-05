@@ -442,6 +442,17 @@
    "slug": "hithium",
    "type": "other",
    "note": "No relationship found. The dossier's judgment for the Hithium lens: an open storage account with no incumbent integrator, but one whose tax-equity financing and stated FEOC due-diligence framework screen a §154-listed OEM as tightly as at Arevon."
+  },
+  {
+   "slug": "ares",
+   "type": "investor",
+   "status": "active",
+   "since": "2021-10",
+   "scale": "Majority stake (percentage undisclosed)",
+   "via": "Ares Infrastructure Equity funds (formerly Infrastructure and Power)",
+   "note": "Funds managed by Ares's infrastructure strategy have held a majority of Apex since a purchase announced in October 2021 and closed in November 2021; two Ares partners sit on the board.",
+   "context": "Apex's release of 6 October 2021 announced that funds managed by Ares Management's Infrastructure and Power strategy would acquire a majority stake. No percentage or price has been published. Ares has issued nothing on Apex since; the reported 2025 marketing of a minority stake through Lazard has no recorded outcome. Apex's own management signs for its turbines, batteries and EPC contracts, so Ares is the owner behind the buyer, not the buyer.",
+   "source": "https://www.apexcleanenergy.com/news/funds-managed-by-ares-management-to-acquire-majority-stake-in-apex-clean-energy/"
   }
  ],
  "policyExposure": [
@@ -1064,6 +1075,6 @@
    "date": "2025-10-31"
   }
  ],
- "lastUpdated": "2026-09-01",
- "profileVersion": 1
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 2
 }

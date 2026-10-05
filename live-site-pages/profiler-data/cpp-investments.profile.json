@@ -472,6 +472,28 @@
    "note": "Co-investor alongside Blue Owl in the second phase of a hyperscale data centre in Abilene, Texas, per CPP Investments' results for the quarter to 30 September 2025; size undisclosed.",
    "context": "CPP Investments lists 'an investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl'.",
    "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html"
+  },
+  {
+   "slug": "ares",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-06",
+   "scale": "About USD 1.3bn (JPY 192.5bn) of the fund's about USD 2.4bn",
+   "via": "Japan DC Partners I",
+   "note": "CPP Investments is the largest limited partner in Ares's Japan DC Partners I, whose campuses Ares's own Ada Infrastructure develops and operates.",
+   "context": "Ares's release of 11 June 2025 announced the final close of Japan DC Partners I at about USD 2.4bn (JPY 350bn) of equity commitments for three Greater Tokyo data-centre campuses of nearly 240 MW of IT load. CPP's commitment is a fund commitment: Ares, as manager, and Ada, as developer, take the equipment decisions.",
+   "source": "https://www.eqs-news.com/news/category/ares-management-closes-inaugural-us-2-4-billion-data-center-development-fund-in-japan/85038cd3-7064-4168-8f1d-36aff20d1030_en"
+  },
+  {
+   "slug": "stonepeak",
+   "type": "partner",
+   "status": "announced",
+   "since": "2025-12",
+   "scale": "Up to USD 1.05bn, for an indirect stake",
+   "via": "Castrol acquisition",
+   "note": "CPP Investments agreed to invest up to USD 1.05bn alongside Stonepeak's acquisition of a majority controlling interest in Castrol from bp, for an indirect stake.",
+   "context": "Stonepeak's release of 24 December 2025: Stonepeak agreed to acquire a majority controlling interest in Castrol at an enterprise value of about USD 10.1bn, with bp keeping 35%, and CPP Investments agreed to invest up to USD 1.05bn in connection with the transaction. CPP's figure is an equity commitment and the USD 10.1bn is an enterprise value. Signed, not closed, on the record read.",
+   "source": "https://stonepeak.com/news/stonepeak-to-acquire-majority-controlling-interest-in-castrol-from-bp"
   }
  ],
  "policyExposure": [
@@ -1045,6 +1067,11 @@
    "date": "2026-01-07"
   },
   {
+   "label": "Stonepeak — to acquire majority controlling interest in Castrol from bp",
+   "url": "https://stonepeak.com/news/stonepeak-to-acquire-majority-controlling-interest-in-castrol-from-bp",
+   "date": "2025-12-24"
+  },
+  {
    "label": "CPP Investments (CNW) — CPP Investments and Goodman launch A$14 billion European data centre Partnership",
    "url": "https://www.newswire.ca/news-releases/cpp-investments-and-goodman-launch-a-14-billion-european-data-centre-partnership-807550159.html",
    "date": "2025-12-22"
@@ -1103,6 +1130,12 @@
    "label": "Minnesota Department of Commerce — Minnesota Power Acquisition Settlement Ensures Affordable, Clean Energy and Reliable Service",
    "url": "https://mn.gov/commerce/news/?id=17-697022",
    "date": "2025-07-11"
+  },
+  {
+   "label": "Ares — closes inaugural USD 2.4bn data-centre development fund in Japan (EQS)",
+   "url": "https://www.eqs-news.com/news/category/ares-management-closes-inaugural-us-2-4-billion-data-center-development-fund-in-japan/85038cd3-7064-4168-8f1d-36aff20d1030_en",
+   "date": "2025-06-11",
+   "party": "disclosure"
   },
   {
    "label": "CPP Investments (CNW) — CPP Investments Net Assets Total $714.4 Billion at 2025 Fiscal Year End",
@@ -1211,6 +1244,6 @@
    "url": "https://www.cppinvestments.com/"
   }
  ],
- "lastUpdated": "2026-10-04",
- "profileVersion": 2
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 3
 }

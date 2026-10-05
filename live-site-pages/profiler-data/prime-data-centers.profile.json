@@ -524,6 +524,17 @@
       "note": "Macquarie Capital held a joint-control interest in Prime from June 2021 and sold its remaining stake during Macquarie's FY26.",
       "context": "The position originated in Macquarie Capital's June 2021 equity partnership — not Macquarie Asset Management — and was held through Wholesale DC Asset Holdings LLC, which the European Commission describes as a holding company within Macquarie and attributes to Macquarie Group Limited.\n\nThe Commission's decision in Case M.11843 records **Ares joining an existing joint venture**: Prime Data Centers LLC was already jointly controlled by Wholesale DC Asset Holdings and Data Realty Group, and Ares was the party obtaining joint control. The target is Prime Data Centers LLC; Data Realty Holding Corp sits on the acquirer side as parent of Data Realty Group.\n\n**Status corrected 2026-09-06:** Macquarie completed the sale of its remaining Prime stake during its FY26 (year ended 31 March 2026). A reader encountering the M.11843 clearance alone would wrongly infer Macquarie is still a joint controller.",
       "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
+    },
+    {
+      "slug": "ares",
+      "type": "investor",
+      "status": "active",
+      "since": "2025-03",
+      "scale": "Joint control cleared March 2025; share undisclosed",
+      "via": "Ares Infrastructure Equity",
+      "note": "Ares joined the joint control of Prime held by Macquarie's Wholesale DC Asset Holdings and Data Realty Group, cleared by the European Commission in March 2025; an Ares partner sits on Prime's board.",
+      "context": "The Commission's decision M.11843 (18 March 2025) records Ares Management Corporation obtaining joint control of Prime Data Centers LLC, which Wholesale DC Asset Holdings and Data Realty Group already jointly controlled. Macquarie has since sold its remaining stake, and Grain's April 2026 release calls Data Realty Holding Corp. Prime's founding and controlling shareholder. No record read states Ares's share or whether its joint-control rights survived Macquarie's exit.",
+      "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
     }
   ],
   "policyExposure": [
@@ -1617,6 +1628,6 @@
       "url": "https://www.edgeir.com/companies/prime-data-centers"
     }
   ],
-  "lastUpdated": "2026-09-07",
-  "profileVersion": 3
+  "lastUpdated": "2026-10-05",
+  "profileVersion": 4
 }

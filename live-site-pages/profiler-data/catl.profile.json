@@ -311,6 +311,17 @@
    "note": "CATL's entry into data-centre power: 49.00% of Zhonhen Electric's controlling holdco by capital increase, plus a four-party strategic cooperation agreement.",
    "context": "On 14 August 2026 CATL signed a Capital Increase Agreement and a Shareholders Agreement taking 49.00% of 杭州中恒科技投资有限公司, the holdco that owns 35.56% of SZSE-listed Zhonhen Electric, for RMB 4,099,858,823.53 — RMB 3,511,858,823.53 in cash plus a ~49% interest in CATL's own energy-storage converter subsidiary Times Tianyuan (Contemporary Terapower (Shenzhen) Technology Co., Ltd.), valued at RMB 588,000,000 against an appraisal of RMB 1,239,820,000 for 100% of it. The structure is a capital increase, not an acquisition of existing shares: CATL subscribes newly issued registered capital, the cash is paid into the target company's account, and founder Zhu Guoding and his wife Bao Xiaoru fall from 70%/30% to 35.70%/15.30% by dilution without selling a share — which is why Zhu remains the holdco's and the listco's actual controller with 51% between them as concert parties. CATL takes one of three holdco board seats, a quorum right that no shareholders' meeting can be held without it, and the right to nominate one listco director, one deputy general manager and one finance-department manager, all conditioned on holding at least 33%. A 60-month lock-up binds both sides. Closing is conditioned on transferring the Times Tianyuan equity and completing the SAMR filing, and must occur within six months of signing.\n\nThe same-day four-party Strategic Cooperation Agreement — signed by the holdco, the listco, CATL and Times Tianyuan — covers computing-power infrastructure directly with the listco, new energy including charging and battery swap through Zhonhen Yunqi, and new power systems and trading through Beijing Zhonhen Borui.\n\nProvenance, stated because it matters: this transaction is documented entirely from Zhonhen's side. CATL has published nothing naming Zhonhen — not on the exchange, not in its FY2025 annual report, its Q1 2026 report or either language edition of its H1 2026 interim report, not on its own newsroom or IR announcement list, and not on the SZSE investor-interaction platform. Its only CATL-side trace is an unnamed sentence in the H1 2026 interim report about integrating \"advanced power electronics, computing-power synergy technologies and related resources\" through \"investment and collaboration\". At RMB 4.1B the consideration is 0.36% of CATL's total assets and 1.08% of its net assets at 30 June 2026, so a filing was very likely not required; that reading of the ChiNext threshold is this dossier's inference and not a rule text it has read.",
    "source": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF"
+  },
+  {
+   "slug": "stonepeak",
+   "type": "other",
+   "status": "active",
+   "since": "2026-04",
+   "scale": "29 MW Mimasaka project",
+   "via": "Batteries for Kingdom's Mimasaka project, Okayama",
+   "note": "CATL batteries are in the 29 MW Mimasaka project of Kingdom, the Japanese battery-storage platform Stonepeak established.",
+   "context": "Kingdom's release of 7 April 2026 describes 'a battery energy storage system (\"BESS\") platform established by Stonepeak' whose first long-term project-finance loan, from MUFG Bank, funds the Mimasaka project, a 29 MW battery in Okayama Prefecture that 'incorporates batteries from CATL'. Kingdom's management signs the supply contracts; Stonepeak is the sponsor.",
+   "source": "https://www.globenewswire.com/news-release/2026/04/07/3268779/0/en/Kingdom-Energy-Storage-Platform-Backed-by-Stonepeak-Executes-First-Project-Financing-Facility.html"
   }
  ],
  "policyExposure": [
@@ -865,6 +876,11 @@
    "date": "2026-04-09"
   },
   {
+   "label": "GlobeNewswire — Kingdom energy-storage platform backed by Stonepeak executes first project financing facility",
+   "url": "https://www.globenewswire.com/news-release/2026/04/07/3268779/0/en/Kingdom-Energy-Storage-Platform-Backed-by-Stonepeak-Executes-First-Project-Financing-Facility.html",
+   "date": "2026-04-07"
+  },
+  {
    "label": "CATL — 2025年年度报告 (FY2025 annual report, SZSE 300750): the Times Tianyuan 99.51% → 99.70% step-up; no mention of Zhonhen",
    "url": "https://static.cninfo.com.cn/finalpage/2026-03-10/1225002214.PDF",
    "date": "2026-03-10"
@@ -975,6 +991,6 @@
    "date": "2023-04-19"
   }
  ],
- "lastUpdated": "2026-09-07",
- "profileVersion": 7
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 8
 }

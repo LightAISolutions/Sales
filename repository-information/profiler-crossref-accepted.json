@@ -121,6 +121,12 @@
       "pair": "iren x semianalysis",
       "why": "Same fact, two tellings. IREN's strategyRead records that ClusterMAX 3.0 split the verdict by site (Prince George worst, Texas better) and that the Culper-era class action remains unresolved; SemiAnalysis's relationship note quotes the same 3.0 verdict on Prince George. The marker word belongs to the litigation, which neither dossier can close, not to the rating.",
       "when": "2026-10-04"
+    },
+    {
+      "id": "d3f335e290f2",
+      "pair": "dominion-energy x stonepeak",
+      "why": "Different things: Dominion's 48 percent is Stonepeak's share of CVOW's remaining capital (Q2 2026 deck); Stonepeak's 40% is its stake in Woodside's Louisiana LNG. The CVOW figures agree across both dossiers (50% interest, 50% of costs to USD 11.3bn, 48% of the remainder). F-I3 accept 1 of 1.",
+      "when": "2026-10-05"
     }
   ]
 }

@@ -469,6 +469,26 @@
    "note": "A competitor for infrastructure capital and platforms; second in Infrastructure Investor's 2026 five-year fundraising ranking.",
    "context": "KKR ranks second in Infrastructure Investor's 2026 table, ahead of Macquarie in fourth.",
    "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "ares",
+   "type": "partner",
+   "status": "historical",
+   "since": "2025-03",
+   "via": "Prime Data Centers joint control",
+   "note": "Former co-controller of Prime Data Centers with Ares and Data Realty Group; Macquarie Capital sold its remaining stake during FY26.",
+   "context": "The European Commission's decision M.11843 (18 March 2025) cleared Ares joining the joint control of Prime that Wholesale DC Asset Holdings, a Macquarie holding company, and Data Realty Group already held. Macquarie's FY26 annual report records the sale of Macquarie Capital's remaining Prime stake, naming no buyer.",
+   "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
+  },
+  {
+   "slug": "stonepeak",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-04",
+   "via": "Cleco acquisition",
+   "note": "Macquarie Asset Management is part of the consortium selling Cleco, the Louisiana utility, to Stonepeak and Bernhard Capital Partners.",
+   "context": "Stonepeak's release of 27 April 2026 announces an agreement with Bernhard Capital Partners to buy Cleco Group from a consortium of Macquarie Asset Management, BCI and Manulife Investment Management, with Stonepeak to hold the majority interest on closing, subject to customary regulatory approvals. Signed, not closed. Typed `other`: a seller and a buyer across one transaction.",
+   "source": "https://stonepeak.com/news/stonepeak-and-bernhard-capital-partners-to-acquire-cleco"
   }
  ],
  "decisionMakers": [
@@ -695,6 +715,11 @@
    "date": "2026-05-08"
   },
   {
+   "label": "Stonepeak — Stonepeak and Bernhard Capital Partners to acquire Cleco",
+   "url": "https://stonepeak.com/news/stonepeak-and-bernhard-capital-partners-to-acquire-cleco",
+   "date": "2026-04-27"
+  },
+  {
    "label": "Macquarie Group 2026 Operational Briefing presentation",
    "url": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-2026-operational-briefing-presentation.pdf",
    "date": "2026-02-10"
@@ -776,6 +801,6 @@
    "url": "https://efts.sec.gov/LATEST/search-index?q=%22Macquarie+Group+Limited%22"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 2
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 3
 }

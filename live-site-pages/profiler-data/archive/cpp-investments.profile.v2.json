@@ -1,0 +1,1216 @@
+{
+ "schemaVersion": 7,
+ "slug": "cpp-investments",
+ "name": "Canada Pension Plan Investment Board (CPP Investments)",
+ "shortName": "CPP Investments",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.cppinvestments.com/",
+ "headquarters": "Toronto, Ontario, Canada (One Queen Street East, Suite 2500 on SEC 13F covers; 141 Bay Street, Suite 3100 on 2026 EDGAR filings); offices in Hong Kong, London, Mumbai, New York, São Paulo and Sydney",
+ "founded": 1997,
+ "employees": "2,125 (fiscal 2025 annual report)",
+ "ownership": {
+  "type": "public (federal Crown corporation)",
+  "ticker": "No listed equity — a federal Crown corporation created by the Canada Pension Plan Investment Board Act (1997, c. 40), accountable to Parliament and to the federal and provincial finance ministers; funds itself with debt (SEC CIK 0001283718; fiscal year ends 31 March)",
+  "notes": "CPP Investments describes itself as 'an independent Crown Corporation' that 'operates at arm's length from governments'; its objects under the Act are to invest 'with a view to achieving a maximum rate of return, without undue risk of loss, having regard to the factors that may affect the funding of the CPP'. A special examination is required every six years (last: Deloitte, February 2022). It manages two accounts — base CPP and additional CPP (contributions since January 2019). Results are published quarterly (mid-August, mid-November, mid-February and about 21 May); no sell-side consensus exists, so every `expected` field below is empty and performance is measured against the Fund's own benchmark portfolios."
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** CPP Investments is the corpus's largest single pool of capital that signs for no equipment and the one with the most control positions behind the buyers: it is 'the majority shareholder' of Pattern Energy (69.1% together with other institutional investors after folding its wholly owned Cordelio into Pattern on 2 April 2026), 40% owner of ALLETE and Minnesota Power with GIP (closed 15 December 2025 at USD 67 a share, USD 6.2bn including debt), the c. 51% controlling owner of atNorth since 2 September 2026 (USD 1.3bn; Equinix c. 34%, Partners Group c. 10%; USD 4bn enterprise value — the 60% / USD 1.6bn signing term was re-cut by rollover), a 37.5% controlling partner in Equinix's more-than-USD 15bn US xScale venture, 12% of AirTrunk beside Blackstone and 50% of Inkia (Peru, USD 3.4bn EV, closed 8 June 2026). Its ~13% indirect interest in Sempra Infrastructure Partners beside KKR (USD 3.0bn) had not closed in any filing through 21 August 2026. Net assets were C$793.3bn at 31 March 2026 (7.8% net return; the benchmark portfolios returned 13.2%) and C$863.6bn at 30 June 2026 (7.5% in the quarter, the strongest in more than a decade). It sold 2,660,479 Constellation shares on 2 June 2026 (Calpine proceeds; 1.3% retained) and launched a C$50bn Maple Fund with Brookfield for Canadian infrastructure on 15 September 2026.\n\n**BACKGROUND.** Per its own releases and the fiscal 2025 annual report, the Canada Pension Plan Investment Board manages the CPP Fund through six departments; the AI-infrastructure and power positions sit in Real Assets (C$146.7bn at 31 March 2025; Infrastructure C$62.0bn; Sustainable Energies about C$36.3bn), led by Max Biagosch with James Bryce (Infrastructure) and Bill Rogers (Sustainable Energies). Fiscal 2026 reclassified its energy holdings from private and public equities into Real Assets, which returned 12.2% that year per press accounts. Infrastructure Investor ranks CPP Investments fourth among institutional infrastructure investors (USD 40,058m allocation, July 2026); Global SWF ranks it 18th among all sovereign and public funds (USD 608bn) with a 10/10 governance score. Canadian investments were C$119.2bn at fiscal year-end against a US share of about 47%, the fact behind the domestic-investment pressure from Ottawa and the Senate.",
+ "ecosystemRole": "We assess CPP Investments as the capital segment's quiet incumbent: it ranks fourth globally in infrastructure allocation and holds controlling or co-controlling positions in a regulated utility (ALLETE), a renewables and transmission developer (Pattern, with SunZia), a Nordic data-centre platform (atNorth) and the US xScale programme, yet it issues no equipment order itself and appears in no Senate letter. The buyers are its platforms — Pattern's project companies, Minnesota Power's rate base, atNorth's campuses, the xScale JV's builds — and the strategics it co-owns with (Equinix, GIP, KKR, Blackstone). Two features distinguish it from the asset managers in this segment: it invests its own pension capital rather than fee-paying third-party money, so it has no fund clock and no exit obligation (it has held Pattern since 2020 and consolidated Cordelio into it rather than selling), and it reports quarterly against a benchmark rather than a consensus. For a seller, CPP is the counterparty that decides whether a platform is funded for its next build — and increasingly the lender too, through Real Assets Credit (a C$225m construction loan for a Cambridge, Ontario hyperscale data centre; CoreWeave facilities).",
+ "productsAndServices": [
+  {
+   "name": "Real Assets — Infrastructure, Real Estate and Sustainable Energies (the department that holds the power and data-centre positions)",
+   "category": "Investment department — direct infrastructure, energy and property equity",
+   "description": "Real Assets 'invests in real estate, infrastructure, as well as both conventional and renewable energy assets globally'. Per the fiscal 2025 annual report it held net assets of C$146.7bn at 31 March 2025 with 270 FTEs, a five-year net return of 7.0% and ten-year value added of 2.2% a year 'with sustainable energies as the largest contributor'; the asset-class view showed Infrastructure at C$62.0bn and Real Estate at C$48.5bn. Three groups sit inside it: Infrastructure (James Bryce — Tarchon, FCC Enviro, toll roads), Real Estate, and Sustainable Energies (Bill Rogers — Pattern and Cordelio, Inkia, Calpine, Aera, Wolf Midstream, Octopus), the group created on 6 April 2021 by merging Energy & Resources with Power & Renewables and holding about C$36.3bn at 31 March 2025. Fiscal 2026 reclassified the energies holdings previously reported inside private and public equities into the Real Assets asset class. Net investments of the department were C$142.4bn at 30 June 2025 (Q1 fiscal 2026 deck); the fiscal 2026 annual report, which carries the 31 March 2026 department figures, could not be located as a PDF from this environment.",
+   "highlights": [
+    "Platforms it controls or co-controls: Pattern Energy (majority; 69.1% with other institutional investors), ALLETE (40%, with GIP), atNorth (c. 51%), Equinix xScale US JV (37.5%), Inkia (50%), Tarchon interconnector (majority, C$1bn, closing end-2026), Reventus Power (wholly owned offshore wind), Cordelio Power (wholly owned until sold to Pattern for shares, 2 April 2026)",
+    "Data-centre commitments in fiscal 2026–27 beyond atNorth and xScale: Goodman European Data Centre Partnership (A$14bn, 50/50; 435 MW across Paris, Frankfurt and Amsterdam), EQT/EdgeConneX (USD 1.75bn, closed July 2026), CtrlS India (8.2% plus a 48% JV, C$1bn), Japan DC Partners (JPY 192.5bn, Ares), Vantage and Yondr (USD 310m plus USD 200m), two Korean JVs with Pacific Asset Management",
+    "Power: AlphaGen (USD 1.0bn minority, with ArcLight), Caturus (31%), Sempra Infrastructure Partners (~13% indirect for ~USD 3.0bn — signed September 2025, not closed in filings through 21 August 2026), ReNew Energy Global (34.4%, take-private agreed 11 August 2026 at USD 7.02 a share)",
+    "The department invests pension capital with no fund clock: Pattern has been held since 2020 and consolidated rather than sold"
+   ],
+   "positioning": "Fourth among institutional infrastructure investors in Infrastructure Investor's Global Investor 75 (USD 40,058m allocation, July 2026), behind La Caisse, ADIA and NPS — the only one of the four with controlling positions in a US utility, a US renewables IPP and a European data-centre platform.",
+   "soldThrough": "Direct equity (sole, joint or minority) from the Fund's own balance sheet; co-investment beside strategics (Equinix, GIP, KKR, Blackstone, I Squared, Elia) and fund commitments (KKR Global Infrastructure Investors V, ArcLight VIII, Ares Japan DC Partners).",
+   "targetSegments": [
+    "Regulated utilities and transmission",
+    "Renewables and firm-power IPPs",
+    "Hyperscale data-centre platforms and JVs"
+   ],
+   "roadmap": "Tarchon completion end-2026; ReNew scheme (75% vote plus UK court sanction); Sempra Infrastructure Partners closing (Sempra expected Q3 2026); Maple Fund deployments."
+  },
+  {
+   "name": "Credit Investments — including Real Assets Credit, the data-centre lender",
+   "category": "Investment department — public and private credit",
+   "description": "Credit Investments held net investments of C$78.8bn at 30 June 2025 (C$80.5bn at 31 March 2025) across public and private credit, including a Real Assets Credit group (Geoffrey Souter) and the Antares Capital platform. David Colla became Senior Managing Director and Global Head on 1 April 2026, succeeding Andrew Edgell. Named AI-infrastructure lending: a C$225m commitment, 50% of a construction loan with Deutsche Bank, for a 54 MW hyperscale data-centre expansion in Cambridge, Ontario pre-leased to a GPU-focused AI cloud provider (July 2025); a USD 250m GPU-server loan facility to CoreWeave (fiscal 2025) and a USD 150m delayed-draw term loan for four CoreWeave data centres (Q1 fiscal 2027); investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl (Q2 fiscal 2026); a USD 1.5bn separately managed account and a USD 1bn financing with Blackstone's private-credit platform; C$1.75bn supporting EQT's AI-infrastructure strategy (Q1 fiscal 2027).",
+   "highlights": [
+    "Fiscal 2026 costs: management fees to external managers C$1,976m, performance fees C$2,758m, operating expenses C$1,757m (23.1 bps)",
+    "Antares Capital is wholly owned; Colla sits on its boards"
+   ],
+   "positioning": "A lender to data-centre construction at the project level, beside the equity it holds in platforms.",
+   "soldThrough": "Direct loans, forward-flow agreements, separately managed accounts with managers.",
+   "targetSegments": [
+    "Data-centre developers and neoclouds (construction and GPU financing)",
+    "Private-credit managers (SMAs)"
+   ],
+   "roadmap": "Not disclosed."
+  },
+  {
+   "name": "Total Fund Management, Capital Markets & Factor Investing, Active Equities and Private Equity",
+   "category": "Investment departments — the balance of the Fund",
+   "description": "Total Fund Management (C$364.7bn of net investments at 30 June 2025; Manroop Jhooty) runs the balancing portfolio; Capital Markets & Factor Investing (C$79.0bn; Heather Tobin) runs external hedge-fund and systematic programmes; Active Equities (C$53.0bn; Frank Ieraci) holds public and pre-IPO stakes; Private Equity (C$143.8bn; Caitlin Gubbels) runs direct, Asia and funds-and-secondaries programmes — the secondaries desk sold 33 fund interests for about C$4bn to Blackstone Strategic Partners and Ardian in May 2026. The 13F for 30 June 2026 lists 1,694 US positions worth USD 180.8bn, including Constellation (USD 1,245m), Equinix (USD 1,164m), GE Vernova (USD 705m), NextEra (USD 390m) and Vistra (USD 389m).",
+   "highlights": [
+    "Fiscal 2025 strategic weights (base / additional CPP): private equity 23% / 15%, public fixed income 41% / 55%, credit 14% / 16%, real assets 26% / 17%",
+    "Geography (fiscal 2026, per ai-CIO): US 48%, Asia-Pacific 18%, Europe 17%, Canada 12%, Latin America 5%"
+   ],
+   "positioning": "The Fund's public-market book makes it a top-25 holder of several covered power and data-centre issuers while the private book controls their peers.",
+   "soldThrough": "Internal mandates; external managers for hedge-fund and some PE programmes.",
+   "targetSegments": [
+    "Not applicable — a single-client pension fund"
+   ],
+   "roadmap": "Not disclosed."
+  },
+  {
+   "name": "Canadian programmes — the Maple Fund with Brookfield and the domestic-investment response",
+   "category": "Partnership vehicle",
+   "description": "On 15 September 2026, at the first Canada Investment Summit, CPP Investments and Brookfield Asset Management launched the Maple Fund: up to C$50bn of equity, 50/50, up to C$25bn each over an initial five years, for projects of more than C$5bn of equity in 'critical infrastructure and strategic industries across Canada', open to third-party co-investors and 'incremental to normal-course' investing. The same day John Graham told the summit 'We are not required to invest in Canada. We invest here when an opportunity earns its place on a risk return basis.' Canadian investments stood at C$119.2bn at 31 March 2026.",
+   "highlights": [
+    "Context: Fall Economic Statement 2024 (repeal of the 30% rule; an AI data-centre programme matching pension capital 1:2 up to C$15bn), Budget 2025's C$1tn target, quarterly Finance Minister meetings with the Maple 8, and Senate Finance chair Carignan's call for a legislated mandate (May 2026)"
+   ],
+   "positioning": "CPP's answer to the mandate debate: a voluntary, scaled vehicle rather than a statutory allocation.",
+   "soldThrough": "Co-investment partnership with Brookfield; third-party co-investors invited.",
+   "targetSegments": [
+    "Canadian energy, transmission and AI-infrastructure projects above C$5bn of equity"
+   ],
+   "roadmap": "First investments not yet announced (September 2026)."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-10-01",
+   "category": "ma",
+   "headline": "Agreed sale of 10.5% of WestConnex and 25% of NorthWestern Roads Group to Transurban, about A$4.5bn gross",
+   "read": "Recycling mature Australian toll-road capital; AirTrunk stays.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-announces-sale-of-australian-toll-road-assets-841986632.html"
+  },
+  {
+   "date": "2026-09-23",
+   "category": "ma",
+   "headline": "Schedule 13E-3 filed for the ReNew Energy Global take-private by CPP Investments and founder Sumant Sinha at USD 7.02 a share; CPP holds 34.4%",
+   "read": "A 34.4%-owned Indian renewables IPP goes private under a UK scheme.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1283718/000119312526398221/d72407dsc13e3.htm"
+  },
+  {
+   "date": "2026-09-15",
+   "category": "partnership",
+   "headline": "CPP Investments and Brookfield launch the Maple Fund — up to C$50bn, 50/50, for Canadian infrastructure and strategic industries; Graham: 'We are not required to invest in Canada'",
+   "read": "The voluntary answer to Ottawa's and the Senate's domestic-investment pressure.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-and-brookfield-launch-50-billion-maple-fund-to-pursue-large-scale-investments-across-canada-841350467.html"
+  },
+  {
+   "date": "2026-09-02",
+   "category": "ma",
+   "headline": "atNorth acquisition completed: CPP Investments c. 51% control for USD 1.3bn, Equinix c. 34% (USD 895m), Partners Group re-invests for c. 10% (USD 260m); USD 4bn enterprise value; USD 4.1bn financing",
+   "read": "The 60% / USD 1.6bn signing term was re-cut by seller and management rollover — CPP's first controlling European data-centre platform.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-and-equinix-complete-atnorth-acquisition-to-support-growth-of-leading-nordic-data-center-platform-834078322.html"
+  },
+  {
+   "date": "2026-08-14",
+   "category": "financial",
+   "headline": "Q1 fiscal 2027: net assets C$863.6bn, net return 7.5% in the quarter ('strongest quarterly investment performance in more than a decade'), ten-year 9.4%; Constellation 0.7% block sold for USD 742m net, 1.3% retained; Inkia closed; Caturus raised to 31%",
+   "read": "A strong quarter after the fiscal 2026 benchmark miss.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-863-6-billion-at-first-quarter-fiscal-2027-819704344.html"
+  },
+  {
+   "date": "2026-08-14",
+   "category": "leadership",
+   "headline": "Geoffrey Rubin to become Head of Asia Pacific at end-2026 as Agus Tandiono retires; expanded portfolio carbon-footprint reporting (86.7% of C$787bn below 40 tCO2e/USD m EVIC)",
+   "read": "",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-launches-expanded-portfolio-carbon-footprint-reporting-897938029.html"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "ma",
+   "headline": "CPP Investments commits C$1bn for a majority stake in the 1.4 GW Tarchon UK–Germany HVDC interconnector with Elia Group's WindGrid; completion expected end-2026",
+   "read": "A regulated transmission asset of a size the corpus has not seen a pension take alone.",
+   "source": "https://www.newswire.ca/news-releases/elia-group-and-cpp-investments-expand-partnership-with-acquisition-of-the-tarchon-interconnector-project-899201203.html"
+  },
+  {
+   "date": "2026-07-09",
+   "category": "corporate",
+   "headline": "Sempra ties its CFO succession to the closing of the Sempra Infrastructure Partners sale, 'expected to occur in the third quarter of 2026'",
+   "read": "Closing slipped to the end of Q3; no completion 8-K through 21 August 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000040/sempra-20260706.htm"
+  },
+  {
+   "date": "2026-07-03",
+   "category": "ma",
+   "headline": "CPP Investments invests USD 1.75bn to support EQT's AI-infrastructure strategy led by EdgeConneX; the transaction has closed",
+   "read": "Data-centre exposure through a manager's platform rather than a direct stake.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-partners-with-eqt-to-support-global-digital-infrastructure-growth-826226428.html"
+  },
+  {
+   "date": "2026-06-17",
+   "category": "ma",
+   "headline": "Up to INR 70bn (C$1bn) into CtrlS Datacenters: an 8.2% stake plus 48% of a hyperscale-campus JV",
+   "read": "India's data-centre build-out enters the portfolio.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-commits-c-1-billion-to-ctrls-data-centre-partnership-in-india-877239451.html"
+  },
+  {
+   "date": "2026-06-08",
+   "category": "ma",
+   "headline": "Inkia Energy (Peru, 2.6 GW) closes: CPP Investments 50% at a total enterprise value of USD 3.4bn, an I Squared continuation vehicle the other 50%",
+   "read": "A new Latin American generation platform in Sustainable Energies.",
+   "source": "https://www.lw.com/en/news/2026/06/latham-advises-cpp-investments-on-closing-of-investment-in-inkia-alongside-i-squared-capital"
+  },
+  {
+   "date": "2026-06-02",
+   "category": "financial",
+   "headline": "CPP Investments sells 2,660,479 Constellation shares (plus up to 326,516 option shares) at USD 281 public in the Calpine holders' underwritten offering beside ECP and Texas Teachers; Constellation repurchases 2m shares",
+   "read": "First monetisation of the Calpine consideration; the 2027 tranche remains locked.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069482/0001104659-26-069482.txt"
+  },
+  {
+   "date": "2026-05-21",
+   "category": "financial",
+   "headline": "Fiscal 2026: net assets C$793.3bn (from C$714.4bn), net return 7.8%, net income C$56.9bn, net transfers C$22.0bn, ten-year 8.8%; the benchmark portfolios returned 13.2%; Canadian investments C$119.2bn",
+   "read": "Strong absolute, large negative relative year — Graham: 'a market that is rewarding concentration'.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-793-3-billion-at-2026-fiscal-year-end-814459989.html"
+  },
+  {
+   "date": "2026-05-20",
+   "category": "financial",
+   "headline": "Sale of 33 private-equity fund interests to Blackstone Strategic Partners and Ardian completes, about C$4bn net",
+   "read": "An active secondaries seller as well as buyer.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-completes-sale-of-private-equity-fund-interests-to-blackstone-strategic-partners-and-ardian-875930342.html"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "policy",
+   "headline": "Senate Finance committee chair Claude Carignan says pension funds 'need to invest more in Canada' and favours a legislated mandate; CPP's Michel Leduc counters with more than C$115bn invested in Canada",
+   "read": "Mandate talk is now explicit in the Senate.",
+   "source": "https://www.theglobeandmail.com/politics/article-pension-funds-senate-finance-committee-chair/"
+  },
+  {
+   "date": "2026-04-02",
+   "category": "ma",
+   "headline": "Pattern Energy completes the acquisition of Cordelio Power from CPP Investments for shares — 1,550 MW of operating and in-construction projects and most of Cordelio's US pipeline; Pattern now nearly 12,000 MW",
+   "read": "CPP's wholly owned Cordelio folds into Pattern, lifting CPP's stake 'together with other institutional investors' to 69.1%.",
+   "source": "https://patternenergy.com/pattern-energy-announces-completion-of-acquisition-of-cordelio-power/"
+  },
+  {
+   "date": "2026-04-01",
+   "category": "leadership",
+   "headline": "David Colla becomes Senior Managing Director and Global Head of Credit Investments; Andrew Edgell moves to Senior Advisor",
+   "read": "",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-announces-senior-executive-appointment-891819790.html"
+  },
+  {
+   "date": "2026-02-27",
+   "category": "ma",
+   "headline": "CPP Investments and Equinix agree to acquire atNorth from Partners Group at a USD 4bn enterprise value — CPP about USD 1.6bn for about 60%, Equinix about 40%; about 800 MW installed and a further 1 GW of secured power",
+   "read": "The signing terms, later re-cut at close.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-and-equinix-to-acquire-atnorth-for-us-4-billion-805897687.html"
+  },
+  {
+   "date": "2026-02-13",
+   "category": "financial",
+   "headline": "Q3 fiscal 2026: net assets C$780.7bn; definitive agreement to sell Cordelio Power to Pattern — 'this share-based transaction will increase our existing ownership stake in Pattern Energy, together with other institutional investors, to 69.1% upon closing'",
+   "read": "The only ownership percentage on the Pattern record, written by CPP.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-780-7-billion-at-third-quarter-fiscal-2026-832201322.html"
+  },
+  {
+   "date": "2026-02-12",
+   "category": "ma",
+   "headline": "Agreement to acquire 50% of Inkia Energy at a USD 3.4bn enterprise value alongside I Squared Capital",
+   "read": "",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-to-invest-in-inkia-alongside-i-squared-capital-811136352.html"
+  },
+  {
+   "date": "2026-01-07",
+   "category": "ma",
+   "headline": "Constellation completes the Calpine acquisition; CPP Investments, a 15.75% Calpine holder, receives Constellation shares and signs the registration rights agreement with ECP and Access Industries",
+   "read": "The Calpine stake (about USD 700m cash plus USD 1.9bn of stock at signing) converts into a listed position.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926001780/tm2532248d1_ex10-1.htm"
+  },
+  {
+   "date": "2025-12-22",
+   "category": "partnership",
+   "headline": "Goodman European Data Centre Partnership: A$14bn (EUR 8bn) 50/50 with Goodman Group; initial A$3.9bn across four projects totalling 435 MW of primary power in Paris, Frankfurt and Amsterdam — CPP's first European data-centre partnership",
+   "read": "",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-and-goodman-launch-a-14-billion-european-data-centre-partnership-807550159.html"
+  },
+  {
+   "date": "2025-12-15",
+   "category": "ma",
+   "headline": "ALLETE take-private completes: CPP Investments and GIP acquire all shares at USD 67 in cash (USD 6.2bn including debt); CPP 40%; MPUC conditions include a one-year rate freeze and USD 50m of credits",
+   "read": "Co-ownership of a regulated Minnesota utility after an ALJ had recommended rejection.",
+   "source": "https://www.sec.gov/Archives/edgar/data/66756/000114036125045482/ef20060780_ex99-1.htm"
+  },
+  {
+   "date": "2025-12-04",
+   "category": "policy",
+   "headline": "Senators Warren, Sanders and Blumenthal write to BlackRock on the ALLETE acquisition; CPP Investments appears only in the cited docket title",
+   "read": "CPP is adjacent to, not a recipient of, the oversight letters.",
+   "source": "https://www.banking.senate.gov/imo/media/doc/20251204lettertoblackrockreutilityenergycosts.pdf"
+  },
+  {
+   "date": "2025-11-14",
+   "category": "financial",
+   "headline": "Q2 fiscal 2026: net assets C$777.5bn; investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl; USD 750m to KKR Global Infrastructure Investors V",
+   "read": "",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html"
+  },
+  {
+   "date": "2025-10-27",
+   "category": "legal",
+   "headline": "Four young Canadians sue CPPIB over alleged climate-risk mismanagement (Ecojustice and Goldblatt Partners)",
+   "read": "The first climate suit against a Canadian pension manager, after CPP dropped its net-zero commitment.",
+   "source": "https://ecojustice.ca/news/canadas-largest-pension-investment-manager-sued-over-alleged-climate-risk-mismanagement/"
+  },
+  {
+   "date": "2025-10-03",
+   "category": "regulatory",
+   "headline": "Minnesota PUC unanimously approves the ALLETE sale with a one-year base-rate freeze, ROE cut to 9.65% with a 9.78% cap to 2030, USD 50m of credits and funding of a USD 5bn capital plan; the ALJ had recommended rejection in July",
+   "read": "",
+   "source": "https://www.utilitydive.com/news/minnesota-puc-allete-private-equity-blackrock-gip/802006/"
+  },
+  {
+   "date": "2025-09-23",
+   "category": "ma",
+   "headline": "Agreement to acquire an approximate 13% indirect equity interest in Sempra Infrastructure Partners for about USD 3.0bn alongside KKR affiliates; close expected Q2–Q3 2026",
+   "read": "LNG, pipelines and Mexican renewables; KKR's consortium takes 65% for about USD 10bn.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-to-acquire-stake-in-sempra-infrastructure-partners-832131905.html"
+  },
+  {
+   "date": "2025-07-31",
+   "category": "financial",
+   "headline": "C$225m commitment — half of a construction loan with Deutsche Bank — for a 54 MW hyperscale data-centre expansion in Cambridge, Ontario pre-leased to a GPU-focused AI cloud provider",
+   "read": "CPP as a project lender to AI capacity.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-commits-to-225-million-in-construction-financing-for-ontario-data-centre-886540216.html"
+  },
+  {
+   "date": "2025-01-10",
+   "category": "ma",
+   "headline": "CPP Investments agrees to sell its 15.75% of Calpine to Constellation for about USD 700m in cash and USD 1.9bn of Constellation stock",
+   "read": "",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-to-sell-stake-in-calpine-corporation-809390217.html"
+  },
+  {
+   "date": "2024-12-23",
+   "category": "ma",
+   "headline": "AirTrunk acquisition by Blackstone and CPP Investments completes at an implied enterprise value above A$24bn; CPP's share 12%",
+   "read": "",
+   "source": "https://airtrunk.com/completion-of-airtrunk-acquisition-by-blackstone-marking-new-era-of-growth/"
+  },
+  {
+   "date": "2024-12-16",
+   "category": "ma",
+   "headline": "A consortium headed by APG (for ABP) and Australian Retirement Trust agrees to buy Riverstone's stake in Pattern Energy, becoming owners 'alongside Canada Pension Plan Investment Board and Pattern management'",
+   "read": "The co-owners behind 'together with other institutional investors'.",
+   "source": "https://www.dutchnews.nl/businesswire/pattern-energy-announces-equity-investment-from-consortium-headed-by-apg-and-art/"
+  },
+  {
+   "date": "2024-10-01",
+   "category": "partnership",
+   "headline": "Equinix xScale US joint venture: more than USD 15bn of capital with GIC; CPP Investments' initial equity allocation up to USD 2.4bn for a 37.5% controlling interest; more than 1.5 GW across campuses above 100 MW",
+   "read": "",
+   "source": "https://www.sec.gov/Archives/edgar/data/1101239/000110465924104921/tm2425348d1_ex99-1.htm"
+  },
+  {
+   "date": "2024-09-04",
+   "category": "ma",
+   "headline": "CPP Investments commits to acquire a 12% interest in AirTrunk alongside Blackstone at an implied enterprise value of over A$24bn",
+   "read": "",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-announces-investment-in-asia-pacific-data-centre-operator-airtrunk-879569570.html"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **CPP Investments is a directory of buyers with no exit clock**: it signs no equipment order, but its platforms do, and because it invests pension capital rather than a fund it holds and consolidates (Pattern since 2020, Cordelio folded in for shares) where a manager would sell. Basis: Pattern's and Cordelio's releases; CPP's 69.1% statement; the absence of any sale, secondary or IPO report on Pattern through 2026. A seller to Pattern or Minnesota Power is selling to a CPP-funded balance sheet that will still be there at the next build.",
+  "**(High confidence)** We assess that **the atNorth re-cut from 60% to c. 51% is the model of how CPP's headline terms move**: the signing release stated about USD 1.6bn for about 60%, the completion release c. 51% for USD 1.3bn after Partners Group reinvested for c. 10% and insiders rolled equity. Basis: the two joint releases of 27 February and 2 September 2026. Read every CPP percentage against the completion document, not the agreement.",
+  "**(Moderate confidence)** We assess that **CPP's data-centre exposure is now wider than any single investor's in this corpus but is held mostly without control** — xScale (37.5%), Goodman Europe (50% of a partnership), EQT/EdgeConneX (undisclosed), CtrlS (8.2% plus a 48% JV), Japan DC Partners (an LP commitment), Vantage and Yondr (commitments), AirTrunk (12%), the Korean JVs — with atNorth the one controlling position. Basis: CPP's own releases and quarterly summaries. For a seller that means CPP is rarely the decision-maker on a campus's equipment; Equinix, Goodman, EdgeConneX and Blackstone are.",
+  "**(Moderate confidence)** We assess that **the Sempra Infrastructure Partners stake is the position most likely to be reported wrongly**, because three documents give three framings: CPP (~13% indirect for ~USD 3.0bn), Sempra's 10-Q (a KKR-led 'KKR Partners' buying 45% for ~USD 9.99bn, CPPIB an 'indirect co-investor') and the corpus's KKR dossier (USD 10bn for 45%, USD 31.7bn EV). All three are consistent; none states closing. Sempra expected Q3 2026 and tied its CFO succession to it; no completion appeared in filings through 21 August 2026.",
+  "**(Moderate confidence)** We assess that **Ottawa's domestic-investment pressure will shape CPP's next infrastructure allocations more than any US regulator will**: the Maple Fund (C$50bn with Brookfield) was launched on the day the CEO told the Canada Investment Summit CPP is 'not required to invest in Canada', the Senate Finance chair favours a legislated mandate, and Bill C-30 cuts base contributions from 2027. Basis: CPP's and the Prime Minister's releases; the Globe and Mail. Cuts against: CPP's governance score (10/10, Global SWF) and the two-thirds-of-provinces amendment threshold make a statutory mandate slow.",
+  "**(Low confidence)** We assess that **the fiscal 2026 benchmark miss (7.8% against 13.2%) will push CPP toward more private infrastructure, not less** — the department that outperformed was Real Assets (12.2%), and Graham attributed the miss to public-market concentration. Basis: press accounts of the results call. Treat as a tendency, not a plan.",
+  "**INDICATORS TO WATCH** — *Sempra 8-K on the Sempra Infrastructure Partners closing:* confirms CPP's ~13% and the USD 3.0bn; a termination notice after the twelve-month long-stop would reverse it. *Mid-November 2026, Q2 fiscal 2027 results:* the transaction list is where CPP discloses platform moves (watch for Tarchon closing, Maple Fund deployments, further Constellation sales). *Pattern Energy's next step — a SunZia-scale financing, a sale, or an IPO:* any would test the 'no exit clock' judgment. *The ReNew scheme vote and UK court sanction:* CPP's second take-private of a renewables IPP. *Minnesota Power's first rate case after the one-year freeze (2027):* the regulatory cost of co-owning a utility. *Any CPPIB Act amendment bill or a Senate committee report recommending a mandate.*"
+ ],
+ "relationships": [
+  {
+   "slug": "pattern-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2020-03",
+   "scale": "'the majority shareholder'; 69.1% together with other institutional investors after Cordelio (2 April 2026)",
+   "note": "CPP took Pattern Energy private in 2020 (USD 26.75 a share, about USD 6.1bn enterprise value including net debt) and in April 2026 folded its wholly owned Cordelio Power into Pattern for shares.",
+   "context": "The joint release of 4 November 2019 records the all-cash agreement at USD 26.75 per share, 'implying an enterprise value of approximately $6.1 billion, including net debt'. CPP's Q3 fiscal 2026 release (13 February 2026) states that the share-based Cordelio sale 'will increase our existing ownership stake in Pattern Energy, together with other institutional investors, to 69.1% upon closing' — the percentage is the combined institutional stake, not CPP alone; Pattern's completion release of 2 April 2026 calls CPP 'the majority shareholder'. A consortium headed by APG (for ABP) and Australian Retirement Trust bought Riverstone's stake in 2025 and is described as an owner 'alongside' CPP and management.\n\nThe `pattern-energy` dossier carries the same 69.1% sentence and the same ambiguity; this dossier adds CPP's own wording.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-780-7-billion-at-third-quarter-fiscal-2026-832201322.html"
+  },
+  {
+   "slug": "blackrock",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-05",
+   "scale": "ALLETE: CPP 40% beside GIP (closed 15 December 2025; USD 6.2bn including debt)",
+   "note": "CPP Investments and BlackRock's Global Infrastructure Partners jointly took ALLETE private; CPP states its stake as 40%.",
+   "context": "CPP's fiscal 2025 release describes the agreement 'to jointly acquire ALLETE, Inc. alongside Global Infrastructure Partners for US$6.2 billion, including the assumption of debt' with CPP's stake at 40% on closing; ALLETE's 8-K of 15 December 2025 records completion at USD 67 a share in cash, about USD 200m of customer benefits, and a majority-independent board. GIP's 60% split (40% GIP V plus 20% a GIP-managed CalPERS vehicle) and 'governance shared equally' appear in the `blackrock` dossier from ALLETE's proxy; they are not stated in any CPP, ALLETE 8-K, MPUC or Senate document read for this dossier.",
+   "source": "https://www.sec.gov/Archives/edgar/data/66756/000114036125045482/ef20060780_ex99-1.htm"
+  },
+  {
+   "slug": "equinix",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-10",
+   "scale": "xScale US JV: CPP 37.5% controlling interest (>USD 15bn); atNorth: CPP c. 51%, Equinix c. 34%",
+   "note": "Equinix is CPP's partner in the US xScale hyperscale venture and its co-owner of atNorth, completed 2 September 2026.",
+   "context": "Equinix's 8-K of 1 October 2024 records the joint venture with CPP Investments and GIC to raise more than USD 15bn and build more than 1.5 GW of US xScale capacity; CPP states an initial equity allocation of up to USD 2.4bn and that it 'will control a 37.5% equity interest'. The atNorth agreement of 27 February 2026 gave CPP about 60% for about USD 1.6bn and Equinix about 40%; the completion release of 2 September 2026 states CPP c. 51% (USD 1.3bn), Equinix c. 34% (USD 895m) and Partners Group c. 10% (USD 260m) at a USD 4bn enterprise value with USD 4.1bn of financing. The `equinix` dossier carries the agreement figures (Equinix ~40%); the closing figures supersede them.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-and-equinix-complete-atnorth-acquisition-to-support-growth-of-leading-nordic-data-center-platform-834078322.html"
+  },
+  {
+   "slug": "kkr",
+   "type": "partner",
+   "status": "announced",
+   "since": "2025-09",
+   "scale": "Sempra Infrastructure Partners: CPP ~13% indirect for ~USD 3.0bn beside KKR's 65% consortium — signed, not closed in filings through 21 August 2026",
+   "note": "CPP is the indirect co-investor in the KKR-led purchase of a 45% stake and the GP interest in Sempra Infrastructure Partners; CPP also committed USD 750m to KKR Global Infrastructure Investors V.",
+   "context": "CPP's release of 23 September 2025 records a definitive agreement to acquire 'an approximate 13% indirect equity interest … for approximately US$3.0 billion, alongside affiliates of KKR', with closing expected in Q2–Q3 2026. Sempra's 10-Q filed 6 August 2026 defines 'KKR Partners' as KKR affiliates and 'indirect co-investor Canada Pension Plan Investment Board', a base price of about USD 9.99bn for 45% of the Class A units and the GP interest, a ticking fee from 1 April 2026, a USD 414m reverse termination fee and a post-close split of KKR Partners 65%, Sempra 25%, ADIA 10%; it still 'expect[s] this sale to close in the third quarter of 2026'. No completion 8-K appeared through 21 August 2026. CPP's Q2 fiscal 2026 release also records USD 750m to KKR Global Infrastructure Investors V.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-to-acquire-stake-in-sempra-infrastructure-partners-832131905.html"
+  },
+  {
+   "slug": "blackstone",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-09",
+   "scale": "AirTrunk 12% beside Blackstone (EV >A$24bn, completed 23 December 2024); Tallgrass (~USD 843m, 2024); credit SMA USD 1.5bn",
+   "note": "CPP co-invested with Blackstone in AirTrunk and Tallgrass, holds a USD 1.5bn discretionary credit account with Blackstone and sold fund interests to Blackstone Strategic Partners.",
+   "context": "CPP's release of 4 September 2024 commits to acquire a 12% interest in AirTrunk alongside Blackstone at an implied enterprise value of over A$24bn; AirTrunk's completion release of 23 December 2024 names Blackstone's real estate, infrastructure, tactical opportunities and private-wealth vehicles and CPP Investments as the buyers. CPP's August 2024 release records about USD 843m into Tallgrass Energy alongside Blackstone. Fiscal 2026 items add a USD 1.5bn Blackstone discretionary credit account, a USD 1bn financing to Blackstone Private Credit Fund and the sale of 33 fund interests to Blackstone Strategic Partners and Ardian (completed 20 May 2026).",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-announces-investment-in-asia-pacific-data-centre-operator-airtrunk-879569570.html"
+  },
+  {
+   "slug": "macquarie",
+   "type": "other",
+   "status": "historical",
+   "since": "2024-09",
+   "scale": "AirTrunk bought from Macquarie Asset Management and PSP (EV >A$24bn)",
+   "note": "Macquarie Asset Management was the seller of AirTrunk to Blackstone and CPP Investments.",
+   "context": "CPP's September 2024 release states the acquisition is 'from Macquarie Asset Management and other investors including PSP Investments'; completion followed on 23 December 2024 after FIRB approval. The `macquarie` dossier records the same sale from the seller's side.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-announces-investment-in-asia-pacific-data-centre-operator-airtrunk-879569570.html"
+  },
+  {
+   "slug": "constellation-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "1.3% after selling 2,660,479 shares (USD 742m net) on 2 June 2026; 5,012,169 shares at 30 June 2026 (13F)",
+   "note": "CPP received Constellation shares for its 15.75% of Calpine and sold part of the position in June 2026.",
+   "context": "CPP's release of 10 January 2025 agreed to sell its 15.75% of Calpine to Constellation for about USD 700m in cash and USD 1.9bn of Constellation stock; Constellation's registration rights agreement of 7 January 2026 names Canada Pension Plan Investment Board as a party. In the 2 June 2026 underwritten offering CPPIB sold 2,660,479 shares (plus up to 326,516 option shares) at USD 281 public; CPP's Q1 fiscal 2027 release records 'net proceeds of US$742 million' for a 0.7% stake and says 'we continue to hold a 1.3% stake'. The 13F for 30 June 2026 lists 5,012,169 shares worth USD 1,244.9m.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-863-6-billion-at-first-quarter-fiscal-2027-819704344.html"
+  },
+  {
+   "slug": "energy-capital-partners",
+   "type": "partner",
+   "status": "historical",
+   "since": "2018",
+   "scale": "Calpine co-owners (ECP-led consortium) until 7 January 2026",
+   "note": "CPP held 15.75% of Calpine in the ECP-led consortium and exited beside ECP into Constellation shares.",
+   "context": "Constellation's January 2025 announcement names 'Calpine's significant shareholders, including ECP, Canada Pension Plan Investments (CPP Investments) and Access Industries'; CPP's own release of the same day records its 15.75% stake. Both sold Constellation shares in the 2 June 2026 offering (ECP about 7.6m, CPP 2,660,479). The `energy-capital-partners` dossier carries the consortium from ECP's side.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-to-sell-stake-in-calpine-corporation-809390217.html"
+  },
+  {
+   "slug": "brookfield",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-09",
+   "scale": "Maple Fund: up to C$50bn, 50/50, up to C$25bn each over five years",
+   "note": "CPP Investments and Brookfield Asset Management launched the Maple Fund for Canadian infrastructure and strategic industries on 15 September 2026; the two also agreed to buy LXP Industrial Trust (about USD 5.2bn) in July 2026.",
+   "context": "The joint release of 15 September 2026 describes up to C$50bn of equity, 50/50, for projects of more than C$5bn of equity across Canada, open to third-party co-investors and incremental to each partner's normal investing. CPP's Q1 fiscal 2027 release records the agreement with Brookfield to acquire LXP Industrial Trust. No Maple Fund investment had been announced by 3 October 2026.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-and-brookfield-launch-50-billion-maple-fund-to-pursue-large-scale-investments-across-canada-841350467.html"
+  },
+  {
+   "slug": "voltagrid",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2021",
+   "scale": "investor in the USD 72.6m and USD 150m equity rounds (stake undisclosed)",
+   "note": "CPP Investments is named among VoltaGrid's institutional equity investors in two early rounds, before Blackstone's 2026 round.",
+   "context": "VoltaGrid's release on its USD 72.6m (C$92.5m) equity commitment names CPP Investments with Carnelian, Pilot Company, Walter Ventures and Longbow (the page is dated 2020 while The Logic dates the round to 2021 — unresolved), and InnovationMap records CPP in the USD 150m round of October 2022. CPP's own releases and quarterly summaries do not mention VoltaGrid; the `voltagrid` and `blackstone` dossiers carry the same early-backer list.",
+   "source": "https://voltagrid.com/voltagrid-closes-73-million-equity-commitment-from-institutional-investors"
+  },
+  {
+   "slug": "mainspring-energy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2022-09",
+   "scale": "new investor in the USD 290m Series E final close",
+   "note": "CPP Investments joined Mainspring Energy's Series E (USD 290m, September 2022) as a new investor.",
+   "context": "Mainspring's release of 21 September 2022 records the Series E final close at USD 290m led by Lightrock with CPP Investments among the new investors. CPP's own channels do not mention the position, and CPP is not named in the April 2025 Series F list. The `mainspring-energy` dossier lists CPP among its investors.",
+   "source": "https://www.prnewswire.com/news-releases/mainspring-closes-series-e-at-290-million-301626840.html"
+  },
+  {
+   "slug": "coreweave",
+   "type": "other",
+   "status": "active",
+   "since": "2025",
+   "scale": "USD 250m GPU-server loan facility (fiscal 2025); USD 150m delayed-draw term loan for four data centres (Q1 fiscal 2027)",
+   "note": "CPP's Credit Investments department is a lender to CoreWeave.",
+   "context": "CPP's fiscal 2025 release records a USD 250m loan facility secured on GPU servers to CoreWeave; its Q1 fiscal 2027 release records a USD 150m delayed-draw term loan to a CoreWeave special-purpose vehicle for four data centres in the US and Canada. CPP holds no equity in CoreWeave per its releases.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-863-6-billion-at-first-quarter-fiscal-2027-819704344.html"
+  },
+  {
+   "slug": "vantage",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2025",
+   "scale": "USD 310m committed to Vantage Data Centers plus USD 200m across Vantage and Yondr (fiscal 2026)",
+   "note": "CPP committed to Vantage Data Centers and to Yondr in fiscal 2026.",
+   "context": "CPP's fiscal 2026 results release lists 'a combined US$310 million to U.S.-based Vantage Data Centers … as well as an additional US$200 million commitment across Vantage and Yondr'. No stake percentage is stated.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-793-3-billion-at-2026-fiscal-year-end-814459989.html"
+  },
+  {
+   "slug": "blue-owl",
+   "type": "partner",
+   "status": "active",
+   "since": "2025",
+   "via": "Abilene campus, phase 2",
+   "note": "Co-investor alongside Blue Owl in the second phase of a hyperscale data centre in Abilene, Texas, per CPP Investments' results for the quarter to 30 September 2025; size undisclosed.",
+   "context": "CPP Investments lists 'an investment in the second phase of a hyperscale data centre in Abilene, Texas alongside Blue Owl'.",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Canada Pension Plan Investment Board Act (1997) — mandate, governance and the domestic-investment debate",
+   "status": "in-effect",
+   "effectiveDate": "1997-12-18",
+   "exposure": "The Act sets CPP's sole objective (maximum return without undue risk, having regard to CPP funding), arm's-length governance, accountability to Parliament and the finance ministers, and a six-yearly special examination; amendment requires the federal government plus two-thirds of the provinces with two-thirds of the population. Since the Fall Economic Statement of December 2024 (repeal of the 30% rule; an AI data-centre programme matching pension capital up to C$15bn), Budget 2025's C$1tn target, quarterly Finance Minister meetings with the Maple 8, the Senate Finance chair's call for a legislated mandate (May 2026) and the Canadian Shield Institute's proposed 3% mandate (September 2026), domestic allocation is the live political question; Canadian investments were C$119.2bn (about 12%) at 31 March 2026 against about 47% in the US.",
+   "mitigation": "The C$50bn Maple Fund with Brookfield (15 September 2026); Graham: 'We invest here when an opportunity earns its place on a risk return basis.'",
+   "source": "https://www.newswire.ca/news-releases/cpp-investments-ceo-john-graham-delivers-remarks-at-the-canada-investment-summit-898229880.html"
+  },
+  {
+   "regime": "Minnesota PUC and FERC §203 — ALLETE / Minnesota Power",
+   "status": "in-effect",
+   "effectiveDate": "2025-12-15",
+   "exposure": "The ALLETE take-private closed only after the Minnesota PUC's unanimous approval (3 October 2025; written order December) over an administrative law judge's recommendation to reject it, with conditions: a one-year base-rate freeze, ROE reduced from 9.78% to 9.65% with a 9.78% cap to 2030, USD 50m of rate credits, funding of a USD 5bn five-year capital plan, USD 50m for clean firm power and Minnesota-based independent directors; FERC approved the transfer in December 2024. Senators Warren, Sanders and Blumenthal's December 2025 letter to BlackRock about the deal names CPP only in the docket title.",
+   "source": "https://www.utilitydive.com/news/minnesota-puc-allete-private-equity-blackrock-gip/802006/"
+  },
+  {
+   "regime": "US Senate Banking Committee oversight — private-equity ownership of utilities and data centres",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-10",
+   "exposure": "The June 2026 Warren letters on data-centre ownership went to KKR, BlackRock, Brookfield and Blackstone and the September 2026 bipartisan letter to FERC concerns GIP/AES; CPP Investments — co-owner of ALLETE, AirTrunk and atNorth and partner in the xScale venture — is not a recipient and is not named.",
+   "source": "https://www.banking.senate.gov/imo/media/doc/20251204lettertoblackrockreutilityenergycosts.pdf"
+  },
+  {
+   "regime": "Canada Pension Plan contribution rates — Bill C-30 and the Chief Actuary's reports",
+   "status": "announced",
+   "effectiveDate": "2027-01-01",
+   "exposure": "The 32nd Actuarial Report (valuation at 31 December 2024; revised version tabled 27 May 2026) finds the base and additional CPP sustainable at legislated rates, with minimum contribution rates of 9.21%/9.19% against the statutory 9.9%; Bill C-30 cuts the base rate to 9.5% from 1 January 2027, which press accounts put at about 4% lower contributions from 2027. Net transfers into the Fund were C$22.0bn in fiscal 2026.",
+   "source": "https://www.osfi-bsif.gc.ca/en/oca/actuarial-reports/actuarial-report-32nd-canada-pension-plan"
+  },
+  {
+   "regime": "Australian Foreign Investment Review Board and UK/German regulatory approvals",
+   "status": "in-effect",
+   "effectiveDate": "2024-12-23",
+   "exposure": "The AirTrunk acquisition was conditional on FIRB approval (completed 23 December 2024); the Tarchon interconnector is 'a regulated asset progressing through the relevant regulatory approvals process in the UK and Germany' with completion expected end-2026; the ReNew take-private proceeds under a UK Companies Act Part 26 scheme requiring 75% approval and court sanction.",
+   "source": "https://www.newswire.ca/news-releases/elia-group-and-cpp-investments-expand-partnership-with-acquisition-of-the-tarchon-interconnector-project-899201203.html"
+  },
+  {
+   "regime": "Litigation — climate-risk duty (Ecojustice) and the FNZ class action",
+   "status": "in-effect",
+   "effectiveDate": "2025-10-27",
+   "exposure": "Four young Canadians sued CPPIB on 27 October 2025 alleging breach of duties of impartiality and even-handedness in managing climate risk, after CPP's 2025 reversal of its net-zero commitment; separately, a USD 4.6bn New Zealand employee class action against FNZ names CPP Investments and CDPQ among controlling investors (first hearing 12 May 2026). CPP expanded its portfolio carbon-footprint reporting in August 2026 (86.7% of C$787bn below 40 tCO2e per USD m EVIC).",
+   "source": "https://ecojustice.ca/news/canadas-largest-pension-investment-manager-sued-over-alleged-climate-risk-mismanagement/"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "The Fund — net assets, returns and composition",
+   "specs": [
+    {
+     "band": "Net assets",
+     "label": "31 March 2026 (fiscal 2026 year-end)",
+     "value": "C$793.3bn (from C$714.4bn): net income C$56.9bn + net transfers C$22.0bn; base CPP C$712.9bn, additional CPP C$80.4bn"
+    },
+    {
+     "band": "Net assets",
+     "label": "30 June 2026 (Q1 fiscal 2027)",
+     "value": "C$863.6bn: net income C$60.2bn + net transfers C$10.1bn; base CPP C$773.4bn, additional CPP C$90.2bn"
+    },
+    {
+     "band": "Returns",
+     "label": "Fiscal 2026 / benchmark",
+     "value": "Net 7.8% (base 8.0%, additional 5.4%); benchmark portfolios 13.2%; ten-year 8.8%; five-year 6.6%; ten-year value added 0.7% a year"
+    },
+    {
+     "band": "Returns",
+     "label": "Q1 fiscal 2027",
+     "value": "7.5% in the quarter ('strongest in more than a decade'); ten-year 9.4%"
+    },
+    {
+     "band": "Returns",
+     "label": "Five-year by asset class (fiscal 2026)",
+     "value": "Public equities 8.9%; private equities 9.1%; government bonds 0.5%; credit 7.0%; real assets 7.9%"
+    },
+    {
+     "band": "Composition",
+     "label": "Geography (fiscal 2026)",
+     "value": "US 48%; Asia-Pacific 18%; Europe 17%; Canada 12% (C$119.2bn); Latin America 5% (per ai-CIO's reading of the release's charts)"
+    },
+    {
+     "band": "Composition",
+     "label": "Asset mix (fiscal 2026, per ai-CIO)",
+     "value": "Public equities 36%; private equities 22%; real assets 20%; credit 9%; government bonds 13%"
+    },
+    {
+     "band": "Costs",
+     "label": "Fiscal 2026",
+     "value": "Operating expenses C$1,757m (23.1 bps); external management fees C$1,976m; performance fees C$2,758m; transaction costs C$753m"
+    },
+    {
+     "band": "Rankings",
+     "label": "Infrastructure Investor Global Investor 75 (July 2026) / Global SWF",
+     "value": "4th, infrastructure allocation USD 40,058m / 18th among sovereign and public funds, USD 608bn, governance 10/10"
+    }
+   ],
+   "notes": "CPP's own quarterly and annual releases; the fiscal 2026 annual report PDF could not be located from this environment, so the 31 March 2026 department sizes and asset-mix percentages are taken from the release's text and press readings of its charts."
+  },
+  {
+   "product": "Real Assets — department and platform figures",
+   "specs": [
+    {
+     "band": "Department",
+     "label": "Real Assets net assets",
+     "value": "C$146.7bn at 31 March 2025 (270 FTE; five-year 7.0%; fiscal 2025 8.7%); C$142.4bn net investments at 30 June 2025"
+    },
+    {
+     "band": "Department",
+     "label": "Infrastructure / Real Estate / Sustainable Energies",
+     "value": "C$62.0bn / C$48.5bn / about C$36.3bn at 31 March 2025 (Infrastructure fiscal 2025 return 9.4%)"
+    },
+    {
+     "band": "Platforms",
+     "label": "Pattern Energy",
+     "value": "Majority; 69.1% with other institutional investors after Cordelio (2 April 2026); about 12,000 MW operating and in construction"
+    },
+    {
+     "band": "Platforms",
+     "label": "ALLETE / Minnesota Power",
+     "value": "40% (GIP 60%); USD 67 a share; USD 6.2bn including debt; closed 15 December 2025"
+    },
+    {
+     "band": "Platforms",
+     "label": "atNorth",
+     "value": "c. 51% for USD 1.3bn (signing: ~60% for ~USD 1.6bn); Equinix c. 34% (USD 895m); Partners Group c. 10% (USD 260m); EV USD 4bn; financing USD 4.1bn; about 800 MW installed, 1 GW of secured power; closed 2 September 2026"
+    },
+    {
+     "band": "Platforms",
+     "label": "Equinix xScale US JV",
+     "value": "37.5% controlling interest; initial equity allocation up to USD 2.4bn; >USD 15bn programme; >1.5 GW"
+    },
+    {
+     "band": "Platforms",
+     "label": "Inkia Energy (Peru)",
+     "value": "50%; EV USD 3.4bn; 2.6 GW; closed 8 June 2026"
+    },
+    {
+     "band": "Platforms",
+     "label": "Sempra Infrastructure Partners",
+     "value": "~13% indirect for ~USD 3.0bn beside KKR (consortium 65%); signed 23 September 2025; not closed in filings through 21 August 2026"
+    },
+    {
+     "band": "Platforms",
+     "label": "AirTrunk / Tarchon / ReNew / Caturus / AlphaGen",
+     "value": "12% (EV >A$24bn) / majority, C$1bn, closing end-2026 / 34.4%, take-private at USD 7.02 / 31% / USD 1.0bn minority"
+    },
+    {
+     "band": "Public holdings",
+     "label": "13F, 30 June 2026 (power and data centres)",
+     "value": "Constellation USD 1,244.9m (5,012,169 shares); Equinix USD 1,163.7m; Cheniere USD 744.0m; GE Vernova USD 705.4m; NextEra USD 389.5m; Vistra USD 388.6m; Vertiv USD 264.9m; Eaton USD 239.6m; Talen USD 21.0m"
+    }
+   ],
+   "notes": "Platform figures per CPP's own releases and the counterparties' completion documents; the GIP split at ALLETE is from ALLETE's proxy as recorded in the `blackrock` dossier, not from CPP."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "John Graham",
+   "title": "President and Chief Executive Officer",
+   "background": [
+    "Quoted on every quarterly and annual release; delivered CPP's remarks at the first Canada Investment Summit (15 September 2026)",
+    "Named 2026 Canadian Business Leader of the Year (Canadian Chamber of Commerce)"
+   ]
+  },
+  {
+   "name": "Maximilian (Max) Biagosch",
+   "title": "Senior Managing Director and Global Head of Real Assets (and Head of Europe)",
+   "background": [
+    "Appointed Senior Managing Director, Head of Europe and Real Assets in February 2023; previously SMD and Head of Europe and Direct Private Equity",
+    "Quoted on atNorth, the Equinix xScale JV, the Goodman partnership, CtrlS, EdgeConneX, Sempra Infrastructure Partners and AirTrunk",
+    "London-based; fiscal 2025 total direct compensation GBP 2,993,567 per the annual report"
+   ]
+  },
+  {
+   "name": "Bill Rogers",
+   "title": "Managing Director and Head of Sustainable Energies",
+   "background": [
+    "Quoted on Pattern and Cordelio, Inkia, Calpine, Castrol, Encino, Tallgrass, Aera and Reventus; CPP's notice contact on the ReNew Schedule 13E-3",
+    "'Global Head of Sustainable Energies' in 2024 releases"
+   ]
+  },
+  {
+   "name": "James Bryce",
+   "title": "Managing Director and Head of Infrastructure",
+   "background": [
+    "Quoted on the Tarchon interconnector, FCC Enviro, TgP and the Australian toll-road sale"
+   ]
+  },
+  {
+   "name": "David Colla",
+   "title": "Senior Managing Director and Global Head of Credit Investments (from 1 April 2026)",
+   "background": [
+    "Joined CPP in 2010; led the Capital Solutions Group; built Americas Leveraged Finance and Structured Credit; led the acquisition and oversight of Antares Capital (director of Antares Capital and Antares Holdings)",
+    "Succeeded Andrew Edgell, now Senior Advisor"
+   ]
+  },
+  {
+   "name": "Edwin Cass",
+   "title": "Senior Managing Director and Chief Investment Officer",
+   "background": [
+    "Senior Management Team member (fiscal 2025 annual report)"
+   ]
+  },
+  {
+   "name": "Kristina Fanjoy",
+   "title": "Senior Managing Director and Chief Financial Officer",
+   "background": [
+    "Senior Management Team member (fiscal 2025 annual report)"
+   ]
+  },
+  {
+   "name": "Caitlin Gubbels",
+   "title": "Senior Managing Director and Global Head of Private Equity (from 15 October 2024)",
+   "background": [
+    "Joined 2010; previously Managing Director, Head of Funds; CIBC World Markets investment banking; BComm Dalhousie; succeeded Suyi Kim"
+   ]
+  },
+  {
+   "name": "Heather Tobin",
+   "title": "Senior Managing Director and Global Head of Capital Markets and Factor Investing (from 17 July 2024)",
+   "background": [
+    "Previously Managing Director, Head of Investment Portfolio Management (Office of the CIO)"
+   ]
+  },
+  {
+   "name": "Priti Singh",
+   "title": "Senior Managing Director and Chief Risk Officer (from 17 July 2024)",
+   "background": [
+    "Previously SMD and Global Head of Capital Markets and Factor Investing; succeeded Kristen Walters"
+   ]
+  },
+  {
+   "name": "Geoffrey Rubin",
+   "title": "Senior Managing Director and One Fund Strategist; incoming Head of Asia Pacific (effective end-2026)",
+   "background": [
+    "Succeeds Agus Tandiono, retiring after twelve years"
+   ]
+  },
+  {
+   "name": "Manroop Jhooty",
+   "title": "Senior Managing Director and Head of Total Fund Management",
+   "background": [
+    "Senior Management Team member (fiscal 2025 annual report)"
+   ]
+  },
+  {
+   "name": "Michel Leduc",
+   "title": "Senior Managing Director and Global Head of Public Affairs and Communications",
+   "background": [
+    "CPP's spokesman in the domestic-investment debate (House finance committee testimony, April 2026; Globe and Mail, May 2026)"
+   ]
+  },
+  {
+   "name": "Dean Connor",
+   "title": "Chairperson of the Board",
+   "background": [
+    "Board additions 2025–26: Gillian Denham (September 2025), Stephanie Coyles (October 2025), Elio Luongo (April/May 2026), Elizabeth Cannon (May/June 2026); Barry Perry and Sylvia Chrominska reappointed"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "CAD (C$) unless stated",
+  "type": "public (federal Crown corporation; quarterly and annual results releases and an annual report; no listed equity and no consensus — performance is measured against the Fund's benchmark portfolios, so every `expected` field is empty by design)",
+  "periods": [
+   {
+    "period": "Fiscal 2025 (year to 31 March 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-03-31",
+    "metrics": [
+     {
+      "name": "Net assets",
+      "actual": "C$714.4bn (from C$632.3bn)",
+      "expected": "",
+      "verdict": "",
+      "result": "Fiscal 2025 results release, 21 May 2025."
+     },
+     {
+      "name": "Net return",
+      "actual": "9.3%; ten-year 8.4% (reported at the time)",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "Real Assets",
+      "actual": "Net assets C$146.7bn; Infrastructure C$62.0bn; Real Estate C$48.5bn; Sustainable Energies about C$36.3bn; fiscal 2025 return 8.7% (Infrastructure 9.4%)",
+      "expected": "",
+      "verdict": "",
+      "result": "Fiscal 2025 annual report and releases."
+     },
+     {
+      "name": "Transactions of note",
+      "actual": "ALLETE agreement (USD 6.2bn including debt; CPP 40%); Calpine sale agreed (15.75% for about USD 700m cash + USD 1.9bn Constellation stock); AirTrunk 12% completed; Japan DC Partners JPY 192.5bn; CoreWeave USD 250m facility",
+      "expected": "",
+      "verdict": "",
+      "result": "Company releases."
+     }
+    ],
+    "commentary": "The comparative year."
+   },
+   {
+    "period": "Fiscal 2026 (year to 31 March 2026)",
+    "periodType": "annual",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Net assets",
+      "actual": "C$793.3bn (+C$78.9bn: net income C$56.9bn, net transfers C$22.0bn)",
+      "expected": "",
+      "verdict": "",
+      "result": "Fiscal 2026 results release, 21 May 2026."
+     },
+     {
+      "name": "Net return vs benchmark portfolios",
+      "actual": "7.8% (base CPP 8.0%, additional CPP 5.4%) against the benchmark portfolios' 13.2%; ten-year 8.8%; five-year 6.6%",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The 'expected' here is the Fund's own benchmark, not a consensus: a 5.4-point shortfall attributed by the CEO to a market 'rewarding concentration' in large technology stocks. Ten-year value added 0.7% a year."
+     },
+     {
+      "name": "Costs",
+      "actual": "Operating expenses C$1,757m (23.1 bps); external management fees C$1,976m; performance fees C$2,758m; transaction costs C$753m",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "Canadian investments",
+      "actual": "C$119.2bn ('all-time high')",
+      "expected": "",
+      "verdict": "",
+      "result": "About 12% of the Fund; the figure in the domestic-investment debate."
+     },
+     {
+      "name": "Transactions of note",
+      "actual": "ALLETE closed (15 December 2025); atNorth agreed (~60% for ~USD 1.6bn); Goodman European DC Partnership (A$14bn); Sempra Infrastructure Partners agreed (~13%, ~USD 3.0bn); Inkia agreed (50%, EV USD 3.4bn); AlphaGen USD 1.0bn; Vantage/Yondr USD 510m; Cordelio sale to Pattern agreed; USD 750m to KKR GIP V; Blackstone credit SMA USD 1.5bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Fiscal 2026 release and quarterlies."
+     }
+    ],
+    "commentary": "Real Assets returned 12.2% per press accounts of the results; the fiscal 2026 annual report PDF, which carries the department sizes at 31 March 2026, could not be located from this environment."
+   },
+   {
+    "period": "Q1 fiscal 2027 (quarter to 30 June 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Net assets",
+      "actual": "C$863.6bn (+C$70.3bn: net income C$60.2bn, net transfers C$10.1bn)",
+      "expected": "",
+      "verdict": "",
+      "result": "Q1 fiscal 2027 results release, 14 August 2026."
+     },
+     {
+      "name": "Net return",
+      "actual": "7.5% in the quarter — 'strongest quarterly investment performance in more than a decade'; ten-year 9.4%; cumulative net income since 1999 C$609.3bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported; no benchmark figure for the quarter in the release."
+     },
+     {
+      "name": "Transactions of note",
+      "actual": "Constellation 0.7% sold for USD 742m net (1.3% retained); Inkia closed; Caturus raised to 31% (USD 1.2bn financing); EQT/EdgeConneX USD 1.75bn closed; CtrlS C$1bn; Tarchon C$1bn majority agreed; LXP Industrial Trust with Brookfield; CoreWeave USD 150m term loan; C$1.75bn to EQT's AI-infrastructure strategy",
+      "expected": "",
+      "verdict": "",
+      "result": "Q1 fiscal 2027 release."
+     }
+    ],
+    "commentary": "After the quarter: atNorth closed at c. 51% (2 September), the Maple Fund launched (15 September), the ReNew Schedule 13E-3 was filed (23 September) and the Australian toll-road sale was agreed (1 October). Next results: Q2 fiscal 2027, expected mid-November 2026 (Q2 fiscal 2026 was published 14 November 2025)."
+   }
+  ],
+  "commentary": "CPP Investments reports quarterly against its own benchmark portfolios, not a consensus; the only 'verdict' recorded is fiscal 2026's shortfall against that benchmark. Department sizes are last available at 31 March 2025 because the fiscal 2026 annual report could not be read — a collection gap, not an absence."
+ },
+ "sources": [
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Announces Sale of Australian Toll Road Assets",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-announces-sale-of-australian-toll-road-assets-841986632.html",
+   "date": "2026-10-01"
+  },
+  {
+   "label": "SEC EDGAR — Schedule 13E-3, ReNew Energy Global plc (CPPIB, Dyuti Private Holdings, Sumant Sinha)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1283718/000119312526398221/d72407dsc13e3.htm",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments and Brookfield launch $50 billion Maple Fund",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-and-brookfield-launch-50-billion-maple-fund-to-pursue-large-scale-investments-across-canada-841350467.html",
+   "date": "2026-09-15"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments CEO John Graham delivers remarks at the Canada Investment Summit",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-ceo-john-graham-delivers-remarks-at-the-canada-investment-summit-898229880.html",
+   "date": "2026-09-15"
+  },
+  {
+   "label": "Prime Minister of Canada — The first Canada Investment Summit unleashes nearly $500 billion of new investment in Canada",
+   "url": "https://www.pm.gc.ca/en/news/news-releases/2026/09/15/first-canada-investment-summit-unleashes-nearly-500-billion-new",
+   "date": "2026-09-15"
+  },
+  {
+   "label": "CPP Investments — Statement of Investment Objectives, Policies, Return Expectations and Risk Management (effective 1 September 2026, PDF)",
+   "url": "https://www.cppinvestments.com/wp-content/uploads/attachments/InvestmentStatement-InvestmentPortfolio-EN-Sept082026.pdf",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "CPP Investments and Equinix (CNW) — CPP Investments and Equinix Complete atNorth Acquisition",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-and-equinix-complete-atnorth-acquisition-to-support-growth-of-leading-nordic-data-center-platform-834078322.html",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Equinix — CPP Investments and Equinix Complete atNorth Acquisition to Support Growth of Leading Nordic Data Center Platform",
+   "url": "https://newsroom.equinix.com/2026-09-02-CPP-Investments-and-Equinix-Complete-atNorth-Acquisition-to-Support-Growth-of-Leading-Nordic-Data-Center-Platform",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Canadian Shield Institute — Worth It: How Canada's Pensions Can Invest in Real Canadian Growth",
+   "url": "https://canadianshieldinstitute.ca/reports/worth-it-pension-funds-investing-in-real-canadian-growth",
+   "date": "2026-09"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Net Assets Total $863.6 Billion at First Quarter Fiscal 2027",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-863-6-billion-at-first-quarter-fiscal-2027-819704344.html",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments launches expanded portfolio carbon footprint reporting",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-launches-expanded-portfolio-carbon-footprint-reporting-897938029.html",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "SEC EDGAR — Canada Pension Plan Investment Board Form 13F-HR, period 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1283718/000110465926097308/",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "Benefits Canada — CPP Investments posts 7.5% return for fiscal Q1 2027, net assets rise to $863.6 billion",
+   "url": "https://www.benefitscanada.com/news/bencan/cpp-investments-posts-7-5-return-for-fiscal-q1-2027-net-assets-rise-to-863-6-billion/",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "SEC EDGAR — Schedule 13D/A, ReNew Energy Global plc (CPPIB 34.4%)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1283718/000119312526343551/primary_doc.xml",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "SEC EDGAR — Sempra Form 10-Q for the quarter ended 30 June 2026 (Sempra Infrastructure Partners sale terms and status)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000045/sre-20260630.htm",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "CPP Investments and Elia Group (CNW) — Elia Group and CPP Investments expand partnership with acquisition of the Tarchon interconnector project",
+   "url": "https://www.newswire.ca/news-releases/elia-group-and-cpp-investments-expand-partnership-with-acquisition-of-the-tarchon-interconnector-project-899201203.html",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "SEC EDGAR — Sempra 8-K Item 5.02 (CFO succession tied to the SIP closing)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000040/sempra-20260706.htm",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Partners with EQT to Support Global Digital Infrastructure Growth (EdgeConneX)",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-partners-with-eqt-to-support-global-digital-infrastructure-growth-826226428.html",
+   "date": "2026-07-03"
+  },
+  {
+   "label": "Infrastructure Investor — Global Investor 75 ranking (published 1 July 2026)",
+   "url": "https://www.infrastructureinvestor.com/global-investor-ranking/",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Commits C$1 Billion to CtrlS Data Centre Partnership in India",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-commits-c-1-billion-to-ctrls-data-centre-partnership-in-india-877239451.html",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "US Senate Banking Committee (minority) — Warren Probes Major Private Equity Firms on Investments in Data Centers as Utility Costs Rise",
+   "url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-major-private-equity-firms-on-investments-in-data-centers-as-utility-costs-rise",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "Latham & Watkins — Latham Advises CPP Investments on Closing of Investment in Inkia Alongside I Squared Capital",
+   "url": "https://www.lw.com/en/news/2026/06/latham-advises-cpp-investments-on-closing-of-investment-in-inkia-alongside-i-squared-capital",
+   "date": "2026-06-08"
+  },
+  {
+   "label": "Wealth Professional — Chief actuary clears base CPP rate cut in Bill C-30",
+   "url": "https://www.wealthprofessional.ca/news/industry-news/chief-actuary-clears-base-cpp-rate-cut-in-bill-c-30/392689",
+   "date": "2026-06-08"
+  },
+  {
+   "label": "ai-CIO — CPP Investments' 7.8% Fiscal 2026 Return Buoyed by IT, Communications Sectors",
+   "url": "https://www.ai-cio.com/news/cpp-investments-7-8-fiscal-2026-return-buoyed-by-it-communications-sectors/",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "SEC EDGAR — Constellation Energy 8-K and underwriting agreement: 11,000,000 shares sold by Calpine's former holders (complete submission)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069482/0001104659-26-069482.txt",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "Office of the Chief Actuary (OSFI) — 32nd Actuarial Report on the Canada Pension Plan (revised version)",
+   "url": "https://www.osfi-bsif.gc.ca/en/oca/actuarial-reports/actuarial-report-32nd-canada-pension-plan",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Pension Pulse — A Discussion With CPP Investments' CEO on Their Fiscal Year 2026 Results",
+   "url": "https://pensionpulse.blogspot.com/2026/05/a-discussion-with-cpp-investments-ceo.html",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Net Assets Total $793.3 Billion at 2026 Fiscal Year End",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-793-3-billion-at-2026-fiscal-year-end-814459989.html",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "BNN Bloomberg (Canadian Press) — CPP Investments earned 7.8% for fiscal 2026, net assets total $793.3 billion",
+   "url": "https://www.bnnbloomberg.ca/business/2026/05/21/cpp-investments-earned-78-for-fiscal-2026-net-assets-total-7933-billion/",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Completes Sale of Private Equity Fund Interests to Blackstone Strategic Partners and Ardian",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-completes-sale-of-private-equity-fund-interests-to-blackstone-strategic-partners-and-ardian-875930342.html",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "The Globe and Mail — Pension funds should invest more in Canada, Senate finance committee chair says",
+   "url": "https://www.theglobeandmail.com/politics/article-pension-funds-senate-finance-committee-chair/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Pattern Energy — Pattern Energy Announces Completion of Acquisition of Cordelio Power",
+   "url": "https://patternenergy.com/pattern-energy-announces-completion-of-acquisition-of-cordelio-power/",
+   "date": "2026-04-02"
+  },
+  {
+   "label": "CPP Investments and Equinix (CNW) — CPP Investments and Equinix to Acquire atNorth for US$4 Billion",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-and-equinix-to-acquire-atnorth-for-us-4-billion-805897687.html",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "Partners Group — Partners Group to sell atNorth for an EV of USD 4 billion",
+   "url": "https://www.partnersgroup.com/en/news-and-views/press-releases/investment-news/detail?news_id=064d4e79-30b6-4500-9a08-f7a65686f860",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Announces Senior Executive Appointment (David Colla)",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-announces-senior-executive-appointment-891819790.html",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "CBC News — Amid 'Buy Canadian' fervour, Canada's top pension funds still heavily invested in U.S.",
+   "url": "https://www.cbc.ca/news/investigates/cpp-us-investments-record-assests-9.7088667",
+   "date": "2026-02-14"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Net Assets Total $780.7 Billion at Third Quarter Fiscal 2026",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-780-7-billion-at-third-quarter-fiscal-2026-832201322.html",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments to Invest in Inkia Alongside I Squared Capital",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-to-invest-in-inkia-alongside-i-squared-capital-811136352.html",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "SEC EDGAR — Constellation Energy 8-K exhibit 10.1: Registration Rights Agreement (ECP, Access Industries, Canada Pension Plan Investment Board)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926001780/tm2532248d1_ex10-1.htm",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments and Goodman launch A$14 billion European data centre Partnership",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-and-goodman-launch-a-14-billion-european-data-centre-partnership-807550159.html",
+   "date": "2025-12-22"
+  },
+  {
+   "label": "SEC EDGAR — ALLETE 8-K exhibit 99.1: ALLETE Announces Completion of Acquisition by CPP Investments and Global Infrastructure Partners",
+   "url": "https://www.sec.gov/Archives/edgar/data/66756/000114036125045482/ef20060780_ex99-1.htm",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "US Senate Banking Committee (minority) — Letter of Senators Warren, Sanders and Blumenthal to BlackRock on utility acquisitions and energy costs (PDF)",
+   "url": "https://www.banking.senate.gov/imo/media/doc/20251204lettertoblackrockreutilityenergycosts.pdf",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Net Assets Total $777.5 Billion at Second Quarter Fiscal 2026",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-777-5-billion-at-second-quarter-fiscal-2026-800566047.html",
+   "date": "2025-11-14"
+  },
+  {
+   "label": "The Logic — CPP-backed data-centre firm VoltaGrid raises US$5B in debt",
+   "url": "https://thelogic.co/briefing/cpp-backed-data-centre-firm-voltagrid-raises-us5b-in-debt/",
+   "date": "2025-11-10"
+  },
+  {
+   "label": "Ecojustice — Canada's largest pension investment manager sued over alleged climate risk mismanagement",
+   "url": "https://ecojustice.ca/news/canadas-largest-pension-investment-manager-sued-over-alleged-climate-risk-mismanagement/",
+   "date": "2025-10-27"
+  },
+  {
+   "label": "Utility Dive — Minnesota PUC approves $6.2B Allete sale to private equity",
+   "url": "https://www.utilitydive.com/news/minnesota-puc-allete-private-equity-blackrock-gip/802006/",
+   "date": "2025-10-06"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments to Acquire Stake in Sempra Infrastructure Partners",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-to-acquire-stake-in-sempra-infrastructure-partners-832131905.html",
+   "date": "2025-09-23"
+  },
+  {
+   "label": "CPP Investments — Q1 Fiscal 2026 Results Overview deck (PDF; department net investments at 30 June 2025)",
+   "url": "https://www.cppinvestments.com/wp-content/uploads/attachments/Q1-F26-Results-Overview-Aug14-2025-EN.pdf",
+   "date": "2025-08-14"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Commits to $225 Million in Construction Financing for Ontario Data Centre",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-commits-to-225-million-in-construction-financing-for-ontario-data-centre-886540216.html",
+   "date": "2025-07-31"
+  },
+  {
+   "label": "Utility Dive — Law judge calls for Minnesota PUC to reject $6.2B Allete private equity deal",
+   "url": "https://www.utilitydive.com/news/minnesota-power-allete-gip-puc-private-equity/753181/",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Minnesota Department of Commerce — Minnesota Power Acquisition Settlement Ensures Affordable, Clean Energy and Reliable Service",
+   "url": "https://mn.gov/commerce/news/?id=17-697022",
+   "date": "2025-07-11"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Net Assets Total $714.4 Billion at 2025 Fiscal Year End",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-714-4-billion-at-2025-fiscal-year-end-886824057.html",
+   "date": "2025-05-21"
+  },
+  {
+   "label": "CPP Investments — Annual Report 2025, 'Investing for Canadians' (PDF)",
+   "url": "https://www.cppinvestments.com/wp-content/uploads/attachments/CPP-Investments-F2025-Annual-Report-English.pdf",
+   "date": "2025-05"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments to Sell Stake in Calpine Corporation",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-to-sell-stake-in-calpine-corporation-809390217.html",
+   "date": "2025-01-10"
+  },
+  {
+   "label": "SEC EDGAR — Constellation Energy 8-K exhibit 99.1: Constellation to Acquire Calpine",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827525000006/ceg-202501108kxexh991.htm",
+   "date": "2025-01-10"
+  },
+  {
+   "label": "AirTrunk — Completion of AirTrunk Acquisition by Blackstone – Marking New Era of Growth",
+   "url": "https://airtrunk.com/completion-of-airtrunk-acquisition-by-blackstone-marking-new-era-of-growth/",
+   "date": "2024-12-23"
+  },
+  {
+   "label": "Renewable Energy World — ALLETE gets FERC approval to go private in $6.2B deal",
+   "url": "https://www.renewableenergyworld.com/energy-business/policy-and-regulation/allete-gets-ferc-approval-to-go-private-in-6-2b-deal/",
+   "date": "2024-12-20"
+  },
+  {
+   "label": "Torys LLP — Federal Fall Economic Statement 2024: spotlight on Canadian pension funds",
+   "url": "https://www.torys.com/our-latest-thinking/publications/2024/12/federal-fall-economic-statement-2024",
+   "date": "2024-12-16"
+  },
+  {
+   "label": "Pattern Energy via Business Wire (DutchNews syndication) — Pattern Energy Announces Equity Investment from Consortium Headed by APG and ART",
+   "url": "https://www.dutchnews.nl/businesswire/pattern-energy-announces-equity-investment-from-consortium-headed-by-apg-and-art/",
+   "date": "2024-12-16"
+  },
+  {
+   "label": "SEC EDGAR — Equinix 8-K exhibit 99.1: Equinix Agrees to Form Greater Than $15B JV to Expand Hyperscale Data Centers in the U.S.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110465924104921/tm2425348d1_ex99-1.htm",
+   "date": "2024-10-01"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Announces Investment in Asia Pacific Data Centre Operator AirTrunk",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-announces-investment-in-asia-pacific-data-centre-operator-airtrunk-879569570.html",
+   "date": "2024-09-04"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Announces Senior Executive Appointment (Caitlin Gubbels)",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-announces-senior-executive-appointment-883188326.html",
+   "date": "2024-08-14"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Acquires Stake in U.S. Energy Infrastructure Company Tallgrass Energy",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-acquires-stake-in-u-s-energy-infrastructure-company-tallgrass-energy-890355147.html",
+   "date": "2024-08-13"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments Announces Senior Executive Appointments (Priti Singh; Heather Tobin)",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-announces-senior-executive-appointments-833680845.html",
+   "date": "2024-07-17"
+  },
+  {
+   "label": "InnovationMap — Houston microgrid tech company announces $150 million investment (VoltaGrid)",
+   "url": "https://houston.innovationmap.com/voltagrid-150-million-equity-raise-2658487087.html",
+   "date": "2022-10-24"
+  },
+  {
+   "label": "PR Newswire — Mainspring Closes Series E at $290 Million",
+   "url": "https://www.prnewswire.com/news-releases/mainspring-closes-series-e-at-290-million-301626840.html",
+   "date": "2022-09-21"
+  },
+  {
+   "label": "CPP Investments (CNW) — CPP Investments creates new Sustainable Energy Group",
+   "url": "https://www.newswire.ca/news-releases/cpp-investments-creates-new-sustainable-energy-group-821607478.html",
+   "date": "2021-04-06"
+  },
+  {
+   "label": "VoltaGrid — VoltaGrid Closes $73 Million Equity Commitment from Institutional Investors (page dated 2020; The Logic dates the round to 2021)",
+   "url": "https://voltagrid.com/voltagrid-closes-73-million-equity-commitment-from-institutional-investors",
+   "date": "2020-02-02"
+  },
+  {
+   "label": "Pattern Energy and CPPIB (CNW) — Pattern Energy Enters Agreement to be Acquired by Canada Pension Plan Investment Board",
+   "url": "https://www.newswire.ca/news-releases/pattern-energy-enters-agreement-to-be-acquired-by-canada-pension-plan-investment-board-851006800.html",
+   "date": "2019-11-04"
+  },
+  {
+   "label": "Global SWF — fund profile: CPP (Canada)",
+   "url": "https://globalswf.com/fund/CPPIB"
+  },
+  {
+   "label": "SEC EDGAR — Canada Pension Plan Investment Board filing index (CIK 0001283718)",
+   "url": "https://data.sec.gov/submissions/CIK0001283718.json"
+  },
+  {
+   "label": "Newswire.ca — Canada Pension Plan Investment Board release listing",
+   "url": "https://www.newswire.ca/news/canada-pension-plan-investment-board/"
+  },
+  {
+   "label": "CPP Investments — corporate site (HTML pages return an AWS WAF challenge to this environment; PDFs readable)",
+   "url": "https://www.cppinvestments.com/"
+  }
+ ],
+ "lastUpdated": "2026-10-04",
+ "profileVersion": 2
+}

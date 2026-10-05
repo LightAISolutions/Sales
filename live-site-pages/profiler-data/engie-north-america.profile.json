@@ -14,7 +14,7 @@
   "type": "subsidiary",
   "ticker": "EPA: ENGI (parent, ENGIE SA)"
  },
- "summary": "BOTTOM LINE UP FRONT: ENGIE North America is the largest battery-storage owner in ERCOT and the second largest in the United States, but it is being run for cash by a parent whose 2026 capital went to a UK regulated network, and it has had no permanent chief executive since 1 August 2026. BACKGROUND. Houston-based, wholly owned by ENGIE SA (Euronext Paris: ENGI) and carried in the parent's scope of consolidation as \"ENGIE North America — Electricity distribution and generation, Natural gaz, LNG, Energy services — United States — 100.0%\". Four lines: utility-scale renewables development and ownership, battery energy storage, C&I retail supply through ENGIE Resources, and wholesale marketing through ENGIE Energy Marketing NA, with a local energy-infrastructure concession business on university and medical campuses. ENGIE states 11+ GW of generation operating or in construction in North America, 3.5+ GW of BESS across 35+ operational projects, 80+ renewable projects online and over 45,000 (its homepage says 50,000+) commercial and industrial retail customers. S&P Global Commodity Insights, working from government filings, independently measures 3.662 GW of operating US battery storage at 30 June 2026 — second only to NextEra Energy Resources — and Modo Energy measures ~2.8 GW in ERCOT alone, a 20% share and more than twice the next owner. The storage platform was bought, not built: ENGIE acquired Broad Reach Power in August 2023 for more than US$1 billion of equity value. Since then the business has been recycling that capital, selling a 49% interest in 905 MW to Ares (March 2025), a 49.5% interest in a 2.4 GW, 31-project battery portfolio to CBRE Investment Management (May 2025) and a further 730 MW to Ares (January 2026), retaining control and operations in each. The parent reported FY2025 revenue of EUR 71.9bn and net recurring income Group share of EUR 4.9bn; North America contributed EUR 5,807m of revenue (8.1%) and EUR 11,051m of industrial capital employed (15.5%). ENGIE publishes no North American EBIT.",
+ "summary": "BOTTOM LINE UP FRONT: ENGIE North America is the largest battery-storage owner in ERCOT and the second largest in the United States, but it is being run for cash by a parent whose 2026 capital went to a UK regulated network, and it has had no permanent chief executive since 1 August 2026. BACKGROUND. Houston-based, wholly owned by ENGIE SA (Euronext Paris: ENGI) and carried in the parent's scope of consolidation as \"ENGIE North America — Electricity distribution and generation, Natural gaz, LNG, Energy services — United States — 100.0%\". Four lines: utility-scale renewables development and ownership, battery energy storage, C&I retail supply through ENGIE Resources, and wholesale marketing through ENGIE Energy Marketing NA, with a local energy-infrastructure concession business on university and medical campuses. ENGIE states 11+ GW of generation operating or in construction in North America, 3.5+ GW of BESS across 35+ operational projects, 80+ renewable projects online and over 45,000 (its homepage says 50,000+) commercial and industrial retail customers. S&P Global Commodity Insights, working from government filings, independently measures 3.662 GW of operating US battery storage at 30 June 2026 — second only to NextEra Energy Resources — and Modo Energy measures ~2.8 GW in ERCOT alone, a 20% share and more than twice the next owner. The storage platform was bought, not built: ENGIE acquired Broad Reach Power in August 2023 for more than US$1 billion of equity value. Since then the business has been recycling that capital, selling a minority stake in a 905 MW portfolio to Ares for US$430m (March 2025), a 49.5% interest in a 2.4 GW, 31-project battery portfolio to CBRE Investment Management (May 2025) and a further 730 MW to Ares (January 2026), retaining control and operations in each. The parent reported FY2025 revenue of EUR 71.9bn and net recurring income Group share of EUR 4.9bn; North America contributed EUR 5,807m of revenue (8.1%) and EUR 11,051m of industrial capital employed (15.5%). ENGIE publishes no North American EBIT.",
  "ecosystemRole": "We assess ENGIE North America as the ecosystem's largest merchant battery counterparty and one of its two most important corporate-PPA sellers. For a storage supplier it is a buyer that has already bought at scale and now funds growth by selling minority stakes rather than by issuing parent equity, which puts an infrastructure fund's diligence between a vendor and a signature. For a data-centre operator it is a counterparty that sells three different things — project-tied PPAs (Meta, Google), retail supply and hourly 24/7 matching (Microsoft, AstraZeneca, Aker BioMarine), and co-location of compute at its own generation and storage sites (Prometheus Hyperscale, Cipher Mining) — and the third is the one that is new and unproven.",
  "productsAndServices": [
   {
@@ -379,9 +379,9 @@
   {
    "date": "2025-03-24",
    "category": "ma",
-   "headline": "Ares Management acquires a 49% interest in a 905 MW portfolio of US solar and storage for US$430m, taking the Ares relationship to 3.7 GW",
-   "read": "The template ENGIE repeats: sell just under half, keep the controlling share, keep the O&M contract.",
-   "source": "https://www.engie-na.com/engie-expands-partnership-with-ares-management-with-addition-of-nearly-1-gw-portfolio-of-solar-and-storage-assets-in-the-u-s/"
+   "headline": "Ares Management Infrastructure Opportunities funds buy a minority stake in the 905 MW 'Aspen' portfolio of US solar and storage for US$430m, per ENGIE SA's 2025 annual report; ENGIE's release puts the cumulative Ares relationship at 3.7 GW",
+   "read": "The template ENGIE repeats: sell a minority stake, keep the controlling share, keep operations and management.",
+   "source": "https://www.engie.com/app/uploads/2026/03/2025-Management-report-and-annual-consolidated-financial-statements.pdf"
   },
   {
    "date": "2025-02-03",
@@ -518,6 +518,17 @@
    "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
    "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
    "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "ares",
+   "type": "partner",
+   "status": "active",
+   "since": "2024",
+   "scale": "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+   "via": "Ares Management Infrastructure Opportunities funds",
+   "note": "Ares infrastructure funds hold minority stakes in successive ENGIE North America renewables portfolios; ENGIE keeps a controlling share and operates the assets.",
+   "context": "ENGIE North America's releases of 24 March 2025 and 13 January 2026 say 'ENGIE will retain a controlling share in the portfolio and will continue to operate and manage the assets', and put the cumulative relationship at 3.7 GW and then 4.3 GW. ENGIE SA's 2025 annual report (Note 16.2.4) gives the money: US$430m for a minority stake in the 905 MW Aspen portfolio, and for the 730 MW Big Sampson wind and Anson 2 / Sypert Branch solar portfolios US$153m paid in 2025 with about US$280m scheduled for 2026. No percentage is published. A non-controlling co-owner, not an operator.",
+   "source": "https://www.engie.com/app/uploads/2026/03/2025-Management-report-and-annual-consolidated-financial-statements.pdf"
   }
  ],
  "policyExposure": [
@@ -866,7 +877,7 @@
  },
  "strategyRead": [
   "(High confidence) We assess ENGIE North America's storage leadership is real, bought rather than built, and measured independently. Basis: S&P Global Commodity Insights, working from government filings, ranks it second in US operating battery storage at 3.662 GW (30 June 2026), and Modo Energy measures ~2.8 GW in ERCOT entering 2026 — a 20% share and more than twice the next owner. ENGIE's own 2024 milestone release credits the acceleration to the August 2023 Broad Reach Power acquisition, and two of its published projects (Bat Cave, North Fork) trace through Broad Reach to Plus Power.",
-  "(High confidence) We assess the business is being run for capital recycling rather than balance-sheet growth. Basis: three consecutive minority sell-downs — Ares 49% of 905 MW for US$430m (March 2025), CBRE Investment Management 49.5% of a 2.4 GW battery portfolio (May 2025, in three tranches of US$291m, US$221m and ~US$70m), Ares again for 730 MW (January 2026) — each with the identical formula that ENGIE 'will retain a controlling share in the portfolio and will continue to operate and manage the assets'. North American industrial capital employed fell EUR 808m across FY2025 while the region's revenue rose 5.1%.",
+  "(High confidence) We assess the business is being run for capital recycling rather than balance-sheet growth. Basis: three consecutive minority sell-downs — Ares a minority stake in 905 MW for US$430m (March 2025), CBRE Investment Management 49.5% of a 2.4 GW battery portfolio (May 2025, in three tranches of US$291m, US$221m and ~US$70m), Ares again for 730 MW (January 2026) — each with the identical formula that ENGIE 'will retain a controlling share in the portfolio and will continue to operate and manage the assets'. North American industrial capital employed fell EUR 808m across FY2025 while the region's revenue rose 5.1%.",
   "(High confidence) We assess the group's 2026 capital priority moved away from North America. Basis: ENGIE agreed to buy UK Power Networks for about EUR 12.2bn net cash plus EUR 6.6bn of assumed debt, making the UK its second-largest EBIT country; group net growth capex fell in FY2025 'mainly due to project delays in the US' in ENGIE's own words; ENGIE Impact was sold to Arcadia and the Distributed Solar & Storage business is being sold with a ~EUR 250m impairment; and North American revenue fell 3.1% year on year in H1 2026. This is recycling, not net deployment.",
   "(Moderate confidence) We assess the ERCOT concentration is now the central commercial risk, not the central asset. Basis: 29 of 31 published storage projects sit in ERCOT, where Enverus measures average battery revenue falling from $149/kW (2023) to a projected $17/kW (2025) with most major operators below 2.2% year-to-date profitability, and ancillary-services revenues down about 90%. Modo separately measures merchant revenue at $43/kW for 2024-25 against $192/kW in 2023 — the two series disagree and no source reconciles them. Cutting against this judgment: interconnection applications fell 50% in H2 2025 and the median queue lengthened to 4.1 years, which protects incumbents.",
   "(Moderate confidence) We assess co-location of compute is ENGIE's differentiated answer to that revenue compression, and that it is the least proven part of the strategy. Basis: the Cipher Mining preliminary agreement (up to 300 MW) and the Prometheus Hyperscale collaboration are both framed by ENGIE in market-structure terms — relieving congestion, offsetting basis risk, mitigating curtailment — rather than as sustainability deals. Neither discloses MW under contract; no third party has verified Prometheus's construction progress, financing or load commitment; and the group's own data-centre disclosure moved advanced-stage pipeline from 0.8 GW to 4 GW in six months, which is a forward claim rather than a delivered one.",
@@ -1004,6 +1015,11 @@
   {
    "label": "ENGIE — ENGIE expands Ares partnership with 730 MW of operating US solar and wind",
    "url": "https://www.engie-na.com/engie-expands-ares-partnership-730mw-renewables/",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "ENGIE North America — partnership with Ares expands by 730 MW of US solar and wind",
+   "url": "https://www.prnewswire.com/news-releases/engie-and-ares-partnership-further-expands-with-addition-of-730-mw-portfolio-of-new-us-solar-and-wind-assets-302659666.html",
    "date": "2026-01-13"
   },
   {
@@ -1171,6 +1187,6 @@
    "url": "https://www.engieresources.com/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 2
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 3
 }

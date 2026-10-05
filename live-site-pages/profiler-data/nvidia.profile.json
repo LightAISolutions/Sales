@@ -386,6 +386,17 @@
    "note": "Investor and credit support: NVIDIA prepaid USD 1.5bn in August 2026, committed USD 1.5bn more at the IPO, guarantees the OpenAI tenant's obligations on the first ~4.25 GW-IT at PORTS-Pike and is to be its exclusive AI compute provider.",
    "context": "SB Energy's 17 August 2026 release names NVIDIA 'the exclusive AI compute infrastructure provider at PORTS-Pike', with credit support on the initial 4.25 GW-IT and an option on the rest. The S-1 adds that NVIDIA funded USD 1.5bn under a prepaid forward on 17 August 2026, at 90% of the IPO price, and committed to buy USD 1.5bn of non-voting Class N stock alongside the offering, which has not priced.",
    "source": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
+  },
+  {
+   "slug": "apollo",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-08",
+   "scale": "Over USD 500bn of third-party capital across six firms, over time; no per-firm allocation",
+   "via": "AI compute infrastructure financing platform",
+   "note": "Apollo is one of the six financiers in NVIDIA's August 2026 memoranda of understanding to build AI compute-financing platforms.",
+   "context": "NVIDIA's release of 10 August 2026 announced memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over USD 500bn of third-party capital, subject to final agreements and with no per-firm allocation. Apollo separately led the USD 3.5bn financing of Valor Compute Infrastructure's January 2026 purchase of NVIDIA GB200 compute leased to an xAI subsidiary, per Apollo's release.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
   }
  ],
  "policyExposure": [
@@ -774,6 +785,6 @@
    "date": "2026-08-26"
   }
  ],
- "lastUpdated": "2026-10-04",
- "profileVersion": 13
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 14
 }

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-10-05",
- "companies": 211,
+ "companies": 214,
  "edges": [
   {
    "a": "5c-group",
@@ -2450,6 +2450,34 @@
    },
    "evid": [],
    "last": "2026"
+  },
+  {
+   "a": "aep",
+   "b": "stonepeak",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "AEP Ohio supplies onsite fuel-cell electricity to Cologix, the data-centre platform Stonepeak controls, under a 15-year PUCO-approved contract.",
+     "context": "AEP's release of 5 June 2025 says the PUCO approved AEP Ohio's onsite fuel-cell projects for Amazon Web Services and Cologix and that both customers cover the full project costs. AEP Ohio owns the Bloom Energy fuel cells and Cologix buys the electricity. Stonepeak has held a majority of Cologix since 2017 and completed a USD 3.0bn equity recapitalisation of it in 2022. Stonepeak reaches AEP only through its platform.",
+     "source": "https://www.aep.com/news/stories/view/10262/",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "Cologix's 15-year contract, one of two totalling about 98 MW",
+     "via": "AEP Ohio onsite fuel-cell electricity service to Cologix"
+    },
+    "b": {
+     "type": "other",
+     "note": "AEP Ohio provides onsite fuel-cell electricity to Cologix, Stonepeak's controlled data-centre platform, under a 15-year PUCO-approved contract; AEP Ohio owns the Bloom Energy fuel cells.",
+     "context": "AEP's release of 5 June 2025 says the PUCO approved AEP Ohio's onsite fuel-cell projects for Amazon Web Services and Cologix and that 'AWS and Cologix will cover the full project costs'; AEP's Q2 2025 10-Q records two contracts totalling about 98 MW under its Bloom Energy fuel-cell purchase agreement. AEP Ohio buys, owns and operates the fuel cells; Cologix is the customer for the electricity.\n\nStonepeak has controlled Cologix since 2017 and recapitalised it at a USD 3.0bn equity value in 2022.",
+     "source": "https://www.aep.com/news/stories/view/10262/",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "About 98 MW across the AWS and Cologix contracts; Cologix's runs 15 years",
+     "via": "AEP Ohio onsite fuel-cell electricity service"
+    }
+   },
+   "evid": [],
+   "last": "2025-05"
   },
   {
    "a": "aep",
@@ -8051,27 +8079,126 @@
   },
   {
    "a": "anthropic",
-   "b": "blackstone",
+   "b": "apollo",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Apollo leads the initial USD 35bn capital solution of Broadcom's AI XPV Platform, which funds the compute racks Anthropic leases at Fluidstack-based sites; an Apollo-managed fund holds the purchase obligation.",
+     "context": "Broadcom's release of 9 June 2026, reposted by Apollo, establishes the AI XPV Platform with Apollo and Blackstone's Credit & Insurance business as initial anchor investors and an initial USD 35bn tranche led by Apollo 'to facilitate Anthropic's previously-announced capacity expansion of more than 1 gigawatt of compute infrastructure expected to deploy in Fluidstack-based sites starting in mid-2026'.\n\nApollo's Q2 2026 10-Q says an Apollo-managed fund, WarehouseCo Intermediate Holdings LP, holds the purchase obligation for the compute and that Athene guarantees 15% of it; Broadcom's 10-Q describes its backstop of the customer's five-year lease obligations (maximum about USD 29bn undiscounted). Anthropic is the lessee; Apollo is the financier.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "USD 35bn initial tranche; more than 1 GW of compute",
+     "via": "Broadcom AI XPV Platform"
+    },
+    "b": {
+     "type": "other",
+     "note": "Apollo leads the initial USD 35bn capital solution of Broadcom's AI XPV Platform, which funds the compute racks Anthropic leases at Fluidstack-based sites.",
+     "context": "Broadcom announced the platform on 9 June 2026 with Apollo and Blackstone's Credit & Insurance business as initial anchor investors. Its initial tranche, led by Apollo with banks, facilitates 'Anthropic's previously-announced capacity expansion of more than 1 gigawatt of compute infrastructure' at Fluidstack-based sites from mid-2026.\n\nPer Apollo's Q2 2026 10-Q, an Apollo-managed fund, WarehouseCo Intermediate Holdings LP, holds the purchase obligation for the compute, and Athene guarantees 15% of it. Per Broadcom's 10-Q, Broadcom backstops the customer's five-year lease payments up to about USD 29bn. Anthropic is the lessee; Apollo is the financier.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "USD 35bn initial tranche; more than 1 GW of compute",
+     "via": "Broadcom AI XPV Platform"
+    }
+   },
    "evid": [
     {
      "where": "Summary",
      "date": "",
-     "text": "Its make-versus-lease answer is neither: it leases buildings, has chips bought by an Apollo–Blackstone vehicle with Broadcom residual-value support, and buys the generation.",
+     "text": "Its make-versus-lease answer is neither: it leases buildings, has chips bought by an Apollo-managed fund financed through Broadcom's AI XPV Platform, with Apollo and Blackstone as anchor investors and Broadcom backstopping the lease, and buys the generation.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: the 401 MW Justified lease in its own name, Riot's 191 MW build-to-suit (tenant per Bloomberg), the 470 MW ERock equipment order, the Theseus anchor-tenant platform and the Apollo–Blackstone chip vehicle — leases, generation and lessor-owned chips, but no owned campus.",
+     "text": "Basis: the 401 MW Justified lease in its own name, Riot's 191 MW build-to-suit (tenant per Bloomberg), the 470 MW ERock equipment order, the Theseus anchor-tenant platform and the Apollo-led chip financing under Broadcom's AI XPV Platform — leases, generation and lessor-owned chips, but no owned campus.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Recent Reporting",
      "date": "2026-06-10",
-     "text": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial tranche of about USD 35 billion to buy Google TPUs and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value — The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
-     "src": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html",
+     "text": "Broadcom announces the AI XPV Platform with Apollo and Blackstone as initial anchor investors: an initial USD 35 billion tranche, led by Apollo, to buy TPUs (Google-built, per press) and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value — The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The second is a **compute-financing book**: Apollo leads the USD 35bn initial tranche of Broadcom's AI XPV Platform, which buys compute racks for Anthropic, and led a USD 3.5bn financing for Valor's lease of NVIDIA GB200 systems to xAI.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Under it an Apollo-managed fund, WarehouseCo Intermediate Holdings LP, holds the obligation to buy the Broadcom-designed compute racks that Anthropic leases at Fluidstack sites.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Apollo's exposure is therefore to Anthropic's and xAI's lease payments — on XPV backstopped by Broadcom up to about USD 29bn — rather than to construction.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **Stream is Apollo's one scaled buyer of data-centre power equipment, and the reported Anthropic talks would deepen it**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A direct 1 GW lease to Anthropic, reported on 22–23 September but announced by no party, would make an Apollo platform a lab-direct landlord beside the Broadcom racks Apollo already finances.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*A Stream–Anthropic lease announcement:* would confirm Judgment 3 and make Stream a lab-direct landlord.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI compute financing — Broadcom AI XPV Platform, Valor Compute Infrastructure, Nscale",
+     "date": "",
+     "text": "It funds the racks of Broadcom-designed accelerators that Anthropic is to deploy at Fluidstack-based sites from mid-2026, across 'a multi-year draw schedule'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-09",
+     "text": "Apollo leads an initial USD 35bn capital solution for Broadcom's AI XPV Platform, with Blackstone and banks, funding Anthropic's capacity expansion of more than 1 GW at Fluidstack-based sites from mid-2026 — Apollo's 10-Q puts the purchase obligation in an Apollo-managed fund and a 15% limited guarantee on Athene.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/apollo-leads-35-billion-capital-solution-for-broadcom-ai-xpv-platform-in-partnership-with-blackstone-and-leading-global-banks-3308896",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
+  },
+  {
+   "a": "anthropic",
+   "b": "blackstone",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its make-versus-lease answer is neither: it leases buildings, has chips bought by an Apollo-managed fund financed through Broadcom's AI XPV Platform, with Apollo and Blackstone as anchor investors and Broadcom backstopping the lease, and buys the generation.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Broadcom announces the AI XPV Platform with Apollo and Blackstone as initial anchor investors: an initial USD 35 billion tranche, led by Apollo, to buy TPUs (Google-built, per press) and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value — The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
      "from": "a"
     }
    ],
@@ -8245,7 +8372,7 @@
    "curated": {
     "a": {
      "type": "supplier",
-     "note": "Fluidstack is the tenant-operator of Anthropic's USD 50 billion US data-centre programme announced on 12 November 2025 — the leases sit in Fluidstack subsidiaries with Google backstops, the buildings belong to TeraWulf, Cipher, Hut 8 and Meridian Arc, and the chips are bought by an Apollo–Blackstone vehicle and leased to Anthropic.",
+     "note": "Fluidstack is the tenant-operator of Anthropic's USD 50 billion US data-centre programme announced on 12 November 2025 — the leases sit in Fluidstack subsidiaries with Google backstops, the buildings belong to TeraWulf, Cipher, Hut 8 and Meridian Arc, and the chips are bought by an Apollo-managed fund under Broadcom's AI XPV Platform and leased to Anthropic.",
      "context": "Anthropic's release: 'building data centers with Fluidstack in Texas and New York, with more sites to come', chosen 'for its ability to move with exceptional agility, enabling rapid delivery of gigawatts of power'; 'approximately 800 permanent jobs and 2,400 construction jobs'. Hut 8's 17 December 2025 release names Anthropic as end user of the Fluidstack-operated River Bend clusters ('at least 245 megawatts and up to 2,295 MW'). MeasuredAI's reading: 'Anthropic is not a party to the lease and guarantees nothing'. Anthropic's July 2026 Justified lease and its reported Nscale, Lambda and Riot contracts show it now also contracts around Fluidstack.",
      "source": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
      "status": "active",
@@ -8324,8 +8451,8 @@
     {
      "where": "Recent Reporting",
      "date": "2026-06-10",
-     "text": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial tranche of about USD 35 billion to buy Google TPUs and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value — The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
-     "src": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html",
+     "text": "Broadcom announces the AI XPV Platform with Apollo and Blackstone as initial anchor investors: an initial USD 35 billion tranche, led by Apollo, to buy TPUs (Google-built, per press) and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value — The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
      "from": "a"
     },
     {
@@ -8436,7 +8563,7 @@
     {
      "where": "Capabilities · GPU and capacity financing — Macquarie asset-backed facility, capacity purchases from smaller neoclouds, the Broadcom–Apollo–Blackstone chip vehicle",
      "date": "",
-     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (the Broadcom–Apollo–Blackstone platform, June 2026, reported at about USD 35 billion for the first tranche).",
+     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (Broadcom's AI XPV Platform, announced 9 June 2026 with Apollo and Blackstone as initial anchor investors; Apollo leads the initial USD 35 billion tranche).",
      "src": "",
      "from": "b"
     },
@@ -8471,8 +8598,8 @@
     {
      "where": "Recent Reporting",
      "date": "2026-06-10",
-     "text": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value — The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
-     "src": "https://www.artificialintelligence-news.com/news/new-data-centre-projects-mark-anthropic-biggest-us-expansion/",
+     "text": "Broadcom, Apollo and Blackstone announce the AI XPV Platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value — The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
      "from": "b"
     },
     {
@@ -8499,7 +8626,7 @@
     "a": {
      "type": "supplier",
      "note": "Google supplies TPUs — 'up to one million' with 'well over a gigawatt' in 2026 and 'multiple gigawatts' from 2027 through Broadcom — holds about 14% of Anthropic (court records per Fortune, capped at 15%), backstops Fluidstack's leases at the Anthropic sites, and is Vertex AI's Claude distributor; press reports an up-to-USD 40 billion 2026 commitment that Google has not itself itemised.",
-     "context": "Google Cloud (23 October 2025): 'Anthropic will have access to up to one million TPU chips', 'well over a gigawatt of capacity coming online in 2026', 'worth tens of billions of dollars'; (6 April 2026): 'multiple gigawatts of TPU capacity' 'expected to come online starting in 2027', 'Google-built TPUs supplied through Broadcom'. Anthropic's May 2026 recap: 'Google and Broadcom: 5 GW agreement beginning in 2027'. CNBC and Bloomberg (24 April 2026): USD 10 billion now at a USD 350 billion valuation plus USD 30 billion on milestones and five gigawatts over five years — no Google primary statement was located and Alphabet's Q1 2026 10-Q does not name Anthropic.\n\nThe CMA cleared Google's 2023–24 investment ('up to $2 billion') in November 2024. Fortune (June 2026): 'roughly 14% of Anthropic in straight equity, hard-capped contractually at 15%'. Google is also the guarantor of record on every Fluidstack lease serving Anthropic (TeraWulf, Cipher, Hut 8, Meridian Arc filings) and, per press accounts, the designer of the chips the Apollo–Blackstone vehicle leases to Anthropic. Google pays SpaceX/xAI for Colossus capacity in parallel — the same landlord serves both labs.",
+     "context": "Google Cloud (23 October 2025): 'Anthropic will have access to up to one million TPU chips', 'well over a gigawatt of capacity coming online in 2026', 'worth tens of billions of dollars'; (6 April 2026): 'multiple gigawatts of TPU capacity' 'expected to come online starting in 2027', 'Google-built TPUs supplied through Broadcom'. Anthropic's May 2026 recap: 'Google and Broadcom: 5 GW agreement beginning in 2027'. CNBC and Bloomberg (24 April 2026): USD 10 billion now at a USD 350 billion valuation plus USD 30 billion on milestones and five gigawatts over five years — no Google primary statement was located and Alphabet's Q1 2026 10-Q does not name Anthropic.\n\nThe CMA cleared Google's 2023–24 investment ('up to $2 billion') in November 2024. Fortune (June 2026): 'roughly 14% of Anthropic in straight equity, hard-capped contractually at 15%'. Google is also the guarantor of record on every Fluidstack lease serving Anthropic (TeraWulf, Cipher, Hut 8, Meridian Arc filings) and, per press accounts, the designer of the chips leased to Anthropic under Broadcom's AI XPV Platform. Google pays SpaceX/xAI for Colossus capacity in parallel — the same landlord serves both labs.",
      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
      "status": "active",
      "since": "2023-02",
@@ -8604,8 +8731,8 @@
     {
      "where": "Recent Reporting",
      "date": "2026-06-10",
-     "text": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial tranche of about USD 35 billion to buy Google TPUs and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value — The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
-     "src": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html",
+     "text": "Broadcom announces the AI XPV Platform with Apollo and Blackstone as initial anchor investors: an initial USD 35 billion tranche, led by Apollo, to buy TPUs (Google-built, per press) and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value — The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
      "from": "a"
     },
     {
@@ -10293,6 +10420,119 @@
   },
   {
    "a": "apex-clean-energy",
+   "b": "ares",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Funds managed by Ares's infrastructure strategy have held a majority of Apex since a purchase announced in October 2021 and closed in November 2021; two Ares partners sit on the board.",
+     "context": "Apex's release of 6 October 2021 announced that funds managed by Ares Management's Infrastructure and Power strategy would acquire a majority stake. No percentage or price has been published. Ares has issued nothing on Apex since; the reported 2025 marketing of a minority stake through Lazard has no recorded outcome. Apex's own management signs for its turbines, batteries and EPC contracts, so Ares is the owner behind the buyer, not the buyer.",
+     "source": "https://www.apexcleanenergy.com/news/funds-managed-by-ares-management-to-acquire-majority-stake-in-apex-clean-energy/",
+     "status": "active",
+     "since": "2021-10",
+     "scale": "Majority stake (percentage undisclosed)",
+     "via": "Ares Infrastructure Equity funds (formerly Infrastructure and Power)"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Funds managed by Ares's infrastructure strategy have held a majority of Apex Clean Energy since a purchase announced in October 2021; two Ares partners sit on Apex's board.",
+     "context": "Apex's release of 6 October 2021 said funds and other accounts managed by Ares' Infrastructure and Power strategy had agreed to acquire a majority stake, closing before the end of 2021, with Apex's management continuing to lead the company. Ares has published nothing on Apex since; Keith Derman and Steven Porto list Apex board seats in their Ares bios, and PV Tech on 29 September 2026 still described Apex as majority-owned by Ares-managed funds.\n\nION Analytics reported on 4 December 2025 that Ares was marketing a minority stake in Apex through Lazard; no outcome is on the record, and Apex's 2026 transactions are project-level selldowns. Apex's own management signs for its turbines and batteries.",
+     "source": "https://www.apexcleanenergy.com/news/funds-managed-by-ares-management-to-acquire-majority-stake-in-apex-clean-energy/",
+     "status": "active",
+     "since": "2021-10",
+     "scale": "Majority stake (percentage undisclosed)",
+     "via": "Ares Infrastructure Equity funds (formerly Infrastructure and Power)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Apex Clean Energy is a wind-heritage US developer that has turned itself into a farmdown independent power producer under Ares Management — 12 GW commercialized since 2009, over 3 GW operating or under construction, 2 GW under management, $4.08B of project financing closed in 2025 and a further $2.79B in January 2026 — and it is one of the few large US buyers whose battery supply chain is genuinely open: all three operating ERCOT batteries (Great Kiskadee 100 MW/200 MWh, Angelo Storage 100 MW/200 MWh, Cameron 16.4 MW) run on Powin, which entered Chapter 11 in June 2025, and the next award (Coldwater Storage, 75 MW/381 MWh, COD mid-2027) went to Canadian Solar e-STORAGE, with Raven Storage (100 MW, financed January 2026) still unnamed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A December 2025 Infralogic report that Ares is marketing a minority stake through Lazard is unconfirmed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Charlottesville, Virginia; founded 2009 by Sandy Reisky and Mark Goodwin (both still directors); ~350 staff; majority owned since November 2021 by funds managed by Ares Management's Infrastructure and Power strategy (terms undisclosed).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gaps: no revenue, EBITDA or valuation is disclosed; the Ares deal value and stake are undisclosed; Raven Storage's battery supplier, the Coles and Emerson Creek turbine OEMs and any solar module supplier are unnamed; the Powin docket motion to reject Apex affiliates' supply and service agreements (June 2025) is known only from a search summary and is unverified.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web it is the supply-side counterpart to Meta, Google and Microsoft power purchase agreements, a GE Vernova and Vestas turbine buyer, a MasTec frame-agreement customer, and — through Ares — a portfolio company whose ownership may change hands.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: a single Infralogic report (4 December 2025) that Ares is marketing a minority stake through Lazard following a strategic-alternatives review; no second-source confirmation and no reported outcome by September 2026; EGCO — a 2021 co-investor — has since become an asset buyer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Green fuels / hydrogen (dormant)",
+     "date": "",
+     "text": "A 2020–2022 push: a 345 MW wind PPA and development-services agreement with Plug Power (July 2021, 'largest green hydrogen PPA in the United States', more than 30 t/day of liquid hydrogen), a gigawatt-scale Corpus Christi green-fuels hub MOU with Ares, EPIC Midstream and the Port of Corpus Christi Authority (February 2022), and Big Trail Energy, a hybrid wind/solar/storage/hydrogen site in Schleicher County TX (2023).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "They control **Apex Clean Energy** (a majority since late 2021; two Ares partners on its board) and 80% of an EDPR California portfolio with 184 MW of batteries, and since 1 October 2026 Ares jointly controls Eni's Plenitude.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Apex Clean Energy is the funds' controlled power buyer: Apex's own management develops, builds and operates its wind, solar and storage projects and buys their equipment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Apex Clean Energy is the funds' other controlled buyer, run by its own management.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Ares Infrastructure Equity — power, renewables and midstream",
+     "date": "",
+     "text": "Its funds have controlled Apex Clean Energy since a majority purchase announced in October 2021 and closed by the end of that year.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-28",
+     "text": "Apex Clean Energy closes a second selldown to EGCO — 49% of 339 MW — keeping 51%; PV Tech describes Apex as majority-owned by Ares-managed funds — Apex keeps recycling capital at project level; no corporate stake sale is on the record.",
+     "src": "https://www.apexcleanenergy.com/news/apex-closes-second-portfolio-selldown-with-egco-group/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-28"
+  },
+  {
+   "a": "apex-clean-energy",
    "b": "arevon",
    "curated": {
     "a": {
@@ -10876,6 +11116,581 @@
    "last": "2021"
   },
   {
+   "a": "apollo",
+   "b": "blackrock",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn — MOUs, not definitive agreements: NVIDIA's release says 'These partnerships remain subject to execution of the final agreements' and gives no per-firm allocation. Fink tied it to AIP ('including through the AI Infrastructure Partnership').",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "apollo",
+   "b": "blackstone",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Fellow initial anchor investor, through Blackstone's Credit & Insurance business, in Broadcom's AI XPV Platform, whose initial tranche Apollo leads.",
+     "context": "Broadcom's release names Apollo and Blackstone's Credit & Insurance business as the platform's 'initial anchor investors'; Apollo's own release says Apollo funds are leading the initial USD 35bn capital solution 'in partnership with Blackstone and leading global banks'. No split between the two is disclosed. Blackstone was also one of the six firms in NVIDIA's August 2026 compute-financing memoranda.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "USD 35bn initial tranche (shared)",
+     "via": "Broadcom AI XPV Platform"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Fellow initial anchor investor in Broadcom's AI XPV Platform: Apollo funds lead the initial USD 35bn tranche and Blackstone's Credit & Insurance business co-anchors it.",
+     "context": "The joint release of 9 June 2026 names Apollo and Blackstone's Credit & Insurance business as the platform's initial anchor investors, with Apollo funds leading the initial tranche alongside global banks. Both firms were also among the six in NVIDIA's August 2026 compute-financing memoranda. The two compete for the same infrastructure-credit and data-centre mandates; on this vehicle they are co-investors.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "USD 35bn initial tranche, Apollo-led; split undisclosed",
+     "via": "Broadcom AI XPV Platform"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · AI compute financing — Broadcom AI XPV Platform, Valor Compute Infrastructure, Nscale",
+     "date": "",
+     "text": "Apollo leads 'an initial $35 billion capital solution' for Broadcom's AI XPV Platform, announced on 9 June 2026 with Blackstone's Credit & Insurance business as the other initial anchor investor and with banks.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-09",
+     "text": "Apollo leads an initial USD 35bn capital solution for Broadcom's AI XPV Platform, with Blackstone and banks, funding Anthropic's capacity expansion of more than 1 GW at Fluidstack-based sites from mid-2026 — Apollo's 10-Q puts the purchase obligation in an Apollo-managed fund and a 15% limited guarantee on Athene.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/apollo-leads-35-billion-capital-solution-for-broadcom-ai-xpv-platform-in-partnership-with-blackstone-and-leading-global-banks-3308896",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA names Blackstone one of six capital partners in a programme to mobilise over USD 500bn of third-party capital for AI infrastructure — Blackstone is one of six firms — with Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — and no per-firm allocation is published, so this is a memorandum of understanding rather than a committed sum.",
+     "src": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "apollo",
+   "b": "blue-owl",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Blue Owl Digital Infrastructure's portfolio company STACK was the seller in the April 2025 carve-out of its European colocation business to Apollo infrastructure funds.",
+     "context": "Apollo's 29 April 2025 release names STACK Infrastructure as 'a portfolio company of Blue Owl Digital Infrastructure Advisors LLC'. The seven-site business relaunched under Apollo funds as Vaultica Data Centers in December 2025. No price was disclosed.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871",
+     "status": "historical",
+     "since": "2025-04",
+     "via": "European colocation carve-out (now Vaultica)"
+    },
+    "b": {
+     "type": "other",
+     "note": "Apollo infrastructure funds bought STACK's pan-European colocation business from the Blue Owl Digital Infrastructure portfolio company in April 2025; it now trades as Vaultica Data Centers.",
+     "context": "Apollo's release of 29 April 2025 names STACK Infrastructure as 'a portfolio company of Blue Owl Digital Infrastructure Advisors LLC' and describes seven data centres in Stockholm, Oslo, Copenhagen, Milan and Geneva. ICTjournal reported the business's relaunch as Vaultica Data Centers in December 2025. No price was disclosed. Typed `other` because the seller was STACK, Blue Owl's portfolio company, not Blue Owl itself.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871",
+     "status": "historical",
+     "since": "2025-04",
+     "via": "European colocation carve-out (now Vaultica)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "It sold eleven stabilised data centres to ODIT, its own wealth vehicle, and STACK's European colocation business to Apollo (agreed April 2025, per Apollo, and relaunched under Apollo funds as Vaultica Data Centers in December 2025, per ICTjournal).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-04"
+  },
+  {
+   "a": "apollo",
+   "b": "cipher-mining",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: about 4.4 GW of the 5.3 GW portfolio has no tenant, and four of those sites — Colchis, Mikeska, McLennan and Apollo — are explicitly qualified as 'subject to ERCOT batch process' and expected in Batch Zero.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Development pipeline — approximately 4.4 GW across eight uncontracted sites",
+     "date": "",
+     "text": "**Apollo** (within 25 miles of San Antonio, up to 900 MW, 2030+) was optioned on 23 July 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-23",
+     "text": "Options the Apollo site, up to 900 MW within 25 miles of San Antonio, submitted as a studied load in ERCOT's Batch Zero — The largest single addition to the uncontracted pipeline and the first inside a major metro's orbit rather than in West Texas.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000041/cifr-20260630.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-23"
+  },
+  {
+   "a": "apollo",
+   "b": "exelon",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "ComEd, Exelon's Illinois utility, is building the substation for the Elk Grove Village campus of Apollo-controlled Stream Data Centers.",
+     "context": "Stream's release of 10 September 2025 records ComEd breaking ground on the substation for its Elk Grove Village campus — more than 1.2m sq ft across three buildings, in service in 2027 — with a ComEd vice-president quoted; T&D World gives the substation as 260 MW of load. Stream has been majority-owned by Apollo-managed funds since 3 November 2025. ComEd is the only utility Stream names on the record.",
+     "source": "https://www.streamdatacenters.com/news/comed-groundbreaking-egv/",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "260 MW substation (T&D World)",
+     "via": "ComEd substation for Stream Data Centers' Elk Grove Village campus"
+    },
+    "b": {
+     "type": "other",
+     "note": "ComEd is building the substation for the Elk Grove Village campus of Stream Data Centers, which Apollo funds have controlled since November 2025.",
+     "context": "Stream's release of 10 September 2025 records ComEd breaking ground on the substation for its Elk Grove Village campus. Apollo funds completed their acquisition of a majority stake in Stream in November 2025. ComEd's counterparty is Stream; Apollo reaches Exelon only through its platform.",
+     "source": "https://www.streamdatacenters.com/news/comed-groundbreaking-egv/",
+     "status": "active",
+     "since": "2025-09",
+     "via": "ComEd substation for Stream Data Centers' Elk Grove Village campus"
+    }
+   },
+   "evid": [],
+   "last": "2025-09"
+  },
+  {
+   "a": "apollo",
+   "b": "flexgen",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Funds managed by Apollo affiliates committed USD 150m of equity to FlexGen in 2021; two Apollo infrastructure partners list FlexGen board seats; the current stake is undisclosed.",
+     "context": "The 25 August 2021 release announced a USD 150m equity commitment from funds managed by affiliates of Apollo, alongside FlexGen's existing investors. Apollo has published nothing on FlexGen since, including on FlexGen's 2025 purchase of Powin's assets, but Apollo's own leadership pages list FlexGen among the boards of Olivia Wassenaar, head of the Apollo Infrastructure Group, and Trevor Mills. No ownership percentage or control right is disclosed; it is a minority growth investment, not a controlled platform.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2021/08/funds-managed-by-affiliates-of-apollo-global-management-announce-150-million-equity-commitment-to-flexgen-power-systems-inc-130337477",
+     "status": "active",
+     "since": "2021-08",
+     "scale": "USD 150m equity commitment (2021)"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Funds managed by Apollo affiliates committed USD 150m of equity to FlexGen in 2021; the current stake is undisclosed.",
+     "context": "FlexGen's release of 25 August 2021 announced a USD 150m equity commitment from funds managed by affiliates of Apollo alongside its existing investors. Neither party has published the size of the resulting stake, and no Apollo release since covers FlexGen. A minority equity commitment, not a controlling purchase.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2021/08/funds-managed-by-affiliates-of-apollo-global-management-announce-150-million-equity-commitment-to-flexgen-power-systems-inc-130337477",
+     "status": "active",
+     "since": "2021-08",
+     "scale": "USD 150m equity commitment (2021); current stake undisclosed"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Backed by Apollo Global Management ($150M, 2021), Vitol (anchored the $100M Series C, 2022), and Altira Group.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2021-08"
+  },
+  {
+   "a": "apollo",
+   "b": "fluidstack",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "The compute racks financed by the Apollo-led XPV tranche are deployed at Fluidstack-based sites; Fluidstack is also the counterparty the reported Anthropic–Stream lease would bypass.",
+     "context": "The joint release of 9 June 2026 says the initial USD 35bn tranche will facilitate Anthropic's more-than-1 GW expansion 'expected to deploy in Fluidstack-based sites starting in mid-2026'. The racks are bought by the Apollo-managed purchaser fund and leased to Anthropic, not to Fluidstack.\n\nOn 22–23 September 2026 The Information reported Anthropic in early talks to lease up to 1 GW directly from Apollo-controlled Stream Data Centers; no party has announced it.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "More than 1 GW at Fluidstack-based sites",
+     "via": "Broadcom AI XPV Platform"
+    },
+    "b": {
+     "type": "other",
+     "note": "Apollo leads the initial USD 35bn tranche of Broadcom's AI XPV Platform, which funds the compute racks deployed at Fluidstack-based sites and leased to Anthropic; Apollo-controlled Stream Data Centers is the landlord in Anthropic's reported 1 GW direct-lease talks.",
+     "context": "The joint release of 9 June 2026 says the Apollo-led initial tranche will facilitate Anthropic's more-than-1 GW expansion 'expected to deploy in Fluidstack-based sites starting in mid-2026'; the racks are bought by an Apollo-managed purchaser fund (Apollo Q2 2026 10-Q) and leased to Anthropic, not to Fluidstack.\n\nOn 22–23 September 2026 The Information reported Anthropic in early talks to lease up to 1 GW directly from Stream Data Centers, majority-owned by Apollo-managed funds since November 2025, with no intermediary; no party has announced it.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "USD 35bn initial tranche for more than 1 GW at Fluidstack-based sites",
+     "via": "Broadcom AI XPV Platform"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Under it an Apollo-managed fund, WarehouseCo Intermediate Holdings LP, holds the obligation to buy the Broadcom-designed compute racks that Anthropic leases at Fluidstack sites.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI compute financing — Broadcom AI XPV Platform, Valor Compute Infrastructure, Nscale",
+     "date": "",
+     "text": "It funds the racks of Broadcom-designed accelerators that Anthropic is to deploy at Fluidstack-based sites from mid-2026, across 'a multi-year draw schedule'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-09",
+     "text": "Apollo leads an initial USD 35bn capital solution for Broadcom's AI XPV Platform, with Blackstone and banks, funding Anthropic's capacity expansion of more than 1 GW at Fluidstack-based sites from mid-2026 — Apollo's 10-Q puts the purchase obligation in an Apollo-managed fund and a 15% limited guarantee on Athene.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/apollo-leads-35-billion-capital-solution-for-broadcom-ai-xpv-platform-in-partnership-with-blackstone-and-leading-global-banks-3308896",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that Google's position — guarantor of the leases, warrant-holder in two landlords, reported prospective shareholder in the tenant and, through the Broadcom–Apollo–Blackstone vehicle, the designer of the chips leased to the end user — makes the Fluidstack chain a Google TPU distribution channel to Anthropic as much as a neocloud.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GPU and capacity financing — Macquarie asset-backed facility, capacity purchases from smaller neoclouds, the Broadcom–Apollo–Blackstone chip vehicle",
+     "date": "",
+     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (Broadcom's AI XPV Platform, announced 9 June 2026 with Apollo and Blackstone as initial anchor investors; Apollo leads the initial USD 35 billion tranche).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-23",
+     "text": "The Information (via Yahoo Finance): Anthropic is in early talks to lease up to 1 GW directly from Stream Data Centers, majority-owned by Apollo, filled primarily with Google/Broadcom TPUs, with Google discussed as a possible credit guarantor; at least USD 40 billion of capital — Google's backstop is being discussed around Fluidstack rather than only through it — the credit-substitution layer is no longer the intermediary's exclusive product.",
+     "src": "https://finance.yahoo.com/technology/ai/articles/anthropic-discusses-1-gw-stream-134246854.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Broadcom, Apollo and Blackstone announce the AI XPV Platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value — The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-23"
+  },
+  {
+   "a": "apollo",
+   "b": "google",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-22",
+     "text": "Reported: Anthropic is in early talks to lease up to 1 GW directly from Stream Data Centers, with Google discussed as a possible credit guarantor (The Information) — If signed it would make Apollo's data-centre platform a lab-direct landlord; no party has announced it.",
+     "src": "https://ca.investing.com/news/stock-market-news/anthropic-in-talks-to-lease-1-gigawatt-from-stream-data-centers-the-information-93CH-4848940",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-22"
+  },
+  {
+   "a": "apollo",
+   "b": "kkr",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs compute-financing memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilise over USD 500bn — MOUs 'subject to execution of the final agreements'. KKR's statement calls NVIDIA 'a founding investor in Helix Digital Infrastructure'.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "apollo",
+   "b": "nscale",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Funds managed by Apollo are among the investors 'supporting' Nscale's USD 3.36bn pre-IPO convertible, which Third Point led; the amount is undisclosed.",
+     "context": "Nscale's 25 September 2026 release lists 'funds managed by Apollo' with NVIDIA, Citadel, Hudson Bay Capital, Abu Dhabi Investment Council and 8090 Industries among the supporters of a round led by Third Point. Nscale's S-1, filed 18 September, records a subscription agreement for at least USD 3.1bn (USD 2.1bn of unsecured convertible loan notes plus USD 1.0bn to NVIDIA) and does not name Apollo. Convertible notes are debt until an IPO; typed as a lender-style link.",
+     "source": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+     "status": "active",
+     "since": "2026-09",
+     "via": "Pre-IPO convertible loan notes"
+    },
+    "b": {
+     "type": "other",
+     "note": "Funds managed by Apollo are among the investors in Nscale's pre-IPO convertible financing led by Third Point; Apollo's amount is undisclosed.",
+     "context": "Nscale's release of 25 September 2026 lists funds managed by Apollo among the supporters of the round, which Third Point led. The notes convert at the IPO, so Apollo holds a lender's claim today and an equity stake only if they convert. Typed `other`, as a lender link, on both sides.",
+     "source": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+     "status": "active",
+     "since": "2026-09",
+     "via": "Pre-IPO convertible loan notes"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-25",
+     "text": "TechCrunch and SiliconANGLE: USD 3.36 billion of convertible financing led by Third Point, with Apollo, Citadel and more than a dozen institutions, 'USD 2.36 billion available to the company immediately' and USD 1 billion from NVIDIA 'in mid-November'; the S-1 records the 15 September subscription agreement at 'a minimum of $3.1 billion', converting automatically at the IPO and maturing 15 June 2028 — Pre-IPO capital at convertible terms the filing does not price — the bridge that lets the Anthropic build start before the equity market decides.",
+     "src": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-25"
+  },
+  {
+   "a": "apollo",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "One of six financiers in NVIDIA's August 2026 memoranda of understanding to build compute-financing platforms; NVIDIA is also the anchor limited partner in the Valor vehicle Apollo financed.",
+     "context": "NVIDIA's release of 10 August 2026 announced memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over USD 500bn of third-party capital; they 'remain subject to execution of the final agreements', and no per-firm allocation is published.\n\nSeparately, Apollo's 7 January 2026 release says NVIDIA invested in Valor Compute Infrastructure as an anchor limited partner; that vehicle bought the GB200 systems Apollo financed for lease to xAI.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "status": "announced",
+     "since": "2026-08",
+     "scale": "Over USD 500bn of third-party capital across six firms, 'over time'",
+     "via": "AI compute infrastructure financing platform"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Apollo is one of the six financiers in NVIDIA's August 2026 memoranda of understanding to build AI compute-financing platforms.",
+     "context": "NVIDIA's release of 10 August 2026 announced memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over USD 500bn of third-party capital, subject to final agreements and with no per-firm allocation. Apollo separately led the USD 3.5bn financing of Valor Compute Infrastructure's January 2026 purchase of NVIDIA GB200 compute leased to an xAI subsidiary, per Apollo's release.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "status": "announced",
+     "since": "2026-08",
+     "scale": "Over USD 500bn of third-party capital across six firms, over time; no per-firm allocation",
+     "via": "AI compute infrastructure financing platform"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The second is a **compute-financing book**: Apollo leads the USD 35bn initial tranche of Broadcom's AI XPV Platform, which buys compute racks for Anthropic, and led a USD 3.5bn financing for Valor's lease of NVIDIA GB200 systems to xAI.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Final agreements under the NVIDIA memoranda:* the first per-firm allocation.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI compute financing — Broadcom AI XPV Platform, Valor Compute Infrastructure, Nscale",
+     "date": "",
+     "text": "On 7 January 2026 Apollo funds led a USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn acquisition and triple-net lease of NVIDIA GB200 compute to an xAI subsidiary.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs memoranda of understanding with Apollo and five other firms to build compute-financing platforms targeting over USD 500bn of third-party capital 'over time', subject to final agreements — A memorandum, not a commitment; no per-firm allocation is published.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-09",
+     "text": "Reported: Apollo near a roughly USD 3.4bn loan to a second vehicle buying NVIDIA chips to lease to xAI (Reuters, citing The Information) — Would repeat the January structure; no completion is on the record.",
+     "src": "https://finance.yahoo.com/news/apollo-xai-near-3-4-141209518.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-07",
+     "text": "Apollo funds lead a USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn acquisition and triple-net lease of NVIDIA GB200 compute to an xAI subsidiary — Lender to a chip lessor, with NVIDIA as anchor limited partner in the lessor.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The August 2026 compute-financing platforms — memorandums with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilize over $500B of third-party capital — are the largest structural answer offered so far, moving demand financing toward independent underwriters rather than NVIDIA's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital — We assess this externalizes the financing of NVIDIA's own demand. The instruments are memorandums of understanding rather than committed capital — the release states MOUs were 'signed with six of the world's premier financial institutions' to establish the platforms, publishes no per-firm allocation, and frames the >$500B as third-party capital the platforms aim to mobilize over time rather than an NVIDIA commitment. Read against the circular-financing critique this dossier rates the most serious structural risk, it is the largest structural answer NVIDIA has offered: it moves demand financing toward independent underwriters instead of NVIDIA's own balance sheet.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "apollo",
+   "b": "stack-infrastructure",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Apollo infrastructure funds bought STACK Infrastructure's pan-European colocation business in a carve-out agreed on 29 April 2025; it now trades as Vaultica Data Centers.",
+     "context": "Apollo's release describes seven data centres in Stockholm, Oslo, Copenhagen, Milan and Geneva bought from STACK Infrastructure, 'a portfolio company of Blue Owl Digital Infrastructure Advisors LLC', and says the business would drop the STACK name. Apollo did not announce the closing; the business relaunched as Vaultica Data Centers in December 2025, and an Apollo partner lists a Vaultica board seat. STACK kept its hyperscale business.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871",
+     "status": "historical",
+     "since": "2025-04",
+     "scale": "Seven colocation data centres in five European markets",
+     "via": "European colocation carve-out (now Vaultica)"
+    },
+    "b": {
+     "type": "other",
+     "note": "Apollo infrastructure funds bought STACK's pan-European colocation business in a carve-out agreed in April 2025; it now trades as Vaultica Data Centers.",
+     "context": "Apollo's release of 29 April 2025 describes seven data centres in Stockholm, Oslo, Copenhagen, Milan and Geneva bought from STACK Infrastructure, serving carriers, IT firms and financial institutions. ICTjournal reported the relaunch as Vaultica Data Centers in December 2025. No price was disclosed. The carve-out left STACK EMEA as a hyperscale wholesale business.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871",
+     "status": "historical",
+     "since": "2025-04",
+     "scale": "Seven colocation data centres in five European markets",
+     "via": "European colocation carve-out (now Vaultica)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Data-centre platforms — Stream Data Centers and Vaultica",
+     "date": "",
+     "text": "Separately, Apollo infrastructure funds agreed on 29 April 2025 to buy STACK Infrastructure's pan-European colocation business — seven data centres in Stockholm, Oslo, Copenhagen, Milan and Geneva — which relaunched as Vaultica Data Centers in December 2025.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-29",
+     "text": "Apollo infrastructure funds agree to acquire STACK Infrastructure's pan-European colocation business (seven data centres) in a carve-out — STACK keeps its hyperscale business; Apollo takes the enterprise colocation.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Ownership is in motion at both ends of the structure: Blue Owl acquired STACK's fund manager IPI Partners (~$1.0B, closed January 2025), carved the pan-European colocation business out to Apollo funds (April 2025), seeded a perpetual non-traded REIT with 11 stabilized STACK data centers at $3.3B gross value (December 2025), and — per Bloomberg-sourced reporting, June 2026 — is preparing a sale of the APAC portfolio that could exceed $30B.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: company and partner releases — named developer-owner roles for Amazon (three Louisiana campuses, $18B) and for Oracle/OpenAI's Stargate program (Project Jupiter, one of five sites in the 4.5GW expansion), one of the sector's longest-running data-center securitization programs (ten series since 2019), and a three-region platform that its sponsor actively recycles (Apollo colocation carve-out, perpetual-REIT seeding, reported APAC sale process).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Apollo carve-out of the pan-European colocation business (Apr 2025), the perpetual non-traded REIT seeded with 11 stabilized STACK data centers at $3.3B gross value (Dec 2025), and Bloomberg-reported preparation of an APAC portfolio sale that could exceed $30B (Jun 2026) — three monetization moves in fourteen months against a stated 13GW pipeline.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · EMEA hyperscale platform (post-carve-out)",
+     "date": "",
+     "text": "In April 2025 Apollo-managed funds agreed to acquire the pan-European colocation business (seven data centers across Stockholm, Oslo, Copenhagen, Milan and Geneva, serving carriers, IT firms and financial institutions), which relaunched as Vaultica Data Centers under CEO Sherif Rizkalla in December 2025 — leaving STACK EMEA focused on hyperscale wholesale under interim CEO Brian Cox (since August 2025).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-07",
+     "text": "Brian Cox appointed interim CEO of STACK EMEA (then still CEO of STACK Americas) as EMEA chief John Eland transitions out — EMEA put under direct founder control months after the Apollo colo carve-out — a region being restructured, not just re-led.",
+     "src": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-appoints-brian-cox-interim-ceo-of-stack-emea/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-08-07"
+  },
+  {
+   "a": "apollo",
+   "b": "stonepeak",
+   "evid": [
+    {
+     "where": "Capabilities · Infrastructure funds — the flagship closed-end series",
+     "date": "",
+     "text": "A specialist infrastructure manager, not a diversified alternative-asset firm: it has no buyout, hedge-fund or insurance arm, and its regulatory AUM is about a twelfth of Apollo's total AUM.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apollo",
+   "b": "xai",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Apollo funds led a USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn acquisition and lease of NVIDIA GB200 compute to an xAI subsidiary.",
+     "context": "Apollo's 7 January 2026 release: Apollo-managed funds 'led a $3.5 billion capital solution for Valor Compute Infrastructure L.P. (VCI), a fund managed by Valor Equity Partners', to support its USD 5.4bn acquisition and triple-net lease of data-centre compute infrastructure, including NVIDIA GB200 GPUs, to a subsidiary of xAI Corp. Valor's fund owns the systems; Apollo is the lead financier.\n\nReported only: Reuters, citing The Information, said on 9 February 2026 that Apollo was close to a roughly USD 3.4bn loan to a second chip-lease vehicle for xAI; no completion is on the record.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "USD 3.5bn financing of a USD 5.4bn transaction",
+     "via": "Valor Compute Infrastructure triple-net lease"
+    },
+    "b": {
+     "type": "other",
+     "note": "Apollo funds led the USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn purchase of NVIDIA GB200 compute, leased triple-net to an xAI subsidiary.",
+     "context": "Apollo's release of 7 January 2026: Apollo-managed funds 'led a $3.5 billion capital solution for Valor Compute Infrastructure L.P. (VCI), a fund managed by Valor Equity Partners', supporting VCI's USD 5.4bn acquisition of NVIDIA GB200 compute and its triple-net lease to an xAI subsidiary. Apollo is a financier of the lessor, not a counterparty to xAI's own purchasing.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "USD 3.5bn financing of a USD 5.4bn transaction",
+     "via": "Valor Compute Infrastructure triple-net lease"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The second is a **compute-financing book**: Apollo leads the USD 35bn initial tranche of Broadcom's AI XPV Platform, which buys compute racks for Anthropic, and led a USD 3.5bn financing for Valor's lease of NVIDIA GB200 systems to xAI.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "It leads the USD 35bn initial tranche of Broadcom's AI XPV Platform and led the USD 3.5bn Valor–xAI financing.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Apollo's exposure is therefore to Anthropic's and xAI's lease payments — on XPV backstopped by Broadcom up to about USD 29bn — rather than to construction.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI compute financing — Broadcom AI XPV Platform, Valor Compute Infrastructure, Nscale",
+     "date": "",
+     "text": "On 7 January 2026 Apollo funds led a USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn acquisition and triple-net lease of NVIDIA GB200 compute to an xAI subsidiary.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-09",
+     "text": "Reported: Apollo near a roughly USD 3.4bn loan to a second vehicle buying NVIDIA chips to lease to xAI (Reuters, citing The Information) — Would repeat the January structure; no completion is on the record.",
+     "src": "https://finance.yahoo.com/news/apollo-xai-near-3-4-141209518.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-07",
+     "text": "Apollo funds lead a USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn acquisition and triple-net lease of NVIDIA GB200 compute to an xAI subsidiary — Lender to a chip lessor, with NVIDIA as anchor limited partner in the lessor.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-09"
+  },
+  {
    "a": "applied-digital",
    "b": "cipher-mining",
    "curated": {
@@ -11238,6 +12053,459 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "ares",
+   "b": "blackstone",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-29",
+     "text": "Ares acquires 32.4% of the Rover Pipeline from Blackstone Energy Transition Partners; an Energy Transfer affiliate operates it — Midstream exposure tied to power demand, held without control.",
+     "src": "https://www.eqs-news.com/news/category/ares-acquires-stake-in-rover-pipeline-from-blackstone-energy-transition-partners-to-serve-growing-energy-demand-centers-across-north-america/4e5aacba-107b-4a5b-9ee3-93f5b43fba50_en",
+     "from": "a"
+    }
+   ],
+   "last": "2026-04-29"
+  },
+  {
+   "a": "ares",
+   "b": "cpp-investments",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "CPP Investments is the largest limited partner in Ares's Japan DC Partners I, committing about USD 1.3bn to the fund that Ada Infrastructure builds and operates for.",
+     "context": "Ares's release of 11 June 2025 announced the final close of Japan DC Partners I at about USD 2.4bn (JPY 350bn) of equity commitments, for three Greater Tokyo data-centre campuses of nearly 240 MW of IT load developed and operated by Ada Infrastructure, with CPP Investments committing about USD 1.3bn (JPY 193bn). CPP is a fund investor; Ares manages the fund and Ada runs the campuses.",
+     "source": "https://www.eqs-news.com/news/category/ares-management-closes-inaugural-us-2-4-billion-data-center-development-fund-in-japan/85038cd3-7064-4168-8f1d-36aff20d1030_en",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "CPP commitment about USD 1.3bn (JPY 193bn) of about USD 2.4bn",
+     "via": "Japan DC Partners I"
+    },
+    "b": {
+     "type": "partner",
+     "note": "CPP Investments is the largest limited partner in Ares's Japan DC Partners I, whose campuses Ares's own Ada Infrastructure develops and operates.",
+     "context": "Ares's release of 11 June 2025 announced the final close of Japan DC Partners I at about USD 2.4bn (JPY 350bn) of equity commitments for three Greater Tokyo data-centre campuses of nearly 240 MW of IT load. CPP's commitment is a fund commitment: Ares, as manager, and Ada, as developer, take the equipment decisions.",
+     "source": "https://www.eqs-news.com/news/category/ares-management-closes-inaugural-us-2-4-billion-data-center-development-fund-in-japan/85038cd3-7064-4168-8f1d-36aff20d1030_en",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "About USD 1.3bn (JPY 192.5bn) of the fund's about USD 2.4bn",
+     "via": "Japan DC Partners I"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-11",
+     "text": "Japan DC Partners I closes at about USD 2.4bn for three Greater Tokyo campuses (~240 MW) developed and operated by Ada; CPP Investments commits about USD 1.3bn — Ares's first data-centre fund, and Ada's anchor portfolio.",
+     "src": "https://www.eqs-news.com/news/category/ares-management-closes-inaugural-us-2-4-billion-data-center-development-fund-in-japan/85038cd3-7064-4168-8f1d-36aff20d1030_en",
+     "from": "a"
+    }
+   ],
+   "last": "2025-06-11"
+  },
+  {
+   "a": "ares",
+   "b": "engie-north-america",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Ares infrastructure funds hold non-controlling interests in successive ENGIE North America renewables portfolios; ENGIE keeps a controlling share and operates the assets.",
+     "context": "ENGIE North America's releases of 24 March 2025 (nearly 1 GW of solar and storage) and 13 January 2026 (730 MW of operating wind and solar in ERCOT) describe sales to Ares Management Infrastructure Opportunities funds and say 'ENGIE will retain a controlling share in the portfolio and will continue to operate and manage the assets'. ENGIE SA's 2025 annual report (Note 16.2.4) gives the prices: US$430m for a minority stake in the 905 MW Aspen portfolio, and US$153m paid in 2025 with about US$280m scheduled for 2026 for the 730 MW portfolios. No percentage is published. Ares's Steven Porto is quoted in the releases; Ares issued no release of its own.",
+     "source": "https://www.prnewswire.com/news-releases/engie-and-ares-partnership-further-expands-with-addition-of-730-mw-portfolio-of-new-us-solar-and-wind-assets-302659666.html",
+     "status": "active",
+     "since": "2024",
+     "scale": "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "via": "Ares Infrastructure Opportunities funds"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Ares infrastructure funds hold minority stakes in successive ENGIE North America renewables portfolios; ENGIE keeps a controlling share and operates the assets.",
+     "context": "ENGIE North America's releases of 24 March 2025 and 13 January 2026 say 'ENGIE will retain a controlling share in the portfolio and will continue to operate and manage the assets', and put the cumulative relationship at 3.7 GW and then 4.3 GW. ENGIE SA's 2025 annual report (Note 16.2.4) gives the money: US$430m for a minority stake in the 905 MW Aspen portfolio, and for the 730 MW Big Sampson wind and Anson 2 / Sypert Branch solar portfolios US$153m paid in 2025 with about US$280m scheduled for 2026. No percentage is published. A non-controlling co-owner, not an operator.",
+     "source": "https://www.engie.com/app/uploads/2026/03/2025-Management-report-and-annual-consolidated-financial-statements.pdf",
+     "status": "active",
+     "since": "2024",
+     "scale": "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "via": "Ares Management Infrastructure Opportunities funds"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Ares Infrastructure Equity — power, renewables and midstream",
+     "date": "",
+     "text": "They hold 49% of a 1,632 MW EDPR portfolio (about USD 2.9bn for 100%, October 2025) and successive minority stakes in ENGIE North America portfolios, which ENGIE continues to control and operate.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-13",
+     "text": "ENGIE North America adds 730 MW of operating wind and solar to its partnership with Ares; ENGIE keeps control and operations — Minority capital beside an operator.",
+     "src": "https://www.prnewswire.com/news-releases/engie-and-ares-partnership-further-expands-with-addition-of-730-mw-portfolio-of-new-us-solar-and-wind-assets-302659666.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-24",
+     "text": "ENGIE North America adds nearly 1 GW of solar and storage to its partnership with Ares — Minority capital beside an operator.",
+     "src": "https://www.prnewswire.com/news-releases/engie-expands-partnership-with-ares-management-with-addition-of-nearly-1-gw-portfolio-of-solar-and-storage-assets-in-the-us-302408735.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Since then the business has been recycling that capital, selling a minority stake in a 905 MW portfolio to Ares for US$430m (March 2025), a 49.5% interest in a 2.4 GW, 31-project battery portfolio to CBRE Investment Management (May 2025) and a further 730 MW to Ares (January 2026), retaining control and operations in each.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: three consecutive minority sell-downs — Ares a minority stake in 905 MW for US$430m (March 2025), CBRE Investment Management 49.5% of a 2.4 GW battery portfolio (May 2025, in three tranches of US$291m, US$221m and ~US$70m), Ares again for 730 MW (January 2026) — each with the identical formula that ENGIE 'will retain a controlling share in the portfolio and will continue to operate and manage the assets'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-13"
+  },
+  {
+   "a": "ares",
+   "b": "macquarie",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Former co-controller of Prime Data Centers with Ares and Data Realty Group; Macquarie Capital has since sold its remaining stake.",
+     "context": "The European Commission's decision M.11843 (18 March 2025) cleared Ares acquiring joint control of Prime Data Centers alongside Wholesale DC Asset Holdings, a Macquarie holding company, and Data Realty Group. Macquarie's FY26 annual report records that Macquarie Capital completed the sale of its remaining stake in Prime; the buyer is not named.",
+     "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+     "status": "historical",
+     "since": "2025-03",
+     "via": "Prime Data Centers joint control"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Former co-controller of Prime Data Centers with Ares and Data Realty Group; Macquarie Capital sold its remaining stake during FY26.",
+     "context": "The European Commission's decision M.11843 (18 March 2025) cleared Ares joining the joint control of Prime that Wholesale DC Asset Holdings, a Macquarie holding company, and Data Realty Group already held. Macquarie's FY26 annual report records the sale of Macquarie Capital's remaining Prime stake, naming no buyer.",
+     "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+     "status": "historical",
+     "since": "2025-03",
+     "via": "Prime Data Centers joint control"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Minority and preferred positions — Prime Data Centers, SB Energy, X-energy",
+     "date": "",
+     "text": "The European Commission cleared Ares acquiring joint control of Prime Data Centers with Macquarie's holding company and Data Realty Group in March 2025; Macquarie's FY26 annual report records the sale of its remaining stake, naming no buyer, and an April 2026 release by Grain Management calls Data Realty Holding Corp.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-18",
+     "text": "European Commission clears Ares joining the existing Macquarie / Data Realty Group joint control of Prime Data Centers (Case M.11843) — The decision records Ares JOINING a joint venture Macquarie and Data Realty Group already controlled — it is not Macquarie acquiring Prime, and the Macquarie entity is Macquarie Capital via Wholesale DC Asset Holdings LLC.",
+     "src": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2025-03-18"
+  },
+  {
+   "a": "ares",
+   "b": "prime-data-centers",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Ares acquired joint control of Prime Data Centers with Macquarie's holding company and Data Realty Group, cleared by the European Commission in March 2025; an Ares partner sits on Prime's board, and current control is not settled on the record.",
+     "context": "The Commission's decision M.11843 of 18 March 2025 records Ares Management Corporation, Wholesale DC Asset Holdings (ultimately controlled by Macquarie) and Data Realty Group acquiring joint control of Prime Data Centers LLC, previously jointly controlled by the latter two. Prime's July 2025 release names Macquarie Capital, Ares Management and Siemens Financial Services as existing investors.\n\nMacquarie's FY26 annual report records that Macquarie Capital 'completed the sale of its remaining stake in Prime Data Centers', naming no buyer, and Grain Management's April 2026 release calls Data Realty Holding Corp. Prime's 'founding and controlling shareholder'. Ares's Steven Porto lists a Prime board seat. No filing read for this dossier states Ares's share or settles who controls Prime now.",
+     "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+     "status": "active",
+     "since": "2025-03",
+     "scale": "Joint control cleared by the European Commission (share undisclosed)",
+     "via": "Ares Infrastructure Equity"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Ares joined the joint control of Prime held by Macquarie's Wholesale DC Asset Holdings and Data Realty Group, cleared by the European Commission in March 2025; an Ares partner sits on Prime's board.",
+     "context": "The Commission's decision M.11843 (18 March 2025) records Ares Management Corporation obtaining joint control of Prime Data Centers LLC, which Wholesale DC Asset Holdings and Data Realty Group already jointly controlled. Macquarie has since sold its remaining stake, and Grain's April 2026 release calls Data Realty Holding Corp. Prime's founding and controlling shareholder. No record read states Ares's share or whether its joint-control rights survived Macquarie's exit.",
+     "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+     "status": "active",
+     "since": "2025-03",
+     "scale": "Joint control cleared March 2025; share undisclosed",
+     "via": "Ares Infrastructure Equity"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It shares joint control of Prime Data Centers, holds minority stakes (49% at EDPR) in operating renewables that ENGIE and EDPR run, holds preferred equity in SB Energy's parent (redeemed at the IPO) and roughly 10% of X-energy's votes (our calculation from its prospectus), and arranged a USD 2.4bn loan for Vantage.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Low confidence)** We assess that **Prime Data Centers is not an Ares-controlled buyer today**, despite the 2025 joint-control clearance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Minority and preferred positions — Prime Data Centers, SB Energy, X-energy",
+     "date": "",
+     "text": "The European Commission cleared Ares acquiring joint control of Prime Data Centers with Macquarie's holding company and Data Realty Group in March 2025; Macquarie's FY26 annual report records the sale of its remaining stake, naming no buyer, and an April 2026 release by Grain Management calls Data Realty Holding Corp.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-07",
+     "text": "Grain Management finances Data Realty Holding Corp., which its release calls 'the founding and controlling shareholder of Prime Data Centers' — Leaves the current control of Prime, once jointly held with Ares, unsettled on the record.",
+     "src": "https://newswire.telecomramblings.com/2026/04/grain-management-announces-strategic-structured-financing-in-data-realty-holding-corp-the-founding-and-controlling-shareholder-of-prime-data-centers/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its capital came in layers: Macquarie Capital's June 2021 equity partnership (a 'USD 5 billion over the next 10 years' plan), Ares Management and Siemens Financial Services as later institutional investors, joint control by Macquarie, Ares and Data Realty Group cleared by the European Commission in March 2025 (Case M.11843), a Snowhawk/Nuveen strategic investment in July 2025 during a reported USD 2 billion raise, and Grain Management's April 2026 preferred equity in Data Realty Holding Corp., 'the founding and controlling shareholder'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The mid-tier build-to-suit developer competing for the same hyperscale and neocloud tenants as the F7 landlords, and the corpus's clearest recapitalisation case: a founder's platform that has taken Macquarie, Ares, Siemens, Snowhawk/Nuveen and Grain money in five rounds, shelved a bond, and financed its one fully leased campus with project-level high-yield debt.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that Prime's model is recapitalisation as much as development: five equity rounds (Macquarie 2021, Ares and Siemens, Snowhawk/Nuveen 2025, Grain 2026 at the parent), an acquisition line, project-level high-yield debt on the one fully leased campus, and a bond that failed — against about 151 MW operating after nine years.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-31",
+     "text": "Snowhawk LP and Nuveen make a strategic equity investment alongside 'existing institutional investors' Macquarie Capital, Ares Management and Siemens Financial Services; Prime is 'raising more than $2 billion this year' on a 'four gigawatts (GW) roadmap' — The fourth investor group; the USD 2 billion raise had been delayed from Q1 by lease negotiations per Infralogic.",
+     "src": "https://primedatacenters.com/news/snowhawk-and-nuveen-make-strategic-investment-in-prime-data-centers/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-19",
+     "text": "European Commission clears joint control of Prime by Ares, Macquarie (via WDCAH) and Data Realty Group (Case M.11843, simplified procedure) — The only regulatory record of who controls the company.",
+     "src": "https://www.marketscreener.com/quote/stock/MACQUARIE-GROUP-LIMITED-6491460/news/European-Commission-OKs-Prime-Data-Centers-Takeover-by-Ares-Macquarie-Data-Realty-49376294/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-07"
+  },
+  {
+   "a": "ares",
+   "b": "quinbrook",
+   "evid": [
+    {
+     "where": "Capabilities · Closed-end funds — Low Carbon Power Fund, Renewables Impact Funds I and II, Net Zero Power Fund, Valley of Fire continuation fund, and Quinbrook III in market",
+     "date": "",
+     "text": "The sequence: Quinbrook Low Carbon Power Fund (first sale June 2017, final close 2019; US, UK and Australia; now largely realised); Quinbrook Renewables Impact Fund (QRIF, UK; final close 2 October 2023 at GBP 620m against a GBP 500m target; Cleve Hill, the Rassau and Thistle synchronous condensers, Uskmouth, Habitat Energy); the Valley of Fire Fund (closed 4 April 2024 at USD 600m; lead investor Blackstone Strategic Partners, cornerstone Ares Infrastructure Secondaries; bought 51% of Gemini and the Valley of Fire development portfolio from the first fund); the Net Zero Power Fund (NZPF, 'Quinbrook Infrastructure Partners III – Net Zero Power Fund'; final close announced 1 August 2024 at USD 3bn 'across the fund and co-investment vehicles' — Infrastructure Investor reports USD 2bn of fund and USD 1bn of co-investment; the Form D for the main vehicles shows USD 1,599,813,000 sold; Primergy, Rowan, Supernode, PurposeEnergy, Project Severn); and Quinbrook Renewables Impact Fund II (QRIF II, UK and Ireland; final close 8 July 2026 at GBP 587m against GBP 500m, hard cap GBP 1bn; Mallard Pass, Wexford, Aegis Energy, Project Norton).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-04-04",
+     "text": "USD 600m Valley of Fire continuation fund closes with Blackstone Strategic Partners as lead investor and Ares as cornerstone, buying 51% of Gemini and the Valley of Fire development portfolio from the first fund — A GP-led secondary that realised the first fund and began the Blackstone relationship.",
+     "src": "https://www.quinbrook.com/news-insights/quinbrook-closes-600m-solarstorage-continuation-fund/",
+     "from": "b"
+    }
+   ],
+   "last": "2024-04-04"
+  },
+  {
+   "a": "ares",
+   "b": "sb-energy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Ares affiliates hold preferred equity and warrants in SBE Global, SB Energy's direct parent, which the S-1 says are redeemed in full at the IPO; no board seat.",
+     "context": "SB Energy's S-1/A No. 2 (21 September 2026): SBE Global issued USD 800m of preferred equity to Ares across 2022, 2024 and 2025, with an aggregate liquidation preference of about USD 996m at 31 December 2025, and warrants with the 2025 issuance. The preferred is 'not an obligation of, or equity interest in, SB Energy, Inc.' At the IPO it is to be redeemed in full and the warrants net-settled for about USD 40m, after which Ares 'will no longer hold any equity interest, preferred claim, or warrant position in SBE Global or any of its subsidiaries'. Board designation rights go to SoftBank and OpenAI. Preferred equity with senior economics, not control.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "since": "2022",
+     "scale": "USD 800m of preferred equity issued (≈USD 996m liquidation preference at 31 Dec 2025) plus warrants",
+     "via": "SBE Global preferred equity"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Affiliates of Ares Management hold preferred equity and warrants in SBE Global, SB Energy's direct parent, with senior economic rights and no board seat; the S-1 says they are redeemed in full at the IPO.",
+     "context": "The S-1/A2 defines Ares as 'affiliates of Ares Management Corporation that hold preferred equity interests and warrants of SBE Global, including Ares SBE SPV, L.P.'. SBE Global issued USD 800m of preferred equity to Ares across 2022, 2024 and 2025, with an aggregate liquidation preference of about USD 996m at 31 December 2025, and warrants with the 2025 issuance; part of an earlier tranche was redeemed for USD 495.0m in the first half of 2025. The preferred equity is 'not an obligation of, or equity interest in, SB Energy, Inc.'\n\nAt the IPO, SBE Global is to redeem the preferred equity in full and net-settle the warrants for about USD 40m, after which 'Ares will no longer hold any equity interest, preferred claim, or warrant position in SBE Global or any of its subsidiaries'. The Ares Redemption is a condition of the new credit facility. Board designation and consent rights in the post-IPO shareholders' agreement go to SoftBank and OpenAI only.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "status": "active",
+     "since": "2022",
+     "scale": "USD 800m of preferred equity issued (≈USD 996m liquidation preference at 31 Dec 2025) plus warrants",
+     "via": "SBE Global preferred equity"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It shares joint control of Prime Data Centers, holds minority stakes (49% at EDPR) in operating renewables that ENGIE and EDPR run, holds preferred equity in SB Energy's parent (redeemed at the IPO) and roughly 10% of X-energy's votes (our calculation from its prospectus), and arranged a USD 2.4bn loan for Vantage.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: ENGIE's releases say it keeps control and operations of the portfolios Ares bought into; EDPR keeps 51% of the 1,632 MW portfolio; Rover and the Central Penn Line are operated by others; SB Energy's preferred and the Vantage loan are financing.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Ada's first named power-equipment supplier or US tenant at Spotsylvania.* *The SB Energy IPO pricing:* triggers the redemption of Ares's preferred.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Minority and preferred positions — Prime Data Centers, SB Energy, X-energy",
+     "date": "",
+     "text": "In SB Energy, affiliates of Ares hold USD 800m of preferred equity and warrants in its parent SBE Global, to be redeemed at the IPO.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Affiliates of Ares hold USD 800m of preferred equity (about USD 996m of liquidation preference at 31 December 2025) and warrants in SBE Global, the direct parent; the S-1 says they are to be redeemed in full, and the warrants net-settled for about USD 40m, at or before the IPO, which the new credit facility requires.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2022"
+  },
+  {
+   "a": "ares",
+   "b": "softbank",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** SoftBank's dollar commitment to, and share of, the Stargate entity; the name and ownership of the SoftBank affiliate developing PORTS gas and who holds the turbine reservations; SoftBank's economic share of SB Energy after the OpenAI, Ares and NVIDIA instruments (the S-1's percentages are blank); the current SoftBank titles of Ippei Mimura and Varun Aravapally, two of DigitalBridge's new directors; whether Lordstown remains a data-centre site; the USD amount of the Arm margin loan (reports conflict); a full-year consensus for FY2025 (none located in a loadable source).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "ares",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Ares funds arranged a USD 2.4bn debt facility for Vantage Data Centers in North America in February 2026 and hold about USD 1.6bn of it.",
+     "context": "Ares's release of 10 February 2026: certain Ares funds 'have arranged a $2.4 billion debt facility' for Vantage Data Centers; 'Ares holds approximately $1.6 billion of the commitment and funded approximately $330 million at closing'. A Vantage executive is quoted in the release. Ares is arranger and lender, not an owner.",
+     "source": "https://www.eqs-news.com/news/category/ares-arranges-2-4-billion-debt-facility-to-vantage-data-centers/c5a34084-ddb2-48c4-af66-db5c60c5c961_en",
+     "status": "active",
+     "since": "2026-02",
+     "scale": "USD 2.4bn facility; Ares holds about USD 1.6bn",
+     "via": "Ares Infrastructure Debt"
+    },
+    "b": {
+     "type": "other",
+     "note": "Ares funds arranged a USD 2.4bn debt facility for Vantage in North America in February 2026 and hold about USD 1.6bn of the commitment.",
+     "context": "Ares's release of 10 February 2026: certain Ares funds 'have arranged a $2.4 billion debt facility' for Vantage Data Centers, with 'Ares holds approximately $1.6 billion of the commitment and funded approximately $330 million at closing'. The facility size, Ares's commitment and the amount drawn are three different numbers. A lender link, typed `other` on both sides.",
+     "source": "https://www.eqs-news.com/news/category/ares-arranges-2-4-billion-debt-facility-to-vantage-data-centers/c5a34084-ddb2-48c4-af66-db5c60c5c961_en",
+     "status": "active",
+     "since": "2026-02",
+     "scale": "USD 2.4bn facility; Ares holds about USD 1.6bn of the commitment",
+     "via": "Ares Infrastructure Debt"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Ares Infrastructure Debt and direct lending",
+     "date": "",
+     "text": "Ares funds 'arranged' a USD 2.4bn debt facility for Vantage Data Centers in North America in February 2026, holding about USD 1.6bn of the commitment and funding about USD 330m at closing.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-10",
+     "text": "Ares funds arrange a USD 2.4bn debt facility for Vantage Data Centers, holding about USD 1.6bn and funding about USD 330m at closing — Ares as lender to a hyperscale landlord, not owner.",
+     "src": "https://www.eqs-news.com/news/category/ares-arranges-2-4-billion-debt-facility-to-vantage-data-centers/c5a34084-ddb2-48c4-af66-db5c60c5c961_en",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-10"
+  },
+  {
+   "a": "ares",
+   "b": "x-energy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Ares affiliates are significant minority holders of X-energy, with two Ares partners on its board but no contractual nomination right in the prospectus.",
+     "context": "X-energy's final prospectus (27 April 2026) lists entities affiliated with Ares holding 13,844,585 Class A shares (4.9%) and 24,418,756 Class B shares (20.5%) after the offering. Class B shares carry one vote each and no economic rights and vote with Class A, so by our calculation Ares holds roughly 10% of the combined vote. Ares's 13G (August 2026) reports 38,263,341 shares with shared voting power, 12.3% of Class A on an as-converted basis. Ares partners David Kaplan and Allyson Satin sit on the board. Ares Acquisition Corporation's 2022 SPAC merger agreement with X-energy was terminated in 2023.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm",
+     "status": "active",
+     "since": "2022",
+     "scale": "4.9% of Class A and 20.5% of Class B after the IPO",
+     "via": "Ares X-Energy Holdings and co-investment vehicles"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Ares affiliates are significant minority holders, with two Ares partners on the board and no contractual nomination right in the prospectus.",
+     "context": "The final prospectus (27 April 2026) lists Ares-affiliated entities holding 13,844,585 Class A shares (4.9%) and 24,418,756 Class B shares (20.5%) after the offering; Class B shares carry votes but no economic rights, so by our calculation Ares holds about 10% of the combined vote. Ares's Schedule 13G (August 2026) reports 12.3% of Class A on an as-converted basis. The relationship began with Ares Acquisition Corporation's 2022 SPAC merger agreement, terminated in 2023, and an Ares bridge loan repaid in October 2024. A minority holder, not a controller.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm",
+     "status": "active",
+     "since": "2022",
+     "scale": "4.9% of Class A and 20.5% of Class B after the IPO; about 10% of the combined vote (our calculation)",
+     "via": "Ares X-Energy Holdings and co-investment vehicles"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It shares joint control of Prime Data Centers, holds minority stakes (49% at EDPR) in operating renewables that ENGIE and EDPR run, holds preferred equity in SB Energy's parent (redeemed at the IPO) and roughly 10% of X-energy's votes (our calculation from its prospectus), and arranged a USD 2.4bn loan for Vantage.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Minority and preferred positions — Prime Data Centers, SB Energy, X-energy",
+     "date": "",
+     "text": "In X-energy, Ares affiliates held 4.9% of the Class A and 20.5% of the Class B shares after the April 2026 IPO.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-27",
+     "text": "X-energy's IPO prices; Ares affiliates hold 4.9% of Class A and 20.5% of Class B shares afterwards — A minority position with two Ares partners on the board.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Funding: Series C USD 235 million (2023), Series C-1 USD 700 million (2024–2025, Amazon-anchored), Series D USD 700 million led by Jane Street (November 2025), IPO USD 1.02 billion (April 2026); the 2022 SPAC with Ares Acquisition Corp (about USD 2.0 billion pre-money) was terminated in October 2023.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-16",
+     "text": "Amazon leads the about USD 500 million Series C-1 through its Climate Pledge Fund (with Ken Griffin, Ares, NGP and the University of Michigan) and, with Energy Northwest, agrees to develop an initial 320 MW four-unit project expandable to 960 MW; 'Amazon and X-energy aim to bring more than 5 gigawatts online across the United States by 2039' — The deal that made X-energy 'Amazon's SMR partner' — shareholder, project funder and rights-holder in one announcement.",
+     "src": "https://x-energy.com/news/amazon-invests-in-x-energy-to-support-advanced-small-modular-nuclear-reactors-and-expand-carbon-free-power/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-27"
   },
   {
    "a": "arevon",
@@ -12424,6 +13692,27 @@
     }
    ],
    "last": "2026-03-21"
+  },
+  {
+   "a": "bechtel",
+   "b": "stonepeak",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Dominion's 8-K says Virginia Power 'will retain full operational control of the construction and operations' of CVOW; Woodside operates Louisiana LNG with Bechtel as contractor; Repsol and Ørsted keep control of the US renewables Stonepeak co-owns.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-25",
+     "text": "Woodside completes the sale of 40% of Louisiana LNG Infrastructure to Stonepeak, which commits USD 5.7bn toward capital expenditure and pays about USD 1.9bn at closing — A non-controlling LNG stake; Woodside operates and Bechtel builds.",
+     "src": "https://www.sec.gov/Archives/edgar/data/844551/000119312525146092/d48785dex991.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2025-06-25"
   },
   {
    "a": "bechtel",
@@ -15426,12 +16715,13 @@
    "curated": {
     "a": {
      "type": "other",
-     "note": "Blackstone is reported as a participant in the Broadcom-Apollo-Blackstone vehicle that buys chips and leases them to Anthropic at Fluidstack sites.",
-     "context": "Press accounts of a chip-leasing platform describe an initial USD 35bn tranche to facilitate about 1 GW of compute that Anthropic is expected to deploy at Fluidstack-operated sites, with the vehicle buying Google-designed TPUs and leasing them onward. Bloomberg separately reported in September 2026 that Blackstone was weighing a second debt package for the same arrangement. **This is trade reporting, not a filed arrangement**: no Blackstone filing located names Fluidstack, Anthropic or the vehicle, and the Broadcom release page was unreachable. It is recorded as `other` and as reported rather than confirmed.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526340208/d158269d10q.htm",
-     "status": "announced",
+     "note": "Blackstone's Credit & Insurance business is an initial anchor investor, with Apollo, in Broadcom's AI XPV Platform, whose compute racks Anthropic leases at Fluidstack-based sites.",
+     "context": "Broadcom's and Apollo's joint release of 9 June 2026 names Apollo and Blackstone's Credit & Insurance business as the platform's initial anchor investors. The initial USD 35bn tranche, led by Apollo funds with global banks, facilitates Anthropic's previously announced expansion of more than 1 GW of compute, 'expected to deploy in Fluidstack-based sites starting in mid-2026'. Apollo's Q2 2026 10-Q records an Apollo-managed fund as the purchaser of the compute, and Broadcom's 10-Q records Broadcom's backstop of the lease payments. The racks are leased to Anthropic, not to Fluidstack, and no split between Apollo and Blackstone is disclosed. Bloomberg separately reported in September 2026 that Blackstone was weighing a second debt package for the same arrangement; that is reported, not announced. Recorded as `other` because Blackstone reaches Fluidstack only through the platform's lessee.",
+     "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+     "status": "active",
      "since": "2026-06",
-     "scale": "reported USD 35bn initial tranche of the chip vehicle"
+     "scale": "USD 35bn initial tranche, Apollo-led; Blackstone share undisclosed",
+     "via": "Broadcom AI XPV Platform"
     }
    },
    "evid": [
@@ -15445,15 +16735,15 @@
     {
      "where": "Capabilities · GPU and capacity financing — Macquarie asset-backed facility, capacity purchases from smaller neoclouds, the Broadcom–Apollo–Blackstone chip vehicle",
      "date": "",
-     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (the Broadcom–Apollo–Blackstone platform, June 2026, reported at about USD 35 billion for the first tranche).",
+     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (Broadcom's AI XPV Platform, announced 9 June 2026 with Apollo and Blackstone as initial anchor investors; Apollo leads the initial USD 35 billion tranche).",
      "src": "",
      "from": "b"
     },
     {
      "where": "Recent Reporting",
      "date": "2026-06-10",
-     "text": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value — The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
-     "src": "https://www.artificialintelligence-news.com/news/new-data-centre-projects-mark-anthropic-biggest-us-expansion/",
+     "text": "Broadcom, Apollo and Blackstone announce the AI XPV Platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value — The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
      "from": "b"
     }
    ],
@@ -16170,6 +17460,20 @@
      "text": "Basis: no Blackstone reference exists in any source; the company names no owner; the single ownership statement is Elda River's 'controlled by Roscommon Analytics'; the board carries two Bain Capital-affiliated directors and an Encompass Capital partner without any stated shareholding.",
      "src": "",
      "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackstone",
+   "b": "stonepeak",
+   "evid": [
+    {
+     "where": "Capabilities · Private Equity — including Blackstone Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition, measuring five-year infrastructure capital raised, places Blackstone **eighth at USD 45.7bn** — behind BlackRock (USD 113.4bn), KKR, Brookfield, Macquarie, EQT, Stonepeak and DigitalBridge.",
+     "src": "",
+     "from": "a"
     }
    ],
    "last": ""
@@ -17899,6 +19203,42 @@
     }
    ],
    "last": "2026-06-25"
+  },
+  {
+   "a": "blue-owl",
+   "b": "stonepeak",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Blue Owl's GP Strategic Capital funds have held a passive minority interest in Stonepeak's holding company since June 2023, with no control.",
+     "context": "Stonepeak's July 2023 release announced a minority investment from Blue Owl's GP Strategic Capital platform. Its Form ADV (April 2026) records that Blue Owl-managed vehicles acquired a minority interest in Stonepeak Partners Holdings LP in June 2023 and made follow-on investments; Blue Owl and other third-party strategic investors together receive less than 17% of the adviser's fee income and of its carried interest, and none has 'control over the day-to-day operations or investment decisions'. Michael Dorrell controls the adviser through its general partner.",
+     "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159699/PDF/159699.pdf",
+     "status": "active",
+     "since": "2023-06",
+     "scale": "Third-party owners receive less than 17% of fee income and carried interest",
+     "via": "Blue Owl GP Strategic Capital (formerly Dyal)"
+    },
+    "a": {
+     "type": "portfolio",
+     "note": "Blue Owl's GP Strategic Capital funds have held a passive minority interest in Stonepeak's holding company since June 2023, with no control.",
+     "context": "Stonepeak's Form ADV (April 2026) records that Blue Owl-managed vehicles bought a minority interest in Stonepeak Partners Holdings LP in June 2023 and made follow-on investments. Blue Owl and the other third-party strategic investors together receive less than 17% of the adviser's fee income and carried interest, and none has 'control over the day-to-day operations or investment decisions'. A GP stake buys a share of a manager's economics, not a say in what its funds buy.",
+     "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159699/PDF/159699.pdf",
+     "status": "active",
+     "since": "2023-06",
+     "scale": "Passive minority stake; third-party owners receive less than 17% of fee income and carried interest",
+     "via": "Blue Owl GP Strategic Capital (formerly Dyal)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Blue Owl's GP Strategic Capital funds have held a minority interest since June 2023, with no control.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023-06"
   },
   {
    "a": "brookfield",
@@ -22822,6 +24162,70 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "catl",
+   "b": "stonepeak",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "CATL batteries are in the 29 MW Mimasaka project of Kingdom, the Japanese battery-storage platform Stonepeak established.",
+     "context": "Kingdom's release of 7 April 2026 describes 'a battery energy storage system (\"BESS\") platform established by Stonepeak' whose first long-term project-finance loan, from MUFG Bank, funds the Mimasaka project, a 29 MW battery in Okayama Prefecture that 'incorporates batteries from CATL'. Kingdom's management signs the supply contracts; Stonepeak is the sponsor.",
+     "source": "https://www.globenewswire.com/news-release/2026/04/07/3268779/0/en/Kingdom-Energy-Storage-Platform-Backed-by-Stonepeak-Executes-First-Project-Financing-Facility.html",
+     "status": "active",
+     "since": "2026-04",
+     "scale": "29 MW Mimasaka project",
+     "via": "Batteries for Kingdom's Mimasaka project, Okayama"
+    },
+    "b": {
+     "type": "other",
+     "note": "CATL supplies the batteries for Kingdom's 29 MW Mimasaka project, the first project-financed asset of Stonepeak's Japanese battery-storage platform.",
+     "context": "Kingdom's release of April 2026 describes 'a battery energy storage system (\"BESS\") platform established by Stonepeak' that signed its first long-term project-finance loan with MUFG Bank for the Mimasaka project, a 29 MW battery in Okayama Prefecture, which 'incorporates batteries from CATL'. Kingdom owns nine Japanese projects totalling 479 MW, each with a 20-year capacity-market contract. Kingdom's management signs the supply contract; Stonepeak is the sponsor.",
+     "source": "https://www.globenewswire.com/news-release/2026/04/07/3268779/0/en/Kingdom-Energy-Storage-Platform-Backed-by-Stonepeak-Executes-First-Project-Financing-Facility.html",
+     "status": "active",
+     "since": "2026-04",
+     "scale": "29 MW Mimasaka project",
+     "via": "BESS for the Mimasaka project, Okayama"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Kingdom owns nine Japanese battery projects (479 MW), and its first project financing names CATL batteries.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Kingdom's first financing names CATL batteries, and Montera's delivery team comes from Oracle and Equinix.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the platforms' own releases and Stonepeak's release language on each; Kingdom's April 2026 financing release is the only one naming a supplier (CATL).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy and energy transition — Kingdom, CVOW, Louisiana LNG, solar and distributed energy",
+     "date": "",
+     "text": "Kingdom, a battery-storage platform 'established by Stonepeak' and headquartered in Singapore, owns nine Japanese projects totalling 479 MW that each hold a 20-year capacity-market contract; it closed its first project financing, for the 29 MW Mimasaka project with CATL batteries, with MUFG in April 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-07",
+     "text": "Kingdom, the Japanese battery-storage platform established by Stonepeak, signs its first project-finance facility with MUFG for the 29 MW Mimasaka project, with CATL batteries — The first named battery supplier at a Stonepeak-controlled platform; the facility amount is undisclosed.",
+     "src": "https://www.globenewswire.com/news-release/2026/04/07/3268779/0/en/Kingdom-Energy-Storage-Platform-Backed-by-Stonepeak-Executes-First-Project-Financing-Facility.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-07"
   },
   {
    "a": "catl",
@@ -28048,6 +29452,49 @@
     }
    ],
    "last": "2026-04-02"
+  },
+  {
+   "a": "cpp-investments",
+   "b": "stonepeak",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "CPP Investments agreed to invest up to USD 1.05bn alongside Stonepeak's acquisition of a majority controlling interest in Castrol from bp, for an indirect stake.",
+     "context": "Stonepeak's release of 24 December 2025: Stonepeak agreed to acquire a majority controlling interest in Castrol at an enterprise value of about USD 10.1bn, with bp keeping 35%, and CPP Investments agreed to invest up to USD 1.05bn in connection with the transaction. CPP's figure is an equity commitment and the USD 10.1bn is an enterprise value. Signed, not closed, on the record read.",
+     "source": "https://stonepeak.com/news/stonepeak-to-acquire-majority-controlling-interest-in-castrol-from-bp",
+     "status": "announced",
+     "since": "2025-12",
+     "scale": "Up to USD 1.05bn, for an indirect stake",
+     "via": "Castrol acquisition"
+    },
+    "b": {
+     "type": "partner",
+     "note": "CPP Investments agreed to invest up to USD 1.05bn alongside Stonepeak's acquisition of a majority controlling interest in Castrol, taking an indirect stake.",
+     "context": "Stonepeak's release of 24 December 2025: Stonepeak agreed to acquire a majority controlling interest in Castrol from bp at an enterprise value of about USD 10.1bn, bp keeping 35%; 'in connection with the transaction, Canada Pension Plan Investment Board (\"CPP Investments\") will invest up to USD$1.05 billion in support of the transaction, resulting in an indirect stake in Castrol'. No closing is on the record as of 5 October 2026.",
+     "source": "https://stonepeak.com/news/stonepeak-to-acquire-majority-controlling-interest-in-castrol-from-bp",
+     "status": "announced",
+     "since": "2025-12",
+     "scale": "CPP up to USD 1.05bn, for an indirect stake",
+     "via": "Castrol acquisition"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Signed acquisitions — Cleco, Castrol and Allgas",
+     "date": "",
+     "text": "On 24 December 2025 Stonepeak agreed to acquire a majority controlling interest in Castrol from bp at an enterprise value of about USD 10.1bn, with bp keeping 35% and CPP Investments investing up to USD 1.05bn for an indirect stake.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-24",
+     "text": "Stonepeak agrees to acquire a majority controlling interest in Castrol from bp at about USD 10.1bn enterprise value; bp keeps 35%; CPP Investments invests up to USD 1.05bn — The firm's largest announced acquisition; closing not on the record.",
+     "src": "https://stonepeak.com/news/stonepeak-to-acquire-majority-controlling-interest-in-castrol-from-bp",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-24"
   },
   {
    "a": "cpp-investments",
@@ -33913,7 +35360,7 @@
    "curated": {
     "a": {
      "type": "other",
-     "note": "NextEra Energy, the parent of NextEra Energy Resources, agreed on May 15, 2026 to acquire Dominion Energy in an all-stock combination expected to close in the second half of 2027.",
+     "note": "NextEra Energy, the parent of NextEra Energy Resources, agreed on May 15, 2026 to acquire Dominion Energy for 0.8138 NextEra shares plus a pro rata share of $360 million in cash per Dominion share, with closing expected in the second half of 2027.",
      "context": "The May 18, 2026 joint release sets the exchange ratio at 0.8138 NextEra shares per Dominion share plus a one-time aggregate cash payment of $360 million, pro forma ownership of approximately 74.5 percent and 25.5 percent, a combined company of approximately 10 million customer accounts, 110 GW of generation and $138 billion of rate base, John Ketchum as chairman and CEO, Robert Blue as president and CEO of regulated utilities, Edward Baine as president and CEO of Dominion Energy Virginia, dual headquarters in Juno Beach and Richmond and a board of ten NextEra and four Dominion directors. Applications were filed July 15, 2026 with the SCC (Case PUR-2026-00112, hearing November 17, 2026), the NCUC, the South Carolina PSC, FERC and the NRC, with $2.25 billion of shareholder-funded bill credits over two years post-close.\n\nThe covered dossier is NextEra Energy Resources, the merchant development subsidiary; the acquirer is its parent. For this corpus the consequence is that the largest regulated data-center utility and the largest storage developer would share an owner from late 2027.",
      "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-to-Combine-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers/default.aspx",
      "status": "announced",
@@ -34071,6 +35518,63 @@
     }
    ],
    "last": "2025-01"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "stonepeak",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Stonepeak owns a 50% noncontrolling interest in CVOW, bought in October 2024; Virginia Power keeps full operational control, and Stonepeak funds 48 percent of the remaining capital.",
+     "context": "The 8-K of 26 February 2024 records the equity capital contribution agreement with Dunedin Member LLC, a Stonepeak vehicle. Stonepeak paid 50% of construction costs incurred to closing and funds 50% of remaining costs up to a total of USD 11.3bn, with optional cost-sharing between USD 11.3bn and USD 13.7bn; Virginia Power 'will retain full operational control', and Stonepeak has 'customary minority interest rights'. The sale closed in October 2024, with Virginia Power receiving USD 2.6bn. Dominion builds and operates the project and signs its equipment contracts; Stonepeak is a co-owner and funder, not a buyer.",
+     "source": "https://www.sec.gov/Archives/edgar/data/715957/000119312524045358/d766880d8k.htm",
+     "status": "active",
+     "since": "2024-10",
+     "scale": "50% noncontrolling interest; USD 2.6bn received at closing",
+     "via": "Coastal Virginia Offshore Wind Commercial Project (2.6 GW)"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Stonepeak owns a 50% noncontrolling interest in CVOW through OSW Project LLC; Dominion's Virginia Power keeps full operational control of construction and operations.",
+     "context": "Dominion's 8-K of 26 February 2024 records the equity capital contribution agreement with Dunedin Member LLC, a Stonepeak vehicle: Stonepeak paid 50% of construction costs incurred to closing (less a USD 145m withholding), funds 50% of remaining costs up to a total of USD 11.3bn, and may share costs between USD 11.3bn and USD 13.7bn, with Virginia Power then contributing 67–83%; Virginia Power 'will retain full operational control', and Stonepeak has 'customary minority interest rights'. The sale closed in October 2024, with Virginia Power receiving USD 2.6bn.\n\nDominion's Q2 2026 10-Q puts the estimated cost at about USD 11.7bn, with the final turbines expected by the end of 2027, and lists Stonepeak's optional contributions among its risks. Dominion builds and operates the project and signs its equipment contracts.",
+     "source": "https://www.sec.gov/Archives/edgar/data/715957/000119312524045358/d766880d8k.htm",
+     "status": "active",
+     "since": "2024-10",
+     "scale": "50% noncontrolling interest; USD 2.6bn paid to Dominion at closing",
+     "via": "Coastal Virginia Offshore Wind Commercial Project (2.6 GW)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Coastal Virginia Offshore Wind (CVOW)",
+     "date": "",
+     "text": "A 2.6 GW, 176-turbine wind farm 27 to 44 miles off Virginia Beach, per the company's February 2025 cost release, using Siemens Gamesa turbines of the same model as the Moray West project; a 50 percent noncontrolling interest was sold to Stonepeak in October 2024 (Q2 2026 10-Q).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-31",
+     "text": "CVOW at ~81% complete with all 176 monopiles set and 31 turbines installed; budget raised to $11.65B on April 2026 tariffs, PJM network-upgrade revisions and installation projections; final turbine now year-end 2027 — A second schedule slip in two quarters, into the band where the 10-K says incremental cost is unrecoverable from customers — the rest of the overrun is shareholders' and Stonepeak's.",
+     "src": "https://s2.q4cdn.com/510812146/files/doc_financials/2026/q2/2026-07-31-DE-IR-2Q-2026-earnings-call-slides-vTCII.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-02-03",
+     "text": "CVOW budget raised from $9.8B to $10.7B on higher PJM network-upgrade and onshore interconnection costs; ~50% complete; completion 'on schedule' for end-2026; Stonepeak funds 50% of costs up to $11.3B — The first of four budget revisions in eighteen months, and the one attributed to the grid rather than the sea.",
+     "src": "https://news.dominionenergy.com/press-releases/press-releases/2025/Coastal-Virginia-Offshore-Wind-CVOW-Project-Part-of-Comprehensive-All-of-the-Above-Energy-Strategy-to-Affordably-Meet-Growing-Energy-Needs-Continues-on-Schedule-Cost-Updated/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy and energy transition — Kingdom, CVOW, Louisiana LNG, solar and distributed energy",
+     "date": "",
+     "text": "Stonepeak bought a 50% noncontrolling interest in Dominion Energy's 2.6 GW Coastal Virginia Offshore Wind project in October 2024, paying USD 2.6bn at closing, and a 40% interest in Woodside's Louisiana LNG infrastructure company in June 2025.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-31"
   },
   {
    "a": "dominion-energy",
@@ -40421,6 +41925,20 @@
   },
   {
    "a": "equinix",
+   "b": "stonepeak",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Kingdom's first financing names CATL batteries, and Montera's delivery team comes from Oracle and Equinix.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "equinix",
    "b": "switch",
    "curated": {
     "b": {
@@ -44642,8 +46160,8 @@
     {
      "where": "Recent Reporting",
      "date": "2026-06-10",
-     "text": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value — The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
-     "src": "https://www.artificialintelligence-news.com/news/new-data-centre-projects-mark-anthropic-biggest-us-expansion/",
+     "text": "Broadcom, Apollo and Blackstone announce the AI XPV Platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value — The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
+     "src": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
      "from": "a"
     },
     {
@@ -45049,7 +46567,7 @@
     {
      "where": "Capabilities · GPU and capacity financing — Macquarie asset-backed facility, capacity purchases from smaller neoclouds, the Broadcom–Apollo–Blackstone chip vehicle",
      "date": "",
-     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (the Broadcom–Apollo–Blackstone platform, June 2026, reported at about USD 35 billion for the first tranche).",
+     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (Broadcom's AI XPV Platform, announced 9 June 2026 with Apollo and Blackstone as initial anchor investors; Apollo leads the initial USD 35 billion tranche).",
      "src": "",
      "from": "a"
     },
@@ -58486,6 +60004,47 @@
   },
   {
    "a": "macquarie",
+   "b": "stonepeak",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Macquarie Asset Management is part of the consortium selling Cleco, the Louisiana utility, to Stonepeak and Bernhard Capital Partners.",
+     "context": "Stonepeak's release of 27 April 2026 announces an agreement with Bernhard Capital Partners to buy Cleco Group from a consortium of Macquarie Asset Management, BCI and Manulife Investment Management, with Stonepeak to hold the majority interest on closing, subject to customary regulatory approvals. Signed, not closed. Typed `other`: a seller and a buyer across one transaction.",
+     "source": "https://stonepeak.com/news/stonepeak-and-bernhard-capital-partners-to-acquire-cleco",
+     "status": "announced",
+     "since": "2026-04",
+     "via": "Cleco acquisition"
+    },
+    "b": {
+     "type": "other",
+     "note": "Macquarie Asset Management is part of the consortium selling Cleco, the Louisiana utility, to Stonepeak and Bernhard Capital Partners.",
+     "context": "Stonepeak's release of 27 April 2026 announces an agreement with Bernhard Capital Partners to acquire Cleco Group from a consortium of Macquarie Asset Management, BCI and Manulife Investment Management, which owned it for about a decade; Stonepeak is to hold the majority interest on closing, subject to customary regulatory approvals.",
+     "source": "https://stonepeak.com/news/stonepeak-and-bernhard-capital-partners-to-acquire-cleco",
+     "status": "announced",
+     "since": "2026-04",
+     "via": "Cleco acquisition"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Signed acquisitions — Cleco, Castrol and Allgas",
+     "date": "",
+     "text": "With Bernhard Capital Partners, Stonepeak agreed on 27 April 2026 to buy Cleco Group, a Louisiana regulated electric utility serving about 298,000 customers, from a consortium of Macquarie Asset Management, BCI and Manulife; 'upon close, Stonepeak will hold the majority interest', subject to customary regulatory approvals; Cleco would remain regulated by the Louisiana Public Service Commission.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-27",
+     "text": "Stonepeak and Bernhard Capital Partners agree to buy Cleco, a Louisiana regulated utility, from Macquarie Asset Management, BCI and Manulife; Stonepeak to hold the majority on closing — On closing, a Stonepeak-controlled utility with 2,676 MW of generation; approvals pending.",
+     "src": "https://stonepeak.com/news/stonepeak-and-bernhard-capital-partners-to-acquire-cleco",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-27"
+  },
+  {
+   "a": "macquarie",
    "b": "trina-storage",
    "evid": [
     {
@@ -67689,6 +69248,20 @@
   },
   {
    "a": "oracle",
+   "b": "stonepeak",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Kingdom's first financing names CATL batteries, and Montera's delivery team comes from Oracle and Equinix.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "oracle",
    "b": "supermicro",
    "curated": {
     "b": {
@@ -70740,7 +72313,7 @@
     "b": {
      "type": "portfolio",
      "note": "SoftBank's controlled subsidiary and the group's only equipment buyer — the developer, owner and operator of OpenAI's Milam County and PORTS-Pike campuses.",
-     "context": "SB Energy's S-1 calls SoftBank its 'founding sponsor and ultimate parent company'. It says SoftBank's affiliates have contributed about USD 3.2bn and that SoftBank expects to control more than 50% of the vote after the IPO, making SB Energy a controlled company. SoftBank's Securities Report lists Energy Global, LP at 100% at 31 March 2026. Outside instruments have since been added: OpenAI's USD 500m preferred equity and warrants, Ares's preferred equity (to be redeemed at the IPO) and NVIDIA's USD 3.0bn of Class N stock and prepaid forward. SoftBank's economic share after the IPO is therefore unstated. SoftBank designates six of SB Energy's nine directors, among them Alex Clavel as chairman.",
+     "context": "SB Energy's S-1 calls SoftBank its 'founding sponsor and ultimate parent company'. It says SoftBank's affiliates have contributed about USD 3.2bn and that SoftBank expects to control more than 50% of the vote after the IPO, making SB Energy a controlled company. SoftBank's Securities Report lists Energy Global, LP at 100% at 31 March 2026. Outside instruments have since been added: OpenAI's USD 500m preferred equity and warrants and NVIDIA's USD 3.0bn of Class N stock and prepaid forward. Separately, affiliates of Ares have held preferred equity in SBE Global, SB Energy's direct parent, since 2022 (USD 800m issued across 2022, 2024 and 2025) and warrants since 2025; the S-1 says they are to be redeemed in full and the warrants net-settled for about USD 40m at the IPO. SoftBank's economic share after the IPO is therefore unstated. SoftBank designates six of SB Energy's nine directors, among them Alex Clavel as chairman.",
      "source": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
      "status": "active",
      "since": "2019",

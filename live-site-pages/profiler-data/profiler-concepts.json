@@ -657,6 +657,14 @@
    "def": "Lending secured on specific physical assets rather than on a company's general creditworthiness — the lender can take the equipment if the borrower fails. Financing GPUs against the GPUs themselves is a pure example."
   },
   {
+   "slug": "asset-based-finance",
+   "term": "asset-based finance",
+   "def": "Lending secured by a pool of specific assets or the cash they produce — equipment, leases, receivables, loans — rather than by a borrower's general credit. A loan against a fleet of AI servers leased to a tenant is asset-based finance: the lender looks first to the servers and the lease payments.",
+   "aliases": [
+    "asset-backed finance"
+   ]
+  },
+  {
    "slug": "asset-manager",
    "term": "asset manager",
    "def": "A firm that invests other people's money — pension funds, insurers, sovereign funds — through funds it manages for a fee. Goldman Sachs Asset Management is the arm of the bank that runs such funds; when it 'owns' GridStor, the owners are really the fund's investors.",
@@ -1583,6 +1591,17 @@
    "aliases": [
     "carry",
     "promote"
+   ]
+  },
+  {
+   "slug": "carrier-neutral-data-centre",
+   "term": "carrier-neutral data centre",
+   "def": "A data centre that any telecom carrier or network can connect into, so tenants can buy connections from many providers in one building. Its value is the density of networks meeting inside it, which is why such buildings sit in city centres and are smaller than the hyperscale campuses built for a single tenant.",
+   "aliases": [
+    "carrier-neutral",
+    "carrier-neutral data center",
+    "interconnection data centre",
+    "interconnection data center"
    ]
   },
   {
@@ -5445,6 +5464,15 @@
    ]
   },
   {
+   "slug": "fund-commitment",
+   "term": "fund commitment",
+   "def": "An investor's promise to put a set amount into a fund as the manager calls for it over several years. It buys a share of the fund's returns, not a say in what the fund buys: the manager, and the companies the fund controls, take those decisions.",
+   "aliases": [
+    "capital commitment",
+    "LP commitment"
+   ]
+  },
+  {
    "slug": "fund-life",
    "term": "fund life",
    "def": "The fixed term — usually ten to twelve years — over which an investment fund must invest its money and return it to investors. A fund that owns a developer has to sell it or its projects before the fund closes, whatever the contracts' tenor.",
@@ -7499,6 +7527,16 @@
    ]
   },
   {
+   "slug": "long-term-decarbonization-auction",
+   "term": "long-term decarbonization auction",
+   "def": "Japan's auction, first held for fiscal 2023, that awards new low-carbon generation and storage a fixed capacity payment for about 20 years to cover most of its fixed costs. A battery that wins one has a bankable revenue floor, which is what makes it possible to project-finance.",
+   "aliases": [
+    "LTDA",
+    "long-term decarbonisation auction",
+    "Long-Term Decarbonization Power Source Auction"
+   ]
+  },
+  {
    "slug": "loss-ratio",
    "term": "loss ratio",
    "def": "Claims paid divided by premium earned over a period — the underwriter's report card. A book with a loss ratio persistently above what the carrier priced for loses its capacity at renewal.",
@@ -7807,6 +7845,16 @@
    "aliases": [
     "merchant HVDC",
     "merchant line"
+   ]
+  },
+  {
+   "slug": "merger-control",
+   "term": "merger control",
+   "def": "A competition authority's review of an acquisition of control before it closes. The European Commission's decisions record who acquires control of what, and a deal raising no competition issues is cleared under a short 'simplified procedure' — which also makes the decision a public record of the ownership structure.",
+   "aliases": [
+    "merger clearance",
+    "EUMR",
+    "simplified procedure"
    ]
   },
   {
@@ -11992,6 +12040,14 @@
    "slug": "spread-footing",
    "term": "spread footing",
    "def": "An isolated concrete pad under a column that spreads its load over enough ground to stay within the bearing capacity. The default foundation where the soil is good."
+  },
+  {
+   "slug": "spread-related-earnings",
+   "term": "spread-related earnings",
+   "def": "The profit a life insurer makes on the gap between what its investment portfolio earns and what it has promised to pay annuity holders, after costs. An asset manager that owns an insurer reports it as a separate line from its fee income, because it comes from the insurer's own balance sheet rather than from fees on other people's money.",
+   "aliases": [
+    "spread related earnings"
+   ]
   },
   {
    "slug": "sscb",

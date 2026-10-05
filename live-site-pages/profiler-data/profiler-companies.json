@@ -107,7 +107,7 @@
       "hq": "Columbus, OH, USA",
       "ticker": "NASDAQ: AEP",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "aep.com",
         "docs.aep.com",
@@ -120,8 +120,8 @@
         "swepco.com",
         "aepenergy.com"
       ],
-      "srcTotal": 144,
-      "srcFirstPct": 51,
+      "srcTotal": 145,
+      "srcFirstPct": 50,
       "kpiNorm": true,
       "segments": [
         {
@@ -376,14 +376,14 @@
       "tagline": "The compute buyer — up to 5 GW of Trainium, 'well over a gigawatt' of TPUs then multi-GW from 2027, USD 30bn of Azure, all of Colossus 1, a 401 MW direct lease, a 470 MW gas order and reported USD 45bn/USD 35bn neocloud contracts, on run-rate revenue of USD 47bn and a USD 965bn Series H ahead of an IPO.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "anthropic.com",
         "claude.com",
         "www-cdn.anthropic.com",
         "assets.anthropic.com"
       ],
-      "srcTotal": 152,
+      "srcTotal": 155,
       "srcFirstPct": 57,
       "kpiNorm": false,
       "segments": [
@@ -440,7 +440,7 @@
       "tagline": "Wind-heritage farmdown IPP under Ares — 12 GW commercialized, 3+ GW operating/under construction, $4.08B financed in 2025; all three operating ERCOT batteries are Powin (bankrupt) and the next award went to Canadian Solar e-STORAGE — an open, FEOC-constrained storage buyer with no data-center customer yet.",
       "hq": "Charlottesville, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-01",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "apexcleanenergy.com",
         "apexcleanenergyproject.com"
@@ -456,6 +456,56 @@
         {
           "id": "aidc-developers-and-landlords",
           "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "apollo",
+      "name": "Apollo",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "USD 1.05tn alternative manager and retirement-services group (NYSE: APO; Athene) whose funds control Stream Data Centers (4 GW+ of powered land) and Vaultica; leads the USD 35bn initial tranche of Broadcom's AI XPV Platform for Anthropic and led a USD 3.5bn financing of Valor's GB200 lease to xAI; its 50% stakes in Hornsea 3 and TotalEnergies' Texas portfolio are partner-operated; signs for no power equipment itself",
+      "hq": "New York, NY, United States",
+      "ticker": "NYSE: APO",
+      "status": "active",
+      "lastUpdated": "2026-10-05",
+      "aka": [
+        "Apollo Global Management, Inc.",
+        "Apollo Global Management",
+        "Apollo Global",
+        "Apollo Asset Management",
+        "Apollo-managed",
+        "Apollo Funds",
+        "Apollo Infrastructure Group",
+        "Apollo Capital Solutions",
+        "Apollo Insurance Solutions Group",
+        "Athene",
+        "Athene Holding",
+        "Athene Holding Ltd.",
+        "Atlas SP Partners",
+        "Atlas SP",
+        "Apollo Debt Solutions",
+        "WarehouseCo Intermediate Holdings",
+        "Stream Data Centers",
+        "Vaultica",
+        "Vaultica Data Centers",
+        "PowerGrid Services",
+        "Argo Infrastructure Partners",
+        "Bridge Investment Group",
+        "Kelvion"
+      ],
+      "domains": [
+        "apollo.com",
+        "athene.com"
+      ],
+      "srcTotal": 42,
+      "srcFirstPct": 69,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
         }
       ]
     },
@@ -479,6 +529,63 @@
       "segments": [
         {
           "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "ares",
+      "name": "Ares",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "USD 671bn credit-first manager (NYSE: ARES) that owns Ada Infrastructure, its own data-centre developer with over 1 GW in flight in Virginia, Tokyo, Osaka, London and Brazil; its funds control Apex Clean Energy and 80% of an EDPR solar-and-battery portfolio, and it jointly controls Eni's Plenitude; minority, preferred or lender at Prime Data Centers, SB Energy, X-energy, ENGIE and Vantage",
+      "hq": "Los Angeles, CA, United States",
+      "ticker": "NYSE: ARES",
+      "status": "active",
+      "lastUpdated": "2026-10-05",
+      "aka": [
+        "Ares Management",
+        "Ares Management Corporation",
+        "Ares Management Corp",
+        "Ares Management, L.P.",
+        "Ares Infrastructure and Power",
+        "Ares Infrastructure Opportunities",
+        "Ares Infrastructure Equity",
+        "Ares Infrastructure Debt",
+        "Ares Infrastructure Secondaries",
+        "Energy Investors Funds",
+        "Ares EIF",
+        "EIF",
+        "Ares Digital Infrastructure",
+        "Ada Infrastructure",
+        "Japan DC Partners",
+        "GCP International",
+        "GLP Capital Partners",
+        "Ares Acquisition Corporation",
+        "Ares Acquisition Corp",
+        "Ares Capital",
+        "Ares Capital Corporation",
+        "Ares Strategic Income Fund",
+        "Ares Core Infrastructure Fund",
+        "Ares Climate Infrastructure Partners",
+        "Plenitude"
+      ],
+      "domains": [
+        "ares.com",
+        "aresmgmt.com",
+        "adainfrastructure.com"
+      ],
+      "srcTotal": 43,
+      "srcFirstPct": 67,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        },
+        {
+          "id": "capital",
           "role": "challenger"
         }
       ]
@@ -750,14 +857,14 @@
       "hq": "New York, NY, United States",
       "ticker": "NYSE: BX",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "blackstone.com",
         "breit.com",
         "bxdc.com"
       ],
-      "srcTotal": 32,
-      "srcFirstPct": 75,
+      "srcTotal": 35,
+      "srcFirstPct": 74,
       "kpiNorm": true,
       "segments": [
         {
@@ -1076,12 +1183,12 @@
       "hq": "Ningde, China",
       "ticker": "SZSE: 300750 · HKEX: 3750",
       "status": "active",
-      "lastUpdated": "2026-09-07",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "catl.com"
       ],
-      "srcTotal": 51,
-      "srcFirstPct": 37,
+      "srcTotal": 52,
+      "srcFirstPct": 38,
       "kpiNorm": true,
       "segments": [
         {
@@ -1388,7 +1495,7 @@
       "hq": "Toronto, Canada",
       "ticker": "Crown corporation (no listed equity)",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "aka": [
         "Canada Pension Plan Investment Board",
         "CPPIB",
@@ -1411,7 +1518,7 @@
         "cppinvestments.com",
         "cordeliopower.com"
       ],
-      "srcTotal": 73,
+      "srcTotal": 75,
       "srcFirstPct": 60,
       "kpiNorm": false,
       "segments": [
@@ -1703,7 +1810,7 @@
       "hq": "Richmond, VA, USA",
       "ticker": "NYSE: D",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "dominionenergy.com",
         "coastalvawind.com",
@@ -1711,7 +1818,7 @@
         "s205.q4cdn.com",
         "cdn-dominionenergy-prd-001.azureedge.net"
       ],
-      "srcTotal": 123,
+      "srcTotal": 126,
       "srcFirstPct": 48,
       "kpiNorm": true,
       "segments": [
@@ -1991,15 +2098,15 @@
       "hq": "Houston, Texas, United States",
       "ticker": "EPA: ENGI (parent)",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "engie-na.com",
         "engieresources.com",
         "engie.com",
         "newsroom.engie.com"
       ],
-      "srcTotal": 61,
-      "srcFirstPct": 59,
+      "srcTotal": 62,
+      "srcFirstPct": 60,
       "kpiNorm": false,
       "segments": [
         {
@@ -2226,7 +2333,7 @@
       "hq": "Chicago, IL, USA",
       "ticker": "Nasdaq: EXC",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-05",
       "aka": [
         "Exelon Corporation",
         "EXC",
@@ -2255,8 +2362,8 @@
         "delmarva.com",
         "atlanticcityelectric.com"
       ],
-      "srcTotal": 106,
-      "srcFirstPct": 21,
+      "srcTotal": 108,
+      "srcFirstPct": 20,
       "kpiNorm": true,
       "segments": [
         {
@@ -2398,12 +2505,12 @@
       "tagline": "Software-first US BESS integrator (HybridOS EMS) — assessed as a services-lane specialist after acquiring Powin's assets in 2025.",
       "hq": "Durham, NC, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "flexgen.com"
       ],
-      "srcTotal": 25,
-      "srcFirstPct": 72,
+      "srcTotal": 26,
+      "srcFirstPct": 69,
       "kpiNorm": false,
       "segments": [
         {
@@ -2457,14 +2564,14 @@
       "tagline": "Tenant-of-record on ~1.4 GW of Anthropic-bound leases at TeraWulf, Cipher, Hut 8 and Meridian Arc — bankable only through Google's backstops; owns Abernathy and now breaks ground at Harlingen (USD 4bn, 1.5 GW reserved); ClusterMAX 3.0 'Unavailable' (bare-metal TPUs at 100K+ chips); USD 2.6bn equity against ~USD 27bn of rent; FY2025 accounts overdue at Companies House.",
       "hq": "New York, NY, USA",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "fluidstack.io",
         "okmulgeefluidstack.io",
         "sullivanfluidstack.io",
         "harlingenfluidstack.io"
       ],
-      "srcTotal": 149,
+      "srcTotal": 152,
       "srcFirstPct": 46,
       "kpiNorm": false,
       "segments": [
@@ -3715,14 +3822,14 @@
       "hq": "Sydney, NSW, Australia",
       "ticker": "ASX: MQG",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "macquarie.com",
         "macquariegroup.com",
         "greeninvestmentgroup.com"
       ],
-      "srcTotal": 28,
-      "srcFirstPct": 75,
+      "srcTotal": 29,
+      "srcFirstPct": 72,
       "kpiNorm": false,
       "segments": [
         {
@@ -4347,13 +4454,13 @@
       "tagline": "Microsoft- and Anthropic-anchored European neocloud that owns its ground — S-1 of 18 Sep 2026: USD 103.4bn contracted TCV (Microsoft up to USD 43.8bn, Anthropic up to USD 44.6bn) on USD 140.6M H1 2026 revenue and a USD 1.02bn loss; 1 GW of 1.37 GW owned; USD 3.1bn+ convertible notes; NYSE 'NSCL' unpriced; ClusterMAX 3.0 'Unavailable'.",
       "hq": "London, United Kingdom",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "nscale.com",
         "docs.nscale.com"
       ],
-      "srcTotal": 145,
-      "srcFirstPct": 50,
+      "srcTotal": 146,
+      "srcFirstPct": 51,
       "kpiNorm": true,
       "segments": [
         {
@@ -4388,7 +4495,7 @@
       "hq": "Santa Clara, CA, USA",
       "ticker": "NASDAQ: NVDA",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "nvidia.com"
       ],
@@ -4884,7 +4991,7 @@
       "tagline": "Founder-controlled Dallas developer of wholesale and build-to-suit campuses — ~151 MW operating (Chicago, Los Angeles, Dallas, Sacramento, Silicon Valley), 240 MW Avondale under construction from May 2026, a '4+ GW' (or '7 GW') pipeline into Texas, Pennsylvania and the Nordics — whose named tenants are CoreWeave (15-year, ~USD 2.2bn Elk Grove lease behind USD 900m of 7.5% notes) and Lambda (21 MW at Vernon), recapitalised five times (Macquarie, Ares, Siemens FS, Snowhawk/Nuveen, Grain), with a shelved Nordic bond and three fraud suits by former executives in August 2026.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-07",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "primedatacenters.com"
       ],
@@ -5522,12 +5629,12 @@
       "tagline": "Blue Owl's named-tenant build engine — developer-owner of all three campuses in Amazon's $18B Louisiana program plus the 1 GW+ Stargate 'Project Jupiter'; 13 GW stated pipeline across three ring-fenced regions, ten ABS series since 2019, a reported $30B+ APAC sale in motion.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "stackinfra.com"
       ],
-      "srcTotal": 42,
-      "srcFirstPct": 79,
+      "srcTotal": 43,
+      "srcFirstPct": 77,
       "kpiNorm": false,
       "segments": [
         {
@@ -5577,6 +5684,53 @@
         },
         {
           "id": "software-and-optimization",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "stonepeak",
+      "name": "Stonepeak",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Private infrastructure manager (USD 81.9bn regulatory AUM; about USD 93bn published) that builds platforms — Cologix, Digital Edge (1.8 GW secured), Montera (500 MW in Arizona) and Kingdom (479 MW of Japanese batteries, CATL at Mimasaka); 50% noncontrolling in Dominion's CVOW and 40% of Louisiana LNG; Cleco (majority, with Bernhard) and Castrol signed, not closed",
+      "hq": "New York, NY, United States",
+      "ticker": "Private",
+      "status": "active",
+      "lastUpdated": "2026-10-05",
+      "aka": [
+        "Stonepeak Partners LP",
+        "Stonepeak Partners",
+        "Stonepeak Infrastructure Partners",
+        "Stonepeak Infrastructure Fund",
+        "Stonepeak Credit",
+        "Stonepeak-Plus",
+        "SP+ INFRA",
+        "Dunedin Member",
+        "Cologix",
+        "Digital Edge",
+        "Montera Infrastructure",
+        "Montera",
+        "Kingdom BESS Development",
+        "Kingdom Energy Storage Platform",
+        "TerraWind Renewables",
+        "TerraWind",
+        "WahajPeak",
+        "Synera Renewable Energy",
+        "JouleTerra",
+        "Boundary Street Capital",
+        "Astound Broadband"
+      ],
+      "domains": [
+        "stonepeak.com"
+      ],
+      "srcTotal": 56,
+      "srcFirstPct": 77,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "capital",
           "role": "incumbent"
         }
       ]
@@ -5907,13 +6061,13 @@
       "tagline": "Denver powered-land developer (Tract Capital Management, founded 2022 by Cologix's Grant van Rooyen) that entitles and services master-planned parks — 14 parks, ~21,000 acres, ~18.7 GW on its projects page, 12,000 acres of it at Reno's TRIC — and sells shovel-ready parcels; the only recorded buyer is sister platform Fleet Data Centers, whose two 230 MW Storey County campuses are leased 197 months to a tenant Bloomberg names as Nvidia and financed by USD 8.4bn of notes, while NV Energy sued Tract in July 2026 and the PUCN decides its temporary gas plants on 8 September.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "tract.com",
         "tractcapital.com",
         "fleetdatacenters.com"
       ],
-      "srcTotal": 159,
+      "srcTotal": 161,
       "srcFirstPct": 32,
       "kpiNorm": false,
       "segments": [
@@ -6068,12 +6222,12 @@
       "tagline": "The giga-scale Stargate landlord — 41 campuses / ~9 GW on five continents, 1.4 GW Frontier + 902 MW Lighthouse for Oracle/OpenAI behind a record $38B loan; invented the data-center ABS, now reportedly exploring a ~$100B IPO.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "vantage-dc.com"
       ],
-      "srcTotal": 48,
-      "srcFirstPct": 81,
+      "srcTotal": 49,
+      "srcFirstPct": 82,
       "kpiNorm": false,
       "segments": [
         {
@@ -6366,13 +6520,13 @@
       "hq": "Rockville, Maryland, USA",
       "ticker": "NASDAQ: XE",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "x-energy.com",
         "cdn.x-energy.com",
         "investors.x-energy.com"
       ],
-      "srcTotal": 139,
+      "srcTotal": 141,
       "srcFirstPct": 62,
       "kpiNorm": false,
       "segments": [
@@ -6391,12 +6545,12 @@
       "tagline": "The extreme case in behind-the-fence power — ~1 GW Colossus on self-built gas + the largest Megapack fleet; now inside SpaceX, monetized by Anthropic at $15B/yr.",
       "hq": "Palo Alto, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-10-05",
       "domains": [
         "x.ai"
       ],
-      "srcTotal": 22,
-      "srcFirstPct": 36,
+      "srcTotal": 23,
+      "srcFirstPct": 35,
       "kpiNorm": false,
       "segments": [
         {
@@ -6827,7 +6981,7 @@
       "hq": "Tokyo, Japan",
       "ticker": "TSE: 9984",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "aka": [
         "SoftBank Group Corp.",
         "SoftBank Group",
@@ -6900,7 +7054,7 @@
       "tagline": "SoftBank-controlled developer and owner of OpenAI-leased AI campuses — Milam County, TX (~753 MW-IT, under construction) and PORTS-Pike, OH (~8.0 GW-IT leased Aug 2026, NVIDIA-guaranteed, not started) — and of ~2.2 GW of operating solar and storage; buys transformers, switchgear, modules and batteries directly (Fluence at Athos); PORTS gas belongs to another SoftBank affiliate; Nasdaq/Nasdaq Texas IPO (SBE) filed, unpriced",
       "hq": "Redwood City, CA, United States",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "aka": [
         "SB Energy, Inc.",
         "SB Energy Global",
@@ -6955,7 +7109,7 @@
       "hq": "New York, NY, United States",
       "ticker": "NYSE: OWL",
       "status": "active",
-      "lastUpdated": "2026-10-04",
+      "lastUpdated": "2026-10-05",
       "aka": [
         "Blue Owl Capital Inc.",
         "Blue Owl Capital",
@@ -6997,7 +7151,7 @@
       "domains": [
         "blueowl.com"
       ],
-      "srcTotal": 41,
+      "srcTotal": 43,
       "srcFirstPct": 63,
       "kpiNorm": true,
       "segments": [

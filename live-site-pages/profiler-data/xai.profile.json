@@ -212,6 +212,17 @@
    "note": "xAI joined the BlackRock-chaired AI Infrastructure Partnership, with NVIDIA, on 19 March 2025.",
    "context": "BlackRock's 19 March 2025 release: NVIDIA and xAI join the partnership, renamed the AI Infrastructure Partnership, and GE Vernova and NextEra Energy agree to collaborate with it. The partnership's first investment is Aligned Data Centers, closed in July 2026, and xAI is named among Aligned's strategic partners. xAI's commitment is undisclosed.",
    "source": "https://www.blackrock.com/corporate/newsroom/media/press-releases/ai-infrastructure-partnership"
+  },
+  {
+   "slug": "apollo",
+   "type": "other",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "USD 3.5bn financing of a USD 5.4bn transaction",
+   "via": "Valor Compute Infrastructure triple-net lease",
+   "note": "Apollo funds led the USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn purchase of NVIDIA GB200 compute, leased triple-net to an xAI subsidiary.",
+   "context": "Apollo's release of 7 January 2026: Apollo-managed funds 'led a $3.5 billion capital solution for Valor Compute Infrastructure L.P. (VCI), a fund managed by Valor Equity Partners', supporting VCI's USD 5.4bn acquisition of NVIDIA GB200 compute and its triple-net lease to an xAI subsidiary. Apollo is a financier of the lessor, not a counterparty to xAI's own purchasing.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463"
   }
  ],
  "technicalSpecs": [
@@ -420,6 +431,11 @@
    "date": "2026-01-29"
   },
   {
+   "label": "Apollo — backs USD 5.4bn Valor and xAI compute transaction with USD 3.5bn capital solution",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463",
+   "date": "2026-01-07"
+  },
+  {
    "label": "xAI — Series E announcement ($20B)",
    "url": "https://x.ai/news/series-e",
    "date": "2026-01-06"
@@ -468,6 +484,6 @@
    "url": "https://x.ai/memphis"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 6
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 7
 }

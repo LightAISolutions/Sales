@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "slug": "fluidstack",
   "title": "Fluidstack — Technology Study Guide",
-  "lastUpdated": "2026-09-05",
+  "lastUpdated": "2026-10-05",
   "glossary": [
     {
       "t": "Google Recognition Agreement",
@@ -87,7 +87,7 @@
         ],
         [
           "**Chip owner**",
-          "A chip-leasing vehicle (Apollo–Blackstone, per press), with Broadcom residual-value support",
+          "A chip-leasing vehicle under Broadcom's AI XPV Platform (Apollo-led, with Blackstone), with a Broadcom backstop of the lease payments",
           "The TPUs, leased to the end user",
           "The end user's lease payments; Broadcom's residual promise"
         ],

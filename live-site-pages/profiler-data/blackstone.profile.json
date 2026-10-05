@@ -461,12 +461,13 @@
   {
    "slug": "fluidstack",
    "type": "other",
-   "status": "announced",
+   "status": "active",
    "since": "2026-06",
-   "scale": "reported USD 35bn initial tranche of the chip vehicle",
-   "note": "Blackstone is reported as a participant in the Broadcom-Apollo-Blackstone vehicle that buys chips and leases them to Anthropic at Fluidstack sites.",
-   "context": "Press accounts of a chip-leasing platform describe an initial USD 35bn tranche to facilitate about 1 GW of compute that Anthropic is expected to deploy at Fluidstack-operated sites, with the vehicle buying Google-designed TPUs and leasing them onward. Bloomberg separately reported in September 2026 that Blackstone was weighing a second debt package for the same arrangement. **This is trade reporting, not a filed arrangement**: no Blackstone filing located names Fluidstack, Anthropic or the vehicle, and the Broadcom release page was unreachable. It is recorded as `other` and as reported rather than confirmed.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526340208/d158269d10q.htm"
+   "scale": "USD 35bn initial tranche, Apollo-led; Blackstone share undisclosed",
+   "note": "Blackstone's Credit & Insurance business is an initial anchor investor, with Apollo, in Broadcom's AI XPV Platform, whose compute racks Anthropic leases at Fluidstack-based sites.",
+   "context": "Broadcom's and Apollo's joint release of 9 June 2026 names Apollo and Blackstone's Credit & Insurance business as the platform's initial anchor investors. The initial USD 35bn tranche, led by Apollo funds with global banks, facilitates Anthropic's previously announced expansion of more than 1 GW of compute, 'expected to deploy in Fluidstack-based sites starting in mid-2026'. Apollo's Q2 2026 10-Q records an Apollo-managed fund as the purchaser of the compute, and Broadcom's 10-Q records Broadcom's backstop of the lease payments. The racks are leased to Anthropic, not to Fluidstack, and no split between Apollo and Blackstone is disclosed. Bloomberg separately reported in September 2026 that Blackstone was weighing a second debt package for the same arrangement; that is reported, not announced. Recorded as `other` because Blackstone reaches Fluidstack only through the platform's lessee.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+   "via": "Broadcom AI XPV Platform"
   },
   {
    "slug": "blackrock",
@@ -483,6 +484,17 @@
    "note": "A competitor for infrastructure capital and platforms; second in Infrastructure Investor's 2026 five-year fundraising ranking.",
    "context": "KKR ranks second in Infrastructure Investor's 2026 table at USD 100.5bn against Blackstone's eighth; both own hyperscale landlords (KKR with GIP in CyrusOne, Blackstone in QTS).",
    "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "apollo",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "USD 35bn initial tranche, Apollo-led; split undisclosed",
+   "via": "Broadcom AI XPV Platform",
+   "note": "Fellow initial anchor investor in Broadcom's AI XPV Platform: Apollo funds lead the initial USD 35bn tranche and Blackstone's Credit & Insurance business co-anchors it.",
+   "context": "The joint release of 9 June 2026 names Apollo and Blackstone's Credit & Insurance business as the platform's initial anchor investors, with Apollo funds leading the initial tranche alongside global banks. Both firms were also among the six in NVIDIA's August 2026 compute-financing memoranda. The two compete for the same infrastructure-credit and data-centre mandates; on this vehicle they are co-investors.",
+   "source": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl"
   }
  ],
  "decisionMakers": [
@@ -681,6 +693,11 @@
  },
  "sources": [
   {
+   "label": "Broadcom — Form 10-Q, quarter ended 2 August 2026 (AI XPV platform and backstop)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+   "date": "2026-09-10"
+  },
+  {
    "label": "BXDC (Blackstone Digital Infrastructure Trust) Form 10-Q, quarter ended 30 June 2026",
    "url": "https://www.sec.gov/Archives/edgar/data/2100161/000210016126000007/bxdc-20260630.htm",
    "date": "2026-08-10"
@@ -688,6 +705,11 @@
   {
    "label": "NVIDIA — partnerships with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over $500bn for AI infrastructure",
    "url": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Apollo Global Management — Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm",
    "date": "2026-08-10"
   },
   {
@@ -729,6 +751,11 @@
    "label": "US Senate Committee on Banking, Housing and Urban Affairs (Minority) — letters to Blackstone, BlackRock, KKR and Brookfield Infrastructure on data-centre ownership and electricity costs",
    "url": "https://www.banking.senate.gov/newsroom/minority",
    "date": "2026-06-10"
+  },
+  {
+   "label": "Broadcom, Apollo and Blackstone establish the AI XPV Platform (joint release, Apollo newsroom)",
+   "url": "https://www.apollo.com/insights-news/pressreleases/2026/06/broadcom--apollo--and-blackstone-establish-landmark-strategic-pl",
+   "date": "2026-06-09"
   },
   {
    "label": "Infrastructure Investor 100 — 2026 edition, five-year infrastructure capital raised",
@@ -831,6 +858,6 @@
    "url": "https://pestakeholder.org/news/private-equity-cash-fuels-data-center-buildout/"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 2
+ "lastUpdated": "2026-10-05",
+ "profileVersion": 3
 }

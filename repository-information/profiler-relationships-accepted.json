@@ -151,6 +151,72 @@
       "pair": "blue-owl x oracle",
       "why": "Indirect by construction: Blue Owl-managed funds own STACK, which develops Project Jupiter for Oracle; Oracle's contract is with STACK, not Blue Owl, so both sides type it 'other' (project pin jupiter-nm). No inverse type applies. F-I2 accept 4 of 4.",
       "when": "2026-10-04"
+    },
+    {
+      "id": "9b9a184c8349",
+      "pair": "aep x stonepeak",
+      "why": "Indirect by construction: AEP Ohio's 15-year onsite fuel-cell contract is with Cologix, which Stonepeak controls; Stonepeak has no AEP contract itself, so both sides type it 'other'. F-I3 accept 1 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "541b99d4699a",
+      "pair": "anthropic x apollo",
+      "why": "Financing, not supply or ownership: Apollo funds lead the initial USD 35bn tranche of Broadcom's AI XPV Platform, whose Apollo-managed purchaser leases compute racks to Anthropic (joint release, 9 June 2026; both 10-Qs). Lessor-financier to lessee has no inverse type. F-I3 accept 2 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "7a1ad44c2e32",
+      "pair": "apollo x blue-owl",
+      "why": "A historical asset sale through a portfolio company: Apollo funds bought STACK's European colocation business (now Vaultica) from STACK, Blue Owl's portfolio company, in April 2025; a buyer of a business from a seller has no enum type. F-I3 accept 3 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "1ebaced54af5",
+      "pair": "apollo x exelon",
+      "why": "Indirect by construction: ComEd builds the substation for Stream Data Centers' Elk Grove Village campus; Stream, which Apollo funds control, is the counterparty, not Apollo. F-I3 accept 4 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "524874033056",
+      "pair": "apollo x fluidstack",
+      "why": "Indirect by construction: the Apollo-led XPV tranche funds compute racks deployed at Fluidstack-based sites but leased to Anthropic, not to Fluidstack (joint release, 9 June 2026). No direct Apollo–Fluidstack contract. F-I3 accept 5 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "cc10565b7e21",
+      "pair": "apollo x nscale",
+      "why": "Lender relationship per the F-I1 precedent: Apollo-managed funds are among the investors in Nscale's pre-IPO convertible loan notes (Nscale release, 25 September 2026); a convertible is debt until it converts. F-I3 accept 6 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "5d6dd8cb8dd7",
+      "pair": "apollo x stack-infrastructure",
+      "why": "A historical carve-out purchase: Apollo infrastructure funds bought STACK's pan-European colocation business in April 2025; a buyer of a business unit is neither customer nor investor in the seller. F-I3 accept 7 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "4418486f625f",
+      "pair": "apollo x xai",
+      "why": "Financing of the lessor: Apollo funds led the USD 3.5bn capital solution for Valor Compute Infrastructure's USD 5.4bn purchase of GB200 compute leased triple-net to an xAI subsidiary (Apollo release, 7 January 2026). Lender to the lessor has no inverse type. F-I3 accept 8 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "c07343ae0f69",
+      "pair": "ares x vantage",
+      "why": "Lender relationship per the F-I1 precedent: Ares funds arranged a USD 2.4bn debt facility for Vantage and hold about USD 1.6bn of the commitment (Ares release, 10 February 2026). F-I3 accept 9 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "2f6f6fbbf99f",
+      "pair": "catl x stonepeak",
+      "why": "Indirect by construction: CATL batteries are in Kingdom's Mimasaka project; Kingdom, the BESS platform Stonepeak established, is the buyer and Stonepeak the sponsor (Kingdom release, 7 April 2026). F-I3 accept 10 of 11.",
+      "when": "2026-10-05"
+    },
+    {
+      "id": "3b773ecd0095",
+      "pair": "macquarie x stonepeak",
+      "why": "A signed-not-closed M&A counterparty: Macquarie Asset Management is in the consortium selling Cleco to Stonepeak and Bernhard Capital Partners (Stonepeak release, 27 April 2026). Seller to buyer has no enum type. F-I3 accept 11 of 11.",
+      "when": "2026-10-05"
     }
   ]
 }

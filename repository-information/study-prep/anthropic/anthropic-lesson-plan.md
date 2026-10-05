@@ -62,7 +62,7 @@
 
 **The single idea:** the silicon is a lessor's asset with a residual-value promise attached, and every rung of the book lands in one window.
 
-**The lessor vehicle.** A chip-leasing vehicle — Broadcom, Apollo and Blackstone in the reported structure — buys the TPUs, leases them to the halls the buyer uses, and carries the risk that the chips are worth less at lease end than the model assumed; residual-value support from the chip's designer is what makes a lender fund a five-year lease on a two-year product cycle. The buyer pays a capacity fee and never owns a chip; the vehicle's lenders are one more counterparty whose comfort depends on the buyer's run-rate.
+**The lessor vehicle.** A chip-leasing vehicle — Broadcom's AI XPV Platform, announced by Broadcom, Apollo and Blackstone on 9 June 2026 — buys the TPUs, leases them to the halls the buyer uses, and carries the risk that the chips are worth less at lease end than the model assumed; residual-value support from the chip's designer is what makes a lender fund a five-year lease on a two-year product cycle. The buyer pays a capacity fee and never owns a chip; the vehicle's lenders are one more counterparty whose comfort depends on the buyer's run-rate.
 
 **The delivery window.** Trainium "nearly 1 GW" by end-2026; Fluidstack sites "throughout 2026" with CB-5 already at early 2027; Barber Lake September 2026; River Bend Q2 2027; Hawesville 2H 2027; Rockdale December 2027; Monarch late 2027; TPUs "starting in 2027". No filing read reports a missed milestone; the May 2026 rate limits the company attributed to a compute shortage show what a shortfall costs.
 

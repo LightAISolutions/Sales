@@ -2,7 +2,7 @@
  "schemaVersion": 2,
  "slug": "engie-north-america",
  "title": "ENGIE North America — Technology Study Guide",
- "lastUpdated": "2026-09-06",
+ "lastUpdated": "2026-10-05",
  "sections": [
   {
    "id": "start-here-the-bought-fleet",
@@ -91,7 +91,7 @@
     "The mechanics are worth being precise about, because the headline numbers are misleading. In May 2025 CBRE Investment Management took a **49.5%** interest in a portfolio of 31 operating batteries totalling 2.4 GW in Texas and California. ENGIE did not sell 2.4 GW. It sold just under half of the economics of 2.4 GW, and the release says exactly what it kept: ENGIE 'will retain a controlling share in the portfolio and will continue to operate and manage the assets'.",
     "Read that sentence as three separate things. **Control** means ENGIE still consolidates the assets and still decides how they are dispatched and when they are augmented. **Operations** means ENGIE keeps an O&M contract, which is fee income that survives the sale. And **just under half** is not an accident: staying below 50% keeps the accounting and the governance where ENGIE wants them.",
     "Why does an infrastructure fund buy the other half? Because an operating battery with a track record is a different risk than a battery on a drawing board. The fund is buying contracted or proven merchant cash flow with the development risk already spent; the developer is buying the ability to start again. Both sides get the risk they are set up to hold. This is the same logic as a {{partnership flip}} in {{tax equity}}, applied to operating assets rather than to tax attributes.",
-    "The pattern repeats in ENGIE's record: Ares took 49% of 905 MW for $430m in March 2025 and added 730 MW in January 2026, taking that relationship to 4.3 GW. Three sell-downs in ten months.",
+    "The pattern repeats in ENGIE's record: Ares took a minority stake in 905 MW for $430m in March 2025 and added 730 MW in January 2026, taking that relationship to 4.3 GW. Three sell-downs in ten months.",
     "The number that tells you it is real: North American industrial capital employed **fell** by 808 million euros across 2025 while the region's revenue rose 5%. ENGIE is running the American business for cash, not for balance-sheet growth."
    ]
   },
@@ -207,7 +207,7 @@
     },
     {
      "x": 2025.2,
-     "label": "Ares takes 49% of 905 MW for $430m — capital recycling begins"
+     "label": "Ares takes a minority stake in 905 MW for $430m — capital recycling begins"
     },
     {
      "x": 2025.4,

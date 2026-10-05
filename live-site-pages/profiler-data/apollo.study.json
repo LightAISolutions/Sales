@@ -1,0 +1,406 @@
+{
+ "schemaVersion": 2,
+ "slug": "apollo",
+ "title": "Apollo — Technology Study Guide",
+ "lastUpdated": "2026-10-05",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a manager with an insurer, a developer and a chip-financing book",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Apollo the listed company signs no power-equipment order; Stream Data Centers and its other controlled platforms do.",
+   "ps": [
+    "**The firm.** Apollo Global Management is a listed {{asset manager}} that also owns a life insurer, Athene. It earns fees on the money it manages and a spread on the insurer's own portfolio.",
+    "**The developer.** Apollo-managed funds bought a majority of Stream Data Centers, a hyperscale developer with more than 4 GW of long-term powered land. Stream's management builds the campuses and buys their equipment.",
+    "**The chip financing.** Apollo leads the initial USD 35bn of Broadcom's AI XPV Platform, which buys compute racks and leases them to Anthropic, and led a USD 3.5bn financing of GB200 systems leased to an xAI subsidiary. Those are chips, not power gear.",
+    "This guide teaches the mechanics behind that: how a manager that owns an insurer earns, how annuity money becomes long-dated lending, asset-based finance, how a chip-financing platform is layered, what controlling a developer means for a seller, why a 50% stake is not control, and how to read the deals on the record."
+   ]
+  },
+  {
+   "id": "manager-and-insurer",
+   "title": "A manager that owns an insurer",
+   "kind": "prose",
+   "read": "Fees on other people's money and a spread on the insurer's own portfolio are two different businesses.",
+   "ps": [
+    "Apollo reports three segments. **Asset Management** earns {{management fee}}s and transaction fees on the funds it runs; its headline measure is {{fee-related earnings}}. **Retirement Services** is Athene, a life insurer Apollo has owned outright since January 2022; its measure is {{spread-related earnings}}. **Principal Investing** is Apollo's own capital in its funds, which pays out when investments are sold.",
+    "The sizes differ by design. Apollo reported about USD 1.05tn of {{assets under management}} at 30 June 2026, USD 858bn of it fee-generating, and USD 621bn of perpetual capital — money with no date on which it must be returned. Athene's USD 416bn is the largest slice of that perpetual capital.",
+    "Why it matters to a seller: perpetual capital lets Apollo hold long loans and leases for their whole life. That is the profile of a data-centre lease or a chip lease, and it is why Apollo can lead deals of a size most managers syndicate.",
+    "None of this money buys equipment directly. It owns or lends to the companies that do."
+   ]
+  },
+  {
+   "id": "where-earnings-come-from",
+   "title": "Where Apollo's earnings come from",
+   "kind": "bars",
+   "read": "The insurer's spread is the largest earnings line; fees are close behind.",
+   "unit": "USD millions, full year 2025",
+   "intro": "Apollo's three segment measures for 2025, from its full-year results.",
+   "items": [
+    {
+     "label": "Spread-related earnings",
+     "sub": "Athene: investment income minus what annuity holders are owed",
+     "v": 3361
+    },
+    {
+     "label": "Fee-related earnings",
+     "sub": "Asset Management: fees on funds and deals",
+     "v": 2528
+    },
+    {
+     "label": "Principal investing income",
+     "sub": "Apollo's own capital, paid when investments are sold",
+     "v": 338
+    }
+   ]
+  },
+  {
+   "id": "annuity-money",
+   "title": "How annuity money becomes long-dated lending",
+   "kind": "prose",
+   "read": "An insurer that owes money in twenty years wants assets that pay for twenty years.",
+   "ps": [
+    "An {{annuity}} is a promise: the saver hands over a lump sum, the insurer pays a stated return or income for years. The insurer invests the premiums in its {{general account}} and keeps the difference between what the portfolio earns and what it owes — the spread.",
+    "To earn that spread safely the portfolio must be long-dated and mostly high-grade. Athene's is 'primarily high-grade fixed income assets', managed by Apollo's asset-management arm. Loans backed by long leases to creditworthy tenants fit that profile well.",
+    "That is the link to AI infrastructure. A five-year lease of compute racks to a large AI lab, backstopped by the chip designer, is a long, contracted stream of payments. In the Broadcom platform Athene guarantees 15% of the purchaser's obligation, and per trade press it also took a sizable part of the debt.",
+    "The insurer is a funder. It does not choose the racks, the site or the power equipment."
+   ]
+  },
+  {
+   "id": "asset-based-finance",
+   "title": "Lending against assets, not companies",
+   "kind": "prose",
+   "read": "Most of Apollo is credit, and a large share of that credit is secured by specific assets.",
+   "ps": [
+    "Apollo's credit business held USD 749.2bn at 31 December 2025. USD 302.1bn was direct origination — loans to companies, judged on the company's credit. USD 282.7bn was {{asset-based finance}} — loans secured by pools of equipment, leases, receivables or loans, judged first on the assets and their cash flows.",
+    "Chip financing is asset-based finance. The lender's protection is the hardware and the lease payments; its risk is what the chips are worth if the lease ends early, and whether the lessee can pay. A {{credit backstop}} from a strong party narrows that risk.",
+    "Apollo Capital Solutions is the arranging arm: it originates, structures and syndicates loans, and earned a record USD 808m of fees in 2025. Leading a deal and holding all of it are different things — an arranger may keep part and sell the rest.",
+    "For a power-equipment seller, a credit book is a list of who is building with whose money. It is not a purchasing department."
+   ]
+  },
+  {
+   "id": "xpv-layers",
+   "title": "The layers of a chip-financing platform",
+   "kind": "table",
+   "read": "Each party in Broadcom's AI XPV Platform carries a different risk; none of them buys power equipment.",
+   "intro": "From the joint release of 9 June 2026, Apollo's Q2 2026 10-Q and Broadcom's 10-Q for the quarter to 2 August 2026. The platform is a {{chip-leasing vehicle}} at very large scale.",
+   "cols": [
+    "Layer",
+    "Who",
+    "What it does"
+   ],
+   "rows": [
+    [
+     "Designer and backstop",
+     "Broadcom",
+     "Designs the compute racks and backstops the customer's five-year lease payments, up to about USD 29bn"
+    ],
+    [
+     "Purchaser",
+     "An Apollo-managed fund",
+     "Holds the obligation to buy the racks, across a multi-year draw schedule"
+    ],
+    [
+     "Guarantor",
+     "Athene",
+     "Guarantees 15% of the purchase obligation; a third party reimburses it for 35% of anything it pays"
+    ],
+    [
+     "Anchor investors",
+     "Apollo funds (lead) and Blackstone's Credit & Insurance business",
+     "Provide the initial USD 35bn with global banks"
+    ],
+    [
+     "Lessee",
+     "Anthropic",
+     "Leases the racks and pays the rent"
+    ],
+    [
+     "Sites",
+     "Fluidstack-based sites",
+     "Where the racks are deployed; the building owners and operators buy the power equipment"
+    ]
+   ]
+  },
+  {
+   "id": "four-numbers",
+   "title": "Four numbers that are not the same thing",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "A commitment, a target, a backstop and a guarantee share a headline and nothing else.",
+   "ps": [
+    "**USD 35bn** is the initial capital solution — committed money drawn over several years as racks are bought, with fundings expected by 2028. It is not money lent on day one.",
+    "**Over 20 GW** is the platform's design target for compute capacity through 2028. It is an ambition, not a contract.",
+    "**About USD 29bn** is Broadcom's maximum potential liability under its backstop of the lease payments, undiscounted. It is a ceiling on a promise, not a payment.",
+    "**15%** is Athene's share of the purchase obligation it guarantees. Apply the same discipline elsewhere: Apollo led a **USD 3.5bn** financing of Valor's **USD 5.4bn** purchase of GB200 systems leased to an xAI subsidiary — a loan size and a transaction size, not two loans."
+   ]
+  },
+  {
+   "id": "controlling-a-developer",
+   "title": "What controlling a developer means for a seller",
+   "kind": "prose",
+   "read": "Apollo's funds own most of Stream; Stream's management and joint ventures sign the orders.",
+   "ps": [
+    "Apollo-managed funds bought a majority of Stream Data Centers in November 2025; Stream's management and a Principal Asset Management fund kept minority stakes, and no percentage or price was disclosed. This is a {{platform investment}}: the fund supplies capital and governance, the company keeps its team and pipeline.",
+    "Stream reports more than 4 GW of long-term {{powered land}} — sites where a utility has committed to deliver power — and delivers its campuses through joint ventures. Apollo and Stream Realty Partners committed new capital for 650 MW of near-term capacity in metro Chicago, Atlanta and Dallas.",
+    "The orders for switchgear, transformers, generators and batteries are placed by Stream's development teams or the joint ventures that own each campus. At Elk Grove Village, Illinois, the utility ComEd is building the substation itself — the utility buys that equipment, not Stream.",
+    "One report shows how this can grow: in September 2026 The Information reported Anthropic in early talks to lease up to 1 GW directly from Stream. No party has announced it, so it is a lead, not a fact."
+   ]
+  },
+  {
+   "id": "half-is-not-control",
+   "title": "Why a 50% stake is not control",
+   "kind": "prose",
+   "read": "Apollo's largest energy cheques buy half of assets that a partner builds and runs.",
+   "ps": [
+    "A {{minority interest}} buys a share of the returns and some protective rights. Control means deciding the budget, the management and the contracts. Even at exactly 50% the agreements usually leave operations with the other owner, and that owner is the one who buys.",
+    "Apollo funds committed USD 6.5bn for 50% of Ørsted's 2.9 GW Hornsea 3 offshore wind farm, including half of its capital spending; Ørsted builds and operates it. Apollo holds 50% of TotalEnergies' roughly 2 GW Texas solar-and-storage portfolio, which TotalEnergies operates. In the German grid joint venture with RWE, RWE has operational control.",
+    "By contrast Apollo's funds control Stream, Vaultica (STACK's former European colocation business), PowerGrid Services, a utility maintenance and construction contractor, and — once the deal closes — Eagle Creek's roughly 700 MW of hydro plants.",
+    "The test for a seller is never the size of the cheque. It is who signs the purchase order."
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test across Apollo's positions",
+   "kind": "table",
+   "read": "An investor passes only through a platform it controls that buys power equipment.",
+   "intro": "Each position, what kind it is, and who signs for equipment. The {{buying-authority test}} is defined in this guide's glossary.",
+   "cols": [
+    "Position",
+    "Kind",
+    "Who signs for power equipment",
+    "Passes?"
+   ],
+   "rows": [
+    [
+     "Stream Data Centers",
+     "Majority owned by Apollo funds",
+     "Stream's management and its campus joint ventures",
+     "Through the platform"
+    ],
+    [
+     "Vaultica Data Centers",
+     "Owned by Apollo funds",
+     "Vaultica's management, at seven European colocation sites",
+     "Through the platform"
+    ],
+    [
+     "PowerGrid Services",
+     "Majority owned by Apollo funds",
+     "A contractor: installs equipment that utilities buy",
+     "Rarely"
+    ],
+    [
+     "Eagle Creek Renewable Energy",
+     "Purchase agreed, not closed",
+     "Eagle Creek's management, once the deal closes",
+     "Pending"
+    ],
+    [
+     "Broadcom AI XPV Platform; Valor Compute Infrastructure",
+     "Financier and guarantor",
+     "The lessees and site operators; the financing buys chips",
+     "No"
+    ],
+    [
+     "Hornsea 3; TotalEnergies Texas; RWE grid venture",
+     "50% or minority stakes",
+     "Ørsted, TotalEnergies, RWE",
+     "No"
+    ],
+    [
+     "FlexGen; Nscale",
+     "Minority equity; convertible notes",
+     "FlexGen is a seller; Nscale is a borrower that buys for itself",
+     "No"
+    ]
+   ]
+  },
+  {
+   "id": "deal-ladder",
+   "title": "The deal ladder for Apollo's 2025–2026 transactions",
+   "kind": "table",
+   "read": "A report, a memorandum, a signing and a closing are four different states.",
+   "intro": "Where each deal on the record stands, in the words of the parties' own releases and filings.",
+   "cols": [
+    "Stage",
+    "Example",
+    "What to record"
+   ],
+   "rows": [
+    [
+     "Report",
+     "Anthropic in talks to lease up to 1 GW from Stream (The Information, September 2026)",
+     "Reported, unconfirmed by any party"
+    ],
+    [
+     "Memorandum",
+     "NVIDIA's compute-financing memoranda with six firms including Apollo (August 2026)",
+     "Subject to final agreements; no per-firm allocation"
+    ],
+    [
+     "Signed, not closed",
+     "Eagle Creek purchase (October 2025); Kelvion's sale to SLB (August 2026)",
+     "Agreed; closing not announced"
+    ],
+    [
+     "Closed",
+     "Stream majority (November 2025); STACK's European colocation business, now Vaultica",
+     "Completed"
+    ],
+    [
+     "Committed, drawing",
+     "The USD 35bn XPV tranche",
+     "Committed money drawn as racks are bought"
+    ]
+   ]
+  },
+  {
+   "id": "directory",
+   "title": "A directory, not a door",
+   "kind": "proscons",
+   "read": "Apollo tells a seller where the money and the developers are; the orders are signed elsewhere.",
+   "intro": "Weigh the reach of Apollo's capital against the fact that the manager buys nothing itself.",
+   "cards": [
+    {
+     "t": "Why Apollo is worth knowing",
+     "meta": "A map of funded builders",
+     "adv": [
+      "**One controlled developer at scale.** Stream's powered land makes it one of the larger buyers of campus power equipment the corpus can reach through capital.",
+      "**Early signals.** A new financing tranche or land-fund commitment often precedes a developer's equipment plan.",
+      "**The compute side.** Its chip financing shows which AI labs are adding capacity, and at whose sites."
+     ],
+     "dis": [
+      "**No purchase order.** Apollo Global Management signs none; Stream, Vaultica and the site operators do.",
+      "**Chips, not power gear.** The largest deals buy compute; the power equipment is bought by whoever owns the buildings.",
+      "**Partners operate.** Its biggest energy stakes are 50% positions run by Ørsted, TotalEnergies and RWE."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date, a name or a deal size.",
+   "cards": [
+    {
+     "q": "How do {{spread-related earnings}} differ from {{fee-related earnings}}?",
+     "a": "Fee-related earnings are fees on other people's money; spread-related earnings are the insurer's own portfolio return minus what it owes annuity holders."
+    },
+    {
+     "q": "Why does an insurer's balance sheet suit long data-centre and chip leases?",
+     "a": "Its obligations to annuity holders run for decades, so it wants long, contracted, mostly high-grade income — which a long lease to a strong tenant provides."
+    },
+    {
+     "q": "What secures a loan in {{asset-based finance}}?",
+     "a": "A specific pool of assets or their cash flows — equipment, leases, receivables — rather than the borrower's general credit."
+    },
+    {
+     "q": "In a {{chip-leasing vehicle}}, what is the lender's main risk?",
+     "a": "That the lessee stops paying and the chips are worth less than the debt when the lease ends; a backstop from a strong party narrows it."
+    },
+    {
+     "q": "What does a {{credit backstop}} cap?",
+     "a": "The backer's maximum potential payment if the obligor defaults — a ceiling on a promise, not money paid."
+    },
+    {
+     "q": "Why is a committed facility drawn over several years not 'money lent'?",
+     "a": "Only the drawn amount is lent; the rest is a promise to lend as the assets are bought."
+    },
+    {
+     "q": "An investor owns 50% of a wind farm its partner builds and operates. Who buys the turbines?",
+     "a": "The operating partner — a {{minority interest}}, even at half, rarely carries control of procurement."
+    },
+    {
+     "q": "A fund controls a developer through a {{platform investment}}. Who places the equipment orders?",
+     "a": "The developer's management and the project companies it forms, under the fund's governance."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "Apollo-managed funds own a majority of Stream Data Centers. Who signs Stream's switchgear orders?",
+     "c": [
+      "Apollo Global Management",
+      "Athene",
+      "Stream's management and its campus joint ventures",
+      "Anthropic"
+     ],
+     "a": 2,
+     "why": "The controlled platform's management buys, under the governance of the funds that own it."
+    },
+    {
+     "q": "In Broadcom's AI XPV Platform, what does Athene's 15% figure describe?",
+     "c": [
+      "Athene's equity in Broadcom",
+      "The share of the purchase obligation Athene guarantees",
+      "Athene's share of Anthropic",
+      "The interest rate on the loans"
+     ],
+     "a": 1,
+     "why": "Athene guarantees 15% of the purchaser's obligation; a third party reimburses it for 35% of anything it pays."
+    },
+    {
+     "q": "Which of these is a design target rather than a commitment?",
+     "c": [
+      "USD 35bn initial tranche",
+      "Over 20 GW of compute through 2028",
+      "USD 3.5bn Valor financing",
+      "15% guarantee"
+     ],
+     "a": 1,
+     "why": "The 20 GW figure is the platform's ambition; the tranche is committed money drawn over time."
+    },
+    {
+     "q": "Apollo funds own 50% of Hornsea 3, which Ørsted builds and operates. For a turbine seller, who is the buyer?",
+     "c": [
+      "Apollo",
+      "Ørsted",
+      "Athene",
+      "The UK government"
+     ],
+     "a": 1,
+     "why": "Half the equity is a {{minority interest}} in practice: the operator controls procurement."
+    },
+    {
+     "q": "Which earnings line comes from Apollo's own insurer rather than from fees?",
+     "c": [
+      "Fee-related earnings",
+      "Spread-related earnings",
+      "Management fees",
+      "Transaction fees"
+     ],
+     "a": 1,
+     "why": "Spread-related earnings measure Athene's portfolio return minus its obligations to annuity holders."
+    },
+    {
+     "q": "A trade report says an AI lab is in talks to lease 1 GW from an Apollo-controlled developer. What do you record?",
+     "c": [
+      "A signed lease",
+      "A reported, unconfirmed lead",
+      "A closed acquisition",
+      "A cancelled deal"
+     ],
+     "a": 1,
+     "why": "Until a party announces it, a press report of talks is a lead, not a transaction."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "buying-authority test",
+   "d": "The Phase F screen for this corpus: does a company, or a platform it controls alone or jointly, sign for batteries, medium-voltage switchgear, generation or solid-state transformers? An investor passes only through a platform it controls."
+  },
+  {
+   "t": "purchase obligation",
+   "d": "A binding commitment to buy specified goods over a set period. In Broadcom's AI XPV Platform an Apollo-managed fund holds the obligation to buy the compute racks, which is what the financing pays for."
+  }
+ ]
+}

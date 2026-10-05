@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "slug": "anthropic",
   "title": "Anthropic — Technology Study Guide",
-  "lastUpdated": "2026-09-05",
+  "lastUpdated": "2026-10-05",
   "glossary": [
     {
       "t": "Project Rainier",
@@ -169,7 +169,7 @@
       "kind": "prose",
       "read": "6 min",
       "ps": [
-        "At the Fluidstack sites the buildings belong to landlords, the leases to Fluidstack subsidiaries, the credit to Google — and, by press accounts of the Broadcom–Apollo–Blackstone platform, the chips to a **{{chip-leasing vehicle}}** that 'will purchase Google's chips and lease them to Anthropic for use at facilities in New York, Texas, Louisiana, and Indiana', with Broadcom 'providing a residual value support agreement'. Bloomberg reported tranches of roughly USD 6 billion, USD 25 billion and USD 4.5 billion and a possible second package. The buyer neither buys the silicon nor rents it from a cloud: it leases it from a fund.",
+        "At the Fluidstack sites the buildings belong to landlords, the leases to Fluidstack subsidiaries, the credit to Google — and the chips to a **{{chip-leasing vehicle}}**. Under Broadcom's AI XPV Platform, announced by Broadcom, Apollo and Blackstone on 9 June 2026, an Apollo-managed fund buys the racks and leases them to Anthropic; Broadcom's 10-Q records a backstop of the five-year lease payments that, if the lessee defaults, covers the gap between 85% of what is owed and the racks' resale value. Press accounts describe the vehicle buying 'Google's chips' for facilities in New York, Texas, Louisiana, and Indiana. Bloomberg reported tranches of roughly USD 6 billion, USD 25 billion and USD 4.5 billion and a possible second package. The buyer neither buys the silicon nor rents it from a cloud: it leases it from a fund.",
         "The structure exists because of one number nobody knows — what a TPU is worth in 2031. A lender financing a chip fleet is really financing the fleet's value at the end of the lease; if that value is zero the lease payments must amortise the whole cost, which makes the rent expensive. **{{residual-value support}}** from the chip's designer caps that fear: Broadcom promises to stand behind part of the end-of-lease value, so the lessor can charge less and the lender can lend more. The corpus's coreweave guide teaches GPU-backed debt from the borrower's side; this is the same problem solved by moving the chips off every operating company's balance sheet and putting the designer's promise under them.",
         "For the buyer the lease is flexibility bought at a margin: a decade of chip obsolescence moved to a lessor, at the price of a lease payment above what an owner would pay and a dependence on the vehicle's continued financing. For the ecosystem it is a new kind of counterparty — a chip fund — that appears in no landlord filing and answers to bondholders. The Lambda deal shows the mirror image: NVIDIA holds the Beacon Point lease, Lambda installs the chips, Anthropic buys the output — 'circular financing', the NVIDIA CFO said, 'we see it differently'.",
         "**Self-check:** why would a chip designer guarantee the residual value of chips it has already been paid for? *(Because the guarantee is what makes the next order financeable — it is a cost of selling, priced against future volume.)*"

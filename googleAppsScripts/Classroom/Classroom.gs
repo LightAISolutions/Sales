@@ -1,4 +1,4 @@
-var VERSION = "v02.00g";
+var VERSION = "v02.01g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -23616,8 +23616,8 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
  "title": "Storage developers and IPPs",
  "short": "The owners and developers of grid-connected storage and merchant generation — standalone and hybrid battery fleets, the IPPs and yieldcos that hold them, and…",
  "group": "The Value Chain",
- "updated": "2026-10-04",
- "reviewBy": "2027-04-04",
+ "updated": "2026-10-05",
+ "reviewBy": "2027-04-05",
  "provenance": {
   "inputs": [
    {
@@ -23629,7 +23629,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "profile:apex-clean-energy",
-    "date": "2026-09-01",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -23683,7 +23683,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "profile:engie-north-america",
-    "date": "2026-09-06",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -23839,7 +23839,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "profile:sb-energy",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -23893,7 +23893,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -25290,11 +25290,43 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     ],
     [
      "**Apex Clean Energy**",
+     "Ares",
+     "investor",
+     "active",
+     "Majority stake (percentage undisclosed)",
+     "Ares Infrastructure Equity funds (formerly Infrastructure and Power)"
+    ],
+    [
+     "**Apex Clean Energy**",
      "MasTec",
      "supplier",
      "active",
      "—",
      "EPC frame agreement"
+    ],
+    [
+     "**Ares**",
+     "**Apex Clean Energy**",
+     "portfolio",
+     "active",
+     "Majority stake (percentage undisclosed)",
+     "Ares Infrastructure Equity funds (formerly Infrastructure and Power)"
+    ],
+    [
+     "**Ares**",
+     "**ENGIE North America**",
+     "partner",
+     "active",
+     "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "Ares Infrastructure Opportunities funds"
+    ],
+    [
+     "**Ares**",
+     "**SB Energy**",
+     "portfolio",
+     "active",
+     "USD 800m of preferred equity issued (≈USD 996m liquidation preference at 31 Dec 2025) plus warrants",
+     "SBE Global preferred equity"
     ],
     [
      "**Arevon**",
@@ -25522,6 +25554,14 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     ],
     [
      "**ENGIE North America**",
+     "Ares",
+     "partner",
+     "active",
+     "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "Ares Management Infrastructure Opportunities funds"
+    ],
+    [
+     "**ENGIE North America**",
      "Cipher Digital",
      "customer",
      "announced",
@@ -25567,49 +25607,9 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "historical",
      "409 MW / 900 MWh Manatee Energy Storage Center",
      "Irby Construction (EPC)"
-    ],
-    [
-     "**Hunt Energy Network**",
-     "Burns & McDonnell",
-     "other",
-     "historical",
-     "Fort Duncan EPC (for Recurrent Energy)",
-     "—"
-    ],
-    [
-     "**Intersect**",
-     "Crusoe",
-     "competitor",
-     "active",
-     "—",
-     "Texas SB 6 co-location net-metering"
-    ],
-    [
-     "**Intersect**",
-     "Equinix",
-     "other",
-     "active",
-     "—",
-     "executive hire"
-    ],
-    [
-     "**Invenergy**",
-     "Blattner",
-     "supplier",
-     "active",
-     "240 MW (Pleasant Prairie Solar)",
-     "Solar EPC"
-    ],
-    [
-     "**Invenergy**",
-     "Equinix",
-     "customer",
-     "historical",
-     "100 MW wind PPA (Wake Wind, ERCOT)",
-     "Power purchase agreement"
     ]
    ],
-   "note": "Curated edges among members: 100 · to the neighbouring segments: 93 (the first 40 shown, by company) · derived-only mentions (no curated typing): 40 among members, 18 to the neighbours."
+   "note": "Curated edges among members: 100 · to the neighbouring segments: 99 (the first 40 shown, by company) · derived-only mentions (no curated typing): 40 among members, 19 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -26718,6 +26718,13 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     "where-it-sits",
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-10-05",
+   "note": "regenerated: concepts:profiler-concepts 2026-10-04→2026-10-05; profile:apex-clean-energy 2026-09-01→2026-10-05; profile:engie-north-america 2026-09-06→2026-10-05; profile:sb-energy 2026-10-04→2026-10-05",
+   "changed": [
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -26731,7 +26738,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
  "title": "AIDC developers and landlords",
  "short": "The wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and…",
  "group": "The Value Chain",
- "updated": "2026-10-04",
+ "updated": "2026-10-05",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -26750,7 +26757,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:apex-clean-energy",
-    "date": "2026-09-01",
+    "date": "2026-10-05",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26758,6 +26765,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     "ref": "profile:applied-digital",
     "date": "2026-08-30",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ares",
+    "date": "2026-10-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -26834,7 +26847,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:fluidstack",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26876,7 +26889,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:nscale",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26888,7 +26901,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:prime-data-centers",
-    "date": "2026-09-07",
+    "date": "2026-10-05",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26912,13 +26925,13 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:sb-energy",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:stack-infrastructure",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26954,13 +26967,13 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:tract",
-    "date": "2026-09-26",
+    "date": "2026-10-05",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:vantage",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26978,14 +26991,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "39",
+   "k": "40",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -26997,10 +27010,10 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
   {
    "k": "19",
    "v": "challengers",
-   "sub": "contesting that set; 11 adjacent"
+   "sub": "contesting that set; 12 adjacent"
   },
   {
-   "k": "111",
+   "k": "119",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -27278,6 +27291,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "productsAndServices › Powered Land — large-load and data-center sites with secured interconnection"
     ],
     [
+     "**Ares**",
+     "ares",
+     "adjacent",
+     "productsAndServices › Ares Digital Infrastructure and Ada Infrastructure: Ares's own data-centre development and operating platform — the 10-K's 'dedicated data center operating platform' — with over 1 GW of campuses in flight (Northern Virginia, Tokyo, Osaka, London, Brazil)"
+    ],
+    [
      "**Eolian**",
      "eolian",
      "adjacent",
@@ -27507,6 +27526,16 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "—"
     ],
     [
+     "**Ares**",
+     "FY2025 · 2025-12-31",
+     "5,601.5",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**Fluidstack**",
      "FY2025 · 2025-12-31",
      "—",
@@ -27604,6 +27633,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "—"
     ],
     [
+     "**Apex Clean Energy**",
+     "**Ares**",
+     "investor",
+     "active",
+     "Majority stake (percentage undisclosed)",
+     "Ares Infrastructure Equity funds (formerly Infrastructure and Power)"
+    ],
+    [
      "**Applied Digital**",
      "**Core Scientific**",
      "competitor",
@@ -27626,6 +27663,38 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "—",
      "—",
      "—"
+    ],
+    [
+     "**Ares**",
+     "**Apex Clean Energy**",
+     "portfolio",
+     "active",
+     "Majority stake (percentage undisclosed)",
+     "Ares Infrastructure Equity funds (formerly Infrastructure and Power)"
+    ],
+    [
+     "**Ares**",
+     "**Prime Data Centers**",
+     "portfolio",
+     "active",
+     "Joint control cleared by the European Commission (share undisclosed)",
+     "Ares Infrastructure Equity"
+    ],
+    [
+     "**Ares**",
+     "**SB Energy**",
+     "portfolio",
+     "active",
+     "USD 800m of preferred equity issued (≈USD 996m liquidation preference at 31 Dec 2025) plus warrants",
+     "SBE Global preferred equity"
+    ],
+    [
+     "**Ares**",
+     "**Vantage Data Centers**",
+     "other",
+     "active",
+     "USD 2.4bn facility; Ares holds about USD 1.6bn",
+     "Ares Infrastructure Debt"
     ],
     [
      "**Cipher Digital**",
@@ -28165,6 +28234,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     ],
     [
      "**Prime Data Centers**",
+     "**Ares**",
+     "investor",
+     "active",
+     "Joint control cleared March 2025; share undisclosed",
+     "Ares Infrastructure Equity"
+    ],
+    [
+     "**Prime Data Centers**",
      "**PowerHouse Data Centers**",
      "competitor",
      "active",
@@ -28218,6 +28295,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "active",
      "—",
      "—"
+    ],
+    [
+     "**SB Energy**",
+     "**Ares**",
+     "investor",
+     "active",
+     "USD 800m of preferred equity issued (≈USD 996m liquidation preference at 31 Dec 2025) plus warrants",
+     "SBE Global preferred equity"
     ],
     [
      "**STACK Infrastructure**",
@@ -28386,6 +28471,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "active",
      "—",
      "—"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "**Ares**",
+     "other",
+     "active",
+     "USD 2.4bn facility; Ares holds about USD 1.6bn of the commitment",
+     "Ares Infrastructure Debt"
     ],
     [
      "**Vantage Data Centers**",
@@ -28580,6 +28673,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "—"
     ],
     [
+     "**Ares**",
+     "ENGIE North America",
+     "partner",
+     "active",
+     "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "Ares Infrastructure Opportunities funds"
+    ],
+    [
      "**Aypa Power**",
      "**Eolian**",
      "partner",
@@ -28762,17 +28863,9 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "active",
      "1.6% of annualised recurring revenue; 49 locations",
      "—"
-    ],
-    [
-     "**Digital Realty**",
-     "Microsoft",
-     "partner",
-     "active",
-     "—",
-     "Azure ExpressRoute"
     ]
    ],
-   "note": "Curated edges among members: 111 · to the neighbouring segments: 142 (the first 40 shown, by company) · derived-only mentions (no curated typing): 34 among members, 54 to the neighbours."
+   "note": "Curated edges among members: 119 · to the neighbouring segments: 144 (the first 40 shown, by company) · derived-only mentions (no curated typing): 35 among members, 54 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -28805,56 +28898,56 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     {
      "x": 4,
      "lane": "record",
+     "label": "2026-10-02 — Q3 2026 results set for Thursday 29 October before the NYSE opens, with a 9:00 a.m. ET call",
+     "sub": "Ares · financial"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-10-01 — Ares contributes more than EUR 1bn to Plenitude, rising to 26.24% and taking joint control with Eni (three of nine board seats, including the chairman)",
+     "sub": "Ares · ma"
+    },
+    {
+     "x": 6,
+     "lane": "record",
      "label": "2026-09-30 — The Wall Street Journal (via Semafor): 'The cloud startup NScale to postpone its investor roadshow' as OpenAI shelves its own listing and 'what was set to be a bumper IPO market to end the year is stalling'; no S-1 amendment, price range or pricing had been filed by 2 October",
      "sub": "Nscale · market"
     },
     {
-     "x": 5,
+     "x": 7,
+     "lane": "record",
+     "label": "2026-09-30 — Preliminary Q3 2026 realized net performance income of about USD 10m (Q3 2025: USD 9m)",
+     "sub": "Ares · financial"
+    },
+    {
+     "x": 8,
      "lane": "record",
      "label": "2026-09-29 — At the Bloomberg Canadian Finance Conference, Hypertec CEO Simon Ahdoot says 5C is 'absolutely considering an IPO' after a planned 'incremental $5 billion or $6 billion' raise; about 110 MW operational, a 1,500 MW roadmap, Hypertec 'remains largest shareholder'",
      "sub": "5C Group · financial"
     },
     {
-     "x": 6,
+     "x": 9,
      "lane": "record",
      "label": "2026-09-28 — Allegheny Front: Upper Burrell residents push to regulate the data centre; EQT signage photographed at wells by the site the company says it owns",
      "sub": "TECfusions · regulatory"
     },
     {
-     "x": 7,
+     "x": 10,
      "lane": "record",
      "label": "2026-09-28 — USD 1.07 billion four-year senior secured revolving credit facility (J.P. Morgan lead left arranger; Citi, Goldman Sachs, Morgan Stanley joint leads; 12 lenders); the release reiterates USD 7.5 billion of 'fully amortizing, non-recourse investment-grade project financing' for River Bend and Beacon Point and names no tenant",
      "sub": "Hut 8 · financial"
     },
     {
-     "x": 8,
+     "x": 11,
      "lane": "record",
      "label": "2026-09-28 — Dealroom relays an investor memo: Fluidstack 'will run 1.3GW of compute across more than 10 sites in 2026, generating $660 million in revenue', 'more than double its expected 2025 figure of $200 million and 10 times its 2024 audited revenue of $66.2 million'; the round is 'led by quant trading giant Jane Street' at an USD 18 billion post-money",
      "sub": "Fluidstack · financial"
     },
     {
-     "x": 9,
+     "x": 12,
      "lane": "record",
      "label": "2026-09-28 — Crusoe names Google: 'today announced it is the developer of Google's data center campus under construction in Armstrong County outside of Amarillo' — ground broken June 2025, 5,500 workers on site, direct connection to Serena's Goodnight 1 (265.5 MW, operating) and Goodnight 2 (265.5 MW, under construction) wind farms, closed-loop cooling; no MW or capex stated",
      "sub": "Crusoe · customer"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-09-26 — IFR reports the IPO roadshow on hold after investors indicated interest below a USD 50bn valuation",
-     "sub": "SB Energy · financial"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-09-25 — TechCrunch and SiliconANGLE: USD 3.36 billion of convertible financing led by Third Point, with Apollo, Citadel and more than a dozen institutions, 'USD 2.36 billion available to the company immediately' and USD 1 billion from NVIDIA 'in mid-November'; the S-1 records the 15 September subscription agreement at 'a minimum of $3.1 billion', converting automatically at the IPO and maturing 15 June 2028",
-     "sub": "Nscale · financial"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-09-25 — Cipher 8-K: the Barber Lake lease is amended — 'individual data halls expected to be delivered from the fourth quarter of 2026 through the first quarter of 2027' instead of September 2026, first rent in Q4 2026; Cipher bears 'the first $359.3 million of costs in excess of the initial budgeted amount', the tenant reimburses 50% above that over twenty years; 'a binding commitment with a leading AI lab' adds a second ten-year term, taking contracted revenue to 'over $9 billion'",
-     "sub": "Fluidstack · project"
     }
    ]
   },
@@ -29058,6 +29151,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "Prime Data Centers"
     ],
     [
+     "EU Merger Regulation — joint-control clearance",
+     "in-effect",
+     "2025-03",
+     "Ares"
+    ],
+    [
      "FAST-41 permitting",
      "in-effect",
      "2026-04",
@@ -29140,6 +29239,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "proposed",
      "—",
      "Hut 8"
+    ],
+    [
+     "Investment Company Act §36(b) — adviser fee suits",
+     "in-effect",
+     "2026-05",
+     "Ares"
     ],
     [
      "Ireland — CRU large energy user connection policy (CRU/2025/236)",
@@ -29715,7 +29820,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The Fence Line: Interconnection and the Substation* · *Bridge Power: Building the Plant Before the Grid Arrives* · *Reading the Named Projects* · *N+1, 2N, and Six Nines*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-aidc-developers-and-landlords-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** Aligned Data Centers, Compass Datacenters, CyrusOne, Digital Realty, Equinix, QTS Data Centers, STACK Infrastructure, Switch, Vantage Data Centers, 5C Group, Applied Digital, Chindata, Cipher Digital, Core Scientific, Crusoe, EdgeCore, Fermi America, G42, Galaxy Digital, Hut 8, IREN, PowerHouse Data Centers, Prime Data Centers, SB Energy, TECfusions, TeraWulf, Tract, WhiteFiber, Apex Clean Energy, Eolian, Firmus, Fluidstack, HUMAIN, Intersect, Nscale, Quinbrook, Samsung C&T, Strata Clean Energy, Talen Energy — each member's dossier carries one in Profiler."
+    "**Study guides:** Aligned Data Centers, Compass Datacenters, CyrusOne, Digital Realty, Equinix, QTS Data Centers, STACK Infrastructure, Switch, Vantage Data Centers, 5C Group, Applied Digital, Chindata, Cipher Digital, Core Scientific, Crusoe, EdgeCore, Fermi America, G42, Galaxy Digital, Hut 8, IREN, PowerHouse Data Centers, Prime Data Centers, SB Energy, TECfusions, TeraWulf, Tract, WhiteFiber, Apex Clean Energy, Ares, Eolian, Firmus, Fluidstack, HUMAIN, Intersect, Nscale, Quinbrook, Samsung C&T, Strata Clean Energy, Talen Energy — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -29871,6 +29976,18 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     "the-players",
     "what-moved",
     "where-it-sits",
+    "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-10-05",
+   "note": "regenerated: concepts:profiler-concepts 2026-10-04→2026-10-05; profile:apex-clean-energy 2026-09-01→2026-10-05; profile:ares added@2026-10-05; profile:fluidstack 2026-10-04→2026-10-05; profile:nscale 2026-10-04→2026-10-05; profile:prime-data-centers 2026-09-07→2026-10-05; profile:sb-energy 2026-10-04→2026-10-05; profile:stack-infrastructure 2026-10-04→2026-10-05; profile:tract 2026-09-26→2026-10-05; profile:vantage 2026-10-04→2026-10-05",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
     "who-is-connected"
    ]
   }
@@ -32407,14 +32524,14 @@ function clLessonSegmentUtilities_() {
  "title": "Utilities",
  "short": "The regulated wires-and-generation franchises whose IRP, certificate, rate case, large-load tariff and interconnection process decide whether AI load and the…",
  "group": "The Value Chain",
- "updated": "2026-10-04",
+ "updated": "2026-10-05",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
    {
     "kind": "public",
     "ref": "profile:aep",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -32426,7 +32543,7 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "profile:dominion-energy",
-    "date": "2026-09-03",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -32444,7 +32561,7 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "profile:engie-north-america",
-    "date": "2026-09-06",
+    "date": "2026-10-05",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -32456,7 +32573,7 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "profile:exelon",
-    "date": "2026-09-26",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -32570,7 +32687,7 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -33572,6 +33689,30 @@ function clLessonSegmentUtilities_() {
      "—"
     ],
     [
+     "**AEP**",
+     "Stonepeak",
+     "other",
+     "active",
+     "Cologix's 15-year contract, one of two totalling about 98 MW",
+     "AEP Ohio onsite fuel-cell electricity service to Cologix"
+    ],
+    [
+     "**Apollo**",
+     "**Exelon**",
+     "other",
+     "active",
+     "260 MW substation (T&D World)",
+     "ComEd substation for Stream Data Centers' Elk Grove Village campus"
+    ],
+    [
+     "**Ares**",
+     "**ENGIE North America**",
+     "partner",
+     "active",
+     "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "Ares Infrastructure Opportunities funds"
+    ],
+    [
      "**Berkshire Hathaway Energy**",
      "Excelsior Energy Capital",
      "supplier",
@@ -33610,6 +33751,14 @@ function clLessonSegmentUtilities_() {
      "announced",
      "—",
      "—"
+    ],
+    [
+     "**Dominion Energy**",
+     "Stonepeak",
+     "partner",
+     "active",
+     "50% noncontrolling interest; USD 2.6bn received at closing",
+     "Coastal Virginia Offshore Wind Commercial Project (2.6 GW)"
     ],
     [
      "**Dominion Energy**",
@@ -33652,6 +33801,14 @@ function clLessonSegmentUtilities_() {
      "Duke Energy Carolinas electric service at NC-1, Madison (Rockingham County)"
     ],
     [
+     "**ENGIE North America**",
+     "Ares",
+     "partner",
+     "active",
+     "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "Ares Management Infrastructure Opportunities funds"
+    ],
+    [
      "**Energy Capital Partners**",
      "**NextEra**",
      "other",
@@ -33690,6 +33847,14 @@ function clLessonSegmentUtilities_() {
      "active",
      "21.6 MWdc (17 projects)",
      "Xcel Energy Community Solar Garden programme (Minnesota)"
+    ],
+    [
+     "**Exelon**",
+     "Apollo",
+     "other",
+     "active",
+     "—",
+     "ComEd substation for Stream Data Centers' Elk Grove Village campus"
     ],
     [
      "**Fluidstack**",
@@ -33780,6 +33945,22 @@ function clLessonSegmentUtilities_() {
      "Phoenix Solar"
     ],
     [
+     "**Stonepeak**",
+     "**AEP**",
+     "other",
+     "active",
+     "About 98 MW across the AWS and Cologix contracts; Cologix's runs 15 years",
+     "AEP Ohio onsite fuel-cell electricity service"
+    ],
+    [
+     "**Stonepeak**",
+     "**Dominion Energy**",
+     "partner",
+     "active",
+     "50% noncontrolling interest; USD 2.6bn paid to Dominion at closing",
+     "Coastal Virginia Offshore Wind Commercial Project (2.6 GW)"
+    ],
+    [
      "**Vistra**",
      "KKR",
      "partner",
@@ -33804,7 +33985,7 @@ function clLessonSegmentUtilities_() {
      "Duke Energy Carolinas electric service at NC-1"
     ]
    ],
-   "note": "Curated edges among members: 59 · to the neighbouring segments: 30 · derived-only mentions (no curated typing): 16 among members, 10 to the neighbours."
+   "note": "Curated edges among members: 59 · to the neighbouring segments: 38 · derived-only mentions (no curated typing): 16 among members, 10 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -34751,6 +34932,13 @@ function clLessonSegmentUtilities_() {
     "where-it-sits",
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-10-05",
+   "note": "regenerated: concepts:profiler-concepts 2026-10-04→2026-10-05; profile:aep 2026-10-04→2026-10-05; profile:dominion-energy 2026-09-03→2026-10-05; profile:engie-north-america 2026-09-06→2026-10-05; profile:exelon 2026-09-26→2026-10-05",
+   "changed": [
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -34764,10 +34952,22 @@ function clLessonSegmentCapital_() {
  "title": "Capital",
  "short": "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a…",
  "group": "The Value Chain",
- "updated": "2026-10-04",
+ "updated": "2026-10-05",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:apollo",
+    "date": "2026-10-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ares",
+    "date": "2026-10-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
    {
     "kind": "public",
     "ref": "profile:blackrock",
@@ -34777,13 +34977,13 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "profile:blackstone",
-    "date": "2026-09-26",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:blue-owl",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -34795,7 +34995,7 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "profile:cpp-investments",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -34831,7 +35031,7 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "profile:macquarie",
-    "date": "2026-09-26",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -34849,13 +35049,19 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "profile:softbank",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:stonepeak",
+    "date": "2026-10-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:vantage",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -34867,29 +35073,29 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-10-04",
+    "date": "2026-10-05",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "15",
+   "k": "18",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
   {
-   "k": "9",
+   "k": "11",
    "v": "incumbents",
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "3",
+   "k": "4",
    "v": "challengers",
    "sub": "contesting that set; 3 adjacent"
   },
   {
-   "k": "51",
+   "k": "67",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -34989,6 +35195,12 @@ function clLessonSegmentCapital_() {
    ],
    "rows": [
     [
+     "**Apollo**",
+     "apollo",
+     "incumbent",
+     "ecosystemRole: the capital segment's largest AI-compute financier and the controlling owner of one scaled data-centre developer — Apollo-managed funds hold a majority of Stream Data Centers (more than 4 GW of long-term powered land) and Apollo leads the USD 35bn initial tranche of Broadcom's AI XPV Platform; USD 1.05tn of AUM"
+    ],
+    [
      "**BlackRock**",
      "blackrock",
      "incumbent",
@@ -35041,6 +35253,18 @@ function clLessonSegmentCapital_() {
      "softbank",
      "incumbent",
      "ecosystemRole: three counterparties under one name — Stargate's initial equity funder with 'financial responsibility', ~13% of OpenAI after USD 64.6bn, owner of SB Energy and, since 30 September 2026, of DigitalBridge (USD 40.2bn fee-earning equity); a controlling owner of the landlords and storage platforms the segment defines"
+    ],
+    [
+     "**Stonepeak**",
+     "stonepeak",
+     "incumbent",
+     "ecosystemRole: the capital segment's platform builder — controls Cologix, Digital Edge, Montera and Kingdom; sixth in Infrastructure Investor's 2026 five-year infrastructure fundraising ranking (USD 52.9bn), ahead of Blackstone"
+    ],
+    [
+     "**Ares**",
+     "ares",
+     "challenger",
+     "ecosystemRole: a second-tier capital name that owns one data-centre buyer outright (Ada Infrastructure) and controls one power buyer through its funds (Apex Clean Energy); infrastructure is about 4% of USD 671bn of AUM"
     ],
     [
      "**Energy Capital Partners**",
@@ -35098,6 +35322,16 @@ function clLessonSegmentCapital_() {
    ],
    "rows": [
     [
+     "**Apollo**",
+     "FY2025 · 2025-12-31",
+     "32,049",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**BlackRock**",
      "FY2025 · 2025-12-31",
      "24,216",
@@ -35148,6 +35382,16 @@ function clLessonSegmentCapital_() {
      "—"
     ],
     [
+     "**Ares**",
+     "FY2025 · 2025-12-31",
+     "5,601.5",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**Digital Realty**",
      "FY2025 · 2025-12-31",
      "6,113",
@@ -35175,7 +35419,7 @@ function clLessonSegmentCapital_() {
      "—",
      "—",
      "—",
-     "CPP Investments, Macquarie, MGX, SoftBank, Energy Capital Partners, Excelsior Energy Capital, Quinbrook, Vantage Data Centers"
+     "CPP Investments, Macquarie, MGX, SoftBank, Stonepeak, Energy Capital Partners, Excelsior Energy Capital, Quinbrook, Vantage Data Centers"
     ]
    ]
   },
@@ -35194,6 +35438,46 @@ function clLessonSegmentCapital_() {
     "Via"
    ],
    "rows": [
+    [
+     "**Apollo**",
+     "**Blackstone**",
+     "partner",
+     "active",
+     "USD 35bn initial tranche (shared)",
+     "Broadcom AI XPV Platform"
+    ],
+    [
+     "**Apollo**",
+     "**Blue Owl**",
+     "other",
+     "historical",
+     "—",
+     "European colocation carve-out (now Vaultica)"
+    ],
+    [
+     "**Ares**",
+     "**CPP Investments**",
+     "partner",
+     "active",
+     "CPP commitment about USD 1.3bn (JPY 193bn) of about USD 2.4bn",
+     "Japan DC Partners I"
+    ],
+    [
+     "**Ares**",
+     "**Macquarie**",
+     "partner",
+     "historical",
+     "—",
+     "Prime Data Centers joint control"
+    ],
+    [
+     "**Ares**",
+     "**Vantage Data Centers**",
+     "other",
+     "active",
+     "USD 2.4bn facility; Ares holds about USD 1.6bn",
+     "Ares Infrastructure Debt"
+    ],
     [
      "**BlackRock**",
      "**Blackstone**",
@@ -35252,6 +35536,14 @@ function clLessonSegmentCapital_() {
     ],
     [
      "**Blackstone**",
+     "**Apollo**",
+     "partner",
+     "active",
+     "USD 35bn initial tranche, Apollo-led; split undisclosed",
+     "Broadcom AI XPV Platform"
+    ],
+    [
+     "**Blackstone**",
      "**BlackRock**",
      "competitor",
      "active",
@@ -35292,6 +35584,14 @@ function clLessonSegmentCapital_() {
     ],
     [
      "**Blue Owl**",
+     "**Apollo**",
+     "other",
+     "historical",
+     "—",
+     "European colocation carve-out (now Vaultica)"
+    ],
+    [
+     "**Blue Owl**",
      "**BlackRock**",
      "other",
      "announced",
@@ -35305,6 +35605,14 @@ function clLessonSegmentCapital_() {
      "active",
      "—",
      "Abilene campus, phase 2"
+    ],
+    [
+     "**Blue Owl**",
+     "**Stonepeak**",
+     "portfolio",
+     "active",
+     "Passive minority stake; third-party owners receive less than 17% of fee income and carried interest",
+     "Blue Owl GP Strategic Capital (formerly Dyal)"
     ],
     [
      "**Brookfield**",
@@ -35345,6 +35653,14 @@ function clLessonSegmentCapital_() {
      "active",
      "—",
      "—"
+    ],
+    [
+     "**CPP Investments**",
+     "**Ares**",
+     "partner",
+     "active",
+     "About USD 1.3bn (JPY 192.5bn) of the fund's about USD 2.4bn",
+     "Japan DC Partners I"
     ],
     [
      "**CPP Investments**",
@@ -35401,6 +35717,14 @@ function clLessonSegmentCapital_() {
      "historical",
      "AirTrunk bought from Macquarie Asset Management and PSP (EV >A$24bn)",
      "—"
+    ],
+    [
+     "**CPP Investments**",
+     "**Stonepeak**",
+     "partner",
+     "announced",
+     "Up to USD 1.05bn, for an indirect stake",
+     "Castrol acquisition"
     ],
     [
      "**CPP Investments**",
@@ -35516,6 +35840,14 @@ function clLessonSegmentCapital_() {
     ],
     [
      "**Macquarie**",
+     "**Ares**",
+     "partner",
+     "historical",
+     "—",
+     "Prime Data Centers joint control"
+    ],
+    [
+     "**Macquarie**",
      "**BlackRock**",
      "competitor",
      "active",
@@ -35555,6 +35887,14 @@ function clLessonSegmentCapital_() {
      "—"
     ],
     [
+     "**Macquarie**",
+     "**Stonepeak**",
+     "other",
+     "announced",
+     "—",
+     "Cleco acquisition"
+    ],
+    [
      "**Quinbrook**",
      "**Blackstone**",
      "partner",
@@ -35587,6 +35927,38 @@ function clLessonSegmentCapital_() {
      "DigitalBridge (manager of the funds that lead Vantage's ownership)"
     ],
     [
+     "**Stonepeak**",
+     "**Blue Owl**",
+     "investor",
+     "active",
+     "Third-party owners receive less than 17% of fee income and carried interest",
+     "Blue Owl GP Strategic Capital (formerly Dyal)"
+    ],
+    [
+     "**Stonepeak**",
+     "**CPP Investments**",
+     "partner",
+     "announced",
+     "CPP up to USD 1.05bn, for an indirect stake",
+     "Castrol acquisition"
+    ],
+    [
+     "**Stonepeak**",
+     "**Macquarie**",
+     "other",
+     "announced",
+     "—",
+     "Cleco acquisition"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "**Ares**",
+     "other",
+     "active",
+     "USD 2.4bn facility; Ares holds about USD 1.6bn of the commitment",
+     "Ares Infrastructure Debt"
+    ],
+    [
      "**Vantage Data Centers**",
      "**Digital Realty**",
      "partner",
@@ -35609,6 +35981,30 @@ function clLessonSegmentCapital_() {
      "active",
      "19.9% of two transmission companies; USD 2.82bn with PSP",
      "—"
+    ],
+    [
+     "**AEP**",
+     "**Stonepeak**",
+     "other",
+     "active",
+     "Cologix's 15-year contract, one of two totalling about 98 MW",
+     "AEP Ohio onsite fuel-cell electricity service to Cologix"
+    ],
+    [
+     "**Apollo**",
+     "Exelon",
+     "other",
+     "active",
+     "260 MW substation (T&D World)",
+     "ComEd substation for Stream Data Centers' Elk Grove Village campus"
+    ],
+    [
+     "**Ares**",
+     "ENGIE North America",
+     "partner",
+     "active",
+     "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "Ares Infrastructure Opportunities funds"
     ],
     [
      "**Berkshire Hathaway Energy**",
@@ -35652,6 +36048,14 @@ function clLessonSegmentCapital_() {
     ],
     [
      "**Dominion Energy**",
+     "**Stonepeak**",
+     "partner",
+     "active",
+     "50% noncontrolling interest; USD 2.6bn received at closing",
+     "Coastal Virginia Offshore Wind Commercial Project (2.6 GW)"
+    ],
+    [
+     "**Dominion Energy**",
      "**Vantage Data Centers**",
      "customer",
      "active",
@@ -35673,6 +36077,14 @@ function clLessonSegmentCapital_() {
      "active",
      "—",
      "Electric service agreement"
+    ],
+    [
+     "**ENGIE North America**",
+     "**Ares**",
+     "partner",
+     "active",
+     "905 MW for US$430m (March 2025); 730 MW, US$153m paid in 2025 and about US$280m scheduled for 2026",
+     "Ares Management Infrastructure Opportunities funds"
     ],
     [
      "**Energy Capital Partners**",
@@ -35713,6 +36125,14 @@ function clLessonSegmentCapital_() {
      "active",
      "21.6 MWdc (17 projects)",
      "Xcel Energy Community Solar Garden programme (Minnesota)"
+    ],
+    [
+     "**Exelon**",
+     "**Apollo**",
+     "other",
+     "active",
+     "—",
+     "ComEd substation for Stream Data Centers' Elk Grove Village campus"
     ],
     [
      "**Galaxy Digital**",
@@ -35779,6 +36199,22 @@ function clLessonSegmentCapital_() {
      "Phoenix Solar"
     ],
     [
+     "**Stonepeak**",
+     "AEP",
+     "other",
+     "active",
+     "About 98 MW across the AWS and Cologix contracts; Cologix's runs 15 years",
+     "AEP Ohio onsite fuel-cell electricity service"
+    ],
+    [
+     "**Stonepeak**",
+     "Dominion Energy",
+     "partner",
+     "active",
+     "50% noncontrolling interest; USD 2.6bn paid to Dominion at closing",
+     "Coastal Virginia Offshore Wind Commercial Project (2.6 GW)"
+    ],
+    [
      "**UL Solutions**",
      "**Digital Realty**",
      "other",
@@ -35803,7 +36239,7 @@ function clLessonSegmentCapital_() {
      "Dedicated electricity rate (VLC tariff); payment-and-cancellation agreements"
     ]
    ],
-   "note": "Curated edges among members: 51 · to the neighbouring segments: 25 · derived-only mentions (no curated typing): 18 among members, 7 to the neighbours."
+   "note": "Curated edges among members: 67 · to the neighbouring segments: 33 · derived-only mentions (no curated typing): 25 among members, 7 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -35824,68 +36260,68 @@ function clLessonSegmentCapital_() {
     {
      "x": 2,
      "lane": "record",
+     "label": "2026-10-02 — Q3 2026 results set for Thursday 29 October before the NYSE opens, with a 9:00 a.m. ET call",
+     "sub": "Ares · financial"
+    },
+    {
+     "x": 3,
+     "lane": "record",
      "label": "2026-10-01 — Third and final USD 10bn tranche of the 2026 OpenAI round executed; cumulative investment USD 64.6bn, about 13%; the bridge facility fully repaid and its last USD 10bn of capacity cancelled",
      "sub": "SoftBank · financial"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-10-01 — Agreed sale of 10.5% of WestConnex and 25% of NorthWestern Roads Group to Transurban, about A$4.5bn gross",
      "sub": "CPP Investments · ma"
     },
     {
-     "x": 4,
+     "x": 5,
      "lane": "record",
      "label": "2026-10-01 — Q3 2026 results set for Thursday 29 October before market open; OCIC's Q3 window closes with USD 3.1bn of redemption requests (16.8%), filled pro rata at the 5% tender",
      "sub": "Blue Owl · financial"
     },
     {
-     "x": 5,
+     "x": 6,
+     "lane": "record",
+     "label": "2026-10-01 — Ares contributes more than EUR 1bn to Plenitude, rising to 26.24% and taking joint control with Eni (three of nine board seats, including the chairman)",
+     "sub": "Ares · ma"
+    },
+    {
+     "x": 7,
      "lane": "record",
      "label": "2026-09-30 — DigitalBridge acquisition completed: USD 16.00 a share in cash, about USD 3.1bn for all common stock; DigitalBridge delisted from the NYSE and becomes a controlled subsidiary",
      "sub": "SoftBank · ma"
     },
     {
-     "x": 6,
+     "x": 8,
+     "lane": "record",
+     "label": "2026-09-30 — Preliminary Q3 2026 realized net performance income of about USD 10m (Q3 2025: USD 9m)",
+     "sub": "Ares · financial"
+    },
+    {
+     "x": 9,
      "lane": "record",
      "label": "2026-09-29 — Bipartisan letter led by Senator Warren urges FERC to reject the GIP/BlackRock takeover of AES — ECP not named",
      "sub": "Energy Capital Partners · policy"
     },
     {
-     "x": 7,
-     "lane": "record",
-     "label": "2026-09-25 — KKR's third-quarter update: more than USD 750m of monetisation income so far in the quarter",
-     "sub": "KKR · financial"
-    },
-    {
-     "x": 8,
-     "lane": "record",
-     "label": "2026-09-24 — About USD 11.1bn of foreign-currency senior notes issued, USD coupons 8.625%–9.750%",
-     "sub": "SoftBank · financial"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-09-24 — Bloomberg reports an AIP- and IFM-backed group in an exclusive window for STACK's Asia-Pacific data centres",
-     "sub": "KKR · market"
-    },
-    {
      "x": 10,
      "lane": "record",
-     "label": "2026-09-24 — Bloomberg reports the AIP (BlackRock-backed) and IFM Investors in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at USD 20–25bn",
-     "sub": "Blue Owl · market"
+     "label": "2026-09-29 — Q3 2026 results set for Tuesday 3 November, before the NYSE opens",
+     "sub": "Apollo · financial"
     },
     {
      "x": 11,
      "lane": "record",
-     "label": "2026-09-24 — Bloomberg reports Oracle sent a force-majeure notice on Project Jupiter to STACK, the Blue Owl-owned developer; Blue Owl says 'This notice does not change the financial commitments to this multi-year project'",
-     "sub": "Blue Owl · customer"
+     "label": "2026-09-28 — Apex Clean Energy closes a second selldown to EGCO — 49% of 339 MW — keeping 51%; PV Tech describes Apex as majority-owned by Ares-managed funds",
+     "sub": "Ares · ma"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-09-24 — Bloomberg reports AIP and IFM Investors in exclusive talks with Blue Owl for STACK Infrastructure's Asia-Pacific data centres at up to USD 25bn",
-     "sub": "BlackRock · market"
+     "label": "2026-09-25 — KKR's third-quarter update: more than USD 750m of monetisation income so far in the quarter",
+     "sub": "KKR · financial"
     }
    ]
   },
@@ -35925,6 +36361,12 @@ function clLessonSegmentCapital_() {
      "in-effect",
      "2024-12-23",
      "CPP Investments"
+    ],
+    [
+     "Bermuda Corporate Income Tax Act 2023",
+     "in-effect",
+     "2026-01",
+     "Apollo"
     ],
     [
      "Canada Pension Plan contribution rates — Bill C-30 and the Chief Actuary's reports",
@@ -35981,6 +36423,12 @@ function clLessonSegmentCapital_() {
      "Energy Capital Partners"
     ],
     [
+     "EU Merger Regulation — joint-control clearance",
+     "in-effect",
+     "2025-03",
+     "Ares"
+    ],
+    [
      "FEOC restrictions",
      "in-effect",
      "2026",
@@ -36023,10 +36471,22 @@ function clLessonSegmentCapital_() {
      "Galaxy Digital"
     ],
     [
+     "Investment Advisers Act — SEC registration and Form ADV",
+     "in-effect",
+     "2012-03",
+     "Stonepeak"
+    ],
+    [
      "Investment Company Act §36(b) — adviser fee suits",
      "in-effect",
      "2026-04",
      "Blue Owl"
+    ],
+    [
+     "Investment Company Act §36(b) — adviser fee suits",
+     "in-effect",
+     "2026-05",
+     "Ares"
     ],
     [
      "Ireland — CRU large energy user connection policy and the EirGrid Dublin constraint",
@@ -36039,6 +36499,12 @@ function clLessonSegmentCapital_() {
      "in-effect",
      "2024-07",
      "Excelsior Energy Capital"
+    ],
+    [
+     "Japan Long-Term Decarbonization Auction",
+     "in-effect",
+     "—",
+     "Stonepeak"
     ],
     [
      "Kansas Large Load Power Service tariff",
@@ -36117,6 +36583,12 @@ function clLessonSegmentCapital_() {
      "in-effect",
      "2027-12-31",
      "Digital Realty"
+    ],
+    [
+     "Securities Exchange Act §10(b) — securities class action",
+     "in-effect",
+     "2026-03",
+     "Apollo"
     ],
     [
      "Senate Banking Committee oversight — data-centre ownership and retail electricity prices",
@@ -36218,7 +36690,7 @@ function clLessonSegmentCapital_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The Independent Engineer's Report* · *Who Carries Which Risk* · *One Dollar, Four Names*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-capital-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** BlackRock, Blackstone, Blue Owl, Brookfield, CPP Investments, KKR, Macquarie, MGX, SoftBank, Energy Capital Partners, Excelsior Energy Capital, Quinbrook, Digital Realty, Galaxy Digital, Vantage Data Centers — each member's dossier carries one in Profiler."
+    "**Study guides:** Apollo, BlackRock, Blackstone, Blue Owl, Brookfield, CPP Investments, KKR, Macquarie, MGX, SoftBank, Stonepeak, Ares, Energy Capital Partners, Excelsior Energy Capital, Quinbrook, Digital Realty, Galaxy Digital, Vantage Data Centers — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -36228,7 +36700,7 @@ function clLessonSegmentCapital_() {
    "read": "5 questions",
    "items": [
     {
-     "q": "Which segment does the registry place **BlackRock** in?",
+     "q": "Which segment does the registry place **Apollo** in?",
      "c": [
       "Software and optimization",
       "Assurance",
@@ -36236,7 +36708,7 @@ function clLessonSegmentCapital_() {
       "Cooling"
      ],
      "a": 2,
-     "why": "The registry's basis line: ecosystemRole: an investor that buys nothing and controls a great deal — its GIP-branded funds own or co-own Aligned, CyrusOne, Coravel, ALLETE, Clearway Energy Group, Eolian and Jupiter Power; first in Infrastructure Investor's 2026 five-year infrastructure fundraising ranking (USD 113.4bn)"
+     "why": "The registry's basis line: ecosystemRole: the capital segment's largest AI-compute financier and the controlling owner of one scaled data-centre developer — Apollo-managed funds hold a majority of Stream Data Centers (more than 4 GW of long-term powered land) and Apollo leads the USD 35bn initial tranche of Broadcom's AI XPV Platform; USD 1.05tn of AUM"
     },
     {
      "q": "What role does the registry give **Vantage Data Centers** in Capital?",
@@ -36271,15 +36743,15 @@ function clLessonSegmentCapital_() {
      "why": "Chain position 15 against this segment's 16."
     },
     {
-     "q": "The graph records a curated edge from **BlackRock** to **Blackstone**. How is it typed from BlackRock's side?",
+     "q": "The graph records a curated edge from **Apollo** to **Blackstone**. How is it typed from Apollo's side?",
      "c": [
       "supplier",
-      "competitor",
       "partner",
+      "competitor",
       "other"
      ],
      "a": 1,
-     "why": "A different firm that is routinely confused with BlackRock; eighth in Infrastructure Investor's 2026 ranking against BlackRock's first."
+     "why": "Fellow initial anchor investor, through Blackstone's Credit & Insurance business, in Broadcom's AI XPV Platform, whose initial tranche Apollo leads."
     }
    ]
   }
@@ -36366,6 +36838,19 @@ function clLessonSegmentCapital_() {
     "the-players",
     "what-moved",
     "where-it-sits",
+    "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-10-05",
+   "note": "regenerated: concepts:profiler-concepts 2026-10-04→2026-10-05; profile:apollo added@2026-10-05; profile:ares added@2026-10-05; profile:blackstone 2026-09-26→2026-10-05; profile:blue-owl 2026-10-04→2026-10-05; profile:cpp-investments 2026-10-04→2026-10-05; profile:macquarie 2026-09-26→2026-10-05; profile:softbank 2026-10-04→2026-10-05; profile:stonepeak added@2026-10-05; profile:vantage 2026-10-04→2026-10-05",
+   "changed": [
+    "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
     "who-is-connected"
    ]
   }
