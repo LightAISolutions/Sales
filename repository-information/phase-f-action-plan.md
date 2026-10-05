@@ -128,8 +128,8 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | 10 | ~~Sat 10/3 – Tue 10/6~~ **Landed Sun 10/4 (v07.91r)** — prompt in §13 | Reframe the Dominion rehearsal (Classroom, its own session) | Fable 5.1 · launched at xhigh (the row asked for high; no model substitution) | Done, in one session and one commit. **Outcome (c) — not issued on the public record:** on 4 October Dominion's own solicitation page still reads that the purchase solicitation "is expected to be issued on October 1, 2026", its materials sit behind the CE-8 registration portal, no document is posted, the newsroom carries no issue notice and no new date is published — so the room is re-dated to the slip rather than rewritten, the 2025 purchase solicitation (8 Oct 2025; proposals 9 Feb 2026; up to 500 MW of storage on 15-year terms) read first-hand as the model, and the dispatchable-generation solicitation's 18 December deadline carried as the one published procurement gate. **"All-stock" is wrong**: the May 2026 merger 8-K and the July 2026 joint proxy describe 0.8138 NextEra shares plus a pro rata share of USD 360 M in cash, no election, no CVR, and neither uses the phrase — corrected in the scenario; `dominion-energy` v1 flagged for a `profiler Dominion Energy` refresh (it carries the cash in `relationships[8]` and still says all-stock). Both shareholder votes passed 3 Sep (Dominion 671.3 M for / 8.6 M against); SCC PUR-2026-00112 local hearings 7 and 9 Oct, evidentiary 17 Nov; SC docket 2026-186-EG hearing 8 Dec. Seven sections changed, all three beats hold; reviewBy 10/1 → **12/2** (the landscape's bound binds before the scenario's 12/18 gate, C5 §6). Classroom v01.99g; the GAS changelog rotated (11 sections, 2026-09-16 group, SHA-enriched) → 40/50. The reminder is left for the developer to dismiss |
 | 11 | ~~Once the DigitalBridge close is confirmed (reported completed 30 Sep), and by Wed 10/7 either way~~ **Landed Sun 10/4 (v07.93r)** — prompt in §14 | **F-I2** — SoftBank, SB Energy, Blue Owl | Opus 5.5 · xhigh | Done, in one session with six research subagents (two per company). **The DigitalBridge close was verified first**, from DigitalBridge's completion Form 8-K (CIK 1679688, accession 0001104659-26-112148): merger completed 30 September 2026 at USD 16.00 a share in cash, so SoftBank's dossier was written once, with the close as fact and the DigitalBridge platforms as controlled by its manager. Identity check corrected all three plan rows: SoftBank bought the DigitalBridge manager, not its funds (USD 3.1bn equity value against ~USD 4.0bn enterprise value, each stated as itself); SB Energy's Milam County is ~753 MW-IT in the S-1 (1.2 GW is OpenAI's figure, unreconciled), the PORTS gas belongs to a different SoftBank affiliate and the IPO is unpriced; Blue Owl's Hyperion USD 27bn is total development cost against USD 7.0bn of its funds' cash, and its fall was 43.4%, not 'more than 45%'. Roles — `capital`: SoftBank and Blue Owl incumbents (15 members, 9 · 3 · 3); SB Energy challenger in `aidc-developers-and-landlords` and, not adjacent as hypothesised, challenger in `storage-developers-and-ipps`. Step 7: 66 raw aka hits (35 · 14 · 17), 29 dossiers revised with reciprocal edges, three of them corrected (`abb`, `iren`, `meta`); `vantage.study.json` corrected minimally; 11 report pins re-verified edge-only, `abb` and `meta` left loud. Step-5 sub-rule: the 11 segments with section changes regenerated, 8 pin-only left, Classroom.gs v02.00g. Row 15's DigitalBridge fallback is retired |
 | 12 | ~~After row 11~~ **Landed Mon 10/5 (v07.95r)** — prompt in §15 | **F-I3** — Apollo, Ares, Stonepeak | Opus 5.5 · xhigh | Done, in one session with six research subagents (two per company); every `*.sec.gov` request, Form ADV included, went through curl with `SEC_USER_AGENT`. **Identity check:** Apollo — the Stream majority closed 3 Nov 2025 (more than 4 GW of powered land, percentage undisclosed); the 'Broadcom–Apollo–Blackstone vehicle' is Broadcom's AI XPV Platform, now first-party: a USD 35bn initial tranche Apollo leads (committed money drawn over years), an Apollo-managed purchaser fund, Athene guaranteeing 15%, Broadcom's ~USD 29bn backstop; the Valor financing (USD 3.5bn of a USD 5.4bn transaction) was missing from `xai`; the STACK carve-out completed and trades as Vaultica. Ares — Ada Infrastructure, owned outright since the GCP International purchase, is the one platform a manager in this segment owns itself; the Apex majority holds, the reported Lazard minority-stake process has no outcome; Prime's control is unsettled since Macquarie's exit; Ares arranged Vantage's USD 2.4bn facility, holds ~USD 1.6bn and funded ~USD 330m. Stonepeak — private: Form ADV USD 81.9bn regulatory AUM; Cologix's 2022 recapitalisation was a USD 3.0bn equity value; the Japan BESS platform is Kingdom BESS Development (479 MW, CATL at Mimasaka); AMPYR Distributed Energy is announced with the stake undisclosed; at CVOW Stonepeak fails test 2. **Roles** — `capital`: Apollo and Stonepeak incumbents on the record, Ares challenger as hypothesised (18 members, 11 · 4 · 3); Ares also takes an adjacent seat in `aidc-developers-and-landlords` for Ada. **Step 7:** 38 dossier hits by the full `aka[]` grep (15 · 12 · 11; 34 distinct dossiers), 23 dossiers revised, 10 of them substantively — the two known corrections (`softbank`/`sb-energy` on Ares's preferred; `dominion-energy`'s 'all-stock', from the 8-K, pins left loud), `anthropic`, `fluidstack` and `blackstone` on the XPV vehicle, `blue-owl` and `stack-infrastructure` on Vaultica, `engie-north-america`'s '49%' (no ENGIE record states it; the 905 MW and US$430m are confirmed by ENGIE SA's 2025 annual report) and `tract`'s Cologix figures; four study guides and two lesson plans corrected minimally; 6 report pins re-verified edge-only, `anthropic` and `stack-infrastructure` left loud. **Step-5 sub-rule:** the 4 segments with section changes regenerated (`capital`, `aidc-developers-and-landlords`, `storage-developers-and-ipps`, `utilities`), 15 pin-only left; Classroom.gs v02.01g. `landscape-capital-2026-09` and `scenario-capital-objection` stay stale by design for row 15 |
-| 13 | Week 2 | **ERCOT**, with the grid-operator schema note, category and Profiler page change | Fable 5.1 · xhigh | Was the last row. 73 inbound dossiers, the corpus's largest step 7. See the note below |
-| 14 | After ERCOT | **PJM** | Fable 5.1 · high | 37 inbound dossiers; ERCOT has settled the schema |
+| 13 | Week 2 | **ERCOT**, with the grid-operator schema note, category and Profiler page change — prompt in §16 | Fable 5.1 · xhigh | Was the last row. 73 inbound dossiers when planned, **78 (1,096 word hits) measured 10/5** — the corpus's largest step 7. See the note below. The page change rotates `Profilerhtml.changelog.md` (50/50) |
+| 14 | After ERCOT | **PJM** | Fable 5.1 · high | 37 inbound dossiers when planned, **48 measured 10/5**; ERCOT has settled the schema |
 
 **Week 3 — Sat 10/10 to Sat 10/17.** The three waves come to about $450–$600 of Fable, which leaves roughly half the allowance free for other work. After this week Phase F needs no Fable.
 
@@ -145,7 +145,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 |---|---|---|---|---|
 | 18 | After the filing | `profiler Megmeet`, then `profiler report competitive: AIDC power conversion` | Opus 5.5 · xhigh | The standing reminder. Raise Mitsubishi Electric's scope question here |
 
-**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High); §8–§11 are rows 5–8 as run; **§12 is row 9's (Classroom wave A, Fable 5.1 xhigh)** — the first Classroom-wave prompt, and the pattern for waves B–D (rows 15–17); **§13 is row 10's (the Dominion reframe, Fable 5.1 High)** — the first single-scenario reframe prompt, and the pattern for any later one; **§14 is row 11's (F-I2, Opus 5.5 xhigh)** — the first Profiler prompt written after the step-5 sub-rule, and the pattern for F-I3 (row 12); **§15 is row 12's (F-I3, Opus 5.5 xhigh)**, adapted from §14 with F-I2's alias rule (only uncovered controlled platforms go in aka[]), its two process slips and the counts re-measured on 10/4. §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
+**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High); §8–§11 are rows 5–8 as run; **§12 is row 9's (Classroom wave A, Fable 5.1 xhigh)** — the first Classroom-wave prompt, and the pattern for waves B–D (rows 15–17); **§13 is row 10's (the Dominion reframe, Fable 5.1 High)** — the first single-scenario reframe prompt, and the pattern for any later one; **§14 is row 11's (F-I2, Opus 5.5 xhigh)** — the first Profiler prompt written after the step-5 sub-rule, and the pattern for F-I3 (row 12); **§15 is row 12's (F-I3, Opus 5.5 xhigh)**, adapted from §14 with F-I2's alias rule (only uncovered controlled platforms go in aka[]), its two process slips and the counts re-measured on 10/4. **§16 is row 13's (ERCOT, Fable 5.1 xhigh)** — the first grid-operator prompt: schema note and category first, the Profiler page change with its changelog rotation, an edge test that leaves market presence to the graph, and the counts re-measured on 10/5; adapt it for PJM (row 14). §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
 
 **ERCOT and PJM — decided 2026-09-26: cover both, as grid operators.** The developer knows both well and wants them in. The category is a new **`grid-operator`** (label 'Grid operator'), not the generic `other` the earlier recommendation named, so the tag says what they are. That adds one entry to the Profiler page's category list, a page change made in the ERCOT session. The work is **two sessions, ERCOT first**: 73 inbound dossiers alone is a larger step 7 than BlackRock's 42 raw hits, which filled most of F-I1. The earlier reasoning stands:
 - **Why:** they are the two most-cited uncovered entities in the corpus (73 and 37 dossiers). Curating them converts roughly 110 derived mentions into real edges, and their rules (Batch Zero and SB 6; the capacity auction) are what half the utilities and developers in the corpus are exposed to.
@@ -1681,5 +1681,233 @@ correction; close or edit the developer's reminders.
 At the end: one line per company (identity verdicts, segments and roles, inbound read/revised counts,
 calendar row); the two known corrections as made; the segments regenerated and the Classroom version
 written; the --check and content-checker final lines; and the session's cost from get_session's
+usage.cost_usd if it exposes one, with the rate-limit status.
+```
+
+## 16 · Paste-in prompt — §3 row 13, ERCOT: the first grid operator (Fable 5.1 · xhigh)
+
+Written 2026-10-05 (v07.96r), after row 12 landed (v07.95r). Row 13 has no date gate of its own; PJM (row 14) follows it, and Classroom wave C (row 16) waits on both in case either takes a seat. It adapts §15, but ERCOT is a different kind of subject — a grid operator, not a company — so the prompt carries four things no earlier Profiler prompt needed:
+- **A schema note and a category before any dossier.** The developer's 2026-09-26 decision (§3 note; `PROFILER-COVERAGE-PLAN.md` §11): a new `grid-operator` category (label 'Grid operator') and a one-paragraph note in `PROFILER-SCHEMA.md` on `ownership.type`, the `financials` stance and the segment question, written once for ERCOT and PJM both.
+- **A Profiler page change, and the page changelog is full.** The category needs four edits in `Profiler.html` (`ovSafeCat`, `ovCatLabel`, the CSS tag colour, `OV_REL_CAT_COLORS`) plus the registry's category order, so the page bumps v01.93w → v01.94w — and `Profilerhtml.changelog.md` stands at **50/50**, so it rotates first. The same bump can carry the "Changed since vN" fix found at v07.95r (`OV_DIFF_TABS` keys `overview`, the style label maps key `snapshot`, so revisions to overview fields show an `undefined` chip); that fix is my addition, offered as optional.
+- **An edge test for a grid operator.** 78 dossiers name ERCOT, most as a market location ("a 200 MW battery in ERCOT"). Curating an edge to every market participant would add ~78 `other` edges and ~78 accepts of noise. The prompt curates only specific relationships and leaves market presence to the graph's derived evidence. That's my call, so change it if you want every participant linked; the plan's "~110 derived mentions into real edges" (§3 note) is then an upper bound, not a target.
+- **Counts re-measured today** (word-bounded, case-sensitive): `\bERCOT\b` 78 dossiers and 1,096 hits (the row says 73); PJM is now 48 (row 14 says 37).
+
+Fable 5.1 at xhigh is the plan's own line (§2: the corpus's largest step 7). If the Fable cap binds, §2's rule applies: finish on Opus 5.5 xhigh and record the substitution in the §11.3 Model cell.
+
+```text
+Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 13 as a fresh
+session: ERCOT — the first grid operator in the corpus, with the grid-operator schema note, the new
+category and the Profiler page change. This session runs on Fable 5.1 at xhigh (§2: the corpus's
+largest step 7). Fable draws on its half of the shared weekly limit, and the shared limit was at
+allowed_warning when F-I3 closed (seven-day window, resets Sat 10/10 7:00 AM ET) — check Settings →
+Usage first. If the Fable cap binds, §2's rule applies: finish on Opus 5.5 xhigh and record the
+substitution in the §11.3 Model cell. If the whole weekly limit binds, land what is written in this
+order — schema note and category, the dossier, the guide, then the reconciliation in the priority order
+under RECONCILIATION — record every deferred slug by name in the ledger and the hand-off, and stop.
+Never skim a reconciliation to finish.
+
+WHY NOW: no date gate of its own — row 13 follows row 12, which landed at v07.95r. PJM (row 14) follows
+this one and inherits the schema note you write, and Classroom wave C (row 16) waits on both in case
+either takes a seat. Do NOT run PJM, any Classroom wave, or any other row.
+
+STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+HEAD || git rebase origin/main; git fetch --unshallow origin main before any pin read and before the
+changelog rotation below (it needs the deep clone for SHA enrichment). If the Wednesday 10/7 Classroom
+pipeline run committed before you start, the rebase picks it up. Read the counters after the rebase:
+repository-information/CHANGELOG.md is 91/100 at v07.96r (no rotation expected);
+live-site-pages/html-changelogs/Profilerhtml.changelog.md is 50/50 (it ROTATES — see THE PAGE CHANGE);
+live-site-pages/gs-changelogs/Classroomgs.changelog.md is 42/50 and Profilergs.changelog.md 40/50.
+
+READ FIRST, in this order: repository-information/SESSION-CONTEXT.md (the F-I3 hand-off);
+phase-f-action-plan.md §2, §3 rows 13–17 and the "ERCOT and PJM" note under the §3 table, and this §16
+(§15 is the F-I3 prompt this one adapts, and the v07.95r CHANGELOG section is F-I3 as it landed);
+PROFILER-COVERAGE-PLAN.md §2, §7, §11 (the 2026-09-26 grid-operator decision, §11.1's buying-authority
+test, and your §11.3 row: `ercot`, hypothesis "Grid operator, not a company. Batch Zero / SB 6
+large-load process" — its "row 21" reference is stale, it is §3 row 13 now); .claude/rules/profiler-app.md
+(Profiler Command — step 1a identity, step 5 and its segment sub-rule, step 7 reconciliation; Profiler
+Prep Command; Scheduled Refreshes); repository-information/PROFILER-SCHEMA.md (the `categories` row
+and how `utility` absorbed public power and TVA without a new category — your note follows that
+pattern; `ownership`, `financials`, Naming and renames, Segments registry, Refresh calendar);
+repository-information/PROFILER-STYLES.md (active style); .claude/rules/html-pages.md and
+.claude/rules/changelogs.md (the page bump and the rotation). Read as house patterns: salt-river-project
+and tva (non-shareholder gatekeepers whose dossier shape you are extending), oncor and aep (the ERCOT
+wires side), and the policyExposure entries that cite SB 6 or Batch Zero in the dossiers listed under
+RECONCILIATION.
+
+THE SCHEMA NOTE AND THE CATEGORY — before the dossier, in the same commit. Write one paragraph into
+PROFILER-SCHEMA.md, as a row note on `categories` like the 2026-09-29 public-power note, for ERCOT and
+PJM both:
+- `grid-operator` (label 'Grid operator'): the entity that runs a wholesale market, the reliability
+  function and the interconnection process for a region, and owns no franchise, no rate base and no
+  generation. Say why it is not `utility` and not `other`.
+- `ownership.type`: the descriptive variant the dossier header can render verbatim (ERCOT is a Texas
+  nonprofit membership corporation — establish that from its own record, then pick the wording).
+- The `financials` stance: what the entity actually publishes (audited statements, a budget, a
+  system-administration fee or equivalent), with `expected` left empty by rule — no consensus exists.
+- Segments: a grid operator buys almost nothing the nineteen segments cover, so the default is
+  `unassigned[]` with a reason; an adjacent seat only on the record (below).
+- The edge convention for a grid operator (below), so every accept can cite it.
+Add `grid-operator` to the `categories` order list in profiler-companies.json (after `utility`) and to
+the schema's canonical category list. Do not add a peer family: a category named in no family is its own
+family, so ERCOT and PJM compare only with each other — say so in the note. The `RTO` concept in
+profiler-concepts.json carries the alias "grid operator" and defines FERC-regulated RTOs; ERCOT is the
+exception. Do not edit that concept: put an ERCOT-specific glossary entry in the guide instead, and
+record the mismatch for the developer.
+
+THE PAGE CHANGE — Profiler.html, under the normal HTML rules, inside the PROJECT blocks. The category
+needs four edits, all found on 10/5: `ovSafeCat`'s `known` list, `ovCatLabel` ('Grid operator'), a CSS
+colour variable plus `.ov-tag.grid-operator`, and `OV_REL_CAT_COLORS` — pick a colour distinct from all
+eleven in use. Bump Profilerhtml.version.txt and the `<meta name="build-version">` together, v01.93w →
+v01.94w ([PC-HTML-VERSION] #2). Profilerhtml.changelog.md is at 50/50, so ROTATE FIRST: move the oldest
+whole date group (2026-08-29 — 25 sections on 10/5's count; recount) to
+Profilerhtml.changelog-archive.md with SHA enrichment from the deepened clone, per
+repository-information/CHANGELOG-archive.md "Rotation Logic", then add the v01.94w section in public,
+user-facing wording (changelog-security rules — no file names). Set the README tree's Profiler display
+(scripts/check-readme-tree.py, 0 findings). Optional, and the developer's call if you are unsure: the
+same bump may fix the "Changed since vN" strip, which shows an `undefined` chip whenever a revision
+changes overview fields — `OV_DIFF_TABS` keys that group `overview`, the style label maps (OV_SEC_LABELS)
+key it `snapshot`. Align the key without changing any label map, check the chip jumps to the overview
+tab in every style, and give it its own changelog line. It reproduces on iren and abb today.
+
+THE TASK: `profiler ERCOT` then `profiler prep ERCOT` — dossier (schema v7, profileVersion 1, active
+style) and study guide (schema v2) with its lesson plan under repository-information/study-prep/ercot/,
+written skeleton-first and filled by Edit. Proposed slug `ercot`, category ["grid-operator"]; decide the
+display name and `aka[]` under Naming and renames before the step-7 grep ("Electric Reliability Council
+of Texas" is the obvious alias; it adds no dossier beyond the bare ERCOT hits on 10/5). The schema fits
+loosely, so map it, don't force it: productsAndServices are ERCOT's functions (grid operations and
+reliability, the wholesale and ancillary-services markets, transmission planning, generation and
+large-load interconnection, retail registration and settlement); technicalSpecs are system facts
+(peak demand and its date, installed capacity by fuel, the battery fleet, the large-load queue, the DC
+ties); decision makers are its executives and board. The guide teaches the market and the rules a
+large load lives under — never ERCOT trivia.
+
+IDENTITY (step 1a) — establish each of these from ERCOT's, the PUCT's and the Legislature's own
+records, do not assume it; every earlier row found its plan text wrong somewhere:
+- The entity: legal name and form, who its members are, how its board is chosen and by whom since the
+  2021 reforms, who regulates it (PUCT, the Legislature) and where FERC and NERC/Texas RE reach. Its
+  scope: the share of Texas load and the interconnection's isolation (the DC ties), from its own pages.
+- The money: what ERCOT publishes (audited financial statements, the budget the PUCT approves, the
+  system administration fee) and the latest figures, each with its date. No consensus exists, so no
+  verdict against expectations — say so in `financials.commentary`.
+- SB 6 (2025): what the statute requires of a large load, and which of its requirements live in PUCT
+  rules now — adopted, proposed or not yet started, each on the record's own word with its project
+  number. A proposal is not a rule.
+- "Batch Zero": what ERCOT calls it, when it opened or opens, who is in it if ERCOT publishes that, and
+  its status today. Nine dossiers carry the phrase; read each against ERCOT's own description.
+- The large-load queue: ERCOT's own latest figure, its date and its definition (requested, studied,
+  approved, energized). The corpus carries several figures for this from different dates — expect
+  check-profiler-crossrefs.py to flag them; state each as itself.
+- RTC+B (real-time co-optimization): the go-live date and what changed, from ERCOT's record.
+- Peak demand record, battery fleet and installed capacity: ERCOT's own reports, each with its date.
+A grid operator signs for almost no batteries, MV gear, generation or SSTs itself (§11.1 test 2): if the
+record shows ERCOT buying a service under contract (emergency response service, firm fuel supply,
+reliability-must-run or the like), list it with the counterparty and a source; otherwise say it buys
+none.
+
+SEGMENTS: the hypothesis is no seat — `unassigned[]` with a reason ("operates the market and approves
+interconnections but neither buys what a segment covers nor holds a franchise"). Take an adjacent seat
+only if the dossier records ERCOT itself operating what a segment's definition covers, verified against
+the dossier you wrote, never against the category. A new segment is never your call. If ERCOT takes a
+seat, the step-5 sub-rule below fires for that segment.
+
+EDGES — the convention your schema note records: a dossier that merely operates in ERCOT ("a 200 MW
+battery in ERCOT", "ERCOT merchant") is NOT an edge; the graph derives that evidence from `aka[]` on
+its own. Curate an edge only for a specific relationship on the record: a transmission and distribution
+utility whose large-load and transmission work ERCOT studies or approves (check each — Entergy Texas
+and Xcel's SPS sit outside ERCOT); a counterparty under an ERCOT-procured service or contract; a project
+or campus named in an ERCOT study, report or protocol filing; an ERCOT proceeding or dispute naming the
+company. Type it `other` on both sides unless ERCOT itself buys a service under contract (then
+`customer`/`supplier`), with a `via` naming the role. Every `other`↔`other` pair needs an accept in
+profiler-relationships-accepted.json with a reason that cites the note. Lender and indirect links stay
+`other` (the F-I1 to F-I3 precedent).
+
+THE §11.3 WHY CELL IS A HYPOTHESIS, NOT A BRIEF. Verify every clause, record a premise verdict per clause,
+rewrite the cell and flip the row (Dossier v1 · Guide v2). Run check-source-reachability.py before you
+plan the research and say what it read; check by one curl that ercot.com and the PUCT's interchange
+answer from this session before planning around them. Every request to any *.sec.gov host, a subagent's
+included, goes through curl with SEC_USER_AGENT read from scripts/check-source-reachability.py — WebFetch
+cannot send it; say so in every subagent brief (ERCOT files nothing with the SEC, but counterparties'
+10-Ks name it).
+
+RECONCILIATION (step 7) — measured 2026-10-05 by word-bounded, case-sensitive grep of the current corpus
+(the row says 73). \bERCOT\b matches 78 dossiers and 1,096 word hits; 77 have hits outside sources[]
+(aes-clean-energy cites ERCOT only in a source). By field: productsAndServices 59 dossiers,
+recentDevelopments 50, technicalSpecs 39, relationships 39, policyExposure 30, summary 28,
+ecosystemRole 26. By category: developer 35, ipp 26, supplier 13, utility 5, integrator 5, neocloud 4,
+advisor 3, epc 3, investor 3, hyperscaler 2. The heaviest: gridmatic 82 hits, habitat-energy 59,
+spearmint-energy 56, hunt-energy-network 44, esvolta 41, oncor 38, engie-north-america 38, aep 38,
+available-power 35, cipher-mining 33. Related phrases: "large-load" 57 dossiers, "large load" 40, PUCT
+27, "SB 6" 13 plus "Senate Bill 6" 9, "Batch Zero" 9, RTC+B 7, "Texas Energy Fund" 4. Grep again with
+the full aka[] after you set it, and count against the pre-revision copies.
+Classify every hit, not every dossier: (a) market location — no action, count it; (b) a claim about
+ERCOT's rules, figures or process (SB 6, Batch Zero, the queue, RTC+B, price caps, peak records, the
+ancillary services) — test it against ERCOT's and the PUCT's own record; contradicted → revise that
+dossier minimally under the Archival Procedure; two figures that may describe different things → state
+both, say nothing reconciles them; (c) a specific relationship (EDGES above) — curate the reciprocal
+edge; (d) career-only (an executive who once worked at ERCOT) — skip. The read is large: fan it out to
+general-purpose subagents in batches by dossier, each returning a per-hit classification table with the
+field path and quote, and decide every revision yourself. Priority if the sets outgrow the session: the
+policyExposure claims (30 dossiers) and the TDSPs (oncor, aep) first, then the heaviest-hit dossiers,
+then the rest; record every remaining slug by name as deferred. Re-verify a report pin only when your
+change is edge-only — every pre-existing field identical to the archived copy and every cited source
+unchanged, checked mechanically as F-I3 did; when the change is substantive, leave the pin loud and
+write down why. Classroom.gs carries 189 ERCOT mentions (sections such as ercot-is-the-exception and
+ercot-versus-regulated): never edit them; list anything your record contradicts in the hand-off for
+wave C.
+
+LESSONS FROM ROWS 5–12 — apply them:
+- Every counterparty named in prose rests on a source in sources[].
+- A proposal, a rulemaking, a "planned" batch or a press account is not a rule or a completed process:
+  type each on the record's own word and state the gap. Re-verify any dated fact on its date.
+- A queue figure, a peak and a capacity number carry their date and their definition; four numbers
+  that look alike are four numbers.
+- Do not edit an existing concept in profiler-concepts.json (ERCOT, SB 6, batch study, large-load
+  interconnection and RTO all exist); check new terms and aliases for collisions before adding them.
+- If an existing study guide contradicts a verified finding, correct it minimally and record it.
+- Write any JSON or shell text containing `$` only through files or quoted heredocs (<<'EOF').
+- Count inbound hits against the archive copies, and exclude your own new dossier from the counts.
+- Verify the page change in a browser before you call it done: the harness in
+  scripts/verify-profiler-roles.py is the pattern (stub script.google.com, seed
+  localStorage.ov_note_session, wait for ov_note_role).
+
+THE STEP-5 SUB-RULE (developer-approved 2026-09-30). After the registry writes, run python3
+scripts/build-classroom-segments.py --check. If ERCOT takes a seat, or the --check lists segments with
+sections differing (your revisions touch many segment members), regenerate exactly those segments
+(`--segment <id>` each, or `--all` when every one differs) with `--today` set to your data date if the
+generator's EST date lags it; leave pin-only segments alone (G3). Never edit a segment-* lesson, a
+landscape, a scenario or anything else in Classroom.gs by hand. If you regenerate, bump Classroom.gs
+VERSION v02.01g → v02.02g and Classroomgs.version.txt → |v02.02g| together, add one generic line to
+Classroomgs.changelog.md ("Market-structure lessons updated with the latest company coverage"; 42/50,
+no rotation) and set the README display. If nothing differs, Classroom is untouched. check-classroom-
+content.py must report 0 errors either way.
+
+FOR THE MEGMEET JOB: in the hand-off, one short paragraph on what ERCOT's large-load rules ask of a data
+centre's power train — curtailment and its notice, ride-through or voltage behaviour if any rule sets
+one, the disclosure of on-site backup generation — from ERCOT's and the PUCT's own records only, each
+marked adopted or proposed. Say which of those a battery, a UPS or a solid-state transformer could
+answer, and who signs for it in Texas: the campus owner, not ERCOT.
+
+VERIFY: check-source-reachability.py before planning; sync-profiler-registry.py --check clean (214 → 215
+in bijection, calendar included — ERCOT gets a cadence row: no results date; pick the tier by the
+Refresh-calendar rule and say why); build-profiler-graph.py; check-profiler-study.py,
+check-profiler-relationships.py and check-profiler-crossrefs.py clean (accept reviewed candidates with a
+reason); check-profiler-reports.py warnings read; scripts/verify-profiler-roles.py passes after the page
+change; check-readme-tree.py 0 findings; if Classroom was regenerated, check-classroom-content.py 0
+errors, node --check on a .js copy of Classroom.gs and node scripts/check-gas-inner-scripts.js. Under
+Playwright as admin: the roster shows a 'Grid operator' chip with its colour; ERCOT's dossier and guide
+render; every revised dossier renders with zero page errors other than the sandbox's gis_load_failed;
+the guide overlay closes with its ✕ button, not Escape. Normal Pre-Commit and Pre-Push checklists; ONE
+commit; push on your claude/* branch once git ls-remote shows it absent. Flip §3 row 13 to landed in the
+pattern of rows 1–12, write the CHANGELOG section with this prompt verbatim as the blockquote, and
+remember session.
+
+NEVER: edit a Classroom lesson, landscape or scenario by hand; edit an existing concept; type market
+presence as an edge; state a proposed rule as adopted, or a queue request as a connection; add a peer
+family or a segment; run PJM or any Classroom wave; close or edit the developer's reminders.
+
+At the end: ERCOT's identity verdicts, category, segment decision and calendar row; the schema note in
+one line; the inbound counts (hits by class, dossiers read, revised, deferred) and the edges curated;
+the page version written and the rotation as made; any segments regenerated and the Classroom version;
+the --check and content-checker final lines; and the session's cost from get_session's
 usage.cost_usd if it exposes one, with the rate-limit status.
 ```

@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.96r] — 2026-10-05 02:32:43 AM EST
+
+> **Prompt:** "give me a prompt to run Section 3 row 13, ERCOT on Fable 5.1 xhigh, then remember session."
+
+The paste-in prompt for §3 row 13, ERCOT (Fable 5.1 xhigh), appended to `phase-f-action-plan.md` as §16. Row 13 now points at it. No dossier, page, GAS or diagram changed.
+
+### Added
+
+- **`repository-information/phase-f-action-plan.md` §16** — the ERCOT prompt, adapted from §15 for the first grid operator. Model line: Fable 5.1 xhigh, the plan's own (§2: the corpus's largest step 7), with §2's Opus fallback if the Fable cap binds. What it adds over §15:
+  - **Schema note and category first:** the `grid-operator` category ('Grid operator') and one `PROFILER-SCHEMA.md` note for ERCOT and PJM both, covering `ownership.type`, the `financials` stance (`expected` empty by rule), the default `unassigned[]` seat and the edge convention. It follows the public-power precedent and adds no peer family.
+  - **The page change, measured:** four `Profiler.html` edits (`ovSafeCat`, `ovCatLabel`, the CSS tag colour, `OV_REL_CAT_COLORS`), the registry's category order, v01.93w → v01.94w, and a **rotation of `Profilerhtml.changelog.md`, which is at 50/50** (the oldest date group, 2026-08-29, 25 sections). The same bump may fix the "Changed since vN" `undefined` chip found at v07.95r; that is marked optional.
+  - **An edge test for a grid operator:** market presence stays the graph's derived evidence. Curated edges are only TDSPs whose large-load work ERCOT studies, ERCOT-procured services, projects named in ERCOT records, and proceedings. They are typed `other` both sides unless ERCOT buys a service, each with an accept that cites the note. It warns that Entergy Texas and Xcel's SPS sit outside ERCOT.
+  - **Identity questions:** the entity and its 2021 governance; what ERCOT publishes about its money; SB 6's requirements and their PUCT status; "Batch Zero"; the queue figure with its date and definition; RTC+B; peak and fleet figures.
+  - **The `RTO` concept trap:** "grid operator" resolves to a concept that defines FERC-regulated RTOs, and ERCOT is the exception. The guide gets its own glossary entry, and the concept is left unedited.
+  - **Inbound counts, re-measured today** (word-bounded, case-sensitive): `\bERCOT\b` 78 dossiers and 1,096 hits against the row's 73, broken down by field, category and heaviest dossier, with a hit-level classification (location, rule claim, relationship, career-only) and a deferral priority (policyExposure claims and the TDSPs first).
+
+### Changed
+
+- **`phase-f-action-plan.md` §3** — row 13 points at §16 and carries the 10/5 count (78) and the rotation; row 14 carries PJM's 10/5 count (48, against 37 planned); the "Prompts for these sessions" paragraph lists §16.
+- **README.md** — the action plan's tree description mentions the prompts through §16; timestamp and repo version.
+- **`SESSION-CONTEXT.md`** — remember session.
+
+### Notes
+
+- Measured from the corpus, not inferred: 77 of the 78 dossiers have ERCOT hits outside `sources[]`. The `ERCOT`, `SB 6`, `batch study`, `large-load interconnection` and `RTO` concepts already exist and must not be edited. `Classroom.gs` carries 189 ERCOT mentions, which wave C owns.
+- CHANGELOG `Sections: 90/100` → 91/100 (no rotation). The developer's reminders were not touched.
 
 ## [v07.95r] — 2026-10-04 11:23:08 PM EST
 

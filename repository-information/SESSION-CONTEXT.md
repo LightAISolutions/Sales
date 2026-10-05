@@ -6,6 +6,38 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-10-05 ~02:27 AM → ~02:40 AM EST (§3 row 13's prompt — ERCOT — written as §16, with this save; one attended turn)
+**Repo version:** v07.95r → v07.96r (one push)
+**Branch:** `claude/hopeful-knuth-g13gvz`
+
+### What was done
+
+- **`phase-f-action-plan.md` §16** — the ERCOT paste-in prompt (Fable 5.1 xhigh), on §15's pattern, also given in chat. §3 row 13 points at it; rows 13–14 carry the 10/5 counts (ERCOT 78 dossiers / 1,096 hits; PJM 48).
+- **What §16 adds:** the schema note and `grid-operator` category before the dossier; the exact `Profiler.html` edit points and the `Profilerhtml.changelog.md` rotation (50/50 → rotate the 2026-08-29 group, 25 sections); an edge test that leaves market presence to the graph; the identity questions (governance, money, SB 6 status, Batch Zero, queue figure, RTC+B); the `RTO` concept trap; a hit-level classification and deferral order for the largest step 7.
+
+### Where we left off
+
+- All work committed in one push (v07.96r). **ERCOT itself has not run** — §16 waits for a fresh Fable 5.1 xhigh session.
+
+### Key decisions made
+
+- **Edge test (my call, flagged in §16's preamble):** market presence is not an edge; only specific relationships are curated. The plan's "~110 derived mentions into real edges" becomes an upper bound. Change §16's EDGES paragraph if every participant should be linked.
+- **Optional page fix bundled:** the "Changed since vN" `undefined` chip (OV_DIFF_TABS `overview` vs OV_SEC_LABELS `snapshot`) may ride ERCOT's Profiler.html bump.
+- **Segment hypothesis:** `unassigned[]` with a reason; an adjacent seat only on the record.
+
+### Active context
+
+- Repo v07.96r; Profiler page v01.93w (ERCOT bumps it to v01.94w); Classroom GAS v02.01g; coverage 214 dossiers; `capital` 18 (11 · 4 · 3). CHANGELOG 91/100; Profilerhtml 50/50 (rotates next bump); Classroomgs 42/50; Profilergs 40/50.
+- Weekly limit at `allowed_warning` (seven-day window, resets Sat 10/10 7:00 AM ET); the Fable half is what ERCOT draws on. Toggles unchanged (START On, BOOKENDS Off, TIMING On, END On). Reminders untouched.
+
+### Recommendation for next session
+
+- **Paste `phase-f-action-plan.md` §16 into a fresh Fable 5.1 xhigh session** — ERCOT: schema note and category first, then the dossier, the guide, the Profiler page change with its changelog rotation, and the 78-dossier reconciliation, so PJM (row 14) inherits a settled schema before Classroom wave C.
+
+**To continue:** type `run the ERCOT prompt in phase-f-action-plan.md §16` (or paste §16 directly).
+
+## Previous Sessions
+
 **Date:** 2026-10-04 ~09:58 PM → ~11:35 PM EST (§3 row 12: F-I3 — Apollo, Ares, Stonepeak; one attended turn with one context compaction during step 7)
 **Repo version:** v07.94r → v07.95r (one push)
 **Branch:** `claude/hopeful-knuth-g13gvz`
@@ -40,43 +72,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Run §3 row 13, ERCOT** (Fable 5.1 · xhigh) with the grid-operator schema note — the corpus's largest step 7 (73 inbound dossiers) — then PJM, so Classroom wave B (row 15, by Wed 10/14) and wave C follow on a settled roster.
 
 **To continue:** type `write the ERCOT prompt for phase-f-action-plan.md §3 row 13`
-
-## Previous Sessions
-
-**Date:** 2026-10-04 ~09:33 PM → ~10:00 PM EST (§3 row 12's prompt — F-I3: Apollo, Ares, Stonepeak — written as §15, then this save; two attended turns, no compaction)
-**Repo version:** v07.93r → v07.94r (one push; this save is a housekeeping commit, no bump)
-**Branch:** `claude/happy-hawking-u7vin4`
-
-### What was done
-
-- **`phase-f-action-plan.md` §15** — the F-I3 paste-in prompt (Opus 5.5 xhigh), section for section on §14, also given in chat. §3 row 12 points at it (its Why cell names the two 10-K filers, Stonepeak's private record, the covered ties `apex-clean-energy` / `prime-data-centers` / `dominion-energy`, and the re-measured counts); the "Prompts for these sessions" paragraph lists §15. Landed as v07.94r (d9deeaca), merged.
-- **What §15 adds over §14:** F-I2's alias rule (only uncovered controlled platforms go in `aka[]` — softbank's DataBank/Zayo in, Vantage/Switch out; covered platforms take reciprocal edges); F-I2's two process slips as rules (`$` content only via files or `<<'EOF'`; every `*.sec.gov` request through curl with `SEC_USER_AGENT`, never WebFetch — Form ADV on adviserinfo.sec.gov included); per-company identity questions tied to the dossier carrying each claim; two known corrections; today's baselines (Classroom v02.00g → v02.01g, Classroomgs 41/50, 71 lessons / 8 tracks / 220 gate cases, registry 211 → 214, `capital` 15 → up to 18); the Megmeet paragraph testing F-I2's "capital is a door only at SB Energy" against these three firms' platforms.
-
-### Where we left off
-
-- All work committed and merged (v07.94r). **F-I3 itself has not run** — the prompt waits in §15 for a fresh Opus 5.5 xhigh session.
-- Inbound counts measured 10/4 for that session: `\bApollo\b` 14 (coolit and cipher-mining are collisions, mgx career-only), `\bAres\b` 11 (delta-electronics' "Ares Chen"), `\bStonepeak\b` 2; platform names Cologix 6, Montera 3, Stream Data Centers 2, AMPYR 1 (fluence — possibly a different AMPYR).
-
-### Key decisions made
-
-- **Dominion's "all-stock" line is corrected inside F-I3's step 7**, minimally from the May 2026 merger 8-K (0.8138 NextEra shares plus a pro rata share of USD 360M cash), because F-I3 revises `dominion-energy` for the Stonepeak edge anyway; its pins stay loud and the full refresh stays `profiler Dominion Energy`'s. Offered to the developer as removable (delete item (2) under TWO KNOWN CORRECTIONS before pasting); no answer yet, so it stands as written.
-- **Segment hypothesis in §15:** all three `capital` · challenger, Apollo the incumbent candidate through Stream; adjacent seats only on the Quinbrook precedent (the firm itself develops or operates).
-
-### Known issues (left to the F-I3 identity check)
-
-- `softbank` v1 records Ares preferred equity in SB Energy; `sb-energy` v1 does not name Ares.
-- `xai` v6 names neither Apollo nor Valor; `vantage` v10 does not name Ares (the row's USD 2.4B facility).
-- Unverified: Montera Infrastructure's ownership, the Japan BESS platform's legal name ("Kingdom" in the row), whether fluence's AMPYR is Stonepeak's.
-- Process slip this session: reminders and session context were surfaced at the end of the first response instead of its start.
-
-### Active context
-
-- Branch `claude/happy-hawking-u7vin4`; repo v07.94r; Classroom GAS v02.00g; Profiler page v01.93w (unchanged). Coverage 211 dossiers; `capital` 15 (9 · 3 · 3). CHANGELOG 89/100; Classroomgs 41/50, Profilergs 40/50.
-- `build-classroom-segments.py --check` on 10/4: assurance, software-and-optimization and insurance-and-risk-transfer due, all pin-only.
-- Weekly limit at `allowed_warning` since F-I2 (resets Sat 10/10 7:00 AM ET). Toggles unchanged (START On, BOOKENDS Off, TIMING On, END On). Reminders untouched — the Dominion reframe reminder is the developer's to dismiss (row 10 landed it at v07.91r).
-
-### Recommendation for next session
-
-- **Paste `phase-f-action-plan.md` §15 into a fresh Opus 5.5 xhigh session** — F-I3 (Apollo, Ares, Stonepeak): identity first (two 10-K filers, Stonepeak through Form ADV), `aka[]` on F-I2's rule before the step-7 grep, the two known corrections, segment lessons regenerated (Classroom → v02.01g), §3 row 12 flipped — so wave B (row 15, by Wed 10/14) seats the full capital roster.
-
-**To continue:** type `run the F-I3 prompt in phase-f-action-plan.md §15` (or paste §15 directly).
