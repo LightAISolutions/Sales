@@ -3,11 +3,19 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.97r] — 2026-10-06 09:19:00 AM EST
+
+> **Prompt:** "Profiler earnings desk (scheduled): take up to three due rows from the refresh calendar; confirm unconfirmed dates within seven days."
+
+### Changed
+
+- **`profiler-refresh-calendar.json`** — nothing was due. BlackRock's Q3 date confirmed from the company's release notice: Wednesday 2026-10-14, before the open, call 7:30 a.m. ET (was 2026-10-13, unconfirmed). No dossier written.
 
 ## [v07.96r] — 2026-10-05 02:32:43 AM EST
 
