@@ -1,4 +1,4 @@
-var VERSION = "v02.01g";
+var VERSION = "v02.02g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -58420,6 +58420,161 @@ function clLessonBriefing20260921_() {
 };
 }
 
+function clLessonBriefing20261007_() {
+  return {
+ "schemaVersion": 1,
+ "id": "briefing-2026-10-07",
+ "type": "briefing",
+ "edition": "2026-10-07",
+ "title": "This week in BESS/AIDC — 2026-10-07",
+ "short": "A ratings reset and a stalled IPO window reprice the neoclouds, Oracle sends force majeure on Project Jupiter, and Clinch River clears the NRC.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-10-07",
+ "reviewBy": "2026-11-15",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:semianalysis",
+    "date": "2026-10-04",
+    "note": "the ClusterMAX 3.0 rating round — tier moves, the new Participation Ribbon, the paid assessment service — and the neocloud share reaction the week after"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nscale",
+    "date": "2026-10-05",
+    "note": "the USD 3.36bn convertible financing, the postponed investor roadshow, and the COO hire"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:lambda",
+    "date": "2026-10-02",
+    "note": "the USD 1.008bn rated senior secured delayed-draw term loan and the Mayes County, Oklahoma site"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fluidstack",
+    "date": "2026-10-05",
+    "note": "the overdue FY2025 Companies House accounts, the relayed investor-memo revenue figures, and the Barber Lake lease amendment"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:blue-owl",
+    "date": "2026-10-05",
+    "note": "the force-majeure notice Oracle sent on Project Jupiter to STACK and Blue Owl's response on the financial commitments"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sb-energy",
+    "date": "2026-10-05",
+    "note": "the IPO roadshow put on hold on indicated interest below the target valuation"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:tva",
+    "date": "2026-09-29",
+    "note": "the NRC construction permit for the Clinch River BWRX-300"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "id": "the-edition",
+   "title": "What this edition covers",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "This edition closes a long window — the last one shut on 21 September — and the developments inside it cluster hard around one question: **who can still raise money on an AI-compute story, and on whose terms.** A third-party rating round moved tiers, two listings were pulled or paused, one borrower priced a loan that insurance desks would buy, and one tenant sent a force-majeure notice to its landlord.",
+    "Nothing here changes what the segment lessons teach about how these businesses are built. It is a feed of dated developments, each one stated by the dossier it came from — read it for what moved, not for what it settles about any particular counterparty."
+   ]
+  },
+  {
+   "id": "clustermax-3-ratings-reset",
+   "title": "A third-party rating round reshuffles the neocloud tiers",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "SemiAnalysis published **ClusterMAX 3.0** on 23 September: **323 providers tracked, 77 reviewed, 19 medallions** awarded, plus a new *Participation Ribbon* tier. The tier moves are the story — **Nebius joined CoreWeave at Platinum**, while **Crusoe dropped from Gold to Bronze**, **Azure fell to Silver**, **AWS and Together to Bronze**, and **Fluidstack was moved to 'Unavailable'**. A paid *SemiAnalysis Technical Assessment* service was announced alongside the round.",
+    "The week after, the dossier records neocloud shares falling — **IREN −4%, CoreWeave −3%, Nebius −2%** — and a 'pay to rank' accusation aired on Yahoo Finance, with SemiAnalysis replying that 'providers cannot purchase their ranking and … client compensation is not tied to the ratings'.",
+    "Why this belongs in a power-and-storage briefing: a rating that moves a GPU provider's cost of capital moves the schedule of every substation, transformer and battery behind that provider's next site. The rating is not the engineering, but it is increasingly the gate the engineering has to pass through."
+   ]
+  },
+  {
+   "id": "nscale-convertible-and-roadshow",
+   "title": "USD 3.36bn raised privately, then the roadshow postponed",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "On 25 September Nscale was reported to have closed **USD 3.36 billion of convertible financing** led by Third Point, with Apollo, Citadel and more than a dozen institutions — **USD 2.36 billion available immediately** and **USD 1 billion from NVIDIA 'in mid-November'**. The S-1 records a 15 September subscription agreement at 'a minimum of $3.1 billion', converting automatically at the IPO and maturing **15 June 2028**.",
+    "Five days later the direction reversed: the Wall Street Journal, via Semafor, reported Nscale **postponing its investor roadshow** as OpenAI shelved its own listing and 'what was set to be a bumper IPO market to end the year is stalling'. As of 2 October **no S-1 amendment, price range or pricing had been filed**. On 2 October Bloomberg reported Meta's chief partnerships officer **Justin Osofsky hired as COO**, 'ahead of IPO'.",
+    "Read the sequence rather than any single item: the private money cleared at scale, the public money did not open, and the convertible's automatic conversion at IPO plus a June 2028 maturity is what now sets the clock. For a supplier, the mid-November NVIDIA tranche is the nearest dated milestone worth watching."
+   ]
+  },
+  {
+   "id": "lambda-rated-term-loan",
+   "title": "A neocloud loan priced for insurance buyers",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "Lambda closed a **USD 1.008 billion senior secured fixed-rate delayed-draw term loan** on 1 October: a **6.78% semi-annual coupon**, **A (low) from Morningstar DBRS and Baa1 from Moody's**, **fully amortising to 30 May 2033**, J.P. Morgan sole arranger, and 'marketed to insurance companies and fixed income investors'. Proceeds fund 'three committed customer deployments with two investment-grade offtakers' (unnamed).",
+    "This is the contrast that makes the edition cohere. An investment-grade-adjacent rating, a fixed coupon and a full amortisation schedule are the vocabulary of project finance, not venture growth — and they were available because the cash flows sit behind named-quality offtakers. The structure, not the sector, is what got the price."
+   ]
+  },
+  {
+   "id": "fluidstack-accounts-overdue",
+   "title": "A fast-growing balance sheet that has not filed",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Two items on the same company point opposite ways. On 28 September Dealroom relayed an investor memo in which Fluidstack 'will run **1.3GW of compute across more than 10 sites in 2026, generating $660 million in revenue**' — 'more than double its expected 2025 figure of $200 million and 10 times its 2024 audited revenue of $66.2 million' — with the round 'led by quant trading giant Jane Street' at an **USD 18 billion post-money**.",
+    "On 2 October Companies House flagged **Fluidstack Ltd 'Accounts overdue'**: the **FY2025 accounts due by 30 September 2026 were not filed by the deadline**, and the filing history's newest entries remain the June–August 2026 share allotments.",
+    "Hold both. The growth figures are a relayed memo; the missed filing is a registry fact with a date on it. For anyone extending terms, the asymmetry matters more than either number alone — the audited record that would corroborate the memo is precisely the document that is late."
+   ]
+  },
+  {
+   "id": "barber-lake-delivery-slip",
+   "title": "Barber Lake slips a quarter, and the cost-overrun split is written down",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A Cipher 8-K dated 25 September amends the Barber Lake lease: **individual data halls are now expected to be delivered from Q4 2026 through Q1 2027** instead of September 2026, with first rent in Q4 2026. Cipher bears **the first USD 359.3 million of costs in excess of the initial budgeted amount**, and the tenant reimburses **50% above that, over twenty years**. A 'binding commitment with a leading AI lab' adds a second ten-year term, taking contracted revenue to **'over $9 billion'**.",
+    "The overrun split is the part to study. A landlord absorbing the first ~$359M and sharing half of everything beyond it has written the schedule risk into the lease rather than leaving it to a claim — which is what makes a one-quarter slip an accounting event instead of a dispute. That is the instrument doing its job, and it is a template worth recognising when the same structure shows up elsewhere."
+   ]
+  },
+  {
+   "id": "jupiter-force-majeure",
+   "title": "Oracle sends a force-majeure notice on Project Jupiter",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "Bloomberg reported on 24 September that **Oracle sent a force-majeure notice on Project Jupiter to STACK**, the Blue Owl-owned developer. Blue Owl's response: 'This notice does not change the financial commitments to this multi-year project.'",
+    "Last edition covered Jupiter from the procurement side — the 2GW New Mexico renewable RFP, the solar-heavy mix chosen partly to ease permitting, and the state land commissioner's denial of rights-of-way for the supporting gas pipeline. A force-majeure notice is the contractual expression of that same blocked path. Note what it is and is not: a notice preserving a position under the contract, with the counterparty publicly affirming the money is unchanged — not a cancellation."
+   ]
+  },
+  {
+   "id": "sb-energy-roadshow-on-hold",
+   "title": "A second listing paused on valuation",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "IFR reported on 26 September that **SB Energy's IPO roadshow was put on hold** after investors indicated interest **below a USD 50bn valuation**.",
+    "Two paused roadshows in one window, at a developer and at a neocloud, is the clearest signal in this edition that the public-equity route narrowed rather than any single issuer stumbling. Private capital kept clearing at size in the same days — which is why the financing question for a counterparty is now *which* market they depend on, not whether money exists."
+   ]
+  },
+  {
+   "id": "clinch-river-smr-permit",
+   "title": "The first US commercial SMR construction permit",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "On 29 September the **NRC issued the construction permit for TVA's Clinch River BWRX-300** — the **first commercial small modular reactor permit in the United States** — and issued it **four months ahead of schedule**.",
+    "This is the longest-dated item in the edition and the one least tied to the financing story. A construction permit is not a reactor: it authorises building, and the delivery horizon sits well beyond the load it is discussed as serving. What changed on 29 September is regulatory precedent and the schedule credibility of the pathway — the first time a US commercial SMR has had one, and ahead of the expected date rather than behind it."
+   ]
+  }
+ ]
+};
+}
+
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -58490,7 +58645,8 @@ function clLessons_() {
           clLessonScenarioInsuranceAndRiskTransferObjection_(),
           clLessonScenarioUtilitiesDiscoveryAidc_(),
           clLessonScenarioHyperscalersAndAiLabsDiscovery_(),
-          clLessonBriefing20260921_()];
+          clLessonBriefing20260921_(),
+          clLessonBriefing20261007_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

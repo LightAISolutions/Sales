@@ -3,11 +3,48 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.98r] — 2026-10-07 07:15:11 AM EST
+
+> **Prompt:** "You are one run of the Classroom curriculum pipeline (C2) in LightAISolutions/Sales. Nobody is watching this session and you cannot ask anyone anything. STEP 0 — clone the repo, unshallow, and prove push works with `git push --dry-run` before the pre-flight; a failure there is `BLOCKED` with nothing authored. READ FIRST: `repository-information/CLASSROOM-COMMITTER-CONTRACT.md`, `repository-information/CLASSROOM-SCHEMA.md`, `.claude/rules/classroom-app.md` — they do not auto-load in a Routine-fired session. Then run the contract's own pre-flight (§5.1) — repo identity, a clean tree, a fresh `claude/classroom-pipeline-<YYYY-MM-DD>` branch off a just-fetched `origin/main` (a pre-existing remote branch of that name is `BLOCKED`), a green `check-classroom-content.py` baseline with its warning count recorded, the gate-surface digest matching the ledger's `gateDigest`, and schema versions still v1/v1. CORPUS TOKEN: <no corpus token> — per §5.1 step 5, skip corpus reads entirely; refresh only from the Pages-served and repo-resident layers, and do not author a briefing from memory in their place. Undated registries are dated by file commit date. BUDGET: 45 minutes wall-clock and 120 assistant turns, whichever comes first. BEFORE COMMITTING, and again immediately before `git commit`, all of these must pass: `check-classroom-content.py` (zero errors, no new warnings against the baseline), `check-classroom-pipeline.py --base origin/main` (zero findings), `node --check` on a `.js` copy of `Classroom.gs`, and `node scripts/check-gas-inner-scripts.js`. Never edit a checker, its fixtures or its thresholds. END THE RUN with the §5.4 report verbatim."
+
+### Added
+
+- **briefing-2026-10-07** (tracks) — the second registered briefing edition, closing a 16-day window: nine sections over seven dated developments, covering SemiAnalysis's ClusterMAX 3.0 rating round and the neocloud share reaction, Nscale's USD 3.36bn convertible and its postponed roadshow, Lambda's USD 1.008bn rated senior secured term loan, Fluidstack's overdue FY2025 Companies House accounts against its relayed revenue memo, the Barber Lake delivery slip and its cost-overrun split, Oracle's force-majeure notice on Project Jupiter to STACK, SB Energy's IPO roadshow held below a USD 50bn valuation, and the NRC construction permit for TVA's Clinch River BWRX-300; inputs: profile:semianalysis@2026-10-04, profile:nscale@2026-10-05, profile:lambda@2026-10-02, profile:fluidstack@2026-10-05, profile:blue-owl@2026-10-05, profile:sb-energy@2026-10-05, profile:tva@2026-09-29. All-public stamp, so the edition folds to `tracks` — the analyst-visible public-only edition. `reviewBy` 2026-11-15, the mid-November NVIDIA tranche in the Nscale convertible, which is the nearest dated gate among the items.
+
+### Changed
+
+- **No lesson was revised.** `scripts/build-classroom-segments.py --check` reports **15 of 19 segments due, 0 with section changes, 15 pin-only** — every due segment moved only on inputs whose regeneration would rewrite dates and nothing else. Per G3/G4 a source that moved without contradicting a taught claim leaves the lesson untouched, pin included, so no segment was regenerated and no pin advanced. The 15 will re-present next run.
+
+### Notes
+
+```
+CLASSROOM PIPELINE — 2026-10-07 — COMMIT
+Covered through: 2026-09-21 → 2026-10-07
+Sources seen: 353 fetched · 302 unchanged · 51 moved · 0 unknown
+Wrote: briefing-2026-10-07 (tracks) — 93 qualifying items across 46 sources, bar is 3/2; nine sections authored from seven of those sources
+Skipped at caps: none — one briefing authored against a cap of one; no lesson qualified for revision under G3, so the three-revision cap was not reached
+Frozen (unknown source): none
+Blocked by: —
+Needs the developer:
+  - 15 of 19 segment lessons are due pin-only (`build-classroom-segments.py --check`: "0 with section changes, 15 pin-only"); left untouched with pins unmoved per G3, and they will re-present every run until a source contradicts a taught claim
+  - the `concepts:profiler-concepts` registry is dated by file commit date (2026-10-05), which marks 52 module lessons due on a whole-file signal that carries no per-entry revision; this is the §10.2 undated-layer decision working as designed, but it is the single largest source of pin-only churn in the due list
+  - 9 scenario lessons have a moved `profile:` input and are untouchable by any run under P13 / design D6 (their beats would need re-judging): scenario-aidc-developers-and-landlords-objection ← profile:vantage 2026-09-06→2026-10-05; scenario-capital-objection ← profile:brookfield 2026-09-06→2026-09-26; scenario-epc-and-construction-objection ← profile:turner-construction 2026-09-06→2026-10-04; scenario-hyperscalers-and-ai-labs-discovery ← profile:google 2026-09-07→2026-10-04; scenario-hyperscalers-and-ai-labs-objection ← profile:meta 2026-09-26→2026-10-04; scenario-insurance-and-risk-transfer-objection ← profile:marsh-mclennan 2026-09-09→2026-09-26; scenario-neoclouds-discovery ← profile:fluidstack 2026-10-04→2026-10-05; scenario-utilities-discovery-aidc ← profile:aep 2026-09-03→2026-10-05; scenario-utilities-objection ← profile:dominion-energy 2026-09-03→2026-10-05
+  - contract §6.1 and the P4 authoring row still name `Profiler.gs` `guidanceDocs_()` as the read source for `guidance:` module dates, but guidance moved into `Classroom.gs` in Phase 6's C3; this run read the 28 `guidanceDoc*_()` literals in `Classroom.gs` instead. The contract table is stale and only a developer session may correct it (§4.5)
+```
+
+Checker results, run after the write and again immediately before the commit (the second run is the one that counts):
+
+- `python3 scripts/check-classroom-content.py` — 72 lesson(s), 8 track(s), 220 gate case(s), **0 errors, 0 warnings**, matching the pre-flight baseline of 0/0 recorded on `main`
+- `python3 scripts/check-classroom-pipeline.py --base origin/main` — **0 findings** across P1–P13
+- `node --check` on a `.js` copy of `Classroom.gs` — clean; `node scripts/check-gas-inner-scripts.js` — clean
+- Pre-flight §5.1: identity `LightAISolutions/Sales`, clean tree, fresh `claude/classroom-pipeline-2026-10-07` off a just-fetched `origin/main` with no pre-existing remote branch of that name; gate-surface digest `sha256:3d09700026…f711a69` equals the ledger's `gateDigest`; schema versions v1/v1
+- `Classroom.gs VERSION v02.01g → v02.02g`; `coveredThrough 2026-09-21 → 2026-10-07`; CHANGELOG `Sections: 92/100 → 93/100` (no rotation); Classroom GAS changelog `Sections: 42/50 → 43/50` (no rotation)
 
 ## [v07.97r] — 2026-10-06 09:19:00 AM EST
 
