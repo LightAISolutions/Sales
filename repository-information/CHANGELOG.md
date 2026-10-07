@@ -9,6 +9,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 
 *(No changes yet)*
 
+## [v07.99r] — 2026-10-07 09:18:44 AM EST
+
+> **Prompt:** "Profiler earnings desk (scheduled): take up to three due rows from the refresh calendar; confirm unconfirmed dates within seven days."
+
+### Changed
+
+- **`profiler-refresh-calendar.json`** — nothing was due. Applied Digital's fiscal Q1 2027 date confirmed from the company's call notice: Wednesday 2026-10-07 after the close, call 5:00 p.m. ET (was 2026-10-14, unconfirmed). The row falls due on the next run. No dossier written.
+
 ## [v07.98r] — 2026-10-07 07:15:11 AM EST
 
 > **Prompt:** "You are one run of the Classroom curriculum pipeline (C2) in LightAISolutions/Sales. Nobody is watching this session and you cannot ask anyone anything. STEP 0 — clone the repo, unshallow, and prove push works with `git push --dry-run` before the pre-flight; a failure there is `BLOCKED` with nothing authored. READ FIRST: `repository-information/CLASSROOM-COMMITTER-CONTRACT.md`, `repository-information/CLASSROOM-SCHEMA.md`, `.claude/rules/classroom-app.md` — they do not auto-load in a Routine-fired session. Then run the contract's own pre-flight (§5.1) — repo identity, a clean tree, a fresh `claude/classroom-pipeline-<YYYY-MM-DD>` branch off a just-fetched `origin/main` (a pre-existing remote branch of that name is `BLOCKED`), a green `check-classroom-content.py` baseline with its warning count recorded, the gate-surface digest matching the ledger's `gateDigest`, and schema versions still v1/v1. CORPUS TOKEN: <no corpus token> — per §5.1 step 5, skip corpus reads entirely; refresh only from the Pages-served and repo-resident layers, and do not author a briefing from memory in their place. Undated registries are dated by file commit date. BUDGET: 45 minutes wall-clock and 120 assistant turns, whichever comes first. BEFORE COMMITTING, and again immediately before `git commit`, all of these must pass: `check-classroom-content.py` (zero errors, no new warnings against the baseline), `check-classroom-pipeline.py --base origin/main` (zero findings), `node --check` on a `.js` copy of `Classroom.gs`, and `node scripts/check-gas-inner-scripts.js`. Never edit a checker, its fixtures or its thresholds. END THE RUN with the §5.4 report verbatim."
