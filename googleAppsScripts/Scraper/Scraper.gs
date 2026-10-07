@@ -1,4 +1,4 @@
-var VERSION = "v02.22g";
+var VERSION = "v02.23g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1784,6 +1784,24 @@ var SCRAPER_DIGEST_SEND_HOUR = 7;                // nothing is emailed before th
 // rule is: a late edition is acceptable, a silently degraded or permanently
 // missing one is not.
 var SCRAPER_DIGEST_HARD_STOP_HOUR = 12;
+// The hourly tick's two working windows, desk time (scTickWindow_). It fires
+// every hour regardless; outside these it only stamps its heartbeat.
+//   * weekday mornings, from the build hour through this hour — one tick past
+//     the 12:00 hard stop, so a missed or slow noon tick still gets its check;
+//   * one nightly hour for the Profiler → Interests sync, early enough that
+//     the 06:00 build scores against fresh interests, and clear of the 02:00
+//     retention job.
+var SCRAPER_TICK_LAST_HOUR = 13;
+var SCRAPER_TICK_NIGHTLY_HOUR = 3;
+// Lock-miss retries per day for the build (scDigestRetryAfterLockMiss_). Each
+// retry is a one-off trigger, and one-offs share the project's trigger limit
+// with the daily ones; eight minutes of retries outlast any single lock
+// holder, since no execution can hold the lock past its 6-minute cap.
+var SCRAPER_DIGEST_LOCK_RETRY_MAX = 8;
+// A build stretch that started within this window means its chain is alive
+// (a stretch runs ~4 minutes and books the next one a minute out), so the
+// hourly tick does not hand it a second chain (scDigestHandOff_).
+var SCRAPER_DIGEST_PULSE_FRESH_MS = 10 * 60 * 1000;
 // Comfortably inside the 6-minute execution cap, leaving room for the step in
 // flight to finish and for the continuation trigger to be created.
 var SCRAPER_DIGEST_RUN_BUDGET_MS = 240000;
@@ -1843,7 +1861,8 @@ var SCRAPER_DIGEST_ITEM_AI_ATTEMPTS = 3;
 // attempts across six hours, where a fixed 5-minute interval would burn ~72
 // executions against the consumer 90 min/day trigger-runtime budget.
 // Tier 1 is 3 immediate same-execution attempts (scDigestStepWithRetry_);
-// Tier 3 is the hourly tick, which carries the edition to the hard stop.
+// Tier 3 is the hourly tick, which hands a build that has gone quiet back to
+// the full-speed run (scDigestHandOff_) through the hard stop.
 var SCRAPER_DIGEST_RETRY_LADDER_MIN = [5, 10, 20, 30, 60, 60, 60];
 // Failure alerts, the one-time subscriber-milestone heads-up, and the
 // delivery to: line. Every other subscriber rides in bcc: — subscribers must
@@ -5145,27 +5164,60 @@ function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen
   return out.length;
 }
 
-/** Fetch phase: walk enabled roster sources, a few feeds per step. */
+/** Fetch every URL in one parallel batch; one response (or null) per URL, in order.
+
+    The roster used to be fetched one feed at a time, so a step spent most of
+    its life waiting on six round trips in series — and that waiting is billed
+    against the account's daily trigger runtime exactly like work is.
+    UrlFetchApp.fetchAll issues the batch at once, so a step costs roughly
+    its slowest feed rather than the sum of all six.
+
+    The fallback is the reason this is a helper. muteHttpExceptions only
+    covers HTTP status codes; a transport failure (DNS, timeout, refused
+    connection) on ANY one URL can throw for the whole batch, which would
+    lose the five healthy feeds along with the broken one. So a throw drops
+    back to the old one-at-a-time path for that batch only, where a broken
+    feed costs nothing but itself — the worst case is today's behaviour. */
+function scFetchAllTolerant_(urls) {
+  if (!urls.length) return [];
+  var opts = { muteHttpExceptions: true, followRedirects: true };
+  try {
+    return UrlFetchApp.fetchAll(urls.map(function(u) {
+      return { url: u, muteHttpExceptions: true, followRedirects: true };
+    }));
+  } catch (batchErr) {
+    return urls.map(function(u) {
+      try { return UrlFetchApp.fetch(u, opts); } catch (oneErr) { return null; }
+    });
+  }
+}
+
+/** Fetch phase: walk enabled roster sources, a few feeds per step — the
+    step's feeds are fetched together (scFetchAllTolerant_), then ingested
+    one by one in roster order. */
 function scDigestFetchStep_(ss, state, t0) {
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
   var enabled = scEnabledSources_(ss);
   var model = scLoadInterestModel_(ss, scEditionById_(ss, state.editionId));
   var seen = scDigestIntakeUrls_(intake, state.id);
   var cutoffMs = Date.now() - state.windowH * 3600000;
-  var fetches = 0;
-  while (state.srcCursor < SCRAPER_SOURCE_ROSTER.length &&
-         fetches < SCRAPER_DIGEST_FETCHES_PER_STEP &&
-         (Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS) {
-    var src = SCRAPER_SOURCE_ROSTER[state.srcCursor];
-    state.srcCursor++;
-    if (!enabled[src.key]) continue;
-    fetches++;
+  var batch = [];
+  if ((Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS) {
+    while (state.srcCursor < SCRAPER_SOURCE_ROSTER.length &&
+           batch.length < SCRAPER_DIGEST_FETCHES_PER_STEP) {
+      var src = SCRAPER_SOURCE_ROSTER[state.srcCursor];
+      state.srcCursor++;
+      if (enabled[src.key]) batch.push(src);
+    }
+  }
+  var resps = scFetchAllTolerant_(batch.map(function(s) { return s.rss; }));
+  for (var b = 0; b < batch.length; b++) {
     try {
-      var resp = UrlFetchApp.fetch(src.rss, { muteHttpExceptions: true, followRedirects: true });
-      if (resp.getResponseCode() !== 200) continue;
-      var items = scParseFeed_(resp.getContentText(), src.name);
+      var resp = resps[b];
+      if (!resp || resp.getResponseCode() !== 200) continue;
+      var items = scParseFeed_(resp.getContentText(), batch[b].name);
       state.fetched += items.length;
-      state.kept += scDigestIngest_(ss, intake, state, items, src.name, false, seen, model, cutoffMs);
+      state.kept += scDigestIngest_(ss, intake, state, items, batch[b].name, false, seen, model, cutoffMs);
     } catch (feedErr) { /* a broken feed never breaks the run */ }
   }
   if (state.srcCursor >= SCRAPER_SOURCE_ROSTER.length) state.phase = 'backstop';
@@ -6735,34 +6787,39 @@ function scDigestStep_(editionId) {
 }
 
 /** Scheduled entry (called from scSchedulerTick AFTER the pipeline pause
-    gate): weekday mornings only, one step per tick, stops once today's
-    edition exists. Never throws into the tick. */
+    gate) in the weekday-morning window: runs the noon check, hands an
+    unfinished scheduled edition to the full-speed run, and otherwise does
+    the quiet-hour repair and housekeeping. Returns a short note for the run
+    stamp. Never throws into the tick. */
 function scDigestScheduledTick_() {
   var clock = scDigestClock_(new Date());
   // Gated on the BUILD hour so the tick can assist during the 06:00 hour —
   // see the comment at SCRAPER_DIGEST_BUILD_HOUR.
-  if (clock.hour < SCRAPER_DIGEST_BUILD_HOUR) return;
+  if (clock.hour < SCRAPER_DIGEST_BUILD_HOUR) return '';
   var ss = scraperSs_();
+  // The noon check runs FIRST, whatever else is going on. It used to live only
+  // at the end of the quiet branch below, so a day whose build was still
+  // unfinished at noon — exactly the day it matters — never reached it.
+  if (clock.hour >= SCRAPER_DIGEST_HARD_STOP_HOUR) {
+    try { scDigestNoRenderCheck_(ss, clock); } catch (nrErr) { scDigestLogErr_('tick.norender', nrErr); }
+  }
+  // A scheduled edition still due → the full-speed build, never a lone step.
+  var editions = scEditions_(ss);
+  for (var i = 0; i < editions.length; i++) {
+    if (scEditionDue_(editions[i], clock)) return scDigestHandOff_(clock);
+  }
+  // What can still be in flight here is a build the SCHEDULE is not waiting
+  // on — a manual "Run intake now" rebuild abandoned mid-way. That keeps the
+  // old one-step-per-tick treatment: the full-speed run only builds due
+  // editions, and stepping a manual build from a continuation every minute
+  // would race the app's own step loop, which takes no lock.
   var state = scDigestState_();
-  // A build already in flight today → keep advancing it to completion first.
   if (state && state.phase !== 'done' && state.date === clock.date) {
     var edId = state.editionId;
     var info = null;
     try { info = scDigestStep_(edId); } catch (e0) { scDigestLogErr_('tick.step', e0); }
-    // The tick can be the pass that finishes a build the 06:00 run started, so
-    // the marker has to be written here too or the schedule would re-run it.
     if (info && info.done) scMarkSchedBuilt_(edId, clock.date);
-    return;
-  }
-  // Otherwise pick the first enabled edition that is DUE and not built today.
-  var editions = scEditions_(ss);
-  for (var i = 0; i < editions.length; i++) {
-    if (scEditionDue_(editions[i], clock)) {
-      var due = editions[i].id, r = null;
-      try { r = scDigestStep_(due); } catch (e1) { scDigestLogErr_('tick.start', e1); }
-      if (r && r.done) scMarkSchedBuilt_(due, clock.date);
-      return;
-    }
+    return 'advanced a manual build one step';
   }
   // Nothing building, nothing due — Tier 3 of the retry ladder. Give any
   // rendered-but-incomplete edition another pass; past the hard stop, ship
@@ -7074,10 +7131,25 @@ function scDigestMorningRun() {
   try {
     PropertiesService.getScriptProperties().setProperty('SCHEDULER_LAST_TICK', String(Date.now()));
   } catch (hbErr) {}
-  scDigestClearContinuations_();
   if (!SCRAPER_SCHED_RUNS_ENABLED) return;
   var lock = LockService.getScriptLock();
-  if (!lock.tryLock(5000)) return;
+  // A busy lock used to end the run right here — silently, with no retry. On
+  // 2026-10-07 that cost the whole day's paper: the 06:01 hourly tick had
+  // started the build itself and held the lock for 5½ minutes, the 06:04
+  // build trigger waited its 5 seconds and quit, and nothing ran at full
+  // speed again that day. Now the run books itself a minute out instead.
+  if (!lock.tryLock(5000)) { scDigestRetryAfterLockMiss_(); return; }
+  // Only the run that WINS the lock tidies the continuation queue. This used
+  // to run before the lock, so a run that then lost the lock could delete
+  // the one continuation keeping a build alive and leave nothing behind.
+  // After the lock it still does its job — spent one-offs cannot pile up
+  // against the trigger cap, and a duplicate chain collapses into this one.
+  scDigestClearContinuations_();
+  // Proof of life for the hourly tick: a stretch that started recently means
+  // a build chain is alive, so the tick need not hand it a second one.
+  try {
+    PropertiesService.getScriptProperties().setProperty('scDigestBuildPulse', String(Date.now()));
+  } catch (plErr) {}
   var more = false;
   try {
     var ss = scraperSs_();
@@ -7132,6 +7204,72 @@ function scDigestMorningRun() {
   }
   // Out of budget with work left → come back in a minute rather than in an hour.
   if (more) scDigestScheduleContinuation_();
+}
+
+/** The build lost the script lock: say so, and come back in a minute.
+
+    Not written to the error trail: a lost lock is routine (the 07:00 send, a
+    hand-off continuation or a manual "Run intake now" can each hold it for a
+    few seconds), and the trail feeds the app's amber "errors logged" tile —
+    an alarm that fires most mornings stops being read. The ordinary miss is
+    recorded where it belongs instead: the run note the app shows as "Last
+    scheduled run", and this execution's own log. Only running out of retries
+    is an error, because then the day's build is relying on the hourly tick.
+
+    Capped per day because each retry is a one-off trigger, and one-offs count
+    against the project's trigger limit alongside the daily ones. */
+function scDigestRetryAfterLockMiss_() {
+  try {
+    var clock = scDigestClock_(new Date());
+    if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return;
+    var props = PropertiesService.getScriptProperties();
+    var parts = String(props.getProperty('scDigestLockRetry') || '').split('|');
+    var n = parts[0] === clock.date ? (Number(parts[1]) || 0) : 0;
+    if (n >= SCRAPER_DIGEST_LOCK_RETRY_MAX) {
+      scDigestLogErr_('build.lock', 'Script lock busy; ' + n
+        + ' retries used today, so the hourly tick takes over the build');
+      return;
+    }
+    props.setProperty('scDigestLockRetry', clock.date + '|' + (n + 1));
+    var note = 'lock busy — retrying in 1 min (' + (n + 1) + '/'
+      + SCRAPER_DIGEST_LOCK_RETRY_MAX + ' today)';
+    console.log('scDigestMorningRun: ' + note);
+    scDigestNoteRun_('build', note);
+    scDigestScheduleContinuation_(60000);
+  } catch (lrErr) { scDigestLogErr_('build.lock', lrErr); }
+}
+
+/** The hourly tick found a scheduled edition still due: hand it to the
+    full-speed build — the same budgeted, self-chaining run the 06:00 trigger
+    starts — instead of advancing it one step itself.
+
+    The tick used to take one ~40-second step per hour. A build is dozens of
+    steps across three editions, so once the 06:00 run was lost the edition
+    could not finish the same day — and while it sat unfinished, the tick
+    never reached the noon "nothing rendered" alert either. That was the
+    whole of the silent miss on 2026-10-07.
+
+    Two cases where the tick stands back:
+      * a chain that is alive — a stretch started within the pulse window, so
+        its next continuation is already coming;
+      * the build hour, until the 06:00 trigger has run. Apps Script fires it
+        anywhere from 05:45 to 06:15, so at 06:01 it may simply not have come
+        yet, and a hand-off then would only race it for the lock — the very
+        collision that lost 2026-10-07. Once it HAS run today (its pulse is
+        dated today) and gone quiet, the chain died, and the tick picks it up
+        within the hour rather than waiting for 07:00. */
+function scDigestHandOff_(clock) {
+  var pulse = 0;
+  try {
+    pulse = Number(PropertiesService.getScriptProperties().getProperty('scDigestBuildPulse')) || 0;
+  } catch (pErr) {}
+  if ((Date.now() - pulse) < SCRAPER_DIGEST_PULSE_FRESH_MS) return 'build running';
+  if (clock.hour <= SCRAPER_DIGEST_BUILD_HOUR) {
+    var pulseDay = pulse ? Utilities.formatDate(new Date(pulse), SCRAPER_DIGEST_TZ, 'yyyy-MM-dd') : '';
+    if (pulseDay !== clock.date) return 'build hour — left to the 06:00 run';
+  }
+  scDigestScheduleContinuation_(60000);
+  return 'handed an unfinished build to the full-speed run';
 }
 
 /** The 7:00 pass. Sends whatever is built and pending; if the build is still
@@ -7275,36 +7413,62 @@ function scDigestRepairPass_(ss, budgetMs) {
     }
   }
   // The one silent failure left: a due edition with no Digests row at all.
+  // The tick also runs this check on its own at the hard stop, ahead of
+  // everything else — see scDigestNoRenderCheck_ for why.
   if (atStop) {
-    try {
-      var have = {};
-      if (n > 0) {
-        if (!dates) {
-          dates = sheet.getRange(2, 2, n, 1).getValues();
-          eds = sheet.getRange(2, 10, n, 1).getValues();
-        }
-        for (var m = 0; m < n; m++) {
-          if (scIssueDateKey_(dates[m][0]) !== clock.date) continue;
-          have[String(eds[m][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id] = true;
-        }
-      }
-      var missing = [];
-      scEditions_(ss).forEach(function(ed) {
-        if (ed.enabled && scEditionCadenceDue_(ed, clock) && !have[ed.id]) {
-          missing.push(ed.name || ed.id);
-        }
-      });
-      if (missing.length) {
-        scDigestAlertOnce_(clock, 'norender',
-          'Morning Digest: no edition rendered by the hard stop',
-          'Nothing rendered today for: ' + missing.join(', ') + '.\n\n'
-          + 'The build never produced a Digests row, so there is nothing to '
-          + 'ship best-available. Check the Apps Script executions log and '
-          + 'the AI provider configuration.');
-      }
-    } catch (mErr) { scDigestLogErr_('repair.norender', mErr); }
+    try { scDigestNoRenderCheck_(ss, clock); } catch (mErr) { scDigestLogErr_('repair.norender', mErr); }
   }
   return out;
+}
+
+/** At or after the hard stop: alert once if a due edition has no Digests row
+    for today.
+
+    This lived inline at the end of the repair pass, which the hourly tick only
+    reaches when nothing is building or due. So the alert covered the day the
+    build never started, and missed the day it started and could not finish —
+    on 2026-10-07 the edition was still mid-build at noon and no alert was
+    ever sent. The tick now calls this first, whatever state the build is in,
+    and the text says which of the two days it is. One alert per day either
+    way: scDigestAlertOnce_ keys it as 'norender'. */
+function scDigestNoRenderCheck_(ss, clock) {
+  if (clock.hour < SCRAPER_DIGEST_HARD_STOP_HOUR) return;
+  if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return;
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet ? sheet.getLastRow() - 1 : 0;
+  var have = {};
+  if (n > 0) {
+    var dates = sheet.getRange(2, 2, n, 1).getValues();
+    var eds = sheet.getRange(2, 10, n, 1).getValues();
+    for (var m = 0; m < n; m++) {
+      if (scIssueDateKey_(dates[m][0]) !== clock.date) continue;
+      have[String(eds[m][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id] = true;
+    }
+  }
+  var building = [], never = [];
+  scEditions_(ss).forEach(function(ed) {
+    if (!ed.enabled || !scEditionCadenceDue_(ed, clock) || have[ed.id]) return;
+    (scDigestBuildInFlight_(ed.id, clock.date) ? building : never).push(ed.name || ed.id);
+  });
+  if (!building.length && !never.length) return;
+  var body = 'No edition has been saved today for: '
+    + building.concat(never).join(', ') + '.\n\n';
+  if (building.length) {
+    body += 'Still building: ' + building.join(', ') + '. The build keeps '
+      + 'going, and anything that finishes today is emailed as soon as it '
+      + 'does — late, but not lost.\n\n';
+  }
+  if (never.length) {
+    body += 'Never started: ' + never.join(', ') + '. There is nothing to '
+      + 'ship best-available.\n\n';
+  }
+  body += 'Check the Apps Script executions log (My Executions) and the AI '
+    + 'provider configuration.';
+  scDigestAlertOnce_(clock, 'norender',
+    building.length && !never.length
+      ? 'Morning Digest: not ready by the noon cutoff — still building'
+      : 'Morning Digest: no edition rendered by the hard stop',
+    body);
 }
 
 /** Hard stop: write display snippets into the summary cells that are still
@@ -7985,8 +8149,8 @@ var SCRAPER_SCHED_AI_PAUSE_MS = 4000;       // pause between analyze chunks (fre
 // property unset, nothing is emailed even though this flag is on.
 var SCRAPER_SCHED_EMAIL_ENABLED = true;
 // Master pause for the scheduled pipeline. Phase 4 go-live (2026-08-27):
-// flipped to true — the hourly tick now advances the weekday Morning Digest
-// build (weekday ≥7:00 AM ET, one budget-bounded step per tick). AI tokens
+// flipped to true — the 06:00 build and its continuations make the weekday
+// Morning Digest, and the hourly tick hands it back to them if it stalls. AI tokens
 // are spent only if an AI provider key is configured; without one the
 // edition builds in $0 fallback mode. Flip to false and merge to re-pause.
 var SCRAPER_SCHED_RUNS_ENABLED = true;
@@ -8091,6 +8255,19 @@ function scSubsMilestoneCheck_() {
   props.setProperty('SUBS_MILESTONE_15_SENT', '1');
 }
 
+/** Which window the hourly tick is in: 'morning' (weekday build-and-send,
+    SCRAPER_DIGEST_BUILD_HOUR through SCRAPER_TICK_LAST_HOUR), 'nightly'
+    (SCRAPER_TICK_NIGHTLY_HOUR, every day) or 'off' (heartbeat only). Pure
+    given the clock. */
+function scTickWindow_(clock) {
+  if (clock.hour === SCRAPER_TICK_NIGHTLY_HOUR) return 'nightly';
+  if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) !== -1 &&
+      clock.hour >= SCRAPER_DIGEST_BUILD_HOUR && clock.hour <= SCRAPER_TICK_LAST_HOUR) {
+    return 'morning';
+  }
+  return 'off';
+}
+
 /** Hourly trigger entry point. */
 function scSchedulerTick() {
   // Heartbeat FIRST (before the lock): proof-of-life for getSchedulerHealth.
@@ -8100,18 +8277,37 @@ function scSchedulerTick() {
   try {
     PropertiesService.getScriptProperties().setProperty('SCHEDULER_LAST_TICK', String(Date.now()));
   } catch (hbErr) {}
-  // Rebuild Phase 1: daily Profiler-registry → Interests sync. Deliberately
-  // BEFORE the pipeline pause gate — the sync spends no AI tokens and sends
-  // no email (one static GitHub Pages fetch + sheet writes), and keeping the
-  // Interests tab current while the digest pipeline is paused is what lets
-  // the Phase 2 panel and the Phase 4 go-live start from live data. It
-  // throttles itself to ~once/day and must never break the tick.
-  try { scSyncInterests_(false); } catch (interestsErr) { scDigestLogErr_('tick.interests', interestsErr); }
-  // Phase 1: the one-time subscriber-milestone heads-up. Sits with the sync,
-  // before the pause gate — it is about roster growth, not the pipeline, and
-  // its property guard makes the steady-state cost a single property read.
-  try { scSubsMilestoneCheck_(); } catch (msErr) { scDigestLogErr_('tick.milestone', msErr); }
+  // The tick still FIRES every hour — the heartbeat above and the run note
+  // below are what keep the app's health tiles honest — but it only WORKS in
+  // two windows (scTickWindow_): the weekday-morning build-and-send window and
+  // one nightly pass. Every other hour is a heartbeat and a note, a second or
+  // so, where it used to open the spreadsheet every hour around the clock.
+  var tickClock = scDigestClock_(new Date());
+  var win = scTickWindow_(tickClock);
+  if (win === 'nightly') {
+    // Rebuild Phase 1: the Profiler-registry → Interests sync. Deliberately
+    // BEFORE the pipeline pause gate — the sync spends no AI tokens and sends
+    // no email (one static GitHub Pages fetch + sheet writes), and keeping the
+    // Interests tab current while the digest pipeline is paused is what lets
+    // the Phase 2 panel and the Phase 4 go-live start from live data. Forced:
+    // the nightly hour is the throttle now. Left on the 20-hour freshness
+    // check, a daytime "Sync now" would push the next nightly sync out by a
+    // whole extra day. It must never break the tick.
+    try { scSyncInterests_(true); } catch (interestsErr) { scDigestLogErr_('tick.interests', interestsErr); }
+    // Phase 1: the one-time subscriber-milestone heads-up. Sits with the sync,
+    // before the pause gate — it is about roster growth, not the pipeline, and
+    // its property guard makes the steady-state cost a single property read.
+    try { scSubsMilestoneCheck_(); } catch (msErr) { scDigestLogErr_('tick.milestone', msErr); }
+  }
   if (!SCRAPER_SCHED_RUNS_ENABLED) return;  // pipeline paused — heartbeat only
+  if (win !== 'morning' && !SCRAPER_LEGACY_SCHEDULES_ENABLED) {
+    // Noted, not silent: the "Last scheduled run" tile reads this stamp, and
+    // a tick that stopped writing it outside the window would turn the tile
+    // "overdue" every afternoon and all weekend.
+    scDigestNoteRun_('tick', win === 'nightly' ? 'nightly pass (interests sync)'
+      : 'idle — outside the weekday-morning window');
+    return;
+  }
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) return;  // a previous tick is still running
   try {
@@ -8130,26 +8326,33 @@ function scSchedulerTick() {
     // would trade a visible failure for a hidden one. The rethrow keeps that
     // notification and the failed-execution record intact; the log entry just
     // means the app can now say what happened without opening the console.
-    try {
-      var ss = scraperSs_();
-      ensureScraperTabs_(ss);
-      // Rebuild Phase 3: the weekday Morning Digest — one budget-bounded step
-      // per tick (weekday-morning + built-today checks live inside). Sits after
-      // the pipeline pause gate, so it cannot spend AI tokens while paused.
-      scDigestScheduledTick_();
-    } catch (fatalErr) {
-      scDigestLogErr_('tick.fatal', fatalErr);
-      throw fatalErr;
+    var ss = null, tickRes = '';
+    if (win === 'morning') {
+      try {
+        ss = scraperSs_();
+        ensureScraperTabs_(ss);
+        // Rebuild Phase 3: the weekday Morning Digest. The tick no longer
+        // builds — it hands an unfinished scheduled edition to the full-speed
+        // run (scDigestHandOff_) and owns the noon check. Sits after the
+        // pipeline pause gate, so it cannot spend AI tokens while paused.
+        tickRes = scDigestScheduledTick_() || '';
+      } catch (fatalErr) {
+        scDigestLogErr_('tick.fatal', fatalErr);
+        throw fatalErr;
+      }
+      // Catch-up delivery. The 7:00 pass is the normal path; this covers the case
+      // where the morning build was still running at 7:00, or the day the daily
+      // triggers were missing entirely. It refuses to send before the send hour,
+      // so it can never mail an edition early.
+      try { scDigestDeliverPending_(ss); } catch (delErr) { scDigestLogErr_('tick.deliver', delErr); }
     }
-    // Catch-up delivery. The 7:00 pass is the normal path; this covers the case
-    // where the morning build was still running at 7:00, or the day the daily
-    // triggers were missing entirely. It refuses to send before the send hour,
-    // so it can never mail an edition early.
-    try { scDigestDeliverPending_(ss); } catch (delErr) { scDigestLogErr_('tick.deliver', delErr); }
-    scDigestNoteRun_('tick', 'ok');
+    scDigestNoteRun_('tick', tickRes ? 'ok · ' + tickRes : 'ok');
     // Phase 4 go-live: the legacy Schedules-tab pipeline below stays gated off
     // (Your Morning Digest replaces it) — see SCRAPER_LEGACY_SCHEDULES_ENABLED.
     if (!SCRAPER_LEGACY_SCHEDULES_ENABLED) return;
+    // Legacy schedules keep their round-the-clock cadence, so outside the
+    // morning window the spreadsheet has not been opened yet.
+    ss = ss || scraperSs_();
     var t0 = Date.now();
     var sheet = ss.getSheetByName(SCRAPER_TABS.SCHEDULES);
     var data = sheet.getDataRange().getValues();
@@ -9032,7 +9235,8 @@ function scDigestBuildInFlight_(editionId, date) {
 function scEditionDue_(ed, clock) {
   if (!ed.enabled) return false;
   // Build hour, not the retired separate run hour: if the 06:00 trigger never
-  // fired at all, the tick may start the build itself during the 06:00 hour.
+  // fired at all, the tick hands the build to the full-speed run — from the
+  // 07:00 tick on, since the 06:00 hour belongs to the trigger itself.
   if (clock.hour < SCRAPER_DIGEST_BUILD_HOUR) return false;
   // The catch-up tick asks whether the SCHEDULED build has run, not whether
   // anything has. A manual test build must not satisfy the schedule.

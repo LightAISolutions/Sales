@@ -3,11 +3,57 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v08.00r] — 2026-10-07 06:08:24 PM EST
+
+> **Prompt:** "Ok, then I want you to execute the following:
+>
+> * Make the Scraper recover fast. When the hourly check finds today's build unfinished, it should do what the 6:00 run does: work for 4 minutes and schedule its own next run.
+> * News feeds. The Scraper fetches them one at a time. Apps Script can fetch a batch at once (UrlFetchApp.fetchAll), and time spent waiting counts toward the 90 minutes. Change to fetching a batch at once.
+> * Profiler's transcript watcher. It runs every 15 minutes (96 times a day) and scans the whole folder each time. change it to hourly during working hours.
+> * The Scraper's hourly check. Change it to only on weekday mornings, plus one nightly pass for the interest sync.
+>
+>
+> Also implement your recommended 1-3 fix:
+>
+> * Retry instead of quitting. When the 6 AM build can't get the lock, it should try again a minute later and log what happened.
+> * Finish at full speed. When the hourly check finds today's build unfinished, it should hand it to the full-speed build (4-minute stretches, each scheduling the next) instead of doing one step itself.
+> * Always alert at noon. Send the "nothing was built" alert at noon even if a build is still in progress.
+>
+>
+> Let me know if you think I shouldn't implement anything above and I will reconsider. Otherwise, go for it."
+
+Root cause of the missing 2026-10-07 Morning Digest, read from the developer's My Executions page: the 06:01 hourly tick started the build itself and held the script lock for 325.8 s; the 06:04:51 `scDigestMorningRun` waited its 5 s on `tryLock`, returned without logging or retrying (7.5 s run), and from then on the tick advanced the build one ~40 s step per hour — still unfinished at 17:01 ET, so nothing was saved, nothing sent, and the noon `norender` alert (reachable only when nothing was building) never fired. Trigger runtime that day was ~14.5 min across the 17 h shown, nowhere near the 90 min/day cap.
+
+#### `Scraper.gs` — v02.23g
+
+##### Fixed
+
+- **Lock miss retries instead of quitting** — `scDigestMorningRun` (and so every continuation) calls the new `scDigestRetryAfterLockMiss_` when `tryLock(5000)` fails: books a 1-minute continuation, records the miss in the `DIGEST_LAST_RUN` note and the execution log, capped at `SCRAPER_DIGEST_LOCK_RETRY_MAX` (8) per day; only the cap reaching the limit goes to the error trail, so a routine miss does not turn the app's error tile amber. `scDigestClearContinuations_` moved after the lock so a run that loses the lock can no longer delete the continuation keeping a build alive. Each lock-winning stretch stamps `scDigestBuildPulse`
+- **The tick hands off instead of stepping** — `scDigestScheduledTick_` now returns `scDigestHandOff_(clock)` for any due scheduled edition: a 1-minute continuation into the full-speed, self-chaining run, skipped while a chain is alive (pulse within `SCRAPER_DIGEST_PULSE_FRESH_MS`, 10 min) and during the 06:00 hour until the 06:00 trigger has run that day (it fires 05:45–06:15; handing off earlier would race it for the lock). A manual "Run intake now" build left in flight keeps the old one-step treatment, since a continuation stepping it every minute would race the app's own lock-free step loop
+- **Noon alert regardless of build state** — the inline hard-stop check in `scDigestRepairPass_` became `scDigestNoRenderCheck_`, which the tick now calls first at or after `SCRAPER_DIGEST_HARD_STOP_HOUR`, whatever the build is doing; the text distinguishes "still building" from "never started". Still one `norender` alert per day
+
+##### Changed
+
+- **Feeds fetched as one batch** — `scDigestFetchStep_` gathers its ≤6 enabled roster feeds and fetches them with the new `scFetchAllTolerant_` (`UrlFetchApp.fetchAll`), falling back to one-at-a-time for that batch if the batch call throws, so one unreachable host costs only itself. The Google News backstop stays sequential: all twelve queries go to one host, which throttles bursts
+- **Tick windows** — `scSchedulerTick` still fires hourly and always stamps its heartbeat, but works only in `scTickWindow_`'s two windows: weekday 06:00–13:59 ET (`SCRAPER_TICK_LAST_HOUR` 13, one tick past the hard stop) and the nightly 03:00 ET hour (`SCRAPER_TICK_NIGHTLY_HOUR`), which runs the interests sync (now forced, the hour being the throttle) and the subscriber-milestone check. Off-window ticks write a `DIGEST_LAST_RUN` note so the "Last scheduled run" tile does not go overdue; legacy schedules, if ever re-enabled, keep their round-the-clock cadence
+- Comments describing the tick as "one step per tick" updated
+
+#### `Profiler.gs` — v01.41g
+
+##### Changed
+
+- **Transcript watcher hourly in working hours** — `installTranscriptWatcher` arms `everyHours(1)`; `transcriptWatcherTick(e)` works only Mon–Fri 08:00–20:59 ET and at most once per clock hour (`TRANSCRIPT_WATCHER_LAST_HOUR` property), which also throttles a watcher armed before this change to hourly without re-arming. Editor runs (no event object) are never gated. Not running on this account per the 10/7 My Executions page, so this saves nothing today
+
+### Changed
+
+- **`repository-information/diagrams/Scraper-diagram.md`** — nightly-pass sync loop, the 06:00 chained build with lock retry and tick hand-off, the batched feed fetch, and the noon alert; mermaid.live link regenerated and verified
+- `Sections: 93/100 → 94/100` (no rotation); Scraper GAS changelog `43/50 → 44/50`; Profiler GAS changelog `40/50 → 41/50`
 
 ## [v07.99r] — 2026-10-07 09:18:44 AM EST
 

@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.23g] — 2026-10-07 06:08:24 PM EST — v08.00r
+
+### Fixed
+- A morning digest is no longer lost when its early start is briefly blocked — the build now tries again a minute later instead of giving up for the day
+- A digest that falls behind now catches up at full speed, so a slow start means a late paper rather than a missing one
+- If no paper is ready by the noon cutoff you now get an email saying so, even while it is still being put together
+
+### Changed
+- News feeds are now collected together rather than one at a time, so each digest is gathered faster
+- Background checks now run on weekday mornings plus one overnight refresh of your followed companies, instead of around the clock
 
 ## [v02.22g] — 2026-09-22 11:02:50 PM EST — v07.21r
 

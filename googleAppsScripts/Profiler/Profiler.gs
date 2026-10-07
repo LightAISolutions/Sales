@@ -1,4 +1,4 @@
-var VERSION = "v01.40g";
+var VERSION = "v01.41g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3010,6 +3010,17 @@ var WATCHER_TRIGGER_FN = "transcriptWatcherTick";
 // plus a model call, so a backlog is drained a few per tick rather than risking a
 // mid-file kill that leaves a note filed but never written up.
 var WATCHER_MAX_PER_RUN = 3;
+// When the timer does work: hourly, weekdays, 08:00–20:59 Eastern. It used to
+// run every 15 minutes around the clock — 96 executions a day, each walking
+// the whole transcribed folder, all billed against the 90 minutes of trigger
+// runtime a day that every project on this account shares. A recording
+// dropped outside these hours is written up at the first run of the next
+// working window. Editor runs ignore all of this (see transcriptWatcherTick).
+var WATCHER_TZ = "America/New_York";
+var WATCHER_FIRST_HOUR = 8;
+var WATCHER_LAST_HOUR = 20;
+var WATCHER_DAYS = [1, 2, 3, 4, 5];   // ISO day-of-week (Mon–Fri)
+var WATCHER_LAST_RUN_PROP = "TRANSCRIPT_WATCHER_LAST_HOUR";
 
 // Which account to share the folder with. diagnoseAuthorization cannot print
 // this — Session.getEffectiveUser needs userinfo.email, which this project's
@@ -3067,8 +3078,23 @@ function createTranscriptNote_(slug, fileName, text, confidence) {
 // One pass over the shared folder. Safe to run by hand from the editor — that is
 // the only way to see its log, and the fastest way to tell a sharing problem
 // from an empty queue.
-function transcriptWatcherTick() {
+function transcriptWatcherTick(e) {
   var props = PropertiesService.getScriptProperties();
+  // Schedule gate — timer runs only. A time-driven trigger passes an event
+  // object; a Run from the editor passes nothing, and is always let through,
+  // because that is how the log gets read. The once-per-hour check is what
+  // tames a watcher armed BEFORE this change: its trigger still fires every
+  // 15 minutes until installTranscriptWatcher is run again, but only the
+  // first firing in each working hour gets past here.
+  if (e) {
+    var now = new Date();
+    var day = Number(Utilities.formatDate(now, WATCHER_TZ, 'u'));
+    var hour = Number(Utilities.formatDate(now, WATCHER_TZ, 'H'));
+    if (WATCHER_DAYS.indexOf(day) === -1 || hour < WATCHER_FIRST_HOUR || hour > WATCHER_LAST_HOUR) return 0;
+    var hourKey = Utilities.formatDate(now, WATCHER_TZ, 'yyyy-MM-dd HH');
+    if (props.getProperty(WATCHER_LAST_RUN_PROP) === hourKey) return 0;
+    props.setProperty(WATCHER_LAST_RUN_PROP, hourKey);
+  }
   var conf = props.getProperty(PROP_AUTO_CONFIDENCE);
   if (conf === null || conf === '' || isNaN(Number(conf))) {
     Logger.log('Set ' + PROP_AUTO_CONFIDENCE + ' (0-100) in Script Properties first. '
@@ -3124,8 +3150,9 @@ function transcriptWatcherTick() {
 // so repeated runs cannot stack duplicate triggers.
 function installTranscriptWatcher() {
   removeTranscriptWatcher();
-  ScriptApp.newTrigger(WATCHER_TRIGGER_FN).timeBased().everyMinutes(15).create();
-  Logger.log('Watcher armed. It checks the transcribed folder every 15 minutes.');
+  ScriptApp.newTrigger(WATCHER_TRIGGER_FN).timeBased().everyHours(1).create();
+  Logger.log('Watcher armed. It checks the transcribed folder hourly, weekdays '
+    + WATCHER_FIRST_HOUR + ':00–' + WATCHER_LAST_HOUR + ':59 Eastern.');
 }
 
 function removeTranscriptWatcher() {

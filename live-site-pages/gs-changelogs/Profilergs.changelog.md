@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 40/50`
+`Sections: 41/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.41g] — 2026-10-07 06:08:24 PM EST — v08.00r
+
+### Changed
+- The automatic transcript write-up now checks for new recordings once an hour on weekdays, 8 AM to 9 PM Eastern, instead of every 15 minutes around the clock. Anything that arrives overnight or at the weekend is written up at the start of the next working day
 
 ## [v01.40g] — 2026-09-20 09:06:03 PM EST — v06.79r
 
