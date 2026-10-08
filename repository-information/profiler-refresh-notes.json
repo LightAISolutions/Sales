@@ -103,15 +103,16 @@
       ]
     },
     "applied-digital": {
-      "source": "Investing.com earnings calendar (fiscal Q1 2027, quarter ended 2026-08-31); matches the early-to-mid-October Q1 cadence, not company-confirmed — verify at https://ir.applieddigital.com/news-events/press-releases",
+      "source": "Cadence inference from the company's own press-release series, not company-confirmed: fiscal Q2 2026 results were issued 2026-01-07 (SEC 8-K 0001144879-26-000002, after the close) and fiscal Q1 2027 on 2026-10-07, a Wednesday, announced by a call-date notice on 2026-09-28 (nine days ahead). Fiscal Q2 2027 covers the quarter ending 2026-11-30. 2027-01-07 is a Thursday (verified with date -d). Confirm via the call-date notice at https://ir.applieddigital.com/news-events/press-releases, expected about a week before the call.",
       "watch": [
-        "Q1 FY2027 vs Street (~-$0.25 EPS / $111M revenue at arming)",
-        "Any identification of the unnamed high-investment-grade hyperscaler tenant (~69% of the $36B backlog)",
-        "New leases from the 1.7 GW being marketed",
-        "Polaris Forge 3 MDU regulatory approval status",
-        "Delivery milestones at PF1/PF2",
-        "Financing actions (project notes, Macquarie preferred draws)",
-        "ChronoScale (CHRN) status"
+        "Fit-out revenue share of the top line (54% in fiscal Q1 2027) against base rent ($65.8M) and NOI ($58.8M); the recurring lines are the signal",
+        "Debt trajectory: $6.4B at 2026-08-31 against $3.7B cash; new project notes for the third PF1 building successors, PF2, PF3, Delta Forge, and Macquarie preferred draws",
+        "Any identification of the unnamed high-investment-grade hyperscaler tenant (~69% of the ~$36B backlog)",
+        "New leases from the capacity being marketed, including the ~1 GW Finland option (initial power 2028)",
+        "Polaris Forge 2 initial operations (company target: North Dakota live capacity 300 MW by end of calendar 2026) and Polaris Forge 3 MDU regulatory approval",
+        "Base Electron: ~1,200 MW gas-plant PPA disclosed 2026-10-07, the ~10% equity stake and development status",
+        "ChronoScale (CHRN, ~96% owned): Microsoft 50 MW GB300 deployment and the Ekso discontinued-operations disposal",
+        "Analyst reaction to the fiscal Q1 2027 print was not available at refresh time; UBS initiated at Buy, $38 target on 2026-09-23 (trade-press lead only)"
       ]
     },
     "ares": {

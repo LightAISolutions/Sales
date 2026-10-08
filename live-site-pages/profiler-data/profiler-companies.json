@@ -519,12 +519,12 @@
       "hq": "Dallas, TX, USA",
       "ticker": "NASDAQ: APLD",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-10-08",
       "domains": [
         "applieddigital.com"
       ],
-      "srcTotal": 24,
-      "srcFirstPct": 62,
+      "srcTotal": 28,
+      "srcFirstPct": 68,
       "kpiNorm": true,
       "segments": [
         {

@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v08.01r] — 2026-10-08 09:24:25 AM EST
+
+> **Prompt:** "[Scheduled routine 'Profiler earnings desk': clone the repo, prove push works, read the refresh calendar, take at most three due rows oldest-first, verify each report published, run the Profiler Command including news triage, advance the calendar row, confirm unconfirmed dates within seven days, land one commit. Corpus token omitted — it must never be written to the repo.]"
+
+### Changed
+
+- Refreshed the Applied Digital dossier to profileVersion 5; v4 archived. Fiscal Q1 2027 results (reported 2026-10-07): revenue $341.9M, $3.7B cash against $6.4B debt, backlog unchanged at ~1.41 GW / ~$36B. Added the Polaris Forge 1 250 MW delivery (2026-10-02) and the ~1 GW Finland power agreement (2026-10-06); Delta Forge 1 / 2 site states (Louisiana / Alabama) now recorded.
+- Advanced the Applied Digital refresh-calendar row to fiscal Q2 2027 (2027-01-07, unconfirmed) and refreshed its watch list.
+- News triage via the Scraper corpus: 15 items reviewed, none promoted (UBS initiation is single-outlet trade-press; the Delta Forge 2 trade-press article could not be fetched and the same facts are first-party in the Q1 release).
 
 ## [v08.00r] — 2026-10-07 06:08:24 PM EST
 
