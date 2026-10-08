@@ -1,4 +1,4 @@
-var VERSION = "v01.18g";
+var VERSION = "v01.19g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -882,15 +882,22 @@ function aclHealthProbe_() {
     out.reason = 'acl_unreachable';
     out.detail = String((e && e.message) || e).split(MASTER_ACL_SPREADSHEET_ID).join('[ACL_ID]').slice(0, 200);
   }
+  // PROJECT: the grace block is Receipts' verbatim. It reads the key aclSnapshotSave_
+  // writes and reports the { enabled, users, ageSec, usable } shape that
+  // scripts/check-acl-health.sh parses. The block this replaced read a property
+  // nothing ever wrote ('ACL_LAST_GOOD') in a shape the checker could not read, so
+  // the probe answered "NOT armed" whatever the snapshot actually held.
   try {
-    var snapRaw = PropertiesService.getScriptProperties().getProperty('ACL_LAST_GOOD');
-    if (snapRaw) {
-      var snap = JSON.parse(snapRaw);
-      out.grace = { armed: true, ageSeconds: Math.round((Date.now() - Number(snap.at || 0)) / 1000) };
+    var rawSnap = PropertiesService.getScriptProperties().getProperty(aclSnapshotKey_());
+    var snap = rawSnap ? JSON.parse(rawSnap) : null;
+    if (snap && snap.at && snap.roles) {
+      var ageSec = Math.floor((Date.now() - Number(snap.at)) / 1000);
+      out.grace = { enabled: ACL_GRACE_ENABLED, users: Object.keys(snap.roles).length,
+                    ageSec: ageSec, usable: ACL_GRACE_ENABLED && ageSec <= ACL_GRACE_MAX_AGE_SEC };
     } else {
-      out.grace = { armed: false };
+      out.grace = { enabled: ACL_GRACE_ENABLED, users: 0, ageSec: -1, usable: false };
     }
-  } catch (eSnap) { out.grace = { armed: false }; }
+  } catch (eG) { /* the probe must still answer even if the snapshot is unreadable */ }
   try { cache.put('aclhealth_probe', JSON.stringify(out), 60); } catch (ePut) {}
   return out;
 }

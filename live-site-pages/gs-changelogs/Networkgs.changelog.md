@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 18/50`
+`Sections: 19/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.19g] — 2026-10-08 11:36:36 AM EST — v08.02r
+
+### Fixed
+
+- The app's sign-in health check now reports its outage safeguard accurately. It had been reporting the safeguard as off regardless of its real state
 
 ## [v01.18g] — 2026-09-25 06:08:32 AM EST — v07.49r
 

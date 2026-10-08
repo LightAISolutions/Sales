@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v08.02r] — 2026-10-08 11:36:36 AM EST
+
+> **Prompt:** "I woke up to this notification. Arm safety net snapshot for Network and Events. Then, tell me what the safety net snapshot does for them."
+
+### Fixed
+
+- **Events and Network ACL health probe misreported the last-known-good snapshot** (`Events.gs` v01.11g, `Network.gs` v01.19g) — `aclHealthProbe_` read the Script Property `ACL_LAST_GOOD`, which nothing writes (the snapshot lives under `aclSnapshotKey_()` = `ACL_SNAPSHOT_<page>`), and reported `{ armed, ageSeconds }`, a shape `scripts/check-acl-health.sh` does not parse. The daily ACL health Routine therefore printed "NOT armed" for both apps whatever the snapshot held. The grace block is now Receipts' verbatim: it reads `aclSnapshotKey_()` and reports `{ enabled, users, ageSec, usable }`. The snapshot save and the sign-in fallback were already wired correctly and are unchanged.
+- Events and Network GAS changelogs `10/50 → 11/50` and `18/50 → 19/50`; README tree GAS displays synced; `Sections: 95/100 → 96/100` (no rotation).
 
 ## [v08.01r] — 2026-10-08 09:24:25 AM EST
 
