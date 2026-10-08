@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v08.03r] — 2026-10-08 12:41:56 PM EST
+
+> **Prompt:** "Profiler's unauthenticated ACL health probe (`?action=api&op=aclhealth`, function `aclHealthProbe_` in `googleAppsScripts/Profiler/Profiler.gs`) returns no `grace` field. `scripts/check-acl-health.sh` reads `grace` to tell whether each app's last-known-good ACL snapshot is armed. Because the field is missing, it prints Profiler with no grace tail and never warns when Profiler's snapshot has expired. Verified live on 2026-10-08, when the probe printed `OK Profiler v01.41g acl_ok` with no `[grace: …]` suffix.
+>
+> Port the grace block that Receipts already uses (`googleAppsScripts/Receipts/Receipts.gs`, inside `aclHealthProbe_`, just before the `cache.put('aclhealth_probe', …)` line). Events and Network received the same port in v08.02r. The block reads the Script Property at `aclSnapshotKey_()` and sets `out.grace = { enabled, users, ageSec, usable }`, where `usable = ACL_GRACE_ENABLED && ageSec <= ACL_GRACE_MAX_AGE_SEC`. Confirm that Profiler.gs defines `aclSnapshotKey_`, `ACL_GRACE_ENABLED` and `ACL_GRACE_MAX_AGE_SEC`, and that `out` is initialised with `grace: null`.
+>
+> Follow the repo's normal Pre-Commit checklist in CLAUDE.md:
+> - Bump Profiler's GAS `VERSION` and `live-site-pages/gs-versions/Profilergs.version.txt` together.
+> - Add a user-facing entry to `live-site-pages/gs-changelogs/Profilergs.changelog.md`.
+> - Add a CHANGELOG entry.
+> - Sync the README tree with `python3 scripts/check-readme-tree.py --fix`.
+> - Bump the repo version and the README timestamp.
+>
+> Push to a `claude/*` branch so the auto-merge workflow deploys it. Done means `bash scripts/check-acl-health.sh profiler` prints a `[grace: N user(s), Ns old, armed|NOT armed]` suffix for Profiler."
+
+### Fixed
+
+- **Profiler's ACL health probe reported no `grace` field** (`Profiler.gs` v01.42g) — `aclHealthProbe_` never read the last-known-good snapshot, so `scripts/check-acl-health.sh` printed Profiler with no `[grace: …]` tail and could not warn when its snapshot expired. Ported Receipts' grace block verbatim (the same port Events and Network received in v08.02r): `out` now initialises with `grace: null`, and before the result is cached the probe reads the Script Property at `aclSnapshotKey_()` and reports `{ enabled, users, ageSec, usable }`, with `usable = ACL_GRACE_ENABLED && ageSec <= ACL_GRACE_MAX_AGE_SEC`. `aclSnapshotKey_`, `ACL_GRACE_ENABLED` and `ACL_GRACE_MAX_AGE_SEC` already existed in `Profiler.gs`, and the snapshot save and sign-in fallback were already wired, so neither changed. The probe function is now byte-identical to Receipts'.
+- Profiler GAS changelog `41/50 → 42/50`; README tree GAS display synced; `Sections: 96/100 → 97/100` (no rotation).
 
 ## [v08.02r] — 2026-10-08 11:36:36 AM EST
 

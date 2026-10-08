@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.42g] — 2026-10-08 12:41:56 PM EST — v08.03r
+
+### Fixed
+
+- The app's sign-in health check now reports the state of its outage safeguard. Until now it left the safeguard out, so the daily check could not warn when the safeguard had lapsed
 
 ## [v01.41g] — 2026-10-07 06:08:24 PM EST — v08.00r
 

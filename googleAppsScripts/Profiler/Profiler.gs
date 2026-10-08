@@ -1,4 +1,4 @@
-var VERSION = "v01.41g";
+var VERSION = "v01.42g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3516,7 +3516,7 @@ function handleNoteOp_(e) {
 // cache keeps unauthenticated callers from burning Sheets quota.
 function aclHealthProbe_() {
   var out = { probe: 'aclhealth', page: ACL_PAGE_NAME, gasVersion: VERSION,
-              ok: false, stage: 'config', reason: '', detail: '' };
+              ok: false, stage: 'config', reason: '', detail: '', grace: null };
   var hasAcl = MASTER_ACL_SPREADSHEET_ID && MASTER_ACL_SPREADSHEET_ID !== "YOUR_MASTER_ACL_SPREADSHEET_ID";
   if (!hasAcl) { out.reason = 'acl_not_configured'; return out; }
   var cache = getEpochCache();
@@ -3551,6 +3551,17 @@ function aclHealthProbe_() {
     out.reason = 'acl_unreachable';
     out.detail = String((e && e.message) || e).split(MASTER_ACL_SPREADSHEET_ID).join('[ACL_ID]').slice(0, 200);
   }
+  try {
+    var rawSnap = PropertiesService.getScriptProperties().getProperty(aclSnapshotKey_());
+    var snap = rawSnap ? JSON.parse(rawSnap) : null;
+    if (snap && snap.at && snap.roles) {
+      var ageSec = Math.floor((Date.now() - Number(snap.at)) / 1000);
+      out.grace = { enabled: ACL_GRACE_ENABLED, users: Object.keys(snap.roles).length,
+                    ageSec: ageSec, usable: ACL_GRACE_ENABLED && ageSec <= ACL_GRACE_MAX_AGE_SEC };
+    } else {
+      out.grace = { enabled: ACL_GRACE_ENABLED, users: 0, ageSec: -1, usable: false };
+    }
+  } catch (eG) { /* the probe must still answer even if the snapshot is unreadable */ }
   try { cache.put('aclhealth_probe', JSON.stringify(out), 60); } catch (ePut) {}
   return out;
 }
