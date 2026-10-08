@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12g] — 2026-10-08 12:44:53 PM EST — v08.04r
+
+### Changed
+
+- The daily sign-in health check now also keeps the app's outage safeguard up to date, so it stays ready even on days nobody signs in
 
 ## [v01.11g] — 2026-10-08 11:36:36 AM EST — v08.02r
 

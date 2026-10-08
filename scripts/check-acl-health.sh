@@ -135,8 +135,9 @@ if [ "$warned" -gt 0 ]; then
   echo
   echo "HEALTHY, with $warned warning(s): sign-in works, but a last-known-good"
   echo "snapshot is not armed, so the next outage would be a hard lockout again."
-  echo "A snapshot arms itself on the next successful sign-in — if this persists,"
-  echo "check that ACL_GRACE_ENABLED is still true."
+  echo "The probe itself refreshes the snapshot on every healthy read, so this"
+  echo "means the snapshot write failed or ACL_GRACE_ENABLED is false. Check the"
+  echo "app's execution log for 'aclSnapshotSave_ failed'."
 fi
 
 echo

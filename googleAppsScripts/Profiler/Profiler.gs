@@ -1,4 +1,4 @@
-var VERSION = "v01.42g";
+var VERSION = "v01.43g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3544,6 +3544,7 @@ function aclHealthProbe_() {
           out.reason = 'acl_column_missing';
         } else {
           out.ok = true; out.stage = 'done'; out.reason = 'acl_ok';
+          try { aclHealthRefreshSnapshot_(data, colIdx); } catch (eRefresh) {}
         }
       }
     }
@@ -3564,6 +3565,34 @@ function aclHealthProbe_() {
   } catch (eG) { /* the probe must still answer even if the snapshot is unreadable */ }
   try { cache.put('aclhealth_probe', JSON.stringify(out), 60); } catch (ePut) {}
   return out;
+}
+
+// Refresh the last-known-good snapshot from the Access-tab rows the probe just
+// read, with the same allow-list pass checkSpreadsheetAccess makes on a sign-in.
+// The daily health check (scripts/check-acl-health.sh) calls the probe, so this
+// keeps the safety net armed for an app nobody signed into that day. The copy
+// still mirrors the live list, so a removal lands no later than after a sign-in,
+// and aclSnapshotSave_ throttles the write to one per ten minutes.
+function aclHealthRefreshSnapshot_(data, colIdx) {
+  var headers = data[0], roleColIdx = -1;
+  for (var rc = 0; rc < headers.length; rc++) {
+    if (String(headers[rc]).trim().toLowerCase() === 'role') { roleColIdx = rc; break; }
+  }
+  var allowMap = {}, rolesMatrix = null;
+  for (var sr = 1; sr < data.length; sr++) {
+    var sEmail = String(data[sr][0]).trim().toLowerCase();
+    if (!sEmail) continue;
+    var sVal = data[sr][colIdx];
+    if (!(sVal === true || String(sVal).trim().toUpperCase() === 'TRUE')) continue;
+    var sRole = RBAC_DEFAULT_ROLE;
+    if (roleColIdx !== -1 && data[sr][roleColIdx]) {
+      var sRaw = String(data[sr][roleColIdx]).trim().toLowerCase();
+      if (rolesMatrix === null) rolesMatrix = getRolesFromSpreadsheet();
+      if (rolesMatrix[sRaw]) sRole = sRaw;
+    }
+    allowMap[sEmail] = sRole;
+  }
+  aclSnapshotSave_(allowMap);
 }
 
 // quota (design plan D14): today's execution count by event type, read from

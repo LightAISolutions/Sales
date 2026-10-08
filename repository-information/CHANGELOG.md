@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v08.04r] — 2026-10-08 12:44:53 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Changed
+
+- **The ACL health probe now refreshes the last-known-good snapshot** (`Events.gs` v01.12g, `Network.gs` v01.20g, `Receipts.gs` v01.31g, `Profiler.gs` v01.43g) — on a successful read, `aclHealthProbe_` calls the new `aclHealthRefreshSnapshot_`, which builds the page's allow-list from the rows already read (the same pass `checkSpreadsheetAccess` makes on a sign-in) and hands it to `aclSnapshotSave_` (throttled to one write per ten minutes). The daily ACL health Routine therefore keeps the safety net armed for apps nobody signed into that day; Events' copy had been 13 days old. The copy still mirrors the live list, so a removal lands no later than after a sign-in. The refresh is wrapped so a failure cannot turn a healthy probe into `acl_unreachable`, and the `grace` report runs after it.
+- **`scripts/check-acl-health.sh`** — the NOT-armed warning now says the probe refreshes the snapshot itself, so the warning means the write failed or `ACL_GRACE_ENABLED` is off.
+- **`.claude/rules/gas-scripts-reference.md`** — monitor note lists the four probed apps and describes the refresh.
+- GAS changelogs: Events `11/50 → 12/50`, Network `19/50 → 20/50`, Receipts `30/50 → 31/50`, Profiler `42/50 → 43/50`; README tree GAS displays synced; `Sections: 97/100 → 98/100` (no rotation).
 
 ## [v08.03r] — 2026-10-08 12:41:56 PM EST
 
