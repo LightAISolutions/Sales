@@ -6,14 +6,13 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
-**Date:** 2026-10-08 ~11:40 AM EST
+**Date:** 2026-10-08 ~12:42 PM EST
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v08.01r
+**Repo version:** v08.02r
 
 ### What was done
 
-- Scraper: lock-miss retry, tick hand-off to the full-speed build, noon alert mid-build, batched feed fetch, weekday-morning + nightly tick windows; Profiler transcript watcher hourly in working hours (v08.00r)
-- Profiler earnings desk (scheduled): Applied Digital fiscal Q1 2027 refresh, profileVersion 5 (v08.01r)
+- Events + Network: ACL health probe now reads the real last-known-good snapshot under `aclSnapshotKey_()` and reports Receipts' `{ enabled, users, ageSec, usable }` grace shape (v08.02r)
 
 ### Where we left off
 
@@ -27,15 +26,14 @@ All changes committed and merged to main. ERCOT (`phase-f-action-plan.md` §16) 
 
 ## Previous Sessions
 
-**Date:** 2026-10-07 ~05:25 PM EST
+**Date:** 2026-10-08 ~11:40 AM EST
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v07.99r
+**Repo version:** v08.01r
 
 ### What was done
 
-- Profiler earnings desk (scheduled): nothing due; BlackRock Q3 date confirmed for 2026-10-14 (v07.97r)
-- Classroom curriculum pipeline (scheduled): briefing-2026-10-07 authored; no lesson revised, 15 of 19 segments due pin-only (v07.98r)
-- Profiler earnings desk (scheduled): nothing due; Applied Digital fiscal Q1 2027 date confirmed for 2026-10-07 after the close (v07.99r)
+- Scraper: lock-miss retry, tick hand-off to the full-speed build, noon alert mid-build, batched feed fetch, weekday-morning + nightly tick windows; Profiler transcript watcher hourly in working hours (v08.00r)
+- Profiler earnings desk (scheduled): Applied Digital fiscal Q1 2027 refresh, profileVersion 5 (v08.01r)
 
 ### Where we left off
 
