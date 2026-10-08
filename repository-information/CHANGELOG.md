@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v08.05r] — 2026-10-08 12:59:34 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Changed
+
+- **Routine `trig_01GeTqB8xp5nG8FCC139Bgr9` runs twice a day** — renamed *ACL health check (daily)* → *ACL health check (twice daily)*; cron `0 10 * * *` (UTC) → `CRON_TZ=America/New_York 50 5,17 * * *` (05:50 and 17:50 ET, no daylight-saving drift; ten minutes before the hour per the scheduler's jitter guidance). Since v08.04r each healthy probe refreshes the last-known-good snapshot, so two runs a day keep it at most ~12 hours old, inside the 24-hour grace window; once a day left it expiring just before each run.
+- **Same Routine's prompt** — the warning branch no longer says a snapshot "arms itself on the next successful sign-in"; it says the probe refreshes the snapshot on every healthy read, so a warning on a healthy run means the write failed or `ACL_GRACE_ENABLED` is off, and points to the `aclSnapshotSave_ failed` log line. The rest of the prompt is unchanged.
+- **`.claude/rules/gas-scripts-reference.md`** — monitor note carries the new name, cron and reason.
+- `Sections: 98/100 → 99/100` (no rotation).
 
 ## [v08.04r] — 2026-10-08 12:44:53 PM EST
 
