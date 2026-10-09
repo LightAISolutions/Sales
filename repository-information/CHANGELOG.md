@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v08.06r] — 2026-10-09 09:22:48 AM EST
+
+> **Prompt:** "Profiler earnings desk (scheduled): take up to three due rows from the refresh calendar; confirm unconfirmed dates within seven days."
+
+### Changed
+
+- **`profiler-refresh-calendar.json`** — nothing was due. Marsh (formerly Marsh McLennan) third-quarter date confirmed from the company's 2026-09-17 call notice: Thursday 2026-10-15 before the open, call 8:30 a.m. ET (unchanged date, now `confirmed: true`). No dossier written.
+- `Sections: 99/100 → 100/100` (no rotation).
 
 ## [v08.05r] — 2026-10-08 12:59:34 PM EST
 
